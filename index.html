@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catecismo da Igreja Católica - Pesquisa</title>
+    <link rel="stylesheet" href="/css/geral.css">
+</head>
+<body>
+    <header>
+        <h1>Catecismo da Igreja Católica</h1>
+    </header>
+    <main>
+        <div id="busca-container">
+            <div class="barra-de-busca" role="search">
+                <label for="campo-busca" class="sr-only">Termo de busca:</label> <!-- Visually hidden label -->
+                <input type="text" id="campo-busca" placeholder="Buscar no Catecismo...">
+                <button id="botao-buscar" type="button">Pesquisar</button>
+            </div>
+
+            <div id="painel-busca">
+                <!-- Optional: for messages like "Loading..." or "No results" -->
+                <div id="status-messages" aria-live="polite"></div>
+
+                <div id="resultados" class="painel-resultados oculto" aria-labelledby="resultados-titulo">
+                    <h2 id="resultados-titulo" class="sr-only">Resultados da Pesquisa</h2>
+                    <!-- Search results will be populated here by JavaScript -->
+                </div>
+                <div id="conteudo" class="painel-conteudo oculto" aria-labelledby="conteudo-titulo">
+                    <h2 id="conteudo-titulo" class="sr-only">Conteúdo Selecionado</h2>
+                    <!-- Selected content will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/script.js" defer></script>
+    <!--
+        Common CSS for .sr-only (screen-reader only) class:
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    -->
+</body>
+</html>
