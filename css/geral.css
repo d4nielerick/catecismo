@@ -36,20 +36,30 @@ body {
 
 #busca-container {
     display: flex;
-    flex-direction: column; /* Keeps search bar etc. at the top */
+    flex-direction: column;
     align-items: center;
     gap: 20px;
     font-family: "Inter", sans-serif;
     color: #333;
+    /* Se você quer que #painel-busca ocupe o resto da altura da viewport
+       após a barra de busca, #busca-container pode precisar de altura */
+    /* min-height: 100vh; Ou height: 100vh e overflow: hidden se necessário */
 }
 
 /* This panel will contain results (left) and content (right) side-by-side */
 #painel-busca {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* ou 90vw ou algo responsivo */
     gap: 20px;
-    /* flex-direction: row; is the default for display: flex */
+    /* Para que os filhos (#resultados, #conteudo) possam ter altura baseada em % ou vh
+       ou para que flex-grow funcione corretamente em altura, #painel-busca precisa ter uma altura.
+       Uma forma é fazê-lo preencher o espaço restante no #busca-container. */
+    flex-grow: 1; /* Se #busca-container for flex-direction: column e tiver altura */
+    /* OU você pode dar uma altura explícita ao painel-busca: */
+    /* height: calc(100vh - ALTURA_DA_BARRA_DE_BUSCA - MARGENS); */
+    /* Por exemplo: */
+    height: 85vh; /* Ajuste conforme necessário */
 }
 
 /* Styles for the search bar itself, assuming it's within #busca-container but sibling to #painel-busca */
@@ -107,19 +117,20 @@ body {
 }
 
 #resultados {
-    width: 38%; /* Width of the results list column */
-    position: sticky;
-    /* Adjust 'top' based on the height of your fixed header/search bar area */
-    /* If your search bar is 100px tall and you want 20px space: top: 120px */
-    top: 20px; /* Example: if search bar is outside #painel-busca and page scrolls */
-    align-self: flex-start; /* Important for sticky positioning in a flex container */
-    /* Max height should account for the 'top' offset and any bottom spacing */
-    max-height: calc(100vh - 40px); /* Example: 20px top + 20px bottom padding/margin */
-    overflow-y: auto;
+    width: 38%;
+    /* position: sticky; top: 20px; align-self: flex-start; */
+    /* Com o #painel-busca tendo altura, position:sticky não é mais necessário aqui
+       se #resultados e #conteudo devem preencher a altura do #painel-busca */
     background-color: white;
-    padding: 1.5rem; /* Adjusted padding slightly */
+    padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Added a subtle shadow */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    /* Para que #resultados tenha sua própria rolagem dentro da altura do #painel-busca */
+    overflow-y: auto;
+    height: 100%; /* Ocupa toda a altura do #painel-busca */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
 }
 
 .resultado-item {
@@ -147,13 +158,17 @@ body {
 
 
 #conteudo {
-    width: 60%; /* Width of the content display area */
-    /* flex-grow: 1; Alternative to width, takes remaining space */
+    width: 60%;
     background-color: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Added a subtle shadow */
-    /* No max-height or overflow-y: auto here, content makes this panel grow, and page scrolls */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    /*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
+    /*  !!!!!!!!!!!!!! MUDANÇA CRÍTICA !!!!!!!!!!!!!!!!!!  */
+    height: 100%; /* Ocupa toda a altura do #painel-busca */
+    overflow-y: auto; /* Permite rolagem interna em #conteudo */
+    /*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
 }
 
 mark {

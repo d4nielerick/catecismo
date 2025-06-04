@@ -3,18 +3,19 @@ const campoBusca = document.getElementById('campo-busca');
 const botaoBuscar = document.getElementById('botao-buscar');
 const resultadosDiv = document.getElementById('resultados');
 const conteudoDiv = document.getElementById('conteudo');
-const buscaContainer = document.getElementById('busca-container'); // Main container for search UI
-const painelBusca = document.getElementById('painel-busca'); // The flex container for results and content
+const buscaContainer = document.getElementById('busca-container');
+const painelBusca = document.getElementById('painel-busca');
 const statusMessagesDiv = document.getElementById('status-messages');
 
 // --- State & Cache ---
 let cache = [];
+let idsDeTextoNoCache = new Set(); // Para ajudar a prevenir duplicatas exatas de texto
 let ultimoArquivoCarregado = null;
 let termoAtualBusca = '';
 let cacheHTMLInteiro = {};
 let proximoIdParagrafo = 0;
-let itemSelecionadoAtual = null; // Keep track of the selected item's data
-let elementoSelecionadoAtual = null; // Keep track of the selected list item's DOM element
+let itemSelecionadoAtual = null;
+let elementoSelecionadoAtual = null;
 
 // --- Configuration ---
 const ARQUIVOS_CATECISMO = [
@@ -46,6 +47,9 @@ async function carregarTodosOsArquivos() {
     if (statusMessagesDiv) statusMessagesDiv.textContent = 'Carregando dados do Catecismo...';
     resultadosDiv.classList.add('oculto');
     conteudoDiv.classList.add('oculto');
+    idsDeTextoNoCache.clear();
+    cache = []; // Limpar cache antes de recarregar
+    proximoIdParagrafo = 0; // Resetar contador de ID
 
     let arquivosCarregados = 0;
     console.log("INICIANDO CARREGAMENTO DE ARQUIVOS PARA CACHE");
@@ -62,60 +66,116 @@ async function carregarTodosOsArquivos() {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
 
-            let ultimaParte = "";
-            let ultimoCapitulo = "";
-            const todosElementosRelevantes = doc.querySelectorAll('body .marcacao, body .titulo, body .paragrafo, body .ponto-com-notas, body .subtitulo, body h1, body h2, body h3, body h4, body h5, body h6, body p');
-            console.log(`Encontrados ${todosElementosRelevantes.length} elementos relevantes em ${arquivo.url}`);
+            let ultimaParteNome = "";
+            let ultimoCapituloNome = "";
 
-            todosElementosRelevantes.forEach(el => {
-                if (el.classList.contains('marcacao')) {
-                    if (el.classList.contains('parte')) {
-                        ultimaParte = el.textContent.trim();
-                        ultimoCapitulo = "";
-                    } else if (el.classList.contains('capitulo') || el.closest('.capitulo')) {
-                        let textoCapitulo = el.textContent.trim();
-                        if (el.closest('.capitulo')) {
-                            const sectionCapitulo = el.closest('.capitulo');
-                            const h2Capitulo = sectionCapitulo ? sectionCapitulo.querySelector('h2') : null;
-                            if (h2Capitulo) textoCapitulo = h2Capitulo.textContent.trim();
+            // Iterar sobre os elementos do corpo do documento
+            const elementosProcessaveis = Array.from(doc.body.querySelectorAll('h1, h2, h3, h4, h5, h6, p, .paragrafo, .ponto-com-notas, section.capitulo, div.parte'));
+            // Ou use doc.body.children se a estrutura for mais plana e direta
+
+            for (const el of elementosProcessaveis) {
+                // Pular elementos dentro de notas, a menos que seja a própria nota (que não queremos no cache principal)
+                if (el.closest('.nota-associada')) continue;
+
+                // Tentar identificar se é uma marcação de PARTE
+                if (el.matches('h1.parte, div.parte, .marcacao.parte') || (el.tagName === 'H1' && el.textContent.toLowerCase().includes("parte"))) {
+                    const textoCompletoElementoParte = el.textContent.trim();
+                    // Tenta encontrar "PRIMEIRA PARTE", "SEGUNDA PARTE", etc. no início do texto.
+                    const matchRegExpParte = textoCompletoElementoParte.match(/^(PRIMEIRA PARTE|SEGUNDA PARTE|TERCEIRA PARTE|QUARTA PARTE)/i);
+
+                    if (matchRegExpParte && matchRegExpParte[0]) {
+                        ultimaParteNome = matchRegExpParte[0].toUpperCase(); // Armazena "PRIMEIRA PARTE" em maiúsculas
+                    } else {
+                        // Fallback se não encontrar o padrão exato, pode usar o nome do arquivo ou um texto genérico
+                        // Ou tentar uma extração mais simples se a estrutura for "Parte 1", "Parte 2"
+                        // Por agora, se não encontrar, pode ficar vazio ou usar um fallback.
+                        // Se o seu HTML sempre tem "PRIMEIRA PARTE", etc. escrito, o match acima deve funcionar.
+                        // Se for apenas "Parte 1", você pode querer ajustar a lógica ou o que é armazenado.
+                        // Exemplo de fallback mais simples se o acima falhar:
+                        if (textoCompletoElementoParte.toLowerCase().startsWith("parte ")) {
+                           ultimaParteNome = textoCompletoElementoParte.split(/[:–-]/)[0].trim().toUpperCase(); // Pega "PARTE X"
+                        } else {
+                           ultimaParteNome = arquivo.nome.toUpperCase(); // Usa o nome do arquivo como "PARTE 1"
                         }
-                        ultimoCapitulo = textoCapitulo;
                     }
-                    return;
+
+                    ultimoCapituloNome = ""; // Resetar capítulo ao encontrar nova parte
+                    console.log(`Nova Parte Encontrada: ${ultimaParteNome}`);
+                    continue;
                 }
 
-                let isConteudoParaCache = el.classList.contains('paragrafo') || el.classList.contains('ponto-com-notas');
-                if (el.tagName === 'P' && !el.classList.contains('marcacao') && !el.classList.contains('titulo')) {
+                // Tentar identificar se é uma marcação de CAPÍTULO
+                // (Ex: <section class="capitulo"><h2>Título</h2></section>, <h2 class="capitulo-titulo">)
+                let tituloCapituloElement = null;
+                if (el.matches('section.capitulo h2, section.capitulo h3, h2.capitulo-titulo')) {
+                    tituloCapituloElement = el; // Se 'el' for o próprio H2/H3
+                } else if (el.matches('section.capitulo')) {
+                    tituloCapituloElement = el.querySelector('h2, h3'); // Busca dentro da section
+                } else if (['H2', 'H3'].includes(el.tagName) && el.textContent.trim().length > 10 && !el.closest('section.capitulo')) {
+                    // Heurística para H2/H3 soltos que podem ser capítulos
+                    tituloCapituloElement = el;
+                }
+
+
+                if (tituloCapituloElement) {
+                    let nomeCapitulo = tituloCapituloElement.textContent.trim();
+                    nomeCapitulo = nomeCapitulo.replace(/^Capítulo\s*[\w\dºª°]+\s*[:–-]?\s*/i, '').trim();
+                    ultimoCapituloNome = nomeCapitulo.split(':')[0].trim();
+                    console.log(`Novo Capítulo Encontrado: ${ultimoCapituloNome}`);
+                    // Não 'continue' aqui se o título do capítulo também for buscável ou se 'el' for uma section
+                    // Se 'el' for o próprio título (H2/H3), ele pode ser tratado como conteúdo abaixo.
+                }
+
+                // Identificar conteúdo para cache (parágrafos, pontos)
+                let isConteudoParaCache = false;
+                if (el.matches('.paragrafo, .ponto-com-notas')) {
+                    isConteudoParaCache = true;
+                } else if (el.tagName === 'P' && !el.matches('.marcacao, .titulo, .subtitulo')) {
+                     // Garante que não é um P de marcação
                     isConteudoParaCache = true;
                 }
+                // Adicionar títulos (H2, H3 etc.) ao cache se não forem de parte/capítulo já tratados
+                // e se contiverem texto substancial.
+                else if (['H2','H3','H4','H5','H6'].includes(el.tagName) && el.textContent.trim().length > 15 && !tituloCapituloElement) {
+                     // Se não foi identificado como título de capítulo acima, pode ser um subtítulo buscável.
+                     isConteudoParaCache = true;
+                }
+
 
                 if (isConteudoParaCache) {
                     const elementoClone = el.cloneNode(true);
-                    elementoClone.querySelectorAll('.nota-associada').forEach(nota => nota.remove());
-                    const textoLimpo = elementoClone.textContent.trim();
+                    // Remover notas e referências para limpeza do texto e evitar que o texto delas entre na busca
+                    elementoClone.querySelectorAll('.nota-associada, .ref-nota, sup.ref-nota').forEach(notaEl => notaEl.remove());
+                    
+                    let textoOriginalLimpo = elementoClone.textContent.trim().replace(/\s+/g, ' ');
 
-                    if (textoLimpo) {
+                    if (textoOriginalLimpo && textoOriginalLimpo.length > 10) { // Mínimo de 10 caracteres
+                        if (idsDeTextoNoCache.has(textoOriginalLimpo)) {
+                            // console.warn("Texto duplicado no cache ignorado:", textoOriginalLimpo.substring(0, 50));
+                            continue;
+                        }
+                        idsDeTextoNoCache.add(textoOriginalLimpo);
+
                         const paragrafoId = `paragrafo-${proximoIdParagrafo++}`;
-                        let localizacaoFormatada = "";
-                        if (ultimaParte && ultimoCapitulo) {
-                            localizacaoFormatada = `${ultimaParte} – ${ultimoCapitulo}`;
-                        } else if (ultimaParte) {
-                            localizacaoFormatada = ultimaParte;
-                        } else if (ultimoCapitulo) {
-                            localizacaoFormatada = ultimoCapitulo;
+                        let numeroParagrafo = "";
+                        const matchNumero = textoOriginalLimpo.match(/^(\s*\d+)\s*[.:]?\s+/);
+                        if (matchNumero && matchNumero[1]) {
+                            numeroParagrafo = matchNumero[1].trim();
                         }
 
                         cache.push({
                             id: paragrafoId,
-                            texto: textoLimpo,
-                            htmlOriginal: el.outerHTML,
+                            textoOriginalCompleto: textoOriginalLimpo, // Usado para busca e para encontrar no DOM
+                            htmlOriginal: el.outerHTML, // Para referência e renderização se necessário
                             arquivoUrl: arquivo.url,
                             arquivoNome: arquivo.nome,
-                            localizacao: localizacaoFormatada
+                            parte: ultimaParteNome,
+                            capitulo: ultimoCapituloNome,
+                            numero: numeroParagrafo
                         });
                     }
                 }
-            });
+            }
             arquivosCarregados++;
             console.log(`Arquivo ${arquivo.url} processado. Cache atual com ${cache.length} itens.`);
         } catch (error) {
@@ -135,13 +195,12 @@ async function carregarTodosOsArquivos() {
         } else if (arquivosCarregados === 0 && ARQUIVOS_CATECISMO.length > 0) {
             statusMessagesDiv.textContent = 'Erro: Nenhum arquivo do Catecismo pôde ser carregado.';
             console.error("Nenhum arquivo do Catecismo pôde ser carregado.");
-        } else if (cache.length === 0 && arquivosCarregados === 0 && ARQUIVOS_CATECISMO.length === 0) {
-            statusMessagesDiv.textContent = 'Nenhum arquivo configurado para carregar.';
         }
     }
 
     if (cache.length > 0) {
         console.log("Exemplo do primeiro item no cache:", JSON.stringify(cache[0], null, 2));
+        if (cache.length > 1) console.log("Exemplo do último item no cache:", JSON.stringify(cache[cache.length -1], null, 2));
     }
 }
 
@@ -152,39 +211,34 @@ function executarBusca() {
 
     resultadosDiv.innerHTML = '';
     conteudoDiv.innerHTML = '';
-    // Hide content panel initially, it will be shown if there are results
     conteudoDiv.classList.add('oculto');
     itemSelecionadoAtual = null;
     elementoSelecionadoAtual = null;
 
-    document.querySelectorAll('.introducao').forEach(intro => {
-        intro.classList.add('oculto');
-    });
+    document.querySelectorAll('.introducao').forEach(intro => intro.classList.add('oculto'));
 
     if (termo.length < MIN_SEARCH_TERM_LENGTH) {
         resultadosDiv.innerHTML = `<div class="aviso-resultado">Por favor, digite pelo menos ${MIN_SEARCH_TERM_LENGTH} caracteres.</div>`;
-        resultadosDiv.classList.remove('oculto'); // Show results panel for the message
+        resultadosDiv.classList.remove('oculto');
         if (statusMessagesDiv) statusMessagesDiv.textContent = "";
-        console.log("Termo de busca muito curto.");
         return;
     }
 
-    resultadosDiv.classList.remove('oculto'); // Show results panel
+    resultadosDiv.classList.remove('oculto');
 
     const resultadosEncontrados = cache.filter(item => {
-        return item.texto.toLowerCase().includes(termo);
+        return item.textoOriginalCompleto && item.textoOriginalCompleto.toLowerCase().includes(termo);
     });
     console.log(`Resultados encontrados no cache para "${termo}":`, resultadosEncontrados.length);
 
     if (resultadosEncontrados.length === 0) {
         resultadosDiv.innerHTML = `<div class="aviso-resultado">Nenhum resultado encontrado para "${termo}".</div>`;
-        conteudoDiv.classList.add('oculto'); // Ensure content panel is hidden
+        conteudoDiv.classList.add('oculto');
         if (statusMessagesDiv) statusMessagesDiv.textContent = "";
         return;
     }
     
-    // If we have results, ensure both panels could be visible
-    conteudoDiv.classList.remove('oculto'); // Show content panel area
+    conteudoDiv.classList.remove('oculto');
 
     const headerResultados = document.createElement('div');
     headerResultados.className = 'header-resultados';
@@ -196,28 +250,67 @@ function executarBusca() {
         divResultado.className = 'resultado-item';
         divResultado.setAttribute('role', 'button');
         divResultado.setAttribute('tabindex', '0');
-        // Store item reference directly on the element for easier access if needed, though closure is fine
-        // divResultado.dataset.itemId = item.id; 
 
+          // Construir a string de localização (apenas a PARTE)
+        let localizacaoDisplay = "";
+        if (item.parte && item.parte.trim()) {
+            localizacaoDisplay = item.parte; // Já deve estar em maiúsculas e formatado como "PRIMEIRA PARTE"
+        } else {
+            // Fallback se item.parte não estiver definido (raro se a extração funcionar)
+            localizacaoDisplay = (item.arquivoNome || "Contexto Desconhecido").toUpperCase();
+        }
+
+        // O trechoHtml já inclui o número do parágrafo se ele estiver no item.textoOriginalCompleto
+        // e será formatado com <mark> para o termo buscado.
         const regexTermo = new RegExp(`(${termo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-        const trechoMaxChars = 200;
-        let trechoTexto = item.texto;
-        let startIndex = item.texto.toLowerCase().indexOf(termo);
-        if (startIndex === -1) startIndex = 0;
+        const trechoMaxChars = 200; // Ou o valor que você preferir
+        let textoBaseParaPreview = item.textoOriginalCompleto;
+  let numeroParagrafoDetectado = "";
+        const matchNumeroNoInicioOriginal = textoBaseParaPreview.match(/^(\s*\d+\s*[.:]?\s*)/);
+        if (matchNumeroNoInicioOriginal) {
+            numeroParagrafoDetectado = matchNumeroNoInicioOriginal[0]; // Ex: "1601. "
+        }
 
-        let previewStart = Math.max(0, startIndex - Math.floor(trechoMaxChars / 3));
-        let previewText = item.texto.substring(previewStart, previewStart + trechoMaxChars);
-        if (previewStart > 0) previewText = "..." + previewText;
-        if (previewStart + trechoMaxChars < item.texto.length) previewText = previewText + "...";
+        let textoAposNumero = textoBaseParaPreview.substring(numeroParagrafoDetectado.length); // Texto sem o número inicial
 
+        // A busca pelo termo (startIndex) é feita no texto *após* o número,
+        // mas precisamos do índice relativo ao texto completo para a marcação depois.
+        let startIndexNoTextoAposNumero = textoAposNumero.toLowerCase().indexOf(termo);
+        if (startIndexNoTextoAposNumero === -1) { // O termo deve estar no número em si, ou erro
+            startIndexNoTextoAposNumero = 0;
+             // Se o termo está no número, o preview vai ser o número e um pouco depois
+        }
+
+        // Ajustar trechoMaxChars para considerar o tamanho do número já exibido
+        let trechoMaxCharsParaTexto = trechoMaxChars - numeroParagrafoDetectado.length;
+        if (trechoMaxCharsParaTexto < 50) trechoMaxCharsParaTexto = 50; // Mínimo para o texto
+
+        let previewStartNoTextoAposNumero = Math.max(0, startIndexNoTextoAposNumero - Math.floor(trechoMaxCharsParaTexto / 3));
+        let previewTextoAposNumero = textoAposNumero.substring(previewStartNoTextoAposNumero, previewStartNoTextoAposNumero + trechoMaxCharsParaTexto);
+
+        let prefixoPreview = "";
+        if (previewStartNoTextoAposNumero > 0) {
+            prefixoPreview = "...";
+        }
+
+        let sufixoPreview = "";
+        if ((previewStartNoTextoAposNumero + trechoMaxCharsParaTexto) < textoAposNumero.length) {
+            sufixoPreview = "...";
+        }
+
+        // Montar o previewText final
+        // O número sempre vem primeiro (se existir), depois o prefixo ("..."), depois o trecho do texto, depois o sufixo ("...")
+        let previewText = numeroParagrafoDetectado + prefixoPreview + previewTextoAposNumero + sufixoPreview;
+        
+        // A marcação <mark> ainda é aplicada no previewText montado.
+        // Se o termo estiver no número, ele será marcado. Se estiver no texto, também.
         const trechoHtml = previewText.replace(regexTermo, '<mark>$1</mark>');
 
         divResultado.innerHTML = `
-      <div class="resultado-localizacao">${item.localizacao || item.arquivoNome || ''}</div>
-      <div class="resultado-trecho">${trechoHtml}</div>
-    `;
+          <div class="resultado-localizacao">${localizacaoDisplay}</div>
+          <div class="resultado-trecho">${trechoHtml}</div>
+        `;
         
-        // Pass item and the element itself to the handler
         divResultado.addEventListener('click', () => selecionarItemResultado(item, divResultado));
         divResultado.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -228,118 +321,86 @@ function executarBusca() {
 
         resultadosDiv.appendChild(divResultado);
 
-        // Automatically select and load the first item
         if (index === 0) {
             selecionarItemResultado(item, divResultado);
         }
     });
 
-    // Scroll the #resultados panel to the top if needed, not the whole window
     resultadosDiv.scrollTop = 0; 
-
     if (statusMessagesDiv) statusMessagesDiv.textContent = "";
 }
 
 async function selecionarItemResultado(item, elementoLista) {
     console.log("Item selecionado:", item);
 
-    // Remove selection from previously selected item
     if (elementoSelecionadoAtual) {
         elementoSelecionadoAtual.classList.remove('selecionado');
     }
-
-    // Add selection to the new item
     elementoLista.classList.add('selecionado');
     elementoSelecionadoAtual = elementoLista;
     itemSelecionadoAtual = item;
 
-    // Scroll the selected item into view within the results list if necessary
-    // Use 'nearest' to avoid unnecessary scrolling if already visible.
     elementoLista.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
     conteudoDiv.innerHTML = '<div class="loading-content">Carregando conteúdo...</div>';
-    // No need to toggle 'oculto' for conteudoDiv here if it's already shown by executarBusca
-
-    // Scroll main window to bring content area into view if it's far down.
-    // Only scroll if #painel-busca is not fully visible.
-    // const painelBuscaRect = painelBusca.getBoundingClientRect();
-    // if (painelBuscaRect.top < 0 || painelBuscaRect.bottom > window.innerHeight) {
-    //     painelBusca.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // }
-    // Decided against aggressive scrolling of main window here, sticky should handle visibility of results.
+    conteudoDiv.classList.remove('oculto'); // Garante visibilidade
 
     if (cacheHTMLInteiro[item.arquivoUrl]) {
-        console.log("Renderizando conteúdo do cacheHTMLInteiro para:", item.arquivoUrl);
         renderizarConteudoPrincipal(item.arquivoUrl, cacheHTMLInteiro[item.arquivoUrl], item);
     } else {
-        console.log("Buscando HTML completo para:", item.arquivoUrl);
         try {
             const response = await fetch(item.arquivoUrl);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const htmlCompleto = await response.text();
             cacheHTMLInteiro[item.arquivoUrl] = htmlCompleto;
-            console.log("HTML completo buscado e cacheado. Renderizando.");
             renderizarConteudoPrincipal(item.arquivoUrl, htmlCompleto, item);
         } catch (error) {
             console.error("Erro ao buscar HTML completo:", error);
-            conteudoDiv.innerHTML = `<div class="error-content">Erro ao carregar o conteúdo de ${item.arquivoNome}. Tente novamente.</div>`;
+            conteudoDiv.innerHTML = `<div class="error-content">Erro ao carregar o conteúdo de ${item.arquivoNome}.</div>`;
         }
     }
 }
 
-
 function renderizarConteudoPrincipal(urlArquivo, htmlCompleto, itemAlvo) {
-    console.log("Renderizando conteúdo principal para:", urlArquivo, "Alvo:", itemAlvo.texto.substring(0, 50) + "...");
+    console.log("Renderizando conteúdo principal para:", urlArquivo, "Alvo:", itemAlvo.textoOriginalCompleto.substring(0, 50) + "...");
     ultimoArquivoCarregado = urlArquivo;
 
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlCompleto, 'text/html');
-
-    conteudoDiv.innerHTML = ''; // Clear previous content (like loading message)
-
-    // DO NOT add a back button or hide resultadosDiv here
-    // const backButton = document.createElement('button');
-    // ... (removal of back button logic)
+    conteudoDiv.innerHTML = ''; 
 
     Array.from(doc.body.childNodes).forEach(node => {
         conteudoDiv.appendChild(node.cloneNode(true));
     });
 
-    // Ensure rendering is complete before marking and scrolling
     setTimeout(() => {
-        console.log("Após timeout: marcando termo e rolando no conteúdo.");
         marcarTermoNoConteudo(conteudoDiv, termoAtualBusca);
-        rolarParaParagrafoNoConteudo(conteudoDiv, itemAlvo.texto);
+        conteudoDiv.scrollTop = 0; // Reset scroll ANTES de rolar para o parágrafo específico
+        rolarParaParagrafoNoConteudo(conteudoDiv, itemAlvo.textoOriginalCompleto);
         ativarNotasHover(conteudoDiv);
-        // Scroll the content pane to the top before scrolling to the specific item
-        // to ensure the item is positioned correctly relative to the content pane's viewport
-        conteudoDiv.scrollTop = 0;
-        rolarParaParagrafoNoConteudo(conteudoDiv, itemAlvo.texto); // Call again after scrollTop reset
-    }, 100); 
+    }, 150);
 }
 
-
 function marcarTermoNoConteudo(container, termo) {
-    if (!termo || termo.length < MIN_SEARCH_TERM_LENGTH) {
-        return;
-    }
+    if (!termo || termo.length < MIN_SEARCH_TERM_LENGTH) return;
+
     const regex = new RegExp(`(${termo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-    const elementosParaMarcar = container.querySelectorAll('.paragrafo, .ponto-com-notas, .titulo, .subtitulo, p, li, h1, h2, h3, h4, h5, h6');
+    // Considerar também os títulos dentro do conteúdo principal
+    const elementosParaMarcar = container.querySelectorAll('.paragrafo, .ponto-com-notas, p:not(.marcacao), h1, h2, h3, h4, h5, h6, li');
 
     elementosParaMarcar.forEach(el => {
+        if (el.closest('.nota-associada')) return; // Não marcar dentro de notas
+
         Array.from(el.childNodes).forEach(child => {
             if (child.nodeType === Node.TEXT_NODE) {
                 const text = child.textContent;
-                if (text.toLowerCase().includes(termo.toLowerCase())) { // Ensure case-insensitive check here too
+                if (text.toLowerCase().includes(termo.toLowerCase())) {
                     const novoHtml = text.replace(regex, '<mark>$1</mark>');
-                    const spanWrapper = document.createElement('span'); // Use a temporary element
+                    const spanWrapper = document.createElement('span');
                     spanWrapper.innerHTML = novoHtml;
-                    
                     const fragment = document.createDocumentFragment();
-                    while(spanWrapper.firstChild) {
+                    while (spanWrapper.firstChild) {
                         fragment.appendChild(spanWrapper.firstChild);
                     }
-                    // Replace the original text node with the new nodes (text and mark elements)
                     el.replaceChild(fragment, child);
                 }
             }
@@ -347,82 +408,137 @@ function marcarTermoNoConteudo(container, termo) {
     });
 }
 
-function rolarParaParagrafoNoConteudo(container, textoExatoDoItem) {
-    const elementosCandidatos = container.querySelectorAll('.paragrafo, .ponto-com-notas');
-    let encontrado = false;
-    for (let p of elementosCandidatos) {
-        const cloneP = p.cloneNode(true);
-        // Remove marks for accurate text comparison
-        cloneP.querySelectorAll('mark').forEach(mark => {
-            const parent = mark.parentNode;
-            parent.replaceChild(document.createTextNode(mark.textContent), mark);
-            parent.normalize(); // Merges adjacent text nodes
-        });
-        
-        if (cloneP.textContent.trim() === textoExatoDoItem.trim()) {
-            console.log("rolarParaParagrafoNoConteudo: Parágrafo encontrado!", p);
-            // Scroll within the #conteudo div, not the whole window
-            const containerRect = container.getBoundingClientRect();
-            const targetRect = p.getBoundingClientRect();
-            const scrollTop = container.scrollTop + (targetRect.top - containerRect.top) - (container.clientHeight / 2) + (p.clientHeight / 2);
-            
-            container.scrollTo({ top: scrollTop, behavior: 'smooth' });
+function rolarParaParagrafoNoConteudo(container, textoDoItemDoCache) { // Renomeei para clareza
+    console.log("----------------------------------------------------");
+    console.log("Tentando rolar para o item com texto (do cache):");
+    console.log(`"${textoDoItemDoCache}"`);
+    console.log("----------------------------------------------------");
 
-            p.classList.add('paragrafo-destacado-flash'); // Use a different class for temporary highlight
-            setTimeout(() => p.classList.remove('paragrafo-destacado-flash'), 2500);
+    // Seleciona todos os possíveis parágrafos ou títulos na área de conteúdo
+    const todosOsParagrafosNaPagina = container.querySelectorAll(
+        '.paragrafo, .ponto-com-notas, p:not(.marcacao):not(.titulo), h2:not(.marcacao), h3:not(.marcacao), h4:not(.marcacao), h5:not(.marcacao), h6:not(.marcacao)'
+    );
+
+    let encontrado = false;
+    let contadorDeParagrafosChecados = 0;
+
+    for (const paragrafoAtualDaPagina of todosOsParagrafosNaPagina) {
+        contadorDeParagrafosChecados++;
+
+        // 1. Clonar o parágrafo da página para não mexer no original ainda
+        const cloneDoParagrafo = paragrafoAtualDaPagina.cloneNode(true);
+
+        // 2. Limpeza do clone (REMOVER O QUE NÃO ESTAVA NO TEXTO DO CACHE)
+
+        // a. Remover as marcações <mark> que a busca adicionou
+        cloneDoParagrafo.querySelectorAll('mark').forEach(mark => {
+            const pai = mark.parentNode;
+            if (pai) {
+                pai.replaceChild(document.createTextNode(mark.textContent), mark);
+                pai.normalize(); // Junta textos, se necessário
+            }
+        });
+
+        // b. Remover as notas e referências de nota
+        cloneDoParagrafo.querySelectorAll('.nota-associada, .ref-nota, sup.ref-nota').forEach(el => el.remove());
+        
+        // c. Pegar o texto limpo do parágrafo da página
+        let textoDoParagrafoDaPaginaLimpo = cloneDoParagrafo.textContent;
+
+        // d. Aplicar a mesma normalização de espaços que foi usada no cache
+        textoDoParagrafoDaPaginaLimpo = textoDoParagrafoDaPaginaLimpo.trim().replace(/\s+/g, ' ');
+        let textoDoCacheNormalizado = textoDoItemDoCache.trim().replace(/\s+/g, ' '); // Normalizar o do cache também aqui para garantir
+
+        // --- LOGS DE COMPARAÇÃO ---
+        // Mostrar apenas alguns para não poluir muito o console
+        // Ou se o início do texto parecer promissor
+        if (contadorDeParagrafosChecados <= 5 || textoDoParagrafoDaPaginaLimpo.startsWith(textoDoCacheNormalizado.substring(0, 20))) {
+            console.log(`\nChecando Parágrafo ${contadorDeParagrafosChecados} da Página:`);
+            console.log(`  TEXTO DO CACHE (esperado): "${textoDoCacheNormalizado.substring(0, 100)}..."`);
+            console.log(`  TEXTO DA PÁGINA (limpo)  : "${textoDoParagrafoDaPaginaLimpo.substring(0, 100)}..."`);
+
+            if (textoDoParagrafoDaPaginaLimpo.length !== textoDoCacheNormalizado.length) {
+                console.warn(`  AVISO: Tamanhos diferentes! CACHE: ${textoDoCacheNormalizado.length}, PÁGINA: ${textoDoParagrafoDaPaginaLimpo.length}`);
+            }
+        }
+        // --- FIM DOS LOGS DE COMPARAÇÃO ---
+
+        if (textoDoParagrafoDaPaginaLimpo === textoDoCacheNormalizado) {
+            console.log("### SUCESSO! Parágrafo encontrado! ###");
+            console.log(`Texto correspondente: "${textoDoCacheNormalizado.substring(0, 70)}..."`);
+
+            // --- CÓDIGO DE ROLAGEM (o mesmo de antes) ---
+            const containerRect = container.getBoundingClientRect();
+            const targetRect = paragrafoAtualDaPagina.getBoundingClientRect(); // Usar o elemento original para getBoundingClientRect
+            const scrollTopCalculado = container.scrollTop + (targetRect.top - containerRect.top) - (container.clientHeight / 2) + (paragrafoAtualDaPagina.clientHeight / 2);
+            
+            container.scrollTo({ top: scrollTopCalculado, behavior: 'smooth' });
+            paragrafoAtualDaPagina.classList.add('paragrafo-destacado-flash');
+            setTimeout(() => paragrafoAtualDaPagina.classList.remove('paragrafo-destacado-flash'), 2500);
+            // --- FIM DO CÓDIGO DE ROLAGEM ---
+
             encontrado = true;
-            break; 
+            break; // Para o loop, já encontramos
         }
     }
-    if (!encontrado) console.warn("rolarParaParagrafoNoConteudo: Parágrafo alvo não encontrado no DOM. Texto buscado:", textoExatoDoItem.substring(0,50));
+
+    if (!encontrado) {
+        console.error("### FALHA: Parágrafo alvo NÃO encontrado no DOM após checar " + contadorDeParagrafosChecados + " parágrafos. ###");
+        console.error("Verifique os logs acima. O 'TEXTO DO CACHE (esperado)' deve ser idêntico a um dos 'TEXTO DA PÁGINA (limpo)'.");
+        console.error("Se houver diferenças (mesmo um espaço ou símbolo), a rolagem não ocorrerá.");
+        console.error("Texto do Cache que não foi encontrado na página (primeiros 100 caracteres):");
+        console.error(`"${textoDoItemDoCache.substring(0,100)}..."`);
+    }
+     console.log("----------------------------------------------------");
 }
 
-// Add a simple CSS for the flash effect
 const styleSheet = document.createElement("style");
 styleSheet.type = "text/css";
 styleSheet.innerText = `
   @keyframes flashBackground {
     0% { background-color: transparent; }
-    25% { background-color: #fff3c4; } /* Light yellow flash */
+    25% { background-color: #fff3c4; }
     75% { background-color: #fff3c4; }
     100% { background-color: transparent; }
   }
   .paragrafo-destacado-flash {
     animation: flashBackground 1.5s ease-out;
-    border-radius: 4px; /* Optional: round corners of flash */
+    border-radius: 4px;
   }
 `;
 document.head.appendChild(styleSheet);
-
 
 function ativarNotasHover(container) {
     const pontosComNotas = container.querySelectorAll(".ponto-com-notas");
     pontosComNotas.forEach(ponto => {
         const refs = ponto.querySelectorAll(".ref-nota");
-        const notasAssociadas = ponto.querySelectorAll(".nota-associada");
+        // Assumindo que as notas estão logo após o ponto ou dentro de um container específico
+        const notasAssociadasNoPonto = ponto.querySelectorAll(".nota-associada");
 
         refs.forEach(ref => {
             const refNum = ref.dataset.ref;
             if (!refNum) return;
 
             let targetNotas = [];
-            notasAssociadas.forEach(nota => {
+            notasAssociadasNoPonto.forEach(nota => {
+                // Comparar o início do texto da nota com o número de referência
                 if (nota.textContent.trim().startsWith(refNum + ".")) {
                     targetNotas.push(nota);
                     nota.style.display = "none";
                     nota.style.opacity = "0";
-                    nota.style.transition = "opacity 0.3s ease-in-out, display 0s linear 0.3s"; // Delay hiding
+                    nota.style.transition = "opacity 0.3s ease-in-out, transform 0.3s ease-in-out";
+                   // nota.style.transform = "translateY(5px)";
                 }
             });
 
             if (targetNotas.length > 0) {
                 ref.addEventListener("mouseenter", () => {
                     targetNotas.forEach(nota => {
-                        nota.style.transition = "opacity 0.3s ease-in-out"; // Reset transition for display
                         nota.style.display = "block";
-                        requestAnimationFrame(() => { // Force reflow
-                            requestAnimationFrame(() => { // Apply opacity change
+                        requestAnimationFrame(() => {
+                            requestAnimationFrame(() => {
                                 nota.style.opacity = "1";
+                               // nota.style.transform = "translateY(0)";
                             });
                         });
                     });
@@ -431,7 +547,12 @@ function ativarNotasHover(container) {
                 ref.addEventListener("mouseleave", () => {
                     targetNotas.forEach(nota => {
                         nota.style.opacity = "0";
-                        // The display:none is now handled by the delayed transition on display property
+                       // nota.style.transform = "translateY(5px)";
+                        setTimeout(() => {
+                            if (nota.style.opacity === "0") {
+                                nota.style.display = "none";
+                            }
+                        }, 300); // Sync with transition duration
                     });
                 });
             }
