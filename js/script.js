@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- Core Functions ---
 
+
+
 async function carregarTodosOsArquivos() {
     if (statusMessagesDiv) statusMessagesDiv.textContent = 'Carregando dados do Catecismo...';
     resultadosDiv.classList.add('oculto');
@@ -144,17 +146,18 @@ async function carregarTodosOsArquivos() {
 
                 if (isConteudoParaCache) {
                     const elementoClone = el.cloneNode(true);
-                    // Remover notas e referências para limpeza do texto e evitar que o texto delas entre na busca
                     elementoClone.querySelectorAll('.nota-associada, .ref-nota, sup.ref-nota').forEach(notaEl => notaEl.remove());
                     
                     let textoOriginalLimpo = elementoClone.textContent.trim().replace(/\s+/g, ' ');
 
-                    if (textoOriginalLimpo && textoOriginalLimpo.length > 10) { // Mínimo de 10 caracteres
-                        if (idsDeTextoNoCache.has(textoOriginalLimpo)) {
-                            // console.warn("Texto duplicado no cache ignorado:", textoOriginalLimpo.substring(0, 50));
+                    if (textoOriginalLimpo && textoOriginalLimpo.length > 10) {
+                        // NORMALIZAÇÃO PARA O ID DE CACHE (EVITAR DUPLICATAS)
+                        const textoNormalizadoParaIdCache = removerAcentos(textoOriginalLimpo.toLowerCase()); // Usar texto normalizado para checar duplicatas
+                        if (idsDeTextoNoCache.has(textoNormalizadoParaIdCache)) { // Checar com o texto normalizado
+                            // console.warn("Texto duplicado (após normalização) no cache ignorado:", textoOriginalLimpo.substring(0, 50));
                             continue;
                         }
-                        idsDeTextoNoCache.add(textoOriginalLimpo);
+                        idsDeTextoNoCache.add(textoNormalizadoParaIdCache); // Adicionar o texto normalizado ao set
 
                         const paragrafoId = `paragrafo-${proximoIdParagrafo++}`;
                         let numeroParagrafo = "";
@@ -165,8 +168,9 @@ async function carregarTodosOsArquivos() {
 
                         cache.push({
                             id: paragrafoId,
-                            textoOriginalCompleto: textoOriginalLimpo, // Usado para busca e para encontrar no DOM
-                            htmlOriginal: el.outerHTML, // Para referência e renderização se necessário
+                            textoOriginalCompleto: textoOriginalLimpo, // Mantém o original para exibição e rolagem precisa
+                            textoNormalizadoParaBusca: removerAcentos(textoOriginalLimpo.toLowerCase()), // NOVO: Para a busca
+                            htmlOriginal: el.outerHTML,
                             arquivoUrl: arquivo.url,
                             arquivoNome: arquivo.nome,
                             parte: ultimaParteNome,
@@ -205,9 +209,13 @@ async function carregarTodosOsArquivos() {
 }
 
 function executarBusca() {
-    const termo = campoBusca.value.trim().toLowerCase();
-    console.log("Termo buscado:", termo);
-    termoAtualBusca = termo;
+    const termoInputUsuario = campoBusca.value.trim();
+    termoAtualBusca = termoInputUsuario.toLowerCase(); // Este é o termo global para highlight
+    const termoNormalizadoParaFiltro = removerAcentos(termoAtualBusca); // Para a busca no cache
+    // ... restante da função
+
+    console.log("Termo original:", termoInputUsuario, "| Termo para highlight:", termoAtualBusca, "| Termo para filtro:", termoNormalizadoParaFiltro);
+
 
     resultadosDiv.innerHTML = '';
     conteudoDiv.innerHTML = '';
@@ -217,7 +225,8 @@ function executarBusca() {
 
     document.querySelectorAll('.introducao').forEach(intro => intro.classList.add('oculto'));
 
-    if (termo.length < MIN_SEARCH_TERM_LENGTH) {
+    // Usar o termo original (ou o normalizado, mas o original é mais intuitivo para o usuário) para a checagem de tamanho
+    if (termoInputUsuario.length < MIN_SEARCH_TERM_LENGTH) {
         resultadosDiv.innerHTML = `<div class="aviso-resultado">Por favor, digite pelo menos ${MIN_SEARCH_TERM_LENGTH} caracteres.</div>`;
         resultadosDiv.classList.remove('oculto');
         if (statusMessagesDiv) statusMessagesDiv.textContent = "";
@@ -227,12 +236,14 @@ function executarBusca() {
     resultadosDiv.classList.remove('oculto');
 
     const resultadosEncontrados = cache.filter(item => {
-        return item.textoOriginalCompleto && item.textoOriginalCompleto.toLowerCase().includes(termo);
+        // MODIFICADO: Usar o campo normalizado para a busca
+        return item.textoNormalizadoParaBusca && item.textoNormalizadoParaBusca.includes(termoNormalizadoParaFiltro);
     });
-    console.log(`Resultados encontrados no cache para "${termo}":`, resultadosEncontrados.length);
+    console.log(`Resultados encontrados no cache para "${termoNormalizadoParaFiltro}":`, resultadosEncontrados.length);
 
     if (resultadosEncontrados.length === 0) {
-        resultadosDiv.innerHTML = `<div class="aviso-resultado">Nenhum resultado encontrado para "${termo}".</div>`;
+        // Exibir o termo que o usuário digitou originalmente na mensagem
+        resultadosDiv.innerHTML = `<div class="aviso-resultado">Nenhum resultado encontrado para "${termoInputUsuario}".</div>`;
         conteudoDiv.classList.add('oculto');
         if (statusMessagesDiv) statusMessagesDiv.textContent = "";
         return;
@@ -251,60 +262,53 @@ function executarBusca() {
         divResultado.setAttribute('role', 'button');
         divResultado.setAttribute('tabindex', '0');
 
-          // Construir a string de localização (apenas a PARTE)
         let localizacaoDisplay = "";
         if (item.parte && item.parte.trim()) {
-            localizacaoDisplay = item.parte; // Já deve estar em maiúsculas e formatado como "PRIMEIRA PARTE"
+            localizacaoDisplay = item.parte;
         } else {
-            // Fallback se item.parte não estiver definido (raro se a extração funcionar)
             localizacaoDisplay = (item.arquivoNome || "Contexto Desconhecido").toUpperCase();
         }
 
-        // O trechoHtml já inclui o número do parágrafo se ele estiver no item.textoOriginalCompleto
-        // e será formatado com <mark> para o termo buscado.
-        const regexTermo = new RegExp(`(${termo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-        const trechoMaxChars = 200; // Ou o valor que você preferir
-        let textoBaseParaPreview = item.textoOriginalCompleto;
-  let numeroParagrafoDetectado = "";
+        // O highlight <mark> deve usar o termoAtualBusca (que é o input do usuário em minúsculas, mas com acentos se ele digitou)
+        // para que "Cânon" seja destacado se o usuário digitou "Cânon", e "canon" se digitou "canon".
+        // A busca encontrou o item usando a versão normalizada, mas o destaque visual é no texto original.
+        const regexTermoHighlight = new RegExp(`(${termoAtualBusca.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+        
+        const trechoMaxChars = 200;
+        let textoBaseParaPreview = item.textoOriginalCompleto; // Usar o texto original para o preview
+        let numeroParagrafoDetectado = "";
         const matchNumeroNoInicioOriginal = textoBaseParaPreview.match(/^(\s*\d+\s*[.:]?\s*)/);
         if (matchNumeroNoInicioOriginal) {
-            numeroParagrafoDetectado = matchNumeroNoInicioOriginal[0]; // Ex: "1601. "
+            numeroParagrafoDetectado = matchNumeroNoInicioOriginal[0];
         }
 
-        let textoAposNumero = textoBaseParaPreview.substring(numeroParagrafoDetectado.length); // Texto sem o número inicial
-
-        // A busca pelo termo (startIndex) é feita no texto *após* o número,
-        // mas precisamos do índice relativo ao texto completo para a marcação depois.
-        let startIndexNoTextoAposNumero = textoAposNumero.toLowerCase().indexOf(termo);
-        if (startIndexNoTextoAposNumero === -1) { // O termo deve estar no número em si, ou erro
-            startIndexNoTextoAposNumero = 0;
-             // Se o termo está no número, o preview vai ser o número e um pouco depois
+        let textoAposNumero = textoBaseParaPreview.substring(numeroParagrafoDetectado.length);
+        
+        // Encontrar o termo para centralizar o preview.
+        // Aqui, podemos usar o termo normalizado para encontrar a POSIÇÃO no texto normalizado,
+        // mas o corte será feito no texto original.
+        let startIndexNoTextoAposNumeroOriginal = textoAposNumero.toLowerCase().indexOf(termoAtualBusca); // Posição no texto original (com acentos)
+        if (startIndexNoTextoAposNumeroOriginal === -1) { // Se não achou com acentos, tenta sem
+            startIndexNoTextoAposNumeroOriginal = removerAcentos(textoAposNumero.toLowerCase()).indexOf(termoNormalizadoParaFiltro);
+        }
+        if (startIndexNoTextoAposNumeroOriginal === -1) { // Fallback se ainda não encontrar (improvável se o item foi selecionado)
+             startIndexNoTextoAposNumeroOriginal = 0;
         }
 
-        // Ajustar trechoMaxChars para considerar o tamanho do número já exibido
+
         let trechoMaxCharsParaTexto = trechoMaxChars - numeroParagrafoDetectado.length;
-        if (trechoMaxCharsParaTexto < 50) trechoMaxCharsParaTexto = 50; // Mínimo para o texto
+        if (trechoMaxCharsParaTexto < 50) trechoMaxCharsParaTexto = 50;
 
-        let previewStartNoTextoAposNumero = Math.max(0, startIndexNoTextoAposNumero - Math.floor(trechoMaxCharsParaTexto / 3));
+        let previewStartNoTextoAposNumero = Math.max(0, startIndexNoTextoAposNumeroOriginal - Math.floor(trechoMaxCharsParaTexto / 3));
         let previewTextoAposNumero = textoAposNumero.substring(previewStartNoTextoAposNumero, previewStartNoTextoAposNumero + trechoMaxCharsParaTexto);
 
-        let prefixoPreview = "";
-        if (previewStartNoTextoAposNumero > 0) {
-            prefixoPreview = "...";
-        }
-
-        let sufixoPreview = "";
-        if ((previewStartNoTextoAposNumero + trechoMaxCharsParaTexto) < textoAposNumero.length) {
-            sufixoPreview = "...";
-        }
-
-        // Montar o previewText final
-        // O número sempre vem primeiro (se existir), depois o prefixo ("..."), depois o trecho do texto, depois o sufixo ("...")
+        let prefixoPreview = (previewStartNoTextoAposNumero > 0) ? "..." : "";
+        let sufixoPreview = ((previewStartNoTextoAposNumero + trechoMaxCharsParaTexto) < textoAposNumero.length) ? "..." : "";
+        
         let previewText = numeroParagrafoDetectado + prefixoPreview + previewTextoAposNumero + sufixoPreview;
         
-        // A marcação <mark> ainda é aplicada no previewText montado.
-        // Se o termo estiver no número, ele será marcado. Se estiver no texto, também.
-        const trechoHtml = previewText.replace(regexTermo, '<mark>$1</mark>');
+        // Aplicar o highlight no previewText construído
+        const trechoHtml = previewText.replace(regexTermoHighlight, '<mark>$1</mark>');
 
         divResultado.innerHTML = `
           <div class="resultado-localizacao">${localizacaoDisplay}</div>
@@ -372,40 +376,110 @@ function renderizarConteudoPrincipal(urlArquivo, htmlCompleto, itemAlvo) {
         conteudoDiv.appendChild(node.cloneNode(true));
     });
 
+    // O setTimeout é para dar uma chance ao navegador de renderizar o conteúdo
+    // antes de tentarmos manipular ou rolar.
     setTimeout(() => {
+        console.log("RENDERIZAR: Dentro do setTimeout. Termo atual para marcar:", termoAtualBusca); // DEBUG
+        
+        // 1. Marcar o termo
         marcarTermoNoConteudo(conteudoDiv, termoAtualBusca);
-        conteudoDiv.scrollTop = 0; // Reset scroll ANTES de rolar para o parágrafo específico
+        
+        // 2. Resetar o scroll do container ANTES de rolar para o parágrafo específico
+        conteudoDiv.scrollTop = 0; 
+        
+        // 3. Rolar para o parágrafo específico
         rolarParaParagrafoNoConteudo(conteudoDiv, itemAlvo.textoOriginalCompleto);
+        
+        // 4. Ativar notas (se houver)
         ativarNotasHover(conteudoDiv);
-    }, 150);
+    }, 150); // 150ms pode ser ajustado se necessário
 }
 
 function marcarTermoNoConteudo(container, termo) {
-    if (!termo || termo.length < MIN_SEARCH_TERM_LENGTH) return;
+    if (!termo || termo.length < MIN_SEARCH_TERM_LENGTH) {
+        console.log("MarcarTermo: Termo muito curto ou ausente:", termo);
+        return;
+    }
+    console.log("MarcarTermo: Iniciando marcação para o termo:", termo, "no container:", container);
 
+    // A regex para encontrar o termo, case-insensitive e global.
+    // O termo já deve estar em minúsculas (termoAtualBusca).
     const regex = new RegExp(`(${termo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-    // Considerar também os títulos dentro do conteúdo principal
-    const elementosParaMarcar = container.querySelectorAll('.paragrafo, .ponto-com-notas, p:not(.marcacao), h1, h2, h3, h4, h5, h6, li');
+
+    // Elementos onde o texto pode estar (parágrafos, títulos, etc.)
+    const elementosParaMarcar = container.querySelectorAll(
+        '.paragrafo, .ponto-com-notas, p:not(.marcacao):not(.titulo), h1, h2, h3, h4, h5, h6, li'
+    );
+
+    let matchEncontradoAlgumLugar = false; // Para debug
 
     elementosParaMarcar.forEach(el => {
         if (el.closest('.nota-associada')) return; // Não marcar dentro de notas
 
-        Array.from(el.childNodes).forEach(child => {
-            if (child.nodeType === Node.TEXT_NODE) {
-                const text = child.textContent;
-                if (text.toLowerCase().includes(termo.toLowerCase())) {
-                    const novoHtml = text.replace(regex, '<mark>$1</mark>');
-                    const spanWrapper = document.createElement('span');
-                    spanWrapper.innerHTML = novoHtml;
-                    const fragment = document.createDocumentFragment();
-                    while (spanWrapper.firstChild) {
-                        fragment.appendChild(spanWrapper.firstChild);
+        // Usar um TreeWalker é mais robusto para encontrar todos os nós de texto,
+        // mesmo que estejam aninhados dentro de outros elementos como <span>, <b>, <i> etc.
+        const walker = document.createTreeWalker(
+            el,
+            NodeFilter.SHOW_TEXT, // Apenas nós de texto
+            {
+                acceptNode: function(node) {
+                    // Ignorar texto dentro de <script> ou <style> se eles pudessem estar nos elementos selecionados
+                    if (node.parentNode.nodeName === 'SCRIPT' || node.parentNode.nodeName === 'STYLE') {
+                        return NodeFilter.FILTER_REJECT;
                     }
-                    el.replaceChild(fragment, child);
+                    // Verificar se o texto do nó contém o termo (case-insensitive)
+                    if (node.nodeValue.toLowerCase().includes(termo)) {
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                    return NodeFilter.FILTER_SKIP;
+                }
+            },
+            false // deprecated
+        );
+
+        let node;
+        const nodesToReplace = []; // Coletar nós para substituir depois, para não modificar a árvore durante a travessia
+
+        while (node = walker.nextNode()) {
+            nodesToReplace.push(node);
+        }
+
+        nodesToReplace.forEach(textNode => {
+            const text = textNode.nodeValue;
+            if (text.toLowerCase().includes(termo)) { // termo já é toLowerCase
+                matchEncontradoAlgumLugar = true;
+                const fragment = document.createDocumentFragment();
+                let ultimoIndice = 0;
+                text.replace(regex, (match, p1, offset) => {
+                    // Adiciona texto antes da correspondência
+                    if (offset > ultimoIndice) {
+                        fragment.appendChild(document.createTextNode(text.substring(ultimoIndice, offset)));
+                    }
+                    // Adiciona o <mark>
+                    const markElement = document.createElement('mark');
+                    markElement.textContent = match; // p1 é o grupo capturado, match é o texto completo encontrado
+                    fragment.appendChild(markElement);
+                    ultimoIndice = offset + match.length;
+                });
+                // Adiciona texto restante após a última correspondência
+                if (ultimoIndice < text.length) {
+                    fragment.appendChild(document.createTextNode(text.substring(ultimoIndice)));
+                }
+
+                // Substitui o nó de texto original pelo fragmento
+                if (textNode.parentNode) {
+                    textNode.parentNode.replaceChild(fragment, textNode);
+                } else {
+                    console.warn("MarcarTermo: Nó de texto não tem pai, não pode ser substituído:", textNode);
                 }
             }
         });
     });
+    if (matchEncontradoAlgumLugar) {
+        console.log("MarcarTermo: Pelo menos uma marcação foi feita para o termo:", termo);
+    } else {
+        console.log("MarcarTermo: Nenhuma marcação foi feita. O termo:", termo, "não foi encontrado nos nós de texto dos elementos selecionados.");
+    }
 }
 
 function rolarParaParagrafoNoConteudo(container, textoDoItemDoCache) { // Renomeei para clareza
@@ -558,4 +632,10 @@ function ativarNotasHover(container) {
             }
         });
     });
+}
+
+// --- Utility Functions (NOVA SEÇÃO, OU ADICIONE ONDE PREFERIR) ---
+function removerAcentos(texto) {
+    if (!texto) return "";
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
