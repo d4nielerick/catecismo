@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.imagem-capa img{
+    max-width: 200px;
+}
