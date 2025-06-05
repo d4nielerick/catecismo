@@ -84,10 +84,10 @@ body {
 
 #campo-busca {
     flex: 1;
-    padding: 15px 16px;
+    padding: 15px 26px;
     font-size: 18px;
     border: 4px solid #fdd54d;
-    border-radius: 12px;
+    border-radius: 500px;
     font-weight: 500 !important;
     letter-spacing: -0.2px;
 }
@@ -102,11 +102,11 @@ body {
 
 #botao-buscar {
     color: #fff8b5;
-    padding: 12px 20px;
+    padding: 12px 30px;
     font-size: 16px;
     background-color: #b88607;
     border: none;
-    border-radius: 9px;
+    border-radius: 90px;
     cursor: pointer;
     position: absolute;
     right: 7px;
@@ -135,7 +135,7 @@ body {
 
 .resultado-item {
     background: #fff;
-    border-radius: 8px; /* Slightly smaller radius */
+    border-radius: 0 8px 8px 0; /* Slightly smaller radius */
     margin-bottom: 15px; /* Adjusted margin */
     padding: 15px; /* Adjusted padding */
     cursor: pointer;
@@ -185,12 +185,14 @@ mark {
     padding: 5px;
     margin: 5px 0;
     border-left: 3px solid #ccc;
+    font-size: 13px;
 }
 
 .ref-nota {
     cursor: pointer;
-    color: #0070f3;
+    color: rgb(82, 82, 27);
     text-decoration: underline dotted;
+    font-size: 14px;
 }
 
 /* For sr-only elements, ensure they are truly hidden visually but accessible */

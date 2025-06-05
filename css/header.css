@@ -5,12 +5,18 @@ header{
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
+    width: 500px;
 }
 
 .imagem-capa img{
     max-width: 200px;
+}
+
+.resultado-localizacao{
+    font-size: 14px;
+    padding-bottom: 6px;
 }
