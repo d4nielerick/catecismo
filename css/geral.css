@@ -1,5 +1,9 @@
+/* Seu CSS base (com a mudança para #FFCB00) */
 body {
-    background-color: #FFCB00;
+    background-color: #FFCB00; /* Cor de fundo principal da página */
+    margin: 0; /* Remove margens padrão do body */
+    padding: 20px; /* Adiciona um respiro geral */
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
 }
 
 .oculto {
@@ -7,33 +11,6 @@ body {
 }
 
 /* Layout principal */
-#resultados {
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: #ccc transparent; /* Firefox */
-}
-
-/* WebKit (Chrome, Edge, Safari) */
-#resultados::-webkit-scrollbar {
-    width: 3px; /* deixa fininha */
-}
-
-#resultados::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 12px;
-}
-
-#resultados::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.1); /* tom leve */
-    border-radius: 12px;
-    border: 2px solid transparent; /* cria espaçamento */
-    background-clip: content-box;
-}
-
-#resultados::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.2); /* mais visível no hover */
-}
-
-
 #busca-container {
     display: flex;
     flex-direction: column;
@@ -41,137 +18,299 @@ body {
     gap: 20px;
     font-family: "Inter", sans-serif;
     color: #333;
-    /* Se você quer que #painel-busca ocupe o resto da altura da viewport
-       após a barra de busca, #busca-container pode precisar de altura */
-    /* min-height: 100vh; Ou height: 100vh e overflow: hidden se necessário */
+    width: 100%;
+    /* min-height: calc(100vh - 40px); */ /* Ocupar altura da viewport menos o padding do body */
 }
 
-/* This panel will contain results (left) and content (right) side-by-side */
-#painel-busca {
+/* Barra de Busca (Topo) */
+.barra-de-busca-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    /* margin-bottom: 20px;  Já temos gap no #busca-container */
+    position: relative;
+}
+
+/* .barra-de-busca {  (Este seletor pode não ser mais necessário se .barra-de-busca-wrapper o substitui)
     display: flex;
     width: 100%;
-    max-width: 1200px; /* ou 90vw ou algo responsivo */
-    gap: 20px;
-    /* Para que os filhos (#resultados, #conteudo) possam ter altura baseada em % ou vh
-       ou para que flex-grow funcione corretamente em altura, #painel-busca precisa ter uma altura.
-       Uma forma é fazê-lo preencher o espaço restante no #busca-container. */
-    flex-grow: 1; /* Se #busca-container for flex-direction: column e tiver altura */
-    /* OU você pode dar uma altura explícita ao painel-busca: */
-    /* height: calc(100vh - ALTURA_DA_BARRA_DE_BUSCA - MARGENS); */
-    /* Por exemplo: */
-    height: 85vh; /* Ajuste conforme necessário */
-}
-
-/* Styles for the search bar itself, assuming it's within #busca-container but sibling to #painel-busca */
-/* If your actual HTML for search bar is different, these might need adjustment or be placed elsewhere */
-.barra-de-busca-wrapper { /* Create a wrapper for your input and button if they are not already grouped */
-    display: flex;
-    width: 100%;
-    max-width: 800px; /* Or whatever fits your design */
-    margin-bottom: 20px; /* Space between search bar and results/content panels */
-    position: relative; /* For the button positioning */
-}
-
-
-.barra-de-busca { /* This was your original class for the input+button container */
-    display: flex;
-    width: 100%; /* Take full width of its wrapper */
     position: relative;
     font-size: 18px;
     font-weight: 600 !important;
-}
-
+} */
 
 #campo-busca {
     flex: 1;
     padding: 15px 26px;
-    font-size: 18px;
-    border: 4px solid #fdd54d;
+    font-size: 17px; /* Ajustado um pouco */
+    border: 3px solid #fdd54d; /* Borda um pouco mais sutil */
     border-radius: 500px;
     font-weight: 500 !important;
     letter-spacing: -0.2px;
+    outline: none; /* Remove outline padrão no foco */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra suave */
+    margin: 0;
+    width: 60vw;
+    max-width: 700px;
 }
-
-.header-resultados {
-    font-size: 12px;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    margin-bottom: 10px; /* Added some space */
+#campo-busca:focus {
+    border-color: #b88607; /* Cor de destaque no foco */
 }
 
 
 #botao-buscar {
     color: #fff8b5;
-    padding: 12px 30px;
-    font-size: 16px;
+    padding: 10px 25px; /* Ajustado */
+    font-size: 15px; /* Ajustado */
     background-color: #b88607;
     border: none;
     border-radius: 90px;
     cursor: pointer;
     position: absolute;
-    right: 7px;
-    height: 46px;
+    right: 8px; /* Ajustado */
+    height: calc(100% - 16px); /* Altura relativa ao input - padding */
     top: 50%;
     transform: translate(0, -50%);
     font-weight: 600 !important;
+    transition: background-color 0.2s;
+}
+#botao-buscar:hover {
+    background-color: #a07406;
 }
 
-#resultados {
-    width: 38%;
-    /* position: sticky; top: 20px; align-self: flex-start; */
-    /* Com o #painel-busca tendo altura, position:sticky não é mais necessário aqui
-       se #resultados e #conteudo devem preencher a altura do #painel-busca */
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Painel Principal (Resultados + Conteúdo) */
+#painel-busca {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 25px; /* Aumentado um pouco */
+    height: 80vh; /* Altura principal do painel, ajuste conforme necessário */
+    /* flex-grow: 1;  (Se #busca-container tiver altura definida e for flex column) */
+}
 
-    /* Para que #resultados tenha sua própria rolagem dentro da altura do #painel-busca */
-    overflow-y: auto;
-    height: 100%; /* Ocupa toda a altura do #painel-busca */
+/* Painel de Resultados (Esquerda) */
+#resultados {
+    width: 40%; /* Ajuste conforme preferência */
+    /* background-color: transparent; Não precisa, pois o painel-resultados-container terá cor */
+    /* padding: 0; O padding será no container interno */
+    border-radius: 12px; /* Mantido se quiser borda arredondada no scrollbar container */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); Movido para painel-resultados-container */
+    overflow-y: auto; /* Rolagem SÓ para a lista de cards, não para o cabeçalho */
+    height: 100%;
+    display: flex; /* Para que o header e a lista de cards fiquem um abaixo do outro */
+    flex-direction: column; /* Header em cima, lista abaixo */
+}
+
+/* Scrollbar para #resultados (mantido do seu original) */
+#resultados {
     scrollbar-width: thin;
     scrollbar-color: #ccc transparent;
 }
+#resultados::-webkit-scrollbar {
+    width: 5px; /* Um pouco mais visível */
+}
+#resultados::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 5px 0; /* Afastar a barra das bordas do container de resultados */
+}
+#resultados::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    /* border: 2px solid transparent; */ /* Removido para preencher mais */
+    /* background-clip: content-box; */
+}
+#resultados::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
 
-.resultado-item {
-    background: #fff;
-    border-radius: 0 8px 8px 0; /* Slightly smaller radius */
-    margin-bottom: 15px; /* Adjusted margin */
-    padding: 15px; /* Adjusted padding */
+
+/* NOVO: Container para o Cabeçalho dos Resultados + Lista de Cards */
+.painel-resultados-container {
+    background-color: #f8f9fa; /* Cinza claro para o fundo do header */
+    padding: 18px 20px; /* Padding interno */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07); /* Sombra suave */
+    /* Este container NÃO rola, a lista de cards abaixo dele é que rola */
+    margin-bottom: 12px;
+}
+
+.resultados-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px; /* Espaço antes da lista de cards */
+    padding-bottom: 12px; /* Espaço abaixo do texto */
+    border-bottom: 1px solid #dee2e6; /* Linha divisória */
+}
+
+.resultados-header-info h3 {
+    margin: 0 0 2px 0; /* Pequena margem abaixo */
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.resultados-header-info .termo-buscado-display {
+    font-size: 0.9em;
+    color: #6c757d;
+    display: block;
+}
+
+.botao-nova-busca {
+    padding: 7px 14px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: background-color ease 0.2s, border-left-color ease 0.2s;
-    border-left: 4px solid transparent; /* For selected state */
+    font-size: 0.85em; /* Reduzido um pouco */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #495057;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.botao-nova-busca:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+.botao-nova-busca svg {
+    width: 0.9em; /* Ajustado */
+    height: 0.9em;
+    fill: currentColor;
 }
 
-.resultado-item:hover {
-    background-color: #f9f9f9;
+/* NOVO: Container para a LISTA de cards de resultado que terá o scroll */
+/* Este seletor .lista-resultados-container precisa ser o elemento que você cria no JS */
+/* Se você não criou um elemento específico para a lista, aplique overflow-y: auto; em #resultados
+   e o .painel-resultados-container não deve ter altura fixa, mas o #resultados sim.
+   A estrutura atual do JS parece colocar o .painel-resultados-container e depois .listaResultadosContainer
+   dentro de #resultados. Então, #resultados precisa de display:flex; flex-direction:column.
+   E .listaResultadosContainer precisa de overflow-y: auto; flex-grow:1; */
+
+/* Se #resultados é o container principal que tem o painel-resultados-container E a lista:
+   #resultados {
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+       background-color: #fff; /* Fundo para #resultados */
+/*     padding: 0; /* Removido padding de #resultados */
+/*     border-radius: 12px;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   }
+   .painel-resultados-container { /* Header *SEM* scroll */
+/*     background-color: #f8f9fa;
+       padding: 18px 20px;
+       border-top-left-radius: 12px;
+       border-top-right-radius: 12px;
+       /* box-shadow: none; */
+/* }
+   .lista-resultados-scrollavel { /* Este seria o novo nome da div que contém os cards */
+/*     overflow-y: auto;
+       flex-grow: 1; /* Ocupa o espaço restante */
+/*     padding: 0 20px 20px 20px; /* Padding para os cards, exceto no topo */
+/* }
+*/
+
+/* O JS atual coloca o headerContainer e listaResultadosContainer DENTRO de #resultados.
+   Para que a rolagem seja só na lista, #resultados precisa de display:flex, flex-direction:column.
+   E o listaResultadosContainer precisa de overflow:auto e flex-grow:1
+*/
+#resultados { /* Já definido acima com display:flex e flex-direction:column */ }
+
+.lista-resultados-scrollavel { /* Adicione esta classe à div que você chamou de listaResultadosContainer no JS */
+    overflow-y: auto;
+    flex-grow: 1; /* Para ocupar o espaço restante em #resultados após o header */
+    padding: 0 20px 20px 20px; /* Padding em volta dos cards, mas não no topo (já tem no header) */
+    /* Aplicar scrollbar aqui se quiser que seja diferente do #resultados */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+.lista-resultados-scrollavel::-webkit-scrollbar { width: 5px; }
+.lista-resultados-scrollavel::-webkit-scrollbar-track { background: transparent; margin: 5px 0;}
+.lista-resultados-scrollavel::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.15); border-radius: 10px; }
+.lista-resultados-scrollavel::-webkit-scrollbar-thumb:hover { background-color: rgba(0,0,0,0.25); }
+
+
+/* Estilo para cada item de resultado (CARD) */
+.resultado-item-card { /* Classe que você já usa no JS */
+    background-color: #fff;
+    border: 1px solid #e0e0e0; /* Borda mais sutil */
+    border-radius: 8px;
+    padding: 16px; /* Aumentado padding interno */
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.resultado-item-card:last-child {
+    margin-bottom: 0; /* Remove margem do último card */
 }
 
-.resultado-item.selecionado {
-    background-color: #f0f0f0; /* Highlight for selected item */
-    border-left-color: #b88607; /* Accent color for selected item */
-}
-.resultado-item.selecionado .resultado-localizacao {
-    font-weight: 600; /* Make location bold for selected item */
+.resultado-item-card:hover {
+    border-color: #c0c0c0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada no hover */
 }
 
+.resultado-item-card.selecionado {
+    border-color: #b88607; /* Cor da sua marca para selecionado */
+    /* background-color: #fffaf0;  Um off-white muito sutil */
+    box-shadow: 0 0 0 2px rgba(184, 134, 7, 0.3); /* Glow da cor da marca */
+}
 
+.resultado-meta-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Aumentado espaço */
+}
+
+.resultado-tag-paragrafo {
+    background-color: #fff3cd;
+    color: #664d03;
+    padding: 4px 10px; /* Aumentado padding */
+    border-radius: 5px; /* Mais arredondado */
+    font-size: 0.8em; /* Levemente menor */
+    font-weight: 600; /* Mais destaque */
+}
+
+.resultado-item-localizacao {
+    font-size: 0.8em;
+    color: #555; /* Escurecido um pouco */
+    text-align: right;
+    white-space: nowrap; /* Evita quebra de linha */
+    overflow: hidden; /* Esconde o excesso */
+    text-overflow: ellipsis; /* Adiciona "..." */
+    padding-left: 10px; /* Espaço para não colar na tag */
+    max-width: 60%; /* Evita que empurre demais a tag */
+}
+
+.resultado-item-conteudo {
+    font-size: 0.9em; /* Ajustado */
+    line-height: 1.65; /* Aumentado */
+    color: #333;
+}
+
+.resultado-item-conteudo mark {
+    background-color: #ffe564; /* Mantido do seu original */
+    padding: 0.1em 0.15em;
+    border-radius: 3px;
+}
+
+/* Painel de Conteúdo (Direita) */
 #conteudo {
     width: 60%;
     background-color: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-    /*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
-    /*  !!!!!!!!!!!!!! MUDANÇA CRÍTICA !!!!!!!!!!!!!!!!!!  */
-    height: 100%; /* Ocupa toda a altura do #painel-busca */
-    overflow-y: auto; /* Permite rolagem interna em #conteudo */
-    /*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    height: 100%;
+    overflow-y: auto;
 }
+/* Scrollbar para #conteudo (opcional, pode usar o padrão do navegador ou estilizar como #resultados) */
 
-mark {
+
+/* Outros estilos (mark, nota-associada, etc. mantidos) */
+mark { /* Estilo global para mark, se não for sobrescrito */
     background: #ffe564;
     padding: 0 2px;
     border-radius: 4px;
@@ -181,22 +320,22 @@ mark {
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
-    background: #ffffcc;
-    padding: 5px;
-    margin: 5px 0;
+    background: #ffffdd; /* Levemente diferente */
+    padding: 8px 10px;
+    margin: 8px 0;
     border-left: 3px solid #ccc;
-    font-size: 13px;
+    font-size: 0.85em; /* Ajustado */
+    border-radius: 0 4px 4px 0;
 }
 
 .ref-nota {
     cursor: pointer;
-    color: rgb(82, 82, 27);
+    color: #725d1e; /* Ajustado para combinar com a paleta */
     text-decoration: underline dotted;
-    font-size: 14px;
+    font-size: 0.9em; /* Ajustado */
 }
 
-/* For sr-only elements, ensure they are truly hidden visually but accessible */
-.sr-only {
+.sr-only { /* Mantido */
     position: absolute;
     width: 1px;
     height: 1px;
@@ -206,4 +345,12 @@ mark {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+}
+
+/* Para o aviso de nenhum resultado ou poucos caracteres */
+.aviso-resultado {
+    padding: 15px;
+    text-align: center;
+    color: #555;
+    font-size: 0.95em;
 }
