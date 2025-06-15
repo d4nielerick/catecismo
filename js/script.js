@@ -6,6 +6,7 @@ const conteudoDiv = document.getElementById('conteudo');
 const buscaContainer = document.getElementById('busca-container');
 const painelBusca = document.getElementById('painel-busca');
 const statusMessagesDiv = document.getElementById('status-messages');
+const sugestoesBuscaContainer = document.getElementById('sugestoes-busca-container');
 
 // --- State & Cache ---
 let cache = [];
@@ -25,6 +26,23 @@ const ARQUIVOS_CATECISMO = [
 ];
 const MIN_SEARCH_TERM_LENGTH = 2;
 
+// --- Configuration ---
+// ... (ARQUIVOS_CATECISMO e MIN_SEARCH_TERM_LENGTH como antes) ...
+
+const TEMAS_SUGERIDOS = [
+    { nome: "Os Sacramentos", termoBusca: "sacramentos" },
+    { nome: "Mandamentos", termoBusca: "dez mandamentos" },
+    { nome: "Oração do Pai Nosso", termoBusca: "pai nosso" },
+    { nome: "Bem-aventuranças", termoBusca: "bem-aventuranças" },
+    { nome: "Santíssima Trindade", termoBusca: "trindade" },
+    { nome: "Maria, Mãe de Deus", termoBusca: "maria mãe de deus" },
+    { nome: "A Igreja", termoBusca: "igreja Una Santa" },
+    { nome: "Vida Eterna", termoBusca: "vida eterna" },
+    { nome: "Pecado Original", termoBusca: "pecado original" },
+    { nome: "Eucaristia", termoBusca: "eucaristia presença real" }
+    // Adicione mais temas conforme necessário
+];
+
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
     if (botaoBuscar && campoBusca) {
@@ -35,10 +53,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 executarBusca();
             }
         });
+
+        // Mostrar sugestões quando o campo de busca está vazio e recebe foco
+        campoBusca.addEventListener('focus', () => {
+            if (campoBusca.value.trim() === '' && resultadosDiv.classList.contains('oculto')) { // Só mostra se não houver resultados ativos
+                renderizarSugestoes();
+            }
+        });
+
+        // Opcional: esconder sugestões quando o usuário começa a digitar
+        // campoBusca.addEventListener('input', () => {
+        //     const container = document.getElementById('sugestoes-busca-container');
+        //     if (container && campoBusca.value.trim() !== '') {
+        //         container.classList.add('oculto');
+        //     }
+        // });
+
+        // Opcional: esconder sugestões ao clicar fora
+        // document.addEventListener('click', function(event) {
+        //     const container = document.getElementById('sugestoes-busca-container');
+        //     const isClickInsideCampo = campoBusca.contains(event.target);
+        //     const isClickInsideSugestoes = container ? container.contains(event.target) : false;
+
+        //     if (!isClickInsideCampo && !isClickInsideSugestoes && container) {
+        //         container.classList.add('oculto');
+        //     }
+        // });
+
     } else {
         console.error("Elementos de busca (campo ou botão) não encontrados.");
     }
     carregarTodosOsArquivos();
+    renderizarSugestoes(); // <<<<<< MOSTRAR SUGESTÕES INICIALMENTE
 });
 
 // --- Utility Functions ---
@@ -47,6 +93,60 @@ function removerAcentos(texto) {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+
+// --- Functions for Suggestions ---
+
+function renderizarSugestoes() {
+    let containerParaSugestoes = document.getElementById('sugestoes-busca-container');
+
+    // Se o container não existe no HTML (Opção B), cria e insere
+    if (!containerParaSugestoes) {
+        containerParaSugestoes = document.createElement('div');
+        containerParaSugestoes.id = 'sugestoes-busca-container';
+        containerParaSugestoes.className = 'sugestoes-busca-container'; // Adicionaremos estilo para esta classe
+        
+        const barraDeBuscaWrapperEl = document.querySelector('.barra-de-busca-wrapper');
+        if (barraDeBuscaWrapperEl && barraDeBuscaWrapperEl.parentNode) {
+            // Insere o container de sugestões DEPOIS do wrapper da barra de busca
+            barraDeBuscaWrapperEl.parentNode.insertBefore(containerParaSugestoes, barraDeBuscaWrapperEl.nextSibling);
+        } else {
+            console.error("Wrapper da barra de busca não encontrado para inserir sugestões.");
+            return; // Não pode renderizar sem um lugar para colocar
+        }
+    }
+
+    containerParaSugestoes.innerHTML = ''; // Limpa sugestões anteriores
+
+    if (TEMAS_SUGERIDOS.length > 0) {
+        const tituloSugestoes = document.createElement('p');
+        tituloSugestoes.className = 'sugestoes-titulo';
+        tituloSugestoes.textContent = 'Experimente pesquisar por:';
+        containerParaSugestoes.appendChild(tituloSugestoes);
+
+        const listaSugestoesUl = document.createElement('ul');
+        listaSugestoesUl.className = 'sugestoes-lista';
+
+        TEMAS_SUGERIDOS.forEach(tema => {
+            const listItem = document.createElement('li');
+            const buttonItem = document.createElement('button');
+            buttonItem.className = 'sugestao-item-botao';
+            buttonItem.textContent = tema.nome;
+            buttonItem.type = 'button'; // Importante para não submeter forms
+            buttonItem.addEventListener('click', () => {
+                campoBusca.value = tema.termoBusca;
+                executarBusca(); // Executa a busca com o termo da sugestão
+                // Opcional: esconder sugestões após clique
+                // containerParaSugestoes.classList.add('oculto'); 
+            });
+            listItem.appendChild(buttonItem);
+            listaSugestoesUl.appendChild(listItem);
+        });
+        containerParaSugestoes.appendChild(listaSugestoesUl);
+        containerParaSugestoes.classList.remove('oculto'); // Mostra o container
+    } else {
+        containerParaSugestoes.classList.add('oculto'); // Esconde se não houver sugestões
+    }
+}
 
 // --- Core Functions ---
 // Função carregarTodosOsArquivos (COMPLETA E REFINADA para extrair o "ponto" do parágrafo)
@@ -262,8 +362,8 @@ async function carregarTodosOsArquivos() {
 // Função executarBusca (COMPLETA E AJUSTADA)
 function executarBusca() {
     const termoInputUsuario = campoBusca.value.trim();
-    termoAtualBusca = termoInputUsuario.toLowerCase(); // Com acentos, se digitado. Para highlight no conteúdo principal.
-    const termoNormalizadoParaFiltro = removerAcentos(termoAtualBusca); // Sem acentos. Para filtrar cache e marcar previews.
+    termoAtualBusca = termoInputUsuario.toLowerCase(); 
+    const termoNormalizadoParaFiltro = removerAcentos(termoAtualBusca);
 
     // console.log("ExecutarBusca - Termo Original:", termoInputUsuario, "| Termo Atual (Highlight):", termoAtualBusca, "| Termo Normalizado (Filtro):", termoNormalizadoParaFiltro);
 
@@ -283,14 +383,54 @@ function executarBusca() {
         headerContainer.appendChild(headerInfoDiv);
         resultadosDiv.appendChild(headerContainer);
         resultadosDiv.classList.remove('oculto');
-        document.getElementById('btnNovaBuscaHeaderErro').addEventListener('click', () => { campoBusca.value = ''; resultadosDiv.innerHTML = ''; resultadosDiv.classList.add('oculto'); conteudoDiv.classList.add('oculto'); document.querySelectorAll('.introducao').forEach(intro => intro.classList.remove('oculto')); campoBusca.focus(); });
+        const btnErro = document.getElementById('btnNovaBuscaHeaderErro');
+        if(btnErro) { // Adiciona verificação se o botão existe
+            btnErro.addEventListener('click', () => { 
+                campoBusca.value = ''; 
+                resultadosDiv.innerHTML = ''; 
+                resultadosDiv.classList.add('oculto'); 
+                conteudoDiv.classList.add('oculto'); 
+                document.querySelectorAll('.introducao').forEach(intro => intro.classList.remove('oculto')); 
+                campoBusca.focus();
+                // Rolar de volta para o topo da página ao limpar
+                window.scrollTo({ top: 0, behavior: 'smooth' }); 
+                renderizarSugestoes(); // <<<<<< MOSTRAR SUGESTÕES AO LIMPAR
+
+            });
+        }
         if (statusMessagesDiv) statusMessagesDiv.textContent = "";
+        
+        // --- ADIÇÃO DE ROLAGEM APÓS BUSCA INVÁLIDA ---
+        // Rolar para que o início dos resultados (ou a mensagem de erro) seja visível
+        // Se a barra de busca estiver dentro de um wrapper fixo no topo, talvez não precise disso aqui.
+        // Se a barra de busca rola com a página, rolar para o #busca-container pode ser uma opção.
+        if (buscaContainer) { // buscaContainer é o elemento que contém a barra de busca E o painel de busca
+            // setTimeout para garantir que o DOM atualizou antes de calcular a posição
+            setTimeout(() => {
+                 // buscaContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                 // Ou, se você tem um wrapper específico para a barra de busca:
+                 const barraDeBuscaWrapperEl = document.querySelector('.barra-de-busca-wrapper');
+                 if (barraDeBuscaWrapperEl) {
+                    //  barraDeBuscaWrapperEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    //  Ou rolar a janela para o topo da barra de busca
+                    const yOffset = -10; // Pequeno offset para não colar no topo
+                    const y = barraDeBuscaWrapperEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                 } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' }); // Fallback: rolar para o topo
+                 }
+            }, 50); // Pequeno delay
+        }
         return;
     }
     resultadosDiv.classList.remove('oculto');
 
+     const containerSugestoes = document.getElementById('sugestoes-busca-container');
+    if (containerSugestoes) {
+        containerSugestoes.classList.add('oculto'); // Esconde sugestões ao executar uma busca
+    }
+
     const resultadosEncontrados = cache.filter(item => {
-        // item.textoNormalizadoParaBusca foi criado a partir do texto APÓS o prefixo numérico
         return item.textoNormalizadoParaBusca && item.textoNormalizadoParaBusca.includes(termoNormalizadoParaFiltro);
     });
 
@@ -311,7 +451,20 @@ function executarBusca() {
     novaBuscaButton.id = 'btnNovaBuscaHeader';
     novaBuscaButton.title = 'Limpar busca e resultados';
     novaBuscaButton.innerHTML = `<svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>Nova busca`;
-    novaBuscaButton.addEventListener('click', () => { campoBusca.value = ''; resultadosDiv.innerHTML = ''; resultadosDiv.classList.add('oculto'); conteudoDiv.classList.add('oculto'); document.querySelectorAll('.introducao').forEach(intro => intro.classList.remove('oculto')); campoBusca.focus(); });
+    const btnHeader = novaBuscaButton; // Renomeando para evitar conflito de escopo se declarado depois
+    if(btnHeader) {
+        btnHeader.addEventListener('click', () => { 
+            campoBusca.value = ''; 
+            resultadosDiv.innerHTML = ''; 
+            resultadosDiv.classList.add('oculto'); 
+            conteudoDiv.classList.add('oculto'); 
+            document.querySelectorAll('.introducao').forEach(intro => intro.classList.remove('oculto')); 
+            campoBusca.focus();
+            window.scrollTo({ top: 0, behavior: 'smooth' }); 
+            renderizarSugestoes(); // <<<<<< MOSTRAR SUGESTÕES AO LIMPAR
+
+        });
+    }
     headerInfoDiv.appendChild(countText);
     headerInfoDiv.appendChild(novaBuscaButton);
     headerContainer.appendChild(headerInfoDiv);
@@ -327,7 +480,7 @@ function executarBusca() {
         conteudoDiv.classList.add('oculto');
     } else {
         conteudoDiv.classList.remove('oculto');
-
+        // ... (o seu loop forEach para renderizar os resultadosEncontrados permanece aqui, idêntico à sua última versão)
         resultadosEncontrados.forEach((item, index) => {
             const divResultadoCard = document.createElement('div');
             divResultadoCard.className = 'resultado-item-card';
@@ -339,11 +492,11 @@ function executarBusca() {
 
             const tagParagrafoSpan = document.createElement('span');
             tagParagrafoSpan.className = 'resultado-tag-paragrafo';
-            if (item.numero && item.numero.trim() !== "") { // item.numero são só os dígitos
+            if (item.numero && item.numero.trim() !== "") { 
                 tagParagrafoSpan.textContent = `§ ${item.numero}`;
             } else {
                 const matchIdNum = item.id.match(/\d+$/);
-                tagParagrafoSpan.textContent = matchIdNum ? `§ ${matchIdNum[0]}` : "Ref."; // Fallback
+                tagParagrafoSpan.textContent = matchIdNum ? `§ ${matchIdNum[0]}` : "Ref.";
             }
 
             const localizacaoSpan = document.createElement('span');
@@ -362,53 +515,37 @@ function executarBusca() {
             metaTopoDiv.appendChild(tagParagrafoSpan);
             metaTopoDiv.appendChild(localizacaoSpan);
 
-            // Conteúdo do Resultado (Trecho)
-            let textoBaseDoItemCompletoOriginal = item.textoOriginalCompleto; // Contém o prefixo numérico
-            let textoParaPreviewOriginal = textoBaseDoItemCompletoOriginal; // Inicialmente, o texto completo
+            let textoBaseDoItemCompletoOriginal = item.textoOriginalCompleto; 
+            let textoParaPreviewOriginal = textoBaseDoItemCompletoOriginal; 
 
-            // REMOVER O PREFIXO ANTES DE PROCESSAR PARA O PREVIEW
-            // Usamos item.prefixoVisual que deve ser como "1210." ou "1210" (sem espaços ao redor)
             if (item.prefixoVisual && item.prefixoVisual.trim() !== "") {
                 const prefixoEscapado = item.prefixoVisual.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                // Regex para encontrar o prefixoVisual no início, seguido por um ou mais espaços.
                 const regexParaRemover = new RegExp(`^${prefixoEscapado}\\s+`);
                 const matchPrefixoReal = textoBaseDoItemCompletoOriginal.match(regexParaRemover);
-
                 if (matchPrefixoReal) {
-                    // matchPrefixoReal[0] é o prefixo + os espaços que o seguem. Ex: "1210. "
                     textoParaPreviewOriginal = textoBaseDoItemCompletoOriginal.substring(matchPrefixoReal[0].length);
                 } else {
-                    // Fallback: se não encontrou com espaço, tenta remover só o prefixoVisual se estiver no começo
-                    // Isso pode acontecer se não houver espaço após o ponto/número.
                     if (textoBaseDoItemCompletoOriginal.toLowerCase().startsWith(item.prefixoVisual.toLowerCase())) {
                         textoParaPreviewOriginal = textoBaseDoItemCompletoOriginal.substring(item.prefixoVisual.length).trimStart();
                     }
-                    // Se ainda assim não removeu, textoParaPreviewOriginal continua sendo textoBaseDoItemCompletoOriginal,
-                    // o que significa que o preview pode incluir o número se o item.prefixoVisual não foi bem detectado
-                    // ou não correspondeu à forma como o texto começa.
                 }
             }
-            // Agora, textoParaPreviewOriginal DEVE ser o texto APÓS o número/ponto.
-
+            
             const textoParaPreviewNormalizado = removerAcentos(textoParaPreviewOriginal.toLowerCase());
-
             const trechoMaxChars = 180;
             let startIndexNoPreviewNormalizado = textoParaPreviewNormalizado.indexOf(termoNormalizadoParaFiltro);
+
             if (startIndexNoPreviewNormalizado === -1) {
-                 // Se o termo não estiver no corpo do texto do preview (após o número),
-                 // verificamos se ele está no NÚMERO em si.
-                 const numNormalizado = removerAcentos(item.numero.toLowerCase()); // item.numero são só os dígitos
+                 const numNormalizado = removerAcentos(item.numero.toLowerCase());
                  if (numNormalizado.includes(termoNormalizadoParaFiltro)) {
-                     // O termo está no número. Não há o que centralizar no texto principal.
-                     // O preview do texto começará do início.
-                     startIndexNoPreviewNormalizado = 0; // Ou um valor que indique para não cortar
+                     startIndexNoPreviewNormalizado = 0; 
                  } else {
-                    startIndexNoPreviewNormalizado = 0; // Termo não encontrado nem no número nem no texto, mostra início.
+                    startIndexNoPreviewNormalizado = 0; 
                  }
             }
 
             let corteInicioOriginal = 0;
-            if (startIndexNoPreviewNormalizado > 0 && textoParaPreviewOriginal.length > 0) { // Apenas se houver texto e o índice for positivo
+            if (startIndexNoPreviewNormalizado > 0 && textoParaPreviewOriginal.length > 0) {
                  let charCountNorm = 0;
                  for (let i = 0; i < textoParaPreviewOriginal.length; i++) {
                     if (charCountNorm >= startIndexNoPreviewNormalizado) {
@@ -416,7 +553,7 @@ function executarBusca() {
                         break;
                     }
                     charCountNorm += (removerAcentos(textoParaPreviewOriginal[i].toLowerCase()).length || 1);
-                    if (i === textoParaPreviewOriginal.length - 1) { // Se chegou ao fim do loop
+                    if (i === textoParaPreviewOriginal.length - 1) { 
                         corteInicioOriginal = (charCountNorm >= startIndexNoPreviewNormalizado) ? i : textoParaPreviewOriginal.length;
                     }
                  }
@@ -430,12 +567,9 @@ function executarBusca() {
 
             let prefixoEllipsis = (previewStartPosOriginal > 0) ? "..." : "";
             let sufixoEllipsis = ((previewStartPosOriginal + trechoMaxChars) < textoParaPreviewOriginal.length) ? "..." : "";
-            
             let previewTextParaMarcar = prefixoEllipsis + previewConteudoCortado + sufixoEllipsis;
-
             let trechoHtmlMarcado = "";
             const previewTextNormalizadoParaMatch = removerAcentos(previewTextParaMarcar.toLowerCase());
-            // Usar termoNormalizadoParaFiltro para encontrar no previewTextNormalizadoParaMatch
             const regexTermoNormalizadoParaHighlight = new RegExp(termoNormalizadoParaFiltro.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
             let ultimoIndiceOriginalNoPreview = 0;
             let matchNormalizadoNoPreview;
@@ -449,7 +583,6 @@ function executarBusca() {
                     let inicioMatchOrig = -1, fimMatchOrig = -1;
                     let currentNormPos = 0, iOrigPreview = 0;
                     let encontrouInicio = false;
-
                     for (iOrigPreview = 0; iOrigPreview < previewTextParaMarcar.length; iOrigPreview++) {
                         const charOrig = previewTextParaMarcar[iOrigPreview];
                         const charNorm = removerAcentos(charOrig.toLowerCase());
@@ -460,7 +593,6 @@ function executarBusca() {
                     }
                     if (encontrouInicio && fimMatchOrig === -1 && currentNormPos >= fimMatchNorm) { fimMatchOrig = previewTextParaMarcar.length; }
                     if (encontrouInicio && fimMatchOrig === -1 && iOrigPreview === previewTextParaMarcar.length && currentNormPos === fimMatchNorm){ fimMatchOrig = previewTextParaMarcar.length; }
-
                     if (inicioMatchOrig !== -1 && fimMatchOrig !== -1 && fimMatchOrig >= inicioMatchOrig) {
                         trechoHtmlMarcado += previewTextParaMarcar.substring(ultimoIndiceOriginalNoPreview, inicioMatchOrig).replace(/</g, "<").replace(/>/g, ">");
                         trechoHtmlMarcado += '<mark>' + previewTextParaMarcar.substring(inicioMatchOrig, fimMatchOrig).replace(/</g, "<").replace(/>/g, ">") + '</mark>';
@@ -475,27 +607,56 @@ function executarBusca() {
                     trechoHtmlMarcado += previewTextParaMarcar.substring(ultimoIndiceOriginalNoPreview).replace(/</g, "<").replace(/>/g, ">");
                 }
             }
-
             const conteudoDivResultado = document.createElement('div');
             conteudoDivResultado.className = 'resultado-item-conteudo';
             conteudoDivResultado.innerHTML = trechoHtmlMarcado;
-
             divResultadoCard.appendChild(metaTopoDiv);
             divResultadoCard.appendChild(conteudoDivResultado);
             divResultadoCard.addEventListener('click', () => selecionarItemResultado(item, divResultadoCard));
             divResultadoCard.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selecionarItemResultado(item, divResultadoCard); }});
             listaResultadosContainer.appendChild(divResultadoCard);
-
             if (index === 0 && resultadosEncontrados.length > 0) {
                 selecionarItemResultado(item, divResultadoCard);
             }
-        });
+        }); // Fim do forEach
     }
 
     resultadosDiv.appendChild(headerContainer);
     resultadosDiv.appendChild(listaResultadosContainer);
-    resultadosDiv.scrollTop = 0;
+    resultadosDiv.scrollTop = 0; // Garante que o INÍCIO do painel de resultados (o header dele) esteja visível.
     if (statusMessagesDiv) statusMessagesDiv.textContent = "";
+
+    // --- NOVA SEÇÃO DE ROLAGEM DA PÁGINA ---
+    // Após os resultados serem carregados e renderizados
+    // Vamos rolar a PÁGINA para que o topo do #painel-busca (ou #resultadosDiv) fique visível
+    // abaixo da barra de busca.
+    if (resultadosEncontrados.length > 0 || termoInputUsuario.length >= MIN_SEARCH_TERM_LENGTH) { // Rolar se houver resultados ou se a busca foi válida (mesmo sem resultados)
+        setTimeout(() => {
+            const elementoAlvoParaScroll = painelBusca; // O container que tem resultados e conteúdo
+            // Ou poderia ser resultadosDiv se quiser alinhar o topo dos resultados
+
+            if (elementoAlvoParaScroll) {
+                const yOffset = -20; // Ajuste este valor para dar um respiro acima do elemento alvo
+                                   // Se sua barra de busca for position:sticky ou fixed, este offset pode não ser necessário
+                                   // ou precisará ser a altura da barra de busca.
+
+                const elementoRect = elementoAlvoParaScroll.getBoundingClientRect();
+                const y = elementoRect.top + window.pageYOffset + yOffset;
+                
+                // Se a barra de busca tem uma altura fixa e está no fluxo normal do documento:
+                // const barraDeBuscaWrapperEl = document.querySelector('.barra-de-busca-wrapper');
+                // let alturaBarraDeBusca = 0;
+                // if (barraDeBuscaWrapperEl) {
+                //     alturaBarraDeBusca = barraDeBuscaWrapperEl.offsetHeight;
+                // }
+                // const y = elementoRect.top + window.pageYOffset - alturaBarraDeBusca - 20; // 20px de margem
+
+
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        }, 100); // Um pequeno delay para garantir que o DOM está pronto e as alturas calculadas
+    }
+    // --- FIM DA NOVA SEÇÃO DE ROLAGEM DA PÁGINA ---
 }
 
 

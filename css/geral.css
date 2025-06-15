@@ -1,9 +1,19 @@
 /* Seu CSS base (com a mudança para #FFCB00) */
+html {
+    height: 100%; /* Garante que o html pode ter 100% de altura */
+}
+
 body {
-    background-color: #FFCB00; /* Cor de fundo principal da página */
-    margin: 0; /* Remove margens padrão do body */
-    padding: 20px; /* Adiciona um respiro geral */
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+    background: linear-gradient(135deg, #fff2c2, #ffd900) no-repeat;
+    margin: 0;
+    padding: 0 20px; /* Seu padding original */
+    box-sizing: border-box;
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    /* Ou, se o conteúdo sempre for maior: */
+    /* height: 100%; */ /* Para body preencher o html */
+
+    /* Para o gradiente cobrir mesmo se o conteúdo for menor e rolar: */
+    background-attachment: fixed; /* Opcional: mantém o gradiente fixo durante a rolagem */
 }
 
 .oculto {
@@ -221,8 +231,7 @@ body {
 .lista-resultados-scrollavel { /* Adicione esta classe à div que você chamou de listaResultadosContainer no JS */
     overflow-y: auto;
     flex-grow: 1; /* Para ocupar o espaço restante em #resultados após o header */
-    padding: 0 20px 20px 20px; /* Padding em volta dos cards, mas não no topo (já tem no header) */
-    /* Aplicar scrollbar aqui se quiser que seja diferente do #resultados */
+    
     scrollbar-width: thin;
     scrollbar-color: #ccc transparent;
 }
@@ -353,4 +362,52 @@ mark { /* Estilo global para mark, se não for sobrescrito */
     text-align: center;
     color: #555;
     font-size: 0.95em;
+}
+
+
+/* Estilos para Sugestões de Busca */
+.sugestoes-busca-container {
+    width: 100%;
+    max-width: 700px; /* Mesma largura da barra de busca, ou um pouco menos */
+    margin: 0 auto 20px auto; /* Centraliza e adiciona margem abaixo */
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente transparente */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+    font-size: 0.9em;
+}
+
+.sugestoes-titulo {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #4b3800; /* Cor escura para contraste com fundo amarelo */
+    font-size: 0.95em;
+}
+
+.sugestoes-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+    gap: 8px; /* Espaço entre os botões */
+}
+
+.sugestao-item-botao {
+    background-color: rgba(255, 255, 255, 0.7); /* Botões um pouco mais opacos */
+    color: #594400;
+    border: 1px solid rgba(184, 134, 7, 0.3); /* Borda sutil na cor da marca */
+    padding: 6px 12px;
+    border-radius: 20px; /* Botões arredondados */
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    font-weight: 500;
+}
+
+.sugestao-item-botao:hover {
+    background-color: #fff8b5; /* Cor de hover */
+    color: #b88607;
+    border-color: #b88607;
 }
