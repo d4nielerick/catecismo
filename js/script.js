@@ -671,51 +671,48 @@ async function carregarTodosOsArquivos() {
     // ... (mensagens de finalização como antes) ...
 }
 
-// Função executarBusca (COMPLETA E AJUSTADA com limparBuscaEResultados)
+// Função executarBusca (COMPLETA E AJUSTADA para busca por número exato)
 function executarBusca() {
     const termoInputUsuario = campoBusca.value.trim();
     termoAtualBusca = termoInputUsuario.toLowerCase(); 
     const termoNormalizadoParaFiltro = removerAcentos(termoAtualBusca);
 
-    // Esconder sugestões assim que uma busca é iniciada (se a busca for válida)
-    if (termoInputUsuario.length >= MIN_SEARCH_TERM_LENGTH) {
+    // Esconder sugestões
+    if (termoInputUsuario.length > 0) { // Esconde se houver qualquer input, mesmo que curto
         const containerSugestoes = document.getElementById('sugestoes-busca-container');
-        if (containerSugestoes) {
-            containerSugestoes.classList.add('oculto');
-        }
+        if (containerSugestoes) containerSugestoes.classList.add('oculto');
     }
 
-    // Limpeza inicial ANTES de verificar MIN_SEARCH_TERM_LENGTH,
-    // pois mesmo uma busca inválida deve limpar resultados anteriores.
-    if (resultadosDiv) {
-        resultadosDiv.innerHTML = ''; 
-    }
-    if (conteudoDiv) {
-        conteudoDiv.innerHTML = '';
-        conteudoDiv.classList.add('oculto');
-    }
+    // Limpeza inicial dos painéis de resultados e conteúdo
+    if (resultadosDiv) resultadosDiv.innerHTML = ''; 
+    if (conteudoDiv) { conteudoDiv.innerHTML = ''; conteudoDiv.classList.add('oculto'); }
     itemSelecionadoAtual = null;
     elementoSelecionadoAtual = null;
     document.querySelectorAll('.introducao').forEach(intro => intro.classList.add('oculto'));
 
-
-    if (termoInputUsuario.length < MIN_SEARCH_TERM_LENGTH) {
+    // Se o campo de busca estiver vazio, não faz nada além de limpar e mostrar sugestões (se houver)
+    if (termoInputUsuario.length === 0) {
+        if (typeof renderizarSugestoes === 'function') renderizarSugestoes();
+        // Garante que o painel de resultados (que pode ter tido um header de erro) seja ocultado
+        if (resultadosDiv) resultadosDiv.classList.add('oculto'); 
+        return;
+    }
+    
+    // Validação do comprimento do termo (exceto se for puramente numérico)
+    const ehApenasNumero = /^\d+$/.test(termoInputUsuario);
+    if (!ehApenasNumero && termoInputUsuario.length < MIN_SEARCH_TERM_LENGTH) {
         const headerContainer = document.createElement('div');
         headerContainer.className = 'painel-resultados-container'; 
         const headerInfoDiv = document.createElement('div');
         headerInfoDiv.className = 'resultados-header-info';
-        headerInfoDiv.innerHTML = `<div><h3>Busca Inválida</h3><span class="termo-buscado-display">Por favor, digite pelo menos ${MIN_SEARCH_TERM_LENGTH} caracteres.</span></div><button class="botao-nova-busca" id="btnNovaBuscaHeaderErro" title="Limpar busca e resultados"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>Nova busca</button>`;
+        headerInfoDiv.innerHTML = `<div><h3>Busca Inválida</h3><span class="termo-buscado-display">Por favor, digite pelo menos ${MIN_SEARCH_TERM_LENGTH} caracteres (ou apenas números).</span></div><button class="botao-nova-busca" id="btnNovaBuscaHeaderErro" title="Limpar busca e resultados"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>Nova busca</button>`;
         headerContainer.appendChild(headerInfoDiv);
-        resultadosDiv.appendChild(headerContainer); // Adiciona o header de erro
-        resultadosDiv.classList.remove('oculto'); // Mostra o painel de resultados com o erro
-        
+        resultadosDiv.appendChild(headerContainer);
+        resultadosDiv.classList.remove('oculto');
         const btnErro = document.getElementById('btnNovaBuscaHeaderErro');
-        if(btnErro) {
-            btnErro.addEventListener('click', limparBuscaEResultados); // <<< USA A NOVA FUNÇÃO
-        }
+        if(btnErro) btnErro.addEventListener('click', limparBuscaEResultados);
         if (statusMessagesDiv) statusMessagesDiv.textContent = "";
         
-        // Rolagem após busca inválida
         if (buscaContainer) { 
             setTimeout(() => {
                  const barraDeBuscaWrapperEl = document.querySelector('.barra-de-busca-wrapper');
@@ -730,39 +727,59 @@ function executarBusca() {
         }
         return;
     }
-    // Se a busca for válida (passou do MIN_SEARCH_TERM_LENGTH), aí sim mostra resultadosDiv
     resultadosDiv.classList.remove('oculto'); 
 
-    // A linha abaixo foi movida para o início de executarBusca (antes da checagem de MIN_SEARCH_TERM_LENGTH)
-    // const containerSugestoes = document.getElementById('sugestoes-busca-container');
-    // if (containerSugestoes) {
-    //     containerSugestoes.classList.add('oculto');
-    // }
+    let resultadosEncontrados = [];
+    let buscaPorNumeroExatoBemSucedida = false;
 
-    const resultadosEncontrados = cache.filter(item => {
-        return item.textoNormalizadoParaBusca && item.textoNormalizadoParaBusca.includes(termoNormalizadoParaFiltro);
-    });
+    if (ehApenasNumero) {
+        // console.log("Tentando busca por número exato:", termoInputUsuario);
+        resultadosEncontrados = cache.filter(item => item.numero === termoInputUsuario);
+        if (resultadosEncontrados.length > 0) {
+            buscaPorNumeroExatoBemSucedida = true;
+            // console.log(`Encontrado(s) ${resultadosEncontrados.length} item(ns) para o número ${termoInputUsuario}`);
+        } else {
+            // console.log(`Nenhum item para o número exato ${termoInputUsuario}. Tentando busca textual...`);
+        }
+    }
 
+    if (!buscaPorNumeroExatoBemSucedida && termoInputUsuario.length >= MIN_SEARCH_TERM_LENGTH) {
+        // console.log("Procedendo com busca textual para:", termoNormalizadoParaFiltro);
+        resultadosEncontrados = cache.filter(item => {
+            // item.textoNormalizadoParaBusca (do cache) já está sem prefixo e normalizado
+            return item.textoNormalizadoParaBusca && item.textoNormalizadoParaBusca.includes(termoNormalizadoParaFiltro);
+        });
+    }
+
+    // --- RENDERIZAÇÃO DOS RESULTADOS ---
     const headerContainer = document.createElement('div');
-    headerContainer.className = 'painel-resultados-container';
+    headerContainer.className = 'painel-resultados-container cabecalho-modo-busca'; // Adicionada classe para diferenciar do modo leitura
     const headerInfoDiv = document.createElement('div');
     headerInfoDiv.className = 'resultados-header-info';
     const countText = document.createElement('div');
     const countTextH3 = document.createElement('h3');
-    countTextH3.textContent = `${resultadosEncontrados.length} resultado${resultadosEncontrados.length !== 1 ? 's' : ''} encontrados`;
+    
+    let textoContagemResultados = `${resultadosEncontrados.length} resultado${resultadosEncontrados.length !== 1 ? 's' : ''} encontrados`;
+    if (buscaPorNumeroExatoBemSucedida) {
+        textoContagemResultados = `Parágrafo ${termoInputUsuario} encontrado`;
+        if (resultadosEncontrados.length > 1) { // Caso raro, mas possível se houver duplicatas de número
+             textoContagemResultados = `${resultadosEncontrados.length} correspondências para o § ${termoInputUsuario}`;
+        }
+    }
+    countTextH3.textContent = textoContagemResultados;
+
     const termoDisplay = document.createElement('span');
     termoDisplay.className = 'termo-buscado-display';
     termoDisplay.textContent = `para "${termoInputUsuario}"`;
     countText.appendChild(countTextH3);
     countText.appendChild(termoDisplay);
+    
     const novaBuscaButton = document.createElement('button');
     novaBuscaButton.className = 'botao-nova-busca';
     novaBuscaButton.id = 'btnNovaBuscaHeader';
     novaBuscaButton.title = 'Limpar busca e resultados';
     novaBuscaButton.innerHTML = `<svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>Nova busca`;
-    
-    // Removido o if(btnHeader) porque novaBuscaButton é criado aqui, então sempre existirá.
-    novaBuscaButton.addEventListener('click', limparBuscaEResultados); // <<< USA A NOVA FUNÇÃO
+    novaBuscaButton.addEventListener('click', limparBuscaEResultados);
     
     headerInfoDiv.appendChild(countText);
     headerInfoDiv.appendChild(novaBuscaButton);
@@ -774,12 +791,16 @@ function executarBusca() {
     if (resultadosEncontrados.length === 0) {
         const aviso = document.createElement('div');
         aviso.className = 'aviso-resultado';
-        aviso.textContent = `Nenhum resultado encontrado para "${termoInputUsuario}".`;
+        if (ehApenasNumero && !buscaPorNumeroExatoBemSucedida) { // Tentou número e falhou
+            aviso.textContent = `Nenhum parágrafo encontrado com o número "${termoInputUsuario}".`;
+        } else {
+            aviso.textContent = `Nenhum resultado encontrado para "${termoInputUsuario}".`;
+        }
         listaResultadosContainer.appendChild(aviso);
-        conteudoDiv.classList.add('oculto'); // Garante que o conteúdo não apareça se não houver resultados
+        if (conteudoDiv) conteudoDiv.classList.add('oculto');
     } else {
-        conteudoDiv.classList.remove('oculto');
-        // ... (o seu loop forEach para renderizar os resultadosEncontrados permanece aqui, idêntico à sua última versão)
+        if (conteudoDiv) conteudoDiv.classList.remove('oculto');
+        
         resultadosEncontrados.forEach((item, index) => {
             const divResultadoCard = document.createElement('div');
             divResultadoCard.className = 'resultado-item-card';
@@ -832,15 +853,14 @@ function executarBusca() {
             
             const textoParaPreviewNormalizado = removerAcentos(textoParaPreviewOriginal.toLowerCase());
             const trechoMaxChars = 180;
+            // Se a busca foi por número exato, termoNormalizadoParaFiltro será esse número.
+            // A lógica de indexOf ainda tentará centralizar se o número aparecer no texto.
+            // Se não aparecer (o que é provável se textoParaPreviewOriginal já foi limpo do número),
+            // o preview começará do início, o que é aceitável.
             let startIndexNoPreviewNormalizado = textoParaPreviewNormalizado.indexOf(termoNormalizadoParaFiltro);
 
             if (startIndexNoPreviewNormalizado === -1) {
-                 const numNormalizado = removerAcentos(item.numero.toLowerCase());
-                 if (item.numero && numNormalizado.includes(termoNormalizadoParaFiltro)) { // Adicionada checagem se item.numero existe
-                     startIndexNoPreviewNormalizado = 0; 
-                 } else {
-                    startIndexNoPreviewNormalizado = 0; 
-                 }
+                startIndexNoPreviewNormalizado = 0; // Se o termo não está no preview, começa do início
             }
 
             let corteInicioOriginal = 0;
@@ -869,14 +889,19 @@ function executarBusca() {
             let previewTextParaMarcar = prefixoEllipsis + previewConteudoCortado + sufixoEllipsis;
             let trechoHtmlMarcado = "";
             const previewTextNormalizadoParaMatch = removerAcentos(previewTextParaMarcar.toLowerCase());
-            const regexTermoNormalizadoParaHighlight = new RegExp(termoNormalizadoParaFiltro.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+            // termoNormalizadoParaFiltro é usado para o highlight. Se foi busca por número, ele é o número.
+            const regexTermoNormalizadoParaHighlight = new RegExp(termoNormalizadoParaFiltro.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'); // 'gi' para pegar todas as ocorrências e ser case-insensitive
             let ultimoIndiceOriginalNoPreview = 0;
             let matchNormalizadoNoPreview;
 
-            // Correção: o escape para HTML estava incorreto antes. Deve ser < e >
             if (termoNormalizadoParaFiltro === "" || !previewTextNormalizadoParaMatch.includes(termoNormalizadoParaFiltro)) {
                 trechoHtmlMarcado = previewTextParaMarcar.replace(/</g, "<").replace(/>/g, ">");
             } else {
+                // A lógica de marcação aqui usa termoNormalizadoParaFiltro para encontrar
+                // no previewTextNormalizadoParaMatch, e depois destaca o correspondente no previewTextParaMarcar.
+                // Se a busca foi por número exato, e o número não está no texto do preview,
+                // nada será marcado, o que é correto.
+                // Se o número (como texto) ESTIVER no preview, ele será marcado.
                 while ((matchNormalizadoNoPreview = regexTermoNormalizadoParaHighlight.exec(previewTextNormalizadoParaMatch)) !== null) {
                     const inicioMatchNorm = matchNormalizadoNoPreview.index;
                     const fimMatchNorm = inicioMatchNorm + matchNormalizadoNoPreview[0].length;
@@ -921,20 +946,26 @@ function executarBusca() {
         }); // Fim do forEach
     }
 
-    resultadosDiv.appendChild(headerContainer);
-    resultadosDiv.appendChild(listaResultadosContainer);
-    resultadosDiv.scrollTop = 0; 
+    if (resultadosDiv) {
+        resultadosDiv.appendChild(headerContainer);
+        resultadosDiv.appendChild(listaResultadosContainer);
+        resultadosDiv.scrollTop = 0; 
+    }
     if (statusMessagesDiv) statusMessagesDiv.textContent = "";
 
-    // --- SEÇÃO DE ROLAGEM DA PÁGINA ---
-    if (resultadosEncontrados.length > 0 || termoInputUsuario.length >= MIN_SEARCH_TERM_LENGTH) {
+    // Rolagem da página
+    if (resultadosEncontrados.length > 0 || ehApenasNumero || termoInputUsuario.length >= MIN_SEARCH_TERM_LENGTH) {
         setTimeout(() => {
             const elementoAlvoParaScroll = painelBusca; 
             if (elementoAlvoParaScroll) {
                 const yOffset = -20; 
                 const elementoRect = elementoAlvoParaScroll.getBoundingClientRect();
-                const y = elementoRect.top + window.pageYOffset + yOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
+                let yScroll = elementoRect.top + window.pageYOffset + yOffset;
+
+                // Ajuste para não rolar acima do topo da página
+                if (yScroll < 0) yScroll = 0;
+                
+                window.scrollTo({ top: yScroll, behavior: 'smooth' });
             }
         }, 100); 
     }
