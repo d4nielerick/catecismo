@@ -84,7 +84,25 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Elementos de busca (campo ou botão) não encontrados.");
     }
     carregarTodosOsArquivos();
+
     renderizarSugestoes(); // <<<<<< MOSTRAR SUGESTÕES INICIALMENTE
+
+     // --- ADICIONAR ESTE LISTENER PARA A TECLA ESC ---
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape" || event.keyCode === 27) {
+            // Verificar se há resultados visíveis ou se o campo de busca tem texto
+            // para decidir se o ESC deve limpar a busca.
+            // Isso evita que o ESC limpe tudo se o usuário só abriu a página e apertou ESC.
+            const resultadosEstaoVisiveis = resultadosDiv && !resultadosDiv.classList.contains('oculto') && resultadosDiv.innerHTML.trim() !== '';
+            const campoTemTexto = campoBusca && campoBusca.value.trim() !== '';
+
+            if (resultadosEstaoVisiveis || campoTemTexto) {
+                limparBuscaEResultados();
+            }
+        }
+    });
+    // --- FIM DO LISTENER PARA A TECLA ESC ---
+    
 });
 
 // --- Utility Functions ---
@@ -359,20 +377,33 @@ async function carregarTodosOsArquivos() {
     // }
 }
 
-// Função executarBusca (COMPLETA E AJUSTADA)
+// Função executarBusca (COMPLETA E AJUSTADA com limparBuscaEResultados)
 function executarBusca() {
     const termoInputUsuario = campoBusca.value.trim();
     termoAtualBusca = termoInputUsuario.toLowerCase(); 
     const termoNormalizadoParaFiltro = removerAcentos(termoAtualBusca);
 
-    // console.log("ExecutarBusca - Termo Original:", termoInputUsuario, "| Termo Atual (Highlight):", termoAtualBusca, "| Termo Normalizado (Filtro):", termoNormalizadoParaFiltro);
+    // Esconder sugestões assim que uma busca é iniciada (se a busca for válida)
+    if (termoInputUsuario.length >= MIN_SEARCH_TERM_LENGTH) {
+        const containerSugestoes = document.getElementById('sugestoes-busca-container');
+        if (containerSugestoes) {
+            containerSugestoes.classList.add('oculto');
+        }
+    }
 
-    resultadosDiv.innerHTML = ''; 
-    conteudoDiv.innerHTML = '';
-    conteudoDiv.classList.add('oculto');
+    // Limpeza inicial ANTES de verificar MIN_SEARCH_TERM_LENGTH,
+    // pois mesmo uma busca inválida deve limpar resultados anteriores.
+    if (resultadosDiv) {
+        resultadosDiv.innerHTML = ''; 
+    }
+    if (conteudoDiv) {
+        conteudoDiv.innerHTML = '';
+        conteudoDiv.classList.add('oculto');
+    }
     itemSelecionadoAtual = null;
     elementoSelecionadoAtual = null;
     document.querySelectorAll('.introducao').forEach(intro => intro.classList.add('oculto'));
+
 
     if (termoInputUsuario.length < MIN_SEARCH_TERM_LENGTH) {
         const headerContainer = document.createElement('div');
@@ -381,54 +412,38 @@ function executarBusca() {
         headerInfoDiv.className = 'resultados-header-info';
         headerInfoDiv.innerHTML = `<div><h3>Busca Inválida</h3><span class="termo-buscado-display">Por favor, digite pelo menos ${MIN_SEARCH_TERM_LENGTH} caracteres.</span></div><button class="botao-nova-busca" id="btnNovaBuscaHeaderErro" title="Limpar busca e resultados"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>Nova busca</button>`;
         headerContainer.appendChild(headerInfoDiv);
-        resultadosDiv.appendChild(headerContainer);
-        resultadosDiv.classList.remove('oculto');
+        resultadosDiv.appendChild(headerContainer); // Adiciona o header de erro
+        resultadosDiv.classList.remove('oculto'); // Mostra o painel de resultados com o erro
+        
         const btnErro = document.getElementById('btnNovaBuscaHeaderErro');
-        if(btnErro) { // Adiciona verificação se o botão existe
-            btnErro.addEventListener('click', () => { 
-                campoBusca.value = ''; 
-                resultadosDiv.innerHTML = ''; 
-                resultadosDiv.classList.add('oculto'); 
-                conteudoDiv.classList.add('oculto'); 
-                document.querySelectorAll('.introducao').forEach(intro => intro.classList.remove('oculto')); 
-                campoBusca.focus();
-                // Rolar de volta para o topo da página ao limpar
-                window.scrollTo({ top: 0, behavior: 'smooth' }); 
-                renderizarSugestoes(); // <<<<<< MOSTRAR SUGESTÕES AO LIMPAR
-
-            });
+        if(btnErro) {
+            btnErro.addEventListener('click', limparBuscaEResultados); // <<< USA A NOVA FUNÇÃO
         }
         if (statusMessagesDiv) statusMessagesDiv.textContent = "";
         
-        // --- ADIÇÃO DE ROLAGEM APÓS BUSCA INVÁLIDA ---
-        // Rolar para que o início dos resultados (ou a mensagem de erro) seja visível
-        // Se a barra de busca estiver dentro de um wrapper fixo no topo, talvez não precise disso aqui.
-        // Se a barra de busca rola com a página, rolar para o #busca-container pode ser uma opção.
-        if (buscaContainer) { // buscaContainer é o elemento que contém a barra de busca E o painel de busca
-            // setTimeout para garantir que o DOM atualizou antes de calcular a posição
+        // Rolagem após busca inválida
+        if (buscaContainer) { 
             setTimeout(() => {
-                 // buscaContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                 // Ou, se você tem um wrapper específico para a barra de busca:
                  const barraDeBuscaWrapperEl = document.querySelector('.barra-de-busca-wrapper');
                  if (barraDeBuscaWrapperEl) {
-                    //  barraDeBuscaWrapperEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    //  Ou rolar a janela para o topo da barra de busca
-                    const yOffset = -10; // Pequeno offset para não colar no topo
+                    const yOffset = -10; 
                     const y = barraDeBuscaWrapperEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({top: y, behavior: 'smooth'});
                  } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' }); // Fallback: rolar para o topo
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                  }
-            }, 50); // Pequeno delay
+            }, 50);
         }
         return;
     }
-    resultadosDiv.classList.remove('oculto');
+    // Se a busca for válida (passou do MIN_SEARCH_TERM_LENGTH), aí sim mostra resultadosDiv
+    resultadosDiv.classList.remove('oculto'); 
 
-     const containerSugestoes = document.getElementById('sugestoes-busca-container');
-    if (containerSugestoes) {
-        containerSugestoes.classList.add('oculto'); // Esconde sugestões ao executar uma busca
-    }
+    // A linha abaixo foi movida para o início de executarBusca (antes da checagem de MIN_SEARCH_TERM_LENGTH)
+    // const containerSugestoes = document.getElementById('sugestoes-busca-container');
+    // if (containerSugestoes) {
+    //     containerSugestoes.classList.add('oculto');
+    // }
 
     const resultadosEncontrados = cache.filter(item => {
         return item.textoNormalizadoParaBusca && item.textoNormalizadoParaBusca.includes(termoNormalizadoParaFiltro);
@@ -451,20 +466,10 @@ function executarBusca() {
     novaBuscaButton.id = 'btnNovaBuscaHeader';
     novaBuscaButton.title = 'Limpar busca e resultados';
     novaBuscaButton.innerHTML = `<svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>Nova busca`;
-    const btnHeader = novaBuscaButton; // Renomeando para evitar conflito de escopo se declarado depois
-    if(btnHeader) {
-        btnHeader.addEventListener('click', () => { 
-            campoBusca.value = ''; 
-            resultadosDiv.innerHTML = ''; 
-            resultadosDiv.classList.add('oculto'); 
-            conteudoDiv.classList.add('oculto'); 
-            document.querySelectorAll('.introducao').forEach(intro => intro.classList.remove('oculto')); 
-            campoBusca.focus();
-            window.scrollTo({ top: 0, behavior: 'smooth' }); 
-            renderizarSugestoes(); // <<<<<< MOSTRAR SUGESTÕES AO LIMPAR
-
-        });
-    }
+    
+    // Removido o if(btnHeader) porque novaBuscaButton é criado aqui, então sempre existirá.
+    novaBuscaButton.addEventListener('click', limparBuscaEResultados); // <<< USA A NOVA FUNÇÃO
+    
     headerInfoDiv.appendChild(countText);
     headerInfoDiv.appendChild(novaBuscaButton);
     headerContainer.appendChild(headerInfoDiv);
@@ -477,7 +482,7 @@ function executarBusca() {
         aviso.className = 'aviso-resultado';
         aviso.textContent = `Nenhum resultado encontrado para "${termoInputUsuario}".`;
         listaResultadosContainer.appendChild(aviso);
-        conteudoDiv.classList.add('oculto');
+        conteudoDiv.classList.add('oculto'); // Garante que o conteúdo não apareça se não houver resultados
     } else {
         conteudoDiv.classList.remove('oculto');
         // ... (o seu loop forEach para renderizar os resultadosEncontrados permanece aqui, idêntico à sua última versão)
@@ -537,7 +542,7 @@ function executarBusca() {
 
             if (startIndexNoPreviewNormalizado === -1) {
                  const numNormalizado = removerAcentos(item.numero.toLowerCase());
-                 if (numNormalizado.includes(termoNormalizadoParaFiltro)) {
+                 if (item.numero && numNormalizado.includes(termoNormalizadoParaFiltro)) { // Adicionada checagem se item.numero existe
                      startIndexNoPreviewNormalizado = 0; 
                  } else {
                     startIndexNoPreviewNormalizado = 0; 
@@ -574,6 +579,7 @@ function executarBusca() {
             let ultimoIndiceOriginalNoPreview = 0;
             let matchNormalizadoNoPreview;
 
+            // Correção: o escape para HTML estava incorreto antes. Deve ser < e >
             if (termoNormalizadoParaFiltro === "" || !previewTextNormalizadoParaMatch.includes(termoNormalizadoParaFiltro)) {
                 trechoHtmlMarcado = previewTextParaMarcar.replace(/</g, "<").replace(/>/g, ">");
             } else {
@@ -623,40 +629,21 @@ function executarBusca() {
 
     resultadosDiv.appendChild(headerContainer);
     resultadosDiv.appendChild(listaResultadosContainer);
-    resultadosDiv.scrollTop = 0; // Garante que o INÍCIO do painel de resultados (o header dele) esteja visível.
+    resultadosDiv.scrollTop = 0; 
     if (statusMessagesDiv) statusMessagesDiv.textContent = "";
 
-    // --- NOVA SEÇÃO DE ROLAGEM DA PÁGINA ---
-    // Após os resultados serem carregados e renderizados
-    // Vamos rolar a PÁGINA para que o topo do #painel-busca (ou #resultadosDiv) fique visível
-    // abaixo da barra de busca.
-    if (resultadosEncontrados.length > 0 || termoInputUsuario.length >= MIN_SEARCH_TERM_LENGTH) { // Rolar se houver resultados ou se a busca foi válida (mesmo sem resultados)
+    // --- SEÇÃO DE ROLAGEM DA PÁGINA ---
+    if (resultadosEncontrados.length > 0 || termoInputUsuario.length >= MIN_SEARCH_TERM_LENGTH) {
         setTimeout(() => {
-            const elementoAlvoParaScroll = painelBusca; // O container que tem resultados e conteúdo
-            // Ou poderia ser resultadosDiv se quiser alinhar o topo dos resultados
-
+            const elementoAlvoParaScroll = painelBusca; 
             if (elementoAlvoParaScroll) {
-                const yOffset = -20; // Ajuste este valor para dar um respiro acima do elemento alvo
-                                   // Se sua barra de busca for position:sticky ou fixed, este offset pode não ser necessário
-                                   // ou precisará ser a altura da barra de busca.
-
+                const yOffset = -20; 
                 const elementoRect = elementoAlvoParaScroll.getBoundingClientRect();
                 const y = elementoRect.top + window.pageYOffset + yOffset;
-                
-                // Se a barra de busca tem uma altura fixa e está no fluxo normal do documento:
-                // const barraDeBuscaWrapperEl = document.querySelector('.barra-de-busca-wrapper');
-                // let alturaBarraDeBusca = 0;
-                // if (barraDeBuscaWrapperEl) {
-                //     alturaBarraDeBusca = barraDeBuscaWrapperEl.offsetHeight;
-                // }
-                // const y = elementoRect.top + window.pageYOffset - alturaBarraDeBusca - 20; // 20px de margem
-
-
                 window.scrollTo({ top: y, behavior: 'smooth' });
             }
-        }, 100); // Um pequeno delay para garantir que o DOM está pronto e as alturas calculadas
+        }, 100); 
     }
-    // --- FIM DA NOVA SEÇÃO DE ROLAGEM DA PÁGINA ---
 }
 
 
@@ -943,4 +930,66 @@ function ativarNotasHover(container) {
             }
         });
     });
+}
+
+// --- Utility Functions --- (ou onde você preferir colocar)
+function removerAcentos(texto) { // Sua função existente
+    if (!texto) return "";
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function limparBuscaEResultados() {
+    console.log("limparBuscaEResultados chamada"); // Para depuração
+
+    if (campoBusca) { // Verifica se campoBusca existe
+        campoBusca.value = '';
+    }
+
+    if (resultadosDiv) { // Verifica se resultadosDiv existe
+        resultadosDiv.innerHTML = ''; 
+        resultadosDiv.classList.add('oculto');
+    }
+
+    if (conteudoDiv) { // Verifica se conteudoDiv existe
+        conteudoDiv.innerHTML = '';
+        conteudoDiv.classList.add('oculto');
+    }
+    
+    // Resetar estados globais relacionados à seleção
+    itemSelecionadoAtual = null;
+    elementoSelecionadoAtual = null;
+    termoAtualBusca = ''; // Limpa o termo de busca atual
+    
+    // Mostrar introdução de volta (se houver elementos com essa classe)
+    const introducoes = document.querySelectorAll('.introducao');
+    if (introducoes.length > 0) {
+        introducoes.forEach(intro => intro.classList.remove('oculto'));
+    }
+
+    if (campoBusca) {
+        campoBusca.focus();
+    }
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Renderizar sugestões se a função existir e o campo estiver vazio
+    // Adicione a verificação de 'typeof renderizarSugestoes'
+    if (typeof renderizarSugestoes === 'function' && campoBusca && campoBusca.value.trim() === '') {
+        renderizarSugestoes(); 
+    } else if (typeof renderizarSugestoes === 'function') {
+        // Se a função existe, mas o campo não está vazio (improvável aqui),
+        // você pode decidir esconder as sugestões ou não fazer nada.
+        // Por agora, chamamos se o campo estiver vazio.
+        // Se o campo não estiver vazio, talvez você não queira mostrar sugestões imediatamente.
+        // A lógica de mostrar/esconder sugestões pode ser mais complexa
+        // e gerenciada pela própria função renderizarSugestoes ou pelos seus gatilhos.
+        const containerSugestoes = document.getElementById('sugestoes-busca-container');
+        if (containerSugestoes) { // Se o container existe, e não vamos renderizar novas, esconde
+            if (campoBusca && campoBusca.value.trim() !== '') {
+                 containerSugestoes.classList.add('oculto');
+            } else {
+                 renderizarSugestoes(); // Campo está vazio, então renderiza/mostra
+            }
+        }
+    }
 }

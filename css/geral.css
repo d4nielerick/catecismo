@@ -411,3 +411,7 @@ mark { /* Estilo global para mark, se não for sobrescrito */
     color: #b88607;
     border-color: #b88607;
 }
+
+#status-messages{
+    display: none;
+}
