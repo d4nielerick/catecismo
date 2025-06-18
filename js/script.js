@@ -1,22 +1,32 @@
-// --- DOM Elements ---
+// --- DOM Elements (certifique-se que todos estão definidos no topo do seu script.js) ---
 const campoBusca = document.getElementById('campo-busca');
 const botaoBuscar = document.getElementById('botao-buscar');
-const resultadosDiv = document.getElementById('resultados');
-const conteudoDiv = document.getElementById('conteudo');
-const buscaContainer = document.getElementById('busca-container');
-const painelBusca = document.getElementById('painel-busca');
+const resultadosDiv = document.getElementById('resultados'); // Painel esquerdo
+const conteudoDiv = document.getElementById('conteudo');   // Painel direito
+const buscaContainer = document.getElementById('busca-container'); // Container geral da página
+const painelBusca = document.getElementById('painel-busca');     // Container dos painéis resultados/conteúdo
 const statusMessagesDiv = document.getElementById('status-messages');
-const sugestoesBuscaContainer = document.getElementById('sugestoes-busca-container');
 
-// --- State & Cache ---
+const botaoLerCatecismo = document.getElementById('botao-ler-catecismo');
+// Não precisamos de um botão "Voltar para Busca" global, ele será criado no header do índice.
+const barraDeBuscaWrapper = document.querySelector('.barra-de-busca-wrapper');
+const sugestoesContainerGlobal = document.getElementById('sugestoes-busca-container'); // Renomeado para evitar conflito com var local
+
+// --- State & Cache (como antes) ---
 let cache = [];
-let idsDeTextoNoCache = new Set(); // Para ajudar a prevenir duplicatas exatas de texto
+let idsDeTextoNoCache = new Set();
 let ultimoArquivoCarregado = null;
-let termoAtualBusca = ''; // Termo como o usuário digitou, em minúsculas (com acentos)
+let termoAtualBusca = '';
 let cacheHTMLInteiro = {};
 let proximoIdParagrafo = 0;
 let itemSelecionadoAtual = null;
 let elementoSelecionadoAtual = null;
+
+// --- State para Modo Leitura ---
+let modoLeituraAtivo = false;
+let indiceCatecismo = []; 
+let conteudoHtmlCompletoConcatenado = '';
+let proximoIdIndice = 0;
 
 // --- Configuration ---
 const ARQUIVOS_CATECISMO = [
@@ -43,7 +53,7 @@ const TEMAS_SUGERIDOS = [
     // Adicione mais temas conforme necessário
 ];
 
-// --- Initialization ---
+// --- Initialization (DOMContentLoaded) ---
 document.addEventListener('DOMContentLoaded', () => {
     if (botaoBuscar && campoBusca) {
         botaoBuscar.addEventListener('click', executarBusca);
@@ -53,39 +63,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 executarBusca();
             }
         });
-
-        // Mostrar sugestões quando o campo de busca está vazio e recebe foco
         campoBusca.addEventListener('focus', () => {
-            if (campoBusca.value.trim() === '' && resultadosDiv.classList.contains('oculto')) { // Só mostra se não houver resultados ativos
-                renderizarSugestoes();
+            if (campoBusca.value.trim() === '' && (!resultadosDiv || resultadosDiv.classList.contains('oculto') || resultadosDiv.innerHTML.trim() === '')) { 
+                if (typeof renderizarSugestoes === 'function') renderizarSugestoes();
             }
         });
-
-        // Opcional: esconder sugestões quando o usuário começa a digitar
-        // campoBusca.addEventListener('input', () => {
-        //     const container = document.getElementById('sugestoes-busca-container');
-        //     if (container && campoBusca.value.trim() !== '') {
-        //         container.classList.add('oculto');
-        //     }
-        // });
-
-        // Opcional: esconder sugestões ao clicar fora
-        // document.addEventListener('click', function(event) {
-        //     const container = document.getElementById('sugestoes-busca-container');
-        //     const isClickInsideCampo = campoBusca.contains(event.target);
-        //     const isClickInsideSugestoes = container ? container.contains(event.target) : false;
-
-        //     if (!isClickInsideCampo && !isClickInsideSugestoes && container) {
-        //         container.classList.add('oculto');
-        //     }
-        // });
-
     } else {
         console.error("Elementos de busca (campo ou botão) não encontrados.");
     }
-    carregarTodosOsArquivos();
 
-    renderizarSugestoes(); // <<<<<< MOSTRAR SUGESTÕES INICIALMENTE
+    if (botaoLerCatecismo) {
+        botaoLerCatecismo.addEventListener('click', ativarModoLeitura);
+    }
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape" || event.keyCode === 27) {
+            const resultadosEstaoVisiveis = resultadosDiv && !resultadosDiv.classList.contains('oculto') && resultadosDiv.innerHTML.trim() !== '';
+            const campoTemTexto = campoBusca && campoBusca.value.trim() !== '';
+            if (modoLeituraAtivo) { // Se estiver no modo leitura, ESC volta para busca
+                desativarModoLeitura();
+            } else if (resultadosEstaoVisiveis || campoTemTexto) { // Se estiver no modo busca e houver algo para limpar
+                limparBuscaEResultados();
+            }
+        }
+    });
+
+    carregarTodosOsArquivos(); // Para a busca
+    prepararDadosModoLeitura(); // Para o índice e conteúdo completo
+    if (typeof renderizarSugestoes === 'function') renderizarSugestoes(); 
+
 
      // --- ADICIONAR ESTE LISTENER PARA A TECLA ESC ---
     document.addEventListener('keydown', function(event) {
@@ -104,6 +110,324 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- FIM DO LISTENER PARA A TECLA ESC ---
 
 });
+
+// --- Funções de Controle de UI e Modo ---
+
+function alternarUiBuscaPrincipal(mostrar) {
+    // Controla a barra de busca principal e o botão "Ler Catecismo"
+    if (mostrar) {
+        if (barraDeBuscaWrapper) barraDeBuscaWrapper.classList.remove('oculto');
+        if (botaoLerCatecismo) botaoLerCatecismo.classList.remove('oculto');
+        // Sugestões são controladas por renderizarSugestoes()
+    } else {
+        if (barraDeBuscaWrapper) barraDeBuscaWrapper.classList.add('oculto');
+        if (botaoLerCatecismo) botaoLerCatecismo.classList.add('oculto');
+        if (sugestoesContainerGlobal) sugestoesContainerGlobal.classList.add('oculto');
+    }
+}
+
+function ativarModoLeitura() {
+    if (modoLeituraAtivo) return; // Já está no modo leitura
+    modoLeituraAtivo = true;
+    alternarUiBuscaPrincipal(false); // Esconde barra de busca e botão "Ler Catecismo"
+
+    resultadosDiv.innerHTML = ''; 
+    conteudoDiv.innerHTML = '';   
+
+    resultadosDiv.classList.remove('oculto'); 
+    conteudoDiv.classList.remove('oculto');   
+
+    document.body.classList.add('modo-leitura-ativo');
+    resultadosDiv.classList.add('painel-indice'); 
+    resultadosDiv.classList.remove('painel-resultados-busca'); // Se você usa essa classe
+
+    // --- CRIAR CABEÇALHO DO MODO LEITURA (ÍNDICE) ---
+    const headerLeituraContainer = document.createElement('div');
+    headerLeituraContainer.className = 'painel-resultados-container cabecalho-modo-leitura'; 
+
+    const headerLeituraInfoDiv = document.createElement('div');
+    headerLeituraInfoDiv.className = 'resultados-header-info'; 
+
+    const tituloIndiceDiv = document.createElement('div');
+    const tituloIndiceH3 = document.createElement('h3');
+    tituloIndiceH3.textContent = 'Índice do Catecismo';
+    tituloIndiceDiv.appendChild(tituloIndiceH3);
+
+    const btnVoltarParaBusca = document.createElement('button');
+    btnVoltarParaBusca.className = 'botao-nova-busca'; // Reutiliza estilo
+    btnVoltarParaBusca.innerHTML = `<svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg> Modo Busca`;
+    btnVoltarParaBusca.title = "Voltar para o modo de busca";
+    btnVoltarParaBusca.addEventListener('click', desativarModoLeitura);
+
+    headerLeituraInfoDiv.appendChild(tituloIndiceDiv);
+    headerLeituraInfoDiv.appendChild(btnVoltarParaBusca);
+    headerLeituraContainer.appendChild(headerLeituraInfoDiv);
+    resultadosDiv.appendChild(headerLeituraContainer);
+    // --- FIM DO CABEÇALHO DO MODO LEITURA ---
+
+    const listaIndiceContainer = document.createElement('div');
+    listaIndiceContainer.className = "lista-resultados-scrollavel"; // Para a lista rolável do índice
+    resultadosDiv.appendChild(listaIndiceContainer);
+
+    if (typeof renderizarIndice === 'function') renderizarIndice(listaIndiceContainer);
+    if (typeof renderizarConteudoCompleto === 'function') renderizarConteudoCompleto();
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola a PÁGINA para o topo
+    resultadosDiv.scrollTop = 0; // Garante que o topo do painel do índice esteja visível
+}
+
+function desativarModoLeitura() {
+    if (!modoLeituraAtivo) return; // Já está no modo busca
+    modoLeituraAtivo = false;
+    alternarUiBuscaPrincipal(true); // Mostra barra de busca e botão "Ler Catecismo"
+
+    // resultadosDiv.innerHTML = ''; // Será preenchido pela busca ou mensagem de erro
+    // conteudoDiv.innerHTML = '';
+    // conteudoDiv.classList.add('oculto');
+
+    document.body.classList.remove('modo-leitura-ativo');
+    resultadosDiv.classList.remove('painel-indice');
+    // resultadosDiv.classList.add('painel-resultados-busca'); // Adicionado por executarBusca se necessário
+
+    limparBuscaEResultados(); // Limpa o estado da busca e mostra sugestões
+}
+
+// --- Funções para Modo Leitura (prepararDadosModoLeitura, renderizarIndice, renderizarConteudoCompleto) ---
+
+// Função prepararDadosModoLeitura (AJUSTADA PARA USAR querySelectorAll)
+async function prepararDadosModoLeitura() {
+    if (indiceCatecismo.length > 0 && conteudoHtmlCompletoConcatenado) {
+        return;
+    }
+    console.log("INICIANDO: Preparando dados para o modo leitura (Estratégia Marcacao+Titulo com querySelectorAll)...");
+
+    indiceCatecismo = [];
+    let htmlConcatenadoTemporario = ''; // Para o conteúdo completo
+    let corpoHtmlOriginalInteiro = ''; // Para construir o conteúdo final
+    proximoIdIndice = 0;
+    
+    let ultimoItemNivel1 = null; 
+    let ultimoItemNivel2 = null; 
+    let ultimoItemNivel3 = null; 
+    let ultimoItemNivel4 = null; 
+
+    for (const arquivo of ARQUIVOS_CATECISMO) {
+        console.log(`DEBUG QSA: Processando arquivo: ${arquivo.nome}`);
+        // Resetar os 'últimos itens' para cada arquivo se a estrutura de cada arquivo for independente
+        // Se as partes/seções podem cruzar arquivos, esta lógica de reset precisaria ser mais global.
+        // Assumindo por agora que cada arquivo pode ter sua própria estrutura de topo.
+        ultimoItemNivel1 = null; 
+        ultimoItemNivel2 = null;
+        ultimoItemNivel3 = null;
+        ultimoItemNivel4 = null;
+
+        try {
+            const response = await fetch(arquivo.url);
+            if (!response.ok) { /* ... erro ... */ continue; }
+            const htmlText = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(htmlText, 'text/html');
+            
+            // CONSTRUIR O CONTEÚDO COMPLETO PRIMEIRO, ADICIONANDO IDs AOS TÍTULOS NO 'doc' ORIGINAL
+            // Assim, o htmlConcatenadoTemporario terá os IDs corretos.
+            
+            // Seleciona TODOS os elementos que podem ser títulos ou que são conteúdo relevante.
+            // É importante que a ordem seja a ordem do DOM.
+            // Os seletores precisam ser precisos para a SUA estrutura HTML.
+            const elementosRelevantes = doc.body.querySelectorAll(
+                'h1, h2, h3, h4, h5, h6, p.marcacao, p.titulo, p.subtitulo, p.paragrafo, div.ponto-com-notas'
+                // Adicione mais seletores se necessário (ex: section, article, etc. se eles próprios
+                // devem ter IDs ou se você precisa iterar dentro deles de forma especial).
+                // Se você só quer os filhos diretos do body, mantenha doc.body.children e processe recursivamente.
+                // Mas para pegar títulos aninhados, querySelectorAll é melhor.
+            );
+            console.log(`DEBUG QSA: Arquivo ${arquivo.nome} - Encontrados ${elementosRelevantes.length} elementos relevantes.`);
+
+            let textoParteNumericaTemp = ""; 
+
+            for (const el of Array.from(elementosRelevantes)) { // Agora iteramos sobre os elementos selecionados
+                const tagName = el.tagName.toLowerCase();
+                const textoOriginalElemento = el.textContent.trim();
+                const classesElemento = el.className;
+
+                let textoLimpoParaIndice = textoOriginalElemento;
+                let nivelIndiceDetectado = 0;
+                let idAncoraConteudo = `ancora-idx-${proximoIdIndice}`; // Gera ID potencial
+                let novoElementoIndice = null;
+
+                // console.log(`  ---> QSA El: <${tagName} class="${classesElemento}"> | Texto: "${textoOriginalElemento.substring(0, 70)}..."`);
+
+                // --- LÓGICA DE IDENTIFICAÇÃO DE TÍTULOS PARA O ÍNDICE ---
+                // Nível 1: PARTE
+                if (el.matches('p.marcacao.parte')) { 
+                    textoParteNumericaTemp = textoOriginalElemento;
+                    // console.log(`    QSA: MARCAÇÃO DE PARTE: "${textoParteNumericaTemp}"`);
+                } else if (el.matches('p.titulo[class*="-parte"]') && textoParteNumericaTemp) { 
+                    // Este seletor assume que a classe do título contém algo como "primeira-parte", "segunda-parte"
+                    // Se for apenas <p class="titulo"> e vier depois de <p class="marcacao parte">, ajuste:
+                    // else if (textoParteNumericaTemp && el.matches('p.titulo')) { ... }
+                    nivelIndiceDetectado = 1;
+                    textoLimpoParaIndice = `${textoParteNumericaTemp} - ${textoOriginalElemento}`;
+                    
+                    novoElementoIndice = { id: idAncoraConteudo, texto: textoLimpoParaIndice, nivel: nivelIndiceDetectado, filhos: [] };
+                    indiceCatecismo.push(novoElementoIndice);
+                    ultimoItemNivel1 = novoElementoIndice;
+                    ultimoItemNivel2 = null; ultimoItemNivel3 = null; ultimoItemNivel4 = null;
+                    textoParteNumericaTemp = ""; 
+                    console.log(`    => QSA ADD NÍVEL 1: "${textoLimpoParaIndice}" (ID: ${idAncoraConteudo})`);
+                } 
+                // Nível 2: SEÇÃO (Antes eram p.subtitulo, ajuste se necessário)
+                else if (el.matches('p.subtitulo.secao-principal, h2.secao')) { // SELETOR EXEMPLO
+                    nivelIndiceDetectado = 2;
+                    textoLimpoParaIndice = textoOriginalElemento; 
+                    
+                    novoElementoIndice = { id: idAncoraConteudo, texto: textoLimpoParaIndice, nivel: nivelIndiceDetectado, filhos: [] };
+                    if (ultimoItemNivel1) {
+                        ultimoItemNivel1.filhos.push(novoElementoIndice);
+                    } else {
+                        console.warn(`    QSA WARN L2: Seção "${textoLimpoParaIndice}" sem PARTE pai. Adicionando à raiz como Nível 1.`);
+                        novoElementoIndice.nivel = 1; indiceCatecismo.push(novoElementoIndice); ultimoItemNivel1 = novoElementoIndice;
+                    }
+                    ultimoItemNivel2 = novoElementoIndice;
+                    ultimoItemNivel3 = null; ultimoItemNivel4 = null;
+                    console.log(`    => QSA ADD NÍVEL 2: "${textoLimpoParaIndice}" (ID: ${idAncoraConteudo})`);
+                }
+                // Nível 3: CAPÍTULO
+                else if (el.matches('p.subtitulo.capitulo-interno, h3.capitulo')) { // SELETOR EXEMPLO
+                    nivelIndiceDetectado = 3;
+                    textoLimpoParaIndice = textoOriginalElemento;
+                    novoElementoIndice = { id: idAncoraConteudo, texto: textoLimpoParaIndice, nivel: nivelIndiceDetectado, filhos: [] };
+                    if (ultimoItemNivel2) ultimoItemNivel2.filhos.push(novoElementoIndice);
+                    else if (ultimoItemNivel1) { novoElementoIndice.nivel = 2; ultimoItemNivel1.filhos.push(novoElementoIndice); ultimoItemNivel2 = novoElementoIndice;}
+                    else { novoElementoIndice.nivel = 1; indiceCatecismo.push(novoElementoIndice); ultimoItemNivel1 = novoElementoIndice;}
+                    ultimoItemNivel3 = novoElementoIndice;
+                    ultimoItemNivel4 = null;
+                    console.log(`    => QSA ADD NÍVEL 3: "${textoLimpoParaIndice}" (ID: ${idAncoraConteudo})`);
+                }
+                // Nível 4: ARTIGO
+                else if (el.matches('p.marcacao.artigo')) { 
+                    textoParteNumericaTemp = textoOriginalElemento; // Assume ARTIGO X
+                } else if (el.matches('p.titulo[class*="artigo-"]') && textoParteNumericaTemp) { // Assume p.titulo.artigo-X
+                // OU: else if (textoParteNumericaTemp.toUpperCase().includes("ARTIGO") && el.matches('p.titulo')) {
+                    nivelIndiceDetectado = 4;
+                    textoLimpoParaIndice = `${textoParteNumericaTemp} - ${textoOriginalElemento}`;
+                    novoElementoIndice = { id: idAncoraConteudo, texto: textoLimpoParaIndice, nivel: nivelIndiceDetectado, filhos: [] };
+                    if (ultimoItemNivel3) ultimoItemNivel3.filhos.push(novoElementoIndice);
+                    // ... (fallbacks para aninhar sob Nível 2 ou Nível 1) ...
+                    else { novoElementoIndice.nivel = 1; indiceCatecismo.push(novoElementoIndice); ultimoItemNivel1 = novoElementoIndice; }
+                    ultimoItemNivel4 = novoElementoIndice;
+                    textoParteNumericaTemp = "";
+                    console.log(`    => QSA ADD NÍVEL 4: "${textoLimpoParaIndice}" (ID: ${idAncoraConteudo})`);
+                }
+                // Nível 5: SUBTÍTULO (dentro de Artigo)
+                // Se este é <p class="subtitulo"> e NÃO é uma Seção Principal
+                else if (el.matches('p.subtitulo') && !el.matches('p.subtitulo.secao-principal, p.subtitulo.capitulo-interno')) { 
+                    // ^ Garante que não é um subtitulo de nível mais alto já pego.
+                    nivelIndiceDetectado = 5;
+                    textoLimpoParaIndice = textoOriginalElemento;
+                    novoElementoIndice = { id: idAncoraConteudo, texto: textoLimpoParaIndice, nivel: nivelIndiceDetectado, filhos: [] };
+                    if (ultimoItemNivel4) ultimoItemNivel4.filhos.push(novoElementoIndice);
+                    // ... (fallbacks) ...
+                    else { console.warn(`    QSA WARN L5: Subtítulo "${textoLimpoParaIndice}" sem pai Artigo. Não adicionado estruturado.`); novoElementoIndice = null; }
+                    if(novoElementoIndice) console.log(`    => QSA ADD NÍVEL 5: "${textoLimpoParaIndice}" (ID: ${idAncoraConteudo})`);
+                }
+
+
+                // Adicionar o ID diretamente no elemento original DENTRO DO DOC PARSEADO
+                // Assim, quando pegarmos o innerHTML do body, os IDs já estarão lá.
+                if (novoElementoIndice && nivelIndiceDetectado > 0) { 
+                    el.id = idAncoraConteudo; // Modifica o 'el' original no 'doc'
+                    proximoIdIndice++; 
+                }
+                // Não precisamos mais do cloneEl e concatenar aqui se vamos pegar doc.body.innerHTML no final.
+            } 
+            // Após processar todos os elementos e adicionar IDs aos títulos no 'doc':
+            corpoHtmlOriginalInteiro += doc.body.innerHTML; // Concatena o HTML do body inteiro do arquivo atual
+
+        } catch (error) {
+            console.error(`DEBUG QSA: Erro CRÍTICO ao processar ${arquivo.url}:`, error);
+        }
+    } 
+
+    conteudoHtmlCompletoConcatenado = corpoHtmlOriginalInteiro; // Atribui o HTML concatenado
+    console.log("CONCLUÍDO: Preparação dos dados para o modo leitura. Itens de raiz no índice:", indiceCatecismo.length);
+    if (indiceCatecismo.length === 0) {
+        console.warn("DEBUG QSA: NENHUM ITEM FOI ADICIONADO AO ÍNDICE FINAL.");
+    } else {
+        // Descomente para ver a estrutura completa do índice:
+        // console.log("Estrutura do Índice Gerado:", JSON.stringify(indiceCatecismo, null, 2)); 
+    }
+}
+
+function renderizarIndice(containerParaListaIndice) {
+    if (!containerParaListaIndice) {
+        console.error("Container para lista do índice não fornecido a renderizarIndice.");
+        return;
+    }
+    containerParaListaIndice.innerHTML = ''; // Limpa apenas o container da lista
+
+    const ul = document.createElement('ul');
+    ul.className = 'lista-indice-principal cic-indice-lista'; // Classe geral para a lista
+
+    function criarItensIndiceRecursivo(itens, parentUl, nivelAtual) { // Adiciona nivelAtual
+        itens.forEach(item => {
+            const li = document.createElement('li');
+            li.className = `cic-indice-item cic-indice-nivel-${nivelAtual}`; // Nível atual
+            
+            const toggleWrapper = document.createElement('div');
+            toggleWrapper.className = 'cic-indice-toggle-wrapper';
+
+            // Botão de Toggle (seta) se houver filhos
+            if (item.filhos && item.filhos.length > 0) {
+                const toggleButton = document.createElement('button');
+                toggleButton.className = 'cic-indice-toggle-btn';
+                toggleButton.setAttribute('aria-expanded', 'false'); // Inicialmente recolhido
+                toggleButton.innerHTML = '<svg viewBox="0 0 16 16" class="cic-indice-seta"><path d="M6 12l6-6-6-6"/></svg>'; // Seta para a direita
+                toggleWrapper.appendChild(toggleButton);
+            }
+
+            const a = document.createElement('a');
+            a.href = `#${item.id}`;
+            a.textContent = item.texto;
+            // ... (seu event listener para o link 'a' permanece o mesmo) ...
+            a.addEventListener('click', (e) => { /* ... scroll e classe ativo ... */ });
+            toggleWrapper.appendChild(a);
+            li.appendChild(toggleWrapper);
+            parentUl.appendChild(li);
+
+            if (item.filhos && item.filhos.length > 0) {
+                const subUl = document.createElement('ul');
+                subUl.className = 'cic-indice-sublista oculto'; // Sub-listas começam ocultas
+                criarItensIndiceRecursivo(item.filhos, subUl, nivelAtual + 1);
+                li.appendChild(subUl);
+
+                // Event listener para o botão de toggle
+                const toggleButton = li.querySelector('.cic-indice-toggle-btn');
+                if (toggleButton) {
+                    toggleButton.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Evita que o clique no botão também dispare o clique no link 'a'
+                        const sublista = li.querySelector('.cic-indice-sublista');
+                        const isExpanded = sublista.classList.toggle('oculto');
+                        toggleButton.setAttribute('aria-expanded', String(!isExpanded));
+                        toggleButton.classList.toggle('aberto', !isExpanded); // Para estilizar a seta
+                    });
+                }
+            }
+        });
+    }
+    criarItensIndiceRecursivo(indiceCatecismo, ul, 1); // Começa no nível 1
+    containerParaListaIndice.appendChild(ul);
+}
+
+function renderizarConteudoCompleto() {
+    if (conteudoDiv) {
+        conteudoDiv.innerHTML = conteudoHtmlCompletoConcatenado;
+        ativarNotasHover(conteudoDiv); 
+        // Resetar scroll do conteúdo para o topo ao renderizar
+        conteudoDiv.scrollTop = 0;
+    }
+}
+
 
 // --- Utility Functions ---
 function removerAcentos(texto) {

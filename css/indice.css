@@ -1,0 +1,89 @@
+/* Estilos para o Índice Navegável */
+.cic-indice-lista { /* ul principal e sub-listas */
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.cic-indice-item {
+    margin-bottom: 2px; /* Pequeno espaço entre itens */
+}
+
+.cic-indice-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 8px 5px; /* Padding no wrapper do link/botão */
+    border-radius: 4px;
+    transition: background-color 0.15s ease-in-out;
+}
+.cic-indice-toggle-wrapper:hover {
+    background-color: #e9ecef; /* Hover sutil */
+}
+
+
+.cic-indice-toggle-btn {
+    background: transparent;
+    border: none;
+    padding: 0 8px 0 0; /* Espaço para a seta */
+    margin-right: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+}
+
+.cic-indice-seta {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cic-indice-toggle-btn.aberto .cic-indice-seta {
+    transform: rotate(90deg); /* Gira a seta quando aberto */
+}
+
+.cic-indice-item a {
+    text-decoration: none;
+    color: #333;
+    flex-grow: 1; /* Faz o link ocupar o espaço restante */
+    display: block; /* Para melhor área de clique */
+}
+
+.cic-indice-item a.ativo { /* Destaque para o item de índice atualmente visível/clicado */
+    font-weight: bold;
+    color: #b88607; /* Sua cor de marca */
+}
+
+.cic-indice-sublista {
+    padding-left: 25px; /* Indentação para sub-níveis */
+    margin-top: 5px;
+    border-left: 1px solid #e0e0e0; /* Linha vertical sutil para indicar aninhamento */
+    margin-left: 10px; /* Alinha a borda com o centro da seta aproximadamente */
+}
+
+.cic-indice-sublista.oculto {
+    display: none;
+}
+
+/* Estilização específica por nível, se desejar (já tem cic-indice-nivel-X) */
+.cic-indice-nivel-1 > .cic-indice-toggle-wrapper > a {
+    font-weight: 600; /* Ex: Partes em negrito */
+    font-size: 1.05em;
+}
+.cic-indice-nivel-2 > .cic-indice-toggle-wrapper > a {
+    /* font-size: 1em; */
+}
+.cic-indice-nivel-3 > .cic-indice-toggle-wrapper > a {
+    font-size: 0.95em;
+    color: #444;
+}
+.cic-indice-nivel-4 > .cic-indice-toggle-wrapper > a {
+    font-size: 0.9em;
+    color: #555;
+}
+.cic-indice-nivel-5 > .cic-indice-toggle-wrapper > a {
+    font-size: 0.85em;
+    color: #666;
+}

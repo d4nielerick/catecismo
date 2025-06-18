@@ -16,6 +16,22 @@ body {
     background-attachment: fixed; /* Opcional: mantém o gradiente fixo durante a rolagem */
 }
 
+.primeira-parte{
+    display: none;
+}
+
+.marcacao.secao,
+.marcacao.capitulo{
+    font-weight: 600;
+    font-size: 80%;
+    margin-top: 36px;
+}
+
+.titulo.primeira-seccao{
+    margin-top: -8px;
+    font-size: 120%;
+}
+
 .oculto {
     display: none !important;
 }
