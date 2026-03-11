@@ -1,0 +1,94 @@
+/* ── search.css — barra de busca ─────────────────────────────────────────── */
+
+.campo-busca-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 640px;
+}
+
+/* Ícone de lupa (esquerda) */
+.campo-busca-container .icone-busca {
+  position: absolute;
+  left: 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--color-muted);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* Input */
+#campo-busca {
+  width: 100%;
+  padding: 0.85rem 2.75rem 0.85rem 2.75rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 100px;
+  box-shadow: var(--shadow);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+#campo-busca::placeholder {
+  color: var(--color-muted);
+}
+
+#campo-busca:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(197,160,40,0.15), var(--shadow);
+}
+
+/* Botão limpar (×) — visível só quando há texto */
+#botao-limpar {
+  position: absolute;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: none;
+  background: var(--color-border);
+  color: var(--color-muted);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  transition: background var(--transition), color var(--transition);
+}
+
+#botao-limpar:hover {
+  background: #d0c8bc;
+  color: var(--color-text);
+}
+
+#botao-limpar.oculto { display: none !important; }
+
+/* ── Versão hero (estado inicial) ─────────────────────────────────────────── */
+#hero .campo-busca-container {
+  max-width: 560px;
+}
+
+#hero #campo-busca {
+  font-size: 1.05rem;
+  padding: 1rem 3rem 1rem 3rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Versão topo (estado de busca ativa) ──────────────────────────────────── */
+#busca-topo .campo-busca-container {
+  flex: 1;
+  max-width: 600px;
+}
+
+#busca-topo #campo-busca {
+  padding: 0.6rem 2.5rem 0.6rem 2.5rem;
+  font-size: 0.95rem;
+  box-shadow: none;
+}
