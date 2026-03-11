@@ -1,0 +1,340 @@
+/* ── panels.css — painéis esquerdo (resultados) e direito (leitura) ───────── */
+
+/* ── Container dos dois painéis ─────────────────────────────────────────── */
+#painel-busca {
+  display: flex;
+  flex: 1;
+  gap: 0;
+  height: calc(100vh - 57px); /* subtrai a altura do #busca-topo */
+  overflow: hidden;
+}
+
+/* ── Painel esquerdo — lista de resultados ──────────────────────────────── */
+#painel-resultados {
+  width: 35%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+/* Cabeçalho fixo com contagem */
+#resultados-header {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+#contagem-resultados {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+/* Lista com scroll independente */
+#lista-resultados {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+#lista-resultados::-webkit-scrollbar { width: 5px; }
+#lista-resultados::-webkit-scrollbar-track { background: transparent; }
+#lista-resultados::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+
+/* ── Grupos de resultado ─────────────────────────────────────────────────── */
+.grupo-parte {
+  margin-bottom: 1.25rem;
+}
+
+.grupo-parte-titulo {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.grupo-secao-titulo {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  padding: 0.2rem 0.5rem 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ── Card de resultado individual ────────────────────────────────────────── */
+.resultado-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.resultado-card:last-child { margin-bottom: 0; }
+
+.resultado-card:hover {
+  border-color: #c8bfb2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: var(--color-surface);
+}
+
+.resultado-card.selecionado {
+  border-color: var(--color-accent);
+  background: var(--color-surface);
+  box-shadow: 0 0 0 2px rgba(197,160,40,0.2);
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.card-num {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent-dk);
+  background: #FEF9EC;
+  border: 1px solid #f0e3a8;
+  border-radius: 4px;
+  padding: 0.15rem 0.45rem;
+  flex-shrink: 0;
+}
+
+.card-artigo {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-trecho {
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+/* ── Mensagem "sem resultados" ───────────────────────────────────────────── */
+#sem-resultados {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+#sem-resultados strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+/* ── Painel direito — leitura ─────────────────────────────────────────────── */
+#painel-conteudo {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem 2.5rem;
+  background: var(--color-surface);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+#painel-conteudo::-webkit-scrollbar { width: 6px; }
+#painel-conteudo::-webkit-scrollbar-track { background: transparent; }
+#painel-conteudo::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+
+/* Estado vazio do painel direito */
+#painel-conteudo .placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+#painel-conteudo .placeholder svg {
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.25;
+}
+
+/* Conteúdo do parágrafo selecionado */
+.conteudo-meta {
+  margin-bottom: 1.5rem;
+}
+
+.conteudo-breadcrumb {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.conteudo-breadcrumb span + span::before {
+  content: '›';
+  margin-right: 0.35rem;
+  color: var(--color-border);
+}
+
+.conteudo-num {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent-dk);
+  background: #FEF9EC;
+  border: 1px solid #f0e3a8;
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  display: inline-block;
+}
+
+.conteudo-artigo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+}
+
+/* Texto principal */
+.conteudo-texto {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 68ch;
+}
+
+/* Toolbar de ações */
+.conteudo-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.btn-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.btn-toolbar:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: #F0F5F2;
+}
+
+.btn-toolbar svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+}
+
+.btn-toolbar.copiado {
+  color: #2e7d32;
+  border-color: #a5d6a7;
+  background: #f1f8f1;
+}
+
+/* Navegação anterior / próximo */
+.conteudo-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 0.4rem;
+}
+
+/* ── Mobile (< 768px) ─────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  #painel-busca {
+    height: calc(100vh - 57px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Painel esquerdo ocupa tela toda */
+  #painel-resultados {
+    width: 100%;
+    border-right: none;
+  }
+
+  /* Painel direito vira drawer por cima */
+  #painel-conteudo {
+    position: absolute;
+    inset: 0;
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+    z-index: 10;
+    padding: 1.25rem 1rem;
+  }
+
+  #painel-conteudo.aberto {
+    transform: translateX(0);
+  }
+
+  /* Botão fechar drawer no mobile */
+  #btn-fechar-conteudo {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  #btn-fechar-conteudo {
+    display: none;
+  }
+}
+
+#btn-fechar-conteudo {
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}

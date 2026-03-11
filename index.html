@@ -1,63 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catecismo da Igreja Católica - Pesquisa</title>
-    <link rel="stylesheet" href="/css/geral.css">
-    <link rel="stylesheet" href="/css/header.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Catecismo da Igreja Católica — Buscador</title>
+  <meta name="description" content="Busque os 2865 parágrafos do Catecismo da Igreja Católica em tempo real. Encontre o que a Igreja ensina sobre qualquer tema.">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Catecismo da Igreja Católica — Buscador">
+  <meta property="og:description" content="Busca em tempo real nos parágrafos do Catecismo.">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="assets/Catecismo Ill (1).webp">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/search.css">
+  <link rel="stylesheet" href="assets/css/panels.css">
 </head>
 <body>
-    <header>
-        <div class="imagem-capa"><img src="/assets/Catecismo Ill (1).webp" alt=""></div>
-        <h1>Catecismo da Igreja Católica</h1>
-    </header>
-    <main>
-        
-    <div id="busca-container">
-        <!-- Search input and button might be here -->
-        <div class="barra-de-busca-wrapper"> <!-- Or your existing wrapper for search controls -->
-            <div class="barra-de-busca">
-                <input type="text" id="campo-busca" placeholder="Buscar no Catecismo...">
-                <button id="botao-buscar">Buscar</button>
-            </div>
-        </div>
 
-        <!-- Abaixo do seu .barra-de-busca-wrapper -->
-        <div id="sugestoes-busca-container" class="sugestoes-busca-container oculto">
-            <!-- As sugestões serão inseridas aqui pelo JS -->
-        </div>
+<div id="app" class="estado-inicial">
 
-        
-        <div id="status-messages" aria-live="polite"></div>
+  <!-- ══════════════════════════════════════════════════════════════
+       ESTADO INICIAL — busca centralizada
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Busca no Catecismo">
 
-        <!-- This #painel-busca is the flex container for results and content -->
-        <div id="painel-busca">
-            <div id="resultados" class="oculto" aria-labelledby="resultados-titulo">
-                <h2 id="resultados-titulo" class="sr-only">Resultados da Pesquisa</h2>
-                <!-- Search results will be populated here by JavaScript -->
-            </div>
-            <div id="conteudo" class="oculto" aria-labelledby="conteudo-titulo">
-                <h2 id="conteudo-titulo" class="sr-only">Conteúdo Selecionado</h2>
-                <!-- Selected content will be populated here by JavaScript -->
-            </div>
-        </div>
+    <img
+      src="assets/Catecismo Ill (1).webp"
+      alt="Catecismo da Igreja Católica"
+      class="logo"
+    >
+
+    <h1>Catecismo da<br>Igreja Católica</h1>
+    <p class="tagline">Busque o que a Igreja ensina sobre qualquer tema</p>
+
+    <!-- Barra de busca principal (hero) -->
+    <div class="campo-busca-container" role="search">
+      <svg class="icone-busca" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+
+      <label for="campo-busca" class="sr-only">Buscar no Catecismo</label>
+      <input
+        type="search"
+        id="campo-busca"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Busque por sacramento, oração, moral…"
+        aria-label="Buscar no Catecismo"
+        aria-controls="lista-resultados"
+        aria-autocomplete="list"
+      >
+
+      <button
+        id="botao-limpar"
+        type="button"
+        class="oculto"
+        aria-label="Limpar busca"
+        title="Limpar (ESC)"
+      >×</button>
     </div>
-    </main>
-    <script src="/js/script.js" defer></script>
-    <!--
-        Common CSS for .sr-only (screen-reader only) class:
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-    -->
+
+    <!-- Atalhos rápidos por tema -->
+    <nav id="temas-rapidos" aria-label="Temas sugeridos">
+      <button type="button" data-tema="sacramentos">Sacramentos</button>
+      <button type="button" data-tema="oração">Oração</button>
+      <button type="button" data-tema="trindade">Trindade</button>
+      <button type="button" data-tema="eucaristia">Eucaristia</button>
+      <button type="button" data-tema="pecado">Pecado</button>
+      <button type="button" data-tema="ressurreição">Ressurreição</button>
+      <button type="button" data-tema="maria">Maria</button>
+      <button type="button" data-tema="mandamentos">Mandamentos</button>
+    </nav>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       ESTADO DE BUSCA ATIVA — barra no topo + dois painéis
+  ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- Topo fixo com barra de busca -->
+  <header id="busca-topo" role="banner" aria-label="Barra de busca">
+    <a href="." aria-label="Início">
+      <img
+        src="assets/Catecismo Ill (1).webp"
+        alt=""
+        class="logo-mini"
+        aria-hidden="true"
+      >
+    </a>
+
+    <div id="busca-topo-wrapper" class="campo-busca-container" role="search">
+      <svg class="icone-busca" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <!-- O #campo-busca e #botao-limpar são movidos aqui pelo ui.js ao ativar busca -->
+    </div>
+  </header>
+
+  <!-- Dois painéis -->
+  <div id="painel-busca" role="main">
+
+    <!-- Painel esquerdo: lista de resultados -->
+    <aside
+      id="painel-resultados"
+      aria-label="Resultados da busca"
+    >
+      <div id="resultados-header">
+        <span id="contagem-resultados" aria-live="polite" aria-atomic="true"></span>
+      </div>
+
+      <div
+        id="lista-resultados"
+        role="listbox"
+        aria-label="Parágrafos encontrados"
+        tabindex="0"
+      ></div>
+
+      <!-- Mensagem sem resultados -->
+      <div id="sem-resultados" class="oculto" role="status">
+        <strong>Nenhum resultado encontrado.</strong>
+        Tente termos como "graça", "fé", "batismo" ou "oração".
+      </div>
+
+    </aside>
+
+    <!-- Painel direito: leitura do parágrafo selecionado -->
+    <article
+      id="painel-conteudo"
+      aria-label="Parágrafo selecionado"
+      aria-live="polite"
+    >
+      <!-- Botão fechar drawer (mobile) -->
+      <button id="btn-fechar-conteudo" type="button" aria-label="Voltar aos resultados">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Resultados
+      </button>
+
+      <!-- Conteúdo preenchido pelo ui.js -->
+      <div class="placeholder" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+        </svg>
+        <p>Selecione um parágrafo para ler</p>
+      </div>
+
+    </article>
+
+  </div><!-- #painel-busca -->
+
+</div><!-- #app -->
+
+<!-- Módulos JS (ES modules) -->
+<script type="module" src="assets/js/ui.js"></script>
+<script type="module" src="assets/js/router.js"></script>
+
 </body>
 </html>
