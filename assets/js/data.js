@@ -11,7 +11,8 @@
  *     secao: string, capitulo: string, artigo: string }
  */
 
-const DATA_URL = '/data/catecismo.json';
+// Caminho relativo ao módulo — funciona em qualquer base URL (localhost, GitHub Pages, etc.)
+const DATA_URL = new URL('../../data/catecismo.json', import.meta.url).href;
 
 let _cache = null;
 
