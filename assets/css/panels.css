@@ -5,7 +5,10 @@
   display: flex;
   flex: 1;
   gap: 0;
-  height: calc(100vh - 54px); /* altura do #busca-topo */
+  max-width: var(--max-width-app);
+  width: 100%;
+  margin: 0 auto;
+  height: calc(100vh - 54px);
   overflow: hidden;
 }
 
@@ -13,6 +16,7 @@
 #painel-resultados {
   width: 35%;
   min-width: 280px;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid var(--color-border);
@@ -153,7 +157,7 @@
   color: var(--color-text);
 }
 
-/* ── Painel direito — leitura ─────────────────────────────────────────────── */
+/* ── Painel direito — leitura contínua ────────────────────────────────────── */
 #painel-conteudo {
   flex: 1;
   overflow-y: auto;
@@ -192,114 +196,103 @@
   font-size: 0.9rem;
 }
 
-/* Conteúdo do parágrafo selecionado */
-.conteudo-meta {
-  margin-bottom: var(--space-xl);
+/* ── Texto contínuo do Catecismo ─────────────────────────────────────────── */
+.texto-continuo {
+  max-width: 68ch;
 }
 
-.conteudo-breadcrumb {
-  font-size: 0.75rem;
-  color: var(--color-muted);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  align-items: center;
-  margin-bottom: var(--space-sm);
-}
-
-.conteudo-breadcrumb span + span::before {
-  content: '›';
-  margin-right: 0.3rem;
-  color: var(--color-border);
-}
-
-.conteudo-num {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-accent-dk);
-  background: #FEF9EC;
-  border: 1px solid #f0e3a8;
-  border-radius: 4px;
-  padding: 0.15rem 0.55rem;
-  display: inline-block;
-  line-height: 1.4;
-}
-
-.conteudo-artigo {
+/* Cabeçalhos hierárquicos */
+.tc-parte {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--color-primary);
-  margin-top: var(--space-sm);
-  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: var(--space-3xl) 0 var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-accent);
 }
 
-/* Texto principal */
-.conteudo-texto {
+.tc-parte:first-child {
+  margin-top: 0;
+}
+
+.tc-secao {
   font-family: var(--font-serif);
   font-size: 1.15rem;
-  line-height: 1.85;
-  color: var(--color-text);
-  max-width: 65ch;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: var(--space-2xl) 0 var(--space-md);
 }
 
-/* Toolbar de ações */
-.conteudo-toolbar {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-  margin-top: var(--space-xl);
-  padding-top: var(--space-lg);
-  border-top: 1px solid var(--color-border);
-}
-
-.btn-toolbar {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
+.tc-capitulo {
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-muted);
-  background: none;
-  border: 1px solid var(--color-border);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: var(--space-xl) 0 var(--space-sm);
+}
+
+.tc-artigo {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-accent-dk);
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+/* Parágrafo individual no texto contínuo */
+.tc-paragrafo {
+  position: relative;
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-xs);
   border-radius: var(--radius);
-  padding: 0.4rem 0.7rem;
-  cursor: pointer;
-  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  border-left: 3px solid transparent;
+  transition: background var(--transition), border-color var(--transition);
 }
 
-.btn-toolbar:hover {
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-  background: #F0F5F2;
+.tc-paragrafo-num {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-accent-dk);
+  margin-right: var(--space-sm);
+  user-select: none;
 }
 
-.btn-toolbar:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-  pointer-events: none;
+.tc-paragrafo-texto {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text);
 }
 
-.btn-toolbar svg {
-  width: 0.85rem;
-  height: 0.85rem;
-  flex-shrink: 0;
+/* Parágrafo ativo / selecionado */
+.tc-paragrafo.ativo {
+  background: #FEF9EC;
+  border-left-color: var(--color-accent);
 }
 
-.btn-toolbar.copiado {
-  color: #2e7d32;
-  border-color: #a5d6a7;
-  background: #f1f8f1;
+/* Highlight suave ao scroll */
+.tc-paragrafo.flash {
+  animation: flashHighlight 1.5s ease;
 }
 
-/* Navegação anterior / próximo */
-.conteudo-nav {
-  margin-left: auto;
-  display: flex;
-  gap: 0.35rem;
+@keyframes flashHighlight {
+  0%   { background: rgba(197,160,40,0.18); }
+  100% { background: transparent; }
+}
+
+.tc-paragrafo.ativo.flash {
+  animation: flashHighlightAtivo 1.5s ease;
+}
+
+@keyframes flashHighlightAtivo {
+  0%   { background: rgba(197,160,40,0.3); }
+  100% { background: #FEF9EC; }
 }
 
 /* ── Mobile (< 768px) ─────────────────────────────────────────────────────── */
@@ -314,6 +307,7 @@
   #painel-resultados {
     width: 100%;
     min-width: 0;
+    max-width: none;
     border-right: none;
   }
 
@@ -335,13 +329,17 @@
     transform: translateX(0);
   }
 
-  .conteudo-texto {
-    font-size: 1.05rem;
-    line-height: 1.75;
+  .tc-paragrafo-texto {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
-  .conteudo-toolbar {
-    margin-top: var(--space-lg);
+  .tc-parte {
+    font-size: 1.2rem;
+  }
+
+  .tc-secao {
+    font-size: 1.05rem;
   }
 
   /* Botão fechar drawer no mobile */
@@ -353,11 +351,6 @@
 @media (min-width: 768px) {
   #btn-fechar-conteudo {
     display: none;
-  }
-
-  /* Limitar largura do conteúdo em telas muito largas */
-  #painel-conteudo {
-    padding: var(--space-2xl) var(--space-3xl);
   }
 }
 

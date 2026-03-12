@@ -31,6 +31,8 @@
   --shadow:  0 2px 16px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 24px rgba(0,0,0,0.12);
 
+  --max-width-app: 1440px;
+
   --transition: 0.25s ease;
 }
 
@@ -123,6 +125,9 @@ body {
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-xl);
+  max-width: var(--max-width-app);
+  width: 100%;
+  margin: 0 auto;
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
   box-shadow: 0 1px 8px rgba(0,0,0,0.06);
@@ -199,13 +204,6 @@ mark {
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
-}
-
-/* Conteúdo do painel direito faz fade */
-#painel-conteudo .conteudo-meta,
-#painel-conteudo .conteudo-texto,
-#painel-conteudo .conteudo-toolbar {
-  animation: fadeIn 0.18s ease both;
 }
 
 /* Transição suave do estado inicial → busca ativa */
