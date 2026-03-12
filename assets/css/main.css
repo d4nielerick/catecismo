@@ -18,10 +18,20 @@
   --font-serif: 'EB Garamond', Georgia, serif;
   --font-sans:  'Inter', system-ui, sans-serif;
 
+  --space-xs:  0.25rem;   /*  4px */
+  --space-sm:  0.5rem;    /*  8px */
+  --space-md:  0.75rem;   /* 12px */
+  --space-lg:  1rem;      /* 16px */
+  --space-xl:  1.5rem;    /* 24px */
+  --space-2xl: 2rem;      /* 32px */
+  --space-3xl: 2.5rem;    /* 40px */
+
   --radius:  8px;
   --radius-lg: 16px;
   --shadow:  0 2px 16px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 24px rgba(0,0,0,0.12);
+
+  --max-width-app: 1440px;
 
   --transition: 0.25s ease;
 }
@@ -65,25 +75,22 @@ body {
 }
 
 /* ── Estado inicial — busca centralizada (Spotlight) ────────────────────── */
-#app.estado-inicial #hero {
-  display: flex;
-}
-#app.estado-busca #hero {
-  display: none;
-}
+#app.estado-inicial #hero        { display: flex;  }
+#app.estado-busca  #hero         { display: none;  }
+#app.estado-inicial #painel-busca { display: none; }
 
 #hero {
   flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem 1rem 4rem;
+  gap: var(--space-xl);
+  padding: var(--space-2xl) var(--space-lg) 3rem;
   text-align: center;
 }
 
 #hero .logo {
-  width: 100px;
+  width: 96px;
   height: auto;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -94,14 +101,16 @@ body {
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 500;
   color: var(--color-primary);
-  line-height: 1.2;
+  line-height: 1.25;
   max-width: 520px;
+  margin-top: var(--space-xs);
 }
 
 #hero .tagline {
   font-size: 0.95rem;
   color: var(--color-muted);
   max-width: 400px;
+  margin-top: calc(-1 * var(--space-sm));
 }
 
 /* ── Estado de busca ativa ───────────────────────────────────────────────── */
@@ -114,11 +123,14 @@ body {
 
 #busca-topo {
   align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1.5rem;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+  max-width: var(--max-width-app);
+  width: 100%;
+  margin: 0 auto;
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -136,9 +148,10 @@ body {
 #temas-rapidos {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-sm);
   justify-content: center;
-  max-width: 560px;
+  max-width: 520px;
+  margin-top: var(--space-sm);
 }
 
 #temas-rapidos button {
@@ -157,6 +170,10 @@ body {
 #temas-rapidos button:hover {
   background: #EEF5F1;
   border-color: var(--color-primary);
+}
+
+#temas-rapidos button:active {
+  transform: scale(0.97);
 }
 
 /* ── mark global ─────────────────────────────────────────────────────────── */
@@ -187,13 +204,6 @@ mark {
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
-}
-
-/* Conteúdo do painel direito faz fade */
-#painel-conteudo .conteudo-meta,
-#painel-conteudo .conteudo-texto,
-#painel-conteudo .conteudo-toolbar {
-  animation: fadeIn 0.18s ease both;
 }
 
 /* Transição suave do estado inicial → busca ativa */

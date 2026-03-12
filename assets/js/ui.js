@@ -2,6 +2,9 @@
  * ui.js
  * Controlador principal da interface.
  * Liga o motor de busca (search.js) aos dois painéis do DOM.
+ *
+ * Painel direito: renderiza todo o texto do Catecismo de forma contínua.
+ * Ao clicar num resultado, faz scroll até o parágrafo correspondente.
  */
 
 import { carregarDados, buscarPorNumero } from './data.js';
@@ -26,6 +29,8 @@ let paragrafos    = [];      // todos os parágrafos em memória
 let queryAtual    = '';      // último termo buscado
 let debounceTimer = null;
 let cardAtivo     = null;    // elemento DOM do card selecionado
+let paragrafoAtivo = null;   // elemento DOM do parágrafo ativo no texto contínuo
+let textoRenderizado = false; // se o texto contínuo já foi montado
 
 // ── Boot ─────────────────────────────────────────────────────────────────────
 (async function init() {
@@ -41,7 +46,7 @@ let cardAtivo     = null;    // elemento DOM do card selecionado
 
   registrarEventos();
 
-  // Verifica se há um hash na URL para abrir diretamente (router.js chama isso também)
+  // Verifica se há um hash na URL para abrir diretamente
   if (location.hash) {
     const num = parseInt(location.hash.replace('#paragrafo-', ''), 10);
     if (Number.isFinite(num)) ativarBuscaEAbrirParagrafo(num);
@@ -50,27 +55,22 @@ let cardAtivo     = null;    // elemento DOM do card selecionado
 
 // ── Eventos ──────────────────────────────────────────────────────────────────
 function registrarEventos() {
-  // Debounce na digitação
   campoBusca.addEventListener('input', () => {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => executarBusca(campoBusca.value), 200);
     botaoLimpar.classList.toggle('oculto', campoBusca.value === '');
   });
 
-  // ESC limpa e volta ao estado inicial
   campoBusca.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') limparBusca();
   });
 
-  // Botão ×
   botaoLimpar.addEventListener('click', limparBusca);
 
-  // Fechar drawer mobile
   btnFecharConteudo.addEventListener('click', () => {
     painelConteudo.classList.remove('aberto');
   });
 
-  // Temas rápidos
   temasRapidos.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-tema]');
     if (!btn) return;
@@ -80,14 +80,12 @@ function registrarEventos() {
     executarBusca(campoBusca.value);
   });
 
-  // Delegação de cliques na lista de resultados
   listaResultados.addEventListener('click', (e) => {
     const card = e.target.closest('[data-num]');
     if (!card) return;
     selecionarParagrafo(parseInt(card.dataset.num, 10), card);
   });
 
-  // Navegação por teclado na lista
   listaResultados.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       const card = document.activeElement.closest('[data-num]');
@@ -102,19 +100,18 @@ function executarBusca(query) {
 
   if (queryAtual.length < 2) {
     if (queryAtual === '') {
-      // Voltamos ao estado inicial se campo vazio
       voltarEstadoInicial();
     }
     return;
   }
 
-  // Ativa o estado de busca (barra sobe ao topo, painéis aparecem)
   ativarEstadoBusca();
 
   const { total, paragrafos: encontrados } = buscar(queryAtual, paragrafos);
   const grupos = agrupar(encontrados);
 
   renderizarResultados(grupos, total, queryAtual);
+  atualizarHighlightsTexto(queryAtual, encontrados);
 }
 
 // ── Estados da UI ────────────────────────────────────────────────────────────
@@ -124,17 +121,21 @@ function ativarEstadoBusca() {
   app.classList.remove('estado-inicial');
   app.classList.add('estado-busca');
 
-  // Move o input + botão limpar para o wrapper do topo
   buscarTopoWrap.appendChild(campoBusca);
   buscarTopoWrap.appendChild(botaoLimpar);
   campoBusca.focus();
+
+  // Renderiza texto contínuo na primeira vez
+  if (!textoRenderizado) {
+    renderizarTextoCompleto();
+    textoRenderizado = true;
+  }
 }
 
 function voltarEstadoInicial() {
   app.classList.remove('estado-busca');
   app.classList.add('estado-inicial');
 
-  // Devolve o input ao hero
   const heroWrapper = hero.querySelector('.campo-busca-container');
   heroWrapper.appendChild(campoBusca);
   heroWrapper.appendChild(botaoLimpar);
@@ -143,7 +144,11 @@ function voltarEstadoInicial() {
   contagemEl.textContent = '';
   semResultados.classList.add('oculto');
   painelConteudo.classList.remove('aberto');
-  renderizarPlaceholderConteudo();
+
+  // Limpa highlights do texto contínuo
+  limparHighlights();
+  limparParagrafoAtivo();
+
   cardAtivo = null;
 }
 
@@ -154,7 +159,174 @@ function limparBusca() {
   campoBusca.focus();
 }
 
-// ── Renderização dos resultados ───────────────────────────────────────────────
+// ── Renderização do texto completo (contínuo) ────────────────────────────────
+function renderizarTextoCompleto() {
+  const container = document.createElement('div');
+  container.className = 'texto-continuo';
+
+  let parteAtual = '';
+  let secaoAtual = '';
+  let capituloAtual = '';
+  let artigoAtual = '';
+
+  for (const p of paragrafos) {
+    // Cabeçalho Parte
+    if (p.parte && p.parte !== parteAtual) {
+      parteAtual = p.parte;
+      secaoAtual = '';
+      capituloAtual = '';
+      artigoAtual = '';
+      const h = document.createElement('h2');
+      h.className = 'tc-parte';
+      h.textContent = p.parte;
+      container.appendChild(h);
+    }
+
+    // Cabeçalho Seção
+    if (p.secao && p.secao !== secaoAtual) {
+      secaoAtual = p.secao;
+      capituloAtual = '';
+      artigoAtual = '';
+      const h = document.createElement('h3');
+      h.className = 'tc-secao';
+      h.textContent = p.secao;
+      container.appendChild(h);
+    }
+
+    // Cabeçalho Capítulo
+    if (p.capitulo && p.capitulo !== capituloAtual) {
+      capituloAtual = p.capitulo;
+      artigoAtual = '';
+      const h = document.createElement('h4');
+      h.className = 'tc-capitulo';
+      h.textContent = p.capitulo;
+      container.appendChild(h);
+    }
+
+    // Cabeçalho Artigo
+    if (p.artigo && p.artigo !== artigoAtual) {
+      artigoAtual = p.artigo;
+      const h = document.createElement('h5');
+      h.className = 'tc-artigo';
+      h.textContent = p.artigo;
+      container.appendChild(h);
+    }
+
+    // Parágrafo
+    const div = document.createElement('div');
+    div.className = 'tc-paragrafo';
+    div.id = `p-${p.numero}`;
+
+    const numSpan = document.createElement('span');
+    numSpan.className = 'tc-paragrafo-num';
+    numSpan.textContent = `§${p.numero}`;
+
+    const textoSpan = document.createElement('span');
+    textoSpan.className = 'tc-paragrafo-texto';
+    textoSpan.textContent = p.texto;
+
+    div.appendChild(numSpan);
+    div.appendChild(textoSpan);
+    container.appendChild(div);
+  }
+
+  // Limpa placeholder e insere texto contínuo
+  // Preserva o botão fechar (mobile)
+  const btnFechar = painelConteudo.querySelector('#btn-fechar-conteudo');
+  painelConteudo.innerHTML = '';
+  if (btnFechar) painelConteudo.appendChild(btnFechar);
+  painelConteudo.appendChild(container);
+}
+
+// ── Highlights no texto contínuo ─────────────────────────────────────────────
+function atualizarHighlightsTexto(query, encontrados) {
+  // Primeiro limpa todos os highlights anteriores
+  limparHighlights();
+
+  // Cria set com números encontrados para lookup rápido
+  const numerosEncontrados = new Set(encontrados.map(p => p.numero));
+
+  // Atualiza apenas os parágrafos encontrados com highlight
+  for (const p of encontrados) {
+    const el = document.getElementById(`p-${p.numero}`);
+    if (!el) continue;
+    const textoEl = el.querySelector('.tc-paragrafo-texto');
+    if (textoEl) {
+      textoEl.innerHTML = destacar(p.texto, query);
+    }
+  }
+}
+
+function limparHighlights() {
+  const marcados = painelConteudo.querySelectorAll('.tc-paragrafo-texto');
+  for (const el of marcados) {
+    // Se tem <mark>, restaura para texto puro
+    if (el.querySelector('mark')) {
+      // Encontra o parágrafo correspondente
+      const pDiv = el.closest('.tc-paragrafo');
+      if (pDiv) {
+        const num = parseInt(pDiv.id.replace('p-', ''), 10);
+        const p = buscarPorNumero(num);
+        if (p) el.textContent = p.texto;
+      }
+    }
+  }
+}
+
+function limparParagrafoAtivo() {
+  if (paragrafoAtivo) {
+    paragrafoAtivo.classList.remove('ativo');
+    paragrafoAtivo = null;
+  }
+}
+
+// ── Seleção de parágrafo ─────────────────────────────────────────────────────
+function selecionarParagrafo(numero, cardEl) {
+  // Destaca o card ativo na lista
+  if (cardAtivo) {
+    cardAtivo.classList.remove('selecionado');
+    cardAtivo.setAttribute('aria-selected', 'false');
+  }
+  cardAtivo = cardEl;
+  cardAtivo.classList.add('selecionado');
+  cardAtivo.setAttribute('aria-selected', 'true');
+
+  // Destaca e scrolla até o parágrafo no texto contínuo
+  scrollParaParagrafo(numero);
+
+  // Mobile: abre drawer
+  if (window.innerWidth < 768) {
+    painelConteudo.classList.add('aberto');
+  }
+
+  // Atualiza URL hash
+  const novoHash = `#paragrafo-${numero}`;
+  if (location.hash !== novoHash) {
+    history.pushState(null, '', novoHash);
+  }
+}
+
+function scrollParaParagrafo(numero) {
+  const el = document.getElementById(`p-${numero}`);
+  if (!el) return;
+
+  // Remove ativo anterior
+  limparParagrafoAtivo();
+
+  // Marca novo como ativo
+  el.classList.add('ativo');
+  paragrafoAtivo = el;
+
+  // Scroll suave
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  // Flash de destaque
+  el.classList.remove('flash');
+  void el.offsetWidth; // force reflow
+  el.classList.add('flash');
+}
+
+// ── Renderização dos resultados (painel esquerdo) ────────────────────────────
 function renderizarResultados(grupos, total, query) {
   listaResultados.innerHTML = '';
 
@@ -217,7 +389,7 @@ function criarCard(p, query) {
 
   card.innerHTML = `
     <div class="card-meta">
-      <span class="card-num">§${p.numero}</span>
+      <span class="card-num">\u00A7${p.numero}</span>
       ${labelContexto ? `<span class="card-artigo">${escapeHtml(labelContexto)}</span>` : ''}
     </div>
     <div class="card-trecho">${trecho(p.texto, query)}</div>
@@ -226,161 +398,13 @@ function criarCard(p, query) {
   return card;
 }
 
-// ── Renderização do parágrafo selecionado ────────────────────────────────────
-function selecionarParagrafo(numero, cardEl) {
-  const p = buscarPorNumero(numero) ?? paragrafos.find(x => x.numero === numero);
-  if (!p) return;
-
-  // Destaca o card ativo
-  if (cardAtivo) {
-    cardAtivo.classList.remove('selecionado');
-    cardAtivo.setAttribute('aria-selected', 'false');
-  }
-  cardAtivo = cardEl;
-  cardAtivo.classList.add('selecionado');
-  cardAtivo.setAttribute('aria-selected', 'true');
-
-  renderizarConteudo(p);
-
-  // Mobile: abre drawer
-  if (window.innerWidth < 768) {
-    painelConteudo.classList.add('aberto');
-  }
-
-  // Atualiza URL hash sem recarregar (router.js também escuta isso)
-  const novoHash = `#paragrafo-${numero}`;
-  if (location.hash !== novoHash) {
-    history.pushState(null, '', novoHash);
-  }
-}
-
-function renderizarConteudo(p) {
-  const breadcrumb = [p.parte, p.secao, p.capitulo]
-    .filter(Boolean)
-    .map(s => `<span>${escapeHtml(s)}</span>`)
-    .join('');
-
-  painelConteudo.innerHTML = `
-    <button id="btn-fechar-conteudo" type="button" aria-label="Voltar aos resultados">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M19 12H5M12 5l-7 7 7 7"/>
-      </svg>
-      Resultados
-    </button>
-
-    <div class="conteudo-meta">
-      ${breadcrumb ? `<div class="conteudo-breadcrumb">${breadcrumb}</div>` : ''}
-      <span class="conteudo-num">§${p.numero}</span>
-      ${p.artigo ? `<div class="conteudo-artigo">${escapeHtml(p.artigo)}</div>` : ''}
-    </div>
-
-    <p class="conteudo-texto">${destacar(p.texto, queryAtual)}</p>
-
-    <div class="conteudo-toolbar">
-      <button class="btn-toolbar" id="btn-copiar" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-        </svg>
-        Copiar link
-      </button>
-      <div class="conteudo-nav">
-        <button class="btn-toolbar" id="btn-anterior" type="button" aria-label="Parágrafo anterior" ${p.numero <= 1 ? 'disabled' : ''}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-          Anterior
-        </button>
-        <button class="btn-toolbar" id="btn-proximo" type="button" aria-label="Próximo parágrafo">
-          Próximo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 18l6-6-6-6"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  `;
-
-  // Rebind botões (innerHTML recriou os elementos)
-  document.getElementById('btn-fechar-conteudo')
-    .addEventListener('click', () => painelConteudo.classList.remove('aberto'));
-
-  document.getElementById('btn-copiar')
-    .addEventListener('click', () => copiarLink(p.numero));
-
-  document.getElementById('btn-anterior')
-    .addEventListener('click', () => navegarParagrafo(p.numero - 1));
-
-  document.getElementById('btn-proximo')
-    .addEventListener('click', () => navegarParagrafo(p.numero + 1));
-}
-
-function renderizarPlaceholderConteudo() {
-  painelConteudo.innerHTML = `
-    <div class="placeholder" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
-      </svg>
-      <p>Selecione um parágrafo para ler</p>
-    </div>
-  `;
-}
-
-// ── Copiar link ───────────────────────────────────────────────────────────────
-async function copiarLink(numero) {
-  const url = `${location.origin}${location.pathname}#paragrafo-${numero}`;
-  try {
-    await navigator.clipboard.writeText(url);
-  } catch {
-    // Fallback para browsers sem permissão
-    const ta = document.createElement('textarea');
-    ta.value = url;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-  }
-
-  const btn = document.getElementById('btn-copiar');
-  if (!btn) return;
-  btn.classList.add('copiado');
-  btn.textContent = '✓ Copiado!';
-  setTimeout(() => {
-    btn.classList.remove('copiado');
-    btn.innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-      </svg>
-      Copiar link`;
-  }, 2000);
-}
-
-// ── Navegação parágrafo anterior / próximo ────────────────────────────────────
-function navegarParagrafo(numero) {
-  const p = paragrafos.find(x => x.numero === numero);
-  if (!p) return;
-
-  // Tenta encontrar o card na lista se existir; senão renderiza direto
-  const card = listaResultados.querySelector(`[data-num="${numero}"]`);
-  if (card) {
-    card.scrollIntoView({ block: 'nearest' });
-    selecionarParagrafo(numero, card);
-  } else {
-    renderizarConteudo(p);
-    history.pushState(null, '', `#paragrafo-${numero}`);
-  }
-}
-
 // ── Utilitário: abrir parágrafo direto pelo hash (chamado pelo router.js) ────
 export function ativarBuscaEAbrirParagrafo(numero) {
   const p = paragrafos.find(x => x.numero === numero);
   if (!p) return;
 
   ativarEstadoBusca();
-  renderizarConteudo(p);
+  scrollParaParagrafo(numero);
 
   if (window.innerWidth < 768) {
     painelConteudo.classList.add('aberto');
