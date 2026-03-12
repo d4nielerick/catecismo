@@ -7,7 +7,7 @@
  * Ao clicar num resultado, faz scroll até o parágrafo correspondente.
  */
 
-import { carregarDados, buscarPorNumero } from './data.js';
+import { carregarDados, buscarPorNumero, carregarNotas, notasDoParagrafo } from './data.js';
 import { buscar, agrupar, destacar, trecho } from './search.js';
 
 // ── Elementos do DOM ─────────────────────────────────────────────────────────
@@ -35,7 +35,10 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
 // ── Boot ─────────────────────────────────────────────────────────────────────
 (async function init() {
   try {
-    paragrafos = await carregarDados();
+    [paragrafos] = await Promise.all([
+      carregarDados(),
+      carregarNotas(),
+    ]);
   } catch (err) {
     painelConteudo.innerHTML = `
       <div class="placeholder">
@@ -223,7 +226,7 @@ function renderizarTextoCompleto() {
 
     const textoSpan = document.createElement('span');
     textoSpan.className = 'tc-paragrafo-texto';
-    textoSpan.textContent = p.texto;
+    renderizarTextoComNotas(textoSpan, p.texto, p.numero);
 
     div.appendChild(numSpan);
     div.appendChild(textoSpan);
@@ -252,6 +255,7 @@ function atualizarHighlightsTexto(query, encontrados) {
     if (!el) continue;
     const textoEl = el.querySelector('.tc-paragrafo-texto');
     if (textoEl) {
+      // Durante a busca: highlight simples (notas ficam como texto plano)
       textoEl.innerHTML = destacar(p.texto, query);
     }
   }
@@ -260,14 +264,15 @@ function atualizarHighlightsTexto(query, encontrados) {
 function limparHighlights() {
   const marcados = painelConteudo.querySelectorAll('.tc-paragrafo-texto');
   for (const el of marcados) {
-    // Se tem <mark>, restaura para texto puro
     if (el.querySelector('mark')) {
-      // Encontra o parágrafo correspondente
       const pDiv = el.closest('.tc-paragrafo');
       if (pDiv) {
         const num = parseInt(pDiv.id.replace('p-', ''), 10);
         const p = buscarPorNumero(num);
-        if (p) el.textContent = p.texto;
+        if (p) {
+          el.innerHTML = '';
+          renderizarTextoComNotas(el, p.texto, num);
+        }
       }
     }
   }
@@ -408,6 +413,40 @@ export function ativarBuscaEAbrirParagrafo(numero) {
 
   if (window.innerWidth < 768) {
     painelConteudo.classList.add('aberto');
+  }
+}
+
+// ── Renderização de texto com notas de rodapé ────────────────────────────────
+/**
+ * Preenche `el` com o texto do parágrafo, substituindo (n) por <sup> interativo
+ * quando a nota existir em notas.json.
+ */
+function renderizarTextoComNotas(el, texto, numeroParagrafo) {
+  const notas = notasDoParagrafo(numeroParagrafo);
+  if (!notas) {
+    el.textContent = texto;
+    return;
+  }
+
+  const partes = texto.split(/(\(\d+\))/);
+  for (const parte of partes) {
+    const m = parte.match(/^\((\d+)\)$/);
+    if (m && notas[m[1]]) {
+      const ref = m[1];
+      const sup = document.createElement('sup');
+      sup.className = 'ref-nota';
+      sup.textContent = ref;
+      sup.setAttribute('aria-label', `Nota de rodapé ${ref}`);
+
+      const tooltip = document.createElement('span');
+      tooltip.className = 'nota-tooltip';
+      tooltip.textContent = notas[ref];
+      sup.appendChild(tooltip);
+
+      el.appendChild(sup);
+    } else {
+      el.appendChild(document.createTextNode(parte));
+    }
   }
 }
 

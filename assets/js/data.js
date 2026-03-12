@@ -11,10 +11,12 @@
  *     secao: string, capitulo: string, artigo: string }
  */
 
-// Caminho relativo ao módulo — funciona em qualquer base URL (localhost, GitHub Pages, etc.)
-const DATA_URL = new URL('../../data/catecismo.json', import.meta.url).href;
+// Caminhos relativos ao módulo — funciona em qualquer base URL
+const DATA_URL  = new URL('../../data/catecismo.json', import.meta.url).href;
+const NOTAS_URL = new URL('../../data/notas.json',     import.meta.url).href;
 
-let _cache = null;
+let _cache      = null;
+let _notasCache = null;
 
 /**
  * Retorna o array de parágrafos. Na primeira chamada faz fetch() e constrói
@@ -42,12 +44,40 @@ export async function carregarDados() {
 
 /**
  * Retorna um parágrafo pelo número, ou null se não encontrado.
- * Requer que carregarDados() já tenha sido chamado (i.e., cache populado).
+ * Requer que carregarDados() já tenha sido chamado.
  *
  * @param {number} numero
- * @returns {{numero:number, texto:string, parte:string, secao:string, capitulo:string, artigo:string}|null}
+ * @returns {object|null}
  */
 export function buscarPorNumero(numero) {
   if (!_cache) return null;
   return _cache.find(p => p.numero === numero) ?? null;
+}
+
+/**
+ * Carrega o mapa de notas de rodapé (notas.json).
+ * Retorna { [paraNum]: { [noteRef]: noteText } }
+ *
+ * @returns {Promise<Object>}
+ */
+export async function carregarNotas() {
+  if (_notasCache) return _notasCache;
+  try {
+    const resp = await fetch(NOTAS_URL);
+    if (!resp.ok) return {};
+    _notasCache = await resp.json();
+  } catch {
+    _notasCache = {};
+  }
+  return _notasCache;
+}
+
+/**
+ * Retorna as notas do parágrafo N, ou null.
+ * @param {number} numero
+ * @returns {Object|null}
+ */
+export function notasDoParagrafo(numero) {
+  if (!_notasCache) return null;
+  return _notasCache[String(numero)] ?? null;
 }

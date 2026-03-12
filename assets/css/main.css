@@ -71,7 +71,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  will-change: transform; /* promote to own layer for smooth transitions */
+}
+
+/* Modo busca: trava altura em 100vh para scroll independente dos painéis */
+#app.estado-busca {
+  height: 100dvh;
+  overflow: hidden;
 }
 
 /* ── Estado inicial — busca centralizada (Spotlight) ────────────────────── */
@@ -87,23 +92,35 @@ body {
   gap: var(--space-xl);
   padding: var(--space-2xl) var(--space-lg) 3rem;
   text-align: center;
+  background: linear-gradient(
+    160deg,
+    var(--color-bg) 0%,
+    #F0EDE4 55%,
+    #E8E4DB 100%
+  );
 }
 
 #hero .logo {
-  width: 96px;
+  width: 108px;
   height: auto;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(26,60,46,0.18), 0 2px 8px rgba(26,60,46,0.10);
+  transition: transform 0.3s ease;
+}
+
+#hero .logo:hover {
+  transform: translateY(-3px);
 }
 
 #hero h1 {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
   font-weight: 500;
   color: var(--color-primary);
-  line-height: 1.25;
+  line-height: 1.2;
   max-width: 520px;
   margin-top: var(--space-xs);
+  letter-spacing: -0.01em;
 }
 
 #hero .tagline {
@@ -111,6 +128,7 @@ body {
   color: var(--color-muted);
   max-width: 400px;
   margin-top: calc(-1 * var(--space-sm));
+  line-height: 1.55;
 }
 
 /* ── Estado de busca ativa ───────────────────────────────────────────────── */
@@ -121,26 +139,32 @@ body {
   display: none;
 }
 
+/* Header externo: full-width, sticky */
 #busca-topo {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.07);
+  flex-shrink: 0;
+}
+
+/* Inner wrapper: max-width centrado */
+.busca-topo-inner {
+  display: flex;
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-xl);
   max-width: var(--max-width-app);
-  width: 100%;
   margin: 0 auto;
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  width: 100%;
 }
 
 #busca-topo .logo-mini {
   width: 36px;
   height: 36px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
   flex-shrink: 0;
 }
 
@@ -150,26 +174,29 @@ body {
   flex-wrap: wrap;
   gap: var(--space-sm);
   justify-content: center;
-  max-width: 520px;
+  max-width: 540px;
   margin-top: var(--space-sm);
 }
 
 #temas-rapidos button {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
   color: var(--color-primary);
-  background: var(--color-surface);
+  background: rgba(255,255,255,0.85);
   border: 1px solid var(--color-border);
   border-radius: 100px;
-  padding: 0.35rem 0.85rem;
+  padding: 0.35rem 0.9rem;
   cursor: pointer;
-  transition: background var(--transition), border-color var(--transition);
+  transition: background var(--transition), border-color var(--transition), transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 #temas-rapidos button:hover {
-  background: #EEF5F1;
-  border-color: var(--color-primary);
+  background: #FFFFFF;
+  border-color: var(--color-accent);
+  color: var(--color-accent-dk);
+  box-shadow: 0 2px 8px rgba(197,160,40,0.15);
+  transform: translateY(-1px);
 }
 
 #temas-rapidos button:active {
@@ -188,11 +215,11 @@ mark {
 
 /* Hero aparece com fade-in */
 #hero {
-  animation: fadeUp 0.4s ease both;
+  animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
