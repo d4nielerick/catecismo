@@ -8,7 +8,7 @@
   max-width: var(--max-width-app);
   width: 100%;
   margin: 0 auto;
-  height: calc(100vh - 54px);
+  min-height: 0;   /* critical for flex children to scroll independently */
   overflow: hidden;
 }
 
@@ -298,7 +298,6 @@
 /* ── Mobile (< 768px) ─────────────────────────────────────────────────────── */
 @media (max-width: 767px) {
   #painel-busca {
-    height: calc(100vh - 54px);
     position: relative;
     overflow: hidden;
   }
@@ -378,4 +377,66 @@
 
 #btn-fechar-conteudo:hover {
   color: var(--color-text);
+}
+
+/* ── Notas de rodapé ─────────────────────────────────────────────────────── */
+.ref-nota {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--color-accent-dk);
+  background: #FEF9EC;
+  border: 1px solid #f0e3a8;
+  border-radius: 3px;
+  padding: 0 3px;
+  cursor: pointer;
+  vertical-align: super;
+  line-height: 1;
+  user-select: none;
+  transition: background var(--transition), border-color var(--transition);
+  position: relative;
+}
+
+.ref-nota:hover {
+  background: #FFF3C4;
+  border-color: var(--color-accent);
+}
+
+/* Tooltip da nota */
+.nota-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1A3C2E;
+  color: #F5F0E8;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  white-space: normal;
+  width: max-content;
+  max-width: min(320px, 80vw);
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.nota-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #1A3C2E;
+}
+
+.ref-nota:hover .nota-tooltip,
+.ref-nota.tooltip-visivel .nota-tooltip {
+  opacity: 1;
 }
