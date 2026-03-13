@@ -31,7 +31,7 @@
   --shadow:  0 2px 16px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 24px rgba(0,0,0,0.12);
 
-  --max-width-app: 1440px;
+  --max-width-app: 1200px;
 
   --transition: 0.25s ease;
 }
@@ -80,9 +80,19 @@ body {
 }
 
 /* ── Estado inicial — busca centralizada (Spotlight) ────────────────────── */
-#app.estado-inicial #hero        { display: flex;  }
-#app.estado-busca  #hero         { display: none;  }
+#app.estado-inicial #hero         { display: flex; }
+#app.estado-busca   #hero         { display: none; }
+#app.estado-leitura #hero         { display: none; }
 #app.estado-inicial #painel-busca { display: none; }
+#app.estado-leitura #painel-busca { display: none; }
+
+/* ── Estado de leitura ───────────────────────────────────────────────────── */
+#app.estado-leitura {
+  height: 100dvh;
+  overflow: hidden;
+}
+#app.estado-leitura #busca-topo      { display: none; }
+#app:not(.estado-leitura) #leitor-container { display: none; }
 
 #hero {
   flex: 1;
@@ -159,12 +169,21 @@ body {
   width: 100%;
 }
 
-#busca-topo .logo-mini {
+.btn-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   width: 36px;
   height: 36px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
+  border-radius: var(--radius);
+  color: var(--color-muted);
+  transition: color var(--transition), background var(--transition);
+}
+
+.btn-home:hover {
+  color: var(--color-primary);
+  background: var(--color-bg);
 }
 
 /* ── Tema de sugestões rápidas (estado inicial) ──────────────────────────── */
@@ -247,3 +266,38 @@ mark {
 
 /* ── Utilitários ─────────────────────────────────────────────────────────── */
 .oculto { display: none !important; }
+
+/* ── Frame "app" — borda dourada em telas com espaço ────────────────────── */
+@media (min-width: 860px) {
+  html {
+    /* Fundo sólido fora do #app */
+    background: #C5A028;
+    min-height: 100%;
+  }
+
+  body {
+    padding: 1.25rem;
+    background: transparent;
+  }
+
+  #app {
+    border-radius: 20px;
+    background: var(--color-bg);
+    /* overflow: hidden para respeitar o border-radius nas bordas */
+    overflow: hidden;
+    /* Anel dourado + sombra profunda */
+    box-shadow:
+      0 0 0 2px rgba(197, 160, 40, 0.75),   /* borda dourada */
+      0 0 0 4px rgba(197, 160, 40, 0.12),    /* halo suave    */
+      0 32px 80px rgba(0, 0, 0, 0.40),       /* sombra grande */
+      0 8px 24px rgba(0, 0, 0, 0.25);        /* sombra próxima*/
+    min-height: calc(100dvh - 2.5rem);
+  }
+
+  /* Em modo busca e leitura a altura fica travada — desconta o padding */
+  #app.estado-busca,
+  #app.estado-leitura {
+    height: calc(100dvh - 2.5rem);
+    min-height: 0;
+  }
+}

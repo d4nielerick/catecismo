@@ -1,0 +1,10 @@
+# Backups
+data/*.bak.*.json
+assets/css/*.bak
+*.bak
+
+# Embedded repo (acidental)
+/catecismo/
+
+# OS
+.DS_Store

@@ -9,6 +9,8 @@
 
 import { carregarDados, buscarPorNumero, carregarNotas, notasDoParagrafo } from './data.js';
 import { buscar, agrupar, destacar, trecho } from './search.js';
+import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
+import { iniciarLeitor, abrirLeitor } from './leitor.js';
 
 // ── Elementos do DOM ─────────────────────────────────────────────────────────
 const app             = document.getElementById('app');
@@ -23,13 +25,54 @@ const semResultados   = document.getElementById('sem-resultados');
 const painelConteudo  = document.getElementById('painel-conteudo');
 const btnFecharConteudo = document.getElementById('btn-fechar-conteudo');
 const temasRapidos    = document.getElementById('temas-rapidos');
+const navAnterior     = document.getElementById('nav-anterior');
+const navProximo      = document.getElementById('nav-proximo');
 
 // ── Estado ───────────────────────────────────────────────────────────────────
-let paragrafos    = [];      // todos os parágrafos em memória
-let queryAtual    = '';      // último termo buscado
-let debounceTimer = null;
-let cardAtivo     = null;    // elemento DOM do card selecionado
-let paragrafoAtivo = null;   // elemento DOM do parágrafo ativo no texto contínuo
+let paragrafos        = [];   // todos os parágrafos em memória
+let queryAtual        = '';   // último termo buscado
+let debounceTimer     = null;
+let cardAtivo         = null; // elemento DOM do card selecionado
+let paragrafoAtivo    = null; // elemento DOM do parágrafo ativo no texto contínuo
+let resultadosAtuais  = [];   // parágrafos do resultado atual (para nav prev/next)
+let indiceAtivo       = -1;   // índice do parágrafo ativo em resultadosAtuais
+let autoSelectTimer   = null; // timer para seleção automática do 1º resultado
+
+// ── Botões rovings (migram para o parágrafo ativo) ───────────────────────────
+
+// Copiar link
+const _btnRoving = document.createElement('button');
+_btnRoving.className = 'para-copiar-btn';
+_btnRoving.setAttribute('aria-label', 'Copiar link deste parágrafo');
+_btnRoving.setAttribute('type', 'button');
+_btnRoving.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
+_btnRoving.addEventListener('click', (e) => { e.stopPropagation(); copiarLink(); });
+let _rovingTimer = null;
+
+// Colecionar trecho
+const _btnColetar = document.createElement('button');
+_btnColetar.className = 'para-coletar-btn';
+_btnColetar.setAttribute('type', 'button');
+_btnColetar.setAttribute('aria-label', 'Adicionar ao coletor');
+_btnColetar.textContent = '+';
+_btnColetar.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const num = paragrafoAtivo ? parseInt(paragrafoAtivo.id.replace('p-', ''), 10) : null;
+  if (!num) return;
+  const p = paragrafos.find(x => x.numero === num);
+  if (p) adicionarEAbrir(p);
+  atualizarBtnColetar();
+});
+
+// Callback: atualiza visual do botão quando o coletor muda (ex: item removido)
+onMudanca(atualizarBtnColetar);
+
+function atualizarBtnColetar() {
+  if (!paragrafoAtivo) return;
+  const num = parseInt(paragrafoAtivo.id.replace('p-', ''), 10);
+  _btnColetar.classList.toggle('coletado', contemNumero(num));
+  _btnColetar.textContent = contemNumero(num) ? '✓' : '+';
+}
 let textoRenderizado = false; // se o texto contínuo já foi montado
 
 // ── Boot ─────────────────────────────────────────────────────────────────────
@@ -47,6 +90,7 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
     return;
   }
 
+  iniciarLeitor(paragrafos);
   registrarEventos();
 
   // Verifica se há um hash na URL para abrir diretamente
@@ -60,6 +104,7 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
 function registrarEventos() {
   campoBusca.addEventListener('input', () => {
     clearTimeout(debounceTimer);
+    clearTimeout(autoSelectTimer);
     debounceTimer = setTimeout(() => executarBusca(campoBusca.value), 200);
     botaoLimpar.classList.toggle('oculto', campoBusca.value === '');
   });
@@ -74,18 +119,23 @@ function registrarEventos() {
     painelConteudo.classList.remove('aberto');
   });
 
+
   temasRapidos.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-tema]');
     if (!btn) return;
     campoBusca.value = btn.dataset.tema;
     campoBusca.focus();
     botaoLimpar.classList.remove('oculto');
+    clearTimeout(autoSelectTimer);
     executarBusca(campoBusca.value);
+    // Tema clicado = intenção clara — seleciona rápido
+    autoSelectTimer = setTimeout(() => selecionarPrimeiro(), 300);
   });
 
   listaResultados.addEventListener('click', (e) => {
     const card = e.target.closest('[data-num]');
     if (!card) return;
+    clearTimeout(autoSelectTimer);
     selecionarParagrafo(parseInt(card.dataset.num, 10), card);
   });
 
@@ -95,6 +145,14 @@ function registrarEventos() {
       if (card) selecionarParagrafo(parseInt(card.dataset.num, 10), card);
     }
   });
+
+  navAnterior.addEventListener('click', () => navegarPara(indiceAtivo - 1));
+  navProximo.addEventListener('click',  () => navegarPara(indiceAtivo + 1));
+
+  document.getElementById('btn-ler-hero')
+    ?.addEventListener('click', () => abrirLeitor(0));
+  document.getElementById('btn-ler-header')
+    ?.addEventListener('click', () => abrirLeitor(0));
 }
 
 // ── Busca ────────────────────────────────────────────────────────────────────
@@ -113,8 +171,17 @@ function executarBusca(query) {
   const { total, paragrafos: encontrados } = buscar(queryAtual, paragrafos);
   const grupos = agrupar(encontrados);
 
+  resultadosAtuais = encontrados;
+  indiceAtivo = -1;
+
   renderizarResultados(grupos, total, queryAtual);
   atualizarHighlightsTexto(queryAtual, encontrados);
+
+  // Seleciona o 1º resultado automaticamente após 1s de inatividade
+  clearTimeout(autoSelectTimer);
+  if (encontrados.length > 0) {
+    autoSelectTimer = setTimeout(() => selecionarPrimeiro(), 1000);
+  }
 }
 
 // ── Estados da UI ────────────────────────────────────────────────────────────
@@ -153,6 +220,9 @@ function voltarEstadoInicial() {
   limparParagrafoAtivo();
 
   cardAtivo = null;
+  resultadosAtuais = [];
+  indiceAtivo = -1;
+  ocultarNav();
 }
 
 function limparBusca() {
@@ -233,8 +303,7 @@ function renderizarTextoCompleto() {
     container.appendChild(div);
   }
 
-  // Limpa placeholder e insere texto contínuo
-  // Preserva o botão fechar (mobile)
+  // Limpa placeholder e insere texto contínuo; preserva o botão fechar (mobile)
   const btnFechar = painelConteudo.querySelector('#btn-fechar-conteudo');
   painelConteudo.innerHTML = '';
   if (btnFechar) painelConteudo.appendChild(btnFechar);
@@ -283,6 +352,8 @@ function limparParagrafoAtivo() {
     paragrafoAtivo.classList.remove('ativo');
     paragrafoAtivo = null;
   }
+  if (_btnRoving.parentNode)  _btnRoving.parentNode.removeChild(_btnRoving);
+  if (_btnColetar.parentNode) _btnColetar.parentNode.removeChild(_btnColetar);
 }
 
 // ── Seleção de parágrafo ─────────────────────────────────────────────────────
@@ -309,6 +380,10 @@ function selecionarParagrafo(numero, cardEl) {
   if (location.hash !== novoHash) {
     history.pushState(null, '', novoHash);
   }
+
+  // Atualiza índice e setas de navegação
+  indiceAtivo = resultadosAtuais.findIndex(p => p.numero === numero);
+  atualizarNav();
 }
 
 function scrollParaParagrafo(numero) {
@@ -322,13 +397,23 @@ function scrollParaParagrafo(numero) {
   el.classList.add('ativo');
   paragrafoAtivo = el;
 
-  // Scroll suave
-  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Scroll instantâneo — o flash é o feedback visual de "você está aqui"
+  const panelRect = painelConteudo.getBoundingClientRect();
+  const elRect    = el.getBoundingClientRect();
+  const target    = painelConteudo.scrollTop + elRect.top - panelRect.top
+                    - (painelConteudo.clientHeight - el.offsetHeight) / 2;
+  painelConteudo.scrollTop = Math.max(0, target);
 
   // Flash de destaque
   el.classList.remove('flash');
   void el.offsetWidth; // force reflow
   el.classList.add('flash');
+
+  // Migra os botões rovings para este parágrafo
+  _btnRoving.classList.remove('copiado');
+  el.appendChild(_btnRoving);
+  el.appendChild(_btnColetar);
+  atualizarBtnColetar();
 }
 
 // ── Renderização dos resultados (painel esquerdo) ────────────────────────────
@@ -428,7 +513,8 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
     return;
   }
 
-  const partes = texto.split(/(\(\d+\))/);
+  // Exclui números de 4 dígitos (ex: anos como 1974, 1968) — não são notas de rodapé
+  const partes = texto.split(/(\((?!\d{4}\))\d+\))/);
   for (const parte of partes) {
     const m = parte.match(/^\((\d+)\)$/);
     if (m && notas[m[1]]) {
@@ -448,6 +534,59 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       el.appendChild(document.createTextNode(parte));
     }
   }
+}
+
+// ── Seleção automática ────────────────────────────────────────────────────────
+function selecionarPrimeiro() {
+  if (!resultadosAtuais.length) return;
+  const primeiro = resultadosAtuais[0];
+  const card = listaResultados.querySelector(`[data-num="${primeiro.numero}"]`);
+  if (card) selecionarParagrafo(primeiro.numero, card);
+}
+
+// ── Navegação prev/next ───────────────────────────────────────────────────────
+function navegarPara(novoIndice) {
+  if (novoIndice < 0 || novoIndice >= resultadosAtuais.length) return;
+  const p = resultadosAtuais[novoIndice];
+
+  // Encontra o card na lista e seleciona
+  const card = listaResultados.querySelector(`[data-num="${p.numero}"]`);
+  if (card) {
+    card.scrollIntoView({ block: 'nearest' });
+    selecionarParagrafo(p.numero, card);
+  } else {
+    // Card fora dos 200 renderizados — apenas scrolla o texto
+    scrollParaParagrafo(p.numero);
+    indiceAtivo = novoIndice;
+    atualizarNav();
+  }
+}
+
+function atualizarNav() {
+  if (indiceAtivo === -1 || resultadosAtuais.length <= 1) {
+    ocultarNav();
+    return;
+  }
+  navAnterior.classList.remove('oculto');
+  navProximo.classList.remove('oculto');
+  navAnterior.disabled = indiceAtivo === 0;
+  navProximo.disabled  = indiceAtivo === resultadosAtuais.length - 1;
+}
+
+function ocultarNav() {
+  navAnterior.classList.add('oculto');
+  navProximo.classList.add('oculto');
+}
+
+// ── Copiar link ───────────────────────────────────────────────────────────────
+let _copiarTimer = null;
+
+function copiarLink() {
+  navigator.clipboard.writeText(location.href).then(() => {
+    _btnRoving.classList.add('copiado');
+    clearTimeout(_copiarTimer);
+    _copiarTimer = setTimeout(() => { _btnRoving.classList.remove('copiado'); }, 2000);
+  });
 }
 
 // ── Helper ────────────────────────────────────────────────────────────────────

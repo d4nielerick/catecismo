@@ -29,6 +29,19 @@ function normalizar(s) {
 const MAX_RENDERIZADOS = 200; // limite de itens renderizados no painel esquerdo
 
 /**
+ * Retorna true se `haystack` (normalizado) contém `needle` como palavra
+ * ou início de palavra — mas nunca como sufixo de outra palavra.
+ * Ex: "oracao" bate em "oracao", "oracoes", mas NÃO em "coracao".
+ */
+function contemPalavra(haystack, needle) {
+  const idx = haystack.indexOf(needle);
+  if (idx === -1) return false;
+  // O caractere imediatamente anterior não pode ser uma letra
+  if (idx > 0 && /[a-z]/.test(haystack[idx - 1])) return false;
+  return true;
+}
+
+/**
  * Filtra parágrafos que contêm a query em texto, artigo ou capítulo.
  * Retorna { total, paragrafos } onde `paragrafos` está limitado a MAX_RENDERIZADOS.
  *
@@ -42,9 +55,9 @@ export function buscar(query, paragrafos) {
   if (q.length < 2) return { total: 0, paragrafos: [] };
 
   const encontrados = paragrafos.filter(p =>
-    normalizar(p.texto).includes(q) ||
-    normalizar(p.artigo).includes(q) ||
-    normalizar(p.capitulo).includes(q)
+    contemPalavra(normalizar(p.texto),    q) ||
+    contemPalavra(normalizar(p.artigo),   q) ||
+    contemPalavra(normalizar(p.capitulo), q)
   );
 
   return {

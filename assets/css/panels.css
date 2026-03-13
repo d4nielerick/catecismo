@@ -7,9 +7,10 @@
   gap: 0;
   max-width: var(--max-width-app);
   width: 100%;
-  margin: 0 auto;
+  align-self: center;
   min-height: 0;   /* critical for flex children to scroll independently */
   overflow: hidden;
+  position: relative;
 }
 
 /* ── Painel esquerdo — lista de resultados ──────────────────────────────── */
@@ -161,6 +162,7 @@
 #painel-conteudo {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: var(--space-2xl) var(--space-3xl);
   background: var(--color-surface);
 
@@ -248,9 +250,11 @@
 .tc-paragrafo {
   position: relative;
   padding: var(--space-md) var(--space-lg);
+  /* reserva espaço à direita para os botões rovings (+) e (link) */
+  padding-right: 3.75rem;
   margin-bottom: var(--space-xs);
   border-radius: var(--radius);
-  border-left: 3px solid transparent;
+  border-left: none;
   transition: background var(--transition), border-color var(--transition);
 }
 
@@ -270,29 +274,36 @@
   color: var(--color-text);
 }
 
-/* Parágrafo ativo / selecionado */
+/* Parágrafo ativo / selecionado — marca-texto por linha */
 .tc-paragrafo.ativo {
-  background: #FEF9EC;
-  border-left-color: var(--color-accent);
+  background: transparent;
 }
 
-/* Highlight suave ao scroll */
+.tc-paragrafo.ativo .tc-paragrafo-texto {
+  background: #FFFBE6;
+  padding: 0.12em 0.2em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 2px;
+}
+
+/* Flash de atenção ao chegar no parágrafo (sem animar o marca-texto) */
 .tc-paragrafo.flash {
-  animation: flashHighlight 1.5s ease;
+  animation: flashBlock 1.2s ease;
 }
 
-@keyframes flashHighlight {
-  0%   { background: rgba(197,160,40,0.18); }
+@keyframes flashBlock {
+  0%   { background: rgba(197,160,40,0.22); }
   100% { background: transparent; }
 }
 
 .tc-paragrafo.ativo.flash {
-  animation: flashHighlightAtivo 1.5s ease;
+  animation: flashBlockAtivo 1.2s ease;
 }
 
-@keyframes flashHighlightAtivo {
-  0%   { background: rgba(197,160,40,0.3); }
-  100% { background: #FEF9EC; }
+@keyframes flashBlockAtivo {
+  0%   { background: rgba(197,160,40,0.28); }
+  100% { background: transparent; }
 }
 
 /* ── Mobile (< 768px) ─────────────────────────────────────────────────────── */
@@ -379,6 +390,88 @@
   color: var(--color-text);
 }
 
+/* ── Setas de navegação prev/next ────────────────────────────────────────── */
+#nav-paragrafo {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  z-index: 20;
+}
+
+#nav-anterior,
+#nav-proximo {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-muted);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: color var(--transition), border-color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+#nav-anterior:hover,
+#nav-proximo:hover {
+  color: var(--color-primary);
+  border-color: #c8bfb2;
+  background: var(--color-bg);
+  box-shadow: var(--shadow-md);
+}
+
+#nav-anterior:disabled,
+#nav-proximo:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  #nav-paragrafo { display: none; }
+}
+
+/* ── Ícone de copiar link no parágrafo ativo ─────────────────────────────── */
+.para-copiar-btn {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.tc-paragrafo.ativo .para-copiar-btn {
+  opacity: 1;
+}
+
+.para-copiar-btn:hover {
+  color: var(--color-primary);
+  border-color: #c8bfb2;
+  background: #FFFBE6;
+}
+
+.para-copiar-btn.copiado {
+  color: var(--color-accent-dk);
+  border-color: var(--color-accent);
+  background: #FEF9EC;
+}
+
 /* ── Notas de rodapé ─────────────────────────────────────────────────────── */
 .ref-nota {
   font-family: var(--font-sans);
@@ -439,4 +532,272 @@
 .ref-nota:hover .nota-tooltip,
 .ref-nota.tooltip-visivel .nota-tooltip {
   opacity: 1;
+}
+
+/* ── Botão coletor no header ─────────────────────────────────────────────── */
+#btn-coletor {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: #FEF9EC;
+  border: 1px solid var(--color-accent);
+  border-radius: 100px;
+  padding: 0.3rem 0.75rem 0.3rem 0.6rem;
+  cursor: pointer;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+#btn-coletor:hover {
+  background: #FFF3C4;
+  box-shadow: 0 2px 8px rgba(197,160,40,0.2);
+}
+
+#badge-coletor {
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 100px;
+  padding: 0.05rem 0.45rem;
+  min-width: 1.2em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ── Overlay ─────────────────────────────────────────────────────────────── */
+#coletor-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 100;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* ── Off-canvas panel ────────────────────────────────────────────────────── */
+#coletor-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(440px, 100vw);
+  height: 100dvh;
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+  box-shadow: -4px 0 32px rgba(0,0,0,0.12);
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#coletor-panel.aberto {
+  transform: translateX(0);
+}
+
+/* Header */
+#coletor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+#coletor-contagem {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+#coletor-fechar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  padding: 0.25rem;
+  border-radius: var(--radius);
+  display: flex;
+  transition: color var(--transition);
+}
+
+#coletor-fechar:hover { color: var(--color-text); }
+
+/* Lista */
+#coletor-lista {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+/* Estado vazio */
+#coletor-vazio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: var(--color-muted);
+  text-align: center;
+  padding: var(--space-2xl);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+#coletor-vazio svg { opacity: 0.2; margin-bottom: var(--space-sm); }
+#coletor-vazio strong { color: var(--color-accent-dk); }
+
+/* Card individual */
+.coletor-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.coletor-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.coletor-card-num {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent-dk);
+  background: #FEF9EC;
+  border: 1px solid #f0e3a8;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  flex-shrink: 0;
+}
+
+.coletor-card-ctx {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.coletor-card-remover {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: color var(--transition);
+}
+
+.coletor-card-remover:hover { color: #c0392b; }
+
+.coletor-card-texto {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Footer com ações */
+#coletor-footer {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+#coletor-footer button {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 100px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+#coletor-footer button:hover {
+  background: var(--color-surface);
+  border-color: #c8bfb2;
+}
+
+#coletor-copiar-tudo {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  border-color: var(--color-primary) !important;
+}
+
+#coletor-copiar-tudo:hover {
+  opacity: 0.9;
+}
+
+.coletor-limpar {
+  color: var(--color-muted) !important;
+  margin-left: auto;
+}
+
+/* ── Botão + no parágrafo ativo ──────────────────────────────────────────── */
+.para-coletar-btn {
+  position: absolute;
+  top: var(--space-sm);
+  right: 2.25rem;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-muted);
+  cursor: pointer;
+  opacity: 0;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 300;
+  transition: opacity 0.15s ease, color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.tc-paragrafo.ativo .para-coletar-btn {
+  opacity: 1;
+}
+
+.para-coletar-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+  background: #FEF9EC;
+}
+
+.para-coletar-btn.coletado {
+  color: var(--color-accent-dk);
+  border-color: var(--color-accent);
+  background: #FEF9EC;
 }

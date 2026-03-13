@@ -1,0 +1,366 @@
+/* ── leitor.css — modo leitura ────────────────────────────────────────────── */
+
+/* Container principal — ocupa o #app inteiro */
+#leitor-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+#leitor-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.07);
+  flex-shrink: 0;
+}
+
+#leitor-breadcrumb {
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 var(--space-sm);
+}
+
+.leitor-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+}
+
+.leitor-btn-icon:hover {
+  color: var(--color-primary);
+  background: var(--color-bg);
+}
+
+/* Body: TOC + conteúdo */
+#leitor-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── TOC lateral ─────────────────────────────────────────────────────────── */
+#leitor-toc {
+  width: 260px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-lg) 0;
+  background: var(--color-bg);
+  transition: width 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
+}
+
+#leitor-container.toc-fechada #leitor-toc {
+  width: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Parte */
+.toc-parte {
+  margin-bottom: 2px;
+}
+
+.toc-parte > summary {
+  font-family: var(--font-sans);
+  font-size: 0.63rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.toc-parte > summary::-webkit-details-marker { display: none; }
+
+/* Seção */
+.toc-secao {
+  margin-bottom: 2px;
+}
+
+.toc-secao > summary {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: 0.3rem var(--space-lg) 0.3rem calc(var(--space-lg) + 0.5rem);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.toc-secao > summary::-webkit-details-marker { display: none; }
+
+/* Capítulo */
+.toc-cap-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-left: 3px solid transparent;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  padding: 0.35rem var(--space-lg) 0.35rem calc(var(--space-lg) + 1rem - 3px);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+  line-height: 1.3;
+}
+
+.toc-cap-link:hover {
+  background: rgba(26,60,46,0.05);
+  color: var(--color-primary);
+}
+
+.toc-cap-link.ativo {
+  color: var(--color-primary);
+  font-weight: 600;
+  background: rgba(197,160,40,0.10);
+  border-left-color: var(--color-accent);
+}
+
+/* ── Área de texto ───────────────────────────────────────────────────────── */
+#leitor-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+#leitor-texto {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Coluna de prosa centrada */
+.leitor-conteudo {
+  width: 100%;
+  max-width: 68ch;
+}
+
+.leitor-cap-titulo {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  font-weight: 500;
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin-bottom: var(--space-2xl);
+}
+
+.leitor-artigo-titulo {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+}
+
+.leitor-paragrafo {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.leitor-paragrafo-num {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-accent-dk);
+  opacity: 0.65;
+  min-width: 2.8rem;
+  padding-top: 0.25em;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.leitor-paragrafo-texto {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--color-text);
+}
+
+/* ── Nav capítulos ───────────────────────────────────────────────────────── */
+#leitor-nav-caps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) clamp(var(--space-lg), 6vw, 8rem);
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+  background: var(--color-surface);
+}
+
+.leitor-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.leitor-nav-btn:hover:not(:disabled) {
+  background: var(--color-bg);
+  border-color: var(--color-accent);
+}
+
+.leitor-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ── Popup de seleção ────────────────────────────────────────────────────── */
+#leitor-save-popup {
+  position: fixed;
+  z-index: 400;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: 100px;
+  padding: 0.4rem 1.1rem;
+  box-shadow: var(--shadow-md);
+}
+
+#leitor-save-popup button {
+  border: none;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* ── Botão "Ler" no hero ────────────────────────────────────────────────── */
+#btn-ler-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+#btn-ler-hero:hover {
+  color: var(--color-primary);
+  background: rgba(255,255,255,0.8);
+  border-color: var(--color-primary);
+}
+
+/* ── Botão "Ler" no header de busca ─────────────────────────────────────── */
+#btn-ler-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+}
+
+#btn-ler-header:hover {
+  color: var(--color-primary);
+  background: var(--color-bg);
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  #leitor-toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px !important;
+    height: 100dvh;
+    z-index: 200;
+    box-shadow: var(--shadow-md);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 1 !important;
+    padding: var(--space-lg) 0 !important;
+    overflow-y: auto !important;
+  }
+
+  #leitor-container:not(.toc-fechada) #leitor-toc {
+    transform: translateX(0);
+  }
+
+  /* overlay mobile para fechar TOC */
+  #leitor-toc-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 199;
+  }
+
+  #leitor-container:not(.toc-fechada) #leitor-toc-overlay {
+    display: block;
+  }
+
+  #leitor-texto {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  #leitor-nav-caps {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .leitor-nav-btn span {
+    display: none;
+  }
+}

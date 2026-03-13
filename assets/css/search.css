@@ -14,7 +14,7 @@
   left: var(--space-lg);
   width: 1.1rem;
   height: 1.1rem;
-  color: var(--color-muted);
+  color: rgba(26, 60, 46, 0.45);
   pointer-events: none;
   flex-shrink: 0;
   transition: color var(--transition);
@@ -39,6 +39,10 @@
   outline: none;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
+
+/* Esconde o botão nativo de limpar do input[type="search"] */
+#campo-busca::-webkit-search-cancel-button { display: none; }
+#campo-busca::-ms-clear { display: none; }
 
 #campo-busca::placeholder {
   color: #B0A898;
@@ -102,6 +106,7 @@
   left: 1.1rem;
   width: 1.15rem;
   height: 1.15rem;
+  color: rgba(26, 60, 46, 0.70);
 }
 
 #hero #botao-limpar {
@@ -112,6 +117,7 @@
 #busca-topo .campo-busca-container {
   flex: 1;
   max-width: 600px;
+  margin: 0 auto;
 }
 
 #busca-topo #campo-busca {

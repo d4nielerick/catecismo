@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/search.css">
   <link rel="stylesheet" href="assets/css/panels.css">
+  <link rel="stylesheet" href="assets/css/leitor.css">
 </head>
 <body>
 
@@ -75,6 +76,14 @@
       <button type="button" data-tema="mandamentos">Mandamentos</button>
     </nav>
 
+    <!-- Botão modo leitura -->
+    <button id="btn-ler-hero" type="button" aria-label="Ler o Catecismo">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+      </svg>
+      Ler o Catecismo
+    </button>
+
   </section>
 
   <!-- ══════════════════════════════════════════════════════════════
@@ -84,13 +93,11 @@
   <!-- Topo fixo com barra de busca -->
   <header id="busca-topo" role="banner" aria-label="Barra de busca">
     <div class="busca-topo-inner">
-      <a href="." aria-label="Início">
-        <img
-          src="assets/Catecismo Ill (1).webp"
-          alt=""
-          class="logo-mini"
-          aria-hidden="true"
-        >
+      <a href="." aria-label="Início" class="btn-home">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+          <polyline points="9 21 9 12 15 12 15 21"/>
+        </svg>
       </a>
 
       <div id="busca-topo-wrapper" class="campo-busca-container" role="search">
@@ -99,8 +106,53 @@
         </svg>
         <!-- O #campo-busca e #botao-limpar são movidos aqui pelo ui.js ao ativar busca -->
       </div>
+
+      <!-- Botão modo leitura -->
+      <button id="btn-ler-header" type="button" aria-label="Modo leitura">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+        </svg>
+      </button>
+
+      <!-- Botão coletor de trechos -->
+      <button id="btn-coletor" type="button" class="oculto" aria-label="Abrir coletor de trechos">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span id="badge-coletor">0</span>
+      </button>
     </div>
   </header>
+
+  <!-- Off-canvas: coletor de trechos -->
+  <div id="coletor-overlay" class="oculto"></div>
+  <aside id="coletor-panel" aria-label="Trechos coletados" aria-hidden="true">
+    <div id="coletor-header">
+      <span id="coletor-contagem">0 trechos</span>
+      <button id="coletor-fechar" type="button" aria-label="Fechar coletor">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="coletor-lista"></div>
+
+    <div id="coletor-vazio">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+      </svg>
+      <p>Nenhum trecho ainda.</p>
+      <p>Clique em <strong>+</strong> num parágrafo para colecionar.</p>
+    </div>
+
+    <footer id="coletor-footer">
+      <button id="coletor-copiar-tudo" type="button">Copiar tudo</button>
+      <button id="coletor-baixar-txt" type="button">↓ TXT</button>
+      <button id="coletor-baixar-md" type="button">↓ MD</button>
+      <button id="coletor-limpar" type="button" class="coletor-limpar">Limpar</button>
+    </footer>
+  </aside>
 
   <!-- Dois painéis -->
   <div id="painel-busca" role="main">
@@ -152,11 +204,80 @@
 
     </article>
 
+    <!-- Navegação prev/next (setas flutuantes) -->
+    <div id="nav-paragrafo">
+      <button id="nav-anterior" type="button" class="oculto" aria-label="Parágrafo anterior">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 15l-6-6-6 6"/>
+        </svg>
+      </button>
+      <button id="nav-proximo" type="button" class="oculto" aria-label="Próximo parágrafo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
+    </div>
   </div><!-- #painel-busca -->
+
+  <!-- ══════════════════════════════════════════════════════════════
+       MODO LEITURA
+  ═══════════════════════════════════════════════════════════════ -->
+  <div id="leitor-container" aria-label="Modo leitura">
+
+    <header id="leitor-header">
+      <!-- Toggle TOC -->
+      <button id="leitor-btn-toc" class="leitor-btn-icon" type="button" aria-label="Índice" aria-expanded="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Breadcrumb -->
+      <div id="leitor-breadcrumb"></div>
+
+      <!-- Fechar modo leitura -->
+      <button id="leitor-fechar" class="leitor-btn-icon" type="button" aria-label="Fechar modo leitura">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+          <polyline points="9 21 9 12 15 12 15 21"/>
+        </svg>
+      </button>
+    </header>
+
+    <div id="leitor-body">
+      <!-- TOC lateral -->
+      <nav id="leitor-toc" aria-label="Índice do Catecismo"></nav>
+      <div id="leitor-toc-overlay" aria-hidden="true"></div>
+
+      <!-- Área principal -->
+      <div id="leitor-main">
+        <div id="leitor-texto" aria-live="polite"></div>
+
+        <!-- Nav capítulos -->
+        <div id="leitor-nav-caps">
+          <button id="leitor-anterior" class="leitor-nav-btn" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            <span>Capítulo anterior</span>
+          </button>
+          <button id="leitor-proximo" class="leitor-nav-btn" type="button">
+            <span>Próximo capítulo</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- #leitor-container -->
+
+  <!-- Popup de seleção de texto (modo leitura) -->
+  <div id="leitor-save-popup" class="oculto" role="dialog" aria-label="Salvar trecho selecionado">
+    <button id="leitor-save-btn" type="button">Salvar trecho</button>
+  </div>
 
 </div><!-- #app -->
 
 <!-- Módulos JS (ES modules) -->
+<script type="module" src="assets/js/coletor.js"></script>
 <script type="module" src="assets/js/ui.js"></script>
 <script type="module" src="assets/js/router.js"></script>
 
