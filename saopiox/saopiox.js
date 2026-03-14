@@ -243,7 +243,7 @@ temas?.addEventListener('click', e => {
   campoBusca.value = btn.dataset.tema;
   btnLimpar.classList.remove('oculto');
   ativarBusca(btn.dataset.tema);
-  campoBusca.focus();
+  if (window.innerWidth >= 768) campoBusca.focus();
 });
 
 listaEl.addEventListener('click', e => {

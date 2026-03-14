@@ -159,7 +159,7 @@ function registrarEventos() {
     const btn = e.target.closest('[data-tema]');
     if (!btn) return;
     campoBusca.value = btn.dataset.tema;
-    campoBusca.focus();
+    if (window.innerWidth >= 768) campoBusca.focus();
     botaoLimpar.classList.remove('oculto');
     clearTimeout(autoSelectTimer);
     executarBusca(campoBusca.value);

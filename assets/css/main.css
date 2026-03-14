@@ -46,7 +46,7 @@ html { height: 100%; }
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0);    }
 }
-#app { animation: _page-in 0.35s ease forwards; }
+#app { animation: _page-in 0.35s ease; }
 
 body.page-saindo #app {
   animation: none;
@@ -62,6 +62,7 @@ body {
   color: var(--color-text);
   min-height: 100vh;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 /* ── Acessibilidade ──────────────────────────────────────────────────────── */
