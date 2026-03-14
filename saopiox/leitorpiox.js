@@ -51,12 +51,24 @@ export function abrirLeitorPioX(indice = 0) {
   _indice = Math.max(0, Math.min(indice, _capitulos.length - 1));
   app.classList.remove('estado-inicial', 'estado-busca');
   app.classList.add('estado-leitura');
-  renderizarCapitulo(_indice);
+
+  if (window.innerWidth < 768) {
+    // Mobile: abre o TOC primeiro; usuário escolhe o capítulo
+    _tocAberta = true;
+    container.classList.remove('toc-fechada');
+    btnToc.setAttribute('aria-expanded', 'true');
+  } else {
+    renderizarCapitulo(_indice);
+  }
 }
 
 export function fecharLeitorPioX() {
   app.classList.remove('estado-leitura');
   app.classList.add(_estadoAnterior);
+  // Reseta TOC para próxima abertura
+  _tocAberta = true;
+  container.classList.remove('toc-fechada');
+  btnToc.setAttribute('aria-expanded', 'true');
 }
 
 // ── Construção dos capítulos ──────────────────────────────────────────────────
