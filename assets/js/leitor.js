@@ -67,7 +67,15 @@ export function abrirLeitor(indice = 0) {
   _indice = Math.max(0, Math.min(indice, _capitulos.length - 1));
   app.classList.remove('estado-inicial', 'estado-busca');
   app.classList.add('estado-leitura');
-  renderizarCapitulo(_indice);
+
+  if (window.innerWidth < 768) {
+    // Mobile: abre o TOC primeiro; usuário escolhe o capítulo
+    _tocAberta = true;
+    container.classList.remove('toc-fechada');
+    btnToc.setAttribute('aria-expanded', 'true');
+  } else {
+    renderizarCapitulo(_indice);
+  }
 }
 
 export function fecharLeitor() {
@@ -75,6 +83,10 @@ export function fecharLeitor() {
   app.classList.add('estado-inicial');
   savePopup.classList.add('oculto');
   _selecaoAtual = null;
+  // Reseta TOC para próxima abertura
+  _tocAberta = true;
+  container.classList.remove('toc-fechada');
+  btnToc.setAttribute('aria-expanded', 'true');
 }
 
 // ── Construção dos capítulos ──────────────────────────────────────────────────
