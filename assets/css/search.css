@@ -12,9 +12,9 @@
 .campo-busca-container .icone-busca {
   position: absolute;
   left: var(--space-lg);
-  width: 1.1rem;
-  height: 1.1rem;
-  color: rgba(26, 60, 46, 0.45);
+  width: 1.05rem;
+  height: 1.05rem;
+  color: rgba(26, 60, 46, 0.9);
   pointer-events: none;
   flex-shrink: 0;
   transition: color var(--transition);
@@ -46,6 +46,7 @@
 
 #campo-busca::placeholder {
   color: #B0A898;
+  font-size: 0.875rem;
 }
 
 #campo-busca:focus {
@@ -106,7 +107,7 @@
   left: 1.1rem;
   width: 1.15rem;
   height: 1.15rem;
-  color: rgba(26, 60, 46, 0.70);
+  color: rgba(26, 60, 46, 0.9);
 }
 
 #hero #botao-limpar {

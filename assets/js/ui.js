@@ -11,6 +11,7 @@ import { carregarDados, buscarPorNumero, carregarNotas, notasDoParagrafo } from 
 import { buscar, agrupar, destacar, trecho } from './search.js';
 import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
 import { iniciarLeitor, abrirLeitor } from './leitor.js';
+import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
 
 // ── Elementos do DOM ─────────────────────────────────────────────────────────
 const app             = document.getElementById('app');
@@ -24,9 +25,21 @@ const contagemEl      = document.getElementById('contagem-resultados');
 const semResultados   = document.getElementById('sem-resultados');
 const painelConteudo  = document.getElementById('painel-conteudo');
 const btnFecharConteudo = document.getElementById('btn-fechar-conteudo');
+const btnResumir      = document.getElementById('btn-resumir');
+const aiCard          = document.getElementById('ai-resumo-card');
+const aiCorpo         = document.getElementById('ai-resumo-corpo');
+const aiFechar        = document.getElementById('ai-resumo-fechar');
 const temasRapidos    = document.getElementById('temas-rapidos');
 const navAnterior     = document.getElementById('nav-anterior');
 const navProximo      = document.getElementById('nav-proximo');
+
+// Barra de nav mobile
+const mobileNavBar        = document.getElementById('mobile-nav-bar');
+const mobileBtnResultados = document.getElementById('mobile-btn-resultados');
+const mobileBtnResumir    = document.getElementById('mobile-btn-resumir');
+const mobileNavInfo       = document.getElementById('mobile-nav-info');
+const mobileBtnAnterior   = document.getElementById('mobile-btn-anterior');
+const mobileBtnProximo    = document.getElementById('mobile-btn-proximo');
 
 // ── Estado ───────────────────────────────────────────────────────────────────
 let paragrafos        = [];   // todos os parágrafos em memória
@@ -92,6 +105,7 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
 
   iniciarLeitor(paragrafos);
   registrarEventos();
+  iniciarTooltips();
 
   // Verifica se há um hash na URL para abrir diretamente
   if (location.hash) {
@@ -117,6 +131,27 @@ function registrarEventos() {
 
   btnFecharConteudo.addEventListener('click', () => {
     painelConteudo.classList.remove('aberto');
+    fecharMobileNavBar();
+  });
+
+  mobileBtnResultados.addEventListener('click', () => {
+    painelConteudo.classList.remove('aberto');
+    fecharMobileNavBar();
+  });
+
+  mobileBtnAnterior.addEventListener('click', () => navegarPara(indiceAtivo - 1));
+  mobileBtnProximo.addEventListener('click',  () => navegarPara(indiceAtivo + 1));
+  mobileBtnResumir.addEventListener('click', () => {
+    // Fecha o drawer e aciona o resumo no painel de resultados
+    painelConteudo.classList.remove('aberto');
+    fecharMobileNavBar();
+    acionarResumoIA();
+  });
+
+  btnResumir.addEventListener('click', acionarResumoIA);
+  aiFechar.addEventListener('click', () => {
+    aiCard.classList.add('oculto');
+    btnResumir.classList.remove('oculto');
   });
 
 
@@ -153,6 +188,25 @@ function registrarEventos() {
     ?.addEventListener('click', () => abrirLeitor(0));
   document.getElementById('btn-ler-header')
     ?.addEventListener('click', () => abrirLeitor(0));
+
+  // Contribuição
+  document.getElementById('btn-contribuir-hero')
+    ?.addEventListener('click', abrirModalContribuicao);
+  document.getElementById('btn-contribuir-header')
+    ?.addEventListener('click', abrirModalContribuicao);
+  document.getElementById('modal-contribuicao-fechar')
+    ?.addEventListener('click', fecharModalContribuicao);
+  document.getElementById('modal-contribuicao-overlay')
+    ?.addEventListener('click', (e) => {
+      if (e.target.id === 'modal-contribuicao-overlay') fecharModalContribuicao();
+    });
+  document.getElementById('btn-copiar-pix')
+    ?.addEventListener('click', copiarPix);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !document.getElementById('modal-contribuicao-overlay').classList.contains('oculto')) {
+      fecharModalContribuicao();
+    }
+  });
 }
 
 // ── Busca ────────────────────────────────────────────────────────────────────
@@ -164,6 +218,26 @@ function executarBusca(query) {
       voltarEstadoInicial();
     }
     return;
+  }
+
+  // Busca direta por número de parágrafo: "42" ou "§42"
+  const numMatch = queryAtual.match(/^§?(\d{1,4})$/);
+  if (numMatch) {
+    const num = parseInt(numMatch[1], 10);
+    const p = paragrafos.find(x => x.numero === num);
+    if (p) {
+      ativarEstadoBusca();
+      resultadosAtuais = [p];
+      indiceAtivo = -1;
+      renderizarResultados(agrupar([p]), 1, '');
+      atualizarHighlightsTexto('', [p]);
+      clearTimeout(autoSelectTimer);
+      autoSelectTimer = setTimeout(() => {
+        const card = listaResultados.querySelector(`[data-num="${num}"]`);
+        if (card) selecionarParagrafo(num, card);
+      }, 100);
+      return;
+    }
   }
 
   ativarEstadoBusca();
@@ -213,7 +287,10 @@ function voltarEstadoInicial() {
   listaResultados.innerHTML = '';
   contagemEl.textContent = '';
   semResultados.classList.add('oculto');
+  btnResumir.classList.add('oculto');
+  aiCard.classList.add('oculto');
   painelConteudo.classList.remove('aberto');
+  fecharMobileNavBar();
 
   // Limpa highlights do texto contínuo
   limparHighlights();
@@ -370,9 +447,10 @@ function selecionarParagrafo(numero, cardEl) {
   // Destaca e scrolla até o parágrafo no texto contínuo
   scrollParaParagrafo(numero);
 
-  // Mobile: abre drawer
+  // Mobile: abre drawer + barra de nav
   if (window.innerWidth < 768) {
     painelConteudo.classList.add('aberto');
+    abrirMobileNavBar(numero);
   }
 
   // Atualiza URL hash
@@ -423,6 +501,8 @@ function renderizarResultados(grupos, total, query) {
   if (total === 0) {
     contagemEl.textContent = '';
     semResultados.classList.remove('oculto');
+    btnResumir.classList.add('oculto');
+    aiCard.classList.add('oculto');
     return;
   }
 
@@ -430,6 +510,8 @@ function renderizarResultados(grupos, total, query) {
   contagemEl.textContent = total === 1
     ? '1 resultado'
     : `${total} resultado${total > 200 ? 's (exibindo 200)' : 's'}`;
+  btnResumir.classList.remove('oculto');
+  aiCard.classList.add('oculto');
 
   const frag = document.createDocumentFragment();
 
@@ -476,14 +558,28 @@ function criarCard(p, query) {
   card.dataset.num = p.numero;
 
   const labelContexto = [p.artigo, p.capitulo].filter(Boolean)[0] || '';
+  const salvo = contemNumero(p.numero);
 
   card.innerHTML = `
     <div class="card-meta">
       <span class="card-num">\u00A7${p.numero}</span>
       ${labelContexto ? `<span class="card-artigo">${escapeHtml(labelContexto)}</span>` : ''}
+      <button class="card-save-btn${salvo ? ' salvo' : ''}" type="button" aria-label="Salvar parágrafo ${p.numero}">
+        ${salvo
+          ? `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>`
+          : `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`}
+      </button>
     </div>
     <div class="card-trecho">${trecho(p.texto, query)}</div>
   `;
+
+  card.querySelector('.card-save-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    adicionarEAbrir(p);
+    const btn = e.currentTarget;
+    btn.classList.add('salvo');
+    btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>`;
+  });
 
   return card;
 }
@@ -518,7 +614,9 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
   for (const parte of partes) {
     const m = parte.match(/^\((\d+)\)$/);
     if (m && notas[m[1]]) {
-      const ref = m[1];
+      const ref      = m[1];
+      const noteText = notas[ref];
+
       const sup = document.createElement('sup');
       sup.className = 'ref-nota';
       sup.textContent = ref;
@@ -526,8 +624,42 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
 
       const tooltip = document.createElement('span');
       tooltip.className = 'nota-tooltip';
-      tooltip.textContent = notas[ref];
+
+      const spanNota = document.createElement('span');
+      spanNota.className = 'nota-tooltip-nota';
+      spanNota.textContent = noteText;
+
+      const spanVerso = document.createElement('span');
+      spanVerso.className = 'nota-tooltip-verso';
+
+      tooltip.appendChild(spanNota);
+      tooltip.appendChild(spanVerso);
       sup.appendChild(tooltip);
+
+      // Carrega versículo ao primeiro hover (desktop)
+      let _fetched = false;
+      let _verse   = null;
+      sup.addEventListener('mouseenter', async () => {
+        if (_fetched) return;
+        _fetched = true;
+        _verse = await buscarVersiculo(noteText);
+        if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
+      });
+
+      // Clique: mobile → card com nota + verso; desktop → card só com verso
+      sup.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        if (window.innerWidth < 768) {
+          if (!_fetched) {
+            _fetched = true;
+            _verse = await buscarVersiculo(noteText);
+            if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
+          }
+          mostrarCardMobile(ref, noteText, _verse);
+        } else if (_verse) {
+          mostrarCard(_verse.referencia, _verse.texto);
+        }
+      });
 
       el.appendChild(sup);
     } else {
@@ -571,11 +703,20 @@ function atualizarNav() {
   navProximo.classList.remove('oculto');
   navAnterior.disabled = indiceAtivo === 0;
   navProximo.disabled  = indiceAtivo === resultadosAtuais.length - 1;
+
+  // Sincroniza setas da barra mobile
+  mobileBtnAnterior.disabled = indiceAtivo === 0;
+  mobileBtnProximo.disabled  = indiceAtivo === resultadosAtuais.length - 1;
+  // Atualiza texto de posição
+  const num = resultadosAtuais[indiceAtivo]?.numero;
+  if (num) mobileNavInfo.textContent = `§${num}  ·  ${indiceAtivo + 1}/${resultadosAtuais.length}`;
 }
 
 function ocultarNav() {
   navAnterior.classList.add('oculto');
   navProximo.classList.add('oculto');
+  mobileBtnAnterior.disabled = true;
+  mobileBtnProximo.disabled  = true;
 }
 
 // ── Copiar link ───────────────────────────────────────────────────────────────
@@ -596,4 +737,155 @@ function escapeHtml(s) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+// ── Contribuição ──────────────────────────────────────────────────────────────
+function abrirModalContribuicao() {
+  document.getElementById('modal-contribuicao-overlay')?.classList.remove('oculto');
+}
+
+function fecharModalContribuicao() {
+  document.getElementById('modal-contribuicao-overlay')?.classList.add('oculto');
+}
+
+function copiarPix() {
+  const chave = document.getElementById('pix-chave')?.textContent?.trim();
+  if (!chave) return;
+  const btn = document.getElementById('btn-copiar-pix');
+  navigator.clipboard.writeText(chave).then(() => {
+    btn.textContent = 'Copiado ✓';
+    setTimeout(() => { btn.textContent = 'Copiar'; }, 2000);
+  });
+}
+
+// ── Barra de nav mobile ───────────────────────────────────────────────────────
+function abrirMobileNavBar(numeroParagrafo) {
+  mobileNavBar.classList.add('visivel');
+  mobileNavBar.setAttribute('aria-hidden', 'false');
+  mobileNavInfo.textContent = `§${numeroParagrafo}`;
+}
+
+function fecharMobileNavBar() {
+  mobileNavBar.classList.remove('visivel');
+  mobileNavBar.setAttribute('aria-hidden', 'true');
+}
+
+// ── Resumo com IA ─────────────────────────────────────────────────────────────
+async function acionarResumoIA() {
+  if (!resultadosAtuais.length) return;
+
+  // Mostra card com skeleton
+  btnResumir.classList.add('oculto');
+  aiCard.classList.remove('oculto');
+  aiCorpo.innerHTML = `
+    <div class="ai-skeleton">
+      <div class="ai-skeleton-linha"></div>
+      <div class="ai-skeleton-linha"></div>
+      <div class="ai-skeleton-linha"></div>
+    </div>`;
+
+  try {
+    const resp = await fetch('/api/resumo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: queryAtual, paragrafos: resultadosAtuais }),
+    });
+
+    const data = await resp.json();
+
+    if (!resp.ok || !data.resumo) {
+      throw new Error(data.error || 'Erro desconhecido');
+    }
+
+    aiCorpo.innerHTML = '';
+    renderizarResumoIA(data.resumo);
+  } catch (err) {
+    aiCorpo.innerHTML = `<p style="color:var(--color-muted);font-size:0.85rem">Não foi possível gerar o resumo. Tente novamente.</p>`;
+    console.error('[AI resumo]', err);
+  }
+}
+
+// Converte o texto do resumo em HTML, tornando §N clicáveis
+function renderizarResumoIA(texto) {
+  // Quebra em parágrafos por linha em branco ou ponto final de parágrafo
+  const linhas = texto.split(/\n+/).filter(l => l.trim());
+
+  for (const linha of linhas) {
+    const p = document.createElement('p');
+
+    // Detecta "Parágrafos: §X, §Y" — última linha com citações
+    const isCitacoes = /parágrafos?:/i.test(linha);
+    if (isCitacoes) p.style.cssText = 'font-family:var(--font-sans);font-size:0.78rem;margin-top:0.5rem;';
+
+    // Substitui §NNN por botões clicáveis
+    const parts = linha.split(/(§\d+)/g);
+    for (const part of parts) {
+      const m = part.match(/^§(\d+)$/);
+      if (m) {
+        const num = parseInt(m[1], 10);
+        const btn = document.createElement('button');
+        btn.className = 'ai-citacao';
+        btn.type = 'button';
+        btn.textContent = `§${num}`;
+        btn.addEventListener('click', () => {
+          const card = listaResultados.querySelector(`[data-num="${num}"]`);
+          if (card) {
+            card.scrollIntoView({ block: 'nearest' });
+            selecionarParagrafo(num, card);
+          }
+        });
+        p.appendChild(btn);
+      } else {
+        p.appendChild(document.createTextNode(part));
+      }
+    }
+    aiCorpo.appendChild(p);
+  }
+}
+
+// ── Posicionamento de tooltips ────────────────────────────────────────────────
+// Usa position:fixed para escapar de pais com overflow:auto e clamp ao viewport.
+function iniciarTooltips() {
+  const MARGIN = 10;
+  const GAP    = 8;
+
+  document.addEventListener('mouseenter', (e) => {
+    const sup = e.target.closest?.('.ref-nota');
+    if (!sup) return;
+    const tooltip = sup.querySelector('.nota-tooltip');
+    if (!tooltip) return;
+
+    const supRect = sup.getBoundingClientRect();
+    const maxW    = Math.min(320, window.innerWidth - MARGIN * 2);
+
+    // Horizontal: centralizado no sup, clamped ao viewport
+    let left = supRect.left + supRect.width / 2 - maxW / 2;
+    left = Math.max(MARGIN, Math.min(left, window.innerWidth - maxW - MARGIN));
+
+    // Vertical: acima por padrão; abaixo se não houver espaço
+    const spaceAbove = supRect.top - GAP;
+    const showAbove  = spaceAbove > 60; // altura mínima estimada
+
+    tooltip.classList.toggle('tooltip-abaixo', !showAbove);
+    Object.assign(tooltip.style, {
+      position:  'fixed',
+      left:      left + 'px',
+      maxWidth:  maxW + 'px',
+      width:     maxW + 'px',
+      transform: 'none',
+      zIndex:    '9000',
+      ...(showAbove
+        ? { bottom: (window.innerHeight - supRect.top + GAP) + 'px', top: 'auto' }
+        : { top:    (supRect.bottom + GAP) + 'px',                   bottom: 'auto' }),
+    });
+  }, true);
+
+  document.addEventListener('mouseleave', (e) => {
+    const sup = e.target.closest?.('.ref-nota');
+    if (!sup) return;
+    const tooltip = sup.querySelector('.nota-tooltip');
+    if (!tooltip) return;
+    tooltip.style.cssText = '';
+    tooltip.classList.remove('tooltip-abaixo');
+  }, true);
 }

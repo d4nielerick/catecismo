@@ -11,7 +11,7 @@
   <meta property="og:title"       content="Catecismo da Igreja Católica — Buscador">
   <meta property="og:description" content="Busca em tempo real nos parágrafos do Catecismo.">
   <meta property="og:type"        content="website">
-  <meta property="og:image"       content="assets/Catecismo Ill (1).webp">
+  <meta property="og:image"       content="assets/catecismo-logo.webp">
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/main.css">
@@ -29,18 +29,18 @@
   <section id="hero" aria-label="Busca no Catecismo">
 
     <img
-      src="assets/Catecismo Ill (1).webp"
+      src="assets/catecismo-logo.webp"
       alt="Catecismo da Igreja Católica"
       class="logo"
     >
 
-    <h1>Catecismo da<br>Igreja Católica</h1>
+    <h1>Catecismo da<br>Igreja Católica <span class="badge-beta">beta</span></h1>
     <p class="tagline">Busque o que a Igreja ensina sobre qualquer tema</p>
 
     <!-- Barra de busca principal (hero) -->
     <div class="campo-busca-container" role="search">
       <svg class="icone-busca" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.2-5.2m0 0a7.5 7.5 0 1 0-10.6-10.6 7.5 7.5 0 0 0 10.6 10.6z"/>
       </svg>
 
       <label for="campo-busca" class="sr-only">Buscar no Catecismo</label>
@@ -84,6 +84,15 @@
       Ler o Catecismo
     </button>
 
+    <button id="btn-contribuir-hero" type="button" aria-label="Apoiar o projeto">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      Apoiar
+    </button>
+
+    <a href="/saopiox" class="btn-outro-catecismo" aria-label="Catecismo de São Pio X">
+      Catecismo de São Pio X →
+    </a>
+
   </section>
 
   <!-- ══════════════════════════════════════════════════════════════
@@ -102,7 +111,7 @@
 
       <div id="busca-topo-wrapper" class="campo-busca-container" role="search">
         <svg class="icone-busca" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.2-5.2m0 0a7.5 7.5 0 1 0-10.6-10.6 7.5 7.5 0 0 0 10.6 10.6z"/>
         </svg>
         <!-- O #campo-busca e #botao-limpar são movidos aqui pelo ui.js ao ativar busca -->
       </div>
@@ -112,6 +121,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
         </svg>
+      </button>
+
+      <button id="btn-contribuir-header" type="button" class="btn-home" aria-label="Apoiar o projeto">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
       </button>
 
       <!-- Botão coletor de trechos -->
@@ -164,6 +177,24 @@
     >
       <div id="resultados-header">
         <span id="contagem-resultados" aria-live="polite" aria-atomic="true"></span>
+        <button id="btn-resumir" class="oculto" type="button" aria-label="Resumir com IA">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2 L13.8 10.2 L22 12 L13.8 13.8 L12 22 L10.2 13.8 L2 12 L10.2 10.2 Z"/></svg>
+          IA
+        </button>
+      </div>
+
+      <!-- Card de resumo da IA -->
+      <div id="ai-resumo-card" class="oculto" aria-live="polite">
+        <div id="ai-resumo-header">
+          <span id="ai-resumo-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2 L13.8 10.2 L22 12 L13.8 13.8 L12 22 L10.2 13.8 L2 12 L10.2 10.2 Z"/></svg>
+            Resumo por IA
+          </span>
+          <button id="ai-resumo-fechar" type="button" aria-label="Fechar resumo">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div id="ai-resumo-corpo"></div>
       </div>
 
       <div
@@ -204,7 +235,7 @@
 
     </article>
 
-    <!-- Navegação prev/next (setas flutuantes) -->
+    <!-- Navegação prev/next (setas flutuantes, desktop) -->
     <div id="nav-paragrafo">
       <button id="nav-anterior" type="button" class="oculto" aria-label="Parágrafo anterior">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -217,6 +248,32 @@
         </svg>
       </button>
     </div>
+
+    <!-- Barra de navegação mobile (aparece quando o drawer de conteúdo está aberto) -->
+    <div id="mobile-nav-bar" aria-hidden="true">
+      <div id="mobile-nav-esquerda">
+        <button id="mobile-btn-resultados" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          Resultados
+        </button>
+        <button id="mobile-btn-resumir" type="button" aria-label="Resumir com IA">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2 L13.8 10.2 L22 12 L13.8 13.8 L12 22 L10.2 13.8 L2 12 L10.2 10.2 Z"/></svg>
+          IA
+        </button>
+      </div>
+      <span id="mobile-nav-info"></span>
+      <div id="mobile-nav-arrows">
+        <button id="mobile-btn-anterior" type="button" aria-label="Resultado anterior" disabled>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+        </button>
+        <button id="mobile-btn-proximo" type="button" aria-label="Próximo resultado" disabled>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
   </div><!-- #painel-busca -->
 
   <!-- ══════════════════════════════════════════════════════════════
@@ -274,9 +331,52 @@
     <button id="leitor-save-btn" type="button">Salvar trecho</button>
   </div>
 
+<!-- Modal contribuição -->
+<div id="modal-contribuicao-overlay" class="oculto" role="dialog" aria-modal="true" aria-label="Apoiar o projeto">
+  <div id="modal-contribuicao">
+    <button id="modal-contribuicao-fechar" type="button" aria-label="Fechar">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-icone">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    </div>
+    <h2>Apoiar o projeto</h2>
+    <p class="modal-descricao">Este buscador é gratuito e sem anúncios. Se ele te ajuda, considere contribuir.</p>
+    <div class="pix-container">
+      <span class="pix-label">Chave PIX</span>
+      <div class="pix-key-row">
+        <code id="pix-chave">033.383.233-79</code>
+        <button id="btn-copiar-pix" type="button">Copiar</button>
+      </div>
+    </div>
+    <div class="meta-container">
+      <div class="meta-header">
+        <span>Meta mensal</span>
+        <span class="meta-valor"><strong id="meta-atual">R$0</strong> / R$500</span>
+      </div>
+      <div class="meta-barra">
+        <div class="meta-progresso" id="meta-progresso-barra" style="width: 0%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div><!-- #app -->
 
+<!-- Card flutuante de versículo bíblico -->
+<div id="biblia-card" class="oculto" role="complementary" aria-label="Nota de rodapé">
+  <div id="biblia-card-header">
+    <span id="biblia-card-ref"></span>
+    <button id="biblia-card-fechar" type="button" aria-label="Fechar">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <p id="biblia-card-nota"></p>
+  <p id="biblia-card-texto"></p>
+</div>
+
 <!-- Módulos JS (ES modules) -->
+<script type="module" src="assets/js/nav.js"></script>
 <script type="module" src="assets/js/coletor.js"></script>
 <script type="module" src="assets/js/ui.js"></script>
 <script type="module" src="assets/js/router.js"></script>

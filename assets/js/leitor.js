@@ -5,13 +5,15 @@
  */
 
 import { notasDoParagrafo } from './data.js';
-import { adicionarTrecho, atualizarBadge as _atualizarBadge } from './coletor.js';
+import { adicionarTrecho, atualizarBadge as _atualizarBadge, contemNumero } from './coletor.js';
+import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
 
 // ── Estado ────────────────────────────────────────────────────────────────────
-let _paragrafos = [];
-let _capitulos  = [];   // lista flat de capítulos
-let _indice     = 0;    // capítulo atual
-let _tocAberta  = true;
+let _paragrafos    = [];
+let _capitulos     = [];   // lista de seções (agrupamento por parte|secao)
+let _indice        = 0;    // seção atual
+let _tocAberta     = true;
+let _capSlugAtivo  = null; // slug do capítulo em destaque no TOC
 
 // ── DOM ───────────────────────────────────────────────────────────────────────
 const app         = document.getElementById('app');
@@ -83,14 +85,13 @@ function construirCapitulos(paragrafos) {
   let capCorrente = null;
 
   for (const p of paragrafos) {
-    const chave = `${p.parte||''}|${p.secao||''}|${p.capitulo||''}`;
+    const chave = `${p.parte||''}|${p.secao||''}`;
     if (chave !== ultimo) {
       ultimo = chave;
       capCorrente = {
-        label:     p.capitulo || p.secao || p.parte || 'Introdução',
-        parte:     p.parte    || '',
-        secao:     p.secao    || '',
-        capitulo:  p.capitulo || '',
+        label:      p.secao || p.parte || 'Prólogo',
+        parte:      p.parte  || '',
+        secao:      p.secao  || '',
         paragrafos: [],
       };
       caps.push(capCorrente);
@@ -103,68 +104,163 @@ function construirCapitulos(paragrafos) {
 
 // ── TOC ───────────────────────────────────────────────────────────────────────
 
+const ROMANOS = ['I','II','III','IV','V','VI','VII','VIII'];
+
 function construirToc() {
   tocEl.innerHTML = '';
 
-  let parteAtual = '', secaoAtual = '';
-  let parteDetails = null, secaoDetails = null;
+  // Prólogo: link direto no topo
+  const prologoIdx = _capitulos.findIndex(c => c.parte === 'PRÓLOGO');
+  if (prologoIdx !== -1) {
+    const btn = document.createElement('button');
+    btn.className = 'toc-cap-link toc-prologo';
+    btn.type = 'button';
+    btn.textContent = 'Prólogo';
+    btn.dataset.secaoIdx = prologoIdx;
+    btn.addEventListener('click', () => _tocClick(prologoIdx));
+    tocEl.appendChild(btn);
+  }
 
-  _capitulos.forEach((cap, idx) => {
-    // Nova parte
-    if (cap.parte !== parteAtual) {
-      parteAtual = cap.parte;
+  // Itera sobre _paragrafos para obter hierarquia parte > seção > capítulo
+  let parteAtual = '', secaoAtual = '', capituloAtual = '';
+  let parteDetails = null, secaoDetails = null;
+  let parteNum = 0, secaoNum = 0, capNum = 0;
+  let introAdicionada = false;
+
+  for (const p of _paragrafos) {
+    if (p.parte === 'PRÓLOGO') continue;
+
+    // ── Nova parte ──
+    if (p.parte !== parteAtual) {
+      parteAtual = p.parte;
       secaoAtual = '';
-      secaoDetails = null;
+      capituloAtual = '';
+      parteNum++;
+      secaoNum = 0;
+      introAdicionada = false;
 
       const details = document.createElement('details');
       details.className = 'toc-parte';
       details.open = true;
 
       const summary = document.createElement('summary');
-      summary.textContent = cap.parte || 'Geral';
-      details.appendChild(summary);
+      const numSpan = document.createElement('span');
+      numSpan.className = 'toc-parte-num';
+      numSpan.textContent = `Parte ${ROMANOS[parteNum - 1] || parteNum}`;
+      summary.appendChild(numSpan);
+      summary.appendChild(document.createTextNode(p.parte));
 
+      const firstSecIdx = _capitulos.findIndex(c => c.parte === p.parte && c.secao);
+      const navIdx = firstSecIdx !== -1 ? firstSecIdx : _capitulos.findIndex(c => c.parte === p.parte);
+      summary.addEventListener('click', () => setTimeout(() => _tocClick(navIdx), 0));
+
+      details.appendChild(summary);
       parteDetails = details;
       tocEl.appendChild(details);
     }
 
-    // Nova seção
-    if (cap.secao && cap.secao !== secaoAtual) {
-      secaoAtual = cap.secao;
+    if (!p.secao && !p.capitulo) continue; // intro de parte — pular
+
+    // ── Nova seção ──
+    if (p.secao && p.secao !== secaoAtual) {
+      secaoAtual = p.secao;
+      capituloAtual = '';
+      secaoNum++;
+      capNum = 0;
+      introAdicionada = false;
+
+      const secaoIdx = _capitulos.findIndex(c => c.parte === p.parte && c.secao === p.secao);
 
       const details = document.createElement('details');
       details.className = 'toc-secao';
       details.open = true;
 
       const summary = document.createElement('summary');
-      summary.textContent = cap.secao;
-      details.appendChild(summary);
+      const numSpan = document.createElement('span');
+      numSpan.className = 'toc-secao-num';
+      numSpan.textContent = `Seção ${ROMANOS[secaoNum - 1] || secaoNum}`;
+      summary.appendChild(numSpan);
+      summary.appendChild(document.createTextNode(p.secao));
+      summary.addEventListener('click', () => setTimeout(() => _tocClick(secaoIdx), 0));
 
+      details.appendChild(summary);
       secaoDetails = details;
-      if (parteDetails) parteDetails.appendChild(details);
-      else tocEl.appendChild(details);
+      (parteDetails || tocEl).appendChild(details);
     }
 
-    // Link do capítulo — só se tiver label de capítulo ou seção
-    if (!cap.capitulo && !cap.secao) return; // primeira entrada sem título estrutural
+    // ── Novo capítulo (ou intro de seção) ──
+    if (p.capitulo && p.capitulo !== capituloAtual) {
+      capituloAtual = p.capitulo;
+      capNum++;
 
-    const btn = document.createElement('button');
-    btn.className = 'toc-cap-link';
-    btn.type = 'button';
-    btn.textContent = cap.capitulo || cap.secao;
-    btn.dataset.idx = idx;
-    btn.addEventListener('click', () => {
-      navegarCapitulo(idx);
-      if (window.innerWidth < 768) {
-        _tocAberta = false;
-        container.classList.add('toc-fechada');
-      }
-    });
+      const secaoIdx = _capitulos.findIndex(c => c.parte === p.parte && c.secao === p.secao);
+      const slug = _capSlug(p.capitulo);
 
-    if (secaoDetails) secaoDetails.appendChild(btn);
-    else if (parteDetails) parteDetails.appendChild(btn);
-    else tocEl.appendChild(btn);
-  });
+      const btn = document.createElement('button');
+      btn.className = 'toc-cap-link';
+      btn.type = 'button';
+      btn.dataset.secaoIdx = secaoIdx;
+      btn.dataset.capSlug = slug;
+      btn.addEventListener('click', () => _tocClickCap(secaoIdx, slug));
+
+      const numSpan = document.createElement('span');
+      numSpan.className = 'toc-cap-num';
+      numSpan.textContent = capNum;
+      btn.appendChild(numSpan);
+      btn.appendChild(document.createTextNode(p.capitulo));
+
+      (secaoDetails || parteDetails || tocEl).appendChild(btn);
+    } else if (!p.capitulo && !introAdicionada) {
+      introAdicionada = true;
+      const secaoIdx = _capitulos.findIndex(c => c.parte === p.parte && c.secao === p.secao);
+
+      const btn = document.createElement('button');
+      btn.className = 'toc-cap-link toc-intro';
+      btn.type = 'button';
+      btn.dataset.secaoIdx = secaoIdx;
+      btn.textContent = 'Introdução';
+      btn.addEventListener('click', () => _tocClick(secaoIdx));
+
+      (secaoDetails || parteDetails || tocEl).appendChild(btn);
+    }
+  }
+}
+
+function _capSlug(titulo) {
+  return titulo.toLowerCase()
+    .replace(/[«»""'']/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .substring(0, 60);
+}
+
+function _tocClick(idx) {
+  _capSlugAtivo = null;
+  navegarCapitulo(idx);
+  if (window.innerWidth < 768) {
+    _tocAberta = false;
+    container.classList.add('toc-fechada');
+  }
+}
+
+function _tocClickCap(secaoIdx, capSlug) {
+  _capSlugAtivo = capSlug;
+  if (secaoIdx !== _indice) {
+    navegarCapitulo(secaoIdx);
+    setTimeout(() => _scrollParaCapitulo(capSlug), 60);
+  } else {
+    _scrollParaCapitulo(capSlug);
+  }
+  atualizarTocAtivo();
+  if (window.innerWidth < 768) {
+    _tocAberta = false;
+    container.classList.add('toc-fechada');
+  }
+}
+
+function _scrollParaCapitulo(capSlug) {
+  const el = document.getElementById(`cap-${capSlug}`);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function toggleToc() {
@@ -175,9 +271,18 @@ function toggleToc() {
 
 function atualizarTocAtivo() {
   tocEl.querySelectorAll('.toc-cap-link').forEach((btn) => {
-    btn.classList.toggle('ativo', parseInt(btn.dataset.idx, 10) === _indice);
-    // Garante que o item ativo esteja visível (abre details pais)
-    if (btn.classList.contains('ativo')) {
+    const secaoIdx = parseInt(btn.dataset.secaoIdx ?? btn.dataset.idx, 10);
+    const capSlug  = btn.dataset.capSlug;
+    let isAtivo;
+    if (_capSlugAtivo) {
+      // Capítulo específico clicado — só ele fica ativo
+      isAtivo = !!capSlug && secaoIdx === _indice && capSlug === _capSlugAtivo;
+    } else {
+      // Navegação por seção — marca capítulos da seção, mas não a Introdução
+      isAtivo = !!capSlug && secaoIdx === _indice;
+    }
+    btn.classList.toggle('ativo', isAtivo);
+    if (isAtivo) {
       let el = btn.parentElement;
       while (el && el !== tocEl) {
         if (el.tagName === 'DETAILS') el.open = true;
@@ -192,6 +297,7 @@ function atualizarTocAtivo() {
 function navegarCapitulo(idx) {
   if (idx < 0 || idx >= _capitulos.length) return;
   _indice = idx;
+  _capSlugAtivo = null;
   renderizarCapitulo(idx);
 }
 
@@ -200,26 +306,37 @@ function renderizarCapitulo(idx) {
   if (!cap) return;
 
   // Breadcrumb
-  breadcrumb.textContent = [cap.parte, cap.secao, cap.capitulo].filter(Boolean).join(' › ');
+  breadcrumb.textContent = [cap.parte, cap.secao].filter(Boolean).join(' › ');
 
   // Conteúdo
   textoEl.innerHTML = '';
   const wrapper = document.createElement('div');
   wrapper.className = 'leitor-conteudo';
 
-  // Título
-  if (cap.capitulo || cap.secao) {
+  // Título da seção
+  if (cap.secao || cap.parte) {
     const h = document.createElement('h2');
     h.className = 'leitor-cap-titulo';
-    h.textContent = cap.capitulo || cap.secao;
+    h.textContent = cap.secao || cap.parte;
     wrapper.appendChild(h);
   }
 
-  let artigoAtual = '';
+  let capituloAtual = '', artigoAtual = '';
   for (const p of cap.paragrafos) {
+    // Cabeçalho de capítulo dentro da seção
+    if (p.capitulo && p.capitulo !== capituloAtual) {
+      capituloAtual = p.capitulo;
+      artigoAtual = '';
+      const h = document.createElement('h3');
+      h.className = 'leitor-capitulo-titulo';
+      h.id = `cap-${_capSlug(p.capitulo)}`;
+      h.textContent = p.capitulo;
+      wrapper.appendChild(h);
+    }
+
     if (p.artigo && p.artigo !== artigoAtual) {
       artigoAtual = p.artigo;
-      const h = document.createElement('h3');
+      const h = document.createElement('h4');
       h.className = 'leitor-artigo-titulo';
       h.textContent = p.artigo;
       wrapper.appendChild(h);
@@ -238,8 +355,18 @@ function renderizarCapitulo(idx) {
     textoSpan.className = 'leitor-paragrafo-texto';
     renderizarTextoComNotas(textoSpan, p.texto, p.numero);
 
+    const saveBtn = document.createElement('button');
+    saveBtn.className = 'leitor-para-save-btn' + (contemNumero(p.numero) ? ' salvo' : '');
+    saveBtn.type = 'button';
+    saveBtn.setAttribute('aria-label', `Salvar parágrafo ${p.numero}`);
+    saveBtn.innerHTML = contemNumero(p.numero)
+      ? `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>`
+      : `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`;
+    saveBtn.addEventListener('click', (e) => { e.stopPropagation(); salvarParagrafoLeitor(p, saveBtn); });
+
     div.appendChild(numSpan);
     div.appendChild(textoSpan);
+    div.appendChild(saveBtn);
     wrapper.appendChild(div);
   }
 
@@ -254,6 +381,23 @@ function renderizarCapitulo(idx) {
   // Scroll TOC para item ativo
   const ativoEl = tocEl.querySelector('.toc-cap-link.ativo');
   if (ativoEl) ativoEl.scrollIntoView({ block: 'nearest' });
+}
+
+// ── Salvar parágrafo completo ─────────────────────────────────────────────────
+
+function salvarParagrafoLeitor(p, btn) {
+  adicionarTrecho({
+    numero:   p.numero,
+    texto:    p.texto,
+    parte:    p.parte    || '',
+    secao:    p.secao    || '',
+    capitulo: p.capitulo || '',
+    artigo:   p.artigo   || '',
+    tipo:     'paragrafo',
+  });
+  _atualizarBadge();
+  btn.classList.add('salvo');
+  btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>`;
 }
 
 // ── Seleção de texto → salvar ─────────────────────────────────────────────────
@@ -312,7 +456,7 @@ function salvarSelecao() {
   window.getSelection()?.removeAllRanges();
 }
 
-// ── Renderização de notas (igual ao ui.js) ────────────────────────────────────
+// ── Renderização de notas ─────────────────────────────────────────────────────
 
 function renderizarTextoComNotas(el, texto, numeroParagrafo) {
   const notas = notasDoParagrafo(numeroParagrafo);
@@ -322,15 +466,53 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
   for (const parte of partes) {
     const m = parte.match(/^\((\d+)\)$/);
     if (m && notas[m[1]]) {
-      const ref     = m[1];
-      const sup     = document.createElement('sup');
+      const ref      = m[1];
+      const noteText = notas[ref];
+
+      const sup = document.createElement('sup');
       sup.className = 'ref-nota';
       sup.textContent = ref;
       sup.setAttribute('aria-label', `Nota de rodapé ${ref}`);
-      const tooltip     = document.createElement('span');
+
+      const tooltip = document.createElement('span');
       tooltip.className = 'nota-tooltip';
-      tooltip.textContent = notas[ref];
+
+      const spanNota = document.createElement('span');
+      spanNota.className = 'nota-tooltip-nota';
+      spanNota.textContent = noteText;
+
+      const spanVerso = document.createElement('span');
+      spanVerso.className = 'nota-tooltip-verso';
+
+      tooltip.appendChild(spanNota);
+      tooltip.appendChild(spanVerso);
       sup.appendChild(tooltip);
+
+      // Carrega versículo ao primeiro hover (desktop)
+      let _fetched = false;
+      let _verse   = null;
+      sup.addEventListener('mouseenter', async () => {
+        if (_fetched) return;
+        _fetched = true;
+        _verse = await buscarVersiculo(noteText);
+        if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
+      });
+
+      // Clique: mobile → card com nota + verso; desktop → card só com verso
+      sup.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        if (window.innerWidth < 768) {
+          if (!_fetched) {
+            _fetched = true;
+            _verse = await buscarVersiculo(noteText);
+            if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
+          }
+          mostrarCardMobile(ref, noteText, _verse);
+        } else if (_verse) {
+          mostrarCard(_verse.referencia, _verse.texto);
+        }
+      });
+
       el.appendChild(sup);
     } else {
       el.appendChild(document.createTextNode(parte));

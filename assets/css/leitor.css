@@ -78,25 +78,61 @@
   overflow: hidden;
 }
 
+/* Prólogo — link direto no topo */
+.toc-prologo {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-left: 3px solid transparent;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  margin-bottom: var(--space-sm);
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.toc-prologo:hover { color: var(--color-primary); background: rgba(26,60,46,0.04); }
+.toc-prologo.ativo { color: var(--color-primary); font-weight: 700; border-left-color: var(--color-accent); }
+
 /* Parte */
 .toc-parte {
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .toc-parte > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
   font-family: var(--font-sans);
-  font-size: 0.63rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-text);
   padding: var(--space-sm) var(--space-lg);
   cursor: pointer;
   list-style: none;
   user-select: none;
+  border-top: 1px solid var(--color-border);
 }
 
 .toc-parte > summary::-webkit-details-marker { display: none; }
+
+.toc-parte-num {
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-dk);
+  background: rgba(197,160,40,0.12);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  flex-shrink: 0;
+}
 
 /* Seção */
 .toc-secao {
@@ -104,11 +140,14 @@
 }
 
 .toc-secao > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--color-text);
-  padding: 0.3rem var(--space-lg) 0.3rem calc(var(--space-lg) + 0.5rem);
+  padding: 0.3rem var(--space-lg) 0.3rem calc(var(--space-lg) + 0.75rem);
   cursor: pointer;
   list-style: none;
   user-select: none;
@@ -116,27 +155,51 @@
 
 .toc-secao > summary::-webkit-details-marker { display: none; }
 
-/* Capítulo */
+.toc-secao-num {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  flex-shrink: 0;
+  min-width: 1.2rem;
+}
+
+/* Intro de seção */
+.toc-intro {
+  font-style: italic;
+  color: rgba(136,136,136,0.8);
+  font-size: 0.7rem;
+}
+
+/* Capítulo — link dentro de cada seção */
 .toc-cap-link {
-  display: block;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
   width: 100%;
   text-align: left;
   border: none;
   border-left: 3px solid transparent;
   background: transparent;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: var(--color-muted);
-  padding: 0.35rem var(--space-lg) 0.35rem calc(var(--space-lg) + 1rem - 3px);
+  padding: 0.32rem var(--space-lg) 0.32rem calc(var(--space-lg) + 1.5rem - 3px);
   cursor: pointer;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
   line-height: 1.3;
 }
 
-.toc-cap-link:hover {
-  background: rgba(26,60,46,0.05);
-  color: var(--color-primary);
+.toc-cap-num {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-border);
+  flex-shrink: 0;
+  min-width: 1.4rem;
+  transition: color var(--transition);
 }
+
+.toc-cap-link:hover { background: rgba(26,60,46,0.05); color: var(--color-primary); }
+.toc-cap-link:hover .toc-cap-num { color: var(--color-accent-dk); }
 
 .toc-cap-link.ativo {
   color: var(--color-primary);
@@ -144,6 +207,7 @@
   background: rgba(197,160,40,0.10);
   border-left-color: var(--color-accent);
 }
+.toc-cap-link.ativo .toc-cap-num { color: var(--color-accent-dk); }
 
 /* ── Área de texto ───────────────────────────────────────────────────────── */
 #leitor-main {
@@ -178,13 +242,24 @@
   margin-bottom: var(--space-2xl);
 }
 
-.leitor-artigo-titulo {
+.leitor-capitulo-titulo {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--color-primary);
   margin-top: var(--space-2xl);
   margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.leitor-artigo-titulo {
+  font-family: var(--font-serif);
+  font-size: 1.0rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
   font-style: italic;
 }
 
@@ -192,6 +267,7 @@
   display: flex;
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
+  align-items: flex-start;
 }
 
 .leitor-paragrafo-num {
@@ -211,6 +287,41 @@
   font-size: 1.05rem;
   line-height: 1.85;
   color: var(--color-text);
+  flex: 1;
+}
+
+.leitor-para-save-btn {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 0.3em;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition), color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.leitor-paragrafo:hover .leitor-para-save-btn,
+.leitor-para-save-btn.salvo {
+  opacity: 1;
+}
+
+.leitor-para-save-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-bg);
+}
+
+.leitor-para-save-btn.salvo {
+  color: var(--color-accent-dk);
+  border-color: var(--color-accent);
+  background: rgba(197,160,40,0.1);
 }
 
 /* ── Nav capítulos ───────────────────────────────────────────────────────── */

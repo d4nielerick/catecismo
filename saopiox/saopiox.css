@@ -1,0 +1,217 @@
+/* ── São Pio X — paleta bordeaux ─────────────────────────────────────────────
+   Sobrescreve as variáveis do main.css para este contexto.
+   main.css é carregado primeiro, então :root aqui tem precedência igual
+   mas a folha vem depois na cascata — o que garante override.
+──────────────────────────────────────────────────────────────────────────── */
+:root {
+  --color-primary:  #572528;
+  --color-accent:   #C5A028;
+  --color-accent-dk:#a0811e;
+  --color-bg:       #FAF7F7;
+  --color-surface:  #FFFFFF;
+  --color-text:     #2C2121;
+  --color-muted:    #8A7878;
+  --color-border:   #E2D8D8;
+  --color-mark:     #FFDDD0;
+}
+
+/* Fundo externo ao #app e stroke bordeaux (sobrescreve ouro do main.css) */
+@media (min-width: 860px) {
+  html { background: #572528; }
+
+  #app {
+    box-shadow:
+      0 0 0 2px rgba(87, 37, 40, 0.7),
+      0 0 0 4px rgba(87, 37, 40, 0.12),
+      0 24px 60px rgba(0, 0, 0, 0.18),
+      0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Gradiente do hero com leve tom avermelhado */
+#hero {
+  background: linear-gradient(
+    160deg,
+    var(--color-bg) 0%,
+    #F2E8E8 55%,
+    #EBE0E0 100%
+  );
+}
+
+/* ── Brasão ──────────────────────────────────────────────────────────────── */
+.brasao-piox {
+  width: 120px;
+  height: auto;
+  opacity: 0.88;
+  transition: transform 0.3s ease;
+}
+
+.brasao-piox:hover {
+  transform: translateY(-3px);
+}
+
+/* ── Título ──────────────────────────────────────────────────────────────── */
+.titulo-piox {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+
+/* Label "São Pio X" no topo da busca */
+#topo-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  opacity: 0.55;
+  white-space: nowrap;
+}
+
+/* ── Cartão de resultado (painel esquerdo) ──────────────────────────────── */
+.piox-item {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.piox-item:hover,
+.piox-item.ativo {
+  background: rgba(87, 37, 40, 0.06);
+}
+.piox-item-num {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  opacity: 0.45;
+  margin-bottom: 0.25rem;
+}
+.piox-item-pergunta {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+  color: var(--color-text);
+}
+.piox-item-trecho {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* ── Painel direito — Q&A ────────────────────────────────────────────────── */
+.piox-qa {
+  padding: 1.5rem 1.8rem 3rem;
+  max-width: 680px;
+}
+
+.piox-qa-breadcrumb {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  opacity: 0.45;
+  margin-bottom: 1.4rem;
+}
+.piox-qa-breadcrumb span + span::before {
+  content: ' › ';
+}
+
+.piox-qa-num {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  opacity: 0.35;
+  margin-bottom: 0.6rem;
+}
+
+.piox-qa-pergunta {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+}
+
+.piox-qa-resposta {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--color-text);
+}
+
+/* ── Modo Leitura — Q&A ──────────────────────────────────────────────────── */
+
+/* TOC: parte sem badge numérico */
+#leitor-toc .toc-parte > summary {
+  font-size: 0.7rem;
+}
+
+.piox-leitor-qa {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.piox-leitor-num {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  opacity: 0.35;
+  user-select: none;
+}
+
+.piox-leitor-pergunta {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-primary);
+}
+
+.piox-leitor-resposta {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--color-text);
+}
+
+/* Botão fechar drawer mobile */
+.btn-fechar-dir {
+  display: none;
+}
+@media (max-width: 767px) {
+  .btn-fechar-dir {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.75rem 1rem 0.5rem;
+    opacity: 0.7;
+  }
+  .btn-fechar-dir:hover { opacity: 1; }
+}

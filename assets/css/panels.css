@@ -1,5 +1,6 @@
 /* ── panels.css — painéis esquerdo (resultados) e direito (leitura) ───────── */
 
+
 /* ── Container dos dois painéis ─────────────────────────────────────────── */
 #painel-busca {
   display: flex;
@@ -40,6 +41,134 @@
   font-size: 0.8rem;
   color: var(--color-muted);
   font-weight: 500;
+}
+
+/* ── Botão Resumir com IA ─────────────────────────────────────────────────── */
+#btn-resumir {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent-dk);
+  background: rgba(197,160,40,0.10);
+  border: 1px solid rgba(197,160,40,0.35);
+  border-radius: 100px;
+  padding: 0.25rem 0.7rem;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+  white-space: nowrap;
+}
+
+#btn-resumir:hover {
+  background: rgba(197,160,40,0.20);
+  border-color: var(--color-accent);
+}
+
+#btn-resumir.carregando {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ── Card de resumo da IA ─────────────────────────────────────────────────── */
+#ai-resumo-card {
+  margin: var(--space-sm) var(--space-sm) 0;
+  background: linear-gradient(135deg, #fffdf5 0%, #fdf8e8 100%);
+  border: 1px solid rgba(197,160,40,0.35);
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#ai-resumo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0.75rem;
+  background: rgba(197,160,40,0.10);
+  border-bottom: 1px solid rgba(197,160,40,0.2);
+}
+
+#ai-resumo-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-accent-dk);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+#ai-resumo-fechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  padding: 2px;
+  border-radius: 3px;
+  transition: color var(--transition);
+}
+
+#ai-resumo-fechar:hover { color: var(--color-primary); }
+
+#ai-resumo-corpo {
+  padding: 0.65rem 0.75rem;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+#ai-resumo-corpo p { margin-bottom: 0.4rem; }
+#ai-resumo-corpo p:last-child { margin-bottom: 0; }
+
+/* Skeleton de loading */
+#ai-resumo-corpo .ai-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ai-skeleton-linha {
+  height: 0.85rem;
+  background: linear-gradient(90deg, rgba(197,160,40,0.12) 25%, rgba(197,160,40,0.22) 50%, rgba(197,160,40,0.12) 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: ai-shimmer 1.4s infinite;
+}
+
+.ai-skeleton-linha:nth-child(2) { width: 88%; }
+.ai-skeleton-linha:nth-child(3) { width: 75%; }
+
+@keyframes ai-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Citações clicáveis no texto do resumo */
+.ai-citacao {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent-dk);
+  background: rgba(197,160,40,0.15);
+  border: 1px solid rgba(197,160,40,0.3);
+  border-radius: 4px;
+  padding: 0 0.3rem;
+  cursor: pointer;
+  transition: background var(--transition);
+  vertical-align: baseline;
+}
+
+.ai-citacao:hover {
+  background: rgba(197,160,40,0.3);
 }
 
 /* Lista com scroll independente */
@@ -135,6 +264,41 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  flex: 1;
+}
+
+.card-save-btn {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity var(--transition), color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.resultado-card:hover .card-save-btn,
+.card-save-btn.salvo {
+  opacity: 1;
+}
+
+.card-save-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-bg);
+}
+
+.card-save-btn.salvo {
+  color: var(--color-accent-dk);
+  border-color: var(--color-accent);
+  background: rgba(197,160,40,0.1);
 }
 
 .card-trecho {
@@ -337,6 +501,8 @@
 
   #painel-conteudo.aberto {
     transform: translateX(0);
+    /* Espaço para a barra de nav mobile fixada no fundo */
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
   }
 
   .tc-paragrafo-texto {
@@ -352,13 +518,134 @@
     font-size: 1.05rem;
   }
 
-  /* Botão fechar drawer no mobile */
+  /* Botão fechar drawer no mobile — substituído pela barra de nav */
   #btn-fechar-conteudo {
+    display: none;
+  }
+
+  /* ── Barra de nav mobile ───────────────────────────────────────────────── */
+  #mobile-nav-bar {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-sm) var(--space-md);
+    padding-bottom: calc(var(--space-sm) + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+  }
+
+  #mobile-nav-bar.visivel {
+    transform: translateY(0);
+  }
+
+  #mobile-nav-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  #mobile-btn-resultados {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-muted);
+    cursor: pointer;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius);
+    transition: color var(--transition), background var(--transition);
+  }
+
+  #mobile-btn-resultados:hover {
+    color: var(--color-primary);
+    background: var(--color-bg);
+  }
+
+  #mobile-btn-resumir {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-accent-dk);
+    background: rgba(197,160,40,0.12);
+    border: 1px solid rgba(197,160,40,0.35);
+    border-radius: 100px;
+    padding: 0.2rem 0.55rem;
+    cursor: pointer;
+    transition: background var(--transition);
+  }
+
+  #mobile-btn-resumir:hover {
+    background: rgba(197,160,40,0.22);
+  }
+
+  #mobile-nav-info {
+    flex: 1;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--color-muted);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #mobile-nav-arrows {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  #mobile-btn-anterior,
+  #mobile-btn-proximo {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-muted);
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+  }
+
+  #mobile-btn-anterior:not(:disabled):hover,
+  #mobile-btn-proximo:not(:disabled):hover {
+    color: var(--color-primary);
+    border-color: var(--color-accent);
+  }
+
+  #mobile-btn-anterior:disabled,
+  #mobile-btn-proximo:disabled {
+    opacity: 0.3;
+    cursor: default;
   }
 }
 
+/* Barra de nav mobile: oculta no desktop */
 @media (min-width: 768px) {
+  #mobile-nav-bar {
+    display: none;
+  }
   #btn-fechar-conteudo {
     display: none;
   }
@@ -519,6 +806,7 @@
   transition: opacity 0.15s ease;
 }
 
+/* Seta padrão: aponta para baixo (tooltip acima do texto) */
 .nota-tooltip::after {
   content: '';
   position: absolute;
@@ -529,9 +817,121 @@
   border-top-color: #1A3C2E;
 }
 
+/* Quando JS posiciona o tooltip abaixo do sup, seta aponta para cima */
+.nota-tooltip.tooltip-abaixo::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: #1A3C2E;
+}
+
 .ref-nota:hover .nota-tooltip,
 .ref-nota.tooltip-visivel .nota-tooltip {
   opacity: 1;
+}
+
+.nota-tooltip-nota {
+  display: block;
+}
+
+.nota-tooltip-verso {
+  display: block;
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  font-size: 0.68rem;
+  color: rgba(245,240,232,0.82);
+}
+
+.nota-tooltip-verso:empty {
+  display: none;
+}
+
+/* ── Card flutuante de versículo ─────────────────────────────────────────── */
+#biblia-card {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 500;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  max-width: 340px;
+  width: calc(100vw - 3rem);
+  padding: 1rem 1.1rem;
+}
+
+#biblia-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+#biblia-card-ref {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-accent-dk);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+#biblia-card-fechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-muted);
+  padding: 2px;
+  border-radius: 3px;
+  transition: color var(--transition);
+}
+
+#biblia-card-fechar:hover {
+  color: var(--color-primary);
+}
+
+#biblia-card-nota {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+#biblia-card-nota:empty { display: none; }
+
+#biblia-card-texto {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+  font-style: italic;
+}
+
+#biblia-card-texto:empty { display: none; }
+
+/* Mobile: tooltip desabilitado — card cobre a tela toda na base */
+@media (max-width: 767px) {
+  .nota-tooltip { display: none !important; }
+
+  #biblia-card {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    width: 100%;
+    border-radius: var(--radius) var(--radius) 0 0;
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 600;
+  }
 }
 
 /* ── Botão coletor no header ─────────────────────────────────────────────── */
