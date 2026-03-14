@@ -671,6 +671,7 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
 // ── Seleção automática ────────────────────────────────────────────────────────
 function selecionarPrimeiro() {
   if (!resultadosAtuais.length) return;
+  if (window.innerWidth < 768) return;
   const primeiro = resultadosAtuais[0];
   const card = listaResultados.querySelector(`[data-num="${primeiro.numero}"]`);
   if (card) selecionarParagrafo(primeiro.numero, card);
