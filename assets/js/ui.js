@@ -12,6 +12,7 @@ import { buscar, agrupar, destacar, trecho } from './search.js';
 import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
 import { iniciarLeitor, abrirLeitor } from './leitor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
+import { gerarVariantes } from './variantes.js';
 
 // ── Elementos do DOM ─────────────────────────────────────────────────────────
 const app             = document.getElementById('app');
@@ -50,6 +51,7 @@ let paragrafoAtivo    = null; // elemento DOM do parágrafo ativo no texto cont�
 let resultadosAtuais  = [];   // parágrafos do resultado atual (para nav prev/next)
 let indiceAtivo       = -1;   // índice do parágrafo ativo em resultadosAtuais
 let autoSelectTimer   = null; // timer para seleção automática do 1º resultado
+let _sugestaoEl       = null; // elemento de sugestão de variante
 
 // ── Botões rovings (migram para o parágrafo ativo) ───────────────────────────
 
@@ -250,6 +252,7 @@ function executarBusca(query) {
 
   renderizarResultados(grupos, total, queryAtual);
   atualizarHighlightsTexto(queryAtual, encontrados);
+  mostrarSugestao(queryAtual, total);
 
   // Seleciona o 1º resultado automaticamente após 1s de inatividade
   clearTimeout(autoSelectTimer);
@@ -302,9 +305,44 @@ function voltarEstadoInicial() {
   ocultarNav();
 }
 
+function getSugestaoEl() {
+  if (_sugestaoEl) return _sugestaoEl;
+  _sugestaoEl = document.createElement('div');
+  _sugestaoEl.className = 'sugestao-variante oculto';
+  document.getElementById('resultados-header').insertAdjacentElement('afterend', _sugestaoEl);
+  return _sugestaoEl;
+}
+
+function mostrarSugestao(query, nAtual) {
+  const el = getSugestaoEl();
+  const variantes = gerarVariantes(query);
+  if (!variantes.length) { el.className = 'sugestao-variante oculto'; return; }
+
+  const THRESHOLD = 5;
+  let melhor = null, melhorN = 0;
+  for (const v of variantes) {
+    const { total } = buscar(v, paragrafos);
+    if (total > melhorN) { melhorN = total; melhor = v; }
+  }
+
+  if (!melhor || melhorN === 0 || (nAtual >= THRESHOLD && melhorN <= nAtual)) {
+    el.className = 'sugestao-variante oculto'; return;
+  }
+
+  const prefixo = nAtual === 0 ? 'Nenhum resultado. Tentar:' : 'Ver também:';
+  el.className = 'sugestao-variante';
+  el.innerHTML = `${prefixo} <button class="sugestao-btn" type="button">${melhor} <span class="sugestao-count">(${melhorN})</span></button>`;
+  el.querySelector('.sugestao-btn').addEventListener('click', () => {
+    campoBusca.value = melhor;
+    botaoLimpar.classList.remove('oculto');
+    executarBusca(melhor);
+  });
+}
+
 function limparBusca() {
   campoBusca.value = '';
   botaoLimpar.classList.add('oculto');
+  if (_sugestaoEl) _sugestaoEl.className = 'sugestao-variante oculto';
   voltarEstadoInicial();
   campoBusca.focus();
 }

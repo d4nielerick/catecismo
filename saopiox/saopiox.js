@@ -4,6 +4,7 @@
  */
 
 import { iniciarLeitorPioX, abrirLeitorPioX } from './leitorpiox.js';
+import { gerarVariantes } from '/assets/js/variantes.js';
 
 // ── Estado ────────────────────────────────────────────────────────────────────
 let _dados       = [];
@@ -82,6 +83,43 @@ function trecho(texto, query, janela = 160) {
   const ini = Math.max(0, idx - Math.floor(janela / 2));
   const fim = Math.min(texto.length, ini + janela);
   return (ini > 0 ? '…' : '') + destacar(texto.slice(ini, fim), query) + (fim < texto.length ? '…' : '');
+}
+
+// ── Sugestão de variante ──────────────────────────────────────────────────────
+let _sugestaoEl = null;
+
+function getSugestaoEl() {
+  if (_sugestaoEl) return _sugestaoEl;
+  _sugestaoEl = document.createElement('div');
+  _sugestaoEl.className = 'sugestao-variante oculto';
+  document.getElementById('resultados-header').insertAdjacentElement('afterend', _sugestaoEl);
+  return _sugestaoEl;
+}
+
+function mostrarSugestao(query, nAtual) {
+  const el = getSugestaoEl();
+  const variantes = gerarVariantes(query);
+  if (!variantes.length) { el.className = 'sugestao-variante oculto'; return; }
+
+  const THRESHOLD = 5;
+  let melhor = null, melhorN = 0;
+  for (const v of variantes) {
+    const n = buscar(v).length;
+    if (n > melhorN) { melhorN = n; melhor = v; }
+  }
+
+  if (!melhor || melhorN === 0 || (nAtual >= THRESHOLD && melhorN <= nAtual)) {
+    el.className = 'sugestao-variante oculto'; return;
+  }
+
+  const prefixo = nAtual === 0 ? 'Nenhum resultado. Tentar:' : 'Ver também:';
+  el.className = 'sugestao-variante';
+  el.innerHTML = `${prefixo} <button class="sugestao-btn" type="button">${melhor} <span class="sugestao-count">(${melhorN})</span></button>`;
+  el.querySelector('.sugestao-btn').addEventListener('click', () => {
+    campoBusca.value = melhor;
+    btnLimpar.classList.remove('oculto');
+    ativarBusca(melhor);
+  });
 }
 
 // ── Render lista ──────────────────────────────────────────────────────────────
@@ -193,6 +231,7 @@ function ativarBusca(query) {
   }
 
   renderLista();
+  mostrarSugestao(query, _resultados.length);
   btnAnterior.classList.add('oculto');
   btnProximo.classList.add('oculto');
 
@@ -213,6 +252,7 @@ function limparBusca() {
   listaEl.innerHTML = '';
   semRes.classList.add('oculto');
   contagemEl.textContent = '';
+  if (_sugestaoEl) _sugestaoEl.className = 'sugestao-variante oculto';
   _resultados = []; _idxAtivo = -1; _query = '';
 
   // Devolve o campo ao hero

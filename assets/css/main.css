@@ -291,6 +291,48 @@ mark {
   }
 }
 
+/* ── Sugestão de variante ────────────────────────────────────────────────── */
+.sugestao-variante {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.45rem var(--space-lg);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.sugestao-variante.oculto { display: none; }
+
+.sugestao-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.6rem;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.sugestao-btn:hover {
+  border-color: var(--color-accent);
+  background: var(--color-bg);
+}
+
+.sugestao-count {
+  font-size: 0.68rem;
+  color: var(--color-muted);
+}
+
 /* ── Utilitários ─────────────────────────────────────────────────────────── */
 .oculto { display: none !important; }
 
