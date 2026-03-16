@@ -52,7 +52,7 @@
         id="campo-busca"
         autocomplete="off"
         spellcheck="false"
-        placeholder="Busque por sacramento, oração, moral…"
+        placeholder="Busque por tema, palavra ou número do parágrafo…"
         aria-label="Buscar no Catecismo"
         aria-controls="lista-resultados"
         aria-autocomplete="list"
@@ -340,18 +340,43 @@
     <button id="modal-contribuicao-fechar" type="button" aria-label="Fechar">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
+
     <div class="modal-icone">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
     </div>
     <h2>Apoiar o projeto</h2>
     <p class="modal-descricao">Este buscador é gratuito e sem anúncios. Se ele te ajuda, considere contribuir.</p>
-    <div class="pix-container">
-      <span class="pix-label">Chave PIX</span>
-      <div class="pix-key-row">
-        <code id="pix-chave">033.383.233-79</code>
-        <button id="btn-copiar-pix" type="button">Copiar</button>
-      </div>
+
+    <!-- Seletor de valor -->
+    <div class="pix-valores" role="group" aria-label="Valor da contribuição">
+      <button class="pix-valor-btn ativo" data-valor="10"    type="button">R$10</button>
+      <button class="pix-valor-btn"        data-valor="20"    type="button">R$20</button>
+      <button class="pix-valor-btn"        data-valor="50"    type="button">R$50</button>
+      <button class="pix-valor-btn"        data-valor="livre" type="button">Livre</button>
     </div>
+
+    <!-- QR Code (desktop default / mobile toggle) -->
+    <div id="pix-qr-area">
+      <img id="pix-qr-img" src="/assets/img/pix-qr-10.webp" alt="QR Code PIX R$10" width="168" height="168">
+      <p class="pix-qr-hint">Escaneie com o app do banco</p>
+    </div>
+
+    <!-- Chave PIX -->
+    <div class="pix-container">
+      <code id="pix-chave" class="sr-only">033.383.233-79</code>
+      <button id="btn-copiar-pix" type="button">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar chave PIX
+      </button>
+    </div>
+
+    <!-- Toggle QR (visível só no mobile) -->
+    <button id="btn-toggle-qr" type="button">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3m0 4h4m-4 0v-4m4 0h-4"/></svg>
+      Ver QR Code
+    </button>
+
+    <!-- Meta mensal -->
     <div class="meta-container">
       <div class="meta-header">
         <span>Meta mensal</span>

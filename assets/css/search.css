@@ -114,6 +114,159 @@
   right: 1rem;
 }
 
+/* ── Índice Analítico ────────────────────────────────────────────────────── */
+.indice-analitico-bloco {
+  padding: 0.6rem 0.75rem 0.4rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.82rem;
+  margin-bottom: 0.25rem;
+}
+
+.indice-analitico-titulo {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.45rem;
+}
+
+.indice-analitico-tema {
+  margin-bottom: 0.45rem;
+}
+
+.indice-analitico-tema-nome {
+  display: block;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+  font-size: 0.78rem;
+}
+
+.indice-analitico-subtema > span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.indice-analitico-subtema {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  margin: 0.12rem 0.2rem 0.12rem 0;
+  font-size: 0.7rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: inherit;
+  max-width: 22em;
+  white-space: nowrap;
+}
+
+.indice-analitico-subtema:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.indice-analitico-subtema.ativo {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Badge de contagem */
+.indice-subtema-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-border);
+  color: var(--color-muted);
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  min-width: 1.1em;
+  padding: 0 0.3em;
+  line-height: 1.5;
+  transition: background 0.15s, color 0.15s;
+}
+
+.indice-analitico-subtema:hover .indice-subtema-count,
+.indice-analitico-subtema.ativo .indice-subtema-count {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+/* X de desselecionar — só visível quando ativo */
+.indice-subtema-x {
+  display: none;
+  margin-left: 0.3rem;
+  font-size: 0.85em;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.indice-analitico-subtema.ativo .indice-subtema-x {
+  display: inline;
+}
+
+.indice-subtema-x:hover {
+  opacity: 1;
+}
+
+/* Wrapper com gradiente */
+.indice-analitico-temas-wrap {
+  position: relative;
+}
+
+.indice-analitico-ver-mais-wrap {
+  position: relative;
+  margin-top: -0.5rem;
+  padding-top: 1.8rem;
+  text-align: center;
+}
+
+.indice-analitico-ver-mais-wrap.collapsed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.8rem;
+  background: linear-gradient(to bottom, transparent, var(--color-surface));
+  pointer-events: none;
+}
+
+.indice-analitico-ver-mais {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.72rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.indice-analitico-ver-mais svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex-shrink: 0;
+}
+
+.indice-analitico-ver-mais:hover {
+  background: var(--color-bg);
+  border-color: var(--color-primary);
+}
+
 /* ── Versão topo (estado de busca ativa) ──────────────────────────────────── */
 #busca-topo .campo-busca-container {
   flex: 1;

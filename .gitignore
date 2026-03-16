@@ -8,3 +8,6 @@ assets/css/*.bak
 
 # OS
 .DS_Store
+catecismo/
+.vercel
+.env*.local

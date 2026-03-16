@@ -42,6 +42,175 @@ const mobileNavInfo       = document.getElementById('mobile-nav-info');
 const mobileBtnAnterior   = document.getElementById('mobile-btn-anterior');
 const mobileBtnProximo    = document.getElementById('mobile-btn-proximo');
 
+// ── Índice Analítico ─────────────────────────────────────────────────────────
+const MAX_TEMAS_VISIVEIS = 2;
+let indiceAnalitico = null;
+let subtemaAtivoEl  = null;
+
+async function carregarIndiceAnalitico() {
+  if (indiceAnalitico) return indiceAnalitico;
+  try {
+    const r = await fetch('data/indice_analitico.json');
+    indiceAnalitico = await r.json();
+  } catch {
+    indiceAnalitico = [];
+  }
+  return indiceAnalitico;
+}
+
+function normalizarSimples(s) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function contemTermo(texto, termo) {
+  // Verdadeiro só se o termo bate no início de alguma palavra do texto
+  const t = normalizarSimples(texto);
+  const q = normalizarSimples(termo);
+  return t.split(/[\s\-\/]+/).some(palavra => palavra.startsWith(q));
+}
+
+function limparIndiceAnalitico() {
+  const bloco = listaResultados.querySelector('.indice-analitico-bloco');
+  if (bloco) bloco.remove();
+  subtemaAtivoEl = null;
+}
+
+async function renderizarIndiceAnalitico(query) {
+  limparIndiceAnalitico();
+  const dados = await carregarIndiceAnalitico();
+
+  const matches = [];
+  const subtemaVistos = new Set();
+  for (const tema of dados) {
+    const temaMatch = contemTermo(tema.nome, query);
+    const subtemasFiltrados = tema.subtemas.filter(s =>
+      contemTermo(s.nome, query) && !subtemaVistos.has(s.nome)
+    );
+    const subtemasExibir = temaMatch
+      ? tema.subtemas.filter(s => !subtemaVistos.has(s.nome))
+      : subtemasFiltrados;
+    const comParagrafos = subtemasExibir.filter(s => s.paragrafos && s.paragrafos.length > 0);
+    if (comParagrafos.length === 0) continue;
+    comParagrafos.forEach(s => subtemaVistos.add(s.nome));
+    matches.push({ tema, subtemas: comParagrafos });
+  }
+
+  if (matches.length === 0) return;
+
+  const bloco = document.createElement('div');
+  bloco.className = 'indice-analitico-bloco';
+
+  const titulo = document.createElement('div');
+  titulo.className = 'indice-analitico-titulo';
+  titulo.textContent = 'Índice analítico';
+  bloco.appendChild(titulo);
+
+  const temasWrap = document.createElement('div');
+  temasWrap.className = 'indice-analitico-temas-wrap';
+  bloco.appendChild(temasWrap);
+
+  const temasContainer = document.createElement('div');
+  temasContainer.className = 'indice-analitico-temas';
+  temasWrap.appendChild(temasContainer);
+
+  function renderTemas(limite) {
+    temasContainer.innerHTML = '';
+    const visíveis = matches.slice(0, limite);
+    for (const { tema, subtemas } of visíveis) {
+      const temaEl = document.createElement('div');
+      temaEl.className = 'indice-analitico-tema';
+
+      const temaLabel = document.createElement('span');
+      temaLabel.className = 'indice-analitico-tema-nome';
+      temaLabel.textContent = tema.nome;
+      temaEl.appendChild(temaLabel);
+
+      for (const sub of subtemas) {
+        const subEl = document.createElement('button');
+        subEl.className = 'indice-analitico-subtema';
+        subEl.title = `§§ ${sub.paragrafos.join(', ')}`;
+
+        const nomeSpan = document.createElement('span');
+        nomeSpan.textContent = sub.nome;
+        subEl.appendChild(nomeSpan);
+
+        const count = paragrafos.filter(p => sub.paragrafos.includes(p.numero)).length;
+        if (count > 0) {
+          const countSpan = document.createElement('span');
+          countSpan.className = 'indice-subtema-count';
+          countSpan.textContent = count;
+          subEl.appendChild(countSpan);
+        }
+
+        const xBtn = document.createElement('span');
+        xBtn.className = 'indice-subtema-x';
+        xBtn.innerHTML = '&times;';
+        xBtn.title = 'Voltar à busca por palavra';
+        xBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          subEl.classList.remove('ativo');
+          subtemaAtivoEl = null;
+          executarBusca(queryAtual);
+        });
+        subEl.appendChild(xBtn);
+
+        subEl.addEventListener('click', () => {
+          if (subtemaAtivoEl) subtemaAtivoEl.classList.remove('ativo');
+          subEl.classList.add('ativo');
+          subtemaAtivoEl = subEl;
+          navegarParaSubtema(sub.paragrafos);
+        });
+        temaEl.appendChild(subEl);
+      }
+      temasContainer.appendChild(temaEl);
+    }
+
+    // Gradiente + botão ver mais / ver menos
+    const btnAnterior = bloco.querySelector('.indice-analitico-ver-mais-wrap');
+    if (btnAnterior) btnAnterior.remove();
+
+    if (matches.length > MAX_TEMAS_VISIVEIS) {
+      const wrap = document.createElement('div');
+      wrap.className = 'indice-analitico-ver-mais-wrap';
+
+      const collapsed = limite < matches.length;
+      if (collapsed) wrap.classList.add('collapsed');
+
+      const btn = document.createElement('button');
+      btn.className = 'indice-analitico-ver-mais';
+      if (collapsed) {
+        btn.innerHTML = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg> Ver mais ${matches.length - MAX_TEMAS_VISIVEIS} temas`;
+        btn.addEventListener('click', () => renderTemas(matches.length));
+      } else {
+        btn.innerHTML = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 10 8 6 12 10"/></svg> Ver menos`;
+        btn.addEventListener('click', () => renderTemas(MAX_TEMAS_VISIVEIS));
+      }
+      wrap.appendChild(btn);
+      bloco.appendChild(wrap);
+    }
+  }
+
+  renderTemas(MAX_TEMAS_VISIVEIS);
+  listaResultados.prepend(bloco);
+}
+
+function navegarParaSubtema(numeros) {
+  const encontrados = paragrafos.filter(p => numeros.includes(p.numero));
+  if (encontrados.length === 0) return;
+  resultadosAtuais = encontrados;
+  indiceAtivo = -1;
+  // Salva o bloco antes de renderizarResultados limpar o innerHTML
+  const bloco = listaResultados.querySelector('.indice-analitico-bloco');
+  renderizarResultados(agrupar(encontrados), encontrados.length, '');
+  if (bloco) listaResultados.prepend(bloco);
+  atualizarHighlightsTexto('', encontrados);
+  clearTimeout(autoSelectTimer);
+  autoSelectTimer = setTimeout(() => {
+    const card = listaResultados.querySelector(`[data-num="${encontrados[0].numero}"]`);
+    if (card) selecionarParagrafo(encontrados[0].numero, card);
+  }, 100);
+}
+
 // ── Estado ───────────────────────────────────────────────────────────────────
 let paragrafos        = [];   // todos os parágrafos em memória
 let queryAtual        = '';   // último termo buscado
@@ -204,6 +373,13 @@ function registrarEventos() {
     });
   document.getElementById('btn-copiar-pix')
     ?.addEventListener('click', copiarPix);
+  document.getElementById('btn-toggle-qr')
+    ?.addEventListener('click', toggleQR);
+  document.querySelector('.pix-valores')
+    ?.addEventListener('click', (e) => {
+      const btn = e.target.closest('.pix-valor-btn');
+      if (btn) selecionarValorPix(btn.dataset.valor);
+    });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !document.getElementById('modal-contribuicao-overlay').classList.contains('oculto')) {
       fecharModalContribuicao();
@@ -253,6 +429,7 @@ function executarBusca(query) {
   renderizarResultados(grupos, total, queryAtual);
   atualizarHighlightsTexto(queryAtual, encontrados);
   mostrarSugestao(queryAtual, total);
+  renderizarIndiceAnalitico(queryAtual);
 
   // Seleciona o 1º resultado automaticamente após 1s de inatividade
   clearTimeout(autoSelectTimer);
@@ -290,6 +467,7 @@ function voltarEstadoInicial() {
   listaResultados.innerHTML = '';
   contagemEl.textContent = '';
   semResultados.classList.add('oculto');
+  limparIndiceAnalitico();
   btnResumir.classList.add('oculto');
   aiCard.classList.add('oculto');
   painelConteudo.classList.remove('aberto');
@@ -779,6 +957,15 @@ function escapeHtml(s) {
 }
 
 // ── Contribuição ──────────────────────────────────────────────────────────────
+const PIX_QR = {
+  '10':    '/assets/img/pix-qr-10.webp',
+  '20':    '/assets/img/pix-qr-20.webp',
+  '50':    '/assets/img/pix-qr-50.webp',
+  'livre': '/assets/img/pix-qr-livre.webp',
+};
+
+let _valorPix = '10';
+
 function abrirModalContribuicao() {
   document.getElementById('modal-contribuicao-overlay')?.classList.remove('oculto');
 }
@@ -787,14 +974,37 @@ function fecharModalContribuicao() {
   document.getElementById('modal-contribuicao-overlay')?.classList.add('oculto');
 }
 
+function selecionarValorPix(valor) {
+  _valorPix = valor;
+  document.querySelectorAll('.pix-valor-btn').forEach(b =>
+    b.classList.toggle('ativo', b.dataset.valor === valor)
+  );
+  const img = document.getElementById('pix-qr-img');
+  if (img) {
+    img.src = PIX_QR[valor];
+    img.alt = `QR Code PIX${valor !== 'livre' ? ` R$${valor}` : ' — valor livre'}`;
+  }
+}
+
 function copiarPix() {
   const chave = document.getElementById('pix-chave')?.textContent?.trim();
   if (!chave) return;
   const btn = document.getElementById('btn-copiar-pix');
   navigator.clipboard.writeText(chave).then(() => {
-    btn.textContent = 'Copiado ✓';
-    setTimeout(() => { btn.textContent = 'Copiar'; }, 2000);
+    btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Copiado!`;
+    setTimeout(() => {
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copiar chave`;
+    }, 2000);
   });
+}
+
+function toggleQR() {
+  const modal = document.getElementById('modal-contribuicao');
+  const btn   = document.getElementById('btn-toggle-qr');
+  const ativo = modal.classList.toggle('qr-ativo');
+  btn.innerHTML = ativo
+    ? `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg> Fechar QR`
+    : `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3m0 4h4m-4 0h-4m4 0v-4"/></svg> Ver QR Code`;
 }
 
 // ── Barra de nav mobile ───────────────────────────────────────────────────────

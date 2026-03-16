@@ -1,18 +1,23 @@
 /**
  * saopiox.js
  * Motor de busca e UI para o Catecismo Maior de São Pio X.
+ * Texto contínuo no painel direito — ao selecionar um resultado,
+ * scrolla até a questão e o usuário pode ler livremente.
  */
 
 import { iniciarLeitorPioX, abrirLeitorPioX } from './leitorpiox.js';
 import { gerarVariantes } from '/assets/js/variantes.js';
 
 // ── Estado ────────────────────────────────────────────────────────────────────
-let _dados       = [];
-let _resultados  = [];
-let _idxAtivo    = -1;
-let _query       = '';
+let _dados        = [];
+let _resultados   = [];
+let _idxAtivo     = -1;
+let _query        = '';
 let _debounce;
 let _autoSelect;
+let _continuoRenderizado = false;
+let _qaAtivo      = null;   // elemento DOM da questão ativa
+let _sugestaoEl   = null;
 
 // ── Elementos ─────────────────────────────────────────────────────────────────
 const app           = document.getElementById('app');
@@ -33,6 +38,12 @@ const mobileBtnPro  = document.getElementById('mobile-btn-proximo');
 const mobileInfo    = document.getElementById('mobile-nav-info');
 const btnLerHero    = document.getElementById('btn-ler-hero');
 const btnLerHeader  = document.getElementById('btn-ler-header');
+const btnFechar     = document.getElementById('btn-fechar-conteudo');
+const btnResumir    = document.getElementById('btn-resumir');
+const aiCard        = document.getElementById('ai-resumo-card');
+const aiCorpo       = document.getElementById('ai-resumo-corpo');
+const aiFechar      = document.getElementById('ai-resumo-fechar');
+const mobileBtnRes2 = document.getElementById('mobile-btn-resumir');
 
 // ── Normalização / busca ───────────────────────────────────────────────────────
 function norm(s = '') {
@@ -86,8 +97,6 @@ function trecho(texto, query, janela = 160) {
 }
 
 // ── Sugestão de variante ──────────────────────────────────────────────────────
-let _sugestaoEl = null;
-
 function getSugestaoEl() {
   if (_sugestaoEl) return _sugestaoEl;
   _sugestaoEl = document.createElement('div');
@@ -122,6 +131,79 @@ function mostrarSugestao(query, nAtual) {
   });
 }
 
+// ── Texto contínuo ────────────────────────────────────────────────────────────
+function renderizarTodosQA() {
+  if (_continuoRenderizado) return;
+  _continuoRenderizado = true;
+
+  const container = document.createElement('div');
+  container.className = 'piox-continuo';
+
+  let parteAtual = '';
+  let capAtual   = '';
+
+  for (const p of _dados) {
+    if (p.parte && p.parte !== parteAtual) {
+      parteAtual = p.parte;
+      capAtual   = '';
+      const h = document.createElement('h2');
+      h.className = 'piox-cont-parte';
+      h.textContent = p.parte;
+      container.appendChild(h);
+    }
+    if (p.capitulo && p.capitulo !== capAtual) {
+      capAtual = p.capitulo;
+      const h = document.createElement('h3');
+      h.className = 'piox-cont-cap';
+      h.textContent = p.capitulo;
+      container.appendChild(h);
+    }
+
+    const div = document.createElement('div');
+    div.className = 'piox-qa-item';
+    div.id = `qa-${p.numero}`;
+
+    const numSpan = document.createElement('span');
+    numSpan.className = 'piox-qa-num';
+    numSpan.textContent = `Q. ${p.numero}`;
+
+    const pergEl = document.createElement('div');
+    pergEl.className = 'piox-qa-pergunta';
+    pergEl.textContent = p.pergunta;
+
+    const respEl = document.createElement('div');
+    respEl.className = 'piox-qa-resposta';
+    respEl.textContent = p.resposta;
+
+    div.appendChild(numSpan);
+    div.appendChild(pergEl);
+    div.appendChild(respEl);
+    container.appendChild(div);
+  }
+
+  // Preserva o botão fechar e insere o texto contínuo
+  const placeholder = painelDir.querySelector('.placeholder');
+  if (placeholder) placeholder.remove();
+  painelDir.appendChild(container);
+}
+
+function atualizarHighlights(query, resultados) {
+  // Limpa highlights anteriores
+  painelDir.querySelectorAll('.piox-qa-item mark').forEach(m => {
+    m.outerHTML = m.textContent;
+  });
+
+  if (!query) return;
+  const nums = new Set(resultados.map(p => p.numero));
+
+  for (const p of resultados) {
+    const el = document.getElementById(`qa-${p.numero}`);
+    if (!el) continue;
+    el.querySelector('.piox-qa-pergunta').innerHTML = destacar(p.pergunta, query);
+    el.querySelector('.piox-qa-resposta').innerHTML = destacar(p.resposta, query);
+  }
+}
+
 // ── Render lista ──────────────────────────────────────────────────────────────
 function renderLista() {
   listaEl.innerHTML = '';
@@ -129,11 +211,14 @@ function renderLista() {
   if (_resultados.length === 0) {
     semRes.classList.remove('oculto');
     contagemEl.textContent = 'Nenhum resultado';
+    btnResumir?.classList.add('oculto');
+    aiCard?.classList.add('oculto');
     return;
   }
 
   semRes.classList.add('oculto');
   contagemEl.textContent = `${_resultados.length} questã${_resultados.length === 1 ? 'o' : 'ões'}`;
+  btnResumir?.classList.remove('oculto');
 
   const frag = document.createDocumentFragment();
   _resultados.forEach((p, idx) => {
@@ -153,8 +238,8 @@ function renderLista() {
   listaEl.appendChild(frag);
 }
 
-// ── Render Q&A no painel direito ──────────────────────────────────────────────
-function abrirQA(idx) {
+// ── Scroll para Q&A no painel contínuo ───────────────────────────────────────
+function scrollParaQA(idx) {
   if (idx < 0 || idx >= _resultados.length) return;
   _idxAtivo = idx;
 
@@ -165,33 +250,27 @@ function abrirQA(idx) {
   listaEl.querySelector('.piox-item.ativo')?.scrollIntoView({ block: 'nearest' });
 
   const p = _resultados[idx];
-  const partes = [p.parte, p.capitulo].filter(Boolean);
-  const breadcrumb = partes.map(t => `<span>${esc(t)}</span>`).join('');
+  const el = document.getElementById(`qa-${p.numero}`);
+  if (!el) return;
 
-  const respostaHtml = destacar(p.resposta, _query)
-    .replace(/(\s(?:\d+[ºo°]|[IVX]+\.)\s)/g, '<br>$1');
+  // Remove ativo anterior
+  if (_qaAtivo) _qaAtivo.classList.remove('ativo', 'flash');
+  _qaAtivo = el;
+  el.classList.add('ativo');
 
-  painelDir.innerHTML = `
-    <button class="btn-fechar-dir" type="button" aria-label="Voltar aos resultados">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M19 12H5M12 5l-7 7 7 7"/>
-      </svg>
-      Resultados
-    </button>
-    <div class="piox-qa">
-      <div class="piox-qa-breadcrumb">${breadcrumb}</div>
-      <div class="piox-qa-num">Q. ${p.numero}</div>
-      <div class="piox-qa-pergunta">${destacar(p.pergunta, _query)}</div>
-      <div class="piox-qa-resposta">${respostaHtml}</div>
-    </div>
-  `;
-  painelDir.scrollTop = 0;
+  // Scroll centralizado no painel
+  const panelRect = painelDir.getBoundingClientRect();
+  const elRect    = el.getBoundingClientRect();
+  const target    = painelDir.scrollTop + elRect.top - panelRect.top
+                    - (painelDir.clientHeight - el.offsetHeight) / 2;
+  painelDir.scrollTop = Math.max(0, target);
 
-  // Botão fechar (reescrito pelo innerHTML)
-  painelDir.querySelector('.btn-fechar-dir')
-    ?.addEventListener('click', fecharDir);
+  // Flash
+  el.classList.remove('flash');
+  void el.offsetWidth;
+  el.classList.add('flash');
 
-  // Mobile: desliza o drawer
+  // Mobile
   painelDir.classList.add('aberto');
   mobileBar.classList.add('visivel');
   mobileBar.setAttribute('aria-hidden', 'false');
@@ -213,7 +292,8 @@ function atualizarNavArrows() {
   if (mobileBtnAnt) mobileBtnAnt.disabled = !ant;
   if (mobileBtnPro) mobileBtnPro.disabled = !pro;
   if (mobileInfo) {
-    mobileInfo.textContent = _resultados[_idxAtivo] ? `Q.${_resultados[_idxAtivo].numero}` : '';
+    const p = _resultados[_idxAtivo];
+    mobileInfo.textContent = p ? `Q.${p.numero}  ·  ${_idxAtivo + 1}/${_resultados.length}` : '';
   }
 }
 
@@ -228,17 +308,19 @@ function ativarBusca(query) {
     app.classList.add('estado-busca');
     topoWrap.appendChild(campoBusca);
     topoWrap.appendChild(btnLimpar);
+    renderizarTodosQA();
   }
 
   renderLista();
+  atualizarHighlights(query, _resultados);
   mostrarSugestao(query, _resultados.length);
   btnAnterior.classList.add('oculto');
   btnProximo.classList.add('oculto');
 
-  // Auto-seleciona o primeiro resultado em desktop
+  // Auto-seleciona o primeiro em desktop
   clearTimeout(_autoSelect);
   if (_resultados.length > 0 && window.innerWidth >= 768) {
-    _autoSelect = setTimeout(() => abrirQA(0), 300);
+    _autoSelect = setTimeout(() => scrollParaQA(0), 300);
   }
 }
 
@@ -253,6 +335,9 @@ function limparBusca() {
   semRes.classList.add('oculto');
   contagemEl.textContent = '';
   if (_sugestaoEl) _sugestaoEl.className = 'sugestao-variante oculto';
+  btnResumir?.classList.add('oculto');
+  aiCard?.classList.add('oculto');
+  if (_qaAtivo) { _qaAtivo.classList.remove('ativo', 'flash'); _qaAtivo = null; }
   _resultados = []; _idxAtivo = -1; _query = '';
 
   // Devolve o campo ao hero
@@ -260,6 +345,68 @@ function limparBusca() {
   heroWrap?.appendChild(campoBusca);
   heroWrap?.appendChild(btnLimpar);
   campoBusca.focus();
+}
+
+// ── IA resumo ─────────────────────────────────────────────────────────────────
+async function acionarResumoIA() {
+  if (!_resultados.length) return;
+
+  btnResumir?.classList.add('oculto');
+  aiCard?.classList.remove('oculto');
+  aiCorpo.innerHTML = `
+    <div class="ai-skeleton">
+      <div class="ai-skeleton-linha"></div>
+      <div class="ai-skeleton-linha"></div>
+      <div class="ai-skeleton-linha"></div>
+    </div>`;
+
+  try {
+    const resp = await fetch('/api/resumo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: _query,
+        paragrafos: _resultados.map(p => ({
+          numero: p.numero,
+          texto: `P: ${p.pergunta}\nR: ${p.resposta}`,
+        })),
+      }),
+    });
+    const data = await resp.json();
+    if (!resp.ok || !data.resumo) throw new Error(data.error || 'Erro desconhecido');
+    aiCorpo.innerHTML = '';
+    renderizarResumoIA(data.resumo);
+  } catch (err) {
+    aiCorpo.innerHTML = `<p style="color:var(--color-muted);font-size:0.85rem">Não foi possível gerar o resumo. Tente novamente.</p>`;
+    console.error('[AI PioX]', err);
+  }
+}
+
+function renderizarResumoIA(texto) {
+  const linhas = texto.split(/\n+/).filter(l => l.trim());
+  for (const linha of linhas) {
+    const p = document.createElement('p');
+    // Substitui Q.NNN por botões clicáveis
+    const parts = linha.split(/(Q\.\s*\d+)/g);
+    for (const part of parts) {
+      const m = part.match(/^Q\.\s*(\d+)$/);
+      if (m) {
+        const num = parseInt(m[1], 10);
+        const btn = document.createElement('button');
+        btn.className = 'ai-citacao';
+        btn.type = 'button';
+        btn.textContent = `Q.${num}`;
+        btn.addEventListener('click', () => {
+          const idx = _resultados.findIndex(p => p.numero === num);
+          if (idx !== -1) scrollParaQA(idx);
+        });
+        p.appendChild(btn);
+      } else {
+        p.appendChild(document.createTextNode(part));
+      }
+    }
+    aiCorpo.appendChild(p);
+  }
 }
 
 // ── Eventos ───────────────────────────────────────────────────────────────────
@@ -277,6 +424,8 @@ campoBusca.addEventListener('keydown', e => {
 
 btnLimpar.addEventListener('click', limparBusca);
 
+btnFechar?.addEventListener('click', fecharDir);
+
 temas?.addEventListener('click', e => {
   const btn = e.target.closest('[data-tema]');
   if (!btn) return;
@@ -290,15 +439,25 @@ listaEl.addEventListener('click', e => {
   const item = e.target.closest('[data-idx]');
   if (!item) return;
   clearTimeout(_autoSelect);
-  abrirQA(parseInt(item.dataset.idx, 10));
+  scrollParaQA(parseInt(item.dataset.idx, 10));
 });
 
-btnAnterior.addEventListener('click', () => { if (_idxAtivo > 0) abrirQA(_idxAtivo - 1); });
-btnProximo.addEventListener('click',  () => { if (_idxAtivo < _resultados.length - 1) abrirQA(_idxAtivo + 1); });
+btnAnterior.addEventListener('click', () => { if (_idxAtivo > 0) scrollParaQA(_idxAtivo - 1); });
+btnProximo.addEventListener('click',  () => { if (_idxAtivo < _resultados.length - 1) scrollParaQA(_idxAtivo + 1); });
 
 mobileBtnRes?.addEventListener('click', fecharDir);
-mobileBtnAnt?.addEventListener('click', () => { if (_idxAtivo > 0) abrirQA(_idxAtivo - 1); });
-mobileBtnPro?.addEventListener('click', () => { if (_idxAtivo < _resultados.length - 1) abrirQA(_idxAtivo + 1); });
+mobileBtnAnt?.addEventListener('click', () => { if (_idxAtivo > 0) scrollParaQA(_idxAtivo - 1); });
+mobileBtnPro?.addEventListener('click', () => { if (_idxAtivo < _resultados.length - 1) scrollParaQA(_idxAtivo + 1); });
+
+btnResumir?.addEventListener('click', acionarResumoIA);
+aiFechar?.addEventListener('click', () => {
+  aiCard?.classList.add('oculto');
+  btnResumir?.classList.remove('oculto');
+});
+mobileBtnRes2?.addEventListener('click', () => {
+  fecharDir();
+  acionarResumoIA();
+});
 
 btnLerHero?.addEventListener('click',   () => abrirLeitorPioX(0));
 btnLerHeader?.addEventListener('click', () => abrirLeitorPioX(0));
@@ -311,7 +470,6 @@ btnLerHeader?.addEventListener('click', () => abrirLeitorPioX(0));
     const json = await resp.json();
     _dados = json.perguntas ?? [];
     campoBusca.placeholder = `Busque entre ${_dados.length} questões…`;
-    console.log('[PioX] dados carregados:', _dados.length);
     iniciarLeitorPioX(_dados);
   } catch (err) {
     campoBusca.placeholder = 'Erro ao carregar dados';
