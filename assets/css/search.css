@@ -123,24 +123,58 @@
 }
 
 .indice-analitico-titulo {
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  z-index: 1;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-muted);
-  margin-bottom: 0.45rem;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.1rem;
 }
 
 .indice-analitico-tema {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.35rem;
+}
+
+.indice-analitico-tema-header {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  margin-bottom: 0.2rem;
+  width: 100%;
+  text-align: left;
 }
 
 .indice-analitico-tema-nome {
-  display: block;
   font-weight: 600;
   color: var(--color-primary);
-  margin-bottom: 0.2rem;
   font-size: 0.78rem;
+}
+
+.indice-tema-chevron {
+  width: 0.7rem;
+  height: 0.7rem;
+  flex-shrink: 0;
+  color: var(--color-muted);
+  transition: transform 0.2s ease;
+}
+
+.indice-analitico-subtemas-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.indice-analitico-tema.collapsed .indice-analitico-subtemas-wrap {
+  display: none;
 }
 
 .indice-analitico-subtema > span:first-child {

@@ -120,10 +120,17 @@ async function renderizarIndiceAnalitico(query) {
       const temaEl = document.createElement('div');
       temaEl.className = 'indice-analitico-tema';
 
-      const temaLabel = document.createElement('span');
-      temaLabel.className = 'indice-analitico-tema-nome';
-      temaLabel.textContent = tema.nome;
-      temaEl.appendChild(temaLabel);
+      const temaHeader = document.createElement('button');
+      temaHeader.className = 'indice-analitico-tema-header';
+      temaHeader.innerHTML = `<span class="indice-analitico-tema-nome">${tema.nome}</span><svg class="indice-tema-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>`;
+      const subtemasWrap = document.createElement('div');
+      subtemasWrap.className = 'indice-analitico-subtemas-wrap';
+      temaHeader.addEventListener('click', () => {
+        const collapsed = temaEl.classList.toggle('collapsed');
+        temaHeader.querySelector('.indice-tema-chevron').style.transform = collapsed ? 'rotate(-90deg)' : '';
+      });
+      temaEl.appendChild(temaHeader);
+      temaEl.appendChild(subtemasWrap);
 
       for (const sub of subtemas) {
         const subEl = document.createElement('button');
@@ -160,7 +167,7 @@ async function renderizarIndiceAnalitico(query) {
           subtemaAtivoEl = subEl;
           navegarParaSubtema(sub.paragrafos);
         });
-        temaEl.appendChild(subEl);
+        subtemasWrap.appendChild(subEl);
       }
       temasContainer.appendChild(temaEl);
     }
