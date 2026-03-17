@@ -102,7 +102,9 @@ async function renderizarIndiceAnalitico(query) {
 
   const titulo = document.createElement('div');
   titulo.className = 'indice-analitico-titulo';
-  titulo.textContent = 'Índice analítico';
+  const tituloTexto = document.createElement('span');
+  tituloTexto.textContent = 'Índice analítico';
+  titulo.appendChild(tituloTexto);
   bloco.appendChild(titulo);
 
   const temasWrap = document.createElement('div');
@@ -172,28 +174,33 @@ async function renderizarIndiceAnalitico(query) {
       temasContainer.appendChild(temaEl);
     }
 
-    // Gradiente + botão ver mais / ver menos
+    // Botão ver mais (abaixo) / ver menos (no título)
     const btnAnterior = bloco.querySelector('.indice-analitico-ver-mais-wrap');
     if (btnAnterior) btnAnterior.remove();
+    const verMenosAnterior = titulo.querySelector('.indice-analitico-ver-menos');
+    if (verMenosAnterior) verMenosAnterior.remove();
 
     if (matches.length > MAX_TEMAS_VISIVEIS) {
-      const wrap = document.createElement('div');
-      wrap.className = 'indice-analitico-ver-mais-wrap';
-
       const collapsed = limite < matches.length;
-      if (collapsed) wrap.classList.add('collapsed');
 
-      const btn = document.createElement('button');
-      btn.className = 'indice-analitico-ver-mais';
       if (collapsed) {
+        // "Ver mais" com gradiente, abaixo dos temas
+        const wrap = document.createElement('div');
+        wrap.className = 'indice-analitico-ver-mais-wrap collapsed';
+        const btn = document.createElement('button');
+        btn.className = 'indice-analitico-ver-mais';
         btn.innerHTML = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg> Ver mais ${matches.length - MAX_TEMAS_VISIVEIS} temas`;
         btn.addEventListener('click', () => renderTemas(matches.length));
+        wrap.appendChild(btn);
+        bloco.appendChild(wrap);
       } else {
+        // "Ver menos" no título
+        const btn = document.createElement('button');
+        btn.className = 'indice-analitico-ver-menos';
         btn.innerHTML = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 10 8 6 12 10"/></svg> Ver menos`;
         btn.addEventListener('click', () => renderTemas(MAX_TEMAS_VISIVEIS));
+        titulo.appendChild(btn);
       }
-      wrap.appendChild(btn);
-      bloco.appendChild(wrap);
     }
   }
 
