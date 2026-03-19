@@ -158,6 +158,20 @@
       </button>
     </div>
 
+    <!-- Card de resumo IA dos trechos coletados -->
+    <div id="coletor-resumo-card" class="oculto">
+      <div id="coletor-resumo-header">
+        <span id="coletor-resumo-label">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2 L13.8 10.2 L22 12 L13.8 13.8 L12 22 L10.2 13.8 L2 12 L10.2 10.2 Z"/></svg>
+          Resumo por IA
+        </span>
+        <button id="coletor-resumo-fechar" type="button" aria-label="Fechar resumo">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="coletor-resumo-corpo"></div>
+    </div>
+
     <div id="coletor-lista"></div>
 
     <div id="coletor-vazio">
@@ -169,6 +183,10 @@
     </div>
 
     <footer id="coletor-footer">
+      <button id="coletor-resumir-ia" type="button" class="coletor-resumir-ia">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2 L13.8 10.2 L22 12 L13.8 13.8 L12 22 L10.2 13.8 L2 12 L10.2 10.2 Z"/></svg>
+        Resumir com IA
+      </button>
       <button id="coletor-copiar-tudo" type="button">Copiar tudo</button>
       <button id="coletor-baixar-txt" type="button">↓ TXT</button>
       <button id="coletor-baixar-md" type="button">↓ MD</button>
@@ -188,7 +206,7 @@
         <span id="contagem-resultados" aria-live="polite" aria-atomic="true"></span>
         <button id="btn-resumir" class="oculto" type="button" aria-label="Resumir com IA">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2 L13.8 10.2 L22 12 L13.8 13.8 L12 22 L10.2 13.8 L2 12 L10.2 10.2 Z"/></svg>
-          IA
+          RESUMO POR IA
         </button>
       </div>
 
@@ -269,7 +287,7 @@
         </button>
         <button id="mobile-btn-resumir" type="button" aria-label="Resumir com IA">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2 L13.8 10.2 L22 12 L13.8 13.8 L12 22 L10.2 13.8 L2 12 L10.2 10.2 Z"/></svg>
-          IA
+          RESUMO POR IA
         </button>
       </div>
       <span id="mobile-nav-info"></span>

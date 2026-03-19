@@ -188,6 +188,48 @@ document.getElementById('coletor-limpar').addEventListener('click', () => {
   renderizarLista();
   atualizarBadge();
   notificar();
+  fecharResumoIA();
+});
+
+// ── Resumo IA dos trechos coletados ──────────────────────────────────────────
+
+const resumoCard  = document.getElementById('coletor-resumo-card');
+const resumoCorpo = document.getElementById('coletor-resumo-corpo');
+
+function fecharResumoIA() {
+  resumoCard.classList.add('oculto');
+  resumoCorpo.textContent = '';
+}
+
+document.getElementById('coletor-resumo-fechar')
+  .addEventListener('click', fecharResumoIA);
+
+document.getElementById('coletor-resumir-ia').addEventListener('click', async () => {
+  const trechos = carregar();
+  if (!trechos.length) return;
+
+  const btn = document.getElementById('coletor-resumir-ia');
+  btn.disabled = true;
+  btn.textContent = 'Resumindo…';
+
+  resumoCard.classList.remove('oculto');
+  resumoCorpo.textContent = 'Gerando resumo…';
+  resumoCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  try {
+    const resp = await fetch('/api/resumo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: 'síntese dos trechos selecionados', paragrafos: trechos, modo: 'coletor' }),
+    });
+    const data = await resp.json();
+    resumoCorpo.textContent = data.resumo ?? data.error ?? 'Erro ao gerar resumo.';
+  } catch {
+    resumoCorpo.textContent = 'Erro de conexão.';
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2 L13.8 10.2 L22 12 L13.8 13.8 L12 22 L10.2 13.8 L2 12 L10.2 10.2 Z"/></svg> Resumir com IA`;
+  }
 });
 
 // Badge no load

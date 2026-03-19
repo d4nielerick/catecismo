@@ -725,39 +725,6 @@
 }
 
 /* ── Ícone de copiar link no parágrafo ativo ─────────────────────────────── */
-.para-copiar-btn {
-  position: absolute;
-  top: var(--space-sm);
-  right: var(--space-sm);
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  color: var(--color-muted);
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.15s ease, color var(--transition), border-color var(--transition), background var(--transition);
-}
-
-.tc-paragrafo.ativo .para-copiar-btn {
-  opacity: 1;
-}
-
-.para-copiar-btn:hover {
-  color: var(--color-primary);
-  border-color: #c8bfb2;
-  background: var(--color-mark);
-}
-
-.para-copiar-btn.copiado {
-  color: var(--color-accent-dk);
-  border-color: var(--color-accent);
-  background: #FEF9EC;
-}
 
 /* ── Notas de rodapé ─────────────────────────────────────────────────────── */
 .ref-nota {
@@ -1162,6 +1129,65 @@
 .coletor-limpar {
   color: var(--color-muted) !important;
   margin-left: auto;
+}
+
+/* ── Resumo IA dentro do coletor ─────────────────────────────────────────── */
+.coletor-resumir-ia {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--color-accent-dk) !important;
+  color: #fff !important;
+  border-color: var(--color-accent-dk) !important;
+}
+
+.coletor-resumir-ia:hover { opacity: 0.88; }
+.coletor-resumir-ia:disabled { opacity: 0.6; cursor: default; }
+
+#coletor-resumo-card {
+  margin: var(--space-md) var(--space-lg) 0;
+  background: #FFFDF5;
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#coletor-resumo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.85rem;
+  border-bottom: 1px solid var(--color-accent);
+  background: #FEF9EC;
+}
+
+#coletor-resumo-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent-dk);
+}
+
+#coletor-resumo-fechar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  padding: 2px;
+  display: flex;
+}
+
+#coletor-resumo-corpo {
+  padding: 0.75rem 0.85rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  white-space: pre-wrap;
 }
 
 /* ── Botão + no parágrafo ativo ──────────────────────────────────────────── */

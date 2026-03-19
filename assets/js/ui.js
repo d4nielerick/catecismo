@@ -241,15 +241,6 @@ const _paragrafosComHighlight = new Set(); // elementos .tc-paragrafo-texto com 
 
 // ── Botões rovings (migram para o parágrafo ativo) ───────────────────────────
 
-// Copiar link
-const _btnRoving = document.createElement('button');
-_btnRoving.className = 'para-copiar-btn';
-_btnRoving.setAttribute('aria-label', 'Copiar link deste parágrafo');
-_btnRoving.setAttribute('type', 'button');
-_btnRoving.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
-_btnRoving.addEventListener('click', (e) => { e.stopPropagation(); copiarLink(); });
-let _rovingTimer = null;
-
 // Colecionar trecho
 const _btnColetar = document.createElement('button');
 _btnColetar.className = 'para-coletar-btn';
@@ -666,7 +657,6 @@ function limparParagrafoAtivo() {
     paragrafoAtivo.classList.remove('ativo');
     paragrafoAtivo = null;
   }
-  if (_btnRoving.parentNode)  _btnRoving.parentNode.removeChild(_btnRoving);
   if (_btnColetar.parentNode) _btnColetar.parentNode.removeChild(_btnColetar);
 }
 
@@ -724,9 +714,7 @@ function scrollParaParagrafo(numero) {
   void el.offsetWidth; // force reflow
   el.classList.add('flash');
 
-  // Migra os botões rovings para este parágrafo
-  _btnRoving.classList.remove('copiado');
-  el.appendChild(_btnRoving);
+  // Migra o botão roving para este parágrafo
   el.appendChild(_btnColetar);
   atualizarBtnColetar();
 }
@@ -955,17 +943,6 @@ function ocultarNav() {
   navProximo.classList.add('oculto');
   mobileBtnAnterior.disabled = true;
   mobileBtnProximo.disabled  = true;
-}
-
-// ── Copiar link ───────────────────────────────────────────────────────────────
-let _copiarTimer = null;
-
-function copiarLink() {
-  navigator.clipboard.writeText(location.href).then(() => {
-    _btnRoving.classList.add('copiado');
-    clearTimeout(_copiarTimer);
-    _copiarTimer = setTimeout(() => { _btnRoving.classList.remove('copiado'); }, 2000);
-  });
 }
 
 // ── Helper ────────────────────────────────────────────────────────────────────

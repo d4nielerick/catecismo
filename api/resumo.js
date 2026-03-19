@@ -5,9 +5,15 @@
 
 export const config = { runtime: 'edge' };
 
-const SYSTEM_PROMPT = `Você é um assistente especializado no Catecismo da Igreja Católica.
+const SYSTEM_PROMPT_BUSCA = `Você é um assistente especializado no Catecismo da Igreja Católica.
 Com base EXCLUSIVAMENTE nos parágrafos fornecidos pelo usuário, escreva um resumo claro e conciso (3–5 frases) do que o Catecismo ensina sobre o tema pesquisado.
 Ao final, liste os números dos parágrafos que embasam o resumo, no formato: Parágrafos: §X, §Y, §Z.
+Não invente informação — use apenas o que está nos parágrafos fornecidos.
+Responda em português do Brasil.`;
+
+const SYSTEM_PROMPT_COLETOR = `Você é um assistente especializado no Catecismo da Igreja Católica.
+O usuário selecionou manualmente os parágrafos abaixo para estudo. Com base EXCLUSIVAMENTE nesses trechos, escreva uma síntese coesa (3–5 frases) que integre os ensinamentos presentes neles, identificando os temas em comum.
+Ao final, liste os números dos parágrafos usados, no formato: Parágrafos: §X, §Y, §Z.
 Não invente informação — use apenas o que está nos parágrafos fornecidos.
 Responda em português do Brasil.`;
 
@@ -34,7 +40,7 @@ export default async function handler(req) {
     });
   }
 
-  const { query, paragrafos } = body;
+  const { query, paragrafos, modo } = body;
   if (!query || !Array.isArray(paragrafos) || paragrafos.length === 0) {
     return new Response(JSON.stringify({ error: 'Parâmetros inválidos.' }), {
       status: 400,
@@ -42,13 +48,18 @@ export default async function handler(req) {
     });
   }
 
+  const isColetor = modo === 'coletor';
+  const systemPrompt = isColetor ? SYSTEM_PROMPT_COLETOR : SYSTEM_PROMPT_BUSCA;
+
   // Monta contexto com os parágrafos relevantes (máx. 15)
   const contexto = paragrafos
     .slice(0, 15)
     .map(p => `§${p.numero}: ${p.texto}`)
     .join('\n\n');
 
-  const userMessage = `Tema pesquisado: "${query}"\n\nParágrafos do Catecismo:\n\n${contexto}`;
+  const userMessage = isColetor
+    ? `Parágrafos selecionados pelo usuário:\n\n${contexto}`
+    : `Tema pesquisado: "${query}"\n\nParágrafos do Catecismo:\n\n${contexto}`;
 
   try {
     const resp = await fetch('https://api.x.ai/v1/chat/completions', {
@@ -60,7 +71,7 @@ export default async function handler(req) {
       body: JSON.stringify({
         model: 'grok-4-1-fast-non-reasoning',
         messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'system', content: systemPrompt },
           { role: 'user',   content: userMessage },
         ],
         max_tokens: 400,
