@@ -5,6 +5,33 @@
 
 export const config = { runtime: 'edge' };
 
+// ── Rate limiting in-memory (por IP, por instância Edge) ─────────────────────
+const LIMIT_REQUESTS = 5;      // máx. requisições por janela
+const LIMIT_WINDOW_MS = 10 * 60 * 1000; // janela de 10 minutos
+const MAX_IPS = 500;           // limite de IPs em memória (evita vazamento)
+
+const _rateMap = new Map(); // ip → { count, windowStart }
+
+function checkRateLimit(ip) {
+  const now = Date.now();
+
+  // Limpeza periódica para não crescer indefinidamente
+  if (_rateMap.size > MAX_IPS) {
+    for (const [key, val] of _rateMap) {
+      if (now - val.windowStart > LIMIT_WINDOW_MS) _rateMap.delete(key);
+    }
+  }
+
+  const entry = _rateMap.get(ip);
+  if (!entry || now - entry.windowStart > LIMIT_WINDOW_MS) {
+    _rateMap.set(ip, { count: 1, windowStart: now });
+    return true;
+  }
+  if (entry.count >= LIMIT_REQUESTS) return false;
+  entry.count++;
+  return true;
+}
+
 const SYSTEM_PROMPT_BUSCA = `Você é um assistente especializado no Catecismo da Igreja Católica.
 Com base EXCLUSIVAMENTE nos parágrafos fornecidos pelo usuário, escreva um resumo claro e conciso (3–5 frases) do que o Catecismo ensina sobre o tema pesquisado.
 Ao final, liste os números dos parágrafos que embasam o resumo, no formato: Parágrafos: §X, §Y, §Z.
@@ -20,6 +47,17 @@ Responda em português do Brasil.`;
 export default async function handler(req) {
   if (req.method !== 'POST') {
     return new Response('Method Not Allowed', { status: 405 });
+  }
+
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0].trim()
+           ?? req.headers.get('x-real-ip')
+           ?? 'unknown';
+
+  if (!checkRateLimit(ip)) {
+    return new Response(JSON.stringify({ error: 'Muitas requisições. Aguarde alguns minutos.' }), {
+      status: 429,
+      headers: { 'Content-Type': 'application/json', 'Retry-After': '600' },
+    });
   }
 
   const apiKey = process.env.GROK_API_KEY;
