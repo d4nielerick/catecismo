@@ -690,15 +690,4 @@ mark {
 }
 
 /* ── Badge de versão ──────────────────────────────────────────────────────── */
-#app-version {
-  position: fixed;
-  bottom: var(--space-sm);
-  right: var(--space-sm);
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  color: var(--color-muted);
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 10;
-  letter-spacing: 0.03em;
-}
+#app-version:empty { display: none; }
