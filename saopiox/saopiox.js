@@ -7,6 +7,7 @@
 
 import { iniciarLeitorPioX, abrirLeitorPioX } from './leitorpiox.js';
 import { gerarVariantes } from '/assets/js/variantes.js';
+import { APP_VERSION } from '/assets/js/version.js';
 
 // ── Estado ────────────────────────────────────────────────────────────────────
 let _dados        = [];
@@ -490,6 +491,8 @@ window.addEventListener('resize', atualizarAutocomplete);
     _dados = json.perguntas ?? [];
     campoBusca.placeholder = `Busque entre ${_dados.length} questões…`;
     iniciarLeitorPioX(_dados);
+    const versionEl = document.getElementById('app-version');
+    if (versionEl) versionEl.textContent = APP_VERSION;
   } catch (err) {
     campoBusca.placeholder = 'Erro ao carregar dados';
     contagemEl.textContent = `Erro: ${err.message}`;

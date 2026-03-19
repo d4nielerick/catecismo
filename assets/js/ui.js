@@ -13,6 +13,7 @@ import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
 import { iniciarLeitor, abrirLeitor } from './leitor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
 import { gerarVariantes } from './variantes.js';
+import { APP_VERSION } from './version.js';
 
 // ── Elementos do DOM ─────────────────────────────────────────────────────────
 const app             = document.getElementById('app');
@@ -236,6 +237,7 @@ let indiceAtivo       = -1;   // índice do parágrafo ativo em resultadosAtuais
 let autoSelectTimer   = null; // timer para seleção automática do 1º resultado
 let _sugestaoEl       = null; // elemento de sugestão de variante
 const _cacheResumoIA  = new Map(); // cache de resumos IA por query (sessão)
+const _paragrafosComHighlight = new Set(); // elementos .tc-paragrafo-texto com <mark> ativo
 
 // ── Botões rovings (migram para o parágrafo ativo) ───────────────────────────
 
@@ -292,6 +294,10 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
   iniciarLeitor(paragrafos);
   registrarEventos();
   iniciarTooltips();
+
+  // Versão discreta no rodapé do hero
+  const versionEl = document.getElementById('app-version');
+  if (versionEl) versionEl.textContent = APP_VERSION;
 
   // Verifica se há um hash na URL para abrir diretamente
   if (location.hash) {
@@ -635,25 +641,24 @@ function atualizarHighlightsTexto(query, encontrados) {
     if (textoEl) {
       // Durante a busca: highlight simples (notas ficam como texto plano)
       textoEl.innerHTML = destacar(p.texto, query);
+      _paragrafosComHighlight.add(textoEl);
     }
   }
 }
 
 function limparHighlights() {
-  const marcados = painelConteudo.querySelectorAll('.tc-paragrafo-texto');
-  for (const el of marcados) {
-    if (el.querySelector('mark')) {
-      const pDiv = el.closest('.tc-paragrafo');
-      if (pDiv) {
-        const num = parseInt(pDiv.id.replace('p-', ''), 10);
-        const p = buscarPorNumero(num);
-        if (p) {
-          el.innerHTML = '';
-          renderizarTextoComNotas(el, p.texto, num);
-        }
+  for (const el of _paragrafosComHighlight) {
+    const pDiv = el.closest('.tc-paragrafo');
+    if (pDiv) {
+      const num = parseInt(pDiv.id.replace('p-', ''), 10);
+      const p = buscarPorNumero(num);
+      if (p) {
+        el.innerHTML = '';
+        renderizarTextoComNotas(el, p.texto, num);
       }
     }
   }
+  _paragrafosComHighlight.clear();
 }
 
 function limparParagrafoAtivo() {
