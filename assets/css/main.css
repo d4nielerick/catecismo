@@ -13,7 +13,11 @@
   --color-text:     #2C2C2C;
   --color-muted:    #888888;
   --color-border:   #E2DDD5;
-  --color-mark:     #FFF176;
+  --color-mark:     #fde047;
+  --color-mark-bg:  #fefce8;
+  --hero-grad-mid:  #F0EDE4;
+  --hero-grad-end:  #E8E4DB;
+  --header-bg:      rgba(255,255,255,0.97);
 
   --font-serif: 'EB Garamond', Georgia, serif;
   --font-sans:  'Inter', system-ui, sans-serif;
@@ -35,6 +39,7 @@
 
   --transition: 0.25s ease;
 }
+
 
 /* ── Reset ───────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -63,6 +68,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   overscroll-behavior-y: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ── Acessibilidade ──────────────────────────────────────────────────────── */
@@ -122,8 +128,8 @@ body {
   background: linear-gradient(
     160deg,
     var(--color-bg) 0%,
-    #F0EDE4 55%,
-    #E8E4DB 100%
+    var(--hero-grad-mid) 55%,
+    var(--hero-grad-end) 100%
   );
 }
 
@@ -179,7 +185,7 @@ body {
 
 /* Header externo: full-width, sticky */
 #busca-topo {
-  background: rgba(255,255,255,0.97);
+  background: var(--header-bg);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
@@ -622,6 +628,14 @@ mark {
 #btn-toggle-qr:hover {
   color: var(--color-text);
   border-color: var(--color-muted);
+}
+
+/* Mobile: header compacto sem botão de leitura */
+@media (max-width: 767px) {
+  .busca-topo-inner {
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+  }
 }
 
 /* Mobile: inverte defaults */

@@ -413,6 +413,7 @@ function renderizarResumoIA(texto) {
 campoBusca.addEventListener('input', () => {
   const v = campoBusca.value.trim();
   btnLimpar.classList.toggle('oculto', !v);
+  if (window.innerWidth < 768) return;
   clearTimeout(_debounce);
   if (v.length < 2) return;
   _debounce = setTimeout(() => ativarBusca(v), 200);
@@ -420,6 +421,7 @@ campoBusca.addEventListener('input', () => {
 
 campoBusca.addEventListener('keydown', e => {
   if (e.key === 'Escape') limparBusca();
+  if (e.key === 'Enter') { e.preventDefault(); const v = campoBusca.value.trim(); if (v.length >= 2) ativarBusca(v); }
 });
 
 btnLimpar.addEventListener('click', limparBusca);
@@ -461,6 +463,13 @@ mobileBtnRes2?.addEventListener('click', () => {
 
 btnLerHero?.addEventListener('click',   () => abrirLeitorPioX(0));
 btnLerHeader?.addEventListener('click', () => abrirLeitorPioX(0));
+
+// autocomplete só no desktop
+function atualizarAutocomplete() {
+  campoBusca.autocomplete = window.innerWidth >= 768 ? 'on' : 'off';
+}
+atualizarAutocomplete();
+window.addEventListener('resize', atualizarAutocomplete);
 
 // ── Carrega dados ─────────────────────────────────────────────────────────────
 (async () => {

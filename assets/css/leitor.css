@@ -408,6 +408,47 @@
   border-color: var(--color-primary);
 }
 
+/* ── Botão modo escuro (hero) ────────────────────────────────────────────── */
+.btn-tema-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.btn-tema-hero:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* ── Botão modo escuro (header) ──────────────────────────────────────────── */
+#btn-tema {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+}
+
+#btn-tema:hover {
+  color: var(--color-primary);
+  background: var(--color-bg);
+}
+
 /* ── Botão "Ler" no header de busca ─────────────────────────────────────── */
 #btn-ler-header {
   display: flex;
@@ -431,6 +472,8 @@
 
 /* ── Mobile ──────────────────────────────────────────────────────────────── */
 @media (max-width: 767px) {
+  #btn-ler-header { display: none; }
+
   #leitor-toc {
     position: fixed;
     top: 0;

@@ -444,7 +444,7 @@
 }
 
 .tc-paragrafo.ativo .tc-paragrafo-texto {
-  background: #FFFBE6;
+  background: var(--color-mark-bg);
   padding: 0.12em 0.2em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -750,7 +750,7 @@
 .para-copiar-btn:hover {
   color: var(--color-primary);
   border-color: #c8bfb2;
-  background: #FFFBE6;
+  background: var(--color-mark);
 }
 
 .para-copiar-btn.copiado {

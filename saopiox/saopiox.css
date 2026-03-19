@@ -13,7 +13,11 @@
   --color-muted:    #8A7878;
   --color-border:   #E2D8D8;
   --color-mark:     #FFDDD0;
+  --hero-grad-mid:  #F2E8E8;
+  --hero-grad-end:  #EBE0E0;
+  --header-bg:      rgba(255,255,255,0.97);
 }
+
 
 /* Fundo externo ao #app e stroke bordeaux (sobrescreve ouro do main.css) */
 @media (min-width: 860px) {
@@ -33,8 +37,8 @@
   background: linear-gradient(
     160deg,
     var(--color-bg) 0%,
-    #F2E8E8 55%,
-    #EBE0E0 100%
+    var(--hero-grad-mid) 55%,
+    var(--hero-grad-end) 100%
   );
 }
 

@@ -304,7 +304,8 @@ function registrarEventos() {
   campoBusca.addEventListener('input', () => {
     clearTimeout(debounceTimer);
     clearTimeout(autoSelectTimer);
-    debounceTimer = setTimeout(() => executarBusca(campoBusca.value), 200);
+    const delay = window.matchMedia('(pointer: coarse)').matches ? 500 : 200;
+    debounceTimer = setTimeout(() => executarBusca(campoBusca.value), delay);
     botaoLimpar.classList.toggle('oculto', campoBusca.value === '');
   });
 

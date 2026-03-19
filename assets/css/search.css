@@ -14,7 +14,7 @@
   left: var(--space-lg);
   width: 1.05rem;
   height: 1.05rem;
-  color: rgba(26, 60, 46, 0.9);
+  color: var(--color-muted);
   pointer-events: none;
   flex-shrink: 0;
   transition: color var(--transition);
@@ -107,7 +107,8 @@
   left: 1.1rem;
   width: 1.15rem;
   height: 1.15rem;
-  color: rgba(26, 60, 46, 0.9);
+  color: var(--color-primary);
+  opacity: 0.7;
 }
 
 #hero #botao-limpar {
