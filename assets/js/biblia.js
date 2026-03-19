@@ -3,17 +3,29 @@
  * Busca de versículos na Bíblia Ave-Maria para enriquecer as notas de rodapé.
  */
 
-// ── Cache ─────────────────────────────────────────────────────────────────────
-let _biblia   = null;
-let _promise  = null;
+// ── Cache por livro ───────────────────────────────────────────────────────────
+const _livros   = new Map(); // abrev → caps object
+const _promises = new Map(); // abrev → Promise em voo
+let _nomes      = null;
+let _nomesPromise = null;
 
-async function _carregar() {
-  if (_biblia)   return _biblia;
-  if (_promise)  return _promise;
-  _promise = fetch('data/biblia.json')
+async function _carregarNomes() {
+  if (_nomes) return _nomes;
+  if (_nomesPromise) return _nomesPromise;
+  _nomesPromise = fetch('data/biblia/nomes.json')
     .then(r => r.json())
-    .then(d => { _biblia = d; return d; });
-  return _promise;
+    .then(d => { _nomes = d; return d; });
+  return _nomesPromise;
+}
+
+async function _carregarLivro(abrev) {
+  if (_livros.has(abrev)) return _livros.get(abrev);
+  if (_promises.has(abrev)) return _promises.get(abrev);
+  const p = fetch(`data/biblia/${encodeURIComponent(abrev)}.json`)
+    .then(r => r.ok ? r.json() : null)
+    .then(d => { if (d) _livros.set(abrev, d); return d; });
+  _promises.set(abrev, p);
+  return p;
 }
 
 // ── Mapa de abreviações alternativas → chave canônica do biblia.json ──────────
@@ -46,13 +58,15 @@ export async function buscarVersiculo(textoNota) {
   const cap   = m[2];
   const vers  = m[3];
 
-  let biblia;
-  try { biblia = await _carregar(); } catch { return null; }
+  let caps, nomes;
+  try {
+    [caps, nomes] = await Promise.all([_carregarLivro(abrev), _carregarNomes()]);
+  } catch { return null; }
 
-  const texto = biblia.index?.[abrev]?.[cap]?.[vers];
+  const texto = caps?.[cap]?.[vers];
   if (!texto) return null;
 
-  const nome = biblia.nomes?.[abrev] ?? abrev;
+  const nome = nomes?.[abrev] ?? abrev;
   return { referencia: `${nome} ${cap},${vers}`, texto };
 }
 
