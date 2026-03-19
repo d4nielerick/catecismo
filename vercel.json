@@ -11,14 +11,6 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=31536000" }]
     },
     {
-      "source": "/assets/css/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=31536000" }]
-    },
-    {
-      "source": "/assets/js/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=31536000" }]
-    },
-    {
       "source": "/assets/img/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, s-maxage=2592000, immutable" }]
     }
