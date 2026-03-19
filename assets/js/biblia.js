@@ -67,6 +67,18 @@ if (_cardFechar) {
   _cardFechar.addEventListener('click', ocultarCard);
 }
 
+// Fechar ao clicar fora do card
+document.addEventListener('click', e => {
+  if (_card && !_card.classList.contains('oculto') && !_card.contains(e.target)) {
+    ocultarCard();
+  }
+});
+
+// Fechar com Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') ocultarCard();
+});
+
 // Desktop: clique numa nota com referência bíblica → mostra só o versículo
 export function mostrarCard(referencia, texto) {
   if (!_card) return;

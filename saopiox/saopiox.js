@@ -18,6 +18,7 @@ let _autoSelect;
 let _continuoRenderizado = false;
 let _qaAtivo      = null;   // elemento DOM da questão ativa
 let _sugestaoEl   = null;
+const _cacheResumoIA = new Map(); // cache de resumos IA por query (sessão)
 
 // ── Elementos ─────────────────────────────────────────────────────────────────
 const app           = document.getElementById('app');
@@ -353,6 +354,14 @@ async function acionarResumoIA() {
 
   btnResumir?.classList.add('oculto');
   aiCard?.classList.remove('oculto');
+
+  // Cache por query na sessão — evita chamadas repetidas ao Grok
+  if (_cacheResumoIA.has(_query)) {
+    aiCorpo.innerHTML = '';
+    renderizarResumoIA(_cacheResumoIA.get(_query));
+    return;
+  }
+
   aiCorpo.innerHTML = `
     <div class="ai-skeleton">
       <div class="ai-skeleton-linha"></div>
@@ -366,7 +375,7 @@ async function acionarResumoIA() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         query: _query,
-        paragrafos: _resultados.map(p => ({
+        paragrafos: _resultados.slice(0, 15).map(p => ({
           numero: p.numero,
           texto: `P: ${p.pergunta}\nR: ${p.resposta}`,
         })),
@@ -374,6 +383,7 @@ async function acionarResumoIA() {
     });
     const data = await resp.json();
     if (!resp.ok || !data.resumo) throw new Error(data.error || 'Erro desconhecido');
+    _cacheResumoIA.set(_query, data.resumo);
     aiCorpo.innerHTML = '';
     renderizarResumoIA(data.resumo);
   } catch (err) {
@@ -413,10 +423,10 @@ function renderizarResumoIA(texto) {
 campoBusca.addEventListener('input', () => {
   const v = campoBusca.value.trim();
   btnLimpar.classList.toggle('oculto', !v);
-  if (window.innerWidth < 768) return;
   clearTimeout(_debounce);
   if (v.length < 2) return;
-  _debounce = setTimeout(() => ativarBusca(v), 200);
+  const delay = window.innerWidth < 768 ? 500 : 200;
+  _debounce = setTimeout(() => ativarBusca(v), delay);
 });
 
 campoBusca.addEventListener('keydown', e => {

@@ -235,6 +235,7 @@ let resultadosAtuais  = [];   // parágrafos do resultado atual (para nav prev/n
 let indiceAtivo       = -1;   // índice do parágrafo ativo em resultadosAtuais
 let autoSelectTimer   = null; // timer para seleção automática do 1º resultado
 let _sugestaoEl       = null; // elemento de sugestão de variante
+const _cacheResumoIA  = new Map(); // cache de resumos IA por query (sessão)
 
 // ── Botões rovings (migram para o parágrafo ativo) ───────────────────────────
 
@@ -1038,9 +1039,16 @@ function fecharMobileNavBar() {
 async function acionarResumoIA() {
   if (!resultadosAtuais.length) return;
 
-  // Mostra card com skeleton
   btnResumir.classList.add('oculto');
   aiCard.classList.remove('oculto');
+
+  // Cache por query na sessão — evita chamadas repetidas ao Grok
+  if (_cacheResumoIA.has(queryAtual)) {
+    aiCorpo.innerHTML = '';
+    renderizarResumoIA(_cacheResumoIA.get(queryAtual));
+    return;
+  }
+
   aiCorpo.innerHTML = `
     <div class="ai-skeleton">
       <div class="ai-skeleton-linha"></div>
@@ -1052,7 +1060,7 @@ async function acionarResumoIA() {
     const resp = await fetch('/api/resumo', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: queryAtual, paragrafos: resultadosAtuais }),
+      body: JSON.stringify({ query: queryAtual, paragrafos: resultadosAtuais.slice(0, 15) }),
     });
 
     const data = await resp.json();
@@ -1061,6 +1069,7 @@ async function acionarResumoIA() {
       throw new Error(data.error || 'Erro desconhecido');
     }
 
+    _cacheResumoIA.set(queryAtual, data.resumo);
     aiCorpo.innerHTML = '';
     renderizarResumoIA(data.resumo);
   } catch (err) {
