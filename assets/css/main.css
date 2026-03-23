@@ -445,7 +445,13 @@ mark {
   transform: scale(1.15);
 }
 
-/* No header (estado busca) — ícone animado, sem texto */
+/* No header (estado busca) — ícone + label compacto */
+.btn-header-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
 #btn-contribuir-header svg {
   color: #c0392b;
   animation: heart-beat 2.8s ease-in-out 1.5s infinite;

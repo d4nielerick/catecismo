@@ -8,6 +8,12 @@ import { notasDoParagrafo } from './data.js';
 import { adicionarTrecho, atualizarBadge as _atualizarBadge, contemNumero } from './coletor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
 
+// ── Utilitários ───────────────────────────────────────────────────────────────
+function _sentenceCase(str) {
+  if (!str) return str;
+  return str.toLowerCase().replace(/[a-záàâãéèêíïóòôõúùûüç]/i, c => c.toUpperCase());
+}
+
 // ── Estado ────────────────────────────────────────────────────────────────────
 let _paragrafos    = [];
 let _capitulos     = [];   // lista de seções (agrupamento por parte|secao)
@@ -219,7 +225,7 @@ function construirToc() {
       numSpan.className = 'toc-cap-num';
       numSpan.textContent = capNum;
       btn.appendChild(numSpan);
-      btn.appendChild(document.createTextNode(p.capitulo));
+      btn.appendChild(document.createTextNode(_sentenceCase(p.capitulo)));
 
       (secaoDetails || parteDetails || tocEl).appendChild(btn);
     } else if (!p.capitulo && !introAdicionada) {
