@@ -445,11 +445,33 @@ mark {
   transform: scale(1.15);
 }
 
-/* No header (estado busca) — ícone + label compacto */
-.btn-header-label {
+/* No header (estado busca) — pill compacto igual ao hero */
+#btn-contribuir-header {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
   font-family: var(--font-sans);
   font-size: 0.72rem;
   font-weight: 600;
+  color: #9a2020;
+  background: rgba(176, 48, 32, 0.08);
+  border: 1.5px solid rgba(176, 48, 32, 0.28);
+  border-radius: 100px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+#btn-contribuir-header:hover {
+  color: #7a1a1a;
+  background: rgba(176, 48, 32, 0.14);
+  border-color: rgba(176, 48, 32, 0.5);
+}
+
+@media (max-width: 480px) {
+  .btn-contribuir-label { display: none; }
+  #btn-contribuir-header { padding: 0.3rem; border: none; background: none; }
 }
 
 #btn-contribuir-header svg {
