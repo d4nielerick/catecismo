@@ -25,6 +25,7 @@ const botaoLimpar     = document.getElementById('botao-limpar');
 const listaResultados = document.getElementById('lista-resultados');
 const contagemEl      = document.getElementById('contagem-resultados');
 const semResultados   = document.getElementById('sem-resultados');
+const hintColetor     = document.getElementById('hint-coletor');
 const painelConteudo  = document.getElementById('painel-conteudo');
 const btnFecharConteudo = document.getElementById('btn-fechar-conteudo');
 const btnResumir      = document.getElementById('btn-resumir');
@@ -480,6 +481,7 @@ function voltarEstadoInicial() {
   listaResultados.innerHTML = '';
   contagemEl.textContent = '';
   semResultados.classList.add('oculto');
+  hintColetor.classList.add('oculto');
   limparIndiceAnalitico();
   btnResumir.classList.add('oculto');
   aiCard.classList.add('oculto');
@@ -726,12 +728,14 @@ function renderizarResultados(grupos, total, query) {
   if (total === 0) {
     contagemEl.textContent = '';
     semResultados.classList.remove('oculto');
+    hintColetor.classList.add('oculto');
     btnResumir.classList.add('oculto');
     aiCard.classList.add('oculto');
     return;
   }
 
   semResultados.classList.add('oculto');
+  hintColetor.classList.remove('oculto');
   contagemEl.textContent = total === 1
     ? '1 resultado'
     : `${total} resultado${total > 200 ? 's (exibindo 200)' : 's'}`;
