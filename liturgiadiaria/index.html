@@ -703,7 +703,8 @@ let _catecismo = null;
 async function buscarParagrafo(n) {
   if (!_catecismo) {
     const r = await fetch('../data/catecismo.json');
-    _catecismo = await r.json();
+    const d = await r.json();
+    _catecismo = d.paragrafos ?? d;
   }
   return _catecismo.find(p => p.numero === n);
 }
