@@ -232,70 +232,111 @@
       font-size: 0.9rem;
     }
 
-    /* ── Reflexão (dentro do card Evangelho) ─────────────────────────────── */
-    #area-reflexao {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--color-border);
-    }
-
+    /* ── Reflexão IA ──────────────────────────────────────────────────────── */
     #reflexao-conteudo { margin-top: 1.5rem; }
 
-    .reflexao-bloco { margin-bottom: 1.5rem; }
+    .reflexao-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem 1.25rem;
+    }
 
-    .reflexao-bloco-label {
+    .ia-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
       font-family: var(--font-sans);
       font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
       color: var(--color-muted);
-      margin-bottom: 0.4rem;
+      margin-bottom: 1rem;
     }
 
-    .termo-grego {
+    .ia-badge svg { opacity: 0.5; }
+
+    .reflexao-p {
       font-family: var(--font-serif);
-      font-size: 1.4rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--color-text);
+      margin: 0 0 0.85rem;
+    }
+
+    .reflexao-p:last-of-type { margin-bottom: 1rem; }
+
+    .termo-inline {
       font-weight: 600;
       color: var(--color-primary);
     }
 
-    .termo-transliteracao {
-      font-style: italic;
-      color: var(--color-muted);
-      font-size: 0.95rem;
-      margin-left: 0.35rem;
-      font-family: var(--font-serif);
-    }
-
-    .reflexao-texto {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--color-text);
-      margin-top: 0.3rem;
-    }
-
+    /* Pills dos parágrafos */
     .cic-refs {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
-      margin-top: 0.6rem;
+      margin-top: 0.25rem;
     }
 
     .cic-ref-pill {
       font-family: var(--font-sans);
       font-size: 0.78rem;
-      background: var(--color-bg);
+      background: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: 6px;
-      padding: 0.2em 0.55em;
+      padding: 0.25em 0.6em;
       color: var(--color-primary);
-      text-decoration: none;
-      transition: background 0.12s;
+      cursor: pointer;
+      transition: background 0.12s, border-color 0.12s;
     }
 
-    .cic-ref-pill:hover { background: rgba(197,160,40,0.1); }
+    .cic-ref-pill:hover,
+    .cic-ref-pill.aberta { background: rgba(197,160,40,0.1); border-color: var(--color-accent); }
+
+    /* Card expandido do parágrafo CIC */
+    .cic-paragrafo-card {
+      margin-top: 0.75rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      animation: _fadeIn 0.18s ease;
+    }
+
+    @keyframes _fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+    .cic-paragrafo-num {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .cic-paragrafo-texto {
+      font-family: var(--font-serif);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      color: var(--color-text);
+      margin: 0 0 0.75rem;
+    }
+
+    .cic-ver-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      color: var(--color-primary);
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity 0.12s;
+    }
+
+    .cic-ver-link:hover { opacity: 1; }
 
     /* ── Mobile tabs ──────────────────────────────────────────────────────── */
     .lp-tabs {
@@ -657,43 +698,85 @@ async function iniciarReflexao() {
   });
 }
 
+// ── Cache do catecismo para lookup inline ────────────────────────────────────
+let _catecismo = null;
+async function buscarParagrafo(n) {
+  if (!_catecismo) {
+    const r = await fetch('../data/catecismo.json');
+    _catecismo = await r.json();
+  }
+  return _catecismo.find(p => p.numero === n);
+}
+
 function renderReflexao(r) {
   const out = document.getElementById('reflexao-conteudo');
   if (!out) return;
   const { termo_grego: t, catecismo: c, fato_curioso: f } = r;
 
-  const refs = (c?.paragrafos ?? []).map(n =>
-    `<a class="cic-ref-pill" href="/#paragrafo-${n}" title="Abrir §${n} no Catecismo">§${n}</a>`
+  const nums = c?.paragrafos ?? [];
+  const pills = nums.map(n =>
+    `<button class="cic-ref-pill" data-n="${n}" aria-expanded="false">§${n}</button>`
   ).join('');
 
-  // Insere reflexão dentro do card do Evangelho
-  const card = document.getElementById('evangelho');
-  if (card && !card.querySelector('.reflexao-sep')) {
-    const sep = document.createElement('div');
-    sep.className = 'reflexao-sep';
-    sep.style.cssText = 'margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--color-border)';
-    card.appendChild(sep);
-  }
-
   out.innerHTML = `
-    <div class="reflexao-bloco">
-      <div class="reflexao-bloco-label">Termo grego</div>
-      <div>
-        <span class="termo-grego">${t?.termo ?? ''}</span>
-        <span class="termo-transliteracao">${t?.transliteracao ?? ''}</span>
+    <div class="reflexao-card">
+      <div class="ia-badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Gerado por IA
       </div>
-      <p class="reflexao-texto">${t?.significado ?? ''}</p>
-    </div>
-    <div class="reflexao-bloco">
-      <div class="reflexao-bloco-label">No Catecismo</div>
-      <p class="reflexao-texto">${c?.conexao ?? ''}</p>
-      ${refs ? `<div class="cic-refs">${refs}</div>` : ''}
-    </div>
-    <div class="reflexao-bloco">
-      <div class="reflexao-bloco-label">Fato curioso</div>
-      <p class="reflexao-texto">${f ?? ''}</p>
+
+      <p class="reflexao-p"><span class="termo-inline">${t?.termo ?? ''}</span> (${t?.transliteracao ?? ''}) — ${t?.significado ?? ''}</p>
+      <p class="reflexao-p">${c?.conexao ?? ''}</p>
+      <p class="reflexao-p">${f ?? ''}</p>
+
+      ${pills ? `<div class="cic-refs" id="cic-refs-wrap">${pills}</div><div id="cic-cards"></div>` : ''}
     </div>
   `;
+
+  // Clique nas pills → abre card inline
+  out.querySelectorAll('.cic-ref-pill').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const n   = Number(btn.dataset.n);
+      const wrap = document.getElementById('cic-cards');
+      const id  = `cic-card-${n}`;
+
+      // Toggle
+      const existing = document.getElementById(id);
+      if (existing) {
+        existing.remove();
+        btn.classList.remove('aberta');
+        btn.setAttribute('aria-expanded', 'false');
+        return;
+      }
+
+      btn.classList.add('aberta');
+      btn.setAttribute('aria-expanded', 'true');
+
+      const card = document.createElement('div');
+      card.id = id;
+      card.className = 'cic-paragrafo-card';
+      card.innerHTML = `<p class="cic-paragrafo-num">Carregando §${n}…</p>`;
+      wrap.appendChild(card);
+
+      try {
+        const p = await buscarParagrafo(n);
+        if (p) {
+          card.innerHTML = `
+            <div class="cic-paragrafo-num">§${p.numero}</div>
+            <p class="cic-paragrafo-texto">${p.texto}</p>
+            <a class="cic-ver-link" href="/#paragrafo-${p.numero}" target="_blank" rel="noopener">
+              Ver no Catecismo
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          `;
+        } else {
+          card.innerHTML = `<p class="cic-paragrafo-num">Parágrafo §${n} não encontrado.</p>`;
+        }
+      } catch {
+        card.innerHTML = `<p class="cic-paragrafo-num">Erro ao carregar §${n}.</p>`;
+      }
+    });
+  });
 }
 
 init();
