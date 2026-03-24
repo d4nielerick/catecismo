@@ -1,0 +1,271 @@
+════════════════════════════════════════════════════════════════
+  SANTADOUTRINA.CLOUD — FUNCIONALIDADES E OPORTUNIDADES
+════════════════════════════════════════════════════════════════
+Gerado em: março de 2026
+Site: https://santadoutrina.cloud
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PARTE 1 — O QUE O SITE FAZ HOJE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O site é uma plataforma de busca e leitura para dois catecismos
+católicos em português, 100% gratuita, sem anúncios e sem login.
+
+
+DOIS CATECISMOS
+───────────────
+• Catecismo da Igreja Católica (CIC) — 2.865 parágrafos
+• Catecismo Maior de São Pio X — 994 perguntas e respostas
+• Navegação entre eles com 1 clique
+
+
+BUSCA INTELIGENTE
+─────────────────
+• Busca instantânea client-side (sem servidor, sem latência)
+• Normalização de acentos e variações ortográficas
+• Evita resultados falsos (ex: "oração" não bate em "coração")
+• Sugestão automática de termos alternativos
+• Resultados agrupados por estrutura do Catecismo
+  (Parte → Seção → Capítulo → Artigo)
+• Atalhos rápidos: Sacramentos, Oração, Trindade, Eucaristia,
+  Pecado, Ressurreição, Maria, Mandamentos
+• Índice Analítico Temático integrado nos resultados
+• Até 200 resultados por busca
+
+
+MODO LEITURA
+────────────
+• Leitura contínua de todo o Catecismo (não apenas resultados)
+• Índice lateral (TOC) com toda a estrutura hierárquica
+• Navegação por capítulos (setas anterior/próximo)
+• Breadcrumb mostra localização atual
+• Teclado: setas para navegar, ESC para sair
+• Adaptado para mobile (índice compactável)
+
+
+LAYOUT DOIS PAINÉIS
+───────────────────
+• Painel esquerdo: lista de resultados
+• Painel direito: texto completo do Catecismo em contexto
+• Clicar num resultado scrolla automaticamente até o parágrafo
+• Mobile: layout em drawer adaptativo
+
+
+COLETOR DE TRECHOS
+──────────────────
+• Botão "+" em cada parágrafo para salvar para estudo
+• Seleção de texto no modo leitura → popup "Salvar trecho"
+• Painel lateral com todos os trechos coletados
+• Cada trecho mostra: §número, Parte › Seção › Capítulo
+• Exportação: copiar tudo, baixar em .TXT ou .MD
+• Persistência em localStorage (sobrevive ao fechar o browser)
+
+
+RESUMO COM INTELIGÊNCIA ARTIFICIAL
+────────────────────────────────────
+• Dois modos:
+  - Resumo de busca: sintetiza os resultados encontrados
+  - Resumo de coleção: integra trechos escolhidos pelo usuário
+• Resposta em 3-5 frases + lista dos §§ usados como fonte
+• Usa apenas os parágrafos fornecidos (sem "inventar")
+• Cache de sessão: não refaz chamadas desnecessárias
+• Rate limiting: 5 requisições por IP por 10 minutos
+• Powered by Grok (xAI)
+
+
+REFERÊNCIAS BÍBLICAS
+────────────────────
+• Detecção automática de citações bíblicas nos textos
+  (ex: Jo 3,16 | 1Cor 10,2 | Sl 22)
+• Desktop: hover na nota → card flutuante com versículo
+• Mobile: toque → card com texto completo
+• Dados: Bíblia Ave-Maria completa (73 livros)
+• Carregamento sob demanda por livro (~60KB por livro)
+
+
+DOAÇÃO VIA PIX
+──────────────
+• Modal de contribuição com QR Codes
+• Valores: R$10, R$20, R$50, Livre
+• Chave PIX copiável
+• Sem intermediário, sem taxa de plataforma
+
+
+PERFORMANCE E PRIVACIDADE
+──────────────────────────
+• Zero dependências externas (sem npm, sem frameworks)
+• Sem rastreamento, sem cookies, sem analytics
+• Dados bíblicos carregados sob demanda (lazy load)
+• Funciona 100% offline após primeiro carregamento (dados em cache)
+
+
+ACESSIBILIDADE
+──────────────
+• Roles ARIA completos (search, listbox, dialog, complementary)
+• Labels descritivos em todos os botões
+• Regiões live para atualizações de contagem
+• Navegação completa por teclado (Tab, Enter, Escape, setas)
+• HTML semântico (<nav>, <aside>, <article>, <header>)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PARTE 2 — SUGESTÕES DE MODELO DE NEGÓCIO E IMPACTO SOCIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+QUEM USA ESSE SITE
+──────────────────
+Catequistas e professores de religião
+Padres e seminaristas em pesquisa rápida
+Fiéis leigos em estudo pessoal
+Estudantes de teologia e filosofia
+Pais ensinando a fé aos filhos
+Pessoas em busca de respostas sobre a fé
+
+
+PROBLEMA QUE RESOLVE
+────────────────────
+O Catecismo é um documento denso (900+ páginas). Sem busca,
+encontrar o que a Igreja ensina sobre um tema específico exige
+experiência e tempo. O site elimina essa barreira: qualquer pessoa
+digita um tema e encontra o que precisa em segundos.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SUGESTÕES DE MELHORIAS COM IMPACTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+[ALTO IMPACTO — CURTO PRAZO]
+
+1. PLANO DE ESTUDO GUIADO
+   Sequências temáticas pré-definidas para catequese, RCIA,
+   grupos de oração, etc. Ex: "Estudo sobre os Sacramentos"
+   com 10 parágrafos selecionados e perguntas para reflexão.
+   → Diferencia o site de um simples buscador.
+   → Professores e catequistas voltariam toda semana.
+
+2. COMPARTILHAMENTO DE TRECHOS
+   Gerar link curto para um parágrafo ou coleção de trechos.
+   Ex: santadoutrina.cloud/#s/abc123 abre exatamente os
+   trechos que alguém selecionou.
+   → Viralização orgânica em grupos de WhatsApp e Telegram.
+   → Zero custo: apenas um JSON armazenado.
+
+3. PERGUNTA LIVRE À IA
+   "O que a Igreja ensina sobre divórcio?"
+   A IA busca os parágrafos relevantes e responde citando §§.
+   → Principal pedido esperado de novos usuários.
+   → Custo controlável com rate limiting e cache.
+
+4. MODO CATEQUESE (VISÃO SIMPLIFICADA)
+   Versão do São Pio X com linguagem adaptada para crianças,
+   ou modo com fonte maior, menos densidade visual.
+   → Alcança público de catequistas e famílias.
+
+
+[MÉDIO IMPACTO — MÉDIO PRAZO]
+
+5. VERSÃO APP (PWA)
+   Instalar como app no celular, funcionar offline.
+   Com os dados já em JSON, isso é tecnicamente simples.
+   → Catequistas em paróquias sem boa internet.
+   → Usuários que acessam no transporte público.
+
+6. LITURGIA INTEGRADA
+   Mostrar os parágrafos do Catecismo relacionados às leituras
+   do dia (Palavra do dia). Integração com API de liturgia.
+   → Retorno diário ao site (fidelização).
+   → Uso em homilias e grupos bíblicos.
+
+7. COMUNIDADE DE ANOTAÇÕES
+   Anotações pessoais salvas em conta (opcional).
+   Coleções temáticas públicas criadas por usuários.
+   → "Catequistas recomendam" → conteúdo gerado pela comunidade.
+   → Modelo freemium: conta gratuita, conta premium com sync.
+
+8. VERSÃO PARA EDUCAÇÃO FORMAL
+   Integração com materiais de ensino religioso de escolas.
+   Exportação de planos de aula baseados nos parágrafos.
+   → Licenciamento para escolas católicas (modelo B2B).
+
+
+[MODELO DE SUSTENTAÇÃO FINANCEIRA]
+
+OPÇÃO A — DOAÇÃO VOLUNTÁRIA (atual)
+  Funciona para projetos com audiência engajada.
+  Melhorar com: meta mensal real, histórico de apoiadores,
+  benefícios simbólicos (nome na página de agradecimentos).
+
+OPÇÃO B — FREEMIUM
+  Grátis: busca, leitura, coletor básico
+  Premium (~R$9,90/mês): planos de estudo, sync na nuvem,
+  IA sem limite de requisições, exportação avançada.
+  → Estimativa: 1.000 usuários ativos → 50 pagantes → R$500/mês
+
+OPÇÃO C — PARCERIAS INSTITUCIONAIS
+  Diocese, paróquias, escolas católicas, seminários.
+  Licença de uso com suporte e customização (logo, domínio próprio).
+  → 1 contrato com diocese = custo do servidor coberto por 1 ano.
+
+OPÇÃO D — PATROCÍNIO EDITORIAL
+  Editoras católicas (Loyola, Vozes, Paulus) que vendem
+  versões impressas do Catecismo poderiam patrocinar o site
+  como canal de descoberta → link para compra do livro.
+  → Alinhamento de interesse, sem conflito com missão gratuita.
+
+
+[IMPACTO SOCIAL — MISSÃO]
+
+O maior obstáculo à evangelização no Brasil não é falta de fé,
+é falta de acesso ao conhecimento da fé de forma acessível.
+
+Com escala, este projeto pode:
+
+• Ser a principal referência digital do Catecismo em PT-BR
+• Servir mais de 130 milhões de católicos brasileiros
+• Ajudar padres a preparar homilias em minutos
+• Permitir que leigos respondam dúvidas com fontes reais
+• Ser usado em 40.000+ paróquias do Brasil
+• Integrar o ecossistema de catequese da CNBB
+
+A força do projeto é ser gratuito, sem rastreamento,
+sem agenda comercial, e tecnicamente muito competente.
+Isso cria confiança — o bem mais raro na internet.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RESUMO DE PRIORIDADES SUGERIDAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AGORA (sem custo adicional)
+  ✓ Compartilhamento de parágrafos por link
+  ✓ Pergunta livre à IA (já tem toda a infraestrutura)
+  ✓ PWA básico (instalar como app)
+
+EM SEGUIDA (baixo custo)
+  ✓ Planos de estudo temáticos curados
+  ✓ Meta de doação real com integração simples
+  ✓ Liturgia do dia com parágrafos relacionados
+
+DEPOIS (requer mais esforço)
+  ✓ Conta de usuário + sync (freemium)
+  ✓ Versão para escolas
+  ✓ Parcerias com dioceses
+
+
+════════════════════════════════════════════════════════════════
+  NOTA TÉCNICA
+════════════════════════════════════════════════════════════════
+
+Stack atual: Vanilla JS, sem framework, sem bundler.
+Hosting: VPS própria (Ubuntu + Nginx + Node/PM2) + deploy automático via GitHub webhook.
+IA: Grok (xAI) via API REST.
+Custo mensal estimado: R$40-80 (VPS Hostinger) + uso da API Grok.
+
+A arquitetura atual é simples, barata e escalável.
+Não há necessidade de migrar de stack para implementar
+nenhuma das sugestões acima.
+
+════════════════════════════════════════════════════════════════
