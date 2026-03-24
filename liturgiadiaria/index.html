@@ -16,138 +16,144 @@
 
   <link rel="stylesheet" href="../assets/css/main.css">
   <style>
+    /* ── Base ─────────────────────────────────────────────────────────────── */
+    html, body {
+      background: var(--color-bg);
+      min-height: 100%;
+    }
+
     body {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 2rem 1.25rem 4rem;
+      font-family: var(--font-sans);
+      color: var(--color-text);
     }
 
-    .vol-header {
+    /* ── Layout dois painéis ──────────────────────────────────────────────── */
+    .lp-wrap {
       display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 2.5rem;
+      min-height: 100vh;
+      max-width: 1080px;
+      margin: 0 auto;
     }
 
-    .vol-header a {
+    /* ── Sidebar ──────────────────────────────────────────────────────────── */
+    .lp-sidebar {
+      width: 240px;
+      flex-shrink: 0;
+      padding: 2rem 1.5rem 3rem;
+      border-right: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lp-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       color: var(--color-muted);
       text-decoration: none;
-      font-size: 0.875rem;
-      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+      transition: color 0.15s;
     }
+    .lp-back:hover { color: var(--color-primary); }
+    .lp-back svg { flex-shrink: 0; }
 
-    .vol-header a:hover { color: var(--color-primary); }
-    .vol-header svg { flex-shrink: 0; color: var(--color-muted); }
-
-    h1.liturgia-titulo {
+    .lp-titulo {
       font-family: var(--font-serif);
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--color-text);
       margin: 0 0 0.4rem;
+      line-height: 1.3;
     }
 
-    .liturgia-meta {
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
+    .lp-data {
+      font-size: 0.78rem;
       color: var(--color-muted);
-      margin-bottom: 2.5rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
     }
 
     .tempo-badge {
       display: inline-block;
       background: rgba(197,160,40,0.12);
       color: var(--color-accent-dk);
-      font-size: 0.72rem;
-      font-weight: 600;
-      font-family: var(--font-sans);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.2em 0.65em;
-      border-radius: 4px;
-      margin-left: 0.5rem;
-      vertical-align: middle;
-    }
-
-    .leitura { margin-bottom: 2.5rem; }
-
-    .leitura-label {
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .leitura-ref {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--color-text);
-      margin-bottom: 1rem;
-    }
-
-    .leitura-texto {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--color-text);
-    }
-
-    .leitura-texto p { margin: 0 0 0.6rem; }
-
-    .vers-num {
       font-size: 0.68rem;
-      font-family: var(--font-sans);
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+    }
+
+    /* Nav de leituras */
+    .lp-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .lp-nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
       color: var(--color-muted);
-      vertical-align: super;
-      margin-right: 0.15em;
-      user-select: none;
+      text-decoration: none;
+      transition: background 0.12s, color 0.12s;
     }
 
-    .leitura + .leitura {
-      padding-top: 2.5rem;
-      border-top: 1px solid var(--color-border);
+    .lp-nav a:hover {
+      background: rgba(26,60,46,0.06);
+      color: var(--color-text);
     }
 
-    .loading {
-      font-family: var(--font-sans);
-      color: var(--color-muted);
-      padding: 3rem 0;
-      text-align: center;
+    .lp-nav a.ativa {
+      background: rgba(26,60,46,0.08);
+      color: var(--color-primary);
+      font-weight: 600;
     }
 
-    .erro {
-      font-family: var(--font-sans);
-      color: var(--color-muted);
-      background: var(--color-surface);
-      border-radius: 8px;
-      padding: 1.5rem;
-      text-align: center;
+    .lp-nav .nav-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.4;
+      flex-shrink: 0;
     }
 
-    #conteudo { min-height: 200px; }
+    .lp-nav a.ativa .nav-dot { opacity: 1; }
 
-    /* ── Reflexão ──────────────────────────────────────────────────────────── */
-    #area-reflexao {
-      margin-top: 3rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid var(--color-border);
+    /* Botão reflexão no sidebar */
+    .lp-sidebar-footer {
+      margin-top: auto;
+      padding-top: 2rem;
     }
 
     #btn-reflexao {
-      display: inline-flex;
+      width: 100%;
+      display: flex;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: center;
+      gap: 0.45rem;
       background: none;
       border: 1.5px solid var(--color-primary);
       color: var(--color-primary);
       font-family: var(--font-sans);
-      font-size: 0.875rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      padding: 0.6rem 1.2rem;
+      padding: 0.65rem 1rem;
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.15s, color 0.15s;
@@ -158,46 +164,116 @@
       color: #fff;
     }
 
-    #btn-reflexao:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
+    #btn-reflexao:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* ── Conteúdo principal ───────────────────────────────────────────────── */
+    .lp-main {
+      flex: 1;
+      padding: 2.5rem 2.5rem 5rem;
+      min-width: 0;
     }
 
-    #reflexao-conteudo { margin-top: 1.75rem; }
+    /* Cards de leitura */
+    .leitura-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+      scroll-margin-top: 1.5rem;
+    }
 
-    .reflexao-bloco { margin-bottom: 1.75rem; }
+    .leitura-card.card-evangelho {
+      border-color: rgba(26,60,46,0.2);
+      box-shadow: 0 2px 12px rgba(26,60,46,0.06);
+    }
 
-    .reflexao-bloco-label {
+    .leitura-label {
       font-family: var(--font-sans);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--color-muted);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .card-evangelho .leitura-label { color: var(--color-accent-dk); }
+
+    .leitura-ref {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 1.25rem;
+    }
+
+    .leitura-texto {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--color-text);
+    }
+
+    .vers-num {
+      font-size: 0.65rem;
+      font-family: var(--font-sans);
+      color: var(--color-muted);
+      vertical-align: super;
+      margin-right: 0.2em;
+      user-select: none;
+    }
+
+    .loading, .erro {
+      font-family: var(--font-sans);
+      color: var(--color-muted);
+      text-align: center;
+      padding: 3rem 0;
+      font-size: 0.9rem;
+    }
+
+    /* ── Reflexão (dentro do card Evangelho) ─────────────────────────────── */
+    #area-reflexao {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    #reflexao-conteudo { margin-top: 1.5rem; }
+
+    .reflexao-bloco { margin-bottom: 1.5rem; }
+
+    .reflexao-bloco-label {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.4rem;
     }
 
     .termo-grego {
       font-family: var(--font-serif);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 600;
       color: var(--color-primary);
     }
 
     .termo-transliteracao {
-      font-family: var(--font-serif);
       font-style: italic;
       color: var(--color-muted);
-      font-size: 1rem;
-      margin-left: 0.4rem;
+      font-size: 0.95rem;
+      margin-left: 0.35rem;
+      font-family: var(--font-serif);
     }
 
     .reflexao-texto {
       font-family: var(--font-serif);
-      font-size: 1.025rem;
+      font-size: 1rem;
       line-height: 1.75;
       color: var(--color-text);
-      margin-top: 0.35rem;
+      margin-top: 0.3rem;
     }
 
     .cic-refs {
@@ -209,42 +285,114 @@
 
     .cic-ref-pill {
       font-family: var(--font-sans);
-      font-size: 0.8rem;
-      background: var(--color-surface);
+      font-size: 0.78rem;
+      background: var(--color-bg);
       border: 1px solid var(--color-border);
       border-radius: 6px;
-      padding: 0.2em 0.6em;
+      padding: 0.2em 0.55em;
       color: var(--color-primary);
       text-decoration: none;
+      transition: background 0.12s;
     }
 
-    .cic-ref-pill:hover { background: rgba(197,160,40,0.08); }
+    .cic-ref-pill:hover { background: rgba(197,160,40,0.1); }
+
+    /* ── Mobile tabs ──────────────────────────────────────────────────────── */
+    .lp-tabs {
+      display: none;
+      overflow-x: auto;
+      gap: 0.25rem;
+      padding: 1rem 1.25rem 0;
+      scrollbar-width: none;
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-surface);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .lp-tabs::-webkit-scrollbar { display: none; }
+
+    .lp-tabs a {
+      display: inline-block;
+      white-space: nowrap;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-muted);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.12s, border-color 0.12s;
+    }
+
+    .lp-tabs a.ativa {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    /* ── Responsivo ───────────────────────────────────────────────────────── */
+    @media (max-width: 700px) {
+      .lp-wrap { flex-direction: column; }
+
+      .lp-sidebar {
+        position: static;
+        height: auto;
+        width: 100%;
+        border-right: none;
+        border-bottom: none;
+        padding: 1.5rem 1.25rem 0;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .lp-nav, .lp-sidebar-footer { display: none; }
+      .lp-tabs { display: flex; }
+
+      .lp-main { padding: 1.25rem 1.25rem 4rem; }
+
+      .leitura-card { padding: 1.25rem 1.25rem; }
+    }
   </style>
 </head>
 <body>
 
-<div class="vol-header">
-  <a href="../" aria-label="Voltar ao Catecismo">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M19 12H5M12 5l-7 7 7 7"/>
-    </svg>
-  </a>
-  <a href="../">Catecismo da Igreja Católica</a>
-</div>
+<div class="lp-wrap">
 
-<h1 class="liturgia-titulo">Liturgia do Dia</h1>
-<p class="liturgia-meta" id="liturgia-meta">Carregando…</p>
+  <!-- ── Sidebar ─────────────────────────────────────────────────────────── -->
+  <aside class="lp-sidebar">
+    <a href="../" class="lp-back" aria-label="Voltar ao Catecismo">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      Catecismo da Igreja Católica
+    </a>
 
-<div id="conteudo">
-  <p class="loading">Buscando leituras do dia…</p>
-</div>
+    <h1 class="lp-titulo">Liturgia<br>do Dia</h1>
+    <p class="lp-data" id="lp-data">Carregando…</p>
+    <span class="tempo-badge" id="lp-tempo" style="display:none"></span>
 
-<div id="area-reflexao" style="display:none">
-  <button id="btn-reflexao" type="button">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-    Explicar este Evangelho
-  </button>
-  <div id="reflexao-conteudo"></div>
+    <ul class="lp-nav" id="lp-nav" aria-label="Leituras do dia">
+      <!-- preenchido pelo JS -->
+    </ul>
+
+    <div class="lp-sidebar-footer" id="area-reflexao" style="display:none">
+      <button id="btn-reflexao" type="button">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4M12 16h.01"/></svg>
+        Explicar o Evangelho
+      </button>
+    </div>
+  </aside>
+
+  <!-- ── Tabs mobile ─────────────────────────────────────────────────────── -->
+  <nav class="lp-tabs" id="lp-tabs" aria-label="Leituras"></nav>
+
+  <!-- ── Conteúdo ────────────────────────────────────────────────────────── -->
+  <main class="lp-main" id="conteudo">
+    <p class="loading">Buscando leituras do dia…</p>
+  </main>
+
 </div>
 
 <script type="module">
@@ -290,8 +438,8 @@ const NOMES_PT = {
 };
 
 const SEASONS_PT = {
-  "Lent": "Quaresma", "Advent": "Advento", "Christmas": "Natal",
-  "Easter": "Páscoa", "Ordinary Time": "Tempo Comum",
+  "Lent":"Quaresma","Advent":"Advento","Christmas":"Natal",
+  "Easter":"Páscoa","Ordinary Time":"Tempo Comum",
 };
 
 const _cache = new Map();
@@ -306,10 +454,8 @@ async function carregarLivro(abr) {
 }
 
 function parseRef(ref) {
-  // Ex: "John 5:1-16"  "Ezekiel 47:1-9, 12"  "Psalm 46:2-3, 5-6, 8-9"
   const m = ref.trim().match(/^(.+?)\s+(\d+):(.+)$/);
   if (!m) return null;
-
   const bookKey = m[1].toLowerCase().replace(/\.$/, '');
   let abr = EN_TO_ABR[bookKey];
   if (!abr) {
@@ -318,9 +464,8 @@ function parseRef(ref) {
     }
   }
   if (!abr) return null;
-
   const cap = m[2];
-  const versStr = m[3].replace(/(\d+)[a-z]/g, '$1'); // remove letras (18b → 18)
+  const versStr = m[3].replace(/(\d+)[a-z]/g, '$1');
   const vers = [];
   for (const part of versStr.split(',')) {
     const p = part.trim();
@@ -332,29 +477,24 @@ function parseRef(ref) {
       if (!isNaN(n)) vers.push(n);
     }
   }
-
   return { abr, cap, vers };
 }
 
 function refPT(parsed) {
   const nome = NOMES_PT[parsed.abr] ?? parsed.abr;
-  // formata versículos: 1-9.12 ou 2-3.5-6.8-9
   const groups = [];
   let start = parsed.vers[0], prev = parsed.vers[0];
   for (let i = 1; i <= parsed.vers.length; i++) {
     if (i === parsed.vers.length || parsed.vers[i] !== prev + 1) {
       groups.push(start === prev ? `${start}` : `${start}-${prev}`);
       if (i < parsed.vers.length) { start = parsed.vers[i]; prev = parsed.vers[i]; }
-    } else {
-      prev = parsed.vers[i];
-    }
+    } else { prev = parsed.vers[i]; }
   }
   return `${nome} ${parsed.cap},${groups.join('.')}`;
 }
 
-async function renderLeitura(label, refEn) {
+async function renderLeitura(label, refEn, id, isGospel = false) {
   if (!refEn) return '';
-
   const parsed = parseRef(refEn);
   const refDisplay = parsed ? refPT(parsed) : refEn;
 
@@ -366,23 +506,55 @@ async function renderLeitura(label, refEn) {
       const linhas = parsed.vers
         .map(v => cap[String(v)] ? `<span class="vers-num">${v}</span>${cap[String(v)]} ` : '')
         .filter(Boolean);
-      if (linhas.length) {
-        textHtml = `<p>${linhas.join('')}</p>`;
-      }
+      if (linhas.length) textHtml = `<p>${linhas.join('')}</p>`;
     }
   }
 
-  if (!textHtml) {
-    textHtml = `<p class="erro">Texto não disponível para esta leitura.</p>`;
-  }
+  if (!textHtml) textHtml = `<p class="erro" style="padding:0;text-align:left">Texto não disponível para esta leitura.</p>`;
+
+  const gospelExtra = isGospel ? `<div id="reflexao-conteudo"></div>` : '';
 
   return `
-    <div class="leitura">
+    <div class="leitura-card${isGospel ? ' card-evangelho' : ''}" id="${id}">
       <div class="leitura-label">${label}</div>
       <div class="leitura-ref">${refDisplay}</div>
       <div class="leitura-texto">${textHtml}</div>
+      ${gospelExtra}
     </div>
   `;
+}
+
+function construirNav(leituras) {
+  const navEl  = document.getElementById('lp-nav');
+  const tabsEl = document.getElementById('lp-tabs');
+  navEl.innerHTML  = '';
+  tabsEl.innerHTML = '';
+
+  leituras.forEach(({ label, id }, i) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="#${id}"${i === 0 ? ' class="ativa"' : ''}><span class="nav-dot"></span>${label}</a>`;
+    navEl.appendChild(li);
+
+    const a = document.createElement('a');
+    a.href = `#${id}`;
+    a.textContent = label;
+    if (i === 0) a.classList.add('ativa');
+    tabsEl.appendChild(a);
+  });
+
+  // Highlight ao scroll
+  const cards = leituras.map(({ id }) => document.getElementById(id)).filter(Boolean);
+  const allLinks = [...navEl.querySelectorAll('a'), ...tabsEl.querySelectorAll('a')];
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        allLinks.forEach(a => a.classList.toggle('ativa', a.getAttribute('href') === `#${e.target.id}`));
+      }
+    });
+  }, { threshold: 0.3 });
+
+  cards.forEach(c => obs.observe(c));
 }
 
 async function init() {
@@ -396,42 +568,47 @@ async function init() {
   let raw;
   try {
     const r = await fetch(url);
-    if (!r.ok) throw new Error('não disponível');
+    if (!r.ok) throw new Error();
     raw = await r.json();
   } catch {
-    document.getElementById('conteudo').innerHTML =
-      `<p class="erro">Leituras de hoje não disponíveis. Tente novamente mais tarde.</p>`;
-    document.getElementById('liturgia-meta').textContent = '';
+    document.getElementById('conteudo').innerHTML = `<p class="erro">Leituras de hoje não disponíveis.</p>`;
+    document.getElementById('lp-data').textContent = '';
     return;
   }
 
   const dataFmt = hoje.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   const season  = SEASONS_PT[raw.season] ?? raw.season ?? '';
 
-  document.getElementById('liturgia-meta').innerHTML =
-    `${dataFmt}${season ? `<span class="tempo-badge">${season}</span>` : ''}`;
+  document.getElementById('lp-data').textContent = dataFmt;
+  if (season) {
+    const badge = document.getElementById('lp-tempo');
+    badge.textContent = season;
+    badge.style.display = '';
+  }
 
   const { firstReading, psalm, secondReading, gospel } = raw.readings ?? {};
 
-  const partes = await Promise.all([
-    renderLeitura('1ª Leitura', firstReading),
-    renderLeitura('Salmo', psalm),
-    secondReading ? renderLeitura('2ª Leitura', secondReading) : Promise.resolve(''),
-    renderLeitura('Evangelho', gospel),
-  ]);
+  const leituras = [
+    { label: '1ª Leitura', ref: firstReading, id: 'primeira-leitura' },
+    { label: 'Salmo',      ref: psalm,         id: 'salmo' },
+    secondReading ? { label: '2ª Leitura', ref: secondReading, id: 'segunda-leitura' } : null,
+    { label: 'Evangelho',  ref: gospel,         id: 'evangelho' },
+  ].filter(Boolean);
+
+  const partes = await Promise.all(
+    leituras.map(({ label, ref, id }) => renderLeitura(label, ref, id, id === 'evangelho'))
+  );
 
   document.getElementById('conteudo').innerHTML = partes.join('');
+  construirNav(leituras);
 
-  // Só mostra área de reflexão se houver Evangelho
   if (gospel) {
     const parsedGospel = parseRef(gospel);
     if (parsedGospel) {
-      // Coleta o texto do Evangelho já carregado no DOM
       window._liturgiaData = {
         data: `${ano}-${mm}-${dd}`,
-        evangelhoRef: parsedGospel ? refPT(parsedGospel) : gospel,
-        gospel,
-        parsedGospel,
+        evangelhoRef: refPT(parsedGospel),
+        gospel, parsedGospel,
       };
       document.getElementById('area-reflexao').style.display = '';
       iniciarReflexao();
@@ -442,26 +619,22 @@ async function init() {
 // ── Reflexão via Grok ─────────────────────────────────────────────────────────
 async function iniciarReflexao() {
   const btn = document.getElementById('btn-reflexao');
-  const out = document.getElementById('reflexao-conteudo');
   const { data, evangelhoRef, parsedGospel } = window._liturgiaData;
 
-  // Tenta cache estático primeiro (0 custo)
+  // Cache estático primeiro
   try {
     const r = await fetch(`../data/liturgia/${data}-reflexao.json`);
     if (r.ok) {
-      const cached = await r.json();
-      renderReflexao(cached);
+      renderReflexao(await r.json());
       btn.style.display = 'none';
       return;
     }
-  } catch { /* sem cache — mostra botão */ }
+  } catch { /* mostra botão */ }
 
   btn.addEventListener('click', async () => {
     btn.disabled = true;
-    btn.textContent = 'Gerando reflexão…';
-    out.innerHTML = '';
+    btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Gerando…`;
 
-    // Monta texto do Evangelho
     const livro = await carregarLivro(parsedGospel.abr);
     const cap   = livro?.[parsedGospel.cap] ?? {};
     const texto = parsedGospel.vers.map(v => cap[String(v)] ?? '').filter(Boolean).join(' ');
@@ -473,24 +646,34 @@ async function iniciarReflexao() {
         body: JSON.stringify({ data, evangelhoRef, evangelhoTexto: texto }),
       });
       if (!r.ok) throw new Error(`Erro ${r.status}`);
-      const reflexao = await r.json();
-      renderReflexao(reflexao);
+      renderReflexao(await r.json());
       btn.style.display = 'none';
-    } catch (err) {
+    } catch {
       btn.disabled = false;
-      btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Tentar novamente`;
-      out.innerHTML = `<p class="erro">Não foi possível gerar a reflexão. Tente novamente.</p>`;
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Tentar novamente`;
+      const out = document.getElementById('reflexao-conteudo');
+      if (out) out.innerHTML = `<p style="color:var(--color-muted);font-size:0.85rem;margin-top:1rem">Não foi possível gerar. Tente novamente.</p>`;
     }
   });
 }
 
 function renderReflexao(r) {
   const out = document.getElementById('reflexao-conteudo');
+  if (!out) return;
   const { termo_grego: t, catecismo: c, fato_curioso: f } = r;
 
   const refs = (c?.paragrafos ?? []).map(n =>
     `<a class="cic-ref-pill" href="/#paragrafo-${n}" title="Abrir §${n} no Catecismo">§${n}</a>`
   ).join('');
+
+  // Insere reflexão dentro do card do Evangelho
+  const card = document.getElementById('evangelho');
+  if (card && !card.querySelector('.reflexao-sep')) {
+    const sep = document.createElement('div');
+    sep.className = 'reflexao-sep';
+    sep.style.cssText = 'margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--color-border)';
+    card.appendChild(sep);
+  }
 
   out.innerHTML = `
     <div class="reflexao-bloco">
@@ -501,13 +684,11 @@ function renderReflexao(r) {
       </div>
       <p class="reflexao-texto">${t?.significado ?? ''}</p>
     </div>
-
     <div class="reflexao-bloco">
       <div class="reflexao-bloco-label">No Catecismo</div>
       <p class="reflexao-texto">${c?.conexao ?? ''}</p>
       ${refs ? `<div class="cic-refs">${refs}</div>` : ''}
     </div>
-
     <div class="reflexao-bloco">
       <div class="reflexao-bloco-label">Fato curioso</div>
       <p class="reflexao-texto">${f ?? ''}</p>
