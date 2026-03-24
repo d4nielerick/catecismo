@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Liturgia do Dia — Catecismo da Igreja Católica</title>
+  <meta name="description" content="Leituras litúrgicas do dia, com texto completo em português.">
+
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .vol-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .vol-header a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-family: var(--font-sans);
+    }
+
+    .vol-header a:hover { color: var(--color-primary); }
+
+    .vol-header svg { flex-shrink: 0; }
+
+    h1.liturgia-titulo {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin: 0 0 0.25rem;
+    }
+
+    .liturgia-meta {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .tempo-badge {
+      display: inline-block;
+      background: var(--color-primary-light, #f0ebe0);
+      color: var(--color-primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-sans);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2em 0.65em;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+    }
+
+    .leitura {
+      margin-bottom: 2.5rem;
+    }
+
+    .leitura-label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .leitura-ref {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+    }
+
+    .leitura-texto {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--color-text);
+    }
+
+    .leitura-texto p {
+      margin: 0 0 0.6rem;
+    }
+
+    .vers-num {
+      font-size: 0.7rem;
+      font-family: var(--font-sans);
+      color: var(--color-text-muted);
+      vertical-align: super;
+      margin-right: 0.2em;
+      user-select: none;
+    }
+
+    .leitura + .leitura {
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .loading {
+      font-family: var(--font-sans);
+      color: var(--color-text-muted);
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .erro {
+      font-family: var(--font-sans);
+      color: var(--color-text-muted);
+      background: var(--color-surface);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    #conteudo { min-height: 200px; }
+  </style>
+</head>
+<body>
+
+<div class="vol-header">
+  <a href="../" aria-label="Voltar ao Catecismo">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M19 12H5M12 5l-7 7 7 7"/>
+    </svg>
+  </a>
+  <a href="../">Catecismo da Igreja Católica</a>
+</div>
+
+<h1 class="liturgia-titulo">Liturgia do Dia</h1>
+<p class="liturgia-meta" id="liturgia-meta">Carregando…</p>
+
+<div id="conteudo">
+  <p class="loading">Buscando leituras do dia…</p>
+</div>
+
+<script type="module">
+
+// ── Mapeamento livros inglês → abreviação PT ──────────────────────────────────
+const EN_TO_ABR = {
+  "genesis":"Gn","exodus":"Ex","leviticus":"Lv","numbers":"Nm","deuteronomy":"Dt",
+  "joshua":"Js","judges":"Jz","ruth":"Rt","1 samuel":"1Sm","2 samuel":"2Sm",
+  "1 kings":"1Rs","2 kings":"2Rs","1 chronicles":"1Cr","2 chronicles":"2Cr",
+  "ezra":"Esd","nehemiah":"Ne","tobit":"Tb","judith":"Jt","esther":"Est",
+  "job":"Jó","psalm":"Sl","psalms":"Sl","1 maccabees":"1Mac","2 maccabees":"2Mac",
+  "proverbs":"Pr","ecclesiastes":"Ecl","song of songs":"Ct","song of solomon":"Ct",
+  "wisdom":"Sb","sirach":"Sir","ecclesiasticus":"Sir","isaiah":"Is","jeremiah":"Jr",
+  "lamentations":"Lm","baruch":"Bar","ezekiel":"Ez","daniel":"Dn","hosea":"Os",
+  "joel":"Jl","amos":"Am","obadiah":"Ab","jonah":"Jon","micah":"Mq","nahum":"Na",
+  "habakkuk":"Hab","zephaniah":"Sf","haggai":"Ag","zechariah":"Zc","malachi":"Ml",
+  "matthew":"Mt","mark":"Mc","luke":"Lc","john":"Jo","acts":"At","romans":"Rm",
+  "1 corinthians":"1Cor","2 corinthians":"2Cor","galatians":"Gl","ephesians":"Ef",
+  "philippians":"Fl","colossians":"Cl","1 thessalonians":"1Ts","2 thessalonians":"2Ts",
+  "1 timothy":"1Tm","2 timothy":"2Tm","titus":"Tt","philemon":"Fm","hebrews":"Hb",
+  "james":"Tg","1 peter":"1Pd","2 peter":"2Pd","1 john":"1Jo","2 john":"2Jo",
+  "3 john":"3Jo","jude":"Jd","revelation":"Ap","apocalypse":"Ap",
+};
+
+const NOMES_PT = {
+  "Gn":"Gênesis","Ex":"Êxodo","Lv":"Levítico","Nm":"Números","Dt":"Deuteronômio",
+  "Js":"Josué","Jz":"Juízes","Rt":"Rute","1Sm":"1 Samuel","2Sm":"2 Samuel",
+  "1Rs":"1 Reis","2Rs":"2 Reis","1Cr":"1 Crônicas","2Cr":"2 Crônicas",
+  "Esd":"Esdras","Ne":"Neemias","Tb":"Tobias","Jt":"Judite","Est":"Ester",
+  "Jó":"Jó","Sl":"Salmos","1Mac":"1 Macabeus","2Mac":"2 Macabeus",
+  "Pr":"Provérbios","Ecl":"Eclesiastes","Ct":"Cântico dos Cânticos",
+  "Sb":"Sabedoria","Sir":"Eclesiástico","Is":"Isaías","Jr":"Jeremias",
+  "Lm":"Lamentações","Bar":"Baruc","Ez":"Ezequiel","Dn":"Daniel","Os":"Oséias",
+  "Jl":"Joel","Am":"Amós","Ab":"Abdias","Jon":"Jonas","Mq":"Miquéias",
+  "Na":"Naum","Hab":"Habacuc","Sf":"Sofonias","Ag":"Ageu","Zc":"Zacarias",
+  "Ml":"Malaquias","Mt":"São Mateus","Mc":"São Marcos","Lc":"São Lucas",
+  "Jo":"São João","At":"Atos dos Apóstolos","Rm":"Romanos",
+  "1Cor":"1 Coríntios","2Cor":"2 Coríntios","Gl":"Gálatas","Ef":"Efésios",
+  "Fl":"Filipenses","Cl":"Colossenses","1Ts":"1 Tessalonicenses","2Ts":"2 Tessalonicenses",
+  "1Tm":"1 Timóteo","2Tm":"2 Timóteo","Tt":"Tito","Fm":"Filêmon","Hb":"Hebreus",
+  "Tg":"Tiago","1Pd":"1 Pedro","2Pd":"2 Pedro","1Jo":"1 João","2Jo":"2 João",
+  "3Jo":"3 João","Jd":"Judas","Ap":"Apocalipse",
+};
+
+const SEASONS_PT = {
+  "Lent": "Quaresma", "Advent": "Advento", "Christmas": "Natal",
+  "Easter": "Páscoa", "Ordinary Time": "Tempo Comum",
+};
+
+const _cache = new Map();
+
+async function carregarLivro(abr) {
+  if (_cache.has(abr)) return _cache.get(abr);
+  const r = await fetch(`../data/biblia/${encodeURIComponent(abr)}.json`);
+  if (!r.ok) return null;
+  const d = await r.json();
+  _cache.set(abr, d);
+  return d;
+}
+
+function parseRef(ref) {
+  // Ex: "John 5:1-16"  "Ezekiel 47:1-9, 12"  "Psalm 46:2-3, 5-6, 8-9"
+  const m = ref.trim().match(/^(.+?)\s+(\d+):(.+)$/);
+  if (!m) return null;
+
+  const bookKey = m[1].toLowerCase().replace(/\.$/, '');
+  let abr = EN_TO_ABR[bookKey];
+  if (!abr) {
+    for (const [k, v] of Object.entries(EN_TO_ABR)) {
+      if (bookKey.startsWith(k) || k.startsWith(bookKey)) { abr = v; break; }
+    }
+  }
+  if (!abr) return null;
+
+  const cap = m[2];
+  const versStr = m[3].replace(/(\d+)[a-z]/g, '$1'); // remove letras (18b → 18)
+  const vers = [];
+  for (const part of versStr.split(',')) {
+    const p = part.trim();
+    if (p.includes('-')) {
+      const [a, b] = p.split('-').map(Number);
+      for (let i = a; i <= b; i++) vers.push(i);
+    } else {
+      const n = parseInt(p);
+      if (!isNaN(n)) vers.push(n);
+    }
+  }
+
+  return { abr, cap, vers };
+}
+
+function refPT(parsed) {
+  const nome = NOMES_PT[parsed.abr] ?? parsed.abr;
+  // formata versículos: 1-9.12 ou 2-3.5-6.8-9
+  const groups = [];
+  let start = parsed.vers[0], prev = parsed.vers[0];
+  for (let i = 1; i <= parsed.vers.length; i++) {
+    if (i === parsed.vers.length || parsed.vers[i] !== prev + 1) {
+      groups.push(start === prev ? `${start}` : `${start}-${prev}`);
+      if (i < parsed.vers.length) { start = parsed.vers[i]; prev = parsed.vers[i]; }
+    } else {
+      prev = parsed.vers[i];
+    }
+  }
+  return `${nome} ${parsed.cap},${groups.join('.')}`;
+}
+
+async function renderLeitura(label, refEn) {
+  if (!refEn) return '';
+
+  const parsed = parseRef(refEn);
+  const refDisplay = parsed ? refPT(parsed) : refEn;
+
+  let textHtml = '';
+  if (parsed) {
+    const livro = await carregarLivro(parsed.abr);
+    if (livro) {
+      const cap = livro[parsed.cap] ?? {};
+      const linhas = parsed.vers
+        .map(v => cap[String(v)] ? `<span class="vers-num">${v}</span>${cap[String(v)]} ` : '')
+        .filter(Boolean);
+      if (linhas.length) {
+        textHtml = `<p>${linhas.join('')}</p>`;
+      }
+    }
+  }
+
+  if (!textHtml) {
+    textHtml = `<p class="erro">Texto não disponível para esta leitura.</p>`;
+  }
+
+  return `
+    <div class="leitura">
+      <div class="leitura-label">${label}</div>
+      <div class="leitura-ref">${refDisplay}</div>
+      <div class="leitura-texto">${textHtml}</div>
+    </div>
+  `;
+}
+
+async function init() {
+  const hoje = new Date();
+  const ano  = hoje.getFullYear();
+  const mm   = String(hoje.getMonth() + 1).padStart(2, '0');
+  const dd   = String(hoje.getDate()).padStart(2, '0');
+
+  const url = `https://cpbjr.github.io/catholic-readings-api/readings/${ano}/${mm}-${dd}.json`;
+
+  let raw;
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('não disponível');
+    raw = await r.json();
+  } catch {
+    document.getElementById('conteudo').innerHTML =
+      `<p class="erro">Leituras de hoje não disponíveis. Tente novamente mais tarde.</p>`;
+    document.getElementById('liturgia-meta').textContent = '';
+    return;
+  }
+
+  const dataFmt = hoje.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  const season  = SEASONS_PT[raw.season] ?? raw.season ?? '';
+
+  document.getElementById('liturgia-meta').innerHTML =
+    `${dataFmt}${season ? `<span class="tempo-badge">${season}</span>` : ''}`;
+
+  const { firstReading, psalm, secondReading, gospel } = raw.readings ?? {};
+
+  const partes = await Promise.all([
+    renderLeitura('1ª Leitura', firstReading),
+    renderLeitura('Salmo', psalm),
+    secondReading ? renderLeitura('2ª Leitura', secondReading) : Promise.resolve(''),
+    renderLeitura('Evangelho', gospel),
+  ]);
+
+  document.getElementById('conteudo').innerHTML = partes.join('');
+}
+
+init();
+</script>
+
+</body>
+</html>
