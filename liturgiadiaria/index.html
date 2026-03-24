@@ -133,6 +133,100 @@
     }
 
     #conteudo { min-height: 200px; }
+
+    /* ── Reflexão ──────────────────────────────────────────────────────────── */
+    #area-reflexao {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    #btn-reflexao {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: 1.5px solid var(--color-primary);
+      color: var(--color-primary);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    #btn-reflexao:hover:not(:disabled) {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    #btn-reflexao:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #reflexao-conteudo {
+      margin-top: 1.75rem;
+    }
+
+    .reflexao-bloco {
+      margin-bottom: 1.75rem;
+    }
+
+    .reflexao-bloco-label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .termo-grego {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .termo-transliteracao {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-text-muted);
+      font-size: 1rem;
+      margin-left: 0.4rem;
+    }
+
+    .reflexao-texto {
+      font-family: var(--font-serif);
+      font-size: 1.025rem;
+      line-height: 1.75;
+      color: var(--color-text);
+      margin-top: 0.35rem;
+    }
+
+    .cic-refs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .cic-ref-pill {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 0.2em 0.6em;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .cic-ref-pill:hover { background: var(--color-primary-light, #f0ebe0); }
   </style>
 </head>
 <body>
@@ -151,6 +245,14 @@
 
 <div id="conteudo">
   <p class="loading">Buscando leituras do dia…</p>
+</div>
+
+<div id="area-reflexao" style="display:none">
+  <button id="btn-reflexao" type="button">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    Explicar este Evangelho
+  </button>
+  <div id="reflexao-conteudo"></div>
 </div>
 
 <script type="module">
@@ -327,6 +429,98 @@ async function init() {
   ]);
 
   document.getElementById('conteudo').innerHTML = partes.join('');
+
+  // Só mostra área de reflexão se houver Evangelho
+  if (gospel) {
+    const parsedGospel = parseRef(gospel);
+    if (parsedGospel) {
+      // Coleta o texto do Evangelho já carregado no DOM
+      window._liturgiaData = {
+        data: `${ano}-${mm}-${dd}`,
+        evangelhoRef: parsedGospel ? refPT(parsedGospel) : gospel,
+        gospel,
+        parsedGospel,
+      };
+      document.getElementById('area-reflexao').style.display = '';
+      iniciarReflexao();
+    }
+  }
+}
+
+// ── Reflexão via Grok ─────────────────────────────────────────────────────────
+async function iniciarReflexao() {
+  const btn = document.getElementById('btn-reflexao');
+  const out = document.getElementById('reflexao-conteudo');
+  const { data, evangelhoRef, parsedGospel } = window._liturgiaData;
+
+  // Tenta cache estático primeiro (0 custo)
+  try {
+    const r = await fetch(`../data/liturgia/${data}-reflexao.json`);
+    if (r.ok) {
+      const cached = await r.json();
+      renderReflexao(cached);
+      btn.style.display = 'none';
+      return;
+    }
+  } catch { /* sem cache — mostra botão */ }
+
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    btn.textContent = 'Gerando reflexão…';
+    out.innerHTML = '';
+
+    // Monta texto do Evangelho
+    const livro = await carregarLivro(parsedGospel.abr);
+    const cap   = livro?.[parsedGospel.cap] ?? {};
+    const texto = parsedGospel.vers.map(v => cap[String(v)] ?? '').filter(Boolean).join(' ');
+
+    try {
+      const r = await fetch('/api/liturgia-reflexao', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data, evangelhoRef, evangelhoTexto: texto }),
+      });
+      if (!r.ok) throw new Error(`Erro ${r.status}`);
+      const reflexao = await r.json();
+      renderReflexao(reflexao);
+      btn.style.display = 'none';
+    } catch (err) {
+      btn.disabled = false;
+      btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Tentar novamente`;
+      out.innerHTML = `<p class="erro">Não foi possível gerar a reflexão. Tente novamente.</p>`;
+    }
+  });
+}
+
+function renderReflexao(r) {
+  const out = document.getElementById('reflexao-conteudo');
+  const { termo_grego: t, catecismo: c, fato_curioso: f } = r;
+
+  const refs = (c?.paragrafos ?? []).map(n =>
+    `<a class="cic-ref-pill" href="/#paragrafo-${n}" title="Abrir §${n} no Catecismo">§${n}</a>`
+  ).join('');
+
+  out.innerHTML = `
+    <div class="reflexao-bloco">
+      <div class="reflexao-bloco-label">Termo grego</div>
+      <div>
+        <span class="termo-grego">${t?.termo ?? ''}</span>
+        <span class="termo-transliteracao">${t?.transliteracao ?? ''}</span>
+      </div>
+      <p class="reflexao-texto">${t?.significado ?? ''}</p>
+    </div>
+
+    <div class="reflexao-bloco">
+      <div class="reflexao-bloco-label">No Catecismo</div>
+      <p class="reflexao-texto">${c?.conexao ?? ''}</p>
+      ${refs ? `<div class="cic-refs">${refs}</div>` : ''}
+    </div>
+
+    <div class="reflexao-bloco">
+      <div class="reflexao-bloco-label">Fato curioso</div>
+      <p class="reflexao-texto">${f ?? ''}</p>
+    </div>
+  `;
 }
 
 init();
