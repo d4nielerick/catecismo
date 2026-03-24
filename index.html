@@ -85,6 +85,9 @@
       <button type="button" data-tema="mandamentos">Mandamentos</button>
     </nav>
 
+    <!-- Widget Liturgia do Dia -->
+    <div id="liturgia-widget" class="oculto" aria-label="Liturgia do Dia"></div>
+
     <!-- Botão modo leitura -->
     <button id="btn-ler-hero" type="button" aria-label="Ler o Catecismo">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -428,6 +431,10 @@
 <script type="module" src="assets/js/coletor.js"></script>
 <script type="module" src="assets/js/ui.js"></script>
 <script type="module" src="assets/js/router.js"></script>
+<script type="module">
+  import { iniciarLiturgia } from '/assets/js/liturgia.js';
+  iniciarLiturgia();
+</script>
 
 </body>
 </html>
