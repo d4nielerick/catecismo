@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Perguntas sobre a fé católica — Catecismo da Igreja Católica</title>
+  <meta name="description" content="O que a Igreja ensina sobre Eucaristia, pecado, divórcio, Maria e mais. Respostas diretas do Catecismo da Igreja Católica.">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <style>
+    .perguntas-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .perguntas-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .perguntas-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .perguntas-header p {
+      color: var(--color-muted);
+      font-size: 0.92rem;
+    }
+
+    .perguntas-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .pergunta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1.1rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--color-text);
+      font-size: 0.9rem;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+      cursor: pointer;
+    }
+
+    .pergunta-item:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 2px 12px rgba(197,160,40,0.12);
+      transform: translateY(-1px);
+      color: var(--color-primary);
+    }
+
+    .pergunta-item svg {
+      flex-shrink: 0;
+      color: var(--color-accent-dk);
+    }
+
+    .perguntas-voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      transition: color 0.15s;
+    }
+
+    .perguntas-voltar:hover { color: var(--color-primary); }
+
+    #loading {
+      text-align: center;
+      color: var(--color-muted);
+      padding: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="perguntas-container">
+    <a href="/" class="perguntas-voltar">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Voltar ao buscador
+    </a>
+
+    <div class="perguntas-header">
+      <h1>Perguntas sobre a fé</h1>
+      <p>Respostas diretas do Catecismo da Igreja Católica</p>
+    </div>
+
+    <div id="loading">Carregando perguntas…</div>
+    <div id="perguntas-lista" class="perguntas-lista" style="display:none"></div>
+  </div>
+</div>
+
+<script>
+async function carregarPerguntas() {
+  try {
+    const res = await fetch('/data/perguntas/_indice.json');
+    if (!res.ok) throw new Error('Índice não encontrado');
+    const perguntas = await res.json();
+
+    const lista = document.getElementById('perguntas-lista');
+    const loading = document.getElementById('loading');
+
+    for (const { slug, pergunta } of perguntas) {
+      const a = document.createElement('a');
+      a.href = `/perguntas/${slug}`;
+      a.className = 'pergunta-item';
+      a.innerHTML = `
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        ${pergunta}
+      `;
+      lista.appendChild(a);
+    }
+
+    loading.style.display = 'none';
+    lista.style.display = 'flex';
+  } catch {
+    document.getElementById('loading').textContent = 'As perguntas ainda estão sendo preparadas. Volte em breve.';
+  }
+}
+
+carregarPerguntas();
+</script>
+</body>
+</html>
