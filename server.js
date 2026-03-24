@@ -111,7 +111,7 @@ async function callGrok(systemPrompt, userMessage, maxTokens = 500) {
       'Authorization': `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: 'grok-3-fast',
+      model: 'grok-4-1-fast-non-reasoning',
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user',   content: userMessage },
