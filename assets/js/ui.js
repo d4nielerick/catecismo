@@ -793,11 +793,16 @@ function criarCard(p, query) {
     <div class="card-meta">
       <span class="card-num">\u00A7${p.numero}</span>
       ${labelContexto ? `<span class="card-artigo">${escapeHtml(labelContexto)}</span>` : ''}
-      <button class="card-save-btn${salvo ? ' salvo' : ''}" type="button" aria-label="Salvar parágrafo ${p.numero}">
-        ${salvo
-          ? `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>`
-          : `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`}
-      </button>
+      <div class="card-acoes">
+        <button class="card-share-btn" type="button" aria-label="Copiar link do parágrafo ${p.numero}" title="Copiar link">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </button>
+        <button class="card-save-btn${salvo ? ' salvo' : ''}" type="button" aria-label="Salvar parágrafo ${p.numero}">
+          ${salvo
+            ? `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>`
+            : `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`}
+        </button>
+      </div>
     </div>
     <div class="card-trecho">${trecho(p.texto, query)}</div>
   `;
@@ -808,6 +813,12 @@ function criarCard(p, query) {
     const btn = e.currentTarget;
     btn.classList.add('salvo');
     btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>`;
+  });
+
+  card.querySelector('.card-share-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const url = `${location.origin}/#paragrafo-${p.numero}`;
+    navigator.clipboard.writeText(url).then(() => mostrarToast('Link copiado!'));
   });
 
   return card;
@@ -947,6 +958,21 @@ function ocultarNav() {
   navProximo.classList.add('oculto');
   mobileBtnAnterior.disabled = true;
   mobileBtnProximo.disabled  = true;
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────────────
+let _toastTimer = null;
+function mostrarToast(msg) {
+  let toast = document.getElementById('toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('visivel');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => toast.classList.remove('visivel'), 2000);
 }
 
 // ── Helper ────────────────────────────────────────────────────────────────────

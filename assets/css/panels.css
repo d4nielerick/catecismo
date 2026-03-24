@@ -267,7 +267,15 @@
   flex: 1;
 }
 
-.card-save-btn {
+.card-acoes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.card-save-btn,
+.card-share-btn {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
@@ -279,14 +287,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
   opacity: 0;
   transition: opacity var(--transition), color var(--transition), background var(--transition), border-color var(--transition);
 }
 
 .resultado-card:hover .card-save-btn,
+.resultado-card:hover .card-share-btn,
 .card-save-btn.salvo {
   opacity: 1;
+}
+
+.card-share-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-bg);
 }
 
 .card-save-btn:hover {
