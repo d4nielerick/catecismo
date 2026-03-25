@@ -427,6 +427,114 @@
 </div>
 
 <!-- Módulos JS (ES modules) -->
+<!-- ── Barra flutuante de navegação ──────────────────────────────────────── -->
+<nav id="barra-flutuante" aria-label="Navegação principal">
+  <a href="/" class="bf-item ativo" title="Catecismo da Igreja Católica">
+    <span class="bf-icone">
+      <!-- Livro aberto -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    </span>
+    <span class="bf-label">CIC</span>
+  </a>
+  <a href="/saopiox/" class="bf-item" title="Catecismo de São Pio X">
+    <span class="bf-icone">
+      <!-- Cruz -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="9" x2="22" y2="9"/></svg>
+    </span>
+    <span class="bf-label">Pio X</span>
+  </a>
+  <a href="/liturgiadiaria/" class="bf-item" title="Liturgia Diária">
+    <span class="bf-icone">
+      <!-- Sol / calendário litúrgico -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    </span>
+    <span class="bf-label">Liturgia</span>
+  </a>
+  <button class="bf-item" id="bf-doar" title="Fazer uma doação" type="button">
+    <span class="bf-icone">
+      <!-- Coração -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </span>
+    <span class="bf-label">Doar</span>
+  </button>
+  <a href="https://wa.me/?text=Acesse%20o%20Catecismo%20da%20Igreja%20Cat%C3%B3lica%20online%3A%20https%3A%2F%2Fsantadoutrina.cloud" class="bf-item" target="_blank" rel="noopener" title="Compartilhar no WhatsApp">
+    <span class="bf-icone">
+      <!-- WhatsApp -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </span>
+    <span class="bf-label">Zap</span>
+  </a>
+</nav>
+
+<style>
+#barra-flutuante {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 100px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.bf-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  color: var(--color-muted, #888);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: var(--font-sans, sans-serif);
+  white-space: nowrap;
+}
+
+.bf-item:hover {
+  background: rgba(0,0,0,0.05);
+  color: var(--color-text, #1a1a1a);
+}
+
+.bf-item.ativo {
+  background: var(--color-primary, #1a3c2e);
+  color: #fff;
+}
+
+.bf-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.bf-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+</style>
+
+<script>
+document.getElementById('bf-doar').addEventListener('click', () => {
+  const doacao = document.getElementById('pix-qr-area');
+  if (doacao) {
+    doacao.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
+</script>
+
 <script type="module" src="assets/js/nav.js"></script>
 <script type="module" src="assets/js/coletor.js"></script>
 <script type="module" src="assets/js/ui.js"></script>
