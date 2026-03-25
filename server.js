@@ -69,10 +69,14 @@ Antes de gerar o JSON final, releia o campo "homilia" e corrija: preposições f
 
 Responda APENAS com JSON válido, sem texto antes ou depois, neste formato exato:
 {
-  "termo_grego": { "termo": "κεχαριτωμένη", "transliteracao": "kecharitōménē" },
+  "termos_gregos": [
+    { "termo": "κεχαριτωμένη", "transliteracao": "kecharitōménē" }
+  ],
   "paragrafos": [484, 488, 490],
   "homilia": "Texto corrido da homilia, 4 a 6 parágrafos, separados por \\n\\n."
-}`;
+}
+
+Pode incluir até 2 termos gregos se forem igualmente centrais à passagem. Normalmente 1 é suficiente.`;
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function sendJson(res, status, data, extra = {}) {

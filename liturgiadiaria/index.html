@@ -78,18 +78,96 @@
       line-height: 1.5;
     }
 
+    .tempo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cor-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
     .tempo-badge {
       display: inline-block;
-      background: rgba(197,160,40,0.12);
-      color: var(--color-accent-dk);
       font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      padding: 0.2em 0.6em;
-      border-radius: 4px;
-      margin-bottom: 2rem;
+      color: var(--color-muted);
     }
+
+    /* ── Calendário ───────────────────────────────────────────────────────── */
+    .cal-wrap {
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+      padding-top: 1.25rem;
+    }
+
+    .cal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .cal-mes {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .cal-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--color-muted);
+      font-size: 1rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+
+    .cal-btn:hover { color: var(--color-primary); background: rgba(26,60,46,0.06); }
+
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+    }
+
+    .cal-dow {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--color-muted);
+      padding: 0.2rem 0;
+      text-transform: uppercase;
+    }
+
+    .cal-dia {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      text-align: center;
+      padding: 0.3rem 0;
+      border-radius: 4px;
+      cursor: pointer;
+      color: var(--color-muted);
+      transition: background 0.1s, color 0.1s;
+      text-decoration: none;
+    }
+
+    .cal-dia:hover { background: rgba(26,60,46,0.08); color: var(--color-text); }
+    .cal-dia.hoje { background: var(--color-primary); color: #fff; font-weight: 600; }
+    .cal-dia.selecionado { background: rgba(26,60,46,0.15); color: var(--color-primary); font-weight: 600; }
+    .cal-dia.vazio { cursor: default; }
+    .cal-dia.fora-range { opacity: 0.3; pointer-events: none; }
 
     /* Nav de leituras */
     .lp-nav {
@@ -304,6 +382,47 @@
 
     .ia-badge svg { opacity: 0.5; }
 
+    /* Palavra grega */
+    .palavra-grega-bloco {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .palavra-grega-label {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .palavra-grega-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .audio-btn {
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--color-muted);
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.45rem;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      font-family: var(--font-sans);
+      transition: color 0.12s, border-color 0.12s;
+    }
+
+    .audio-btn:hover { color: var(--color-primary); border-color: var(--color-primary); }
+
     .reflexao-p {
       font-family: var(--font-serif);
       font-size: 1rem;
@@ -459,11 +578,17 @@
 
     <h1 class="lp-titulo">Liturgia<br>do Dia</h1>
     <p class="lp-data" id="lp-data">Carregando…</p>
-    <span class="tempo-badge" id="lp-tempo" style="display:none"></span>
+    <div class="tempo-wrap" id="lp-tempo-wrap" style="display:none">
+      <span class="cor-dot" id="lp-cor-dot"></span>
+      <span class="tempo-badge" id="lp-tempo"></span>
+    </div>
 
     <ul class="lp-nav" id="lp-nav" aria-label="Leituras do dia">
       <!-- preenchido pelo JS -->
     </ul>
+
+    <!-- Calendário -->
+    <div class="cal-wrap" id="cal-wrap"></div>
 
     <div class="lp-sidebar-footer" id="area-reflexao" style="display:none">
       <button id="btn-reflexao" type="button">
@@ -647,7 +772,8 @@ function construirNav(leituras) {
 
 async function init() {
   const hoje  = new Date();
-  const dt    = hoje.toISOString().slice(0, 10); // YYYY-MM-DD
+  const params = new URLSearchParams(location.search);
+  const dt    = params.get('data') || hoje.toISOString().slice(0, 10);
 
   let raw;
   try {
@@ -664,9 +790,10 @@ async function init() {
   document.getElementById('lp-data').textContent = dataFmt;
 
   if (raw.titulo) {
-    const badge = document.getElementById('lp-tempo');
-    badge.textContent = raw.titulo;
-    badge.style.display = '';
+    const COR_MAP = { roxo:'#7c3aed', branco:'#b8972e', verde:'#15803d', vermelho:'#dc2626', rosa:'#db2777' };
+    document.getElementById('lp-tempo').textContent = raw.titulo;
+    document.getElementById('lp-cor-dot').style.background = COR_MAP[raw.cor_liturgica] ?? '#888';
+    document.getElementById('lp-tempo-wrap').style.display = '';
   }
 
   const htmlRef = raw.referencias ?? '';
@@ -696,6 +823,7 @@ async function init() {
     ).join('');
 
   construirNav(blocos);
+  construirCalendario(dt);
 
   if (ev) {
     window._liturgiaData = {
@@ -747,6 +875,86 @@ async function iniciarReflexao() {
   });
 }
 
+// ── Calendário ────────────────────────────────────────────────────────────────
+const DATA_MIN = '2024-01-01';
+const DATA_MAX = '2026-12-31';
+
+function construirCalendario(dtAtual) {
+  const wrap = document.getElementById('cal-wrap');
+  if (!wrap) return;
+
+  const sel  = new Date(dtAtual + 'T12:00:00');
+  let ano  = sel.getFullYear();
+  let mes  = sel.getMonth(); // 0-indexed
+
+  function render() {
+    const hoje = new Date().toISOString().slice(0, 10);
+    const MESES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
+                   'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    const DIAS_SEMANA = ['D','S','T','Q','Q','S','S'];
+
+    const primeiroDia = new Date(ano, mes, 1).getDay();
+    const ultimoDia   = new Date(ano, mes + 1, 0).getDate();
+
+    let html = `
+      <div class="cal-header">
+        <button class="cal-btn" id="cal-prev">‹</button>
+        <span class="cal-mes">${MESES[mes]} ${ano}</span>
+        <button class="cal-btn" id="cal-next">›</button>
+      </div>
+      <div class="cal-grid">
+        ${DIAS_SEMANA.map(d => `<div class="cal-dow">${d}</div>`).join('')}
+        ${Array(primeiroDia).fill('<div class="cal-dia vazio"></div>').join('')}
+    `;
+
+    for (let d = 1; d <= ultimoDia; d++) {
+      const dtStr = `${ano}-${String(mes+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const foraRange = dtStr < DATA_MIN || dtStr > DATA_MAX;
+      const isHoje    = dtStr === hoje;
+      const isSel     = dtStr === dtAtual;
+      const cls = [
+        'cal-dia',
+        foraRange ? 'fora-range' : '',
+        isHoje    ? 'hoje'       : '',
+        isSel && !isHoje ? 'selecionado' : '',
+      ].filter(Boolean).join(' ');
+
+      html += foraRange
+        ? `<div class="${cls}">${d}</div>`
+        : `<a class="${cls}" href="?data=${dtStr}">${d}</a>`;
+    }
+
+    html += '</div>';
+    wrap.innerHTML = html;
+
+    document.getElementById('cal-prev')?.addEventListener('click', () => {
+      mes--; if (mes < 0) { mes = 11; ano--; } render();
+    });
+    document.getElementById('cal-next')?.addEventListener('click', () => {
+      mes++; if (mes > 11) { mes = 0; ano++; } render();
+    });
+  }
+
+  render();
+}
+
+// ── Áudio da palavra grega ────────────────────────────────────────────────────
+function pronunciar(termo, translit) {
+  if (!window.speechSynthesis) return;
+  speechSynthesis.cancel();
+  // Tenta grego; fallback para transliteração em português
+  const u = new SpeechSynthesisUtterance(termo);
+  u.lang  = 'el-GR';
+  u.rate  = 0.7;
+  u.onerror = () => {
+    const u2 = new SpeechSynthesisUtterance(translit);
+    u2.lang = 'pt-BR';
+    u2.rate = 0.7;
+    speechSynthesis.speak(u2);
+  };
+  speechSynthesis.speak(u);
+}
+
 // ── Cache do catecismo para lookup inline ────────────────────────────────────
 let _catecismo = null;
 async function buscarParagrafo(n) {
@@ -761,15 +969,31 @@ async function buscarParagrafo(n) {
 function renderReflexao(r) {
   const out = document.getElementById('reflexao-conteudo');
   if (!out) return;
-  const { termo_grego: t, paragrafos, homilia } = r;
 
-  const nums = paragrafos ?? [];
+  // Suporta novo formato (termos_gregos[]) e legado (termo_grego{})
+  const termos = r.termos_gregos ?? (r.termo_grego ? [r.termo_grego] : []);
+  const nums   = r.paragrafos ?? r.catecismo?.paragrafos ?? [];
+  const homilia = r.homilia ?? '';
+
   const pills = nums.map(n =>
     `<button class="cic-ref-pill" data-n="${n}" aria-expanded="false">§${n}</button>`
   ).join('');
 
-  // Homilia: cada parágrafo separado por \n\n vira um <p>
-  const homiliaHtml = (homilia ?? '')
+  const termosHtml = termos.map(t => `
+    <div class="palavra-grega-bloco">
+      <div class="palavra-grega-label">Palavra grega</div>
+      <div class="palavra-grega-row">
+        <span class="termo-inline">${t.termo}</span>
+        <span style="font-style:italic;color:var(--color-muted);font-family:var(--font-serif);font-size:0.95rem">${t.transliteracao ?? ''}</span>
+        <button class="audio-btn" data-termo="${t.termo}" data-translit="${t.transliteracao ?? ''}" title="Ouvir pronúncia">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          Ouvir
+        </button>
+      </div>
+    </div>
+  `).join('');
+
+  const homiliaHtml = homilia
     .split(/\n\n+/)
     .filter(Boolean)
     .map(p => `<p class="reflexao-p">${p.trim()}</p>`)
@@ -779,16 +1003,18 @@ function renderReflexao(r) {
     <div class="reflexao-card">
       <div class="ia-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-        Gerado por IA
+        Resumo gerado por IA
       </div>
-
-      ${t?.termo ? `<div style="margin-bottom:1rem"><span class="termo-inline">${t.termo}</span> <span style="font-style:italic;color:var(--color-muted);font-family:var(--font-serif)">${t.transliteracao ?? ''}</span></div>` : ''}
-
+      ${termosHtml}
       ${homiliaHtml}
-
       ${pills ? `<div class="cic-refs" id="cic-refs-wrap">${pills}</div><div id="cic-cards"></div>` : ''}
     </div>
   `;
+
+  // Botões de áudio
+  out.querySelectorAll('.audio-btn').forEach(btn => {
+    btn.addEventListener('click', () => pronunciar(btn.dataset.termo, btn.dataset.translit));
+  });
 
   // Clique nas pills → abre card inline
   out.querySelectorAll('.cic-ref-pill').forEach(btn => {
