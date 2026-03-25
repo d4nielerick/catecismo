@@ -322,6 +322,11 @@
   background: rgba(192,57,43,0.07);
 }
 
+.tc-paragrafo:hover .card-flag-btn,
+.leitor-paragrafo:hover .card-flag-btn {
+  opacity: 1;
+}
+
 /* ── Formulário de correção inline ──────────────────────────────────────── */
 .card-correcao-form {
   margin-top: var(--space-sm);
