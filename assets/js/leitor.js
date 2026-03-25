@@ -382,9 +382,12 @@ function renderizarCapitulo(idx) {
       : `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`;
     saveBtn.addEventListener('click', (e) => { e.stopPropagation(); salvarParagrafoLeitor(p, saveBtn); });
 
+    const flagBtn = criarFlagBtn(p.numero);
+
     div.appendChild(numSpan);
     div.appendChild(textoSpan);
     div.appendChild(saveBtn);
+    div.appendChild(flagBtn);
     wrapper.appendChild(div);
   }
 
@@ -399,6 +402,70 @@ function renderizarCapitulo(idx) {
   // Scroll TOC para item ativo
   const ativoEl = tocEl.querySelector('.toc-cap-link.ativo');
   if (ativoEl) ativoEl.scrollIntoView({ block: 'nearest' });
+}
+
+// ── Botão de correção ─────────────────────────────────────────────────────────
+
+function criarFlagBtn(numeroParagrafo) {
+  const btn = document.createElement('button');
+  btn.className = 'card-flag-btn';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', `Reportar erro no parágrafo ${numeroParagrafo}`);
+  btn.title = 'Reportar erro';
+  btn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>`;
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const container = btn.closest('.leitor-paragrafo');
+    if (!container) return;
+    const existing = container.querySelector('.card-correcao-form');
+    if (existing) { existing.remove(); return; }
+
+    const form = document.createElement('div');
+    form.className = 'card-correcao-form';
+    form.innerHTML = `
+      <textarea placeholder="Descreva o erro encontrado neste parágrafo…" rows="3"></textarea>
+      <div class="card-correcao-form-acoes">
+        <button class="btn-correcao-cancelar" type="button">Cancelar</button>
+        <button class="btn-correcao-enviar" type="button">Enviar</button>
+      </div>
+    `;
+    container.appendChild(form);
+    form.querySelector('textarea').focus();
+
+    form.querySelector('.btn-correcao-cancelar').addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      form.remove();
+    });
+
+    form.querySelector('.btn-correcao-enviar').addEventListener('click', async (ev) => {
+      ev.stopPropagation();
+      const descricao = form.querySelector('textarea').value.trim();
+      if (!descricao) return;
+      const enviarBtn = form.querySelector('.btn-correcao-enviar');
+      enviarBtn.disabled = true;
+      enviarBtn.textContent = 'Enviando…';
+      try {
+        const resp = await fetch('/api/correcao', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ paragrafo: numeroParagrafo, descricao }),
+        });
+        if (resp.ok) {
+          form.innerHTML = '<p class="card-correcao-ok">Obrigado! Correção recebida.</p>';
+          setTimeout(() => form.remove(), 2500);
+        } else {
+          enviarBtn.disabled = false;
+          enviarBtn.textContent = 'Enviar';
+        }
+      } catch {
+        enviarBtn.disabled = false;
+        enviarBtn.textContent = 'Enviar';
+      }
+    });
+  });
+
+  return btn;
 }
 
 // ── Salvar parágrafo completo ─────────────────────────────────────────────────

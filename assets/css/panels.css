@@ -294,7 +294,6 @@
 
 .resultado-card:hover .card-save-btn,
 .resultado-card:hover .card-share-btn,
-.resultado-card:hover .card-flag-btn,
 .card-save-btn.salvo {
   opacity: 1;
 }
