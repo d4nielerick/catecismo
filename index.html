@@ -469,60 +469,69 @@
 <style>
 #barra-flutuante {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 100px;
-  padding: 0.5rem 0.75rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.08);
+  gap: 0.75rem;
+  background: #1c1c1e;
+  border-radius: 28px 28px 0 0;
+  padding: 0.85rem 1.25rem 1.1rem;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
 }
 
 .bf-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
-  padding: 0.45rem 0.9rem;
-  border-radius: 100px;
+  gap: 0.3rem;
   border: none;
   background: transparent;
-  color: var(--color-muted, #888);
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
   font-family: var(--font-sans, sans-serif);
-  white-space: nowrap;
-}
-
-.bf-item:hover {
-  background: rgba(0,0,0,0.05);
-  color: var(--color-text, #1a1a1a);
-}
-
-.bf-item.ativo {
-  background: var(--color-primary, #1a3c2e);
-  color: #fff;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .bf-icone {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
+  transition: transform 0.15s, filter 0.15s;
+}
+
+.bf-item:hover .bf-icone,
+.bf-item:active .bf-icone {
+  transform: scale(1.08);
+  filter: brightness(1.08);
+}
+
+/* Cores pastel individuais */
+.bf-item:nth-child(1) .bf-icone { background: #d4e8d0; color: #2d6a4f; } /* CIC — verde sage */
+.bf-item:nth-child(2) .bf-icone { background: #d0dff5; color: #2c4a8c; } /* Pio X — azul */
+.bf-item:nth-child(3) .bf-icone { background: #f5dfd0; color: #8c4a2c; } /* Liturgia — laranja suave */
+.bf-item:nth-child(4) .bf-icone { background: #f5d0d8; color: #8c2c3e; } /* Doar — rosa */
+.bf-item:nth-child(5) .bf-icone { background: #d0f5d8; color: #25D366; } /* Zap — verde */
+
+.bf-item.ativo .bf-icone {
+  box-shadow: 0 0 0 2.5px #fff inset;
 }
 
 .bf-label {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.65);
+}
+
+.bf-item.ativo .bf-label {
+  color: #fff;
 }
 </style>
 
