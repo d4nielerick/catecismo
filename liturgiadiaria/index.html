@@ -761,12 +761,19 @@ async function buscarParagrafo(n) {
 function renderReflexao(r) {
   const out = document.getElementById('reflexao-conteudo');
   if (!out) return;
-  const { termo_grego: t, catecismo: c, fato_curioso: f } = r;
+  const { termo_grego: t, paragrafos, homilia } = r;
 
-  const nums = c?.paragrafos ?? [];
+  const nums = paragrafos ?? [];
   const pills = nums.map(n =>
     `<button class="cic-ref-pill" data-n="${n}" aria-expanded="false">§${n}</button>`
   ).join('');
+
+  // Homilia: cada parágrafo separado por \n\n vira um <p>
+  const homiliaHtml = (homilia ?? '')
+    .split(/\n\n+/)
+    .filter(Boolean)
+    .map(p => `<p class="reflexao-p">${p.trim()}</p>`)
+    .join('');
 
   out.innerHTML = `
     <div class="reflexao-card">
@@ -775,9 +782,9 @@ function renderReflexao(r) {
         Gerado por IA
       </div>
 
-      <p class="reflexao-p"><span class="termo-inline">${t?.termo ?? ''}</span> (${t?.transliteracao ?? ''}) — ${t?.significado ?? ''}</p>
-      <p class="reflexao-p">${c?.conexao ?? ''}</p>
-      <p class="reflexao-p">${f ?? ''}</p>
+      ${t?.termo ? `<div style="margin-bottom:1rem"><span class="termo-inline">${t.termo}</span> <span style="font-style:italic;color:var(--color-muted);font-family:var(--font-serif)">${t.transliteracao ?? ''}</span></div>` : ''}
+
+      ${homiliaHtml}
 
       ${pills ? `<div class="cic-refs" id="cic-refs-wrap">${pills}</div><div id="cic-cards"></div>` : ''}
     </div>
