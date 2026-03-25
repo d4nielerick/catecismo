@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-12",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Cor 3,15-4,1.3-6</div><div> Sl 84(85),9ab-10.11-12.13-14 (R. cf. 10b)</div><div></div><div> Mt 5,20-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,15-4,1.3-6",
+    "texto": "Irmãos,\n15\naté ao dia de hoje,\nquando os israelitas leem os escritos de Moisés,\num véu cobre o coração deles.\n16\nMas, todas as vezes\nque o coração se converte ao Senhor,\no véu é tirado.\n17\nPois o Senhor é o Espírito,\ne onde está o Espírito do Senhor,\naí está a liberdade.\n18\nTodos nós, porém, com o rosto descoberto,\ncontemplamos e refletimos a glória do Senhor\ne assim somos transformados à sua imagem,\npelo seu Espírito,\ncom uma glória cada vez maior.\n4,1\nNão desanimamos no exercício deste ministério\nque recebemos da misericórdia divina.\n3\nE se o nosso evangelho está velado,\né só para aqueles que perecem\nque ele está velado.\n4\nO deus deste mundo\ncegou a inteligência desses incrédulos,\npara que eles não vejam a luz esplendorosa\ndo evangelho da glória de Cristo\nque é a imagem de Deus.\n5\nDe fato, não nos pregamos a nós mesmos,\npregamos a Jesus Cristo, o Senhor.\nQuanto a nós, apresentamo-nos como servos vossos,\npor causa de Jesus.\n6\nCom efeito, Deus que disse:\n\"Do meio das trevas brilhe a luz\",\né o mesmo que fez brilhar a sua luz em nossos corações,\npara tornar claro o conhecimento da sua glória\nna face de Cristo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 84(85),9ab-10.11-12.13-14 (R. cf. 10b)",
+    "refrao": "",
+    "texto": "R.\nA glória do Senhor habitará em nossa terra.\n9a\nQuero ouvir o que o Senhor irá falar:\n†\né a paz que ele vai anunciar; *\nb\na paz para o seu povo e seus amigos.\n10\nEstá perto a salvação dos que o temem, *\ne a glória habitará em nossa terra.\nR.\n11\nA verdade e o amor se encontrarão,*\na justiça e a paz se abraçarão;\n12\nda terra brotará a fidelidade, *\ne a justiça olhará dos altos céus.\nR.\n13\nO Senhor nos dará tudo o que é bom,*\ne a nossa terra nos dará suas colheitas;\n14\na justiça andará na sua frente *\ne a salvação há de seguir os passos seus.\nR.\nEvangelho - Mt 5,27-32\nAclamação ao Evangelho\nJo 13,34\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos dou novo preceito:\nque uns aos outros vos ameis,\ncomo eu vos tenho amado."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,20-26",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n5,20-26\nNaquele tempo disse Jesus aos seus discípulos:\n20\n\"Se a vossa justiça não for maior\nque a justiça dos mestres da Lei e dos fariseus,\nvós não entrareis no Reino dos Céus.\n21\nVós ouvistes o que foi dito aos antigos:\n'Não matarás!\nQuem matar será condenado pelo tribunal'.\n22\nEu, porém, vos digo:\ntodo aquele que se encoleriza com seu irmão\nserá réu em juízo;\nquem disser ao seu irmão: 'patife!'\nserá condenado pelo tribunal;\nquem chamar o irmão de 'tolo'\nserá condenado ao fogo do inferno.\n23\nPortanto, quando tu estiveres levando\na tua oferta para o altar, e ali te lembrares\nque teu irmão tem alguma coisa contra ti,\n24\ndeixa a tua oferta ali diante do altar,\ne vai primeiro reconciliar-te com o teu irmão.\nSó então vai apresentar a tua oferta.\n25\nProcura reconciliar-te com teu adversário,\nenquanto caminha contigo para o tribunal.\nSenão o adversário te entregará ao juiz,\no juiz te entregará ao oficial de justiça,\ne tu serás jogado na prisão.\n26\nEm verdade eu te digo: dali não sairás,\nenquanto não pagares o último centavo\".\nPalavra da Salvação."
+  }
+}

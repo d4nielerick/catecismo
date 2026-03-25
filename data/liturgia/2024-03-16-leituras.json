@@ -1,0 +1,23 @@
+{
+  "data": "2024-03-16",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 11,18-20</div><div> Sl 7,2-3.9bc-10.11-12 (R. 2a)</div><div></div><div> Jo 7,40-53</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,18-20",
+    "texto": "18\nSenhor, avisaste-me e eu entendi;\nfizeste-me saber as intrigas deles.\n19\nEu era como manso cordeiro levado ao sacrifício,\ne não sabia que tramavam contra mim:\n\"Vamos cortar a árvore em toda sua força,\neliminá-lo do mundo dos vivos,\npara seu nome não ser mais lembrado\".\n20\nE tu, Senhor dos exércitos,\nque julgas com justiça\ne perscrutas os afetos do coração,\nconcede que eu veja a vingança\nque tomarás contra eles,\npois eu te confiei a minha causa.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 7,",
+    "refrao": "",
+    "texto": "2-3.9bc-10.11-12 (R. 2a)\nR.\nSenhor meu Deus, em vós procuro o meu refúgio.\n2\nSenhor meu Deus, em vós procuro o meu refúgio: *\nvinde salvar-me do inimigo, libertai-me!\n3\nNão aconteça que agarrem minha vida †\ncomo um leão que despedaça a sua presa, *\nsem que ninguém venha salvar-me e libertar-me!\nR.\n9b\nJulgai-me, Senhor Deus, como eu mereço *\nc\ne segundo a inocência que há em mim!\n10\nPonde um fim à iniquidade dos perversos, †\ne confirmai o vosso justo, ó Deus-justiça, *\nvós que sondais os nossos rins e corações.\nR.\n11\nO Deus vivo é um escudo protetor, *\ne salva aqueles que têm reto coração.\n12\nDeus é juiz, e ele julga com justiça, *\nmas é um Deus que ameaça cada dia.\nR.\nEvangelho - Jo 7,40-53\nAclamação ao Evangelho  Cf.\nLc 8,15\nR.\nGlória a Cristo, palavra eterna do Pai, que é amor!\nV.\nFelizes os que observam\na palavra do Senhor, de reto coração,\ne produzem muitos frutos,\naté o fim perseverantes!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,40-53",
+    "texto": "7,40-53\nNaquele tempo,\n40\nao ouvirem as palavras de Jesus,\nalgumas pessoas da multidão diziam:\n\"Este é, verdadeiramente, o Profeta\".\n41\nOutros diziam: \"Ele é o Messias\".\nMas alguns objetavam:\n\"Porventura o Messias virá da Galileia?\n42\nNão diz a Escritura que o Messias\nserá da descendência de Davi\ne virá de Belém, povoado de onde era Davi?\"\n43\nAssim, houve divisão no meio do povo\npor causa de Jesus.\n44\nAlguns queriam prendê-lo,\nmas ninguém pôs as mãos nele.\n45\nEntão, os guardas do Templo\nvoltaram para os sumos sacerdotes e os fariseus,\ne estes lhes perguntaram:\n\"Por que não o trouxestes?\"\n46\nOs guardas responderam:\n\"Ninguém jamais falou como este homem\".\n47\nEntão os fariseus disseram-lhes:\n\"Também vós vos deixastes enganar?\n48\nPor acaso algum dos chefes ou dos fariseus\nacreditou nele?\n49\nMas esta gente que não conhece a Lei,\né maldita!\"\n50\nNicodemos, porém, um dos fariseus,\naquele que se tinha encontrado com Jesus anteriormente,\ndisse:\n51\n\"Será que a nossa Lei julga alguém,\nantes de o ouvir e saber o que ele fez?\"\n52\nEles responderam:\n\"Também tu és galileu, porventura?\nVai estudar e verás que da Galileia não surge profeta\".\n53\nE cada um voltou para sua casa.\nPalavra da Salvação."
+  }
+}

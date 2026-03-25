@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 11,10-12.14</div><div> Sl 115(116B),12-13.15-16.17-18 (R. 13)</div><div></div><div> Mt 12,1-8</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,10-12,14",
+    "texto": "Naqueles dias,\n11,10\nMoisés e Aarão realizaram muitos prodígios diante do Faraó;\nmas o Senhor endureceu o coração do Faraó,\ne ele não deixou que os filhos de Israel saíssem da sua terra.\n12,1\nO Senhor disse a Moisés e a Aarão no Egito:\n2\n\"Este mês será para vós o começo dos meses;\nserá o primeiro mês do ano.\n3\nFalai a toda a comunidade dos filhos de Israel, dizendo:\nNo décimo dia deste mês,\ncada um tome um cordeiro por família,\num cordeiro por casa.\n4\nSe a família não for bastante numerosa\npara comer um cordeiro,\nconvidará também o vizinho mais próximo,\nde acordo com o número de pessoas.\nDeveis calcular o número de comensais,\nconforme o tamanho do cordeiro.\n5\nO cordeiro será sem defeito,\nmacho, de um ano.\nPodereis escolher tanto um cordeiro, como um cabrito:\n6\ne devereis guardá-lo preso\naté ao dia catorze deste mês.\nEntão toda a comunidade de Israel reunida\no imolará ao cair da tarde.\n7\nTomareis um pouco do seu sangue\ne untareis os marcos e a travessa da porta,\nnas casas em que o comerdes.\n8\nComereis a carne nessa mesma noite,\nassada ao fogo,\ncom pães ázimos e ervas amargas.\n9\nNão comereis dele nada cru,\nou cozido em água, mas assado ao fogo,\ninteiro, com cabeça, pernas e vísceras.\n10\nNão deixareis nada para o dia seguinte:\no que sobrar, devereis queimá-lo ao fogo.\n11\nAssim devereis comê-lo:\ncom os rins cingidos,\nsandálias nos pés\ne cajado na mão.\nE comereis às pressas,\npois é a Páscoa,\nisto é, a Passagem do Senhor!\n12\nE naquela noite passarei pela terra do Egito\ne ferirei na terra do Egito todos os primogênitos,\ndesde os homens até os animais;\ne infligirei castigos contra todos os deuses do Egito,\neu, o Senhor.\n13\nO sangue servirá de sinal\nnas casas onde estiverdes.\nAo ver o sangue, passarei adiante,\ne não vos atingirá a praga exterminadora,\nquando eu ferir a terra do Egito.\n14\nEste dia será para vós uma festa memorável em honra do Senhor,\nque haveis de celebrar por todas as gerações\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 115(116B),12-13.15-16.17-18 (R. 13)",
+    "refrao": "",
+    "texto": "R.\nElevo o cálice da minha salvação,\ninvocando o nome santo do Senhor.\nOu:\nAleluia, Aleluia, Aleluia.\n12\nQue poderei retribuir ao Senhor Deus*\npor tudo aquilo que ele fez em meu favor?\n13\nElevo o cálice da minha salvação,*\ninvocando o nome santo do Senhor.\nR.\n15\nÉ sentida por demais pelo Senhor*\na morte de seus santos, seus amigos.\n16\nEis que sou o vosso servo, ó Senhor †\nvosso servo que nasceu de vossa serva;\nmas me quebrastes os grilhões da escravidão!\nR.\n17\nPor isso oferto um sacrifício de louvor,*\ninvocando o nome santo do Senhor.\n18\nVou cumprir minhas promessas ao Senhor*\nna presença de seu povo reunido.\nR.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,1-8",
+    "texto": "12,1-8\n1\nNaquele tempo,\nJesus passou no meio de uma plantação\nnum dia de sábado.\nSeus discípulos tinham fome\ne começaram a apanhar espigas para comer.\n2\nVendo isso, os fariseus disseram-lhe:\n\"Olha, os teus discípulos estão fazendo,\no que não é permitido fazer em dia de sábado!\"\n3\nJesus respondeu-lhes:\n\"Nunca lestes o que fez Davi,\nquando ele e seus companheiros sentiram fome?\n4\nComo entrou na casa de Deus\ne todos comeram os pães da oferenda\nque nem a ele nem aos seus companheiros\nera permitido comer,\nmas unicamente aos sacerdotes?\n5\nOu nunca lestes na Lei,\nque em dia de sábado, no Templo,\nos sacerdotes violam o sábado\nsem contrair culpa alguma?\n6\nOra, eu vos digo:\naqui está quem é maior do que o Templo.\n7\nSe tivésseis compreendido o que significa:\n'Quero a misericórdia e não o sacrifício',\nnão teríeis condenado os inocentes.\n8\nDe fato, o Filho do Homem é senhor do sábado\".\nPalavra da Salvação."
+  }
+}

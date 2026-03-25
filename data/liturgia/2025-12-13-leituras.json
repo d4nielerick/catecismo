@@ -1,0 +1,23 @@
+{
+  "data": "2025-12-13",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Eclo 48,1-4.9-11</div><div> Sl 79(80),2ac e 3b.15-16.18-19 (R. 4)</div><div></div><div> Mt 17,10-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "48,1-4.9-11",
+    "texto": "Naqueles dias,\n1\no profeta Elias surgiu como um fogo,\ne sua palavra queimava como uma tocha.\n2\nFez vir a fome sobre eles\ne, no seu zelo, reduziu-os a pouca gente.\n3\nPela palavra do Senhor fechou o céu\ne de lá fez cair fogo por três vezes.\n4\nÓ Elias, como te tornaste glorioso por teus prodígios!\nQuem poderia gloriar-se de ser semelhante a ti?\n9\nTu foste arrebatado num turbilhão de fogo,\nnum carro de cavalos também de fogo,\n10\ntu, nas ameaças para os tempos futuros,\nfoste designado para acalmar a ira do Senhor antes do furor,\npara reconduzir o coração do pai ao filho,\ne restabelecer as tribos de Jacó.\n11\nFelizes os que te viram,\ne os que adormeceram na tua amizade!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 79(80),2ac e 3b.15-16.18-19 (R. 4)",
+    "refrao": "",
+    "texto": "R.\nConvertei-nos, ó Senhor,\nresplandecei a vossa face e nós seremos salvos!\n2a\nÓ Pastor de Israel, prestai ouvidos.*\nc\nVós que sobre os querubins vos assentais.\n3b\nDespertai vosso poder, ó nosso Deus*\ne vinde logo nos trazer a salvação!\nR.\n15\nVoltai-vos para nós, Deus do universo!†\nOlhai dos altos céus e observai.*\nVisitai a vossa vinha e protegei-a!\n16\nFoi a vossa mão direita que a plantou;*\nprotegei-a, e ao rebento que firmastes!\nR.\n18\nPousai a mão por sobre o vosso Protegido,*\no filho do homem que escolhestes para vós!\n19\nE nunca mais vos deixaremos, Senhor Deus!*\nDai-nos vida, e louvaremos vosso nome!\nR.\nEvangelho - Mt 17,10-1\nAclamação ao Evangelho\nLc 3,4.6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPreparai o caminho do Senhor, endireitai suas veredas!\nToda carne há de ver a salvação que vem de Deus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "17,10-13",
+    "texto": "17,10-13\nAo descerem do monte,\n10\nos discípulos perguntaram a Jesus:\n\"Por que os mestres da Lei dizem\nque Elias deve vir primeiro?\"\n11\nJesus respondeu:\n\"Elias vem e colocará tudo em ordem.\n12\nOra, eu vos digo: Elias já veio,\nmas eles não o reconheceram.\nAo contrário, fizeram com ele tudo o que quiseram.\nAssim também o Filho do Homem será maltratado por eles\".\n13\nEntão os discípulos compreenderam\nque Jesus lhes falava de João Batista.\nPalavra da Salvação."
+  }
+}

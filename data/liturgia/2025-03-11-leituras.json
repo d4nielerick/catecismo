@@ -1,0 +1,23 @@
+{
+  "data": "2025-03-11",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 55,10-11</div><div> Sl 33(34),4-5.6-7.16-17.18-19 (R. 18b)</div><div></div><div> Mt 6,7-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "55,10-11",
+    "texto": "Isto diz o Senhor:\n10\n\"Assim como a chuva e a neve descem do céu\ne para lá não voltam mais,\nmas vêm irrigar e fecundar a terra,\ne fazê-la germinar\ne dar semente, para o plantio e para a alimentação,\n11\nassim a palavra que sair de minha boca\nnão voltará para mim vazia;\nantes, realizará tudo que for de minha vontade\ne produzirá os efeitos que pretendi, ao enviá-la\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 33(34),4-5.6-7.16-17.18-19 (R. 18b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor liberta os justos de todas as angústias.\n4\nComigo engrandecei ao Senhor Deus, *\nexaltemos todos juntos o seu nome!\n5\nTodas as vezes que o busquei, ele me ouviu, *\ne de todos os temores me livrou.\nR.\n6\nContemplai a sua face e alegrai-vos, *\ne vosso rosto não se cubra de vergonha!\n7\nEste infeliz gritou a Deus, e foi ouvido, *\ne o Senhor o libertou de toda angústia.\nR.\n16\nO Senhor pousa seus olhos sobre os justos, *\ne seu ouvido está atento ao seu chamado;\n17\nmas ele volta a sua face contra os maus, *\npara da terra apagar sua lembrança.\nR.\n18\nClamam os justos, e o Senhor bondoso escuta *\ne de todas as angústias os liberta.\n19\nDo coração atribulado ele está perto *\ne conforta os de espírito abatido.\nR.\nAclamação ao Evangelho\nMt 4,4b\nR.\nGlória a Cristo, palavra eterna do Pai, que é amor!\nV.\nO homem não vive somente de pão,\nmas de toda palavra da boca de Deus."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,7-15",
+    "texto": "6,7-15\n7\nNaquele tempo, disse Jesus aos seus discípulos:\n\"Quando orardes,\nnão useis muitas palavras, como fazem os pagãos.\nEles pensam que serão ouvidos\npor força das muitas palavras.\n8\nNão sejais como eles,\npois vosso Pai sabe do que precisais,\nmuito antes que vós o peçais.\n9\nVós deveis rezar assim:\nPai Nosso que estás nos céus,\nsantificado seja o teu nome;\n10\nvenha o teu Reino;\nseja feita a tua vontade,\nassim na terra como nos céus.\n11\nO pão nosso de cada dia dá-nos hoje.\n12\nPerdoa as nossas ofensas,\nassim como nós perdoamos\na quem nos tem ofendido.\n13\nE não nos deixes cair em tentação,\nmas livra-nos do mal.\n14\nDe fato, se vós perdoardes aos homens\nas faltas que eles cometeram,\nvosso Pai que está nos céus\ntambém vos perdoará.\n15\nMas, se vós não perdoardes aos homens,\nvosso Pai também não perdoará\nas faltas que vós cometestes\".\nPalavra da Salvação."
+  }
+}

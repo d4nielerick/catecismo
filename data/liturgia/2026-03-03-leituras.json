@@ -1,0 +1,23 @@
+{
+  "data": "2026-03-03",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 1,10.16-20</div><div> Sl 49(50),8-9.16bc-17.21.23 (R. 23b)</div><div></div><div> Mt 23,1-12</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,10.16-20",
+    "texto": "10\nOuvi a palavra do Senhor,\nmagistrados de Sodoma,\nprestai ouvidos ao ensinamento do nosso Deus,\npovo de Gomorra.\n16\nLavai-vos, purificai-vos.\nTirai a maldade de vossas ações\nde minha frente.\nDeixai de fazer o mal!\n17\nAprendei a fazer o bem!\nProcurai o direito, corrigi o opressor.\nJulgai a causa do órfão, defendei a viúva.\n18\nVinde, debatamos - diz o Senhor.\nAinda que vossos pecados sejam como púrpura,\ntornar-se-ão brancos como a neve.\nSe forem vermelhos como o carmesim,\ntornar-se-ão como lã.\n19\nSe consentires em obedecer,\ncomereis as coisas boas da terra.\n20\nMas se recusardes e vos rebelardes,\npela espada sereis devorados,\nporque a boca do Senhor falou!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 49(50),8-9.16bc-17.21.23 (R. 23b)",
+    "refrao": "",
+    "texto": "R.\nA todos que procedem retamente,\neu mostrarei a salvação que vem de Deus.\n8\n\"Eu não venho censurar teus sacrifícios, *\npois sempre estão perante mim teus holocaustos;\n9\nnão preciso dos novilhos de tua casa *\nnem dos carneiros que estão nos teus rebanhos.\nR.\n16b\nComo ousas repetir os meus preceitos *\nc\ne trazer minha Aliança em tua boca?\n17\nTu que odiaste minhas leis e meus conselhos *\ne deste as costas às palavras dos meus lábios!\nR.\n21\nDiante disso que fizeste, eu calarei? *\nAcaso pensas que eu sou igual a ti?\nÉ disso que te acuso e repreendo *\ne manifesto essas coisas aos teus olhos.\nR.\n23\nQuem me oferece um sacrifício de louvor, *\neste sim é que me honra de verdade.\nA todo homem que procede retamente, *\neu mostrarei a salvação que vem de Deus\".\nR.\nEvangelho - Mt 23,1-12\nAclamação ao Evangelho\nEz 18,31\nR.\nSalve, ó Cristo, imagem do Pai,\na plena verdade nos comunicai!\nV.\nLançai para bem longe toda a vossa iniquidade!\nCriai em vós um novo espírito e um novo coração!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "23,1-12",
+    "texto": "23,1-12\nNaquele tempo,\n1\nJesus falou às multidões e a seus discípulos\ne lhes disse:\n2\n\"Os mestres da Lei e os fariseus\ntêm autoridade para interpretar a Lei de Moisés.\n3\nPor isso, deveis fazer e observar tudo o que eles dizem.\nMas não imiteis suas ações!\nPois eles falam e não praticam.\n4\nAmarram pesados fardos\ne os colocam nos ombros dos outros,\nmas eles mesmos não estão dispostos a movê-los,\nnem sequer com um dedo.\n5\nFazem todas as suas ações\nsó para serem vistos pelos outros.\nEles usam faixas largas, com trechos da Escritura,\nna testa e nos braços,\ne põem na roupa longas franjas.\n6\nGostam de lugar de honra nos banquetes\ne dos primeiros lugares nas sinagogas.\n7\nGostam de ser cumprimentados nas praças públicas\ne de serem chamados de Mestre.\n8\nQuanto a vós, nunca vos deixeis chamar de Mestre,\npois um só é vosso Mestre e todos vós sois irmãos.\n9\nNa terra, não chameis a ninguém de pai,\npois um só é vosso Pai, aquele que está nos céus.\n10\nNão deixeis que vos chamem de guias,\npois um só é o vosso Guia, Cristo.\n11\nPelo contrário, o maior dentre vós\ndeve ser aquele que vos serve.\n12\nQuem se exaltar será humilhado,\ne quem se humilhar será exaltado\".\nPalavra da Salvação."
+  }
+}

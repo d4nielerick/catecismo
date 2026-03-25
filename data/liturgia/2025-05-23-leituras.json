@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-23",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 15,22-31</div><div> Sl 56(57),8-9.10-12 (R. 10a)</div><div></div><div> Jo 15,12-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,22-31",
+    "texto": "Naqueles dias,\n22\npareceu bem aos apóstolos e aos anciãos,\nde acordo com toda a comunidade de Jerusalém,\nescolher alguns da comunidade\npara mandá-los a Antioquia, com Paulo e Barnabé.\nEscolheram Judas, chamado Bársabas, e Silas,\nque eram muito respeitados pelos irmãos.\n23\nAtravés deles enviaram a seguinte carta:\n\"Nós, os apóstolos e os anciãos, vossos irmãos,\nsaudamos os irmãos vindos do paganismo\ne que estão em Antioquia\ne nas regiões da Síria e da Cilícia.\n24\nFicamos sabendo que alguns dos nossos\ncausaram perturbações com palavras\nque transtornaram vosso espírito.\nEles não foram enviados por nós.\n25\nEntão decidimos, de comum acordo,\nescolher alguns representantes\ne mandá-los até vós,\njunto com nossos queridos irmãos Barnabé e Paulo,\n26\nhomens que arriscaram suas vidas\npelo nome de nosso Senhor Jesus Cristo.\n27\nPor isso, estamos enviando Judas e Silas,\nque pessoalmente vos transmitirão a mesma mensagem.\n28\nPorque decidimos, o Espírito Santo e nós,\nnão vos impor nenhum fardo,\nalém destas coisas indispensáveis:\n29\nabster-se de carnes sacrificadas aos ídolos,\ndo sangue, das carnes de animais sufocados\ne das uniões ilegítimas.\nVós fareis bem se evitardes essas coisas.\nSaudações!\"\n30\nDepois da despedida,\nJudas e Silas foram para Antioquia,\nreuniram a assembleia e entregaram a carta.\nA sua leitura causou alegria,\npor causa do estímulo que trazia.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 56(57),8-9.10-12 (R. 10a)",
+    "refrao": "",
+    "texto": "R.\nVou louvar-vos, Senhor, entre os povos.\nOu:\nAleluia, Aleluia, Aleluia.\n8\nMeu coração está pronto, meu Deus, *\nestá pronto o meu coração!\n9\nVou cantar e tocar para vós: *\ndesperta, minh'alma, desperta!\nDespertem a harpa e a lira, *\neu irei acordar a aurora!\nR.\n10\nVou louvar-vos, Senhor, entre os povos, *\ndar-vos graças, por entre as nações!\n11\nVosso amor é mais alto que os céus, *\nmais que as nuvens a vossa verdade!\n12\nElevai-vos, ó Deus sobre os céus, *\nvossa glória refulja na terra!\nR.\nAclamação ao Evangelho\nJo 15,15b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos chamo meus amigos,\npois vos dei a conhecer o que o Pai me revelou."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,12-17",
+    "texto": "15,12-17\nNaquele tempo, disse Jesus aos seus discípulos:\n12\n\"Este é o meu mandamento:\namai-vos uns aos outros,\nassim como eu vos amei.\n13\nNinguém tem amor maior\ndo que aquele que dá sua vida pelos amigos.\n14\nVós sois meus amigos,\nse fizerdes o que eu vos mando.\n15\nJá não vos chamo servos,\npois o servo não sabe o que faz o seu senhor.\nEu chamo-vos amigos,\nporque vos dei a conhecer\ntudo o que ouvi de meu Pai.\n16\nNão fostes vós que me escolhestes,\nmas fui eu que vos escolhi\ne vos designei para irdes e para que produzais fruto\ne o vosso fruto permaneça.\nO que, então, pedirdes ao Pai em meu nome,\nele vo-lo concederá.\n17\nIsto é o que vos ordeno:\namai-vos uns aos outros\".\nPalavra da Salvação."
+  }
+}

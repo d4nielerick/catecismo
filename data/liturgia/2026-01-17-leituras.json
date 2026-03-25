@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-17",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Sm 9,1-4.17-19.10,1a</div><div> Sl 20(21),2-3.4-5.6-7 (R. 2a)</div><div></div><div> Mc 2,13-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "9, 1-4.17-19; 10,1a",
+    "texto": "1\nHavia um homem de Benjamin, chamado Cis,\nfilho de Abiel, filho de Seror,\nfilho de Becorat, filho de Afia,\num benjaminita, homem forte e valente.\n2\nEle tinha um filho chamado Saul,\nde boa apresentação.\nEntre os filhos de Israel\nnão havia outro melhor do que ele:\ndos ombros para cima sobressaía a todo o povo.\n3\nOra, aconteceu\nque se perderam umas jumentas de Cis, pai de Saul.\nE Cis disse a seu filho Saul:\n\"Toma contigo um dos criados,\npõe-te a caminho\ne vai procurar as jumentas\".\nEles atravessaram a montanha de Efraim\n4\ne a região de Salisa,\nmas não as encontraram.\nPassaram também pela região de Salim,\nsem encontrar nada;\ne, ainda pela terra de Benjamin,\nsem resultado algum.\n17\nQuando Samuel avistou Saul,\no Senhor lhe disse:\n\"Este é o homem de quem te falei.\nEle reinará sobre o meu povo\".\n18\nSaul aproximou-se de Samuel, na soleira da porta,\ne disse-lhe:\n\"Peço-te que me informes onde é a casa do vidente\".\n19\nSamuel respondeu a Saul:\n\"Sou eu mesmo o vidente.\nSobe na minha frente ao santuário da colina.\nHoje comereis comigo,\ne amanhã de manhã te deixarei partir,\ndepois de te ter revelado tudo o que tens no coração\".\n10,1a\nNa manhã seguinte,\nSamuel tomou um pequeno frasco de azeite,\nderramou-o sobre a cabeça de Saul\ne beijou-o, dizendo:\n\"Com isto o Senhor te ungiu\ncomo chefe do seu povo, Israel.\nTu governarás o povo do Senhor\ne o livrarás das mãos de seus inimigos,\nque estão ao seu redor\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 20(21),2-3.4-5.6-7 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, em vossa força o rei se alegra.\n2\nÓ Senhor, em vossa força o rei se alegra; *\nquanto exulta de alegria em vosso auxílio!\n3\nO que sonhou seu coração, lhe concedestes; *\nnão recusastes os pedidos de seus lábios.\nR.\n4\nCom bênção generosa o preparastes; *\nde ouro puro coroastes sua fronte.\n5\nA vida ele pediu e vós lhe destes, *\nlongos dias, vida longa pelos séculos.\nR.\n6\nÉ grande a sua glória em vosso auxílio; *\nde esplendor e majestade o revestistes.\n7\nTransformastes o seu nome numa bênção, *\ne o cobristes de alegria em vossa face.\nR.\nEvangelho - Mc 2,13-17\nAclamação ao Evangelho\nLc 4,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor repousa sobre mim\ne enviou-me a anunciar aos pobres o Evangelho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "2,13-17",
+    "texto": "2,13-17\nNaquele tempo,\n13\nJesus saiu de novo para a beira do mar.\nToda a multidão ia ao seu encontro\ne Jesus os ensinava.\n14\nEnquanto passava,\nJesus viu Levi, o filho de Alfeu,\nsentado na coletoria de impostos,\ne disse-lhe:\n\"Segue-me!\"\nLevi se levantou e o seguiu.\n15\nE aconteceu que, estando à mesa na casa de Levi,\nmuitos cobradores de impostos e pecadores\ntambém estavam à mesa com Jesus e seus discípulos.\nCom efeito, eram muitos os que o seguiam.\n16\nAlguns doutores da Lei, que eram fariseus,\nviram que Jesus estava comendo\ncom pecadores e cobradores de impostos.\nEntão eles perguntaram aos discípulos:\n\"Por que ele come\ncom os cobradores de impostos e pecadores?\"\n17\nTendo ouvido, Jesus respondeu-lhes:\n\"Não são as pessoas sadias que precisam de médico,\nmas as doentes.\nEu não vim para chamar justos, mas sim pecadores\".\nPalavra da Salvação."
+  }
+}

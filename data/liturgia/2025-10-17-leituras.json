@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-17",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 4,1-8</div><div> Sl 31(32),1-2.5.11 (R. cf. 7)</div><div></div><div> Lc 12,1-7</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,1-8",
+    "texto": "Irmãos,\n1\nque vantagem diremos ter obtido Abraão,\nnosso pai segundo a carne?\n2\nPois se Abraão se tornou justo em virtude das obras,\nestá aí seu motivo de glória...\nmas não perante Deus!\n3\nCom efeito, o que diz a Escritura?\n\"Abraão creu em Deus,\ne isso lhe foi creditado como justiça\".\n4\nOra, para quem faz um trabalho,\no salário não é creditado como um presente gratuito,\nmas como uma dívida.\n5\nPorém, para a pessoa que, em vez de fazer um trabalho,\ncrê naquele que torna justo o ímpio,\na sua fé lhe é creditada como atestado de justiça.\n6\nÉ assim que Davi declara feliz o homem\na quem Deus credita a justiça\nindependentemente das obras:\n7\n\"Felizes aqueles cujas transgressões foram remidas\ne cujos pecados foram perdoados;\n8\nfeliz o homem do qual Deus não leva em conta o pecado\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 31(32),1-2.5.11 (R. cf. 7)",
+    "refrao": "",
+    "texto": "R.\nVós sois para mim proteção e refúgio,\neu canto bem alto a vossa salvação.\n1\nFeliz o homem que foi perdoado *\ne cuja falta já foi encoberta!\n2\nFeliz o homem a quem o Senhor †\nnão olha mais como sendo culpado,*\ne em cuja alma não há falsidade!\nR.\n5\nEu confessei, afinal, meu pecado, *\ne minha falta vos fiz conhecer.\nDisse: \"Eu irei confessar meu pecado!\" *\nE perdoastes, Senhor, minha falta.\nR.\n11\nRegozijai-vos, ó justos, em Deus, †\ne no Senhor exultai de alegria! *\nCorações retos, cantai jubilosos!\nR.\nEvangelho - Lc 12,1-7\nAclamação ao Evangelho\nSl 32(33),22\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSobre nós venha, Senhor, a vossa graça,\nda mesma forma que em vós nós esperamos!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,1-7",
+    "texto": "12,1-7\nNaquele tempo,\n1\nmilhares de pessoas se reuniram,\na ponto de uns pisarem os outros.\nJesus começou a falar,\nprimeiro a seus discípulos:\n\"Tomai cuidado com o fermento dos fariseus,\nque é a hipocrisia.\n2\nNão há nada de escondido,\nque não venha  a ser revelado,\ne não há nada de oculto\nque não venha a ser conhecido.\n3\nPortanto, tudo o que tiverdes dito na escuridão,\nserá ouvido à luz do dia;\ne o que tiverdes pronunciado ao pé do ouvido,\nno quarto,\nserá proclamado sobre os telhados.\n4\nPois bem, meus amigos, eu vos digo:\nnão tenhais medo daqueles que matam o corpo,\nnão podendo fazer mais do que isto.\n5\nVou mostrar-vos a quem deveis temer:\ntemei aquele que, depois de tirar a vida,\ntem o poder de lançar-vos no inferno.\nSim, eu vos digo, a este temei.\n6\nNão se vendem cinco pardais\npor uma pequena quantia?\nNo entanto,\nnenhum deles é esquecido por Deus.\n7\nAté mesmo os cabelos de vossa cabeça\nestão todos contados.\nNão tenhais medo!\nVós valeis mais do que muitos pardais\".\nPalavra da Salvação."
+  }
+}

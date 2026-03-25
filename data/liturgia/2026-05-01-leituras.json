@@ -1,0 +1,23 @@
+{
+  "data": "2026-05-01",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 13,26-33</div><div> Sl 2,6-7.8-9.10-11 (R. 7)</div><div></div><div> Jo 14,1-6</div></div>",
+  "primeira_leitura": {
+    "referencia": "13,26-33",
+    "texto": "Naqueles dias, tendo chegado a Antioquia da Pisídia,\nPaulo disse na sinagoga:\n26\n\"Irmãos, descendentes  de Abraão,\ne todos vós que temeis a Deus,\na nós foi enviada esta mensagem de salvação.\n27\nOs habitantes de Jerusalém e seus chefes\nnão reconheceram a Jesus\ne, ao condená-lo, cumpriram as profecias\nque se leem todos os sábados.\n28\nEmbora não encontrassem nenhum motivo\npara a sua condenação,\npediram a Pilatos que fosse morto.\n29\nDepois de realizarem tudo o que a Escritura diz\na respeito de Jesus,\neles o tiraram da cruz e o colocaram num túmulo.\n30\nMas Deus o ressuscitou dos mortos\n31\ne, durante muitos dias, ele foi visto\npor aqueles que o acompanharam\ndesde a Galileia até Jerusalém.\nAgora eles são testemunhas de Jesus diante do povo.\n32\nPor isso, nós vos anunciamos este Evangelho:\na promessa que Deus fez aos antepassados,\n33\nele a cumpriu para nós, seus filhos,\nquando ressuscitou Jesus,\ncomo está escrito no salmo segundo:\n'Tu és o meu filho, eu hoje te gerei'\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 2,6-7.8-9.10-11 (R. 7)",
+    "refrao": "",
+    "texto": "R.\nTu és meu Filho, e eu hoje te gerei!\nOu:\nAleluia, Aleluia, Aleluia.\n6\n\"Fui eu mesmo que escolhi este meu Rei *\ne em Sião, meu monte santo, o consagrei!\"\n7\nO decreto do Senhor promulgarei, †\nfoi assim que me falou o Senhor Deus: *\n\"Tu és meu Filho, e eu hoje te gerei!\"\nR.\n8\nPodes pedir-me, e em resposta eu te darei †\npor tua herança os povos todos e as nações, *\ne há de ser a terra inteira o teu domínio.\n9\nCom cetro férreo haverás de dominá-los, *\ne quebrá-los como um vaso de argila!\nR.\n10\nE agora, poderosos, entendei; *\nsoberanos, aprendei esta lição:\n11\nCom temor servi a Deus, rendei-lhe glória *\ne prestai-lhe homenagem com respeito!\nR.\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o caminho, a verdade e a vida;\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,1-6",
+    "texto": "14,1-6\nNaquele tempo, disse Jesus a seus discípulos:\n1\n\"Não se perturbe o vosso coração.\nTendes fé em Deus,\ntende fé em mim também.\n2\nNa casa de meu Pai há muitas moradas.\nSe assim não fosse, eu vos teria dito.\nVou preparar um lugar para vós,\n3\ne quando eu tiver ido preparar-vos um lugar,\nvoltarei e vos levarei comigo,\na fim de que onde eu estiver\nestejais também vós.\n4\nE para onde eu vou,\nvós conheceis o caminho\".\n5\nTomé disse a Jesus:\n\"Senhor, nós não sabemos para onde vais.\nComo podemos conhecer o caminho?\"\n6\nJesus respondeu:\n\"Eu sou o Caminho, a Verdade e a Vida.\nNinguém vai ao Pai senão por mim\".\nPalavra da Salvação."
+  }
+}

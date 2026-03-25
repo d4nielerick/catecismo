@@ -1,0 +1,23 @@
+{
+  "data": "2024-05-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Tg 5,1-6</div><div> Sl 48(49),14-15ab.15cd-16.17-18.19-20 (R. Mt 5,3)</div><div></div><div> Mc 9,41-50</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-6",
+    "texto": "1\nE agora, ricos, chorai e gemei,\npor causa das desgraças\nque estão para cair sobre vós.\n2\nVossa riqueza está apodrecendo,\ne vossas roupas estão carcomidas pelas traças.\n3\nVosso ouro e vossa prata estão enferrujados,\ne a ferrugem deles\nvai servir de testemunho contra vós\ne devorar vossas carnes, como fogo!\nAmontoastes tesouros nos últimos dias.\n4\nVede:\no salário dos trabalhadores\nque ceifaram os vossos campos,\nque vós deixastes de pagar, está gritando,\ne o clamor dos trabalhadores\nchegou aos ouvidos do Senhor todo-poderoso.\n5\nVós vivestes luxuosamente na terra,\nentregues à boa vida,\ncevando os vossos corações para o dia da matança.\n6\nCondenastes o justo e o assassinastes;\nele não resiste a vós.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 48(49),14-15ab.15cd-16.17-18.19-20 (R. Mt 5,3)",
+    "refrao": "",
+    "texto": "R.\nFelizes os humildes de espírito\nporque deles é o Reino dos Céus!\n14\nEste é o fim do que espera estultamente, *\no fim daqueles que se alegram com sua sorte;\n15a\nsão um rebanho recolhido ao cemitério, *\nb\ne a própria morte é o pastor que os apascenta.\nR.\nc\nSão empurrados e deslizam para o abismo. †\nd\nLogo seu corpo e seu semblante se desfazem, *\ne entre os mortos fixarão sua morada.\n16\nDeus, porém, me salvará das mãos da morte *\ne junto a si me tomará em suas mãos.\nR.\n17\nNão te inquietes, quando um homem fica rico *\ne aumenta a opulência de sua casa;\n18\npois ao morrer não levará nada consigo, *\nnem seu prestígio poderá acompanhá-lo.\nR.\n19\nFelicitava-se a si mesmo enquanto vivo: *\n\"Todos te aplaudem, tudo bem, isto que é vida!\"\n20\nMas vai-se ele para junto de seus pais, *\nque nunca mais e nunca mais verão a luz!\nR.\nEvangelho - Mc 9,38-40\nAclamação ao Evangelho\n1Ts 2,13\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAcolhei a palavra de Deus, não como palavra humana,\nmas como mensagem de Deus, o que ela é, em verdade!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,41-43.45-56.47-50",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n9,41-43.45-56.47-50\nNaquele tempo, disse Jesus aos seus discípulos:\n41\n\"Quem vos der a beber um copo de água,\nporque sois de Cristo,\nnão ficará sem receber a sua recompensa.\n42\nE se alguém escandalizar\num destes pequeninos que creem,\nmelhor seria que fosse jogado no mar\ncom uma pedra de moinho amarrada ao pescoço.\n43\nSe tua mão te leva a pecar, corta-a!\nÉ melhor entrar na Vida sem uma das mãos,\ndo que, tendo as duas, ir para o inferno,\npara o fogo que nunca se apaga.\n45\nSe teu pé te leva a pecar, corta-o!\nÉ melhor entrar na Vida sem um dos pés,\ndo que, tendo os dois, ser jogado no inferno.\n47\nSe teu olho te leva a pecar, arranca-o!\nÉ melhor entrar no Reino de Deus com um olho só,\ndo que, tendo os dois, ser jogado no inferno,\n48\n'onde o verme deles não morre,\ne o fogo não se apaga'.\n49\nPois todos hão de ser salgados pelo fogo.\n50\nCoisa boa é o sal.\nMas se o sal se tornar insosso,\ncom que lhe restituireis o tempero?\nTende, pois, sal em vos mesmos\ne vivei em paz uns com os outros\".\nPalavra da Salvação."
+  }
+}

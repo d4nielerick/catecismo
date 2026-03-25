@@ -1,0 +1,23 @@
+{
+  "data": "2024-12-27",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 1,1-4</div><div> Sl 96(97),1-2.5-6.11-12 (R. 12a)</div><div></div><div> Jo 20,2-8</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-4",
+    "texto": "Caríssimos,\n1\no que era desde o princípio,\no que nós ouvimos,\no que vimos com os nossos olhos,\no que contemplamos\ne as nossas mãos tocaram da Palavra da Vida,\n2\n- de fato, a Vida manifestou-se\ne nós a vimos,\ne somos testemunhas,\ne a vós anunciamos a Vida eterna,\nque estava junto do Pai\ne que se tornou visível para nós -;\n3\nisso que vimos e ouvimos,\nnós vos anunciamos,\npara que estejais em comunhão conosco.\nE a nossa comunhão é com o Pai\ne com seu Filho, Jesus Cristo.\n4\nNós vos escrevemos estas coisas\npara que a nossa alegria fique completa.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 96(97),1-2.5-6.11-12 (R. 12a)",
+    "refrao": "",
+    "texto": "R.\nÓ justos, alegrai-vos no Senhor!\n1\nDeus é Rei! Exulte a terra de alegria, *\ne as ilhas numerosas rejubilem!\n2\nTreva e nuvem o rodeiam no seu trono, *\nque se apoia na justiça e no direito.\nR.\n5\nAs montanhas se derretem como cera *\nante a face do Senhor de toda a terra;\n6\ne assim proclama o céu sua justiça, *\ntodos os povos podem ver a sua glória.\nR.\n11\nUma luz já se levanta para os justos, *\ne a alegria, para os retos corações.\n12\nHomens justos, alegrai-vos no Senhor, *\ncelebrai e bendizei seu santo nome!\nR.\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA vós, ó Deus, louvamos, a vós, Senhor, cantamos,\nvos louva o exército dos vossos Santos Mártires!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "20,2-8",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n20,2-8\nNo primeiro dia da semana,\n2\nMaria Madalena saiu correndo\ne foi encontrar Simão Pedro e o outro discípulo,\naquele que Jesus amava,\ne lhes disse:\n\"Tiraram o Senhor do túmulo,\ne não sabemos onde o colocaram\".\n3\nSaíram, então, Pedro e o outro discípulo\ne foram ao túmulo.\n4\nOs dois corriam juntos,\nmas o outro discípulo\ncorreu mais depressa que Pedro\ne chegou primeiro ao túmulo.\n5\nOlhando para dentro,\nviu as faixas de linho no chão,\nmas não entrou.\n6\nChegou também Simão Pedro,\nque vinha correndo atrás,\ne entrou no túmulo.\nViu as faixas de linho deitadas no chão\n7\ne o pano que tinha estado\nsobre a cabeça de Jesus,\nnão posto com as faixas,\nmas enrolado num  lugar à parte.\n8\nEntão entrou também o outro discípulo,\nque tinha chegado primeiro ao túmulo.\nEle viu, e acreditou.\nPalavra da Salvação."
+  }
+}

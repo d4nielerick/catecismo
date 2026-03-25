@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-09",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 41,55-57;42,5-7a.17-24a</div><div> Sl 32(33),2-3.10-11.18-19 (R. 22)</div><div></div><div> Mt 10,1-7</div></div>",
+  "primeira_leitura": {
+    "referencia": "41,55-57.42,5-7a.17-24a",
+    "texto": "Naqueles dias,\n55\ntodo o Egito começou a sentir fome,\ne o povo clamou ao Faraó, pedindo alimento.\nE ele respondeu-lhe:\n\"Dirigi-vos a José e fazei o que ele vos disser\".\n56\nQuando a fome se estendeu a todo o país,\nJosé abriu os celeiros\ne vendeu trigo aos egípcios,\nporque a fome também os oprimia.\n57\nDe todas as nações vinham ao Egito comprar alimento,\npois a fome era dura em toda a terra.\n42,5\nOs filhos de Israel entraram na terra do Egito com outros\nque também iam comprar trigo,\npois havia fome em Canaã.\n6\nJosé era governador na terra do Egito\ne, conforme a sua vontade,\nse vendia trigo à população.\nChegando os irmãos de José,\nprostraram-se diante dele com o rosto em terra.\n7a\nAo ver seus irmãos, José os reconheceu.\n17\nE mandou metê-los na prisão durante três dias.\n18\nE, no terceiro dia, disse-lhes:\n\"Fazei o que já vos disse e vivereis,\npois eu temo a Deus.\n19\nSe sois sinceros,\nfique um dos irmãos preso aqui no cárcere,\ne vós outros ide levar para vossas casas\no trigo que comprastes.\n20\nMas trazei-me o vosso irmão mais novo,\npara que eu possa provar a verdade de vossas palavras,\ne não morrerdes\".\nEles fizeram como José lhes tinha dito.\n21\nE diziam uns aos outros:\n\"Sofremos justamente estas coisas,\nporque pecamos contra o nosso irmão:\nvimos a sua angústia,\nquando nos pedia compaixão,\ne não o atendemos.\nÉ por isso que nos veio esta tribulação\".\n22\nRúben disse-lhes:\n\"Não vos adverti dizendo:\n'Não pequeis contra o menino?'\nE vós não me escutastes.\nE agora nos pedem conta do seu sangue\".\n23\nOra, eles não sabiam que José os entendia,\npois lhes falava por meio de intérprete.\n24a\nEntão, José afastou-se deles e chorou.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),2-3.10-11.18-19 (R. 22)",
+    "refrao": "",
+    "texto": "R.\nSobre nós venha, Senhor, a vossa graça,\nda mesma forma que em vós nós esperamos!\n2\nDai graças ao Senhor ao som da harpa, *\nna lira de dez cordas celebrai-o!\n3\nCantai para o Senhor um canto novo, *\ncom arte sustentai a louvação!\nR.\n10\nO Senhor desfaz os planos das nações *\ne os projetos que os povos se propõem.\n11\nMas os desígnios do Senhor são para sempre, †\ne os pensamentos que ele traz no coração, *\nde geração em geração, vão perdurar.\nR.\n18\nMas o Senhor pousa o olhar sobre os que o temem, *\ne que confiam esperando em seu amor,\n19\npara da morte libertar as suas vidas *\ne alimentá-los quando é tempo de penúria.\nR.\nEvangelho - Mt 10,1-7\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois, o Reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,1-7",
+    "texto": "10,1-7\nNaquele tempo,\n1\nJesus chamou os doze discípulos\ne deu-lhes poder para expulsarem os espíritos maus\ne para curarem todo tipo de doença e enfermidade.\n2\nEstes são os nomes dos doze apóstolos:\nprimeiro, Simão chamado Pedro, e André, seu irmão;\nTiago, filho de Zebedeu, e seu irmão João;\n3\nFilipe e Bartolomeu;\nTomé e Mateus, o cobrador de impostos;\nTiago, filho de Alfeu, e Tadeu;\n4\nSimão, o Zelota, e Judas Iscariotes,\nque foi o traidor de Jesus.\n5\nJesus enviou estes Doze,\ncom as seguintes recomendações:\n\"Não deveis ir aonde moram os pagãos,\nnem entrar nas cidades dos samaritanos!\n6\nIde, antes, às ovelhas perdidas da casa de Israel!\n7\nEm vosso caminho, anunciai:\n'O Reino dos Céus está próximo'\".\nPalavra da Salvação."
+  }
+}

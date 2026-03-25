@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-10",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 9,31-42</div><div> Sl 115(116B),12-13.14-15.16-17 (R. 12)</div><div></div><div> Jo 6,60-69</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,31-42",
+    "texto": "Naqueles dias:\n31\nA Igreja, vivia em paz\nem toda a Judeia, Galileia e Samaria.\nEla consolidava-se e progredia no temor do Senhor\ne crescia em número com a ajuda do Espírito Santo.\n32\nPedro percorria todos os lugares;\ne visitou também os fiéis que moravam em Lida.\n33\nEncontrou aí um homem chamado Eneias,\nque estava paralítico\ne, há oito anos, jazia numa cama.\n34\nPedro disse-lhe:\n\"Eneias, Jesus Cristo te cura!\nLevanta-te e arruma a tua cama!\"\nImediatamente Eneias se levantou.\n35\nTodos os habitantes de Lida e da região do Saron\nviram isso e se converteram ao Senhor.\n36\nEm Jope, havia uma discípula chamada Tabita,\nnome que quer dizer Gazela.\nEram muitas as boas obras\nque fazia e as esmolas que dava.\n37\nNaqueles dias ela ficou doente e morreu.\nEntão lavaram seu corpo\ne o colocaram no andar superior da casa.\n38\nComo Lida ficava perto de Jope,\ne ouvindo dizer que Pedro estava lá,\nos discípulos mandaram dois homens com um recado:\n\"Vem depressa até nós!\"\n39\nPedro partiu imediatamente com eles.\nAssim que chegou,\nlevaram-no ao andar superior,\nonde todas as viúvas foram ao seu encontro.\nChorando, elas mostravam a Pedro\nas túnicas e mantos que Tabita havia feito,\nquando vivia com elas.\n40\nPedro mandou que todos saíssem.\nEm seguida, pôs-se de joelhos e rezou.\nDepois, voltou-se para o corpo e disse:\n\"Tabita, levanta-te!\"\nela então abriu os olhos, viu Pedro e sentou-se.\n41\nPedro deu-lhe a mão e ajudou-a a levantar-se.\nDepois chamou os fiéis e as viúvas\ne apresentou-lhes Tabita viva.\n42\nO fato ficou conhecido em toda a cidade de Jope\ne muitos acreditaram no Senhor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 115(116B),12-13.14-15.16-17 (R. 12)",
+    "refrao": "",
+    "texto": "R.\nQue poderei retribuir ao Senhor Deus,\npor tudo aquilo que ele fez em meu favor?\nOu:\nAleluia, Aleluia, Aleluia.\n12\nQue poderei retribuir ao Senhor Deus *\npor tudo aquilo que ele fez em meu favor?\n13\nElevo o cálice da minha salvação, *\ninvocando o nome santo do Senhor.\nR.\n14\nVou cumprir minhas promessas ao Senhor *\nna presença de seu povo reunido.\n15\nÉ sentida por demais pelo Senhor *\na morte de seus santos, seus amigos.\nR.\n16\nEis que sou o vosso servo, ó Senhor, †\nque nasceu de vossa serva; *\nmas me quebrastes os grilhões da escravidão!\n17\nPor isso oferto um sacrifício de louvor, *\ninvocando o nome santo do Senhor.\nR.\nEvangelho - Jo 6,60-69\nAclamação ao Evangelho\nJo 6,63c.68c\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSenhor, tuas palavras são espírito, são vida;\nsó tu tens palavras de vida eterna!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,60-69",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n6,60-69\nNaquele tempo:\n60\nmuitos dos discípulos de Jesus\nque o escutaram, disseram:\n\"Esta palavra é dura.\nQuem consegue escutá-la?\"\n61\nSabendo que seus discípulos estavam murmurando\npor causa disso mesmo,\nJesus perguntou:\n\"Isto vos escandaliza?\n62\nE quando virdes o Filho do Homem\nsubindo para onde estava antes?\n63\nO Espírito é que dá vida,\na carne não adianta nada.\nAs palavras que vos falei são espírito e vida.\n64\nMas entre vós há alguns que não creem\".\nJesus sabia, desde o início,\nquem eram os que não tinham fé\ne quem havia de entregá-lo.\n65\nE acrescentou:\n\"É por isso que vos disse:\nninguém pode vir a mim\na não ser que lhe seja concedido pelo Pai\".\n66\nA partir daquele momento,\nmuitos discípulos voltaram atrás\ne não andavam mais com ele.\n67\nEntão, Jesus disse aos doze:\n\"Vós também quereis ir embora?\"\n68\nSimão Pedro respondeu:\n\"A quem iremos, Senhor?\nTu tens palavras de vida eterna.\n69\nNós cremos firmemente e reconhecemos\nque tu és o Santo de Deus\".\nPalavra da Salvação."
+  }
+}

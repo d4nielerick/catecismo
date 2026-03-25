@@ -1,0 +1,23 @@
+{
+  "data": "2024-08-12",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ez 1,2-5.24-28c</div><div> Sl 148,1-2.11-12ab.12c-14a.14bcd</div><div></div><div> Mt 17,22-27</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,2-5.24-28c",
+    "texto": "2\nNo dia cinco do mês\n- esse era o quinto ano do exílio do rei Joaquim -\n3\na palavra do Senhor foi dirigida a Ezequiel,\nfilho do sacerdote Buzi,\nna terra dos caldeus, junto ao rio Cobar.\nFoi ali que a mão do Senhor esteve sobre ele.\n4\nEu vi que um vento impetuoso vinha do norte,\numa grande nuvem envolta em claridade e relâmpagos;\nno meio brilhava algo\ncomo se fosse ouro incandescente.\n5\nNo centro aparecia a figura de quatro seres vivos.\nEste era o seu aspecto:\ncada um tinha a figura de homem.\n24\nE eu ouvi o rumor de suas asas:\nEra como um estrondo de muitas águas,\ncomo a voz do Poderoso.\nQuando se moviam,\no seu ruído era como o barulho de um acampamento;\nquando paravam, eles deixavam pender as asas.\n25\nO ruído vinha de cima do firmamento,\nque estava sobre suas cabeças.\n26\nAcima do firmamento que estava sobre as cabeças,\nhavia algo parecido com safira,\numa espécie de trono,\ne sobre essa espécie de trono, bem no alto,\numa figura com aparência humana.\n27\nE eu vi como que um brilho de ouro incandescente,\nenvolvendo essa figura como se fosse fogo,\nacima daquilo que parecia ser a cintura;\nabaixo daquilo que parecia ser a cintura,\nvi algo como fogo\ne, em sua volta, um círculo luminoso.\n28c\nEsse círculo luminoso\ntinha o mesmo aspecto do arco-íris,\nque se forma nas nuvens em dia de chuva.\nTal era a aparência visível da glória do Senhor.\nAo vê-la, caí com o rosto no chão.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 148,1-2.11-12ab.12c-14a.14bcd",
+    "refrao": "",
+    "texto": "R.\nDa vossa glória estão cheios o céu e a terra.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nLouvai o Senhor Deus nos altos céus, *\nlouvai-o no excelso firmamento!\n2\nLouvai-o, anjos seus, todos louvai-o, *\nlouvai-o, legiões celestiais!\nR.\n11\nReis da terra, povos todos, bendizei-o, *\ne vós, príncipes e todos os juízes;\n12a\ne vós, jovens, e vós, moças e rapazes, *\nb\nanciãos e criancinhas, bendizei-o!\nR.\nc\nLouvem o nome do Senhor, louvem-no todos, *\nporque somente o seu nome é excelso!\nA majestade e esplendor de sua glória *\n14a\nultrapassam em grandeza o céu e a terra.\nR.\nb\nEle exaltou seu povo eleito em poderio, *\nc\nele é o motivo de louvor para os seus santos.\nd\nÉ um hino para os filhos de Israel, *\neste povo que ele ama e lhe pertence.\nR.\nEvangelho - Mt 17,22-2\nAclamação ao Evangelho\nCf. 2Ts 2,14\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPelo Evangelho o Pai nos chamou,\na fim de alcançarmos a glória\nde nosso Senhor Jesus Cristo."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "",
+    "texto": "Proclamação do Evangelho de Jesus Cristo\nsegundo Mateus\n17,22-27\nNaquele tempo,\n22\nquando Jesus e os seus discípulos\nestavam reunidos na Galileia,\nele lhes disse:\n\"O Filho do Homem\nvai ser entregue nas mãos dos homens.\n23\nEles o matarão,\nmas no terceiro dia ele ressuscitará\".\nE os discípulos ficaram muito tristes.\n24\nQuando chegaram a Cafarnaum,\nos cobradores do imposto do Templo\naproximaram-se de Pedro e perguntaram:\n\"O vosso mestre não paga o imposto do Templo?\"\n25\nPedro respondeu:\n\"Sim, paga\".\nAo entrar em casa, Jesus adiantou-se, e perguntou:\n\"Simão, que te parece:\nOs reis da terra cobram impostos ou taxas de quem:\ndos filhos ou dos estranhos?\"\n26\nPedro respondeu:\n\"Dos estranhos!\"\nEntão Jesus disse:\n\"Logo os filhos são livres.\n27\nMas, para não escandalizar essa gente,\nvai ao mar, lança o anzol,\ne abre a boca do primeiro peixe que tu pescares.\nAli tu encontrarás uma moeda;\npega então a moeda e vai entregá-la a eles,\npor mim e por ti\".\nPalavra da Salvação."
+  }
+}

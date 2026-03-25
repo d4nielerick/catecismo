@@ -1,0 +1,23 @@
+{
+  "data": "2024-05-22",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Tg 4,13-17</div><div> Sl 48(49),2-3.6-7.8-10.11 (R. Mt 5,3)</div><div></div><div> Mc 9,38-40</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,13-17",
+    "texto": "Caríssimos,\n13\ne agora, vós que dizeis:\n\"Hoje ou amanhã iremos a tal cidade,\npassaremos ali um ano,\nnegociando e ganhando dinheiro\".\n14\nNo entanto,\nnão sabeis nem mesmo\no que será da vossa vida, amanhã!\nCom efeito, não passais de uma neblina\nque se vê por um instante e logo desaparece.\n15\nEm vez de dizer:\n\"Se o Senhor quiser, estaremos vivos\ne faremos isto ou aquilo\",\n16\nvós vos gloriais de vossas fanfarronadas.\nOra, toda a arrogância deste tipo é um mal.\n17\nAssim, aquele que sabe fazer o bem e não o faz\nincorre em pecado.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 48(49),2-3.6-7.8-10.11 (R. Mt 5,3)",
+    "refrao": "",
+    "texto": "R.\nFelizes os humildes de espírito\nporque deles é o Reino dos Céus!\n2\nOuvi isto, povos todos do universo, *\nmuita atenção, ó habitantes deste mundo;\n3\npoderosos e humildes, escutai-me, *\nricos e pobres, todos juntos, sede atentos!\nR.\n6\nPor que temer os dias maus e infelizes, *\nquando a malícia dos perversos me circunda?\n7\nPor que temer os que confiam nas riquezas *\ne se gloriam na abundância de seus bens?\nR.\n8\nNinguém se livra de sua morte por dinheiro *\nnem a Deus pode pagar o seu resgate.\n9\nA isenção da própria morte não tem preço; *\nnão há riqueza que a possa adquirir,\n10\nnem dar ao homem uma vida sem limites *\ne garantir-lhe uma existência imortal.\nR.\n11\nMorrem os sábios e os ricos igualmente; †\nmorrem os loucos e também os insensatos, *\ne deixam tudo o que possuem aos estranhos.\nR.\nEvangelho - Mc 9,38-40\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o Caminho, a Verdade e a Vida,\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,38-40",
+    "texto": "9,38-40\nNaquele tempo,\n38\nJoão disse a Jesus:\n\"Mestre, vimos um homem\nexpulsar demônios em teu nome.\nMas nós o proibimos,\nporque ele não nos segue\".\n39\nJesus disse:\n\"Não o proibais,\npois ninguém faz milagres em meu nome\npara depois falar mal de mim.\n40\nQuem não é contra nós é a nosso favor\".\nPalavra da Salvação."
+  }
+}

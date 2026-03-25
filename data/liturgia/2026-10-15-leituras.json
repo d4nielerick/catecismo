@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-15",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 1,1-10</div><div> Sl 97(98),1.2-3ab.3cd-4.5-6 (R. 2a)</div><div></div><div> Lc 11,47-54</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-10",
+    "texto": "1\nPaulo, apóstolo de Cristo Jesus\npela vontade de Deus,\naos santos e fiéis em Cristo Jesus:\n2\na vós, graça e paz,\nda parte de Deus, nosso Pai,\ne do Senhor Jesus Cristo.\n3\nBendito seja Deus,\nPai de nosso Senhor Jesus Cristo.\nEle nos abençoou com toda a bênção do seu Espírito\nem virtude de nossa união com Cristo, no céu.\n4\nEm Cristo, ele nos escolheu,\nantes da fundação do mundo,\npara que sejamos santos e irrepreensíveis\nsob o seu olhar, no amor.\n5\nEle nos predestinou\npara sermos seus filhos adotivos\npor intermédio de Jesus Cristo,\nconforme a decisão da sua vontade,\n6\npara o louvor da sua glória\ne da graça com que ele nos cumulou no seu Bem-amado.\n7\nPelo seu sangue, nós somos libertados.\nNele, as nossas faltas são perdoadas,\nsegundo a riqueza da sua graça,\n8\nque Deus derramou profusamente sobre nós,\nabrindo-nos a toda a sabedoria e prudência.\n9\nEle nos fez conhecer o mistério da sua vontade,\no desígnio benevolente\nque de antemão determinou em si mesmo,\n10\npara levar à plenitude o tempo estabelecido\ne recapitular em Cristo, o universo inteiro:\ntudo o que está nos céus\ne tudo o que está sobre a terra.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.2-3ab.3cd-4.5-6 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor fez conhecer seu poder salvador\nperante as nações.\n1\nCantai ao Senhor Deus um canto novo,*\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo*\nalcançaram-lhe a vitória.\nR.\n2\nO Senhor fez conhecer a salvação,*\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel*\nb\npela casa de Israel.\nR.\nc\nOs confins do universo contemplaram*\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira,*\nalegrai-vos e exultai!\nR.\n5\nCantai salmos ao Senhor ao som da harpa*\ne da cítara suave!\n6\nAclamai, com os clarins e as trombetas,*\nao Senhor, o nosso Rei!\nR.\nEvangelho - Lc 11,47-5\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o Caminho, a Verdade e a Vida,\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,47-54",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,47-54\nNaquele tempo, disse o Senhor:\n47\n\"Ai de vós, porque construís os túmulos dos profetas;\nno entanto, foram vossos pais que os mataram.\n48\nCom isso, vós sois testemunhas\ne aprovais as obras de vossos pais,\npois eles mataram os profetas\ne vós construís os túmulos.\n49\nÉ por isso que a sabedoria de Deus afirmou:\nEu lhes enviarei profetas e apóstolos,\ne eles matarão e perseguirão alguns deles,\n50\na fim de que se peçam contas a esta geração\ndo sangue de todos os profetas,\nderramado desde a criação do mundo,\n51\ndesde o sangue de Abel até o sangue de Zacarias,\nque foi morto entre o altar e o santuário.\nSim, eu vos digo:\nserão pedidas contas disso a esta geração.\n52\nAi de vós, mestres da Lei,\nporque tomastes a chave da ciência.\nVós mesmos não entrastes,\ne ainda impedistes os que queriam entrar\".\n53\nQuando Jesus saiu daí,\nos mestres da Lei e os fariseus\ncomeçaram a tratá-lo mal,\ne a provocá-lo sobre muitos pontos.\n54\nArmavam ciladas, para pegá-lo de surpresa,\npor qualquer palavra que saísse de sua boca.\nPalavra da Salvação."
+  }
+}

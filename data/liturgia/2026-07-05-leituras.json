@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Zc 9,9-10</div><div> Sl 144(145),1-2.8-9.10-11.13cd-14 (R. 1b)</div><div> Rm 8,9.11-13</div><div> Mt 11,25-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,9-10",
+    "texto": "Assim diz o Senhor:\n9\n\"Exulta, cidade de Sião!\nRejubila, cidade de Jerusalém.\nEis que vem teu rei ao teu encontro;\nele é justo, ele salva;\né humilde e vem montado num jumento,\num potro, cria de jumenta.\n10\nEliminará os carros de Efraim,\nos cavalos de Jerusalém;\nele quebrará o arco de guerreiro,\nanunciará a paz às nações.\nSeu domínio se estenderá\nde um mar a outro mar,\ne desde o rio até aos confins da terra\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 144(145),1-2.8-9.10-11.13cd-14 (R. 1b)",
+    "refrao": "",
+    "texto": "R.\nBendirei, eternamente, vosso nome, ó Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nÓ meu Deus, quero exaltar-vos, ó meu Rei,*\ne bendizer o vosso nome pelos séculos.\n2\nTodos os dias haverei de bendizer-vos,*\nhei de louvar o vosso nome para sempre.\nR.\n8\nMisericórdia e piedade é o Senhor,*\nele é amor, é paciência, é compaixão.\n9\nO Senhor é muito bom para com todos,*\nsua ternura abraça toda criatura.\nR.\n10\nQue vossas obras, ó Senhor, vos glorifiquem,*\ne os vossos santos com louvores vos bendigam!\n11\nNarrem a glória e o esplendor do vosso reino*\ne saibam proclamar vosso poder!\nR.\n13cd\nO Senhor é amor fiel em sua palavra,*\né santidade em toda obra que ele faz.\n14\nEle sustenta todo aquele que vacila*\ne levanta todo aquele que tombou.\nR.\n2ª Leitura - Rm 8,9.1\nSEGUNDA LEITURA\nSe, pelo Espírito, fizerdes as\nobras do corpo morrer, vivereis.\nLeitura da Carta de São Paulo aos Romanos\n8,9.11-13\nIrmãos:\n9\nVós não viveis segundo a carne,\nmas segundo o espírito,\nse realmente o Espírito de Deus mora em vós.\nSe alguém não tem o Espírito de Cristo,\nnão pertence a Cristo.\n11\nE, se o Espírito daquele\nque ressuscitou Jesus dentre os mortos mora em vós,\nentão aquele que ressuscitou\nJesus Cristo dentre os mortos\nvivificará também vossos corpos mortais\npor meio do seu Espírito que mora em vós.\n12\nPortanto, irmãos, temos uma dívida,\nmas não para com a carne,\npara vivermos segundo a carne.\n13\nPois, se viverdes segundo a carne, morrereis,\nmas se, pelo espírito, matardes o procedimento carnal,\nentão vivereis.\nPalavra do Senhor.\nAclamação ao Evangelho  cf.\nMt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu te louvo, ó Pai Santo,\nDeus do céu, Senhor da terra;\nos mistérios do teu Reino\naos pequenos, Pai, revelas!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,25-30",
+    "texto": "11,25-30\nNaquele tempo, Jesus pôs-se a dizer:\n25\n\"Eu te louvo, ó Pai, Senhor do céu e da terra,\nporque escondeste estas coisas aos sábios e entendidos\ne as revelaste aos pequeninos.\n26\nSim, Pai, porque assim foi do teu agrado.\n27\nTudo me foi entregue por meu Pai,\ne ninguém conhece o Filho, senão o Pai,\ne ninguém conhece o Pai, senão o Filho\ne aquele a quem o Filho o quiser revelar.\n28\nVinde a mim todos vós que estais cansados\ne fatigados sob o peso dos vossos fardos,\ne eu vos darei descanso.\n29\nTomai sobre vós o meu jugo e aprendei de mim,\nporque sou manso e humilde de coração,\ne vós encontrareis descanso.\n30\nPois o meu jugo é suave e o meu fardo é leve\".\nPalavra da Salvação."
+  }
+}

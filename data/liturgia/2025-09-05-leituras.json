@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Cl 1,15-20</div><div> Sl 99(100),2.3.4.5 (R. 2c)</div><div></div><div> Lc 5,33-39</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,15-20",
+    "texto": "15\nCristo Jesus é a imagem do Deus invisível,\no primogênito de toda a criação,\n16\npois por causa dele,\nforam criadas todas as coisas no céu e na terra,\nas visíveis e as invisíveis,\ntronos e dominações, soberanias e poderes.\nTudo foi criado por meio dele e para ele.\n17\nEle existe antes de todas as coisas\ne todas têm nele a sua consistência.\n18\nEle é a Cabeça do corpo, isto é, da Igreja.\nEle é o Princípio, o Primogênito dentre os mortos;\nde sorte que em tudo ele tem a primazia,\n19\nporque Deus quis habitar nele com toda a sua plenitude\n20\ne por ele reconciliar consigo todos os seres,\nos que estão na terra e no céu,\nrealizando a paz pelo sangue da sua cruz.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 99(100),2.3.4.5 (R. 2c)",
+    "refrao": "",
+    "texto": "R.\nCom canto apresentai-vos diante do Senhor!\n2\nAclamai o Senhor, ó terra inteira, †\nservi ao Senhor com alegria, *\nide a ele cantando jubilosos!\nR.\n3\nSabei que o Senhor, só ele, é Deus, †\nEle mesmo nos fez, e somos seus, *\nnós somos seu povo e seu rebanho.\nR.\n4\nEntrai por suas portas dando graças, †\ne em seus átrios com hinos de louvor; *\ndai-lhe graças, seu nome bendizei!\nR.\n5\nSim, é bom o Senhor e nosso Deus, †\nsua bondade perdura para sempre, *\nseu amor é fiel eternamente!\nR.\nAclamação ao Evangelho\nJo 8,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou a luz do mundo;\naquele que me segue\nnão caminha entre as trevas,\nmas terá a luz da vida."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,33-39",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n5,33-39\nNaquele tempo,\n33\nos fariseus e os mestres da Lei disseram a Jesus:\n\"Os discípulos de João,\ne também os discípulos dos fariseus,\njejuam com frequência e fazem orações.\nMas os teus discípulos comem e bebem\".\n34\nJesus, porém, lhes disse:\n\"Os convidados de um casamento podem fazer jejum\nenquanto o noivo está com eles?\n35\nMas dias virão em que o noivo\nserá tirado do meio deles.\nEntão, naqueles dias, eles jejuarão\".\n36\nJesus contou-lhes ainda uma parábola:\n\"Ninguém tira retalho de roupa nova\npara fazer remendo em roupa velha;\nsenão vai rasgar a roupa nova,\ne o retalho novo não combinará com a roupa velha.\n37\nNinguém coloca vinho novo em odres velhos;\nporque, senão, o vinho novo\narrebenta os odres velhos e se derrama;\ne os odres se perdem.\n38\nVinho novo deve ser colocado em odres novos.\n39\nE ninguém, depois de beber vinho velho,\ndeseja vinho novo;\nporque diz: o velho é melhor\".\nPalavra da Salvação."
+  }
+}

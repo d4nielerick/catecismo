@@ -1,0 +1,23 @@
+{
+  "data": "2024-01-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Sm 1,1-4.11-12.19.23-27</div><div> Sl 79(80),2-3.5-7 (R. 4b)</div><div></div><div> Mc 3,20-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-4.11-12.19.23-27",
+    "texto": "Naqueles dias,\n1\nDavi regressou da derrota que infligiu aos amalecitas,\ne esteve dois dias em Siceleg.\n2\nNo terceiro dia, apareceu um homem,\nque vinha do acampamento de Saul,\ncom as vestes rasgadas e a cabeça coberta de pó.\nAo chegar perto de Davi, prostrou-se por terra\ne fez-lhe uma profunda reverência.\n3\nDavi perguntou-lhe:\n\"Donde vens?\"\nEle respondeu:\n\"Salvei-me do acampamento de Israel\".\n4\n\"Que aconteceu?\", perguntou-lhe Davi.\n\"Conta-me tudo!\"\nEle respondeu:\n\"As tropas fugiram da batalha,\ne muitos do povo caíram mortos.\nAté Saul e o seu filho Jônatas pereceram!\"\n11\nEntão Davi tomou suas próprias vestes e rasgou-as,\ne todos os que estavam com ele fizeram o mesmo.\n12\nLamentaram-se, choraram e jejuaram até à tarde,\npor Saul e por seu filho Jônatas,\ne por causa do povo do Senhor e da casa de Israel,\nporque haviam tombado pela espada.\n19\nE Davi disse:\n\"Tua glória, ó Israel,\njaz ferida de morte sobre os teus montes.\nComo tombaram os fortes!\n23\nSaul e Jônatas, amados e belos,\nnem vida nem morte os puderam separar,\nmais velozes que as águias,\nmais fortes que os leões.\n24\nFilhas de Israel, chorai sobre Saul.\nEle vos vestia de púrpura suntuosa\ne ornava de ouro os vossos vestidos.\n25\nComo tombaram os fortes em plena batalha!\nJônatas foi morto sobre as tuas alturas.\n26\nChoro por ti, meu irmão Jônatas.\nTu me eras tão querido;\ntua amizade me era mais cara\nque o amor das mulheres.\n27\nComo tombaram os fortes,\ncomo pereceram as armas de guerra!\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 79(80),2-3.5-7 (R. 4b)",
+    "refrao": "",
+    "texto": "R.\nResplandecei a vossa face, e nós seremos salvos!.\n2\nÓ Pastor de Israel, prestai ouvidos. *\nVós, que a José apascentais qual um rebanho!\nVós, que sobre os querubins vos assentais, †\naparecei cheio de glória e esplendor *\n3\nante Efraim e Benjamim e Manassés!\nDespertai vosso poder, ó nosso Deus, *\ne vinde logo nos trazer a salvação!\nR.\n5\nAté quando, ó Senhor, vos irritais, *\napesar da oração do vosso povo?\n6\nVós nos destes a comer o pão das lágrimas, *\ne a beber destes um pranto copioso.\n7\nPara os vizinhos somos causa de contenda, *\nde zombaria para os nossos inimigos.\nR.\nEvangelho - Mc 3,20-21\nAclamação ao Evangelho  Cf.\nAt 16,14b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAbri-nos, ó Senhor, o coração,\npara ouvirmos a palavra de Jesus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,20-21",
+    "texto": "3,20-21\nNaquele tempo,\n20\nJesus voltou para casa com os discípulos.\nE de novo se reuniu tanta gente\nque eles nem sequer podiam comer.\n21\nQuando souberam disso,\nos parentes de Jesus saíram para agarrá-lo,\nporque diziam que estava fora de si.\nPalavra da Salvação."
+  }
+}

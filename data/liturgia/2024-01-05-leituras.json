@@ -1,0 +1,23 @@
+{
+  "data": "2024-01-05",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 3,11-21</div><div> Sl 99(100),2.3.4.5 (R. 2a)</div><div></div><div> Jo 1,43-51</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,11-21",
+    "texto": "Caríssimos,\n11\nesta é a mensagem que ouvistes desde o início:\nque nos amemos uns aos outros,\n12\nnão como Caim,\nque, sendo do Maligno, matou o seu irmão.\nE por que o matou?\nPorque as suas obras eram más,\nao passo que as do seu irmão eram justas.\n13\nNão vos admireis, irmãos, se o mundo vos odeia.\n14\nNós sabemos que passamos da morte para a vida,\nporque amamos os irmãos.\nQuem não ama, permanece na morte.\n15\nTodo aquele que odeia o seu irmão é um homicida.\nE vós sabeis que nenhum homicida\nconserva a vida eterna dentro de si.\n16\nNisto conhecemos o amor:\nJesus deu a sua vida por nós.\nPortanto, também nós\ndevemos dar a vida pelos irmãos.\n17\nSe alguém possui riquezas neste mundo\ne vê o seu irmão passar necessidade,\nmas, diante dele fecha o seu coração,\ncomo pode o amor de Deus permanecer nele?\n18\nFilhinhos, não amemos só com palavras e de boca,\nmas com ações e de verdade!\n19\nAí está o critério para saber que somos da verdade\ne para sossegar diante dele o nosso coração,\n20\npois, se o nosso coração nos acusa,\nDeus é maior que o nosso coração\ne conhece todas as coisas.\n21\nCaríssimos, se o nosso coração não nos acusa,\ntemos confiança diante de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 99(100), 2.3.4.5 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nAclamai o Senhor, ó terra inteira!\n2\nAclamai o Senhor, ó terra inteira, †\nservi ao Senhor com alegria, *\nide a ele cantando jubilosos!\nR.\n3\nSabei que o Senhor, só ele, é Deus, †\nEle mesmo nos fez, e somos seus, *\nnós somos seu povo e seu rebanho.\nR.\n4\nEntrai por suas portas dando graças, †\ne em seus átrios com hinos de louvor; *\ndai-lhe graças, seu nome bendizei!\nR.\n5\nSim, é bom o Senhor e nosso Deus, †\nsua bondade perdura para sempre, *\nseu amor é fiel eternamente!\nR.\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nUm dia sagrado brilhou para nós:\nnações, vinde todas adorar o Senhor:\npois hoje desceu grande luz sobre a terra."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,43-51",
+    "texto": "1,43-51\nNaquele tempo,\n43\nJesus decidiu partir para a Galileia.\nEncontrou Filipe e disse:\n\"Segue-me\".\n44\nFilipe era de Betsaida,\ncidade de André e de Pedro.\n45\nFilipe encontrou-se com Natanael e lhe disse:\n\"Encontramos aquele\nde quem Moisés escreveu na Lei,\ne também os profetas:\nJesus de Nazaré, o filho de José\".\n46\nNatanael disse:\n\"De Nazaré pode sair coisa boa?\"\nFilipe respondeu:\n\"Vem ver!\"\n47\nJesus viu Natanael\nque vinha para ele e comentou:\n\"Aí vem um israelita de verdade,\num homem sem falsidade\".\n48\nNatanael perguntou:\n\"De onde me conheces?\"\nJesus respondeu:\n\"Antes que Filipe te chamasse,\nenquanto estavas debaixo da figueira,\neu te vi\".\n49\nNatanael respondeu:\n\"Rabi, tu és o Filho de Deus,\ntu és o Rei de Israel\".\n50\nJesus disse:\n\"Tu crês porque te disse:\n'Eu te vi debaixo da figueira?'\nCoisas maiores que esta verás!\"\n51\nE Jesus continuou:\n\"Em verdade, em verdade, eu vos digo:\nVereis o céu aberto\ne os anjos de Deus subindo e descendo\nsobre o Filho do Homem\".\nPalavra da Salvação."
+  }
+}

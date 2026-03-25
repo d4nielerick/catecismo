@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-19",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 15,35-37.42-49</div><div> Sl 55(56),10.11-12.13-14 (R. cf. 14c)</div><div></div><div> Lc 8,4-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,35-37.42-49",
+    "texto": "Irmãos,\n35\nalguém perguntará?\nComo ressuscitam os mortos?\n36\nInsensato!\nO que semeias, não nasce sem antes morrer.\n37\nE, quando semeias,\nnão semeias o corpo da planta, que há de nascer,\nmas o simples grão, como o de trigo,\nou de alguma outra planta.\n42\nPois assim será também a ressurreição dos mortos.\nSemeia-se em corrupção\ne ressuscita-se em incorrupção.\n43\nSemeia-se em ignomínia,\ne ressuscita-se em glória.\nSemeia-se em fraqueza,\ne ressuscita-se em vigor.\n44\nSemeia-se um corpo animal,\ne ressuscita-se um corpo espiritual.\nSe há um corpo animal,\nhá também um espiritual.\n45\nPor isso está escrito:\no primeiro homem, Adão, \"foi um ser vivo\".\nO segundo Adão é um espírito vivificante.\n46\nVeio primeiro não o homem espiritual,\nmas o homem natural;\ndepois é que veio o homem espiritual.\n47\nO primeiro homem,\ntirado da terra, é terrestre;\no segundo homem vem do céu.\n48\nComo foi o homem terrestre,\nassim também são as pessoas terrestres;\ne como é o homem celeste,\nassim também vão ser as pessoas celestes.\n49\nE como já refletimos a imagem do homem terrestre,\nassim também refletiremos a imagem do homem celeste.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 55(56),10.11-12.13-14 (R. cf. 14c)",
+    "refrao": "",
+    "texto": "R.\nNa presença do Senhor, andarei na luz da vida.\n10\nMeus inimigos haverão de recuar †\nem qualquer dia em que eu vos invocar; *\ntenho certeza: o Senhor está comigo!\nR.\n11\nConfio em Deus e louvarei sua promessa; †\n12\né no Senhor que eu confio e nada temo: *\nque poderia contra mim um ser mortal?\nR.\n13\nDevo cumprir, ó Deus, os votos que vos fiz, *\ne vos oferto um sacrifício de louvor,\n14\nporque da morte arrancastes minha vida *\ne não deixastes os meus pés escorregarem,\npara que eu ande na presença do Senhor, *\nna presença do Senhor na luz da vida.\nR.\nAclamação ao Evangelho\ncf. Lc 8,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os que observam a palavra do Senhor\nde reto coração,\ne que produzem muitos frutos, até o fim perseverantes!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,4-15",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n8,4-15\nNaquele tempo,\n4\nreuniu-se uma grande multidão,\ne de todas as cidades iam ter com Jesus.\nEntão ele contou esta parábola:\n5\n\"O semeador saiu para semear a sua semente.\nEnquanto semeava,\numa parte caiu à beira do caminho;\nfoi pisada e os pássaros do céu a comeram.\n6\nOutra parte caiu sobre pedras;\nbrotou e secou, porque não havia umidade.\n7\nOutra parte caiu no meio de espinhos;\nos espinhos cresceram juntos, e a sufocaram.\n8\nOutra parte caiu em terra boa;\nbrotou e deu fruto, cem por um\".\nDizendo isso, Jesus exclamou:\n\"Quem tem ouvidos para ouvir, ouça\".\n9\nOs discípulos lhe perguntaram\no significado dessa parábola.\n10\nJesus respondeu:\n\"A vós foi dado conhecer os mistérios do Reino de Deus.\nMas aos outros, só por meio de parábolas,\npara que olhando não vejam,\ne ouvindo não compreendam.\n11\nA parábola quer dizer o seguinte:\nA semente é a Palavra de Deus.\n12\nOs que estão à beira do caminho\nsão aqueles que ouviram,\nmas, depois, vem o diabo\ne tira a Palavra do coração deles,\npara que não acreditem e não se salvem.\n13\nOs que estão sobre a pedra\nsão aqueles que, ouvindo,\nacolhem a Palavra com alegria.\nMas eles não têm raiz:\npor um momento acreditam;\nmas na hora da tentação voltam atrás.\n14\nAquilo que caiu entre os espinhos\nsão os que ouvem, mas, com o passar do tempo,\nsão sufocados pelas preocupações,\npela riqueza e pelos prazeres da vida,\ne não chegam a amadurecer.\n15\nE o que caiu em terra boa\nsão aqueles que,\nouvindo com um coração bom e generoso,\nconservam a Palavra,\ne dão fruto na perseverança\".\nPalavra da Salvação."
+  }
+}

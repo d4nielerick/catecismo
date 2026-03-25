@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-09",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 2,1-2.7-14</div><div> Sl 116(117),1.2 (R. Mc 16,15)</div><div></div><div> Lc 11,1-4</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-2.7-14",
+    "texto": "Irmãos,\n1\nquatorze anos mais tarde,\nsubi, de novo, a Jerusalém, com Barnabé,\nlevando também Tito comigo.\n2\nFui lá, por causa de uma revelação.\nExpus-lhes o evangelho\nque tenho pregado entre os pagãos,\no que fiz em particular aos líderes da Igreja,\npara não acontecer estivesse eu correndo em vão\nou tivesse corrido em vão.\n7\nPelo contrário,\nviram que a evangelização dos pagãos\nfoi confiada a mim,\ncomo a Pedro foi confiada a evangelização dos judeus.\n8\nDe fato, aquele que preparou Pedro\npara o apostolado entre os judeus\npreparou-me também a mim\npara o apostolado entre os pagãos.\n9\nReconhecendo a graça que me foi dada,\nTiago, Cefas e João,\nconsiderados as colunas da Igreja,\nderam-nos a mão, a mim e a Barnabé,\ncomo sinal de nossa comunhão recíproca.\nAssim ficou confirmado que nós iríamos aos pagãos\ne eles iriam aos judeus.\n10\nO que nos recomendaram foi somente\nque nos lembrássemos dos pobres.\nE isso procurei fazer sempre, com toda a solicitude.\n11\nMas, quando Cefas chegou a Antioquia,\nopus-me a ele abertamente,\npois ele merecia censura.\n12\nCom efeito,\nantes que chegassem alguns da comunidade de Tiago,\nele tomava refeição com os gentios.\nMas, depois que eles chegaram,\nCefas começou a esquivar-se e a afastar-se,\npor medo dos circuncidados.\n13\nE os demais judeus\nacompanharam-no nessa dissimulação,\na ponto de até Barnabé se deixar arrastar\npela hipocrisia deles.\n14\nQuando vi que não estavam procedendo direito,\nde acordo com a verdade do Evangelho,\ndisse a Cefas, diante de todos:\n\"Se tu, que és judeu,\nvives como pagão e não como judeu,\ncomo podes obrigar os pagãos a viverem como judeus?\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 116(117),1.2 (R. Mc 16,15)",
+    "refrao": "",
+    "texto": "R.\nIde, por todo o mundo,\ne a todos pregai o Evangelho.\nOu:\nAleluia, Aleluia, Aleluia\n1\nCantai louvores ao Senhor, todas as gentes,*\npovos todos, festejai-o!\nR.\n2\nPois comprovado é seu amor para conosco,*\npara sempre ele é fiel!\nR.\nEvangelho - Lc 11,1-4\nAclamação ao Evangelho\nRm 8,15bc\nR.\nAleluia, Aleluia, Aleluia.\nV.\nRecebestes um espírito de adoção,\nno qual chamamos Aba! Pai!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,1-4",
+    "texto": "11,1-4\n1\nUm dia, Jesus estava rezando num certo lugar.\nQuando terminou,\num de seus discípulos pediu-lhe:\n\"Senhor, ensina-nos a rezar,\ncomo também João ensinou a seus discípulos\".\n2\nJesus respondeu:\n\"Quando rezardes, dizei:\n'Pai, santificado seja o teu nome.\nVenha o teu Reino.\n3\nDá-nos a cada dia o pão de que precisamos,\n4\ne perdoa-nos os nossos pecados,\npois nós também perdoamos\na todos os nossos devedores;\ne não nos deixes cair em tentação' \".\nPalavra da Salvação."
+  }
+}

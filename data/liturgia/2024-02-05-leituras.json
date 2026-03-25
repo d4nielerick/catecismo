@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 8,1-7.9-13</div><div> Sl 131(132),6-7.8-10 (R. 8a)</div><div></div><div> Mc 6,53-56</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,1-7.9-13",
+    "texto": "Naqueles dias,\n1\nSalomão convocou, junto de si em Jerusalém,\ntodos os anciãos de Israel,\ntodos os chefes das tribos\ne príncipes das famílias dos filhos de Israel,\na fim de transferir da cidade de Sião,\nque é Jerusalém,\na arca da aliança do Senhor.\n2\nTodo o Israel reuniu-se em torno de Salomão,\nno mês de Etanim,\nou seja, no sétimo mês, durante a festa.\n3\nVieram todos os anciãos de Israel,\ne os sacerdotes tomaram a arca\n4\ne carregaram-na junto com a tenda da reunião,\ncomo também todos os objetos sagrados\nque nela estavam;\nquem os carregava eram os sacerdotes e os levitas.\n5\nO rei Salomão e toda a comunidade de Israel,\nreunida em torno dele,\nimolavam diante da arca ovelhas e bois em tal quantidade,\nque não se podia contar nem calcular.\n6\nE os sacerdotes conduziram\na arca da aliança do Senhor ao seu lugar,\nno santuário do templo, ao Santo dos Santos,\ndebaixo das asas dos querubins,\n7\npois os querubins estendiam suas asas\nsobre o lugar da arca,\ncobrindo a arca e seus varais por cima.\n9\nDentro da arca só havia as duas tábuas de pedra,\nque Moisés ali tinha deposto no monte Horeb,\nquando o Senhor concluiu a aliança\ncom os filhos de Israel,\nlogo que saíram da terra do Egito.\n10\nOra, quando os sacerdotes deixaram o santuário,\numa nuvem encheu o templo do Senhor,\n11\nde modo que os sacerdotes\nnão puderam continuar as funções\nporque a glória do Senhor\ntinha enchido o templo do Senhor.\n12\nEntão Salomão disse:\n\"O Senhor disse que habitaria numa nuvem,\n13\ne eu edifiquei uma casa para tua morada,\num templo onde vivas para sempre\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 131(132),6-7.8-10 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nSubi, Senhor, para o lugar de vosso pouso!\n6\nNós soubemos que a arca estava em Éfrata *\ne nos campos de Iaar a encontramos:\n7\nEntremos no lugar em que ele habita, *\nante o escabelo de seus pés o adoremos!\nR.\n8\nSubi, Senhor, para o lugar de vosso pouso, *\nsubi vós, com vossa arca poderosa!\n9\nQue se vistam de alegria os vossos santos, *\ne os vossos sacerdotes, de justiça!\n10\nPor causa de Davi, o vosso servo, *\nnão afasteis do vosso Ungido a vossa face!\nR.\nEvangelho - Mc 6,53-56\nAclamação ao Evangelho  Cf.\nMt 4,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus pregava a Boa-nova, o Reino anunciando,\ne curava toda espécie de doenças entre o povo."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,53-56",
+    "texto": "6,53-56\nNaquele tempo,\n53\ntendo Jesus e seus discípulos\nacabado de atravessar o mar da Galileia,\nchegaram a Genesaré e amarraram a barca.\n54\nLogo que desceram da barca,\nas pessoas imediatamente reconheceram Jesus.\n55\nPercorrendo toda aquela região,\nlevavam os doentes deitados em suas camas\npara o lugar onde ouviam falar que Jesus estava.\n56\nE, nos povoados, cidades e campos onde chegavam,\ncolocavam os doentes nas praças\ne pediam-lhe para tocar,\nao menos, a barra de sua veste.\nE todos quantos o tocavam ficavam curados.\nPalavra da Salvação."
+  }
+}

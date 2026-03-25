@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-07",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Na 2,1.3.3,1-3.6-7</div><div> Dt 32,35cd-36ab.39abcd.41 (R. 39c)</div><div></div><div> Mt 16,24-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1.3; 3,1-3.6-7",
+    "texto": "1\n\"Eis sobre os montes os passos de um mensageiro,\nque anuncia a paz.\nÓ Judá, celebra tuas festas,\ncumpre tuas promessas:\nnunca mais Belial pisará teu solo;\nele foi aniquilado.\n3\nO Senhor há de restaurar a grandeza de Jacó,\nassim como a grandeza de Israel,\npois os ladrões os saquearam\ne devastaram suas videiras.\n3,1\nAi de ti, cidade sanguinária,\ncheia de imposturas,\ncheia de espoliação\ne de incessante rapinagem.\n2\nEstalo de chicotes, fragor de rodas,\ncavalos relinchando, ringir de carros impetuosos,\ncavaleiros à carga,\n3\nespadas brilhando e lanças reluzentes,\ntrucidados sem conta, mortos aos montes;\ncadáveres sem fim,\ntropeça-se sobre os corpos.\n6\nFarei cair sobre ti tuas abominações,\ne te lançarei em rosto merecidos insultos;\nde ti farei um exemplo.\n7\nAssim, todos os que te virem,\nfugirão para longe, dizendo:\n'Nínive está em ruínas!\nQuem terá compaixão dela?\nOnde achar quem a console?'\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Dt 32,35cd-36ab.39abcd.41 (R. 39c)",
+    "refrao": "",
+    "texto": "R.\nSou eu que tiro a vida, sou eu quem faz viver!\n35c\nJá vem o dia em que serão arruinados *\nd\ne o seu destino se apressa em chegar.\n36a\nPorque o Senhor fará justiça ao seu povo *\nb\ne salvará todos aqueles que o servem.\nR.\n39a\nSaibam todos que eu sou, somente eu *\nb\ne não existe outro Deus além de mim:\nc\nquem mata e faz viver, sou eu somente, *\nd\nsou eu que firo e eu que torno a curar.\nR.\n41\nSe eu afiar a minha espada reluzente *\ne com as minhas próprias mãos fizer justiça,\ndos adversários todos hei de me vingar *\ne vou retribuir aos que odeiam.\nR.\nEvangelho - Mt 16,24-2\nAclamação ao Evangelho\nMt 5,10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os que são perseguidos,\npor causa da justiça do Senhor,\nporque o Reino dos Céus há de ser deles!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,24-28",
+    "texto": "16,24-28\nNaquele tempo,\n24\nJesus disse aos discípulos:\n\"Se alguém quer me seguir, renuncie a si mesmo,\ntome a sua cruz e me siga.\n25\nPois quem quiser salvar a sua vida vai perdê-la;\ne quem perder a sua vida por causa de mim,\nvai encontrá-la.\n26\nDe fato, que adianta ao homem ganhar o mundo inteiro\nmas perder a sua vida?\nO que poderá alguém dar em troca de sua vida?\n27\nPorque o Filho do Homem\nvirá na glória do seu Pai, com os seus anjos,\ne então retribuirá a cada um\nde acordo com a sua conduta.\n28\nEm verdade vos digo:\nAlguns daqueles que estão aqui não morrerão\nantes de verem o Filho do Homem vindo com o seu Reino\".\nPalavra da Salvação."
+  }
+}

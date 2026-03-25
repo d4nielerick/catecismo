@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 4,1-6</div><div> Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)</div><div></div><div> Lc 12,54-59</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,1-6",
+    "texto": "Irmãos,\n1\neu, prisioneiro no Senhor, vos exorto\na caminhardes de acordo com a vocação\nque recebestes:\n2\nCom toda a humildade e mansidão,\nsuportai-vos uns aos outros\ncom paciência, no amor.\n3\nAplicai-vos a guardar a unidade do espírito\npelo vínculo da paz.\n4\nHá um só Corpo e um só Espírito,\ncomo também é uma só a esperança\nà qual fostes chamados.\n5\nHá um só Senhor, uma só fé, um só batismo,\n6\num só Deus e Pai de todos,\nque reina sobre todos,\nage por meio de todos e permanece em todos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)",
+    "refrao": "",
+    "texto": "R.\nÉ assim a geração dos que buscam vossa face,\nó Senhor, Deus de Israel.\n1\nAo Senhor pertence a terra e o que ela encerra,*\no mundo inteiro com os seres que o povoam;\n2\nporque ele a tornou firme sobre os mares,*\ne sobre as águas a mantém inabalável.\nR.\n3\n\"Quem subirá até o monte do Senhor,*\nquem ficará em sua santa habitação?\"\n4a\n\"Quem tem mãos puras e inocente coração,*\nb\nquem não dirige sua mente para o crime.\nR.\n5\nSobre este desce a bênção do Senhor*\ne a recompensa de seu Deus e Salvador\".\n6\n\"É assim a geração dos que o procuram,*\ne do Deus de Israel buscam a face\".\nR.\nEvangelho - Lc 12,54-5\nAclamação ao Evangelho\nCf. Mt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois revelaste os mistérios do teu reino aos pequeninos,\nescondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,54-59",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n12,54-59\nNaquele tempo,\n54\nJesus dizia às multidões:\n\"Quando vedes uma nuvem vinda do ocidente,\nlogo dizeis que vem chuva.\nE assim acontece.\n55\nQuando sentis soprar o vento do sul,\nlogo dizeis que vai fazer calor.\nE assim acontece.\n56\nHipócritas! Vós sabeis interpretar\no aspecto da terra e do céu.\nComo é que não sabeis\ninterpretar o tempo presente?\n57\nPor que não julgais por vós mesmos o que é justo?\n58\nQuando, pois, tu vais com o teu adversário\napresentar-te diante do magistrado,\nprocura resolver o caso com ele\nenquanto estais a caminho.\nSenão ele te levará ao juiz,\no juiz te entregará ao guarda,\ne o guarda te jogará na cadeia.\n59\nEu te digo: daí tu não sairás,\nenquanto não pagares o último centavo\".\nPalavra da Salvação."
+  }
+}

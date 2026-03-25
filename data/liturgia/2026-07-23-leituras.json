@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 2,1-3.7-8.12-13</div><div> Sl 35(36),6-7ab.8-9.10-11 (R. 10a)</div><div></div><div> Mt 13,10-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-3.7-8.12-13",
+    "texto": "1\nA palavra do Senhor foi-me dirigida, dizendo:\n2\n\"Vai e grita aos ouvidos de Jerusalém.\nIsto diz o Senhor:\nLembro-me de ti, da afeição da jovem,\ndo amor da noiva,\nde quando me seguias no deserto,\nnuma terra inculta.\n3\nIsrael, consagrado ao Senhor,\nera como as primícias de sua colheita;\ntodos os que dele comiam, pecavam;\nmales caíam sobre eles\",\ndiz o Senhor.\n7\n\"Eu vos introduzi numa terra de pomares,\npara que gozásseis de seus melhores produtos,\nmas, apenas chegados, contaminastes o país\ne tornastes abominável minha herança.\n8\nOs sacerdotes nem perguntaram onde está o Senhor.\nOs versados na Lei não me reconheceram,\ne os chefes do povo voltaram-me as costas,\nos profetas profetizaram em nome de Baal\ne correram atrás de coisas que para nada servem.\n12\nÓ céus, espantai-vos diante disso,\nenchei-vos de grande horror\", diz o Senhor.\n13\n\"Dois pecados cometeu meu povo:\nabandonou-me a mim, fonte de água viva,\ne preferiu cavar cisternas,\ncisternas defeituosas\nque não podem reter água\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 35(36),6-7ab.8-9.10-11 (R. 10a)",
+    "refrao": "",
+    "texto": "R.\nEm vós está a fonte da vida, ó Senhor!\n6\nVosso amor chega aos céus, ó Senhor, *\nchega às nuvens a vossa verdade.\n7a\nComo as altas montanhas eternas *\nb\né a vossa justiça, Senhor.\nR.\n8\nQuão preciosa é, Senhor, vossa graça! †\nEis que os filhos dos homens se abrigam *\nsob a sombra das asas de Deus.\n9\nNa abundância de vossa morada, *\neles vêm saciar-se de bens.\nVós lhes dais de beber água viva, *\nna torrente das vossas delícias.\nR.\n10\nPois em vós está a fonte da vida, *\ne em vossa luz contemplamos a luz.\n11\nConservai aos fiéis vossa graça, *\ne aos retos, a vossa justiça!\nR.\nEvangelho - Mt 13,10-1\nAclamação ao Evangelho\ncf. Mt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois, revelaste os mistérios do teu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,10-17",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n13,10-17\nNaquele tempo,\n10\nos discípulos aproximaram-se e disseram a Jesus:\n\"Por que tu falas ao povo em parábolas?\"\n11\nJesus respondeu:\n\"Porque a vós foi dado o conhecimento\ndos mistérios do Reino dos Céus,\nmas a eles não é dado.\n12\nPois à pessoa que tem,\nserá dado ainda mais, e terá em abundância;\nmas à pessoa que não tem,\nserá tirado até o pouco que tem.\n13\nÉ por isso que eu lhes falo em parábolas:\nporque olhando, eles não veem,\ne ouvindo, eles não escutam, nem compreendem.\n14\nDeste modo se cumpre neles a profecia de Isaías:\n'Havereis de ouvir, sem nada entender.\nHavereis de olhar, sem nada ver.\n15\nPorque o coração deste povo se tornou insensível.\nEles ouviram com má vontade\ne fecharam seus olhos,\npara não ver com os olhos,\nnem ouvir com os ouvidos,\nnem compreender com o coração,\nde modo que se convertam e eu os cure'.\n16\nFelizes sois vós, porque vossos olhos veem\ne vossos ouvidos ouvem.\n17\nEm verdade vos digo, muitos profetas e justos\ndesejaram ver o que vedes, e não viram,\ndesejaram ouvir o que ouvis, e não ouviram\".\nPalavra da Salvação."
+  }
+}

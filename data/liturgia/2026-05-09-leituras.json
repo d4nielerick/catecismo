@@ -1,0 +1,23 @@
+{
+  "data": "2026-05-09",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 16,1-10</div><div> Sl 99(100),2.3.5 (R. 2a)</div><div></div><div> Jo 15,18-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "16,1-10",
+    "texto": "Naqueles dias:\n1\nPaulo foi para Derbe e Listra.\nHavia em Listra um discípulo chamado Timóteo,\nfilho de uma judia, crente, e de pai grego.\n2\nOs irmãos de Listra e Icônio\ndavam bom testemunho de Timóteo.\n3\nPaulo quis então que Timóteo partisse com ele.\nTomou-o consigo e circuncidou-o,\npor causa dos judeus\nque se encontravam nessas regiões,\npois todos sabiam que o pai de Timóteo era grego.\n4\nPercorrendo as cidades,\nPaulo e Timóteo transmitiam as decisões\nque os apóstolos e anciãos de Jerusalém haviam tomado.\nE recomendavam que fossem observadas.\n5\nAs igrejas fortaleciam-se na fé\ne, de dia para dia, cresciam em número.\n6\nPaulo e Timóteo atravessaram a Frígia\ne a região da Galácia,\npois o Espírito Santo os proibira\nde pregar a Palavra de Deus na Ásia.\n7\nChegando perto da Mísia,\neles tentaram entrar na Bitínia,\nmas o Espírito de Jesus os impediu.\n8\nEntão atravessaram a Mísia\ne desceram para Trôade.\n9\nDurante a noite, Paulo teve uma visão:\nna sua frente, estava de pé\num macedônio que lhe suplicava:\n\"Vem à Macedônia e ajuda-nos!\"\n10\nDepois dessa visão,\nprocuramos partir imediatamente para a Macedônia,\npois estávamos convencidos\nde que Deus acabava de nos chamar\npara pregar-lhes o Evangelho.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 99(100),2.3.5 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nAclamai o Senhor, ó terra inteira.\nOu:\nAleluia, Aleluia, Aleluia.\n2\nAclamai o Senhor, ó terra inteira, †\nservi ao Senhor com alegria, *\nide a ele cantando jubilosos!\nR.\n3\nSabei que o Senhor, só ele, é Deus, †\nEle mesmo nos fez, e somos seus, *\nnós somos seu povo e seu rebanho.\nR.\n5\nSim, é bom o Senhor e nosso Deus, †\nsua bondade perdura para sempre, *\nseu amor é fiel eternamente!\nR.\nEvangelho - Jo 15,18-2\nAclamação ao Evangelho\nCl 3,1\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSe com Cristo ressurgistes, procurai o que é do alto,\nonde Cristo está sentando à direita de Deus Pai."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,18-21",
+    "texto": "15,18-21\nNaquele tempo, disse Jesus aos seus discípulos:\n18\n\"Se o mundo vos odeia,\nsabei que primeiro me odiou a mim.\n19\nSe fôsseis do mundo,\no mundo gostaria daquilo que lhe pertence.\nMas, porque não sois do mundo,\nporque eu vos escolhi e apartei do mundo,\no mundo por isso vos odeia.\n20\nLembrai-vos daquilo que eu vos disse:\n'O servo não é maior que seu senhor'.\nSe me perseguiram a mim,\ntambém perseguirão a vós.\nSe guardaram a minha palavra,\ntambém guardarão a vossa.\n21\nTudo isto eles farão contra vós\npor causa do meu nome,\nporque não conhecem aquele que me enviou\".\nPalavra da Salvação."
+  }
+}

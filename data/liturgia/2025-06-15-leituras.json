@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-15",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Pr 8,22-31</div><div> Sl 8,4-5.6-7.8-9 (R. 2a)</div><div> Rm 5,1-5</div><div> Jo 16,12-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,22-31",
+    "texto": "Assim fala a Sabedoria de Deus:\n22\n\"O Senhor me possuiu como primícia de seus caminhos,\nantes de suas obras mais antigas;\n23\ndesde a eternidade fui constituída,\ndesde o princípio,\nantes das origens da terra.\n24\nFui gerada quando não existiam os abismos,\nquando não havia os mananciais das águas,\n25\nantes que fossem estabelecidas as montanhas,\nantes das colinas fui gerada.\n26\nEle ainda não havia feito as terras e os campos,\nnem os primeiros vestígios de terra do mundo.\n27\nQuando preparava os céus,\nali estava eu,\nquando traçava a abóbada sobre o abismo,\n28\nquando firmava as nuvens lá no alto\ne reprimia as fontes do abismo,\n29\nquando fixava ao mar os seus limites\n- de modo que as águas não ultrapassassem suas bordas -\ne lançava os fundamentos da terra,\n30\neu estava ao seu lado como mestre-de-obras;\neu era seu encanto, dia após dia,\nbrincando, todo o tempo, em sua presença,\n31\nbrincando na superfície da terra,\ne alegrando-me em estar com os filhos dos homens\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 8,4-5.6-7.8-9 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor nosso Deus, como é grande\nvosso nome por todo o universo!\n4\nContemplando estes céus que plasmastes *\ne formastes com dedos de artista;\nvendo a lua e estrelas brilhantes, *\n5\nperguntamos: \"Senhor, que é o homem,\npara dele assim vos lembrardes *\ne o tratardes com tanto carinho?\"\nR.\n6\nPouco abaixo de Deus o fizestes, *\ncoroando-o de glória e esplendor;\n7\nvós lhe destes poder sobre tudo, *\nvossas obras aos pés lhe pusestes.\nR.\n8\nas ovelhas, os bois, os rebanhos, *\ntodo o gado e as feras da mata;\n9\npassarinhos e peixes dos mares, *\ntodo ser que se move nas águas.\nR.\n2ª Leitura - Rm 5,1-5\nSEGUNDA LEITURA\nA Deus, por Cristo,\nna caridade difundida pelo Espírito.\nLeitura da Carta de São Paulo aos Romanos\n5,1-5\nIrmãos:\n1\nJustificados pela fé,\nestamos em paz com Deus,\npela mediação do Senhor nosso, Jesus Cristo.\n2\nPor ele tivemos acesso,\npela fé, a esta graça,\nna qual estamos firmes e nos gloriamos,\nna esperança da glória de Deus.\n3\nE não só isso,\npois nos gloriamos também de nossas tribulações,\nsabendo que a tribulação gera a constância,\n4\na constância leva a uma virtude provada,\na virtude provada desabrocha em esperança;\n5\ne a esperança não decepciona,\nporque o amor de Deus\nfoi derramado em nossos corações\npelo Espírito Santo que nos foi dado.\nPalavra do Senhor.\nAclamação ao Evangelho\ncf. Ap 1,8\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGlória ao Pai e ao Filho e ao Espírito Divino,\nao Deus que é, que era e que vem,\npelos séculos. Amém."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,12-15",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n16,12-15\nNaquele tempo, disse Jesus a seus discípulos:\n12\n\"Tenho ainda muitas coisas a dizer-vos,\nmas não sois capazes de as compreender agora.\n13\nQuando, porém, vier o Espírito da Verdade,\nele vos conduzirá à plena verdade.\nPois ele não falará por si mesmo,\nmas dirá tudo o que tiver ouvido;\ne até as coisas futuras vos anunciará.\n14\nEle me glorificará,\nporque receberá do que é meu\ne vo-lo anunciará.\n15\nTudo o que o Pai possui é meu.\nPor isso, disse que\no que ele receberá e vos anunciará, é meu\".\nPalavra da Salvação."
+  }
+}

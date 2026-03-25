@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-27",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ez 18,25-28</div><div> Sl 24,4bc-5.6-7.8-9 (R. 6a)</div><div> Fl 2,1-11</div><div> Mt 21,28-32</div></div>",
+  "primeira_leitura": {
+    "referencia": "18,25-28",
+    "texto": "Assim diz o Senhor:\n25\nVós andais dizendo:\n\"A conduta do Senhor não é correta.\nOuvi, vós da casa de Israel:\nÉ a minha conduta que não é correta,\nou antes é a vossa conduta que não é correta?\n26\nQuando um justo se desvia da justiça,\npratica o mal e morre,\né por causa do mal praticado que ele morre.\n27\nQuando um ímpio se arrepende da maldade que praticou\ne observa o direito e a justiça,\nconserva a própria vida.\n28\nArrependendo-se de todos os seus pecados,\ncom certeza viverá;\nnão morrerá\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 24,4bc-5.6-7.8-9 (R. 6a)",
+    "refrao": "",
+    "texto": "R.\nRecordai, Senhor meu Deus, vossa ternura e compaixão!\n4b\nMostrai-me, ó Senhor, vossos caminhos,*\nc\ne fazei-me conhecer a vossa estrada!\n5\nVossa verdade me oriente e me conduza, †\nporque sois o Deus da minha salvação; *\nem vós espero, ó Senhor, todos os dias!\nR.\n6\nRecordai, Senhor meu Deus, vossa ternura *\ne a vossa compaixão que são eternas!\n7\nNão recordeis os meus pecados quando jovem, *\nnem vos lembreis de minhas faltas e delitos!\nDe mim lembrai-vos, porque sois misericórdia *\ne sois bondade sem limites, ó Senhor!\nR.\n8\nO Senhor é piedade e retidão, *\ne reconduz ao bom caminho os pecadores.\n9\nEle dirige os humildes na justiça, *\ne aos pobres ele ensina o seu caminho.\nR.\nSEGUNDA LEITURA (mais longa)\nTende entre vós o mesmo sentimento\nque existe em Cristo Jesus.\nLeitura da Carta de São Paulo aos Filipenses\n2,1-11\nIrmãos:\n1\nSe existe consolação na vida em Cristo,\nse existe alento no mútuo amor,\nse existe comunhão no Espírito,\nse existe ternura e compaixão,\n2\ntornai então completa a minha alegria:\naspirai à mesma coisa, unidos no mesmo amor;\nvivei em harmonia, procurando a unidade.\n3\nNada façais por competição ou vanglória,\nmas, com humildade, cada um julgue\nque o outro é mais importante,\n4\ne não cuide somente do que é seu,\nmas também do que é do outro.\n5\nTende entre vós o mesmo sentimento\nque existe em Cristo Jesus.\n6\nJesus Cristo, existindo em condição divina,\nnão fez do ser igual a Deus uma usurpação,\n7\nmas esvaziou-se a si mesmo,\nassumindo a condição de escravo\ne tornando-se igual aos homens.\nEncontrado com aspecto humano,\n8\nhumilhou-se a si mesmo,\nfazendo-se obediente até à morte,\ne morte de cruz.\n9\nPor isso, Deus o exaltou acima de tudo\ne lhe deu o Nome que está acima de todo nome.\n10\nAssim, ao nome de Jesus,\ntodo joelho se dobre no céu,\nna terra e abaixo da terra,\n11\ne toda língua proclame: \"Jesus Cristo é o Senhor!\"\n— para a glória de Deus Pai.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam a minha voz,\nminha voz estão elas a escutar;\neu conheço, então, minhas ovelhas,\nque me seguem, comigo a caminhar!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,28-32",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n21,28-32\nNaquele tempo, Jesus disse aos sacerdotes\ne anciãos do povo:\n28\n\"Que vos parece?\nUm homem tinha dois filhos.\nDirigindo-se ao primeiro, ele disse:\n'Filho, vai trabalhar hoje na vinha!'\n29\nO filho respondeu: 'Não quero'.\nMas depois mudou de opinião e foi.\n30\nO pai dirigiu-se ao outro filho e disse a mesma coisa.\nEste respondeu: 'Sim, senhor, eu vou'.\nMas não foi.\n31\nQual dos dois fez a vontade do pai?\"\nOs sumos sacerdotes e os anciãos do povo responderam:\n\"O primeiro\".\nEntão Jesus lhes disse:\n\"Em verdade vos digo,\nque os cobradores de impostos e as prostitutas\nvos precedem no Reino de Deus.\n32\nPorque João veio até vós, num caminho de justiça,\ne vós não acreditastes nele.\nAo contrário,\nos cobradores de impostos e as prostitutas creram nele.\nVós, porém, mesmo vendo isso,\nnão vos arrependestes para crer nele\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-02-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 13,15-17.20-21</div><div> Sl 22(23),1-3a.3b-4.5.6 (R. 1)</div><div></div><div> Mc 6,30-34</div></div>",
+  "primeira_leitura": {
+    "referencia": "13,15-17.20-21",
+    "texto": "Irmãos,\n15\npor meio de Jesus,\nofereçamos a Deus um perene sacrifício de louvor,\nisto é, o fruto dos lábios que celebram o seu nome.\n16\nNão vos esqueçais das boas ações e da comunhão,\npois estes são os sacrifícios que agradam a Deus.\n17\nObedecei aos vossos líderes\ne segui suas orientações,\nporque eles cuidam de vós\ncomo quem há de prestar contas.\nQue possam fazê-lo com alegria,\ne não com queixas, que não seriam coisa boa para vós.\n20\nO Deus da paz,\nque fez subir dentre os mortos\naquele que se tornou, pelo sangue de uma aliança eterna,\no grande pastor das ovelhas, nosso Senhor Jesus,\n21\nvos torne aptos a todo bem,\npara fazerdes a sua vontade;\nque ele realize em nós o que lhe é agradável,\npor Jesus Cristo,\nao qual seja dada a glória pelos séculos dos séculos. Amém!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 22(23),1-3a.3b-4.5.6 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é o pastor que me conduz,\nnão me falta coisa alguma.\n1\nO Senhor é o pastor que me conduz;*\nnão me falta coisa alguma.\n2\nPelos prados e campinas verdejantes*\nele me leva a descansar.\nPara as águas repousantes me encaminha,*\n3a\ne restaura as minhas forças.\nR.\nb\nEle me guia no caminho mais seguro,*\npela honra do seu nome.\n4\nMesmo que eu passe pelo vale tenebroso,*\nnenhum mal eu temerei.\nEstais comigo com bastão e com cajado,*\neles me dão a segurança!\nR.\n5\nPreparais à minha frente uma mesa,*\nbem à vista do inimigo;\ncom óleo vós ungis minha cabeça,*\ne o meu cálice transborda.\nR.\n6\nFelicidade e todo bem hão de seguir-me,*\npor toda a minha vida;\ne, na casa do Senhor, habitarei*\npelos tempos infinitos.\nR.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,30-34",
+    "texto": "6,30-34\nNaquele tempo,\n30\nos apóstolos reuniram-se com Jesus\ne contaram tudo o que haviam feito e ensinado.\n31\nEle lhes disse:\n\"Vinde sozinhos para um lugar deserto,\ne descansai um pouco\".\nHavia, de fato, tanta gente chegando e saindo\nque não tinham tempo nem para comer.\n32\nEntão foram sozinhos, de barco,\npara um lugar deserto e afastado.\n33\nMuitos os viram partir e reconheceram que eram eles.\nSaindo de todas as cidades, correram a pé,\ne chegaram lá antes deles.\n34\nAo desembarcar,\nJesus viu uma numerosa multidão e teve compaixão,\nporque eram como ovelhas sem pastor.\nComeçou, pois, a ensinar-lhes muitas coisas.\nPalavra da Salvação."
+  }
+}

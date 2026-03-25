@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-03",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jó 19,21-27</div><div> Sl 26(27),7-8a.8b-9abc.13-14 (R. 13)</div><div></div><div> Lc 10,1-12</div></div>",
+  "primeira_leitura": {
+    "referencia": "19,21-27",
+    "texto": "Disse Jó:\n21\n\"Piedade, piedade de mim, meus amigos,\npois a mão de Deus me feriu!\n22\nPor que me perseguis como Deus,\ne não vos cansais de me torturar?\n23\nGostaria que minhas palavras fossem escritas\ne gravadas numa inscrição\n24\ncom ponteiro de ferro e com chumbo,\ncravadas na rocha para sempre!\n25\nEu sei que o meu redentor está vivo\ne que, por último, se levantará sobre o pó;\n26\ne depois que tiverem destruído esta minha pele,\nna minha carne, verei a Deus.\n27\nEu mesmo o verei,\nmeus olhos o contemplarão,\ne não os olhos de outros.\nDentro de mim consomem-se os meus rins\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 26(27),7-8a.8b-9abc.13-14 (R. 13)",
+    "refrao": "",
+    "texto": "R.\nSei que a bondade do Senhor eu hei de ver,\nna terra dos viventes.\n7\nÓ Senhor, ouvi a voz do meu apelo, *\natendei por compaixão!\n8a\nMeu coração fala convosco confiante. *\ne os meus olhos vos procuram.\nR.\nb\nSenhor é vossa face que eu procuro; *\nNão me escondais a vossa face!\n9a\nNão afasteis em vossa ira o vosso servo,*\nsois vós o meu auxílio!\nb\nNão me esqueçais nem me deixeis abandonado,*\nc\nmeu Deus e Salvador!\nR.\n13\nSei que a bondade do Senhor eu hei de ver*\nna terra dos viventes.\n14\nEspera no Senhor e tem coragem,*\nespera no Senhor!\nR.\nEvangelho - Lc 10,1-12\nAclamação ao Evangelho  Mc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois o Reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,1-12",
+    "texto": "10,1-12\nNaquele tempo,\n1\no Senhor escolheu outros setenta e dois discípulos\ne os enviou dois a dois, na sua frente,\na toda cidade e lugar aonde ele próprio devia ir.\n2\nE dizia-lhes:\n\"A messe é grande,\nmas os trabalhadores são poucos.\nPor isso, pedi ao dono da messe\nque mande trabalhadores para a colheita.\n3\nEis que vos envio\ncomo cordeiros para o meio de lobos.\n4\nNão leveis bolsa, nem sacola, nem sandálias,\ne não cumprimenteis ninguém pelo caminho!\n5\nEm qualquer casa em que entrardes,\ndizei primeiro:\n'A paz esteja nesta casa!'\n6\nSe ali morar um amigo da paz,\na vossa paz repousará sobre ele;\nse não, ela voltará para vós.\n7\nPermanecei naquela mesma casa,\ncomei e bebei do que tiverem,\nporque o trabalhador merece o seu salário.\nNão passeis de casa em casa.\n8\nQuando entrardes numa cidade\ne fordes bem recebidos,\ncomei do que vos servirem,\n9\ncurai os doentes que nela houver\ne dizei ao povo:\n'O Reino de Deus está próximo de vós.'\n10\nMas, quando entrardes numa cidade\ne não fordes bem recebidos,\nsaindo pelas ruas, dizei:\n11\n'Até a poeira de vossa cidade,\nque se apegou aos nossos pés,\nsacudimos contra vós.\nNo entanto, sabei que o Reino de Deus está próximo!'\n12\nEu vos digo que, naquele dia,\nSodoma será tratada com menos rigor\ndo que essa cidade\".\nPalavra da Salvação."
+  }
+}

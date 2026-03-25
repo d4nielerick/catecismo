@@ -1,0 +1,23 @@
+{
+  "data": "2026-11-03",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Fl 2,5-11</div><div> Sl 21(22),26b-27.28-30a.31-32 (R. 26a)</div><div></div><div> Lc 14,15-24</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,5-11",
+    "texto": "Irmãos,\n5\ntende entre vós o mesmo sentimento\nque existe em Cristo Jesus.\n6\nJesus Cristo, existindo em condição divina,\nnão fez do ser igual a Deus uma usurpação,\n7\nmas ele esvaziou-se a si mesmo,\nassumindo a condição de escravo\ne tornando-se igual aos homens.\nEncontrado com aspecto humano,\n8\nhumilhou-se a si mesmo,\nfazendo-se obediente até a morte,\ne morte de cruz.\n9\nPor isso, Deus o exaltou acima de tudo\ne lhe deu o Nome que está acima de todo nome.\n10\nAssim, ao nome de Jesus,\ntodo o joelho se dobre no céu,\nna terra e abaixo da terra,\n11\ne toda língua proclame :\n\"Jesus Cristo é o Senhor\"\n- para a glória de Deus Pai.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 21(22),26b-27.28-30a.31-32 (R. 26a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, sois meu louvor em meio à grande assembleia!\n26b\nCumpro meus votos ante aqueles que vos temem! *\n27\nVossos pobres vão comer e saciar-se,\ne os que procuram o Senhor o louvarão: *\n\"Seus corações tenham a vida para sempre!\"\nR.\n28\nLembrem-se disso os confins de toda a terra, *\npara que voltem ao Senhor e se convertam,\ne se prostrem, adorando, diante dele *\ntodos os povos e as famílias das nações.\n29\nPois ao Senhor é que pertence a realeza; †\nele domina sobre todas as nações. *\n30a\nSomente a ele adorarão os poderosos.\nR.\n31\nToda a minha descendência há de servi-lo; †\nàs futuras gerações anunciará, *\n32\no poder e a justiça do Senhor;\nao povo novo que há de vir, ela dirá: *\n\"Eis a obra que o Senhor realizou!\"\nR.\nEvangelho - Lc 14,15-2\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados,\ne descanso eu vos darei, diz o senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,15-24",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n14,15-24\nNaquele tempo,\n15\num homem que estava à mesa,\ndisse a Jesus:\n\"Feliz aquele que come o pão no Reino de Deus!\"\n16\nJesus respondeu:\n\"Um homem deu um grande banquete\ne convidou muitas pessoas.\n17\nNa hora do banquete, mandou seu empregado\ndizer aos convidados:\n'Vinde, pois tudo está pronto'.\n18\nMas todos, um a um, começaram a dar desculpas.\nO primeiro disse:\n'Comprei um campo, e preciso ir vê-lo.\nPeço-te que aceites minhas desculpas'.\n19\nUm outro disse:\n'Comprei cinco juntas de bois,\ne vou experimentá-las.\nPeço-te que aceites minhas desculpas'.\n20\nUm terceiro disse:\n'Acabo de me casar e, por isso, não posso ir'.\n21\nO empregado voltou e contou tudo ao patrão.\nEntão o dono da casa ficou muito zangado\ne disse ao empregado:\n'Sai depressa pelas praças e ruas da cidade.\nTraze para cá os pobres,\nos aleijados, os cegos e os coxos'.\n22\nO empregado disse:\n'Senhor, o que tu mandaste fazer foi feito,\ne ainda há lugar'.\n23\nO patrão disse ao empregado:\n'Sai pelas estradas e atalhos,\ne obriga as pessoas a virem aqui,\npara que minha casa fique cheia'.\n24\nPois eu vos digo:\nnenhum daqueles que foram convidados\nprovará do meu banquete'\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-05-17",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 25,13b-21</div><div> Sl 102(103),1-2.11-12.19-20ab (R. 19a)</div><div></div><div> Jo 21,15-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "25,13b-21",
+    "texto": "Naqueles dias,\n13b\no rei Agripa e Berenice chegaram a Cesareia\ne foram cumprimentar Festo.\n14\nComo ficassem alguns dias aí,\nFesto expôs ao rei o caso de Paulo, dizendo:\n\"Está aqui um homem\nque Félix deixou como prisioneiro.\n15\nQuando eu estive em Jerusalém,\nos sumos sacerdotes e os anciãos dos judeus\napresentaram acusações contra ele\ne pediram-me que o condenasse.\n16\nMas eu lhes respondi\nque os romanos não costumam entregar um homem\nantes que o acusado\ntenha sido confrontado com os acusadores\ne possa defender-se da acusação.\n17\nEles vieram para cá\ne, no dia seguinte, sem demora,\nsentei-me no tribunal e mandei trazer o homem.\n18\nSeus acusadores compareceram diante dele,\nmas não trouxeram nenhuma acusação de crimes\nde que eu pudesse suspeitar.\n19\nTinham somente certas questões\nsobre a sua própria religião\ne a respeito de um certo Jesus que já morreu,\nmas que Paulo afirma estar vivo.\n20\nEu não sabia o que fazer para averiguar o assunto.\nPerguntei então a Paulo\nse ele preferia ir a Jerusalém, para ser julgado lá.\n21\nMas Paulo fez uma apelação\npara que a sua causa fosse reservada\nao juízo do Augusto Imperador.\nEntão ordenei que ficasse preso\naté que eu pudesse enviá-lo a César\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 102(103),1-2.11-12.19-20ab (R. 19a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor pôs o seu trono lá nos céus.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nBendize, ó minha alma, ao Senhor, *\ne todo o meu ser, seu santo nome!\n2\nBendize, ó minha alma, ao Senhor, *\nnão te esqueças de nenhum de seus favores!\nR.\n11\nQuanto os céus por sobre a terra se elevam, *\ntanto é grande o seu amor aos que o temem;\n12\nquanto dista o nascente do poente, *\ntanto afasta para longe nossos crimes.\nR.\n19\nO Senhor pôs o seu trono lá nos céus, *\ne abrange o mundo inteiro seu reinado.\n20a\nBendizei ao Senhor Deus, seus anjos todos, *\nb\nvalorosos que cumpris as suas ordens.\nR.\nEvangelho - Jo 21,15-1\nAclamação ao Evangelho\nJo 14,26\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito Santo, o Paráclito,\nhaverá de lembrar-vos\nde tudo o que tenho falado."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,15-19",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n21,15-19\nJesus manifestou-se aos seus discípulos\n15\ne, depois de comerem, perguntou a Simão Pedro:\n\"Simão, filho de João,\ntu me amas mais do que estes?\"\nPedro respondeu:\n\"Sim, Senhor, tu sabes que eu te amo\".\nJesus disse:\n\"Apascenta os meus cordeiros\".\n16\nE disse de novo a Pedro:\n\"Simão, filho de João, tu me amas?\"\nPedro disse:\n\"Sim, Senhor, tu sabes que eu te amo\".\nJesus disse-lhe:\n\"Apascenta as minhas ovelhas\".\n17\nPela terceira vez, perguntou a Pedro:\n\"Simão, filho de João, tu me amas?\"\nPedro ficou triste,\nporque Jesus perguntou três vezes se ele o amava.\nRespondeu:\n\"Senhor, tu sabes tudo;\ntu sabes que eu te amo\".\nJesus disse-lhe:\n\"Apascenta as minhas ovelhas.\n18\nEm verdade, em verdade te digo:\nquando eras jovem,\ntu te cingias e ias para onde querias.\nQuando fores velho,\nestenderás as mãos e outro te cingirá\ne te levará para onde não queres ir\".\n19\nJesus disse isso,\nsignificando com que morte\nPedro iria glorificar a Deus.\nE acrescentou:\n\"Segue-me\".\nPalavra da Salvação."
+  }
+}

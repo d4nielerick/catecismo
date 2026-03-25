@@ -1,0 +1,23 @@
+{
+  "data": "2026-12-30",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 2,12-17</div><div> Sl 95(96),7-8a.8b-9.10 (R. 11a)</div><div></div><div> Lc 2,36-40</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,12-17",
+    "texto": "12\nEu vos escrevo, filhinhos:\nos vossos pecados foram perdoados\npor meio do seu nome.\n13\nEu vos escrevo, pais:\nvós conheceis aquele que é desde o princípio.\nEu vos escrevo, jovens:\nvós vencestes o Maligno.\n14\nJá vos escrevi, filhinhos:\nvós conheceis o Pai.\nJá vos escrevi, jovens:\nvós sois fortes,\na Palavra de Deus permanece em vós,\ne vencestes o Maligno.\n15\nNão ameis o mundo, nem o que há no mundo.\nSe alguém ama o mundo, não está nele o amor do Pai.\n16\nPorque tudo o que há no mundo\n— as paixões da natureza,\na concupiscência dos olhos\ne a ostentação da riqueza —\nnão vem do Pai, mas do mundo.\n17\nOra, o mundo passa,\ne também  a sua concupiscência;\nmas aquele que faz a vontade de Deus\npermanece para sempre.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),7-8a.8b-9.10 (R. 11a)",
+    "refrao": "",
+    "texto": "R.\nO céu se rejubile e exulte a terra!\n7\nÓ família das nações, dai ao Senhor, †\nó nações, dai ao Senhor poder e glória, *\n8a\ndai-lhe a glória que é devida ao seu nome!\nR.\n8b\nOferecei um sacrifício nos seus átrios, †\n9\nadorai-o no esplendor da santidade, *\nterra inteira, estremecei diante dele!\nR.\n10\nPublicai entre as nações: \"Reina o Senhor!\" †\nEle firmou o universo inabalável, *\ne os povos ele julga com justiça.\nR.\nEvangelho - Lc 2,36-40\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nUm dia sagrado brilhou para nós:\nNações, vinde todas adorar o Senhor:\npois hoje desceu grande luz sobre a terra!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "2,36-40",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n2,36-40\nNaquele tempo,\n36\nhavia também uma profetisa, chamada Ana,\nfilha de Fanuel, da tribo de Aser.\nEra de idade muito avançada;\nquando jovem, tinha sido casada\ne vivera sete anos com o marido.\n37\nDepois ficara viúva,\ne agora já estava com oitenta e quatro anos.\nNão saía do Templo, dia e noite servindo a Deus\ncom jejuns e orações.\n38\nAna chegou nesse momento\ne pôs-se a louvar a Deus e a falar do menino\na todos os que esperavam a libertação de Jerusalém.\n39\nDepois de cumprirem tudo, conforme a Lei do Senhor,\nvoltaram à Galileia, para Nazaré, sua cidade.\n40\nO menino crescia e tornava-se forte,\ncheio de sabedoria;\ne a graça de Deus estava com ele.\nPalavra da Salvação."
+  }
+}

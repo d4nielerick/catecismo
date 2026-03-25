@@ -1,0 +1,23 @@
+{
+  "data": "2025-04-14",
+  "titulo": "Semana Santa",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 42,1-7</div><div> Sl 26(27),1.2.3.13-14 (R. 1a)</div><div></div><div> Jo 12,1-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "42,1-7",
+    "texto": "1\n\"Eis o meu servo - eu o recebo;\neis o meu eleito - nele se compraz minh'alma;\npus meu espírito sobre ele,\nele promoverá o julgamento das nações.\n2\nEle não clama nem levanta a voz,\nnem se faz ouvir pelas ruas.\n3\nNão quebra uma cana rachada\nnem apaga um pavio que ainda fumega;\nmas promoverá o julgamento para obter a verdade.\n4\nNão esmorecerá nem se deixará abater,\nenquanto não estabelecer a justiça na terra;\nos países distantes esperam seus ensinamentos\".\n5\nIsto diz o Senhor Deus,\nque criou o céu e o estendeu,\nfirmou a terra e tudo que dela germina,\nque dá a respiração aos seus habitantes\ne o sopro da vida ao que nela se move:\n6\n\"Eu, o Senhor, te chamei para a justiça\ne te tomei pela mão;\neu te formei e te constituí como o centro\nde aliança do povo, luz das nações,\n7\npara abrires os olhos dos cegos,\ntirar os cativos da prisão,\nlivrar do cárcere os que vivem nas trevas\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 26(27),1.2.3.13-14 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é minha luz e salvação.\n1\nO Senhor é minha luz e salvação; *\nde quem eu terei medo?\nO Senhor é a proteção da minha vida; *\nperante quem eu tremerei?\nR.\n2\nQuando avançam os malvados contra mim, *\nquerendo devorar-me,\nsão eles, inimigos e opressores, *\nque tropeçam e sucumbem.\nR.\n3\nSe contra mim um exército se armar, *\nnão temerá meu coração;\nse contra mim uma batalha estourar, *\nmesmo assim confiarei.\nR.\n13\nSei que a bondade do Senhor eu hei de ver *\nna terra dos viventes.\n14\nEspera no Senhor e tem coragem, *\nespera no Senhor!\nR.\nEvangelho - Jo 12,1-11\nAclamação ao Evangelho\nR.\nHonra, glória, poder e louvor a Jesus, nosso Deus e Senhor!\nV.\nSalve, nosso rei, somente vós tendes compaixão dos nossos erros."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,1-11",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n12,1-11\n1\nSeis dias antes da Páscoa,\nJesus foi para Betânia, onde morava Lázaro,\nque ele havia ressuscitado dos mortos.\n2\nAli ofereceram a Jesus um jantar;\nMarta servia\ne Lázaro era um dos que estavam à mesa com ele.\n3\nMaria, tomando quase meio litro de perfume\nde nardo puro e muito caro,\nungiu os pés de Jesus e enxugou-os com seus cabelos.\nA casa inteira ficou cheia do perfume do bálsamo.\n4\nEntão, falou Judas Iscariotes,\num dos seus discípulos,\naquele que o havia de entregar:\n5\n\"Por que não se vendeu este perfume\npor trezentas moedas de prata,\npara as dar aos pobres?\"\n6\nJudas falou assim\nnão porque se preocupasse com os pobres,\nmas porque era ladrão;\nele tomava conta da bolsa comum\ne roubava o que se depositava nela.\n7\nJesus, porém, disse:\n\"Deixa-a; ela fez isto\nem vista do dia de minha sepultura.\n8\nPobres, sempre os tereis convosco,\nenquanto a mim, nem sempre me tereis\".\n9\nMuitos judeus,\ntendo sabido que Jesus estava em Betânia,\nforam para lá,\nnão só por causa de Jesus,\nmas também para verem Lázaro,\nque Jesus havia ressuscitado dos mortos.\n10\nEntão, os sumos sacerdotes\ndecidiram matar também Lázaro,\n11\nporque, por causa dele,\nmuitos deixavam os judeus\ne acreditavam em Jesus.\nPalavra da Salvação."
+  }
+}

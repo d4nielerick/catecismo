@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dt 10,12-22</div><div> Sl 147(147B),12-13.14-15.19-20 (R. 12a)</div><div></div><div> Mt 17,22-27</div></div>",
+  "primeira_leitura": {
+    "referencia": "10,12-22",
+    "texto": "Moisés falou ao povo, dizendo:\n12\n\"E agora, Israel,\no que é que o Senhor teu Deus te pede?\nApenas que o temas e andes em seus caminhos;\nque ames e sirvas ao Senhor teu Deus,\ncom todo o teu coração e com toda a tua alma,\n13\ne que guardes os mandamentos e preceitos do Senhor,\nque hoje te prescrevo para que sejas feliz.\n14\nVê: é ao Senhor teu Deus que pertencem os céus,\no mais alto dos céus,\na terra e tudo o que nela existe.\n15\nNo entanto, foi a teus pais\nque o Senhor se afeiçoou e amou;\ne, depois deles, foi à sua descendência,\nisto é, a vós,\nque ele escolheu entre todos os povos,\ncomo hoje está provado.\n16\nAbri, pois, o vosso coração,\ne não endureçais mais vossa cerviz,\n17\nporque o vosso Deus é o Deus dos deuses\ne o Senhor dos senhores,\no Deus grande, poderoso e terrível,\nque não faz acepção de pessoas nem aceita suborno.\n18\nEle faz justiça ao órfão e à viúva,\nama o estrangeiro e lhe dá alimento e roupa.\n19\nPortanto, amai os estrangeiros,\nporque vós também fostes estrangeiros na terra do Egito.\n20\nTemerás o Senhor teu Deus e só a ele servirás;\na ele te apegarás e jurarás por seu nome.\n21\nEle é o teu louvor, ele é o teu Deus,\nque fez por ti essas coisas grandes e terríveis\nque viste com teus próprios olhos.\n22\nAo descerem para o Egito,\nteus pais eram apenas setenta pessoas,\ne agora o Senhor teu Deus te fez tão numeroso\ncomo as estrelas do céu\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 147(147B),12-13.14-15.19-20 (R. 12a)",
+    "refrao": "",
+    "texto": "R.\nGlorifica o Senhor, Jerusalém!\nOu:\nAleluia, Aleluia, Aleluia.\n12\nGlorifica o Senhor, Jerusalém! *\nÓ Sião, canta louvores ao teu Deus!\n13\nPois reforçou com segurança as tuas portas, *\ne os teus filhos em teu seio abençoou.\nR.\n14\nA paz em teus limites garantiu *\ne te dá como alimento a flor do trigo.\n15\nEle envia suas ordens para a terra, *\ne a palavra que ele diz corre veloz.\nR.\n19\nAnuncia a Jacó sua palavra, *\nseus preceitos suas leis a Israel.\n20\nNenhum povo recebeu tanto carinho, *\na nenhum outro revelou os seus preceitos.\nR.\nEvangelho - Mt 17,22-2\nAclamação ao Evangelho  Cf.\n2Ts 2,14\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPelo Evangelho o Pai nos chamou,\na fim de alcançarmos a glória\nde nosso Senhor Jesus Cristo."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "17,22-27",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n17,22-27\nNaquele tempo,\n22\nquando Jesus e os seus discípulos\nestavam reunidos na Galileia,\nele lhes disse:\n\"O Filho do Homem\nvai ser entregue nas mãos dos homens.\n23\nEles o matarão,\nmas no terceiro dia ele ressuscitará\".\nE os discípulos ficaram muito tristes.\n24\nQuando chegaram a Cafarnaum,\nos cobradores do imposto do Templo\naproximaram-se de Pedro e perguntaram:\n\"O vosso mestre não paga o imposto do Templo?\"\n25\nPedro respondeu:\n\"Sim, paga\".\nAo entrar em casa, Jesus adiantou-se, e perguntou:\n\"Simão, que te parece:\nOs reis da terra cobram impostos ou taxas de quem:\ndos filhos ou dos estranhos?\"\n26\nPedro respondeu:\n\"Dos estranhos!\"\nEntão Jesus disse:\n\"Logo os filhos são livres.\n27\nMas, para não escandalizar essa gente,\nvai ao mar, lança o anzol,\ne abre a boca do primeiro peixe que tu pescares.\nAli tu encontrarás uma moeda;\npega então a moeda e vai entregá-la a eles,\npor mim e por ti\".\nPalavra da Salvação."
+  }
+}

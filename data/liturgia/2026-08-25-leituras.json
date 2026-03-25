@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Ts 2,1-3a.14-17</div><div> Sl 95(96),10.11-12a.12b-13 (R. 13b)</div><div></div><div> Mt 23,23-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-3a.14-17",
+    "texto": "1\nNo que se refere à vinda de nosso Senhor Jesus Cristo\ne à nossa união com ele, nós vos pedimos, irmãos:\n2\nnão deixeis tão facilmente transtornar a vossa cabeça,\nnem vos alarmeis por causa de alguma revelação,\nou carta atribuída a nós,\nafirmando que o Dia do Senhor está próximo.\n3a\nQue ninguém vos engane de modo algum.\n14\nDeus vos chamou para que,\npor meio do nosso evangelho,\nalcanceis a glória de nosso senhor Jesus Cristo.\n15\nAssim, portanto, irmãos, ficai firmes\ne conservai firmemente as tradições\nque vos ensinamos, de viva voz ou por carta.\n16\nNosso Senhor Jesus Cristo\ne Deus nosso Pai, que nos amou em sua graça\ne nos proporcionou uma consolação eterna\ne feliz esperança,\n17\nanimem os vossos corações\ne vos confirmem em toda a boa ação e palavra.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),10.11-12a.12b-13 (R. 13b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor vem julgar nossa terra.\n10\nPublicai entre as nações: \"Reina o Senhor!\" †\nEle firmou o universo inabalável, *\ne os povos ele julga com justiça.\nR.\n11\nO céu se rejubile e exulte a terra, †\naplauda o mar com o que vive em suas águas; *\n12a\nos campos com seus frutos rejubilem\nR.\nb\nE exultem as florestas e as matas †\n13\nna presença do Senhor, pois ele vem, *\nporque vem para julgar a terra inteira.\nGovernará o mundo todo com justiça, *\ne os povos julgará com lealdade.\nR.\nEvangelho - Mt 23,23-2\nAclamação ao Evangelho  Hb\n4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor é viva e eficaz:\nela julga os pensamentos e as intenções do coração."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "23,23-26",
+    "texto": "23,23-26\nNaquele tempo, disse Jesus:\n23\n\"Ai de vós, mestres da Lei e fariseus hipócritas!\nVós pagais o dízimo da hortelã,\nda erva-doce e do cominho,\ne deixais de lado\nos ensinamentos mais importantes da Lei,\ncomo a justiça, a misericórdia e a fidelidade.\nVós deveríeis praticar isto,\nsem contudo deixar aquilo.\n24\nGuias cegos!\nVós filtrais o mosquito, mas engolis o camelo.\n25\nAí de vós, mestres da Lei e fariseus hipócritas!\nVós limpais o copo e o prato por fora,\nmas, por dentro, estais cheios de roubo e cobiça.\n26\nFariseu cego!\nLimpa primeiro o copo por dentro,\npara que também por fora fique limpo\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-12-26",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 6,8-10.7,54-59</div><div> Sl 30(31),3cd-4.6 e 8ab.16bc e 17 (R. 6a)</div><div></div><div> Mt 10,17-22</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,8-10.7,54-59",
+    "texto": "Naqueles dias,\n8\nEstêvão, cheio de graça e poder,\nfazia prodígios e grandes sinais entre o povo.\n9\nMas alguns membros da chamada Sinagoga dos Libertos,\njunto com cirenenses e alexandrinos,\ne alguns da Cilícia e da Âsia,\ncomeçaram a discutir com Estêvão.\n10\nPorém, não conseguiam\nresistir à sabedoria\ne ao Espírito com que ele falava.\n7,54\nAo ouvir essas palavras,\neles ficaram enfurecidos\ne rangeram os dentes contra Estêvão.\n55\nEstêvão, cheio do Espírito Santo,\nolhou para o céu e viu a glória de Deus\ne Jesus, de pé, à direita de Deus.\n56\nE disse: \"Estou vendo o céu aberto,\ne o Filho do Homem, de pé, à direita de Deus\".\n57\nMas eles, dando grandes gritos\ne, tapando os ouvidos,\navançaram todos juntos contra Estêvão;\n58\narrastaram-no para fora da cidade\ne começaram a apedrejá-lo.\nAs testemunhas deixaram suas vestes\naos pés de um jovem, chamado Saulo.\n59\nEnquanto o apedrejavam, Estêvão clamou dizendo:\n\"Senhor Jesus, acolhe o meu espírito\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 30(31),3cd-4.6 e 8ab.16bc e 17 (R. 6a)",
+    "refrao": "",
+    "texto": "R.\nEm vossas mãos, Senhor, entrego o meu espírito.\n3c\nSede uma rocha protetora para mim, *\n3d\num abrigo bem seguro que me salve!\n4\nSim, sois vós a minha rocha e fortaleza; *\npor vossa honra orientai-me e conduzi-me!\nR.\n6\nEm vossas mãos, Senhor, entrego o meu espírito, *\nporque vós me salvareis, ó Deus fiel!\n8a\nV\nosso amor me faz saltar de alegria, *\n8b\npois olhastes para as minhas aflições.\nR.\n16b\nEu entrego em vossas mãos o meu destino; *\n16c\nlibertai-me do inimigo e do opressor!\n17\nMostrai serena a vossa face ao vosso servo, *\ne salvai-me pela vossa compaixão!\nR.\nEvangelho - Mt 10,17-2\nAclamação ao Evangelho\nSl 117(118),26a.27a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nBendito o que vem em nome do Senhor.\nNosso Deus é o Senhor, ele é a nossa luz."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,17-22",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n10,17-22\nNaquele tempo,\ndisse Jesus aos seus apóstolos:\n17\n\"Cuidado com os homens,\nporque eles vos entregarão aos tribunais\ne vos açoitarão nas suas sinagogas.\n18\nVós sereis levados\ndiante de governadores e reis,\npor minha causa,\npara dar testemunho diante deles e das nações.\n19\nQuando vos entregarem,\nnão fiqueis preocupados como falar\nou o que dizer.\nEntão naquele momento\nvos será indicado o que deveis dizer.\n20\nCom efeito,\nnão sereis vós que havereis de falar,\nmas sim o Espírito do vosso Pai\né que falará através de vós.\n21\nO irmão entregará à morte o próprio irmão;\no pai entregará o filho;\nos filhos se levantarão contra seus pais,\ne os matarão.\n22\nVós sereis odiados por todos,\npor causa do meu nome.\nMas quem perseverar até o fim,\nesse será salvo\".\nPalavra da Salvação."
+  }
+}

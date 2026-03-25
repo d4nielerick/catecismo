@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 4,20-25</div><div> Lc 1,69-70.71-72.73-75 (R. cf. 68)</div><div></div><div> Lc 12,13-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,20-25",
+    "texto": "Irmãos,\n20\ndiante da promessa divina,\nAbraão não duvidou por falta de fé,\nmas revigorou-se na fé e deu glória a Deus,\n21\nconvencido de que Deus tem poder para cumprir o que prometeu.\n22\nEsta sua atitude de fé lhe foi creditada como justiça.\n23\nAfirmando que a fé lhe foi creditada como justiça,\na Escritura visa não só à pessoa de Abraão,\n24\nmas também a nós,\npois a fé será creditada também para nós\nque cremos naquele\nque ressuscitou dos mortos Jesus, nosso Senhor.\n25\nEle, Jesus, foi entregue\npor causa de nossos pecados\ne foi ressuscitado para nossa justificação.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Lc 1,69-70.71-72.73-75 (R. cf. 68)",
+    "refrao": "",
+    "texto": "R.\nBendito seja o Senhor Deus de Israel,\nporque a seu povo visitou e libertou!\n69\nFez surgir um poderoso Salvador *\nna casa de Davi, seu servidor,\n70\ncomo falara pela boca de seus santos, *\nos profetas desde os tempos mais antigos.\nR.\n71\npara salvar-nos do poder dos inimigos *\ne da mão de todos quantos nos odeiam.\n72\nAssim mostrou misericórdia a nossos pais, *\nrecordando a sua santa Aliança.\nR.\n73\ne o juramento a Abraão, o nosso pai, *\nde conceder-nos que, libertos do inimigo,\na ele nós sirvamos sem temor †\n75\nem santidade e em justiça diante dele, *\nenquanto perdurarem nossos dias.\nR.\nAclamação ao Evangelho\nMt 5,3\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os humildes de espírito,\nporque deles é o Reino dos Céus."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,13-21",
+    "texto": "12,13-21\nNaquele tempo,\n13\nalguém, do meio da multidão, disse a Jesus:\n\"Mestre, dize ao meu irmão que reparta a herança comigo\".\n14\nJesus respondeu:\n\"Homem, quem me encarregou de julgar\nou de dividir vossos bens?\"\n15\nE disse-lhes:\n\"Atenção!\nTomai cuidado contra todo tipo de ganância,\nporque, mesmo que alguém tenha muitas coisas,\na vida de um homem\nnão consiste na abundância de bens\".\n16\nE contou-lhes uma parábola:\n\"A terra de um homem rico\ndeu uma grande colheita.\n17\nEle pensava consigo mesmo:\n'O que vou fazer?\nNão tenho onde guardar minha colheita'.\n18\nEntão resolveu:\n'Já sei o que fazer!\nVou derrubar meus celeiros e construir maiores;\nneles vou guardar todo o meu trigo,\njunto com os meus bens.\n19\nEntão poderei dizer a mim mesmo:\nMeu caro,\ntu tens uma boa reserva para muitos anos.\nDescansa, come, bebe, aproveita!'\n20\nMas Deus lhe disse:\n'Louco!\nAinda nesta noite, pedirão de volta a tua vida.\nE para quem ficará o que tu acumulaste?'\n21\nAssim acontece\ncom  quem ajunta tesouros para si mesmo,\nmas não é rico diante de Deus\".\nPalavra da Salvação."
+  }
+}

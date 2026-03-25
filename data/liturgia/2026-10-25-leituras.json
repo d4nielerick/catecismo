@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 22,20-26</div><div> Sl 17(18),2-3a.3bc-4.47.51ab (R. 2)</div><div> 1Ts 1,5c-10</div><div> Mt 22,34-40</div></div>",
+  "primeira_leitura": {
+    "referencia": "22,20-26",
+    "texto": "Assim diz o Senhor:\n20\nNão oprimas nem maltrates o estrangeiro,\npois vós fostes estrangeiros na terra do Egito.\n21\nNão façais mal algum à viúva nem ao órfão.\n22\nSe os maltratardes, gritarão por mim,\ne eu ouvirei o seu clamor.\n23\nMinha cólera, então, se inflamará\ne eu vos matarei à espada;\nvossas mulheres ficarão viúvas\ne órfãos os vossos filhos.\n24\nSe emprestares dinheiro a alguém do meu povo,\na um pobre que vive ao teu lado,\nnão sejas um usurário,\ndele cobrando juros.\n25\nSe tomares como penhor o manto do teu próximo,\ndeverás devolvê-lo antes do pôr do sol.\n26\nPois é a única veste que tem para o seu corpo,\ne coberta que ele tem para dormir.\nSe clamar por mim, eu o ouvirei,\nporque sou misericordioso.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 17(18),2-3a.3bc-4. 47.51ab (R. 2)",
+    "refrao": "",
+    "texto": "R.\nEu vos amo, ó Senhor, sois minha força e salvação.\n2\nEu vos amo, ó Senhor! Sois minha força, *\n3a\nminha rocha, meu refúgio e Salvador!\nÓ meu Deus, sois o rochedo que me abriga, *\nminha força e poderosa salvação.\nR.\n3bc\nÓ meu Deus, sois o rochedo que me abriga *\nsois meu escudo e proteção: em vós espero!\n4\nInvocarei o meu Senhor: a ele a glória! *\ne dos meus perseguidores serei salvo!\nR.\n47\nViva o Senhor! Bendito seja o meu Rochedo! *\nE louvado seja Deus, meu Salvador!\n51ab\nConcedeis ao vosso rei grandes vitórias *\ne mostrais misericórdia ao vosso Ungido.\nR.\n2ª Leitura - 1Ts 1,5c\nSEGUNDA LEITURA\nVós vos convertestes, abandonando os falsos deuses,\npara servir a Deus, esperando o seu Filho.\nLeitura da Primeira Carta de São Paulo aos Tessalonicenses\n1,5c-10\nIrmãos:\n5c\nSabeis de que maneira procedemos entre vós,\npara o vosso bem.\n6\nE vós vos tornastes imitadores nossos e do Senhor,\nacolhendo a Palavra com a alegria do Espírito Santo,\napesar de tantas tribulações.\n7\nAssim vos tornastes modelo\npara todos os fiéis da Macedônia e da Acaia.\n8\nCom efeito, a partir de vós,\na Palavra do Senhor não se divulgou apenas\nna Macedônia e na Acaia,\nmas a vossa fé em Deus propagou-se por toda parte.\nAssim, nós já nem precisamos de falar,\n9\npois as pessoas mesmas contam como vós nos acolhestes\ne como vos convertestes, abandonando os falsos deuses,\npara servir ao Deus vivo e verdadeiro,\n10\nesperando dos céus o seu Filho,\na quem ele ressuscitou dentre os mortos:\nJesus, que nos livra do castigo que está por vir.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSe alguém me ama, guardará a minha palavra,\ne meu Pai o amará, e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "22,34-40",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n22,34-40\nNaquele tempo,\n34\nOs fariseus ouviram dizer que Jesus\ntinha feito calar os saduceus.\nEntão eles se reuniram em grupo,\n35\ne um deles perguntou a Jesus, para experimentá-lo:\n36\n\"Mestre, qual é o maior mandamento da Lei?\"\n37\nJesus respondeu:\n\"'Amarás o Senhor teu Deus\nde todo o teu coração, de toda a tua alma,\ne de todo o teu entendimento!'\n38\nEsse é o maior e o primeiro mandamento.\n39\nO segundo é semelhante a esse:\n'Amarás ao teu próximo como a ti mesmo'.\n40\nToda a Lei e os profetas\ndependem desses dois mandamentos\".\nPalavra da Salvação."
+  }
+}

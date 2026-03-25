@@ -1,0 +1,23 @@
+{
+  "data": "2026-12-14",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Nm 24,2-7.15-17a</div><div> Sl 24(25),4bc-5ab.6-7bc.8-9 (R. 4b)</div><div></div><div> Mt 21,23-27</div></div>",
+  "primeira_leitura": {
+    "referencia": "24,2-7.15-17a",
+    "texto": "Naqueles dias,\n2\nBalaão levantou os olhos\ne viu Israel acampado por tribos.\nO espírito de Deus veio sobre ele,\n3\ne Balaão pronunciou seu poema:\n\"Oráculo de Balaão, filho de Beor,\noráculo do homem que tem os olhos abertos;\n4\noráculo daquele que ouve as palavras de Deus,\nque vê o que o Poderoso lhe faz ver,\nque cai, e seus olhos se abrem.\n5\nComo são belas as tuas tendas, ó Jacó,\ne as tuas moradas, ó Israel!\n6\nElas se estendem como vales,\ncomo jardins ao longo de um rio,\ncomo aloés que o Senhor plantou,\ncomo cedros junto das águas.\n7\nA água transborda de seus cântaros,\ne sua semente é ricamente regada.\nSeu rei é mais poderoso do que Agag,\nseu reino está em ascensão\".\n15\nE Balaão continuou pronunciando o seu poema:\n\"Oráculo de Balaão, filho de Beor,\noráculo do homem que tem os olhos abertos,\n16\noráculo daquele que ouve as palavras de Deus,\ne conhece os pensamentos do Altíssimo,\nque vê o que o Poderoso lhe faz ver,\nque cai, e seus olhos se abrem.\n17a\nEu o vejo, mas não agora;\ne o contemplo, mas não de perto.\nUma estrela sai de Jacó,\ne um cetro se levanta de Israel\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 24(25),4bc-5ab.6-7bc.8-9 (R. 4b)",
+    "refrao": "",
+    "texto": "R.\nFazei-me conhecer a vossa estrada, ó Senhor!\n4b\nMostrai-me, ó Senhor, vossos caminhos, *\nc\ne fazei-me conhecer a vossa estrada!\n5a\nVossa verdade me oriente e me conduza, *\nb\nporque sois o Deus da minha salvação.\nR.\n6\nRecordai, Senhor meu Deus, vossa ternura *\ne a vossa compaixão que são eternas!\n7b\nDe mim lembrai-vos, porque sois misericórdia *\nc\ne sois bondade sem limites, ó Senhor!\nR.\n8\nO Senhor é piedade e retidão, *\ne reconduz ao bom caminho os pecadores.\n9\nEle dirige os humildes na justiça, *\ne aos pobres ele ensina o seu caminho.\nR.\nAclamação ao Evangelho\nSl 84(85),8\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMostrai-nos, ó Senhor, vossa bondade\ne a vossa salvação nos concedei!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,23-27",
+    "texto": "21,23-27\nNaquele tempo,\n23\nJesus voltou ao Templo.\nEnquanto ensinava,\nos sumos sacerdotes e os anciãos do povo\naproximaram-se dele e perguntaram:\n\"Com que autoridade fazes estas coisas?\nQuem te deu tal autoridade?\"\n24\nJesus respondeu-lhes:\n\"Também eu vos farei uma pergunta.\nSe vós me responderdes, também eu vos direi\ncom que autoridade faço estas coisas.\n25\nDonde vinha o batismo de João?\nDo céu ou dos homens?\"\nEles refletiam entre si:\n\"Se dissermos: 'Do céu', ele nos dirá:\n'Por que não acreditastes nele?'\n26\nSe dissermos: 'Dos homens', temos medo do povo,\npois todos têm João Batista na conta de profeta\".\n27\nEles então responderam a Jesus: \"Não sabemos\".\nAo que Jesus também respondeu:\n\"Eu também não vos direi\ncom que autoridade faço estas coisas\".\nPalavra da Salvação."
+  }
+}

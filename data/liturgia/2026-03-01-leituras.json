@@ -1,0 +1,23 @@
+{
+  "data": "2026-03-01",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 12,1-4a</div><div> Sl 32(33),4-5.18-19.20.22 (R. cf. 22)</div><div> 2Tm 1,8b-10</div><div> Mt 17,1-9</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,1-4a",
+    "texto": "1\nNaqueles dias, o Senhor disse a Abrão:\n\"Sai da tua terra, da tua família e da casa do teu pai,\ne vai para a terra que eu te vou mostrar.\n2\nFarei de ti um grande povo e te abençoarei:\nengrandecerei o teu nome,\nde modo que ele se torne uma bênção.\n3\nAbençoarei os que te abençoarem\ne amaldiçoarei os que te amaldiçoarem;\nem ti serão abençoadas todas as famílias da terra!\".\n4a\nE Abrão partiu, como o Senhor lhe havia dito.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),4-5.18-19.20.22 (R. cf. 22)",
+    "refrao": "",
+    "texto": "R.\nSobre nós venha, Senhor, a vossa graça,\nvenha a vossa salvação!\n4\nPois reta é a palavra do Senhor,*\ne tudo o que ele faz merece fé.\n5\nDeus ama o direito e a justiça,*\ntransborda em toda a terra a sua graça.\nR.\n18\nMas o Senhor pousa o olhar sobre os que o temem,*\ne que confiam esperando em seu amor,\n19\npara da morte libertar as suas vidas*\ne alimentá-los quando é tempo de penúria.\nR.\n20\nNo Senhor nós esperamos confiantes,*\nporque ele é nosso auxílio e proteção!\n22\nSobre nós venha, Senhor, a vossa graça,*\nda mesma forma que em vós nós esperamos!\nR.\n2ª Leitura - 2Tm 1,8b\nSEGUNDA LEITURA\nDeus nos chama e ilumina.\nLeitura da Segunda Carta de São Paulo a Timóteo\n1,8b-10\nCaríssimo:\n8b\nSofre comigo pelo Evangelho,\nfortificado pelo poder de Deus.\n9\nDeus nos salvou e nos chamou com uma vocação santa,\nnão devido às nossas obras,\nmas em virtude do seu desígnio e da sua graça,\nque nos foi dada em Cristo Jesus\ndesde toda a eternidade.\n10\nEsta graça foi revelada agora,\npela manifestação de nosso Salvador, Jesus Cristo.\nEle não só destruiu a morte,\ncomo também fez brilhar a vida e a imortalidade\npor meio do Evangelho,\nPalavra do Senhor.\nAclamação ao Evangelho\ncf. Lc 9,35\nR.\nLouvor a vós, ó Cristo, rei da eterna glória!\nV.\nNuma nuvem resplendente fez-se ouvir a voz do Pai:\nEis meu Filho muito amado, escutai-o, todos vós."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "17,1-9",
+    "texto": "17,1-9\nNaquele tempo,\n1\nJesus tomou consigo Pedro, Tiago e João, seu irmão,\ne os levou a um lugar à parte, sobre uma alta montanha.\n2\nE foi transfigurado diante deles;\no seu rosto brilhou como o sol\ne as suas roupas ficaram brancas como a luz.\n3\nNisto apareceram-lhes Moisés e Elias,\nconversando com Jesus.\n4\nEntão Pedro tomou a palavra e disse:\n\"Senhor, é bom ficarmos aqui.\nSe queres, vou fazer aqui três tendas:\numa para ti, outra para Moisés, e outra para Elias\".\n5\nPedro ainda estava falando,\nquando uma nuvem luminosa os cobriu com sua sombra.\nE da nuvem uma voz dizia:\n\"Este é o meu Filho amado,\nno qual eu pus todo meu agrado.\nEscutai-o!\"\n6\nQuando ouviram isto, os discípulos ficaram muito\nassustados e caíram com o rosto em terra.\n7\nJesus se aproximou, tocou neles e disse:\n\"Levantai-vos, e não tenhais medo\".\n8\nOs discípulos ergueram os olhos e não viram mais\nninguém, a não ser somente Jesus.\n9\nQuando desciam da montanha, Jesus ordenou-lhes:\n\"Não conteis a ninguém esta visão até que o\nFilho do Homem tenha ressuscitado dos mortos\".\nPalavra da Salvação."
+  }
+}

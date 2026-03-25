@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 3,22-29</div><div> Sl 104(105),2-3.4-5.6-7 (R. 8a)</div><div></div><div> Lc 11,27-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,22-29",
+    "texto": "Irmãos,\n22\na Escritura pôs todos e tudo sob o jugo do pecado,\na fim de que, pela fé em Jesus Cristo,\nse cumprisse a promessa em favor dos que creem.\n23\nAntes que se inaugurasse o regime da fé,\nnós éramos guardados, como prisioneiros,\nsob o jugo da Lei.\nÉramos guardados para o regime da fé,\nque estava para ser revelado.\n24\nAssim, a Lei foi como um pedagogo\nque nos conduziu até Cristo,\npara que fôssemos justificados pela fé.\n25\nMas, uma vez inaugurado o regime da fé,\njá não estamos na dependência desse pedagogo.\n26\nCom efeito, vós todos sois filhos de Deus\npela fé em Jesus Cristo.\n27\nVós todos que fostes batizados em Cristo\nvos revestistes de Cristo.\n28\nO que vale não é mais ser judeu nem grego,\nnem escravo nem livre,\nnem homem nem mulher,\npois todos vós sois um só, em Jesus Cristo.\n29\nSendo de Cristo,\nsois então descendência de Abraão,\nherdeiros segundo a promessa.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 104(105),2-3.4-5.6-7 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor se lembra sempre da Aliança!\nOu:\nAleluia, Aleluia, Aleluia\n2\nCantai, entoai salmos para ele, *\npublicai todas as suas maravilhas!\n3\nGloriai-vos em seu nome que é santo, *\nexulte o coração que busca a Deus!\nR.\n4\nProcurai o Senhor Deus e seu poder, *\nbuscai constantemente a sua face!\n5\nLembrai as maravilhas que ele fez, *\nseus prodígios e as palavras de seus lábios!\nR.\n6\nDescendentes de Abraão, seu servidor, *\ne filhos de Jacó, seu escolhido,\n7\nele mesmo, o Senhor, é nosso Deus, *\nvigoram suas leis em toda a terra.\nR.\nEvangelho - Lc 11,27-2\nAclamação ao Evangelho\nLc 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFeliz quem ouve e observa a palavra de Deus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,27-28",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,27-28\nNaquele tempo,\n27\nenquanto Jesus falava,\numa mulher levantou a voz no meio da multidão\ne lhe disse:\n\"Feliz o ventre que te trouxe\ne os seios que te amamentaram\".\n28\nJesus respondeu:\n\"Muito mais felizes são aqueles\nque ouvem a palavra de Deus\ne a põem em prática\".\nPalavra da Salvação."
+  }
+}

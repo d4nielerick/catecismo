@@ -1,0 +1,23 @@
+{
+  "data": "2026-06-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 17,1-6</div><div> Sl 120(121),1-2.3-4.5-6.7-8 (R. Cf. 2)</div><div></div><div> Mt 5,1-12</div></div>",
+  "primeira_leitura": {
+    "referencia": "17,1-6",
+    "texto": "Naqueles dias,\n1\no profeta Elias, tesbita de Tesbi de Galaad,\ndisse a Acab:\n\"Pela vida do Senhor, o Deus de Israel, a quem sirvo,\nnão haverá nestes anos nem orvalho nem chuva,\nsenão quando eu disser!\"\n2\nE a palavra do Senhor foi dirigida a Elias\nnestes termos:\n3\n\"Parte daqui e toma a direção do oriente.\nVai esconder-te junto à torrente de Carit,\nque está defronte ao Jordão.\n4\nLá beberás da torrente.\nE eu ordenei aos corvos que te deem alimento\".\n5\nElias partiu e fez como o Senhor lhe tinha ordenado,\ne foi morar junto à torrente de Carit,\nque está defronte ao Jordão.\n6\nOs corvos traziam-lhe pão e carne,\ntanto de manhã como de tarde,\ne ele bebia da torrente.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 120(121),1-2.3-4.5-6.7-8 (R. Cf. 2)",
+    "refrao": "",
+    "texto": "R.\nDo Senhor é que vem o meu socorro,\ndo Senhor que fez o céu e fez a terra!\n1\nEu levanto os meus olhos para os montes:*\nde onde pode vir o meu socorro?\n2\n\"Do Senhor é que me vem o meu socorro,*\ndo Senhor que fez o céu e fez a terra!\"\nR.\n3\nEle não deixa tropeçarem os meus pés,*\ne não dorme quem te guarda e te vigia.\n4\nOh! Não! Ele não dorme nem cochila,*\naquele que é o guarda de Israel!\nR.\n5\nO Senhor é o teu guarda, o teu vigia,*\né uma sombra protetora à tua direita.\n6\nNão vai ferir-te o sol durante o dia,*\nnem a lua através de toda a noite.\nR.\n7\nO Senhor te guardará de todo o mal,*\nele mesmo vai cuidar da tua vida!\n8\nDeus te guarda na partida e na chegada.*\nEle te guarda desde agora e para sempre!\nR.\nEvangelho - Mt 5,1-12a\nAclamação ao Evangelho\nMt 5,12a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAlegrai-vos, vós todos, porque grande há de ser\na recompensa nos céus que um dia tereis!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,1-12",
+    "texto": "5,1-12\nNaquele tempo,\n1\nvendo Jesus as multidões,\nsubiu ao monte e sentou-se.\nOs discípulos aproximaram-se,\n2\ne Jesus começou a ensiná-los:\n3\n\"Bem-aventurados os pobres em espírito,\nporque deles é o Reino dos Céus.\n4\nBem-aventurados os aflitos,\nporque serão consolados.\n5\nBem-aventurados os mansos,\nporque possuirão a terra.\n6\nBem-aventurados os que têm fome e sede de justiça,\nporque serão saciados.\n7\nBem-aventurados os misericordiosos,\nporque alcançarão misericórdia.\n8\nBem-aventurados os puros de coração,\nporque verão a Deus.\n9\nBem-aventurados os que promovem a paz,\nporque serão chamados filhos de Deus.\n10\nBem-aventurados os que são perseguidos\npor causa da justiça,\nporque deles é o Reino dos Céus.\n11\nBem-aventurados sois vós\nquando vos injuriarem e perseguirem\ne, mentindo, disserem todo tipo de mal contra vós,\npor causa de mim.\n12\nAlegrai-vos e exultai,\nporque será grande a vossa recompensa nos céus.\nDo mesmo modo perseguiram\nos profetas que vieram antes de vós\".\nPalavra da Salvação."
+  }
+}

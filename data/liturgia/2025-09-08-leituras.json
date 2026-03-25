@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Mq 5,1-4a</div><div> Sl 70(71),6;Sl 12(13),6 (R. Is 61,10)</div><div></div><div> Mt 1,1-16.18-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-4a",
+    "texto": "Assim diz o Senhor:\n1\n\"Tu, Belém de Éfrata,\npequenina entre os mil povoados de Judá,\nde ti há de sair\naquele que dominará em Israel;\nsua origem vem de tempos remotos,\ndesde os dias da eternidade.\n2\nDeus deixará seu povo ao abandono,\naté ao tempo em que uma mãe der à luz;\ne o resto de seus irmãos\nse voltará para os filhos de Israel.\n3\nEle não recuará, apascentará com a força do Senhor\ne com a majestade do nome do Senhor seu Deus;\nos homens viverão em paz,\npois ele agora estenderá o poder\naté aos confins da terra,\n4a\ne ele mesmo será a Paz\".\nPalavra do Senhor.\nOu:\nPRIMEIRA LEITURA\nAqueles que Deus predestinou, também os chamou.\nLeitura da Carta de São Paulo aos Romanos\n8,28-30\nIrmãos,\n28\nsabemos que tudo contribui\npara o bem daqueles que amam a Deus,\ndaqueles que são chamados para a salvação,\nde acordo com o projeto de Deus.\n29\nPois aqueles que Deus\ncontemplou com seu amor desde sempre,\na esses ele predestinou\na serem conformes à imagem de seu Filho,\npara que este seja o primogênito\nnuma multidão de irmãos.\n30\nE aqueles que Deus predestinou,\ntambém os chamou.\nE aos que chamou,\ntambém os tornou justos;\ne aos que tornou justos,\ntambém os glorificou.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 70(71),6; Sl 12(13),6 (R. Is 61,10)",
+    "refrao": "",
+    "texto": "R.\nExulto de alegria no Senhor.\n70,6\nSois meu apoio desde antes que eu nascesse, †\ndesde o seio maternal, o meu amparo: *\npara vós o meu louvor eternamente!\nR.\n12,6\numa vez que confiei no vosso amor, †\nmeu coração, por vosso auxílio, rejubile, *\ne que eu vos cante pelo bem que me fizestes!\nR.\nEvangelho - Mt 1,1-16.\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSois feliz, virgem Maria; e mereceis todo louvor;\npois de vós se levantou o sol brilhante da justiça,\nque é Cristo, nosso Deus, pelo qual nós fomos salvos!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,1-16.18-23",
+    "texto": "1,1-16.18-23\n1\nLivro da origem de Jesus Cristo,\nfilho de Davi, filho de Abraão.\n2\nAbraão gerou Isaac; Isaac gerou Jacó;\nJacó gerou Judá e seus irmãos.\n3\nJudá gerou Farés e Zara, cuja mãe era Tamar.\nFarés gerou Esrom; Esrom gerou Aram;\n4\nAram gerou Aminadab; Aminadab gerou Naasson;\nNaasson gerou Salmon;\n5\nSalmon gerou Booz, cuja mãe era Raab.\nBooz gerou Obed, cuja mãe era Rute.\nObed gerou Jessé.\n6\nJessé gerou o rei Davi.\nDavi gerou Salomão,\ndaquela que tinha sido a mulher de Urias.\n7\nSalomão gerou Roboão; Roboão gerou Abias;\nAbias gerou Asa;\n8\nAsa gerou Josafá; Josafá gerou Jorão;\nJorão gerou Ozias;\n9\nOzias gerou Joatão; Joatão gerou Acaz;\nAcaz gerou Ezequias;\n10\nEzequias gerou Manassés; Manassés gerou Amon;\nAmon gerou Josias.\n11\nJosias gerou Jeconias e seus irmãos,\nno tempo do exílio na Babilônia.\n12\nDepois do exílio na Babilônia,\nJeconias gerou Salatiel; Salatiel gerou Zorobabel;\n13\nZorobabel gerou Abiud; Abiud gerou Eliaquim;\nEliaquim gerou Azor;\n14\nAzor gerou Sadoc; Sadoc gerou Aquim;\nAquim gerou Eliud;\n15\nEliud gerou Eleazar; Eleazar gerou Matã;\nMatã gerou Jacó.\n16\nJacó gerou José, o esposo de Maria,\nda qual nasceu Jesus, que é chamado o Cristo.\n18\nA origem de Jesus Cristo foi assim:\nMaria, sua mãe, estava prometida em casamento\na José, e, antes de viverem juntos,\nela ficou grávida pela ação do Espírito Santo.\n19\nJosé, seu marido, era justo\ne, não querendo denunciá-la,\nresolveu abandonar Maria, em segredo.\n20\nEnquanto José pensava nisso,\neis que o anjo do Senhor apareceu-lhe, em sonho,\ne lhe disse:\n\"José, Filho de Davi,\nnão tenhas medo de receber Maria como tua esposa,\nporque ela concebeu pela ação do Espírito Santo.\n21\nEla dará à luz um filho,\ne tu lhe darás o nome de Jesus,\npois ele vai salvar o seu povo dos seus pecados\".\n22\nTudo isso aconteceu para se cumprir\no que o Senhor havia dito pelo profeta:\n23\n\"Eis que a virgem conceberá\ne dará à luz um filho.\nEle será chamado pelo nome de Emanuel,\nque significa: Deus está conosco\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 8,1-11</div><div> Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)</div><div></div><div> Lc 13,1-9</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,1-11",
+    "texto": "Irmãos,\n1\nnão há mais condenação\npara aqueles que estão em Cristo Jesus.\n2\nPois a lei do Espírito\nque dá a vida em Jesus Cristo\nte libertou da lei do pecado e da morte.\n3\nCom efeito, aquilo que era impossível para a Lei,\njá que ela estava enfraquecida pela carne,\nDeus o realizou;\ntendo enviado seu próprio Filho\nnuma condição semelhante àquela da humanidade pecadora,\ne por causa justamente do pecado,\ncondenou o pecado em nossa condição humana,\n4\npara que toda a justiça exigida pela Lei,\nseja cumprida em nós\nque não procedemos segundo a carne,\nmas segundo o Espírito.\n5\nOs que vivem segundo a carne\naspiram pelas coisas da carne;\nos que vivem segundo o Espírito,\naspiram pelas coisas do Espírito.\n6\nNa verdade, as aspirações da carne levam à morte\ne as aspirações do Espírito\nlevam à vida e à paz.\n7\nTudo isso, porque as tendências da carne\nsão inimizade contra Deus:\nnão se submetem - nem poderiam submeter-se -\nà Lei de Deus.\n8\nOs que vivem segundo a carne\nnão podem agradar a Deus.\n9\nVós não viveis segundo a carne,\nmas segundo o Espírito,\nse realmente o Espírito de Deus mora em vós.\nSe alguém não tem o Espírito de Cristo,\nnão pertence a Cristo.\n10\nSe, porém, Cristo está em vós,\nembora vosso corpo esteja ferido de morte\npor causa do pecado,\nvosso espírito está cheio de vida,\ngraças à justiça.\n11\nE, se o Espírito daquele\nque ressuscitou Jesus dentre os mortos mora em vós,\nentão aquele que ressuscitou Jesus Cristo dentre os mortos\nvivificará também vossos corpos mortais\npor meio do seu Espírito que mora em vós.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)",
+    "refrao": "",
+    "texto": "R.\nÉ assim a geração dos que buscam vossa face,\nó Senhor, Deus de Israel.\n1\nAo Senhor pertence a terra e o que ela encerra,*\no mundo inteiro com os seres que o povoam;\n2\nporque ele a tornou firme sobre os mares,*\ne sobre as águas a mantém inabalável.\nR.\n3\n\"Quem subirá até o monte do Senhor,*\nquem ficará em sua santa habitação?\"\n4a\n\"Quem tem mãos puras e inocente coração,*\nb\nquem não dirige sua  mente para o crime.\nR.\n5\nSobre este desce a bênção do Senhor*\ne a recompensa de seu Deus e Salvador\".\n6\n\"É assim a geração dos que o procuram,*\ne do Deus de Israel buscam a face\".\nR.\nAclamação ao Evangelho\nEz 33,11\nR.\nAleluia, Aleluia, Aleluia.\nV.\nNão quero a morte do pecador, diz o Senhor,\nmas que ele volte, se converta e tenha vida."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,1-9",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n13,1-9\n1\nNaquele tempo, vieram algumas pessoas\ntrazendo notícias a Jesus\na respeito dos galileus\nque Pilatos tinha matado,\nmisturando seu sangue\ncom o dos sacrifícios que\nofereciam.\n2\nJesus lhes respondeu:\n\"Vós pensais que esses galileus eram mais pecadores\ndo que todos os outros galileus,\npor terem sofrido tal coisa?\n3\nEu vos digo que não.\nMas se vós não vos converterdes,\nireis morrer todos do mesmo modo.\n4\nE aqueles dezoito que morreram,\nquando a torre de Siloé caiu sobre eles?\nPensais que eram mais culpados\ndo que todos os outros moradores de Jerusalém?\n5\nEu vos digo que não.\nMas, se não vos converterdes,\nireis morrer todos do mesmo modo\".\n6\nE Jesus contou esta parábola:\n\"Certo homem tinha uma figueira\nplantada na sua vinha.\nFoi até ela procurar figos e não encontrou.\n7\nEntão disse ao vinhateiro:\n'Já faz três anos\nque venho procurando figos nesta\nfigueira\ne nada encontro.\nCorta-a!\nPor que está ela inutilizando a terra?'\n8\nEle, porém, respondeu:\n'Senhor, deixa a figueira ainda este ano.\nVou cavar em volta dela e colocar adubo.\n9\nPode ser que venha a dar fruto.\nSe não der, então tu a cortarás'\".\nPalavra da Salvação."
+  }
+}

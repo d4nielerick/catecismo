@@ -1,0 +1,23 @@
+{
+  "data": "2024-08-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Ts 1,1-5.11b-12</div><div> Sl 95(96),1-2a.2b-3.4-5 (R. 3)</div><div></div><div> Mt 23,13-22</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-5.11b-12",
+    "texto": "1\nPaulo, Silvano e Timóteo,\nà Igreja dos tessalonicenses\nreunida em Deus nosso Pai\ne no Senhor Jesus Cristo:\n2\na vós, graça e paz da parte de Deus Pai\ne do Senhor Jesus Cristo.\n3\nDevemos agradecer sempre por vós, irmãos,\ncom toda justiça,\nporque progredis sempre mais na fé\ne porque aumenta a caridade\nque tendes uns para com os outros.\n4\nAssim, nos gloriamos nas igrejas de Deus\npor causa da vossa perseverança e da vossa fé\nem todas as perseguições\ne sofrimentos que suportais.\n5\nEstes constituem um sinal do justo juízo de Deus,\npois servem para serdes julgados dignos\ndo reino de Deus,\npelo qual também estais sofrendo.\n11b\nQue o nosso Deus vos faça dignos da sua vocação.\nQue ele, por seu poder,\nrealize todo o bem que desejais\ne torne ativa a vossa fé.\n12\nAssim o nome de nosso Senhor Jesus Cristo\nserá glorificado em vós, e vós nele,\nem virtude da graça do nosso Deus\ne do Senhor Jesus Cristo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),1-2a.2b-3.4-5 (R. 3)",
+    "refrao": "",
+    "texto": "R.\nAnunciai as maravilhas do Senhor\nentre todas as nações!\n1\nCantai ao Senhor Deus um canto novo, †\ncantai ao Senhor Deus, ó terra inteira! *\n2a\nCantai e bendizei seu santo nome!\nR.\nb\nDia após dia anunciai sua salvação, †\n3\nmanifestai a sua glória entre as nações, *\ne entre os povos do universo seus prodígios!\nR.\n4\nPois Deus é grande e muito digno de louvor, *\né mais terrível e maior que os outros deuses,\n5\nporque um nada são os deuses dos pagãos. *\nFoi o Senhor e nosso Deus quem fez os céus.\nR.\nEvangelho - Mt 23,13-2\nAclamação ao Evangelho  Jo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "23,13-22",
+    "texto": "23,13-22\nNaquele tempo, disse Jesus:\n13\n\"Ai de vós, mestres da Lei e fariseus hipócritas!\nVós fechais o Reino dos Céus aos homens.\nVós porém não entrais,\nnem deixais entrar aqueles que o desejam.\n[14]\n15\nAí de vós, mestres da Lei e fariseus hipócritas!\nVós percorreis o mar e a terra para converter alguém,\ne quando o conseguis,\no tornais merecedor do inferno,\nduas vezes pior do que vós.\n16\nAi de vós, guias cegos!\nVós dizeis:\n'Se alguém jura pelo Templo, não vale;\nmas, se alguém jura pelo ouro do Templo, então vale!'\n17\nInsensatos e cegos!\nO que vale mais:\no ouro ou o Templo que santifica o ouro?\n18\nVós dizeis também:\n'Se alguém jura pelo altar, não vale;\nmas, se alguém jura pela oferta\nque está sobre o altar, então vale!'\n19\nCegos! O que vale mais:\na oferta, ou o altar que santifica a oferta?\n20\nCom efeito, quem jura pelo altar,\njura por ele e por tudo o que está sobre ele.\n21\nE quem jura pelo Templo,\njura por ele e por Deus que habita no Templo.\n22\nE quem jura pelo céu, jura pelo trono de Deus\ne por aquele que nele está sentado\".\nPalavra da Salvação."
+  }
+}

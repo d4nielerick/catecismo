@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jl 1,13-15;2,1-2</div><div> Sl 9A(9),2-3.6 e 16.8-9 (R. 9a)</div><div></div><div> Lc 11,15-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,13-15; 2,1-2",
+    "texto": "13\nPonde as vestes e chorai, sacerdotes,\ngemei, ministros do altar.\nEntrai no templo, deitai-vos em sacos,\nministros de Deus;\na casa de vosso Deus está vazia\nde oblações e libações.\n14\nPrescrevei o jejum sagrado,\nconvocai a assembleia,\ncongregai os anciãos\ne toda a gente do povo\nna casa do Senhor, vosso Deus,\ne clamai ao Senhor:\n15\n\"Ai de nós neste dia!\"\nO dia do Senhor está às portas,\nestá chegando com a força devastadora da tempestade.\n2,1\nTocai trombeta em Sião,\ngritai alerta em meu santo monte;\ntremam os habitantes da terra,\nque está chegando o dia do Senhor,\nele está às portas.\n2\nÉ um dia de escuridão fechada,\ndia de nuvens e remoinhos;\ncomo aurora espraiada nos montes,\nassim é um povo numeroso e forte,\ntal como jamais se viu algum outro\nnem jamais se verá,\naté aos anos de gerações futuras.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 9A(9),2-3.6 e 16.8-9 (R. 9a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor há de julgar o mundo inteiro com justiça.\n2\nSenhor, de coração vos darei graças, *\nas vossas maravilhas cantarei!\n3\nEm vós exultarei de alegria, *\ncantarei ao vosso nome, Deus Altíssimo!\nR.\n6\nRepreendestes as nações, e os maus perdestes, *\napagastes o seu nome para sempre.\n16\nOs maus caíram no buraco que cavaram, *\nnos próprios laços foram presos os seus pés.\nR.\n8\nMas Deus sentou-se para sempre no seu trono, *\npreparou o tribunal do julgamento;\n9\njulgará o mundo inteiro com justiça, *\ne as nações há de julgar com equidade.\nR.\nAclamação ao Evangelho\nJo 12,31b-32\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAgora o príncipe deste mundo\nhá de ser lançado fora;\nquando eu for elevado da terra,\natrairei para mim todo ser."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,15-26",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,15-26\nNaquele tempo, Jesus estava expulsando um demônio.\n15\nMas alguns disseram:\n\"É por Belzebu, o príncipe dos demônios,\nque ele expulsa os demônios\".\n16\nOutros, para tentar Jesus, pediam-lhe um sinal do céu.\n17\nMas, conhecendo seus pensamentos, Jesus disse-lhes:\n\"Todo reino dividido contra si mesmo será destruído;\ne cairá uma casa por cima da outra.\n18\nOra, se até Satanás está dividido contra si mesmo,\ncomo poderá sobreviver o seu reino?\nVós dizeis que é por Belzebu que eu expulso os demônios.\n19\nSe é por meio de Belzebu que eu expulso demônios,\nvossos filhos os expulsam por meio de quem?\nPor isso, eles mesmos serão vossos juízes.\n20\nMas, se é pelo dedo de Deus que eu expulso os demônios,\nentão chegou para vós o Reino de Deus.\n21\nQuando um homem forte e bem armado\nguarda a própria casa,\nseus bens estão seguros.\n22\nMas, quando chega um homem mais forte do que ele,\nvence-o, arranca-lhe a armadura na qual ele confiava,\ne reparte o que roubou.\n23\nQuem não está comigo, está contra mim.\nE quem não recolhe comigo, dispersa.\n24\nQuando o espírito mau sai de um homem,\nfica vagando em lugares desertos, à procura de repouso;\nnão o encontrando, ele diz:\n'Vou voltar para minha casa de onde saí'.\n25\nQuando ele chega, encontra a casa varrida e arrumada.\n26\nEntão ele vai, e traz consigo\noutros sete espíritos piores do que ele.\nE, entrando, instalam-se aí.\nNo fim, esse homem fica em condição pior do que antes\".\nPalavra da Salvação."
+  }
+}

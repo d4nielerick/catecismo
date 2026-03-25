@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-13",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Tg 1,12-18</div><div> Sl 93(94),12-13a.14-15.18-19 (R. 12a)</div><div></div><div> Mc 8,14-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,12-18",
+    "texto": "12\nFeliz o homem que suporta a provação.\nPorque, uma vez provado,\nreceberá a coroa da vida,\nque o Senhor prometeu àqueles que o amam.\n13\nNinguém, ao ser tentado, deve dizer:\n\"É Deus que me está tentando\",\npois Deus não pode ser tentado pelo mal\ne tampouco ele tenta a ninguém.\n14\nAntes, cada qual é tentado\npor sua própria concupiscência,\nque o arrasta e seduz.\n15\nEm seguida, a concupiscência concebe o pecado\ne o dá à luz,\ne o pecado, uma vez consumado, gera a morte.\n16\nMeus queridos irmãos, não vos enganeis.\n17\nTodo o dom precioso\ne toda a dádiva perfeita vêm do alto;\ndescem do Pai das luzes,\nno qual não há mudança, nem sombra de variação.\n18\nDe livre vontade ele nos gerou,\npela Palavra da verdade,\na fim de sermos como que as primícias de suas criaturas.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 93(94),12-13a.14-15.18-19 (R. 12a)",
+    "refrao": "",
+    "texto": "R.\nBem-aventurado é aquele a quem  ensinais vossa lei!\n12\nÉ feliz, ó Senhor, quem formais †\ne educais nos caminhos da Lei, *\n13a\npara dar-lhe um alívio na angústia.\nR.\n14\nO Senhor não rejeita o seu povo *\ne não pode esquecer sua herança:\n15\nvoltarão a juízo as sentenças; *\nquem é reto andará na justiça.\nR.\n18\nQuando eu penso: \"Estou quase caindo!\" *\nVosso amor me sustenta, Senhor!\n19\nQuando o meu coração se angustia, *\nconsolais e alegrais minha alma.\nR.\nEvangelho - Mc 8,14-21\nAclamação ao Evangelho\nJo 14,2\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama, realmente, guardará minha palavra\ne meu Pai o amará, e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,14-21",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n8,14-21\nNaquele tempo,\n14\nOs discípulos tinham se esquecido de levar pães.\nTinham consigo na barca apenas um pão.\n15\nEntão Jesus os advertiu:\n\"Prestai atenção e tomai cuidado\ncom o fermento dos fariseus\ne com o fermento de Herodes\".\n16\nOs discípulos diziam entre si:\n\"É porque não temos pão\".\n17\nMas Jesus percebeu e perguntou-lhes:\n\"Por que discutis sobre a falta de pão?\nAinda não entendeis e nem compreendeis?\nVós tendes o coração endurecido?\n18\nTendo olhos, vós não vedes,\ne tendo ouvidos, não ouvis?\nNão vos lembrais\n19\nde quando reparti cinco pães para cinco mil pessoas?\nQuantos cestos vós recolhestes cheios de pedaços?\"\nEles responderam:\n\"Doze\".\n20\nJesus perguntou:\nE quando reparti sete pães com quatro mil pessoas,\nquantos cestos vós recolhestes cheios de pedaços?\nEles responderam:\n\"Sete\".\n21\nJesus disse:\n\"E vós ainda não compreendeis?\"\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2026-11-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Fl 3,3-8a</div><div> Sl 104(105),2-3.4-5.6-7 (R. 3b)</div><div></div><div> Lc 15,1-10</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,3-8a",
+    "texto": "Irmãos,\n3\nos verdadeiros circuncidados somos nós,\nque prestamos culto pelo Espírito de Deus,\ncolocamos a nossa glória em Cristo Jesus\ne não pomos confiança na carne.\n4\nAliás, também eu poderia pôr minha confiança na carne.\nPois, se algum outro pensa\nque pode confiar na carne,\neu mais ainda.\n5\nFui circuncidado no oitavo dia,\nsou da raça de Israel, da tribo de Benjamim,\nhebreu filho de hebreus.\nEm relação à Lei, fariseu,\n6\npelo zelo, perseguidor da Igreja de Deus;\nquanto à justiça que vem da Lei,\nsempre irrepreensível.\n7\nMas essas coisas,\nque eram vantagens para mim,\nconsiderei-as como perda, por causa de Cristo.\n8a\nNa verdade, considero tudo como perda\ndiante da vantagem suprema que consiste\nem conhecer a Cristo Jesus, meu Senhor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 104(105),2-3.4-5.6-7 (R. 3b)",
+    "refrao": "",
+    "texto": "R.\nExulte o coração dos que  buscam o Senhor!\nOu:\nAleluia, Aleluia, Aleluia\n2\nCantai, entoai salmos para ele, *\npublicai todas as suas maravilhas!\n3\nGloriai-vos em seu nome que é santo, *\nexulte o coração que busca a Deus!\nR.\n4\nProcurai o Senhor Deus e seu poder, *\nbuscai constantemente a sua face!\n5\nLembrai as maravilhas que ele fez, *\nseus prodígios e as palavras de seus lábios!\nR.\n6\nDescendentes de Abraão, seu servidor, *\ne filhos de Jacó, seu escolhido,\n7\nele mesmo, o Senhor, é nosso Deus, *\nvigoram suas leis em toda a terra.\nR.\nEvangelho - Lc 15,1-10\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados,\ne descanso eu vos darei, diz o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,1-10",
+    "texto": "15,1-10\nNaquele tempo,\n1\nos publicanos e pecadores\naproximavam-se de Jesus para o escutar.\n2\nOs fariseus, porém,\ne os mestres da Lei criticavam Jesus.\n\"Este homem acolhe os pecadores\ne faz refeição com eles\".\n3\nEntão Jesus contou-lhes esta parábola:\n4\n\"Se um de vós tem cem ovelhas e perde uma,\nnão deixa as noventa e nove no deserto,\ne vai atrás daquela que se perdeu,\naté encontrá-la?\n5\nQuando a encontra,\ncoloca-a nos ombros com alegria,\n6\ne, chegando a casa,\nreúne os amigos e vizinhos,\ne diz:\n'Alegrai-vos comigo!\nEncontrei a minha ovelha que estava perdida!'\n7\nEu vos digo:\nAssim haverá no céu mais alegria\npor um só pecador que se converte,\ndo que por noventa e nove justos\nque não precisam de conversão.\n8\nE se uma mulher tem dez moedas de prata\ne perde uma,\nnão acende uma lâmpada,\nvarre a casa e a procura cuidadosamente, até encontrá-la?\n9\nQuando a encontra,\nreúne as amigas e vizinhas, e diz:\n'Alegrai-vos comigo!\nEncontrei a moeda que tinha perdido!'\n10\nPor isso, eu vos digo,\nhaverá alegria entre os anjos de Deus\npor um só pecador que se converte\".\nPalavra da Salvação."
+  }
+}

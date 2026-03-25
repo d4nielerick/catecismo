@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-15",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 10,5-7.13-16</div><div> Sl 93(94),5-6.7-8.9-10.14-15 (R. 14a)</div><div></div><div> Mt 11,25-27</div></div>",
+  "primeira_leitura": {
+    "referencia": "10,5-7.13-16",
+    "texto": "Assim fala o Senhor:\n5\n\"Ai de Assur, vara de minha cólera,\nbastão em minhas mãos,\ninstrumento de minha indignação!\n6\nEu o envio contra uma nação ímpia\ne ordeno-lhe, contra um povo que me excita à ira,\nque o submeta à pilhagem e ao saque,\nque o calque aos pés\ncomo lama nas ruas.\n7\nMas ele assim não pensava,\nseu propósito não era esse;\npelo contrário, sua intenção era esmagar\ne exterminar não poucas nações.\n13\nPois diz o rei da Assíria:\n'Realizei isso pela força da minha mão\ne com minha sagacidade, pois tenho experiência;\naboli as fronteiras dos povos,\nsaqueei seus tesouros,\ne derrubei de golpe os ocupantes de altos postos;\n14\nminha mão empalmou como um ninho a riqueza dos povos;\ne como se apanha uma ninhada de ovos,\nassim ajuntei eu os povos da terra,\ne não houve quem batesse asa\nou abrisse o bico e desse um pio'.\n15\nMas acaso gloria-se o machado,\nem detrimento do lenhador que com ele corta?\nOu se exalta a serra\ncontra o serrador que a maneja?\nComo se a vara movesse quem a levanta\ne um bastão erguesse aquele que não é madeira.\n16\nPor isso, enviará o Dominador, Senhor dos exércitos,\ncontra aqueles fortes guerreiros o raquitismo;\ne abalará sua glória\ncom convulsões que queimam como fogo\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 93(94),5-6.7-8.9-10.14-15 (R. 14a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor não rejeita o seu povo.\n5\nEis que oprimem, Senhor, vosso povo *\ne humilham a vossa herança;\n6\nestrangeiro e viúva trucidam, *\ne assassinam o pobre e o órfão!\nR.\n7\nEles dizem: \"O Senhor não nos vê *\ne o Deus de Jacó não percebe!\"\n8\nEntendei, ó estultos do povo; *\ninsensatos, quando é que vereis?\nR.\n9\nO que fez o ouvido, não ouve? *\nQuem os olhos formou, não verá?\n10\nQuem educa as nações, não castiga? *\nQuem os homens ensina, não sabe?\nR.\n14\nO Senhor não rejeita o seu povo *\ne não pode esquecer sua herança:\n15\nvoltarão a juízo as sentenças; *\nquem é reto andará na justiça.\nR.\nEvangelho - Mt 11,25-2\nAclamação ao Evangelho\ncf. Mt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois, revelaste os mistérios do teu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,25-27",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n11,25-27\n25\nNaquele tempo, Jesus pôs-se a dizer:\n\"Eu te louvo, ó Pai, Senhor do céu e da terra,\nporque escondeste estas coisas aos sábios e entendidos\ne as revelaste aos pequeninos.\n26\nSim, Pai, porque assim foi do teu agrado.\n27\nTudo me foi entregue por meu Pai,\ne ninguém conhece o Filho, senão o Pai,\ne ninguém conhece o Pai, senão o Filho\ne aquele a quem o Filho o quiser revelar\".\nPalavra da Salvação."
+  }
+}

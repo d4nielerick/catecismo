@@ -1,0 +1,23 @@
+{
+  "data": "2024-07-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Eclo 44,1.10-15</div><div> Sl 131(132),11.13-14.17-18 (R. Lc 1,32a)</div><div></div><div> Mt 13,16-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "44,1.10-15",
+    "texto": "1\nVamos fazer o elogio dos homens famosos,\nnossos antepassados através das gerações.\n10\nEstes, são homens de misericórdia;\nseus gestos de bondade não serão esquecidos.\n11\nEles permanecem com seus descendentes;\nseus próprios netos são a sua melhor herança.\n12\nA descendência deles mantém-se fiel às alianças,\n13\ne, graças a eles, também os seus filhos.\nSua descendência permanece para sempre,\ne sua glória jamais se apagará.\n14\nSeus corpos serão sepultados na paz\ne seu nome dura através das gerações.\n15\nOs povos proclamarão a sua sabedoria,\ne a assembleia vai celebrar o seu louvor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 131(132),11.13-14.17-18 (R. Lc 1,32a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor vai dar-lhe o trono\nde seu pai, o rei Davi.\n11\nO Senhor fez a Davi um juramento, *\numa promessa que jamais renegará:\n\"Um herdeiro que é fruto do teu ventre *\ncolocarei sobre o trono em teu lugar!\"\nR.\n13\nPois o Senhor quis para si Jerusalém *\ne a desejou para que fosse sua morada:\n14\n\"Eis o lugar do meu repouso para sempre, *\neu fico aqui: este é o lugar que preferi!\"\nR.\n17\n\"De Davi farei brotar um forte Herdeiro, *\nacenderei ao meu Ungido uma lâmpada.\n18\nCobrirei de confusão seus inimigos, *\nmas sobre ele brilhará minha coroa!\"\nR.\nEvangelho - Mt 13,16-1\nAclamação ao Evangelho\nLc 2,25c\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEsperavam estes pais a redenção de Israel,\ne o Espírito do Senhor estava sobre eles."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,16-17",
+    "texto": "13,16-17\nNaquele tempo, disse Jesus aos seus discípulos:\n16\n\"Felizes sois vós, porque vossos olhos veem\ne vossos ouvidos ouvem.\n17\nEm verdade vos digo, muitos profetas e justos\ndesejaram ver o que vedes, e não viram,\ndesejaram ouvir o que ouvis, e não ouviram\".\nPalavra da Salvação."
+  }
+}

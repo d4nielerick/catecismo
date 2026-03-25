@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 3,18-23</div><div> Sl 23(24),1-2.3-4ab.5-6 (R. 1)</div><div></div><div> Lc 5,1-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,18-23",
+    "texto": "Irmãos,\n18\nninguém se iluda:\nSe algum de vós pensa que é sábio nas coisas deste mundo,\nreconheça sua insensatez,\npara se tornar sábio de verdade;\n19\npois a sabedoria deste mundo\né insensatez diante de Deus.\nCom efeito, está escrito:\n\"Ele apanha os sábios em sua própria astúcia\",\n20\ne ainda:\n\"O Senhor conhece os pensamentos dos sábios;\nsabe que são vãos\".\n21\nPortanto, que ninguém ponha a sua glória\nem homem algum.\nCom efeito, tudo vos pertence:\n22\nPaulo, Apolo, Cefas,\no mundo, a vida, a morte, o presente, o futuro,\ntudo é vosso,\n23\nmas vós sois de Cristo,\ne Cristo é de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 23(24),1-2.3-4ab.5-6 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nAo Senhor pertence a terra e o que ela encerra.\n1\nAo Senhor pertence a terra e o que ela encerra, *\no mundo inteiro com os seres que o povoam;\n2\nporque ele a tornou firme sobre os mares, *\ne sobre as águas a mantém inabalável.\nR.\n3\n\"Quem subirá até o monte do Senhor, *\nquem ficará em sua santa habitação?\"\n4a\n\"Quem tem mãos puras e inocente coração, *\nb\nquem não dirige sua  mente para o crime.\nR.\n5\nSobre este desce a bênção do Senhor *\ne a recompensa de seu Deus e Salvador\".\n6\n\"É assim a geração dos que o procuram, *\ne do Deus de Israel buscam a face\".\nR.\nEvangelho - Lc 5,1-11\nAclamação ao Evangelho\nMt 4,19\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde após mim, disse o Senhor,\ne eu ensinarei a pescar gente."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,1-11",
+    "texto": "5,1-11\nNaquele tempo,\n1\nJesus estava na margem do lago de Genesaré,\ne a multidão apertava-se ao seu redor\npara ouvir a palavra de Deus.\n2\nJesus viu duas barcas paradas na margem do lago.\nOs pescadores haviam desembarcado e lavavam as redes.\n3\nSubindo numa das barcas, que era de Simão,\npediu que se afastasse um pouco da margem.\nDepois sentou-se e, da barca,\nensinava as multidões.\n4\nQuando acabou de falar, disse a Simão:\n\"Avança para águas mais profundas,\ne lançai vossas redes para a pesca\".\n5\nSimão respondeu:\n\"Mestre, nós trabalhamos a noite inteira\ne nada pescamos.\nMas, em atenção à tua palavra,\nvou lançar as redes\".\n6\nAssim fizeram, e apanharam tamanha quantidade de peixes\nque as redes se rompiam.\n7\nEntão fizeram sinal aos companheiros da outra barca,\npara que viessem ajudá-los.\nEles vieram, e encheram as duas barcas,\na ponto de quase afundarem.\n8\nAo ver aquilo,\nSimão Pedro atirou-se aos pés de Jesus, dizendo:\n\"Senhor, afasta-te de mim,\nporque sou um pecador!\"\n9\nÉ que o espanto se apoderara de Simão\ne de todos os seus companheiros,\npor causa da pesca que acabavam de fazer.\n10\nTiago e João, filhos de Zebedeu, que eram sócios de Simão,\ntambém ficaram espantados.\nJesus, porém, disse a Simão:\n\"Não tenhas medo!\nDe hoje em diante tu serás pescador de homens\".\n11\nEntão levaram as barcas para a margem,\ndeixaram tudo e seguiram a Jesus.\nPalavra da Salvação."
+  }
+}

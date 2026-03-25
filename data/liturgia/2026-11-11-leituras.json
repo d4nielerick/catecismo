@@ -1,0 +1,23 @@
+{
+  "data": "2026-11-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Tt 3,1-7</div><div> Sl 22(23),1-3a.3b-4.5.6 (R. 1)</div><div></div><div> Lc 17,11-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-7",
+    "texto": "Caríssimo,\n1\nadmoesta a todos\nque vivam submissos aos príncipes e às autoridades,\nque lhes obedeçam\ne estejam prontos para qualquer boa obra.\n2\nNão injuriem a ninguém, sejam pacíficos, afáveis\ne deem provas de mansidão para com todos os homens.\n3\nPorque nós outrora éramos insensatos,\nrebeldes, extraviados,\nescravos de toda sorte de paixões e prazeres,\nvivendo na maldade e na inveja,\ndignos de ódio e odiando uns aos outros.\n4\nMas um dia manifestou-se\na bondade de Deus, nosso Salvador,\ne o seu amor pelos homens:\n5\nEle salvou-nos não por causa dos atos de justiça\nque tivéssemos praticado,\nmas por sua misericórdia;\nquando renascemos e fomos renovados no batismo\npelo Espírito Santo,\n6\nque ele derramou abundantemente sobre nós\npor meio de nosso Salvador Jesus Cristo.\n7\nJustificados, assim, pela sua graça,\nnos tornamos na esperança herdeiros da vida eterna.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 22 (23),1-3a.3b-4.5.6 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é o pastor que me conduz,\nnão me falta coisa alguma.\n1\nO Senhor é o pastor que me conduz; *\nnão me falta coisa alguma.\n2\nPelos prados e campinas verdejantes *\nele me leva a descansar.\nPara as águas repousantes me encaminha, *\n3a\ne restaura as minhas forças.\nR.\nb\nEle me guia no caminho mais seguro, *\npela honra do seu nome.\n4\nMesmo que eu passe pelo vale tenebroso, *\nnenhum mal eu temerei.\nEstais comigo com bastão e com cajado, *\neles me dão a segurança!\nR.\n5\nPreparais à minha frente uma mesa, *\nbem à vista do inimigo;\ncom óleo vós ungis minha cabeça, *\ne o meu cálice transborda.\nR.\n6\nFelicidade e todo bem hão de seguir-me, *\npor toda a minha vida;\ne, na casa do Senhor, habitarei *\npelos tempos infinitos.\nR.\nEvangelho - Lc 17,11-1\nAclamação ao Evangelho\n1Ts 5,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEm tudo dai graças, pois esta é a vontade\nde Deus para convosco, em Cristo, o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "17,11-19",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n17,11-19\n11\nAconteceu que, caminhando para Jerusalém,\nJesus passava entre a Samaria e a Galileia.\n12\nQuando estava para entrar num povoado,\ndez leprosos vieram ao seu encontro.\nPararam à distância,\n13\ne gritaram:\n\"Jesus, Mestre, tem compaixão de nós!\"\n14\nAo vê-los, Jesus disse:\n\"Ide apresentar-vos aos sacerdotes\".\nEnquanto caminhavam,\naconteceu que ficaram curados.\n15\nUm deles, ao perceber que estava curado,\nvoltou glorificando a Deus em alta voz;\n16\natirou-se aos pés de Jesus,\ncom o rosto por terra,\ne lhe agradeceu.\nE este era um samaritano.\n17\nEntão Jesus lhe perguntou:\n\"Não foram dez os curados?\nE os outro nove, onde estão?\n18\nNão houve quem voltasse para dar glória a Deus,\na não ser este estrangeiro?\"\n19\nE disse-lhe:\n\"Levanta-te e vai! Tua fé te salvou\".\nPalavra da Salvação."
+  }
+}

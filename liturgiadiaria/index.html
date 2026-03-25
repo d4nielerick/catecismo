@@ -438,123 +438,42 @@
 
 <script type="module">
 
-// ── Mapeamento livros inglês → abreviação PT ──────────────────────────────────
-const EN_TO_ABR = {
-  "genesis":"Gn","exodus":"Ex","leviticus":"Lv","numbers":"Nm","deuteronomy":"Dt",
-  "joshua":"Js","judges":"Jz","ruth":"Rt","1 samuel":"1Sm","2 samuel":"2Sm",
-  "1 kings":"1Rs","2 kings":"2Rs","1 chronicles":"1Cr","2 chronicles":"2Cr",
-  "ezra":"Esd","nehemiah":"Ne","tobit":"Tb","judith":"Jt","esther":"Est",
-  "job":"Jó","psalm":"Sl","psalms":"Sl","1 maccabees":"1Mac","2 maccabees":"2Mac",
-  "proverbs":"Pr","ecclesiastes":"Ecl","song of songs":"Ct","song of solomon":"Ct",
-  "wisdom":"Sb","sirach":"Sir","ecclesiasticus":"Sir","isaiah":"Is","jeremiah":"Jr",
-  "lamentations":"Lm","baruch":"Bar","ezekiel":"Ez","daniel":"Dn","hosea":"Os",
-  "joel":"Jl","amos":"Am","obadiah":"Ab","jonah":"Jon","micah":"Mq","nahum":"Na",
-  "habakkuk":"Hab","zephaniah":"Sf","haggai":"Ag","zechariah":"Zc","malachi":"Ml",
-  "matthew":"Mt","mark":"Mc","luke":"Lc","john":"Jo","acts":"At","romans":"Rm",
-  "1 corinthians":"1Cor","2 corinthians":"2Cor","galatians":"Gl","ephesians":"Ef",
-  "philippians":"Fl","colossians":"Cl","1 thessalonians":"1Ts","2 thessalonians":"2Ts",
-  "1 timothy":"1Tm","2 timothy":"2Tm","titus":"Tt","philemon":"Fm","hebrews":"Hb",
-  "james":"Tg","1 peter":"1Pd","2 peter":"2Pd","1 john":"1Jo","2 john":"2Jo",
-  "3 john":"3Jo","jude":"Jd","revelation":"Ap","apocalypse":"Ap",
-};
-
-const NOMES_PT = {
-  "Gn":"Gênesis","Ex":"Êxodo","Lv":"Levítico","Nm":"Números","Dt":"Deuteronômio",
-  "Js":"Josué","Jz":"Juízes","Rt":"Rute","1Sm":"1 Samuel","2Sm":"2 Samuel",
-  "1Rs":"1 Reis","2Rs":"2 Reis","1Cr":"1 Crônicas","2Cr":"2 Crônicas",
-  "Esd":"Esdras","Ne":"Neemias","Tb":"Tobias","Jt":"Judite","Est":"Ester",
-  "Jó":"Jó","Sl":"Salmos","1Mac":"1 Macabeus","2Mac":"2 Macabeus",
-  "Pr":"Provérbios","Ecl":"Eclesiastes","Ct":"Cântico dos Cânticos",
-  "Sb":"Sabedoria","Sir":"Eclesiástico","Is":"Isaías","Jr":"Jeremias",
-  "Lm":"Lamentações","Bar":"Baruc","Ez":"Ezequiel","Dn":"Daniel","Os":"Oséias",
-  "Jl":"Joel","Am":"Amós","Ab":"Abdias","Jon":"Jonas","Mq":"Miquéias",
-  "Na":"Naum","Hab":"Habacuc","Sf":"Sofonias","Ag":"Ageu","Zc":"Zacarias",
-  "Ml":"Malaquias","Mt":"São Mateus","Mc":"São Marcos","Lc":"São Lucas",
-  "Jo":"São João","At":"Atos dos Apóstolos","Rm":"Romanos",
-  "1Cor":"1 Coríntios","2Cor":"2 Coríntios","Gl":"Gálatas","Ef":"Efésios",
-  "Fl":"Filipenses","Cl":"Colossenses","1Ts":"1 Tessalonicenses","2Ts":"2 Tessalonicenses",
-  "1Tm":"1 Timóteo","2Tm":"2 Timóteo","Tt":"Tito","Fm":"Filêmon","Hb":"Hebreus",
-  "Tg":"Tiago","1Pd":"1 Pedro","2Pd":"2 Pedro","1Jo":"1 João","2Jo":"2 João",
-  "3Jo":"3 João","Jd":"Judas","Ap":"Apocalipse",
-};
-
-const SEASONS_PT = {
-  "Lent":"Quaresma","Advent":"Advento","Christmas":"Natal",
-  "Easter":"Páscoa","Ordinary Time":"Tempo Comum",
-};
-
-const _cache = new Map();
-
-async function carregarLivro(abr) {
-  if (_cache.has(abr)) return _cache.get(abr);
-  const r = await fetch(`../data/biblia/${encodeURIComponent(abr)}.json`);
-  if (!r.ok) return null;
-  const d = await r.json();
-  _cache.set(abr, d);
-  return d;
+// ── Extrai o livro (ex: "Nm") a partir do HTML de referências ─────────────────
+function extrairLivro(htmlRef, refSuffix) {
+  // refSuffix = "21,4-9" → procura "Nm 21,4-9" no HTML
+  const escaped = refSuffix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const m = htmlRef.match(new RegExp('([A-Za-záéíóúàâêôãõç1-9]+(?:\\([^)]+\\))?(?:\\s+[A-Z][a-z]+)*)\\s+' + escaped));
+  return m ? m[1].trim() : refSuffix;
 }
 
-function parseRef(ref) {
-  const m = ref.trim().match(/^(.+?)\s+(\d+):(.+)$/);
-  if (!m) return null;
-  const bookKey = m[1].toLowerCase().replace(/\.$/, '');
-  let abr = EN_TO_ABR[bookKey];
-  if (!abr) {
-    for (const [k, v] of Object.entries(EN_TO_ABR)) {
-      if (bookKey.startsWith(k) || k.startsWith(bookKey)) { abr = v; break; }
-    }
-  }
-  if (!abr) return null;
-  const cap = m[2];
-  const versStr = m[3].replace(/(\d+)[a-z]/g, '$1');
-  const vers = [];
-  for (const part of versStr.split(',')) {
-    const p = part.trim();
-    if (p.includes('-')) {
-      const [a, b] = p.split('-').map(Number);
-      for (let i = a; i <= b; i++) vers.push(i);
+// ── Converte texto CNBB em HTML com números de versículo como superscript ─────
+function renderTexto(texto) {
+  if (!texto) return '<em>Texto não disponível.</em>';
+
+  const linhas = texto.split('\n').map(l => l.trim()).filter(Boolean);
+  let html = '';
+  let skipRef = false;
+
+  for (const linha of linhas) {
+    // Ignora cabeçalhos litúrgicos e linha de referência (ex: "8,21-30")
+    if (/^Proclamação|^Leitura d|^LEITURA|^EVANGELHO|^Palavra do|^Evangelho do Senhor/.test(linha)) continue;
+    if (/^\d+,\d/.test(linha) && linha.length < 20) { skipRef = true; continue; }
+    skipRef = false;
+
+    if (/^\d+$/.test(linha)) {
+      // Número de versículo isolado
+      html += `<sup class="vers-num">${linha}</sup>`;
     } else {
-      const n = parseInt(p);
-      if (!isNaN(n)) vers.push(n);
-    }
-  }
-  return { abr, cap, vers };
-}
-
-function refPT(parsed) {
-  const nome = NOMES_PT[parsed.abr] ?? parsed.abr;
-  const groups = [];
-  let start = parsed.vers[0], prev = parsed.vers[0];
-  for (let i = 1; i <= parsed.vers.length; i++) {
-    if (i === parsed.vers.length || parsed.vers[i] !== prev + 1) {
-      groups.push(start === prev ? `${start}` : `${start}-${prev}`);
-      if (i < parsed.vers.length) { start = parsed.vers[i]; prev = parsed.vers[i]; }
-    } else { prev = parsed.vers[i]; }
-  }
-  return `${nome} ${parsed.cap},${groups.join('.')}`;
-}
-
-async function renderLeitura(label, refEn, id, isGospel = false) {
-  if (!refEn) return '';
-  const parsed = parseRef(refEn);
-  const refDisplay = parsed ? refPT(parsed) : refEn;
-
-  let textHtml = '';
-  if (parsed) {
-    const livro = await carregarLivro(parsed.abr);
-    if (livro) {
-      const cap = livro[parsed.cap] ?? {};
-      const linhas = parsed.vers
-        .map(v => cap[String(v)] ? `<span class="vers-num">${v}</span>${cap[String(v)]} ` : '')
-        .filter(Boolean);
-      if (linhas.length) textHtml = `<p>${linhas.join('')}</p>`;
+      html += linha + ' ';
     }
   }
 
-  if (!textHtml) textHtml = `<p class="erro" style="padding:0;text-align:left">Texto não disponível para esta leitura.</p>`;
+  return `<p>${html.trim()}</p>`;
+}
 
+function renderCard(label, refDisplay, texto, id, isGospel = false) {
+  const textHtml = renderTexto(texto);
   const gospelExtra = isGospel ? `<div id="reflexao-conteudo"></div>` : '';
-
   return `
     <div class="leitura-card${isGospel ? ' card-evangelho' : ''}" id="${id}">
       <div class="leitura-label">${label}</div>
@@ -599,16 +518,12 @@ function construirNav(leituras) {
 }
 
 async function init() {
-  const hoje = new Date();
-  const ano  = hoje.getFullYear();
-  const mm   = String(hoje.getMonth() + 1).padStart(2, '0');
-  const dd   = String(hoje.getDate()).padStart(2, '0');
-
-  const url = `https://cpbjr.github.io/catholic-readings-api/readings/${ano}/${mm}-${dd}.json`;
+  const hoje  = new Date();
+  const dt    = hoje.toISOString().slice(0, 10); // YYYY-MM-DD
 
   let raw;
   try {
-    const r = await fetch(url);
+    const r = await fetch(`../data/liturgia/${dt}-leituras.json`);
     if (!r.ok) throw new Error();
     raw = await r.json();
   } catch {
@@ -618,49 +533,55 @@ async function init() {
   }
 
   const dataFmt = hoje.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-  const season  = SEASONS_PT[raw.season] ?? raw.season ?? '';
-
   document.getElementById('lp-data').textContent = dataFmt;
-  if (season) {
+
+  if (raw.titulo) {
     const badge = document.getElementById('lp-tempo');
-    badge.textContent = season;
+    badge.textContent = raw.titulo;
     badge.style.display = '';
   }
 
-  const { firstReading, psalm, secondReading, gospel } = raw.readings ?? {};
+  const htmlRef = raw.referencias ?? '';
+  const pl = raw.primeira_leitura;
+  const sl = raw.salmo;
+  const sl2 = raw.segunda_leitura;
+  const ev = raw.evangelho;
+
+  // Monta referências completas (livro + capítulo/versículo)
+  const refPL  = pl  ? extrairLivro(htmlRef, pl.referencia)  : '';
+  const refEV  = ev  ? extrairLivro(htmlRef, ev.referencia)  : '';
+  const refSL  = sl?.referencia ?? '';
+  const refSL2 = sl2 ? extrairLivro(htmlRef, sl2.referencia) : '';
 
   const leituras = [
-    { label: '1ª Leitura', ref: firstReading, id: 'primeira-leitura' },
-    { label: 'Salmo',      ref: psalm,         id: 'salmo' },
-    secondReading ? { label: '2ª Leitura', ref: secondReading, id: 'segunda-leitura' } : null,
-    { label: 'Evangelho',  ref: gospel,         id: 'evangelho' },
+    pl  ? { label: '1ª Leitura', refDisplay: refPL,  texto: pl.texto,  id: 'primeira-leitura' } : null,
+    sl  ? { label: 'Salmo',      refDisplay: refSL,  texto: sl.texto,  id: 'salmo'            } : null,
+    sl2 ? { label: '2ª Leitura', refDisplay: refSL2, texto: sl2.texto, id: 'segunda-leitura'  } : null,
+    ev  ? { label: 'Evangelho',  refDisplay: refEV,  texto: ev.texto,  id: 'evangelho'        } : null,
   ].filter(Boolean);
 
-  const partes = await Promise.all(
-    leituras.map(({ label, ref, id }) => renderLeitura(label, ref, id, id === 'evangelho'))
-  );
+  document.getElementById('conteudo').innerHTML =
+    leituras.map(({ label, refDisplay, texto, id }) =>
+      renderCard(label, refDisplay, texto, id, id === 'evangelho')
+    ).join('');
 
-  document.getElementById('conteudo').innerHTML = partes.join('');
   construirNav(leituras);
 
-  if (gospel) {
-    const parsedGospel = parseRef(gospel);
-    if (parsedGospel) {
-      window._liturgiaData = {
-        data: `${ano}-${mm}-${dd}`,
-        evangelhoRef: refPT(parsedGospel),
-        gospel, parsedGospel,
-      };
-      document.getElementById('area-reflexao').style.display = '';
-      iniciarReflexao();
-    }
+  if (ev) {
+    window._liturgiaData = {
+      data: dt,
+      evangelhoRef: refEV,
+      evangelhoTexto: ev.texto,
+    };
+    document.getElementById('area-reflexao').style.display = '';
+    iniciarReflexao();
   }
 }
 
 // ── Reflexão via Grok ─────────────────────────────────────────────────────────
 async function iniciarReflexao() {
   const btn = document.getElementById('btn-reflexao');
-  const { data, evangelhoRef, parsedGospel } = window._liturgiaData;
+  const { data, evangelhoRef } = window._liturgiaData;
 
   // Cache estático primeiro
   try {
@@ -676,9 +597,7 @@ async function iniciarReflexao() {
     btn.disabled = true;
     btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Gerando…`;
 
-    const livro = await carregarLivro(parsedGospel.abr);
-    const cap   = livro?.[parsedGospel.cap] ?? {};
-    const texto = parsedGospel.vers.map(v => cap[String(v)] ?? '').filter(Boolean).join(' ');
+    const texto = window._liturgiaData.evangelhoTexto ?? '';
 
     try {
       const r = await fetch('/api/liturgia-reflexao', {

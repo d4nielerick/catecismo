@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Fl 2,1-4</div><div> Sl 130(131),1.2.3</div><div></div><div> Lc 14,12-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-4",
+    "texto": "Irmãos,\n1\nse existe consolação na vida em Cristo,\nse existe alento no mútuo amor,\nse existe comunhão no Espírito,\nse existe ternura e compaixão,\n2\ntornai então completa a minha alegria:\naspirai à mesma coisa,\nunidos no mesmo amor;\nvivei em harmonia,\nprocurando a unidade.\n3\nNada façais por competição ou vanglória,\nmas, com humildade, cada um julgue\nque o outro é mais importante,\n4\ne não cuide somente do que é seu,\nmas também do que é do outro.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 130(131),1.2.3",
+    "refrao": "",
+    "texto": "R.\nGuardai-me, em paz, junto a vós, ó Senhor!\n1\nSenhor, meu coração não é orgulhoso,*\nnem se eleva arrogante o meu olhar;\nnão ando à procura de grandezas,*\nnem tenho pretensões ambiciosas!\nR.\n2\nFiz calar e sossegar a minha alma;*\nela está em grande paz dentro de mim,\ncomo a criança bem tranquila, amamentada*\nno regaço acolhedor de sua mãe.\nR.\n3\nConfia no Senhor, ó Israel,*\ndesde agora e por toda a eternidade!\nR.\nAclamação ao Evangelho\nJo 8, 31b-32\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSe guardais minha palavra, diz Jesus,\nrealmente vós sereis os meus discípulos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,12-14",
+    "texto": "14,12-14\nNaquele tempo,\n12\ndizia Jesus ao chefe dos fariseus\nque o tinha convidado:\n\"Quando tu deres um almoço ou um jantar,\nnão convides teus amigos, nem teus irmãos,\nnem teus parentes, nem teus vizinhos ricos.\nPois estes poderiam também convidar-te\ne isto já seria a tua recompensa.\n13\nPelo contrário, quando deres uma festa,\nconvida os pobres, os aleijados,\nos coxos, os cegos.\n14\nEntão tu serás feliz!\nPorque eles não te podem retribuir.\nTu receberás a recompensa\nna ressurreição dos justos\".\nPalavra da Salvação."
+  }
+}

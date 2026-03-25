@@ -1,0 +1,23 @@
+{
+  "data": "2026-11-28",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 22,1-7</div><div> Sl 94(95),1-2.3-5.6-7 (R. 1Cor 16,22b e Ap 22,20c)</div><div></div><div> Lc 21,34-36</div></div>",
+  "primeira_leitura": {
+    "referencia": "22,1-7",
+    "texto": "A mim, João,\n1\no anjo do Senhor mostrou-me um rio de água viva,\no qual brilhava como cristal.\nO rio brotava do trono de Deus e do Cordeiro.\n2\nNo meio da praça, de cada lado do rio,\nestão plantadas árvores da vida;\nelas dão frutos doze vezes por ano;\nem cada mês elas dão fruto;\nsuas folhas servem para curar as nações.\n3\nJá não haverá maldição alguma.\nNa cidade estará o trono de Deus e do Cordeiro\ne seus servos poderão prestar-lhe culto.\n4\nVerão a sua face\ne o seu nome estará sobre suas frontes.\n5\nNão haverá mais noite:\nnão se precisará mais da luz da lâmpada,\nnem da luz do sol,\nporque o Senhor Deus vai brilhar sobre eles\ne eles reinarão para toda a eternidade.\n6\nEntão o anjo disse-me:\n\"Estas palavras são dignas de fé e verdadeiras,\npois o Senhor, o Deus que inspira os profetas,\nenviou o seu Anjo, para mostrar aos seus servos\no que deve acontecer muito em breve.\n7\nEis que eu venho em breve.\nFeliz aquele que observa\nas palavras da profecia deste livro\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 94(95),1-2.3-5.6-7 (R. 1Cor 16,22b e Ap 22,20c)",
+    "refrao": "",
+    "texto": "R.\nAmém! Vem, ó Senhor Jesus! Amém!\n1\nVinde, exultemos de alegria no Senhor, *\naclamemos o Rochedo que nos salva!\n2\nAo seu encontro caminhemos com louvores, *\ne com cantos de alegria o celebremos!\nR.\n3\nNa verdade, o Senhor é o grande Deus, *\no grande Rei, muito maior que os deuses todos.\n4\nTem nas mãos as profundezas dos abismos, *\ne as alturas das montanhas lhe pertencem;\n5\no mar é dele, pois foi ele quem o fez, *\ne a terra firme suas mãos a modelaram.\nR.\n6\nVinde adoremos e prostremo-nos por terra, *\ne ajoelhemos ante o Deus que nos criou!\n7\nPorque ele é o nosso Deus, nosso Pastor, †\ne nós somos o seu povo e seu rebanho, *\nas ovelhas que conduz com sua mão.\nR.\nEvangelho - Lc 21,34-3\nAclamação ao Evangelho\nLc 21,36\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVigiai e orai para ficardes de pé,\nante o filho do Homem!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,34-36",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n21,34-36\nNaquele tempo, disse Jesus aos seus discípulos:\n34\n\"Tomai cuidado para que vossos corações\nnão fiquem insensíveis por causa da gula,\nda embriaguez e das preocupações da vida,\ne esse dia não caia de repente sobre vós;\n35\npois esse dia cairá como uma armadilha\nsobre todos os habitantes de toda a terra.\n36\nPortanto, ficai atentos e orai a todo momento,\na fim de terdes força\npara escapar de tudo o que deve acontecer\ne para ficardes em pé diante do Filho do Homem\".\nPalavra da Salvação."
+  }
+}

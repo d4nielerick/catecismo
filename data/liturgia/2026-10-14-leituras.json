@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-14",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 5,18-25</div><div> Sl 1,1-2.3.4 e 6 (R. cf. Jo 8,12)</div><div></div><div> Lc 11,42-46</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,18-25",
+    "texto": "Irmãos,\n18\nse sois conduzidos pelo Espírito,\nentão não estais sob o jugo da Lei.\n19\nSão bem conhecidas as obras da carne:\nfornicação, libertinagem, devassidão,\n20\nidolatria, feitiçaria, inimizades,\ncontendas, ciúmes, iras,\nintrigas, discórdias, facções,\n21\ninvejas, bebedeiras, orgias,\ne coisas semelhantes a estas.\nEu vos previno, como aliás já o fiz:\nos que praticam essas coisas\nnão herdarão o reino de Deus.\n22\nPorém, o fruto do Espírito é:\ncaridade, alegria, paz,\nlonganimidade, benignidade,\nbondade, lealdade,\n23\nmansidão, continência.\nContra estas coisas não existe lei.\n24\nOs que pertencem a Jesus Cristo\ncrucificaram a carne\ncom suas paixões e seus maus desejos.\n25\nSe vivemos pelo Espírito,\nprocedamos também segundo o Espírito,\ncorretamente.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 1,1-2.3.4.6 (R. cf. Jo 8,12)",
+    "refrao": "",
+    "texto": "R.\nSenhor, quem vos seguir, terá a luz da vida!\n1\nFeliz é todo aquele que não anda *\nconforme os conselhos dos perversos;\nque não entra no caminho dos malvados, *\nnem junto aos zombadores vai sentar-se;\n2\nmas encontra seu prazer na lei de Deus *\ne a medita, dia e noite, sem cessar.\nR.\n3\nEis que ele é semelhante a uma árvore *\nque à beira da torrente está plantada;\nela sempre dá seus frutos a seu tempo, †\ne jamais as suas folhas vão murchar. *\nEis que tudo o que ele faz vai prosperar,\nR.\n4\nmas bem outra é a sorte dos perversos. †\nAo contrário, são iguais à palha seca *\nespalhada e dispersada pelo vento.\n6\nPois Deus vigia o caminho dos eleitos, *\nmas a estrada dos malvados leva à morte.\nR.\nEvangelho - Lc 11,42-4\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,42-46",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,42-46\nNaquele tempo, disse o Senhor:\n42\n\"Ai de vós, fariseus,\nporque pagais o dízimo da hortelã,\nda arruda e de todas as outras ervas,\nmas deixais de lado a justiça e o amor de Deus.\nVós deveríeis praticar isso,\nsem deixar de lado aquilo.\n43\nAi de vós, fariseus,\nporque gostais do lugar de honra nas sinagogas,\ne de serdes cumprimentados nas praças públicas.\n44\nAí de vós,\nporque sois como túmulos que não se veem,\nsobre os quais os homens andam sem saber\".\n45\nUm mestre da Lei tomou a palavra e disse:\n\"Mestre, falando assim,\ninsultas-nos também a nós!\"\n46\nJesus respondeu:\n\"Ai de vós também, mestres da Lei,\nporque colocais sobre os homens cargas insuportáveis,\ne vós mesmos não tocais nessas cargas,\nnem com um só dedo\".\nPalavra da Salvação."
+  }
+}

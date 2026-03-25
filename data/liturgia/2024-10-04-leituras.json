@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jó 38,1.12-21.40,3-5</div><div> Sl 138(139),1-3.7-8.9-10.13-14ab (R. 24b)</div><div></div><div> Lc 10,13-16</div></div>",
+  "primeira_leitura": {
+    "referencia": "38,1.12-21; 40,3-5",
+    "texto": "1\nO Senhor respondeu a Jó,\ndo meio da tempestade, e disse:\n12\n\"Alguma vez na vida deste ordens à manhã,\nou indicaste à aurora o seu lugar,\n13\npara que ela apanhe a terra pelos quatro cantos,\ne sejam dela sacudidos os malfeitores?\n14\nA terra torna argila compacta,\ne tudo se apresenta em trajes de gala,\n15\nmas recusa-se a luz aos malfeitores\ne quebra-se o braço rebelde.\n16\nChegaste perto das nascentes do Mar,\nou pousaste no fundo do Oceano?\n17\nForam-te franqueadas as portas da Morte,\nou viste os portais das Sombras?\n18\nExaminaste a extensão da Terra?\nConta-me, se sabes tudo isso!\n19\nQual é o caminho para a morada da luz,\ne onde fica o lugar das trevas?\n20\nPoderias alcançá-las em seu domínio\ne reconhecer o acesso à sua morada?\n21\nDeverias sabê-lo, pois já tinhas nascido\ne grande é o número dos teus anos!\"\n40,3\nJó respondeu ao Senhor, dizendo:\n4\n\"Fui precipitado.\nQue te posso responder?\nPorei minha mão sobre a boca.\n5\nFalei uma vez, não replicarei;\numa segunda vez, mas não falarei mais\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 138(139),1-3.7-8.9-10.13-14ab (R. 24b)",
+    "refrao": "",
+    "texto": "R.\nConduzi-me no caminho para a vida, ó Senhor!\n1\nSenhor, vós me sondais e conheceis, *\n2\nsabeis quando me sento ou me levanto;\nde longe penetrais meus pensamentos, †\n3\npercebeis quando me deito e quando eu ando, *\nos meus caminhos vos são todos conhecidos.\nR.\n7\nEm que lugar me ocultarei de vosso espírito? *\nE para onde fugirei de vossa face?\n8\nSe eu subir até os céus, ali estais; *\nse eu descer até o abismo, estais presente.\nR.\n9\nSe a aurora me emprestar as suas asas, *\npara eu voar e habitar no fim dos mares;\n10\nmesmo lá vai me guiar a vossa mão *\ne segurar-me com firmeza a vossa destra.\nR.\n13\nFostes vós que me formastes as entranhas, *\ne no seio de minha mãe vós me tecestes.\n14\nEu vos louvo e vos dou graças, ó Senhor, †\nporque de modo admirável me formastes! *\nQue prodígio e maravilha as vossas obras!\nR.\nEvangelho - Lc 10,13-1\nAclamação ao Evangelho\nCf. Sl 94(95), 8ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nOxalá ouvísseis hoje a sua voz:\nNão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,13-16",
+    "texto": "10,13-16\nNaquele tempo, disse Jesus:\n13\n\"Ai de ti, Corazim! Aí de ti, Betsaida!\nPorque se em Tiro e Sidônia\ntivessem sido realizados os milagres\nque foram feitos no vosso meio,\nhá muito tempo teriam feito penitência,\nvestindo-se de cilício\ne sentando-se sobre cinzas.\n14\nPois bem: no dia do julgamento,\nTiro e Sidônia\nterão uma sentença menos dura do que vós.\n15\nAi de ti, Cafarnaum!\nSerás elevada até o céu?\nNão, tu serás atirada no inferno.\n16\nQuem vos escuta, a mim escuta;\ne quem vos rejeita, a mim despreza;\nmas quem me rejeita,\nrejeita aquele que me enviou.\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 12,5-16a</div><div> Sl 130(131),1.2.3</div><div></div><div> Lc 14,15-24</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,5-16a",
+    "texto": "Irmãos,\n5\nnós, embora muitos,\nsomos em Cristo um só corpo\ne, todos membros uns dos outros.\n6\nTemos dons diferentes,\nde acordo com a graça dada a cada um de nós:\nse é a profecia, exerçamo-la em harmonia com a fé;\n7\nse é o serviço, pratiquemos o serviço;\nse é o dom de ensinar, consagremo-nos ao ensino;\n8\nse é o dom de exortar, exortemos.\nQuem distribui donativos, faça-o com simplicidade;\nquem preside, presida com solicitude;\nquem se dedica a obras de misericórdia,\nfaça-o com alegria.\n9\nO amor seja sincero.\nDetestai o mal, apegai-vos ao bem.\n10\nQue o amor fraterno vos una uns aos outros\ncom terna afeição,\nprevenindo-vos com atenções recíprocas.\n11\nSede zelosos e diligentes,\nfervorosos de espírito,\nservindo sempre ao Senhor,\n12\nalegres por causa da esperança,\nfortes nas tribulações,\nperseverantes na oração.\n13\nSocorrei os santos em suas necessidades,\npersisti na prática da hospitalidade.\n14\nAbençoai os que vos perseguem,\nabençoai e não amaldiçoeis.\n15\nAlegrai-vos com os que se alegram,\nchorai com os que choram.\n16a\nMantende um bom entendimento uns com os outros;\nnão vos deixeis levar pelo gosto de grandeza,\nmas acomodai-vos às coisas humildes.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 130(131),1.2.3",
+    "refrao": "",
+    "texto": "R.\nGuardai-me, em paz, junto a vós, ó Senhor!\n1\nSenhor, meu coração não é orgulhoso, *\nnem se eleva arrogante o meu olhar;\nnão ando à procura de grandezas, *\nnem tenho pretensões ambiciosas!\nR.\n2\nFiz calar e sossegar a minha alma; *\nela está em grande paz dentro de mim,\ncomo a criança bem tranquila, amamentada *\nno regaço acolhedor de sua mãe.\nR.\n3\nConfia no Senhor, ó Israel, *\ndesde agora e por toda a eternidade!\nR.\nEvangelho - Lc 14,15-2\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados,\ne descanso eu vos darei, diz o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,15-24",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n14,15-24\nNaquele tempo,\n15\num homem que estava à mesa,\ndisse a Jesus:\n\"Feliz aquele que come o pão no Reino de Deus!\"\n16\nJesus respondeu:\n\"Um homem deu um grande banquete\ne convidou muitas pessoas.\n17\nNa hora do banquete, mandou seu empregado\ndizer aos convidados:\n'Vinde, pois tudo está pronto'.\n18\nMas todos, um a um, começaram a dar desculpas.\nO primeiro disse:\n'Comprei um campo, e preciso ir vê-lo.\nPeço-te que aceites minhas desculpas'.\n19\nUm outro disse:\n'Comprei cinco juntas de bois,\ne vou experimentá-las.\nPeço-te que aceites minhas desculpas'.\n20\nUm terceiro disse:\n'Acabo de me casar e, por isso, não posso ir'.\n21\nO empregado voltou e contou tudo ao patrão.\nEntão o dono da casa ficou muito zangado\ne disse ao empregado:\n'Sai depressa pelas praças e ruas da cidade.\nTraze para cá os pobres,\nos aleijados, os cegos e os coxos'.\n22\nO empregado disse:\n'Senhor, o que tu mandaste fazer foi feito,\ne ainda há lugar'.\n23\nO patrão disse ao empregado:\n'Sai pelas estradas e atalhos,\ne obriga as pessoas a virem aqui,\npara que minha casa fique cheia'.\n24\nPois eu vos digo:\nnenhum daqueles que foram convidados\nprovará do meu banquete'\".\nPalavra da Salvação."
+  }
+}

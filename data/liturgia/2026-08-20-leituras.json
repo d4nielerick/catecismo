@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ez 36,23-28</div><div> Sl 50(51),12-13.14-15.18-19 (R. Ez 36,25)</div><div></div><div> Mt 22,1-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "36,23-28",
+    "texto": "Assim fala o Senhor:\n23\n\"Vou mostrar a santidade do meu grande nome,\nque profanastes no meio das nações.\nAs nações saberão que eu sou o Senhor.\n- oráculo do Senhor Deus -\nquando eu manifestar minha santidade\nà vista delas por meio de vós.\n24\nEu vos tirarei do meio das nações,\nvos reunirei de todos os países,\ne vos conduzirei para a vossa terra.\n25\nDerramarei sobre vós uma água pura,\ne sereis purificados.\nEu vos purificarei de todas as impurezas\ne de todos os ídolos.\n26\nEu vos darei um coração novo\ne porei um espírito novo dentro de vós.\nArrancarei do vosso corpo o coração de pedra\ne vos darei um coração de carne;\n27\nporei o meu espírito dentro de vós\ne farei com que sigais a minha lei\ne cuideis de observar os meus mandamentos.\n28\nHabitareis no país que dei a vossos pais.\nSereis o meu povo e eu serei o vosso Deus\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 50(51),12-13.14-15.18-19 (R. Ez 36,25)",
+    "refrao": "",
+    "texto": "R.\nEu hei de derramar sobre vós uma água pura,\ne de vossas imundícies sereis purificados.\n12\nCriai em mim um coração que seja puro,*\ndai-me de novo um espírito decidido.\n13\nÓ Senhor, não me afasteis de vossa face,*\nnem retireis de mim o vosso Santo Espírito!\nR.\n14\nDai-me de novo a alegria de ser salvo*\ne confirmai-me com espírito generoso!\n15\nEnsinarei vosso caminho aos pecadores,*\ne para vós se voltarão os transviados.\nR.\n18\nPois não são de vosso agrado os sacrifícios,*\ne, se oferto um holocausto, o rejeitais.\n19\nMeu sacrifício é minha alma penitente,*\nnão desprezeis um coração arrependido!\nR.\nEvangelho - Mt 22,1-14\nAclamação ao Evangelho\nCf. Sl 94(95),8ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nOxalá ouvísseis hoje a sua voz:\nNão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "22,1-14",
+    "texto": "22,1-14\nNaquele tempo,\n1\nJesus voltou a falar em parábolas\naos sumos sacerdotes e aos anciãos do povo,\n2\ndizendo:\n\"O Reino dos Céus é como a história do rei\nque preparou a festa de casamento do seu filho.\n3\nE mandou os seus empregados\npara chamar os convidados para a festa,\nmas estes não quiseram vir.\n4\nO rei mandou outros empregados, dizendo:\n'Dizei aos convidados:\njá preparei o banquete,\nos bois e os animais cevados já foram abatidos\ne tudo está pronto.\nVinde para a festa!'\n5\nMas os convidados não deram a menor atenção:\num foi para o seu campo,\noutro para os seus negócios,\n6\noutros agarraram os empregados,\nbateram neles e os mataram.\n7\nO rei ficou indignado e mandou suas tropas,\npara matar aqueles assassinos\ne incendiar a cidade deles.\n8\nEm seguida, o rei disse aos empregados:\n'A festa de casamento está pronta,\nmas os convidados não foram dignos dela.\n9\nPortanto, ide até às encruzilhadas dos caminhos\ne convidai para a festa todos os que encontrardes'.\n10\nEntão os empregados saíram pelos caminhos\ne reuniram todos os que encontraram, maus e bons.\nE a sala da festa ficou cheia de convidados.\n11\nQuando o rei entrou para ver os convidados,\nobservou ali um homem\nque não estava usando traje de festa\n12\ne perguntou-lhe:\n'Amigo, como entraste aqui sem o traje de festa?'\nMas o homem nada respondeu.\n13\nEntão o rei disse aos que serviam:\n'Amarrai os pés e as mãos desse homem\ne jogai-o fora, na escuridão!\nAli haverá choro e ranger de dentes'.\n14\nPor que muitos são chamados,\ne poucos são escolhidos.'\nPalavra da Salvação."
+  }
+}

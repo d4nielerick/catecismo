@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Ts 2,1-8</div><div> Sl 138(139),1-3.4-6 (R. 1)</div><div></div><div> Mt 23,23-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-8 1",
+    "texto": "1\nBem sabeis, irmãos,\nque nossa vinda até vós não foi em vão.\n2\nApesar de maltratados e ultrajados em Filipos,\ncomo sabeis, encontramos em Deus a coragem\nde vos anunciar o evangelho,\nem meio a grandes lutas.\n3\nA nossa exortação não se baseia no erro,\nna ambiguidade ou no desejo de enganar.\n4\nAo contrário, uma vez que Deus\nnos achou dignos para que nos confiasse o evangelho,\nfalamos não para agradar aos homens, mas a Deus,\nque examina os nossos corações.\n5\nBem sabeis que nunca usamos palavras de adulação,\nnem procedemos movidos por disfarçada ganância.\nDeus é testemunha disso.\n6\nE também não procuramos elogios humanos,\nnem da parte de vós, nem de outros,\n7\nembora pudéssemos fazer valer\na nossa autoridade de apóstolos de Cristo.\nFoi com muita ternura que nos apresentamos a vós,\ncomo uma mãe que acalenta os seus filhinhos.\n8\nTanto bem vos queríamos,\nque desejávamos dar-vos\nnão somente o evangelho de Deus,\nmas até, a própria vida;\na tal ponto chegou a nossa afeição por vós.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 138(139),1-3.4-6 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nSenhor, vós me sondais e conheceis.\n1\nSenhor, vós me sondais e conheceis, *\n2\nsabeis quando me sento ou me levanto;\nde longe penetrais meus pensamentos,\n†\n3\npercebeis quando me deito e quando eu ando, *\nos meus caminhos vos são todos conhecidos.\nR.\n4\nA palavra nem chegou à minha língua, *\ne já, Senhor, a conheceis inteiramente.\n5\nPor detrás e pela frente me envolveis; *\npusestes sobre mim a vossa mão.\n6\nEsta Verdade é por demais maravilhosa, *\né tão sublime que não posso compreendê-la.\nR.\nAclamação ao Evangelho\nHb 4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor é viva e eficaz:\nela julga os pensamentos e as intenções do coração."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "23,23-26",
+    "texto": "23,23-26\nNaquele tempo, disse Jesus:\n23\n\"Ai de vós, mestres da Lei e fariseus hipócritas!\nVós pagais o dízimo da hortelã,\nda erva-doce e do cominho,\ne deixais de lado\nos ensinamentos mais importantes da Lei,\ncomo a justiça, a misericórdia e a fidelidade.\nVós deveríeis praticar isto,\nsem contudo deixar aquilo.\n24\nGuias cegos!\nVós filtrais o mosquito, mas engolis o camelo.\n25\nAi de vós, mestres da Lei e fariseus hipócritas!\nVós limpais o copo e o prato por fora,\nmas, por dentro, estais cheios de roubo e cobiça.\n26\nFariseu cego!\nLimpa primeiro o copo por dentro,\npara que também por fora fique limpo\".\nPalavra da Salvação."
+  }
+}

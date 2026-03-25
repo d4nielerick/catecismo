@@ -1,0 +1,23 @@
+{
+  "data": "2025-02-12",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 2,4b-9.15-17</div><div> Sl 103(104),1-2a.27-28.29bc-30 (R. 1a)</div><div></div><div> Mc 7,14-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,4b-9.15-17",
+    "texto": "4b\nNo dia em que o Senhor fez a terra e o céu,\n5\nainda não havia nenhum arbusto do campo sobre a terra,\ne ainda nenhuma erva do campo tinha brotado,\nporque o Senhor Deus\nnão tinha feito chover sobre a terra,\ne nem existia homem para cultivar o solo.\n6\nMas uma fonte brotava da terra,\ne lhe regava toda a superfície.\n7\nEntão o Senhor Deus formou o homem do pó da terra,\nsoprou-lhe nas narinas o sopro da vida\ne o homem tornou-se um ser vivente.\n8\nDepois, o Senhor Deus\nplantou um jardim em Éden, a oriente,\ne ali pôs o homem que havia formado.\n9\nE o Senhor Deus fez brotar da terra\ntoda sorte de árvores de aspecto atraente\ne de fruto saboroso ao paladar,\na árvore da vida no meio do jardim\ne a árvore do conhecimento do bem e do mal.\n15\nO Senhor Deus tomou o homem\ne colocou-o no jardim de Éden,\npara o cultivar e guardar.\n16\nE o Senhor Deus deu ao homem uma ordem, dizendo:\n\"Podes comer de todas as árvores do jardim,\n17\nmas não comas da árvore\ndo conhecimento do bem e do mal;\nporque, no dia em que fizeres,\nsem dúvida morrerás\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 103(104),1-2a.27-28.29bc-30 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nBendize, ó minha alma, ao Senhor!\n1\nBendize, ó minha alma, ao Senhor! *\nÓ meu Deus e meu Senhor, como sois grande!\n2a\nDe majestade e esplendor vos revestis *\ne de luz vos envolveis como num manto.\nR.\n27\nTodos eles, ó Senhor, de vós esperam *\nque a seu tempo vós lhes deis o alimento;\n28\nvós lhes dais o que comer e eles recolhem, *\nvós abris a vossa mão e eles se fartam.\nR.\n29b\nSe tirais o seu respiro, eles perecem *\nc\ne voltam para o pó de onde vieram;\n30\nenviais o vosso espírito e renascem *\ne da terra toda a face renovais.\nR.\nEvangelho - Mc 7,14-23\nAclamação ao Evangelho\nCf. Jo 17,17ba\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVossa palavra é a verdade;\nsantificai-nos na verdade!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,14-23",
+    "texto": "7,14-23\nNaquele tempo,\n14\nJesus chamou a multidão para perto de si e disse:\n\"Escutai todos e compreendei:\n15\no que torna impuro o homem\nnão é o que entra nele vindo de fora,\nmas o que sai do seu interior.\n16\nQuem tem ouvidos para ouvir, ouça\".\n17\nQuando Jesus entrou em casa,\nlonge da multidão,\nos discípulos lhe perguntaram sobre essa parábola.\n18\nJesus lhes disse:\n\"Será que nem vós compreendeis?\nNão entendeis que nada do que vem de fora\ne entra numa pessoa, pode torná-la impura,\n19\nporque não entra em seu coração,\nmas em seu estômago e vai para a fossa?\"\nAssim Jesus declarava\nque todos os alimentos eram puros.\n20\nEle disse:\n\"O que sai do homem,\nisso é que o torna impuro.\n21\nPois é de dentro do coração humano\nque saem as más intenções, imoralidades,\nroubos, assassínios,\n22\nadultérios, ambições desmedidas,\nmaldades, fraudes,\ndevassidão, inveja, calúnia,\norgulho, falta de juízo.\n23\nTodas estas coisas más saem de dentro,\ne são elas que tornam impuro o homem\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-02-27",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Eclo 5,1-10</div><div> Sl 1,1-2.3.4 e 6 (R. Sl 39,5a)</div><div></div><div> Mc 9,41-50</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-10 (gr. 1-8)",
+    "texto": "1\nNão confies nas tuas riquezas\ne não digas:\n\"Basta-me viver!\"\n2\nNão deixes que tua força\nte leve a seguir as paixões do coração.\n3\nNão digas:\n\"Quem terá poder sobre mim?\"\nou: \"Quem me fará prestar contas das minhas ações?\",\npois o Senhor, com certeza, te castigará.\n4\nNão digas:\n\"Pequei, e que de mal me aconteceu?\",\npois o Altíssimo é paciente.\n5\nNão percas o temor por causa do perdão,\ncometendo pecado sobre pecado.\n6\nNão digas:\n\"A misericórdia do Senhor é grande,\nele me perdoará a multidão dos meus pecados!\",\n7\npois dele procedem misericórdia e cólera,\ne sua ira se abate sobre os pecadores.\n8\nNão demores em voltar para o Senhor,\ne não adies de um dia para outro,\n9\npois a sua cólera vem de repente\ne, no dia do castigo, serás aniquilado.\n10\nNão te apoies em riquezas injustas,\npois elas de nada te valerão no dia da desgraça.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 1,1-2.3.4 e 6 (R. Sl 39,5a)",
+    "refrao": "",
+    "texto": "R.\nÉ feliz quem a Deus se confia!\n1\nFeliz é todo aquele que não anda *\nconforme os conselhos dos perversos;\nque não entra no caminho dos malvados, *\nnem junto aos zombadores vai sentar-se;\n2\nmas encontra seu prazer na lei de Deus *\ne a medita, dia e noite, sem cessar.\nR.\n3\nEis que ele é semelhante a uma árvore *\nque à beira da torrente está plantada;\nela sempre dá seus frutos a seu tempo, †\ne jamais as suas folhas vão murchar. *\nEis que tudo o que ele faz vai prosperar,\nR.\n4\nmas bem outra é a sorte dos perversos. †\nAo contrário, são iguais à palha seca *\nespalhada e dispersada pelo vento.\n6\nPois Deus vigia o caminho dos eleitos, *\nmas a estrada dos malvados leva à morte.\nR.\nEvangelho - Mc 9,41-50\nAclamação ao Evangelho\n1Ts 2,13\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAcolhei a palavra de Deus, não como palavra humana,\nmas como mensagem de Deus, o que ela é, em verdade!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,41-50",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n9,41-50\nNaquele tempo, disse Jesus aos seus discípulos:\n41\n\"Quem vos der a beber um copo de água,\nporque sois de Cristo,\nnão ficará sem receber a sua recompensa.\n42\nE se alguém escandalizar\num destes pequeninos que creem,\nmelhor seria que fosse jogado no mar\ncom uma pedra de moinho amarrada ao pescoço.\n43\nSe tua mão te leva a pecar, corta-a!\nÉ melhor entrar na Vida sem uma das mãos,\ndo que, tendo as duas, ir para o inferno,\npara o fogo que nunca se apaga.\n[44]\n45\nSe teu pé te leva a pecar, corta-o!\nÉ melhor entrar na Vida  sem um dos pés,\ndo que, tendo os dois, ser jogado no inferno.\n[46]\n47\nSe teu olho te leva a pecar, arranca-o!\nÉ melhor entrar no Reino de Deus com um olho só,\ndo que, tendo os dois, ser jogado no inferno,\n48\n'onde o verme deles não morre,\ne o fogo não se apaga'.\n49\nPois todos hão de ser salgados pelo fogo.\n50\nCoisa boa é o sal.\nMas se o sal se tornar insosso,\ncom que lhe restituireis o tempero?\nTende, pois, sal em vos mesmos\ne vivei em paz uns com os outros\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-28",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Am 6,1a.4-7</div><div> Sl 145(146),7.8-9a.9bc-10 (R. 1)</div><div> 1Tm 6,11-16</div><div> Lc 16,19-31</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,1a.4-7",
+    "texto": "Assim diz o Senhor todo-poderoso:\n1a\nAi dos que vivem despreocupadamente em Sião,\nos que se sentem seguros nas alturas de Samaria!\n4\nOs que dormem em camas de marfim,\ndeitam-se em almofadas,\ncomendo cordeiros do rebanho\ne novilhos do seu gado;\n5\nos que cantam ao som das harpas,\nou, como Davi, dedilham instrumentos musicais;\n6\nos que bebem vinho em taças,\ne se perfumam com os mais finos unguentos\ne não se preocupam com a ruína de José.\n7\nPor isso, eles irão agora\npara o desterro, na primeira fila,\ne o bando dos gozadores será desfeito.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 145(146),7.8-9a.9bc-10 (R.1)",
+    "refrao": "",
+    "texto": "R.\nBendize, minha alma, louva ao Senhor!\nOu\n:\nAleluia, Aleluia, Aleluia.\nO Senhor é fiel para sempre,*\n7\nfaz justiça aos que são oprimidos;\nele dá alimento aos famintos, *\né o Senhor quem liberta os cativos.\nR.\n8\nO Senhor abre os olhos aos cegos *\no Senhor faz erguer-se o caído;\no Senhor ama aquele que é justo *\n9a\nÉ o Senhor quem protege o estrangeiro.\nR.\nbc\nEle ampara a viúva e o órfão *\nmas confunde os caminhos dos maus.\n10\nO Senhor reinará para sempre! †\nÓ Sião, o teu Deus reinará *\npara sempre e por todos os séculos!\nR.\n2ª Leitura - 1Tm 6,11\nSEGUNDA LEITURA\nGuarda o teu mandato\naté a manifestação gloriosa do Senhor.\nLeitura da Primeira Carta de São Paulo a Timóteo\n6,11-16\n11\nTu que és um homem de Deus,\nfoge das coisas perversas,\nprocura a justiça, a piedade, a fé,\no amor, a firmeza, a mansidão.\n12\nCombate o bom combate da fé,\nconquista a vida eterna,\npara a qual foste chamado\ne pela qual fizeste tua nobre profissão de fé\ndiante de muitas testemunhas.\n13\nDiante de Deus, que dá a vida a todas as coisas,\ne de Cristo Jesus,\nque deu o bom testemunho da verdade\nperante Pôncio Pilatos, eu te ordeno:\n14\nguarda o teu mandato íntegro e sem mancha até\nà manifestação gloriosa de nosso Senhor Jesus Cristo.\n15\nEsta manifestação será feita no tempo oportuno\npelo bendito e único Soberano,\no Rei dos reis e Senhor dos senhores,\n16\no único que possui a imortalidade\ne que habita numa luz inacessível,\nque nenhum homem viu, nem pode ver.\nA ele, honra e poder eterno. Amém.\nPalavra do Senhor.\nAclamação ao Evangelho\n2Cor 8,9\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus Cristo, sendo rico, se fez pobre por amor;\npara que sua pobreza nos, assim, enriquecesse."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,19-31",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n16,19-31\nNaquele tempo, Jesus disse aos fariseus:\n19\n\"Havia um homem rico,\nque se vestia com roupas finas e elegantes\ne fazia festas esplêndidas todos os dias.\n20\nUm pobre, chamado Lázaro, cheio de feridas,\nestava no chão à porta do rico.\n21\nEle queria matar a fome\ncom as sobras que caíam da mesa do rico.\nE, além disso, vinham os cachorros lamber suas feridas.\n22\nQuando o pobre morreu,\nos anjos levaram-no para junto de Abraão.\nMorreu também o rico e foi enterrado.\n23\nNa região dos mortos, no meio dos tormentos,\no rico levantou os olhos e viu de longe a Abraão,\ncom Lázaro ao seu lado.\n24\nEntão gritou: 'Pai Abraão, tem piedade de mim!\nManda Lázaro molhar a ponta do dedo\npara me refrescar a língua,\nporque sofro muito nestas chamas'.\n25\nMas Abraão respondeu:\n'Filho, lembra-te que tu recebeste teus bens durante a vida\ne Lázaro, por sua vez, os males.\nAgora, porém, ele encontra aqui consolo\ne tu és atormentado.\n26\nE, além disso, há um grande abismo entre nós:\npor mais que alguém desejasse,\nnão poderia passar daqui para junto de vós,\ne nem os daí poderiam atravessar até nós'.\n27\nO rico insistiu:\n'Pai, eu te suplico, manda Lázaro à casa do meu pai,\n28\nporque eu tenho cinco irmãos.\nManda preveni-los, para que não venham também eles\npara este lugar de tormento'.\n29\nMas Abraão respondeu:\n'Eles têm Moisés e os Profetas, que os escutem!'\n30\nO rico insistiu:\n'Não, Pai Abraão,\nmas se um dos mortos for até eles,\ncertamente vão se converter'.\n31\nMas Abraão lhe disse:\n'Se não escutam a Moisés, nem aos Profetas,\neles não acreditarão,\nmesmo que alguém ressuscite dos mortos'\".\nPalavra da Salvação."
+  }
+}

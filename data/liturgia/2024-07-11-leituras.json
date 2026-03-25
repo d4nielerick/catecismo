@@ -1,0 +1,23 @@
+{
+  "data": "2024-07-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Os 11,1-4.8c-9</div><div> Sl 79(80),2ac e 3b.15-16 (R. 4b)</div><div></div><div> Mt 10,7-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,1-4.8c-9",
+    "texto": "Assim fala o Senhor:\n1\n\"Quando Israel era criança, eu já o amava,\ne desde o Egito chamei meu filho.\n2\nQuanto mais eu os chamava\ntanto mais eles se afastavam de mim;\nimolavam aos Baals\ne sacrificavam aos ídolos.\n3\nEnsinei Efraim a dar os primeiros passos,\ntomei-o em meus braços,\nmas eles não reconheceram que eu cuidava deles.\n4\nEu os atraía com laços de humanidade,\ncom laços de amor;\nera para eles como quem leva uma criança ao colo,\ne rebaixava-me a dar-lhes de comer.\n8c\nMeu coração comove-se no íntimo\ne arde de compaixão.\n9\nNão darei largas à minha ira,\nnão voltarei a destruir Efraim,\neu sou Deus,\ne não homem;\no santo no meio de vós,\ne não me servirei do terror\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 79(80),2ac e 3b.15-16 (R. 4b)",
+    "refrao": "",
+    "texto": "R.\nSobre nós iluminai a vossa face\ne, então, seremos salvos, ó Senhor!\n2a\nÓ Pastor de Israel, prestai ouvidos. *\nc\nVós, que sobre os querubins vos assentais,\n3b\ndespertai vosso poder, ó nosso Deus, *\ne vinde logo nos trazer a salvação!\nR.\n15\nVoltai-vos para nós, Deus do universo! †\nOlhai dos altos céus e observai. *\nVisitai a vossa vinha e protegei-a!\n16\nFoi a vossa mão direita que a plantou; *\nprotegei-a, e ao rebento que firmastes!\nR.\nEvangelho - Mt 10,7-15\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois, o reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,7-15",
+    "texto": "10,7-15\nNaquele tempo, disse Jesus aos seus discípulos:\n7\n\"Em vosso caminho, anunciai:\n'O Reino dos Céus está próximo'.\n8\nCurai os doentes, ressuscitai os mortos,\npurificai os leprosos, expulsai os demônios.\nDe graça recebestes, de graça deveis dar!\n9\nNão leveis ouro nem prata,\nnem dinheiro nos vossos cintos;\n10\nnem sacola para o caminho,\nnem duas túnicas, nem sandálias, nem bastão,\nporque o operário tem direito ao seu sustento.\n11\nEm qualquer cidade ou povoado onde entrardes,\ninformai-vos para saber quem ali seja digno.\nHospedai-vos com ele até a vossa partida.\n12\nAo entrardes numa casa, saudai-a.\n13\nSe a casa for digna,\ndesça sobre ela a vossa paz;\nse ela não for digna,\nvolte para vós a vossa paz.\n14\nSe alguém não vos receber,\nnem escutar vossa palavra,\nsaí daquela casa ou daquela cidade,\ne sacudi a poeira dos vossos pés.\n15\nEm verdade vos digo,\nas cidades de Sodoma e Gomorra\nserão tratadas com menos dureza\ndo que aquela cidade,\nno dia do juízo\".\nPalavra da Salvação."
+  }
+}

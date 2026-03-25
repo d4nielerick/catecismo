@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Cl 3,1-11</div><div> Sl 144(145),2-3.10-11.12-13ab (R. 9a)</div><div></div><div> Lc 6,20-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-11",
+    "texto": "Irmãos,\n1\nse ressuscitastes com Cristo,\nesforçai-vos por alcançar as coisas do alto,\nonde está Cristo, sentado à direita de Deus;\n2\naspirai às coisas celestes\ne não às coisas terrestres.\n3\nPois vós morrestes,\ne a vossa vida está escondida, com Cristo, em Deus.\n4\nQuando Cristo, vossa vida, aparecer em seu triunfo,\nentão vós aparecereis também com ele, revestidos de glória.\n5\nPortanto, fazei morrer o que em vós pertence à terra:\nimoralidade, impureza,\npaixão, maus desejos\ne a cobiça, que é idolatria.\n6\nTais coisas provocam a ira de Deus contra os que lhe resistem.\n7\nAntigamente vós estáveis enredados por estas coisas\ne vos deixastes dominar por elas.\n8\nAgora, porém, abandonai tudo isso:\nira, irritação,\nmaldade, blasfêmia,\npalavras indecentes, que saem dos vossos lábios.\n9\nNão mintais uns aos outros.\nJá vos despojastes do homem velho e da sua maneira de agir\n10\ne vos revestistes do homem novo,\nque se renova segundo a imagem do seu Criador,\nem ordem ao conhecimento.\n11\nAí não se faz distinção entre grego e judeu,\ncircunciso e incircunciso,\ninculto, selvagem, escravo e livre,\nmas Cristo é tudo em todos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 144(145),2-3. 10-11.12-13ab (R. 9a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é muito bom para com todos.\n2\nTodos os dias haverei de bendizer-vos, *\nhei de louvar o vosso nome para sempre.\n3\nGrande é o Senhor e muito digno de louvores, *\ne ninguém pode medir sua grandeza.\nR.\n10\nQue vossas obras, ó Senhor, vos glorifiquem, *\ne os vossos santos com louvores vos bendigam!\n11\nNarrem a glória e o esplendor do vosso reino *\ne saibam proclamar vosso poder!\nR.\n12\nPara espalhar vossos prodígios entre os homens *\ne o fulgor de vosso reino esplendoroso.\n13a\nO vosso reino é um reino para sempre, *\nb\nvosso poder, de geração em geração.\nR.\nEvangelho - Lc 6,20-26\nAclamação ao Evangelho\nLc 6,23ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMeus discípulos, alegrai-vos,\nexultai de alegria,\npois, bem grande é a recompensa,\nque nos céus tereis um dia!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,20-26",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n6,20-26\nNaquele tempo,\n20\nJesus levantando os olhos para os seus discípulos, disse:\n\"Bem-aventurados vós, os pobres,\nporque vosso é o Reino de Deus!\n21\nBem-aventurados, vós que agora tendes fome,\nporque sereis saciados!\nBem-aventurados vós, que agora chorais,\nporque havereis de rir!\n22\nBem-aventurados sereis,\nquando os homens vos odiarem,\nvos expulsarem, vos insultarem\ne amaldiçoarem o vosso nome,\npor causa do Filho do Homem!\n23\nAlegrai-vos, nesse dia, e exultai\npois será grande a vossa recompensa no céu;\nporque era assim\nque os antepassados deles tratavam os profetas.\n24\nMas, ai de vós, ricos,\nporque já tendes vossa consolação!\n25\nAi de vós, que agora tendes fartura,\nporque passareis fome!\nAi de vós, que agora rides,\nporque tereis luto e lágrimas!\n26\nAi de vós quando todos vos elogiam!\nEra assim que os antepassados deles\ntratavam os falsos profetas\".\nPalavra da Salvação."
+  }
+}

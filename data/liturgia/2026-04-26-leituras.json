@@ -1,0 +1,23 @@
+{
+  "data": "2026-04-26",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 2,14a.36-41</div><div> Sl 22(23),1-3a.3b-4.5.6 (R. cf. 1.2c)</div><div> 1Pd 2,20b-25</div><div> Jo 10,1-10</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,14a.36-41",
+    "texto": "No dia de Pentecostes,\n14a\nPedro, de pé, no meio dos Onze apóstolos,\nlevantou a voz e falou à multidão:\n36\n\"Que todo o povo de Israel reconheça com plena certeza:\nDeus constituiu Senhor e Cristo\na este Jesus que vós crucificastes\".\n37\nQuando ouviram isso,\neles ficaram com o coração aflito,\ne perguntaram a Pedro e aos outros apóstolos:\n\"Irmãos, o que devemos fazer?\"\n38\nPedro respondeu:\n\"Convertei-vos e cada um de vós seja batizado\nem nome de Jesus Cristo\npara o perdão dos vossos pecados.\nE vós recebereis o dom do Espírito Santo.\n39\nPois a promessa é para vós e vossos filhos,\ne para todos aqueles que estão longe,\ntodos aqueles que o Senhor nosso Deus chamar para si\".\n40\nCom muitas outras palavras,\nPedro lhes dava testemunho, e os exortava, dizendo:\n\"Salvai-vos dessa gente corrompida!\"\n41\nOs que aceitaram as palavras de Pedro\nreceberam o batismo.\nNaquele dia,\nmais ou menos três mil pessoas se uniram a eles.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 22(23),1-3a.3b-4.5.6 (R. cf. 1.2c)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é o pastor que me conduz; *\npara as águas repousantes me encaminha.\nOu\nAleluia, Aleluia, Aleluia.\n1\nO Senhor é o pastor que me conduz; *\nnão me falta coisa alguma.\n2\nPelos prados e campinas verdejantes *\nele me leva a descansar.\nPara as águas repousantes me encaminha, *\n3a\ne restaura as minhas forças.\nR.\n3b\nEle me guia no caminho mais seguro, *\npela honra do seu nome.\n4\nMesmo que eu passe pelo vale tenebroso, *\nnenhum mal eu temerei;\nestais comigo com bastão e com cajado; *\neles me dão a segurança!\nR.\n5\nPreparais à minha frente uma mesa, *\nbem à vista do inimigo,\ne com óleo vós ungis minha cabeça; *\no meu cálice transborda.\nR.\n6\nFelicidade e todo bem hão de seguir-me *\npor toda a minha vida;\ne, na casa do Senhor, habitarei *\npelos tempos infinitos.\nR.\n2ª Leitura - 1Pd 2,20\nSEGUNDA LEITURA\nVoltareis ao Pastor de vossas vidas.\nLeitura da Primeira Carta de São Pedro\n2,20b-25\nCaríssimos:\n20b\nSe suportais com paciência aquilo que sofreis\npor ter feito o bem, isto vos torna agradáveis\ndiante de Deus.\n21\nDe fato, para isto fostes chamados.\nTambém Cristo sofreu por vós deixando-vos um exemplo,\na fim de que sigais os seus passos.\n22\nEle não cometeu pecado algum,\nmentira nenhuma foi encontrada em sua boca.\n23\nQuando injuriado, não retribuía as injúrias;\natormentado, não ameaçava;\nantes, colocava a sua causa nas mãos daquele\nque julga com justiça.\n24\nSobre a cruz, carregou nossos pecados\nem seu próprio corpo,\na fim de que, mortos para os pecados,\nvivamos para a justiça.\nPor suas feridas fostes curados.\n25\nAndáveis como ovelhas desgarradas, mas agora\nvoltastes ao pastor e guarda de vossas vidas.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 10,14\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou o bom pastor, diz o Senhor;\neu conheço minhas ovelhas\ne elas me conhecem a mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,1-10",
+    "texto": "10,1-10\nNaquele tempo, disse Jesus:\n1\n\"Em verdade, em verdade vos digo,\nquem não entra no redil das ovelhas pela porta,\nmas sobe por outro lugar, é ladrão e assaltante.\n2\nQuem entra pela porta é o pastor das ovelhas.\n3\nA esse o porteiro abre,\ne as ovelhas escutam a sua voz;\nele chama as ovelhas pelo nome\ne as conduz para fora.\n4\nE, depois de fazer sair todas as que são suas,\ncaminha à sua frente, e as ovelhas o seguem,\nporque conhecem a sua voz.\n5\nMas não seguem um estranho,\nantes fogem dele,\nporque não conhecem a voz dos estranhos\".\n6\nJesus contou-lhes esta parábola,\nmas eles não entenderam o que ele queria dizer.\n7\nEntão Jesus continuou:\n\"Em verdade, em verdade vos digo,\neu sou a porta das ovelhas.\n8\nTodos aqueles que vieram antes de mim\nsão ladrões e assaltantes,\nmas as ovelhas não os escutaram.\n9\nEu sou a porta. Quem entrar por mim, será salvo;\nentrará e sairá e encontrará pastagem.\n10\nO ladrão só vem para roubar, matar e destruir.\nEu vim para que tenham vida e a tenham em abundância.\nPalavra da Salvação."
+  }
+}

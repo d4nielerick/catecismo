@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 45,1.4-6</div><div> Sl 95(96),1.2a.3.4-5.7-8.9-10a.c (R. 7ab)</div><div> 1Ts 1,1-5b</div><div> Mt 22,15-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "45,1.4-6",
+    "texto": "1\nIsto diz o Senhor sobre Ciro, seu Ungido:\n\"Tomei-o pela mão\npara submeter os povos ao seu domínio,\ndobrar o orgulho dos reis,\nabrir todas as portas à sua marcha,\ne para não deixar trancar os portões.\n4\nPor causa de meu servo Jacó,\ne de meu eleito Israel, chamei-te pelo nome;\nreservei-te, e não me reconheceste.\n5\nEu sou o Senhor, não existe outro:\nfora de mim não há deus.\nArmei-te guerreiro, sem me reconheceres,\n6\npara que todos saibam, do oriente ao ocidente,\nque fora de mim outro não existe.\nEu sou o Senhor, não há outro\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),1.2a.3.4-5.7-8.9-10a.c (R. 7ab)",
+    "refrao": "",
+    "texto": "R.\nÓ família das nações, dai ao Senhor poder e glória!\n1\nCantai ao Senhor Deus um canto novo, *\n2a\ncantai ao Senhor Deus, ó terra inteira!\n3\nmanifestai a sua glória entre as nações, *\ne entre os povos do universo seus prodígios!\nR.\n4\nPois Deus é grande e muito digno de louvor,*\né mais terrível e maior que os outros deuses,\n5\nporque um nada são os deuses dos pagãos. *\nFoi o Senhor e nosso Deus quem fez os céus.\nR.\n7\nÓ família das nações, dai ao Senhor, *\nó nações, dai ao Senhor poder e glória,\n8\ndai-lhe a glória que é devida ao seu nome! *\nOferecei um sacrifício nos seus átrios.\nR.\n9\nAdorai-o no esplendor da santidade, *\nterra inteira, estremecei diante dele!\n10a\nPublicai entre as nações: \"Reina o Senhor!\" *\nc\npois os povos ele julga com justiça.\nR.\nSEGUNDA LEITURA\nRecordamo-nos sem cessar da vossa\nfé, da caridade e da esperança.\nLeitura da Primeira Carta de São Paulo aos Tessalonicenses\n1,1-5b\n1\nPaulo, Silvano e Timóteo,\nà Igreja dos tessalonicenses,\nreunida em Deus Pai e no Senhor Jesus Cristo:\na vós, graça e paz!\n2\nDamos graças a Deus por todos vós,\nlembrando-vos sempre em nossas orações.\n3\nDiante de Deus, nosso Pai,\nrecordamos sem cessar a atuação da vossa fé,\no esforço da vossa caridade e a firmeza\nda vossa esperança em nosso Senhor Jesus Cristo.\n4\nSabemos, irmãos amados por Deus,\nque sois do número dos escolhidos.\n5b\nPorque o nosso evangelho não chegou até vós\nsomente por meio de palavras,\nmas também mediante a força que é o Espírito Santo;\ne isso, com toda a abundância.\nPalavra do Senhor.\nAclamação ao Evangelho  cf.\nFl 2,15d.16a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nComo astros no mundo, vós resplandeçais,\nmensagem de vida ao mundo anunciando,\nda vida a palavra, com fé, proclameis,\nquais astros luzentes no mundo brilheis."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "22,15-21",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n22,15-21\nNaquele tempo,\n15\nOs fariseus fizeram um plano\npara apanhar Jesus em alguma palavra.\n16\nEntão mandaram os seus discípulos,\njunto com alguns do partido de Herodes,\npara dizerem a Jesus:\n\"Mestre, sabemos que és verdadeiro\ne que, de fato, ensinas o caminho de Deus.\nNão te deixas influenciar pela opinião dos outros,\npois não julgas um homem pelas aparências.\n17\nDize-nos, pois, o que pensas:\nÉ lícito ou não pagar imposto a César?\"\n18\nJesus percebeu a maldade deles e disse: \"Hipócritas!\nPor que me preparais uma armadilha?\n19\nMostrai-me a moeda do imposto!\"\nLevaram-lhe então a moeda.\n20\nE Jesus disse:\n\"De quem é a figura e a inscrição desta moeda?\"\n21\nEles responderam: \"De César\".\nJesus então lhes disse:\n\"Dai pois a César o que é de César,\ne a Deus o que é de Deus\".\nPalavra da Salvação."
+  }
+}

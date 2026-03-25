@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-15",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 5,1-6</div><div> Sl 118(119),41.43.44.45.47.48 (R. 41a)</div><div></div><div> Lc 11,37-41</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-6",
+    "texto": "Irmãos,\n1\nÉ para a liberdade que Cristo nos libertou.\nFicai pois firmes\ne não vos deixeis amarrar de novo ao jugo da escravidão.\n2\nEis que eu, Paulo, vos digo que\nCristo não será de nenhum proveito para vós,\nse vos deixardes circuncidar.\n3\nMais uma vez, atesto a todo homem circuncidado\nque ele está obrigado a observar toda a Lei.\n4\nVós que procurais a vossa justificação na Lei,\nrompestes com Cristo, decaístes da graça.\n5\nQuanto a nós,\nque nos deixamos conduzir pelo Espírito,\né da fé que aguardamos a justificação,\nobjeto de nossa esperança.\n6\nCom efeito, em Jesus Cristo,\no que vale é a fé agindo pela caridade;\nobservar ou não a circuncisão\nnão tem valor algum.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),41.43.",
+    "refrao": "",
+    "texto": "44.45.47.48 (R. 41a)\nR.\nSenhor, que desça sobre mim a vossa graça!\n41\nSenhor, que desça sobre mim a vossa graça *\ne a vossa salvação que prometestes!\nR.\n43\nNão retireis vossa verdade de meus lábios, *\npois eu confio em vossos justos julgamentos!\nR.\n44\nCumprirei constantemente a vossa lei; *\npara sempre, eternamente a cumprirei!\nR.\n45\nÉ amplo e agradável meu caminho, *\nporque busco e pesquiso as vossas ordens.\nR.\n47\nMuito me alegro com os vossos mandamentos, *\nque eu amo, amo tanto, mais que tudo!\nR.\n48\nElevarei as minhas mãos para louvar-vos *\ne com prazer meditarei vossa vontade.\nR.\nEvangelho - Lc 11,37-4\nAclamação ao Evangelho\nHb 4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor é viva e eficaz:\nela julga os pensamentos e as intenções do coração."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,37-41",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,37-41\nNaquele tempo,\n37\nenquanto Jesus falava,\num fariseu convidou-o para jantar com ele.\nJesus entrou e pôs-se à mesa.\n38\nO fariseu ficou admirado\nao ver que Jesus não tivesse lavado as mãos\nantes da refeição.\n39\nO Senhor disse ao fariseu:\n\"Vós fariseus,\nlimpais o copo e o  prato por fora,\nmas o vosso interior está cheio de roubos e maldades.\n40\nInsensatos!\nAquele que fez o exterior\nnão fez também o interior?\n41\nAntes, dai esmola do que vós possuís\ne tudo ficará puro para vós\".\nPalavra da Salvação."
+  }
+}

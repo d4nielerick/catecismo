@@ -1,0 +1,23 @@
+{
+  "data": "2024-01-21",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jn 3,1-5.10</div><div> Sl 24(25),4ab-5ab.6-7bc.8-9 (R. 4a.5a)</div><div> 1Cor 7,29-31</div><div> Mc 1,14-20</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-5.10",
+    "texto": "1\nA palavra do Senhor foi dirigida a Jonas,\npela segunda vez:\n2\n\"Levanta-te\ne põe-te a caminho da grande cidade de Nínive\ne anuncia-lhe a mensagem que eu te vou confiar\".\n3\nJonas pôs-se a caminho de Nínive,\nconforme a ordem do Senhor.\nOra, Nínive era uma cidade muito grande;\neram necessários três dias para ser atravessada.\n4\nJonas entrou na cidade,\npercorrendo o caminho de um dia;\npregava ao povo, dizendo:\n\"Ainda quarenta dias, e Nínive será destruída\".\n5\nOs ninivitas acreditaram em Deus;\naceitaram fazer jejum, e vestiram sacos,\ndesde o superior ao inferior.\n10\nVendo Deus as suas obras de conversão\ne que os ninivitas se afastavam do mau caminho,\ncompadeceu-se e suspendeu o mal\nque tinha ameaçado fazer-lhes, e não o fez.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 24(25),4ab-5ab.6-7bc.8-9 (R. 4a.5a)",
+    "refrao": "",
+    "texto": "R.\nMostrai-me, ó Senhor, vossos caminhos,\nvossa verdade me oriente e me conduza!\n4a\nMostrai-me, ó Senhor, vossos caminhos, *\nb\ne fazei-me conhecer a vossa estrada!\n5a\nVossa verdade me oriente e me conduza, *\nb\nporque sois o Deus da minha salvação.\nR.\n6\nRecordai, Senhor meu Deus, vossa ternura *\ne a vossa compaixão que são eternas!\n7b\nDe mim lembrai-vos, porque sois misericórdia *\nc\ne sois bondade sem limites, ó Senhor!\nR.\n8\nO Senhor é piedade e retidão, *\ne reconduz ao bom caminho os pecadores.\n9\nEle dirige os humildes na justiça, *\ne aos pobres ele ensina o seu caminho.\nR.\n2ª Leitura - 1Cor 7,2\nSEGUNDA LEITURA\nA figura deste mundo passa.\nLeitura da Primeira Carta de São Paulo aos Coríntios\n7,29-31\n29\nEu digo, irmãos: o tempo está abreviado.\nEntão que, doravante, os que têm mulher\nvivam como se não tivessem mulher;\n30\ne os que choram,\ncomo se não chorassem,\ne os que estão alegres,\ncomo se não estivessem alegres;\ne os que fazem compras,\ncomo se não possuíssem coisa alguma;\n31\ne os que usam do mundo,\ncomo se dele não estivessem gozando.\nPois a figura deste mundo passa.\nPalavra do Senhor.\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Reino do Céu está perto!\nConvertei-vos, irmãos, é preciso!\nCrede todos no Evangelho!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,14-20",
+    "texto": "1,14-20\n14\nDepois que João Batista foi preso,\nJesus foi para a Galileia,\npregando o Evangelho de Deus e dizendo:\n15\n\"O tempo já se completou\ne o Reino de Deus está próximo.\nConvertei-vos e crede no Evangelho!\"\n16\nE, passando à beira do mar da Galileia,\nJesus viu Simão e André, seu irmão,\nque lançavam a rede ao mar,\npois eram pescadores.\n17\nJesus lhes disse:\n\"Segui-me e eu farei de vós pescadores de homens\".\n18\nE eles, deixando imediatamente as redes,\nseguiram a Jesus.\n19\nCaminhando mais um pouco,\nviu também Tiago e João, filhos de Zebedeu.\nEstavam na barca, consertando as redes;\n20\ne logo os chamou.\nEles deixaram seu pai Zebedeu na barca com os\nempregados, e partiram, seguindo Jesus.\nPalavra da Salvação."
+  }
+}

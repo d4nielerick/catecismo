@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-27",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 9,15.24-28</div><div> Sl 97(98),1.2-3ab.3cd-4.5-6 (R. 1a)</div><div></div><div> Mc 3,22-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,15.24-28",
+    "texto": "Irmãos,\n15\nCristo é mediador de uma nova aliança.\nPela sua morte, ele reparou as transgressões\ncometidas no decorrer da primeira aliança.\nE, assim, aqueles que são chamados\nrecebem a promessa da herança eterna.\n24\nJesus não entrou num santuário feito por mão humana,\nimagem do verdadeiro,\nmas no próprio céu,\na fim de comparecer, agora, na presença de Deus,\nem nosso favor.\n25\nE não foi para se oferecer a si muitas vezes,\ncomo o sumo sacerdote que, cada ano,\nentra no Santuário com sangue alheio.\n26\nPorque, se assim fosse,\ndeveria ter sofrido muitas vezes,\ndesde a fundação do mundo.\nMas foi agora, na plenitude dos tempos,\nque, uma vez por todas, ele se manifestou\npara destruir o pecado pelo sacrifício de si mesmo.\n27\nO destino de todo homem é morrer uma só vez,\ne depois vem o julgamento.\n28\nDo mesmo modo, também Cristo,\noferecido uma vez por todas,\npara tirar os pecados da multidão,\naparecerá uma segunda vez, fora do pecado,\npara salvar aqueles que o esperam.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.2-3ab.3cd-4.5-6 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nCantai ao Senhor Deus um canto novo,*\nporque ele fez prodígios!\n1\nCantai ao Senhor Deus um canto novo,*\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo*\nalcançaram-lhe a vitória.\nR.\n2\nO Senhor fez conhecer a salvação,*\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel*\nb\npela casa de Israel\nR.\nc\nOs confins do universo contemplaram*\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira,\nalegrai-vos e exultai*\nR.\n5\nCantai salmos ao Senhor ao som da harpa*\ne da cítara suave!\n6\nAclamai, com os clarins e as trombetas,*\nao Senhor, o nosso Rei!\nR.\nEvangelho - Mc 3,22-30\nAclamação ao Evangelho\nCf. 2Tm 1,10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus Cristo Salvador destruiu o mal e a morte;\nfez brilhar pelo evangelho a luz e a vida imperecíveis."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,22-30",
+    "texto": "3,22-30\nNaquele tempo,\n22\nos mestres da Lei, que tinham vindo de Jerusalém,\ndiziam que ele estava possuído por Beelzebu,\ne que pelo príncipe dos demônios\nele expulsava os demônios.\n23\nEntão Jesus os chamou e falou-lhes em parábolas:\n\"Como é que Satanás pode expulsar a Satanás?\n24\nSe um reino se divide contra si mesmo,\nele não poderá manter-se.\n25\nSe uma família se divide contra si mesma,\nela não poderá manter-se.\n26\nAssim, se Satanás se levanta contra si mesmo e se divide,\nnão poderá sobreviver, mas será destruído.\n27\nNinguém pode entrar na casa de um homem forte\npara roubar seus bens,\nsem antes o amarrar.\nSó depois poderá saquear sua casa.\n28\nEm verdade vos digo:\ntudo será perdoado aos homens,\ntanto os pecados,\ncomo qualquer blasfêmia que tiverem dito.\n29\nMas quem blasfemar contra o Espírito Santo,\nnunca será perdoado,\nmas será culpado de um pecado eterno\".\n30\nJesus falou isso, porque diziam:\n\"Ele está possuído por um espírito mau\".\nPalavra da Salvação."
+  }
+}

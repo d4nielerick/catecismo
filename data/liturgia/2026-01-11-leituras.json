@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-11",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 42,1-4.6-7</div><div> Sl 28(29),1a.2.3ac-4.3b.9b-10 (R. 11b)</div><div> At 10,34-38</div><div> Mt 3,13-17 (Jesus batizado por João)</div></div>",
+  "primeira_leitura": {
+    "referencia": "42,1-4.6-7",
+    "texto": "Assim fala o Senhor:\n1\n\"Eis o meu servo - eu o recebo;\neis o meu eleito - nele se compraz minh'alma;\npus meu espírito sobre ele,\nele promoverá o julgamento das nações.\n2\nEle não clama nem levanta a voz,\nnem se faz ouvir pelas ruas.\n3\nNão quebra uma cana rachada\nnem apaga um pavio que ainda fumega;\nmas promoverá o julgamento para obter a verdade.\n4\nNão esmorecerá nem se deixará abater,\nenquanto não estabelecer a justiça na terra;\nos países distantes esperam seus ensinamentos.\n6\nEu, o Senhor, te chamei para a justiça\ne te tomei pela mão; eu te formei e te constituí\ncomo o centro de aliança do povo, luz das nações,\n7\npara abrires os olhos dos cegos, tirar os cativos da prisão,\nlivrar do cárcere os que vivem nas trevas\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 28(29),1a.2.3ac-4.3b.9b-10 (R. 11b)",
+    "refrao": "",
+    "texto": "R.\nQue o Senhor abençoe, com a paz, o seu povo!\n1a\nFilhos de Deus, tributai ao Senhor, *\ntributai-lhe a glória e o poder!\n2\nDai-lhe a glória devida ao seu nome; *\nadorai-o com santo ornamento!\nR.\n3a\nEis a voz do Senhor sobre as águas, *\nc\nsua voz sobre as águas imensas!\n4\nEis a voz do Senhor com poder! *\nEis a voz do Senhor majestosa.\nR.\n3b\nSua voz no trovão reboando! *\n9b\nNo seu templo os fiéis bradam: \"Glória!\"\n10\nÉ o Senhor que domina os dilúvios, *\no Senhor reinará para sempre!\nR.\nSEGUNDA LEITURA\nFoi ungido por Deus com o Espírito Santo.\nLeitura dos Atos dos Apóstolos\n10,34-38\nNaqueles dias,\n34\nPedro tomou a palavra e disse:\n\"De fato, estou compreendendo\nque Deus não faz distinção entre as pessoas.\n35\nPelo contrário, ele aceita quem o teme\ne pratica a justiça,\nqualquer que seja a nação a que pertença.\n36\nDeus enviou sua palavra aos israelitas\ne lhes anunciou a Boa-Nova da paz,\npor meio de Jesus Cristo, que é o Senhor de todos.\n37\nVós sabeis o que aconteceu em toda a Judeia,\na começar pela Galileia,\ndepois do batismo pregado por João:\n38\ncomo Jesus de Nazaré foi ungido por Deus\ncom o Espírito Santo e com poder.\nEle andou por toda a parte, fazendo o bem\ne curando a todos os que estavam dominados pelo demônio;\nporque Deus estava com ele\".\nPalavra do Senhor.\nAclamação ao Evangelho\ncf. Mc 9,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAbriram-se os céus\ne fez-se ouvir a voz do Pai:\nEis meu filho muito amado;\nescutai-o, todos vós!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,13-17",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n3,13-17\nNaquele tempo,\n13\nJesus veio da Galileia para o rio Jordão,\na fim de se encontrar com João e ser batizado por ele.\n14\nMas João protestou, dizendo:\n\"Eu preciso ser batizado por ti, e tu vens a mim?\"\n15\nJesus, porém, respondeu-lhe:\n\"Por enquanto deixa como está,\nporque nós devemos cumprir toda a justiça!\"\nE João concordou.\n16\nDepois de ser batizado, Jesus saiu logo da água.\nEntão o céu se abriu e Jesus viu o Espírito de Deus,\ndescendo como pomba e vindo pousar sobre ele.\n17\nE do céu veio uma voz que dizia:\n\"Este é o meu Filho amado,\nno qual eu pus o meu agrado\".\nPalavra da Salvação."
+  }
+}

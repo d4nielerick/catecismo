@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-28",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 18,18-20</div><div> Sl 30(31),5-6.14.15-16 (R. 17b)</div><div></div><div> Mt 20,17-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "18,18-20",
+    "texto": "Naqueles dias,\n18\ndisseram eles:\n\"Vinde para conspirarmos juntos contra Jeremias;\num sacerdote não deixará morrer a lei;\nnem um sábio, o conselho;\nnem um profeta, a palavra.\nVinde para o atacarmos com a língua,\ne não vamos prestar atenção a todas as suas palavras\".\n19\nAtende-me, Senhor,\nouve o que dizem meus adversários.\n20\nAcaso pode-se retribuir o bem com o mal?\nPois eles cavaram uma cova para mim.\nLembra-te de que fui à tua presença,\npara interceder por eles\ne tentar afastar deles a tua ira.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 30(31),5-6.14.15-16 (R. 17b)",
+    "refrao": "",
+    "texto": "R.\nSalvai-me pela vossa compaixão, ó Senhor Deus!\n5\nRetirai-me desta rede traiçoeira, *\nporque sois o meu refúgio protetor!\n6\nEm vossas mãos, Senhor, entrego o meu espírito, *\nporque vós me salvareis, ó Deus fiel!\nR.\n14\nAo redor, todas as coisas me apavoram; *\nouço muitos cochichando contra mim;\ntodos juntos se reúnem, conspirando *\ne pensando como vão tirar-me a vida.\nR.\n15\nA vós, porém, ó meu Senhor, eu me confio, *\ne afirmo que só vós sois o meu Deus!\n16\nEu entrego em vossas mãos o meu destino; *\nlibertai-me do inimigo e do opressor!\nR.\nEvangelho - Mt 20,17-2\nAclamação ao Evangelho\nJo 8,12\nR.\nSalve, Cristo, luz da vida,\ncompanheiro na partilha!\nV.\nEu sou a luz do mundo;\naquele que me segue\nnão caminha entre as trevas,\nmas terá a luz da vida"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "20,17-28",
+    "texto": "20,17-28\nNaquele tempo,\n17\nenquanto Jesus subia para Jerusalém,\nele tomou os doze discípulos à parte\ne, durante a caminhada, disse-lhes:\n18\n\"Eis que estamos subindo para Jerusalém,\ne o Filho do Homem será entregue\naos sumos sacerdotes e aos mestres da Lei.\nEles o condenarão à morte,\n19\ne o entregarão aos pagãos para zombarem dele,\npara flagelá-lo e crucificá-lo.\nMas no terceiro dia ressuscitará\".\n20\nA mãe dos filhos de Zebedeu\naproximou-se de Jesus com seus filhos\ne ajoelhou-se com a intenção de fazer um pedido.\n21\nJesus perguntou:\n\"O que tu queres?\"\nEla respondeu:\n\"Manda que estes meus dois filhos\nse sentem, no teu Reino,\num à tua direita e outro à tua esquerda\".\n22\nJesus, então, respondeu-lhes:\n\"Não sabeis o que estais pedindo.\nPor acaso podeis beber o cálice que eu vou beber?\"\nEles responderam:\n\"Podemos.\"\n23\nEntão Jesus lhes disse:\n\"De fato, vós bebereis do meu cálice,\nmas não depende de mim\nconceder o lugar à minha direita ou à minha esquerda.\nMeu Pai é quem dará esses lugares\nàqueles para os quais ele os preparou\".\n24\nQuando os outros dez discípulos ouviram isso,\nficaram irritados contra os dois irmãos.\n25\nJesus, porém, chamou-os, e disse:\n\"Vós sabeis que os chefes das nações\ntêm poder sobre elas e os grandes as oprimem.\n26\nEntre vós não deverá ser assim.\nQuem quiser tornar-se grande,\ntorne-se vosso servidor;\n27\nquem quiser ser o primeiro, seja vosso servo.\n28\nPois, o Filho do Homem não veio para ser servido,\nmas para servir e dar a sua vida\ncomo resgate em favor de muitos\".\nPalavra da Salvação."
+  }
+}

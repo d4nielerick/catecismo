@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 49,3.5-6</div><div> Sl 39(40),2.4ab.7-8a.8b-9.10 (R. 8a.9a)</div><div> 1Cor 1,1-3</div><div> Jo 1,29-34</div></div>",
+  "primeira_leitura": {
+    "referencia": "49,3.5-6",
+    "texto": "3\nO Senhor me disse: \"Tu és o meu Servo,\nIsrael, em quem serei glorificado\".\n5\nE agora diz-me o Senhor\n- ele que me preparou desde o nascimento\npara ser seu Servo - que eu recupere Jacó para ele\ne faça Israel unir-se a ele;\naos olhos do Senhor esta é a minha glória.\n6\nDisse ele: \"Não basta seres meu Servo\npara restaurar as tribos de Jacó\ne reconduzir os remanescentes de Israel:\neu te farei luz das nações, para que minha salvação\nchegue até aos confins da terra\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 39(40),2.4ab.7-8a.8b-9.10 (R.8a.9a)",
+    "refrao": "",
+    "texto": "R.\nEu disse: Eis que venho, Senhor,\ncom prazer faço a vossa vontade!\n2\nEsperando, esperei no Senhor,*\ne inclinando-se, ouviu meu clamor.\n4a\nCanto novo ele pôs em meus lábios,*\nb\num poema em louvor ao Senhor.\nR.\n7\nSacrifício e oblação não quisestes,*\nmas abristes, Senhor, meus ouvidos;\nnão pedistes ofertas nem vítimas,*\nholocaustos por nossos pecados.\nR.\n8a\nE então eu vos disse: \"Eis que venho!\"*\nb\nSobre mim está escrito no livro:\n9\n\"Com prazer faço a vossa vontade,*\nguardo em meu coração vossa lei!\"\nR\n.\n10\nBoas-novas de vossa justiça †\nanunciei numa grande assembleia;*\nvós sabeis: não fechei os meus lábios!\nR.\n2ª Leitura - 1Cor 1,1\nSEGUNDA LEITURA\nA vós, graça e paz da parte de Deus,\nnosso Pai, e do Senhor Jesus!\nInício da Primeira Carta de São Paulo aos Coríntios\n1,1-3\n1\nPaulo, chamado a ser apóstolo de Jesus Cristo,\npor vontade de Deus, e o irmão Sóstenes,\n2\nà Igreja de Deus que está em Corinto:\naos que foram santificados em Cristo Jesus,\nchamados a ser santos\njunto com todos que, em qualquer lugar,\ninvocam o nome de nosso Senhor Jesus Cristo,\nSenhor deles e nosso.\n3\nPara vós, graça e paz,\nda parte de Deus, nosso Pai,\ne do Senhor Jesus Cristo.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 1,14a.12a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA Palavra se fez carne, entre nós ela acampou;\ntodo aquele que a acolheu, de Deus filho se tornou."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,29-34",
+    "texto": "1,29-34\nNaquele tempo,\n29\nJoão viu Jesus aproximar-se dele e disse:\n\"Eis o Cordeiro de Deus,\nque tira o pecado do mundo.\n30\nDele é que eu disse:\n'Depois de mim vem um homem que passou à minha frente,\nporque existia antes de mim'.\n31\nTambém eu não o conhecia,\nmas se eu vim batizar com água,\nfoi para que ele fosse manifestado a Israel\".\n32\nE João deu testemunho, dizendo:\n\"Eu vi o Espírito descer,\ncomo uma pomba do céu,\ne permanecer sobre ele.\n33\nTambém eu não o conhecia,\nmas aquele que me enviou a batizar com água me disse:\n'Aquele sobre quem vires o Espírito descer e permanecer,\neste é quem batiza com o Espírito Santo'.\n34\nEu vi e dou testemunho:\nEste é o Filho de Deus!\"\nPalavra da Salvação."
+  }
+}

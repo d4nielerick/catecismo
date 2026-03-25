@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-21",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 4,1-7.11-13</div><div> Sl 18(19A),2-3.4-5 (R. 5a)</div><div></div><div> Mt 9,9-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,1-7.11-13",
+    "texto": "Irmãos,\n1\neu, prisioneiro no Senhor,\nvos exorto\na caminhardes\nde acordo com a vocação que recebestes:\n2\nCom toda a humildade e mansidão,\nsuportai-vos uns aos outros com paciência, no amor.\n3\nAplicai-vos a guardar a unidade do espírito\npelo vínculo da paz.\n4\nHá um só Corpo e um só Espírito,\ncomo também é uma só a esperança\nà qual fostes chamados.\n5\nHá um só Senhor, uma só fé, um só batismo,\n6\num só Deus e Pai de todos,\nque reina sobre todos,\nage por meio de todos e permanece em todos.\n7\nCada um de nós recebeu a graça\nna medida em que Cristo lha deu.\n11\nE foi ele quem instituiu alguns como apóstolos,\noutros como profetas,\noutros ainda como evangelistas,\noutros, enfim, como pastores e mestres.\n12\nAssim, ele capacitou os santos para o ministério,\npara edificar o corpo de Cristo,\n13\naté que cheguemos todos juntos à unidade da fé\ne do conhecimento do Filho de Deus,\nao estado do homem perfeito\ne à estatura de Cristo em sua plenitude.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 18(19A),2-3.4-5 (R. 5a)",
+    "refrao": "",
+    "texto": "R.\nSeu som ressoa e se espalha em toda a terra.\n2\nOs céus proclamam a glória do Senhor, *\ne o firmamento, a obra de suas mãos;\n3\no dia ao dia transmite esta mensagem, *\na noite à noite publica esta notícia.\nR.\n4\nNão são discursos nem frases ou palavras, *\nnem são vozes que possam ser ouvidas;\n5\nseu som ressoa e se espalha em toda a terra, *\nchega aos confins do universo a sua voz.\nR.\nEvangelho - Mt 9,9-13\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA vós, ó Deus, louvamos, a vós, Senhor, cantamos,\nvos louva, ó Senhor, o coro dos apóstolos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,9-13",
+    "texto": "9,9-13\nNaquele tempo,\n9\nJesus viu um homem chamado Mateus,\nsentado na coletoria de impostos,\ne disse-lhe:\n\"Segue-me!\"\nEle se levantou e seguiu a Jesus.\n10\nEnquanto Jesus estava à mesa, em casa de Mateus,\nvieram muitos cobradores de impostos e pecadores\ne sentaram-se à mesa com Jesus e seus discípulos.\n11\nAlguns fariseus viram isso e perguntaram aos discípulos:\n\"Por que vosso mestre\ncome com os cobradores de impostos e pecadores?\"\n12\nJesus ouviu a pergunta e respondeu:\n\"Aqueles que têm saúde não precisam de médico,\nmas sim os doentes.\n13\nAprendei, pois, o que significa:\n'Quero misericórdia e não sacrifício'.\nDe fato, eu não vim para chamar os justos, mas os pecadores\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-06",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Cl 1,21-23</div><div> Sl 53(54),3-4.6 e 8 (R. 6a)</div><div></div><div> Lc 6,1-5</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,21-23",
+    "texto": "Irmãos,\n21\nvós, que outrora éreis estrangeiros\ne inimigos pelas manifestas más obras,\n22\neis que agora Cristo vos reconciliou\npela morte que sofreu no seu corpo mortal,\npara vos apresentar como santos, imaculados,\nirrepreensíveis diante de si.\n23\nMas é necessário\nque permaneçais inabaláveis e firmes na fé,\nsem vos afastardes da esperança\nque vos dá o evangelho, que ouvistes,\nque foi anunciado a toda criatura debaixo do céu\ne do qual eu, Paulo, me tornei ministro.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 53(54),3-4.6 e 8 (R. 6a)",
+    "refrao": "",
+    "texto": "R.\nQuem me protege e me ampara é meu Deus.\n3\nPor vosso nome, salvai-me, Senhor; *\ne dai-me a vossa justiça!\n4\nÓ meu Deus, atendei minha prece *\ne escutai as palavras que eu digo!\nR.\n6\nQuem me protege e me ampara é meu Deus; *\né o Senhor quem sustenta minha vida!\n8\nQuero ofertar-vos o meu sacrifício *\nde coração e com muita alegria;\nquero louvar, ó Senhor, vosso nome, *\nquero cantar vosso nome que é bom!\nR.\nEvangelho - Lc 6,1-5\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o Caminho, a Verdade e a Vida:\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,1-5",
+    "texto": "6,1-5\n1\nNum sábado, Jesus estava passando\natravés de plantações de trigo.\nSeus discípulos arrancavam e comiam as espigas,\ndebulhando-as com as mãos.\n2\nEntão alguns fariseus disseram:\n\"Por que fazeis\no que não é permitido em dia de sábado?\"\n3\nJesus respondeu-lhes:\n\"Acaso vós não lestes\no que Davi e seus companheiros fizeram,\nquando estavam sentindo fome?\n4\nDavi entrou na casa de Deus,\npegou dos pães oferecidos a Deus e os comeu,\ne ainda por cima os deu a seus companheiros.\nNo entanto, só os sacerdotes podem comer desses pães\".\n5\nE Jesus acrescentou:\n\"O Filho do Homem é senhor também do sábado\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-02",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 19,1-8</div><div> Sl 67(68),2-3.4-5ac.6-7ab (R. 33a)</div><div></div><div> Jo 16,29-33</div></div>",
+  "primeira_leitura": {
+    "referencia": "19,1-8",
+    "texto": "1\nEnquanto Apolo estava em Corinto,\nPaulo atravessou as regiões montanhosas\ne chegou a Éfeso.\nAí encontrou alguns discípulos e perguntou-lhes:\n2\n\"Vós recebestes o Espírito Santo\nquando abraçastes a fé?\"\nEles responderam:\n\"Nem sequer ouvimos dizer\nque existe o Espírito Santo!\"\n3\nEntão Paulo perguntou:\n\"Que batismo vós recebestes?\"\nEles responderam:\n\"O batismo de João\".\n4\nPaulo disse-lhes:\n\"João administrava um batismo de conversão,\ndizendo ao povo que acreditasse naquele\nque viria depois dele, isto é, em Jesus\".\n5\nTendo ouvido isso,\neles foram batizados no nome do Senhor Jesus.\n6\nPaulo impôs-lhes as mãos\ne sobre eles desceu o Espírito Santo.\nComeçaram então a falar em línguas e a profetizar.\n7\nAo todo, eram uns doze homens.\n8\nPaulo foi então à sinagoga\ne, durante três meses, falava com toda convicção,\ndiscutindo e procurando convencer os ouvintes\nsobre o Reino de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 67(68),2-3.4-5ac.6-7ab (R. 33a)",
+    "refrao": "",
+    "texto": "R.\nReinos da terra, cantai ao Senhor.\nOu:\nAleluia, Aleluia, Aleluia.\n2\nEis que Deus se põe de pé, e os inimigos se dispersam! *\nFogem longe de sua face os que odeiam o Senhor!\n3\nComo a fumaça se dissipa, assim também os dissipais, †\ncomo a cera se derrete, ao contato com o fogo, *\nassim pereçam os iníquos ante a face do Senhor!\nR.\n4\nMas os justos se alegram na presença do Senhor *\nrejubilam satisfeitos e exultam de alegria!\n5a\nCantai a Deus, a Deus louvai, cantai um salmo a seu nome! *\nc\no seu nome é Senhor: exultai diante dele!\nR.\n6\nDos órfãos ele é pai, e das viúvas protetor; *\né assim o nosso Deus em sua santa habitação.\n7a\nÉ o Senhor quem dá abrigo, dá um lar aos deserdados, *\nb\nquem liberta os prisioneiros e os sacia com fartura.\nR.\nEvangelho - Jo 16,29-3\nAclamação ao Evangelho\nCl 3,1\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSe com Cristo ressurgistes, procurai o que é do alto,\nonde Cristo está sentado à direita de Deus Pai."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,29-33",
+    "texto": "16,29-33\nNaquele tempo,\n29\nos discípulos disseram a Jesus:\n\"Eis, agora falas claramente e não usas mais figuras.\n30\nAgora sabemos que conheces tudo\ne que não precisas que alguém te interrogue.\nPor isto cremos que vieste da parte de Deus\".\n31\nJesus respondeu:\n\"Credes agora?\n32\nEis que vem a hora - e já chegou -\nem que vos dispersareis, cada um para seu lado,\ne me deixareis só.\nMas eu não estou só, o Pai está comigo.\n33\nDisse-vos estas coisas\npara que tenhais paz em mim.\nNo mundo, tereis tribulações.\nMas, tende coragem! Eu  venci o mundo!\"\nPalavra da Salvação."
+  }
+}

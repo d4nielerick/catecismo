@@ -1,0 +1,23 @@
+{
+  "data": "2026-03-11",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dt 4,1.5-9</div><div> Sl 147(147B),12-13.15-16.19-20 (R. 12a)</div><div></div><div> Mt 5,17-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,1.5-9",
+    "texto": "Moisés falou ao povo, dizendo:\n1\n\"Agora, Israel, ouve as leis e os decretos\nque eu vos ensino a cumprir,\npara que, fazendo-o, vivais\ne entreis na posse da terra prometida\nque o Senhor Deus de vossos pais vos vai dar.\n5\nEis que vos ensinei leis e decretos\nconforme o Senhor meu Deus me ordenou,\npara que os pratiqueis na terra em que ides entrar\ne da qual tomareis posse.\n6\nVós os guardareis, pois, e os poreis em prática,\nporque neles está vossa sabedoria\ne inteligência perante os povos,\npara que, ouvindo todas estas leis, digam:\n'Na verdade, é sábia e inteligente esta grande nação!'\n7\nPois, qual é a grande nação\ncujos deuses lhe são tão próximos\ncomo o Senhor nosso Deus,\nsempre que o invocamos?\n8\nE que nação haverá tão grande\nque tenha leis e decretos tão justos,\ncomo esta lei que hoje vos ponho diante dos olhos?\n9\nMas toma cuidado!\nProcura com grande zelo não te esqueceres\nde tudo o que viste com os próprios olhos,\ne nada deixes escapar do teu coração\npor todos os dias de tua vida;\nantes, ensina-o a teus filhos e netos\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 147(147B),12-13.15-16.19-20 (R. 12a)",
+    "refrao": "",
+    "texto": "R.\nGlorifica o Senhor, Jerusalém!\n12\nGlorifica o Senhor, Jerusalém!*\nÓ Sião, canta louvores ao teu Deus!\n13\nPois reforçou com segurança as tuas portas,*\ne os teus filhos em teu seio abençoou.\nR.\n15\nEle envia suas ordens para a terra,*\ne a palavra que ele diz corre veloz.\n16\nele faz cair a neve como a lã *\ne espalha a geada como cinza.\nR.\n19\nAnuncia a Jacó sua palavra,*\nseus preceitos e suas leis a Israel.\n20\nNenhum povo recebeu tanto carinho,*\na nenhum outro revelou os seus preceitos.\nR.\nEvangelho - Mt 5,17-19\nAclamação ao Evangelho\nCf. Jo 6,63c.68c\nR.\nGlória a Cristo, palavra eterna do Pai, que é amor!\nV.\nSenhor, tuas palavras são espírito, são vida;\nsó tu tens palavras de vida eterna!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,17-19",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n5,17-19\nNaquele tempo, disse Jesus aos seus discípulos:\n17\n\"Não penseis que vim abolir a Lei e os Profetas.\nNão vim para abolir,\nmas para dar-lhes pleno cumprimento.\n18\nEm verdade, eu vos digo:\nantes que o céu e a terra deixem de existir,\nnem uma só letra ou vírgula serão tiradas da Lei,\nsem que tudo se cumpra.\n19\nPortanto, quem desobedecer\na um só destes mandamentos, por menor que seja,\ne ensinar os outros a fazerem o mesmo,\nserá considerado o menor no Reino dos Céus.\nPorém, quem os praticar e ensinar\nserá considerado grande no Reino dos Céus\".\nPalavra da Salvação."
+  }
+}

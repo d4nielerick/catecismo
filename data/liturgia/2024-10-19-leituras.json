@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-19",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 1,15-23</div><div> Sl 8,2-3a.4-5.6-7 (R. cf. 7)</div><div></div><div> Lc 12,8-12</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,15-23",
+    "texto": "Irmãos,\n15\ndesde que soube da vossa fé no Senhor Jesus\ne do vosso amor para com todos os santos,\n16\nnão cesso de dar graças a vosso respeito,\nquando me lembro de vós em minhas orações.\n17\nQue o Deus de nosso Senhor Jesus Cristo,\no Pai a quem pertence a glória,\nvos dê um espírito de sabedoria\nque vo-lo revele\ne faça verdadeiramente conhecer.\n18\nQue ele abra o vosso coração à sua luz,\npara que saibais\nqual a esperança que o seu chamamento vos dá,\nqual a riqueza da glória\nque está na vossa herança com os santos,\n19\ne que imenso poder ele exerceu\nem favor de nós que cremos,\nde acordo com a sua ação e força onipotente.\n20\nEle manifestou sua força em Cristo,\nquando o ressuscitou dos mortos\ne o fez sentar-se à sua direita nos céus,\n21\nbem acima de toda a autoridade,\npoder, potência, soberania\nou qualquer título que se possa nomear\nnão somente neste mundo,\nmas ainda no mundo futuro.\n22\nSim, ele pôs tudo sob os seus pés\ne fez dele, que está acima de tudo,\na Cabeça da Igreja,\n23\nque é o seu corpo, a plenitude daquele\nque possui a plenitude universal.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 8,2-3a.4-5.6-7 (R. cf. 7)",
+    "refrao": "",
+    "texto": "R.\nVós destes o domínio ao vosso Filho\nsobre tudo o que criastes.\n2\nÓ Senhor nosso Deus, como é grande *\nvosso nome por todo o universo!\nDesdobrastes nos céus vossa glória *\ncom grandeza, esplendor, majestade.\n3a\nO perfeito louvor vos é dado *\npelos lábios dos mais pequeninos.\nR.\n4\nContemplando estes céus que plasmastes *\ne formastes com dedos de artista;\nvendo a lua e estrelas brilhantes, *\n5\nperguntamos: \"Senhor, que é o homem,\npara dele assim vos lembrardes *\ne o tratardes com tanto carinho?\"\nR.\n6\nPouco abaixo de Deus o fizestes, *\ncoroando-o de glória e esplendor;\n7\nvós lhe destes poder sobre tudo, *\nvossas obras aos pés lhe pusestes.\nR.\nEvangelho - Lc 12,8-12\nAclamação ao Evangelho\nJo 15,26b 27a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito Santo, a verdade, de mim irá testemunhar;\ne vós minhas testemunhas sereis em todo lugar."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,8-12",
+    "texto": "12,8-12\nNaquele tempo, disse Jesus aos seus discípulos:\n8\n\"Todo aquele que der testemunho de mim\ndiante dos homens,\no Filho do Homem também dará testemunho dele\ndiante dos anjos de Deus.\n9\nMas aquele que me renegar diante dos homens,\nserá negado diante dos anjos de Deus.\n10\nTodo aquele que disser alguma coisa\ncontra o Filho do Homem\nserá perdoado.\nMas quem blasfemar contra o Espírito Santo\nnão será perdoado.\n11\nQuando vos conduzirem diante das sinagogas,\nmagistrados e autoridades,\nnão fiqueis preocupados como ou com que vos defendereis,\nou com o que direis.\n12\nPois nessa hora o Espírito Santo vos ensinará\no que deveis dizer\".\nPalavra da Salvação."
+  }
+}

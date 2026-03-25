@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-21",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Zc 2,14-17</div><div> Lc 1,46-47.48-49.50-51.52-53.54-55 (R. cf. 54b)</div><div></div><div> Mt 12,46-50</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,14-17",
+    "texto": "14\n\"Rejubila, alegra-te, cidade de Sião,\neis que venho para habitar no meio de ti,\ndiz o Senhor.\n15\nMuitas nações se aproximarão do Senhor, naquele dia,\ne serão o seu povo.\nHabitarei no meio de ti,\ne saberás que o Senhor dos exércitos me enviou a ti.\n16\nO Senhor entrará em posse de Judá,\ncomo sua porção na terra santa,\ne escolherá de novo Jerusalém.\n17\nEmudeça todo mortal diante do Senhor,\nele acaba de levantar-se de sua santa habitação\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Lc 1,46-47.48-49.50-51.52-53.54-55 (R. 49 ou:)",
+    "refrao": "",
+    "texto": "R.\nO Poderoso fez por mim maravilhas,\ne Santo é o seu nome.\nOu:\nBendita sejais, ó Virgem Maria;\ntrouxestes no ventre a Palavra eterna!\n46\nA minh'alma engrandece ao Senhor, *\n47\ne se alegrou o meu espírito em Deus, meu Salvador,\nR.\n48\npois, ele viu a pequenez de sua serva, *\neis que agora as gerações hão de chamar-me de bendita.\n49\nO Poderoso fez por mim maravilhas *\ne Santo é o seu nome!\nR.\n50\nSeu amor, de geração em geração, *\nchega a todos que o respeitam.\n51\nDemonstrou o poder de seu braço, *\ndispersou os orgulhosos.\nR.\n52\nDerrubou os poderosos de seus tronos *\ne os humildes exaltou.\n53\nDe bens saciou os famintos *\ne despediu, sem nada, os ricos.\nR.\n54\nAcolheu Israel, seu servidor, *\nfiel ao seu amor,\n55\ncomo havia prometido aos nossos pais, *\nem favor de Abraão e de seus filhos, para sempre.\nR.\nEvangelho - Mt 12,46-5\nAclamação ao Evangelho\nLc 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFeliz quem ouve e observa a palavra de Deus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,46-50",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n12,46-50\nNaquele tempo,\n46\nenquanto Jesus estava falando às multidões,\nsua mãe e seus irmãos ficaram do lado de fora,\nprocurando falar com ele.\n47\nAlguém disse a Jesus:\n\"Olha! Tua mãe e teus irmãos estão aí fora,\ne querem falar contigo\".\n48\nJesus perguntou àquele que tinha falado:\n\"Quem é minha mãe, e quem são meus irmãos?\"\n49\nE, estendendo a mão para os discípulos,\nJesus disse:\n\"Eis minha mãe e meus irmãos.\n50\nPois todo aquele que faz a vontade do meu Pai,\nque está nos céus,\nesse é meu irmão, minha irmã e minha mãe\".\nPalavra da Salvação."
+  }
+}

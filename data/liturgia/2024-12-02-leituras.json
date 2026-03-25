@@ -1,0 +1,23 @@
+{
+  "data": "2024-12-02",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 2,1-5</div><div> Sl 121(122),1-2.3-4a.4b-5.6-7.8-9 (R:.1)</div><div></div><div> Mt 8,5-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-5",
+    "texto": "1\nVisão de Isaías, filho de Amós,\nsobre Judá e Jerusalém.\n2\nAcontecerá, nos últimos tempos,\nque o monte da casa do Senhor\nestará firmemente estabelecido\nno ponto mais alto das montanhas e dominará as colinas.\nA ele acorrerão todas as nações,\n3\npara lá irão numerosos povos e dirão:\n\"Vamos subir ao monte do Senhor,\nà casa do Deus de Jacó,\npara que ele nos mostre seus caminhos\ne nos ensine a cumprir seus preceitos\";\nporque de Sião provém a lei\ne de Jerusalém, a palavra do Senhor.\n4\nEle há de julgar as nações\ne arguir numerosos povos;\nestes transformarão suas espadas em arados\ne suas lanças em foices:\nnão pegarão em armas uns contra os outros\ne não mais travarão combate.\n5\nVinde, todos da casa de Jacó,\ne deixemo-nos guiar pela luz do Senhor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 121(122),1-2.3-4a.4b-5.6-7.8-9 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nQue alegria, quando me disseram:\n\"Vamos à casa do Senhor!\"\n1\nQue alegria, quando ouvi que me disseram: *\n\"Vamos à casa do Senhor!\"\n2\nE agora nossos pés já se detêm, *\nJerusalém, em tuas portas.\nR.\n3\nJerusalém, cidade bem edificada *\nnum conjunto harmonioso;\n4a\npara lá sobem as tribos de Israel, *\nas tribos do Senhor.\nR.\nb\nPara louvar, segundo a lei de Israel, *\no nome do Senhor.\n5\nA sede da justiça lá está *\ne o trono de Davi.\nR.\n6\nRogai que viva em paz Jerusalém, *\ne em segurança os que te amam!\n7\nQue a paz habite dentro de teus muros, *\ntranquilidade em teus palácios!\nR.\n8\nPor amor a meus irmãos e meus amigos, *\npeço: \"A paz esteja em ti!\"\n9\nPelo amor que tenho à casa do Senhor,*\neu te desejo todo bem!\nR.\nEvangelho - Mt 8,5-11\nAclamação ao Evangelho\nCf. Sl 79(80),4\nR.\nAleluia, Aleluia, Aleluia.\nV.\nÓ vinde libertar-nos, Senhor e nosso Deus;\nmostrai a vossa face e nós seremos salvos!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,5-11",
+    "texto": "8,5-11\nNaquele tempo,\n5\nquando Jesus entrou em Cafarnaum,\num oficial romano aproximou-se dele, suplicando:\n6\n\"Senhor, o meu empregado está de cama, lá em casa,\nsofrendo terrivelmente com uma paralisia\".\n7\nJesus respondeu:\n\"Vou curá-lo\".\n8\nO oficial disse:\n\"Senhor,\neu não sou digno de que entres em minha casa.\nDize uma só palavra e o meu empregado ficará curado.\n9\nPois eu também sou subordinado\ne tenho soldados debaixo de minhas ordens.\nE digo a um : 'Vai!', e ele vai;\ne a outro: 'Vem!', e ele vem;\ne digo ao meu escravo: 'Faze isto!', e ele faz\".\n10\nQuando ouviu isso, Jesus ficou admirado,\ne disse aos que o seguiam:\n\"Em verdade, vos digo:\nnunca encontrei em Israel alguém que tivesse tanta fé.\n11\nEu vos digo:\nmuitos virão do Oriente e do Ocidente,\ne se sentarão à mesa no Reino dos Céus,\njunto com Abraão, Isaac e Jacó\".\nPalavra da Salvação"
+  }
+}

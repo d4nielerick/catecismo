@@ -1,0 +1,23 @@
+{
+  "data": "2026-06-03",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Tm 1,1-3.6-12</div><div> Sl 122(123),1-2a.2bcd (R. 1a)</div><div></div><div> Mc 12,18-27</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-3.6-12",
+    "texto": "1\nPaulo, Apóstolo de Jesus Cristo pelo desígnio de Deus\nreferente à promessa de vida\nque temos em Cristo Jesus,\n2\na Timóteo, meu querido filho:\nGraça, misericórdia e paz\nda parte de Deus Pai\ne de Cristo Jesus, nosso Senhor!\n3\nDou graças a Deus,\n—\na quem sirvo com a consciência pura,\ncomo aprendi dos meus antepassados\n—\n,\nquando me lembro de ti, dia e noite,\nnas minhas orações.\n6\nPor este motivo,\nexorto-te a reavivar a chama do dom de Deus\nque recebeste pela imposição das minhas mãos.\n7\nPois Deus não nos deu um espírito de timidez\nmas de fortaleza, de amor e sobriedade.\n8\nNão te envergonhes do testemunho de Nosso Senhor\nnem de mim, seu prisioneiro,\nmas sofre comigo pelo Evangelho,\nfortificado pelo poder de Deus.\n9\nDeus nos salvou\ne nos chamou com uma vocação santa,\nnão devido às nossas obras,\nmas em virtude do seu desígnio e da sua graça,\nque nos foi dada em Cristo Jesus\ndesde toda a eternidade.\n10\nEsta graça foi revelada agora,\npela manifestação de nosso Salvador, Jesus Cristo.\nEle não só destruiu a morte,\ncomo também fez brilhar a vida e a imortalidade\npor meio do Evangelho,\n11\ndo qual fui constituído anunciador,\napóstolo e mestre.\n12\nEsta é a causa pela qual estou sofrendo,\nmas não me envergonho,\nporque sei em quem coloquei a minha fé.\nE tenho a certeza de que ele é capaz de guardar\naquilo que me foi confiado até ao grande dia.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 122(123),1-2a.2bcd (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, para vós eu levanto meus olhos.\n1\nEu levanto os meus olhos para vós,*\nque habitais nos altos céus.\n2a\nComo os olhos dos escravos estão fitos*\nnas mãos do seu senhor.\nR.\nb\nComo os olhos das escravas estão fitos*\nnas mãos de sua senhora,\nc\nassim os nossos olhos, no Senhor,*\nd\naté de nós ter piedade\nR.\nEvangelho - Mc 12,18-2\nAclamação ao Evangelho  Jo\n11,25a.26\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou a ressurreição, eu sou a vida,\nquem crê em mim, ainda que morra, viverá."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,18-27",
+    "texto": "12,18-27\nNaquele tempo,\n18\nvieram ter com Jesus alguns saduceus,\nos quais afirmam que não existe ressurreição\ne lhe propuseram este caso:\n19\n\"Mestre, Moisés deu-nos esta prescrição:\nSe morrer o irmão de alguém,\ne deixar a esposa sem filhos,\no irmão desse homem deve casar-se com a viúva,\na fim de garantir a descendência de seu irmão\".\n20\nOra, havia sete irmãos,\no mais velho casou-se,\ne morreu sem deixar descendência.\n21\nO segundo casou-se com a viúva,\ne morreu sem deixar descendência.\nE a mesma coisa aconteceu com o terceiro.\n22\nE nenhum dos sete deixou descendência.\nPor último, morreu também a mulher.\n23\nNa ressurreição, quando eles ressuscitarem,\nde quem será ela mulher?\nPor que os sete se casaram com ela!\"\n24\nJesus respondeu:\n\"Acaso, vós não estais enganados,\npor não conhecerdes as Escrituras,\nnem o poder de Deus?\n25\nCom efeito, quando os mortos ressuscitarem,\nos homens e as mulheres não se casarão,\npois serão como os anjos do céu.\n26\nQuanto ao fato da ressurreição dos mortos,\nnão lestes, no livro de Moisés,\nna passagem da sarça ardente,\ncomo Deus lhe falou:\n'Eu sou o Deus de Abraão,\no Deus de Isaac e o Deus de Jacó'?\n27\nOra, ele não é Deus de mortos, mas de vivos!\nVós estais muito enganados\".\nPalavra da Salvação."
+  }
+}

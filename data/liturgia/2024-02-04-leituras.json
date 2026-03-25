@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jó 7,1-4.6-7</div><div> Sl 146(147),1-2.3-4.5-6 (R. cf. 3a)</div><div> 1Cor 9,16-19.22-23</div><div> Mc 1,29-39</div></div>",
+  "primeira_leitura": {
+    "referencia": "7,1-4.6-7",
+    "texto": "Jó disse:\n1\n\"Não é acaso uma luta a vida do homem sobre a terra?\nSeus dias não são como dias de um mercenário?\n2\nComo um escravo suspira pela sombra,\ncomo um assalariado aguarda sua paga,\n3\nassim tive por ganho meses de decepção,\ne couberam-me noites de sofrimento.\n4\nSe me deito, penso:\nQuando poderei levantar-me?\nE, ao amanhecer, espero novamente a tarde\ne me encho de sofrimentos até ao anoitecer.\n6\nMeus dias correm mais rápido do que a lançadeira do tear\ne se consomem sem esperança.\n7\nLembra-te de que minha vida é apenas um sopro\ne meus olhos não voltarão a ver a felicidade!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 146(147),1-2.3-4.5-6 (R. cf. 3a)",
+    "refrao": "",
+    "texto": "R.\nLouvai a Deus, porque ele é bom e conforta os corações.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nLouvai o Senhor Deus, porque ele é bom, †\ncantai ao nosso Deus, porque é suave: *\nele é digno de louvor, ele o merece!\n2\nO Senhor reconstruiu Jerusalém, *\ne os dispersos de Israel juntou de novo.\nR.\n3\nele conforta os corações despedaçados, *\nele enfaixa suas feridas e as cura;\n4\nfixa o número de todas as estrelas *\ne chama a cada uma por seu nome.\nR.\n5\nÉ grande e onipotente o nosso Deus, *\nseu saber não tem medida nem limites.\n6\nO Senhor Deus é o amparo dos humildes, *\nmas dobra até o chão os que são ímpios.\nR.\n2ª Leitura - 1Cor 9,1\nSEGUNDA LEITURA\nAi de mim, se eu não pregar o Evangelho.\nLeitura da Primeira Carta de São Paulo aos Coríntios\n9,16-19.22-23\nIrmãos:\n16\nPregar o evangelho não é para mim motivo de glória.\nÉ antes uma necessidade para mim, uma imposição.\nAi de mim se eu não pregar o evangelho!\n17\nSe eu exercesse minha função de pregador\npor iniciativa própria,\neu teria direito a salário.\nMas, como a iniciativa não é minha,\ntrata-se de um encargo que me foi confiado.\n18\nEm que consiste então o meu salário?\nEm pregar o evangelho, oferecendo-o de graça,\nsem usar os direitos que o evangelho me dá.\n19\nAssim, livre em relação a todos,\neu me tornei escravo de todos,\na fim de ganhar o maior número possível.\n22\nCom os fracos, eu me fiz fraco,\npara ganhar os fracos.\nCom todos, eu me fiz tudo,\npara certamente salvar alguns.\n23\nPor causa do evangelho eu faço tudo,\npara ter parte nele.\nPalavra do Senhor.\nAclamação ao Evangelho\nMt 8,17\nR.\nAleluia, Aleluia, Aleluia.\nV.\nCristo tomou sobre si nossas dores,\ncarregou em seu corpo as nossas fraquezas."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,29-39",
+    "texto": "1,29-39\nNaquele tempo,\n29\nJesus saiu da sinagoga\ne foi, com Tiago e João, para a casa de Simão e André.\n30\nA sogra de Simão estava de cama, com febre,\ne eles logo contaram a Jesus.\n31\nE ele se aproximou, segurou sua mão\ne ajudou-a a levantar-se.\nEntão, a febre desapareceu;\ne ela começou a servi-los.\n32\nÀ tarde, depois do pôr do sol,\nlevaram a Jesus todos os doentes\ne os possuídos pelo demônio.\n33\nA cidade inteira se reuniu em frente da casa.\n34\nJesus curou muitas pessoas de diversas doenças\ne expulsou muitos demônios.\nE não deixava que os demônios falassem,\npois sabiam quem ele era.\n35\nDe madrugada, quando ainda estava escuro,\nJesus se levantou e foi rezar num lugar deserto.\n36\nSimão e seus companheiros foram à procura de Jesus.\n37\nQuando o encontraram, disseram:\n\"Todos estão te procurando\".\n38\nJesus respondeu:\n\"Vamos a outros lugares, às aldeias da redondeza!\nDevo pregar também ali,\npois foi para isso que eu vim\".\n39\nE andava por toda a Galileia,\npregando em suas sinagogas\ne expulsando os demônios.\nPalavra da Salvação."
+  }
+}

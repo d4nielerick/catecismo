@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 44,18-21.23b-29;45,1-5</div><div> Sl 104(105),16-17.18-19.20-21 (R. 5a)</div><div></div><div> Mt 10,7-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "44,18-21.23b-29.45,1-5",
+    "texto": "Naqueles dias,\n44,18\nJudá aproximou-se de José e,\ncheio de ânimo, disse:\n\"Perdão, meu senhor,\npermite ao teu servo falar com toda a franqueza,\nsem que se acenda a tua cólera contra mim.\nAfinal, tu és como um faraó!\n19\nFoi meu senhor quem perguntou a seus servos:\n'Ainda tendes pai ou algum outro irmão?'\n20\nE nós respondemos ao meu senhor:\n'Temos um pai já velho e um menino\nnascido em sua velhice,\ncujo irmão morreu;\né o único filho de sua mãe que resta,\ne seu pai o ama com muita ternura'.\n21\nE tu disseste a teus servos:\n'Trazei-o a mim, para que eu possa vê-lo.\n23b\nSe não vier convosco o vosso irmão mais novo,\nnão vereis mais a minha face'.\n24\nQuando, pois, voltamos\npara junto de teu servo, nosso pai,\ncontamos tudo o que o meu senhor tinha dito.\n25\nMais tarde disse-nos nosso pai:\n'Voltai e comprai para nós algum trigo'.\n26\nE nós lhe respondemos:\n'Não podemos ir,\na não ser que o nosso irmão mais novo vá conosco.\nDe outra maneira, sem ele,\nnão nos podemos apresentar àquele homem'.\n27\nE o teu servo, nosso pai, respondeu:\n'Bem sabeis que minha mulher\nme deu apenas dois filhos.\n28\nUm deles saiu de casa e eu disse:\nUm animal feroz o devorou!\nE até agora não apareceu.\n29\nSe me levardes também este,\ne lhe acontecer alguma desgraça no caminho,\nfareis descer de desgosto meus cabelos brancos\nà morada dos mortos'\".\n45,1\nEntão José não pôde mais conter-se\ndiante de todos os que o rodeavam,\ne gritou:\n\"Mandai sair toda a gente!\"\nE, assim, não ficou mais ninguém com ele,\nquando se deu a conhecer aos irmãos.\n2\nJosé rompeu num choro tão forte,\nque os egípcios ouviram e toda a casa do Faraó.\n3\nE José disse a seus irmãos:\n\"Eu sou José! Meu pai ainda vive?\"\nMas os irmãos não podiam responder-lhe nada,\npois foram tomados de um enorme terror.\n4\nEle, porém, cheio de clemência, lhes disse:\n\"Aproximai-vos de mim\".\nTendo-se eles aproximado, disse:\n\"Eu sou José, vosso irmão,\na quem vendestes para o Egito.\n5\nEntretanto, não vos aflijais, nem vos atormenteis,\npor me terdes vendido a este país.\nPorque foi para a vossa salvação\nque Deus me mandou adiante de vós, para o Egito\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 104(105),16-17.18-19.20-21 (R. 5a)",
+    "refrao": "",
+    "texto": "R.\nLembrai as maravilhas do Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n16\nMandou vir, então, a fome sobre a terra *\ne os privou de todo pão que os sustentava;\n17\num homem enviara à sua frente, *\nJosé que foi vendido como escravo.\nR.\n18\nApertaram os seus pés entre grilhões *\ne amarraram seu pescoço com correntes,\n19\naté que se cumprisse o que previra, *\ne a palavra do Senhor lhe deu razão.\nR.\n20\nOrdenou, então, o rei que o libertassem, *\no soberano das nações mandou soltá-lo;\n21\nfez dele o senhor de sua casa, *\ne de todos os seus bens o despenseiro.\nR.\nEvangelho - Mt 10,7-15\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois, o Reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,7-15",
+    "texto": "10,7-15\nNaquele tempo, disse Jesus aos seus discípulos:\n7\n\"Em vosso caminho, anunciai:\n'O Reino dos Céus está próximo'.\n8\nCurai os doentes, ressuscitai os mortos,\npurificai os leprosos, expulsai os demônios.\nDe graça recebestes, de graça deveis dar!\n9\nNão leveis ouro, nem prata,\nnem dinheiro nos vossos cintos;\n10\nnem sacola para o caminho,\nnem duas túnicas, nem sandálias, nem bastão,\nporque o operário tem direito ao seu sustento.\n11\nEm qualquer cidade ou povoado onde entrardes,\ninformai-vos para saber quem ali seja digno.\nHospedai-vos com ele até a vossa partida.\n12\nAo entrardes numa casa, saudai-a.\n13\nSe a casa for digna,\ndesça sobre ela a vossa paz;\nse ela não for digna,\nvolte para vós a vossa paz.\n14\nSe alguém não vos receber,\nnem escutar vossa palavra,\nsaí daquela casa ou daquela cidade,\ne sacudi a poeira dos vossos pés.\n15\nEm verdade vos digo,\nas cidades de Sodoma e Gomorra\nserão tratadas com menos dureza\ndo que aquela cidade,\nno dia do juízo\".\nPalavra da Salvação."
+  }
+}

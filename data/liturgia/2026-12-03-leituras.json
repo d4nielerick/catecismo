@@ -1,0 +1,23 @@
+{
+  "data": "2026-12-03",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 26,1-6</div><div> Sl 117(118),1.8-9.19-21.25-27a (R. 26a)</div><div></div><div> Mt 7,21.24-27</div></div>",
+  "primeira_leitura": {
+    "referencia": "26,1-6",
+    "texto": "1\nNaquele dia, cantarão este canto em Judá:\n\"Uma cidade fortificada é a nossa segurança;\no Senhor cercou-a de muros e antemuro.\n2\nAbri as suas portas, para que entre um povo justo,\ncumpridor da palavra,\n3\nfirme em seu propósito;\ne tu lhe conservarás a paz,\nporque confia em ti.\n4\nEsperai no Senhor por todos os tempos,\no Senhor é a rocha eterna.\n5\nEle derrubou os que habitam no alto,\nhá de humilhar a cidade orgulhosa,\ndeitando-a por terra,\naté fazê-la beijar o chão.\n6\nHão de pisá-la os pés, os pés dos pobres,\nas passadas dos humildes\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 117(118),1.8-9.19-21.25-27a (R. 26a)",
+    "refrao": "",
+    "texto": "R.\nBendito é aquele que vem vindo em nome do Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nDai graças ao Senhor, porque ele é bom! *\n\"Eterna é a sua misericórdia!\"\n8\nÉ melhor buscar refúgio no Senhor, *\ndo que pôr no ser humano a esperança;\n9\né melhor buscar refúgio no Senhor, *\ndo que contar com os poderosos deste mundo!\"\nR.\n19\nAbri-me vós, abri-me as portas da justiça; *\nquero entrar para dar graças ao Senhor!\n20\n\"Sim, esta é a porta do Senhor, *\npor ela só os justos entrarão!\"\n21\nDou-vos graças, ó Senhor, porque me ouvistes *\ne vos tornastes para mim o Salvador!\nR.\n25\nÓ Senhor, dai-nos a vossa salvação, *\nó Senhor, dai-nos também prosperidade!\"\n26\nBendito seja, em nome do Senhor, *\naquele que em seus átrios vai entrando!\nDesta casa do Senhor vos bendizemos. *\n27a\nQue o Senhor e nosso Deus nos ilumine!\nR.\nAclamação ao Evangelho\nIs 55,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nBuscai o Senhor, vosso Deus,\ninvocai-o enquanto está perto!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,21.24-27",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n7,21.24-27\nNaquele tempo, disse Jesus aos seus discípulos:\n21\n\"Nem todo aquele que me diz: 'Senhor, Senhor',\nentrará no Reino dos Céus, mas o que põe em prática\na vontade de meu Pai que está nos céus.\n24\nPortanto, quem ouve estas minhas palavras\ne as põe em prática,\né como um homem prudente,\nque construiu sua casa sobre a rocha.\n25\nCaiu a chuva, vieram as enchentes,\nos ventos deram contra a casa,\nmas a casa não caiu,\nporque estava construída sobre a rocha.\n26\nPor outro lado,\nquem ouve estas minhas palavras e não as põe em prática,\né como um homem sem juízo,\nque construiu sua casa sobre a areia.\n27\nCaiu a chuva, vieram as enchentes,\nos ventos sopraram e deram contra a casa,\ne a casa caiu, e sua ruína foi completa!\"\nPalavra da Salvação."
+  }
+}

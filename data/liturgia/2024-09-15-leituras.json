@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-15",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 50,5-9a</div><div> Sl 114(115),1-2.3-4.5-6.8-9 (R. 9)</div><div> Tg 2,14-18</div><div> Mc 8,27-35</div></div>",
+  "primeira_leitura": {
+    "referencia": "50,5-9a",
+    "texto": "5\nO Senhor abriu-me os ouvidos;\nnão lhe resisti nem voltei atrás.\n6\nOfereci as costas para me baterem\ne as faces para me arrancarem a barba:\nnão desviei o rosto\nde bofetões e cusparadas.\n7\nMas, o Senhor Deus é meu Auxiliador,\npor isso não me deixei abater o ânimo,\nconservei o rosto impassível como pedra,\nporque sei que não sairei humilhado.\n8\nA meu lado está quem me justifica;\nalguém me fará objeções? Vejamos.\nQuem é meu adversário? Aproxime-se.\n9a\nSim, o Senhor Deus é meu Auxiliador;\nquem é que me vai condenar?\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 114(115),1-2.3-4.5-6.8-9 (R. 9)",
+    "refrao": "",
+    "texto": "R.\nAndarei na presença de Deus,\njunto a ele, na terra dos vivos.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nEu amo o Senhor, porque ouve *\no grito da minha oração.\n2\nInclinou para mim seu ouvido, *\nno dia em que eu o invoquei.\nR.\n3\nPrendiam-me as cordas da morte, †\napertavam-me os laços do abismo; *\ninvadiam-me angústia e tristeza:\n4\neu então invoquei o Senhor *\n\"Salvai, ó Senhor, minha vida!\"\nR.\n5\nO Senhor é justiça e bondade, *\nnosso Deus é amor-compaixão.\n6\nÉ o Senhor quem defende os humildes: *\neu estava oprimido, e salvou-me.\nR.\n8\nLibertou minha vida da morte, †\nenxugou de meus olhos o pranto *\ne livrou os meus pés do tropeço.\n9\nAndarei na presença de Deus, *\njunto a ele na terra dos vivos.\nR.\n2ª Leitura - Tg 2,14-\nSEGUNDA LEITURA\nA fé, se não se traduz em\nobras, por si só está morta.\nLeitura da Carta de São Tiago\n2,14-18\n14\nMeus irmãos:\nque adianta alguém dizer que tem fé,\nquando não a põe em prática?\nA fé seria então capaz de salvá-lo?\n15\nImaginai que um irmão ou uma irmã\nnão têm o que vestir\ne que lhes falta a comida de cada dia;\n16\nse então alguém de vós lhes disser:\n\"Ide em paz, aquecei-vos\",\ne: \"Comei à vontade\",\nsem lhes dar o necessário para o corpo,\nque adiantará isso?\n17\nAssim também a fé:\nse não se traduz em obras,\npor si só está morta.\n18\nEm compensação, alguém poderá dizer:\n\"Tu tens a fé e eu tenho a prática!\"\nTu, mostra-me a tua fé sem as obras,\nque eu te mostrarei a minha fé pelas obras!\nPalavra do Senhor.\nAclamação ao Evangelho\nGl 6,14\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu de nada me glorio,\na não ser da cruz de Cristo;\nvejo o mundo em cruz pregado\ne para o mundo em cruz me avisto."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,27-35",
+    "texto": "8,27-35\nNaquele tempo,\n27\nJesus partiu com seus discípulos\npara os povoados de Cesareia de Filipe.\nNo caminho perguntou aos discípulos:\n\"Quem dizem os homens que eu sou?\"\n28\nEles responderam:\n\"Alguns dizem que tu és João Batista;\noutros que és Elias;\noutros, ainda, que és um dos profetas\".\n29\nEntão ele perguntou:\n\"E vós, quem dizeis que eu sou?\"\nPedro respondeu:\n\"Tu és o Messias\".\n30\nJesus proibiu-lhes severamente\nde falar a alguém a seu respeito.\n31\nEm seguida, começou a ensiná-los,\ndizendo que o Filho do Homem devia sofrer muito,\nser rejeitado pelos anciãos,\npelos sumos sacerdotes e doutores da Lei;\ndevia ser morto, e ressuscitar depois de três dias.\n32\nEle dizia isso abertamente.\nEntão Pedro tomou Jesus à parte\ne começou a repreendê-lo.\n33\nJesus voltou-se, olhou para os discípulos\ne repreendeu a Pedro, dizendo:\n\"Vai para longe de mim, Satanás!\nTu não pensas como Deus,\ne sim como os homens\".\n34\nEntão chamou a multidão com seus discípulos e disse:\n\"Se alguém me quer seguir,\nrenuncie a si mesmo, tome a sua cruz e me siga.\n35\nPois quem quiser salvar a sua vida, vai perdê-la;\nmas quem perder a sua vida por causa de mim\ne do Evangelho, vai salvá-la\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ag 1,1-8</div><div> Sl 149,1-2.3-4.5-6a e 9b (R. 4a)</div><div></div><div> Lc 9,7-9</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-8",
+    "texto": "1\nNo segundo ano do reinado de Dario,\nno sexto mês, no primeiro dia,\nfoi dirigida a palavra do Senhor,\nmediante o profeta Ageu,\na Zorobabel, filho de Salatiel, governador de Judá,\ne a Josué, filho de Josedec, sumo sacerdote:\n2\n\"Isto diz o Senhor dos exércitos:\nEste povo diz:\n'Ainda não chegou o momento\nde edificar a casa do Senhor'\".\n3\nA palavra do Senhor foi assim dirigida,\npor intermédio do profeta Ageu:\n4\n\"Acaso para vós é tempo\nde morardes em casas revestidas de lambris,\nenquanto esta casa está em ruínas?\n5\nIsto diz, agora, o Senhor dos exércitos:\nConsiderai, com todo o coração,\na conjuntura que estais passando:\n6\ntendes semeado muito, e colhido pouco;\ntendes-vos alimentado,\ne não vos sentis satisfeitos,\nbebeis e não vos embriagais;\nestais vestidos, e não vos aqueceis;\nquem trabalha por salário,\nguarda-o em saco roto.\n7\nIsto diz o Senhor dos exércitos:\nConsiderai, com todo o coração,\na difícil conjuntura que estais passando:\n8\nmas subi ao monte,\ntrazei madeira e edificai a casa;\nela me será aceitável,\nnela me glorificarei, diz o Senhor\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 149,1-2.3-4.5-6a e 9b (R. 4a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor ama seu povo de verdade.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nCantai ao Senhor Deus um canto novo, *\ne o seu louvor na assembleia dos fiéis!\n2\nAlegre-se Israel em Quem o fez, *\ne Sião se rejubile no seu Rei!\nR.\n3\nCom danças glorifiquem o seu nome, *\ntoquem harpa e tambor em sua honra!\n4\nPorque, de fato, o Senhor ama seu povo *\ne coroa com vitória os seus humildes.\nR.\n5\nExultem os fiéis por sua glória, *\ne cantando se levantem de seus leitos;\n6a\ncom louvores do Senhor em sua boca; *\n9b\neis a glória para todos os seus santos.\nR.\nEvangelho - Lc 9,7-9\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o Caminho, a Verdade e a Vida;\nninguém vem ao Pai senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,7-9",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n9,7-9\nNaquele tempo,\n7\no tetrarca Herodes ouviu falar\nde tudo o que estava acontecendo,\ne ficou perplexo, porque alguns diziam\nque João Batista tinha ressuscitado dos mortos.\n8\nOutros diziam que Elias tinha aparecido;\noutros ainda,\nque um dos antigos profetas tinha ressuscitado.\n9\nEntão Herodes disse:\n\"Eu mandei degolar João.\nQuem é esse homem,\nsobre quem ouço falar essas coisas?\"\nE procurava ver Jesus.\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-17",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Cor 8,1-9</div><div> Sl 145(146),2.5-6.7.8-9a (R. 2a)</div><div></div><div> Mt 5,43-48</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,1-9",
+    "texto": "1\nIrmãos, queremos levar ao vosso conhecimento a graça de Deus\nque foi concedida às Igrejas da Macedônia.\n2\nCom efeito, em meio a grandes tribulações\nque as provaram,\na sua extraordinária alegria e extrema pobreza\ntransbordaram em tesouros de liberalidade.\n3\nEu sou testemunha de que esses irmãos,\nsegundo os seus recursos\ne mesmo além dos seus recursos,\npor sua própria iniciativa\n4\ne com muita insistência,\nnos pediram a graça de participar da coleta\nem favor dos santos de Jerusalém.\n5\nE, indo além de nossas expectativas,\ncolocaram-se logo à disposição do Senhor\ne também à nossa, pela vontade de Deus.\n6\nPor isso solicitamos a Tito que,\nassim como a iniciou,\nele leve a bom termo entre vós essa obra de generosidade.\n7\nE como tendes tudo em abundância\n— fé, eloquência, ciência, zelo para tudo,\ne a caridade de que vos demos o exemplo —\nassim também procurai ser abundantes\nnesta obra de generosidade.\n8\nNão é uma ordem que estou dando;\nmas é para testar a sinceridade da vossa caridade\nque eu lembro a boa vontade de outros.\n9\nNa verdade, conheceis a generosidade\nde nosso Senhor Jesus Cristo:\nde rico que era, tornou-se pobre por causa de vós,\npara que vos torneis ricos, por sua pobreza.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 145(146),2.5-6.7.8-9a (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nBendize, ó minha alma, ao Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n2\nBendirei ao Senhor toda a vida, *\ncantarei ao meu Deus sem cessar!\nR.\n5\nÉ feliz todo homem que busca †\nseu auxílio no Deus de Jacó, *\ne que põe no Senhor a esperança.\n6\nO Senhor fez o céu e a terra, †\nfez o mar e o que neles existe. *\nO Senhor é fiel para sempre.\nR.\n7\nFaz justiça aos que são oprimidos; †\nele dá alimento aos famintos, *\né o Senhor quem liberta os cativos.\nR.\n8\nO Senhor abre os olhos aos cegos, *\no Senhor faz erguer-se o caído,\no Senhor ama aquele que é justo. *\n9a\nÉ o Senhor quem protege o estrangeiro.\nR.\nEvangelho - Mt 5,43-48\nAclamação ao Evangelho\nJo 13,34\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos dou novo preceito:\nque uns aos outros vos ameis,\ncomo eu vos tenho amado."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,43-48",
+    "texto": "5,43-48\nNaquele tempo, disse Jesus aos seus discípulos:\n43\n\"Vós ouvistes o que foi dito:\n'Amarás o teu próximo e odiarás o teu inimigo!'\n44\nEu, porém, vos digo:\nAmai os vossos inimigos\ne rezai por aqueles que vos perseguem!\n45\nAssim, vos tornareis filhos\ndo vosso Pai que está nos céus,\nporque ele faz nascer o sol sobre maus e bons,\ne faz cair a chuva sobre justos e injustos.\n46\nPorque, se amais somente aqueles que vos amam,\nque recompensa tereis?\nOs cobradores de impostos não fazem a mesma coisa?\n47\nE se saudais somente os vossos irmãos,\no que fazeis de extraordinário?\nOs pagãos não fazem a mesma coisa?\n48\nPortanto, sede perfeitos\ncomo o vosso Pai celeste é perfeito\".\nPalavra da Salvação."
+  }
+}

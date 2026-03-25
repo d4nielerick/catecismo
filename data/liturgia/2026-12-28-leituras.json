@@ -1,0 +1,23 @@
+{
+  "data": "2026-12-28",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 1,5-2,2</div><div> Sl 123(124),2-3.4-5.7b-8 (R. 7a)</div><div></div><div> Mt 2,13-18</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,5-2,2",
+    "texto": "Caríssimos,\n5\na mensagem, que ouvimos de Jesus Cristo\ne vos anunciamos,\né esta:\nDeus é luz e nele não há trevas.\n6\nSe dissermos que estamos em comunhão com ele,\nmas andamos nas trevas,\nestamos mentindo e não nos guiamos pela verdade.\n7\nMas, se andamos na luz,\ncomo ele está na luz,\nentão estamos em comunhão uns com os outros,\ne o sangue de seu Filho Jesus\nnos purifica de todo pecado.\n8\nSe dissermos que não temos pecado,\nestamo-nos enganando a nós mesmos,\ne a verdade não está dentro de nós.\n9\nSe reconhecermos nossos pecados,\nentão Deus se mostra fiel e justo,\npara nos perdoar os pecados\ne nos purificar de toda culpa.\n10\nSe dissermos que nunca pecamos,\nfazemos dele um mentiroso\ne sua palavra não está dentro de nós.\n2,1\nMeus filhinhos,\nescrevo isto para que não pequeis.\nNo entanto, se alguém pecar,\ntemos junto do Pai um Defensor:\nJesus Cristo, o Justo.\n2\nEle é a vítima de expiação pelos nossos pecados,\ne não só pelos nossos,\nmas também pelos pecados do mundo inteiro.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 123(124),2-3.4-5.7b-8 (R. 7a)",
+    "refrao": "",
+    "texto": "R.\nNossa alma como um pássaro escapou\ndo laço que lhe armara o caçador.\n2\nSe o Senhor não estivesse ao nosso lado, *\nquando os homens investiram contra nós,\n3\ncom certeza nos teriam devorado *\nno furor de sua ira contra nós.\nR.\n4\nEntão as águas nos teriam submergido, *\na correnteza nos teria arrastado,\n5\ne então, por sobre nós teriam passado *\nessas águas sempre mais impetuosas.\nR.\n7b\nO laço arrebentou-se de repente, *\ne assim nós conseguimos libertar-nos.\n8\nO nosso auxílio está no nome do Senhor, *\ndo Senhor que fez o céu e fez a terra!\nR.\nEvangelho - Mt 2,13-18\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA vós, ó Deus, louvamos, a vós, Senhor, cantamos;\nvos louva o exército dos vossos santos mártires!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "2,13-18",
+    "texto": "2,13-18\n13\nDepois que os magos partiram,\no Anjo do Senhor apareceu em sonho a José\ne lhe disse:\n\"Levanta-te, pega o menino e sua mãe\ne foge para o Egito!\nFica lá até que eu te avise!\nPorque Herodes vai procurar o menino\npara matá-lo\".\n14\nJosé levantou-se de noite,\npegou o menino e sua mãe,\ne partiu para o Egito.\n15\nAli ficou até à morte de Herodes,\npara se cumprir\no que o Senhor havia dito pelo profeta:\n\"Do Egito chamei o meu Filho\".\n16\nQuando Herodes percebeu\nque os magos o haviam enganado,\nficou muito furioso.\nMandou matar todos os meninos de Belém\ne de todo o território vizinho,\nde dois anos para baixo,\nexatamente conforme o tempo indicado pelos magos.\n17\nEntão se cumpriu\no que foi dito pelo profeta Jeremias:\n18\n\"Ouviu-se um grito em Ramá,\nchoro e grande lamento:\né Raquel que chora seus filhos,\ne não quer ser consolada,\nporque eles não existem mais\".\nPalavra da Salvação."
+  }
+}

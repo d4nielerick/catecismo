@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Am 9,11-15</div><div> Sl 84(85),9.11-12.13-14 (R. 9)</div><div></div><div> Mt 9,14-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,11-15",
+    "texto": "Assim diz o Senhor:\n11\n\"Naquele dia, reerguerei\na tenda de Davi, em ruínas,\ne consertarei seus estragos,\nlevantando-a dos escombros,\ne reconstruindo tudo, como nos dias de outrora;\n12\ndeste modo possuirão todos o resto de Edom\ne das outras nações,\nque são chamadas com o meu nome,\ndiz o Senhor, que tudo isso realiza.\n13\nEis que dias virão,\ndiz o Senhor,\nem que se seguirão de perto quem ara e quem ceifa,\no que pisa as uvas e o que lança a semente;\nos montes destilarão vinho\ne as colinas parecerão liquefazer-se.\n14\nMudarei a sorte de Israel, meu povo, cativo;\neles reconstruirão as cidades devastadas,\ne as habitarão,\nplantarão vinhas e tomarão o vinho,\ncultivarão pomares e comerão seus frutos.\n15\nEu os plantarei sobre o seu solo\ne eles nunca mais serão arrancados\nde sua terra, que eu lhes dei\",\ndiz o Senhor teu Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 84(85),9.11-12.13-14 (R. 9)",
+    "refrao": "",
+    "texto": "R.\nO Senhor anunciará a paz para o seu povo.\n9\nQuero ouvir o que o Senhor irá falar: *\né a paz que ele vai anunciar;\na paz para o seu povo e seus amigos, *\npara os que voltam ao Senhor seu coração.\nR.\n11\nA verdade e o amor se encontrarão, *\na justiça e a paz se abraçarão;\n12\nda terra brotará a fidelidade, *\ne a justiça olhará dos altos céus.\nR.\n13\nO Senhor nos dará tudo o que é bom, *\ne a nossa terra nos dará suas colheitas;\n14\na justiça andará na sua frente *\ne a salvação há de seguir os passos seus.\nR.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,14-17",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n9,14-17\nNaquele tempo,\n14\nos discípulos de João aproximaram-se de Jesus\ne perguntaram:\n\"Por que razão nós e os fariseus praticamos jejuns,\nmas os teus discípulos não?\"\n15\nDisse-lhes Jesus:\n\"Por acaso, os amigos do noivo podem estar de luto\nenquanto o noivo está com eles?\nDias virão em que o noivo será tirado do meio deles.\nEntão, sim, eles jejuarão.\n16\nNinguém coloca remendo de pano novo em roupa velha,\nporque o remendo repuxa a roupa\ne o rasgão fica maior ainda.\n17\nTambém não se coloca vinho novo em odres velhos,\nsenão os odres se arrebentam, o vinho se derrama\ne os odres se perdem.\nMas vinho novo se coloca em odres novos,\ne assim os dois se conservam\".\nPalavra da Salvação."
+  }
+}

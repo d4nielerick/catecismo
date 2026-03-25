@@ -1,0 +1,23 @@
+{
+  "data": "2024-08-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Cor 9,6-10</div><div> Sl 111(112),1-2.5-6.7-8.9 (R. 5a)</div><div></div><div> Jo 12,24-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,6-10",
+    "texto": "Irmãos,\n6\n\"Quem semeia pouco colherá também pouco\ne quem semeia com largueza\ncolherá também com largueza\".\n7\nDê cada um conforme tiver decidido em seu coração,\nsem pesar nem constrangimento;\npois Deus \"ama quem dá com alegria\".\n8\nDeus é poderoso para vos cumular\nde toda sorte de graças,\npara que, em tudo, tenhais sempre o necessário\ne ainda tenhais de sobra para toda obra boa,\n9\ncomo está escrito:\n\"Distribuiu generosamente, deu aos pobres;\na sua justiça permanece para sempre\".\n10\nAquele que dá a semente ao semeador\ne lhe dará o pão como alimento,\nele mesmo multiplicará as vossas sementes\ne aumentará os frutos da vossa justiça.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 111(112),1-2.5-6.7-8.9(R. 5a)",
+    "refrao": "",
+    "texto": "R.\nFeliz o homem caridoso e prestativo.\n1\nFeliz o homem que respeita o Senhor *\ne que ama com carinho a sua lei!\n2\nSua descendência será forte sobre a terra, *\nabençoada a geração dos homens retos!\nR.\n5\nFeliz o homem caridoso e prestativo, *\nque resolve seus negócios com justiça.\n6\nPorque jamais vacilará o homem reto, *\nsua lembrança permanece eternamente!\nR.\n7\nEle não teme receber notícias más: *\nconfiando em Deus, seu coração está seguro.\n8\nSeu coração está tranquilo e nada teme, *\ne confusos há de ver seus inimigos.\nR.\n9\nEle reparte com os pobres os seus bens, †\npermanece para sempre o bem que fez, *\ne crescerão a sua glória e seu poder.\nR.\nEvangelho - Jo 12,24-2\nAclamação ao Evangelho\nJo 8,12bc\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAquele que me segue não caminha entre as trevas,\nmas terá a luz da vida."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,24-26",
+    "texto": "12,24-26\nNaquele tempo, disse Jesus a seus discípulos:\n24\n\"Em verdade, em verdade vos digo:\nSe o grão de trigo que cai na terra\nnão morre,\nele continua só um grão de trigo;\nmas se morre,\nentão produz muito fruto.\n25\nQuem se apega à sua vida,\nperde-a;\nmas quem faz pouca conta de sua vida neste mundo\nconservá-la-á para a vida eterna.\n26\nSe alguém me quer servir,\nsiga-me,\ne onde eu estou\nestará também o meu servo.\nSe alguém me serve,\nmeu Pai o honrará\".\nPalavra da Salvação."
+  }
+}

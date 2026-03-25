@@ -1,0 +1,23 @@
+{
+  "data": "2025-02-16",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 17,5-8</div><div> Sl 1,1-2.3.4.6 (R.Sl 39,5a)</div><div> 1Cor 15,12.16-20</div><div> Lc 6,17.20-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "17,5-8",
+    "texto": "5\nIsto diz o Senhor:\n\"Maldito o homem que confia no homem\ne faz consistir sua força na carne humana,\nenquanto o seu coração se afasta do Senhor;\n6\ncomo os cardos no deserto,\nele não vê chegar a floração,\nprefere vegetar na secura do ermo,\nem região salobra e desabitada.\n7\nBendito o homem que confia no Senhor,\ncuja esperança é o Senhor;\n8\né como a árvore\nplantada junto às águas,\nque estende as raízes em busca de umidade,\npor isso não teme a chegada do calor:\nsua folhagem mantém-se verde,\nnão sofre míngua em tempo de seca\ne nunca deixa de dar frutos\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 1,1-2.3.4.6 (R. Sl 39,5a)",
+    "refrao": "",
+    "texto": "R.\nÉ feliz quem a Deus se confia!\n1\nFeliz é todo aquele que não anda *\nconforme os conselhos dos perversos;\nque não entra no caminho dos malvados, *\nnem junto aos zombadores vai sentar-se;\n2\nmas encontra seu prazer na lei de Deus *\ne a medita, dia e noite, sem cessar.\nR.\n3\nEis que ele é semelhante a uma árvore, *\nque à beira da torrente está plantada;\nela sempre dá seus frutos a seu tempo, †\ne jamais as suas folhas vão murchar. *\nEis que tudo o que ele faz vai prosperar.\nR.\n4\nMas bem outra é a sorte dos perversos. †\nAo contrário, são iguais à palha seca *\nespalhada e dispersada pelo vento.\n6\nPois Deus vigia o caminho dos eleitos, *\nmas a estrada dos malvados leva à morte.\nR.\n2ª Leitura - 1Cor 12,\nSEGUNDA LEITURA\nSe Cristo não ressuscitou, a vossa fé é vã.\nLeitura da Primeira Carta de São Paulo aos Coríntios\n15,12.16-20\nIrmãos:\n12\nSe se prega que Cristo ressuscitou dos mortos,\ncomo podem alguns dizer entre vós\nque não há ressurreição dos mortos?\n16\nPois, se os mortos não ressuscitam,\nentão Cristo também não ressuscitou.\n17\nE se Cristo não ressuscitou,\na vossa fé não tem nenhum valor\ne ainda estais nos vossos pecados.\n18\nEntão, também os que morreram em Cristo pereceram.\n19\nSe é para esta vida\nque pusemos a nossa esperança em Cristo,\nnós somos – de todos os homens –\nos mais dignos de compaixão.\n20\nMas, na realidade, Cristo ressuscitou dos mortos\ncomo primícias dos que morreram.\nPalavra do Senhor.\nAclamação ao Eva\nngelho\nLc 6,23ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFicai muito alegres, saltai de alegria,\npois, tendes um prêmio bem grande nos céus.\nFicai muito alegres, saltai de alegria,\nAmém! Aleluia, Aleluia!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,17.20-26",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n6,17.20-26\nNaquele tempo,\n17\nJesus desceu da montanha com os discípulos\ne parou num lugar plano.\nAli estavam muitos dos seus discípulos\ne grande multidão de gente\nde toda a Judeia e de Jerusalém,\ndo litoral de Tiro e Sidônia.\n20\nE, levantando os olhos para os seus discípulos, disse:\n\"Bem-aventurados vós, os pobres,\nporque vosso é o Reino de Deus!\n21\nBem-aventurados, vós que agora tendes fome,\nporque sereis saciados!\nBem-aventurados vós, que agora chorais,\nporque havereis de rir!\n22\nBem-aventurados, sereis,\nquando os homens vos odiarem,\nvos expulsarem, vos insultarem\ne amaldiçoarem o vosso nome,\npor causa do Filho do Homem!\n23\nAlegrai-vos, nesse dia, e exultai\npois será grande a vossa recompensa no céu;\nporque era assim\nque os antepassados deles tratavam os profetas.\n24\nMas, ai de vós, ricos,\nporque já tendes vossa consolação!\n25\nAi de vós, que agora tendes fartura,\nporque passareis fome!\nAi de vós, que agora rides,\nporque tereis luto e lágrimas!\n26\nAi de vós quando todos vos elogiam!\nEra assim que os antepassados deles\ntratavam os falsos profetas\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2026-05-23",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 28,16-20.30-31</div><div> Sl 10(11),4.5 e 7 (R. cf. 7b)</div><div></div><div> Jo 21,20-25</div></div>",
+  "primeira_leitura": {
+    "referencia": "28,16-20.30-31",
+    "texto": "16\nQuando entramos em Roma,\nPaulo recebeu permissão para morar em casa particular,\ncom um soldado que o vigiava.\n17\nTrês dias depois,\nPaulo convocou os líderes dos judeus.\nQuando estavam reunidos, falou-lhes:\n\"Irmãos, eu não fiz nada contra o nosso povo,\nnem contra as tradições de nossos antepassados.\nNo entanto, vim de Jerusalém como prisioneiro\ne, assim, fui entregue às mãos dos romanos.\n18\nInterrogado por eles no tribunal\ne não havendo nada em mim que merecesse a morte,\neles queriam me soltar.\n19\nMas os judeus se opuseram\ne eu fui obrigado a apelar para César,\nsem nenhuma intenção de acusar minha nação.\n20\nÉ, por isso, que eu pedi para ver-vos e falar-vos,\npois estou carregando estas algemas\nexatamente por causa da esperança de Israel\".\n30\nPaulo morou dois anos numa casa alugada.\nEle recebia todos os que o procuravam,\n31\npregando o Reino de Deus.\nCom toda a coragem e sem obstáculos,\nele ensinava as coisas\nque se referiam ao Senhor Jesus Cristo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 10(11),4.5 e 7 (R. cf. 7b)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, quem tem reto coração\nhá de ver a vossa face.\nOu:\nAleluia, Aleluia, Aleluia.\n4\nDeus está no templo santo, *\ne no céu tem o seu trono;\nvolta os olhos para o mundo, *\nseu olhar penetra os homens.\nR.\n5\nExamina o justo e o ímpio, *\ne detesta o que ama o mal.\n7\nPorque justo é nosso Deus, *\no Senhor ama a justiça.\nQuem tem reto coração *\nhá de ver a sua face.\nR.\nAclamação ao Evangelho\nJo 16,7.13\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu hei de enviar-vos o Espírito da verdade;\nele vos conduzirá a toda a verdade."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,20-25",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n21,20-25\nNaquele tempo,\n20\nPedro virou-se\ne viu atrás de si aquele outro discípulo\nque Jesus amava,\no mesmo que se reclinara\nsobre o peito de Jesus durante a ceia\ne lhe perguntara:\n\"Senhor, quem é que te vai entregar?\"\n21\nQuando Pedro viu aquele discípulo,\nperguntou a Jesus:\n\"Senhor, o que vai ser deste?\"\n22\nJesus respondeu:\n\"Se eu quero que ele permaneça até que eu venha,\no que te importa isso?\nTu, segue-me!\"\n23\nEntão, correu entre os discípulos a notícia\nde que aquele discípulo não morreria.\nJesus não disse que ele não morreria, mas apenas:\n\"Se eu quero que ele permaneça até que eu venha,\nque te importa?\"\n24\nEste é o discípulo que dá testemunho dessas coisas\ne que as escreveu;\ne sabemos que o seu testemunho é verdadeiro.\n25\nJesus fez ainda muitas outras coisas,\nmas, se fossem escritas todas,\npenso que não caberiam no mundo\nos livros que deveriam ser escritos.\nPalavra da Salvação."
+  }
+}

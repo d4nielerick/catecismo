@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-31",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Fl 1,18b-26</div><div> Sl 41(42),2.3.5bcd (R. 3a)</div><div></div><div> Lc 14,1.7-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,18b-26",
+    "texto": "Irmãos,\n18b\nde qualquer maneira,\ncom segundas intenções ou com sinceridade,\nCristo é anunciado.\nE eu me alegro com isso,\ne sempre me alegrarei.\n19\nPois eu sei que isso resultará na minha salvação\ngraças à vossa oração\ne à assistência do Espírito de Jesus Cristo.\n20\nSegundo a minha viva expectativa\ne a minha esperança,\nnão terei de corar de vergonha.\nSe a minha firmeza continuar total, como sempre,\nentão Cristo vai ser glorificado no meu corpo,\nseja pela minha vida, seja pela minha morte.\n21\nPois para mim, o viver é Cristo\ne o morrer é lucro.\n22\nEntretanto, se o viver na carne significa\nque meu trabalho será frutuoso,\nneste caso, não sei o que escolher.\n23\nSinto-me atraído para os dois lados:\ntenho o desejo de partir,\npara estar com Cristo\n- o que para mim seria de longe o melhor -\n24\nmas para vós é mais necessário\nque eu continue minha vida neste mundo.\n25\nPor isso, sei com certeza\nque vou ficar e continuar com vós todos,\npara que possais progredir e alegrar-vos na fé.\n26\nAssim, com a minha volta para junto de vós,\nvai aumentar ainda a razão\nde vos gloriardes em Cristo Jesus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 41(42),2.3.5bcd (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nMinha alma tem sede de Deus, do Deus vivo!\n2\nAssim como a corça suspira *\npelas águas correntes,\nsuspira igualmente minh'alma *\npor vós, ó meu Deus!\nR.\n3\nMinha alma tem sede de Deus, *\ne deseja o Deus vivo.\nQuando terei a alegria de ver *\na face de Deus?\nR.\n5b\nPeregrino e feliz caminhando *\nc\npara a casa de Deus,\nd\nentre gritos, louvor e alegria *\nda multidão jubilosa.\nR.\nEvangelho - Lc 14,1.7-\nAclamação ao Evangelho\nMt 11,29ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nTomai meu jugo sobre vós\ne aprendei de mim, que sou de coração humilde\ne manso!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,1.7-11",
+    "texto": "14,1.7-11\n1\nAconteceu que, num dia de sábado,\nJesus foi comer na casa\nde um dos chefes dos fariseus.\nE eles o observavam.\n7\nJesus notou como os convidados\nescolhiam os primeiros lugares.\nEntão contou-lhes uma parábola:\n8\n\"Quando tu fores convidado\npara uma festa de casamento,\nnão ocupes o primeiro lugar.\nPode ser que tenha sido convidado\nalguém mais importante do que tu,\n9\ne o dono da casa, que convidou os dois,\nvenha te dizer:\n'Dá o lugar a ele'.\nEntão tu ficarás envergonhado\ne irás ocupar o último lugar.\n10\nMas, quando tu fores convidado,\nvai sentar-te no último lugar.\nAssim, quando chegar quem te convidou, te dirá:\n'Amigo, vem mais para cima'.\nE isto vai ser uma honra para ti\ndiante de todos os convidados.\n11\nPorque quem se eleva, será humilhado\ne quem se humilha, será elevado\".\nPalavra da Salvação."
+  }
+}

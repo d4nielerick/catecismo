@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-19",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Tm 6,2c-12</div><div> Sl 48(49),6-7.8-10.17-18.19-20 (R. Mt 5,3)</div><div></div><div> Lc 8,1-3</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,2c-12",
+    "texto": "Caríssimo,\n2c\nensina e recomenda estas coisas.\n3\nQuem ensina doutrinas estranhas\ne discorda das palavras salutares\nde Nosso Senhor Jesus Cristo\ne da doutrina conforme à piedade,\n4\né um obcecado pelo orgulho,\num ignorante que morbidamente se compraz\nem questões e discussões de palavras.\nDaí é que nascem invejas,\ncontendas, insultos, suspeitas,\n5\nporfias de homens com mente corrompida\ne privados da verdade\nque fazem da piedade assunto de lucro.\n6\nSem dúvida, grande fonte de lucro é a piedade,\nmas quando acompanhada\ndo espírito de desprendimento.\n7\nPorque nada trouxemos ao mundo\ncomo tampouco nada poderemos levar.\n8\nTendo alimento e vestuário,\nfiquemos satisfeitos.\n9\nOs que desejam enriquecer,\ncaem em tentação e armadilhas,\nem muitos desejos loucos e perniciosos\nque afundam os homens na perdição e na ruína,\n10\nporque a raiz de todos os males é a cobiça do dinheiro.\nPor se terem deixado levar por ela,\nmuitos se extraviaram da fé\ne se atormentam a si mesmos\ncom muitos sofrimentos.\n11\nTu que és um homem de Deus,\nfoge das coisas perversas,\nprocura a justiça, a piedade, a fé,\no amor, a firmeza, a mansidão.\n12\nCombate o bom combate da fé,\nconquista a vida eterna,\npara a qual foste chamado\ne pela qual fizeste tua nobre profissão de fé\ndiante de muitas testemunhas.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 48 (49),6-7.8-10.17-18.19-20 (R. Mt 5,3)",
+    "refrao": "",
+    "texto": "R.\nFelizes os humildes de espírito,\nporque deles é o Reino dos céus.\n6\nPor que temer os dias maus e infelizes, *\nquando a malícia dos perversos me circunda?\n7\nPor que temer os que confiam nas riquezas *\ne se gloriam na abundância de seus bens?\nR.\n8\nNinguém se livra de sua morte por dinheiro *\nnem a Deus pode pagar o seu resgate.\n9\nA isenção da própria morte não tem preço; *\nnão há riqueza que a possa adquirir,\n10\nnem dar ao homem uma vida sem limites *\ne garantir-lhe uma existência imortal.\nR.\n17\nNão te inquietes, quando um homem fica rico *\ne aumenta a opulência de sua casa;\n18\npois ao morrer não levará nada consigo, *\nnem seu prestígio poderá acompanhá-lo.\nR.\n19\nFelicitava-se a si mesmo enquanto vivo: *\n\"Todos te aplaudem, tudo bem, isto que é vida!\"\n20\nMas vai-se ele para junto de seus pais, *\nque nunca mais e nunca mais verão a luz!\nR.\nEvangelho - Lc 8,1-3\nAclamação ao Evangelho  Cf.\nMt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois, revelaste os mistérios do teu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,1-3",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n8,1-3\nNaquele tempo,\n1\nJesus andava por cidades e povoados,\npregando e anunciando a Boa-Nova do Reino de Deus.\nOs doze iam com ele;\n2\ne também algumas mulheres\nque haviam sido curadas de maus espíritos e doenças:\nMaria, chamada Madalena,\nda qual tinham saído sete demônios;\n3\nJoana, mulher de Cuza, alto funcionário de Herodes;\nSusana, e várias outras mulheres\nque ajudavam a Jesus e aos discípulos\ncom os bens que possuíam.\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-07-03",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 2,19-22</div><div> Sl 116(117),1-2 (R. Mc 16,15)</div><div></div><div> Jo 20,24-29</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,19-22",
+    "texto": "Irmãos,\n19\njá não sois mais estrangeiros nem migrantes,\nmas concidadãos dos santos.\nSois da família de Deus.\n20\nVós fostes integrados no edifício\nque tem como fundamento os apóstolos e os profetas,\ne o próprio Jesus Cristo como pedra principal.\n21\nÉ nele que toda a construção se ajusta e se eleva\npara formar um templo Santo no Senhor.\n22\nE vós também sois integrados nesta construção,\npara vos tornardes morada de Deus pelo Espírito.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 116(117),1-2 (R. Mc 16,15)",
+    "refrao": "",
+    "texto": "R.\nIde, por todo o mundo, a todos pregai o Evangelho.\n1\nCantai louvores ao Senhor, todas as gentes, *\npovos todos, festejai-o!\nR.\n2\nPois comprovado é seu amor para conosco, *\npara sempre ele é fiel!\nR.\nAclamação ao Evangelho\nJo 20,29\nR.\nAleluia, aleluia, aleluia.\nV.\nAcreditaste, Tomé, porque me viste.\nFelizes os que creem sem ter visto."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "20,24-29",
+    "texto": "20,24-29\n24\nTomé, chamado Dídimo, que era um dos doze,\nnão estava com eles quando Jesus veio.\n25\nOs outros discípulos contaram-lhe depois:\n\"Vimos o Senhor!\".\nMas Tomé disse-lhes:\n\"Se eu não vir a marca dos pregos em suas mãos,\nse eu não puser o dedo nas marcas dos pregos\ne não puser a mão no seu lado, não acreditarei.\"\n26\nOito dias depois,\nencontravam-se os discípulos\nnovamente reunidos em casa,\ne Tomé estava com eles.\nEstando fechadas as portas, Jesus entrou,\npôs-se no meio deles e disse:\n\"A paz esteja convosco\".\n27\nDepois disse a Tomé:\n\"Põe o teu dedo aqui e olha as minhas mãos.\nEstende a tua mão e coloca-a no meu lado.\nE não sejas incrédulo, mas fiel\".\n28\nTomé respondeu:\n\"Meu Senhor e meu Deus!\"\n29\nJesus lhe disse:\n\"Acreditaste, porque me viste?\nBem-aventurados os que creram sem terem visto!\"\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-01-03",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 2,29-3,6</div><div> Sl 97(98),1.3cd-4.5-6 (R. 3a)</div><div></div><div> Jo 1,29-34</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,29-3,6",
+    "texto": "Caríssimos,\n29\njá que sabeis que ele é justo,\nsabei também que todo aquele que pratica a justiça\nnasceu dele.\n3,1\nVede que grande presente de amor o Pai nos deu:\nde sermos chamados filhos de Deus!\nE nós o somos!\nSe o mundo não nos conhece,\né porque não conheceu o Pai.\n2\nCaríssimos, desde já somos filhos de Deus,\nmas nem sequer se manifestou o que seremos!\nSabemos que, quando Jesus se manifestar,\nseremos semelhantes a ele,\nporque o veremos tal como ele é.\n3\nTodo o que espera nele,\npurifica-se a si mesmo,\ncomo também ele é puro.\n4\nTodo o que comete pecado,\ncomete também a iniquidade,\nporque o pecado é a iniquidade.\n5\nVós sabeis que ele se manifestou\npara tirar os pecados\ne que nele não há pecado.\n6\nTodo aquele que peca\nmostra que não o viu, nem o conheceu.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.3cd-4.5-6 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nOs confins do universo contemplaram\na salvação do nosso Deus.\n1\nCantai ao Senhor Deus um canto novo,*\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo*\nalcançaram-lhe a vitória.\nR.\n3c\nOs confins do universo contemplaram*\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira,*\nalegrai-vos e exultai!\nR.\n5\nCantai salmos ao Senhor ao som da harpa*\ne da cítara suave!\n6\nAclamai, com os clarins e as trombetas,*\nao Senhor, o nosso Rei!\nR.\nEvangelho - Jo 1,29-34\nAclamação ao Evangelho\nJo 1,14a.12a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA Palavra se fez carne, entre nós ela habitou;\ne todos os que a acolheram, de Deus filhos se tornaram."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,29-34",
+    "texto": "1,29-34\n29\nNo dia seguinte,\nJoão viu Jesus aproximar-se dele e disse:\n\"Eis o Cordeiro de Deus,\nque tira o pecado do mundo.\n30\nDele é que eu disse:\nDepois de mim vem um homem\nque passou à minha frente,\nporque existia antes de mim.\n31\nTambém eu não o conhecia,\nmas se eu vim batizar com água,\nfoi para que ele fosse manifestado a Israel\".\n32\nE João deu testemunho, dizendo:\n\"Eu vi o Espírito descer,\ncomo uma pomba do céu,\ne permanecer sobre ele.\n33\nTambém eu não o conhecia,\nmas aquele que me enviou a batizar com água\nme disse:\n'Aquele sobre quem vires o Espírito descer e permanecer,\neste é quem batiza com o Espírito Santo'.\n34\nEu vi e dou testemunho:\nEste é o Filho de Deus!\"\nPalavra da Salvação."
+  }
+}

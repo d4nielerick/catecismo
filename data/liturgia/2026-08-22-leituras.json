@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-22",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 9,1-6</div><div> Sl 112(113),1-2.3-4.5-6.7-8 (R. 2)</div><div></div><div> Lc 1,26-38</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,1-6",
+    "texto": "1\nO povo, que andava na escuridão,\nviu uma grande luz;\npara os que habitavam nas sombras da morte,\numa luz resplandeceu.\n2\nFizeste crescer a alegria,\ne aumentaste a felicidade;\ntodos se regozijam em tua presença\ncomo alegres ceifeiros na colheita,\nou como exaltados guerreiros\nao dividirem os despojos.\n3\nPois o jugo que oprimia o povo,\n- a carga sobre os ombros,\no orgulho dos fiscais -\ntu os abateste como na jornada de Madiã.\n4\nBotas de tropa de assalto,\ntrajes manchados de sangue,\ntudo será queimado e devorado pelas chamas.\n5\nPorque nasceu para nós um menino,\nfoi-nos dado um filho;\nele traz aos ombros a marca da realeza;\no nome que lhe foi dado é:\nConselheiro admirável, Deus forte,\nPai dos tempos futuros, Príncipe da Paz.\n6\nGrande será o seu reino\ne a paz não há de ter fim\nsobre o trono de Davi e sobre o seu reinado,\nque ele irá consolidar e confirmar\nem justiça e santidade,\na partir de agora e para todo o sempre.\nO amor zeloso do Senhor dos exércitos\nhá de realizar estas coisas.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 112(113),1-2.3-4.5-6.7-8 (R. 2, ou Aleluia)",
+    "refrao": "",
+    "texto": "R.\nBendito seja o nome do Senhor,\nagora e por toda a eternidade!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nLouvai, louvai, ó servos do Senhor, *\nlouvai, louvai o nome do Senhor!\n2\nBendito seja o nome do Senhor, *\nagora e por toda a eternidade!\nR.\n3\nDo nascer do sol até o seu ocaso, *\nlouvado seja o nome do Senhor!\n4\nO Senhor está acima das nações, *\nsua glória vai além dos altos céus.\nR.\n5\nQuem pode comparar-se ao nosso Deus, †\nao Senhor, que no alto céu tem o seu trono *\n6\ne se inclina para olhar o céu e a terra?\nR.\n7\nLevanta da poeira o indigente *\ne do lixo ele retira o pobrezinho,\n8\npara fazê-lo assentar-se com os nobres, *\nassentar-se com os nobres do seu povo.\nR.\nEvangelho - Lc 1,26-38\nAclamação ao Evangelho\nCf. Lc 1,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMaria, alegra-te, ó cheia de graça,\no Senhor é contigo;\nés bendita entre todas as mulheres da terra!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,26-38",
+    "texto": "1,26-38\nNaquele tempo,\n26\no anjo Gabriel foi enviado por Deus\na uma cidade da Galileia, chamada Nazaré,\n27\na uma virgem, prometida em casamento\na um homem chamado José.\nEle era descendente de Davi\ne o nome da virgem era Maria.\n28\nO anjo entrou onde ela estava e disse:\n\"Alegra-te, cheia de graça, o Senhor está contigo!\"\n29\nMaria ficou perturbada com estas palavras\ne começou a pensar qual seria o significado da saudação.\n30\nO anjo, então, disse-lhe:\n\"Não tenhas medo, Maria,\nporque encontraste graça diante de Deus.\n31\nEis que conceberás e darás à luz um filho,\na quem porás o nome de Jesus.\n32\nEle será grande,\nserá chamado Filho do Altíssimo,\ne o Senhor Deus lhe dará o trono de seu pai Davi.\n33\nEle reinará para sempre\nsobre os descendentes de Jacó,\ne o seu reino não terá fim\".\n34\nMaria perguntou ao anjo:\n\"Como acontecerá isso,\nse eu não conheço homem algum?\"\n35\nO anjo respondeu:\n\"O Espírito virá sobre ti,\ne o poder do Altíssimo te cobrirá com sua sombra.\nPor isso, o menino que vai nascer\nserá chamado Santo, Filho de Deus.\n36\nTambém Isabel, tua parenta,\nconcebeu um filho na velhice.\nEste já é o sexto mês daquela que era considerada estéril,\n37\nporque para Deus nada é impossível\".\n38\nMaria, então, disse:\n\"Eis aqui a serva do Senhor;\nfaça-se em mim segundo a tua palavra!\"\nE o anjo retirou-se.\nPalavra da Salvação."
+  }
+}

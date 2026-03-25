@@ -1,0 +1,23 @@
+{
+  "data": "2025-03-17",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dn 9,4b-10</div><div> Sl 78(79),8.9.11.13 (R. Sl 102(103),10a)</div><div></div><div> Lc 6,36-38</div></div>",
+  "primeira_leitura": {
+    "referencia": "",
+    "texto": "Leitura da Profecia de Daniel\n9, 4b-10\n4b\n\"Eu te suplico, Senhor, Deus grande e terrível,\nque preservas a aliança e a benevolência\naos que te amam e cumprem teus mandamentos;\n5\ntemos pecado,\ntemos praticado a injustiça e a impiedade,\ntemos sido rebeldes,\nafastando-nos de teus mandamentos e de tua lei;\n6\nnão temos prestado ouvidos a teus servos, os profetas,\nque, em teu nome,\nfalaram a nossos reis e príncipes,\na nossos antepassados e a todo o povo do país.\n7\nA ti, Senhor, convém a justiça;\ne a nós, hoje, resta-nos ter vergonha no rosto:\nseja ao homem de Judá,\naos habitantes de Jerusalém e a todo Israel,\nseja aos que moram perto e aos que moram longe,\nde todos os países,\npara onde os escorraçaste\npor causa das infidelidades cometidas contra ti.\n8\nA nós, Senhor, resta-nos ter vergonha no rosto:\na nossos reis e príncipes, e a nossos antepassados,\npois que pecamos contra ti;\n9\nmas a ti, Senhor, nosso Deus,\ncabe misericórdia e perdão,\npois nos temos rebelado contra ti,\n10\ne não ouvimos a voz do Senhor, nosso Deus,\nindicando-nos o caminho de sua lei,\nque nos propôs mediante seus servos, os profetas\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 78(79),8.9.11.13  (R. 103 [103],10a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor não nos trata como exigem nossas faltas.\n8\nNão lembreis as nossas culpas do passado, †\nmas venha logo sobre nós vossa bondade, *\npois estamos humilhados em extremo.\nR.\n9\nAjudai-nos, nosso Deus e Salvador! †\nPor vosso nome e vossa glória, libertai-nos! *\nPor vosso nome, perdoai nossos pecados!\nR.\n11\nAté vós chegue o gemido dos cativos: †\nlibertai com vosso braço poderoso *\nos que foram condenados a morrer!\n13\nQuanto a nós, vosso rebanho e vosso povo, †\ncelebraremos vosso nome para sempre, *\nde geração em geração vos louvaremos.\nR.\nEvangelho - Lc 6,36-38\nAclamação ao Evangelho\nJo 6,63c.68c\nR.\nGlória a Cristo, palavra eterna do Pai, que é amor!\nV.\nSenhor, tuas palavras são espírito, são vida;\nsó tu tens palavras de vida eterna!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,36-38",
+    "texto": "6,36-38\nNaquele tempo, disse Jesus aos seus discípulos:\n36\n\"Sede misericordiosos,\ncomo também o vosso Pai é misericordioso.\n37\nNão julgueis e não sereis julgados;\nnão condeneis e não sereis condenados;\nperdoai, e sereis perdoados.\n38\nDai e vos será dado.\nUma boa medida, calcada, sacudida, transbordante\nserá colocada no vosso colo;\nporque com a mesma medida com que medirdes os outros,\nvós também sereis medidos\".\nPalavra da Salvação."
+  }
+}

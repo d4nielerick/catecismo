@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-16",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 3,21-30</div><div> Sl 129(130),1-2.3-4.5-6 (R. 7)</div><div></div><div> Lc 11,47-54</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,21-30",
+    "texto": "Irmãos,\n21\nagora, sem depender do regime da Lei,\na justiça de Deus se manifestou,\natestada pela Lei e pelos Profetas;\n22\njustiça de Deus essa, que se realiza\nmediante a fé em Jesus Cristo,\npara todos os que têm a fé.\nPois diante desta justiça não há distinção:\n23\ntodos pecaram\ne estão privados da glória de Deus,\n24\ne a justificação se dá gratuitamente,\npor sua graça, realizada em Jesus Cristo.\n25\nDeus destinou Jesus Cristo\na ser, por seu próprio sangue,\ninstrumento de expiação\nmediante a realidade da fé.\nAssim Deus mostrou sua justiça\nem ter deixado sem castigo\nos pecados cometidos outrora,\n26\nno tempo de sua tolerância.\nAssim ainda ele demonstra\nsua justiça no tempo presente,\npara ser ele mesmo justo,\ne tornar justo\naquele que vive a partir da fé em Jesus.\n27\nOnde estaria, então,\no direito de alguém se gloriar?\n— Foi excluído.\nPor qual lei? Pela lei das obras?\n— Absolutamente não,\nmas, sim, pela lei da fé.\n28\nCom efeito,\njulgamos que o homem é justificado pela fé,\nsem a prática da Lei judaica.\n29\nAcaso Deus é só dos judeus?\nNão é também Deus dos pagãos?\nSim, é também Deus dos pagãos.\n30\nPois Deus é um só.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 129(130),1-2.3-4.5-6 (R. 7)",
+    "refrao": "",
+    "texto": "R.\nNo Senhor se encontra toda graça\ne copiosa redenção!\n1\nDas profundezas eu clamo a vós, Senhor,*\n2\nescutai a minha voz!\nVossos ouvidos estejam bem atentos*\nao clamor da minha prece!\nR.\n3\nSe levardes em conta nossas faltas, *\nquem haverá de subsistir?\n4\nMas em vós se encontra o perdão, *\neu vos temo e em vós espero.\nR.\n5\nNo Senhor ponho a minha esperança, *\nespero em sua palavra.\n6\nA minh'alma espera no Senhor *\nmais que o vigia pela aurora.\nR.\nEvangelho - Lc 11,47-5\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o Caminho, a Verdade e a Vida,\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,47-54",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,47-54\nNaquele tempo, disse o Senhor:\n47\n\"Ai de vós, porque construís os túmulos dos profetas;\nno entanto, foram vossos pais que os mataram.\n48\nCom isso, vós sois testemunhas\ne aprovais as obras de vossos pais,\npois eles mataram os profetas\ne vós construís os túmulos.\n49\nÉ por isso que a sabedoria de Deus afirmou:\nEu lhes enviarei profetas e apóstolos,\ne eles matarão e perseguirão alguns deles,\n50\na fim de que se peçam contas a esta geração\ndo sangue de todos os profetas,\nderramado desde a criação do mundo,\n51\ndesde o sangue de Abel até o sangue de Zacarias,\nque foi morto entre o altar e o santuário.\nSim, eu vos digo:\nserão pedidas contas disso a esta geração.\n52\nAi de vós, mestres da Lei,\nporque tomastes a chave da ciência.\nVós mesmos não entrastes,\ne ainda impedistes os que queriam entrar\".\n53\nQuando Jesus saiu daí,\nos mestres da Lei e os fariseus\ncomeçaram a tratá-lo mal,\ne a provocá-lo sobre muitos pontos.\n54\nArmavam ciladas, para pegá-lo de surpresa,\npor qualquer palavra que saísse de sua boca.\nPalavra da Salvação."
+  }
+}

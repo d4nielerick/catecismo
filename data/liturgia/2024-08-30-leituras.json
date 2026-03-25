@@ -1,0 +1,23 @@
+{
+  "data": "2024-08-30",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 1,17-25</div><div> Sl 32(33),1-2.4-5.10ab e 11 (R. 5b)</div><div></div><div> Mt 25,1-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,17-25",
+    "texto": "Irmãos,\n17\nde fato, Cristo não me enviou para batizar,\nmas para pregar a boa nova da salvação,\nsem me valer dos recursos da oratória,\npara não privar a cruz de Cristo da sua força própria.\n18\nA pregação a respeito da cruz\né uma insensatez para os que se perdem,\nmas para os que se salvam,\npara nós, ela é poder de Deus.\n19\nCom efeito, está escrito:\n\"Destruirei a sabedoria dos sábios\ne frustrarei a perspicácia dos inteligentes\".\n20\nOnde está o sábio?\nOnde o mestre da Lei?\nOnde o questionador deste mundo?\nAcaso Deus não mostrou\na insensatez da sabedoria do mundo?\n21\nDe fato, na manifestação da sabedoria de Deus,\no mundo não chegou a conhecer Deus\npor meio da sabedoria;\npor isso, Deus houve por bem salvar os que creem\npor meio da insensatez da pregação.\n22\nOs judeus pedem sinais milagrosos,\nos gregos procuram sabedoria;\n23\nnós, porém, pregamos Cristo crucificado,\nescândalo para os judeus\ne insensatez para os pagãos.\n24\nMas para os que são chamados,\ntanto judeus como gregos,\nesse Cristo é poder de Deus\ne sabedoria de Deus.\n25\nPois o que é dito insensatez de Deus\né mais sábio do que os homens,\ne o que é dito fraqueza de Deus\né mais forte do que os homens.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),1-2.4-5.10ab e 11 (R. 5b)",
+    "refrao": "",
+    "texto": "R.\nTransborda em toda a terra a bondade do Senhor!\n1\nÓ justos, alegrai-vos no Senhor! *\naos retos fica bem glorificá-lo.\n2\nDai graças ao Senhor ao som da harpa, *\nna lira de dez cordas celebrai-o!\nR.\n4\nPois reta é a palavra do Senhor, *\ne tudo o que ele faz merece fé.\n5\nDeus ama o direito e a justiça, *\ntransborda em toda a terra a sua graça.\nR.\n10\nO Senhor desfaz os planos das nações *\nb\ne os projetos que os povos se propõem.\n11\nMas os desígnios do Senhor são para sempre, †\ne os pensamentos que ele traz no coração, *\nde geração em geração, vão perdurar.\nR.\nEvangelho - Mt 25,1-13\nAclamação ao Evangelho\nLc 21,36\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVigiai e orai para ficardes de pé,\nante o Filho do Homem!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "25,1-13",
+    "texto": "25,1-13\nNaquele tempo,\ndisse Jesus aos seus discípulos esta parábola:\n1\n\"O Reino dos Céus é como a história das dez jovens\nque pegaram suas lâmpadas de óleo\ne saíram ao encontro do noivo.\n2\nCinco delas eram imprevidentes,\ne as outras cinco eram previdentes.\n3\nAs imprevidentes pegaram as suas lâmpadas,\nmas não levaram óleo consigo.\n4\nAs previdentes, porém, levaram vasilhas com óleo\njunto com as lâmpadas.\n5\nO noivo estava demorando\ne todas elas acabaram cochilando e dormindo.\n6\nNo meio da noite, ouviu-se um grito:\n'O noivo está chegando.\nIde ao seu encontro!'\n7\nEntão as dez jovens se levantaram\ne prepararam as lâmpadas.\n8\nAs imprevidentes disseram às previdentes:\n'Dai-nos um pouco de óleo,\nporque nossas lâmpadas estão se apagando'.\n9\nAs previdentes responderam:\n'De modo nenhum,\nporque o óleo pode ser insuficiente\npara nós e para vós.\nÉ melhor irdes comprar aos vendedores'.\n10\nEnquanto elas foram comprar óleo,\no noivo chegou,\ne as que estavam preparadas\nentraram com ele para a festa de casamento.\nE a porta se fechou.\n11\nPor fim, chegaram também as outras jovens\ne disseram:\n'Senhor! Senhor! Abre-nos a porta!'\n12\nEle, porém, respondeu:\n'Em verdade eu vos digo:\nNão vos conheço!'\n13\nPortanto, ficai vigiando,\npois não sabeis qual será o dia, nem a hora\".\nPalavra da Salvação."
+  }
+}

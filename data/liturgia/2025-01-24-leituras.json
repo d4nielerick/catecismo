@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-24",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 8,6-13</div><div> Sl 84(85),8 e 10.11-12.13-14 (R. 11a)</div><div></div><div> Mc 3,13-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,6-13",
+    "texto": "Irmãos,\n6\nagora, Cristo possui um ministério superior.\nPois ele é o mediador de uma aliança bem melhor,\nbaseada em promessas melhores.\n7\nDe fato, se a primeira aliança fosse sem defeito,\nnão se procuraria estabelecer uma segunda.\n8\nCom efeito, Deus adverte:\n\"Dias virão, diz o Senhor, em que concluirei\ncom a casa de Israel e com a casa de Judá\numa nova aliança.\n9\nNão como a aliança que eu fiz com os seus pais,\nno dia em que os conduzi pela mão\npara fazê-los sair da terra do Egito.\nPois eles não permaneceram fiéis à minha aliança;\npor isso, me desinteressei deles, diz o Senhor.\n10\nEis a aliança que estabelecerei com o povo de Israel,\ndepois daqueles dias - diz o Senhor:\ncolocarei minhas leis na sua mente\ne as gravarei no seu coração,\ne serei o seu Deus, e eles serão o meu povo.\n11\nNinguém mais ensinará o seu próximo,\ne nem o seu irmão, dizendo:\n'Conhece o Senhor!'.\nPorque todos me conhecerão,\ndesde o menor até o maior.\n12\nPorque terei misericórdia das suas faltas,\ne não me lembrarei mais dos seus pecados\".\n13\nAssim, ao falar de nova aliança,\ndeclarou velha a primeira.\nOra, o que envelhece e se torna antiquado\nestá prestes a desaparecer.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 84(85), 8 e 10.11-12.13-14 (R. 11a)",
+    "refrao": "",
+    "texto": "R.\nA verdade e o amor se encontrarão.\n8\nMostrai-nos, ó Senhor, vossa bondade,*\nconcedei-nos também vossa salvação!\n10\nEstá perto a salvação dos que o temem,*\ne a glória habitará em nossa terra.\nR.\n11\nA verdade e o amor se encontrarão,*\na justiça e a paz se abraçarão;\n12\nda terra brotará a fidelidade,*\ne a justiça olhará dos altos céus.\nR.\n13\nO Senhor nos dará tudo o que é bom,*\ne a nossa terra nos dará suas colheitas;\n14\na justiça andará na sua frente*\ne a salvação há de seguir os passos seus.\nR.\nEvangelho - Mc 3,13-19\nAclamação ao Evangelho\n2Cor 5,19\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEm Cristo, Deus reconciliou consigo mesmo a humanidade;\ne a nós ele entregou esta reconciliação."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,13-19",
+    "texto": "3,13-19\nNaquele tempo,\n13\nJesus subiu ao monte e chamou os que ele quis.\nE foram até ele.\n14\nEntão Jesus designou Doze,\npara que ficassem com ele\ne para enviá-los a pregar,\n15\ncom autoridade para expulsar os demônios.\n16\nDesignou, pois, os Doze:\nSimão, a quem deu o nome de Pedro;\n17\nTiago e João, filhos de Zebedeu,\naos quais deu o nome de Boanerges,\nque quer dizer \"filhos do trovão\";\n18\nAndré, Filipe, Bartolomeu, Mateus, Tomé,\nTiago, filho de Alfeu, Tadeu, Simão, o cananeu,\n19\ne Judas Iscariotes, aquele que depois o traiu.\nPalavra da Salvação."
+  }
+}

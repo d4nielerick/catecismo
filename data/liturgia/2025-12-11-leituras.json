@@ -1,0 +1,23 @@
+{
+  "data": "2025-12-11",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 41,13-20</div><div> Sl 144(145),1.9.10-11.12-13ab (R. 8)</div><div></div><div> Mt 11,11-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "41,13-20",
+    "texto": "13\nEu sou o Senhor, teu Deus,\nque te tomo pela mão\ne te digo: \"Não temas;\neu te ajudarei\".\n14\nNão tenhas medo, Jacó, pobre verme,\nnão temais, homens de Israel.\nEu vos ajudarei, diz o Senhor e Salvador,\no Santo de Israel.\n15\nEis que te transformei num carro novo de triturar,\nguarnecido de dentes de serra.\nHás de triturar e despedaçar os montes,\ne reduzirás as colinas a poeira.\n16\nAo expô-los ao vento, o vento os levará\ne o temporal os dispersará;\nexultarás no Senhor\ne te alegrarás no Santo de Israel.\n17\nPobres e necessitados procuram água, mas não há,\nestão com a língua seca de sede.\nEu, o Senhor, os atenderei,\neu, Deus de Israel, não os abandonarei.\n18\nFarei nascer rios nas colinas escalvadas\ne fontes no meio dos vales;\ntransformarei o deserto em lagos\ne a terra seca em nascentes d'água.\n19\nPlantarei no deserto o cedro,\na acácia e a murta e a oliveira;\ncrescerão no ermo o pinheiro,\no olmo e o cipreste juntamente,\n20\npara que os homens vejam e saibam,\nconsiderem e compreendam\nque a mão do Senhor fez essas coisas\ne o Santo de Israel tudo criou.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 144 (145),1 e 9.10-11.12-13ab (R. 8)",
+    "refrao": "",
+    "texto": "R.\nMisericórdia e piedade é o Senhor!\nEle é amor, é paciência, é compaixão.\n1\nÓ meu Deus, quero exaltar-vos, ó meu Rei, *\ne bendizer o vosso nome pelos séculos.\n9\nO Senhor é muito bom para com todos, *\nsua ternura abraça toda criatura.\nR.\n10\nQue vossas obras, ó Senhor, vos glorifiquem, *\ne os vossos santos com louvores vos bendigam!\n11\nNarrem a glória e o esplendor do vosso reino *\ne saibam proclamar vosso poder!\nR.\n12\nPara espalhar vossos prodígios entre os homens *\ne o fulgor de vosso reino esplendoroso.\n13a\nO vosso reino é um reino para sempre, *\nb\nvosso poder, de geração em geração.\nR.\nEvangelho - Mt 11,11-1\nAclamação ao Evangelho  Cf.\nIs 45,8\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQue os céus, lá do alto, derramem o orvalho,\nque chova das nuvens o Justo esperado,\nque a terra se abra e germine o Senhor!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,11-15",
+    "texto": "11,11-15\nNaquele tempo, disse Jesus à multidão:\n11\nEm verdade eu vos digo,\nde todos os homens que já nasceram,\nnenhum é maior do que João Batista.\nNo entanto, o menor no Reino dos Céus\né maior do que ele.\n12\nDesde os dias de João Batista até agora,\no Reino dos Céus sofre violência,\ne são os violentos que o conquistam.\n13\nCom efeito, todos os profetas e a Lei\nprofetizaram até João.\n14\nE se quereis aceitar,\nele é o Elias que há de vir.\n15\nQuem tem ouvidos, ouça\".\nPalavra da Salvação."
+  }
+}

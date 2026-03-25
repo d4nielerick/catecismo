@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-27",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 1,1-9</div><div> Sl 144(145),2-3.4-5.6-7 (R. cf. 1b)</div><div></div><div> Mt 24,42-51</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-9",
+    "texto": "1\nPaulo, chamado a ser apóstolo de Jesus Cristo,\npor vontade de Deus,\ne o irmão Sóstenes,\n2\nà Igreja de Deus que está em Corinto:\naos que foram santificados em Cristo Jesus,\nchamados a ser santos\njunto com todos que, em qualquer lugar,\ninvocam o nome de nosso Senhor Jesus Cristo,\nSenhor deles e nosso.\n3\nPara vós, graça e paz,\nda parte de Deus, nosso Pai,\ne do Senhor Jesus Cristo.\n4\nDou graças a Deus sempre a vosso respeito,\npor causa da graça que Deus vos concedeu\nem Cristo Jesus:\n5\nNele fostes enriquecidos em tudo,\nem toda a palavra e em todo o conhecimento,\n6\nà medida que o testemunho sobre Cristo\nse confirmou entre vós.\n7\nAssim, não tendes falta de nenhum dom,\nvós que aguardais\na revelação do Senhor nosso, Jesus Cristo.\n8\nÉ ele também que vos dará perseverança\nem vosso procedimento irrepreensível,\naté ao fim,\naté ao dia de nosso Senhor, Jesus Cristo.\n9\nDeus é fiel;\npor ele fostes chamados à comunhão com seu Filho,\nJesus Cristo, Senhor nosso.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 144(145),2-3.4-5.6-7 (R. cf. 1b)",
+    "refrao": "",
+    "texto": "R.\nBendirei o vosso nome, pelos séculos, Senhor!\n2\nTodos os dias haverei de bendizer-vos, *\nhei de louvar o vosso nome para sempre.\n3\nGrande é o Senhor e muito digno de louvores, *\ne ninguém pode medir sua grandeza.\nR.\n4\nUma idade conta à outra vossas obras *\ne publica os vossos feitos poderosos;\n5\nproclamam todos o esplendor de vossa glória *\ne divulgam vossas obras portentosas!\nR.\n6\nNarram todos vossas obras poderosas, *\ne de vossa imensidade todos falam.\n7\nEles recordam vosso amor tão grandioso *\ne exaltam, ó Senhor, vossa justiça.\nR.\nEvangelho - Mt 24,42-5\nAclamação ao Evangelho\nMt 24,42a.44\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVigiai, diz Jesus, vigiai,\npois, no dia em que não esperais,\no vosso Senhor há de vir."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "24,42-51",
+    "texto": "24,42-51\nNaquele tempo disse Jesus aos seus discípulos:\n42\n\"Ficai atentos!\nporque não sabeis em que dia virá o Senhor.\n43\nCompreendei bem isso:\nse o dono da casa soubesse\na que horas viria o ladrão,\ncertamente vigiaria e não deixaria\nque a sua casa fosse arrombada.\n44\nPor isso, também vós ficai preparados!\nPorque na hora em que menos pensais,\no Filho do Homem virá.\n45\nQual é o empregado fiel e prudente,\nque o senhor colocou como responsável\npelos demais empregados,\npara lhes dar alimento na hora certa?\n46\nFeliz o empregado,\ncujo senhor o encontrar agindo assim,\nquando voltar.\n47\nEm verdade vos digo,\nele lhe confiará a administração de todos os seus bens.\n48\nMas, se o empregado mau pensar:\n'Meu senhor está demorando',\n49\ne começar a bater nos companheiros,\na comer e a beber com os bêbados;\n50\nentão o senhor desse empregado\nvirá no dia em que ele não espera,\ne na hora que ele não sabe.\n51\nEle o partirá ao meio\ne lhe imporá a sorte dos hipócritas.\nAli haverá choro e ranger de dentes\".\nPalavra da Salvação."
+  }
+}

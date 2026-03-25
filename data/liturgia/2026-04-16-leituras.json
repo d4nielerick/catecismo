@@ -1,0 +1,23 @@
+{
+  "data": "2026-04-16",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 5,27-33</div><div> Sl 33(34),2 e 9.17-18.19-20 (R. 7a)</div><div></div><div> Jo 3,31-36</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,27-33",
+    "texto": "Naqueles dias, os guardas\n27\nlevaram os apóstolos e os apresentaram ao Sinédrio.\nO sumo sacerdote começou a interrogá-los,\n28\ndizendo: \"Nós tínhamos proibido expressamente\nque vós ensinásseis em nome de Jesus.\nApesar disso, enchestes a cidade de Jerusalém\ncom a vossa doutrina.\nE ainda nos quereis tornar responsáveis\npela morte desse homem!\"\n29\nEntão Pedro e os outros apóstolos responderam:\n\"É preciso obedecer a Deus, antes que aos homens.\n30\nO Deus de nossos pais ressuscitou Jesus,\na quem vós matastes, pregando-o numa cruz.\n31\nDeus, por seu poder, o exaltou,\ntornando-o Guia Supremo e Salvador,\npara dar ao povo de Israel a conversão\ne o perdão dos seus pecados.\n32\nE disso somos testemunhas, nós e o Espírito Santo,\nque Deus concedeu àqueles que lhe obedecem\".\n33\nQuando ouviram isto,\nficaram furiosos e queriam matá-los.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 33(34),2.9.17-18.19-20 (R. 7a)",
+    "refrao": "",
+    "texto": "R.\nEste infeliz gritou a Deus e foi ouvido.\nOu:\nAleluia, Aleluia, Aleluia.\n2\nBendirei o Senhor Deus em todo o tempo, *\nseu louvor estará sempre em minha boca.\n9\nProvai e vede quão suave é o Senhor! *\nFeliz o homem que tem nele o seu refúgio!\nR.\n17\nmas ele volta a sua face contra os maus, *\npara da terra apagar sua lembrança.\n18\nClamam os justos, e o Senhor bondoso escuta *\ne de todas as angústias os liberta.\nR.\n19\nDo coração atribulado ele está perto *\ne conforta os de espírito abatido.\n20\nMuitos males se abatem sobre os justos, *\nmas o Senhor de todos eles os liberta.\nR.\nEvangelho - Jo 3,31-36\nAclamação ao Evangelho\nJo 20,29\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAcreditaste, Tomé, porque me viste.\nFelizes os que creem sem ter visto."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,31-36",
+    "texto": "3,31-36\n31\n\"Aquele que vem do alto\nestá acima de todos.\nO que é da terra,\npertence à terra e fala das coisas da terra.\nAquele que vem do céu\nestá acima de todos.\n32\nDá testemunho daquilo que viu e ouviu,\nmas ninguém aceita o seu testemunho.\n33\nQuem aceita o seu testemunho\natesta que Deus é verdadeiro.\n34\nDe fato, aquele que Deus enviou\nfala as palavras de Deus,\nporque Deus lhe dá o espírito sem medida.\n35\nO Pai ama o Filho\ne entregou tudo em sua mão.\n36\nAquele que acredita no Filho\npossui a vida eterna.\nAquele, porém, que rejeita o Filho não verá a vida,\npois a ira de Deus permanece sobre ele\".\nPalavra da Salvação."
+  }
+}

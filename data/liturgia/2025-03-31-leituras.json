@@ -1,0 +1,23 @@
+{
+  "data": "2025-03-31",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 65,17-21</div><div> Sl 29(30),2 e 4.5-6.11-12a e 13b (R. 2a)</div><div></div><div> Jo 4,43-54</div></div>",
+  "primeira_leitura": {
+    "referencia": "65,17-21",
+    "texto": "Assim fala o Senhor:\n17\n\"Eis que eu criarei\nnovos céus e nova terra,\ncoisas passadas serão esquecidas,\nnão voltarão mais à memória.\n18\nAo contrário, haverá alegria e exultação sem fim\nem razão das coisas que eu vou criar;\nfarei de Jerusalém a cidade da exultação\ne um povo cheio de alegria.\n19\nEu também exulto com Jerusalém\ne alegro-me com o meu povo;\nali nunca mais se ouvirá\na voz do pranto e o grito de dor.\n20\nAli não haverá crianças condenadas\na poucos dias de vida\nnem anciãos que não completem seus dias.\nSerá considerado jovem\nquem morrer aos cem anos;\ne quem não alcançar cem anos,\npassará por maldito.\n21\nConstruirão casas para nelas morar,\nplantarão vinhas para comer seus frutos\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 29(30),2 e 4.5-6.11-12a e 13b  (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nEu vos exalto, ó Senhor, pois me livrastes!\n2\nEu vos exalto, ó Senhor, pois me livrastes,*\ne não deixastes rir de mim meus inimigos!\n4\nVós tirastes minha alma dos abismos*\ne me salvastes, quando estava já morrendo!\nR.\n5\nCantai salmos ao Senhor, povo fiel,*\ndai-lhe graças e invocai seu santo nome!\n6\nPois sua ira dura apenas um momento,*\nmas sua bondade permanece a vida inteira;\nse à tarde vem o pranto visitar-nos,*\nde manhã vem saudar-nos a alegria.\nR.\n11\nEscutai-me, Senhor Deus, tende piedade!*\nSede, Senhor, o meu abrigo protetor!\n12a\nTransformastes o meu pranto em uma festa,*\n13b\nSenhor meu Deus, eternamente hei de louvar-vos!\nR.\nEvangelho - Jo 4,43-54\nAclamação ao Evangelho\nCf. Am 5,14\nR.\nHonra, glória, poder e louvor\na Jesus, nosso Deus e Senhor!\nV.\nBuscai o bem, não o mal, pois assim vivereis;\nentão o Senhor, nosso Deus, convosco estará!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "4,43-54",
+    "texto": "4,43-54\nNaquele tempo,\n43\nJesus partiu da Samaria para a Galileia.\n44\nO próprio Jesus tinha declarado,\nque um profeta não é honrado na sua própria terra.\n45\nQuando então chegou à Galileia,\nos galileus receberam-no bem,\nporque tinham visto tudo o que Jesus havia feito\nem Jerusalém, durante a festa.\nPois também eles tinham ido à festa.\n46\nAssim, Jesus voltou para Caná da Galileia,\nonde havia transformado a água em vinho.\nHavia em Cafarnaum um funcionário do rei\nque tinha um filho doente.\n47\nOuviu dizer que Jesus\ntinha vindo da Judeia para a Galileia.\nEle saiu ao seu encontro\ne pediu-lhe que fosse a Cafarnaum\ncurar seu filho, que estava morrendo.\n48\nJesus disse-lhe:\n\"Se não virdes sinais e prodígios,\nnão acreditais\".\n49\nO funcionário do rei disse:\n\"Senhor, desce,\nantes que meu filho morra!\"\n50\nJesus lhe disse:\n\"Podes ir, teu filho está vivo\".\nO homem acreditou na palavra de Jesus e foi embora.\n51\nEnquanto descia para Cafarnaum,\nseus empregados foram ao seu encontro,\ndizendo que o seu filho estava vivo.\n52\nO funcionário perguntou\na que horas o menino tinha melhorado.\nEles responderam:\n\"A febre desapareceu, ontem, pela uma da tarde\".\n53\nO pai verificou que tinha sido exatamente na mesma hora\nem que Jesus lhe havia dito:\n\"Teu filho está vivo\".\nEntão, ele abraçou a fé,\njuntamente com toda a sua família.\n54\nEsse foi o segundo sinal de Jesus.\nRealizou-o quando voltou da Judeia para a Galileia.\nPalavra da Salvação."
+  }
+}

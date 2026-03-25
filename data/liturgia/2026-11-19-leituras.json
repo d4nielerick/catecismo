@@ -1,0 +1,23 @@
+{
+  "data": "2026-11-19",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 5,1-10</div><div> Sl 149,1-2.3-4.5-6a e 9b (R. Ap 5,10)</div><div></div><div> Lc 19,41-44</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-10",
+    "texto": "Eu, João,\n1\nvi um livro na mão direita\ndaquele que estava sentado no trono.\nEra um rolo escrito por dentro e por fora,\ne estava lacrado com sete selos.\n2\nVi então um anjo forte,\nque proclamava em voz alta:\n\"Quem é digno de romper os selos e abrir o livro?\"\n3\nNinguém no céu, nem na terra,\nnem debaixo da terra\nera digno de abrir o livro\nou de ler o que nele estava escrito.\n4\nEu chorava muito,\nporque ninguém foi considerado digno\nde abrir ou de ler o livro.\n5\nUm dos anciãos me consolou:\n\"Não chores!\nEis que o Leão da tribo de Judá,\no Rebento de Davi, saiu vencedor.\nEle pode romper os selos e abrir o livro\".\n6\nDe fato, vi um Cordeiro.\nEstava no centro do trono\ne dos quatro Seres vivos,\nno meio dos Anciãos.\nEstava de pé como que imolado.\nO Cordeiro tinha sete chifres e sete olhos,\nque são os sete Espíritos de Deus,\nenviados por toda a terra.\n7\nEntão, o Cordeiro veio receber o livro\nda mão direita daquele que está sentado no trono.\n8\nQuando ele recebeu o livro,\nos quatro Seres vivos e os vinte e quatro Anciãos\nprostraram-se diante do Cordeiro.\nTodos tinham harpas e taças de ouro cheias de incenso,\nque são as orações dos santos.\n9\nE entoaram um cântico novo:\n\"Tu és digno de receber o livro e abrir seus selos,\nporque foste imolado,\ne com teu sangue adquiriste para Deus\nhomens de toda a tribo, língua, povo e nação.\n10\nDeles fizeste para o nosso Deus\num reino de sacerdotes.\nE eles reinarão sobre a terra.\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 149,1-2.3-4.5-6a e 9b (R. Ap 5,10)",
+    "refrao": "",
+    "texto": "R.\nFizestes de nós, para Deus, sacerdotes e povo de reis.\nOu:\nAleluia, Aleluia, Aleluia\n1\nCantai ao Senhor Deus um canto novo, *\ne o seu louvor na assembleia dos fiéis!\n2\nAlegre-se Israel em Quem o fez, *\ne Sião se rejubile no seu Rei!\nR.\n3\nCom danças glorifiquem o seu nome, *\ntoquem harpa e tambor em sua honra!\n4\nPorque, de fato, o Senhor ama seu povo *\ne coroa com vitória os seus humildes.\nR.\n5\nExultem os fiéis por sua glória, *\ne cantando se levantem de seus leitos,\n6a\ncom louvores do Senhor em sua boca *\n9b\nEis a glória para todos os seus santos.\nR.\nEvangelho - Lc 19,41-4\nAclamação ao Evangelho\nCf. Sl 94(95), 8ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nOxalá ouvísseis hoje a sua voz:\nNão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "19,41-44",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n19,41-44\nNaquele tempo,\n41\nquando Jesus se aproximou de Jerusalém\ne viu a cidade,\ncomeçou a chorar. E disse:\n42\n\"Se tu também compreendesses hoje\no que te pode trazer a paz!\nAgora, porém, isso está escondido aos teus olhos!\n43\nDias virão em que os inimigos\nfarão trincheiras contra ti\ne te cercarão de todos os lados.\n44\nEles esmagarão a ti e a teus filhos.\nE não deixarão em ti pedra sobre pedra.\nPorque tu não reconheceste o tempo\nem que foste visitada\".\nPalavra da Salvação."
+  }
+}

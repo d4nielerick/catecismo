@@ -1,0 +1,23 @@
+{
+  "data": "2025-04-08",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Nm 21,4-9</div><div> Sl 101(102),2-3.16-18.19-21 (R. 2</div><div></div><div> Jo 8,21-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "21,4-9",
+    "texto": "Naqueles dias,\n4\nos filhos de Israel partiram do monte Hor,\npelo caminho que leva ao mar Vermelho,\npara contornarem o país de Edom.\nDurante a viagem o povo começou a impacientar-se,\n5\ne se pôs a falar contra Deus e contra Moisés, dizendo:\n\"Por que nos fizestes sair do Egito\npara morrermos no deserto?\nNão há pão, falta água,\ne já estamos com nojo desse alimento miserável\".\n6\nEntão o Senhor mandou contra o povo\nserpentes venenosas,\nque os mordiam;\ne morreu muita gente em Israel.\n7\nO povo foi ter com Moisés e disse:\n\"Pecamos, falando contra o Senhor e contra ti.\nRoga ao Senhor que afaste de nós as serpentes\".\nMoisés intercedeu pelo povo,\n8\ne o Senhor respondeu:\n\"Faze uma serpente abrasadora\ne coloca-a como sinal sobre uma haste;\naquele que for mordido e olhar para ela viverá\".\n9\nMoisés fez, pois, uma serpente de bronze\ne colocou-a como sinal sobre uma haste.\nQuando alguém era mordido por uma serpente,\ne olhava para a serpente de bronze,\nficava curado.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 101(102),2-3.16-18.19-21 (R. 2)",
+    "refrao": "",
+    "texto": "R.\nOuvi, Senhor, e escutai minha oração\ne chegue até vós o meu clamor.\n2\nOuvi, Senhor, e escutai minha oração, *\ne chegue até vós o meu clamor!\n3\nDe mim não oculteis a vossa face *\nno dia em que estou angustiado!\nInclinai o vosso ouvido para mim, *\nao invocar-vos atendei-me sem demora!\nR.\n16\nAs nações respeitarão o vosso nome, *\ne os reis de toda a terra, a vossa glória;\n17\nquando o Senhor reconstruir Jerusalém *\ne aparecer com gloriosa majestade,\n18\nele ouvirá a oração dos oprimidos *\ne não desprezará a sua prece.\nR.\n19\nPara as futuras gerações se escreva isto, *\ne um povo novo a ser criado louve a Deus.\n20\nEle inclinou-se de seu templo nas alturas, *\ne o Senhor olhou a terra do alto céu,\n21\npara os gemidos dos cativos escutar *\ne da morte libertar os condenados.\nR.\nEvangelho - Jo 8,21-30\nAclamação ao Evangelho\nR.\nGlória a Cristo, palavra eterna do Pai, que é amor!\nV.\nSemente é de Deus a palavra,\nCristo é o semeador;\ntodo aquele que o encontra,\nvida eterna encontrou."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,21-30",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n8,21-30\nNaquele tempo, disse Jesus aos fariseus:\n21\n\"Eu parto e vós me procurareis,\nmas morrereis no vosso pecado.\nPara onde eu vou,\nvós não podeis ir\".\n22\nOs judeus comentavam:\n\"Por acaso, vai-se matar?\nPois ele diz:\n'Para onde eu vou,\nvós não podeis ir?' \"\n23\nJesus continuou:\n\"Vós sois daqui de baixo,\neu sou do alto.\nVós sois deste mundo,\neu não sou deste mundo.\n24\nDisse-vos que morrereis nos vossos pecados,\nporque, se não acreditais que eu sou,\nmorrereis nos vossos pecados\".\n25\nPerguntaram-lhe pois:\n\"Quem és tu, então?\"\nJesus respondeu:\n\"O que vos digo, desde o começo.\n26\nTenho muitas coisas a dizer a vosso respeito,\ne a julgar também.\nMas aquele que me enviou é fidedigno,\ne o que ouvi da parte dele\né o que falo para o mundo\".\n27\nEles não compreenderam\nque lhes estava falando do Pai.\n28\nPor isso, Jesus continuou:\n\"Quando tiverdes elevado o Filho do Homem,\nentão sabereis que eu sou,\ne que nada faço por mim mesmo,\nmas apenas falo aquilo que o Pai me ensinou.\n29\nAquele que me enviou está comigo.\nEle não me deixou sozinho,\nporque sempre faço o que é de seu agrado\".\n30\nEnquanto Jesus assim falava,\nmuitos acreditaram nele.\nPalavra da Salvação."
+  }
+}

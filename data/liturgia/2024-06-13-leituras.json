@@ -1,0 +1,23 @@
+{
+  "data": "2024-06-13",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 18,41-46</div><div> Sl 64(65),10abcd.10e-11.12-13 (R. 2a)</div><div></div><div> Mt 5,20-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "Elias orou e o céu deu a chuva (Tg 5,18).",
+    "texto": "Leitura do Primeiro Livro dos Reis\n18,41-46\nNaqueles dias,\n41\nElias disse a Acab:\n\"Sobe, come e bebe,\nporque já ouço o ruído de muita chuva\".\n42\nEnquanto Acab subia para comer e beber,\nElias subiu ao cume do Carmelo,\nprostrou-se por terra\ne pôs o rosto entre os joelhos.\n43\nE disse ao seu servo:\n\"Sobe e observa na direção do mar\".\nEle subiu, observou e disse:\n\"Não há nada\".\nElias disse-lhe de novo:\n\"Volta sete vezes\".\n44\nÀ sétima vez o servo disse:\n\"Eis que sobe do mar uma nuvem,\npequena como a mão de um homem\".\nEntão Elias disse-lhe:\n\"Vai dizer a Acab que prepare o carro e desça,\npara que a chuva não o detenha\".\n45\nNesse meio tempo,\no céu cobriu-se de nuvens escuras,\nsoprou o vento e a chuva caiu torrencialmente.\nAcab subiu para o seu carro e partiu para Jezrael.\n46\nA mão do Senhor esteve sobre Elias;\ne ele, cingindo os rins,\ncorreu adiante de Acab até a entrada de Jezrael.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 64(65),10abcd.10e-11.12-13 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor que o povo vos louve em Sião!\n10a\nVisitais a nossa terra com as chuvas, *\nb\ne transborda de fartura.\nc\nRios de Deus que vêm do céu derramam águas, *\nd\ne preparais o nosso trigo.\nR.\ne\nÉ assim que preparais a nossa terra: *\n11\nvós a regais e aplainais,\nos seus sulcos com a chuva amoleceis *\ne abençoais as sementeiras.\nR.\n12\nO ano todo coroais com vossos dons, †\nos vossos passos são fecundos; *\ntransborda a fartura onde passais.\n13\nBrotam pastos no deserto *\nas colinas se enfeitam de alegria.\nR.\nEvangelho - Mt 5,20-26\nAclamação ao Evangelho\nJo 13,34\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos dou novo preceito:\nque uns aos outros vos ameis,\ncomo eu vos tenho amado."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,20-26",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n5,20-26\nNaquele tempo, disse Jesus aos seus discípulos:\n20\n\"Se a vossa justiça não for maior\nque a justiça dos mestres da Lei e dos fariseus,\nvós não entrareis no Reino dos Céus.\n21\nVós ouvistes o que foi dito aos antigos:\n'Não matarás!\nQuem matar será condenado pelo tribunal'.\n22\nEu, porém, vos digo:\ntodo aquele que  se encoleriza com seu irmão\nserá réu em juízo;\nquem disser ao seu irmão: 'patife!'\nserá condenado pelo  tribunal;\nquem chamar o irmão de 'tolo'\nserá condenado ao fogo do inferno.\n23\nPortanto, quando tu estiveres levando\na tua oferta para o altar, e ali te lembrares\nque teu irmão tem alguma coisa contra ti,\n24\ndeixa a tua oferta ali diante do altar,\ne vai primeiro reconciliar-te com o teu irmão.\nSó então vai apresentar a tua oferta.\n25\nProcura reconciliar-te com teu adversário,\nenquanto caminha contigo para o tribunal.\nSenão o adversário te entregará ao juiz,\no juiz te entregará ao oficial de justiça,\ne tu serás jogado na prisão.\n26\nEm verdade eu te digo: dali não sairás,\nenquanto não pagares o último centavo\".\nPalavra da Salvação."
+  }
+}

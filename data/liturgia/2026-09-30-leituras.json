@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-30",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jó 9,1-12.14-16</div><div> Sl 87(88),10bc-11.12-13.14-15 (R. 3a)</div><div></div><div> Lc 9,57-62</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,1-12.14-16",
+    "texto": "1\nJó respondeu a seus amigos e disse:\n2\n\"Sei muito bem que é assim:\ncomo poderia o homem ser justo diante de Deus?\n3\nSe quisesse disputar com ele,\nentre mil razões não haverá uma para rebatê-lo.\n4\nEle é sábio de coração e poderoso em força;\nquem poderia enfrentá-lo e ficar ileso?\n5\nEle desloca as montanhas,\nsem que elas percebam\ne as derruba em sua cólera.\n6\nEle abala a terra em suas bases\ne suas colunas vacilam.\n7\nEle manda ao sol que não brilhe\ne guarda escondidas as estrelas.\n8\nSozinho desdobra os céus,\ne caminha sobre as ondas do mar.\n9\nCriou a Ursa e o Órion,\nas Plêiades e as constelações do Sul.\n10\nFaz prodígios insondáveis,\nmaravilhas sem conta.\n11\nSe passa junto de mim, não o vejo,\ne quando se afasta, não o percebo.\n12\nSe ele apanha uma presa, quem ousa impedi-lo?\nQuem pode dizer-lhe: - 'O que está fazendo?'\n14\nQuem sou eu para replicar-lhe,\ne contra ele escolher meus argumentos?\n15\nAinda que eu tivesse razão,\nnão poderia replicar,\ne deveria pedir misericórdia ao meu juiz.\n16\nSe eu clamasse e ele me respondesse,\nnão creio que daria atenção à minha voz\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 87,10bc-11. 12-13. 14-15 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nChegue a minha oração até a vossa presença!\n10b\nClamo a vós, ó Senhor sem cessar, todo o dia, *\nc\nminhas mãos para vós se levantam em prece.\n11\nPara os mortos, acaso, faríeis milagres? *\npoderiam as sombras erguer-se e louvar-vos?\nR.\n12\nNo sepulcro haverá quem vos cante o amor *\ne proclame entre os mortos a vossa verdade?\n13\nVossas obras serão conhecidas nas trevas, *\nvossa graça, no reino onde tudo se esquece?\nR.\n14\nQuanto a mim, ó Senhor, clamo a vós na aflição, *\nminha prece se eleva até vós desde a aurora.\n15\nPor que vós, ó Senhor, rejeitais a minh'alma? *\nE por que escondeis vossa face de mim?\nR.\nEvangelho - Lc 9,57-62\nAclamação ao Evangelho\nFl 3,8-9\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu tudo considero como perda e como lixo,\na fim de eu ganhar Cristo e ser achado nele!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,57-62",
+    "texto": "9,57-62\nNaquele tempo,\n57\nenquanto Jesus e seus discípulos caminhavam,\nalguém na estrada disse a Jesus:\n\"Eu te seguirei para onde quer que fores\".\n58\nJesus lhe respondeu:\n\"As raposas têm tocas\ne os pássaros têm ninhos;\nmas o Filho do Homem\nnão tem onde repousar a cabeça\".\n59\nJesus disse a outro:\n\"Segue-me\".\nEste respondeu:\n\"Deixa-me primeiro ir enterrar meu pai\".\n60\nJesus respondeu:\n\"Deixa que os mortos enterrem os seus mortos;\nmas tu, vai anunciar o Reino de Deus\".\n61\nUm outro ainda lhe disse:\n\"Eu te seguirei, Senhor,\nmas deixa-me primeiro\ndespedir-me dos meus familiares\".\n62\nJesus, porém, respondeu-lhe:\n\"Quem põe a mão no arado e olha para trás,\nnão está apto para o Reino de Deus\".\nPalavra da Salvação."
+  }
+}

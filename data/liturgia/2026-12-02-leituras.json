@@ -1,0 +1,23 @@
+{
+  "data": "2026-12-02",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 25,6-10a</div><div> Sl 22(23),1-3a.3b-4.5.6 (R. 6cd)</div><div></div><div> Mt 15,29-37</div></div>",
+  "primeira_leitura": {
+    "referencia": "25,6-10a",
+    "texto": "Naquele dia,\n6\no Senhor dos exércitos dará\nneste monte, para todos os povos,\num banquete de ricas iguarias,\nregado com vinho puro,\nservido de pratos deliciosos\ne dos mais finos vinhos.\n7\nEle removerá, neste monte,\na ponta da cadeia que ligava todos os povos,\na teia em que tinha envolvido todas as nações.\n8\nO Senhor Deus\neliminará para sempre a morte\ne enxugará as lágrimas de todas as faces\ne acabará com a desonra do seu povo em toda a terra;\no Senhor o disse.\n9\nNaquele dia, se dirá: \"Este é o nosso Deus,\nesperamos nele, até que nos salvou;\neste é o Senhor, nele temos confiado:\nvamos alegrar-nos e exultar por nos ter salvo\".\n10a\nE a mão do Senhor repousará sobre este monte.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 22(23),1-3a.3b-4.5.6 (R. 6cd)",
+    "refrao": "",
+    "texto": "R.\nNa casa do Senhor habitarei pelos tempos infinitos.\n1\nO Senhor é o pastor que me conduz; *\nnão me falta coisa alguma.\n2\nPelos prados e campinas verdejantes *\nele me leva a descansar.\n3a\nPara as águas repousantes me encaminha, *\ne restaura as minhas forças.\nR.\nb\nEle me guia no caminho mais seguro, *\n4\npela honra do seu nome.\nMesmo que eu passe pelo vale tenebroso, *\nnenhum mal eu temerei.\nEstais comigo com bastão e com cajado, *\neles me dão a segurança!\nR.\n5\nPreparais à minha frente uma mesa, *\nbem à vista do inimigo;\ncom óleo vós ungis minha cabeça, *\ne o meu cálice transborda.\nR.\n6\nFelicidade e todo bem hão de seguir-me, *\npor toda a minha vida;\ne, na casa do Senhor, habitarei *\npelos tempos infinitos.\nR.\nEvangelho - Mt 15,29-3\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEis que o Senhor há de vir\na fim de salvar o seu povo;\nFelizes são todos aqueles\nque estão prontos para ir-lhe ao encontro."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,29-37",
+    "texto": "15,29-37\nNaquele tempo,\n29\nJesus foi para as margens do mar da Galileia,\nsubiu a montanha, e sentou-se.\n30\nNumerosas multidões aproximaram-se dele,\nlevando consigo coxos, aleijados, cegos, mudos,\ne muitos outros doentes.\nEntão os colocaram aos pés de Jesus.\nE ele os curou.\n31\nO povo ficou admirado, quando viu os mudos falando,\nos aleijados sendo curados,\nos coxos andando e os cegos enxergando.\nE glorificaram o Deus de Israel.\n32\nJesus chamou seus discípulos e disse:\n\"Tenho compaixão da multidão,\nporque já faz três dias que está comigo,\ne nada tem para comer.\nNão quero mandá-los embora com fome,\npara que não desmaiem pelo caminho\".\n33\nOs discípulos disseram:\n\"Onde vamos buscar, neste deserto,\ntantos pães para saciar tão grande multidão?\"\n34\nJesus perguntou: \"Quantos pães tendes?\"\nEles responderam: \"Sete, e alguns peixinhos\".\n35\nE Jesus mandou que a multidão se sentasse pelo chão.\n36\nDepois pegou os sete pães e os peixes,\ndeu graças, partiu-os, e os dava aos discípulos,\ne os discípulos, às multidões.\n37\nTodos comeram, e ficaram satisfeitos;\ne encheram sete cestos com os pedaços que sobraram.\nPalavra da Salvação."
+  }
+}

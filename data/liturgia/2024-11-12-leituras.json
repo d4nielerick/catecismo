@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-12",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Tt 2,1-8.11-14</div><div> Sl 36(37),3-4.18-23.27 e 29 (R. 39a)</div><div></div><div> Lc 17,7-10</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-8.11-14",
+    "texto": "Caríssimo,\n1\no teu ensino seja conforme à sã doutrina.\n2\nOs mais velhos sejam sóbrios,\nponderados, prudentes,\nfortes na fé, na caridade, na paciência.\n3\nAssim também as mulheres idosas\nobservem uma conduta santa,\nnão sejam caluniadoras nem escravas do vinho,\nmas mestras do bem.\n4\nSaibam ensinar as jovens a amarem seus maridos,\na cuidarem dos filhos,\n5\na serem prudentes, castas, boas donas-de-casa,\ndóceis para os maridos, bondosas,\npara que a palavra de Deus não seja difamada.\n6\nExorta igualmente os jovens a serem moderados\n7\ne mostra-te em tudo exemplo de boas obras,\nde integridade na doutrina, de ponderação,\n8\nde palavra sã e irrepreensível,\npara que os adversários se confundam,\nnão tendo nada de mal para dizer de nós.\n11\nPois a graça de Deus se manifestou\ntrazendo salvação para todos os homens.\n12\nEla nos ensina a abandonar a impiedade\ne as paixões mundanas\ne a viver neste mundo\ncom equilíbrio, justiça e piedade,\n13\naguardando a feliz esperança\ne a manifestação da glória\ndo nosso grande Deus e Salvador, Jesus Cristo.\n14\nEle se entregou por nós,\npara nos resgatar de toda a maldade\ne purificar para si um povo que lhe pertença\ne que se dedique a praticar o bem.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 36(37),3-4.18-23.27 e 29 (R. 39a)",
+    "refrao": "",
+    "texto": "R.\nA salvação de quem é justo, vem de Deus!\n3\nConfia no Senhor e faze o bem, *\ne sobre a terra habitarás em segurança.\n4\nColoca no Senhor tua alegria, *\ne ele dará o que pedir teu coração.\nR.\n18\nO Senhor cuida da vida dos honestos, *\ne sua herança permanece eternamente.\n23\nÉ o Senhor quem firma os passos dos mortais *\ne dirige o caminhar dos que lhe agradam.\nR.\n27\nAfasta-te do mal e faze o bem, *\ne terás tua morada para sempre.\n29\nmas os justos herdarão a nova terra *\ne nela habitarão eternamente.\nR.\nEvangelho - Lc 17,7-10\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama, realmente, guardará minha palavra,\ne meu Pai o amará e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "17,7-10",
+    "texto": "17,7-10\nNaquele tempo, disse Jesus:\n7\n\"Se algum de vós tem um empregado\nque trabalha a terra ou cuida dos animais,\npor acaso vai dizer-lhe, quando ele volta do campo:\n'Vem depressa para a mesa?'\n8\nPelo contrário, não vai dizer ao empregado:\n'Prepara-me o jantar, cinge-te e serve-me,\nenquanto eu como e bebo;\ndepois disso tu poderás comer e beber?'\n9\nSerá que vai agradecer ao empregado,\nporque fez o que lhe havia mandado?\n10\nAssim também vós:\nquando tiverdes feito tudo o que vos mandaram,\ndizei: 'Somos servos inúteis;\nfizemos o que devíamos fazer' \".\nPalavra da Salvação."
+  }
+}

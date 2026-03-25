@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-06",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 14,7-12</div><div> Sl 26(27),1.4.13-14 (R. 13)</div><div></div><div> Lc 15,1-10</div></div>",
+  "primeira_leitura": {
+    "referencia": "14,7-12",
+    "texto": "Irmãos,\n7\nninguém dentre nós vive para si mesmo\no\nu morre para si mesmo.\n8\nSe estamos vivos, é para o Senhor que vivemos;\nse morremos, é para o Senhor que morremos.\nPortanto, vivos ou mortos, pertencemos ao Senhor.\n9\nCristo morreu e ressuscitou exatamente para isto,\npara ser o Senhor dos mortos e dos vivos.\n10\nE tu, por que julgas o teu irmão?\nOu, mesmo, por que desprezas o teu irmão?\nPois é diante do tribunal de Deus\nque todos compareceremos.\n11\nCom efeito, está escrito:\n\"Por minha vida, diz o Senhor,\ntodo joelho se dobrará diante de mim\ne toda língua glorificará a Deus\".\n12\nAssim, cada um de nós\nprestará contas de si mesmo a Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 26(27),1.4.13-14 (R. 13)",
+    "refrao": "",
+    "texto": "R.\nSei que a bondade do Senhor eu hei de ver,\nna terra dos viventes.\n1\nO Senhor é minha luz e salvação; *\nde quem eu terei medo?\nO Senhor é a proteção da minha vida; *\nperante quem eu tremerei?\nR.\n4\nAo Senhor eu peço apenas uma coisa, *\ne é só isto que eu desejo:\nhabitar no santuário do Senhor *\npor toda a minha vida;\nsaborear a suavidade do Senhor *\ne contemplá-lo no seu templo.\nR.\n13\nSei que a bondade do Senhor eu hei de ver *\nna terra dos viventes.\n14\nEspera no Senhor e tem coragem, *\nespera no Senhor!\nR.\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados,\ne descanso eu vos darei, diz o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,1-10",
+    "texto": "15,1-10\nNaquele tempo,\n1\nos publicanos e pecadores\naproximavam-se de Jesus para o escutar.\n2\nOs fariseus, porém,\ne os mestres da Lei criticavam Jesus.\n\"Este homem acolhe os pecadores\ne faz refeição com eles\".\n3\nEntão Jesus contou-lhes esta parábola:\n4\n\"Se um de vós tem cem ovelhas e perde uma,\nnão deixa as noventa e nove no deserto,\ne vai atrás daquela que se perdeu,\naté encontrá-la?\n5\nQuando a encontra,\ncoloca-a nos ombros com alegria,\n6\ne, chegando a casa,\nreúne os amigos e vizinhos,\ne diz:\n'Alegrai-vos comigo!\nEncontrei a minha ovelha que estava perdida!'\n7\nEu vos digo:\nAssim haverá no céu mais alegria\npor um só pecador que se converte,\ndo que por noventa e nove justos\nque não precisam de conversão.\n8\nE se uma mulher tem dez moedas de prata\ne perde uma,\nnão acende uma lâmpada,\nvarre a casa e a procura cuidadosamente, até encontrá-la?\n9\nQuando a encontra,\nreúne as amigas e vizinhas, e diz:\n'Alegrai-vos comigo!\nEncontrei a moeda que tinha perdido!'\n10\nPor isso, eu vos digo,\nhaverá alegria entre os anjos de Deus\npor um só pecador que se converte\".\nPalavra da Salvação."
+  }
+}

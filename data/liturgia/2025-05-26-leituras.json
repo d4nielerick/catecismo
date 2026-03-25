@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-26",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 16,11-15</div><div> Sl 149,1-2.3-4.5-6a e 9b (R. 4a)</div><div></div><div> Jo 15,26-16,4a</div></div>",
+  "primeira_leitura": {
+    "referencia": "16,11-15",
+    "texto": "11\nEmbarcamos em Trôade\ne navegamos diretamente para a ilha de Samotrácia.\nNo dia seguinte, ancoramos em Neápolis,\n12\nde onde passamos para Filipos,\nque é uma das principais cidades da Macedônia,\ne que tem direitos de colônia romana.\nPassamos alguns dias nessa cidade.\n13\nNo sábado, saímos além da porta da cidade\npara um lugar junto ao rio,\nonde nos parecia haver oração.\nSentados, começamos a falar com as mulheres\nque estavam aí reunidas.\n14\nUma delas chamava-se Lídia;\nera comerciante de púrpura, da cidade de Tiatira.\nLídia acreditava em Deus e escutava com atenção.\nO Senhor abriu o seu coração\npara que aceitasse as palavras de Paulo.\n15\nApós ter sido batizada,\nassim como toda a sua família,\nela convidou-nos:\n\"Se vós me considerais uma fiel do Senhor,\npermanecei em minha casa\".\nE forçou-nos a aceitar.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 149,1-2.3-4.5.6a e 9b (R. 4a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor ama seu povo de verdade.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nCantai ao Senhor Deus um canto novo, *\ne o seu louvor na assembleia dos fiéis!\n2\nAlegre-se Israel em Quem o fez, *\ne Sião se rejubile no seu Rei!\nR.\n3\nCom danças glorifiquem o seu nome, *\ntoquem harpa e tambor em sua honra!\n4\nPorque, de fato, o Senhor ama seu povo *\ne coroa com vitória os seus humildes.\nR.\n5\nExultem os fiéis por sua glória, *\ne cantando se levantem de seus leitos,\n6a\ncom louvores do Senhor em sua boca. *\n9b\nEis a glória para todos os seus santos.\nR.\nAclamação ao Evangelho\nJo 15,26b.27a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito Santo, a verdade,\ndará testemunho de mim;\ndepois, também vós, neste mundo,\nde mim ireis testemunhar."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,26-16,4a",
+    "texto": "15,26-16,4a\nNaquele tempo, disse Jesus aos seus discípulos:\n26\n\"Quando vier o Defensor\nque eu vos mandarei da parte do Pai,\no Espírito da Verdade, que procede do Pai,\nele dará testemunho de mim.\n27\nE vós também dareis testemunho,\nporque estais comigo desde o começo.\n16,1\nEu vos disse estas coisas\npara que a vossa fé não seja abalada.\n2\nExpulsar-vos-ão das sinagogas,\ne virá a hora em que aquele que vos matar\njulgará estar prestando culto a Deus.\n3\nAgirão assim, porque não conheceram o Pai,\nnem a mim.\n4a\nEu vos digo isto,\npara que vos lembreis de que eu o disse,\nquando chegar a hora\".\nPalavra da Salvação."
+  }
+}

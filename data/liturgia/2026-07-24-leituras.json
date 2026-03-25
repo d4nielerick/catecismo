@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-24",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 3,14-17</div><div> Jr 31,10.11-12ab.13 (R. cf. 10d)</div><div></div><div> Mt 13,18-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,14-17",
+    "texto": "14\n\"Convertei-vos, filhos,\nque vos tendes afastado de mim, diz o Senhor,\npois eu sou vosso Senhor;\nvou tomar-vos, um de uma cidade\ne dois de uma família,\ne vos reconduzirei a Sião;\n15\neu vos darei pastores segundo o meu coração,\nque vos apascentarão\ncom clarividência e sabedoria.\n16\nQuando vos tiverdes multiplicado\ne crescerdes na terra,\nnaqueles dias, diz o Senhor,\nnão se falará mais da 'arca da aliança do Senhor';\nela não virá à memória de ninguém,\nnão se lembrarão dela,\nnão a procurarão nem fabricarão outra.\n17\nNaquele tempo,\nchamarão Jerusalém Trono do Senhor,\nem torno dela se reunirão, em nome do Senhor,\ntodos os povos;\neles não se deixarão mais levar\npelas inclinações de um coração mau\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Jr 31,10.11-12ab.13 (R. cf. 10d)",
+    "refrao": "",
+    "texto": "R.\nO Senhor nos guardará qual pastor a seu rebanho.\n10\nOuvi, nações, a palavra do Senhor *\ne anunciai-a nas ilhas mais distantes:\n\"Quem dispersou Israel, vai congregá-lo, *\ne o guardará qual pastor  a seu rebanho!\"\nR.\n11\nPois, na verdade, o Senhor remiu Jacó *\ne o libertou do poder do prepotente.\n12a\nVoltarão para o monte de Sião, †\nentre brados e cantos de alegria *\nb\nafluirão para as bênçãos do Senhor:\nR.\n13\nEntão a virgem dançará alegremente, *\ntambém o jovem e o velho exultarão;\nmudarei em alegria o seu luto, *\nserei consolo e conforto após a guerra.\nR.\nAclamação ao Evangelho\ncf. Lc 8,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os que observam a palavra do Senhor,\nde reto coração\ne que produzem muitos frutos,\naté o fim perseverantes!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,18-23",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n13,18-23\nNaquele tempo, disse Jesus aos seus discípulos:\n18\n\"Ouvi a parábola do semeador:\n19\nTodo aquele que ouve a palavra do Reino\ne não a compreende,\nvem o Maligno e rouba o que foi semeado em seu coração.\nEste é o que foi semeado à beira do caminho.\n20\nA semente que caiu em terreno pedregoso\né aquele que ouve a palavra\ne logo a recebe com alegria;\n21\nmas ele não tem raiz em si mesmo,\né de momento:\nquando chega o sofrimento ou a perseguição,\npor causa da palavra, ele desiste logo.\n22\nA semente que caiu no meio dos espinhos\né aquele que ouve a palavra,\nmas as preocupações do mundo\ne a ilusão da riqueza\nsufocam a palavra, e ele não dá fruto.\n23\nA semente que caiu em boa terra\né aquele que ouve a palavra e a compreende.\nEsse produz fruto.\nUm dá cem, outro sessenta e outro trinta\".\nPalavra da Salvação."
+  }
+}

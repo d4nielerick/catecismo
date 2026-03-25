@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-22",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Pd 5,1-4</div><div> Sl 22(23),1-3a.3b-4.5.6 (R. 1)</div><div></div><div> Mt 16,13-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-4",
+    "texto": "Caríssimos,\n1\nexorto aos presbíteros que estão entre vós,\neu, presbítero como eles,\ntestemunha dos sofrimentos de Cristo\ne participante da glória que será revelada:\n2\nSede pastores do rebanho de Deus, confiado a vós;\ncuidai dele, não por coação, mas de coração generoso;\nnão por torpe ganância, mas livremente;\n3\nnão como dominadores daqueles que vos foram confiados,\nmas antes, como modelos do rebanho.\n4\nAssim, quando aparecer o pastor supremo,\nrecebereis a coroa permanente da glória.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 22(23),1-3a.3b-4.5.6 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é o pastor que me conduz,\nnão me falta coisa alguma.\n1\nO Senhor é o pastor que me conduz;*\nnão me falta coisa alguma.\n2\nPelos prados e campinas verdejantes*\nele me leva a descansar.\nPara as águas repousantes me encaminha,*\n3a\ne restaura as minhas forças.\nR.\n3b\nEle me guia no caminho mais seguro, *\npela honra do seu nome.\n4\nMesmo que eu passe pelo vale tenebroso, *\nnenhum mal eu temerei.\nEstais comigo com bastão e com cajado, *\neles me dão a segurança!\nR.\n5\nPreparais à minha frente uma mesa, *\nbem à vista do inimigo;\ncom óleo vós ungis minha cabeça, *\ne o meu cálice transborda.\nR.\n6\nFelicidade e todo bem hão de seguir-me, *\npor toda a minha vida;\ne, na casa do Senhor, habitarei *\npelos tempos infinitos.\nR.\nEvangelho - Mt 16,13-1\nAclamação ao Evangelho\nMt 16,18\nNa Quaresma, em vez do\nAleluia,\no refrão pode ser:\nR.\nLouvor e glória a ti, Senhor, Cristo, Palavra de Deus!\nR.\nAleluia, Aleluia, Aleluia.\nV.\nTu és Pedro, e sobre esta pedra,\neu irei construir minha Igreja,\ne as portas do inferno não irão derrotá-la"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,13-19",
+    "texto": "16,13-19\nNaquele tempo,\n13\nJesus foi à região de Cesareia de Filipe\ne ali perguntou aos seus discípulos:\n\"Quem dizem os homens ser o Filho do Homem?\"\n14\nEles responderam:\n\"Alguns dizem que é João Batista; outros que é Elias;\nOutros ainda, que é Jeremias ou algum dos profetas\".\n15\nEntão Jesus lhes perguntou:\n\"E vós, quem dizeis que eu sou?\"\n16\nSimão Pedro respondeu:\n\"Tu és o Messias, o Filho do Deus vivo\".\n17\nRespondendo, Jesus lhe disse:\n\"Feliz és tu, Simão, filho de Jonas,\nporque não foi um ser humano que te revelou isso,\nmas o meu Pai que está no céu.\n18\nPor isso eu te digo que tu és Pedro,\ne sobre esta pedra construirei a minha Igreja,\ne o poder do inferno nunca poderá vencê-la.\n19\nEu te darei as chaves do Reino dos Céus:\ntudo o que tu ligares na terra será ligado nos céus;\ntudo o que tu desligares na terra\nserá desligado nos céus\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-14",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 1,16-25</div><div> Sl 18(19A),2-3.4-5 (R. 2a)</div><div></div><div> Lc 11,37-41</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,16-25",
+    "texto": "Irmãos:\n16\nEu não me envergonho do Evangelho,\npois ele é uma força salvadora de Deus\npara todo aquele que crê,\nprimeiro para o judeu,\nmas também para o grego.\n17\nNele, com efeito, a justiça de Deus se revela\nda fé para a fé, como está escrito:\nO justo viverá pela fé.\n18\nPor outro lado,\na ira de Deus se revela, do alto do céu,\ncontra toda a impiedade e iniquidade dos homens\nque em sua iniquidade oprimem a verdade.\n19\nPois o que de Deus se pode conhecer\né manifesto aos homens:\nDeus mesmo lho manifestou.\n20\nSuas perfeições invisíveis,\ncomo o seu poder eterno e sua natureza divina,\nsão claramente conhecidas através de suas obras,\ndesde a criação do mundo.\nAssim, eles não têm desculpa\n21\npor não ter dado glória\ne ação de graças a Deus como se deve,\nembora o tenham conhecido.\nPelo contrário,\nefetuaram-se em suas especulações,\ne seu coração insensato se obscureceu:\n22\nalardeando sabedoria,\ntornaram-se ignorantes\n23\ne trocaram a glória do Deus incorruptível\npor uma figura ou imagem de seres corruptíveis:\nhomens, pássaros, quadrúpedes, répteis.\n24\nPor isso, Deus os entregou\ncom as paixões de seus corações a tal impureza,\nque eles mesmos desonram seus próprios corpos.\n25\nTrocaram a verdade de Deus pela mentira,\nadorando e servindo a criatura em lugar do Criador,\nque é bendito para sempre. — Amém.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 18(19A),2-3.4-5 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nOs céus proclamam a glória do Senhor!\n2\nOs céus proclamam a glória do Senhor, *\ne o firmamento, a obra de suas mãos;\n3\no dia ao dia transmite esta mensagem, *\na noite à noite publica esta notícia.\nR.\n4\nNão são discursos nem frases ou palavras, *\nnem são vozes que possam ser ouvidas;\n5\nseu som ressoa e se espalha em toda a terra, *\nchega aos confins do universo a sua voz.\nR.\nEvangelho - Lc 11,37-4\nAclamação ao Evangelho\nHb 4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor é viva e eficaz:\nela julga os pensamentos e as intenções do coração"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,37-41",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,37-41\nNaquele tempo:\n37\nEnquanto Jesus falava,\num fariseu convidou-o para jantar com ele.\nJesus entrou e pôs-se à mesa.\n38\nO fariseu ficou admirado\nao ver que Jesus não tivesse lavado as mãos\nantes da refeição.\n39\nO Senhor disse ao fariseu:\n\"Vós fariseus, limpais o copo e o  prato por fora,\nmas o vosso interior está cheio de roubos e maldades.\n40\nInsensatos!\nAquele que fez o exterior\nnão fez também o interior?\n41\nAntes, dai esmola do que vós possuís\ne tudo ficará puro para vós\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Mq 6,1-4.6-8</div><div> Sl 49(50),5-6.8-9.16bc-17.21 e 23 (R. 23b)</div><div></div><div> Mt 12,38-42</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,1-4.6-8",
+    "texto": "1\nOuvi o que diz o Senhor:\n\"Levanta-te,\nconvoca um julgamento perante os montes\ne faze que as colinas ouçam tua voz\".\n2\nOuvi, montes, as razões do Senhor em juízo,\nescutai-o, fundamentos da terra;\na pendência do Senhor é com seu povo,\nele disputa em juízo contra Israel.\n3\n\"Povo meu, que é que te fiz?\nEm que te fui penoso?\nResponde-me.\n4\nEu te retirei da terra do Egito\ne te libertei da casa de servidão,\ne pus à tua frente Moisés, Aarão e Maria\".\n6\n\"Que oferta farei ao Senhor, digna dele,\nao ajoelhar-me diante do Deus altíssimo?\nAcaso oferecerei holocaustos\ne novilhos de um ano?\n7\nAcaso agradam ao Senhor carneiros aos milhares,\ne torrentes de óleo?\nPorventura ofertaria eu o meu primogênito,\npor um crime meu,\no fruto do meu sangue pelos pecados da minha vida?\"\n8\nFoi-te revelado, ó homem, o que é o bem,\ne o que o Senhor exige de ti:\nprincipalmente praticar a justiça\ne amar a misericórdia,\ne caminhar solícito com teu Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 49(50),5-6.8-9.16bc-17.21 e 23 (R. 23b)",
+    "refrao": "",
+    "texto": "R.\nA todo homem que procede retamente,\neu mostrarei a salvação que vem de Deus.\n5\n\"Reuni à minha frente os meus eleitos, *\nque selaram a Aliança em sacrifícios!\"\n6\nTestemunha o próprio céu seu julgamento, *\nporque Deus mesmo é juiz e vai julgar.\nR.\n8\nEu não venho censurar teus sacrifícios, *\npois sempre estão perante mim teus holocaustos;\n9\nnão preciso dos novilhos de tua casa *\nnem dos carneiros que estão nos teus rebanhos.\nR.\n16b\n\"Como ousas repetir os meus preceitos *\nc\ne trazer minha Aliança em tua boca?\n17\nTu que odiaste minhas leis e meus conselhos *\ne deste as costas às palavras dos meus lábios!\nR.\n21\nDiante disso que fizeste, eu calarei? *\nAcaso pensas que eu sou igual a ti?\nÉ disso que te acuso e repreendo *\ne manifesto essas coisas aos teus olhos.\nR.\n23\nQuem me oferece um sacrifício de louvor, *\neste sim é que me honra de verdade.\nA todo homem que procede retamente, *\neu mostrarei a salvação que vem de Deus\".\nR.\nAclamação ao Evangelho\ncf. Sl 94(95),8ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nOxalá ouvísseis hoje a sua voz:\nNão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,38-42",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n12,38-42\nNaquele tempo,\n38\nalguns mestres da Lei e fariseus disseram a Jesus:\n\"Mestre, queremos ver um sinal realizado por ti\".\n39\nJesus respondeu-lhes:\n\"Uma geração má e adúltera busca um sinal,\nmas nenhum sinal lhe será dado,\na não ser o sinal do profeta Jonas.\n40\nCom efeito, assim como Jonas\nesteve três dias e três noites no ventre da baleia,\nassim também o Filho do Homem\nestará três dias e três noites no seio da terra.\n41\nNo dia do juízo, os habitantes de Nínive\nse levantarão contra essa geração e a condenarão,\nporque se converteram diante da pregação de Jonas.\nE aqui está quem é maior do que Jonas.\n42\nNo dia do juízo,\na rainha do Sul se levantará contra essa geração,\ne a condenará, porque veio dos confins da terra\npara ouvir a sabedoria de Salomão,\ne aqui está quem é maior do que Salomão\".\nPalavra da Salvação."
+  }
+}

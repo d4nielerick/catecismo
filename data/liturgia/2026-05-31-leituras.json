@@ -1,0 +1,23 @@
+{
+  "data": "2026-05-31",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 34,4b-6.8-9</div><div> Dn 3,52.53.54.55.56 (R. 52b)</div><div> 2Cor 13,11-13</div><div> Jo 3,16-18</div></div>",
+  "primeira_leitura": {
+    "referencia": "34,4b-6.8-9",
+    "texto": "Naqueles dias:\n4b\nMoisés levantou-se, quando ainda fazia noite,\ne subiu ao monte Sinai,\ncomo o Senhor lhe havia mandado,\nlevando consigo as duas tábuas de pedra.\n5\nO Senhor desceu na nuvem e permaneceu com Moisés,\ne este invocou o nome do Senhor.\n6\nEnquanto o Senhor passava diante dele\nMoisés gritou:\n\"Senhor, Senhor! Deus misericordioso e clemente,\npaciente, rico em bondade e fiel\".\n8\nImediatamente, Moisés curvou-se até o chão\n9\ne, prostrado por terra, disse:\n\"Senhor, se é verdade que gozo de teu favor,\npeço-te, caminha conosco;\nembora este seja um povo de cabeça dura,\nperdoa nossas culpas e nossos pecados\ne acolhe-nos como propriedade tua\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Dn 3,52.53.54.55.56 (R. 52b)",
+    "refrao": "",
+    "texto": "R.\nA vós louvor, honra e glória eternamente!\n52\nSede bendito, Senhor Deus de nossos pais.\nR.\nSede bendito, nome santo e glorioso.\nR.\n53\nNo templo santo onde refulge a vossa glória.\nR.\n54\nE em vosso trono de poder vitorioso.\nR.\n55\nSede bendito, que sondais as profundezas.\nR.\ne superior aos querubins vos assentais.\nR.\n56\nSede bendito no celeste firmamento.\nR.\n2ª Leitura - 2Cor 13,\nSEGUNDA LEITURA\nA graça de Jesus Cristo, o amor de Deus e a comunhão do Espírito Santo.\nLeitura da Segunda Carta de São Paulo aos Coríntios\n13,11-13\n11\nIrmãos:\nAlegrai-vos,\ntrabalhai no vosso aperfeiçoamento,\nencorajai-vos, cultivai a concórdia, vivei em paz,\ne o Deus do amor e da paz estará convosco.\n12\nSaudai-vos uns aos outros com o beijo santo.\nTodos os santos vos saúdam.\n13\nA graça do Senhor Jesus Cristo,\no amor de Deus\ne a comunhão do Espírito Santo estejam com todos vós.\nPalavra do Senhor.\nAclamação ao Evangelho\ncf. Ap 1,8\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGlória ao Pai e ao Filho e ao Espírito Divino,\nao Deus que é, que era e que vem,\npelos séculos. Amém!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,16-18",
+    "texto": "3,16-18\n16\nDeus amou tanto o mundo,\nque deu o seu Filho unigênito,\npara que não morra todo o que nele crer,\nmas tenha a vida eterna.\n17\nDe fato, Deus não enviou o seu Filho ao mundo\npara condenar o mundo,\nmas para que o mundo seja salvo por ele.\n18\nQuem nele crê, não é condenado,\nmas quem não crê, já está condenado,\nporque não acreditou no nome do Filho unigênito.\nPalavra da Salvação."
+  }
+}

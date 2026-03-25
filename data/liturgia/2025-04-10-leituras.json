@@ -1,0 +1,23 @@
+{
+  "data": "2025-04-10",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 17,3-9</div><div> Sl 104(105),4-5.6-7.8-9 (R. 8a)</div><div></div><div> Jo 8,51-59</div></div>",
+  "primeira_leitura": {
+    "referencia": "17,3-9",
+    "texto": "Naqueles dias,\n3\nAbrão prostrou-se com o rosto por terra.\n4\nE Deus lhe disse:\n\"Eis a minha aliança contigo:\ntu serás pai de uma multidão de nações.\n5\nJá não te chamarás Abrão,\nmas o teu nome será Abraão,\nporque farei de ti o pai de uma multidão de nações.\n6\nFarei crescer tua descendência infinitamente.\nFarei nascer de ti nações,\ne reis sairão de ti.\n7\nEstabelecerei minha aliança entre mim e ti\ne teus descendentes para sempre;\numa aliança eterna,\npara que eu seja teu Deus\ne o Deus de teus descendentes.\n8\nA ti e aos teus descendentes\ndarei a terra em que vives como estrangeiro,\ntodo o país de Canaã como propriedade para sempre.\nE eu serei o Deus dos teus descendentes\".\n9\nDeus disse a Abraão:\n\"Guarda a minha aliança,\ntu e a tua descendência para sempre\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 104(105),4-5.6-7.8-9 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor se lembra sempre da Aliança!\n4\nProcurai o Senhor Deus e seu poder, *\nbuscai constantemente a sua face!\n5\nLembrai as maravilhas que ele fez, *\nseus prodígios e as palavras de seus lábios!\nR.\n6\nDescendentes de Abraão, seu servidor, *\ne filhos de Jacó, seu escolhido,\n7\nele mesmo, o Senhor, é nosso Deus, *\nvigoram suas leis em toda a terra.\nR.\n8\nEle sempre se recorda da Aliança, *\npromulgada a incontáveis gerações;\n9\nda Aliança que ele fez com Abraão, *\ne do seu santo juramento a Isaac.\nR.\nEvangelho - Jo 8,51-59\nAclamação ao Evangelho\nCf. Sl 94(95),8ab\nR.\nGlória a Cristo, Palavra eterna do Pai, que é amor!\nV.\nOxalá ouvísseis hoje a sua voz.\nNão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,51-59",
+    "texto": "8,51-59\nNaquele tempo, disse Jesus aos judeus:\n51\n\"Em verdade, em verdade, eu vos digo:\nse alguém guardar a minha palavra,\njamais verá a morte\".\n52\nDisseram então os judeus:\n\"Agora sabemos que tens um demônio.\nAbraão morreu e os profetas também,\ne tu dizes:\n'Se alguém guardar a minha palavra\njamais verá a morte'.\n53\nAcaso és maior do que nosso pai Abraão,\nque morreu, como também os profetas?\nQuem pretendes tu ser?\".\n54\nJesus respondeu:\n\"Se me glorifico a mim mesmo,\nminha glória não vale nada.\nQuem me glorifica é o meu Pai,\naquele que vós dizeis ser o vosso Deus.\n55\nNo entanto, não o conheceis.\nMas eu o conheço\ne, se dissesse que não o conheço,\nseria um mentiroso, como vós!\nMas eu o conheço e guardo a sua palavra.\n56\nVosso pai Abraão exultou,\npor ver o meu dia;\nele o viu, e alegrou-se\".\n57\nOs judeus disseram-lhe então:\n\"Nem sequer cinquenta anos tens ,\ne viste Abraão!?\"\n58\nJesus respondeu:\n\"Em verdade, em verdade vos digo,\nantes que Abraão existisse,\neu sou\".\n59\nEntão eles pegaram em pedras para apedrejar Jesus,\nmas ele escondeu-se e saiu do Templo.\nPalavra da Salvação."
+  }
+}

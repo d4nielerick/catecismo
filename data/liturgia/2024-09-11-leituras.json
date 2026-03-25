@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 7,25-31</div><div> Sl 44(45),11-12.14-15.16-17 (R. 11a)</div><div></div><div> Lc 6,20-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "7,25-31",
+    "texto": "Irmãos,\n25\na respeito das pessoas solteiras,\nnão tenho nenhum mandamento do Senhor.\nMas, como alguém que, por misericórdia de Deus,\nmerece confiança, dou uma opinião:\n26\nPenso que, em razão das angústias presentes,\né vantajoso não se casar,\né bom cada qual estar assim.\n27\nEstás ligado a uma mulher?\nNão procures desligar-te.\nNão estás ligado a nenhuma mulher?\nNão procures ligar-te.\n28\nSe, porém, casares, não pecas.\nE, se a virgem se casar, não peca.\nMas as pessoas casadas terão as tribulações\nda vida matrimonial;\ne eu gostaria de poupar-vos isso.\n29\nEu digo, irmãos,\no tempo está abreviado.\nEntão, que, doravante, os que têm mulher\nvivam como se não tivessem mulher;\n30\ne os que choram,\ncomo se não chorassem,\ne os que estão alegres,\ncomo se não estivessem alegres,\ne os que fazem compras,\ncomo se não possuíssem coisa alguma;\n31\ne os que usam do mundo,\ncomo se dele não estivessem gozando.\nPois a figura deste mundo passa.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 44(45),11-12.14-15.16-17 (R.11a)",
+    "refrao": "",
+    "texto": "R.\nEscutai, minha filha, olhai, ouvi isto!\n11\nEscutai, minha filha, olhai, ouvi isto: *\n\"Esquecei vosso povo e a casa paterna!\n12\nQue o Rei se encante com vossa beleza! *\nPrestai-lhe homenagem: é vosso Senhor!\nR.\n14\nMajestosa, a princesa real vem chegando, *\nvestida de ricos brocados de ouro.\n15\nEm vestes vistosas ao Rei se dirige, *\ne as virgens amigas lhe formam cortejo.\nR.\n16\nentre cantos de festa e com grande alegria, *\ningressam, então, no palácio real\".\n17\nDeixareis vossos pais, mas tereis muitos filhos; *\nfareis deles os reis soberanos da terra.\nR.\nEvangelho - Lc 6,20-26\nAclamação ao Evangelho\nLc 6,23ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMeus discípulos, alegrai-vos,\nexultai de alegria,\npois grande é a recompensa\nque nos céus tereis um dia!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,20-26",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n6,20-26\nNaquele tempo,\n20\nJesus levantando os olhos para os seus discípulos, disse:\n\"Bem-aventurados vós, os pobres,\nporque vosso é o Reino de Deus!\n21\nBem-aventurados, vós que agora tendes fome,\nporque sereis saciados!\nBem-aventurados vós, que agora chorais,\nporque havereis de rir!\n22\nBem-aventurados sereis,\nquando os homens vos odiarem,\nvos expulsarem, vos insultarem\ne amaldiçoarem o vosso nome,\npor causa do Filho do Homem!\n23\nAlegrai-vos, nesse dia, e exultai\npois será grande a vossa recompensa no céu;\nporque era assim\nque os antepassados deles tratavam os profetas.\n24\nMas, ai de vós, ricos,\nporque já tendes vossa consolação!\n25\nAi de vós, que agora tendes fartura,\nporque passareis fome!\nAi de vós, que agora rides,\nporque tereis luto e lágrimas!\n26\nAi de vós quando todos vos elogiam!\nEra assim que os antepassados deles\ntratavam os falsos profetas\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2026-12-31",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 2,18-21</div><div> Sl 95(96),1-2.11-12.13 (R. 11a)</div><div></div><div> Jo 1,1-18</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,18-21",
+    "texto": "18\nFilhinhos, esta é a última hora.\nOuvistes dizer que o Anticristo virá.\nCom efeito, muitos anticristos já apareceram.\nPor isso, sabemos que chegou a última hora.\n19\nEles saíram do nosso meio,\nmas não eram dos nossos,\npois se fossem realmente dos nossos,\nteriam permanecido conosco.\nMas era necessário ficar claro\nque nem todos são dos nossos.\n20\nVós já recebestes a unção do Santo,\ne todos tendes conhecimento.\n21\nSe eu vos escrevi,\nnão é porque ignorais a verdade,\nmas porque a conheceis,\ne porque nenhuma mentira provém da verdade.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),1-2.11-12.13 (R. 11a)",
+    "refrao": "",
+    "texto": "R.\nO céu se rejubile e exulte a terra!\n1\nCantai ao Senhor Deus um canto novo,*\ncantai ao Senhor Deus, ó terra inteira!\n2\nCantai e bendizei seu santo nome!*\nDia após dia anunciai sua salvação.\nR.\n11\nO céu se rejubile e exulte a terra, *\naplauda o mar com o que vive em suas águas;\n12\nos campos com seus frutos rejubilem *\ne exultem as florestas e as matas\nR.\n13\nna presença do Senhor, pois ele vem, *\nporque vem para julgar a terra inteira.\nGovernará o mundo todo com justiça, *\ne os povos julgará com lealdade.\nR.\nEvangelho - Jo 1,1-18\nAclamação ao Evangelho\nJo 1,14a.12a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra se fez carne, entre nós ela habitou;\ne todos os que a acolheram, de Deus filhos se tornaram."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,1-18",
+    "texto": "1,1-18\n1\nNo princípio era a Palavra,\ne a Palavra estava com Deus;\ne a Palavra era Deus.\n2\nNo princípio estava ela com Deus.\n3\nTudo foi feito por ela\ne sem ela nada se fez de tudo que foi feito.\n4\nNela estava a vida,\ne a vida era a luz dos homens.\n5\nE a luz brilha nas trevas,\ne as trevas não conseguiram dominá-la.\n6\nSurgiu um homem enviado por Deus;\nSeu nome era João.\n7\nEle veio como testemunha,\npara dar testemunho da luz,\npara que todos chegassem à fé por meio dele.\n8\nEle não era a luz,\nmas veio para dar testemunho da luz:\n9\ndaquele que era a luz de verdade,\nque, vindo ao mundo,\nilumina todo ser humano.\n10\nA Palavra estava no mundo\n- e o mundo foi feito por meio dela -\nmas o mundo não quis conhecê-la.\n11\nVeio para o que era seu,\ne os seus não a acolheram.\n12\nMas, a todos que a receberam,\ndeu-lhes capacidade de se tornarem filhos de Deus\nisto é, aos que acreditam em seu nome,\n13\npois estes não nasceram do sangue\nnem da vontade da carne\nnem da vontade do varão,\nmas de Deus mesmo.\n14\nE a Palavra se fez carne\ne habitou entre nós.\nE nós contemplamos a sua glória,\nglória que recebe do Pai como filho unigênito,\ncheio de graça e de verdade.\n15\nDele, João dá testemunho, clamando:\n\"Este é aquele de quem eu disse:\n'O que vem depois de mim\npassou à minha frente,\nporque ele existia antes de mim' \".\n16\nDe sua plenitude\ntodos nós recebemos graça por graça.\n17\nPois por meio de Moisés foi dada a Lei,\nmas a graça e a verdade\nnos chegaram através de Jesus Cristo.\n18\nA Deus, ninguém jamais viu.\nMas o Unigênito de Deus,\nque está na intimidade do Pai,\nele no-lo deu a conhecer.\nPalavra da Salvação."
+  }
+}

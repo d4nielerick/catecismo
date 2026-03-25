@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-02",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 2,1-5</div><div> Sl 118(119),97.98.99.100.101.102 (R. 97a)</div><div></div><div> Lc 4,16-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-5",
+    "texto": "1\nIrm\nãos, quando fui à vossa cidade\nanunciar-vos o mistério de Deus,\nn\não recorri a uma linguagem elevada\nou ao prestígio da sabedoria humana.\n2\nPois, entre vós, n\não julguei saber coisa alguma,\na n\não ser Jesus Cristo,\ne este, crucificado.\n3\nAliás, eu estive junto de vós,\ncom fraqueza e receio, e muito tremor.\n4\nTambém a minha palavra e a minha pregação\nnão tinham nada dos discursos persuasivos da sabedoria,\nmas eram uma demonstraç\não do poder do Espírito,\n5\npara que a vossa fé se baseasse no poder de Deus\ne não na sabedoria dos homens.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),97.98.99.100.101.102 (R. 97a)",
+    "refrao": "",
+    "texto": "R.\nQuanto eu amo, ó Senhor, a vossa lei!\n97\nQuanto eu amo, ó Senhor, a vossa lei! *\nPermaneço o dia inteiro a meditá-la.\nR.\n98\nVossa lei me faz mais sábio que os rivais, *\nporque ela me acompanha eternamente.\nR.\n99\nFiquei mais sábio do que todos os meus mestres, *\nporque medito sem cessar vossa Aliança.\nR.\n100\nSou mais prudente que os próprios anciãos, *\nporque cumpro, ó Senhor, vossos preceitos.\nR.\n101\nDe todo mau caminho afasto os passos, *\npara que eu siga fielmente as vossas ordens.\nR.\n102\nDe vossos julgamentos não me afasto, *\nporque vós mesmo me ensinastes vossas leis.\nR.\nEvangelho - Lc 4,16-30\nAclamação ao Evangelho\nLc 4,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor repousa sobre mim;\ne enviou-me a anunciar aos pobres o Evangelho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "",
+    "texto": "Nenhum profeta é bem recebido em sua pátria.\nProclamação do Evangelho de Jesus Cristo segundo Lucas\n4,16-30\nNaquele tempo,\n16\nveio Jesus à cidade de Nazaré,\nonde se tinha criado.\nConforme seu costume,\nentrou na sinagoga no sábado,\ne levantou-se para fazer a leitura.\n17\nDeram-lhe o livro do profeta Isaías.\nAbrindo o livro,\nJesus achou a passagem em que está escrito:\n18\n\"O Espírito do Senhor está sobre mim,\nporque ele me consagrou com a unção\npara anunciar a Boa-Nova aos pobres;\nenviou-me para proclamar a libertação aos cativos\ne aos cegos a recuperação da vista;\npara libertar os oprimidos\n19\ne para proclamar um ano da graça do Senhor\".\n20\nDepois fechou o livro,\nentregou-o ao ajudante, e sentou-se.\nTodos os que estavam na sinagoga\ntinham os olhos fixos nele.\n21\nEntão começou a dizer-lhes:\n\"Hoje se cumpriu esta passagem da Escritura\nque acabastes de ouvir\".\n22\nTodos davam testemunho a seu respeito,\nadmirados com as palavras cheias de encanto\nque saíam da sua boca.\nE diziam:\n\"Não é este o filho de José?\"\n23\nJesus, porém, disse:\n\"Sem dúvida, vós me repetireis o provérbio:\nMédico, cura-te a ti mesmo.\nFaze também aqui, em tua terra,\ntudo o que ouvimos dizer que fizeste em Cafarnaum\".\n24\nE acrescentou:\n\"Em verdade eu vos digo que nenhum profeta\né bem recebido em sua pátria.\n25\nDe fato, eu vos digo:\nno tempo do profeta Elias,\nquando não choveu durante três anos e seis meses\ne houve grande fome em toda a região,\nhavia muitas viúvas em Israel.\n26\nNo entanto, a nenhuma delas foi enviado Elias,\nsenão a uma viúva que vivia em Sarepta, na Sidônia.\n27\nE no tempo do profeta Eliseu,\nhavia muitos leprosos em Israel.\nContudo, nenhum deles foi curado,\nmas sim Naamã, o sírio\".\n28\nQuando ouviram estas palavras de Jesus,\ntodos na sinagoga ficaram furiosos.\n29\nLevantaram-se e o expulsaram da cidade.\nLevaram-no até ao alto do monte\nsobre o qual a cidade estava construída,\ncom a intenção de lançá-lo no precipício.\n30\nJesus, porém, passando pelo meio deles,\ncontinuou o seu caminho.\nPalavra da Salvação."
+  }
+}

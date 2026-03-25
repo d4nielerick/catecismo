@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ecl 11,9-12,8</div><div> Sl 89(90),3-4.5-6.12-13.14 e 17 (R. 1)</div><div></div><div> Lc 9,43b-45</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,9-12,8",
+    "texto": "9\nAlegra-te, jovem, na tua adolescência,\ne que o teu coração repouse no bem\nnos dias da tua juventude;\nsegue as aspirações do teu coração\ne os desejos dos teus olhos;\nfica sabendo, porém,\nque de tudo isso Deus te pedirá contas.\n10\nTira a tristeza do teu coração,\ne afasta a malícia do teu corpo,\npois a adolescência e a juventude são vaidade.\n12,1\nLembra-te do teu Criador nos dias da juventude,\nantes que venham os dias da desgraça\ne cheguem os anos dos quais dirás:\n\"Não sinto prazer neles\";\n2\n- antes que se obscureçam o sol, a luz,\na lua e as estrelas,\ne voltem as nuvens depois da chuva;\n3\nquando os guardas da casa começarem a tremer,\ne se curvarem os homens robustos;\nquando as poucas mulheres cessarem de moer,\ne ficarem turvas as vistas\ndas que olham pelas janelas\n4\ne se fecharem as portas que dão para a rua;\nquando enfraquecer o ruído do moinho,\ne os homens se levantarem ao canto dos pássaros,\ne silenciarem as vozes das canções,\n5\ne houver medo das alturas\ne sobressaltos no caminho,\nenquanto a amendoeira floresce,\no gafanhoto se arrasta\ne a alcaparra perde o seu gosto,\nporque o homem se encaminha para a morada eterna,\ne os que choram já rondam pelas ruas;\n6\n- antes que se rompa o cordão de prata\ne se despedace a taça de ouro,\na jarra se parta na fonte,\na roldana se arrebente no poço,\n7\n- antes que volte o pó à terra, de onde veio,\ne o sopro de vida volte a Deus que o concedeu.\n8\nVaidade das vaidades, diz o Eclesiastes,\ntudo é vaidade.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 89(90),3-4.5-6.12-13.14 e 17 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, vós fostes sempre um refúgio para nós.\n3\nVós fazeis voltar ao pó todo mortal,*\nquando dizeis: \"Voltai ao pó, filhos de Adão!\"\n4\nPois mil anos para vós são como ontem,*\nqual vigília de uma noite que passou.\nR.\n5\nEles passam como o sono da manhã,*\n6\nsão iguais à erva verde pelos campos:\nDe manhã ela floresce vicejante,*\nmas à tarde é cortada e logo seca.\nR.\n12\nEnsinai-nos a contar os nossos dias,*\ne dai ao nosso coração sabedoria!\n13\nSenhor, voltai-vos! Até quando tardareis?*\nTende piedade e compaixão de vossos servos!\nR.\n14\nSaciai-nos de manhã com vosso amor,*\ne exultaremos de alegria todo o dia!\n17\nQue a bondade do Senhor e nosso Deus\n†\nrepouse sobre nós e nos conduza!*\nTornai fecundo, ó Senhor, nosso trabalho.\nR.\nEvangelho - Lc 9,43b-4\nAclamação ao Evangelho\ncf. 2Tm 1,10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus Cristo salvador destruiu o mal e a morte;\nfez brilhar pelo Evangelho, a luz e a vida imperecíveis."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,43b-45",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n9,43b-45\nNaquele tempo,\n43b\ntodos estavam admirados\ncom todas as coisas que Jesus fazia.\nEntão Jesus disse a seus discípulos:\n44\n\"Prestai bem atenção às palavras que vou dizer:\nO Filho do Homem vai ser entregue nas mãos dos homens\".\n45\nMas os discípulos não compreendiam o que Jesus dizia.\nO sentido lhes ficava escondido,\nde modo que não podiam entender;\ne eles tinham medo de fazer perguntas sobre o assunto.\nPalavra da Salvação."
+  }
+}

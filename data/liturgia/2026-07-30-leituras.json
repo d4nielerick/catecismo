@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-30",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 18,1-6</div><div> Sl 145(146),1-2.3-4.5-6 (R. 5a)</div><div></div><div> Mt 13,47-53</div></div>",
+  "primeira_leitura": {
+    "referencia": "18,1-6",
+    "texto": "1\nPalavra dirigida a Jeremias, da parte do Senhor:\n2\n\"Levanta-te e vai à casa do oleiro,\ne ali te farei ouvir minhas palavras\".\n3\nFui à casa do oleiro,\ne eis que ele estava trabalhando ao torno;\n4\nquando o vaso que moldava com barro\nse avariava em suas mãos,\nei-lo de novo a fazer com esse material um outro vaso,\nconforme melhor lhe parecesse aos olhos.\n5\nFez-se em mim a palavra do Senhor:\n6\n\"Acaso não posso fazer convosco como este oleiro,\ncasa de Israel? diz o Senhor.\nComo é o barro na mão do oleiro,\nassim sois vós em minha mão, casa de Israel\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 145(146),1-2.3-4.5-6 (R. 5a)",
+    "refrao": "",
+    "texto": "R.\nFeliz quem se apoia no Deus de Jacó!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nBendize, minh'alma, ao Senhor! †\n2\nBendirei ao Senhor toda a vida, *\ncantarei ao meu Deus sem cessar!\nR.\n3\nNão ponhais vossa fé nos que mandam, *\nnão há homem que possa salvar.\n4\nAo faltar-lhe o respiro ele volta †\npara a terra de onde saiu; *\nnesse dia seus planos perecem.\nR.\n5\nÉ feliz todo homem que busca †\nseu auxílio no Deus de Jacó, *\ne que põe no Senhor a esperança.\n6\nO Senhor fez o céu e a terra, *\nfez o mar e o que neles existe.\nR.\nEvangelho - Mt 13,47-5\nAclamação ao Evangelho\ncf. At 16,14b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAbre-nos, ó Senhor, o coração,\npara ouvirmos a palavra de Jesus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,47-53",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n13,47-53\nNaquele tempo, disse Jesus à multidão:\n47\n\"O Reino dos Céus é ainda\ncomo uma rede lançada ao mar\ne que apanha peixes de todo tipo.\n48\nQuando está cheia,\nos pescadores puxam a rede para a praia,\nsentam-se e recolhem os peixes bons em cestos\ne jogam fora os que não prestam.\n49\nAssim acontecerá no fim dos tempos:\nos anjos virão para separar\nos homens maus dos que são justos,\n50\ne lançarão os maus na fornalha de fogo.\nE ai, haverá choro e ranger de dentes.\n51\nCompreendestes tudo isso?\"\nEles responderam:\n\"Sim\".\n52\nEntão Jesus acrescentou:\n\"Assim, pois, todo mestre da Lei,\nque se torna discípulo do Reino dos Céus,\né como um pai de família\nque tira do seu tesouro coisas novas e velhas\".\n53\nQuando Jesus terminou de contar essas parábolas,\npartiu dali.\nPalavra da Salvação."
+  }
+}

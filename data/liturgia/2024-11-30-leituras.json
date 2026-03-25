@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-30",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 10,9-18</div><div> Sl 18(19A),2-3.4-5 (R. 5a)</div><div></div><div> Mt 4,18-22</div></div>",
+  "primeira_leitura": {
+    "referencia": "10,9-18",
+    "texto": "Irmãos,\n9\nse, com tua boca, confessares Jesus como Senhor\ne, no teu coração,\ncreres que Deus o ressuscitou dos mortos,\nserás salvo.\n10\nÉ crendo no coração que se alcança a justiça\ne é confessando a fé com a boca\nque se consegue a salvação.\n11\nPois a Escritura diz:\n\"Todo aquele que nele crer não ficará confundido\".\n12\nPortanto,\nnão importa a diferença\nentre judeu e grego;\ntodos têm o mesmo Senhor,\nque é generoso para com todos os que o invocam.\n13\nDe fato, todo aquele que invocar o Nome do Senhor\nserá salvo.\n14\nMas, como invocá-lo, sem antes crer nele?\nE como crer, sem antes ter ouvido falar dele?\nE como ouvir, sem alguém que pregue?\n15\nE como pregar, sem ser enviado para isso?\nAssim é que está escrito:\n\"Quão belos são os pés dos que anunciam o bem\".\n16\nMas nem todos obedeceram à Boa-nova.\nPois Isaías diz:\n\"Senhor, quem acreditou em nossa pregação?\"\n17\nLogo, a fé vem da pregação\ne a pregação se faz pela palavra de Cristo.\n18\nEntão, eu pergunto:\nSerá que eles não ouviram?\nCertamente que ouviram,\npois \"a voz deles se espalhou por toda a terra,\ne as suas palavras chegaram aos confins do mundo\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 18(19A),2-3.4-5 (R. 5a)",
+    "refrao": "",
+    "texto": "R.\nSeu som ressoa e se espalha em toda terra.\n2\nOs céus proclamam a glória do Senhor, *\ne o firmamento, a obra de suas mãos;\n3\no dia ao dia transmite esta mensagem, *\na noite à noite publica esta notícia.\nR.\n4\nNão são discursos nem frases ou palavras, *\nnem são vozes que possam ser ouvidas;\n5\nseu som ressoa e se espalha em toda a terra, *\nchega aos confins do universo a sua voz.\nR.\nEvangelho - Mt 4,18-22\nAclamação ao Evangelho\nMt 4,19\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde após mim, disse o Senhor,\ne eu ensinarei a pescar gente."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "4,18-22",
+    "texto": "4,18-22\nNaquele tempo,\n18\nquando Jesus andava à beira do mar da Galileia,\nviu dois irmãos:\nSimão, chamado Pedro, e seu irmão André.\nEstavam lançando a rede ao mar,\npois eram pescadores.\n19\nJesus disse a eles:\n\"Segui-me,\ne eu farei de vós pescadores de homens\".\n20\nEles, imediatamente deixaram as redes\ne o seguiram.\n21\nCaminhando um pouco mais,\nJesus viu outros dois irmãos:\nTiago, filho de Zebedeu, e seu irmão João.\nEstavam na barca com seu pai Zebedeu\nconsertando as redes.\nJesus os chamou.\n22\nEles, imediatamente deixaram a barca e o pai,\ne o seguiram.\nPalavra da Salvação."
+  }
+}

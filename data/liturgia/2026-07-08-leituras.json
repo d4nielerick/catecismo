@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Os 10,1-3.7-8.12</div><div> Sl 104(105),2-3.4-5.6-7 (R. 4b)</div><div></div><div> Mt 10,1-7</div></div>",
+  "primeira_leitura": {
+    "referencia": "10,1-3.7-8.12",
+    "texto": "1\nIsrael era uma vinha exuberante\ne dava frutos para seu consumo;\nna medida de sua produção,\nerguia os numerosos altares;\nna medida da fertilidade da terra,\nembelezava seus ídolos.\n2\nCom o coração dividido,\ndeve agora receber castigo;\no Senhor mesmo derrubará seus altares,\ndestruirá os seus simulacros.\n3\nDecerto, dirão agora:\n\"Não temos rei;\nnão temos medo do Senhor.\nQue poderia o rei fazer por nós?\"\n7\nSamaria está liquidada,\nseu rei vai flutuando como palha em cima da água.\n8\nSerá desmantelada a idolatria dos lugares altos,\npecado de Israel;\nali crescerão espinhos e abrolhos\nsobre seus altares;\nentão se dirá aos montes: \"Cobri-nos!\"\ne às colinas: \"Caí sobre nós!\"\n12\nSemeai justiça entre vós,\ne colhereis amor;\ndesbravai uma roça nova.\nÉ tempo de procurar o Senhor,\naté que ele venha e derrame a justiça em vós.'\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 104(105),2-3.4-5.6-7 (R. 4b)",
+    "refrao": "",
+    "texto": "R.\nBuscai constantemente a face do Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n2\nCantai, entoai salmos para ele, *\npublicai todas as suas maravilhas!\n3\nGloriai-vos em seu nome que é santo, *\nexulte o coração que busca a Deus!\nR.\n4\nProcurai o Senhor Deus e seu poder, *\nbuscai constantemente a sua face!\n5\nLembrai as maravilhas que ele fez, *\nseus prodígios e as palavras de seus lábios!\nR.\n6\nDescendentes de Abraão, seu servidor, *\ne filhos de Jacó, seu escolhido,\n7\nele mesmo, o Senhor, é nosso Deus, *\nvigoram suas leis em toda a terra.\nR.\nEvangelho - Mt 10,1-7\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois, o reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,1-7",
+    "texto": "10,1-7\nNaquele tempo,\n1\nJesus chamou os doze discípulos\ne deu-lhes poder para expulsarem os espíritos maus\ne para curarem todo tipo de doença e enfermidade.\n2\nEstes são os nomes dos doze apóstolos:\nprimeiro, Simão chamado Pedro, e André, seu irmão;\nTiago, filho de Zebedeu, e seu irmão João;\n3\nFilipe e Bartolomeu;\nTomé e Mateus, o cobrador de impostos;\nTiago, filho de Alfeu, e Tadeu;\n4\nSimão, o Zelota, e Judas Iscariotes,\nque foi o traidor de Jesus.\n5\nJesus enviou estes Doze,\ncom as seguintes recomendações:\n\"Não deveis ir aonde moram os pagãos,\nnem entrar nas cidades dos samaritanos!\n6\nIde, antes, às ovelhas perdidas da casa de Israel!\n7\nEm vosso caminho, anunciai:\n'O Reino dos Céus está próximo'\".\nPalavra da Salvação."
+  }
+}

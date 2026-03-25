@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Sm 24,3-21</div><div> Sl 56(57),2.3.-4.6 e 11 (R. 2a)</div><div></div><div> Mc 3,13-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "24,3-21",
+    "texto": "Naqueles dias,\n3\nSaul tomou consigo três mil homens\nescolhidos em todo o Israel\ne saiu em busca de Davi e de seus homens,\naté aos rochedos das cabras monteses.\n4\nE chegou aos currais de ovelhas\nque encontrou no caminho.\nHavia ali uma gruta,\nonde Saul entrou para satisfazer suas necessidades.\nDavi e seus homens achavam-se no fundo da gruta,\n5\ne os homens de Davi disseram-lhe:\n\"Este certamente é o dia do qual o Senhor te falou:\n'Eu te entregarei o teu inimigo,\npara que faças dele o que quiseres'\".\nEntão Davi aproximou-se de mansinho\ne cortou a ponta do manto de Saul.\n6\nMas logo o seu coração se encheu de remorsos\npor ter feito aquilo,\n7\ne disse aos seus homens:\n\"Que o Senhor me livre de fazer uma coisa dessas\nao ungido do Senhor,\nlevantando a minha mão contra ele, o ungido do Senhor\".\n8\nCom essas palavras, Davi conteve os seus homens,\ne não permitiu que se lançassem sobre Saul.\nEste deixou a gruta e seguiu seu caminho.\n9\nDavi levantou-se a seguir, saiu da gruta\ne gritou atrás dele:\n\"Senhor, meu rei!\"\nSaul voltou-se e Davi inclinou-se até o chão e prostrou-se.\n10\nE disse a Saul:\n\"Por que dás ouvidos às palavras dos que te dizem\nque Davi procura fazer-te mal?\n11\nViste hoje com teus próprios olhos\nque o Senhor te entregou em minhas mãos, na gruta.\nRenunciando a matar-te,\npoupei-te a vida, porque pensei:\nNão levantarei a mão contra o meu senhor,\npois ele é o ungido do Senhor,\n12\ne meu pai.\nPresta atenção, e vê em minha mão a ponta do teu manto.\nSe eu cortei este pedaço do teu manto e não te matei,\nreconhece que não há maldade nem crime em mim,\nque não pequei contra ti.\nTu, porém, andas procurando tirar-me a vida.\n13\nQue o Senhor seja nosso juiz\ne que ele me vingue de ti.\nMas eu nunca levantarei a minha mão contra ti.\n14\n'Dos ímpios sairá a impiedade', diz o antigo provérbio;\npor isso, a minha mão não te tocará.\n15\nA quem persegues tu, ó rei de Israel?\nA quem persegues? Um cão morto! E uma pulga!\n16\nPois bem! O senhor seja juiz e julgue entre mim e ti.\nQue ele examine e defenda a minha causa,\ne me livre das tuas mãos\".\n17\nQuando Davi terminou de falar, Saul lhe disse:\n\"É esta a tua voz, ó meu filho Davi?\"\nE começou a clamar e a chorar\n18\nDepois disse a Davi:\n\"Tu és mais justo do que eu,\nporque me tens feito bem e eu só te tenho feito mal.\n19\nHoje me revelaste a tua bondade para comigo,\npois o Senhor me entregou em tuas mãos\ne não me mataste.\n20\nQual é o homem que, encontrando o seu inimigo,\no deixa ir embora tranquilamente?\nQue o Senhor te recompense pelo bem que hoje me fizeste.\n21\nAgora, eu sei com certeza que tu serás rei,\ne que terás em tua mão o reino de Israel\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 56(57),2.3-4.6 e 11 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nPiedade, Senhor, tende piedade.\n2\nPiedade, Senhor, piedade, *\npois em vós se abriga a minh'alma!\nDe vossas asas, à sombra, me achego, *\naté que passe a tormenta, Senhor!\nR.\n3\nLanço um grito ao Senhor Deus Altíssimo, *\na este Deus que me dá todo o bem.\n4\nQue me envie do céu sua ajuda †\ne confunda os meus opressores! *\nDeus me envie sua graça e verdade!\nR.\n6\nElevai-vos, ó Deus, sobre os céus, *\nvossa glória refulja na terra!\n11\nVosso amor é mais alto que os céus, *\nmais que as nuvens a vossa verdade!\nR.\nEvangelho - Mc 3,13-19\nAclamação ao Evangelho\n2Cor 5,19\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEm Cristo, Deus reconciliou consigo mesmo a humanidade;\ne a nós ele entregou esta reconciliação."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,13-19",
+    "texto": "3,13-19\nNaquele tempo,\n13\nJesus subiu ao monte e chamou os que ele quis.\nE foram até ele.\n14\nEntão Jesus designou Doze,\npara que ficassem com ele\ne para enviá-los a pregar,\n15\ncom autoridade para expulsar os demônios.\n16\nDesignou, pois, os Doze:\nSimão, a quem deu o nome de Pedro;\n17\nTiago e João, filhos de Zebedeu,\naos quais deu o nome de Boanerges,\nque quer dizer \"filhos do trovão\";\n18\nAndré, Filipe, Bartolomeu, Mateus, Tomé,\nTiago, filho de Alfeu, Tadeu, Simão, o cananeu,\n19\ne Judas Iscariotes, aquele que depois o traiu.\nPalavra da Salvação."
+  }
+}

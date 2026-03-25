@@ -1,0 +1,23 @@
+{
+  "data": "2024-12-20",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 7,10-14</div><div> Sl 23(24),1-2.3-4ab.5-6 (R. 7c.10b)</div><div></div><div> Lc 1,26-38</div></div>",
+  "primeira_leitura": {
+    "referencia": "7,10-14",
+    "texto": "Naqueles dias,\n10\no Senhor falou com Acaz, dizendo:\n11\n\"Pede ao Senhor teu Deus que te faça ver um sinal,\nquer provenha da profundeza da terra,\nquer venha das alturas do céu\".\n12\nMas Acaz respondeu:\n\"Não pedirei nem tentarei o Senhor\".\n13\nDisse o profeta:\n\"Ouvi então, vós, casa de Davi;\nserá que achais pouco incomodar os homens\ne passais a incomodar até o meu Deus?\n14\nPois bem, o próprio Senhor vos dará um sinal.\nEis que uma virgem conceberá e dará à luz um filho,\ne lhe porá o nome de Emanuel\".\nPalavra do Senhor"
+  },
+  "salmo": {
+    "referencia": "Sl 23(24),1-2.3-4ab.5-6 (R. 7c.10b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor vai entrar, é o Rei glorioso!\n1\nAo Senhor pertence a terra e o que ela encerra, *\no mundo inteiro com os seres que o povoam;\n2\nporque ele a tornou firme sobre os mares, *\ne sobre as águas a mantém inabalável.\nR.\n3\n\"Quem subirá até o monte do Senhor, *\nquem ficará em sua santa habitação?\"\n4a\n\"Quem tem mãos puras e inocente coração, *\nb\nquem não dirige sua  mente para o crime\nR.\n5\nSobre este desce a bênção do Senhor *\ne a recompensa de seu Deus e Salvador\".\n6\n\"É assim a geração dos que o procuram, *\ne do Deus de Israel buscam a face\".\nR.\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nÓ chave de Davi,\nque abre as portas do reino eterno:\noh, vinde e livrai do cárcere o preso,\nsentado nas trevas!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,26-38",
+    "texto": "1,26-38\n26\nNo sexto mês, o anjo Gabriel foi enviado por Deus\na uma cidade da Galileia, chamada Nazaré,\n27\na uma virgem, prometida em casamento\na um homem chamado José.\nEle era descendente de Davi\ne o nome da Virgem era Maria.\n28\nO anjo entrou onde ela estava e disse:\n\"Alegra-te, cheia de graça, o Senhor está contigo!\"\n29\nMaria ficou perturbada com estas palavras\ne começou a pensar qual seria o significado da saudação.\n30\nO anjo, então, disse-lhe:\n\"Não tenhas medo, Maria,\nporque encontraste graça diante de Deus.\n31\nEis que conceberás e darás à luz um filho,\na quem porás o nome de Jesus.\n32\nEle será grande,\nserá chamado Filho do Altíssimo,\ne o Senhor Deus lhe dará o trono de seu pai Davi.\n33\nEle reinará para sempre\nsobre os descendentes de Jacó,\ne o seu reino não terá fim\".\n34\nMaria perguntou ao anjo:\n\"Como acontecerá isso,\nse eu não conheço homem algum?\"\n35\nO anjo respondeu:\n\"O Espírito virá sobre ti,\ne o poder do Altíssimo te cobrirá com sua sombra.\nPor isso, o menino que vai nascer\nserá chamado Santo, Filho de Deus.\n36\nTambém Isabel, tua parenta, concebeu um filho na velhice.\nEste já é o sexto mês daquela que era considerada estéril,\n37\nporque para Deus nada é impossível\".\n38\nMaria, então, disse:\n\"Eis aqui a serva do Senhor;\nfaça-se em mim segundo a tua palavra!\"\nE o anjo retirou-se.\nPalavra da Salvação."
+  }
+}

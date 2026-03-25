@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-07",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 4,11-18</div><div> Sl 71(72),1-2.10-11.12-13 (R. cf. 11)</div><div></div><div> Mc 6,45-52</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,11-18",
+    "texto": "11\nCaríssimos, se Deus nos amou assim,\nnós também devemos amar-nos uns aos outros.\n12\nNinguém jamais viu a Deus.\nSe nos amamos uns aos outros,\nDeus permanece conosco\ne seu amor é plenamente realizado entre nós.\n13\nA prova de que permanecemos com ele,\ne ele conosco,\né que ele nos deu o seu Espírito.\n14\nE nós vimos, e damos testemunho,\nque o Pai enviou o seu Filho\ncomo Salvador do mundo.\nTodo aquele que proclama\n15\nque Jesus é o Filho de Deus,\nDeus permanece com ele,\ne ele com Deus.\n16\nE nós conhecemos o amor que Deus tem para conosco,\ne acreditamos nele.\nDeus é amor:\nquem permanece no amor,\npermanece com Deus,\ne Deus permanece com ele.\n17\nNisto se realiza plenamente o seu amor para conosco:\nem nós termos plena confiança no dia do julgamento,\nporque, tal como Jesus, nós somos neste mundo.\n18\nNo amor não há temor.\nAo contrário, o perfeito amor lança fora o temor,\npois o temor implica castigo,\ne aquele que teme não chegou à perfeição do amor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 71(72),1-2. 10-11. 12-13 (R. Cf. 11)",
+    "refrao": "",
+    "texto": "R.\nAs nações de toda a terra, hão de adorar-vos, ó Senhor!\n1\nDai ao Rei vossos poderes, Senhor Deus, *\nvossa justiça ao descendente da realeza!\n2\nCom justiça ele governe o vosso povo, *\ncom equidade ele julgue os vossos pobres.\nR.\n10\nOs reis de Társis e das ilhas hão de vir *\ne oferecer-lhes seus presentes e seus dons;\ne também os reis de Seba e de Sabá *\nhão de trazer-lhe oferendas e tributos.\n11\nOs reis de toda a terra hão de adorá-lo, *\ne todas as nações hão de servi-lo.\nR.\n12\nLibertará o indigente que suplica, *\ne o pobre ao qual ninguém quer ajudar.\n13\nTerá pena do indigente e do infeliz, *\ne a vida dos humildes salvará.\nR.\nEvangelho - Mc 6,45-52\nAclamação ao Evangelho\nCf.\n1Tm 3,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nLouvai o Senhor Jesus, todos os povos,\naceito pela fé no mundo inteiro!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,45-52",
+    "texto": "6,45-52\nDepois de saciar os cinco mil homens,\n45\nJesus obrigou os discípulos a entrarem na barca\ne irem na frente para Betsaida, na outra margem,\nenquanto ele despedia a multidão.\n46\nLogo depois de se despedir deles,\nsubiu ao monte para rezar.\n47\nAo anoitecer, a barca estava no meio do mar\ne Jesus sozinho em terra.\n48\nEle viu os discípulos cansados de remar,\nporque o vento era contrário.\nEntão, pelas três da madrugada,\nJesus foi até eles andando sobre as águas,\ne queria passar na frente deles.\n49\nQuando os discípulos o viram andando sobre o mar,\npensaram que era um fantasma\ne começaram a gritar.\n50\nCom efeito, todos o tinham visto\ne ficaram assustados.\nMas Jesus logo falou:\n\"Coragem, sou eu! Não tenhais medo!\"\n51\nEntão subiu com eles na barca.\nE o vento cessou.\nMas os discípulos ficaram ainda mais espantados,\n52\nporque não tinham compreendido nada\na respeito dos pães.\nO coração deles estava endurecido.\nPalavra da Salvação."
+  }
+}

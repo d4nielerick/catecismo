@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-24",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 4,7-16</div><div> Sl 121(122),1-2.3-4a.4b-5 (R. cf. 1)</div><div></div><div> Lc 13,1-9</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,7-16",
+    "texto": "Irmãos,\n7\ncada um de nós recebeu a graça\nna medida em que Cristo lha deu.\n8\nDaí esta palavra:\n\"Tendo subido às alturas,\nele capturou prisioneiros,\ne distribuiu dons aos homens\".\n9\n\"Ele subiu\"!\nQue significa isso,\nsenão que ele desceu também\nàs profundezas da terra?\n10\nAquele que desceu é o mesmo que subiu\nmais alto do que todos os céus,\na fim de encher o universo.\n11\nE foi ele quem instituiu alguns como apóstolos,\noutros como profetas,\noutros ainda como evangelistas,\noutros, enfim, como pastores e mestres.\n12\nAssim, ele capacitou os santos para o ministério,\npara edificar o corpo de Cristo,\n13\naté que cheguemos todos juntos à unidade da fé\ne do conhecimento do Filho de Deus,\nao estado do homem perfeito\ne à estatura de Cristo em sua plenitude.\n14\nAssim, não seremos mais crianças\nao sabor das ondas,\narrastados por todo vento de doutrina,\nludibriados pelos homens\ne induzidos por sua astúcia ao erro.\n15\nMotivados pelo amor\nqueremos ater-nos à verdade\ne crescer em tudo até atingirmos aquele\nque é a Cabeça, Cristo.\n16\nGraças a ele,\no corpo, coordenado e bem unido,\npor meio de todas as articulações que o servem,\nrealiza o seu crescimento,\nsegundo uma atividade à medida de cada membro,\npara a sua edificação no amor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 121(122),1-2.3-4a.4b-5 (R. cf. 1)",
+    "refrao": "",
+    "texto": "R.\nQue alegria, quando ouvi que me disseram:\n\"Vamos à casa Senhor!\"\n1\nQue alegria, quando ouvi que me disseram:*\n\"Vamos à casa do Senhor!\"\n2\nE agora nossos pés já se detêm,*\nJerusalém, em tuas portas.\nR.\n3\nJerusalém, cidade bem edificada *\nnum conjunto harmonioso;\n4a\npara lá sobem as tribos de Israel,*\nas tribos do Senhor.\nR.\nb\nPara louvar, segundo a lei de Israel,*\no nome do Senhor.\n5\nA sede da justiça lá está *\ne o trono de Davi.\nR.\nEvangelho - Lc 13,1-9\nAclamação ao Evangelho\nEz 33,11\nR.\nAleluia, Aleluia, Aleluia.\nV.\nNão quero a morte do pecador, diz o Senhor,\nmas que ele volte, se converta e tenha vida"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,1-9",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n13,1-9\n1\nNaquele tempo, vieram algumas pessoas\ntrazendo notícias a Jesus\na respeito dos galileus\nque Pilatos tinha matado,\nmisturando seu sangue\ncom o dos sacrifícios que ofereciam.\n2\nJesus lhes respondeu:\n\"Vós pensais que esses galileus eram mais pecadores\ndo que todos os outros galileus,\npor terem sofrido tal coisa?\n3\nEu vos digo que não.\nMas se vós não vos converterdes,\nireis morrer todos do mesmo modo.\n4\nE aqueles dezoito que morreram,\nquando a torre de Siloé caiu sobre eles?\nPensais que eram mais culpados\ndo que todos os outros moradores de Jerusalém?\n5\nEu vos digo que não.\nMas, se não vos converterdes,\nireis morrer todos do mesmo modo\".\n6\nE Jesus contou esta parábola:\n\"Certo homem tinha uma figueira\nplantada na sua vinha.\nFoi até ela procurar figos e não encontrou.\n7\nEntão disse ao vinhateiro:\n'Já faz três anos\nque venho procurando figos nesta figueira\ne nada encontro.\nCorta-a! Por que está ela inutilizando a terra?'\n8\nEle, porém, respondeu:\n'Senhor, deixa a figueira ainda este ano.\nVou cavar em volta dela e colocar adubo.\n9\nPode ser que venha a dar fruto.\nSe não der, então tu a cortarás' \".\nPalavra da Salvação."
+  }
+}

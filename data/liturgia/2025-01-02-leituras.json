@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-02",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 2,22-28</div><div> Sl 97(98),1.2-3ab.3cd-4 (R. 3a)</div><div></div><div> Jo 1,19-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,22-28",
+    "texto": "Caríssimos,\n22\nquem é mentiroso,\nsenão aquele que nega que Jesus é o Cristo?\nO Anticristo é aquele que nega o Pai e o Filho.\n23\nTodo aquele que nega o Filho,\ntambém não possui o Pai.\nQuem confessa o Filho,\npossui também o Pai.\n24\nPermaneça dentro de vós\naquilo que ouvistes desde o princípio.\nSe o que ouvistes desde o princípio permanecer em vós,\npermanecereis com o Filho e com o Pai.\n25\nE esta é a promessa que ele nos fez:\na vida eterna.\n26\nEscrevo isto\na respeito dos que procuram desencaminhar-vos.\n27\nQuanto a vós mesmos,\na unção que recebestes da parte de Jesus\npermanece convosco,\ne não tendes necessidade de que alguém vos ensine.\nA sua unção vos ensina tudo,\ne ela é verdadeira e não mentirosa.\nPor isso, conforme a unção de Jesus vos ensinou,\npermanecei nele.\n28\nEntão, agora, filhinhos, permanecei nele.\nAssim poderemos ter plena confiança,\nquando ele se manifestar,\ne não seremos vergonhosamente afastados dele,\nquando da sua vinda.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.2-3ab.3cd-4 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nOs confins do universo contemplaram\na salvação do nosso Deus.\n1\nCantai ao Senhor Deus um canto novo,*\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo*\nalcançaram-lhe a vitória.\nR.\n2\nO Senhor fez conhecer a salvação,*\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel*\nb\npela casa de Israel.\nR.\nc\nOs confins do universo contemplaram*\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira,*\nalegrai-vos e exultai!\nR.\nAclamação ao Evangelho\nHb 1,1-2\nR.\nAleluia, Aleluia, Aleluia.\nV.\nDepois de ter falado, no passado,\naos nossos pais pelos profetas muitas vezes,\nem nossos dias Deus falou-nos por seu Filho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,19-28",
+    "texto": "1,19-28\n19\nEste foi o testemunho de João,\nquando os judeus enviaram de Jerusalém\nsacerdotes e levitas para perguntar:\n\"Quem és tu?\"\n20\nJoão confessou e não negou.\nConfessou: \"Eu não sou o Messias\".\n21\nEles perguntaram:\n\"Quem és, então? És tu Elias?\"\nJoão respondeu: \"Não sou\".\nEles perguntaram: \"És o Profeta?\"\nEle respondeu: \"Não\".\n22\nPerguntaram então: \"Quem és, afinal?\nTemos que levar uma resposta\npara aqueles que nos enviaram.\nO que dizes de ti mesmo?\"\n23\nJoão declarou:\n\"Eu sou a voz que grita no deserto:\n'Aplainai o caminho do Senhor'\n- conforme disse o profeta Isaías\".\n24\nOra, os que tinham sido enviados\npertenciam aos fariseus\n25\ne perguntaram:\n\"Por que então andas batizando,\nse não és o Messias, nem Elias, nem o Profeta?\"\n26\nJoão respondeu:\n\"Eu batizo com água;\nmas no meio de vós está aquele que vós não conheceis,\n27\ne que vem depois de mim.\nEu não mereço desamarrar a correia de suas sandálias\".\n28\nIsso aconteceu em Betânia além do Jordão,\nonde João estava batizando.\nPalavra da Salvação."
+  }
+}

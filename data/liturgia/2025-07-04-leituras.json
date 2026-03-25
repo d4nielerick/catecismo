@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 23,1-4.19;24,1-8.62-67</div><div> Sl 105(106),1-2.3-4a.4b-5 (R. 1a)</div><div></div><div> Mt 9,9-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "23,1-4.19; 24,1-8.62-67",
+    "texto": "1\nSara viveu cento e vinte e sete anos,\n2\ne morreu em Cariat Arbe, que é Hebron, em Canaã.\nAbraão veio fazer luto por Sara e chorá-la.\n3\nDepois levantou-se de junto da morta\ne falou aos hititas:\n4\n\"Sou um estrangeiro e hóspede no vosso meio.\nCedei-me como propriedade entre vós\num lugar de sepultura,\nonde possa sepultar minha esposa que morreu\".\n19\nAssim, Abraão sepultou Sara, sua mulher,\nna caverna do campo de Macpela,\nem frente de Mambré, que é Hebron,\nna terra de Canaã.\n24,1\nAbraão já era velho, de idade avançada,\ne o Senhor o havia abençoado em tudo.\n2\nAbraão disse ao servo mais antigo da sua casa,\nadministrador de todos os seus bens:\n\"Põe a mão debaixo da minha coxa\n3\ne jura-me pelo Senhor, Deus do céu e da terra,\nque não escolherás para meu filho\numa mulher entre as filhas dos cananeus,\nno meio dos quais eu moro;\n4\nmas tu irás à minha terra natal,\nbuscar entre os meus parentes\numa mulher para o meu filho Isaac\".\n5\nE o servo respondeu:\n\"E se a mulher não quiser vir comigo para esta terra,\ndeverei levar teu filho para a terra de onde saíste?\"\n6\nAbraão respondeu:\n\"Guarda-te de levar meu filho de volta para lá.\n7\nO Senhor, Deus do céu,\nque me tirou da casa do meu pai\ne da minha terra natal,\ne que me falou e jurou, dizendo:\n'À tua descendência darei esta terra',\nele mesmo enviará seu anjo diante de ti\ne trarás de lá uma mulher para meu filho.\n8\nPorém, se a mulher não quiser vir contigo,\nficarás livre deste juramento;\nmas de maneira alguma\nlevarás meu filho de volta para lá\".\n62\nIsaac tinha voltado da região do poço de Laai-Rói\ne morava na terra do Negueb.\n63\nAo cair da tarde,\nIsaac saiu para o campo a passear.\nLevantando os olhos, viu camelos que chegavam.\n64\nRebeca também, erguendo os olhos, viu Isaac.\nDesceu do camelo,\n65\ne perguntou ao servo:\n\"Quem é aquele homem que vem pelo campo,\nao nosso encontro?\"\nO Servo respondeu:\n\"É o meu senhor\".\nEla puxou o véu e cobriu o rosto.\n66\nEntão o servo contou a Isaac tudo o que tinha feito.\n67\nEle introduziu Rebeca na tenda de Sara, sua mãe,\ne recebeu-a por esposa.\nIsaac amou-a,\nconsolando-se assim da morte da mãe.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 105(106),1-2.3-4a.4b-5 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nDai graças ao Senhor, porque ele é bom.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nDai graças ao Senhor, porque ele é bom, *\nporque eterna é a sua misericórdia!\n2\nQuem contará os grandes feitos do Senhor? *\nQuem cantará todo o louvor que ele merece?\nR.\n3\nFelizes os que guardam seus preceitos *\ne praticam a justiça em todo o tempo!\n4a\nLembrai-vos, ó Senhor, de mim, lembrai-vos, *\npelo amor que demonstrais ao vosso povo!\nR.\nb\nVisitai-me com a vossa salvação, *\n5\npara que eu veja o bem-estar do vosso povo,\ne exulte na alegria dos eleitos, *\ne me glorie com os que são vossa herança.\nR.\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados,\ne descanso eu vos darei, diz o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,9-13",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n9,9-13\nNaquele tempo,\n9\nJesus viu um homem chamado Mateus,\nsentado na coletoria de impostos,\ne disse-lhe:\n\"Segue-me!\"\nEle se levantou e seguiu a Jesus.\n10\nEnquanto Jesus estava à mesa, em casa de Mateus,\nvieram muitos cobradores de impostos e pecadores\ne sentaram-se à mesa com Jesus e seus discípulos.\n11\nAlguns fariseus viram isso\ne perguntaram aos discípulos:\n\"Por que vosso mestre\ncome com os cobradores de impostos e pecadores?\"\n12\nJesus ouviu a pergunta e respondeu:\n\"Aqueles que têm saúde não precisam de médico,\nmas sim os doentes.\n13\nAprendei, pois, o que significa:\n'Quero misericórdia e não sacrifício'.\nDe fato, eu não vim para chamar os justos,\nmas os pecadores\".\nPalavra da Salvação."
+  }
+}

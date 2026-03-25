@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-28",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 2,19-22</div><div> Sl 18(19A),2-3.4-5 (R. 5a)</div><div></div><div> Lc 6,12-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,19-22",
+    "texto": "Irmãos,\n19\njá não sois mais estrangeiros nem migrantes,\nmas concidadãos dos santos.\nSois da família de Deus.\n20\nVós fostes integrados no edifício\nque tem como fundamento os apóstolos e os profetas,\ne o próprio Jesus Cristo como pedra principal.\n21\nÉ nele que toda a construção se ajusta e se eleva\npara formar um templo Santo no Senhor.\n22\nE vós também sois integrados nesta construção,\npara vos tornardes morada de Deus pelo Espírito.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 18(19A),2-3.4-5 (R. 5a)",
+    "refrao": "",
+    "texto": "R.\nSeu som ressoa e se espalha em toda terra.\n2\nOs céus proclamam a glória do Senhor, *\ne o firmamento, a obra de suas mãos;\n3\no dia ao dia transmite esta mensagem, *\na noite à noite publica esta notícia.\nR.\n4\nNão são discursos nem frases ou palavras, *\nnem são vozes que possam ser ouvidas;\n5\nseu som ressoa e se espalha em toda a terra, *\nchega aos confins do universo a sua voz.\nR.\nEvangelho - Lc 6,12-19\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA vós, ó Deus, louvamos, a vós, Senhor, cantamos;\nvos louva, ó Senhor, o coro dos Apóstolos!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,12-19",
+    "texto": "6,12-19\n12\nNaqueles dias, Jesus foi à montanha para rezar.\nE passou a noite toda em oração a Deus.\n13\nAo amanhecer, chamou seus discípulos\ne escolheu doze dentre eles,\naos quais deu o nome de apóstolos:\n14\nSimão, a quem impôs o nome de Pedro,\ne seu irmão André;\nTiago e João;\nFilipe e Bartolomeu;\n15\nMateus e Tomé;\nTiago, filho de Alfeu, e Simão, chamado Zelota;\n16\nJudas, filho de Tiago,\ne Judas Iscariotes, aquele que se tornou traidor.\n17\nJesus desceu da montanha com eles\ne parou num lugar plano.\nAli estavam muitos dos seus discípulos\ne grande multidão de gente\nde toda a Judéia e de Jerusalém,\ndo litoral de Tiro e Sidônia.\n18\nVieram para ouvir Jesus\ne serem curados de suas doenças.\nE aqueles que estavam atormentados por espíritos maus\ntambém foram curados.\n19\nA multidão toda procurava tocar em Jesus,\nporque uma força saía dele, e curava a todos.\nPalavra da Salvação."
+  }
+}

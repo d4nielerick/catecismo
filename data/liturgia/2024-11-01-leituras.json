@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-01",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Fl 1,1-11</div><div> Sl 110(111),1-2.3-4.5-6 (R. 2a)</div><div></div><div> Lc 14,1-6</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-11",
+    "texto": "1\nPaulo e Timóteo, servos de Cristo Jesus,\na todos os santos em Cristo Jesus\nque estão em Filipos,\ncom os seus bispos e diáconos:\n2\ngraça e paz a vós da parte de Deus nosso Pai\ne do Senhor Jesus Cristo.\n3\nDou graças ao meu Deus,\ntodas as vezes que me lembro de vós.\n4\nSempre em todas as minhas orações\nrezo por vós, com alegria,\n5\npor causa da vossa comunhão conosco\nna divulgação do evangelho,\ndesde o primeiro dia até agora.\n6\nTenho a certeza de que aquele\nque começou em vós uma boa obra,\nhá de levá-la à perfeição até ao dia de Cristo Jesus.\n7\nÉ justo que eu pense assim a respeito de vós todos,\npois a todos trago no coração,\nporque, tanto na minha prisão\ncomo na defesa e confirmação do Evangelho,\nparticipais na graça que me foi dada.\n8\nDeus é testemunha de que tenho saudade de todos vós,\ncom a ternura de Cristo Jesus.\n9\nE isto eu peço a Deus:\nque o vosso amor cresça sempre mais,\nem todo o conhecimento e experiência,\n10\npara discernirdes o que é o melhor.\nE assim ficareis puros e sem defeito\npara o dia de Cristo,\n11\ncheios do fruto da justiça\nque nos vem por Jesus Cristo,\npara a glória e o louvor de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 110 (111),1-2.3-4.5-6 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nGrandiosas são as obras do Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nEu agradeço a Deus de todo o coração *\njunto com todos os seus justos reunidos!\n2\nQue grandiosas são as obras do Senhor, *\nelas merecem todo o amor e admiração!\nR.\n3\nQue beleza e esplendor são os seus feitos! *\nSua justiça permanece eternamente!\n4\nO Senhor bom e clemente nos deixou *\na lembrança de suas grandes maravilhas.\nR.\n5\nEle dá o alimento aos que o temem *\ne jamais esquecerá sua Aliança.\n6\nAo seu povo manifesta seu poder, *\ndando a ele a herança das nações.\nR.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, aleluia, aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,1-6",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n14,1-6\n1\nAconteceu que, num dia de sábado,\nJesus foi comer na casa de um dos chefes dos fariseus.\nE eles o observavam.\n2\nDiante de Jesus, havia um hidrópico.\n3\nTomando a palavra,\nJesus falou aos mestres da Lei e aos fariseus:\n\"A Lei permite curar em dia de sábado, ou não?\"\n4\nMas eles ficaram em silêncio.\nEntão Jesus tomou o homem pela mão,\ncurou-o e despediu-o.\n5\nDepois lhes disse:\n\"Se algum de vós tem um filho ou um boi\nque caiu num poço,\nnão o tira logo, mesmo em dia de sábado?\"\n6\nE eles não foram capazes de responder a isso.\nPalavra da Salvação."
+  }
+}

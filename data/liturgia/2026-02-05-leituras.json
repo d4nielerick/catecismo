@@ -1,0 +1,23 @@
+{
+  "data": "2026-02-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 2,1-4.10-12</div><div> 1Cr 29,10.11ab.11d-12a.12bcd (R. 12b)</div><div></div><div> Mc 6,7-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-4.10-12",
+    "texto": "1\nAproximando-se o fim da sua vida,\nDavi deu estas instruções a seu filho Salomão:\n2\n\"Vou seguir o caminho de todos os mortais.\nSê corajoso e porta-te como um homem.\n3\nObserva os preceitos do Senhor, teu Deus,\nandando em seus caminhos, observando seus estatutos,\nseus mandamentos, seus preceitos e seus ensinamentos,\ncomo estão escritos na lei de Moisés.\nE assim serás bem sucedido em tudo o que fizeres\ne em todos os teus projetos.\n4\nEntão o Senhor cumprirá a promessa que me fez, dizendo:\n'Se teus filhos conservarem uma boa conduta,\ncaminhando com lealdade diante de mim,\ncom todo o seu coração e com toda a sua alma,\njamais te faltará um sucessor no trono de Israel'\".\n10\nE Davi adormeceu com seus pais\ne foi sepultado na cidade de Davi.\n11\nO tempo que Davi reinou em Israel foi de quarenta anos:\nsete anos em Hebron e trinta e três em Jerusalém.\n12\nSalomão sucedeu no trono a seu pai Davi\ne seu reino ficou solidamente estabelecido.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "1Cr 29,10.11ab.11d-12a.12bcd (R. 12b)",
+    "refrao": "",
+    "texto": "R.\nDominais todos os povos, ó Senhor.\n10\nBendito sejais vós, ó Senhor Deus, †\nSenhor Deus de Israel, o nosso pai. *\ndesde sempre e por toda a eternidade!\nR.\n11a\nA Vós pertencem a grandeza e o poder *\nb\ntoda a glória, esplendor e majestade,\nR.\nd\nA vós, Senhor, também pertence a realeza, †\npois sobre a terra, como rei, vos elevais! *\n12a\nToda glória e riqueza vêm de vós!\nR.\nb\nSois o Senhor e dominais o universo, †\nc\nem vossa mão se encontra a força e o poder, *\nd\nem vossa mão tudo se afirma e tudo cresce!\nR.\nEvangelho - Mc 6,7-13\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois, o Reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,7-13",
+    "texto": "6,7-13\nNaquele tempo,\n7\nJesus chamou os doze,\ne começou a enviá-los dois a dois,\ndando-lhes poder sobre os espíritos impuros.\n8\nRecomendou-lhes que não levassem nada para o caminho,\na não ser um cajado;\nnem pão, nem sacola, nem dinheiro na cintura.\n9\nMandou que andassem de sandálias\ne que não levassem duas túnicas.\n10\nE Jesus disse ainda:\n\"Quando entrardes numa casa,\nficai ali até vossa partida.\n11\nSe em algum lugar não vos receberem,\nnem quiserem vos escutar,\nquando sairdes,\nsacudi a poeira dos pés,\ncomo testemunho contra eles!\"\n12\nEntão os doze partiram\ne pregaram que todos se convertessem.\n13\nExpulsavam muitos demônios\ne curavam numerosos doentes,\nungindo-os com óleo.\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-04-02",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 49,8-15</div><div> Sl 144(145),8-9.13cd-14.17-18 (R. 8a)</div><div></div><div> Jo 5,17-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "49,8-15",
+    "texto": "8\nIsto diz o Senhor:\n\"Eu atendo teus pedidos com favores\ne te ajudo na obra de salvação;\npreservei-te para seres elo de aliança entre os povos,\npara restaurar a terra,\npara distribuir a herança dispersa;\n9\npara dizer aos que estão presos: 'Saí!'\ne aos que estão nas trevas: 'Mostrai-vos'.\nE todos se alimentam pelas estradas\ne até nas colinas estéreis se abastecem;\n10\nnão sentem fome nem sede,\nnão os castiga nem o calor nem o sol,\nporque o seu protetor toma conta deles\ne os conduz às fontes d'água.\n11\nFarei de todos os montes uma estrada\ne os meus caminhos serão nivelados.\n12\nEis que estão vindo de longe,\nuns chegam do Norte e do lado do mar,\ne outros, da terra de Sinim.\n13\nLouvai, ó céus, alegra-te, terra;\nmontanhas, fazei ressoar o louvor,\nporque o Senhor consola o seu povo\ne se compadece dos pobres.\n14\nDisse Sião: 'O Senhor abandonou-me,\no Senhor esqueceu-se de mim!'\n15\nAcaso pode a mulher esquecer-se do filho pequeno,\na ponto de não ter pena do fruto de seu ventre?\nSe ela se esquecer, eu, porém, não me esquecerei de ti\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 144(145),8-9.13cd-14.17-18 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nMisericórdia e piedade é o Senhor.\n8\nMisericórdia e piedade é o Senhor, *\nele é amor, é paciência, é compaixão.\n9\nO Senhor é muito bom para com todos, *\nsua ternura abraça toda criatura.\nR.\n13c\nO Senhor é amor fiel em sua palavra, *\nd\né santidade em toda obra que ele faz.\n14\nEle sustenta todo aquele que vacila *\ne levanta todo aquele que tombou.\nR.\n17\nÉ justo o Senhor em seus caminhos, *\né santo em toda obra que ele faz.\n18\nEle está perto da pessoa que o invoca, *\nde todo aquele que o invoca lealmente.\nR.\nEvangelho - Jo 5,17-30\nAclamação ao Evangelho\nJo 11,25a.26\nR.\nJesus Cristo, sois bendito,\nsois o ungido de Deus Pai!\nV.\nEu sou a ressurreição, eu sou a vida;\nQuem crê em mim, ainda que morra, viverá."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,17-30",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n5,17-30\nNaquele tempo,\n17\nJesus respondeu aos judeus:\n\"Meu Pai trabalha sempre,\nportanto também eu trabalho\".\n18\nEntão, os judeus ainda mais procuravam matá-lo,\nporque, além de violar o sábado,\nchamava Deus o seu Pai,\nfazendo-se, assim, igual a Deus.\n19\nTomando a palavra, Jesus disse aos judeus:\n\"Em verdade, em verdade vos digo,\no Filho não pode fazer nada por si mesmo;\nele faz apenas o que vê o Pai fazer.\nO que o Pai faz,\no Filho o faz também.\n20\nO Pai ama o Filho\ne lhe mostra tudo o que ele mesmo faz.\nE lhe mostrará obras maiores ainda,\nde modo que ficareis admirados.\n21\nAssim como o Pai ressuscita os mortos\ne lhes dá a vida,\no Filho também dá a vida a quem ele quer.\n22\nDe fato, o Pai não julga ninguém,\nmas ele deu ao Filho o poder de julgar,\n23\npara que todos honrem o Filho,\nassim como honram o Pai.\nQuem não honra o Filho,\ntambém não honra o Pai que o enviou.\n24\nEm verdade, em verdade vos digo,\nquem ouve a minha palavra\ne crê naquele que me enviou,\npossui a vida eterna.\nNão será condenado,\npois já passou da morte para a vida.\n25\nEm verdade, em verdade, eu vos digo:\nestá chegando a hora, e já chegou,\nem que os mortos ouvirão a voz do Filho de Deus\ne os que a ouvirem, viverão.\n26\nPorque, assim como o Pai possui a vida em si mesmo,\ndo mesmo modo concedeu ao Filho\npossuir a vida em si mesmo.\n27\nAlém disso, deu-lhe o poder de julgar,\npois ele é o Filho do Homem.\n28\nNão fiqueis admirados com isso,\nporque vai chegar a hora,\nem que todos os que estão nos túmulos\nouvirão a voz do Filho e sairão:\n29\naqueles que fizeram o bem,\nressuscitarão para a vida;\ne aqueles que praticaram o mal, para a condenação.\n30\nEu não posso fazer nada por mim mesmo.\nEu julgo conforme o que escuto,\ne meu julgamento é justo,\nporque não procuro fazer a minha vontade,\nmas a vontade daquele que me enviou\".\nPalavra da Salvação."
+  }
+}

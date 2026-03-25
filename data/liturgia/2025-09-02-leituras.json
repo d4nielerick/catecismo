@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-02",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Ts 5,1-6.9-11</div><div> Sl 26(27),1.4.13-14 (R. 13)</div><div></div><div> Lc 4,31-37</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-6.9-11",
+    "texto": "1\nQuanto ao tempo e à hora, meus irmãos,\nnão há por que vos escrever.\n2\nVós mesmos sabeis perfeitamente\nque o dia do Senhor virá como ladrão, de noite.\n3\nQuando as pessoas disserem:\n\"Paz e segurança!\",\nentão de repente sobrevirá a destruição,\ncomo as dores de parto sobre a mulher grávida.\nE não poderão escapar.\n4\nMas vós, meus irmãos, não estais nas trevas,\nde modo que esse dia vos surpreenda como um ladrão.\n5\nTodos vós sois filhos da luz e filhos do dia.\nNão somos da noite, nem das trevas.\n6\nPortanto, não durmamos, como os outros,\nmas sejamos vigilantes e sóbrios.\n9\nDeus não nos destinou para a ira,\nmas para alcançarmos a salvação,\npor meio de nosso Senhor Jesus Cristo.\n10\nEle morreu por nós, para que,\nquer vigiando nesta vida,\nquer adormecidos na morte,\nalcancemos a vida junto dele.\n11\nPor isso, exortai-vos e edificai-vos uns aos outros\ncomo já costumais fazer.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 26(27),1.4.13-14 (R. 13)",
+    "refrao": "",
+    "texto": "R.\nSei que a bondade do Senhor eu hei de ver,\nna terra dos viventes.\n1\nO Senhor é minha luz e salvação;*\nde quem eu terei medo?\nO Senhor é a proteção da minha vida; *\nperante quem eu tremerei?\nR.\n4\nAo Senhor eu peço apenas uma coisa, *\ne é só isto que eu desejo:\nhabitar no santuário do Senhor *\npor toda a minha vida;\nsaborear a suavidade do Senhor *\ne contemplá-lo no seu templo.\nR.\n13\nSei que a bondade do Senhor eu hei de ver *\nna terra dos viventes.\n14\nEspera no Senhor e tem coragem, *\nespera no Senhor!\nR.\nEvangelho - Lc 4,31-37\nAclamação ao Evangelho\nLc 7,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nUm grande profeta surgiu entre nós\ne Deus visitou o seu povo."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "4,31-37",
+    "texto": "4,31-37\nNaquele tempo,\n31\nJesus desceu a Cafarnaum, cidade da Galileia,\ne aí ensinava-os aos sábados.\n32\nAs pessoas ficavam admiradas com o seu ensinamento,\nporque Jesus falava com autoridade.\n33\nNa sinagoga, havia um homem\npossuído pelo espírito de um demônio impuro,\nque gritou em alta voz:\n34\n\"O que queres de nós, Jesus Nazareno?\nVieste para nos destruir?\nEu sei quem tu és:\ntu és o Santo de Deus!\"\n35\nJesus o ameaçou, dizendo:\n\"Cala-te, e sai dele!\"\nEntão o demônio lançou o homem no chão,\nsaiu dele, e não lhe fez mal nenhum.\n36\nO espanto se apossou de todos\ne eles comentavam entre si:\n\"Que palavra é essa?\nEle manda nos espíritos impuros,\ncom autoridade e poder,\ne eles saem\".\n37\nE a fama de Jesus se espalhava\nem todos os lugares da redondeza.\nPalavra da Salvação."
+  }
+}

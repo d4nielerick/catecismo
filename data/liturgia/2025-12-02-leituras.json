@@ -1,0 +1,23 @@
+{
+  "data": "2025-12-02",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 11,1-10</div><div> Sl 71(72),1-2.7-8.12-13.17 (R. cf. 7)</div><div></div><div> Lc 10,21-24</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,1-10",
+    "texto": "Naqueles dias,\n1\nnascerá uma haste do tronco de Jessé\ne, a partir da raiz, surgirá o rebento de uma flor;\n2\nsobre ele repousará o espírito do Senhor:\nespírito de sabedoria e discernimento,\nespírito de conselho e fortaleza,\nespírito de ciência e temor de Deus;\n3\nno temor do Senhor encontra ele seu prazer.\nEle não julgará pelas aparências que vê\nnem decidirá somente por ouvir dizer;\n4\nmas trará justiça para os humildes\ne uma ordem justa para os homens pacíficos;\nfustigará a terra com a força da sua palavra\ne destruirá o mau com o sopro dos lábios.\n5\nCingirá a cintura com a correia da justiça\ne as costas com a faixa da fidelidade.\n6\nO lobo e o cordeiro viverão juntos\ne o leopardo deitar-se-á ao lado do cabrito;\no bezerro e o leão comerão juntos\ne até mesmo uma criança poderá tangê-los.\n7\nA vaca e o urso pastarão lado a lado,\nenquanto suas crias descansam juntas;\no leão comerá palha como o boi;\n8\na criança de peito vai brincar\nem cima do buraco da cobra venenosa;\ne o menino desmamado\nnão temerá pôr a mão na toca da serpente.\n9\nNão haverá danos nem mortes\npor todo o meu santo monte:\na terra estará tão repleta do saber do Senhor\nquanto as águas que cobrem o mar.\n10\nNaquele dia, a raiz de Jessé\nse erguerá como um sinal entre os povos;\nhão de buscá-la as nações,\ne gloriosa será a sua morada.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 71(72),1-2.7-8.12-13.17 (R. cf 7)",
+    "refrao": "",
+    "texto": "R.\nNos seus dias a justiça florirá\ne paz em abundância, para sempre.\n1\nDai ao Rei vossos poderes, Senhor Deus,*\nvossa justiça ao descendente da realeza!\n2\nCom justiça ele governe o vosso povo,*\ncom equidade ele julgue os vossos pobres.\nR.\n7\nNos seus dias a justiça florirá*\ne grande paz, até que a lua perca o brilho!\n8\nDe mar a mar estenderá o seu domínio,*\ne desde o rio até os confins de toda a terra!\nR.\n12\nLibertará o indigente que suplica,*\ne o pobre ao qual ninguém quer ajudar.\n13\nTerá pena do indigente e do infeliz,*\ne a vida dos humildes salvará.\nR.\n17\nSeja bendito o seu nome para sempre!*\nE que dure como o sol sua memória!\nTodos os povos serão nele abençoados,*\ntodas as gentes cantarão o seu louvor!\nR.\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEis que virá o nosso Deus com poder e majestade.\nE ele há de iluminar os olhos dos seus servos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,21-24",
+    "texto": "10,21-24\n21\nNaquele momento, Jesus exultou no Espírito Santo e disse:\n\"Eu te louvo, Pai, Senhor do céu e da terra,\nporque escondeste essas coisas aos sábios e inteligentes,\ne as revelaste aos pequeninos.\nSim, Pai, porque assim foi do teu agrado.\n22\nTudo me foi entregue pelo meu Pai.\nNinguém conhece quem é o Filho, a não ser o Pai;\ne ninguém conhece quem é o Pai, a não ser o Filho\ne aquele a quem o Filho o quiser revelar\".\n23\nJesus voltou-se para os discípulos\ne disse-lhes em particular:\n\"Felizes os olhos que veem o que vós vedes!\n24\nPois eu vos digo que muitos profetas e reis quiseram ver\no que estais vendo, e não puderam ver;\nquiseram ouvir o que estais ouvindo,\ne não puderam ouvir\".\nPalavra da Salvação."
+  }
+}

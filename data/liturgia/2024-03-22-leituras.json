@@ -1,0 +1,23 @@
+{
+  "data": "2024-03-22",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 20,10-13</div><div> Sl 17(18),2-3a.3bc-4.5-6.7 (R. cf. 7)</div><div></div><div> Jo 10,31-42</div></div>",
+  "primeira_leitura": {
+    "referencia": "20,10-13",
+    "texto": "10\nEu ouvi as injúrias de tantos homens\ne os vi espalhando o medo em redor:\n\"Denunciai-o, denunciemo-lo\".\nTodos os amigos observavam minhas falhas:\n\"Talvez ele cometa um engano\ne nós poderemos apanhá-lo\ne desforrar-nos dele\".\n11\nMas o Senhor está ao meu lado,\ncomo forte guerreiro;\npor isso, os que me perseguem\ncairão vencidos.\nPor não terem tido êxito,\neles se cobrirão de vergonha.\nEterna infâmia, que nunca se apaga!\n12\nÓ Senhor dos exércitos,\nque provas o homem justo\ne vês os sentimentos do coração,\nrogo-te me faças ver tua vingança sobre eles;\npois eu te declarei a minha causa.\n13\nCantai ao Senhor, louvai o Senhor,\npois ele salvou a vida de um pobre homem\ndas mãos dos maus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 17(18),2-3a.3bc-4.5-6.7 (R. cf. 7)",
+    "refrao": "",
+    "texto": "R.\nAo Senhor eu invoquei na minha angústia\ne ele escutou a minha voz.\n2\nEu vos amo, ó Senhor! Sois minha força, *\n3a\nminha rocha, meu refúgio e Salvador!\nR.\nb\nÓ meu Deus, sois o rochedo que me abriga, †\nc\nminha força e poderosa salvação, *\nsois meu escudo e proteção: em vós espero!\n4\nInvocarei o meu Senhor: a ele a glória! *\ne dos meus perseguidores serei salvo!\nR.\n5\nOndas da morte me envolveram totalmente, *\ne as torrentes da maldade me aterraram;\n6\nos laços do abismo me amarraram *\ne a própria morte me prendeu em suas redes.\nR.\n7\nAo Senhor eu invoquei na minha angústia *\ne elevei o meu clamor para o meu Deus;\nde seu Templo ele escutou a minha voz, *\ne chegou a seus ouvidos o meu grito.\nR.\nAclamação ao Evangelho\nCf. Jo 6,63c.68c\nR.\nGlória a Cristo, Palavra eterna do Pai que é amor!\nV.\nSenhor, tuas palavras são espírito, são vida;\nsó tu tens palavras de vida eterna!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,31-42",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n10,31-42\nNaquele tempo,\n31\nos judeus pegaram pedras\npara apedrejar Jesus.\n32\nE ele lhes disse:\n\"Por ordem do Pai,\nmostrei-vos muitas obras boas.\nPor qual delas me quereis apedrejar?\"\n33\nOs judeus responderam:\n\"Não queremos te apedrejar por causa das obras boas,\nmas por causa de blasfêmia,\nporque sendo apenas um homem,\ntu te fazes Deus!\"\n34\nJesus disse:\n\"Acaso não está escrito na vossa Lei:\n'Eu disse: vós sois deuses'?\n35\nOra, ninguém pode anular a Escritura:\nse a Lei chama deuses\nas pessoas às quais se dirigiu a palavra de Deus,\n36\npor que então me acusais de blasfêmia,\nquando eu digo que sou Filho de Deus,\neu a quem o Pai consagrou\ne enviou ao mundo?\n37\nSe não faço as obras do meu Pai,\nnão acrediteis em mim.\n38\nMas, se eu as faço,\nmesmo que não queirais acreditar em mim,\nacreditai nas minhas obras,\npara que saibais e reconheçais\nque o Pai está em mim e eu no Pai\".\n39\nOutra vez procuravam prender Jesus,\nmas ele escapou das mãos deles.\n40\nJesus passou para o outro lado do Jordão,\ne foi para o lugar\nonde, antes, João tinha batizado.\nE permaneceu ali.\n41\nMuitos foram ter com ele,\ne diziam:\n\"João não realizou nenhum sinal,\nmas tudo o que ele disse a respeito deste homem,\né verdade\".\n42\nE muitos, ali, acreditaram nele.\nPalavra da Salvação."
+  }
+}

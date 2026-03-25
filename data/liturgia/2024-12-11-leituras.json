@@ -1,0 +1,23 @@
+{
+  "data": "2024-12-11",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 40,25-31</div><div> Sl 102(103),1-2.3-4.8.10 (R. 1a)</div><div></div><div> Mt 11,28-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "40,25-31",
+    "texto": "25\n\"Com quem haveis de me comparar,\ne a quem seria eu igual?\"\n- fala o Santo.\n26\nLevantai os olhos para o alto\ne vede: Quem criou tudo isto?\n- Aquele que expressa em números\no exército das estrelas\ne a cada uma chama pelo nome:\ntal é a grandeza e força e poder de Deus\nque nenhuma delas falta à chamada.\n27\nEntão, por que dizes, Jacó,\ne por que falas, Israel:\n\"Minha vida ocultou-se da vista do Senhor\ne meu julgamento escapa ao do meu Deus?\"\n28\nAcaso ignoras, ou não ouviste?\nO Senhor é o Deus eterno\nque criou os confins da terra;\nele não falha nem se cansa,\ninsondável é sua sabedoria;\n29\nele dá coragem ao desvalido\ne aumenta o vigor do mais fraco.\n30\nCansam-se as crianças e param,\nos jovens tropeçam e caem,\n31\nmas os que esperam no Senhor\nrenovam suas forças,\ncriam asas como as águias,\ncorrem sem se cansar,\ncaminham sem parar.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 102(103),1-2.3-4.8. e 10 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nBendize, ó minha alma ao Senhor.\n1\nBendize, ó minha alma, ao Senhor, *\ne todo o meu ser, seu santo nome!\n2\nBendize, ó minha alma, ao Senhor, *\nnão te esqueças de nenhum de seus favores!\nR.\n3\nPois ele te perdoa toda culpa, *\ne cura toda a tua enfermidade;\n4\nda sepultura ele salva a tua vida *\ne te cerca de carinho e compaixão;\nR.\n8\nO Senhor é indulgente, é favorável, *\né paciente, é bondoso e compassivo.\n10\nNão nos trata como exigem nossas faltas, *\nnem nos pune em proporção às nossas culpas.\nR.\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEis que o Senhor há de vir,\na fim de salvar o seu povo;\nfelizes são todos aqueles\nque estão prontos para ir-lhe ao encontro."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,28-30",
+    "texto": "11,28-30\nNaquele tempo, tomou Jesus a palavra e disse:\n28\n\"Vinde a mim todos vós que estais cansados\ne fatigados sob o peso dos vossos fardos,\ne eu vos darei descanso.\n29\nTomai sobre vós o meu jugo e aprendei de mim,\nporque sou manso e humilde de coração,\ne vós encontrareis descanso.\n30\nPois o meu jugo é suave e o meu fardo é leve\".\nPalavra da Salvação."
+  }
+}

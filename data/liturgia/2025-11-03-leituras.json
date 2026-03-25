@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-03",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 11,29-36</div><div> Sl 68(69),30-31.33-34.36-37 (R. 14c)</div><div></div><div> Lc 14,12-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,29-36",
+    "texto": "Irmãos,\n29\nos dons e a vocação de Deus são irrevogáveis.\n30\nOutrora, vós fostes desobedientes a Deus,\nmas agora alcançastes misericórdia,\nem consequência da desobediência deles.\n31\nAssim são eles agora os desobedientes,\npara que, em consequência da misericórdia usada convosco,\nalcancem finalmente misericórdia.\n32\nCom efeito,\nDeus encerrou todos os homens na desobediência,\na fim de exercer misericórdia para com todos.\n33\nÓ profundidade da riqueza,\nda sabedoria e da ciência de Deus!\nComo são inescrutáveis os seus juízos\ne impenetráveis os seus caminhos!\n34\nDe fato, quem conheceu o pensamento do Senhor?\nOu quem foi seu conselheiro?\n35\nOu quem se antecipou em dar-lhe alguma coisa,\nde maneira a ter direito a uma retribuição?\n36\nNa verdade, tudo é dele, por ele, e para ele.\nA ele, a glória para sempre. Amém!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 68(69),30-31.33-34.36-37 (R. 14c)",
+    "refrao": "",
+    "texto": "R.\nRespondei-me, ó Senhor, pelo vosso imenso amor!\n30\nPobre de mim, sou infeliz e sofredor! *\nQue vosso auxílio me levante, Senhor Deus!\n31\nCantando eu louvarei o vosso nome *\ne agradecido exultarei de alegria!\nR.\n33\nHumildes, vede isto e alegrai-vos: †\no vosso coração reviverá, *\nse procurardes o Senhor continuamente!\n34\nPois nosso Deus atende à prece dos seus pobres, *\ne não despreza o clamor de seus cativos.\nR.\n36\nSim, Deus virá e salvará Jerusalém, †\nreconstruindo as cidades de Judá, *\nonde os pobres morarão, sendo seus donos.\n37\nA descendência de seus servos há de herdá-las, †\ne os que amam o santo nome do Senhor *\ndentro delas fixarão sua morada!\nR.\nEvangelho - Lc 14,12-1\nAclamação ao Evangelho\nJo 8,31b-32\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSe guardais minha palavra, diz Jesus,\nrealmente vós sereis os meus discípulos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,12-14",
+    "texto": "14,12-14\nNaquele tempo,\n12\ndizia Jesus ao chefe dos fariseus\nque o tinha convidado:\n\"Quando tu deres um almoço ou um jantar,\nnão convides teus amigos, nem teus irmãos,\nnem teus parentes, nem teus vizinhos ricos.\nPois estes poderiam também convidar-te\ne isto já seria a tua recompensa.\n13\nPelo contrário, quando deres uma festa,\nconvida os pobres, os aleijados,\nos coxos, os cegos.\n14\nEntão tu serás feliz!\nPorque eles não te podem retribuir.\nTu receberás a recompensa\nna ressurreição dos justos\".\nPalavra da Salvação."
+  }
+}

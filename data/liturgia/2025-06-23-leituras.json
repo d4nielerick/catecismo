@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 12,1-9</div><div> Sl 32(33),12-13.18-19.20 e 22 (R. 12b)</div><div></div><div> Mt 7,1-5</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,1-9",
+    "texto": "Naqueles dias,\n1\no Senhor disse a Abrão:\n\"Sai da tua terra, da tua família\ne da casa do teu pai,\ne vai para a terra que eu te vou mostrar.\n2\nFarei de ti um grande povo\ne te abençoarei:\nengrandecerei o teu nome,\nde modo que ele se torne uma bênção.\n3\nAbençoarei os que te abençoarem\ne amaldiçoarei os que te amaldiçoarem;\nem ti serão abençoadas todas as famílias da terra!\".\n4\nE Abrão partiu,\ncomo o Senhor lhe havia dito,\ne Ló foi com ele.\nTinha Abrão setenta e cinco anos,\nquando partiu de Harã.\n5\nEle levou consigo sua mulher Sarai,\nseu sobrinho Ló e todos os bens que possuíam,\nbem como todos os escravos\nque haviam adquirido em Harã.\nPartiram rumo à terra de Canaã\ne ali chegaram.\n6\nAbrão atravessou o país até o santuário de Siquém,\naté o carvalho de Moré.\nOs cananeus estavam então naquela terra.\n7\nO Senhor apareceu a Abrão e lhe disse:\n\"Darei esta terra à tua descendência\".\nAbrão ergueu ali um altar ao Senhor,\nque lhe tinha aparecido.\n8\nDe lá, deslocou-se em direção ao monte\nque estava a oriente de Betel,\nonde armou sua tenda,\ncom Betel a ocidente e Hai a oriente.\nAli construiu também um altar ao Senhor,\ne invocou o seu nome.\n9\nDepois, de acampamento em acampamento,\nAbrão foi até o Negueb.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),12-13.18-19.20 e 22 (R. 12b)",
+    "refrao": "",
+    "texto": "R.\nFeliz o povo que o Senhor escolheu por sua herança!\n12\nFeliz o povo cujo Deus é o Senhor, *\ne a nação que escolheu por sua herança!\n13\nDos altos céus o Senhor olha e observa; *\nele se inclina para olhar todos os homens.\nR.\n18\nMas o Senhor pousa o olhar sobre os que o temem, *\ne que confiam esperando em seu amor,\n19\npara da morte libertar as suas vidas *\ne alimentá-los quando é tempo de penúria.\nR.\n20\nNo Senhor nós esperamos confiantes, *\nporque ele é nosso auxílio e proteção!\n22\nSobre nós venha, Senhor, a vossa graça, *\nda mesma forma que em vós nós esperamos!\nR.\nEvangelho - Mt 7,1-5\nAclamação ao Evangelho\nHb 4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor é viva e eficaz:\nela julga os pensamentos e as intenções do coração"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,1-5",
+    "texto": "7,1-5\nNaquele tempo, disse Jesus aos seus discípulos:\n1\n\"Não julgueis, e não sereis julgados.\n2\nPois, vós sereis julgados\ncom o mesmo julgamento com que julgardes;\ne sereis medidos, com a mesma medida com que medirdes.\n3\nPor que observas o cisco no olho do teu irmão,\ne não prestas atenção\nà trave que está no teu próprio olho?\n4\nOu, como podes dizer ao teu irmão:\n'deixa-me tirar o cisco do teu olho',\nquando tu mesmo tens uma trave no teu?\n5\nHipócrita, tira primeiro a trave do teu próprio olho,\ne então enxergarás bem\npara tirar o cisco do olho do teu irmão\".\nPalavra da Salvação."
+  }
+}

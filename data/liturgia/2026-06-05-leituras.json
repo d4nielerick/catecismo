@@ -1,0 +1,23 @@
+{
+  "data": "2026-06-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Tm 3,10-17</div><div> Sl 118(119),157.160.161.165.166.168 (R. 165a)</div><div></div><div> Mc 12,35-37</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,10-17",
+    "texto": "Caríssimo,\n10\ntu me tens seguido fielmente\nno ensino, no procedimento, nos projetos,\nna fé, na paciência,\nno amor, na perseverança,\n11\nnas perseguições e nos sofrimentos\nque suportei em Antioquia, lcônio e Listra.\nE que perseguições sofri!\nMas de todas elas o Senhor me livrou.\n12\nAliás, todos os que quiserem levar\numa vida fervorosa em Cristo Jesus, serão perseguidos.\n13\nOs homens maus e sedutores irão de mal a pior,\nenganando e sendo enganados.\n14\nPermanece firme naquilo que aprendeste\ne aceitaste como verdade;\ntu sabes de quem o aprendeste.\n15\nDesde a infância conheces as Sagradas Escrituras:\nelas têm o poder de te comunicar a sabedoria\nque conduz à salvação pela fé em Cristo Jesus.\n16\nToda a Escritura é inspirada por Deus\ne útil para ensinar, para argumentar,\npara corrigir e para educar na justiça,\n17\na fim de que o homem de Deus seja perfeito\ne qualificado para toda boa obra.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),157.160.161.165.166.168 (R. 165a)",
+    "refrao": "",
+    "texto": "R.\nOs que amam vossa lei, têm grande paz!\n157\nTantos são os que me afligem e perseguem,*\nmas eu nunca deixarei vossa Aliança!\nR.\n160\nVossa palavra é fundada na verdade, *\nos vossos justos julgamentos são eternos.\nR.\n161\nOs poderosos me perseguem sem motivo; *\nmeu coração, porém, só teme a vossa lei.\nR.\n165\nOs que amam vossa lei têm grande paz, *\ne não há nada que os faça tropeçar.\nR.\n166\nÓ Senhor, de vós espero a salvação, *\npois eu cumpro sem cessar vossos preceitos.\nR.\n168\nSerei fiel à vossa lei, vossa Aliança; *\nos meus caminhos estão todos ante vós.\nR.\nEvangelho - Mc 12,28b-\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama, realmente, guardará minha palavra\ne meu Pai o amará e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,35-37",
+    "texto": "Proclamação do Evangelho de Jesus  Cristo escrito por Marcos\n12,35-37\nNaquele tempo,\n35\nJesus ensinava no Templo, dizendo:\n\"Como é que os mestres da Lei\ndizem que o Messias é Filho de Davi?\n36\nO próprio Davi,\nmovido pelo Espírito Santo, falou:\n'Disse o Senhor ao meu Senhor:\nsenta-te à minha direita,\naté que eu ponha teus inimigos debaixo dos teus pés'.\n37\nPortanto, o próprio Davi chama o Messias de Senhor.\nComo é que ele pode então ser seu filho?\"\nE uma grande multidão o escutava com prazer.\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2026-05-10",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 8,5-8.14-17</div><div> Sl 65(66),1-3a.4-5.6-7a.16.20 (R. 1-2a)</div><div> 1Pd 3,15-18</div><div> Jo 14,15-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,5-8.14-17",
+    "texto": "Naqueles dias,\n5\nFelipe desceu a uma cidade da Samaria\ne anunciou-lhes o Cristo.\n6\nAs multidões seguiam com atenção\nas coisas que Felipe dizia.\nE todos unânimes o escutavam,\npois viam os milagres que ele fazia.\n7\nDe muitos possessos saíam os espíritos maus,\ndando grandes gritos.\nNumerosos paralíticos e aleijados\ntambém foram curados.\n8\nEra grande a alegria naquela cidade.\n14\nOs apóstolos, que estavam em Jerusalém,\nsouberam que a Samaria acolhera a Palavra de Deus,\ne enviaram lá Pedro e João.\n15\nChegando ali, oraram pelos habitantes da Samaria,\npara que recebessem o Espírito Santo.\n16\nPorque o Espírito ainda não viera sobre nenhum deles;\napenas tinham recebido\no batismo em nome do Senhor Jesus.\n17\nPedro e João impuseram-lhes as mãos,\ne eles receberam o Espírito Santo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 65(66),1-3a.4-5.6-7a.16.20 (R. 1-2a)",
+    "refrao": "",
+    "texto": "R.\nAclamai o Senhor Deus, ó terra inteira,\ncantai salmos a seu nome glorioso!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nAclamai o Senhor Deus, ó terra inteira, *\n2\ncantai salmos a seu nome glorioso,\ndai a Deus a mais sublime louvação! *\n3a\nDizei a Deus: \"Como são grandes vossas obras!\nR.\n4\nToda a terra vos adore com respeito *\ne proclame o louvor de vosso nome!\"\n5\nVinde ver todas as obras do Senhor: *\nseus prodígios estupendos entre os homens!\nR.\n6\nO mar ele mudou em terra firme, *\ne passaram pelo rio a pé enxuto.\nExultemos de alegria no Senhor! *\n7a\nEle domina para sempre com poder!\nR.\n16\nTodos vós que a Deus temeis, vinde escutar: *\nvou contar-vos todo bem que ele me fez!\n20\nBendito seja o Senhor Deus que me escutou, †\nnão rejeitou minha oração e meu clamor, *\nnem afastou longe de mim o seu amor!\nR.\n2ª Leitura - 1Pd 3,15\nSEGUNDA LEITURA\nSofreu a morte na sua existência humana,\nmas recebeu nova vida pelo Espírito.\nLeitura da Primeira Carta de São Pedro\n3,15-18\nCaríssimos:\n15\nSantificai em vossos corações\no Senhor Jesus Cristo,\ne estai sempre prontos a dar razão da vossa esperança\na todo aquele que vo-la pedir.\n16\nFazei-o, porém, com mansidão e respeito\ne com boa consciência.\nEntão, se em alguma coisa fordes difamados,\nficarão com vergonha aqueles que ultrajam\no vosso bom procedimento em Cristo.\n17\nPois será melhor sofrer praticando o bem,\nse esta for a vontade de Deus\ndo que praticando o mal.\n18\nCom efeito, também Cristo morreu, uma vez por todas,\npor causa dos pecados,\no justo, pelos injustos,\na fim de nos conduzir a Deus.\nSofreu a morte, na sua existência humana,\nmas recebeu nova vida pelo Espírito.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama realmente guardará minha palavra,\ne meu Pai o amará, e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,15-21",
+    "texto": "14,15-21\nNaquele tempo, disse Jesus a seus discípulos:\n15\nSe me amais, guardareis os meus mandamentos,\n16\ne eu rogarei ao Pai, e ele vos dará um outro Defensor,\npara que permaneça sempre convosco:\n17\no Espírito da Verdade,\nque o mundo não é capaz de receber,\nporque não o vê nem o conhece.\nVós o conheceis, porque ele permanece junto de vós\ne estará dentro de vós.\n18\nNão vos deixarei órfãos. Eu virei a vós.\n19\nPouco tempo ainda, e o mundo não mais me verá,\nmas vós me vereis, porque eu vivo e vós vivereis.\n20\nNaquele dia sabereis que eu estou no meu Pai\ne vós em mim e eu em vós.\n21\nQuem acolheu os meus mandamentos e os observa,\nesse me ama.\nOra, quem me ama, será amado por meu Pai,\ne eu o amarei e me manifestarei a ele.\nPalavra da Salvação."
+  }
+}

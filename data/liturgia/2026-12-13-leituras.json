@@ -1,0 +1,23 @@
+{
+  "data": "2026-12-13",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "rosa",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 61,1-2a.10-11</div><div> Lc 1,46-48.49-50.53-54 (R. Is 61,10b)</div><div> 1Ts 5,16-24</div><div> Jo 1,6-8.19-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "61,1-2a.10-11",
+    "texto": "1\nO espírito do Senhor Deus está sobre mim,\nporque o Senhor me ungiu;\nenviou-me para dar a boa-nova aos humildes,\ncurar as feridas da alma,\npregar a redenção para os cativos\ne a liberdade para os que estão presos;\n2a\npara proclamar o tempo da graça do Senhor.\n10\nExulto de alegria no Senhor\ne minh'alma regozija-se em meu Deus;\nele me vestiu com as vestes da salvação,\nenvolveu-me com o manto da justiça\ne adornou-me como um noivo com sua coroa,\nou uma noiva com suas joias.\n11\nAssim como a terra faz brotar a planta\ne o jardim faz germinar a semente,\nassim o Senhor Deus fará germinar a justiça\ne a sua glória diante de todas as nações.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Lc 1,46-48.49-50.53-54 (R. Is 61,10b)",
+    "refrao": "",
+    "texto": "R.\nA minh'alma se alegra no meu Deus.\n46\nA minha alma engrandece ao Senhor, *\n47\ne se alegrou o meu espírito em Deus, meu Salvador,\n48\npois, ele viu a pequenez de sua serva, *\ndesde agora as gerações hão de chamar-me de bendita.\nR.\n49\nO Poderoso fez por mim maravilhas, *\ne Santo é o seu nome!\n50\nSeu amor, de geração em geração,*\nchega a todos os que o respeitam.\nR.\n53\nDe bens saciou os famintos, *\ne despediu, sem nada os ricos.\n54\nAcolheu Israel, seu servidor, *\nfiel ao seu amor.\nR.\n2ª Leitura - 1Ts 5,16\nSEGUNDA LEITURA\nVosso espírito, vossa alma e vosso corposejam conservados para a vinda do Senhor.\nLeitura da Primeira Carta de São Paulo aos Tessalonicenses\n5,16-24\nIrmãos:\n16\nEstai sempre alegres!\n17\nRezai sem cessar.\n18\nDai graças em todas as circunstâncias,\nporque essa é a vosso respeito\na vontade de Deus em Jesus Cristo.\n19\nNão apagueis o espírito!\n20\nNão desprezeis as profecias,\n21\nmas examinai tudo e guardai o que for bom.\n22\nAfastai-vos de toda espécie de maldade!\n23\nQue o próprio Deus da paz vos santifique totalmente,\ne que tudo aquilo que sois\n— espírito, alma, corpo —\nseja conservado sem mancha alguma\npara a vinda de nosso Senhor Jesus Cristo!\n24\nAquele que vos chamou é fiel;\nele mesmo realizará isso.\nPalavra do Senhor.\nAclamação ao Evangelho\nIs 61,1 (Lc 4,18)\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor\nsobre mim fez a sua unção,\nenviou-me aos empobrecidos\na fazer feliz proclamação."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,6-8.19-28",
+    "texto": "1,6-8.19-28\n6\nSurgiu um homem enviado por Deus;\nSeu nome era João.\n7\nEle veio como testemunha,\npara dar testemunho da luz,\npara que todos chegassem à fé por meio dele.\n8\nEle não era a luz,\nmas veio para dar testemunho da luz.\n19\nEste foi o testemunho de João,\nquando os judeus enviaram de Jerusalém\nsacerdotes e levitas para perguntar:\n\"Quem és tu?\"\n20\nJoão confessou e não negou.\nConfessou: \"Eu não sou o Messias\".\n21\nEles perguntaram: \"Quem és, então?\nÉs tu Elias?\"\nJoão respondeu: \"Não sou\".\nEles perguntaram: \"És o Profeta?\"\nEle respondeu: \"Não\".\n22\nPerguntaram então: \"Quem és, afinal?\nTemos que levar uma resposta para aqueles que nos enviaram.\nO que dizes de ti mesmo?\"\n23\nJoão declarou:\n\"Eu sou a voz que grita no deserto:\n'Aplainai o caminho do Senhor'\"\n— conforme disse o profeta Isaías.\n24\nOra, os que tinham sido enviados\npertenciam aos fariseus\n25\ne perguntaram: \"Por que então andas batizando,\nse não és o Messias, nem Elias, nem o Profeta?\"\n26\nJoão respondeu: \"Eu batizo com água;\nmas no meio de vós está aquele\nque vós não conheceis,\n27\ne que vem depois de mim.\nEu não mereço desamarrar a correia de suas sandálias\".\n28\nIsso aconteceu em Betânia além do Jordão,\nonde João estava batizando.\nPalavra da Salvação."
+  }
+}

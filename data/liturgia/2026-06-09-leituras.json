@@ -1,0 +1,23 @@
+{
+  "data": "2026-06-09",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 17,7-16</div><div> Sl 4,2-3.4-5.7-8 (R. 7)</div><div></div><div> Mt 5,13-16</div></div>",
+  "primeira_leitura": {
+    "referencia": "17,7-16",
+    "texto": "Naqueles dias,\n7\nsecou a torrente do lugar onde Elias estava escondido,\nporque não tinha chovido no país.\n8\nEntão a palavra do Senhor\nfoi-lhe dirigida nestes termos:\n\"Levanta-te e vai a Sarepta dos sidônios,\ne fica morando lá,\npois ordenei a uma viúva desse lugar\nque te dê sustento\".\n10\nElias pôs-se a caminho e foi para Sarepta.\nAo chegar à porta da cidade,\nviu uma viúva apanhando lenha.\nEle chamou-a e disse:\n\"Por favor, traze-me um pouco de água numa vasilha\npara eu beber\".\n11\nQuando ela ia buscar água, Elias gritou-lhe:\n\"Por favor, traze-me também\num pedaço de pão em tua mão!\"\n12\nEla respondeu:\n\"Pela vida do Senhor, teu Deus, não tenho pão.\nSó tenho um punhado de farinha numa vasilha\ne um pouco de azeite na jarra.\nEu estava apanhando dois pedaços de lenha,\na fim de preparar esse resto para mim e meu filho,\npara comermos e depois esperar a morte\".\n13\nElias replicou-lhe:\n\"Não te preocupes!\nVai e faze como disseste.\nMas, primeiro, prepara-me com isso um pãozinho,\ne traze-o.\nDepois farás o mesmo para ti e teu filho.\n14\nPorque assim fala o Senhor, Deus de Israel:\n'A vasilha de farinha não acabará\ne a jarra de azeite não diminuirá,\naté ao dia em que o Senhor enviar\na chuva sobre a face da terra'\".\n15\nA mulher foi e fez como Elias lhe tinha dito.\nE comeram, ele e ela e sua casa,\ndurante muito tempo.\n16\nA farinha da vasilha não acabou\nnem diminuiu o óleo da jarra,\nconforme o que o Senhor tinha dito\npor intermédio de Elias.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 4,2-3.4-5.7-8 (R. 7)",
+    "refrao": "",
+    "texto": "R.\nSobre nós fazei brilhar o esplendor da vossa face!\n2\nQuando eu chamo, respondei-me, ó meu Deus, minha justiça! †\nVós que soubestes aliviar-me nos momentos de aflição, *\natendei-me por piedade e escutai minha oração!\n3\nFilhos dos homens, até quando fechareis o coração? *\nPor que amais a ilusão e procurais a falsidade?\nR.\n4\nCompreendei que nosso Deus faz maravilhas por seu servo, *\ne que o Senhor me ouvirá quando lhe faço a minha prece!\n5\nSe ficardes revoltados, não pequeis por vossa ira; *\nmeditai nos vossos leitos e calai o coração!\nR.\n7\nMuitos há que se perguntam: \"Quem nos dá felicidade?\" *\nSobre nós fazei brilhar o esplendor de vossa face!\n8\nVós me destes, ó Senhor, mais alegria ao coração, *\ndo que a outros na fartura do seu trigo e vinho novo.\nR.\nAclamação ao Evangelho\nMt 5,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVós sois a luz do mundo; brilhe a todos vossa luz.\nVendo eles vossas obras, deem glória ao Pai celeste!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,13-16",
+    "texto": "5,13-16\nNaquele tempo, disse Jesus a seus discípulos:\n13\n\"Vós sois o sal da terra.\nOra, se o sal se tornar insosso,\ncom que salgaremos?\nEle não servirá para mais nada,\nsenão para ser jogado fora e ser pisado pelos homens.\n14\nVós sois a luz do mundo.\nNão pode ficar escondida uma cidade\nconstruída sobre um monte.\n15\nNinguém acende uma lâmpada\ne a coloca debaixo de uma vasilha,\nmas sim, num candeeiro,\nonde brilha para todos que estão na casa.\n16\nAssim também brilhe a vossa luz diante dos homens,\npara que vejam as vossas boas obras\ne louvem o vosso Pai que está nos céus\".\nPalavra da Salvação."
+  }
+}

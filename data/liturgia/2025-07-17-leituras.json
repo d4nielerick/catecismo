@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-17",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 3,13-20</div><div> Sl 104(105),1 e 5.8-9.24-25.26-27 (R. 8a)</div><div></div><div> Mt 11,28-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,13-20",
+    "texto": "Naqueles dias,\nouvindo a voz do Senhor do meio da sarça,\n13\nMoisés disse a Deus:\n\"Sim, eu irei aos filhos de Israel e lhes direi:\n'O Deus de vossos pais enviou-me a vós'.\nMas, se eles perguntarem:\n'Qual é o seu nome?' o que lhes devo responder?\"\n14\nDeus disse a Moisés:\n\"Eu sou aquele que sou\". E acrescentou:\n\"Assim responderás aos filhos de Israel:\n'Eu sou enviou-me a vós'\".\n15\nE Deus disse ainda a Moisés:\n\"Assim dirás aos filhos de Israel:\n'O Senhor, o Deus de vossos pais,\no Deus de Abraão, o Deus de Isaac e o Deus de Jacó,\nenviou-me a vós'.\nEste é o meu nome para sempre,\ne assim serei lembrado de geração em geração.\n16\nVai, reúne os anciãos de Israel e dize-lhes:\n'O Senhor, o Deus de vossos pais,\no Deus de Abraão, o Deus de Isaac e o Deus de Jacó,\napareceu-me, dizendo:\nEu vos visitei e vi tudo o que vos sucede no Egito.\n17\nE decidi tirar-vos da opressão do Egito\ne conduzir-vos à terra dos cananeus, dos hititas,\ndos amorreus, dos fereseus, dos heveus e dos jebuseus,\na uma terra onde corre leite e mel.\n18\nEles te escutarão e tu, com os anciãos de Israel,\nirás ao rei do Egito e lhe direis:\n'O Senhor, o Deus dos hebreus, veio ao nosso encontro.\nE, agora, temos que ir, a três dias de marcha no deserto,\npara oferecermos sacrifícios ao Senhor nosso Deus'.\n19\nEu sei, no entanto, que o rei do Egito não vos deixará partir,\nse não for obrigado por mão forte.\n20\nPor isso, estenderei minha mão\ne castigarei o Egito com toda a sorte de prodígios\nque vou realizar no meio deles.\nDepois disso, o rei do Egito vos deixará partir\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 104(105),1 e 5.8-9.24-25.26-27 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor se lembra sempre da Aliança.\n1\nDai graças ao Senhor, gritai seu nome, *\nanunciai entre as nações seus grandes feitos!\n5\nLembrai as maravilhas que ele fez, *\nseus prodígios e as palavras de seus lábios!\nR.\n8\nEle sempre se recorda da Aliança, *\npromulgada a incontáveis gerações;\n9\nda Aliança que ele fez com Abraão, *\ne do seu santo juramento a Isaac.\nR.\n24\nDeus deu um grande crescimento a seu povo *\ne o fez mais forte que os próprios opressores.\n25\nEle mudou seus corações para odiá-lo, *\ne trataram com má-fé seus servidores.\nR.\n26\nEntão mandou Moisés, seu mensageiro, *\ne igualmente Aarão, seu escolhido;\n27\npor meio deles realizou muitos prodígios *\ne, na terra do Egito, maravilhas.\nR.\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados,\ne descanso eu vos darei, diz o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,28-30",
+    "texto": "11,28-30\nNaquele tempo, tomou Jesus a palavra e disse:\n28\n\"Vinde a mim todos vós que estais cansados\ne fatigados sob o peso dos vossos fardos,\ne eu vos darei descanso.\n29\nTomai sobre vós o meu jugo e aprendei de mim,\nporque sou manso e humilde de coração,\ne vós encontrareis descanso.\n30\nPois o meu jugo é suave e o meu fardo é leve\".\nPalavra da Salvação."
+  }
+}

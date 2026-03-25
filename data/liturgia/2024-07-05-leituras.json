@@ -1,0 +1,23 @@
+{
+  "data": "2024-07-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Am 8,4-6.9-12</div><div> Sl 118(119),2.10.20.30.40.131 (R. Mt 4,4)</div><div></div><div> Mt 9,9-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,4-6.9-12",
+    "texto": "4\nOuvi isto, vós que maltratais os humildes\ne causais a prostração dos pobres da terra;\n5\nvós que andais dizendo:\n\"Quando passará a lua nova,\npara vendermos bem a mercadoria?\nE o sábado, para darmos pronta saída ao trigo,\npara diminuir medidas, aumentar pesos,\ne adulterar balanças,\n6\ndominar os pobres com dinheiro\ne os humildes com um par de sandálias,\ne para pôr à venda o refugo do trigo?\"\n9\n\"Acontecerá que naquele dia,\ndiz o Senhor Deus,\nfarei que o sol se ponha ao meio-dia\ne em pleno dia escureça a terra;\n10\nmudarei em luto vossas festas\ne em pranto todos os vossos cânticos;\nfarei vestir saco a todas as cinturas\ne tornarei calvas todas as cabeças,\no país porá luto, como por um filho único,\ne o final desse dia terminará em amargura.\n11\nEis que virão dias,\ndiz o Senhor,\nem que enviarei fome sobre a terra;\nnão fome de pão, nem sede de água,\nmas de ouvir a palavra do Senhor\".\n12\nOs homens vaguearão de um mar a outro mar,\ncirculando do norte para o oriente,\nem busca da palavra do Senhor,\nmas não a encontrarão.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),2.10.20.30.40.131 (R. Mt 4,4)",
+    "refrao": "",
+    "texto": "R.\nO homem não vive somente de pão,\nmas de toda palavra da boca de Deus.\n2\nFeliz o homem que observa seus preceitos, *\ne de todo o coração procura a Deus!\nR.\n10\nDe todo o coração eu vos procuro, *\nnão deixeis que eu abandone a vossa lei!\nR.\n20\nMinha alma se consome o tempo todo *\nem desejar as vossas justas decisões.\nR.\n30\nEscolhi seguir a trilha da verdade, *\ndiante de mim eu coloquei vossos preceitos.\nR.\n40\nComo anseio pelos vossos mandamentos! *\nDai-me a vida, ó Senhor, porque sois justo!\nR.\n131\nAbro a boca e aspiro largamente, *\npois estou ávido de vossos mandamentos.\nR.\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados,\ne descanso eu vos darei, diz o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,9-13",
+    "texto": "9,9-13\nNaquele tempo,\n9\nJesus viu um homem chamado Mateus,\nsentado na coletoria de impostos,\ne disse-lhe:\n\"Segue-me!\"\nEle se levantou e seguiu a Jesus.\n10\nEnquanto Jesus estava à mesa, em casa de Mateus,\nvieram muitos cobradores de impostos e pecadores\ne sentaram-se à mesa com Jesus e seus discípulos.\n11\nAlguns fariseus viram isso\ne perguntaram aos discípulos:\n\"Por que vosso mestre\ncome com os cobradores de impostos e pecadores?\"\n12\nJesus ouviu a pergunta e respondeu:\n\"Aqueles que têm saúde não precisam de médico,\nmas sim os doentes.\n13\nAprendei, pois, o que significa:\n'Quero misericórdia e não sacrifício'.\nDe fato, eu não vim para chamar os justos,\nmas os pecadores\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2026-06-14",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 19,2-6a</div><div> Sl 99(100),2.3.5 (R. 3c)</div><div> Rm 5,6-11</div><div> Mt 9,36-10,8</div></div>",
+  "primeira_leitura": {
+    "referencia": "19,2-6a",
+    "texto": "Naqueles dias, os israelitas,\n2\npartindo de Rafidim,\nchegaram ao deserto do Sinai, onde acamparam.\nIsrael armou aí suas tendas, defronte da montanha.\n3\nMoisés, então, subiu ao encontro de Deus.\nO Senhor chamou-o do alto da montanha, e disse:\n\"Assim deverás falar à casa de Jacó\ne anunciar aos filhos de Israel:\n4\nVistes o que fiz aos egípcios,\ne como vos levei sobre asas de águia\ne vos trouxe a mim.\n5\nPortanto, se ouvirdes a minha voz\ne guardardes a minha aliança,\nsereis para mim a porção escolhida\ndentre todos os povos,\nporque minha é toda a terra.\n6a\nE vós sereis para mim um reino de sacerdotes\ne uma nação santa.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 99(100),2.3.5 (R. 3c)",
+    "refrao": "",
+    "texto": "R.\nNós somos o povo e o rebanho do Senhor.\n2\nAclamai o Senhor, ó terra inteira, †\nservi ao Senhor com alegria, *\nide a ele cantando jubilosos!\nR.\n3\nSabei que o Senhor, só ele, é Deus, †\nEle mesmo nos fez, e somos seus, *\nnós somos seu povo e seu rebanho.\nR.\n5\nSim, é bom o Senhor e nosso Deus, †\nsua bondade perdura para sempre, *\nseu amor é fiel eternamente!\nR.\n2ª Leitura - Rm 5,6-1\nSEGUNDA LEITURA\nSe fomos reconciliados pela morte do Filho,\nmuito mais seremos salvos por sua vida.\nLeitura da Carta de São Paulo aos Romanos\n5,6-11\nIrmãos:\n6\nQuando éramos ainda fracos,\nCristo morreu pelos ímpios,\nno tempo marcado.\n7\nDificilmente alguém morrerá por um justo;\npor uma pessoa muito boa,\ntalvez alguém se anime a morrer.\n8\nPois bem, a prova de que Deus nos ama\né que Cristo morreu por nós,\nquando éramos ainda pecadores.\n9\nMuito mais agora,\nque já estamos justificados pelo sangue de Cristo,\nseremos salvos da ira por ele.\n10\nQuando éramos inimigos de Deus,\nfomos reconciliados com ele pela morte do seu Filho;\nquanto mais agora, estando já reconciliados,\nseremos salvos por sua vida!\n11\nAinda mais:\nNós nos gloriamos em Deus,\npor nosso Senhor Jesus Cristo.\nÉ por ele que, já desde o tempo presente,\nrecebemos a reconciliação.\nPalavra do Senhor.\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Reino do céu está perto!\nConvertei-vos, irmãos, é preciso!\nCrede todos no Evangelho!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,36-10,8",
+    "texto": "9,36-10,8\nNaquele tempo,\n36\nVendo Jesus as multidões, compadeceu-se delas,\nporque estavam cansadas e abatidas,\ncomo ovelhas que não têm pastor.\nEntão disse a seus discípulos:\n37\n\"A Messe é grande, mas os trabalhadores são poucos.\n38\nPedi pois ao dono da messe\nque envie trabalhadores para a sua colheita!\"\n10,1\nJesus chamou os doze discípulos\ne deu-lhes poder para expulsarem os espíritos maus\ne para curarem todo tipo de doença e enfermidade.\n2\nEstes são os nomes dos doze apóstolos:\nprimeiro, Simão chamado Pedro, e André, seu irmão;\nTiago, filho de Zebedeu, e seu irmão João;\n3\nFilipe e Bartolomeu;\nTomé e Mateus, o cobrador de impostos;\nTiago, filho de Alfeu, e Tadeu;\n4\nSimão, o Zelota, e Judas Iscariotes,\nque foi o traidor de Jesus.\n5\nJesus enviou estes Doze,\ncom as seguintes recomendações:\n\"Não deveis ir aonde moram os pagãos,\nnem entrar nas cidades dos samaritanos!\n6\nIde, antes, às ovelhas perdidas da casa de Israel!\n7\nEm vosso caminho, anunciai:\n'O Reino dos Céus está próximo'.\n8\nCurai os doentes, ressuscitai os mortos,\npurificai os leprosos, expulsai os demônios.\nDe graça recebestes, de graça deveis dar!\"\nPalavra da Salvação."
+  }
+}

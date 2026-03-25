@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-16",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ml 3,19-20a</div><div> Sl 97(98),5-6.7-8.9a.9bc (R. cf. 9)</div><div> 2Ts 3,7-12</div><div> Lc 21,5-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,19-20a",
+    "texto": "19\nEis que virá o dia, abrasador como fornalha,\nem que todos os soberbos e ímpios serão como palha;\ne esse dia vindouro haverá de queimá-los,\ndiz o Senhor dos exércitos,\ntal que não lhes deixará raiz nem ramo.\n20a\nPara vós, que temeis o meu nome,\nnascerá o sol da justiça,\ntrazendo salvação em suas asas.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),5-6.7-8.9a.9bc (R. cf. 9)",
+    "refrao": "",
+    "texto": "R.\nO Senhor virá julgar a terra inteira;\ncom justiça julgará.\n5\nCantai salmos ao Senhor ao som da harpa*\ne da cítara suave!\n6\nAclamai, com os clarins e as trombetas,*\nao Senhor, o nosso Rei!\nR.\n7\nAplauda o mar com todo ser que nele vive,*\no mundo inteiro e toda gente!\n8\nAs montanhas e os rios batam palmas*\ne exultem de alegria.\nR.\n9a\nExultem na presença do Senhor, pois ele vem,*\nvem julgar a terra inteira.\n9b\nJulgará o universo com justiça *\n9c\ne as nações com equidade.\n2ª Leitura - 2Ts 3,7-\nSEGUNDA LEITURA\nQuem não quer trabalhar, também não deve comer.\nLeitura da Segunda Carta de São Paulo aos Tessalonicenses\n3,7-12\nIrmãos:\n7\nBem sabeis como deveis seguir o nosso exemplo,\npois não temos vivido entre vós na ociosidade.\n8\nDe ninguém recebemos de graça o pão que comemos.\nPelo contrário, trabalhamos com esforço e cansaço,\nde dia e de noite, para não sermos pesados a ninguém.\n9\nNão que não tivéssemos o direito de fazê-lo,\nmas queríamos apresentar-nos como exemplo a ser imitado.\n10\nCom efeito, quando estávamos entre vós,\ndemos esta regra:\n\"Quem não quer trabalhar, também não deve comer\".\n11\nOra, ouvimos dizer que entre vós há alguns\nque vivem à toa, muito ocupados em não fazer nada.\n12\nEm nome do Senhor Jesus Cristo,\nordenamos e exortamos a estas pessoas que, trabalhando,\ncomam na tranquilidade o seu próprio pão.\nPalavra do Senhor.\nAclamação ao Evangelho\nLc 21,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nLevantai vossa cabeça e olhai,\npois a vossa redenção se aproxima!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,5-19",
+    "texto": "21,5-19\nNaquele tempo,\n5\nalgumas pessoas comentavam a respeito do Templo\nque era enfeitado com belas pedras\ne com ofertas votivas.\nJesus disse:\n6\n\"Vós admirais estas coisas?\nDias virão em que não ficará pedra sobre pedra.\nTudo será destruído\".\n7\nMas eles perguntaram:\n\"Mestre, quando acontecerá isto?\nE qual vai ser o sinal\nde que estas coisas estão para acontecer?\"\n8\nJesus respondeu:\n\"Cuidado para não serdes enganados,\nporque muitos virão em meu nome, dizendo:\n'Sou eu!' e ainda: 'O tempo está próximo.'\nNão sigais essa gente!\n9\nQuando ouvirdes falar de guerras e revoluções,\nnão fiqueis apavorados.\nÉ preciso que estas coisas aconteçam primeiro,\nmas não será logo o fim.'\n10\nE Jesus continuou:\n\"Um povo se levantará contra outro povo,\num país atacará outro país.\n11\nHaverá grandes terremotos,\nfomes e pestes em muitos lugares;\nacontecerão coisas pavorosas\ne grandes sinais serão vistos no céu.\n12\nAntes, porém, que estas coisas aconteçam,\nsereis presos e perseguidos;\nsereis entregues às sinagogas e postos na prisão;\nsereis levados diante de reis e governadores\npor causa do meu nome.\n13\nEsta será a ocasião\nem que testemunhareis a vossa fé.\n14\nFazei o firme propósito\nde não planejar com antecedência a própria defesa;\n15\nporque eu vos darei palavras tão acertadas,\nque nenhum dos inimigos vos poderá resistir ou rebater.\n16\nSereis entregues até mesmo pelos próprios pais,\nirmãos, parentes e amigos.\nE eles matarão alguns de vós.\n17\nTodos vos odiarão por causa do meu nome.\n18\nMas vós não perdereis\num só fio de cabelo da vossa cabeça.\n19\nÉ permanecendo firmes que ireis ganhar a vida!\"\nPalavra da Salvação."
+  }
+}

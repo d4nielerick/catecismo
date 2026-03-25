@@ -1,0 +1,23 @@
+{
+  "data": "2025-03-13",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Est 4,17n.p-r.aa-bb.gg-hh</div><div> Sl 137(138),1-2a.2bc-3.7c-8 (R. 3a)</div><div></div><div> Mt 7,7-12</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,17n.p-r.aa-bb.gg-hh",
+    "texto": "Naqueles dias,\n17n\na rainha Ester,\ntemendo o perigo de morte que se aproximava,\nbuscou refúgio no Senhor.\n17p\nProstrou-se por terra\ndesde a manhã até ao anoitecer,\njuntamente com suas servas, e disse:\n17q\n\"Deus de Abraão, Deus de Isaac e Deus de Jacó,\ntu és bendito.\nVem em meu socorro, pois estou só\ne não tenho outro defensor fora de ti, Senhor,\n17r\npois eu mesma me expus ao perigo.\n17aa\nSenhor, eu ouvi,\ndos livros de meus antepassados,\nque tu libertas, Senhor, até ao fim,\ntodos os que te são caros.\n17bb\nA\ngora, pois, ajuda-me, a mim que estou sozinha\ne não tenho mais ninguém senão a ti,\nSenhor meu Deus.\n17gg\nVem, pois, em auxílio de minha orfandade.\nPõe em meus lábios um discurso atraente,\nquando eu estiver diante do leão,\ne muda o seu coração\npara que odeie aquele que nos ataca,\npara que este pereça com todos os seus cúmplices.\n17hh\nE livra-nos da mão de nossos inimigos.\nTransforma nosso luto em alegria\ne nossas dores em bem-estar\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 137(138),1-2a.2bc-3.7c-8 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nNaquele dia em que gritei,\nvós me escutastes, ó Senhor!.\n1\nÓ Senhor, de coração eu vos dou graças, *\nporque ouvistes as palavras dos meus lábios!\nPerante os vossos anjos vou cantar-vos *\n2a\ne ante o vosso templo vou prostrar-me.\nR.\nb\nEu agradeço vosso amor, vossa verdade, *\nc\nporque fizestes muito mais que prometestes;\n3\nnaquele dia em que gritei, vós me escutastes *\ne aumentastes o vigor da minha alma.\nR.\n7c\nestendereis o vosso braço em meu auxílio *\ne havereis de me salvar com vossa destra.\n8\nCompletai em mim a obra começada; *\nó Senhor, vossa bondade é para sempre!\nEu vos peço: não deixeis inacabada *\nesta obra que fizeram vossas mãos!\nR.\nEvangelho - Mt 7,7-12\nAclamação ao Evangelho\nSl 50,12a.14a\nR.\nSalve, ó Cristo, imagem do Pai,\na plena verdade nos comunicai!\nV.\nCriai em mim um coração que seja puro,\ndai-me de novo a alegria de ser salvo!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,7-12",
+    "texto": "7,7-12\nNaquele tempo, disse Jesus aos seus discípulos:\n7\n\"Pedi e vos será dado! Procurai e achareis!\nBatei e a porta vos será aberta!\n8\nPois todo aquele que pede, recebe;\nquem procura, encontra;\ne a quem bate, a porta será aberta.\n9\nQuem de vós dá ao filho uma pedra,\nquando ele pede um pão?\n10\nOu lhe dá uma cobra, quando ele pede um peixe?\n11\nOra, se vós, que sois maus,\nsabeis dar coisas boas a vossos filhos,\nquanto mais vosso Pai que está nos céus\ndará coisas boas aos que lhe pedirem!\n12\nTudo quanto quereis que os outros vos façam,\nfazei também a eles.\nNisto consiste a Lei e os Profetas\".\nPalavra da Salvação."
+  }
+}

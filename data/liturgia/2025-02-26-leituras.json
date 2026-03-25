@@ -1,0 +1,23 @@
+{
+  "data": "2025-02-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Eclo 4,12-22</div><div> Sl 118(119),165.168.171.174.175 (R. 165a)</div><div></div><div> Mc 9,38-40</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,12-22 (gr. 11-19)",
+    "texto": "12\nA sabedoria comunica a vida a seus filhos\ne acolhe os que a procuram.\n13\nOs que a amam, amam a vida;\nos que a procuram desde manhã cedo,\nserão repletos de alegria pelo Senhor.\n14\nQuem a ela se apega, herdará a glória;\npara onde for, Deus o abençoará.\n15\nOs que a veneram, prestam culto ao Santo;\npois Deus ama os que a amam.\n16\nQuem a escutar, julgará as nações;\nquem a ela se dedicar, viverá em segurança.\n17\nSe alguém confiar nela,\nvai recebê-la em herança;\ne na sua posse continuarão seus descendentes.\n18\nNo começo, ela o acompanha por caminhos contrários,\n19\ntrazendo-lhe temor e tremor;\ncomeça a prová-lo com a sua disciplina,\naté que ele a tenha em seus pensamentos\ne nela deponha sua confiança.\n20\nEntão voltará a ele em linha reta,\no confirmará e lhe dará alegria,\n21\nlhe revelará os seus segredos\ne lhe dará o tesouro da ciência\ne da compreensão da justiça.\n22\nSe, porém, se desviar, ela o abandonará\ne o entregará às mãos de seu inimigo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),165.168.171.174.175 (R. 165a)",
+    "refrao": "",
+    "texto": "R.\nOs que amam vossa lei têm grande paz!\n165\nOs que amam vossa lei têm grande paz, *\ne não há nada que os faça tropeçar.\nR.\n168\nSerei fiel à vossa lei, vossa Aliança; *\nos meus caminhos estão todos ante vós.\nR.\n171\nQue prorrompam os meus lábios em canções, *\npois me fizestes conhecer vossa vontade!\nR.\n174\nDesejo a vossa salvação ardentemente *\ne encontro em vossa lei minhas delícias!\nR.\nEvangelho - Mc 9,30-37\n175\nPossa eu viver e para sempre vos louvar; *\ne que me ajudem, ó Senhor, vossos conselhos!\nR.\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o Caminho, a Verdade e a Vida,\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,38-40",
+    "texto": "9,38-40\nNaquele tempo,\n38\nJoão disse a Jesus:\n\"Mestre, vimos um homem\nexpulsar demônios em teu nome.\nMas nós o proibimos,\nporque ele não nos segue\".\n39\nJesus disse:\n\"Não o proibais,\npois ninguém faz milagres em meu nome\npara depois falar mal de mim.\n40\nQuem não é contra nós é a nosso favor\".\nPalavra da Salvação."
+  }
+}

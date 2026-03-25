@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-22",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Pr 21,1-6.10-13</div><div> Sl 118(119),1.27.30.34.35.44 (R. 35a)</div><div></div><div> Lc 8,19-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "21,1-6.10-13",
+    "texto": "1\nO coração do rei nas mãos do Senhor\né como água corrente;\nele o dirige para onde quer.\n2\nO homem pensa que o seu caminho é sempre reto,\nmas é o Senhor quem sonda os corações.\n3\nPraticar a justiça e o direito\né mais agradável ao Senhor do que os sacrifícios.\n4\nOlhar arrogante e coração orgulhoso,\na lâmpada dos malvados não é senão o pecado.\n5\nOs projetos do homem aplicado produzem abundância,\nmas todos os apressados só alcançam indigência.\n6\nTesouros adquiridos com língua mentirosa\nsão ilusão passageira dos que procuram a morte.\n10\nA alma do malvado deseja o mal,\nele olha sem piedade para o seu próximo.\n11\nQuando se castiga o zombador, aprende o imbecil,\ne quando o sábio é instruído, ele adquire mais saber.\n12\nO justo observa a casa do ímpio\ne leva os ímpios à desgraça.\n13\nQuem tapa os ouvidos ao clamor do pobre,\ntambém há de clamar, mas não será ouvido.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),1.27.30.34.35.44 (R. 35a)",
+    "refrao": "",
+    "texto": "R.\nGuiai-me, Senhor, no caminho de vossos preceitos!\n1\nFeliz o homem sem pecado em seu caminho, *\nque na lei do Senhor Deus vai progredindo!\nR.\n27\nFazei-me conhecer vossos caminhos, *\ne então meditarei vossos prodígios!\nR.\n30\nEscolhi seguir a trilha da verdade, *\ndiante de mim eu coloquei vossos preceitos.\nR.\n34\nDai-me o saber, e cumprirei a vossa lei, *\ne de todo o coração a guardarei.\nR.\n35\nGuiai meus passos no caminho que traçastes, *\npois só nele encontrarei felicidade.\nR.\n44\nCumprirei constantemente a vossa lei; *\npara sempre, eternamente a cumprirei!\nR.\nAclamação ao Evangelho\nLc 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFeliz quem ouve e observa a palavra de Deus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,19-21",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n8,19-21\nNaquele tempo,\n19\na mãe e os irmãos de Jesus aproximaram-se,\nmas não podiam chegar perto dele,\npor causa da multidão.\n20\nEntão anunciaram a Jesus:\n\"Tua mãe e teus irmãos estão aí fora\ne querem te ver\".\n21\nJesus respondeu:\n\"Minha mãe e meus irmãos são aqueles\nque ouvem a Palavra de Deus, e a põem em prática\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-05-03",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 15,1-8</div><div> Sl 18(19A),2-3.4-5 (R. 5a)</div><div></div><div> Jo 14,6-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,1-8",
+    "texto": "1\nIrmãos, quero lembrar-vos\no evangelho que vos preguei e que recebestes,\ne no qual estais firmes.\n2\nPor ele sois salvos,\nse o estais guardando\ntal qual ele vos foi pregado por mim.\nDe outro modo, teríeis abraçado a fé em vão.\n3\nCom efeito, transmiti-vos, em primeiro lugar,\naquilo que eu mesmo tinha recebido,\na saber:\nque Cristo morreu por nossos pecados,\nsegundo as Escrituras;\n4\nque foi sepultado;\nque, ao terceiro dia, ressuscitou,\nsegundo as Escrituras;\n5\ne que apareceu a Cefas e, depois, aos Doze.\n6\nMais tarde,\napareceu a mais de quinhentos irmãos, de uma vez.\nDestes, a maioria ainda vive\ne alguns já morreram.\n7\nDepois, apareceu a Tiago\ne, depois, apareceu aos apóstolos todos juntos.\n8\nPor último, apareceu também a mim,\ncomo a um abortivo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 18(19A),2-3.4-5 (R. 5a)",
+    "refrao": "",
+    "texto": "R.\nSeu som ressoa e se espalha em toda terra.\n2\nOs céus proclamam a glória do Senhor, *\ne o firmamento, a obra de suas mãos;\n3\no dia ao dia transmite esta mensagem, *\na noite à noite publica esta notícia.\nR.\n4\nNão são discursos nem frases ou palavras, *\nnem são vozes que possam ser ouvidas;\n5\nseu som ressoa e se espalha em toda a terra, *\nchega aos confins do universo a sua voz.\nR.\nEvangelho - Jo 14,6-14\nAclamação ao Evangelho\nJoão 14,6b.9c\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o caminho, a verdade e a vida, diz Jesus;\nFilipe, quem me vê, igualmente vê meu Pai!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "14,6-14",
+    "texto": "14,6-14\nNaquele tempo,\nJesus disse a Tomé:\n6\n\"Eu sou o Caminho, a Verdade e a Vida.\nNinguém vai ao Pai senão por mim.\n7\nSe vós me conhecêsseis,\nconheceríeis também o meu Pai.\nE desde agora o conheceis e o vistes\".\n8\nDisse Filipe:\n\"Senhor, mostra-nos o Pai, isso nos basta!\"\n9\nJesus respondeu:\n\"Há tanto tempo estou convosco,\ne não me conheces, Filipe?\nQuem me viu, viu o Pai.\nComo é que tu dizes:\n'Mostra-nos o Pai'?\n10\nNão acreditas que eu estou no Pai\ne o Pai está em mim?\nAs palavras que eu vos digo,\nnão as digo por mim mesmo,\nmas é o Pai que,\npermanecendo em mim,\nrealiza as suas obras.\n11\nAcreditai-me: eu estou no Pai\ne o Pai está em mim.\nAcreditai, ao menos,\npor causa destas mesmas obras.\n12\nEm verdade, em verdade vos digo,\nquem acredita em mim\nfará as obras que eu faço,\ne fará ainda maiores do que estas.\nPois eu vou para o Pai,\n13\ne o que pedirdes em meu nome,\neu o realizarei,\na fim de que o Pai seja glorificado no Filho.\n14\nSe pedirdes algo em meu nome,\neu o realizarei\".\nPalavra da Salvação."
+  }
+}

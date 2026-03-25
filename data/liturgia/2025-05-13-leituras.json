@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-13",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 11,19-26</div><div> Sl 86(87),1-3.4-5.6-7 (R. Sl 116(117),1a)</div><div></div><div> Jo 10,22-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,19-26",
+    "texto": "Naqueles dias,\n19\naqueles que se haviam espalhado\npor causa da perseguição que se seguiu à morte de Estêvão,\nchegaram à Fenícia, à ilha de Chipre\ne à cidade de Antioquia,\nembora não pregassem a Palavra\na ninguém que não fosse judeu.\n20\nContudo, alguns deles,\nhabitantes de Chipre e da cidade de Cirene,\nchegaram a Antioquia\ne começaram a pregar também aos gregos,\nanunciando-lhes a Boa-Nova do Senhor Jesus.\n21\nE a mão do Senhor estava com eles.\nMuitas pessoas acreditaram no Evangelho\ne se converteram ao Senhor.\n22\nA notícia chegou aos ouvidos da Igreja\nque estava em Jerusalém.\nEntão enviaram Barnabé até Antioquia.\n23\nQuando Barnabé chegou\ne viu a graça que Deus havia concedido,\nficou muito alegre e exortou a todos\npara que permanecessem fiéis ao Senhor,\ncom firmeza de coração.\n24\nÉ que ele era um homem bom,\ncheio do Espírito Santo e de fé.\nE uma grande multidão aderiu ao Senhor.\n25\nEntão Barnabé partiu para Tarso,\nà procura de Saulo.\n26\nTendo encontrado Saulo, levou-o a Antioquia.\nPassaram um ano inteiro trabalhando juntos\nnaquela Igreja,\ne instruíram uma numerosa multidão.\nEm Antioquia os discípulos foram, pela primeira vez,\nchamados com o nome de cristãos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 86(87),1-3.4-5.6-7 (R. Sl 116[117],1a)",
+    "refrao": "",
+    "texto": "R.\nCantai louvores ao Senhor, todas as gentes.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nO Senhor ama a cidade *\nque fundou no Monte santo;\n2\nama as portas de Sião *\nmais que as casas de Jacó.\n3\nDizem coisas gloriosas *\nda Cidade do Senhor.\nR.\n4\n\"Lembro o Egito e Babilônia *\nentre os meus veneradores.\nNa Filistéia ou em Tiro †\nou no país da Etiópia, *\neste ou aquele ali nasceu.\n5\nDe Sião, porém, se diz: †\n\"Nasceu nela todo homem; *\nDeus é sua segurança\".\nR.\n6\nDeus anota no seu livro, †\nonde inscreve os povos todos: *\n\"Foi ali que estes nasceram\".\n7\nE por isso todos juntos *\na cantar se alegrarão;\ne, dançando, exclamarão: *\n\"Estão em ti as nossas fontes!\"\nR.\nEvangelho - Jo 10,22-3\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,22-30",
+    "texto": "10,22-30\n22\nCelebrava-se, em Jerusalém,\na festa da Dedicação do Templo.\nEra inverno.\n23\nJesus passeava pelo Templo,\nno pórtico de Salomão.\n24\nOs judeus rodeavam-no e disseram:\n\"Até quando nos deixarás em dúvida?\nSe tu és o Messias, dize-nos abertamente\".\n25\nJesus respondeu:\n\"Já vo-lo disse, mas vós não acreditais.\nAs obras que eu faço em nome do meu Pai\ndão testemunho de mim;\n26\nvós, porém, não acreditais,\nporque não sois das minhas ovelhas.\n27\nAs minhas ovelhas escutam a minha voz,\neu as conheço e elas me seguem.\n28\nEu dou-lhes a vida eterna\ne elas jamais se perderão.\nE ninguém vai arrancá-las de minha mão.\n29\nMeu Pai, que me deu estas ovelhas,\né maior que todos,\ne ninguém pode arrebatá-las da mão do Pai.\n30\nEu e o Pai somos um\".\nPalavra da Salvação."
+  }
+}

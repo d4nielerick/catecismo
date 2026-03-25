@@ -1,0 +1,23 @@
+{
+  "data": "2025-04-16",
+  "titulo": "Semana Santa",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 50,4-9a</div><div> Sl 68(69),8-10.21bcd-22.31 e 33-34 (R. 14cb)</div><div></div><div> Mt 26,14-25</div></div>",
+  "primeira_leitura": {
+    "referencia": "50,4-9a",
+    "texto": "4\nO Senhor Deus deu-me língua adestrada,\npara que eu saiba dizer\npalavras de conforto à pessoa abatida;\nele me desperta cada manhã\ne me excita o ouvido,\npara prestar atenção como um discípulo.\n5\nO Senhor abriu-me os ouvidos;\nnão lhe resisti nem voltei atrás.\n6\nOfereci as costas para me baterem\ne as faces para me arrancarem a barba:\nnão desviei o rosto\nde bofetões e cusparadas.\n7\nMas o Senhor Deus é meu Auxiliador,\npor isso não me deixei abater o ânimo,\nconservei o rosto impassível como pedra,\nporque sei que não sairei humilhado.\n8\nA meu lado está quem me justifica;\nalguém me fará objeções? Vejamos.\nQuem é meu adversário? Aproxime-se.\n9a\nSim, o Senhor Deus é meu Auxiliador;\nquem é que me vai condenar?\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 68(69),8-10.21bcd-22.31.33-34 (R. 14cb)",
+    "refrao": "",
+    "texto": "R.\nRespondei-me pelo vosso imenso amor,\nneste tempo favorável, Senhor Deus.\n8\nPor vossa causa é que sofri tantos insultos, *\ne o meu rosto se cobriu de confusão;\n9\neu me tornei como um estranho a meus irmãos, *\ncomo estrangeiro para os filhos de minha mãe.\n10\nPois meu zelo e meu amor por vossa casa *\nme devoram como fogo abrasador;\ne os insultos de infiéis que vos ultrajam *\nrecaíram todos eles sobre mim!\nR.\n21b\nO insulto me partiu o coração; †\nc\nEu esperei que alguém de mim tivesse pena; *\nd\nprocurei quem me aliviasse e não achei!\n22\nDeram-me fel como se fosse um alimento, *\nem minha sede ofereceram-me vinagre!\nR.\n31\nCantando eu louvarei o vosso nome *\ne agradecido exultarei de alegria!\n33\nHumildes, vede isto e alegrai-vos: †\no vosso coração reviverá, *\nse procurardes o Senhor continuamente!\n34\nPois nosso Deus atende à prece dos seus pobres, *\ne não despreza o clamor de seus cativos.\nR.\nAclamação ao Evangelho\nR.\nSalve, Cristo, Luz da vida,\ncompanheiro na partilha!\nV.\nSalve, nosso rei, somente vós\ntendes compaixão dos nossos erros."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "",
+    "texto": "Contudo, ai daquele que o trair.\nProclamação do Evangelho de Jesus Cristo segundo Mateus\n26,14-25\nNaquele tempo,\n14\num dos doze discípulos, chamado Judas Iscariotes,\nfoi ter com os sumos sacerdotes\n15\ne disse:\n\"O que me dareis se vos entregar Jesus?\"\nCombinaram, então, trinta moedas de prata.\n16\nE daí em diante, Judas procurava uma oportunidade\npara entregar Jesus.\n17\nNo primeiro dia da festa dos Ázimos,\nos discípulos aproximaram-se de Jesus\ne perguntaram:\n\"Onde queres que façamos os preparativos\npara comer a Páscoa?\"\n18\nJesus respondeu:\n\"Ide à cidade,\nprocurai certo homem e dizei-lhe:\n'O Mestre manda dizer:\no meu tempo está próximo,\nvou celebrar a Páscoa em tua casa,\njunto com meus discípulos'\".\n19\nOs discípulos fizeram como Jesus mandou\ne prepararam a Páscoa.\n20\nAo cair da tarde, Jesus pôs-se à mesa\ncom os doze discípulos.\n21\nEnquanto comiam, Jesus disse:\n\"Em verdade eu vos digo, um de vós vai me trair\".\n22\nEles ficaram muito tristes\ne, um por um, começaram a lhe perguntar:\n\"Senhor, será que sou eu?\"\n23\nJesus respondeu:\n\"Quem vai me trair é aquele que comigo põe a mão no prato.\n24\nO Filho do Homem vai morrer,\nconforme diz a Escritura a respeito dele.\nContudo, ai daquele que trair o Filho do Homem!\nSeria melhor que nunca tivesse nascido!\"\n25\nEntão Judas, o traidor, perguntou:\n\"Mestre, serei eu?\"\nJesus lhe respondeu:\n\"Tu o dizes\".\nPalavra da Salvação."
+  }
+}

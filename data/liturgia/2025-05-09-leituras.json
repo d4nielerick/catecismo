@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-09",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 9,1-20</div><div> Sl 116(117),1.2 (R. Mc 16,15)</div><div></div><div> Jo 6,52-59</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,1-20",
+    "texto": "Naqueles dias,\n1\nSaulo só respirava ameaças e morte\ncontra os discípulos do Senhor.\nEle apresentou-se ao Sumo sacerdote\n2\ne pediu-lhe cartas de recomendação\npara as sinagogas de Damasco,\na fim de levar presos para Jerusalém\nos homens e mulheres\nque encontrasse seguindo o Caminho.\n3\nDurante a viagem, quando já estava perto de Damasco,\nSaulo, de repente,\nviu-se cercado por uma luz que vinha do céu.\n4\nCaindo por terra, ele ouviu uma voz que lhe dizia:\n\"Saulo, Saulo, por que me persegues?\"\n5\nSaulo perguntou:\n\"Quem és tu, Senhor?\"\nA voz respondeu:\n\"Eu sou Jesus, a quem tu estás perseguindo.\n6\nAgora, levanta-te, entra na cidade,\ne ali te será dito o que deves fazer\".\n7\nOs homens que acompanhavam Saulo\nficaram mudos de espanto,\nporque ouviam a voz, mas não viam ninguém.\n8\nSaulo levantou-se do chão\ne abriu os olhos, mas não conseguia ver nada.\nEntão pegaram nele pela mão\ne levaram-no para Damasco.\n9\nSaulo ficou três dias sem poder ver.\nE não comeu nem bebeu.\n10\nEm Damasco, havia um discípulo chamado Ananias.\nO Senhor o chamou numa visão: \"Ananias!\"\nE Ananias respondeu:\n\"Aqui estou, Senhor!\"\n11\nO Senhor lhe disse:\n\"Levanta-te, vai à rua que se chama Direita\ne procura, na casa de Judas,\npor um homem de Tarso chamado Saulo.\nEle está rezando\".\n12\nE, numa visão, Saulo contemplou\num homem chamado Ananias,\nentrando e impondo-lhe as mãos\npara que recuperasse a vista.\n13\nAnanias respondeu:\n\"Senhor, já ouvi muitos falarem desse homem\ne do mal que fez aos teus fiéis\nque estão em Jerusalém.\n14\nE aqui em Damasco ele tem plenos poderes,\nrecebidos dos sumos sacerdotes,\npara prender todos os que invocam o teu nome\".\n15\nMas o Senhor disse a Ananias:\n\"Vai, porque esse homem é um instrumento que escolhi\npara anunciar o meu nome aos pagãos,\naos reis e ao povo de Israel.\n16\nEu vou mostrar-lhe\nquanto ele deve sofrer por minha causa\".\n17\nEntão Ananias saiu, entrou na casa,\ne impôs as mãos sobre Saulo, dizendo:\n\"Saulo, meu irmão, o Senhor Jesus,\nque te apareceu quando vinhas no caminho,\nele me mandou aqui para que tu recuperes a vista\ne fiques cheio do Espírito Santo\".\n18\nImediatamente caíram dos olhos de Saulo\ncomo que escamas\ne ele recuperou a vista.\nEm seguida, Saulo levantou-se e foi batizado.\n19\nTendo tomado alimento, sentiu-se reconfortado.\nSaulo passou alguns dias com os discípulos de Damasco,\n20\ne logo começou a pregar nas sinagogas,\nafirmando que Jesus é o Filho de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 116(117),1.2 (R. Mc 16,15)",
+    "refrao": "",
+    "texto": "R.\nIde, por todo o mundo, a todos pregai o Evangelho.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nCantai louvores ao Senhor, todas as gentes, *\npovos todos, festejai-o!\nR.\n2\nPois comprovado é seu amor para conosco,*\npara sempre ele é fiel!\nR.\nEvangelho - Jo 6,52-59\nAclamação ao Evangelho\nJo 6,56\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem come a minha carne e bebe o meu sangue\nem mim permanece e eu vou ficar nele."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,52-59",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n6,52-59\nNaquele tempo,\n52\nos judeus discutiam entre si, dizendo:\n\"Como é que ele pode dar a sua carne a comer?\"\n53\nEntão Jesus disse:\n\"Em verdade, em verdade vos digo,\nse não comerdes a carne do Filho do Homem\ne não beberdes o seu sangue,\nnão tereis a vida em vós.\n54\nQuem come a minha carne\ne bebe o meu sangue\ntem a vida eterna,\ne eu o ressuscitarei no último dia.\n55\nPorque a minha carne é verdadeira comida\ne o meu sangue, verdadeira bebida.\n56\nQuem come a minha carne\ne bebe o meu sangue\npermanece em mim e eu nele.\n57\nComo o Pai, que vive, me enviou,\ne eu vivo por causa do Pai,\nassim o que me come\nviverá por causa de mim.\n58\nEste é o pão que desceu do céu.\nNão é como aquele que os vossos pais comeram.\nEles morreram.\nAquele que come este pão viverá para sempre\".\n59\nAssim falou Jesus,\nensinando na sinagoga em Cafarnaum.\nPalavra da Salvação."
+  }
+}

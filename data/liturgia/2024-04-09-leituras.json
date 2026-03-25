@@ -1,0 +1,23 @@
+{
+  "data": "2024-04-09",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 4,32-37</div><div> Sl 92(93),1ab.1c-2.5 (R. 1a)</div><div></div><div> Jo 3,7b-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,32-37",
+    "texto": "32\nA multidão dos fiéis\nera um só coração e uma só alma.\nNinguém considerava como\npróprias\nas coisas que possuía,\nmas tudo entre eles era posto em comum.\n33\nCom grandes sinais de poder,\nos apóstolos davam testemunho\nda ressurreição do Senhor Jesus.\nE os fiéis eram estimados por todos.\n34\nEntre eles ninguém passava necessidade,\npois aqueles que possuíam terras ou casas,\nvendiam-nas, levavam o dinheiro,\n35\ne o colocavam aos pés dos apóstolos.\nDepois, era distribuído\nconforme a necessidade de cada um.\n36\nJosé, chamado pelos apóstolos de Barnabé,\nque significa filho da consolação,\nlevita e natural de Chipre,\n37\npossuía um campo.\nVendeu e foi depositar o dinheiro\naos pés dos apóstolos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 92(93),1ab.1c-2.5 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nReina o Senhor, revestiu-se de esplendor.\nOu:\nAleluia, Aleluia, Aleluia.\n1a\nDeus é Rei e se vestiu de majestade, *\nb\nrevestiu-se de poder e de esplendor!\nR.\nc\nVós firmastes o universo inabalável, †\n2\nvós firmastes vosso trono desde a origem, *\ndesde sempre, ó Senhor, vós existis!\nR.\n5\nVerdadeiros são os vossos testemunhos, †\nrefulge a santidade em vossa casa,*\npelos séculos dos séculos, Senhor!\nR.\nEvangelho - Jo 3,7b-15\nAclamação ao Evangelho\nJo 3,14b.15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Filho do homem há de ser levantado,\npara que, quem crer, possua a vida eterna."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,7b-15",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n3,7b-15\nNaquele tempo, disse Jesus a Nicodemos:\n7b\n\"Vós deveis nascer do alto.\n8\nO vento sopra onde quer\ne tu podes ouvir o seu ruído,\nmas não sabes de onde vem, nem para onde vai.\nAssim acontece a todo aquele que nasceu do Espírito\".\n9\nNicodemos perguntou:\n\"Como é que isso pode acontecer?\"\n10\nRespondeu-lhe Jesus:\n\"Tu és mestre em Israel,\nmas não sabes estas coisas?\n11\nEm verdade, em verdade te digo,\nnós falamos daquilo que sabemos\ne damos testemunho daquilo que temos visto,\nmas vós não aceitais o nosso testemunho.\n12\nSe não acreditais,\nquando vos falo das coisas da terra,\ncomo acreditareis\nse vos falar das coisas do céu?\n13\nE ninguém subiu ao céu,\na não ser aquele que desceu do céu,\no Filho do Homem.\n14\nDo mesmo modo como Moisés\nlevantou a serpente no deserto,\nassim é necessário\nque o Filho do Homem seja levantado,\n15\npara que todos os que nele crerem\ntenham a vida eterna\".\nPalavra da Salvação."
+  }
+}

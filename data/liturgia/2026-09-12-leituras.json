@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-12",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 10,14-22</div><div> Sl 115(116),12-13.17-18 (R. 17a)</div><div></div><div> Lc 6,43-49</div></div>",
+  "primeira_leitura": {
+    "referencia": "10,14-22",
+    "texto": "14\nMeus caríssimos, fugi da idolatria.\n15\nEu vos falo como a pessoas esclarecidas.\nEntão, ponderai bem o que eu digo:\n16\nO cálice da bênção, o cálice que abençoamos,\nnão é comunhão com o sangue de Cristo?\nE o pão que partimos,\nnão é comunhão com o corpo de Cristo?\n17\nPorque há um só pão,\nnós todos somos um só corpo,\npois todos participamos desse único pão.\n18\nConsiderai os filhos de Israel:\nOs que comem as vítimas sacrificais\nnão estão em comunhão com o altar?\n19\nEntão, o que dizer?\nQue a carne de um sacrifício idolátrico\ntem algum valor?\nOu que o ídolo vale alguma coisa?\n20\n- Nada disso.\nO que eu digo é que os idólatras\noferecem seus sacrifícios aos demônios\ne não a Deus.\nOra, eu não quero\nque entreis em comunhão com os demônios.\n21\nVós não podeis beber do cálice do Senhor\ne do cálice dos demônios;\nvós não podeis participar da mesa do Senhor\ne da mesa dos demônios.\n22\nOu, quem sabe,\nqueremos excitar o zelo santo do Senhor?\nSomos porventura mais fortes do que ele?\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 115(116),12-13.17-18 (R. 17a)",
+    "refrao": "",
+    "texto": "R.\nOferto ao Senhor um sacrifício de louvor.\n12\nQue poderei retribuir ao Senhor Deus*\npor tudo aquilo que ele fez em meu favor?\n13\nElevo o cálice da minha salvação,*\ninvocando o nome santo do Senhor.\nR.\n17\nPor isso oferto um sacrifício de louvor,*\ninvocando o nome santo do Senhor.\n18\nVou cumprir minhas promessas ao Senhor*\nna presença de seu povo reunido.\nR.\nEvangelho - Lc 6,43-49\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama, realmente, guardará minha palavra\ne meu Pai o amará, e a ele nós viremos"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,43-49",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n6,43-49\nNaquele tempo, disse Jesus aos seus discípulos:\n43\n\"Não existe árvore boa que dê frutos ruins,\nnem árvore ruim que dê frutos bons.\n44\nToda árvore é reconhecida pelos seus frutos.\nNão se colhem figos de espinheiros,\nnem uvas de plantas espinhosas.\n45\nO homem bom tira coisas boas\ndo bom tesouro do seu coração.\nMas o homem mau tira coisas más\ndo seu mau tesouro,\npois sua boca fala do que o coração está cheio.\n46\nPor que me chamais:\n'Senhor! Senhor!',\nmas não fazeis o que eu digo?\n47\nVou mostrar-vos com quem se parece\ntodo aquele que vem a mim,\nouve as minhas palavras\ne as põe em prática.\n48\nÉ semelhante a um homem que construiu uma casa:\ncavou fundo e colocou o alicerce sobre a rocha.\nVeio a enchente, a torrente deu contra a casa,\nmas não conseguiu derrubá-la,\nporque estava bem construída.\n49\nAquele, porém, que ouve e não põe em prática,\né semelhante a um homem que construiu uma casa no chão,\nsem alicerce.\nA torrente deu contra a casa,\ne ela imediatamente desabou;\ne foi grande a ruína dessa casa\".\nPalavra da Salvação."
+  }
+}

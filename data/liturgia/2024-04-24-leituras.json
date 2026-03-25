@@ -1,0 +1,23 @@
+{
+  "data": "2024-04-24",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 12,24-13,5a</div><div> Sl 66(67),2-3.5.6 e 8 (R. 4)</div><div></div><div> Jo 12,44-50</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,24-13,5a",
+    "texto": "Naqueles dias,\n24\na palavra do Senhor crescia\ne se espalhava cada vez mais.\n25\nBarnabé e Saulo, tendo concluído seu ministério,\nvoltaram de Jerusalém,\ntrazendo consigo João, chamado Marcos.\n13,1\nNa Igreja de Antioquia, havia profetas e doutores.\nEram eles: Barnabé, Simeão, chamado o Negro,\nLúcio de Cirene, Manaém,\nque fora criado junto com Herodes, e Saulo.\n2\nUm dia, enquanto celebravam a liturgia,\nem honra do Senhor, e jejuavam,\no Espírito Santo disse:\n\"Separai para mim Barnabé e Saulo,\na fim de fazerem o trabalho\npara o qual eu os chamei\".\n3\nEntão eles jejuaram e rezaram,\nimpuseram as mãos sobre Barnabé e Saulo,\ne deixaram-nos partir.\n4\nEnviados pelo Espírito Santo,\nBarnabé e Saulo desceram a Selêucia\ne daí navegaram para Chipre.\n5a\nQuando chegaram a Salamina,\ncomeçaram a anunciar a Palavra de Deus\nnas sinagogas dos judeus.\nEles tinham João como ajudante.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 66(67),2-3.5.6 e 8 (R. 4)",
+    "refrao": "",
+    "texto": "R.\nQue as nações vos glorifiquem ó Senhor,\nque todas as nações vos glorifiquem.\nOu:\nAleluia, Aleluia, Aleluia.\n2\nQue Deus nos dê a sua graça e sua bênção, *\ne sua face resplandeça sobre nós!\n3\nQue na terra se conheça o seu caminho *\ne a sua salvação por entre os povos.\nR.\n5\nExulte de alegria a terra inteira, *\npois julgais o universo com justiça;\nos povos governais com retidão, *\ne guiais, em toda a terra, as nações.\nR.\n6\nQue as nações vos glorifiquem, ó Senhor, *\nque todas as nações vos glorifiquem!\n8\nQue o Senhor e nosso Deus nos abençoe, *\ne o respeitem os confins de toda a terra!\nR.\nEvangelho - Jo 12,44-5\nAclamação ao Evangelho\nJo 8,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou a luz do mundo;\naquele que me segue\nnão caminha entre as trevas,\nmas terá a luz da vida."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,44-50",
+    "texto": "12,44-50\nNaquele tempo:\n44\nJesus exclamou em alta voz:\n\"Quem crê em mim,\nnão é em mim que crê,\nmas naquele que me enviou.\n45\nQuem me vê,\nvê aquele que me enviou.\n46\nEu vim ao mundo como luz,\npara que todo aquele que crê em mim\nnão permaneça nas trevas.\n47\nSe alguém ouvir as minhas palavras\ne não as observar,\neu não o julgo,\nporque eu não vim para julgar o mundo,\nmas para salvá-lo.\n48\nQuem me rejeita e não aceita as minhas palavras\njá tem o seu juiz:\na palavra que eu falei\no julgará no último dia.\n49\nPorque eu não falei por mim mesmo,\nmas o Pai, que me enviou,\nele é quem me ordenou o que eu devia dizer e falar.\n50\nE eu sei que o seu mandamento é vida eterna.\nPortanto, o que eu digo,\neu o digo conforme o Pai me falou\".\nPalavra da Salvação."
+  }
+}

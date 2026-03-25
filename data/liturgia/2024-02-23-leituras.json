@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-23",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ez 18,21-28</div><div> Sl 129(130),1-2.3-4.5-6.7-8 (R. 3)</div><div></div><div> Mt 5,20-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "18,21-28",
+    "texto": "Assim fala o Senhor:\n21\n\"Se o ímpio se arrepender de todos os pecados cometidos,\ne guardar todas as minhas leis,\ne praticar o direito e a justiça,\nviverá com certeza e não morrerá.\n22\nNenhum dos pecados que cometeu\nserá lembrado contra ele.\nViverá por causa da justiça que praticou.\n23\nSerá que eu tenho prazer na morte do ímpio?\n- oráculo do Senhor Deus.\nNão desejo, antes, que mude de conduta e viva?\n24\nMas, se o justo se desviar de sua justiça\ne praticar o mal,\nimitando todas as práticas detestáveis feitas pelo ímpio,\npoderá fazer isso e viver?\nDa justiça que ele praticou,\nnada mais será lembrado.\nPor causa da infidelidade e do pecado que cometeu,\npor causa disso morrerá.\n25\nMas vós andais dizendo:\n'A conduta do Senhor não é correta'.\nOuvi, vós da casa de Israel:\nÉ a minha conduta que não é correta,\nou antes é a vossa conduta que não é correta?\n26\nQuando um justo se desvia da justiça,\npratica o mal e morre,\né por causa do mal praticado que ele morre.\n27\nQuando um ímpio se arrepende da maldade que praticou\ne observa o direito e a justiça,\nconserva a própria vida.\n28\nArrependendo-se de todos os seus pecados,\ncom certeza viverá;\nnão morrerá\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 129(130),1-2.3-4.5-6.7-8 (R. 3)",
+    "refrao": "",
+    "texto": "R.\nSe levardes em conta nossas faltas,\nquem haverá de subsistir?\n1\nDas profundezas eu clamo a vós, Senhor, *\n2\nescutai a minha voz!\nVossos ouvidos estejam bem atentos *\nao clamor da minha prece!\nR.\n3\nSe levardes em conta nossas faltas, *\nquem haverá de subsistir?\n4\nMas em vós se encontra o perdão, *\neu vos temo e em vós espero.\nR.\n5\nNo Senhor ponho a minha esperança, *\nespero em sua palavra.\n6\nA minh'alma espera no Senhor *\nmais que o vigia pela aurora.\nR.\n7\nEspere Israel pelo Senhor, *\nmais que o vigia pela aurora!\nPois no Senhor se encontra toda graça *\ne copiosa redenção.\n8\nEle vem libertar a Israel *\nde toda a sua culpa.\nR.\nAclamação ao Evangelho\nEz 18,31\nR.\nSalve, ó Cristo, imagem do Pai,\na plena verdade nos comunicai!\nV.\nLançai para bem longe toda a vossa iniquidade!\nCriai em vós um novo espírito e um novo coração!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,20-26",
+    "texto": "5,20-26\nNaquele tempo, disse Jesus aos seus discípulos:\n20\n\"Se a vossa justiça não for maior\nque a justiça dos mestres da Lei e dos fariseus,\nvós não entrareis no Reino dos Céus.\n21\nVós ouvistes o que foi dito aos antigos:\n'Não matarás!\nQuem matar será condenado pelo tribunal'.\n22\nEu, porém, vos digo:\ntodo aquele que  se encoleriza com seu irmão\nserá réu em juízo;\nquem disser ao seu irmão: 'patife!'\nserá condenado pelo  tribunal;\nquem chamar o irmão de 'tolo'\nserá condenado ao fogo do inferno.\n23\nPortanto, quando tu estiveres levando\na tua oferta para o altar, e ali te lembrares\nque teu irmão tem alguma coisa contra ti,\n24\ndeixa a tua oferta ali diante do altar,\ne vai primeiro reconciliar-te com o teu irmão.\nSó então vai apresentar a tua oferta.\n25\nProcura reconciliar-te com teu adversário,\nenquanto caminha contigo para o tribunal.\nSenão o adversário te entregará ao juiz,\no juiz te entregará ao oficial de justiça,\ne tu serás jogado na prisão.\n26\nEm verdade eu te digo: dali não sairás,\nenquanto não pagares o último centavo.\nPalavra da Salvação."
+  }
+}

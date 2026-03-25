@@ -1,0 +1,23 @@
+{
+  "data": "2024-04-28",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 9,26-31</div><div> Sl 21(22),26b-27.28.30.31-32 (R. 26a)</div><div> 1Jo 3,18-24</div><div> Jo 15,1-8</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,26-31",
+    "texto": "Naqueles dias,\n26\nSaulo chegou a Jerusalém\ne procurava juntar-se aos discípulos.\nMas todos tinham medo dele,\npois não acreditavam que ele fosse discípulo.\n27\nEntão Barnabé tomou Saulo consigo,\nlevou-o aos apóstolos\ne contou-lhes como Saulo tinha visto o Senhor no caminho,\ncomo o Senhor lhe havia falado\ne como Saulo havia pregado,\nem nome de Jesus, publicamente, na cidade de Damasco.\n28\nDaí em diante, Saulo permaneceu com eles em Jerusalém\ne pregava com firmeza em nome do Senhor.\n29\nFalava também e discutia com os judeus de língua grega,\nmas eles procuravam matá-lo.\n30\nQuando ficaram sabendo disso,\nos irmãos levaram Saulo para Cesareia,\ne daí o mandaram para Tarso.\n31\nA Igreja, porém, vivia em paz\nem toda a Judeia, Galileia e Samaria.\nEla consolidava-se e progredia no temor do Senhor\ne crescia em número com a ajuda do Espírito Santo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 21(22),26b-27.28.30.31-32 (R. 26a)",
+    "refrao": "",
+    "texto": "R.\nSenhor, sois meu louvor em meio à grande assembleia!\nOu:\nAleluia, Aleluia, Aleluia.\n26b\nSois meu louvor em meio à grande assembleia;*\ncumpro meus votos ante aqueles que vos temem!\n27\nVossos pobres vão comer e saciar-se, †\ne os que procuram o Senhor o louvarão; *\n\"Seus corações tenham a vida para sempre!\"\nR.\n28\nLembrem-se disso os confins de toda a terra,*\npara que voltem ao Senhor e se convertam,\ne se prostrem, adorando, diante dele *\ntodos os povos e as famílias das nações.\n30\nSomente a ele adorarão os poderosos, *\ne os que voltam para o pó o louvarão.\nR.\nPara ele há de viver a minha alma,*\n31\ntoda a minha descendência há de servi-lo;\nàs futuras gerações anunciará *\n32\no poder e a justiça do Senhor;\nao povo novo que há de vir, ela dirá: *\n\"Eis a obra que o Senhor realizou!\"\nR.\n2ª Leitura - 1Jo 3,18\nSEGUNDA LEITURA\nEste é o seu mandamento: que creiamos\ne nos amemos uns aos outros.\nLeitura da Primeira Carta de São João\n3,18-24\n18\nFilhinhos, não amemos só com palavras e de boca,\nmas com ações e de verdade!\n19\nAí está o critério para saber que somos da verdade\ne para sossegar diante dele o nosso coração,\n20\npois, se o nosso coração nos acusa,\nDeus é maior que o nosso coração\ne conhece todas as coisas.\n21\nCaríssimos, se o nosso coração não nos acusa,\ntemos confiança diante de Deus.\n22\nE qualquer coisa que pedimos recebemos dele,\nporque guardamos os seus mandamentos\ne fazemos o que é do seu agrado.\n23\nEste é o seu mandamento:\nque creiamos no nome do seu Filho, Jesus Cristo,\ne nos amemos uns aos outros,\nde acordo com o mandamento que ele nos deu.\n24\nQuem guarda os seus mandamentos\npermanece com Deus e Deus permanece com ele.\nQue ele permanece conosco,\nsabemo-lo pelo Espírito que ele nos deu.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 15,4a.5b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFicai em mim, e eu em vós hei de ficar, diz o Senhor;\nquem em mim permanece, esse dá muito fruto."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,1-8",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n15,1-8\nNaquele tempo, Jesus disse a seus discípulos:\n1\n\"Eu sou a videira verdadeira\ne meu Pai é o agricultor.\n2\nTodo ramo que em mim não dá fruto\nele o corta;\ne todo ramo que dá fruto,\nele o limpa, para que dê mais fruto ainda.\n3\nVós já estais limpos\npor causa da palavra que eu vos falei.\n4\nPermanecei em mim\ne eu permanecerei em vós.\nComo o ramo não pode dar fruto por si mesmo,\nse não permanecer na videira,\nassim também vós não podereis dar fruto,\nse não permanecerdes em mim.\n5\nEu sou a videira\ne vós os ramos.\nAquele que permaneceu em mim, e eu nele,\nesse produz muito fruto;\nporque sem mim nada podeis fazer.\n6\nQuem não permanecer em mim,\nserá lançado fora como um ramo e secará.\nTais ramos são recolhidos,\nlançados no fogo e queimados.\n7\nSe permanecerdes em mim\ne minhas palavras permanecerem em vós,\npedi o que quiserdes\ne vos será dado.\n8\nNisto meu Pai é glorificado:\nque deis muito fruto\ne vos torneis meus discípulos.\nPalavra da Salvação."
+  }
+}

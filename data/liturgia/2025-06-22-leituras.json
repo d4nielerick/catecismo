@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-22",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Zc 12,10-11.13,1</div><div> Sl 62(63),2abcd.2e-4.5-6.8-9 (R. 2ce)</div><div> Gl 3,26-29</div><div> Lc 9,18-24</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,10-11;13,1",
+    "texto": "Assim diz o Senhor:\n10\n\"Derramarei sobre a casa de Davi\ne sobre os habitantes de Jerusalém\num espírito de graça e de oração;\neles olharão para mim.\nAo que eles feriram de morte,\nhão de chorá-lo,\ncomo se chora a perda de um filho único,\ne hão de sentir por ele a dor\nque se sente pela morte de um primogênito.\n11\nNaquele dia, haverá um grande pranto em Jerusalém,\ncomo foi o de Adadremon, no campo de Magedo.\n13,1\nNaquele dia,\nhaverá uma fonte acessível\nà casa de Davi e aos habitantes de Jerusalém,\npara ablução e purificação\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 62(63),2abcd.2e-4.5-6.8-9 (R. 2ce)",
+    "refrao": "",
+    "texto": "R.\nA minh'alma tem sede de vós,\ncomo a terra sedenta, ó meu Deus!\n2a\nSois vós, ó Senhor, o meu Deus! *\nb\nDesde a aurora ansioso vos busco!\nc\nA minh'alma tem sede de vós, *\nd\nminha carne também vos deseja.\nR.\n2e\nComo terra sedenta e sem água, †\n3\nvenho, assim, contemplar-vos no templo, *\npara ver vossa glória e poder.\n4\nVosso amor vale mais do que a vida: *\ne por isso meus lábios vos louvam.\nR.\n5\nQuero, pois vos louvar pela vida, *\ne elevar para vós minhas mãos!\n6\nA minh'alma será saciada, *\ncomo em grande banquete de festa;\ncantará a alegria em meus lábios, *\nao cantar para vós meu louvor!\nR.\n8\nPara mim fostes sempre um socorro; *\nde vossas asas à sombra eu exulto!\n9\nMinha alma se agarra em vós; *\ncom poder vossa mão me sustenta.\nR.\nSEGUNDA LEITURA\nVós todos que fostes batizados em Cristo\nvos revestistes de Cristo.\nLeitura da Carta de São Paulo aos Gálatas\n3,26-29\nIrmãos:\n26\nVós todos sois filhos de Deus\npela fé em Jesus Cristo.\n27\nVós todos que fostes batizados em Cristo\nvos revestistes de Cristo.\n28\nO que vale não é mais ser judeu nem grego,\nnem escravo nem livre,\nnem homem nem mulher,\npois todos vós sois um só, em Jesus Cristo.\n29\nSendo de Cristo, sois então descendência de Abraão,\nherdeiros segundo a promessa.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\nminha voz estão elas a escutar;\neu conheço, então, minhas ovelhas,\nque me seguem, comigo a caminhar."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,18-24",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n9,18-24\nCerto dia,\n18\nJesus estava rezando num lugar retirado,\ne os discípulos estavam com ele.\nEntão Jesus perguntou-lhes:\n\"Quem diz o povo que eu sou?\"\n19\nEles responderam:\n\"Uns dizem que és João Batista;\noutros, que és Elias;\nmas outros acham\nque és algum dos antigos profetas que ressuscitou\".\n20\nMas Jesus perguntou:\n\"E vós, quem dizeis que eu sou?\"\nPedro respondeu:\n\"O Cristo de Deus\".\n21\nMas Jesus proibiu-lhes severamente\nque contassem isso a alguém.\n22\nE acrescentou:\n\"O Filho do Homem deve sofrer muito,\nser rejeitado pelos anciãos,\npelos sumos sacerdotes e doutores da Lei,\ndeve ser morto e ressuscitar no terceiro dia\".\n23\nDepois Jesus disse a todos:\n\"Se alguém me quer seguir, renuncie a si mesmo,\ntome sua cruz cada dia, e siga-me.\n24\nPois quem quiser salvar a sua vida, vai perdê-la;\ne quem perder a sua vida por causa de mim,\nesse a salvará\".\nPalavra da Salvação."
+  }
+}

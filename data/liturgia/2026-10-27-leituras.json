@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-27",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 5,21-33</div><div> Sl 127(128),1-2.3.4-5 (R. 1a)</div><div></div><div> Lc 13,18-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,21-33",
+    "texto": "Irmãos,\n21\nvós que temeis a Cristo,\nsede solícitos uns para com os outros.\n22\nAs mulheres sejam submissas aos seus maridos\ncomo ao Senhor.\n23\nPois o marido é a cabeça da mulher,\ndo mesmo modo que Cristo é a cabeça da Igreja,\nele, o Salvador do seu Corpo.\n24\nMas como a Igreja é solícita por Cristo,\nsejam as mulheres solícitas em tudo\npelos seus maridos.\n25\nMaridos, amai as vossas mulheres,\ncomo o Cristo amou a Igreja\ne se entregou por ela.\n26\nEle quis assim torná-la santa,\npurificando-a com o banho da água unida à Palavra.\n27\nEle quis apresentá-la a si mesmo esplêndida,\nsem mancha nem ruga, nem defeito algum,\nmas santa e irrepreensível.\n28\nAssim é que o marido deve amar a sua mulher,\ncomo ao seu próprio corpo.\nAquele que ama a sua mulher ama-se a si mesmo.\n29\nNinguém jamais odiou a sua própria carne.\nAo contrário,\nalimenta-a e cerca-a de cuidados,\ncomo o Cristo faz com a sua Igreja;\n30\ne nós somos membros do seu corpo!\n31\nPor isso o homem deixará seu pai e sua mãe\ne se unirá à sua mulher,\ne os dois serão uma só carne.\n32\nEste mistério é grande,\ne eu o interpreto em relação a Cristo e à Igreja.\n33\nEm todo caso, cada um, no que lhe toca,\ndeve amar a sua mulher como a si mesmo;\ne a mulher deve respeitar o seu marido.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 127(128),1-2.3.4-5 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nFelizes todos que respeitam o Senhor!\n1\nFeliz és tu se temes o Senhor*\ne trilhas seus caminhos!\n2\nDo trabalho de tuas mãos hás de viver,*\nserás feliz, tudo irá bem!\nR.\n3\nA tua esposa é uma videira bem fecunda*\nno coração da tua casa;\nos teus filhos são rebentos de oliveira*\nao redor de tua mesa.\nR.\n4\nSerá assim abençoado todo homem*\nque teme o Senhor.\n5\nO Senhor te abençoe de Sião,*\ncada dia de tua vida.\nR.\nEvangelho - Lc 13,18-2\nAclamação ao Evangelho\nCf. Mt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois revelaste os mistérios do teu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,18-21",
+    "texto": "13,18-21\nNaquele tempo,\n18\nJesus dizia:\n\"A que é semelhante o Reino de Deus,\ne com que poderei compará-lo?\n19\nEle é como a semente de mostarda,\nque um homem pega e atira no seu jardim.\nA semente cresce, torna-se uma grande árvore,\ne as aves do céu fazem ninhos nos seus ramos\".\n20\nJesus disse ainda:\n\"Com que poderei ainda comparar o Reino de Deus?\n21\nEle é como o fermento que uma mulher pega\ne mistura com três porções de farinha,\naté que tudo fique fermentado\".\nPalavra da Salvação."
+  }
+}

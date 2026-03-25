@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-01",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Lv 23,1.4-11.15-16.27.34b-37</div><div> Sl 80(81),3-4.5-6ab.10-11ab (R. 2a)</div><div></div><div> Mt 13,54-58</div></div>",
+  "primeira_leitura": {
+    "referencia": "23,1.4-11.15-16.27.34b-37",
+    "texto": "1\nO Senhor falou a Moisés, dizendo:\n4\n\"São estas as solenidades do Senhor\nem que convocareis santas assembleias\nno devido tempo:\n5\nNo dia catorze do primeiro mês, ao entardecer,\né a Páscoa do Senhor.\n6\nNo dia quinze do mesmo mês é a festa dos Ázimos,\nem honra do Senhor.\nDurante sete dias comereis pães ázimos.\n7\nNo primeiro dia tereis uma santa assembleia,\nnão fareis nenhum trabalho servil;\n8\noferecereis ao Senhor sacrifícios pelo fogo\ndurante sete dias.\nNo sétimo dia haverá uma santa assembleia,\ne não fareis também nenhum trabalho servil\".\n9\nO Senhor falou a Moisés, dizendo:\n10\n\"Fala aos filhos de Israel e dize-lhes:\n'Quando tiverdes entrado na terra que vos darei,\ne tiverdes feito a colheita,\nlevareis ao sacerdote um feixe de espigas\ncomo primeiros frutos da vossa colheita.\n11\nO sacerdote elevará este feixe\nde espigas diante do Senhor,\npara que ele vos seja favorável:\ne fará isto no dia seguinte ao sábado.\n15\nA partir do dia seguinte ao sábado,\ndesde o dia em que tiverdes trazido\no feixe de espigas para ser apresentado,\ncontareis sete semanas completas.\n16\nContareis cinquenta dias\naté o dia seguinte ao sétimo sábado,\ne apresentareis ao Senhor uma nova oferta.\n27\nO décimo dia do sétimo mês é o dia da Expiação.\nNele tereis uma santa assembleia,\njejuareis e oferecereis ao Senhor\num sacrifício pelo fogo.\n34b\nNo dia quinze deste sétimo mês,\ncomeça a festa das Tendas,\nque dura sete dias, em honra do Senhor.\n35\nNo primeiro dia haverá uma santa assembleia\ne não fareis nenhum trabalho servil.\n36\nDurante sete dias oferecereis ao Senhor\nsacrifícios pelo fogo.\nNo oitavo dia tereis uma santa assembleia,\ne oferecereis ao Senhor um sacrifício pelo fogo.\nÉ dia de reunião festiva:\nnão fareis nenhum trabalho servil.\n37\nEstas são as solenidades do Senhor,\nnas quais convocareis santas assembleias\npara oferecer ao Senhor sacrifícios pelo fogo,\nholocaustos e oblações, vítimas e libações,\ncada qual no dia prescrito'\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 80(81),3-4.5-6ab.10-11ab (R.2a)",
+    "refrao": "",
+    "texto": "R.\nExultai no Senhor, nossa força.\n3\nCantai salmos, tocai tamborim, *\nharpa e lira suaves tocai!\n4\nNa lua nova soai a trombeta, *\nna lua cheia, na festa solene!\nR.\n5\nPorque isto é costume em Jacó,*\num preceito do Deus de Israel;\n6a\numa lei que foi dada a José, *\nb\nquando o povo saiu do Egito.\nR.\n10\nEm teu meio não exista um deus estranho, *\nnem adores a um deus desconhecido!\n11a\nPorque eu sou o teu Deus e teu Senhor, *\nb\nque da terra do Egito te arranquei.\nR.\nEvangelho - Mt 13,54-5\nAclamação ao Evangelho\n1Pd 1,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor permanece eternamente,\ne esta é a palavra que vos foi anunciada."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,54-58",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n13,54-58\nNaquele tempo,\n54\ndirigindo-se para a sua terra,\nJesus ensinava na sinagoga,\nde modo que ficavam admirados.\nE diziam:\n\"De onde lhe vem essa sabedoria e esses milagres?\n55\nNão é ele o filho do carpinteiro?\nSua mãe não se chama Maria,\ne seus irmãos não são Tiago, José, Simão e Judas?\n56\nE suas irmãs não moram conosco?\nEntão, de onde lhe vem tudo isso?\"\n57\nE ficaram escandalizados por causa dele.\nJesus, porém, disse:\n\"Um profeta só não é estimado\nem sua própria pátria e em sua família!\"\n58\nE Jesus não fez ali muitos milagres,\nporque eles não tinham fé.\nPalavra da Salvação."
+  }
+}

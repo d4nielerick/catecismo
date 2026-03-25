@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-24",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ecl 1,2-11</div><div> Sl 89(90),3-4.5-6.12-13.14 (R. 1)</div><div></div><div> Lc 9,7-9</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,2-11",
+    "texto": "2\n\"Vaidade das vaidades, diz o Eclesiastes,\nvaidade das vaidades!\nTudo é vaidade\".\n3\nQue proveito tira o homem de todo o trabalho\ncom o qual se afadiga debaixo do sol?\n4\nUma geração passa, outra lhe sucede,\nenquanto a terra permanece sempre a mesma.\n5\nO sol se levanta, o sol se deita,\napressando-se para voltar ao seu lugar,\ndonde novamente torna a levantar-se.\n6\nDirigindo-se para o sul e voltando para o norte,\nora para cá, ora para lá,\nvai soprando o vento,\npara retomar novamente o seu curso.\n7\nTodos os rios correm para o mar,\ne contudo o mar não transborda;\nvoltam ao lugar de onde saíram\npara tornarem a correr.\n8\nTudo é penoso,\ndifícil para o homem explicar.\nA vista não se cansa de ver,\nnem o ouvido se farta de ouvir.\n9\nO que foi, será;\no que aconteceu, acontecerá:\n10\nnão há nada de novo debaixo do sol.\nUma coisa da qual se diz:\n\"Eis aqui algo de novo\",\ntambém esta já existiu\nnos séculos que nos precederam.\n11\nNão há memória do que aconteceu no passado,\nnem também haverá lembrança do que acontecer,\nentre aqueles que viverão depois.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 89(90),3-4.5-6.12-13.14 e 17 (R.1)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, vós fostes sempre um refúgio para nós.\n3\nVós fazeis voltar ao pó todo mortal,*\nquando dizeis: \"Voltai ao pó, filhos de Adão!\"\n4\nPois mil anos para vós são como ontem,*\nqual vigília de uma noite que passou.\nR.\n5\nEles passam como o sono da manhã,*\n6\nsão iguais à erva verde pelos campos:\nDe manhã ela floresce vicejante,*\nmas à tarde é cortada e logo seca.\nR.\n12\nEnsinai-nos a contar os nossos dias,*\ne dai ao nosso coração sabedoria!\n13\nSenhor, voltai-vos! Até quando tardareis?\nTende piedade e compaixão de vossos servos!\nR.\n14\nSaciai-nos de manhã com vosso amor,*\ne exultaremos de alegria todo o dia!\n17\nQue a bondade do Senhor e nosso Deus †\nrepouse sobre nós e nos conduza!*\nTornai fecundo, ó Senhor, nosso trabalho.\nR.\nEvangelho - Lc 9,7-9\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o caminho, a Verdade e a Vida;\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,7-9",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n9,7-9\nNaquele tempo,\n7\no tetrarca Herodes ouviu falar\nde tudo o que estava acontecendo,\ne ficou perplexo, porque alguns diziam\nque João Batista tinha ressuscitado dos mortos.\n8\nOutros diziam que Elias tinha aparecido;\noutros ainda,\nque um dos antigos profetas tinha ressuscitado.\n9\nEntão Herodes disse:\n\"Eu mandei degolar João.\nQuem é esse homem,\nsobre quem ouço falar essas coisas?\"\nE procurava ver Jesus.\nPalavra da Salvação."
+  }
+}

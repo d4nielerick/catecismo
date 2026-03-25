@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 1,13-24</div><div> Sl 138(139),1-3.13-14ab.14c-15 (R. 24b)</div><div></div><div> Lc 10,38-42</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,13-24",
+    "texto": "Irmãos,\n13\ncertamente ouvistes falar\ncomo foi outrora a minha conduta no judaísmo,\ncom que excessos perseguia\ne devastava a Igreja de Deus\n14\ne como progredia no judaísmo\nmais do que muitos judeus de minha idade,\nmostrando-me extremamente zeloso\ndas tradições paternas.\n15\nQuando, porém,\naquele que me separou desde o ventre materno\ne me chamou por sua graça\n16\nse dignou revelar-me o seu Filho,\npara que eu o pregasse entre os pagãos,\nnão consultei carne nem sangue\n17\nnem subi, logo, a Jerusalém\npara estar com os que eram apóstolos antes de mim.\nPelo contrário, parti para a Arábia\ne, depois, voltei ainda a Damasco.\n18\nTrês anos mais tarde, fui a Jerusalém\npara conhecer Cefas\ne fiquei com ele quinze dias.\n19\nE não estive com nenhum outro apóstolo,\na não ser Tiago, o irmão do Senhor.\n20\nEscrevendo estas coisas,\nafirmo diante de Deus que não estou mentindo.\n21\nDepois, fui para as regiões da Síria e da Cilícia.\n22\nAinda não era pessoalmente conhecido\ndas igrejas da Judéia que estão em Cristo.\n23\nApenas tinham ouvido dizer que\n\"aquele que, antes, nos perseguia,\nestá agora pregando a fé\nque, antes, procurava destruir\".\n24\nE glorificavam a Deus por minha causa.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 138(139),1-3.13-14ab.14c-15 (R. 24b)",
+    "refrao": "",
+    "texto": "R.\nConduzi-me no caminho para a vida, ó Senhor!\n1\nSenhor, vós me sondais e conheceis, *\n2\nsabeis quando me sento ou me levanto;\nde longe penetrais meus pensamentos, †\n3\npercebeis quando me deito e quando eu ando, *\nos meus caminhos vos são todos conhecidos.\nR.\n13\nFostes vós que me formastes as entranhas, *\ne no seio de minha mãe vós me tecestes.\n14a\nEu vos louvo e vos dou graças, ó Senhor, †\nporque de modo admirável me formastes! *\nb\nQue prodígio e maravilha as vossas obras!\nR.\nc\nAté o mais íntimo, Senhor me conheceis; *\n15\nnenhuma sequer de minhas fibras ignoráveis;\nquando eu era modelado ocultamente, *\nera formado nas entranhas subterrâneas.\nR.\nEvangelho - Lc 10,38-4\nAclamação ao Evangelho\nLc 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFeliz quem ouve e observa a palavra de Deus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,38-42",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n10,38-42\nNaquele tempo,\n38\nJesus entrou num povoado,\ne certa mulher, de nome Marta,\nrecebeu-o em sua casa.\n39\nSua irmã, chamada Maria,\nsentou-se aos pés do Senhor,\ne escutava a sua palavra.\n40\nMarta, porém, estava ocupada com muitos afazeres.\nEla aproximou-se e disse:\n\"Senhor, não te importas que minha irmã\nme deixe sozinha, com todo o serviço?\nManda que ela me venha ajudar!\"\n41\nO Senhor, porém, lhe respondeu:\n\"Marta, Marta! Tu te preocupas\ne andas agitada por muitas coisas.\n42\nPorém, uma só coisa é necessária.\nMaria escolheu a melhor parte\ne esta não lhe será tirada\".\nPalavra da Salvação."
+  }
+}

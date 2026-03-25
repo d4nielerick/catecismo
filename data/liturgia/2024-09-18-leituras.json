@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 12,31-13,13</div><div> Sl 32(33),2-3.4-5.12 e 22 (R. 12b)</div><div></div><div> Lc 7,31-35</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,31-13,13",
+    "texto": "Irmãos,\n31\nAspirai aos dons mais elevados.\nEu vou ainda mostrar-vos\num caminho\nincomparavelmente superior.\n13,1\nSe eu falasse todas as línguas,\nas dos homens e as dos anjos,\nmas não tivesse caridade,\neu seria como um bronze que soa\nou um címbalo que retine.\n2\nSe eu tivesse o dom da profecia,\nse conhecesse todos os mistérios e toda a ciência,\nse tivesse toda a fé,\na ponto de transportar montanhas,\nmas se não tivesse caridade,\neu não seria nada.\n3\nSe eu gastasse todos os meus bens\npara sustento dos pobres,\nse entregasse o meu corpo às chamas,\nmas não tivesse caridade,\nisso de nada me serviria.\n4\nA caridade é paciente, é benigna;\nnão é invejosa, não é vaidosa, não se ensoberbece;\n5\nnão faz nada de inconveniente, não é interesseira,\nnão se encoleriza, não guarda rancor;\n6\nnão se alegra com a iniquidade,\nmas regozija-se com a verdade.\n7\nSuporta tudo, crê tudo,\nespera tudo, desculpa tudo.\n8\nA caridade não acabará nunca.\nAs profecias desaparecerão,\nas línguas cessarão,\na ciência desaparecerá.\n9\nCom efeito, o nosso conhecimento é limitado\ne a nossa profecia é imperfeita.\n10\nMas, quando vier o que é perfeito,\ndesaparecerá o que é imperfeito.\n11\nQuando eu era criança, falava como criança,\npensava como criança, raciocinava como criança.\nQuando me tornei adulto,\nrejeitei o que era próprio de criança.\n12\nAgora nós vemos num espelho, confusamente,\nmas, então, veremos face a face.\nAgora, conheço apenas de modo imperfeito,\nmas, então, conhecerei como sou conhecido.\n13\nAtualmente permanecem estas três coisas:\nfé, esperança, caridade.\nMas a maior delas é a caridade.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),2-3.4-5.12.22 (12b)",
+    "refrao": "",
+    "texto": "R.\nFeliz o povo que o Senhor escolheu por sua herança!\n2\nDai graças ao Senhor ao som da harpa, *\nna lira de dez cordas celebrai-o!\n3\nCantai para o Senhor um canto novo, *\ncom arte sustentai a louvação!\nR.\n4\nPois reta é a palavra do Senhor, *\ne tudo o que ele faz merece fé.\n5\nDeus ama o direito e a justiça, *\ntransborda em toda a terra a sua graça.\nR.\n12\nFeliz o povo cujo Deus é o Senhor, *\ne a nação que escolheu por sua herança!\n22\nSobre nós venha, Senhor, a vossa graça,\nda mesma forma que em vós nós esperamos!\nR.\nAclamação ao Evangelho  Cf.\nJo 6,63c.68c\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSenhor, tuas palavras são espírito, são vida;\nsó tu tens palavras de vida eterna."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,31-35",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n7,31-35\nNaquele tempo, disse Jesus:\n31\n\"Com quem hei de comparar os homens desta geração?\nCom quem eles se parecem?\n32\nSão como crianças que se sentam nas praças,\ne se dirigem aos colegas, dizendo:\n'Tocamos flauta para vós e não dançastes;\nfizemos lamentações e não chorastes!'\n33\nPois veio João Batista,\nque não comia pão nem bebia vinho,\ne vós dissestes:\n'Ele está com um demônio!'\n34\nVeio o Filho do Homem, que come e bebe, e vós dizeis:\n'Ele é um comilão e beberrão,\namigo dos publicanos e dos pecadores!'\n35\nMas a sabedoria foi justificada\npor todos os seus filhos\".\nPalavra da Salvação."
+  }
+}

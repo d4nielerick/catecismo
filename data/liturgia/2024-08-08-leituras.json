@@ -1,0 +1,23 @@
+{
+  "data": "2024-08-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 31,31-34</div><div> Sl 50(51),12-13.14-15.18-19 (R. 12a)</div><div></div><div> Mt 16,13-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "31,31-34",
+    "texto": "31\n\"Eis que virão dias, diz o Senhor,\nem que concluirei com a casa de Israel\ne a casa de Judá uma nova aliança;\n32\nnão como a aliança que fiz com seus pais,\nquando os tomei pela mão para retirá-los da terra do Egito,\ne que eles violaram,\nmas eu fiz valer a força sobre eles, diz o Senhor.\n33\nEsta será a aliança\nque concluirei com a casa de Israel,\ndepois desses dias, diz o Senhor:\nimprimirei minha lei em suas entranhas,\ne hei de inscrevê-la em seu coração;\nserei seu Deus e eles serão meu povo.\n34\nNão será mais necessário\nensinar seu próximo ou seu irmão,\ndizendo: 'Conhece o Senhor!';\ntodos me reconhecerão,\ndo menor ao maior deles, diz o Senhor,\npois perdoarei sua maldade,\ne não mais lembrarei o seu pecado\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 50(51),12-13.14-15.18-19 (R. 12a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, criai em mim um coração que seja puro!\n12\nCriai em mim um coração que seja puro, *\ndai-me de novo um espírito decidido.\n13\nÓ Senhor, não me afasteis de vossa face, *\nnem retireis de mim o vosso Santo Espírito!\nR.\n14\nDai-me de novo a alegria de ser salvo *\ne confirmai-me com espírito generoso!\n15\nEnsinarei vosso caminho aos pecadores, *\ne para vós se voltarão os transviados.\nR.\n18\nPois não são de vosso agrado os sacrifícios, *\ne, se oferto um holocausto, o rejeitais.\n19\nMeu sacrifício é minha alma penitente, *\nnão desprezeis um coração arrependido!\nR.\nEvangelho - Mt 16,13-2\nAclamação ao Evangelho\nMt 16,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nTu és Pedro e sobre esta pedra\neu irei construir minha Igreja.\nE as portas do inferno não irão derrotá-la!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,13-23",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n16,13-23\nNaquele tempo,\n13\nJesus foi à região de Cesareia de Filipe\ne ali perguntou aos seus discípulos:\n\"Quem dizem os homens ser o Filho do Homem?\"\n14\nEles responderam:\n\"Alguns dizem que é João Batista;\noutros que é Elias;\nOutros ainda,\nque é Jeremias ou algum dos profetas\".\n15\nEntão Jesus lhes perguntou:\n\"E vós, quem dizeis que eu sou?\"\n16\nSimão Pedro respondeu:\n\"Tu és o Messias, o Filho do Deus vivo\".\n17\nRespondendo, Jesus lhe disse:\n\"Feliz és tu, Simão, filho de Jonas,\nporque não foi um ser humano que te revelou isso,\nmas o meu Pai que está no céu.\n18\nPor isso eu te digo que tu és Pedro,\ne sobre esta pedra construirei a minha Igreja,\ne o poder do inferno nunca poderá vencê-la.\n19\nEu te darei as chaves do Reino dos Céus:\ntudo o que tu ligares na terra\nserá ligado nos céus;\ntudo o que tu desligares na terra\nserá desligado nos céus\".\n20\nJesus, então, ordenou aos discípulos\nque não dissessem a ninguém que ele era o Messias.\n21\nJesus começou a mostrar aos seus discípulos\nque devia ir à Jerusalém\ne sofrer muito da parte dos anciãos,\ndos sumos sacerdotes e dos mestres da Lei,\ne que devia ser morto e ressuscitar no terceiro dia.\n22\nEntão Pedro tomou Jesus à parte\ne começou a repreendê-lo, dizendo:\n\"Deus não permita tal coisa, Senhor!\nQue isto nunca te aconteça!\"\n23\nJesus, porém, voltou-se para Pedro, e disse:\n\"Vai para longe, Satanás!\nTu és para mim uma pedra de tropeço,\nporque não pensas as coisas de Deus\nmas sim as coisas dos homens!\"\nPalavra da Salvação."
+  }
+}

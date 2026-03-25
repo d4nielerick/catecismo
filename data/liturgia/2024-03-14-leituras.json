@@ -1,0 +1,23 @@
+{
+  "data": "2024-03-14",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 32,7-14</div><div> Sl 105(106),19-20.21-22.23 (R. 4a)</div><div></div><div> Jo 5,31-47</div></div>",
+  "primeira_leitura": {
+    "referencia": "32,7-14",
+    "texto": "Naqueles dias,\n7\no Senhor falou a Moisés:\n\"Vai, desce, pois corrompeu-se o teu povo,\nque tiraste da terra do Egito.\n8\nBem depressa desviaram-se do caminho que lhes prescrevi.\nFizeram para si um bezerro de metal fundido,\ninclinaram-se em adoração diante dele\ne ofereceram-lhe sacrifícios, dizendo:\n'Estes são os teus deuses, Israel,\nque te fizeram sair do Egito!' \"\n9\nE o Senhor disse ainda a Moisés:\n\"Vejo que este é um povo de cabeça dura.\n10\nDeixa que minha cólera se inflame contra eles\ne que eu os extermine.\nMas de ti farei uma grande nação\".\n11\nMoisés, porém, suplicava ao Senhor seu Deus, dizendo:\n\"Por que, ó Senhor,\nse inflama a tua cólera contra o teu povo,\nque fizeste sair do Egito\ncom grande poder e mão forte?\n12\nNão permitas, te peço, que os egípcios digam:\n'Foi com má intenção que ele os tirou,\npara fazê-los perecer nas montanhas\ne exterminá-los da face da terra'.\nAplaque-se a tua ira\ne perdoa a iniquidade do teu povo.\n13\nLembra-te de teus servos Abraão, Isaac e Israel,\ncom os quais te comprometeste\npor juramento, dizendo:\n'Tornarei os vossos descendentes\ntão numerosos como as estrelas do céu;\ne toda esta terra de que vos falei,\neu a darei aos vossos descendentes\ncomo herança para sempre' \".\n14\nE o Senhor desistiu do mal\nque havia ameaçado fazer ao seu povo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 105(106),19-20.21-22.23 (R. 4a)",
+    "refrao": "",
+    "texto": "R.\nLembrai-vos de nós, ó Senhor,\nsegundo o amor para com vosso povo!\n19\nConstruíram um bezerro no Horeb *\ne adoraram uma estátua de metal;\n20\neles trocaram o seu Deus, que é sua glória, *\npela imagem de um boi que come feno.\nR.\n21\nEsqueceram-se do Deus que os salvara, *\nque fizera maravilhas no Egito;\n22\nno país de Cam fez tantas obras admiráveis, *\nno Mar Vermelho, tantas coisas assombrosas.\nR.\n23\nAté pensava em acabar com sua raça, *\nnão se tivesse Moisés, o seu eleito,\ninterposto, intercedendo junto a ele, *\npara impedir que sua ira os destruísse.\nR.\nAclamação ao Evangelho\nJo 3,16\nR.\nJesus Cristo, sois bendito,\nsois o ungido de Deus Pai!\nV.\nDeus o mundo tanto amou\nque lhe deu seu próprio Filho,\npara que todo o que nele crer,\nencontre vida eterna."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,31-47",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n5,31-47\nNaquele tempo, disse Jesus aos judeus:\n31\n\"Se eu der testemunho de mim mesmo,\nmeu testemunho não vale.\n32\nMas há um outro que dá testemunho de mim,\ne eu sei que o testemunho\nque ele dá de mim é verdadeiro.\n33\nVós mandastes mensageiros a João,\ne ele deu testemunho da verdade.\n34\nEu, porém, não dependo do testemunho de um ser humano.\nMas falo assim para a vossa salvação.\n35\nJoão era uma lâmpada que estava acesa e a brilhar,\ne vós com prazer vos alegrastes\npor um tempo com a sua luz.\n36\nMas eu tenho um testemunho maior que o de João;\nas obras que o Pai me concedeu realizar.\nAs obras que eu faço dão testemunho de mim,\nmostrando que o Pai me enviou.\n37\nE também o Pai que me enviou\ndá testemunho a meu favor.\nVós nunca ouvistes sua voz,\nnem vistes sua face,\n38\ne sua palavra não encontrou morada em vós,\npois não acreditais naquele que ele enviou.\n39\nVós examineis as Escrituras,\npensando que nelas possuís a vida eterna.\nNo entanto, as Escrituras dão testemunho de mim,\n40\nmas não quereis vir a mim para ter a vida eterna!\n41\nEu não recebo a glória que vem dos homens.\n42\nMas eu sei\nque não tendes em vós o amor de Deus.\n43\nEu vim em nome do meu Pai,\ne vós não me recebeis.\nMas, se um outro viesse em seu próprio nome,\na este vós o receberíeis.\n44\nComo podereis acreditar,\nvós que recebeis glória uns dos outros\ne não buscais a glória que vem do único Deus?\n45\nNão penseis que eu vos acusarei diante do Pai.\nHá alguém que vos acusa:\nMoisés, no qual colocais a vossa esperança.\n46\nSe acreditásseis em Moisés,\ntambém acreditaríeis em mim,\npois foi a respeito de mim que ele escreveu.\n47\nMas se não acreditais nos seus escritos,\ncomo acreditareis então nas minhas palavras?\"\nPalavra da Salvação."
+  }
+}

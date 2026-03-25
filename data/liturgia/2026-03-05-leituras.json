@@ -1,0 +1,23 @@
+{
+  "data": "2026-03-05",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 17,5-10</div><div> Sl 1,1-2.3.4 e 6 (R. Sl 39(40),5a)</div><div></div><div> Lc 16,19-31</div></div>",
+  "primeira_leitura": {
+    "referencia": "17,5-10",
+    "texto": "5\nIsto diz o Senhor:\n\"Maldito o homem que confia no homem\ne faz consistir sua força na carne humana,\nenquanto o seu coração se afasta do Senhor;\n6\ncomo os cardos no deserto,\nele não vê chegar a floração,\nprefere vegetar na secura do ermo,\nem região salobra e desabitada.\n7\nBendito o homem que confia no Senhor,\ncuja esperança é o Senhor;\n8\né como a árvore\nplantada junto às águas,\nque estende as raízes em busca de umidade,\npor isso não teme a chegada do calor:\nsua folhagem mantém-se verde,\nnão sofre míngua em tempo de seca\ne nunca deixa de dar frutos.\n9\nEm tudo é enganador o coração,\ne isto é incurável;\nquem poderá conhecê-lo?\n10\nEu sou o Senhor,\nque perscruto o coração e provo os sentimentos,\nque dou a cada qual conforme o seu proceder\ne conforme o fruto de suas obras\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 1,1-2.3.4 e 6 (R. Sl 39(40),5a)",
+    "refrao": "",
+    "texto": "R.\nÉ feliz quem a Deus se confia!\n1\nFeliz é todo aquele que não anda *\nconforme os conselhos dos perversos;\nque não entra no caminho dos malvados, *\nnem junto aos zombadores vai sentar-se;\n2\nmas encontra seu prazer na lei de Deus *\ne a medita, dia e noite, sem cessar.\nR.\n3\nEis que ele é semelhante a uma árvore, *\nque à beira da torrente está plantada;\nela sempre dá seus frutos a seu tempo, †\ne jamais as suas folhas vão murchar. *\nEis que tudo o que ele faz vai prosperar.\nR.\n4\nMas bem outra é a sorte dos perversos. †\nAo contrário, são iguais à palha seca *\nespalhada e dispersada pelo vento.\n6\nPois Deus vigia o caminho dos eleitos, *\nmas a estrada dos malvados leva à morte.\nR.\nEvangelho - Lc 16,19-3\nAclamação ao Evangelho\nCf. Lc 8,15\nR.\nGlória a Cristo, palavra eterna do Pai que é amor!\nV.\nFelizes os que observam\na palavra do Senhor, de reto coração;\ne que produzem muitos frutos,\naté o fim perseverantes!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,19-31",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n16,19-31\nNaquele tempo, Jesus disse aos fariseus:\n19\n\"Havia um homem rico,\nque se vestia com roupas finas e elegantes\ne fazia festas esplêndidas todos os dias.\n20\nUm pobre, chamado Lázaro, cheio de feridas,\nestava no chão à porta do rico.\n21\nEle queria matar a fome\ncom as sobras que caíam da mesa do rico.\nE, além disso, vinham os cachorros lamber suas feridas.\n22\nQuando o pobre morreu,\nos anjos levaram-no para junto de Abraão.\nMorreu também o rico e foi enterrado.\n23\nNa região dos mortos, no meio dos tormentos,\no rico levantou os olhos e viu de longe a Abraão,\ncom Lázaro ao seu lado.\n24\nEntão gritou: 'Pai Abraão, tem piedade de mim!\nManda Lázaro molhar a ponta do dedo\npara me refrescar a língua,\nporque sofro muito nestas chamas'.\n25\nMas Abraão respondeu: 'Filho, lembra-te\nque tu recebeste teus bens durante a vida\ne Lázaro, por sua vez, os males.\nAgora, porém, ele encontra aqui consolo\ne tu és atormentado.\n26\nE, além disso, há um grande abismo entre nós:\npor mais que alguém desejasse,\nnão poderia passar daqui para junto de vós,\ne nem os daí poderiam atravessar até nós'.\n27\nO rico insistiu: 'Pai, eu te suplico,\nmanda Lázaro à casa do meu pai,\n28\nporque eu tenho cinco irmãos.\nManda preveni-los, para que não venham também eles\npara este lugar de tormento'.\n29\nMas Abraão respondeu:\n'Eles têm Moisés e os Profetas, que os escutem!'\n30\nO rico insistiu: 'Não, Pai Abraão,\nmas se um dos mortos for até eles,\ncertamente vão se converter'.\n31\nMas Abraão lhe disse:\n'Se não escutam a Moisés, nem aos Profetas,\neles não acreditarão,\nmesmo que alguém ressuscite dos mortos' \".\nPalavra da Salvação."
+  }
+}

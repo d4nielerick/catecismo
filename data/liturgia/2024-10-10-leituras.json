@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 3,1-5</div><div> Lc 1,69-70.71-72.73 e 75 (R. cf. 68)</div><div></div><div> Lc 11,5-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-5",
+    "texto": "1\nÓ gálatas insensatos,\nquem é que vos fascinou?\nDiante de vossos olhos,\nnão foi acaso representado,\ncomo que ao vivo,\nJesus Cristo crucificado?\n2\nSó isto quero saber de vós:\nRecebestes o Espírito pela prática da Lei\nou pela fé através da pregação?\n3\nSois assim tão insensatos?\nA ponto de,\ndepois de terdes começado pelo espírito,\nquererdes terminar pela carne?\n4\nFoi acaso em vão que sofrestes tanto?\nSe é que foi mesmo em vão!\n5\nAquele que vos dá generosamente o Espírito\ne realiza milagres entre vós,\nfaz isso porque praticais a Lei\nou porque crestes, através da pregação?\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Lc 1,69-70.71-72.73 e 75 (R. cf. 68)",
+    "refrao": "",
+    "texto": "R.\nBendito seja o Senhor Deus de Israel,\nporque a seu povo visitou e libertou!\n69\nFez surgir um poderoso Salvador *\nna casa de Davi, seu servidor,\n70\ncomo falara pela boca de seus santos, *\nos profetas desde os tempos mais antigos.\nR.\n71\npara salvar-nos do poder dos inimigos *\ne da mão de todos quantos nos odeiam.\n72\nAssim mostrou misericórdia a nossos pais, *\nrecordando a sua santa Aliança.\nR.\n73\ne o juramento a Abraão, o nosso pai, *\nde conceder-nos\n74\nque, libertos do inimigo,\na ele nós sirvamos sem temor †\n75\nem santidade e em justiça diante dele, *\nenquanto perdurarem nossos dias.\nR.\nEvangelho - Lc 11,5-13\nAclamação ao Evangelho\nCf. At 16,14b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAbri-nos, ó Senhor, o coração\npara ouvirmos a palavra de Jesus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,5-13",
+    "texto": "11,5-13\nNaquele tempo, disse Jesus aos seus discípulos:\n5\n\"Se um de vós tiver um amigo\ne for procurá-lo à meia-noite\ne lhe disser:\n'Amigo, empresta-me três pães,\n6\nporque um amigo meu chegou de viagem\ne nada tenho para lhe oferecer',\n7\ne se o outro responder lá de dentro:\n'Não me incomodes!\nJá tranquei a porta,\ne meus filhos e eu já estamos deitados;\nnão me posso levantar para te dar os pães';\n8\neu vos declaro:\nmesmo que o outro não se levante\npara dá-los porque é seu amigo,\nvai levantar-se\nao menos por causa da impertinência dele\ne lhe dará quanto for necessário.\n9\nPortanto, eu vos digo:\npedi e recebereis;\nprocurai e encontrareis;\nbatei e vos será aberto.\n10\nPois quem pede, recebe;\nquem procura, encontra;\ne, para quem bate, se abrirá.\n11\nSerá que algum de vós que é pai,\nse o filho pedir um peixe,\nlhe dará uma cobra?\n12\nOu ainda, se pedir um ovo,\nlhe dará um escorpião?\n13\nOra, se vós que sois maus,\nsabeis dar coisas boas aos vossos filhos,\nquanto mais o Pai do Céu dará o Espírito Santo\naos que o pedirem!\"\nPalavra da Salvação."
+  }
+}

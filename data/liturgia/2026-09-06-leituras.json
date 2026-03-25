@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-06",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ez 33,7-9</div><div> Sl 94(95),1-2.6-7.8-9 (R. 8)</div><div> Rm 13,8-10</div><div> Mt 18,15-20</div></div>",
+  "primeira_leitura": {
+    "referencia": "33,7-9",
+    "texto": "Assim diz o Senhor:\n7\n\"Quanto a ti, filho do homem,\neu te estabeleci como vigia para a casa de Israel.\nLogo que ouvires alguma palavra de minha boca,\ntu os deves advertir em meu nome.\n8\nSe eu disser ao ímpio\nque ele vai morrer, e tu não lhe falares,\nadvertindo-o a respeito de sua conduta,\no ímpio vai morrer por própria culpa,\nmas eu te pedirei contas da sua morte.\n9\nMas, se advertires o ímpio a respeito de sua conduta,\npara que se arrependa,\ne ele não se arrepender,\no ímpio morrerá por própria culpa,\nporém, tu salvarás tua vida.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 94(95),1-2.6-7.8-9 (R. 8)",
+    "refrao": "",
+    "texto": "R.\nNão fecheis o coração, ouvi, hoje, a voz de Deus!\n1\nVinde, exultemos de alegria no Senhor, *\naclamemos o Rochedo que nos salva!\n2\nAo seu encontro caminhemos com louvores, *\ne com cantos de alegria o celebremos!\nR.\n6\nVinde, adoremos e prostremo-nos por terra, *\ne ajoelhemos ante o Deus que nos criou!\n7\nPorque ele é o nosso Deus, nosso Pastor, †\ne nós somos o seu povo e seu rebanho, *\nas ovelhas que conduz com sua mão.\nR.\n8\nOxalá ouvísseis hoje a sua voz: *\n\"Não fecheis os corações como em Meriba,\n9\ncomo em Massa, no deserto, aquele dia, †\nem que outrora vossos pais me provocaram, *\napesar de terem visto as minhas obras\".\nR.\nSEGUNDA LEITURA\nO amor é o cumprimento perfeito da Lei.\nLeitura da Carta de São Paulo aos Romanos\n13,8-10\nIrmãos:\n8\nNão fiqueis devendo nada a ninguém,\na não ser o amor mútuo,\npois quem ama o próximo está cumprindo a Lei.\n9\nDe fato, os mandamentos:\n\"Não cometerás adultério\",\n\"Não matarás\",\n\"Não roubarás\",\n\"Não cobiçarás\",\ne qualquer outro mandamento, se resumem neste:\n\"Amarás a teu próximo como a ti mesmo\".\n10\nO amor não faz nenhum mal contra o próximo.\nPortanto, o amor é o cumprimento perfeito da Lei.\nPalavra do Senhor.\nAclamação ao Evangelho  cf.\n2Cor 5,19\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Senhor reconciliou o mundo em Cristo,\nconfiando-nos sua Palavra;\na Palavra da reconciliação,\na Palavra que hoje, aqui, nos salva."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "18,15-20",
+    "texto": "18,15-20\nNaquele tempo, Jesus disse a seus discípulos:\n15\n\"Se o teu irmão pecar contra ti, vai corrigi-lo,\nmas em particular, a sós contigo!\nSe ele te ouvir, tu ganhaste o teu irmão.\n16\nSe ele não te ouvir,\ntoma contigo mais uma ou duas pessoas,\npara que toda a questão seja decidida\nsob a palavra de duas ou três testemunhas.\n17\nSe ele não vos der ouvido, dize-o à Igreja.\nSe nem mesmo à Igreja ele ouvir,\nseja tratado como se fosse um pagão\nou um pecador público.\n18\nEm verdade vos digo,\ntudo o que ligardes na terra será ligado no céu,\ne tudo o que desligardes na terra\nserá desligado no céu.\n19\nDe novo, eu vos digo:\nse dois de vós estiverem de acordo na terra\nsobre qualquer coisa que quiserem pedir,\nisso lhes será concedido por meu Pai que está nos céus.\n20\nPois, onde dois ou três estiverem reunidos em meu nome,\neu estou aí, no meio deles\".\nPalavra da Salvação."
+  }
+}

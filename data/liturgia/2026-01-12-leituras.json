@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-12",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Sm 1,1-8</div><div> Sl 115(116),12-13.14.17.18-19 (R. 17a)</div><div></div><div> Mc 1,14-20</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-8",
+    "texto": "1\nHavia um homem sufita,\noriundo de Ramá, no monte Efraim,\nque se chamava Elcana,\nfilho de Jeroam, filho de Eliú, filho de Tou,\nfilho de Suf, efraimita.\n2\nElcana tinha duas mulheres;\numa chamava-se Ana\ne a outra Fenena.\nFenena tinha filhos;\nAna, porém, não tinha.\n3\nTodos os anos, esse homem subia da sua cidade\npara adorar\ne oferecer sacrifícios\nao Senhor Todo-poderoso, em Silo.\nOs dois filhos de Eli, Hofni e Fineias,\neram sacerdotes do Senhor naquele santuário.\n4\nQuando oferecia sacrifício,\nElcana dava à sua mulher Fenena\ne a todos os seus filhos e filhas\nas porções que lhes cabiam.\n5\nA Ana, embora a amasse,\ndava apenas uma porção escolhida,\npois o Senhor a tinha deixado estéril.\n6\nSua rival também a magoava e atormentava,\nhumilhando-a pelo fato\nde o Senhor a ter tornado estéril.\n7\nE isso acontecia todos os anos.\nSempre que subiam à casa do Senhor,\nela a provocava do mesmo modo.\nE Ana chorava e não comia.\n8\nEntão, Elcana, seu marido, lhe disse:\n\"Ana, por que estás chorando e não te alimentas?\nE por que se aflige o teu coração?\nAcaso não sou eu melhor\npara ti do que dez filhos?\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 115(116),12-13.14.17.18-19 (R. 17a)",
+    "refrao": "",
+    "texto": "R.\nOferto ao Senhor um sacrifício de louvor.\nOu:\nAleluia, Aleluia, Aleluia.\n12\nQue poderei retribuir ao Senhor Deus *\npor tudo aquilo que ele fez em meu favor?\n13\nElevo o cálice da minha salvação, *\ninvocando o nome santo do Senhor.\nR.\n14\nVou cumprir minhas promessas ao Senhor *\nna presença de seu povo reunido.\n17\nPor isso oferto um sacrifício de louvor, *\ninvocando o nome santo do Senhor.\nR.\n18\nVou cumprir minhas promessas ao Senhor *\nna presença de seu povo reunido;\n19\nnos átrios da casa do Senhor, *\nem teu meio, ó cidade de Sião!\nR.\nEvangelho - Mc 1,14-20\nAclamação ao Evangelho\n1Ts 2,13\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois, o Reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,14-20",
+    "texto": "1,14-20\n14\nDepois que João Batista foi preso,\nJesus foi para a Galileia,\npregando o Evangelho de Deus e dizendo:\n15\n\"O tempo já se completou\ne o Reino de Deus está próximo.\nConvertei-vos e crede no Evangelho!\"\n16\nE, passando à beira do mar da Galileia,\nJesus viu Simão e André, seu irmão,\nque lançavam a rede ao mar, pois eram pescadores.\n17\nJesus lhes disse:\n\"Segui-me e eu farei de vós pescadores de homens\".\n18\nE eles, deixando imediatamente as redes,\nseguiram a Jesus.\n19\nCaminhando mais um pouco,\nviu também Tiago e João, filhos de Zebedeu.\nEstavam na barca, consertando as redes;\n20\ne logo os chamou.\nEles deixaram seu pai Zebedeu na barca com os empregados,\ne partiram, seguindo Jesus.\nPalavra da Salvação."
+  }
+}

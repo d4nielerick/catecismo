@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 27,1-5.15-29</div><div> Sl 134(135),1-2.3-4.5-6 (R. 3a)</div><div></div><div> Mt 9,14-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "Jacó suplantou seu irmão e tomou sua bênção (27,36).",
+    "texto": "Leitura do Livro do Gênesis\n27,1-5.15-29\n1\nQuando Isaac ficou velho,\nseus olhos enfraqueceram\ne já não podia ver.\nChamou, então, o filho mais velho Esaú,\ne lhe disse:\n\"Meu filho!\"\nEste respondeu:\n\"Aqui estou!\"\n2\nDisse-lhe o pai:\n\"Como vês, já estou velho\ne não sei qual será o dia da minha morte.\n3\nToma as tuas armas, as flechas e o arco,\ne sai para o campo.\nSe apanhares alguma caça, prepara-me um assado saboroso,\n4\ncomo sabes que eu gosto,\ne traze-o para que o coma,\ne assim te dar a bênção antes de morrer\".\n5\nRebeca escutava o que Isaac dizia a seu filho Esaú.\nEsaú saiu para o campo à procura de caça para o pai.\n15\nRebeca tomou, então, as melhores roupas\nque o filho mais velho tinha em casa,\ne vestiu com elas o filho mais novo, Jacó.\n16\nCobriu-lhe as mãos e a parte lisa do pescoço\ncom peles de cabrito.\n17\nPôs nas mãos do filho Jacó o assado e o pão\nque havia preparado.\n18\nEste levou-os ao pai, dizendo:\n\"Meu pai!\"\n\"Estou ouvindo\",\nrespondeu Isaac.\n\"Quem és tu, meu filho?\"\n19\nE disse Jacó a seu pai:\n\"Eu sou Esaú, teu filho primogênito;\nfiz como me ordenaste.\nLevanta-te, senta-te e come da minha caça,\npara me abençoares\".\n20\nIsaac replicou-lhe:\n\"Como conseguiste achar assim depressa, meu filho?\"\nEle respondeu:\n\"É o Senhor teu Deus que fez que isso acontecesse\".\n21\nIsaac disse a Jacó:\n\"Vem cá, meu filho,\npara que eu te apalpe\ne veja se és ou não meu filho Esaú\".\n22\nJacó achegou-se a seu pai Isaac,\nque o apalpou e disse:\n\"A voz, é a voz de Jacó,\nmas as mãos são as mãos de Esaú\".\n23\nE não o reconheceu,\npois suas mãos estavam peludas\ncomo as do seu filho Esaú.\nEntão, decidiu abençoá-lo.\n24\nPerguntou-lhe ainda:\n\"Tu és, de fato, meu filho Esaú?\"\nEle respondeu:\n\"Sou\".\n25\nIsaac continuou:\n\"Meu filho, serve-me da tua caça\npara eu comer e te abençoar\".\nJacó serviu-o e ele comeu;\ntrouxe-lhe depois vinho e ele bebeu.\n26\nDisse-lhe então seu pai Isaac:\n\"Aproxima-te, meu filho, e beija-me\".\n27\nJacó aproximou-se e o beijou.\nQuando Isaac sentiu o cheiro das suas roupas,\nabençoou-o, dizendo:\n\"Este é o cheiro do meu filho:\né como o aroma de um campo fértil\nque o Senhor abençoou!\n28\nQue Deus te conceda o orvalho do céu,\ne a fertilidade da terra, a abundância de trigo e de vinho.\n29\nQue os povos te sirvam\ne se prostrem as nações em tua presença.\nSê o senhor de teus irmãos,\ne diante de ti se inclinem os filhos de tua mãe.\nMaldito seja quem te amaldiçoar,\ne quem te abençoar, seja bendito!\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 134(135),1-2.3-4. 5-6 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nLouvai o Senhor, porque é bom!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nLouvai o Senhor, bendizei-o; *\nlouvai o Senhor, servos seus,\n2\nque celebrais o louvor em seu templo *\ne habitais junto aos átrios de Deus!\nR.\n3\nLouvai o Senhor, porque é bom; *\ncantai ao seu nome suave!\n4\nEscolheu para si a Jacó, *\npreferiu Israel por herança.\nR.\n5\nEu bem sei que o Senhor é tão grande, *\nque é maior do que todos os deuses.\n6\nEle faz tudo quanto lhe agrada, †\nnas alturas dos céus e na terra, *\nno oceano e nos fundos abismos.\nR.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,14-17",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n9,14-17\nNaquele tempo,\n14\nos discípulos de João aproximaram-se de Jesus\ne perguntaram:\n\"Por que razão nós e os fariseus praticamos jejuns,\nmas os teus discípulos não?\"\n15\nDisse-lhes Jesus:\n\"Por acaso, os amigos do noivo podem estar de luto\nenquanto o noivo está com eles?\nDias virão em que o noivo será tirado do meio deles.\nEntão, sim, eles jejuarão.\n16\nNinguém coloca remendo de pano novo em roupa velha,\nporque o remendo repuxa a roupa\ne o rasgão fica maior ainda.\n17\nTambém não se coloca vinho novo em odres velhos,\nsenão os odres se arrebentam, o vinho se derrama\ne os odres se perdem.\nMas vinho novo se coloca em odres novos,\ne assim os dois se conservam\".\nPalavra da Salvação."
+  }
+}

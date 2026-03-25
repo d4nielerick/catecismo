@@ -1,0 +1,23 @@
+{
+  "data": "2024-08-02",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 26,1-9</div><div> Sl 68(69),5.8-10.14 (R. 14c)</div><div></div><div> Mt 13,54-58</div></div>",
+  "primeira_leitura": {
+    "referencia": "26,1-9",
+    "texto": "1\nNo início do reinado de Joaquim,\nfilho de Josias, rei de Judá,\nfoi comunicada da parte do Senhor,\nesta palavra, que dizia:\n2\n\"Assim fala o Senhor:\nPõe-te de pé no átrio da casa do Senhor\ne fala a todos os que vêm das cidades de Judá,\npara adorar o Senhor no templo,\ntodas as palavras que eu te mandei dizer.\nNão retires uma só palavra;\n3\ntalvez eles as ouçam e voltem do mau caminho,\ne eu me arrependa da decisão de castigá-los\npor suas más obras.\n4\nA eles então dirás:\nIsto diz o Senhor:\nSe não vos dispuserdes\na viver segundo a lei que vos dei,\n5\na escutar as palavras dos meus servos, os profetas,\nque eu vos tenho enviado com solicitude\ne para vossa orientação,\ne que vós não tendes escutado,\n6\nfarei desta casa uma segunda Silo\ne farei desta uma cidade amaldiçoada\npor todos os povos da terra\".\n7\nOs sacerdotes e profetas,\ne todo o povo presente\nouviram Jeremias dizer estas palavras\nna casa do Senhor.\n8\nQuando Jeremias acabou de dizer tudo\ne que o Senhor lhe ordenara falasse a todo o povo,\nprenderam-no os sacerdotes, os profetas e o povo, dizendo:\n\"Este homem tem que morrer!\n9\nPor que dizes, em nome do Senhor, a profecia:\n'Esta casa será como Silo,\ne esta cidade será devastada e vazia de habitantes?'\"\nTodo o povo juntou-se contra Jeremias\nna casa do Senhor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 68(69),5.8-10.14 (R. 14c)",
+    "refrao": "",
+    "texto": "R.\nRespondei-me, ó Senhor, pelo vosso imenso amor.\n5\nMais numerosos que os cabelos da cabeça, *\nsão aqueles que me odeiam sem motivo;\nmeus inimigos são mais fortes do que eu; *\ncontra mim eles se voltam com mentiras!\nPor acaso poderei restituir *\nalguma coisa que de outros não roubei?\nR.\n8\nPor vossa causa é que sofri tantos insultos, *\ne o meu rosto se cobriu de confusão;\n9\neu me tornei como um estranho a meus irmãos, *\ncomo estrangeiro para os filhos de minha mãe.\n10\nPois meu zelo e meu amor por vossa casa *\nme devoram como fogo abrasador;\ne os insultos de infiéis que vos ultrajam *\nrecaíram todos eles sobre mim!\nR.\n14\nPor isso elevo para vós minha oração, *\nneste tempo favorável, Senhor Deus!\nRespondei-me pelo vosso imenso amor, *\npela vossa salvação que nunca falha!\nR.\nEvangelho - Mt 13,54-5\nAclamação ao Evangelho\n1Pd 1,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor permanece eternamente,\ne esta é a palavra que vos foi anunciada"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,54-58",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n13,54-58\nNaquele tempo,\n54\ndirigindo-se para a sua terra,\nJesus ensinava na sinagoga,\nde modo que ficavam admirados.\nE diziam:\n\"De onde lhe vem essa sabedoria e esses milagres?\n55\nNão é ele o filho do carpinteiro?\nSua mãe não se chama Maria,\ne seus irmãos não são Tiago, José, Simão e Judas?\n56\nE suas irmãs não moram conosco?\nEntão, de onde lhe vem tudo isso?\"\n57\nE ficaram escandalizados por causa dele.\nJesus, porém, disse:\n\"Um profeta só não é estimado\nem sua própria pátria e em sua família!\"\n58\nE Jesus não fez ali muitos milagres,\nporque eles não tinham fé.\nPalavra da Salvação."
+  }
+}

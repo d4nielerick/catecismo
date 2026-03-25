@@ -1,0 +1,23 @@
+{
+  "data": "2024-05-09",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 18,1-8</div><div> Sl 97(98),1.2-3ab.3cd-4 (R. cf. 2b)</div><div></div><div> Jo 16,16-20</div></div>",
+  "primeira_leitura": {
+    "referencia": "18,1-8",
+    "texto": "Naqueles dias:\n1\nPaulo deixou Atenas e foi para Corinto.\n2\nAí encontrou um judeu chamado Áquila,\nnatural do Ponto, que acabava de chegar da Itália,\ne sua esposa Priscila,\npois o imperador Cláudio tinha decretado\nque todos os judeus saíssem de Roma.\nPaulo entrou em contato com eles.\n3\nE, como tinham a mesma profissão\n- eram fabricantes de tendas -\nPaulo passou a morar com eles e trabalhavam juntos.\n4\nTodos os sábados, Paulo discutia na sinagoga,\nprocurando convencer judeus e gregos.\n5\nQuando Silas e Timóteo chegaram da Macedônia,\nPaulo dedicou-se inteiramente à Palavra,\ntestemunhando diante dos judeus\nque Jesus era o Messias.\n6\nMas, por causa da resistência e blasfêmias deles,\nPaulo sacudiu as vestes e disse:\n\"Vós sois responsáveis pelo que acontecer.\nEu não tenho culpa;\nde agora em diante, vou dirigir-me aos pagãos\".\n7\nEntão, saindo dali,\nPaulo foi para a casa de um pagão,\num certo Tício Justo, adorador do Deus único,\nque morava ao lado da sinagoga.\n8\nCrispo, o chefe da sinagoga,\nacreditou no Senhor com toda a sua família;\ne muitos coríntios, que escutavam Paulo,\nacreditavam e recebiam o batismo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.2-3ab.3cd-4 (R. cf. 2b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor fez conhecer seu poder salvador\nperante as nações.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nCantai ao Senhor Deus um canto novo, *\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo *\nalcançaram-lhe a vitória.\nR.\n2\nO Senhor fez conhecer a salvação, *\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel *\nb\npela casa de Israel\nR.\nc\nOs confins do universo contemplaram *\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira, *\nalegrai-vos e exultai!\nR.\nEvangelho - Jo 16,16-2\nAclamação ao Evangelho\ncf. Jo 14,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu não vos deixarei órfãos:\neu irei, mas voltarei,\ne o vosso coração muito há de se alegrar."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,16-20",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n16,16-20\nNaquele tempo, disse Jesus aos seus discípulos:\n16\n\"Pouco tempo ainda, e já não me vereis.\nE outra vez pouco tempo, e me vereis de novo\".\n17\nAlguns dos seus discípulos disseram então entre si:\n'O que significa o que ele nos está dizendo:\n'Pouco tempo, e não me vereis,\ne outra vez pouco tempo, e me vereis de novo',\ne: 'Eu vou para junto do Pai?'\"\n18\nDiziam, pois:\n\"O que significa este pouco tempo?\nNão entendemos o que ele quer dizer\".\n19\nJesus compreendeu que eles queriam interrogá-lo;\nentão disse-lhes:\n\"Estais discutindo entre vós\nporque eu disse:\n'Pouco tempo e já não me vereis,\ne outra vez pouco tempo e me vereis'?\n20\nEm verdade, em verdade vos digo:\nVós chorareis e vos lamentareis,\nmas o mundo se alegrará.\nVós ficareis tristes,\nmas a vossa tristeza se transformará em alegria\".\nPalavra da Salvação."
+  }
+}

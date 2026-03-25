@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Cor 1,18-22</div><div> Sl 118(119),129.130.131.132.133.134.135 (R. 135a)</div><div></div><div> Mt 5,13-16</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,18-22",
+    "texto": "Irmãos,\n18\neu vos asseguro, pela fidelidade de Deus:\nO ensinamento que vos transmitimos não é \"sim-e-não\".\n19\nPois o Filho de Deus, Jesus Cristo,\nque nós - a saber:\neu, Silvano e Timóteo - pregamos entre vós,\nnunca foi \"sim-e-não\",\nmas somente \"sim\".\n20\nCom efeito, é nele que todas as promessas de Deus\ntêm o seu \"sim\" garantido.\nPor isso também,\né por ele que dizemos \"amém\" a Deus,\npara a sua glória.\n21\nÉ Deus que nos confirma, a nós e a vós,\nem nossa adesão a Cristo,\ncomo também é Deus que nos ungiu.\n22\nFoi ele que nos marcou com o seu selo\ne nos adiantou como sinal o Espírito\nderramado em nossos corações.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),129.130.131.132.133.134.135 (R. 135a)",
+    "refrao": "",
+    "texto": "R.\nFazei brilhar vosso semblante ao vosso servo!\n129\nMaravilhosos são os vossos testemunhos, *\neis por que meu coração os observa!\nR.\n130\nVossa palavra, ao revelar-se, me ilumina, *\nela dá sabedoria aos pequeninos\nR.\n131\nAbro a boca e aspiro largamente, *\npois estou ávido de vossos mandamentos.\nR.\n132\nSenhor, voltai-vos para mim, tende piedade, *\ncomo fazeis para os que amam vosso nome!\nR.\n133\nConforme a vossa lei firmai meus passos, *\npara que não domine em mim a iniquidade\nR.\n134\nLibertai-me da opressão e da calúnia, *\npara que eu possa observar vossos preceitos!\nR.\n135\nFazei brilhar vosso semblante ao vosso servo, *\ne ensinai-me vossas leis e mandamentos!\nR.\nEvangelho - Mt 5,13-16\nAclamação ao Evangelho\nMt 5,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVós sois a luz do mundo; brilhe a todos vossa luz.\nVendo eles vossas obras, deem glória ao Pai celeste!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,13-16",
+    "texto": "5,13-16\nNaquele tempo, disse Jesus a seus discípulos:\n13\n\"Vós sois o sal da terra.\nOra, se o sal se tornar insosso,\ncom que salgaremos?\nEle não servirá para mais nada,\nsenão para ser jogado fora e ser pisado pelos homens.\n14\nVós sois a luz do mundo.\nNão pode ficar escondida uma cidade\nconstruída sobre um monte.\n15\nNinguém acende uma lâmpada, e a coloca\ndebaixo de uma vasilha, mas sim, num candeeiro,\nonde brilha para todos que estão na casa.\n16\nAssim também brilhe a vossa luz diante dos homens,\npara que vejam as vossas boas obras\ne louvem o vosso Pai que está nos céus\".\nPalavra da Salvação."
+  }
+}

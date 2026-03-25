@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Cor 10,17-11,2</div><div> Sl 148,1-2.11-13a.13c-14 (R. cf. 12a.13a)</div><div></div><div> Mt 13,44-46</div></div>",
+  "primeira_leitura": {
+    "referencia": "10,17-11,2",
+    "texto": "Irmãos,\n17\nquem se gloria, glorie-se no Senhor.\n18\nPois é aprovado só aquele que o Senhor recomenda\ne não aquele que se recomenda a si mesmo.\n11,1\nOxalá pudésseis suportar um pouco de insensatez,\nda minha parte.\nNa verdade, vós me suportais.\n2\nSinto por vós um amor ciumento\nsemelhante ao amor que Deus vos tem.\nFui eu que vos desposei a um único esposo,\napresentando-vos a Cristo como virgem pura.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 148,1-2.11-13a.13c-14 (R. Aleluia, ou cf. 12a.13a)",
+    "refrao": "",
+    "texto": "R.\nAleluia, Aleluia, Aleluia.\nOu:\nVós jovens, vós moças e rapazes,\nlouvai todos o nome do Senhor!\n1\nLouvai o Senhor Deus nos altos céus, *\nlouvai-o no excelso firmamento!\n2\nLouvai-o, anjos seus, todos louvai-o, *\nlouvai-o, legiões celestiais!\nR.\n11\nReis da terra, povos todos, bendizei-o, *\ne vós, príncipes e todos os juízes;\n12\ne vós, jovens, e vós, moças e rapazes, †\nanciãos e criancinhas, bendizei-o! *\n13a\nLouvem o nome do Senhor, louvem-no todos.\nR.\n13c\nA majestade e esplendor de sua glória *\nultrapassam em grandeza o céu e a terra.\n14\nEle exaltou seu povo eleito em poderio *\nele é o motivo de louvor para os seus Santos.\nÉ um hino para os filhos de Israel, *\neste povo que ele ama e lhe pertence.\nR.\nEvangelho - Mt 13,44-4\nAclamação ao Evangelho\nJo 15,9b.5b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFicai em meu amor, assim fala o Senhor;\nquem em mim permanece e no qual permaneço,\nesse dá muito fruto!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,44-46",
+    "texto": "13,44-46\nNaquele tempo, disse Jesus à multidão:\n44\n\"O Reino dos Céus é como um tesouro escondido no campo.\nUm homem o encontra e o mantém escondido.\nCheio de alegria, ele vai, vende todos os seus bens\ne compra aquele campo.\n45\nO Reino dos Céus também é como um comprador\nque procura pérolas preciosas.\n46\nQuando encontra uma pérola de grande valor,\nele vai, vende todos os seus bens\ne compra aquela pérola\".\nPalavra da Salvação."
+  }
+}

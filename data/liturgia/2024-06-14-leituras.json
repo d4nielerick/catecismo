@@ -1,0 +1,23 @@
+{
+  "data": "2024-06-14",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 19,9a.11-16</div><div> Sl 26(27),7-8a.8b-9.13-14 (R. 8b)</div><div></div><div> Mt 5,27-32</div></div>",
+  "primeira_leitura": {
+    "referencia": "19,9a.11-16",
+    "texto": "Naqueles dias, ao chegar a Horeb, o monte de Deus,\n9a\no profeta Elias entrou numa gruta,\nonde passou a noite.\nE eis que a palavra do Senhor\nlhe foi dirigida nestes termos:\n11\n\"Sai e permanece sobre o monte diante do Senhor,\nporque o Senhor vai passar\".\nAntes do Senhor, porém,\nveio um vento impetuoso e forte,\nque desfazia as montanhas e quebrava os rochedos.\nMas o Senhor não estava no vento.\nDepois do vento houve um terremoto.\nMas o Senhor não estava no terremoto.\n12\nPassado o terremoto, veio um fogo.\nMas o Senhor não estava no fogo.\nE depois do fogo\nouviu-se um murmúrio de uma leve brisa.\n13\nOuvindo isto,\nElias cobriu o rosto com o manto,\nsaiu e pôs-se à entrada da gruta.\nOuviu, então, uma voz que dizia:\n\"Que fazes aqui, Elias?\"\n14\nEle respondeu:\n\"Estou ardendo de zelo pelo Senhor,\nDeus Todo-poderoso,\nporque os filhos de Israel abandonaram tua aliança,\ndemoliram teus altares\ne mataram à espada teus profetas.\nSó eu escapei.\nMas, agora, também querem matar-me\".\n15\nO Senhor disse-lhe:\n\"Vai e toma o teu caminho de volta,\nna direção do deserto de Damasco.\nChegando lá, ungirás Hazael como rei da Síria.\n16\nUnge também a Jeú, filho de Namsi,\ncomo rei de Israel,\ne a Eliseu, filho de Safat, de Abel-Meula,\ncomo profeta em teu lugar\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 26(27),7-8a.8b-9.13-14 (R. 8b)",
+    "refrao": "",
+    "texto": "R.\nSenhor, é vossa face que eu procuro!\n7\nÓ Senhor, ouvi a voz do meu apelo, *\natendei por compaixão!\n8a\nMeu coração fala convosco confiante,\né vossa face que eu procuro.\nR.\nb\nNão afasteis em vossa ira o vosso servo, *\nsois vós o meu auxílio!\n9\nNão me esqueçais nem me deixeis abandonado, *\nmeu Deus e Salvador!\nR.\n13\nSei que a bondade do Senhor eu hei de ver *\nna terra dos viventes.\n14\nEspera no Senhor e tem coragem, *\nespera no Senhor!\nR.\nAclamação ao Evangelho\nFl 2,15d.16a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nComo astros no mundo brilheis,\npregando a Palavra da vida!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "",
+    "texto": "já cometeu adultério com ela no seu coração.\nProclamação do Evangelho de Jesus Cristo segundo Mateus\n5,27-32\nNaquele tempo, disse Jesus aos seus discípulos:\n27\n\"Ouvistes o que foi dito:\n'Não cometerás adultério'.\n28\nEu, porém, vos digo:\nTodo aquele que olhar para uma mulher,\ncom o desejo de possuí-la,\njá cometeu adultério com ela no seu coração.\n29\nSe o teu olho direito é para ti ocasião de pecado,\narranca-o e joga-o para longe de ti!\nDe fato, é melhor perder um de teus membros,\ndo que todo o teu corpo ser jogado no inferno.\n30\nSe a tua mão direita é para ti ocasião de pecado,\ncorta-a e joga-a para longe de ti!\nDe fato, é melhor perder um dos teus membros,\ndo que todo o teu corpo ir para o inferno.\n31\nFoi dito também:\n'Quem se divorciar de sua mulher,\ndê-lhe uma certidão de divórcio'.\n32\nEu, porém, vos digo:\nTodo aquele que se divorcia de sua mulher,\na não ser por motivo de união irregular,\nfaz com que ela se torne adúltera;\ne quem se casa com a mulher divorciada comete adultério\".\nPalavra da Salvação."
+  }
+}

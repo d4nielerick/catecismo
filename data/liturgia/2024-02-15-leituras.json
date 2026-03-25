@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-15",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dt 30,15-20</div><div> Sl 1,1-2.3.4 e 6 (R. Sl 39,5a)</div><div></div><div> Lc 9,22-25</div></div>",
+  "primeira_leitura": {
+    "referencia": "Hoje te proponho bênção e maldição (Dt 11,26).",
+    "texto": "Leitura do Livro do Deuteronômio\n30,15-20\nMoisés falou ao povo dizendo:\n15\n\"Vê que eu hoje te proponho\na vida e a felicidade,\na morte e a desgraça.\n16\nSe obedeceres aos preceitos do Senhor teu Deus,\nque eu hoje te ordeno,\namando ao Senhor teu Deus,\nseguindo seus caminhos e guardando seus mandamentos,\nsuas leis e seus decretos,\nviverás e te multiplicarás,\ne o Senhor teu Deus te abençoará\nna terra em que vais entrar para possuí-la.\n17\nSe, porém, o teu coração se desviar\ne não quiseres escutar,\ne se, deixando-te levar pelo erro,\nadorares deuses estranhos e os servires,\n18\neu vos anuncio hoje que certamente perecereis.\nNão vivereis muito tempo na terra onde ides entrar,\ndepois de atravessar o Jordão, para ocupá-la.\n19\nTomo hoje o céu e a terra como testemunhas contra vós\nde que vos propus a vida e a morte, a bênção e a maldição.\nEscolhe, pois, a vida,\npara que vivas, tu e teus descendentes,\n20\namando ao Senhor teu Deus,\nobedecendo à sua voz e apegando-te a ele\na fim de que habites na terra\nque o Senhor jurou dar a teus pais,\nAbraão, Isaac e Jacó\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 1,1-2.3.4 e 6 (R. Sl 39,5a)",
+    "refrao": "",
+    "texto": "R.\nÉ feliz quem a Deus se confia!\n1\nFeliz é todo aquele que não anda *\nconforme os conselhos dos perversos;\nque não entra no caminho dos malvados *\nnem junto aos zombadores vai sentar-se,\n2\nmas encontra seu prazer na lei de Deus *\ne a medita, dia e noite, sem cessar.\nR.\n3\nEis que ele é semelhante a uma árvore *\nque à beira da torrente está plantada;\nela sempre dá seus frutos a seu tempo, †\ne jamais as suas folhas vão murchar. *\nEis que tudo o que ele faz vai prosperar.\nR.\n4\nMas bem outra é a sorte dos perversos. †\nAo contrário, são iguais à palha seca *\nespalhada e dispersada pelo vento.\n6\nPois Deus vigia o caminho dos eleitos, *\nmas a estrada dos malvados leva à morte.\nR.\nEvangelho - Mt 18,1-5.\nAclamação ao Evangelho\nMt 4,17\nR.\nGlória a vós, Senhor Jesus,\nprimogênito dentre os mortos!\nV.\nConvertei-vos, nos diz o Senhor,\nestá próximo o Reino de Deus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,22-25",
+    "texto": "9,22-25\nNaquele tempo disse Jesus aos seus discípulos:\n22\n\"O Filho do Homem deve sofrer muito,\nser rejeitado pelos anciãos,\npelos sumos sacerdotes e doutores da Lei,\ndeve ser morto e ressuscitar no terceiro dia\".\n23\nDepois Jesus disse a todos:\n\"Se alguém me quer seguir, renuncie a si mesmo,\ntome sua cruz cada dia, e siga-me.\n24\nPois quem quiser salvar a sua vida, vai perdê-la;\ne quem perder a sua vida por causa de mim, esse a salvará.\n25\nCom efeito, de que adianta\na um homem ganhar o mundo inteiro\nse se perde e se destrói a si mesmo?\"\nPalavra da Salvação."
+  }
+}

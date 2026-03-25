@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-06",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 4,1-5</div><div> Sl 36(37),3-4.5-6.27-28.39-40 (R. 39a)</div><div></div><div> Lc 5,33-39</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,1-5",
+    "texto": "Irmãos:\n1\nQue todo o mundo nos considere\ncomo servidores de\nCristo\ne administradores dos mistérios de Deus.\n2\nA este respeito,\no que se exige dos administradores\né que sejam fiéis.\n3\nQuanto a mim,\npouco me importa ser julgado por vós\nou por algum tribunal humano.\nNem eu me julgo a mim mesmo.\n4\nÉ verdade que a minha consciência\nnão me acusa de nada.\nMas não é por isso\nque eu posso ser considerado justo.\n5\nQuem me julga é o Senhor.\nPortanto, não queirais julgar antes do tempo.\nAguardai que o Senhor venha.\nEle iluminará o que estiver escondido nas trevas\ne manifestará os projetos dos corações.\nEntão, cada um receberá de Deus\no louvor que tiver merecido.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 36(37),3-4.5-6.27-28.39-40 (R. 39a)",
+    "refrao": "",
+    "texto": "R.\nA salvação de quem é justo vem de Deus.\n3\nConfia no Senhor e faze o bem, *\ne sobre a terra habitarás em segurança.\n4\nColoca no Senhor tua alegria, *\ne ele dará o que pedir teu coração.\nR.\n5\nDeixa aos cuidados do Senhor o teu destino; *\nconfia nele, e com certeza ele agirá.\n6\nFará brilhar tua inocência como a luz, *\ne o teu direito, como o sol do meio-dia.\nR.\n27\nA\nfasta-te do mal e faze o bem, *\ne terás tua morada para sempre.\n28\nPorque o Senhor Deus ama a justiça, *\ne jamais ele abandona os seus amigos.\nR.\n39\nA salvação dos piedosos vem de Deus; *\nele os protege nos momentos de aflição.\n40\nO Senhor lhes dá ajuda e os liberta, +\ndefende-os e protege-os contra os ímpios, *\ne os guarda porque nele confiaram.\nR.\nEvangelho - Lc 5,33-39\nAclamação ao Evangelho\nJo 8,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou a luz do mundo;\naquele que me segue\nnão caminha entre as trevas,\nmas terá a luz da vida."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,33-39",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n5,33-39\nNaquele tempo,\n33\nos fariseus e os mestres da Lei disseram a Jesus:\n\"Os discípulos de João,\ne também os discípulos dos fariseus,\njejuam com frequência e fazem orações.\nMas os teus discípulos comem e bebem\".\n34\nJesus, porém, lhes disse:\n\"Os convidados de um casamento podem fazer jejum\nenquanto o noivo está com eles?\n35\nMas dias virão em que o noivo\nserá tirado do meio deles.\nEntão, naqueles dias, eles jejuarão\".\n36\nJesus contou-lhes ainda uma parábola:\n\"Ninguém tira retalho de roupa nova\npara fazer remendo em roupa velha;\nsenão vai rasgar a roupa nova,\ne o retalho novo não combinará com a roupa velha.\n37\nNinguém coloca vinho novo em odres velhos;\nporque, senão, o vinho novo\narrebenta os odres velhos e se derrama;\ne os odres se perdem.\n38\nVinho novo deve ser colocado em odres novos.\n39\nE ninguém, depois de beber vinho velho,\ndeseja vinho novo;\nporque diz: o velho é melhor\".\nPalavra da Salvação."
+  }
+}

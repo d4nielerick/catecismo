@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Ts 1,1-5.8b-10</div><div> Sl 149,1-2.3-4.5-6a e 9b (R. 4a)</div><div></div><div> Mt 23,13-22</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-5.8b-10",
+    "texto": "1\nPaulo, Silvano e Timóteo,\nà Igreja dos tessalonicenses,\nreunida em Deus Pai e no Senhor Jesus Cristo:\na vós, graça e paz!\n2\nDamos graças a Deus por todos vós,\nlembrando-vos sempre em nossas orações.\n3\nDiante de Deus, nosso Pai,\nrecordamos sem cessar a atuação da vossa fé,\no esforço da vossa caridade\ne a firmeza da vossa esperança\nem nosso Senhor Jesus Cristo.\n4\nSabemos, irmãos amados por Deus,\nque sois do número dos escolhidos.\n5\nPorque o nosso evangelho não chegou até vós\nsomente por meio de palavras,\nmas também mediante a força que é o Espírito Santo;\ne isso, com toda a abundância.\nSabeis de que maneira procedemos entre vós,\npara o vosso bem.\n8b\nA vossa fé em Deus propagou-se por toda parte.\nAssim, nós já nem precisamos falar,\n9\npois as pessoas mesmas contam como vós nos acolhestes\ne como vos convertestes,\nabandonando os falsos deuses,\npara servir ao Deus vivo e verdadeiro,\n10\nesperando dos céus o seu Filho,\na quem ele ressuscitou dentre os mortos:\nJesus, que nos livra do castigo que está por vir.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 149,1-2.3-4.5-6a e 9b (R. 4a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor ama seu povo de verdade.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nCantai ao Senhor Deus um canto novo, *\ne o seu louvor na assembleia dos fiéis!\n2\nAlegre-se Israel em Quem o fez, *\ne Sião se rejubile no seu Rei!\nR.\n3\nCom danças glorifiquem o seu nome, *\ntoquem harpa e tambor em sua honra!\n4\nPorque, de fato, o Senhor ama seu povo *\ne coroa com vitória os seus humildes.\nR.\n5\nExultem os fiéis por sua glória, *\ne cantando se levantem de seus leitos,\n6a\ncom louvores do Senhor em sua boca. *\n9b\nEis a glória para todos os seus santos.\nR.\nEvangelho - Mt 23,13-2\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "23,13-22",
+    "texto": "23,13-22\nNaquele tempo, disse Jesus:\n13\n\"Ai de vós, mestres da Lei e fariseus hipócritas!\nVós fechais o Reino dos Céus aos homens.\nVós, porém, não entrais,\nnem deixais entrar aqueles que o desejam.\n15\nAí de vós, mestres da Lei e fariseus hipócritas!\nVós percorreis o mar e a terra para converter alguém,\ne quando o conseguis,\no tornais merecedor do inferno,\nduas vezes pior do que vós.\n16\nAi de vós, guias cegos!\nVós dizeis:\n'Se alguém jura pelo Templo, não vale;\nmas, se alguém jura pelo ouro do Templo, então vale!'\n17\nInsensatos e cegos!\nO que vale mais:\no ouro ou o Templo que santifica o ouro?\n18\nVós dizeis também:\n'Se alguém jura pelo altar, não vale;\nmas, se alguém jura pela oferta\nque está sobre o altar, então vale!'\n19\nCegos! O que vale mais:\na oferta, ou o altar que santifica a oferta?\n20\nCom efeito, quem jura pelo altar,\njura por ele e por tudo o que está sobre ele.\n21\nE quem jura pelo Templo,\njura por ele e por Deus que habita no Templo.\n22\nE quem jura pelo céu, jura pelo trono de Deus\ne por aquele que nele está sentado\".\nPalavra da Salvação."
+  }
+}

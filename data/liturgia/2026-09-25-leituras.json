@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ecl 3,1-11</div><div> Sl 143(144),1a e 2abc.3-4 (R. 1a)</div><div></div><div> Lc 9,18-22</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-11",
+    "texto": "1\nTudo tem seu tempo.\nHá um momento oportuno\npara tudo que acontece debaixo do céu.\n2\nTempo de nascer e tempo de morrer;\ntempo de plantar e tempo de colher a planta.\n3\nTempo de matar e tempo de salvar;\ntempo de destruir e tempo de construir.\n4\nTempo de chorar e tempo de rir;\ntempo de lamentar e tempo de dançar.\n5\nTempo de atirar pedras e tempo de as amontoar;\ntempo de abraçar e tempo de se separar.\n6\nTempo de buscar e tempo de perder;\ntempo de guardar e tempo de esbanjar.\n7\nTempo de rasgar e tempo de costurar;\ntempo de calar e tempo de falar.\n8\nTempo de amar e tempo de odiar;\ntempo de guerra e tempo de paz.\n9\nQue proveito tira o trabalhador de seu esforço?\n10\nObservei a tarefa que Deus impôs aos homens,\npara que nela se ocupassem.\n11\nAs coisas que ele fez são todas boas no tempo oportuno.\nAlém disso, ele dispôs que fossem permanentes;\nno entanto o homem jamais chega a conhecer\no princípio e o fim da ação que Deus realiza.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 143(144),1a e 2abc.3-4 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nBendito seja o Senhor, meu rochedo!\n1a\nBendito seja o Senhor, meu rochedo.\n2a\nEle é meu amor, meu refúgio, *\nb\nlibertador, fortaleza e abrigo;\nc\nÉ meu escudo: é nele que espero, *\nR.\n3\nQue é o homem, Senhor, para vós? †\nPor que dele cuidais tanto assim, *\ne no filho do homem pensais?\n4\nComo o sopro de vento é o homem, *\nos seus dias são sombra que passa.\nR.\nEvangelho - Lc 9,18-22\nAclamação ao Evangelho\nMc 10,45\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVeio o filho do homem, a fim de servir\ne dar sua vida em resgate por muitos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,18-22",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n9,18-22\nAconteceu que Jesus\n18\nestava rezando num lugar retirado,\ne os discípulos estavam com ele.\nEntão Jesus perguntou-lhes:\n\"Quem diz o povo que eu sou?\"\n19\nEles responderam:\n\"Uns dizem que és João Batista;\noutros, que és Elias;\nmas outros acham\nque és algum dos antigos profetas que ressuscitou\".\n20\nMas Jesus perguntou:\n\"E vós, quem dizeis que eu sou?\"\nPedro respondeu:\n\"O Cristo de Deus\".\n21\nMas Jesus proibiu-lhes severamente\nque contassem isso a alguém.\n22\nE acrescentou:\n\"O Filho do Homem deve sofrer muito,\nser rejeitado pelos anciãos,\npelos sumos sacerdotes e doutores da Lei,\ndeve ser morto e ressuscitar no terceiro dia\".\nPalavra da Salvação."
+  }
+}

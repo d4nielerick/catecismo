@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-22",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 10,8-11</div><div> Sl 118(119),14.24.72.103.111.131 (R. 103a)</div><div></div><div> Lc 19,45-48</div></div>",
+  "primeira_leitura": {
+    "referencia": "10,8-11",
+    "texto": "8\nAquela mesma voz do céu,\nque eu, João, já tinha ouvido,\ntornou a falar comigo:\n\"Vai.\nPega o livrinho aberto da mão do anjo\nque está de pé sobre o mar e a terra\".\n9\nEu fui até ao anjo\ne pedi que me entregasse o livrinho.\nEle me falou:\n\"Pega e come.\nSerá amargo no estômago,\nmas na tua boca, será doce como mel\".\n10\nPeguei da mão do anjo o livrinho e comi-o.\nNa boca era doce como mel,\nmas quando o engoli,\nmeu estômago tornou-se amargo.\n11\nEntão ele me disse:\n\"Deves profetizar ainda\ncontra outros povos e nações, línguas e reis\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),14.24.72.103.111.131 (R. 103a)",
+    "refrao": "",
+    "texto": "R.\nComo é doce ao paladar vossa palavra, ó Senhor!\n14\nSeguindo vossa lei me rejubilo *\nmuito mais do que em todas as riquezas.\nR.\n24\nMinha alegria é a vossa Aliança, *\nmeus conselheiros são os vossos mandamentos.\nR.\n72\nA lei de vossa boca, para mim, *\nvale mais do que milhões em ouro e prata.\nR.\n103\nComo é doce ao paladar vossa palavra, *\nmuito mais doce do que o mel na minha boca!\nR.\n111\nVossa palavra é minha herança para sempre, *\nporque ela é que me alegra o coração!\nR.\n131\nAbro a boca e aspiro largamente, *\npois estou ávido de vossos mandamentos.\nR.\nEvangelho - Lc 19,45-4\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "19,45-48",
+    "texto": "19,45-48\nNaquele tempo,\n45\nJesus entrou no Templo\ne começou a expulsar os vendedores.\n46\nE disse:\n\"Está escrito:\n'Minha casa será casa de oração'.\nNo entanto, vós fizestes dela um antro de ladrões\".\n47\nJesus ensinava todos os dias no Templo.\nOs sumos sacerdotes,\nos mestres da Lei e os notáveis do povo\nprocuravam modo de matá-lo.\n48\nMas não sabiam o que fazer,\nporque o povo todo ficava fascinado\nquando ouvia Jesus falar.\nPalavra da Salvação."
+  }
+}

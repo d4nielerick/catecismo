@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-01",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dt 4,1-2.6-8</div><div> Sl 14(15),2-3ab.3cd-4ab.5 (R. 1a)</div><div> Tg 1,17-18.21b-22.27</div><div> Mc 7,1-8.14-15.21-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,1-2.6-8",
+    "texto": "1\nMoisés falou ao povo, dizendo:\n\"Agora, Israel, ouve as leis e os decretos\nque eu vos ensino a cumprir,\npara que, fazendo-o, vivais\ne entreis na posse da terra prometida\npelo Senhor Deus de vossos pais.\n2\nNada acrescenteis, nada tireis, à palavra que vos digo,\nmas guardai os mandamentos do Senhor vosso Deus\nque vos prescrevo.\n6\nVós os guardareis, pois, e os poreis em prática,\nporque neles está vossa sabedoria\ne inteligência perante os povos,\npara que, ouvindo todas estas leis, digam:\n'Na verdade, é sábia e inteligente esta grande nação!'\n7\nPois, qual é a grande nação\ncujos deuses lhe são tão próximos\ncomo o Senhor nosso Deus,\nsempre que o invocamos?\n8\nE que nação haverá tão grande\nque tenha leis e decretos tão justos,\ncomo esta lei que hoje vos ponho diante dos olhos?\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 14(15),2-3ab.3cd-4ab.5 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nSenhor, quem morará em vossa casa\ne no vosso monte santo, habitará?\n2\nÉ aquele que caminha sem pecado*\ne pratica a justiça fielmente;\n3a\nque pensa a verdade no seu íntimo *\nb\ne não solta em calúnias sua língua.\nR.\nc\nQue em nada prejudica o seu irmão,*\nd\nnem cobre de insultos seu vizinho;\n4a\nque não dá valor algum ao homem ímpio,*\nb\nmas honra os que respeitam o Senhor.\nR.\n5\nNão empresta o seu dinheiro com usura, †\nnem se deixa subornar contra o inocente.*\nJamais vacilará quem vive assim!\nR.\n2ª Leitura - Tg 1,17-\nSEGUNDA LEITURA\nSede praticantes da Palavra.\nLeitura da Carta de São Tiago\n1,17-18.21b-22.27\nIrmãos bem-amados:\n17\nTodo dom precioso\ne toda dádiva perfeita vêm do alto;\ndescem do Pai das luzes,\nno qual não há mudança, nem sombra de variação.\n18\nDe livre vontade ele nos gerou,\npela Palavra da verdade,\na fim de sermos como que as primícias de suas criaturas.\n21b\nRecebei com humildade\na Palavra que em vós foi implantada,\ne que é capaz de salvar as vossas almas.\n22\nTodavia, sede praticantes da Palavra\ne não meros ouvintes,\nenganando-vos a vós mesmos.\n27\nCom efeito, a religião pura e sem mancha\ndiante de Deus Pai, é esta:\nassistir os órfãos e as viúvas em suas tribulações\ne não se deixar contaminar pelo mundo.\nPalavra do Senhor.\nAclamação ao Evangelho\nTg 1,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nDeus, nosso Pai, nesse seu imenso amor,\nfoi quem gerou-nos com a palavra da verdade,\nnós, as primícias do seu gesto criador."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,1-8.14-15.21-23",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n7,1-8.14-15.21-23\nNaquele tempo,\n1\nos fariseus e alguns mestres da Lei\nvieram de Jerusalém e se reuniram em torno de Jesus.\n2\nEles viam que alguns dos seus discípulos\ncomiam o pão com as mãos impuras,\nisto é, sem as terem lavado.\n3\nCom efeito, os fariseus e todos os judeus\nsó comem depois de lavar bem as mãos,\nseguindo a tradição recebida dos antigos.\n4\nAo voltar da praça,\neles não comem sem tomar banho.\nE seguem muitos outros costumes\nque receberam por tradição:\na maneira certa de lavar\ncopos, jarras e vasilhas de cobre.\n5\nOs fariseus e os mestres da Lei\nperguntaram então a Jesus:\n\"Por que os teus discípulos\nnão seguem a tradição dos antigos,\nmas comem o pão sem lavar as mãos?\"\n6\nJesus respondeu:\n\"Bem profetizou Isaías a vosso respeito, hipócritas,\ncomo está escrito:\n'Este povo me honra com os lábios,\nmas seu coração está longe de mim.\n7\nDe nada adianta o culto que me prestam,\npois as doutrinas que ensinam são preceitos humanos'.\n8\nVós abandonais o mandamento de Deus\npara seguir a tradição dos homens\".\n14\nEm seguida,\nJesus chamou a multidão para perto de si e disse:\n\"Escutai todos e compreendei:\n15\no que torna impuro o homem\nnão é o que entra nele vindo de fora,\nmas o que sai do seu interior.\n21\nPois é de dentro do coração humano\nque saem as más intenções,\nimoralidades, roubos, assassínios,\n22\nadultérios, ambições desmedidas, maldades, fraudes,\ndevassidão, inveja, calúnia, orgulho, falta de juízo.\n23\nTodas estas coisas más saem de dentro,\ne são elas que tornam impuro o homem\".\nPalavra da Salvação."
+  }
+}

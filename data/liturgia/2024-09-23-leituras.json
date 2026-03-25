@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Pr 3,27-34</div><div> Sl 14(15),1a-3ab.3cd-4ab.5 (R. 1b)</div><div></div><div> Lc 8,16-18</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,27-34",
+    "texto": "Meu filho,\n27\nNão recuses um favor a quem dele necessita,\nse tu podes fazê-lo.\n28\nNão digas ao próximo:\n\"Vai embora,\nvolta amanhã, então te darei\",\nquando podes dar logo!\n29\nNão trames o mal contra o próximo,\nquando ele vive contigo cheio de confiança.\n30\nNão abras processo contra alguém sem motivo,\nse não te fez mal algum!\n31\nNão invejes o homem violento,\ne não escolhas nenhum de seus caminhos,\n32\nporque o Senhor detesta o perverso,\nmas reserva sua amizade aos íntegros.\n33\nO Senhor amaldiçoa a casa do ímpio,\nmas abençoa a morada dos justos.\n34\nEle zomba dos zombadores,\nmas concede o seu favor aos humildes.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 14(15),1a-3ab.3cd-4ab.5 (R. 1b)",
+    "refrao": "",
+    "texto": "R.\nO justo habitará no monte santo do Senhor.\n1a\n\"Senhor quem entrará em vossa casa?\" †\n2\nAquele que caminha sem pecado *\ne pratica a justiça fielmente;\n3a\nque pensa a verdade no seu íntimo *\nb\ne não solta em calúnias sua língua.\nR.\nc\nQue em nada prejudica o seu irmão,\nd\nnem cobre de insultos seu vizinho;\n4a\nque não dá valor algum ao homem ímpio,*\nb\nmas honra os que respeitam o Senhor.\nR.\n5\nnão empresta o seu dinheiro com usura, †\nnem se deixa subornar contra o inocente.*\nJamais vacilará quem vive assim!\nR.\nEvangelho - Lc 8,16-18\nAclamação ao Evangelho\nMt 5,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVós sois a luz do mundo; brilhe a todos a vossa luz.\nVendo eles vossas obras, deem glória ao Pai celeste!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,16-18",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n8,16-18\nNaquele tempo, disse Jesus à multidão:\n16\n\"Ninguém acende uma lâmpada\npara cobri-la com uma vasilha\nou colocá-la debaixo da cama;\nao contrário, coloca-a no candeeiro,\na fim de que todos os que entram, vejam a luz.\n17\nCom efeito, tudo o que está escondido\ndeverá tornar-se manifesto;\ne tudo o que está em segredo\ndeverá torna-se conhecido\ne claramente manifesto.\nPortanto, prestai atenção à maneira como vós ouvis!\nPois a quem tem alguma coisa, será dado ainda mais;\ne àquele que não tem,\nserá tirado até mesmo o que ele pensa ter\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-13",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 1,1-7</div><div> Sl 97(98),1.2-3ab.3cd-4 (R. 2a)</div><div></div><div> Lc 11,29-32</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-7",
+    "texto": "1\nPaulo, servo de Jesus Cristo,\napóstolo por vocação,\nescolhido para o Evangelho de Deus,\n2\nque pelos profetas havia prometido, nas Escrituras,\n3\ne que diz respeito a seu Filho,\ndescendente de Davi segundo a carne,\nautenticado como Filho de Deus com poder,\npelo Espírito de Santidade que o ressuscitou\ndos mortos,\nJesus Cristo, nosso Senhor.\n4\nÉ por Ele que recebemos\na graça da vocação\npara o apostolado,\na fim de podermos trazer à obediência da fé\ntodos os povos pagãos,\npara a glória de seu nome.\n6\nEntre esses povos estais também vós,\nchamados a ser discípulos de Jesus Cristo.\n7\nA vós todos que morais em Roma,\namados de Deus e santos por vocação,\ngraça e paz da parte de Deus, nosso Pai,\ne de nosso Senhor, Jesus Cristo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.2-3ab.3cd-4 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor fez conhecer a salvação.\n1\nCantai ao Senhor Deus um canto novo, *\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo *\nalcançaram-lhe a vitória.\nR.\n2\nO Senhor fez conhecer a salvação, *\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel *\nb\npela casa de Israel.\nR.\nc\nOs confins do universo contemplaram *\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira, *\nalegrai-vos e exultai!\nR.\nEvangelho - Lc 11,29-3\nAclamação ao Evangelho\nCf. Sl 94(95),8ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nOxalá ouvísseis hoje a sua voz:\nNão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,29-32",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,29-32\nNaquele tempo,\n29\nquando as multidões se reuniram\nem grande quantidade,\nJesus começou a dizer:\n\"Esta geração é uma geração má.\nEla busca um sinal,\nmas nenhum sinal lhe será dado,\na não ser o sinal de Jonas.\n30\nCom efeito, assim como Jonas\nfoi um sinal para os ninivitas,\nassim também será o Filho do Homem\npara esta geração.\n31\nNo dia do julgamento,\na rainha do Sul se levantará\njuntamente com os homens desta geração,\ne os condenará.\nPorque ela veio de uma terra distante\npara ouvir a sabedoria de Salomão.\nE aqui está quem é maior do que Salomão.\n32\nNo dia do julgamento, os ninivitas\nse levantarão juntamente com esta geração e a condenarão.\nPorque eles se converteram\nquando ouviram a pregação de Jonas.\nE aqui está quem é maior do que Jonas\".\nPalavra da Salvação."
+  }
+}

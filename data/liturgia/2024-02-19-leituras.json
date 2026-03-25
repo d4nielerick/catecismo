@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-19",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Lv 19,1-2.11-18</div><div> Sl 18(19),8.9.10.15 (R. Jo 6,63c)</div><div></div><div> Mt 25,31-46</div></div>",
+  "primeira_leitura": {
+    "referencia": "19,1-2.11-18",
+    "texto": "1\nO Senhor falou a Moisés, dizendo:\n2\n\"Fala a toda a comunidade dos filhos de Israel, e dize-lhes:\nSede santos,\nporque eu, o Senhor vosso Deus, sou santo.\n11\nNão furteis, não digais mentiras,\nnem vos enganeis uns aos outros.\n12\nNão jureis falso por meu nome,\nprofanando o nome do Senhor teu Deus.\nEu sou o Senhor.\n13\nNão explores o teu próximo\nnem pratiques extorsão contra ele.\nNão retenhas contigo a diária do assalariado\naté o dia seguinte.\n14\nNão amaldiçoes o surdo,\nnem ponhas tropeço diante do cego,\nmas temerás o teu Deus.\nEu sou o Senhor.\n15\nNão cometas injustiças no exercício da justiça;\nnão favoreças o pobre nem prestigieis o poderoso.\nJulga teu próximo conforme a justiça.\n16\nNão sejas um maldizente entre o teu povo.\nNão conspires, caluniando-o,\ncontra a vida do teu próximo.\nEu sou o Senhor.\n17\nNão tenhas no coração ódio contra teu irmão.\nRepreende o teu próximo,\npara não te tornares culpado de pecado por causa dele.\n18\nNão procures vingança,\nnem guardes rancor aos teus compatriotas.\nAmarás o teu próximo como a ti mesmo.\nEu sou o Senhor\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 18(19),8.9.10.15 (R. Jo 6,63c)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, vossas palavras são espírito e vida!\n8\nA lei do Senhor Deus é perfeita,*\nconforto para a alma!\nO testemunho do Senhor é fiel,*\nsabedoria dos humildes.\nR.\n9\nOs preceitos do Senhor são precisos,*\nalegria ao coração.\nO mandamento do Senhor é brilhante,*\npara os olhos é uma luz.\nR.\n10\nÉ puro o temor do Senhor,*\nimutável para sempre.\nOs julgamentos do Senhor são corretos*\ne justos igualmente.\nR.\n15\nQue vos agrade o cantar dos meus lábios*\ne a voz da minha alma;\nque ela chegue até vós, ó Senhor,*\nmeu Rochedo e Redentor!\nR.\nAclamação ao Evangelho\n2Cor 6,2b\nR.\nSalve Cristo, luz da vida,\ncompanheiro na partilha!\nV.\nEis o tempo de conversão;\neis o dia da salvação"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "25,31-46",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n25,31-46\nNaquele tempo, disse Jesus a seus discípulos:\n31\n\"Quando o Filho do Homem vier em sua glória,\nacompanhado de todos os anjos,\nentão se assentará em seu trono glorioso.\n32\nTodos os povos da terra\nserão reunidos diante dele,\ne ele separará uns dos outros,\nassim como o pastor separa as ovelhas dos cabritos.\n33\nE colocará as ovelhas à sua direita\ne os cabritos à sua esquerda.\n34\nEntão o Rei dirá aos que estiverem à sua direita:\n'Vinde benditos de meu Pai!\nRecebei como herança o Reino que meu Pai vos preparou\ndesde a criação do mundo!\n35\nPois eu estava com fome e me destes de comer;\neu estava com sede e me destes de beber;\neu era estrangeiro e me recebestes em casa;\n36\neu estava nu e me vestistes;\neu estava doente e cuidastes de mim;\neu estava na prisão e fostes me visitar'.\n37\nEntão os justos lhe perguntarão:\n'Senhor, quando foi que te vimos com fome\ne te demos de comer?\ncom sede e te demos de beber?\n38\nQuando foi que te vimos como estrangeiro\ne te recebemos em casa,\ne sem roupa e te vestimos?\n39\nQuando foi que te vimos doente ou preso,\ne fomos te visitar?'\n40\nEntão o Rei lhes responderá:\n'Em verdade eu vos digo,\nque todas as vezes que fizestes isso\na um dos menores de meus irmãos,\nfoi a mim que o fizestes!'\n41\nDepois o Rei dirá aos que estiverem à sua esquerda:\n'Afastai-vos de mim, malditos!\nIde para o fogo eterno,\npreparado para o diabo e para os seus anjos.\n42\nPois eu estava com fome e não me destes de comer;\neu estava com sede e não me destes de beber;\n43\neu era estrangeiro e não me recebestes em casa;\neu estava nu e não me vestistes;\neu estava doente e na prisão\ne não fostes me visitar'.\n44\nE responderão também eles:\n'Senhor, quando foi que te\nvimos com fome, ou com sede,\ncomo estrangeiro, ou nu,\ndoente ou preso, e não te servimos?'\n45\nEntão o Rei lhes responderá:\n'Em verdade eu vos digo,\ntodas as vezes que não fizestes isso\na um desses pequeninos,\nfoi a mim que não o fizestes!'\n46\nPortanto, estes irão para o castigo eterno,\nenquanto os justos irão para a vida eterna\".\nPalavra da Salvação."
+  }
+}

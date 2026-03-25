@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-14",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 2,5-12</div><div> Sl 8,2a e 5.6-7.8-9 (R. cf. 7)</div><div></div><div> Mc 1,21b-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,5-12",
+    "texto": "5\nNão foi aos anjos que Deus submeteu o mundo futuro,\ndo qual estamos falando.\n6\nA este respeito, porém, houve quem afirmasse:\n\"O que é o homem, para dele te lembrares,\nou o filho do homem, para com ele te ocupares?\n7\nTu o fizeste um pouco menor que os anjos,\nde glória e honra o coroaste,\n8\ne todas as coisas puseste debaixo de seus pés\".\nSe Deus lhe submeteu todas as coisas,\nnada deixou que não lhe fosse submisso.\nAtualmente, porém, ainda não vemos\nque tudo lhe esteja submisso.\n9\nJesus, a quem Deus fez pouco menor do que os anjos,\nnós o vemos coroado de glória e honra,\npor ter sofrido a morte.\nSim, pela graça de Deus em favor de todos,\nele provou a morte.\n10\nConvinha de fato que aquele,\npor quem e para quem todas as coisas existem,\ne que desejou conduzir muitos filhos à glória,\nlevasse o iniciador da salvação deles à consumação,\npor meio de sofrimentos.\n11\nPois tanto Jesus, o Santificador,\nquanto os santificados,\nsão descendentes do mesmo ancestral;\npor esta razão,\nele não se envergonha de os chamar irmãos,\n12\ndizendo:\n\"Anunciarei o teu nome a meus irmãos;\ne no meio da assembleia te louvarei\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 8,2a e 5.6-7.8-9 (R. cf. 7)",
+    "refrao": "",
+    "texto": "R.\nDestes domínio ao vosso Filho\nsobre tudo o que criastes.\n2a\nÓ Senhor, nosso Deus, como é grande\nvosso nome por todo o universo!\n5\nPerguntamos: \"Senhor, que é o homem,\n†\npara dele assim vos lembrardes\ne o tratardes com tanto carinho?\"\nR.\n6\nPouco abaixo de Deus o fizestes, *\ncoroando-o de glória e esplendor;\n7\nvós lhe destes poder sobre tudo, *\nvossas obras aos pés lhe pusestes:\nR.\n8\nas ovelhas, os bois, os rebanhos, *\ntodo o gado e as feras da mata;\n9\npassarinhos e peixes dos mares, *\ntodo ser que se move nas águas.\nR.\nEvangelho - Mc 1,21b-2\nAclamação ao Evangelho\n1Ts 2,13\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAcolhei a palavra de Deus, não como palavra humana,\nmas como mensagem de Deus, o que ela é, em verdade!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,21b-28",
+    "texto": "1,21b-28\n21b\nEstando com seus discípulos em Cafarnaum,\nJesus, num dia de sábado,\nentrou na sinagoga e começou a ensinar.\n22\nTodos ficavam admirados com o seu ensinamento,\npois ensinava como quem tem autoridade,\nnão como os mestres da Lei.\n23\nEstava então na sinagoga\num homem possuído por um espírito mau.\nEle gritou:\n24\n\"Que queres de nós, Jesus Nazareno?\nVieste para nos destruir?\nEu sei quem tu és: tu és o Santo de Deus.\"\n25\nJesus o intimou:\n\"Cala-te e sai dele!\"\n26\nEntão o espírito mau sacudiu o homem com violência,\ndeu um grande grito e saiu.\n27\nE todos ficaram muito espantados\ne perguntavam uns aos outros:\n\"O que é isto?\nUm ensinamento novo dado com autoridade:\nEle manda até nos espíritos maus,\ne eles obedecem!\"\n28\nE a fama de Jesus logo se espalhou por toda a parte,\nem toda a região da Galileia.\nPalavra da Salvação."
+  }
+}

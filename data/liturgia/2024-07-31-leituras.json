@@ -1,0 +1,23 @@
+{
+  "data": "2024-07-31",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 15,10.16-21</div><div> Sl 58(59),2-3.4-5a.10-11.17.18 (R. 17d)</div><div></div><div> Mt 13,44-46</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,10.16-21",
+    "texto": "10\n\"Ai de mim, minha mãe,\nque me geraste um homem de controvérsia,\num homem em discórdia com toda a gente!\nNão emprestei com usura nem ninguém me emprestou,\ne contudo todos me amaldiçoam.\n16\nQuando encontrei tuas palavras, alimentei-me,\nelas se tornaram para mim\numa delícia e a alegria do coração,\no modo como invocar teu nome sobre mim,\nSenhor Deus dos exércitos.\n17\nNão costumo frequentar a roda dos folgazões\ne gabo-me disso;\nfiquei a sós, sob o influxo de tua presença\ne cheio de indignação.\n18\nPor que se tornou eterna minha dor,\npor que não sara minha chaga maligna?\nPara mim te tornaste como miragem de um regato,\ncomo visão d'águas ilusórias\".\n19\nAinda assim, isto diz-me o Senhor:\n\"Se te converteres, converterei teu coração,\npara te sustentares em minha presença;\nse souberes separar o precioso do vil,\nfalarás por minha boca;\nos outros voltarão para ti,\ne tu não voltarás para eles.\n20\nEm favor deste povo, farei de ti\numa muralha de bronze fortificada;\ncombaterão contra ti, mas não prevalecerão,\nporque eu estou contigo\npara te salvar e te defender,\ndiz o Senhor.\n21\nEu te libertarei das mãos dos perversos\ne te salvarei dos prepotentes\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 58(59),2-3.4-5a.10-11.17.18 (R. 17d)",
+    "refrao": "",
+    "texto": "R.\nSois meu refúgio no dia da aflição.\n2\nLibertai-me do inimigo, ó meu Deus, *\ne protegei-me contra os meus perseguidores!\n3\nLibertai-me dos obreiros da maldade, *\ndefendei-me desses homens sanguinários!\nR.\n4\nEis que ficam espreitando a minha vida, †\npoderosos armam tramas contra mim. *\n5a\nMas eu, Senhor, não cometi pecado ou crime.\nR.\n10\nMinha força, é a vós que me dirijo, †\nporque sois o meu refúgio e proteção, *\n11\nDeus clemente e compassivo, meu amor!\nDeus virá com seu amor ao meu encontro, *\ne hei de ver meus inimigos humilhados.\nR.\n17\nEu, então, hei de cantar vosso poder, *\ne de manhã celebrarei vossa bondade,\nporque fostes para mim o meu abrigo, *\no meu refúgio no dia da aflição.\nR.\n18\nMinha força, cantarei vossos louvores, †\nporque sois o meu refúgio e proteção, *\nDeus clemente e compassivo, meu amor!\nR.\nAclamação ao Evangelho\nJo 15,15b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos chamo meus amigos,\npois, vos dei a conhecer\no que o Pai me revelou."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,44-46",
+    "texto": "13,44-46\nNaquele tempo, disse Jesus à multidão:\n44\n\"O Reino dos Céus é como um tesouro escondido no campo.\nUm homem o encontra e o mantém escondido.\nCheio de alegria, ele vai, vende todos os seus bens\ne compra aquele campo.\n45\nO Reino dos Céus também é como um comprador\nque procura pérolas preciosas.\n46\nQuando encontra uma pérola de grande valor,\nele vai, vende todos os seus bens\ne compra aquela pérola\".\nPalavra da Salvação."
+  }
+}

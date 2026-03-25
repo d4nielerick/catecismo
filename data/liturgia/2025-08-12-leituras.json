@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-12",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dt 31,1-8</div><div> Dt 32,3-4a.7.8.9 e 12 (R. 9a)</div><div></div><div> Mt 18,1-5.10.12-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "31,1-8",
+    "texto": "1\nMoisés dirigiu-se a todo Israel\ncom as seguintes palavras:\n2\n'Tenho hoje cento e vinte anos\ne já não posso deslocar-me.\nAlém do mais, o Senhor me disse:\n'Não atravessarás este rio Jordão',\n3\n'É o Senhor teu Deus que irá à tua frente;\nele mesmo, à tua vista,\ndestruirá todas essas nações,\npara que ocupes suas terras.\nJosué passará adiante de ti,\ncomo disse o Senhor.\n4\nE o Senhor fará com esses povos\no que fez com Seon e Og, reis dos amorreus,\ne com suas terras, que ele destruiu.\n5\nQuando, pois, o Senhor os entregar a vós,\nfareis com eles exatamente o que vos ordenei.\n6\nSede fortes e valentes;\nnão vos intimideis nem tenhais medo deles,\npois o Senhor teu Deus é ele mesmo o teu guia,\ne não te deixará nem te abandonará'.\n7\nDepois Moisés chamou Josué\ne, diante de todo Israel, lhe disse:\n'Sê forte e corajoso,\npois és tu que introduzirás este povo na terra\nque o Senhor sob juramento\nprometeu dar a seus pais,\ne és tu que lhe darás a posse dela.\n8\nO Senhor, que é o teu guia,\nmarchará à tua frente,\nestará contigo\ne não te deixará nem te abandonará.\nPor isso, não temas nem te acovardes'.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Dt 32,3-4a.7.8.9 e 12 (R. 9a)",
+    "refrao": "",
+    "texto": "R.\nA porção do Senhor é o seu povo.\n3\nO nome do Senhor vou invocar; *\nvinde todos e dai glória ao nosso Deus!\n4a\nEle é a Rocha: suas obras são perfeitas.\nR.\n7\nRecorda-te dos dias do passado *\ne relembra as antigas gerações;\npergunta, e teu pai te contará, *\ninterroga, e teus avós te ensinarão.\nR.\n8\nQuando o Altíssimo os povos dividiu *\ne pela terra espalhou os filhos de Adão,\nas fronteiras das nações ele marcou *\nde acordo com o número de seus filhos;\nR.\n9\nmas a parte do Senhor foi o seu povo, *\ne Jacó foi a porção de sua herança.\n12\nO Senhor, somente ele, foi seu guia, *\ne jamais um outro deus com ele estava.\nR.\nEvangelho - Mt 18,1-5.\nAclamação ao Evangelho\nMt 11,29\nR.\nAleluia, Aleluia, Aleluia\nV.\nTomai meu jugo sobre vós\ne aprendei de mim que sou\nde coração humilde e manso!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "18,1-5.10.12-14",
+    "texto": "18,1-5.10.12-14\nNaquele tempo:\n1\nOs discípulos aproximaram-se de Jesus\ne perguntaram:\n'Quem é o maior no Reino dos Céus?'\n2\nJesus chamou uma criança,\ncolocou-a no meio deles\n3\ne disse:\n'Em verdade vos digo,\nse não vos converterdes,\ne não vos tornardes como crianças,\nnão entrareis no Reino dos Céus.\n4\nQuem se faz pequeno como esta criança,\nesse é o maior no Reino dos Céus.\n5\nE quem recebe em meu nome uma criança como esta,\né a mim que recebe.\n10\nNão desprezeis nenhum desses pequeninos,\npois eu vos digo que os seus anjos nos céus\nvêem sem cessar a face do meu Pai que está nos céus.\n12\nQue vos parece?\nSe um homem tem cem ovelhas,\ne uma delas se perde,\nnão deixa ele as noventa e nove nas montanhas,\npara procurar aquela que se perdeu?\n13\nEm verdade vos digo, se ele a encontrar,\nficará mais feliz com ela,\ndo que com as noventa e nove\nque não se perderam.\n14\nDo mesmo modo, o Pai que está nos céus\nnão deseja que se perca nenhum desses pequeninos'.\nPalavra da Salvação."
+  }
+}

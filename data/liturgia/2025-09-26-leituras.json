@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ag 1,15b-2,9</div><div> Sl 42(43),1.2.3.4. (R. cf. 5bc)</div><div></div><div> Lc 9,18-22</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,15b-2,9",
+    "texto": "1,15b\nNo segundo ano do reinado de Dario,\n2,1\nno dia vinte e um do sétimo mês,\nfez-se ouvir a palavra do Senhor,\nmediante o profeta Ageu:\n2\n\"Vai dizer a Zorobabel,\nfilho de Salatiel, governador de Judá,\ne a Josué, filho de Josedec, sumo sacerdote,\ne ao resto do povo:\n3\nHá dentre vós algum sobrevivente\nque tenha visto esta casa em seu primitivo esplendor?\nE como a vedes agora?\nNão parece aos vossos olhos uma sombra do que era?\n4\nMas agora, toma coragem, Zorobabel,\ndiz o Senhor,\ncoragem, Josué, filho de Josedec, sumo sacerdote;\ncoragem, povo todo desta terra,\ndiz o Senhor dos exércitos;\nponde mãos à obra,\npois eu estou convosco,\ndiz o Senhor dos exércitos.\n5\nEu assumi um compromisso convosco,\nquando saístes do Egito,\ne meu espírito permaneceu no meio de vós:\nnão temais.\n6\nIsto diz o Senhor dos exércitos:\nAinda um momento,\ne eu hei de mover o céu e a terra,\no mar e a terra firme.\n7\nSacudirei todos os povos,\ne começarão a chegar tesouros de todas as nações,\nhei de encher de esplendor esta casa,\ndiz o Senhor dos exércitos.\n8\nPertence-me a prata, pertence-me o ouro,\ndiz o Senhor dos exércitos.\n9\nO esplendor desta nova casa\nserá maior que o da primeira,\ndiz o Senhor dos exércitos;\ne, neste lugar, estabelecerei a paz,\ndiz o Senhor dos exércitos\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 42(43),1.2.3.4 (R. 5bc)",
+    "refrao": "",
+    "texto": "R.\nEspera em Deus! Louvarei novamente\no meu Deus Salvador!\n1\nFazei justiça, meu Deus, e defendei-me *\ncontra a gente impiedosa;\ndo homem perverso e mentiroso *\nlibertai-me, ó Senhor!\nR.\n2\nSois vós o meu Deus e meu refúgio: *\npor que me afastais?\nPor que ando tão triste e abatido *\npela opressão do inimigo?\nR.\n3\nEnviai vossa luz, vossa verdade: *\nelas serão o meu guia;\nque me levem ao vosso Monte santo, *\naté a vossa morada!\nR.\n4\nEntão irei aos altares do Senhor, *\nDeus da minha alegria.\nVosso louvor cantarei, ao som da harpa, *\nmeu Senhor e meu Deus!\nR.\nAclamação ao Evangelho\nMc 10,45\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVeio o filho do homem, a fim de servir\ne dar sua vida em resgate por muitos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,18-22",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n9,18-22\nAconteceu que\nJesus\n18\nestava rezando num lugar retirado,\ne os discípulos estavam com ele.\nEntão Jesus perguntou-lhes:\n\"Quem diz o povo que eu sou?\"\n19\nEles responderam:\n\"Uns dizem que és João Batista;\noutros, que és Elias;\nmas outros acham\nque és algum dos antigos profetas que ressuscitou\".\n20\nMas Jesus perguntou:\n\"E vós, quem dizeis que eu sou?\"\nPedro respondeu:\n\"O Cristo de Deus\".\n21\nMas Jesus proibiu-lhes severamente\nque contassem isso a alguém.\n22\nE acrescentou:\n\"O Filho do Homem deve sofrer muito,\nser rejeitado pelos anciãos,\npelos sumos sacerdotes e doutores da Lei,\ndeve ser morto e ressuscitar no terceiro dia\".\nPalavra da Salvação."
+  }
+}

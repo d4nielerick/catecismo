@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-02",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 5,34-42</div><div> Sl 26(27),1.4.13-14 (R. cf. 4ab)</div><div></div><div> Jo 6,1-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,34-42",
+    "texto": "Naqueles dias,\n34\nUm fariseu, chamado Gamaliel,\nlevantou-se no Sinédrio.\nEra mestre da Lei e todo o povo o estimava.\nGamaliel mandou que os acusados saíssem por um instante.\n35\nDepois disse: \"Homens de Israel,\nvede bem o que estais para fazer contra esses homens.\n36\nAlgum tempo atrás apareceu Teudas,\nque se fazia passar por uma pessoa importante,\ne a ele se juntaram cerca de quatrocentos homens.\nDepois ele foi morto e todos os que o seguiam debandaram,\ne nada restou.\n37\nDepois dele, no tempo do recenseamento,\napareceu Judas, o galileu, que arrastou o povo atrás de si.\nContudo, também ele morreu\ne todos os seus seguidores se dispersaram.\n38\nQuanto ao que está acontecendo agora,\ndou-vos um conselho:\nnão vos preocupeis com esses homens e deixai-os ir embora.\nPorque, se este projeto ou esta atividade é de origem humana\nserá destruído.\n39\nMas, se vem de Deus,\nvós não conseguireis eliminá-los.\nCuidado para não vos pordes em luta contra Deus!\"\nE os membros do Sinédrio aceitaram o parecer de Gamaliel.\n40\nChamaram então os apóstolos, mandaram açoitá-los,\nproibiram que eles falassem em nome de Jesus,\ne depois os soltaram.\n41\nOs apóstolos saíram do Conselho, muito contentes,\npor terem sido considerados dignos de injúrias,\npor causa do nome de Jesus.\n42\nE cada dia, no Templo e pelas casas,\nnão cessavam de ensinar e anunciar\no evangelho de Jesus Cristo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 26(27),1.4.13-14 (R. cf. 4ab)",
+    "refrao": "",
+    "texto": "R.\nAo Senhor eu peço apenas uma coisa:\nhabitar no santuário do Senhor.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nO Senhor é minha luz e salvação; *\nde quem eu terei medo?\nO Senhor é a proteção da minha vida; *\nperante quem eu tremerei?\nR.\n4\nAo Senhor eu peço apenas uma coisa, *\ne é só isto que eu desejo:\nhabitar no santuário do Senhor *\npor toda a minha vida;\nsaborear a suavidade do Senhor *\ne contemplá-lo no seu templo.\nR.\n13\nSei que a bondade do Senhor eu hei de ver *\nna terra dos viventes.\n14\nEspera no Senhor e tem coragem, *\nespera no Senhor!\nR.\nEvangelho - Jo 6,1-15\nAclamação ao Evangelho\nMt 4,4b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO homem não vive somente de pão,\nmas de toda palavra da boca de Deus."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,1-15",
+    "texto": "6,1-15\nNaquele tempo,\n1\nJesus foi para o outro lado do mar da Galileia,\ntambém chamado de Tiberíades.\n2\nUma grande multidão o seguia,\nporque via os sinais que ele operava\na favor dos doentes.\n3\nJesus subiu ao monte\ne sentou-se aí, com os seus discípulos.\n4\nEstava próxima a Páscoa, a festa dos judeus.\n5\nLevantando os olhos,\ne vendo que uma grande multidão\nestava vindo ao seu encontro,\nJesus disse a Filipe:\n\"Onde vamos comprar pão para que eles possam comer?\"\n6\nDisse isso para pô-lo à prova,\npois ele mesmo sabia muito bem o que ia fazer.\n7\nFilipe respondeu:\n\"Nem duzentas moedas de prata bastariam\npara dar um pedaço de pão a cada um\".\n8\nUm dos discípulos,\nAndré, o irmão de Simão Pedro, disse:\n9\n\"Está aqui um menino\ncom cinco pães de cevada e dois peixes.\nMas o que é isso para tanta gente?\"\n10\nJesus disse:\n\"Fazei sentar as pessoas\".\nHavia muita relva naquele lugar,\ne lá se sentaram, aproximadamente, cinco mil homens.\n11\nJesus tomou os pães,\ndeu graças\ne distribuiu-os aos que estavam sentados,\ntanto quanto queriam.\nE fez o mesmo com os peixes.\n12\nQuando todos ficaram satisfeitos,\nJesus disse aos discípulos:\n\"Recolhei os pedaços que sobraram,\npara que nada se perca!\"\n13\nRecolheram os pedaços\ne encheram doze cestos\ncom as sobras dos cinco pães,\ndeixadas pelos que haviam comido.\n14\nVendo o sinal que Jesus tinha realizado,\naqueles homens exclamavam:\n\"Este é verdadeiramente o Profeta,\naquele que deve vir ao mundo\".\n15\nMas, quando notou que estavam querendo levá-lo\npara proclamá-lo rei,\nJesus retirou-se de novo,\nsozinho, para o monte.\nPalavra da Salvação."
+  }
+}

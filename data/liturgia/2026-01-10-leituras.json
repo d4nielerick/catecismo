@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-10",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 5,14-21</div><div> Sl 149,1-2.3-4.5 e 6a e 9b (R. 4a)</div><div></div><div> Jo 3,22-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,14-21",
+    "texto": "Caríssimos,\n14\nesta é a confiança que temos em Deus:\nse lhe pedimos alguma coisa\nde acordo com a sua vontade, ele nos ouve.\n15\nE se sabemos que ele nos ouve\nem tudo o que lhe pedimos,\nsabemos que possuímos o que havíamos pedido.\n16\nSe alguém vê seu irmão cometer um pecado\nque não conduz à morte,\nque ele reze, e Deus lhe dará a vida;\nisto, se, de fato,\no pecado cometido não conduz à morte.\nExiste um pecado que conduz à morte,\nmas não é a respeito deste\nque eu digo que se deve rezar.\n17\nToda iniquidade é pecado,\nmas existe pecado que não conduz à morte.\n18\nSabemos que todo aquele que nasceu de Deus não peca.\nAquele que é gerado por Deus o guarda,\ne o Maligno não o pode atingir.\n19\nNós sabemos que somos de Deus,\nao passo que o mundo inteiro\nestá sob o poder do Maligno.\n20\nNós sabemos que veio o Filho de Deus\ne nos deu inteligência\npara conhecermos aquele que é o Verdadeiro.\nE nós estamos com o Verdadeiro,\nno seu Filho Jesus Cristo.\nEste é o Deus verdadeiro\ne a Vida eterna.\n21\nFilhinhos, guardai-vos dos ídolos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 149,1-2.3-4.5.6a e 9b (R. 4a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor ama seu povo, de verdade.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nCantai ao Senhor Deus um canto novo, *\ne o seu louvor na assembleia dos fiéis!\n2\nAlegre-se Israel em Quem o fez, *\ne Sião se rejubile no seu Rei!\nR.\n3\nCom danças glorifiquem o seu nome, *\ntoquem harpa e tambor em sua honra!\n4\nPorque, de fato, o Senhor ama seu povo *\ne coroa com vitória os seus humildes.\nR.\n5\nExultem os fiéis por sua glória, *\ne cantando se levantem de seus leitos,\n6a\ncom louvores do Senhor em sua boca *\n9b\nEis a glória para todos os seus santos.\nR.\nEvangelho - Jo 3,22-30\nAclamação ao Evangelho\nMt 4,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO povo, sentado nas trevas,\ngrande luz enxergou;\naos que viviam na sombra da morte,\nresplandeceu-lhes a luz."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,22-30",
+    "texto": "3,22-30\nNaquele tempo,\n22\nJesus foi com seus discípulos para a região da Judeia.\nPermaneceu aí com eles e batizava.\n23\nTambém João estava batizando,\nem Enon, perto de Salim,\nonde havia muita água.\nAí chegavam as pessoas e eram batizadas.\n24\nJoão ainda não tinha sido posto no cárcere.\n25\nAlguns discípulos de João estavam discutindo com um judeu\na respeito da purificação.\n26\nForam a João e disseram:\n\"Rabi, aquele que estava contigo além do Jordão\ne do qual tu deste testemunho,\nagora está batizando\ne todos vão a ele\".\n27\nJoão respondeu:\n\"Ninguém pode receber alguma coisa,\nse não lhe for dada do céu.\n28\nVós mesmo sois testemunhas daquilo que eu disse:\n'Eu não sou o Messias,\nmas fui enviado na frente dele'.\n29\nÉ o noivo que recebe a noiva,\nmas o amigo, que está presente e o escuta,\nenche-se de alegria ao ouvir a voz do noivo.\nEsta é a minha alegria, e ela é completa.\n30\nÉ necessário que ele cresça\ne eu diminua\".\nPalavra da Salvação."
+  }
+}

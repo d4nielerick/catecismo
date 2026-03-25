@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 4,12-16</div><div> Sl 18(19B),8.9.10.15 (R. cf. Jo 6,63c)</div><div></div><div> Mc 2,13-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,12-16",
+    "texto": "Irmãos,\n12\na Palavra de Deus é viva,\neficaz e mais cortante\ndo que qualquer espada de dois gumes.\nPenetra até dividir alma e espírito, articulações e medulas.\nEla julga os pensamentos e as intenções do coração.\n13\nE não há criatura que possa ocultar-se diante dela.\nTudo está nu e descoberto aos seus olhos,\ne é a ela que devemos prestar contas.\n14\nTemos um sumo sacerdote eminente,\nque entrou no céu,\nJesus, o Filho de Deus.\nPor isso, permaneçamos firmes na fé que professamos.\n15\nCom efeito, temos um sumo sacerdote\ncapaz de se compadecer de nossas fraquezas,\npois ele mesmo foi provado em tudo como nós,\ncom exceção do pecado.\n16\nAproximemo-nos então, com toda a confiança,\ndo trono da graça,\npara conseguirmos misericórdia\ne alcançarmos a graça de um auxílio no momento oportuno.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 18(19B),8.9.10.15 (R. cf. Jo 6,63c)",
+    "refrao": "",
+    "texto": "R.\nVossas palavras são espírito, são vida,\ntendes palavras, ó Senhor, de vida eterna.\n8\nA lei do Senhor Deus é perfeita,*\nconforto para a alma!\nO testemunho do Senhor é fiel,*\nsabedoria dos humildes.\nR.\n9\nOs preceitos do Senhor são precisos,*\nalegria ao coração.\nO mandamento do Senhor é brilhante,*\npara os olhos é uma luz.\nR.\n10\nÉ puro o temor do Senhor,*\nimutável para sempre.\nOs julgamentos do Senhor são corretos*\ne justos igualmente.\nR.\n15\nQue vos agrade o cantar dos meus lábios*\ne a voz da minha alma;\nque ela chegue até vós, ó Senhor,*\nmeu Rochedo e Redentor!\nR.\nAclamação ao Evangelho\nLc 4,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor repousa sobre mim\ne enviou-me a anunciar aos pobres o Evangelho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "2,13-17",
+    "texto": "2,13-17\nNaquele tempo,\n13\nJesus saiu de novo para a beira do mar.\nToda a multidão ia ao seu encontro\ne Jesus os ensinava.\n14\nEnquanto passava,\nJesus viu Levi, o filho de Alfeu,\nsentado na coletoria de impostos,\ne disse-lhe:\n\"Segue-me!\"\nLevi se levantou e o seguiu.\n15\nE aconteceu que, estando à mesa na casa de Levi,\nmuitos cobradores de impostos e pecadores\ntambém estavam à mesa com Jesus e seus discípulos.\nCom efeito, eram muitos os que o seguiam.\n16\nAlguns doutores da Lei, que eram fariseus,\nviram que Jesus estava comendo\ncom pecadores e cobradores de impostos.\nEntão eles perguntaram aos discípulos:\n\"Por que ele come\ncom os cobradores de impostos e pecadores?\"\n17\nTendo ouvido, Jesus respondeu-lhes:\n\"Não são as pessoas sadias que precisam de médico,\nmas as doentes.\nEu não vim para chamar justos, mas sim pecadores\".\nPalavra da Salvação."
+  }
+}

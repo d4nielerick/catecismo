@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-17",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 38,1-6.21-22.7-8</div><div> Is 38,10.11.12.16 (R. cf. 17b)</div><div></div><div> Mt 12,1-8</div></div>",
+  "primeira_leitura": {
+    "referencia": "38,1-6.21-22.7-8",
+    "texto": "Naqueles dias,\n1\nEzequias foi acometido de uma doença mortal.\nFoi visitá-lo o profeta Isaías, filho de Amós, e disse-lhe:\n\"Isto diz o Senhor:\nArruma as coisas de tua casa,\npois vais morrer e não viverás\".\n2\nEntão Ezequias virou o rosto contra a parede\ne orou ao Senhor, dizendo:\n3\n\"Peço-te, Senhor, te lembres\nde que tenho caminhado em tua presença,\ncom fidelidade e probidade de coração,\ne tenho praticado o bem aos teus olhos\".\nEzequias prorrompeu num grande choro.\n4\nA palavra do Senhor foi dirigida a Isaías:\n5\n\"Vai dizer a Ezequias:\nIsto diz o Senhor, Deus de Davi, teu pai:\n'Ouvi a tua oração, vi as tuas lágrimas;\neis que vou acrescentar à tua vida mais quinze anos,\n6\nvou libertar-te das mãos do rei da Assíria,\njunto com esta cidade,\nque ponho sob minha proteção'\".\n21\nEntão, Isaías ordenou\nque fizessem uma cataplasma de massa de figos\ne a aplicassem sobre a ferida, que ele ficaria bom.\n22\nPerguntou Ezequias:\n\"E qual é o sinal\nde que hei de subir à casa do Senhor?\"\n7\n\"Este é o sinal que terás do Senhor,\nde que ele cumprirá a promessa que fez:\n8\nEis que farei recuar dez graus\na sombra dos graus que já desceu\nno relógio solar de Acaz\".\nDe fato, a marca do sol recuara dez graus\ndos que ela tinha descido.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Is 38,10.11.12.16 (R. cf. 17b)",
+    "refrao": "",
+    "texto": "R.\nVós livrastes minha vida do sepulcro,\na fim de eu não deixar de existir.\n10\nEu dizia: \"É necessário que eu me vá *\nno apogeu de minha vida e de meus dias;\npara a mansão triste dos mortos descerei, *\nsem viver o que me resta dos meus anos\".\nR.\n11\nEu dizia: \"Não verei o Senhor Deus †\nsobre a terra dos viventes nunca mais; *\nnunca mais verei um homem neste mundo!\"\nR.\n12\nMinha morada foi à força arrebatada, *\ndesarmada como a tenda de um pastor.\nQual tecelão, eu ia tecendo a minha vida, *\nmas agora foi cortada a sua trama.\nR.\n16\nÓ Senhor, meu coração em vós espera; †\npor vós há de viver o meu espírito. *\ncurai-me e conservai a minha vida.\nEvangelho - Mt 12,1-8\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,1-8",
+    "texto": "12,1-8\n1\nNaquele tempo,\nJesus passou no meio de uma plantação\nnum dia de sábado.\nSeus discípulos tinham fome\ne começaram a apanhar espigas para comer.\n2\nVendo isso, os fariseus disseram-lhe:\n\"Olha, os teus discípulos estão fazendo,\no que não é permitido fazer em dia de sábado!\"\n3\nJesus respondeu-lhes:\n\"Nunca lestes o que fez Davi,\nquando ele e seus companheiros sentiram fome?\n4\nComo entrou na casa de Deus\ne todos comeram os pães da oferenda\nque nem a ele nem aos seus companheiros\nera permitido comer,\nmas unicamente aos sacerdotes?\n5\nOu nunca lestes na Lei,\nque em dia de sábado, no Templo,\nos sacerdotes violam o sábado\nsem contrair culpa alguma?\n6\nOra, eu vos digo:\naqui está quem é maior do que o Templo.\n7\nSe tivésseis compreendido o que significa:\n'Quero a misericórdia e não o sacrifício',\nnão teríeis condenado os inocentes.\n8\nDe fato, o Filho do Homem é senhor do sábado\".\nPalavra da Salvação."
+  }
+}

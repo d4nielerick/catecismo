@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-13",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 1,1-6</div><div> Sl 96(97),1-2.6 e 7c.9 (R. cf. 7c)</div><div></div><div> Mc 1,14-20</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-61",
+    "texto": "1\nMuitas vezes e de muitos modos\nfalou Deus outrora aos nossos pais, pelos profetas;\n2\nnestes dias, que são os últimos,\nele nos falou por meio do Filho,\na quem ele constituiu herdeiro de todas as coisas\ne pelo qual também ele criou o universo.\n3\nEste é o esplendor da glória do Pai,\na expressão do seu ser.\nEle sustenta o universo com o poder de sua palavra.\nTendo feito a purificação dos pecados,\nele sentou-se à direita da majestade divina, nas alturas.\n4\nEle foi colocado tanto acima dos anjos\nquanto o nome que ele herdou supera o nome deles.\n5\nDe fato, a qual dos anjos Deus disse alguma vez:\n\"Tu és o meu Filho, eu hoje te gerei\"?\nOu ainda:\n\"Eu serei para ele um Pai\ne ele será para mim um filho\"?\n6\nMas, quando faz entrar o Primogênito no mundo,\nDeus diz:\n\"Todos os anjos devem adorá-lo!\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 96(97),1.2b.6e7c.9 (R. cf. 7c)",
+    "refrao": "",
+    "texto": "R.\nAdorai o Senhor Deus, vós anjos todos!\n1\nDeus é Rei! Exulte a terra de alegria, *\ne as ilhas numerosas rejubilem!\n2\nTreva e nuvem o rodeiam no seu trono, *\nque se apoia na justiça e no direito.\nR.\n6\nE assim proclama o céu sua justiça,\n†\ntodos os povos podem ver a sua glória. *\n7c\nAos pés de Deus vêm se prostrar todos os deuses!\nR.\n9\nPorque vós sois o Altíssimo, Senhor,\n†\nmuito acima do universo que criastes, *\ne de muito superais todos os deuses.\nR.\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois o Reino de Deus está chegando."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,14-20",
+    "texto": "1,14-20\n14\nDepois que João Batista foi preso,\nJesus foi para a Galileia,\npregando o Evangelho de Deus e dizendo:\n15\n\"O tempo já se completou\ne o Reino de Deus está próximo.\nConvertei-vos e crede no Evangelho!\"\n16\nE, passando à beira do mar da Galileia,\nJesus viu Simão e André, seu irmão,\nque lançavam a rede ao mar, pois eram pescadores.\n17\nJesus lhes disse:\n\"Segui-me e eu farei de vós pescadores de homens\".\n18\nE eles, deixando imediatamente as redes,\nseguiram a Jesus.\n19\nCaminhando mais um pouco,\nviu também Tiago e João, filhos de Zebedeu.\nEstavam na barca, consertando as redes;\n20\ne logo os chamou.\nEles deixaram seu pai Zebedeu na barca com os\nempregados,\ne partiram, seguindo Jesus.\nPalavra da Salvação."
+  }
+}

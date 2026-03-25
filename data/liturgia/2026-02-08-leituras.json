@@ -1,0 +1,23 @@
+{
+  "data": "2026-02-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 58,7-10</div><div> Sl 111(112),4-5.6-7.8a.9 (R. 4a.3b)</div><div> 1Cor 2,1-5</div><div> Mt 5,13-16</div></div>",
+  "primeira_leitura": {
+    "referencia": "58,7-10",
+    "texto": "Assim diz o Senhor:\n7\nReparte o pão com o faminto,\nacolhe em casa os pobres e peregrinos.\nQuando encontrares um nu, cobre-o,\ne não desprezes a tua carne.\n8\nEntão, brilhará tua luz como a aurora\ne tua saúde há de recuperar-se mais depressa;\nà frente caminhará tua justiça\ne a glória do Senhor te seguirá.\n9\nEntão invocarás o Senhor e ele te atenderá,\npedirás socorro, e ele dirá: \"Eis-me aqui\".\nSe destruíres teus instrumentos de opressão,\ne deixares os hábitos autoritários\ne a linguagem maldosa;\n10\nse acolheres de coração aberto o indigente\ne prestares todo o socorro ao necessitado,\nnascerá nas trevas a tua luz\ne tua vida obscura será como o meio-dia.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 111(112),4-5.6-7.8a.9 (R.4b.3b)",
+    "refrao": "",
+    "texto": "R.\nUma luz brilha nas trevas para o justo,\npermanece para sempre o bem que fez.\nOu:\nAleluia, Aleluia, Aleluia.\n4\nEle é correto, generoso e compassivo,*\ncomo luz brilha nas trevas para os justos.\n5\nFeliz o homem caridoso e prestativo,*\nque resolve seus negócios com justiça.\nR.\n6\nPorque jamais vacilará o homem reto,*\nsua lembrança permanece eternamente!\n7\nEle não teme receber notícias más:*\nconfiando em Deus, seu coração está seguro.\nR.\n8a\nSeu coração está tranquilo e nada teme*\n9\nEle reparte com os pobres os seus bens,\npermanece para sempre o bem que fez*\ne crescerão a sua glória e seu poder.\nR.\n2ª Leitura - 1Cor 2,1\nSEGUNDA LEITURA\nAnunciei entre vós o mistério\nde Cristo crucificado.\nLeitura da Primeira Carta de São Paulo aos Coríntios\n2,1-5\n1\nIrmãos, quando fui à vossa cidade\nanunciar-vos o mistério de Deus,\nnão recorri a uma linguagem elevada\nou ao prestígio da sabedoria humana.\n2\nPois, entre vós, não julguei saber coisa alguma,\na não ser Jesus Cristo,\ne este, crucificado.\n3\nAliás, eu estive junto de vós,\ncom fraqueza e receio, e muito tremor.\n4\nTambém a minha palavra e a minha pregação\nnão tinham nada dos discursos persuasivos da sabedoria,\nmas eram uma demonstração do poder do Espírito,\n5\npara que a vossa fé se baseasse no poder de Deus\ne não na sabedoria dos homens.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 8,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPois eu sou a luz do mundo, quem nos diz é o Senhor;\ne vai ter a luz da vida, quem se faz meu seguidor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,13-16",
+    "texto": "5,13-16\nNaquele tempo, disse Jesus a seus discípulos:\n13\n\"Vós sois o sal da terra.\nOra, se o sal se tornar insosso,\ncom que salgaremos?\nEle não servirá para mais nada,\nsenão para ser jogado fora e ser pisado pelos homens.\n14\nVós sois a luz do mundo.\nNão pode ficar escondida uma cidade\nconstruída sobre um monte.\n15\nNinguém acende uma lâmpada, e a coloca\ndebaixo de uma vasilha, mas sim, num candeeiro,\nonde brilha para todos que estão na casa.\n16\nAssim também brilhe a vossa luz diante dos homens,\npara que vejam as vossas boas obras\ne louvem o vosso Pai que está nos céus\".\nPalavra da Salvação."
+  }
+}

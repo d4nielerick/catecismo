@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-01",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jó 3,1-3.11-17.20-23</div><div> Sl 87(88),2-3.4-5.6.7-8 (R. 3a)</div><div></div><div> Lc 9,51-56</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-3.11-17.20-23",
+    "texto": "1\nJó abriu a boca e amaldiçoou o seu dia,\n2\ndizendo:\n3\n\"Maldito o dia em que nasci\ne a noite em que fui concebido.\n11\nPor que não morri desde o ventre materno,\nou não expirei ao sair das entranhas?\n12\nPor que me acolheu um regaço\ne seios uns me amamentaram?\n13\nEstaria agora deitado e poderia descansar,\ndormiria e teria repouso,\n14\ncom os reis e ministros do país,\nque construíram para si sepulcros grandiosos;\n15\nou com os nobres, que amontoaram\nouro e prata em seus palácios.\n16\nOu, então, enterrado como aborto,\neu agora não existiria,\ncomo crianças que nem chegaram a ver a luz.\n17\nAli acaba o tumulto dos ímpios,\nali repousam os que esgotaram as forças.\n20\nPor que foi dado à luz um infeliz\ne vida àqueles que têm a alma amargurada?\n21\nEles desejam a morte que não vem\ne a buscam mais que um tesouro;\n22\neles se alegrariam por um túmulo\ne gozariam ao receberem sepultura.\n23\nPor que, então, foi dado à luz o homem\na quem seu próprio caminho está oculto,\na quem Deus cercou de todos os lados?\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 87(88),2-3.4-5.6.7-8 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nChegue a minha oração até a vossa presença.\n2\nA vós clamo, Senhor, sem cessar, todo o dia, *\ne de noite se eleva até vós meu gemido.\n3\nChegue a minha oração até a vossa presença, *\ninclinai vosso ouvido a meu triste clamor!\nR.\n4\nSaturada de males se encontra a minh'alma, *\nminha vida chegou junto às portas da morte.\n5\nSou contado entre aqueles que descem à cova, *\ntoda gente me vê como um caso perdido!\nR.\n6\nO meu leito já tenho no reino dos mortos, *\ncomo um homem caído que jaz no sepulcro,\nde quem mesmo o Senhor se esqueceu para sempre *\ne excluiu por completo da sua atenção.\nR.\n7\nÓ Senhor, me pusestes na cova mais funda, *\nnos locais tenebrosos da sombra da morte.\n8\nSobre mim cai o peso do vosso furor, *\nvossas ondas enormes me cobrem, me afogam.\nR.\nEvangelho - Lc 9,51-56\nAclamação ao Evangelho\nMc 10,45\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVeio o Filho do homem, a fim de servir\ne dar sua vida em resgate por muitos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,51-56",
+    "texto": "9,51-56\n51\nEstava chegando o tempo\nde Jesus ser levado para o céu.\nEntão ele tomou a firme decisão\nde partir para Jerusalém\n52\ne enviou mensageiros à sua frente.\nEstes puseram-se a caminho\ne entraram num povoado de samaritanos,\npara preparar hospedagem para Jesus.\n53\nMas os samaritanos não o receberam,\npois Jesus dava a impressão de que ia a Jerusalém.\n54\nVendo isso, os discípulos Tiago e João disseram:\n\"Senhor, queres que mandemos descer fogo do céu\npara destruí-los?\"\n55\nJesus, porém, voltou-se e repreendeu-os.\n56\nE partiram para outro povoado.\nPalavra da Salvação."
+  }
+}

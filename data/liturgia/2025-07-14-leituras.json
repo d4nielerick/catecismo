@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-14",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 1,8-14.22</div><div> Sl 123(124),1-3.4-6.7-8 (R. 8a)</div><div></div><div> Mt 10,34-11,1</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,8-14.22",
+    "texto": "Naqueles dias,\n8\nsurgiu um novo rei no Egito,\nque não tinha conhecido José,\n9\ne disse ao seu povo:\n\"Olhai como o povo dos filhos de Israel\né mais numeroso e mais forte do que nós.\n10\nVamos agir com prudência em relação a ele,\npara impedir que continue crescendo\ne, em caso de guerra,\nse una aos nossos inimigos,\ncombata contra nós\ne acabe por sair do país\".\n11\nEstabeleceram inspetores de obras,\npara que o oprimissem com trabalhos penosos;\ne foi assim que ele construiu para o Faraó\nas cidades-entrepostos Pitom e Ramsés.\n12\nMas, quanto mais o oprimiam,\ntanto mais se multiplicava e crescia.\n13\nObcecados pelo medo dos filhos de Israel,\nos egípcios impuseram-lhes uma dura escravidão.\n14\nE tornaram-lhes a vida amarga\npelo pesado trabalho da preparação do barro e dos tijolos,\ncom toda a espécie de trabalhos dos campos\ne outros serviços que os levavam a fazer à força.\n22\nO Faraó deu esta ordem a todo o seu povo:\n\"Lançai ao rio Nilo todos os meninos hebreus recém-nascidos,\nmas poupai a vida das meninas\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 123(124),1-3.4-6.7-8 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nNosso auxílio está no nome do Senhor.\n1\nSe o Senhor não estivesse ao nosso lado, *\nque o diga Israel neste momento;\n2\nse o Senhor não estivesse ao nosso lado, *\nquando os homens investiram contra nós,\n3\ncom certeza nos teriam devorado *\nno furor de sua ira contra nós.\nR.\n4\nEntão as águas nos teriam submergido, *\na correnteza nos teria arrastado,\n5\ne então, por sobre nós teriam passado *\nessas águas sempre mais impetuosas.\n6\nBendito seja o Senhor, que não deixou *\ncairmos como presa de seus dentes!\nR.\n7\nNossa alma como um pássaro escapou *\ndo laço que lhe armara o caçador;\no laço arrebentou-se de repente, *\ne assim nós conseguimos libertar-nos.\n8\nO nosso auxílio está no nome do Senhor, *\ndo Senhor que fez o céu e fez a terra!\nR.\nAclamação ao Evangelho\nMt 5,10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os que são perseguidos\npor causa da justiça do Senhor,\nporque o reino dos céus há de ser deles!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,34-11,1",
+    "texto": "10,34-11,1\nNaquele tempo, disse Jesus aos seus discípulos:\n34\n\"Não penseis que vim trazer paz à terra;\nnão vim trazer a paz, mas sim a espada.\n35\nDe fato, vim separar o filho de seu pai,\na filha de sua mãe, a nora de sua sogra.\n36\nE os inimigos do homem\nserão os seus próprios familiares.\n37\nQuem ama seu pai ou sua mãe mais do que a mim,\nnão é digno de mim.\nQuem ama seu filho ou sua filha mais do que a mim,\nnão é digno de mim.\n38\nQuem não toma a sua cruz e não me segue,\nnão é digno de mim.\n39\nQuem procura conservar a sua vida vai perdê-la.\nE quem perde a sua vida por causa de mim,\nvai encontrá-la.\n40\nQuem vos recebe, a mim recebe;\ne quem me recebe, recebe aquele que me enviou.\n41\nQuem recebe um profeta, por ser profeta,\nreceberá a recompensa de profeta.\nE quem recebe um justo, por ser justo,\nreceberá a recompensa de justo.\n42\nQuem der, ainda que seja\napenas um copo de água fresca,\na um desses pequeninos, por ser meu discípulo,\nem verdade vos digo:\nnão perderá a sua recompensa\".\n11,1\nQuando Jesus acabou de dar essas instruções\naos doze discípulos,\npartiu daí,\na fim de ensinar e pregar nas cidades deles.\nPalavra da Salvação."
+  }
+}

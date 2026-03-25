@@ -1,0 +1,23 @@
+{
+  "data": "2026-02-28",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dt 26,16-19</div><div> Sl 118(119),1-2.4-5.7-8 (R. 1b)</div><div></div><div> Mt 5,43-48</div></div>",
+  "primeira_leitura": {
+    "referencia": "",
+    "texto": "Leitura do Livro do Deuteronômio\n26, 16-19\nMoisés dirigiu a palavra ao povo de Israel e lhe disse:\n16\n\"Hoje, o Senhor teu Deus te manda\ncumprir esses preceitos e decretos.\nGuarda-os e observa-os\ncom todo o teu coração e com toda a tua alma.\n17\nTu escolheste hoje o Senhor para ser o teu Deus,\npara seguires os seus caminhos,\ne guardares seus preceitos, mandamentos e decretos,\ne para obedeceres à sua voz.\n18\nE o Senhor te escolheu, hoje,\npara que sejas para ele\num povo particular,\ncomo te prometeu,\na fim de observares todos os seus mandamentos.\n19\nAssim ele te fará ilustre entre todas as nações que criou,\ne te tornará superior em honra e glória,\na fim de que sejas o povo santo do Senhor teu Deus,\ncomo ele disse\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),1-2.'4-5.7-8 (R. 1b)",
+    "refrao": "",
+    "texto": "R.\nFeliz é quem na lei do Senhor Deus vai progredindo!\n1\nFeliz o homem sem pecado em seu caminho, *\nque na lei do Senhor Deus vai progredindo!\n2\nFeliz o homem que observa seus preceitos, *\ne de todo o coração procura a Deus!\nR.\n4\nOs vossos mandamentos vós nos destes, *\npara serem fielmente observados.\n5\nOxalá seja bem firme a minha vida *\nem cumprir vossa vontade e vossa lei!\nR.\n7\nQuero louvar-vos com sincero coração, *\npois aprendi as vossas justas decisões.\n8\nQuero guardar vossa vontade e vossa lei; *\nSenhor, não me deixeis desamparado!\nR.\nEvangelho - Mt 5,43-48\nAclamação ao Evangelho\n2Cor 6,2b\nR.\nSalve, ó Cristo, imagem do Pai,\na plena verdade nos comunicai!\nV.\nEis o tempo de conversão,\neis o dia da salvação."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,43-48",
+    "texto": "5,43-48\nNaquele tempo, disse Jesus aos seus discípulos:\n43\n\"Vós ouvistes o que foi dito:\n'Amarás o teu próximo e odiarás o teu inimigo!'\n44\nEu, porém, vos digo: Amai os vossos inimigos\ne rezai por aqueles que vos perseguem!\n45\nAssim, vos tornareis filhos\ndo vosso Pai que está nos céus,\nporque ele faz nascer o sol sobre maus e bons,\ne faz cair a chuva sobre justos e injustos.\n46\nPorque, se amais somente aqueles que vos amam,\nque recompensa tereis?\nOs cobradores de impostos não fazem a mesma coisa?\n47\nE se saudais somente os vossos irmãos,\no que fazeis de extraordinário?\nOs pagãos não fazem a mesma coisa?\n48\nPortanto, sede perfeitos\ncomo o vosso Pai celeste é perfeito\".\nPalavra da Salvação."
+  }
+}

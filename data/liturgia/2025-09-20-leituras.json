@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Tm 6,13-16</div><div> Sl 99(100),2.3.4.5 (R. 2c)</div><div></div><div> Lc 8,4-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,13-16",
+    "texto": "Caríssimo,\n13\ndiante de Deus, que dá a vida a todas as coisas,\ne de Cristo Jesus,\nque deu o bom testemunho da verdade\nperante Pôncio Pilatos, eu te ordeno:\n14\nguarda o teu mandato íntegro e sem mancha\naté à manifestação gloriosa\nde nosso Senhor Jesus Cristo.\n15\nEsta manifestação será feita no tempo oportuno\npelo bendito e único Soberano,\no Rei dos reis e Senhor dos senhores,\n16\no único que possui a imortalidade\ne que habita numa luz inacessível,\nque nenhum homem viu, nem pode ver.\nA ele, honra e poder eterno. Amém.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 99 (100),2.3.4.5 (R. 2c)",
+    "refrao": "",
+    "texto": "R.\nCom canto apresentai-vos diante do Senhor!\n2\nAclamai o Senhor, ó terra inteira, †\nservi ao Senhor com alegria, *\nide a ele cantando jubilosos!\nR.\n3\nSabei que o Senhor, só ele, é Deus, †\nEle mesmo nos fez, e somos seus, *\nnós somos seu povo e seu rebanho.\nR.\n4\nEntrai por suas portas dando graças, †\ne em seus átrios com hinos de louvor; *\ndai-lhe graças, seu nome bendizei!\nR.\n5\nSim, é bom o Senhor e nosso Deus, †\nsua bondade perdura para sempre, *\nseu amor é fiel eternamente!\nR.\nEvangelho - Lc 8,4-15\nAclamação ao Evangelho  Cf. Lc 8,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os que observam a palavra do Senhor,\nde reto coração e que produzem muitos frutos, até o fim perseverantes!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,4-15",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n8,4-15\nNaquele tempo,\n4\nreuniu-se uma grande multidão,\ne de todas as cidades iam ter com Jesus.\nEntão ele contou esta parábola:\n5\n\"O semeador saiu para semear a sua semente.\nEnquanto semeava,\numa parte caiu à beira do caminho;\nfoi pisada e os pássaros do céu a comeram.\n6\nOutra parte caiu sobre pedras;\nbrotou e secou, porque não havia umidade.\n7\nOutra parte caiu no meio de espinhos;\nos espinhos cresceram juntos, e a sufocaram.\n8\nOutra parte caiu em terra boa;\nbrotou e deu fruto, cem por um\".\nDizendo isso, Jesus exclamou:\n\"Quem tem ouvidos para ouvir, ouça\".\n9\nOs discípulos lhe perguntaram\no significado dessa parábola.\n10\nJesus respondeu:\n\"A vós foi dado conhecer\nos mistérios do Reino de Deus.\nMas aos outros, só por meio de parábolas,\npara que olhando não vejam,\ne ouvindo não compreendam.\n11\nA parábola quer dizer o seguinte:\nA semente é a Palavra de Deus.\n12\nOs que estão à beira do caminho\nsão aqueles que ouviram,\nmas, depois, vem o diabo\ne tira a Palavra do coração deles,\npara que não acreditem e não se salvem.\n13\nOs que estão sobre a pedra\nsão aqueles que, ouvindo,\nacolhem a Palavra com alegria.\nMas eles não têm raiz:\npor um momento acreditam;\nmas na hora da tentação voltam atrás.\n14\nAquilo que caiu entre os espinhos\nsão os que ouvem, mas, com o passar do tempo,\nsão sufocados pelas preocupações,\npela riqueza e pelos prazeres da vida,\ne não chegam a amadurecer.\n15\nE o que caiu em terra boa\nsão aqueles que,\nouvindo com um coração bom e generoso,\nconservam a Palavra,\ne dão fruto na perseverança\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-14",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 4,22-24.26-27.31-5,1</div><div> Sl 112(113),1-2.3-4.5a e 6-7 (R. 2)</div><div></div><div> Lc 11,29-32</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,22-24.26-27.31-5,1",
+    "texto": "Irmãos,\n22\nestá escrito que Abraão teve dois filhos,\num da escrava e outro da livre.\n23\nMas o filho da escrava nasceu segundo a carne,\ne o filho da livre nasceu em virtude da promessa.\n24\nEsses fatos têm um sentido alegórico,\npois essas mulheres representam as duas alianças:\na primeira, Hagar, vem do monte Sinai;\nela gera filhos para a escravidão.\n26\nPorém, a Jerusalém celeste é livre,\ne é a nossa mãe.\n27\nPois está escrito:\n\"Rejubila, estéril, que não dás à luz,\nprorrompe em gritos de alegria,\ntu que não sentes as dores do parto,\nporque os filhos da mulher abandonada\nsão mais numerosos do que os da mulher preferida\".\n31\nPortanto, irmãos, não somos filhos de uma escrava;\nsomos filhos da mulher livre.\n5,1\nÉ para a liberdade que Cristo nos libertou.\nFicai pois firmes\ne não vos deixeis amarrar de novo\nao jugo da escravidão.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 112(113),1-2.3-4.5a e 6-7 (R. 2)",
+    "refrao": "",
+    "texto": "R.\nBendito seja o nome do Senhor,\nagora e para sempre!\nOu:\nAleluia, Aleluia, Aleluia\n1\nLouvai, louvai, ó servos do Senhor, *\nlouvai, louvai o nome do Senhor!\n2\nBendito seja o nome do Senhor, *\nagora e por toda a eternidade!\nR.\n3\nDo nascer do sol até o seu ocaso, *\nlouvado seja o nome do Senhor!\n4\nO Senhor está acima das nações, *\nsua glória vai além dos altos céus.\nR.\n5a\nQuem pode comparar-se ao nosso Deus, *\n6\nque se inclina para olhar o céu e a terra?\n7\nLevanta da poeira o indigente *\ne do lixo ele retira o pobrezinho.\nR.\nEvangelho - Lc 11,29-3\nAclamação ao Evangelho\nSl 94(95), 8ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nOxalá ouvísseis hoje a sua voz:\nNão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,29-32",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,29-32\nNaquele tempo,\n29\nquando as multidões se reuniram\nem grande quantidade,\nJesus começou a dizer:\n\"Esta geração é uma geração má.\nEla busca um sinal,\nmas nenhum sinal lhe será dado,\na não ser o sinal de Jonas.\n30\nCom efeito, assim como Jonas\nfoi um sinal para os ninivitas,\nassim também será o Filho do Homem\npara esta geração.\n31\nNo dia do julgamento,\na rainha do Sul se levantará\njuntamente com os homens desta geração,\ne os condenará.\nPorque ela veio de uma terra distante\npara ouvir a sabedoria de Salomão.\nE aqui está quem é maior do que Salomão.\n32\nNo dia do julgamento,\nos ninivitas se levantarão\njuntamente com esta geração e a condenarão.\nPorque eles se converteram\nquando ouviram a pregação de Jonas.\nE aqui está quem é maior do que Jonas\".\nPalavra da Salvação."
+  }
+}

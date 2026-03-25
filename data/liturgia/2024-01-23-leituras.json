@@ -1,0 +1,23 @@
+{
+  "data": "2024-01-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Sm 6,12b-15.17-19</div><div> Sl 23(24),7.8.9.10 (R. 8a)</div><div></div><div> Mc 3,31-35</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,12b-15.17-19",
+    "texto": "Naqueles dias,\n12b\nDavi pôs-se a caminho\ne transportou festivamente a arca de Deus\nda casa de Obed-Edom para a cidade de Davi.\n13\nA cada seis passos que davam,\nos que transportavam a arca do Senhor,\nsacrificavam um boi e um carneiro.\n14\nDavi, cingido apenas com um efod de linho,\ndançava com todas as suas forças diante do Senhor.\n15\nDavi e toda a casa de Israel\nconduziram a arca do Senhor,\nsoltando gritos de júbilo e tocando trombetas.\n17\nIntroduziram a arca do Senhor\ne depuseram-na em seu lugar,\nno centro da tenda que Davi tinha armado para ela.\nEm seguida, ele ofereceu holocaustos\ne sacrifícios pacíficos na presença do Senhor.\n18\nAssim que terminou de oferecer os holocaustos\ne os sacrifícios pacíficos,\nDavi abençoou o povo em nome do Senhor Todo-poderoso.\n19\nE distribuiu a toda a multidão de Israel,\na cada um dos homens e das mulheres,\num pão de forno, um bolo de tâmaras\ne uma torta de uvas.\nDepois todo o povo foi para casa.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 23(24),7.8.9.10 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nDizei-nos: \"Quem é este Rei da glória?\"\n\"É o Senhor, o valoroso, o grandioso!\"\n7\n\"Ó portas, levantai vossos frontões! †\nElevai-vos bem mais alto, antigas portas, *\na fim de que o Rei da glória possa entrar!\"\nR.\n8\nDizei-nos: \"Quem é este Rei da glória?\" †\n\"É o Senhor, o valoroso, o onipotente, *\no Senhor, o poderoso nas batalhas!\"\nR.\n9\n\"Ó portas, levantai vossos frontões! †\nElevai-vos bem mais alto, antigas portas, *\na fim de que o Rei da glória possa entrar!\"\nR.\n10\nDizei-nos: \"Quem é este Rei da glória?\" †\n\"O Rei da glória é o Senhor onipotente, *\no Rei da glória é o Senhor Deus do universo!\"\nR.\nEvangelho - Mc 3,31-35\nAclamação ao Evangelho  Cf.\nMt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois revelaste os mistérios do seu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,31-35",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n3,31-35\nNaquele tempo,\n31\nChegaram a mãe de Jesus e seus irmãos.\nEles ficaram do lado de fora e mandaram chamá-lo.\n32\nHavia uma multidão sentada ao redor dele.\nEntão lhe disseram:\n\"Tua mãe e teus irmãos estão lá fora à tua procura\".\n33\nEle respondeu:\n\"Quem é minha mãe, e quem são meus irmãos?\"\n34\nE olhando para os que estavam sentados ao seu redor,\ndisse:\n\"Aqui estão minha mãe e meus irmãos.\n35\nQuem faz a vontade de Deus,\nesse é meu irmão, minha irmã e minha mãe\".\nPalavra da Salvação."
+  }
+}

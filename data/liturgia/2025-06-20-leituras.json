@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Cor 11,18.21b-30</div><div> Sl 33(34),2-3.4-5.6-7 (R. cf. 18b)</div><div></div><div> Mt 6,19-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,18.21b-30",
+    "texto": "Irmãos,\n18\njá que muitos se gloriam segundo a carne,\neu também me gloriarei.\n21b\nO que outros ousam dizer em vantagem própria,\neu também o digo a meu respeito,\nembora fale como insensato.\n22\nSão hebreus? Eu também.\nSão israelitas? Eu também.\nSão da descendência de Abraão? Eu também.\n23\nSão servos de Cristo?\nComo menos sensato digo:\nEu ainda mais.\nDe fato, muito mais do que eles:\npelos trabalhos, pelas prisões,\npelos açoites sem conta.\nMuitas vezes, vi-me em perigo de morte.\n24\nCinco vezes,\nrecebi dos judeus quarenta açoites menos um.\n25\nTrês vezes, fui batido com varas.\nUma vez, fui apedrejado.\nTrês vezes, naufraguei.\nPassei uma noite e um dia no alto mar.\n26\nFiz inúmeras viagens, com inúmeros perigos:\nperigos de rios,\nperigos de ladrões,\nperigos da parte de meus compatriotas,\nperigos da parte dos pagãos,\nperigos na cidade,\nperigos em lugares desertos,\nperigos no mar,\nperigos por parte de falsos irmãos.\n27\nTrabalhos e fadigas,\ninúmeras vigílias, fome e sede,\nfrequentes jejuns, frio e nudez!\n28\nE, sem falar de outras coisas,\na minha preocupação de cada dia,\na solicitude por todas as igrejas!\n29\nQuem é fraco, que eu também não seja fraco com ele?\nQuem é escandalizado,\nque eu não fique ardendo de indignação?\n30\nSe é preciso gloriar-se,\né de minhas fraquezas que me gloriarei!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "SI 33(34),2-3.4-5.6-7 (R. cf. 18b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor liberta os justos de todas as angústias!\n2\nBendirei o Senhor Deus em todo o tempo, *\nseu louvor estará sempre em minha boca.\n3\nMinha alma se gloria no Senhor; *\nque ouçam os humildes e se alegrem!\nR.\n4\nComigo engrandecei ao Senhor Deus,*\nexaltemos todos juntos o seu nome!\n5\nTodas as vezes que o busquei, ele me ouviu, *\ne de todos os temores me livrou.\nR.\n6\nContemplai a sua face e alegrai-vos,*\ne vosso rosto não se cubra de vergonha!\n7\nEste infeliz gritou a Deus, e foi ouvido, *\ne o Senhor o libertou de toda angústia\n.\nR.\nEvangelho - Mt 13,44-4\nAclamação ao Evangelho\nMt 5,3\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os humildes de espírito,\nporque deles é o Reino dos Céus."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,19-23",
+    "texto": "6,19-23\nNaquele tempo, disse Jesus aos seus discípulos:\n19\n\"Não junteis tesouros aqui na terra,\nonde a traça e a ferrugem destroem,\ne os ladrões assaltam e roubam.\n20\nAo contrário, juntai para vós tesouros no céu,\nonde nem a traça e a ferrugem destroem,\nnem os ladrões assaltam e roubam.\n21\nPorque, onde está o teu tesouro,\naí estará também o teu coração.\n22\nO olho é a lâmpada do corpo.\nSe o teu olho é sadio,\ntodo o teu corpo ficará iluminado.\n23\nSe o teu olho está doente,\ntodo o teu corpo ficará na escuridão.\nOra, se a luz que existe em ti é escuridão,\ncomo será grande a escuridão\".\nPalavra da Salvação."
+  }
+}

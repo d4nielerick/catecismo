@@ -1,0 +1,23 @@
+{
+  "data": "2025-03-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Eclo 35,1-15</div><div> Sl 49(50),5-6.7-8.14 e 23 (R. 23b)</div><div></div><div> Mc 10,28-31</div></div>",
+  "primeira_leitura": {
+    "referencia": "35,1-15 (gr. 1-12)",
+    "texto": "1\nAquele que guarda a lei faz muitas oferendas;\n2\naquele que cumpre os preceitos\noferece um sacrifício salutar.\n[3]\n4\nAquele que mostra agradecimento,\noferece flor de farinha,\ne o que pratica a beneficência\noferece um sacrifício de louvor.\n5\nO que agrada ao Senhor é afastar-se do mal,\ne o que o aplaca é deixar a injustiça.\n6\nNão te apresentes na presença de Deus de mãos vazias,\n7\nporque tudo isso se faz em virtude do preceito.\n8\nO sacrifício do justo enriquece o altar,\no seu perfume sobe ao Altíssimo.\n9\nA oblação do justo é aceitável,\ne sua memória não cairá no esquecimento.\n10\nHonra ao Senhor com coração generoso\ne não regateies as primícias que apresentares.\n11\nFaze todas as tuas oferendas com semblante sereno,\ne com alegria consagra o teu dízimo.\n12\nDá a Deus segundo a doação que ele te fez,\ne com generosidade, conforme as tuas posses;\n13\nporque ele é um Deus retribuidor,\ne te recompensará sete vezes mais.\n14\nNão tentes corrompê-lo com presentes:\nele não os aceita;\n15\nnem confies em sacrifício injusto,\nporque o Senhor é um juiz\nque não faz discriminação de pessoas.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 49(50),5-6.7-8.14 e 23 (R. 23b)",
+    "refrao": "",
+    "texto": "R.\nA todos que procedem retamente,\neu mostrarei a salvação que vem de Deus\n5\n\"Reuni à minha frente os meus eleitos, *\nque selaram a Aliança em sacrifícios!\"\n6\nTestemunha o próprio céu seu julgamento, *\nporque Deus mesmo é juiz e vai julgar.\nR.\n7\n\"Escuta, ó meu povo, eu vou falar; †\nouve, Israel, eu testemunho contra ti: *\nEu, o Senhor, somente eu, sou o teu Deus!\n8\nEu não venho censurar teus sacrifícios, *\npois sempre estão perante mim teus holocaustos;\nR.\n14\nImola a Deus um sacrifício de louvor *\ne cumpre os votos que fizeste ao Altíssimo.\n23\nQuem me oferece um sacrifício de louvor, *\neste sim é que me honra de verdade.\nA todo homem que procede retamente, *\neu mostrarei a salvação que vem de Deus\".\nR.\nAclamação ao Evangelho\nMt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois revelaste os mistérios do teu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,28-31",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n10,28-31\nNaquele tempo,\n28\nComeçou Pedro a dizer a Jesus:\n\"Eis que nós deixamos tudo e te seguimos\".\n29\nRespondeu Jesus:\n\"Em verdade vos digo,\nquem tiver deixado casa,\nirmãos, irmãs, mãe, pai, filhos,\ncampos, por causa de mim e do Evangelho,\n30\nreceberá cem vezes mais agora, durante esta vida\n— casa, irmãos, irmãs, mães, filhos e campos,\ncom perseguições —\ne, no mundo futuro, a vida eterna.\n31\nMuitos que agora são os primeiros serão os últimos.\nE muitos que agora são os últimos serão os primeiros\".\nPalavra da Salvação."
+  }
+}

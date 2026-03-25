@@ -1,0 +1,23 @@
+{
+  "data": "2025-02-21",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 11,1-9</div><div> Sl 32(33),10-11.12-13.14-15 (R. 12b)</div><div></div><div> Mc 8,34-9,1</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,1-9",
+    "texto": "1\nToda a terra tinha uma só linguagem\ne servia-se das mesmas palavras.\n2\nE aconteceu que, partindo do oriente,\nos homens acharam uma planície na terra de Senaar,\ne ali se estabeleceram.\n3\nE disseram uns aos outros:\n\"Vamos, façamos tijolos e cozamo-los ao fogo\".\nUsaram tijolos em vez de pedra,\ne betume em lugar de argamassa.\n4\nE disseram:\n\"Vamos, façamos para nós uma cidade\ne uma torre cujo cimo atinja o céu.\nAssim, ficaremos famosos,\ne não seremos dispersos por toda a face da terra\".\n5\nEntão o Senhor desceu para ver a cidade e a torre\nque os homens estavam construindo.\n6\nE o Senhor disse:\n\"Eis que eles são um só povo\ne falam uma só língua.\nE isto é apenas o começo de seus empreendimentos.\nAgora, nada os impedirá de fazer o que se propuserem.\n7\nDesçamos e confundamos a sua língua,\nde modo que não se entendam uns aos outros\".\n8\nE o Senhor os dispersou daquele lugar\npor toda a superfície da terra,\ne eles cessaram de construir a cidade.\n9\nPor isso, foi chamada Babel, porque foi lá\nque o Senhor confundiu a linguagem de todo o mundo,\ne de lá dispersou os homens por toda a terra.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),10-11.12-13.14-15 (R. 12b)",
+    "refrao": "",
+    "texto": "R.\nFeliz o povo que o Senhor escolheu por sua herança!\n10\nO Senhor desfaz os planos das nações *\ne os projetos que os povos se propõem.\n11\nMas os desígnios do Senhor são para sempre, †\ne os pensamentos que ele traz no coração, *\nde geração em geração, vão perdurar.\nR.\n12\nFeliz o povo cujo Deus é o Senhor, *\ne a nação que escolheu por sua herança!\n13\nDos altos céus o Senhor olha e observa; *\nele se inclina para olhar todos os homens.\nR.\n14\nEle contempla do lugar onde reside *\ne vê a todos os que habitam sobre a terra.\n15\nEle formou o coração de cada um *\ne por todos os seus atos se interessa.\nR.\nEvangelho - Mc 8,34-9,\nAclamação ao Evangelho\nJo 15,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos chamo meus amigos,\npois vos dei a conhecer\no que o Pai me revelou."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,34-9,1",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n8,34-9,1\nNaquele tempo,\n34\nchamou Jesus a multidão com seus discípulos\ne disse:\n\"Se alguém me quer seguir,\nrenuncie a si mesmo, tome a sua cruz e me siga.\n35\nPois quem quiser salvar a sua vida, vai perdê-la;\nmas quem perder a sua vida por causa de mim\ne do Evangelho, vai salvá-la.\n36\nCom efeito, de que adianta ao homem\nganhar o mundo inteiro, se perde a própria vida?\n37\nE o que poderia o homem dar\nem troca da própria vida?\n38\nSe alguém se envergonhar de mim\ne das minhas palavras\ndiante dessa geração adúltera e pecadora,\ntambém o Filho do Homem se envergonhará dele,\nquando vier na glória do seu Pai\ncom seus santos anjos\".\n9,1\nDisse-lhes Jesus:\n\"Em verdade vos digo,\nalguns dos que aqui estão,\nnão morrerão sem antes terem visto o Reino de Deus\nchegar com poder\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 53,10-11</div><div> Sl 32(33),4-5.18-19.20.22 (R. 22)</div><div> Hb 4,14-16</div><div> Mc 10,35-45</div></div>",
+  "primeira_leitura": {
+    "referencia": "53,10-11",
+    "texto": "10\nO Senhor quis macerá-lo com sofrimentos.\nOferecendo sua vida em expiação,\nele terá descendência duradoura,\ne fará cumprir com êxito a vontade do Senhor.\n11\nPor esta vida de sofrimento,\nalcançará luz e uma ciência perfeita.\nMeu Servo, o justo, fará justos inúmeros homens,\ncarregando sobre si suas culpas.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),4-5.18-19.20.22 (R. 22)",
+    "refrao": "",
+    "texto": "R.\nSobre nós venha, Senhor, a vossa graça,\npois, em vós, nós esperamos!\n4\nPois reta é a palavra do Senhor,*\ne tudo o que ele faz merece fé.\n5\nDeus ama o direito e a justiça,*\ntransborda em toda a terra a sua graça.\nR.\n18\nMas o Senhor pousa o olhar sobre os que o temem,*\ne que confiam esperando em seu amor,\n19\npara da morte libertar as suas vidas*\ne alimentá-los quando é tempo de penúria.\nR.\n20\nNo Senhor nós esperamos confiantes,*\nporque ele é nosso auxílio e proteção!\n22\nSobre nós venha, Senhor, a vossa graça,*\nda mesma forma que em vós nós esperamos!\nR.\n2ª Leitura - Hb 4,14-\nSEGUNDA LEITURA\nAproximemo-nos, com confiança, do trono da graça.\nLeitura da Carta aos Hebreus\n4,14-16\nIrmãos:\n14\nTemos um sumo sacerdote eminente,\nque entrou no céu,\nJesus, o Filho de Deus.\nPor isso, permaneçamos firmes na fé que professamos.\n15\nCom efeito, temos um sumo sacerdote\ncapaz de se compadecer de nossas fraquezas,\npois ele mesmo foi provado em tudo como nós,\ncom exceção do pecado.\n16\nAproximemo-nos, então, com toda a confiança,\ndo trono da graça,\npara conseguirmos misericórdia\ne alcançarmos a graça de um auxílio\nno momento oportuno.\nPalavra do Senhor.\nAclamação ao Evangelho  cf.\nMc 10,45\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus Cristo veio servir, Cristo veio dar sua vida.\nJesus Cristo veio salvar, viva Cristo, Cristo viva!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,35-45",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n10,35-45\nNaquele tempo,\n35\nTiago e João, filhos de Zebedeu,\nforam a Jesus e lhe disseram:\n\"Mestre, queremos que faças por nós o que vamos pedir\".\n36\nEle perguntou:\n\"O que quereis que eu vos faça?\"\n37\nEles responderam:\n\"Deixa-nos sentar um\nà tua direita e outro à tua esquerda,\nquando estiveres na tua glória!\"\n38\nJesus então lhes disse:\n\"Vós não sabeis o que pedis.\nPor acaso podeis beber o cálice que eu vou beber?\nPodeis ser batizados com o batismo\ncom que vou ser batizado?\"\n39\nEles responderam: \"Podemos\".\nE ele lhes disse:\n\"Vós bebereis o cálice que eu devo beber,\ne sereis batizados com o batismo\ncom que eu devo ser batizado.\n40\nMas não depende de mim conceder\no lugar à minha direita ou à minha esquerda.\nÉ para aqueles a quem foi reservado\".\n41\nQuando os outros dez discípulos ouviram isso,\nindignaram-se com Tiago e João.\n42\nJesus os chamou e disse:\n\"Vós sabeis que os chefes das  nações as oprimem\ne os grandes as tiranizam.\n43\nMas, entre vós, não deve ser assim:\nquem quiser ser grande, seja vosso servo;\n44\ne quem quiser ser o primeiro, seja o escravo de todos.\n45\nPorque o Filho do Homem\nnão veio para ser servido, mas para servir\ne dar a sua vida como resgate para muitos\".\nPalavra da Salvação."
+  }
+}

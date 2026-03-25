@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Cl 3,12-17</div><div> Sl 150,1-2.3-4.5-6 (R. 6)</div><div></div><div> Lc 6,27-38</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,12-17",
+    "texto": "Irmãos,\n12\nvós sois amados por Deus,\nsois os seus santos eleitos.\nPor isso, revesti-vos de sincera misericórdia,\nbondade, humildade,\nmansidão e paciência,\n13\nsuportando-vos uns aos outros\ne perdoando-vos mutuamente,\nse um tiver queixa contra o outro.\nComo o Senhor vos perdoou,\nassim perdoai vós também.\n14\nMas, sobretudo, amai-vos uns aos outros,\npois o amor é o vínculo da perfeição.\n15\nQue a paz de Cristo reine em vossos corações,\nà qual fostes chamados\ncomo membros de um só corpo.\nE sede agradecidos.\n16\nQue a palavra de Cristo,\ncom toda a sua riqueza,\nhabite em vós.\nEnsinai e admoestai-vos uns aos outros\ncom toda a sabedoria.\nDo fundo dos vossos corações, cantai a Deus\nsalmos, hinos e cânticos espirituais,\nem ação de graças.\n17\nTudo o que fizerdes, em palavras ou obras,\nseja feito em nome do Senhor Jesus Cristo.\nPor meio dele dai graças a Deus, o Pai.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 150,1-2.3-4.5-6 (R. 6)",
+    "refrao": "",
+    "texto": "R.\nLouve o Senhor tudo o que vive e que respira.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nLouvai o Senhor Deus no santuário, *\nlouvai-o no alto céu de seu poder!\n2\nLouvai-o por seus feitos grandiosos, *\nlouvai-o em sua grandeza majestosa!\nR.\n3\nLouvai-o com o toque da trombeta, *\nlouvai-o com a harpa e com a cítara!\n4\nLouvai-o com a dança e o tambor, *\nlouvai-o com as cordas e as flautas!\nR.\n5\nLouvai-o com os címbalos sonoros, *\nlouvai-o com os címbalos de júbilo!\n6\nLouve a Deus tudo o que vive e que respira, *\ntudo cante os louvores do Senhor!\nR.\nAclamação ao Evangelho\n1Jo 4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSe nós nos amamos, irmãos,\nDeus vive unido conosco\ne, em nós, seu amor fica pleno!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,27-38",
+    "texto": "6,27-38\nNaquele tempo, falou Jesus a seus discípulos:\n27\n\"A vós que me escutais, eu digo:\nAmai os vossos inimigos\ne fazei o bem aos que vos odeiam,\n28\nbendizei os que vos amaldiçoam,\ne rezai por aqueles que vos caluniam.\n29\nSe alguém te der uma bofetada numa face,\noferece também a outra.\nSe alguém te tomar o manto,\ndeixa-o levar também a túnica.\n30\nDá a quem te pedir\ne, se alguém tirar o que é teu,\nnão peças que o devolva.\n31\nO que vós desejais que os outros vos façam,\nfazei-o também vós a eles.\n32\nSe amais somente aqueles que vos amam,\nque recompensa tereis?\nAté os pecadores amam aqueles que os amam.\n33\nE se fazeis o bem somente aos que vos fazem o bem,\nque recompensa tereis?\nAté os pecadores fazem assim.\n34\nE se emprestais\nsomente àqueles de quem esperais receber,\nque recompensa tereis?\nAté os pecadores emprestam aos pecadores,\npara receber de volta a mesma quantia.\n35\nAo contrário, amai os vossos inimigos,\nfazei o bem e emprestai\nsem esperar coisa alguma em troca.\nEntão, a vossa recompensa será grande,\ne sereis filhos do Altíssimo,\nporque Deus é bondoso\ntambém\npara com os ingratos e os maus.\n36\nSede misericordiosos,\ncomo também o vosso Pai é misericordioso.\n37\nNão julgueis e não sereis julgados;\nnão condeneis e não sereis condenados;\nperdoai, e sereis perdoados.\n38\nDai e vos será dado.\nUma boa medida, calcada, sacudida, transbordante\nserá colocada no vosso colo;\nporque com a mesma medida com que medirdes os outros,\nvós também sereis medidos\".\nPalavra da Salvação."
+  }
+}

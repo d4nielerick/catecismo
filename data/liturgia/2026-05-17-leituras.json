@@ -1,0 +1,23 @@
+{
+  "data": "2026-05-17",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 1,1-11</div><div> Sl 46(47),2-3.6-7.8-9 (R. 6)</div><div> Ef 1,17-23</div><div>Mt 28,16-20</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-11",
+    "texto": "1\nNo meu primeiro livro, ó Teófilo,\njá tratei de tudo o que Jesus fez e ensinou,\ndesde o começo,\n2\naté ao dia em que foi levado para o céu,\ndepois de ter dado instruções pelo Espírito Santo,\naos apóstolos que tinha escolhido.\n3\nFoi a eles que Jesus se mostrou vivo\ndepois da sua paixão, com numerosas provas.\nDurante quarenta dias, apareceu-lhes\nfalando do Reino de Deus.\n4\nDurante uma refeição, deu-lhes esta ordem:\n\"Não vos afasteis de Jerusalém,\nmas esperai a realização da promessa do Pai,\nda qual vós me ouvistes falar:\n5\n'João batizou com água;\nvós, porém, sereis batizados com o Espírito Santo,\ndentro de poucos dias'\".\n6\nEntão os que estavam reunidos perguntaram a Jesus:\n\"Senhor, é agora que vais restaurar\no Reino em Israel?\"\n7\nJesus respondeu:\n\"Não vos cabe saber os tempos e os momentos\nque o Pai determinou com a sua própria autoridade.\n8\nMas recebereis o poder do Espírito Santo\nque descerá sobre vós, para serdes minhas testemunhas\nem Jerusalém, em toda a Judeia e na Samaria,\ne até os confins da terra\".\n9\nDepois de dizer isso,\nJesus foi levado ao céu, à vista deles.\nUma nuvem o encobriu,\nde forma que seus olhos não mais podiam vê-lo.\n10\nOs apóstolos continuavam olhando para o céu,\nenquanto Jesus subia.\nApareceram então dois homens vestidos de branco,\n11\nque lhes disseram:\n\"Homens da Galileia,\npor que ficais aqui, parados, olhando para o céu?\nEsse Jesus que vos foi levado para o céu,\nvirá do mesmo modo como o vistes partir para o céu\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 46(47),2-3.6-7.8-9 (R. 6)",
+    "refrao": "",
+    "texto": "R.\nPor entre aclamações Deus se elevou,\no Senhor subiu ao toque da trombeta.\nOu:\nAleluia, Aleluia, Aleluia.\n2\nPovos todos do universo, batei palmas, *\ngritai a Deus aclamações de alegria!\n3\nPorque sublime é o Senhor, o Deus Altíssimo, *\no soberano que domina toda a terra.\nR.\n6\nPor entre aclamações Deus se elevou, *\no Senhor subiu ao toque da trombeta.\n7\nSalmodiai ao nosso Deus ao som da harpa, *\nsalmodiai ao som da harpa ao nosso Rei!\nR.\n8\nPorque Deus é o grande Rei de toda a terra, *\nao som da harpa acompanhai os seus louvores!\n9\nDeus reina sobre todas as nações, *\nestá sentado no seu trono glorioso.\nR.\n2ª Leitura - Ef 1,17-\nSEGUNDA LEITURA\nE o fez sentar-se à sua direita nos céus.\nLeitura da Carta de São Paulo aos Efésios\n1,17-23\nIrmãos:\n17\nO Deus de nosso Senhor Jesus Cristo,\no Pai a quem pertence a glória,\nvos dê um espírito de sabedoria\nque vo-lo revele e faça verdadeiramente conhecer.\n18\nQue ele abra o vosso coração à sua luz,\npara que saibais\nqual a esperança que o seu chamamento vos dá,\nqual a riqueza da glória\nque está na vossa herança com os santos,\n19\ne que imenso poder ele exerceu\nem favor de nós que cremos,\nde acordo com a sua ação e força onipotente.\n20\nEle manifestou sua força em Cristo,\nquando o ressuscitou dos mortos\ne o fez sentar-se à sua direita nos céus,\n21\nbem acima de toda a autoridade, poder, potência,\nsoberania ou qualquer título que se possa mencionar\nnão somente neste mundo, mas ainda no mundo futuro.\n22\nSim, ele pôs tudo sob os seus pés e fez dele,\nque está acima de tudo, a Cabeça da Igreja,\n23\nque é o seu corpo,\na plenitude daquele que possui a plenitude universal.\nPalavra do Senhor.\nAclamação ao Evangelho\nMt 28,19a.20b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nIde ao mundo, ensinai aos povos todos;\nconvosco estarei, todo os dias,\naté o fim dos tempos, diz Jesus."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "28,16-20",
+    "texto": "Conclusão do Evangelho de Jesus Cristo segundo Mateus\n28,16-20\nNaquele tempo,\n16\nOs onze discípulos foram para a Galileia,\nao monte que Jesus lhes tinha indicado.\n17\nQuando viram Jesus, prostraram-se diante dele.\nAinda assim alguns duvidaram.\n18\nEntão Jesus aproximou-se e falou:\n\"Toda a autoridade me foi dada no céu e sobre a terra.\n19\nPortanto, ide e fazei discípulos meus todos os povos,\nbatizando-os em nome do Pai\ne do Filho e do Espírito Santo,\n20\ne ensinando-os a observar tudo o que vos ordenei!\nEis que eu estarei convosco todos os dias,\naté ao fim do mundo\".\nPalavra da Salvação."
+  }
+}

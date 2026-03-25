@@ -1,0 +1,23 @@
+{
+  "data": "2025-04-26",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 4,13-21</div><div> Sl 117(118),1 e 14-15.16ab-18.19-21 (R. 21a)</div><div></div><div> Mc 16,9-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,13-21",
+    "texto": "Naqueles dias,\nOs chefes dos sacerdotes, os anciãos e os escribas,\n13\nficaram admirados ao ver a segurança\ncom que Pedro e João falavam,\npois eram pessoas simples e sem instrução.\nReconheciam que eles tinham estado com Jesus.\n14\nNo entanto viam, de pé, junto a eles,\no homem que tinha sido curado.\nE não podiam dizer nada em contrário.\n15\nMandaram que saíssem para fora do Sinédrio,\ne começaram a discutir entre si:\n16\n\"O que vamos fazer com esses homens?\nEles realizaram um milagre claríssimo,\ne o fato tornou-se de tal modo conhecido\npor todos os habitantes de Jerusalém,\nque não podemos negá-lo.\n17\nContudo, a fim de que a coisa\nnão se espalhe ainda mais entre o povo,\nvamos ameaçá-los, para que não falem mais a ninguém\na respeito do nome de Jesus\".\n18\nChamaram de novo Pedro e João\ne ordenaram-lhes que, de modo algum,\nfalassem ou ensinassem em nome de Jesus.\n19\nPedro e João responderam:\n\"Julgai vós mesmos, se é justo diante de Deus\nque obedeçamos a vós e não a Deus!\n20\nQuanto a nós, não nos podemos calar\nsobre o que vimos e ouvimos\".\n21\nEntão, insistindo em suas ameaças,\ndeixaram Pedro e João em liberdade,\njá que não tinham meio de castigá-los,\npor causa do povo.\nPois todos glorificavam a Deus\npelo que havia acontecido.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 117(118),1.14-15.16ab.18.19-21 (R. 21a)",
+    "refrao": "",
+    "texto": "R.\nDou-vos graças, ó Senhor, porque me ouvistes.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nDai graças ao Senhor, porque ele é bom! *\n\"Eterna é a sua misericórdia!\"\n14\nO Senhor é minha força e o meu canto, *\ne tornou-se para mim o Salvador.\n15\n\"Clamores de alegria e de vitória *\nressoem pelas tendas dos fiéis.\nR.\n16a\nA mão direita do Senhor fez maravilhas, †\nb\na mão direita do Senhor me levantou, *\na mão direita do Senhor fez maravilhas!\"\n18\nO Senhor severamente me provou, *\nmas não me abandonou às mãos da morte.\nR.\n19\nAbri-me vós, abri-me as portas da justiça; *\nquero entrar para dar graças ao Senhor!\n20\n\"Sim, esta é a porta do Senhor, *\npor ela só os justos entrarão!\"\n21\nDou-vos graças, ó Senhor, porque me ouvistes *\ne vos tornastes para mim o Salvador!\nR.\nEvangelho - Mc 16,9-15\nAclamação ao Evangelho\nSl 117(118),24\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEste é o dia que o Senhor fez para nós,\nalegremo-nos e nele exultemos!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,9-15",
+    "texto": "16,9-15\n9\nDepois de ressuscitar,\nna madrugada do primeiro dia após o sábado,\nJesus apareceu primeiro a Maria Madalena,\nda qual havia expulsado sete demônios.\n10\nEla foi anunciar isso aos seguidores de Jesus,\nque estavam de luto e chorando.\n11\nQuando ouviram que ele estava vivo\ne fora visto por ela, não quiseram acreditar.\n12\nEm seguida, Jesus apareceu a dois deles,\ncom outra aparência,\nenquanto estavam indo para o campo.\n13\nEles também voltaram e anunciaram isso aos outros.\nTambém a estes não deram crédito.\n14\nPor fim, Jesus apareceu aos onze discípulos\nenquanto estavam comendo,\nrepreendeu-os por causa da falta de fé\ne pela dureza de coração,\nporque não tinham acreditado\nnaqueles que o tinham visto ressuscitado.\n15\nE disse-lhes:\n\"Ide pelo mundo inteiro\ne anunciai o Evangelho a toda criatura!\"\nPalavra da Salvação."
+  }
+}

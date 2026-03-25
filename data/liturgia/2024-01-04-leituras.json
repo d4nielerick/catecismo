@@ -1,0 +1,23 @@
+{
+  "data": "2024-01-04",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 3,7-10</div><div> Sl 97(98),1.7-8.9 (R. 3a)</div><div></div><div> Jo 1,35-42</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,7-10",
+    "texto": "7\nFilhinhos, que ninguém vos desencaminhe.\nO que pratica a justiça é justo,\nassim como ele é justo.\n8\nAquele que comete o pecado é do diabo,\nporque o diabo é pecador desde o princípio.\nPara isto é que o Filho de Deus se manifestou:\npara destruir as obras do diabo.\n9\nTodo aquele que nasceu de Deus não comete pecado,\nporque a semente de Deus fica nele;\nele não pode pecar,\npois nasceu de Deus.\n10\nNisto se revela quem é filho de Deus\ne quem é filho do diabo:\ntodo o que não pratica a justiça não é de Deus,\nnem aquele que não ama o seu irmão.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.7-8.9 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nOs confins do universo contemplaram\na salvação do nosso Deus.\n1\nCantai ao Senhor Deus um canto novo, *\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo *\nalcançaram-lhe a vitória.\nR.\n7\nAplauda o mar com todo ser que nele vive, *\no mundo inteiro e toda gente!\n8\nAs montanhas e os rios batam palmas *\ne exultem de alegria,\nR.\n9\nna presença do Senhor, pois ele vem, *\nvem julgar a terra inteira.\nJulgará o universo com justiça *\ne as nações com equidade.\nR.\nEvangelho - Jo 1,35-42\nAclamação ao Evangelho\nHb 1,1-2\nR.\nAleluia, Aleluia, Aleluia.\nV.\nDepois de ter falado, no passado,\naos nossos pais, pelos profetas, muitas vezes,\nem nossos dias Deus falou-nos por seu Filho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,35-42",
+    "texto": "1,35-42\nNaquele tempo,\n35\nJoão estava de novo com dois de seus discípulos\n36\ne, vendo Jesus passar, disse:\n\"Eis o Cordeiro de Deus!\"\n37\nOuvindo essas palavras,\nos dois discípulos seguiram Jesus.\n38\nVoltando-se para eles e vendo que o estavam seguindo,\nJesus perguntou:\n\"O que estais procurando?\"\nEles disseram:\n\"Rabi (que quer dizer: Mestre), onde moras?\"\n39\nJesus respondeu: \"Vinde ver\".\nForam pois ver onde ele morava\ne, nesse dia, permaneceram com ele.\nEra por volta das quatro da tarde.\n40\nAndré, irmão de Simão Pedro,\nera um dos dois que ouviram as palavras de João\ne seguiram Jesus.\n41\nEle foi encontrar primeiro seu irmão Simão e lhe disse:\n\"Encontramos o Messias\" (que quer dizer: Cristo).\n42\nEntão André conduziu Simão a Jesus.\nJesus olhou bem para ele e disse:\n\"Tu és Simão, filho de João;\ntu serás chamado Cefas\" (que quer dizer: Pedra).\nPalavra da Salvação."
+  }
+}

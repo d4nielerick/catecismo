@@ -1,0 +1,23 @@
+{
+  "data": "2026-12-06",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 40,1-5.9-11</div><div> Sl 84(85),9ab-10.11-12.13-14 (R. 8)</div><div> 2Pd 3,8-14</div><div> Mc 1,1-8</div></div>",
+  "primeira_leitura": {
+    "referencia": "40,1-5.9-11",
+    "texto": "1\n\"Consolai o meu povo, consolai-o!\n— diz o vosso Deus —.\n2\nFalai ao coração de Jerusalém\ne dizei em alta voz que sua servidão acabou\ne a expiação de suas culpas foi cumprida;\nela recebeu das mãos do Senhor\no dobro por todos os seus pecados\".\n3\nGrita uma voz:\n\"Preparai no deserto o caminho do Senhor,\naplainai na solidão a estrada de nosso Deus.\n4\nNivelem-se todos os vales,\nrebaixem-se todos os montes e colinas;\nendireite-se o que é torto\ne alisem-se as asperezas:\n5\na glória do Senhor então se manifestará,\ne todos os homens verão juntamente\no que a boca do Senhor falou.\n9\nSobe a um alto monte,\ntu, que trazes a boa-nova a Sião;\nlevanta com força a tua voz,\ntu, que trazes a boa-nova a Jerusalém,\nergue a voz, não temas;\ndize às cidades de Judá: 'Eis o vosso Deus,\n10\neis que o Senhor Deus vem com poder,\nseu braço tudo domina:\neis, com ele, sua conquista,\neis à sua frente a vitória.\n11\nComo um pastor, ele apascenta o rebanho,\nreúne, com a força dos braços, os cordeiros\ne carrega-os ao colo;\nele mesmo tange as ovelhas-mães'\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 84(85),9ab-10.11-12.13-14 (R. 8)",
+    "refrao": "",
+    "texto": "R.\nMostrai-nos, ó Senhor, vossa bondade,\ne a vossa salvação nos concedei!\n9a\nQuero ouvir o que o Senhor irá falar: *\né a paz que ele vai anunciar;\nb\na paz para o seu povo e seus amigos, *\npara os que voltam ao Senhor seu coração.\n10\nEstá perto a salvação dos que o temem, *\ne a glória habitará em nossa terra.\nR.\n11\nA verdade e o amor se encontrarão, *\na justiça e a paz se abraçarão;\n12\nda terra brotará a fidelidade, *\ne a justiça olhará dos altos céus.\nR.\n13\nO Senhor nos dará tudo o que é bom, *\ne a nossa terra nos dará suas colheitas;\n14\na justiça andará na sua frente *\ne a salvação há de seguir os passos seus.\nR.\n2ª Leitura - 2Pd 3,8-\nSEGUNDA LEITURA\nO que nós esperamos são novos  céus e uma nova terra.\nLeitura da Segunda Carta de São Pedro\n3,8-14\n8\nUma coisa vós não podeis desconhecer, caríssimos:\npara o Senhor, um dia é como mil anos\ne mil anos como um dia.\n9\nO Senhor não tarda a cumprir sua promessa,\ncomo pensam alguns, achando que demora.\nEle está usando de paciência para convosco.\nPois não deseja que alguém se perca.\nAo contrário, quer que todos venham a converter-se.\n10\nO dia do Senhor chegará como um ladrão,\ne então os céus acabarão com barulho espantoso;\nos elementos, devorados pelas chamas, se dissolverão,\ne a terra será consumida com tudo o que nela se fez.\n11\nSe desse modo tudo se vai desintegrar,\nqual não deve ser o vosso empenho\nnuma vida santa e piedosa,\n12\nenquanto esperais com anseio a vinda do Dia de Deus,\nquando os céus em chama se vão derreter,\ne os elementos, consumidos pelo fogo, se fundirão?\n13\nO que nós esperamos, de acordo com a sua promessa,\nsão novos céus e uma nova terra,\nonde habitará a justiça.\n14\nCaríssimos, vivendo nesta esperança,\nesforçai-vos para que ele vos encontre\nnuma vida pura e sem mancha e em paz.\nPalavra do Senhor.\nAclamação ao Evangelho\nLc 3,4.6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPreparai o caminho do Senhor;\nendireitai suas veredas.\nToda a carne há de ver\na salvação do nosso Deus."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,1-8",
+    "texto": "1,1-8\n1\nInício do Evangelho de Jesus Cristo, Filho de Deus.\n2\nEstá escrito no livro do profeta Isaías:\n\"Eis que envio meu mensageiro à tua frente,\npara preparar o teu caminho.\n3\nEsta é a voz daquele que grita no deserto:\n'Preparai o caminho do Senhor,\nendireitai suas estradas!'\"\n4\nFoi assim que João Batista apareceu no deserto,\npregando um batismo de conversão\npara o perdão dos pecados.\n5\nToda a região da Judeia e todos os moradores de Jerusalém\niam ao seu encontro.\nConfessavam os seus pecados\ne João os batizava no rio Jordão.\n6\nJoão se vestia com uma pele de camelo\ne comia gafanhotos e mel do campo.\n7\nE pregava, dizendo:\n\"Depois de mim virá alguém mais forte do que eu.\nEu nem sou digno de me abaixar\npara desamarrar suas sandálias.\n8\nEu vos batizei com água,\nmas ele vos batizará com o Espírito Santo\".\nPalavra da Salvação."
+  }
+}

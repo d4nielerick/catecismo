@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jz 9,6-15</div><div> Sl 20(21),2-3.4-5.6-7 (R. 2a)</div><div></div><div> Mt 20,1-16a</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,6-15",
+    "texto": "Naquele tempo,\n6\ntodos os habitantes de Siquém\ne os de Bet-Melo\nse reuniram junto a um carvalho que havia em Siquém\ne proclamaram rei a Abimelec.\n7\nInformado disso,\nJoatão foi postar-se no cume do monte Garizim\ne se pôs a gritar em alta voz, dizendo:\n\"Ouvi-me, moradores de Siquém,\ne que Deus vos ouça.\n8\nCerta vez, as árvores resolveram ungir um rei\npara reinar sobre elas,\ne disseram à oliveira:\n'Reina sobre nós'.\n9\nMas ela respondeu:\n'Iria eu renunciar ao meu azeite,\ncom que se honram os deuses e os homens,\npara me balançar acima das árvores?'\n10\nEntão as árvores disseram à figueira:\n'Vem e reina sobre nós'.\n11\nE ela lhes respondeu:\n'Iria eu renunciar à minha doçura\ne aos saborosos frutos,\npara me balançar acima das outras árvores?'\n12\nAs árvores disseram então à videira:\n'Vem e reina sobre nós'.\n13\nE ela lhes respondeu:\n'Iria eu renunciar ao meu vinho,\nque alegra os deuses e os homens,\npara me balançar acima das outras árvores?'\n14\nPor fim, todas as árvores disseram ao espinheiro:\n'Vem tu reinar sobre nós'.\n15\nO espinheiro respondeu-lhes:\n'Se deveras me constituís vosso rei,\nvinde e repousai à minha sombra;\nmas se não o quereis, saia fogo do espinheiro\ne devore os cedros do Líbano!'\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 20(21),2-3.4-5.6-7 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, em vossa força o rei se alegra.\n2\nÓ Senhor, em vossa força o rei se alegra; *\nquanto exulta de alegria em vosso auxílio!\n3\nO que sonhou seu coração, lhe concedestes; *\nnão recusastes os pedidos de seus lábios.\nR.\n4\nCom bênção generosa o preparastes; *\nde ouro puro coroastes sua fronte.\n5\nA vida ele pediu e vós lhe destes, *\nlongos dias, vida longa pelos séculos.\nR.\n6\nÉ grande a sua glória em vosso auxílio; *\nde esplendor e majestade o revestistes.\n7\nTransformastes o seu nome numa bênção, *\ne o cobristes de alegria em vossa face.\nR.\nAclamação ao Evangelho\nHb 4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor é viva e eficaz:\nela julga os pensamentos e as intenções do coração."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "20,1-16a",
+    "texto": "20,1-16a\nNaquele tempo,\ndisse Jesus aos seus discípulos esta parábola:\n1\n\"O Reino dos Céus é como a história do patrão\nque saiu de madrugada\npara contratar trabalhadores para a sua vinha.\n2\nCombinou com os trabalhadores\numa moeda de prata por\ndia,\ne os mandou para a vinha.\n3\nÀs nove horas da manhã, o patrão saiu de novo,\nviu outros que estavam na praça, desocupados,\n4\ne lhes disse: 'Ide também vós para a minha vinha!\nE eu vos pagarei o que for justo'.\n5\nE eles foram.\nO patrão saiu de novo ao meio-dia\ne às três horas da tarde,\ne fez a mesma coisa.\n6\nSaindo outra vez pelas cinco horas da tarde,\nencontrou outros que estavam na praça,\ne lhes disse:\n'Por que estais aí o dia inteiro desocupados?'\n7\nEles responderam:\n'\nPorque ninguém nos contratou'.\nO patrão lhes disse:\n'\nIde vós também para a minha vinha'.\n8\nQuando chegou a tarde,\no patrão disse ao administrador:\n'\nChama os trabalhadores\ne paga-lhes uma diária a todos,\ncomeçando pelos últimos até os primeiros!'\n9\nVieram os que tinham sido contratados\nàs cinco da tarde\ne cada um recebeu uma moeda de prata.\n10\nEm seguida vieram os que foram contratados primeiro,\ne pensavam que iam receber mais.\nPorém, cada um deles\ntambém recebeu uma moeda de prata.\n11\nAo receberem o pagamento,\ncomeçaram a resmungar contra o patrão:\n12\n'\nEstes últimos trabalharam uma hora só,\ne tu os igualaste a nós,\nque suportamos o cansaço e o calor o dia inteiro'.\n13\nEntão o patrão disse a um deles:\n'\nAmigo, eu não fui injusto contigo.\nNão combinamos uma moeda de prata?\n14\nToma o que é teu e volta para casa!\nEu quero dar a este que foi contratado por último\no mesmo que dei a ti.\n15\nPor acaso não tenho o direito de fazer o que quero\ncom aquilo que me pertence?\nOu estás com inveja, porque estou sendo bom?'\n16a\nAssim, os últimos serão os primeiros,\ne os primeiros serão os últimos\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-06-06",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Tm 2,8-15</div><div> Sl 24(25),4bc-5ab.8-9.10 e 14 (R. 4b)</div><div></div><div> Mc 12,28b-34</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,8-15",
+    "texto": "Caríssimo,\n8\nlembra-te de Jesus Cristo,\nda descendência de Davi,\nressuscitado dentre os mortos,\nsegundo o meu evangelho.\n9\nPor ele eu estou sofrendo até às algemas,\ncomo se eu fosse um malfeitor;\nmas a palavra de Deus não está algemada.\n10\nPor isso suporto qualquer coisa pelos eleitos,\npara que eles também alcancem a salvação,\nque está em Cristo Jesus,\ncom a glória eterna.\n11\nMerece fé esta palavra:\nse com ele morremos, com ele viveremos.\n12\nSe com ele ficamos firmes, com ele reinaremos.\nSe nós o negamos, também ele nos negará.\n13\nSe lhe somos infiéis, ele permanece fiel,\npois não pode negar-se a si mesmo.\n14\nLembra-lhes tais coisas\ne conjura-os por Deus a evitarem discussões vãs,\nque de nada servem\na não ser para a perdição dos ouvintes.\n15\nEmpenha-te em apresentar-te diante de Deus\ncomo homem digno de aprovação,\ncomo operário que não tem de que se envergonhar,\nmas expõe corretamente a palavra da verdade.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 24(25),4-5ab.8-9.10 e 14 (R. 4a)",
+    "refrao": "",
+    "texto": "R.\nMostrai-me, ó Senhor, vossos caminhos!\n4b\nMostrai-me, ó Senhor, vossos caminhos, *\nc\ne fazei-me conhecer a vossa estrada!\n5a\nVossa verdade me oriente e me conduza, *\nb\nporque sois o Deus da minha salvação\nR.\n8\nO Senhor é piedade e retidão, *\ne reconduz ao bom caminho os pecadores.\n9\nEle dirige os humildes na justiça, *\ne aos pobres ele ensina o seu caminho.\nR.\n10\nVerdade e amor são os caminhos do Senhor *\npara quem guarda sua Aliança e seus preceitos.\n14\nO Senhor se torna íntimo aos que o temem *\ne lhes dá a conhecer sua Aliança.\nR.\nEvangelho - Mc 12,28b-\nAclamação ao Evangelho  Cf.\n2Tm 1,10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus Cristo salvador destruiu o mal e a morte;\nfez brilhar pelo Evangelho a luz e a vida imperecíveis."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,28b-34",
+    "texto": "12,28b-34\nNaquele tempo,\n28\num mestre da Lei,\naproximou-se de Jesus e perguntou-lhe:\n\"Qual é o primeiro de todos os mandamentos?\"\n29\nJesus respondeu:\n\"O primeiro é este:\nOuve, ó Israel!\nO Senhor nosso Deus é o único Senhor.\n30\nAmarás o Senhor teu Deus\nde todo o teu coração, de toda a tua alma,\nde todo o teu entendimento\ne com toda a tua força!\n31\nO segundo mandamento é:\nAmarás o teu próximo como a ti mesmo!\nNão existe outro mandamento maior do que estes\".\n32\nO mestre da Lei disse a Jesus:\n\"Muito bem, Mestre! Na verdade, é como disseste:\nEle é o único Deus e não existe outro além dele.\n33\nAmá-lo de todo o coração, de toda a mente,\ne com toda a força,\ne amar o próximo como a si mesmo\né melhor do que todos os holocaustos e sacrifícios\".\n34\nJesus viu que ele tinha respondido com inteligência,\ne disse:\n\"Tu não estás longe do Reino de Deus\".\nE ninguém mais tinha coragem\nde fazer perguntas a Jesus.\nPalavra da Salvação."
+  }
+}

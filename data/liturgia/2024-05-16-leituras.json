@@ -1,0 +1,23 @@
+{
+  "data": "2024-05-16",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 22,30;23,6-11</div><div> Sl 15(16),1-2a e 5.7-8.9-10.11 (R. 1)</div><div></div><div> Jo 17,20-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "22,30; 23,6-11",
+    "texto": "Naqueles dias:\n30\nquerendo saber com certeza\npor que Paulo estava sendo acusado pelos judeus,\no tribuno soltou-o\ne mandou reunir os chefes dos sacerdotes\ne todo o conselho dos anciãos.\nDepois fez trazer Paulo e colocou-o diante deles.\n23,6\nSabendo que uma parte dos presentes eram saduceus\ne a outra parte eram fariseus,\nPaulo exclamou no conselho dos anciãos:\n\"Irmãos, eu sou fariseu e filho de fariseus.\nEstou sendo julgado\npor causa da nossa esperança\nna ressurreição dos mortos\".\n7\nApenas falou isso,\narmou-se um conflito entre fariseus e saduceus\ne a assembleia se dividiu.\n8\nCom efeito, os saduceus dizem que não há ressurreição,\nnem anjo, nem espírito,\nenquanto os fariseus sustentam uma coisa e outra.\n9\nHouve, então, uma enorme gritaria.\nAlguns doutores da Lei, do partido dos fariseus,\nlevantaram-se e começaram a protestar, dizendo:\n\"Não encontramos nenhum mal neste homem.\nE se um espírito ou anjo tivesse falado com ele?\"\n10\nE o conflito crescia cada vez mais.\nReceando que Paulo fosse despedaçado por eles,\no comandante ordenou que os soldados descessem\ne o tirassem do meio deles,\nlevando-o de novo para o quartel.\n11\nNa noite seguinte,\no Senhor aproximou-se de Paulo e lhe disse:\n\"Tem confiança.\nAssim como tu deste testemunho de mim em Jerusalém,\né preciso que tu sejas também\nminha testemunha em Roma\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 15(16),1-2a e 5.7-8.9-10.11 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nGuardai-me, ó Deus, porque em vós me refugio!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nGuardai-me, ó Deus, porque em vós me refugio! *\n2a\nDigo ao Senhor: \"Somente vós sois meu Senhor\".\n5\nÓ Senhor, sois minha herança e minha taça, *\nmeu destino está seguro em vossas mãos!\nR.\n7\nEu bendigo o Senhor, que me aconselha, *\ne até de noite me adverte o coração.\n8\nTenho sempre o Senhor ante meus olhos, *\npois se o tenho a meu lado não vacilo.\nR.\n9\nEis por que meu coração está em festa, †\nminha alma rejubila de alegria, *\ne até meu corpo no repouso está tranquilo;\n10\npois não haveis de me deixar entregue à morte, *\nnem vosso amigo conhecer a corrupção.\nR.\n11\nVós me ensinais vosso caminho para a vida; †\njunto a vós, felicidade sem limites, *\ndelícia eterna e alegria ao vosso lado!\nR.\nAclamação ao Evangelho\nJo 17,21\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPara que todos sejam um, diz o Senhor,\ncomo tu estás em mim e eu em ti,\npara que o mundo possa crer que me enviaste."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "17,20-26",
+    "texto": "17,20-26\nNaquele tempo,\nJesus ergueu os olhos ao céu e rezou, dizendo:\n20\n“Pai santo, eu não te rogo somente por eles,\nmas também por aqueles\nque vão crer em mim pela sua palavra;\n21\npara que todos sejam um\ncomo tu, Pai, estás em mim e eu em ti,\ne para que eles estejam em nós,\na fim de que o mundo creia que tu me enviaste.\n22\nEu dei-lhes a glória que tu me deste,\npara que eles sejam um, como nós somos um:\n23\neu neles e tu em mim,\npara que assim eles cheguem à unidade perfeita\ne o mundo reconheça que tu me enviaste\ne os amaste, como me amaste a mim.\n24\nPai, aqueles que me deste,\nquero que estejam comigo onde eu estiver,\npara que eles contemplem a minha glória,\nglória que tu me deste\nporque me amaste antes da fundação do universo.\n25\nPai justo, o mundo não te conheceu,\nmas eu te conheci,\ne estes também conheceram que tu me enviaste.\n26\nEu lhes fiz conhecer o teu nome,\ne o tornarei conhecido ainda mais,\npara que o amor com que me amaste esteja neles,\ne eu mesmo esteja neles”.\nPalavra da Salvação."
+  }
+}

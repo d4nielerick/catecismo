@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Cl 1,9-14</div><div> Sl 97(98),2-3ab.3cd-4.5-6 (R. 2a)</div><div></div><div> Lc 5,1-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,9-14",
+    "texto": "Irmãos,\n9\ndesde que recebemos essas notícias,\nnão deixamos de rezar insistentemente por vós,\npara que chegueis a conhecer plenamente\na vontade de Deus,\ncom toda a sabedoria\ne com o discernimento da luz do Espírito.\n10\nPois deveis levar uma vida digna do Senhor,\npara lhe serdes agradáveis em tudo.\nDeveis produzir frutos em toda boa obra\ne crescer no conhecimento de Deus,\n11\nanimados de muita força, pelo poder de sua glória,\nde muita paciência e constância.\n12\nCom alegria dai graças ao Pai,\nque vos tornou capazes de participar da luz,\nque é a herança dos santos.\n13\nEle nos libertou do poder das trevas\ne nos recebeu no reino de seu Filho amado,\n14\npor quem temos a redenção, o perdão dos pecados.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),2-3ab.3cd-4.5-6 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor fez conhecer seu poder salvador,\nperante as nações.\n2\nO Senhor fez conhecer a salvação, *\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel *\nb\npela casa de Israel.\nR.\nc\nOs confins do universo contemplaram *\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira, *\nalegrai-vos e exultai!\nR.\n5\nCantai salmos ao Senhor ao som da harpa *\ne da cítara suave!\n6\nAclamai, com os clarins e as trombetas, *\nao Senhor, o nosso Rei!\nR.\nEvangelho - Lc 5,1-11\nAclamação ao Evangelho\nMt 4,19\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde após mim, disse o Senhor,\ne eu ensinarei a pescar gente."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,1-11",
+    "texto": "5,1-11\nNaquele tempo,\n1\nJesus estava na margem do lago de Genesaré,\ne a multidão apertava-se ao seu redor\npara ouvir a palavra de Deus.\n2\nJesus viu duas barcas paradas na margem do lago.\nOs pescadores haviam desembarcado e lavavam as redes.\n3\nSubindo numa das barcas, que era de Simão,\npediu que se afastasse um pouco da margem.\nDepois sentou-se e, da barca,\nensinava as multidões.\n4\nQuando acabou de falar, disse a Simão:\n\"Avança para águas mais profundas,\ne lançai vossas redes para a pesca\".\n5\nSimão respondeu:\n\"Mestre, nós trabalhamos a noite inteira\ne nada pescamos.\nMas, em atenção à tua palavra,\nvou lançar as redes\".\n6\nAssim fizeram, e apanharam tamanha quantidade de peixes\nque as redes se rompiam.\n7\nEntão fizeram sinal aos companheiros da outra barca,\npara que viessem ajudá-los.\nEles vieram, e encheram as duas barcas,\na ponto de quase afundarem.\n8\nAo ver aquilo,\nSimão Pedro atirou-se aos pés de Jesus, dizendo:\n\"Senhor, afasta-te de mim,\nporque sou um pecador!\"\n9\nÉ que o espanto se apoderara de Simão\ne de todos os seus companheiros,\npor causa da pesca que acabavam de fazer.\n10\nTiago e João, filhos de Zebedeu, que eram sócios de Simão,\ntambém ficaram espantados.\nJesus, porém, disse a Simão:\n\"Não tenhas medo!\nDe hoje em diante tu serás pescador de homens\".\n11\nEntão levaram as barcas para a margem,\ndeixaram tudo e seguiram a Jesus.\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-01",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 7,2-4.9-14</div><div> Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)</div><div> 1Jo 3,1-3</div><div> Mt 5,1-12a (Bem-aventuranças)</div></div>",
+  "primeira_leitura": {
+    "referencia": "7,2-4.9-14",
+    "texto": "Eu, João,\n2\nvi um outro anjo,\nque subia do lado onde nasce o sol.\nEle trazia a marca do Deus vivo\ne gritava, em alta voz,\naos quatro anjos que tinham recebido o poder\nde danificar a terra e o mar,\ndizendo-lhes:\n3\n\"Não façais mal à terra, nem ao mar nem às arvores,\naté que tenhamos marcado na fronte\nos servos do nosso Deus\".\n4\nOuvi então o número dos que tinham sido marcados:\neram cento e quarenta e quatro mil,\nde todas as tribos dos filhos de Israel.\n9\nDepois disso, vi uma multidão imensa\nde gente de todas as nações,\ntribos, povos e línguas,\ne que ninguém podia contar.\nEstavam de pé diante do trono e do Cordeiro;\ntrajavam vestes brancas\ne traziam palmas na mão.\n10\nTodos proclamavam com voz forte:\n\"A salvação pertence ao nosso Deus,\nque está sentado no trono, e ao Cordeiro\".\n11\nTodos os anjos estavam de pé, em volta do trono\ne dos Anciãos e dos quatro Seres vivos e prostravam-se,\ncom o rosto por terra, diante do trono.\nE adoravam a Deus, dizendo:\n12\n\"Amém. O louvor, a glória e a sabedoria,\na ação de graças, a honra, o poder e a força\npertencem ao nosso Deus para sempre.\nAmém\"\n13\nE um dos Anciãos falou comigo e perguntou:\n\"Quem são esses vestidos com roupas brancas?\nDe onde vieram?\"\n14\nEu respondi:\n\"Tu é que sabes, meu senhor\".\nE então ele me disse:\n\"Esses são os que vieram da grande tribulação.\nLavaram e alvejaram as suas roupas\nno sangue do Cordeiro\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)",
+    "refrao": "",
+    "texto": "R.\nÉ assim a geração dos que procuram o Senhor!\n1\nAo Senhor pertence a terra e o que ela encerra, *\no mundo inteiro com os seres que o povoam;\n2\nporque ele a tornou firme sobre os mares, *\ne sobre as águas a mantém inabalável.\nR.\n3\n\"Quem subirá até o monte do Senhor, *\nquem ficará em sua santa habitação?\"\n4a\n\"Quem tem mãos puras e inocente coração, *\n4b\nquem não dirige sua  mente para o crime.\nR\n.\n5\nSobre este desce a bênção do Senhor *\ne a recompensa de seu Deus e Salvador\".\n6\n\"É assim a geração dos que o procuram, *\ne do Deus de Israel buscam a face\".\nR.\n2ª Leitura - 1Jo 3,1-\nSEGUNDA LEITURA\nVeremos Deus tal como é.\nLeitura da Primeira Carta de São João\n3,1-3\nCaríssimos,\n1\nvede que grande presente de amor o Pai nos deu:\nde sermos chamados filhos de Deus!\nE nós o somos!\nSe o mundo não nos conhece,\né porque não conheceu o Pai.\n2\nCaríssimos, desde já somos filhos de Deus,\nmas nem sequer se manifestou o que seremos!\nSabemos que,\nquando Jesus se manifestar,\nseremos semelhantes a ele,\nporque o veremos tal como ele é.\n3\nTodo o que espera nele,\npurifica-se a si mesmo,\ncomo também ele é puro.\nPalavra do Senhor.\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados\ne penais a carregar pesado fardo,\ne descanso eu vos darei, diz o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,1-12a",
+    "texto": "5,1-12a\nNaquele tempo,\n1\nvendo Jesus as multidões,\nsubiu ao monte e sentou-se.\nOs discípulos aproximaram-se,\n2\ne Jesus começou a ensiná-los:\n3\n\"Bem-aventurados os pobres em espírito,\nporque deles é o Reino dos Céus.\n4\nBem-aventurados os aflitos,\nporque serão consolados.\n5\nBem-aventurados os mansos,\nporque possuirão a terra.\n6\nBem-aventurados os que têm fome e sede de justiça,\nporque serão saciados.\n7\nBem-aventurados os misericordiosos,\nporque alcançarão misericórdia.\n8\nBem-aventurados os puros de coração,\nporque verão a Deus.\n9\nBem-aventurados os que promovem a paz,\nporque serão chamados filhos de Deus.\n10\nBem-aventurados os que são perseguidos\npor causa da justiça,\nporque deles é o Reino dos Céus.\n11\nBem-aventurados sois vós, quando vos injuriarem\ne perseguirem, e mentindo,\ndisserem todo tipo de mal contra vós,\npor causa de mim.\n12\nAlegrai-vos e exultai,\nporque será grande a vossa recompensa nos céus\".\nPalavra da Salvação."
+  }
+}

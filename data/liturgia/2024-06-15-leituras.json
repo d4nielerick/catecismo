@@ -1,0 +1,23 @@
+{
+  "data": "2024-06-15",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 19,19-21</div><div> Sl 15(16),1-2a e 5.7-8.9-10 (R. cf. 5a)</div><div></div><div> Mt 5,33-37</div></div>",
+  "primeira_leitura": {
+    "referencia": "19,19-21",
+    "texto": "Naqueles dias,\n19\no profeta Elias partiu dali\ne encontrou Eliseu, filho de Safat,\nlavrando a terra com doze juntas de bois;\ne ele mesmo conduzia a última.\nElias, ao passar perto de Eliseu,\nlançou sobre ele o seu manto.\n20\nEntão Eliseu deixou os bois\ne correu atrás de Elias, dizendo:\n\"Deixa-me primeiro ir beijar meu pai e minha mãe,\ndepois te seguirei\".\nElias respondeu:\n\"Vai e volta!\nPois o que te fiz eu?\"\n21\nEle retirou-se,\ntomou a junta de bois e os imolou.\nCom a madeira do arado e da canga assou a carne\ne deu de comer à sua gente.\nDepois levantou-se,\nseguiu Elias e pôs-se ao seu serviço.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 15(16),1-2a.5.7-8.9-10 (R. cf. 5a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é a porção da minha herança.\n1\nGuardai-me, ó Deus, porque em vós me refugio! †\n2a\nDigo ao Senhor: \"Somente vós sois meu Senhor.\n5\nÓ Senhor, sois minha herança e minha taça, *\nmeu destino está seguro em vossas mãos!\nR.\n7\nEu bendigo o Senhor, que me aconselha, *\ne até de noite me adverte o coração.\n8\nTenho sempre o Senhor ante meus olhos, *\npois se o tenho a meu lado não vacilo.\nR.\n9\nEis por que meu coração está em festa, †\nminha alma rejubila de alegria, *\ne até meu corpo no repouso está tranquilo;\n10\npois não haveis de me deixar entregue à morte, *\nnem vosso amigo conhecer a corrupção.\nR.\nEvangelho - Mt 5,33-37\nAclamação ao Evangelho\nSl 118(119),36a.29b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nInclinai meu coração às vossas advertências,\ne dai-me vossa lei como um presente vantajoso!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,33-37",
+    "texto": "5,33-37\nNaquele tempo, disse Jesus aos seus discípulos:\n33\n\"Vós ouvistes o que foi dito aos antigos:\n'Não jurarás falso',\nmas 'cumprirás os teus juramentos feitos ao Senhor'.\n34\nEu, porém, vos digo:\nNão jureis de modo algum:\nnem pelo céu, porque é o trono de Deus;\n35\nnem pela terra,\nporque é o suporte onde apoia os seus pés;\nnem por Jerusalém,\nporque é a cidade do Grande Rei.\n36\nNão jures tão pouco pela tua cabeça,\nporque tu não podes tornar branco ou preto\num só fio de cabelo.\n37\nSeja o vosso 'sim': 'Sim',\ne o vosso 'não': 'Não'.\nTudo o que for além disso vem do Maligno\".\nPalavra da Salvação."
+  }
+}

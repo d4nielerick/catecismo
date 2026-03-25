@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-24",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 19,1-2.9-11.16-20b</div><div> Dn 3,52.53-54.55.56-57 (R. 52b)</div><div></div><div> Mt 13,10-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "19,1-2.9-11.16-20b",
+    "texto": "1\nNo dia em que se cumpriam três meses da saída do Egito,\nIsrael chegou ao deserto do Sinai.\n2\nPartindo de Rafidim,\nchegaram ao deserto do Sinai, onde acamparam.\nIsrael armou ali suas tendas, defronte da montanha.\n9\nE o Senhor falou a Moisés:\n\"Virei a ti numa nuvem escura,\npara que o povo ouça quando falar contigo,\ne creia sempre em ti\".\n10\nTendo Moisés transmitido ao Senhor as palavras do povo,\nO Senhor lhe disse:\n\"Vai ao povo e santifica-os hoje e amanhã.\nEles devem lavar as suas vestes,\n11\ne estar prontos para o terceiro dia,\npois nesse dia o Senhor descerá\ndiante de todo o povo\nsobre a montanha do Sinai\".\n16\nQuando chegou o terceiro dia, ao raiar da manhã,\nhouve trovões e relâmpagos.\nUma nuvem espessa cobriu a montanha,\ne um fortíssimo som de trombetas se fez ouvir.\nNo acampamento o povo se pôs a tremer.\n17\nMoisés fez o povo sair do acampamento\nao encontro de Deus,\ne eles pararam ao pé da montanha.\n18\nTodo o monte Sinai fumegava,\npois o Senhor descera sobre ele em meio ao fogo.\nA fumaça subia como de uma fornalha,\ne todo o monte tremia violentamente.\n19\nO som da trombeta ia aumentando cada vez mais.\nMoisés falava\ne o Senhor lhe respondia através do trovão.\n20b\nO Senhor desceu sobre o monte Sinai\ne chamou Moisés ao cume do monte.\nE Moisés subiu.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Dn 3,52.53-54.55.56-57 (R. 52b)",
+    "refrao": "",
+    "texto": "R.\nA vós louvor, honra e glória eternamente!\n52\nSede bendito, Senhor Deus de nossos pais.*\nA vós louvor, honra e glória eternamente!\nSede bendito, nome santo e glorioso.\nA vós louvor, honra e glória eternamente!\nR.\n53\nNo templo santo onde refulge a vossa glória. *\nA vós louvor, honra e glória eternamente!\n54\nE em vosso trono de poder vitorioso.\nA vós louvor, honra e glória eternamente!\nR.\n55\nSede bendito, que sondais as profundezas*\nA vós louvor, honra e glória eternamente!\ne superior aos querubins vos assentais.\nA vós louvor, honra e glória eternamente!\nR.\n56\nSede bendito no celeste firmamento. *\nA vós louvor, honra e glória eternamente!\nR.\n57\nObras todas do Senhor, glorificai-o. *\nA ele louvor, honra e glória eternamente!\nR.\nEvangelho - Mt 13,10-1\nAclamação ao Evangelho  Cf.\nMt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois, revelaste os mistérios do teu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,10-17",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n13,10-17\nNaquele tempo,\n10\nos discípulos aproximaram-se e disseram a Jesus:\n\"Por que tu falas ao povo em parábolas?\"\n11\nJesus respondeu:\n\"Porque a vós foi dado o conhecimento\ndos mistérios do Reino dos Céus,\nmas a eles não é dado.\n12\nPois à pessoa que tem,\nserá dado ainda mais, e terá em abundância;\nmas à pessoa que não tem,\nserá tirado até o pouco que tem.\n13\nÉ por isso que eu lhes falo em parábolas:\nporque olhando, eles não veem,\ne ouvindo, eles não escutam, nem compreendem.\n14\nDeste modo se cumpre neles a profecia de Isaías:\n'Havereis de ouvir, sem nada entender.\nHavereis de olhar, sem nada ver.\n15\nPorque o coração deste povo se tornou insensível.\nEles ouviram com má vontade\ne fecharam seus olhos,\npara não ver com os olhos\nnem ouvir com os ouvidos,\nnem compreender com o coração,\nde modo que se convertam e eu os cure'.\n16\nFelizes sois vós, porque vossos olhos veem\ne vossos ouvidos ouvem.\n17\nEm verdade vos digo, muitos profetas e justos\ndesejaram ver o que vedes, e não viram,\ndesejaram ouvir o que ouvis, e não ouviram\".\nPalavra da Salvação."
+  }
+}

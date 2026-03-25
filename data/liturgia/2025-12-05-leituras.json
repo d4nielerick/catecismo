@@ -1,0 +1,23 @@
+{
+  "data": "2025-12-05",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 29,17-24</div><div> Sl 26(27),1.4.13-14 (R. 1a)</div><div></div><div> Mt 9,27-31</div></div>",
+  "primeira_leitura": {
+    "referencia": "29,17-24",
+    "texto": "Assim fala o Senhor Deus:\n17\nDentro de pouco tempo,\nnão se transformará o Líbano em jardim?\nE não poderá o jardim tornar-se floresta?\n18\nNaquele dia, os surdos ouvirão as palavras do livro\ne os olhos dos cegos verão,\nno meio das trevas e das sombras.\n19\nOs humildes aumentarão sua alegria no Senhor,\ne os mais pobres dos homens\nse rejubilarão no Santo de Israel;\n20\nfracassou o prepotente, desapareceu o trapaceiro,\ne sucumbiram todos os malfeitores precoces,\n21\nos que faziam os outros pecar por palavras,\ne armavam ciladas ao juiz à porta da cidade\ne atacavam o justo com palavras falsas.\n22\nIsto diz o Senhor\nà casa de Jacó, ele que libertou Abraão:\n\"Agora, Jacó não mais terá que envergonhar-se\nnem seu rosto terá que enrubescer;\n23\nquando contemplarem as obras de minhas mãos,\nhão de honrar meu nome no meio do povo,\nhonrarão o Santo de Jacó,\ne temerão o Deus de Israel;\n24\nos homens de espírito inconstante conseguirão sabedoria\ne os maldizentes concordarão em aprender\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 26(27),1.4.13-14 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é minha luz e salvação.\n1\nO Senhor é minha luz e salvação;*\nde quem eu terei medo?\nO Senhor é a proteção da minha vida;\nperante quem eu tremerei?\nR.\n4\nAo Senhor eu peço apenas uma coisa,*\ne é só isto que eu desejo:\nhabitar no santuário do Senhor*\npor toda a minha vida;\nsaborear a suavidade do Senhor*\ne contemplá-lo no seu templo.\nR.\n13\nSei que a bondade do Senhor eu hei de ver*\nna terra dos viventes.\n14\nEspera no Senhor e tem coragem,*\nespera no Senhor!\nR.\nEvangelho - Mt 9,27-31\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEis que virá o nosso Deus com poder e majestade,\nE ele há de iluminar os olhos dos seus servos!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,27-31",
+    "texto": "9,27-31\nNaquele tempo,\n27\npartindo Jesus, dois cegos o seguiram, gritando:\n\"Tem piedade de nós, filho de Davi!\"\n28\nQuando Jesus entrou em casa,\nos cegos se aproximaram dele.\nEntão Jesus perguntou-lhes:\n\"Vós acreditais que eu posso fazer isso?\"\nEles responderam: \"Sim, Senhor\".\n29\nEntão Jesus tocou nos olhos deles, dizendo:\n\"Faça-se conforme a vossa fé\".\n30\nE os olhos deles se abriram.\nJesus os advertiu severamente:\n\"Tomai cuidado para que ninguém fique sabendo\".\n31\nMas eles saíram,\ne espalharam sua fama por toda aquela região.\nPalavra da Salvação."
+  }
+}

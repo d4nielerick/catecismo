@@ -1,0 +1,23 @@
+{
+  "data": "2026-06-22",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Rs 17,5-8.13-15a.18</div><div> Sl 59(60),3.4-5.11-12a.12b-13 (R. 7b)</div><div></div><div> Mt 7,1-5</div></div>",
+  "primeira_leitura": {
+    "referencia": "17,5-8.13-15a.18",
+    "texto": "Naqueles dias,\n5\nSalmanasar, rei da Assíria, invadiu todo o país.\nE, chegando a Samaria,\nsitiou-a durante três anos.\n6\nNo nono ano de Oseias,\no rei da Assíria tomou Samaria\ne deportou os habitantes de Israel para a Assíria,\nestabelecendo-os em Hala\ne nas margens do Habor, rio de Gozã,\ne nas cidades da Média.\n7\nIsto aconteceu porque os filhos de Israel\npecaram contra o Senhor, seu Deus,\nque os tinha tirado do Egito,\nlibertando-os da opressão do Faraó, rei do Egito,\nporque tinham adorado outros deuses.\n8\nEles seguiram os costumes dos povos\nque o Senhor havia expulsado diante deles,\ne as leis introduzidas pelos reis de Israel.\n13\nO Senhor tinha advertido seriamente Israel e Judá\npor meio de todos os profetas e videntes, dizendo:\n\"Voltai dos vossos maus caminhos\ne observai meus mandamentos e preceitos,\nconforme todas as leis\nque prescrevi a vossos pais\ne que vos comuniquei\npor intermédio de meus servos, os profetas\".\n14\nEles, porém, não prestaram ouvidos,\nmostrando-se tão obstinados como seus pais,\nque não tinham acreditado no Senhor, seu Deus.\n15a\nDesprezaram as suas leis\ne a aliança que tinha feito com seus pais,\ne os testemunhos com que os havia garantido.\n18\nO Senhor indignou-se profundamente\ncontra os filhos de Israel\ne rejeitou-os para longe da sua face,\nrestando apenas a tribo de Judá.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 59(60),3.4-5.11-12a.12b-13 (R. 7b)",
+    "refrao": "",
+    "texto": "R.\nVossa mão nos ajude, ouvi-nos Senhor!\n3\nRejeitastes, ó Deus, vosso povo †\ne arrasastes as nossas fileiras; *\nvós estáveis irado: voltai-vos!\nR.\n4\nAbalastes, partistes a terra, *\nreparai suas brechas, pois treme.\n5\nDuramente provastes o povo, *\ne um vinho atordoante nos destes.\nR.\n11\nQuem me leva à cidade segura, *\ne a Edom quem me vai conduzir,\n12a\nse vós, Deus, rejeitais vosso povo *\ne não mais conduzis nossas tropas?\nR.\nb\nDai-nos, Deus, vosso auxílio na angústia; *\nnada vale o socorro dos homens!\n13\nMas com Deus nós faremos proezas, *\ne ele vai esmagar o opressor.\nR.\nEvangelho - Mt 7,1-5\nAclamação ao Evangelho\nHb 4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor é viva e eficaz:\nela julga os pensamentos e as intenções do coração."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,1-5",
+    "texto": "7,1-5\nNaquele tempo, disse Jesus aos seus discípulos:\n1\n\"Não julgueis, e não sereis julgados.\n2\nPois, vós sereis julgados\ncom o mesmo julgamento com que julgardes;\ne sereis medidos, com a mesma medida com que medirdes.\n3\nPor que observas o cisco no olho do teu irmão,\ne não prestas atenção\nà trave que está no teu próprio olho?\n4\nOu, como podes dizer ao teu irmão:\n'deixa-me tirar o cisco do teu olho',\nquando tu mesmo tens uma trave no teu?\n5\nHipócrita, tira primeiro a trave do teu próprio olho,\ne então enxergarás bem\npara tirar o cisco do olho do teu irmão\".\nPalavra da Salvação."
+  }
+}

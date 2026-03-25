@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-21",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 15,1-6</div><div> Sl 121(122),1-2.3-4a.4b-5 (R. cf. 1)</div><div></div><div> Jo 15,1-8</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,1-6",
+    "texto": "Naqueles dias,\n1\nchegaram alguns da Judeia\ne ensinavam aos irmãos de Antioquia, dizendo:\n\"Vós não podereis salvar-vos,\nse não fordes circuncidados,\ncomo ordena a Lei de Moisés\".\n2\nIsto provocou muita confusão,\ne houve uma grande discussão\nde Paulo e Barnabé com eles.\nFinalmente, decidiram que\nPaulo, Barnabé e alguns outros\nfossem a Jerusalém, para tratar dessa questão\ncom os apóstolos e os anciãos.\n3\nDepois de terem sido acompanhados pela comunidade,\nPaulo e Barnabé atravessaram a Fenícia e a Samaria.\nContaram sobre a conversão dos pagãos,\ncausando grande alegria entre todos os irmãos.\n4\nChegando a Jerusalém,\nforam recebidos pelos apóstolos e os anciãos,\ne narraram as maravilhas\nque Deus tinha realizado por meio deles.\n5\nAlguns, dos que tinham pertencido ao partido dos fariseus\ne que haviam abraçado a fé,\nlevantaram-se e disseram\nque era preciso circuncidar os pagãos\ne obrigá-los a observar a Lei de Moisés.\n6\nEntão, os apóstolos e os anciãos\nreuniram-se para tratar desse assunto.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 121(122),1-2.3-4a.4b-5 (R. cf. 1)",
+    "refrao": "",
+    "texto": "R.\nQue alegria, quando ouvi que me disseram:\nVamos à casa do Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nQue alegria, quando ouvi que me disseram: *\n\"Vamos à casa do Senhor!\"\n2\nE agora nossos pés já se detêm, *\nJerusalém, em tuas portas.\nR.\n3\nJerusalém, cidade bem edificada *\nnum conjunto harmonioso;\n4a\npara lá sobem as tribos de Israel,*\nas tribos do Senhor.\nR.\nb\nPara louvar, segundo a lei de Israel, *\no nome do Senhor.\n5\nA sede da justiça lá está *\ne o trono de Davi.\nR.\nAclamação ao Evangelho\nJo 15,4a.5b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFicai em mim, e eu em vós ficarei, diz Jesus;\nquem em mim permanece, há de dar muito fruto."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,1-8",
+    "texto": "15,1-8\nNaquele tempo, Jesus disse a seus discípulos:\n1\n\"Eu sou a videira verdadeira\ne meu Pai é o agricultor.\n2\nTodo ramo que em mim não dá fruto ele o corta;\ne todo ramo que dá fruto,\nele o limpa, para que dê mais fruto ainda.\n3\nVós já estais limpos\npor causa da palavra que eu vos falei.\n4\nPermanecei em mim\ne eu permanecerei em vós.\nComo o ramo não pode dar fruto por si mesmo,\nse não permanecer na videira,\nassim também vós não podereis dar fruto,\nse não permanecerdes em mim.\n5\nEu sou a videira e vós os ramos.\nAquele que permanece em mim, e eu nele,\nesse produz muito fruto;\nporque sem mim nada podeis fazer.\n6\nQuem não permanecer em mim,\nserá lançado fora como um ramo e secará.\nTais ramos são recolhidos,\nlançados no fogo e queimados.\n7\nSe permanecerdes em mim\ne minhas palavras permanecerem em vós,\npedi o que quiserdes\ne vos será dado.\n8\nNisto meu Pai é glorificado:\nque deis muito fruto\ne vos torneis meus discípulos\".\nPalavra da Salvação."
+  }
+}

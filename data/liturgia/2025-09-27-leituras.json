@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-27",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Zc 2,5-9.14-15a</div><div> Jr 31,10.11-12ab.13 (R. 10d)</div><div></div><div> Lc 9,43b-45</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,5-9.14-15a",
+    "texto": "5\nLevantei os olhos\ne eis que vi um homem com um cordel de medir na mão.\n6\nPerguntei-lhe:\n\"Aonde vais?\"\nRespondeu-me:\n\"Vou medir Jerusalém,\npara ver qual é a sua largura\ne o seu comprimento\".\n7\nEis que apareceu o anjo que falava em mim,\nenquanto lhe vinha ao encontro um outro anjo,\n8\nque lhe disse:\n\"Corre a falar com esse moço, dizendo:\nA população de Jerusalém precisa ficar sem muralha,\nem vista da multidão de homens e animais\nque vivem no seu interior.\n9\nEu serei para ela, diz o Senhor,\nmuralha de fogo ao seu redor,\ne mostrarei minha glória no meio dela.\n14\nRejubila, alegra-te, cidade de Sião,\neis que venho para habitar no meio de ti,\ndiz o Senhor.\n15a\nMuitas nações se aproximarão do Senhor,\nnaquele dia,\ne serão o seu povo.\nHabitarei no meio de ti\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Jr 31,10.11-12ab.13 (R. 10d)",
+    "refrao": "",
+    "texto": "R.\nO Senhor nos guardará qual pastor a seu rebanho.\n10\nOuvi, nações, a palavra do Senhor *\ne anunciai-a nas ilhas mais distantes:\n\"Quem dispersou Israel, vai congregá-lo, *\ne o guardará qual pastor a seu rebanho!\"\nR.\n11\nPois, na verdade, o Senhor remiu Jacó *\ne o libertou do poder do prepotente.\n12a\nVoltarão para o monte de Sião, †\nentre brados e cantos de alegria *\nb\nafluirão para as bênçãos do Senhor:\nR.\n13\nEntão a virgem dançará alegremente, *\ntambém o jovem e o velho exultarão;\nmudarei em alegria o seu luto, *\nserei consolo e conforto após a guerra.\nR.\nEvangelho - Lc 9,43b-4\nAclamação ao Evangelho  cf.\n2Tm 1,10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus Cristo Salvador destruiu o mal e a morte;\nfez brilhar pelo Evangelho a luz e a vida imperecíveis."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,43b-45",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n9,43b-45\nNaquele tempo,\n43b\nTodos estavam admirados\ncom todas as coisas que Jesus fazia.\nEntão Jesus disse a seus discípulos:\n44\n\"Prestai bem atenção às palavras que vou dizer:\nO Filho do Homem vai ser entregue nas mãos dos homens\".\n45\nMas os discípulos não compreendiam o que Jesus dizia.\nO sentido lhes ficava escondido,\nde modo que não podiam entender;\ne eles tinham medo de fazer perguntas sobre o assunto.\nPalavra da Salvação."
+  }
+}

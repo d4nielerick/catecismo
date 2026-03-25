@@ -1,0 +1,23 @@
+{
+  "data": "2024-04-22",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 11,1-18</div><div> Sl 41(42),2.3 e 42(43),3.4 (R. cf. Sl 41(42), 3a)</div><div></div><div>Jo 10,1-10</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,1-18",
+    "texto": "Naqueles dias,\n1\nOs apóstolos e os irmãos, que viviam na Judeia,\nsouberam que também os pagãos\nhaviam acolhido a Palavra de Deus.\n2\nQuando Pedro subiu a Jerusalém,\nos fiéis de origem judaica\ncomeçaram a discutir com ele, dizendo:\n3\n\"Tu entraste na casa de pagãos e comeste com eles!\"\n4\nEntão, Pedro começou a contar-lhes,\nponto por ponto, o que havia acontecido:\n5\n\"Eu estava na cidade de Jope\ne, ao fazer oração, entrei em êxtase\ne tive a seguinte visão:\nvi uma coisa parecida com uma grande toalha\nque, sustentada pelas quatro pontas,\ndescia do céu e chegava até junto de mim.\n6\nOlhei atentamente e vi dentro dela\nquadrúpedes da terra, animais selvagens,\nrépteis e aves do céu.\n7\nDepois ouvi uma voz que me dizia:\n'Levanta-te, Pedro, mata e come'.\n8\nEu respondi:\n'De modo nenhum, Senhor!\nPorque jamais entrou coisa profana e impura\nna minha boca'.\n9\nA voz me disse pela segunda vez:\n'Não chames impuro o que Deus purificou'.\n10\nIsso repetiu-se por três vezes.\nDepois a coisa foi novamente levantada para o céu.\n11\nNesse momento, três homens se apresentaram\nna casa em que nos encontrávamos.\nTinham sido enviados de Cesareia, à minha procura.\n12\nO Espírito me disse que eu fosse com eles sem hesitar.\nOs seis irmãos que estão aqui me acompanharam\ne nós entramos na casa daquele homem.\n13\nEntão ele nos contou que tinha visto um anjo\napresentar-se em sua casa e dizer:\n'Manda alguém a Jope para chamar Simão,\nconhecido como Pedro.\n14\nEle te falará de acontecimentos\nque trazem a salvação\npara ti e para toda a tua família'.\n15\nLogo que comecei a falar,\no Espírito Santo desceu sobre eles,\nda mesma forma que desceu sobre nós no princípio.\n16\nEntão eu me lembrei do que o Senhor havia dito:\n'João batizou com água,\nmas vós sereis batizados no Espírito Santo'.\n17\nDeus concedeu a eles o mesmo dom que deu a nós\nque acreditamos no Senhor Jesus Cristo.\nQuem seria eu para me opor à ação de Deus?\"\n18\nAo ouvirem isso, os fiéis de origem judaica se acalmaram\ne glorificavam a Deus, dizendo:\n\"Também aos pagãos Deus concedeu a conversão\nque leva para a vida!\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 41(42),2-3; 42(43),3.4 (R. cf. Sl 41[42],3a)",
+    "refrao": "",
+    "texto": "R.\nMinha alma suspira por vós, ó meu Deus.\nOu:\nAleluia, Aleluia, Aleluia.\n41,2\nAssim  como a corça suspira *\npelas águas correntes,\nsuspira igualmente minh'alma\npor vós, ó meu Deus!\nR.\n3\nA minh'alma tem sede de Deus, *\ne deseja o Deus vivo.\nQuando terei a alegria de ver *\na face de Deus?\nR.\n42,3\nEnviai vossa luz, vossa verdade: *\nelas serão o meu guia;\nque me levem ao vosso Monte santo, *\naté a vossa morada!\nR.\n4\nEntão irei aos altares do Senhor, *\nDeus da minha alegria.\nVosso louvor cantarei, ao som da harpa, *\nmeu Senhor e meu Deus!\nR.\nEvangelho - Jo 10,1-10\nAclamação ao Evangelho\nJo 10,14\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou o bom pastor; conheço minhas ovelhas\ne elas me conhecem, assim fala o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,1-10",
+    "texto": "10,1-10\nNaquele tempo, disse Jesus:\n1\n\"Em verdade, em verdade vos digo,\nquem não entra no redil das ovelhas pela porta,\nmas sobe por outro lugar,\né ladrão e assaltante.\n2\nQuem entra pela porta é o pastor das ovelhas.\n3\nA esse o porteiro abre,\ne as ovelhas escutam a sua voz;\nele chama as ovelhas pelo nome\ne as conduz para fora.\n4\nE, depois de fazer sair todas as que são suas,\ncaminha à sua frente,\ne as ovelhas o seguem,\nporque conhecem a sua voz.\n5\nMas não seguem um estranho,\nantes fogem dele,\nporque não conhecem a voz dos estranhos\".\n6\nJesus contou-lhes esta parábola,\nmas eles não entenderam o que ele queria dizer.\n7\nEntão Jesus continuou:\n\"Em verdade, em verdade vos digo,\neu sou a porta das ovelhas.\n8\nTodos aqueles que vieram antes de mim\nsão ladrões e assaltantes,\nmas as ovelhas não os escutaram.\n9\nEu sou a porta. Quem entrar por mim, será salvo;\nentrará e sairá e encontrará pastagem.\n10\nO ladrão só vem para roubar,\nmatar e destruir.\nEu vim para que tenham vida\ne a tenham em abundância\".\nPalavra da Salvação."
+  }
+}

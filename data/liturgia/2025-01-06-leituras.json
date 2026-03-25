@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-06",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 3,22-4,6</div><div> Sl 2,7-8.10-11 (R. 8a)</div><div></div><div> Mt 4,12-17.23-25</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,22-4,6",
+    "texto": "Caríssimos,\n22\nqualquer coisa que pedimos recebemos dele,\nporque guardamos os seus mandamentos\ne fazemos o que é do seu agrado.\n23\nEste é o seu mandamento:\nque creiamos no nome do seu Filho, Jesus Cristo,\ne nos amemos uns aos outros,\nde acordo com o mandamento que ele nos deu.\n24\nQuem guarda os seus mandamentos\npermanece com Deus e Deus permanece com ele.\nQue ele permanece conosco,\nsabemo-lo pelo Espírito que ele nos deu.\n4,1\nCaríssimos,\nnão acrediteis em qualquer espírito,\nmas examinai os espíritos para ver se são de Deus,\npois muitos falsos profetas vieram ao mundo.\n2\nEste é o critério para saber se uma inspiração vem de Deus:\ntodo espírito que leva a professar\nque Jesus Cristo veio na carne\né de Deus;\n3\ne todo espírito\nque não professa a fé em Jesus\nnão é de Deus;\né o espírito do Anticristo.\nOuvistes dizer que o Anticristo virá;\npois bem, ele já está no mundo.\n4\nFilhinhos, vós sois de Deus\ne vós vencestes o Anticristo.\nPois convosco está quem é maior\ndo que aquele que está no mundo.\n5\nOs vossos adversários são do mundo;\npor isso, agem conforme o mundo,\ne o mundo lhes presta ouvidos.\n6\nNós somos de Deus.\nQuem conhece a Deus, escuta-nos;\nquem não é de Deus não nos escuta.\nNisto reconhecemos o espírito da verdade\ne o espírito do erro.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 2,7-8.10-11 (R.8a)",
+    "refrao": "",
+    "texto": "R.\nEu te darei por tua herança os povos todos.\n7\nO decreto do Senhor promulgarei, †\nfoi assim que me falou o Senhor Deus: *\n\"Tu és meu Filho, e eu hoje te gerei!\n8\nPodes pedir-me, e em resposta eu te darei †\npor tua herança os povos todos e as nações, *\ne há de ser a terra inteira o teu domínio.\nR.\n10\nE agora, poderosos, entendei; *\nsoberanos, aprendei esta lição:\n11\nCom temor servi a Deus, rendei-lhe glória *\ne prestai-lhe homenagem com respeito!\nR.\nEvangelho - Mt 4,12-17\nAclamação ao Evangelho\nMt 4,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus pregava a Boa-Nova, o Reino anunciando,\ne curava toda espécie de doenças entre o povo."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "4,12-17.23-25",
+    "texto": "4,12-17.23-25\nNaquele tempo,\n12\nao saber que João tinha sido preso,\nJesus voltou para a Galileia.\n13\nDeixou Nazaré e foi morar em Cafarnaum,\nque fica às margens do mar da Galileia,\n14\nno território de Zabulon e Neftali,\npara se cumprir o que foi dito pelo profeta Isaías:\n15\n\"Terra de Zabulon, terra de Neftali, caminho do mar,\nregião do outro lado do rio Jordão, Galileia dos pagãos!\n16\nO povo que vivia nas trevas viu uma grande luz;\ne para os que viviam na região escura da morte\nbrilhou uma luz\".\n17\nDaí em diante, Jesus começou a pregar, dizendo:\n\"Convertei-vos, porque o Reino dos Céus está próximo\".\n23\nJesus andava por toda a Galileia,\nensinando em suas sinagogas,\npregando o Evangelho do Reino\ne curando todo tipo de doença e enfermidade do povo.\n24\nE sua fama espalhou-se por toda a Síria.\nLevavam-lhe todos os doentes,\nque sofriam diversas enfermidades e tormentos:\nendemoninhados, epiléticos e paralíticos.\nE Jesus os curava.\n25\nNumerosas multidões o seguiam,\nvindas da Galileia, da Decápole,\nde Jerusalém, da Judeia,\ne da região além do Jordão.\nPalavra da Salvação."
+  }
+}

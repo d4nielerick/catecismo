@@ -1,0 +1,23 @@
+{
+  "data": "2024-12-12",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 4,4-7</div><div> Sl 95(96),1-2a.2b-3.10 (R. 3a)</div><div></div><div> Lc 1,39-47</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,4-7",
+    "texto": "Irmãos,\n4\nquando se completou o tempo previsto,\nDeus enviou o seu Filho, nascido de uma mulher,\nnascido sujeito à Lei,\n5\na fim de resgatar os que eram sujeitos à Lei\ne para que todos recebêssemos a filiação adotiva.\n6\nE porque sois filhos,\nDeus enviou aos nossos corações o Espírito do seu\nFilho, que clama: Abá - ó Pai!\n7\nAssim já não és mais escravo, mas filho;\ne se és filho, és também herdeiro:\ntudo isso, por graça de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),1-2a.2b-3.10 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nManifestai a sua glória entre as nações.\n1\nCantai ao Senhor Deus um canto novo, †\ncantai ao Senhor Deus, ó terra inteira! *\n2a\nCantai e bendizei seu santo nome!\nR.\n2b\nDia após dia anunciai sua salvação, †\n3\nmanifestai a sua glória entre as nações, *\ne entre os povos do universo seus prodígios!\nR.\n10\nPublicai entre as nações: \"Reina o Senhor! †\nEle firmou o universo inabalável, *\ne os povos ele julga com justiça\".\nR.\nAclamação ao Evangelho\nCf. Lc 1,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMaria, alegra-te, ó cheia de graça,\no Senhor é contigo;\nés bendita entre todas as mulheres da terra!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,39-47",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n1,39-47\n39\nNaqueles dias,\nMaria partiu para a região montanhosa,\ndirigindo-se, apressadamente,\na uma cidade da Judéia.\n40\nEntrou na casa de Zacarias\ne cumprimentou Isabel.\n41\nQuando Isabel ouviu a saudação de Maria,\na criança pulou no seu ventre\ne Isabel ficou cheia do Espírito Santo.\n42\nCom um grande grito, exclamou:\n\"Bendita és tu entre as mulheres\ne bendito é o fruto do teu ventre!\n43\nComo posso merecer\nque a mãe do meu Senhor me venha visitar?\n44\nLogo que a tua saudação chegou aos meus ouvidos,\na criança pulou de alegria no meu ventre.\n45\nBem-aventurada aquela que acreditou,\nporque será cumprido,\no que o Senhor lhe prometeu\".\n46\nEntão Maria disse:\n\"A minha alma engrandece o Senhor,\n47\ne se alegrou o meu espírito em Deus, meu Salvador\".\nPalavra da Salvação."
+  }
+}

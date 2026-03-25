@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-29",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Nm 11,25-29</div><div> Sl 18(19),8.10.12-13.14 (R. 8a,9b)</div><div> Tg 5,1-6</div><div> Mc 9,38-43.45.47-48</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,25-29",
+    "texto": "Naqueles dias,\n25\no Senhor desceu na nuvem e falou a Moisés.\nRetirou um pouco do espírito que Moisés possuía\ne o deu aos setenta anciãos.\nAssim que repousou sobre eles o espírito,\npuseram-se a profetizar,\nmas não continuaram.\n26\nDois homens, porém, tinham ficado no acampamento.\nUm chamava-se Eldad e o outro Medad.\nO espírito repousou igualmente sobre os dois,\nque estavam na lista, mas não tinham ido à Tenda,\ne eles profetizavam no acampamento.\n27\nUm jovem correu a avisar Moisés\nque Eldad e Medad estavam profetizando no acampamento.\n28\nJosué, filho de Nun,\najudante de Moisés desde a juventude, disse:\n\"Moisés, meu Senhor, manda que eles se calem!\"\n29\nMoisés respondeu:\n\"Tens ciúmes por mim?\nQuem dera que todo o povo do Senhor fosse profeta,\ne que o Senhor lhe concedesse o seu espírito!\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 18(19),8.10.12-13.14 (R.8a 9b)",
+    "refrao": "",
+    "texto": "R.\nA lei do Senhor Deus é perfeita, alegria ao coração.\n8\nA lei do Senhor Deus é perfeita, *\nconforto para a alma!\nO testemunho do Senhor é fiel, *\nsabedoria dos humildes.\nR.\n10\nÉ puro o temor do Senhor, *\nimutável para sempre.\nOs julgamentos do Senhor são corretos *\ne justos igualmente.\nR.\n12\nE vosso servo, instruído por elas, *\nse empenha em guardá-las.\n13\nMas quem pode perceber suas faltas? *\nPerdoai as que não vejo!\nR.\n14\nE preservai o vosso servo do orgulho: *\nnão domine sobre mim!\nE assim puro, eu serei preservado*\ndos delitos mais perversos.\nR.\n2ª Leitura - Tg 5,1-6\nSEGUNDA LEITURA\nVossa riqueza está apodrecendo.\nLeitura da Carta de São Tiago\n5,1-6\n1\nE agora, ricos, chorai e gemei,\npor causa das desgraças que estão para cair sobre vós.\n2\nVossa riqueza está apodrecendo,\ne vossas roupas estão carcomidas pelas traças.\n3\nVosso ouro e vossa prata estão enferrujados,\ne a ferrugem deles vai servir de testemunho contra vós\ne devorar vossas carnes, como fogo!\nAmontoastes tesouros nos últimos dias.\n4\nVede: o salário dos trabalhadores\nque ceifaram os vossos campos,\nque vós deixastes de pagar,\nestá gritando,\ne o clamor dos trabalhadores\nchegou aos ouvidos do Senhor todo-poderoso.\n5\nVós vivestes luxuosamente na terra,\nentregues à boa vida,\ncevando os vossos corações para o dia da matança.\n6\nCondenastes o justo e o assassinastes;\nele não resiste a vós.\nPalavra do Senhor.\nAclamação ao Evangelho  cf.\nJo 17,17b.a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVossa palavra é verdade, orienta e dá vigor;\nna verdade santifica vosso povo, ó Senhor!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,38-43.45.47-48",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n9,38-43.45.47-48\nNaquele tempo,\n38\nJoão disse a Jesus:\n\"Mestre, vimos um homem expulsar demônios em teu nome.\nMas nós o proibimos, porque ele não nos segue\".\n39\nJesus disse:\n\"Não o proibais, pois ninguém faz milagres em meu nome\npara depois falar mal de mim.\n40\nQuem não é contra nós é a nosso favor.\n41\nEm verdade eu vos digo:\nquem vos der a beber um copo de água,\nporque sois de Cristo,\nnão ficará sem receber a sua recompensa.\n42\nE, se alguém escandalizar\num destes pequeninos que creem,\nmelhor seria que fosse jogado no mar\ncom uma pedra de moinho amarrada ao pescoço.\n43\nSe tua mão te leva a pecar, corta-a!\nÉ melhor entrar na Vida sem uma das mãos,\ndo que, tendo as duas, ir para o inferno,\npara o fogo que nunca se apaga.\n45\nSe teu pé te leva a pecar, corta-o!\nÉ melhor entrar na Vida sem um dos pés,\ndo que, tendo os dois, ser jogado no inferno.\n47\nSe teu olho te leva a pecar, arranca-o!\nÉ melhor entrar no Reino de Deus com um olho só,\ndo que, tendo os dois, ser jogado no inferno,\n48\n'onde o verme deles não morre,\ne o fogo não se apaga'\".\nPalavra da Salvação."
+  }
+}

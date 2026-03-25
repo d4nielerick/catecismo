@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-17",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 12,12-14.27-31a</div><div> Sl 99(100),2.3.4.5 (R. 3c)</div><div></div><div> Lc 7,11-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,12-14.27-31a",
+    "texto": "Irmãos,\n12\ncomo o corpo é um,\nembora tenha muitos membros,\ne como todos os membros do corpo,\nembora sejam muitos,\nformam um só corpo,\nassim também acontece com Cristo.\n13\nDe fato, todos nós,\njudeus ou gregos, escravos ou livres,\nfomos batizados num único Espírito,\npara formarmos um único corpo,\ne todos nós bebemos de um único Espírito.\n14\nCom efeito,\no corpo não é feito de um membro apenas,\nmas de muitos membros.\n27\nVós, todos juntos, sois o corpo de Cristo\ne, individualmente, sois membros desse corpo.\n28\nE, na Igreja, Deus colocou,\nem primeiro lugar, os apóstolos;\nem segundo lugar, os profetas;\nem terceiro lugar,\nos que têm o dom e a missão de ensinar;\ndepois, outras pessoas com dons diversos, a saber:\ndom de milagres, dom de curas,\ndom para obras de misericórdia,\ndom de governo e direção, dom de línguas.\n29\nAcaso todos são apóstolos?\nTodos são profetas?\nTodos ensinam?\nTodos realizam milagres?\n30\nTodos têm o dom das curas?\nTodos falam em línguas?\nTodos as interpretam?\n31a\nAspirai aos dons mais elevados.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 99(100),2.3.4.5 (R. 3c)",
+    "refrao": "",
+    "texto": "R.\nNós somos o seu povo e seu rebanho.\n2\nAclamai o Senhor, ó terra inteira, †\nservi ao Senhor com alegria, *\nide a ele cantando jubilosos!\nR.\n3\nSabei que o Senhor, só ele, é Deus, †\nEle mesmo nos fez, e somos seus, *\nnós somos seu povo e seu rebanho.\nR.\n4\nEntrai por suas portas dando graças, †\ne em seus átrios com hinos de louvor; *\ndai-lhe graças, seu nome bendizei!\nR.\n5\nSim, é bom o Senhor e nosso Deus, †\nsua bondade perdura para sempre, *\nseu amor é fiel eternamente!\nR.\nAclamação ao Evangelho\nLc 7,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nUm grande profeta surgiu entre nós,\ne Deus visitou o seu povo."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,11-17",
+    "texto": "7,11-17\nNaquele tempo,\n11\nJesus dirigiu-se a uma cidade chamada Naim.\nCom ele iam seus discípulos\ne uma grande multidão.\n12\nQuando chegou à porta da cidade,\neis que levavam um defunto, filho único;\ne sua mãe era viúva.\nGrande multidão da cidade a acompanhava.\n13\nAo vê-la, o Senhor sentiu compaixão para com ela\ne lhe disse:\n\"Não chores!\"\n14\nAproximou-se, tocou o caixão,\ne os que o carregavam pararam.\nEntão, Jesus disse:\n\"Jovem, eu te ordeno, levanta-te!\"\n15\nO que estava morto sentou-se e começou a falar.\nE Jesus o entregou à sua mãe.\n16\nTodos ficaram com muito medo\ne glorificavam a Deus, dizendo:\n\"Um grande profeta apareceu entre nós\ne Deus veio visitar o seu povo\".\n17\nE a notícia do fato espalhou-se pela Judeia inteira,\ne por toda a redondeza.\nPalavra da Salvação."
+  }
+}

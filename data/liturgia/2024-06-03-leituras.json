@@ -1,0 +1,23 @@
+{
+  "data": "2024-06-03",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Pd 1,2-7</div><div> Sl 90(91),1-2.14-15ab.15c-16 (R. 2b)</div><div></div><div> Mc 12,1-12</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,2-7",
+    "texto": "Caríssimos,\n2\ngraça e paz vos sejam concedidas abundantemente,\nporque conheceis Deus e Jesus, nosso Senhor.\n3\nO seu divino poder nos deu tudo o que contribui\npara a vida e para a piedade,\nmediante o conhecimento daquele que,\npela sua própria glória e virtude, nos chamou.\n4\nPor meio de tudo isso nos foram dadas\nas preciosas promessas, as maiores que há,\na fim de que vos tornásseis\nparticipantes da natureza divina,\ndepois de libertos da corrupção,\nda concupiscência no mundo.\n5\nPor isso mesmo, dedicai todo o esforço\nem juntar à vossa fé a virtude,\nà virtude o conhecimento,\n6\nao conhecimento o autodomínio,\nao autodomínio a perseverança,\nà perseverança a piedade,\n7\nà piedade o amor fraterno\ne ao amor fraterno, a caridade.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 90(91),1-2.14-15ab.15c-16 (R. 2b)",
+    "refrao": "",
+    "texto": "R.\nVós sois meu Deus, no qual confio inteiramente.\n1\nQuem habita ao abrigo do Altíssimo *\ne vive à sombra do Senhor onipotente,\n2\ndiz ao Senhor: \"Sois meu refúgio e proteção, *\nsois o meu Deus, no qual confio inteiramente\".\nR.\n14\n\"Porque a mim se confiou, hei de livrá-lo *\ne protegê-lo, pois meu nome ele conhece.\n15a\nAo invocar-me hei de ouvi-lo e atendê-lo, *\nb\na seu lado eu estarei em suas dores\nR.\nc\nHei de livrá-lo e de glória coroá-lo, †\n16\nvou conceder-lhe vida longa e dias plenos, *\ne vou mostrar-lhe minha graça e salvação\".\nR.\nEvangelho - Mc 12,1-12\nAclamação ao Evangelho  Cf.\nAp 1,5ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus Cristo, a fiel testemunha,\nprimogênito dos mortos,\nnos amou e do pecado nos lavou,\nem seu sangue derramado."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,1-12",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n12,1-12\nNaquele tempo,\n1\nJesus começou a falar aos sumos sacerdotes,\nmestres da Lei e anciãos, usando parábolas:\n\"Um homem plantou uma vinha, cercou-a, fez um lagar\ne construiu uma torre de guarda.\nDepois arrendou a vinha a alguns agricultores,\ne viajou para longe.\n2\nNa época da colheita,\nele mandou um empregado aos agricultores\npara receber a sua parte dos frutos da vinha.\n3\nMas os agricultores pegaram no empregado,\nbateram nele,\ne o mandaram de volta sem nada.\n4\nEntão o dono da vinha\nmandou de novo mais um empregado.\nOs agricultores bateram na cabeça dele e o insultaram.\n5\nEntão o dono mandou ainda mais outro,\ne eles o mataram.\nTrataram da mesma maneira muitos outros,\nbatendo em uns e matando outros.\n6\nRestava-lhe ainda alguém: seu filho querido.\nPor último, ele mandou o filho\naté aos agricultores,\npensando: 'Eles respeitarão meu filho'.\n7\nMas aqueles agricultores disseram uns aos outros:\n'Esse é o herdeiro.\nVamos matá-lo, e a herança será nossa'.\n8\nEntão agarraram o filho, o mataram,\ne o jogaram fora da vinha.\n9\nQue fará o dono da vinha?\nEle virá, destruirá os agricultores,\ne entregará a vinha a outros.\n10\nPor acaso, não lestes na Escritura:\n'A pedra que os construtores deixaram de lado,\ntornou-se a pedra mais importante;\n11\nisso foi feito pelo Senhor\ne é admirável aos nossos olhos'?\"\n12\nEntão os chefes dos judeus procuraram prender Jesus,\npois compreenderam\nque havia contado a parábola para eles.\nPorém, ficaram com medo da multidão\ne, por isso, deixaram Jesus e foram-se embora.\nPalavra da Salvação."
+  }
+}

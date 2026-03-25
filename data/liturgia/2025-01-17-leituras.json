@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-17",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 4,1-5.11</div><div> Sl 77(78),3 e 4bc.6c-7.8 (R. cf. 7c)</div><div></div><div> Mc 2,1-12</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,1-5.11",
+    "texto": "Irmãos,\n1\ntenhamos cuidado,\nenquanto nos é oferecida a oportunidade\nde entrar no repouso de Deus,\nnão aconteça que alguém de vós fique para trás.\n2\nTambém nós, como eles, recebemos uma Boa-Nova.\nMas a proclamação da palavra de nada lhes adiantou,\npor não ter sido acompanhada da fé\nnaqueles que a tinham ouvido,\n3\nenquanto nós, que acreditamos,\nentramos no seu repouso.\nÉ assim como ele falou:\n\"Por isso jurei na minha ira:\njamais entrarão no meu repouso\".\nIsso, não obstante as obras de Deus estarem terminadas\ndesde a criação do mundo.\n4\nPois, em certos lugares, assim falou do sétimo dia:\n\"E Deus repousou no sétimo dia de todas as suas obras\",\n5\ne ainda novamente:\n\"Não entrarão no meu repouso\".\n11\nEsforcemo-nos, portanto, por entrar neste repouso,\npara que ninguém repita\no acima referido exemplo de desobediência.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 77(78),3 e 4bc.6c-7.8 (R. cf. 7c)",
+    "refrao": "",
+    "texto": "R.\nNão vos esqueçais das obras do Senhor!\n3\nTudo aquilo que ouvimos e aprendemos, *\ne transmitiram para nós os nossos pais,\n4b\nà nova geração nós contaremos:*\nc\nAs grandezas do Senhor e seu poder\nR.\n6c\nLevantem-se e as contem a seus filhos, *\n7\npara que ponham no Senhor sua esperança;\ndas obras do Senhor não se esqueçam, *\ne observem fielmente os seus preceitos.\nR.\n8\nNem se tornem, a exemplo de seus pais, *\nrebelde e obstinada geração,\numa raça de inconstante coração, *\ninfiel ao Senhor Deus, em seu espírito.\nR.\nAclamação ao Evangelho\nLc 7,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nUm grande profeta surgiu entre nós\ne Deus visitou o seu povo, aleluia."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "2,1-12",
+    "texto": "2,1-12\n1\nAlguns dias depois,\nJesus entrou de novo em Cafarnaum.\nLogo se espalhou a notícia de que ele estava em casa.\n2\nE reuniram-se ali tantas pessoas,\nque já não havia lugar, nem mesmo diante da porta.\nE Jesus anunciava-lhes a Palavra.\n3\nTrouxeram-lhe, então, um paralítico,\ncarregado por quatro homens.\n4\nMas não conseguindo chegar até Jesus,\npor causa da multidão,\nabriram então o teto,\nbem em cima do lugar onde ele se encontrava.\nPor essa abertura desceram a cama\nem que o paralítico estava deitado.\n5\nQuando viu a fé daqueles homens,\nJesus disse ao paralítico:\n\"Filho, os teus pecados estão perdoados\".\n6\nOra, alguns mestres da Lei,\nque estavam ali sentados,\nrefletiam em seus corações:\n7\n\"Como este homem pode falar assim?\nEle está blasfemando:\nninguém pode perdoar pecados, a não ser Deus\".\n8\nJesus percebeu logo\no que eles estavam pensando no seu íntimo,\ne disse:\n\"Por que pensais assim em vossos corações?\n9\nO que é mais fácil:\ndizer ao paralítico:\n'Os teus pecados estão perdoados',\nou dizer: 'Levanta-te, pega a tua cama e anda'?\n10\nPois bem, para que saibais que o Filho do Homem\ntem, na terra, poder de perdoar pecados,\n- disse ele ao paralítico: -\n11\neu te ordeno:\nlevanta-te, pega tua cama, e vai para tua casa!\"\n12\nO paralítico então se levantou\ne, carregando a sua cama, saiu diante de todos.\nE ficaram todos admirados\ne louvavam a Deus, dizendo:\n\"Nunca vimos uma coisa assim\".\nPalavra da Salvação."
+  }
+}

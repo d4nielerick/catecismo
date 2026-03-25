@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 14,14-19</div><div> Sl 95(96),10.11-12.13 (R. 13b)</div><div></div><div> Lc 21,5-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "14,14-19",
+    "texto": "Eu, João,\n14\nna minha visão, vi uma nuvem branca\ne sentado na nuvem\nalguém que parecia um \"filho de homem\".\nTinha na cabeça uma coroa de ouro\ne, nas mãos, uma foice afiada.\n15\nSaiu do Templo um outro anjo,\ngritando em alta voz\npara aquele que estava sentado na nuvem:\n\"Lança tua foice, e ceifa.\nChegou a hora da colheita.\nA seara da terra está madura!\"\n16\nE aquele que estava sentado na nuvem lançou a foice,\ne a terra foi ceifada.\n17\nEntão saiu do templo que está no céu mais um anjo.\nTambém ele tinha nas mãos uma foice afiada.\n18\nE saiu, de junto do altar, outro anjo ainda,\naquele que tem o poder sobre o fogo.\nEle gritou em alta voz\npara aquele que segurava a foice afiada:\n\"Lança a foice\ne colhe os cachos da videira da terra,\nporque as uvas já estão maduras\".\n19\nE o anjo lançou a foice afiada na terra,\ne colheu as uvas da videira da terra.\nDepois, despejou as uvas\nno grande lagar do furor de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),10.11-12.13 (R. 13b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor vem julgar nossa terra.\n10\nPublicai entre as nações: \"Reina o Senhor!\" †\nEle firmou o universo inabalável, *\ne os povos ele julga com justiça.\nR.\n11\nO céu se rejubile e exulte a terra, *\naplauda o mar com o que vive em suas águas;\n12\nos campos com seus frutos rejubilem *\ne exultem as florestas e as matas\nR.\n13\nna presença do Senhor, pois ele vem, *\nporque vem para julgar a terra inteira.\nGovernará o mundo todo com justiça, *\ne os povos julgará com lealdade.\nR.\nEvangelho - Lc 21,5-11\nAclamação ao Evangelho\nAp 2,10c\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPermanece fiel até a morte,\ne a coroa da vida eu te darei!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,5-11",
+    "texto": "21,5-11\nNaquele tempo,\n5\nalgumas pessoas comentavam a respeito do Templo\nque era enfeitado com belas pedras\ne com ofertas votivas.\nJesus disse:\n6\n\"Vós admirais estas coisas?\nDias virão em que não ficará pedra sobre pedra.\nTudo será destruído\".\n7\nMas eles perguntaram:\n\"Mestre, quando acontecerá isto?\nE qual vai ser o sinal\nde que estas coisas estão para acontecer?\"\n8\nJesus respondeu:\n\"Cuidado para não serdes enganados,\nporque muitos virão em meu nome,\ndizendo: 'Sou eu!'\nE ainda: 'O tempo está próximo'.\nNão sigais essa gente!\n9\nQuando ouvirdes falar de guerras e revoluções,\nnão fiqueis apavorados.\nÉ preciso que estas coisas aconteçam primeiro,\nmas não será logo o fim\".\n10\nE Jesus continuou:\n\"Um povo se levantará contra outro povo,\num país atacará outro país.\n11\nHaverá grandes terremotos,\nfomes e pestes em muitos lugares;\nacontecerão coisas pavorosas\ne grandes sinais serão vistos no céu\".\nPalavra da Salvação."
+  }
+}

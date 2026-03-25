@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-28",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 14,17-22</div><div> Sl 78(79),8.9.11 e 13 (R. 9bc)</div><div></div><div> Mt 13,36-43</div></div>",
+  "primeira_leitura": {
+    "referencia": "14,17-22",
+    "texto": "17\n\"Derramem lágrimas meus olhos,\nnoite e dia, sem parar,\nporque um grande desastre feriu a cidade,\na jovem filha de meu povo,\num golpe terrível e violento.\n18\nSe eu sair ao campo,\nvejo cadáveres abatidos à espada;\nse entrar na cidade,\ndeparo com gente consumida de fome;\naté os profetas e sacerdotes\nandam à toa pelo país\".\n19\nAcaso terás rejeitado Judá inteiramente,\nou te desgostaste deveras de Sião?\nPor que, então, nos feriste tanto,\nque não há meio para nos curarmos?\nEsperávamos a paz, e não veio a felicidade;\ncontávamos com o tempo de cura,\ne não nos restou senão consternação.\n20\nReconhecemos, Senhor, a nossa impiedade,\nos pecados de nossos pais,\nporque todos pecamos contra ti.\n21\nMas, por teu nome,\nnão nos faças sofrer a vergonha suprema\nde levarmos a desonra ao trono de tua glória;\nlembra-te, não quebres a tua aliança conosco.\n22\nAcaso existem entre os ídolos dos povos\nos que podem fazer chover?\nAcaso podem os céus mandar-nos as águas?\nNão és tu o Senhor, nosso Deus,\nque estamos esperando?\nTu realizas todas essas coisas\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 78(79),8.9.11 e 13 (R. 9bc)",
+    "refrao": "",
+    "texto": "R.\nPor vosso nome e vossa glória, libertai-nos!\n8\nNão lembreis as nossas culpas do passado, †\nmas venha logo sobre nós vossa bondade, *\npois estamos humilhados em extremo.\nR.\n9\nAjudai-nos, nosso Deus e Salvador! †\nPor vosso nome e vossa glória, libertai-nos! *\nPor vosso nome, perdoai nossos pecados!\nR.\n11\nAté vós chegue o gemido dos cativos: †\nlibertai com vosso braço poderoso *\nos que foram condenados a morrer!\n13\nQuanto a nós, vosso rebanho e vosso povo, †\ncelebraremos vosso nome para sempre, *\nde geração em geração vos louvaremos.\nR.\nEvangelho - Mt 13,36-4\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA semente é de Deus a palavra,\no Cristo é o semeador;\ntodo aquele que o encontra,\nvida eterna encontrou."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,36-43",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n13,36-43\nNaquele tempo,\n36\nJesus deixou as multidões e foi para casa.\nSeus discípulos aproximaram-se dele e disseram:\n\"Explica-nos a parábola do joio!\"\n37\nJesus respondeu:\n\"Aquele que semeia a boa semente é o Filho do Homem.\n38\nO campo é o mundo.\nA boa semente são os que pertencem ao Reino.\nO joio são os que pertencem ao Maligno.\n39\nO inimigo que semeou o joio é o diabo.\nA colheita é o fim dos tempos.\nOs ceifadores são os anjos.\n40\nComo o joio é recolhido e queimado ao fogo,\nassim também acontecerá no fim dos tempos:\n41\no Filho do Homem enviará os seus anjos\ne eles retirarão do seu Reino\ntodos os que fazem outros pecar\ne os que praticam o mal;\n42\ne depois os lançarão na fornalha de fogo.\nAli haverá choro e ranger de dentes.\n43\nEntão os justos brilharão como o sol\nno Reino de seu Pai.\nQuem tem ouvidos, ouça\".\nPalavra da Salvação."
+  }
+}

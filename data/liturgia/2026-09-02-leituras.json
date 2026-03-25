@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-02",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 3,1-9</div><div> Sl 32(33),12-13.14-15.20-21 (R. 12b)</div><div></div><div> Lc 4,38-44</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-9",
+    "texto": "1\nIrmãos,\nnão pude falar-vos como a pessoas espirituais.\nTive que vos falar como a pessoas carnais,\ncomo a crianças na vida em Cristo.\n2\nPude oferecer-vos somente leite,\nnão alimento sólido,\npois ainda não éreis capazes de tomá-lo.\nE nem atualmente\nsois capazes de receber alimento sólido,\n3\nvisto que ainda sois carnais.\nAs rivalidades e rixas que existem aí,\nno meio de vós,\nacaso não mostram que sois carnais\ne que procedeis de acordo com os impulsos naturais?\n4\nQuando um declara:\n\"Eu sou de Paulo\",\ne outro:\n\"Eu sou de Apolo\",\nnão estais procedendo\ncomo pessoas simplesmente naturais?\n5\nPois, o que é Apolo? O que é Paulo?\nNão passam de servidores,\npelos quais chegastes à fé.\nE cada um deles exerce seu serviço\nsegundo o dom recebido de Deus.\n6\nEu plantei, Apolo regou,\nmas Deus é que fazia crescer.\n7\nDe modo que nem o que planta, nem o que rega\nsão, propriamente, importantes.\nQuem é importante é aquele que faz crescer: Deus.\n8\nAquele que planta e aquele que rega\nformam uma unidade,\nmas cada um receberá o seu próprio salário,\nproporcional ao seu trabalho.\n9\nCom efeito, nós somos cooperadores de Deus,\ne vós sois lavoura de Deus, construção de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),12-13.14-15.20-21 (R. 12b)",
+    "refrao": "",
+    "texto": "R.\nFeliz o povo que o Senhor escolheu por sua herança!\n12\nFeliz o povo cujo Deus é o Senhor, *\ne a nação que escolheu por sua herança!\n13\nDos altos céus o Senhor olha e observa; *\nele se inclina para olhar todos os homens.\nR.\n14\nEle contempla do lugar onde reside *\ne vê a todos os que habitam sobre a terra.\n15\nEle formou o coração de cada um *\ne por todos os seus atos se interessa.\nR.\n20\nNo Senhor nós esperamos confiantes, *\nporque ele é nosso auxílio e proteção!\n21\nPor isso o nosso coração se alegra nele, *\nseu santo nome é nossa única esperança.\nR.\nEvangelho - Lc 4,38-44\nAclamação ao Evangelho\nLc 4,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor repousa sobre mim\ne enviou-me a anunciar aos pobres o Evangelho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "",
+    "texto": "porque para isso é que eu fui enviado.\nProclamação do Evangelho de Jesus Cristo segundo Lucas\n4,38-44\nNaquele tempo,\n38\nJesus saiu da sinagoga\ne entrou na casa de Simão.\nA sogra de Simão estava sofrendo com febre alta,\ne pediram a Jesus em favor dela.\n39\nInclinando-se sobre ela, Jesus ameaçou a febre,\ne a febre a deixou.\nImediatamente, ela se levantou\ne começou a servi-los.\n40\nAo pôr do sol, todos os que tinham doentes\natingidos por diversos males,\nos levaram a Jesus.\nJesus colocava as mãos em cada um deles\ne os curava.\n41\nDe muitas pessoas também saíam demônios,\ngritando:\n\"Tu és o Filho de Deus\".\nJesus os ameaçava, e não os deixava falar,\nporque sabiam que ele era o Messias.\n42\nAo raiar do dia, Jesus saiu,\ne foi para um lugar deserto.\nAs multidões o procuravam e, indo até ele,\ntentavam impedi-lo que os deixasse.\n43\nMas Jesus disse:\n\"Eu devo anunciar a boa-nova do Reino de Deus\ntambém a outras cidades,\nporque para isso é que eu fui enviado\".\n44\nE pregava nas sinagogas da Judeia.\nPalavra da Salvação."
+  }
+}

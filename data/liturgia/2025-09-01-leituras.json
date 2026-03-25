@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-01",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Ts 4,13-18</div><div> Sl 95(96),1 e 3.4-5.11-12.13 (R. 13b)</div><div></div><div> Lc 4,16-30</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,13-18",
+    "texto": "13\nIrmãos, não queremos deixar-vos na incerteza\na respeito dos mortos,\npara que não fiqueis tristes\ncomo os outros, que não têm esperança.\n14\nSe Jesus morreu e ressuscitou — e esta é nossa fé —\nde modo semelhante Deus trará de volta, com Cristo,\nos que através dele entraram no sono da morte.\n15\nIsto vos declaramos, segundo a palavra do Senhor:\nnós que formos deixados com vida para a vinda do Senhor\nnão levaremos vantagem em relação aos que morreram.\n16\nPois o Senhor mesmo, quando for dada a ordem,\nà voz do arcanjo e ao som da trombeta,\ndescerá do céu\ne os que morreram em Cristo ressuscitarão primeiro.\n17\nEm seguida, nós que formos deixados com vida\nseremos arrebatados com eles nas nuvens,\npara o encontro com o Senhor, nos ares.\nE assim estaremos sempre com o Senhor.\n18\nExortai-vos, pois, uns aos outros,\ncom estas palavras.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),1 e 3.4-5.11-12.13 (R. 13b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor vem julgar nossa terra.\n1\nCantai ao Senhor Deus um canto novo, †\n3\nmanifestai a sua glória entre as nações, *\ne entre os povos do universo seus prodígios!\nR.\n4\npois Deus é grande e muito digno de louvor, *\né mais terrível e maior que os outros deuses,\n5\nporque um nada são os deuses dos pagãos. *\nFoi o Senhor e nosso Deus quem fez os céus.\nR.\n11\nO céu se rejubile e exulte a terra, *\naplauda o mar com o que vive em suas águas;\n12\nos campos com seus frutos rejubilem *\ne exultem as florestas e as matas\nR.\n13\nna presença do Senhor, pois ele vem, *\nporque vem para julgar a terra inteira.\nGovernará o mundo todo com justiça, *\ne os povos julgará com lealdade.\nR.\nEvangelho - Lc 4,16-30\nAclamação ao Evangelho\nLc 4,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor repousa sobre mim;\ne enviou-me a anunciar aos pobres o Evangelho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "",
+    "texto": "Nenhum profeta é bem recebido em sua pátria.\nProclamação do Evangelho de Jesus Cristo segundo Lucas\n4,16-30\nNaquele tempo,\n16\nveio Jesus à cidade de Nazaré,\nonde se tinha criado.\nConforme seu costume,\nentrou na sinagoga no sábado,\ne levantou-se para fazer a leitura.\n17\nDeram-lhe o livro do profeta Isaías.\nAbrindo o livro,\nJesus achou a passagem em que está escrito:\n18\n\"O Espírito do Senhor está sobre mim,\nporque ele me consagrou com a unção\npara anunciar a Boa-Nova aos pobres;\nenviou-me para proclamar a libertação aos cativos\ne aos cegos a recuperação da vista;\npara libertar os oprimidos\n19\ne para proclamar um ano da graça do Senhor\".\n20\nDepois fechou o livro,\nentregou-o ao ajudante, e sentou-se.\nTodos os que estavam na sinagoga\ntinham os olhos fixos nele.\n21\nEntão começou a dizer-lhes:\n\"Hoje se cumpriu esta passagem da Escritura\nque acabastes de ouvir.\"\n22\nTodos davam testemunho a seu respeito,\nadmirados com as palavras cheias de encanto\nque saíam da sua boca.\nE diziam:\n\"Não é este o filho de José?\"\n23\nJesus, porém, disse:\n\"Sem dúvida, vós me repetireis o provérbio:\nMédico, cura-te a ti mesmo.\nFaze também aqui, em tua terra,\ntudo o que ouvimos dizer que fizeste em Cafarnaum\".\n24\nE acrescentou:\n\"Em verdade eu vos digo que nenhum profeta\né bem recebido em sua pátria.\n25\nDe fato, eu vos digo:\nno tempo do profeta Elias,\nquando não choveu durante três anos e seis meses\ne houve grande fome em toda a região,\nhavia muitas viúvas em Israel.\n26\nNo entanto, a nenhuma delas foi enviado Elias,\nsenão a uma viúva que vivia em Sarepta, na Sidônia.\n27\nE no tempo do profeta Eliseu,\nhavia muitos leprosos em Israel.\nContudo, nenhum deles foi curado,\nmas sim Naamã, o sírio\".\n28\nQuando ouviram estas palavras de Jesus,\ntodos na sinagoga ficaram furiosos.\n29\nLevantaram-se e o expulsaram da cidade.\nLevaram-no até ao alto do monte\nsobre o qual a cidade estava construída,\ncom a intenção de lançá-lo no precipício.\n30\nJesus, porém, passando pelo meio deles,\ncontinuou o seu caminho.\nPalavra da Salvação."
+  }
+}

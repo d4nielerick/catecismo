@@ -1,0 +1,23 @@
+{
+  "data": "2026-03-10",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dn 3,25.34-43</div><div> Sl 24(25),4bc-5ab.6-7bc.8-9 (R. 6a)</div><div></div><div> Mt 18,21-35</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,25.34-43",
+    "texto": "Naqueles dias,\n25\nAzarias, parou e, de pé,\ncomeçou a rezar;\nabrindo a boca no meio do fogo, disse:\n34\n\"Oh! não nos desampares nunca,\nnós te pedimos, por teu nome,\nnão desfaças tua aliança\n35\nnem retires de nós tua benevolência,\npor Abraão, teu amigo,\npor Isaac, teu servo,\ne por Israel, teu Santo,\n36\naos quais prometeste\nmultiplicar a descendência como estrelas do céu\ne como areia que está na beira do mar;\n37\nSenhor, estamos hoje\nreduzidos ao menor de todos os povos,\nsomos hoje o mais humilde em toda a terra,\npor causa de nossos pecados;\n38\nneste tempo estamos\nsem chefes, sem profetas, sem guia,\nnão há holocausto nem sacrifício,\nnão há oblação nem incenso,\nnão há um lugar para oferecermos\nem tua presença as primícias,\ne encontrarmos benevolência;\n39\nmas, de alma contrita e em espírito de humildade,\nsejamos acolhidos,\ne como nos holocaustos de carneiros e touros\n40\ne como nos sacrifícios de milhares de cordeiros gordos,\nassim se efetue hoje\nnosso sacrifício em tua presença,\ne tu faças que nós te sigamos até ao fim;\nnão se sentirá frustrado\nquem põe em ti sua confiança.\n41\nDe agora em diante, queremos, de todo o coração,\nseguir-te, temer-te, buscar tua face;\n42\nnão nos deixes confundidos,\nmas trata-nos segundo a tua clemência\ne segundo a tua imensa misericórdia;\n43\nliberta-nos com o poder de tuas maravilhas\ne torna teu nome glorificado, Senhor\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 24(25),4bc-5ab.6-7bc.8-9 (R. 6a)",
+    "refrao": "",
+    "texto": "R.\nRecordai, Senhor, a vossa compaixão!\n4b\nMostrai-me, ó Senhor, vossos caminhos,*\nc\ne fazei-me conhecer a vossa estrada!\n5a\nVossa verdade me oriente e me conduza,*\nb\nporque sois o Deus da minha salvação.\nR.\n6\nRecordai, Senhor meu Deus, vossa ternura *\ne a vossa compaixão que são eternas!\n7b\nDe mim lembrai-vos, porque sois misericórdia*\nc\ne sois bondade sem limites, ó Senhor!\nR.\n8\nO Senhor é piedade e retidão,*\ne reconduz ao bom caminho os pecadores.\n9\nEle dirige os humildes na justiça,*\ne aos pobres ele ensina o seu caminho.\nR.\nEvangelho - Mt 18,21-3\nAclamação ao Evangelho\nJl 2,12-13\nR.\nJesus Cristo, sois bendito,\nsois o ungido de Deus Pai!\nV.\nVoltai ao Senhor, vosso Deus,\nele é bom, compassivo e clemente."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "18,21-35",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n18,21-35\nNaquele tempo,\n21\nPedro aproximou-se de Jesus e perguntou:\n\"Senhor, quantas vezes devo perdoar,\nse meu irmão pecar contra mim? Até sete vezes?\"\n22\nJesus respondeu:\n\"Não te digo até sete vezes, mas até setenta vezes sete.\n23\nPorque o Reino dos Céus é como um rei\nque resolveu acertar as contas com seus empregados.\n24\nQuando começou o acerto,\ntrouxeram-lhe um que lhe devia uma enorme fortuna.\n25\nComo o empregado não tivesse com que pagar,\no patrão mandou que fosse vendido como escravo,\njunto com a mulher e os filhos e tudo o que possuía,\npara que pagasse a dívida.\n26\nO empregado, porém, caiu aos pés do patrão,\ne, prostrado, suplicava:\n'Dá-me um prazo! e eu te pagarei tudo'.\n27\nDiante disso, o patrão teve compaixão,\nsoltou o empregado e perdoou-lhe a dívida.\n28\nAo sair dali,\naquele empregado encontrou um dos seus companheiros\nque lhe devia apenas cem moedas.\nEle o agarrou e começou a sufocá-lo, dizendo:\n'Paga o que me deves'.\n29\nO companheiro, caindo aos seus pés, suplicava:\n'Dá-me um prazo! e eu te pagarei'.\n30\nMas o empregado não quis saber disso.\nSaiu e mandou jogá-lo na prisão,\naté que pagasse o que devia.\n31\nVendo o que havia acontecido,\nos outros empregados ficaram muito tristes,\nprocuraram o patrão e lhe contaram tudo.\n32\nEntão o patrão mandou chamá-lo e lhe disse:\n'Empregado perverso, eu te perdoei toda a tua dívida,\nporque tu me suplicaste.\n33\nNão devias tu também, ter compaixão do teu companheiro,\ncomo eu tive compaixão de ti?'\n34\nO patrão indignou-se\ne mandou entregar aquele empregado aos torturadores,\naté que pagasse toda a sua dívida.\n35\nÉ assim que o meu Pai que está nos céus fará convosco,\nse cada um não perdoar de coração ao seu irmão\".\nPalavra da Salvação."
+  }
+}

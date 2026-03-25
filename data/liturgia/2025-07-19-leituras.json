@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-19",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 12,37-42</div><div> Sl 135(136),1 e 23-24.10-12.13-15</div><div></div><div> Mt 12,14-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,37-42",
+    "texto": "Naqueles dias,\n37\nos filhos de Israel partiram de Ramsés para Sucot.\nEram cerca de seiscentos mil homens a pé,\nsem contar as crianças.\n38\nAlém disso, uma multidão numerosa subiu com eles,\nassim como rebanhos consideráveis de ovelhas e bois.\n39\nCom a massa trazida do Egito fizeram pães ázimos,\njá que a massa não pudera fermentar,\npois foram expulsos do Egito,\ne não tinham podido esperar,\nnem preparar provisões para si.\n40\nA permanência dos filhos de Israel no Egito\nfoi de quatrocentos e trinta anos.\n41\nNo mesmo dia em que se concluíam\nos quatrocentos e trinta anos,\ntodos os exércitos do Senhor\nsaíram da terra do Egito.\n42\nAquela foi uma noite de vigília para o Senhor,\nquando os fez sair da terra do Egito:\nessa noite em honra do Senhor deve ser observada\npor todos os filhos de Israel\nem todas as suas gerações.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 135(136),1 e 23-24.10-12.13-15",
+    "refrao": "",
+    "texto": "R.\nEterna é a sua misericórdia.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nDemos graças ao Senhor, porque ele é bom: *\nPorque eterno é seu amor!\n23\nDe nós, seu povo, humilhado, recordou-se: *\nPorque eterno é seu amor!\n24\nDe nossos inimigos libertou-nos: *\nPorque eterno é seu amor!\nR.\n10\nEle feriu os primogênitos do Egito *\nPorque eterno é seu amor!\n11\nE tirou do meio deles Israel: *\nPorque eterno é seu amor!\n12\nCom mão forte e com braço estendido: *\nPorque eterno é seu amor!\nR.\n13\nEle cortou o Mar Vermelho em duas partes: *\nPorque eterno é o seu amor!\n14\nFez passar no meio dele Israel: *\nPorque eterno é o seu amor!\n15\nE afogou o Faraó com suas tropas: *\nPorque eterno é seu amor!\nR.\nEvangelho - Mt 12,38-4\nAclamação ao Evangelho\n2Cor 5,19\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEm Cristo, Deus reconciliou consigo mesmo a humanidade;\ne a nós ele entregou esta reconciliação."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,14-21",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n12,14-21\nNaquele tempo,\n14\nos fariseus saíram e fizeram um plano\npara matar Jesus.\n15\nAo saber disso, Jesus retirou-se dali.\nGrandes multidões o seguiram,\ne ele curou a todos.\n16\nE ordenou-lhes que não dissessem quem ele era,\n17\npara se cumprir o que foi dito pelo profeta Isaías:\n18\n\"Eis o meu servo, que escolhi;\no meu amado, no qual coloco a minha afeição;\nporei sobre ele o meu Espírito,\ne ele anunciará às nações o direito.\n19\nEle não discutirá, nem gritará,\ne ninguém ouvirá a sua voz nas praças.\n20\nNão quebrará o caniço rachado,\nnem apagará o pavio que ainda fumega,\naté que faça triunfar o direito.\n21\nEm seu nome as nações depositarão a sua esperança\".\nPalavra da Salvação."
+  }
+}

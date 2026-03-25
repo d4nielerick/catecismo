@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-04",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 30,1-2.12-15.18-22</div><div> Sl 101(102),16-18.19-21.29e 22-23 (R. 20b)</div><div></div><div> Mt 15,1-2.10-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "30,1-2.12-15.18-22",
+    "texto": "1\nPalavra que foi dirigida a Jeremias,\nda parte do Senhor:\n2\n\"Isto diz o Senhor, Deus de Israel:\nEscreve para ti, num livro,\ntodas as palavras que te falei.\n12\nIsto diz o Senhor:\nIncurável é tua ferida,\nmaligna tua chaga;\n13\nnão há quem conheça teu diagnóstico;\numa úlcera tem remédio,\nmas em ti não se produz cicatrização.\n14\nTodos os teus amigos te esqueceram,\nnão te procuram mais;\neu te causei uma ferida, como se fosses inimigo,\ncomo um castigo cruel:\npor causa do grande número de maldades\nque te fez endurecer no pecado.\n15\nPor que gritas em teu sofrimento?\nÉ insanável a tua dor.\nEu te tratei com rudeza\npor causa das tuas inúmeras maldades\ne por causa do teu endurecimento no pecado.\n18\nIsto diz o Senhor:\nEis que eu mudarei a sorte das tendas de Jacó\ne terei compaixão de suas moradias,\na cidade ressurgirá das suas ruínas\ne a fortaleza terá lugar para suas fundações;\n19\nde lá sairão cânticos de louvor e sons festivos.\nHei de multiplicá-los, eles não diminuirão,\nhei de glorificá-los, eles não serão humilhados.\n20\nTeus filhos serão felizes como outrora,\ne sua comunidade, estável na minha presença;\ne agirei contra todos os que os molestarem.\n21\nPara chefe será escolhido um dos seus,\ne o soberano sairá do seu meio;\neu o incitarei, e ele se aproximará de mim.\nQuem dará a vida em penhor da sua aproximação de mim?\n- diz o Senhor.\n22\nSereis meu povo e eu serei vosso Deus\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 101(102),16-18.19-21.29.22-23 (R. 20b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor olhou a terra do alto céu.\n16\nAs nações respeitarão o vosso nome, *\ne os reis de toda a terra, a vossa glória;\n17\nquando o Senhor reconstruir Jerusalém *\ne aparecer com gloriosa majestade,\n18\nele ouvirá a oração dos oprimidos *\ne não desprezará a sua prece.\nR.\n19\nPara as futuras gerações se escreva isto, *\ne um povo novo a ser criado louve a Deus.\n20\nEle inclinou-se de seu templo nas alturas, *\ne o Senhor olhou a terra do alto céu,\n21\npara os gemidos dos cativos escutar *\ne da morte libertar os condenados.\nR.\n29\nAssim também a geração dos vossos servos †\nterá casa e viverá em segurança, *\ne ante vós se firmará sua descendência.\n22\nPara que cantem o seu nome em Sião *\ne louve ao Senhor Jerusalém,\n23\nquando os povos e as nações se reunirem *\ne todos os impérios o servirem.\nR.\nEvangelho - Mt 14,22-3\nAclamação ao Evangelho\nJo 1,49b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMestre, tu és o Filho de Deus,\nés rei de Israel!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,1-2.10-14",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n15,1-2.10-14\n1\nNaquele tempo, alguns fariseus e mestres da Lei,\nvindos de Jerusalém,\naproximaram-se de Jesus,\ne perguntaram:\n2\n\"Por que os teus discípulos\nnão observam a tradição dos antigos?\nPois não lavam as mãos quando comem o pão!\"\n10\nJesus chamou a multidão para perto de si e disse:\n\"Escutai e compreendei.\n11\nNão é o que entra pela boca\nque torna o homem impuro,\nmas o que sai da boca,\nisso é que torna o homem impuro\".\n12\nEntão os discípulos se aproximaram\ne disseram a Jesus:\n\"Sabes que os fariseus ficaram escandalizados\nao ouvir as tuas palavras?\"\n13\nJesus respondeu:\n\"Toda planta que não foi plantada pelo meu Pai celeste\nserá arrancada.\n14\nDeixai-os! São cegos guiando cegos.\nOra, se um cego guia outro cego,\nos dois cairão no buraco\".\nPalavra da Salvação."
+  }
+}

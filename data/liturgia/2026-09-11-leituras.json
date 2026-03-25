@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 9,16-19.22b-27</div><div> Sl 83(84),3.4.5-6.12 (R. 2)</div><div></div><div> Lc 6,39-42</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,16-19.22b-27",
+    "texto": "Irmãos,\n16\npregar o evangelho não é para mim motivo de glória.\nÉ antes uma necessidade para mim, uma imposição.\nAi de mim se eu não pregar o evangelho!\n17\nSe eu exercesse minha função de pregador\npor iniciativa própria,\neu teria direito a salário.\nMas, como a iniciativa não é minha,\ntrata-se de um encargo que me foi confiado.\n18\nEm que consiste então o meu salário?\nEm pregar o evangelho, oferecendo-o de graça,\nsem usar os direitos que o evangelho me dá.\n19\nAssim, livre em relação a todos,\neu me tornei escravo de todos,\na fim de ganhar o maior número possível.\n22b\nCom todos, eu me fiz tudo,\npara certamente salvar alguns.\n23\nPor causa do evangelho eu faço tudo,\npara ter parte nele.\n24\nAcaso não sabeis que os que correm no estádio\ncorrem todos juntos, mas um só ganha o prêmio?\nCorrei de tal maneira que conquisteis o prêmio.\n25\nTodo atleta se sujeita\na uma disciplina rigorosa em relação a tudo,\ne eles procedem assim,\npara receberem uma coroa corruptível.\nQuanto a nós,\na coroa que buscamos é incorruptível!\n26\nPor isso, eu corro, mas não à toa.\nEu luto, mas não como quem dá murros no ar.\n27\nTrato duramente o meu corpo e o subjugo,\npara não acontecer que,\ndepois de ter proclamado a boa-nova aos outros,\neu mesmo seja reprovado.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 83(84),3.4.5-6.12 (R. 2)",
+    "refrao": "",
+    "texto": "R.\nQuão amável, ó Senhor, é vossa casa!\n3\nMinha alma desfalece de saudades *\ne anseia pelos átrios do Senhor!\nMeu coração e minha carne rejubilam *\ne exultam de alegria no Deus vivo!\nR.\n4\nMesmo o pardal encontra abrigo em vossa casa, †\ne a andorinha ali prepara o seu ninho, *\npara nele seus filhotes colocar:\nvossos altares, ó Senhor Deus do universo! *\nvossos altares, ó meu Rei e meu Senhor!\nR.\n5\nFelizes os que habitam vossa casa; *\npara sempre haverão de vos louvar!\n6\nFelizes os que em vós têm sua força, *\ne se decidem a partir quais peregrinos!\nR.\n12\nO Senhor Deus é como um sol, é um escudo, *\ne largamente distribui a graça e a glória\nO Senhor nunca recusa bem algum *\nàqueles que caminham na justiça.\nR.\nEvangelho - Lc 6,39-42\nAclamação ao Evangelho\nCf. Jo 17,17b.a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVossa palavra é a verdade;\nsantificai-nos na verdade!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,39-42",
+    "texto": "6,39-42\nNaquele tempo,\n39\nJesus contou uma parábola aos discípulos:\n\"Pode um cego guiar outro cego?\nNão cairão os dois num buraco?\n40\nUm discípulo não é maior do que o mestre;\ntodo discípulo bem formado será como o mestre.\n41\nPor que vês tu o cisco no olho do teu irmão,\ne não percebes a trave\nque há no teu próprio olho?\n42\nComo podes dizer a teu irmão:\nIrmão, deixa-me tirar o cisco do teu olho,\nquando tu não vês a trave no teu próprio olho?\nHipócrita! Tira primeiro a trave do teu olho,\ne então poderás enxergar bem\npara tirar o cisco do olho do teu irmão\".\nPalavra da Salvação."
+  }
+}

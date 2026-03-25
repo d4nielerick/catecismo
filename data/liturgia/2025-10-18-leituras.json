@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Tm 4,10-17b</div><div> Sl 144(145),10-11,12-13ab,17-18 (R. 12a)</div><div></div><div> Lc 10,1-9</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,10-17b",
+    "texto": "Caríssimo:\n10\nDemas me abandonou por amor deste mundo,\ne foi para Tessalônica.\nCrescente foi para a Galácia,\nTito para a Dalmácia.\n11\nSó Lucas está comigo.\nToma contigo Marcos e traze-o,\nporque me é útil para o ministério.\n12\nMandei Tíquico a Éfeso.\n13\nQuando vieres, traze contigo a capa\nque deixei em Trôade, em casa de Carpo,\ne os livros, principalmente os pergaminhos.\n14\nAlexandre, o ferreiro, tem-me causado muito dano;\no Senhor lhe pagará segundo as suas obras!\n15\nEvita-o também tu,\npois ele fez forte oposição às nossas palavras.\n16\nNa minha primeira defesa, ninguém me assistiu;\ntodos me abandonaram.\nOxalá que não lhes seja levado em conta.\n17\nMas o Senhor esteve a meu lado e me deu forças,\nele fez com que a mensagem\nfosse anunciada por mim integralmente,\ne ouvida por todas as nações.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 144(145),10-11,12-13ab,17-18 (R. 12a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, vossos amigos anunciem vosso Reino glorioso!\n10\nQue vossas obras, ó Senhor, vos glorifiquem, *\ne os vossos santos com louvores vos bendigam!\n11\nNarrem a glória e o esplendor do vosso reino *\ne saibam proclamar vosso poder!\nR.\n12\nPara espalhar vossos prodígios entre os homens *\ne o fulgor de vosso reino esplendoroso.\n13a\nO vosso reino é um reino para sempre, *\n13b\nvosso poder, de geração em geração.\nR.\n17\nÉ justo o Senhor em seus caminhos, *\né Santo em toda obra que ele faz.\n18\nEle está perto da pessoa que o invoca, *\nde todo aquele que o invoca lealmente.\nR.\nEvangelho - Lc 10,1-9\nAclamação ao Evangelho\nCf. Jo 15,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos designei para que vades e deis frutos,\ne o vosso fruto permaneça, assim disse o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,1-9",
+    "texto": "10,1-9\nNaquele tempo,\n1\no Senhor escolheu outros setenta e dois discípulos\ne os enviou dois a dois, na sua frente,\na toda cidade e lugar aonde ele próprio devia ir.\n2\nE dizia-lhes:\n\"A messe é grande,\nmas os trabalhadores são poucos.\nPor isso, pedi ao dono da messe\nque mande trabalhadores para a colheita.\n3\nEis que vos envio como cordeiros para o meio de lobos.\n4\nNão leveis bolsa, nem sacola, nem sandálias,\ne não cumprimenteis ninguém pelo caminho!\n5\nEm qualquer casa em que entrardes, dizei primeiro:\n'A paz esteja nesta casa!'\n6\nSe ali morar um amigo da paz,\na vossa paz repousará sobre ele;\nse não, ela voltará para vós.\n7\nPermanecei naquela mesma casa,\ncomei e bebei do que tiverem,\nporque o trabalhador merece o seu salário.\nNão passeis de casa em casa.\n8\nQuando entrardes numa cidade e fordes bem recebidos,\ncomei do que vos servirem,\n9\ncurai os doentes que nela houver\ne dizei ao povo:\n'O Reino de Deus está próximo de vós' \".\nPalavra da Salvação."
+  }
+}

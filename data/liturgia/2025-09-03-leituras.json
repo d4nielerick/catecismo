@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-03",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Cl 1,1-8</div><div> Sl 51(52),10.11 (R. 10b)</div><div></div><div> Lc 4,38-44</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-8",
+    "texto": "1\nPaulo, apóstolo de Cristo Jesus\npor vontade de Deus\ne o irmão Timóteo,\n2\naos santos e fiéis irmãos em Cristo\nque estão em Colossos:\ngraça e paz da parte de Deus nosso Pai.\n3\nDamos graças a Deus,\nPai de nosso Senhor Jesus Cristo,\nsempre rezando por vós,\n4\npois ouvimos acerca da vossa fé em Cristo Jesus\ne do amor que mostrais para com todos os santos,\n5\nanimados pela esperança na posse do céu.\nDisso já ouvistes falar no Evangelho,\ncuja palavra de verdade chegou até vós.\n6\nE como no mundo inteiro, assim também entre vós\nela está produzindo frutos e se desenvolve\ndesde o dia em que ouvistes a graça divina\ne conhecestes verdadeiramente.\n7\nAssim aprendestes de Epafras,\nnosso estimado companheiro,\nque é junto de vós\num autêntico mensageiro de Cristo.\n8\nFoi ele quem nos deu notícia sobre o amor\nque o Espírito suscitou em vós.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 51(52),10.11 (R. 10b)",
+    "refrao": "",
+    "texto": "R.\nConfio na clemência do meu Deus, agora e sempre!\n10\nEu, porém, como oliveira verdejante *\nna casa do Senhor,\nconfio na clemência do meu Deus *\nagora e para sempre!\nR.\n11\nLouvarei a vossa graça eternamente, *\nporque vós assim agistes;\nespero em vosso nome, porque é bom, *\nperante os vossos santos!\nR.\nEvangelho - Lc 4,38-44\nAclamação ao Evangelho\nLc 4,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor repousa sobre mim\ne enviou-me a anunciar aos pobres o Evangelho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "",
+    "texto": "porque para isso é que eu fui enviado.\nProclamação do Evangelho de Jesus Cristo segundo Lucas\n4,38-44\nNaquele tempo,\n38\nJesus saiu da sinagoga\ne entrou na casa de Simão.\nA sogra de Simão estava sofrendo com febre alta,\ne pediram a Jesus em favor dela.\n39\nInclinando-se sobre ela, Jesus ameaçou a febre,\ne a febre a deixou.\nImediatamente, ela se levantou\ne começou a servi-los.\n40\nAo pôr do sol, todos os que tinham doentes\natingidos por diversos males,\nos levaram a Jesus.\nJesus colocava as mãos em cada um deles\ne os curava.\n41\nDe muitas pessoas também saíam demônios,\ngritando:\n\"Tu és o Filho de Deus\".\nJesus os ameaçava, e não os deixava falar,\nporque sabiam que ele era o Messias.\n42\nAo raiar do dia, Jesus saiu,\ne foi para um lugar deserto.\nAs multidões o procuravam e, indo até ele,\ntentavam impedi-lo que os deixasse.\n43\nMas Jesus disse:\n\"Eu devo anunciar a Boa-Nova do Reino de Deus\ntambém a outras cidades,\nporque para isso é que eu fui enviado\".\n44\nE pregava nas sinagogas da Judeia.\nPalavra da Salvação."
+  }
+}

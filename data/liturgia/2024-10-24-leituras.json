@@ -1,0 +1,23 @@
+{
+  "data": "2024-10-24",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 3,14-21</div><div> Sl 32(33),1-2.4-5.11-12.18-19 (R. 5b)</div><div></div><div> Lc 12,49-53</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,14-21",
+    "texto": "Irmãos,\n14\neu dobro os joelhos diante do Pai,\n15\nde quem toda e qualquer família recebe seu nome,\nno céu e sobre a terra.\n16\nQue ele vos conceda,\nsegundo a riqueza da sua glória,\nserdes robustecidos, por seu Espírito,\nquanto ao homem interior,\n17\nque ele faça habitar, pela fé,\nCristo em vossos corações,\nque estejais enraizados e fundados no amor.\n18\nTereis assim a capacidade de compreender,\ncom todos os santos,\nqual a largura, o comprimento,\na altura, a profundidade,\n19\ne de conhecer o amor de Cristo,\nque ultrapassa todo o conhecimento,\na fim de que sejais cumulados\naté receber toda a plenitude de Deus.\n20\nÀquele que tudo pode realizar superabundantemente,\ne muito mais do que nós pedimos ou concebemos,\ne cujo poder atua em nós,\n21\na ele a glória,\nna Igreja e em Jesus Cristo,\npor todas as gerações, para sempre. Amém.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),1-2.4-5.11-12.18-19 (R. 5b)",
+    "refrao": "",
+    "texto": "R.\nTransborda em toda a terra a bondade do Senhor!\n1\nÓ justos, alegrai-vos no Senhor! *\naos retos fica bem glorificá-lo.\n2\nDai graças ao Senhor ao som da harpa, *\nna lira de dez cordas celebrai-o!\nR.\n4\nPois reta é a palavra do Senhor, *\ne tudo o que ele faz merece fé.\n5\nDeus ama o direito e a justiça, *\ntransborda em toda a terra a sua graça.\nR.\n11\nMas os desígnios do Senhor são para sempre, †\ne os pensamentos que ele traz no coração, *\nde geração em geração, vão perdurar.\n12\nFeliz o povo cujo Deus é o Senhor, *\ne a nação que escolheu por sua herança!\nR.\n18\nMas o Senhor pousa o olhar sobre os que o temem, *\ne que confiam esperando em seu amor,\n19\npara da morte libertar as suas vidas *\ne alimentá-los quando é tempo de penúria.\nR.\nEvangelho - Lc 12,49-5\nAclamação ao Evangelho\nFl 3,8-9\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu tudo considero como perda e como lixo,\na fim de eu ganhar Cristo e ser achado nele!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,49-53",
+    "texto": "12,49-53\nNaquele tempo, disse Jesus a seus discípulos:\n49\n\"Eu vim para lançar fogo sobre a terra,\ne como gostaria que já estivesse aceso!\n50\nDevo receber um batismo,\ne como estou ansioso até que isto se cumpra!\n51\nVós pensais que eu vim trazer a paz sobre a terra?\nPelo contrário, eu vos digo, vim trazer divisão.\n52\nPois, daqui em diante,\nnuma família de cinco pessoas,\ntrês ficarão divididas contra duas\ne duas contra três;\n53\nficarão divididos:\no pai contra o filho e o filho contra o pai;\na mãe contra a filha e a filha contra a mãe;\na sogra contra a nora e a nora contra a sogra\".\nPalavra da Salvação."
+  }
+}

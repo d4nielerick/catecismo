@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gl 1,6-12</div><div> Sl 110(111),1-2.7-8.9 e 10c (R. 5b)</div><div></div><div> Lc 10,25-37</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,6-12",
+    "texto": "Irmãos,\n6\nadmiro-me de terdes abandonado tão depressa\naquele que vos chamou, na graça de Cristo,\ne de terdes passado para um outro evangelho.\n7\nNão que haja outro evangelho,\nmas algumas pessoas vos estão perturbando\ne querendo mudar o evangelho de Cristo.\n8\nPois bem, mesmo que nós ou um anjo vindo do céu\nvos pregasse um evangelho\ndiferente daquele que vos pregamos, seja excomungado.\n9\nComo já dissemos e agora repito:\nSe alguém vos pregar um evangelho\ndiferente daquele que recebestes, seja excomungado.\n10\nSerá que eu estou buscando a aprovação dos homens\nou a aprovação de Deus?\nOu estou procurando agradar aos homens?\nSe eu ainda estivesse preocupado\nem agradar aos homens,\nnão seria servo de Cristo.\n11\nIrmãos, asseguro-vos\nque o evangelho pregado por mim\nnão é conforme a critérios humanos.\n12\nCom efeito, não o recebi nem aprendi de homem algum,\nmas por revelação de Jesus Cristo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 110(111),1-2.7-8.9 e 10c (R. 5b)",
+    "refrao": "",
+    "texto": "R.\nO Senhor se lembra sempre da Aliança.\nOu:\nAleluia, Aleluia, Aleluia\n1\nEu agradeço a Deus de todo o coração *\njunto com todos os seus justos reunidos!\n2\nQue grandiosas são as obras do Senhor, *\nelas merecem todo o amor e admiração!\nR.\n7\nSuas obras são verdade e são justiça, *\nseus preceitos, todos eles, são estáveis,\n8\nconfirmados para sempre e pelos séculos, *\nrealizados na verdade e retidão.\nR.\n9\nEnviou libertação para o seu povo, *\nconfirmou sua Aliança para sempre.\nSeu nome é santo e é digno de respeito.\n*\n10c\nPermaneça eternamente o seu louvor.\nR.\nAclamação ao Evangelho\nJo 13,34\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos dou novo preceito:\nque uns aos outros vos ameis,\ncomo eu vos tenho amado."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,25-37",
+    "texto": "10,25-37\nNaquele tempo,\n25\num mestre da Lei se levantou\ne, querendo pôr Jesus em dificuldade,\nperguntou:\n\"Mestre, que devo fazer\npara receber em herança a vida eterna?\"\n26\nJesus lhe disse:\n\"O que está escrito na Lei?\nComo lês?\"\n27\nEle então respondeu:\n\"Amarás o Senhor, teu Deus,\nde todo o teu coração e com toda a tua alma,\ncom toda a tua força e com toda a tua inteligência;\ne ao teu próximo como a ti mesmo!\"\n28\nJesus lhe disse:\n\"Tu respondeste corretamente.\nFaze isso e viverás\".\n29\nEle, porém, querendo justificar-se,\ndisse a Jesus:\n\"E quem é o meu próximo?\"\n30\nJesus respondeu:\n\"Certo homem descia de Jerusalém para Jericó\ne caiu nas mãos de assaltantes.\nEstes arrancaram-lhe tudo, espancaram-no,\ne foram-se embora deixando-o quase morto.\n31\nPor acaso, um sacerdote\nestava descendo por aquele caminho.\nQuando viu o homem,\nseguiu adiante, pelo outro lado.\n32\nO mesmo aconteceu com um levita:\nchegou ao lugar, viu o homem\ne seguiu adiante, pelo outro lado.\n33\nMas um samaritano que estava viajando,\nchegou perto dele, viu e sentiu compaixão.\n34\nAproximou-se dele e fez curativos,\nderramando óleo e vinho nas feridas.\nDepois colocou o homem em seu próprio animal\ne levou-o a uma pensão, onde cuidou dele.\n35\nNo dia seguinte, pegou duas moedas de prata\ne entregou-as ao dono da pensão, recomendando:\n\"Toma conta dele!\nQuando eu voltar,\nvou pagar o que tiveres gasto a mais'.\nE Jesus perguntou:\n36\n\"Na tua opinião, qual dos três foi o próximo do homem\nque caiu nas mãos dos assaltantes?\"\n37\nEle respondeu:\n\"Aquele que usou de misericórdia para com ele\".\nEntão Jesus lhe disse:\n\"Vai e faze a mesma coisa\".\nPalavra da Salvação."
+  }
+}

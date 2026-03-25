@@ -1,0 +1,23 @@
+{
+  "data": "2026-02-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 8,22-23.27-30</div><div> Sl 83(84),3.4.5 e 10.11 (R. 2)</div><div></div><div> Mc 7,1-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,22-23.27-30",
+    "texto": "Naqueles dias,\n22\nSalomão pôs-se de pé diante do altar do Senhor,\nna presença de toda a assembleia de Israel,\nestendeu as mãos para o céu e disse:\n23\n\"Ó Senhor, Deus de Israel,\nnão há Deus igual a ti\nnem no mais alto dos céus,\nnem aqui embaixo na terra;\ntu és fiel à tua misericordiosa aliança com teus servos,\nque andam na tua presença de todo o seu coração.\n27\nMas será que Deus pode realmente morar sobre a terra?\nSe os mais altos céus não te podem conter,\nmuito menos esta casa que eu construí!\n28\nMas atende, Senhor meu Deus,\nà oração e à súplica do teu servo,\ne ouve o clamor e a prece\nque ele faz hoje em tua presença.\n29\nTeus olhos estejam abertos noite e dia\nsobre esta casa, sobre o lugar do qual disseste:\n'Aqui estará o meu nome!\nOuve a oração que o teu servo te faz neste lugar.\n30\nOuve as súplicas de teu servo\ne de teu povo Israel,\nquando aqui orarem.\nEscuta-os do alto da tua morada, no céu,\nescuta-os e perdoa!\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 83(84),3.4.5.10.11 (R. 2)",
+    "refrao": "",
+    "texto": "R.\nQuão amável, ó Senhor, é vossa casa!\n3\nMinha alma desfalece de saudades *\ne anseia pelos átrios do Senhor!\nMeu coração e minha carne rejubilam *\ne exultam de alegria no Deus vivo!\nR.\n4\nMesmo o pardal encontra abrigo em vossa casa, †\ne a andorinha ali prepara o seu ninho, *\npara nele seus filhotes colocar:\nvossos altares, ó Senhor Deus do universo! *\nvossos altares, ó meu Rei e meu Senhor!\nR.\n5\nFelizes os que habitam vossa casa; *\npara sempre haverão de vos louvar!\n10\nOlhai, ó Deus, que sois a nossa proteção, *\nvede a face do eleito, vosso Ungido!\nR.\n11\nNa verdade, um só dia em vosso templo *\nvale mais do que milhares fora dele!\nPrefiro estar no limiar de vossa casa, *\na hospedar-me na mansão dos pecadores!\nR.\nEvangelho - Mc 7,1-13\nAclamação ao Evangelho\nSl 118(119),36.29b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nInclinai meu coração às vossas advertências\ne dai-me a vossa lei como um presente valioso!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,1-13",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n7,1-13\nNaquele tempo,\n1\nos fariseus e alguns mestres da Lei\nvieram de Jerusalém\ne se reuniram em torno de Jesus.\n2\nEles viam que alguns dos seus discípulos\ncomiam o pão com as mãos impuras,\nisto é, sem as terem lavado.\n3\nCom efeito, os fariseus e todos os judeus\nsó comem depois de lavar bem as mãos,\nseguindo a tradição recebida dos antigos.\n4\nAo voltar da praça,\neles não comem sem tomar banho.\nE seguem muitos outros costumes\nque receberam por tradição:\na maneira certa de lavar copos,\njarras e vasilhas de cobre.\n5\nOs fariseus e os mestres da Lei\nperguntaram então a Jesus:\n\"Por que os teus discípulos\nnão seguem a tradição dos antigos,\nmas comem o pão sem lavar as mãos?\"\n6\nJesus respondeu:\n\"Bem profetizou Isaías a vosso respeito, hipócritas,\ncomo está escrito:\n'Este povo me honra com os lábios,\nmas seu coração está longe de mim.\n7\nDe nada adianta o culto que me prestam,\npois as doutrinas que ensinam são preceitos humanos'.\n8\nVós abandonais o mandamento de Deus\npara seguir a tradição dos homens\".\n9\nE dizia-lhes:\n\"Vós sabeis muito bem\ncomo anular o mandamento de Deus,\na fim de guardar as vossas tradições.\n10\nCom efeito, Moisés ordenou:\n'Honra teu pai e tua mãe'.\nE ainda:\n'Quem amaldiçoa o pai ou a mãe, deve morrer'.\n11\nMas vós ensinais que é lícito\nalguém dizer a seu pai e à sua mãe:\n'O sustento que vós poderíeis receber de mim\né Corban, isto é, Consagrado a Deus'.\n12\nE essa pessoa fica dispensada\nde ajudar seu pai ou sua mãe.\n13\nAssim vós esvaziais a Palavra de Deus\ncom a tradição que vós transmitis.\nE vós fazeis muitas outras coisas como estas\".\nPalavra da Salvação."
+  }
+}

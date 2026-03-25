@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ez 2,8-3,4</div><div> Sl 118(119),14.24.72.103.111.131 (R. 103a)</div><div></div><div> Mt 18,1-5.10.12-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,8-3,4",
+    "texto": "Assim fala o Senhor:\n8\n\"Quanto a ti, Filho do homem,\nescuta o que eu te digo:\nNão sejas rebelde como esse bando de rebeldes.\nAbre a boca e come o que eu te vou dar\".\n9\nEu olhei e vi uma mão estendida para mim\ne, na mão, um livro enrolado.\nDesenrolou-o diante de mim;\nestava escrito na frente e no verso\ne nele havia cantos fúnebres, lamentações e ais.\n3,1\nEle me disse:\n\"Filho do homem, come o que tens diante de ti!\nCome este rolo e vai falar aos filhos de Israel\".\n2\nEu abri a boca, e ele fez-me comer o rolo.\n3\nDepois disse-me:\n\"Filho do homem, alimenta teu ventre\ne sacia as entranhas com este rolo que eu te dou\".\nEu o comi, e era doce como mel em minha boca.\n4\nEle disse-me então:\n\"Filho do homem, vai!\nDirige-te à casa de Israel\ne fala-lhes com as minhas palavras\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),14.24.72.103.111.131 (R. 103a)",
+    "refrao": "",
+    "texto": "R.\nComo é doce ao paladar vossa palavra, ó Senhor!\n14\nSeguindo vossa lei me rejubilo *\nmuito mais do que em todas as riquezas.\nR.\n24\nMinha alegria é a vossa Aliança, *\nmeus conselheiros são os vossos mandamentos.\nR.\n72\nA lei de vossa boca, para mim, *\nvale mais do que milhões em ouro e prata.\nR.\n103\nComo é doce ao paladar vossa palavra, *\nmuito mais doce do que o mel na minha boca!\nR.\n111\nVossa palavra é minha herança para sempre, *\nporque ela é que me alegra o coração!\nR.\n131\nAbro a boca e aspiro largamente, *\npois estou ávido de vossos mandamentos.\nR.\nEvangelho - Mt 18,1-5.\nAclamação ao Evangelho\nMt 11,29ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nTomai meu jugo sobre vós\ne aprendei de mim, que sou\nde coração humilde e manso!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "18,1-5.10.12-14",
+    "texto": "18,1-5.10.12-14\nNaquele tempo,\n1\nos discípulos aproximaram-se de Jesus\ne perguntaram:\n\"Quem é o maior no Reino dos Céus?\"\n2\nJesus chamou uma criança,\ncolocou-a no meio deles\n3\ne disse:\n\"Em verdade vos digo,\nse não vos converterdes,\ne não vos tornardes como crianças,\nnão entrareis no Reino dos Céus.\n4\nQuem se faz pequeno como esta criança,\nesse é o maior no Reino dos Céus.\n5\nE quem recebe em meu nome uma criança como esta,\né a mim que recebe.\n10\nNão desprezeis nenhum desses pequeninos,\npois eu vos digo que os seus anjos nos céus\nveem sem cessar a face do meu Pai que está nos céus.\n12\nQue vos parece?\nSe um homem tem cem ovelhas,\ne uma delas se perde,\nnão deixa ele as noventa e nove nas montanhas,\npara procurar aquela que se perdeu?\n13\nEm verdade vos digo, se ele a encontrar,\nficará mais feliz com ela,\ndo que com as noventa e nove\nque não se perderam.\n14\nDo mesmo modo, o Pai que está nos céus\nnão deseja que se perca nenhum desses pequeninos\".\nPalavra da Salvação."
+  }
+}

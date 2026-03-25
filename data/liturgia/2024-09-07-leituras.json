@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-07",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 4,6b-15</div><div> Sl 144(145),17-18.19-20.21 (R. 18a)</div><div></div><div> Lc 6,1-5</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,6b-15",
+    "texto": "6b\nIrmãos,\napliquei essa doutrina a mim e a Apolo,\npor causa de vós,\npara que o nosso exemplo vos ensine\na não vos inchar de orgulho,\ntomando o partido de um contra outro,\ne a \"não ir além daquilo que está escrito\".\n7\nCom efeito,\nquem é que te faz melhor que os outros?\nO que tens que não tenhas recebido?\nMas, se recebeste tudo que tens,\npor que, então, te glorias,\ncomo se não o tivesses recebido?\n8\nVós já estais saciados!\nJá vos enriquecestes!\nSem nós, já começastes a reinar!\nOxalá estivésseis mesmo reinando,\npara nós também reinarmos convosco!\n9\nNa verdade, parece-me que Deus nos apresentou,\na nós apóstolos, em último lugar,\ncomo pessoas condenadas à morte.\nTornamo-nos um espetáculo para o mundo,\npara os anjos e os homens.\n10\nNós somos os tolos por causa de Cristo,\nvós, porém, os sábios nas coisas de Cristo.\nNós somos os fracos; vós, os fortes.\nVós sois tratados com toda a estima e atenção,\ne nós, com todo o desprezo.\n11\nAté à presente hora,\npadecemos fome, sede e nudez;\nsomos esbofeteados e vivemos errantes;\n12\nfadigamo-nos, trabalhando com as nossas mãos;\nsomos injuriados, e abençoamos;\nsomos perseguidos, e suportamos;\n13\nsomos caluniados, e exortamos.\nTornamo-nos como que o lixo do mundo,\na escória do universo,\naté ao presente.\n14\nEscrevo-vos tudo isto,\nnão com a intenção de vos envergonhar,\nmas para vos admoestar como meus filhos queridos.\n15\nDe fato, mesmo que tivésseis dez mil educadores\nna vida em Cristo,\nnão tendes muitos pais.\nPois fui eu que, pelo anúncio do Evangelho,\nvos gerei em Jesus Cristo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 144(145),17-18.19-20.21 (R. 18a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor está perto de quem o invoca!\n17\nÉ justo o Senhor em seus caminhos, *\né santo em toda obra que ele faz.\n18\nEle está perto da pessoa que o invoca, *\nde todo aquele que o invoca lealmente.\nR.\n19\nO Senhor cumpre os desejos dos que o temem, *\nele escuta os seus clamores e os salva.\n20\nO Senhor guarda todo aquele que o ama, *\nmas dispersa e extermina os que são ímpios.\nR.\n21\nQue a minha boca cante a glória do Senhor †\ne que bendiga todo ser seu nome santo *\ndesde agora, para sempre e pelos séculos.\nR.\nEvangelho - Lc 6,1-5\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o Caminho, a Verdade e a Vida:\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,1-5",
+    "texto": "6,1-5\n1\nNum sábado, Jesus estava passando\natravés de plantações de trigo.\nSeus discípulos arrancavam e comiam as espigas,\ndebulhando-as com as mãos.\n2\nEntão alguns fariseus disseram:\n\"Por que fazeis\no que não é permitido em dia de sábado?\"\n3\nJesus respondeu-lhes:\n\"Acaso vós não lestes\no que Davi e seus companheiros fizeram,\nquando estavam sentindo fome?\n4\nDavi entrou na casa de Deus,\npegou dos pães oferecidos a Deus e os comeu,\ne ainda por cima os deu a seus companheiros.\nNo entanto, só os sacerdotes podem comer desses pães\".\n5\nE Jesus acrescentou:\n\"O Filho do Homem é senhor também do sábado\".\nPalavra da Salvação."
+  }
+}

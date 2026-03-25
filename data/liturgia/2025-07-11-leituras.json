@@ -1,0 +1,23 @@
+{
+  "data": "2025-07-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 46,1-7.28-30</div><div> Sl 36(37),3-4.18-19.27-28.39-40 (R. 39a)</div><div></div><div> Mt 10,16-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "46,1-7.28-30",
+    "texto": "Naqueles dias,\n1\nIsrael partiu com tudo o que tinha.\nAo chegar a Bersabeia, ofereceu sacrifícios\nao Deus de seu pai Isaac.\n2\nDeus falou a Israel em visão noturna, dizendo-lhe:\n\"Jacó! Jacó!\".\nEle respondeu:\n\"Aqui estou!\"\n3\nE Deus lhe falou:\n\"Eu sou Deus, o Deus de teu pai:\nnão tenhas medo de descer ao Egito,\npois lá farei de ti uma grande nação.\n4\nEu mesmo descerei contigo ao Egito\ne te reconduzirei de lá quando voltares;\ne é José que te fechará os olhos\".\n5\nJacó levantou-se e deixou Bersabeia,\ne seus filhos o puseram,\ncom as crianças e as mulheres, sobre os carros\nque o Faraó enviara para os transportar.\n6\nLevaram, também, tudo o que possuíam na terra de Canaã;\ne foram para o Egito, Jacó com toda a sua família,\n7\ncom seus filhos e netos,\nsuas filhas e toda a sua descendência.\n28\nJacó enviou Judá na frente para avisar José\ne fazê-lo vir ao seu encontro em Gessen.\nE chegaram à terra de Gessen.\n29\nJosé mandou atrelar seu carro\ne subiu a Gessen ao encontro do pai.\nLogo que o viu, lançou-se ao seu pescoço\ne, abraçado a ele, chorou longamente.\n30\nIsrael disse a José:\n\"Agora, morrerei contente,\nporque vi a tua face e te deixo com vida\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 36(37),3-4.18-19.27-28.39-40 (R. 39a)",
+    "refrao": "",
+    "texto": "R.\nA salvação vem de Deus!\n3\nConfia no Senhor e faze o bem, *\ne sobre a terra habitarás em segurança.\n4\nColoca no Senhor tua alegria, *\ne ele dará o que pedir teu coração.\nR.\n18\nO Senhor cuida da vida dos honestos, *\ne sua herança permanece eternamente.\n19\nNão serão envergonhados nos maus dias, *\nmas nos tempos de penúria, saciados.\nR.\n27\nAfasta-te do mal e faze o bem, *\ne terás tua morada para sempre.\n28\nPorque o Senhor Deus ama a justiça, *\ne jamais ele abandona os seus amigos.\nOs malfeitores hão de ser exterminados, *\ne a descendência dos malvados destruída;\nR.\n39\nA salvação dos piedosos vem de Deus; *\nele os protege nos momentos de aflição.\n40\nO Senhor lhes dá ajuda e os liberta, †\ndefende-os e protege-os contra os ímpios, *\ne os guarda porque nele confiaram.\nR.\nEvangelho - Mt 10,16-2\nAclamação ao Evangelho\nJo 16,13a; 14,26d\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuando o Paráclito vier, o Espírito da verdade,\nele vos conduzirá a toda a verdade,\nlembrar-vos-á de tudo o que eu tenho falado."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,16-23",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n10,16-23\nNaquele tempo, disse Jesus aos seus discípulos:\n16\n\"Eis que eu vos envio como ovelhas no meio de lobos.\nSede, portanto, prudentes como as serpentes\ne simples como as pombas.\n17\nCuidado com os homens,\nporque eles vos entregarão aos tribunais\ne vos açoitarão nas suas sinagogas.\n18\nVós sereis levados\ndiante de governadores e reis, por minha causa,\npara dar testemunho diante deles e das nações.\n19\nQuando vos entregarem,\nnão fiqueis preocupados como falar ou o que dizer.\nEntão naquele momento\nvos será indicado o que deveis dizer.\n20\nCom efeito, não sereis vós que havereis de falar,\nmas sim o Espírito do vosso Pai\né que falará através de vós.\n21\nO irmão entregará à morte o próprio irmão;\no pai entregará o filho;\nos filhos se levantarão contra seus pais,\ne os matarão.\n22\nVós sereis odiados por todos,\npor causa do meu nome.\nMas quem perseverar até o fim,\nesse será salvo.\n23\nQuando vos perseguirem numa cidade,\nfugi para outra.\nEm verdade vos digo,\nvós não acabareis de percorrer as cidades de Israel,\nantes que venha o Filho do Homem\".\nPalavra da Salvação."
+  }
+}

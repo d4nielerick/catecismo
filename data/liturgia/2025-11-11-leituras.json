@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Sb 2,23-3,9</div><div> Sl 33(34),2-3.16-17.18-19 (R. 2a)</div><div></div><div> Lc 17,7-10</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,23-3,9",
+    "texto": "23\nDeus criou o homem para a imortalidade\ne o fez à imagem de sua própria natureza;\n24\nfoi por inveja do diabo que a morte entrou no mundo,\ne experimentam-na os que a ele pertencem.\n3,1\nA vida dos justos está nas mãos de Deus,\ne nenhum tormento os atingirá.\n2\nAos olhos dos insensatos parecem ter morrido;\nsua saída do mundo foi considerada uma desgraça,\n3\ne sua partida do meio de nós, uma destruição;\nmas eles estão em paz.\n4\nAos olhos dos homens parecem ter sido castigados,\nmas sua esperança é cheia de imortalidade;\n5\ntendo sofrido leves correções,\nserão cumulados de grandes bens,\nporque Deus os pôs à prova\ne os achou dignos de si.\n6\nProvou-os como se prova o ouro no fogo\ne aceitou-os como ofertas de holocausto;\n7\nno dia do seu julgamento hão de brilhar,\ncorrendo como centelhas no meio da palha;\n8\nvão julgar as nações e dominar os povos,\ne o Senhor reinará sobre eles para sempre.\n9\nOs que nele confiam compreenderão a verdade,\ne os que perseveram no amor ficarão junto dele,\nporque a graça e a misericórdia são para seus eleitos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 33(34),2-3.16-17.18-19 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nBendirei o Senhor Deus em todo o tempo!\n2\nBendirei o Senhor Deus em todo o tempo, *\nseu louvor estará sempre em minha boca.\n3\nMinha alma se gloria no Senhor; *\nque ouçam os humildes e se alegrem!\nR.\n16\nO Senhor pousa seus olhos sobre os justos, *\ne seu ouvido está atento ao seu chamado;\n17\nmas ele volta a sua face contra os maus, *\npara da terra apagar sua lembrança.\nR.\n18\nClamam os justos, e o Senhor bondoso escuta *\ne de todas as angústias os liberta.\n19\nDo coração atribulado ele está perto *\ne conforta os de espírito abatido.\nR.\nEvangelho - Lc 17,7-10\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama, realmente, guardará minha palavra,\ne meu Pai o amará e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "17,7-10",
+    "texto": "17,7-10\nNaquele tempo, disse Jesus:\n7\n\"Se algum de vós tem um empregado\nque trabalha a terra ou cuida dos animais,\npor acaso vai dizer-lhe, quando ele volta do campo:\n'Vem depressa para a mesa'?\n8\nPelo contrário, não vai dizer ao empregado:\n'Prepara-me o jantar, cinge-te e serve-me,\nenquanto eu como e bebo;\ndepois disso tu poderás comer e beber?'\n9\nSerá que vai agradecer ao empregado,\nporque fez o que lhe havia mandado?\n10\nAssim também vós:\nquando tiverdes feito tudo o que vos mandaram,\ndizei: 'Somos servos inúteis;\nfizemos o que devíamos fazer'\".\nPalavra da Salvação."
+  }
+}

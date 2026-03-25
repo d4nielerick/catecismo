@@ -1,0 +1,23 @@
+{
+  "data": "2025-03-27",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 7,23-28</div><div> Sl 94(95),1-2.6-7.8-9 (R. 8)</div><div></div><div> Lc 11,14-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "7,23-28",
+    "texto": "Assim fala o Senhor:\n23\n\"Dei esta ordem ao povo dizendo:\nOuvi a minha voz, assim serei o vosso Deus,\ne vós sereis o meu povo;\ne segui adiante\npor todo o caminho que eu vos indicar\npara serdes felizes.\n24\nMas eles não ouviram e não prestaram atenção;\nao contrário, seguindo as más inclinações do coração,\nandaram para trás e não para a frente,\n25\ndesde o dia em que seus pais saíram do Egito\naté ao dia de hoje.\nA todos enviei meus servos, os profetas,\ne enviei-os cada dia, começando bem cedo;\n26\nmas não ouviram e não prestaram atenção;\nao contrário, obstinaram-se no erro,\nprocedendo ainda pior que seus pais.\n27\nSe falares todas essas coisas,\neles não te escutarão,\ne, se os chamares, não te darão resposta.\n28\nDirás, então:\n'Esta é a nação que não escutou\na voz do Senhor, seu Deus, e não aceitou correção.\nSua fé morreu, foi arrancada de sua boca' \".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 94(95),1-2.6-7.8-9 (R. 8)",
+    "refrao": "",
+    "texto": "R.\nOxalá ouvísseis hoje a sua voz:\nNão fecheis os vossos corações.\n1\nVinde, exultemos de alegria no Senhor, *\naclamemos o Rochedo que nos salva!\n2\nAo seu encontro caminhemos com louvores, *\ne com cantos de alegria o celebremos!\nR.\n6\nVinde adoremos e prostremo-nos por terra, *\ne ajoelhemos ante o Deus que nos criou!\n7\nPorque ele é o nosso Deus, nosso Pastor, †\ne nós somos o seu povo e seu rebanho, *\nas ovelhas que conduz com sua mão.\nR.\n8\nOxalá ouvísseis hoje a sua voz: *\n\"Não fecheis os corações como em Meriba,\n9\ncomo em Massa, no deserto, aquele dia, †\nem que outrora vossos pais me provocaram, *\napesar de terem visto as minhas obras\".\nR.\nEvangelho - Lc 11,14-2\nAclamação ao Evangelho\nJl 2,12-13\nR.\nJesus Cristo, sois bendito,\nsois o ungido de Deus Pai!\nV.\nVoltai ao Senhor, vosso Deus,\nele é bom, compassivo e clemente."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,14-23",
+    "texto": "11,14-23\nNaquele tempo,\n14\nJesus estava expulsando um demônio que era mudo.\nQuando o demônio saiu, o mudo começou a falar,\ne as multidões ficaram admiradas.\n15\nMas alguns disseram:\n\"É por Belzebu, o príncipe dos demônios,\nque ele expulsa os demônios\".\n16\nOutros, para tentar Jesus,\npediam-lhe um sinal do céu.\n17\nMas, conhecendo seus pensamentos,\nJesus disse-lhes:\n\"Todo reino dividido contra si mesmo será destruído;\ne cairá uma casa por cima da outra.\n18\nOra, se até Satanás está dividido contra si mesmo,\ncomo poderá sobreviver o seu reino?\nVós dizeis que é por Belzebu\nque eu expulso os demônios.\n19\nSe é por meio de Belzebu que eu expulso demônios,\nvossos filhos os expulsam por meio de quem?\nPor isso, eles mesmos serão vossos juízes.\n20\nMas, se é pelo dedo de Deus\nque eu expulso os demônios,\nentão chegou para vós o Reino de Deus.\n21\nQuando um homem forte e bem armado\nguarda a própria casa,\nseus bens estão seguros.\n22\nMas, quando chega um homem mais forte do que ele,\nvence-o, arranca-lhe a armadura na qual ele confiava,\ne reparte o que roubou.\n23\nQuem não está comigo, está contra mim.\nE quem não recolhe comigo, dispersa\".\nPalavra da Salvação."
+  }
+}

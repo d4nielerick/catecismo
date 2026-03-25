@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Pr 30,5-9</div><div> Sl 118(119),29.72.89.101.104.163 (R. 105a)</div><div></div><div> Lc 9,1-6</div></div>",
+  "primeira_leitura": {
+    "referencia": "30,5-9",
+    "texto": "5\nA Palavra de Deus é comprovada.\nEle é um escudo para os que nele se abrigam.\n6\nNão acrescentes nada às suas palavras,\npara que ele não te repreenda\ne passes por mentiroso!\n7\nDuas coisas eu te pedi;\nnão mas recuses, antes de eu morrer:\n8\nafasta de mim a falsidade e a mentira,\nnão me dês pobreza nem riqueza,\nmas concede-me o pão que me é necessário.\n9\nNão aconteça que, saciado, eu te renegue\ne diga: \"Quem é o Senhor?\"\nOu que, empobrecido, eu me ponha a roubar\ne profane o nome de meu Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118 (119),29.72.89.101.104.163 (R. 105a)",
+    "refrao": "",
+    "texto": "R.\nVossa palavra é uma luz para os meus passos!\n29\nAfastai-me do caminho da mentira *\ne dai-me a vossa lei como um presente!\nR.\n72\nA lei de vossa boca, para mim, *\nvale mais do que milhões em ouro e prata.\nR.\n89\nÉ eterna, ó Senhor, vossa palavra, *\nela é tão firme e estável como o céu.\nR.\n101\nDe todo mau caminho afasto os passos, *\npara que eu siga fielmente as vossas ordens.\nR.\n104\nDe vossa lei eu recebi inteligência, *\npor isso odeio os caminhos da mentira.\nR.\n163\nEu odeio e detesto a falsidade, *\nporém amo vossas leis e mandamentos!\nR.\nEvangelho - Lc 9,1-6\nAclamação ao Evangelho\nMc 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois, o Reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,1-6",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n9,1-6\nNaquele tempo,\n1\nJesus convocou os Doze,\ndeu-lhes poder e autoridade sobre todos os demônios\ne para curar doenças,\n2\nenviou-os a proclamar o Reino de Deus\ne a curar os enfermos.\n3\nE disse-lhes:\n\"Não leveis nada para o caminho:\nnem cajado, nem sacola, nem pão,\nnem dinheiro, nem mesmo duas túnicas.\n4\nEm qualquer casa onde entrardes, ficai aí;\ne daí é que partireis de novo.\n5\nTodos aqueles que não vos acolherem,\nao sairdes daquela cidade,\nsacudi a poeira dos vossos pés,\ncomo protesto contra eles\".\n6\nOs discípulos partiram e percorriam os povoados,\nanunciando a Boa-Nova\ne fazendo curas em todos os lugares.\nPalavra da Salvação."
+  }
+}

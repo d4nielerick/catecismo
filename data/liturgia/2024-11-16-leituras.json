@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-16",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>3Jo 1,5-8</div><div> Sl 111(112),1-2.3-4.5-6 (R. 1)</div><div></div><div> Lc 18,1-8</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,5-8",
+    "texto": "5\nCaríssimo Gaio,\né muito leal o teu proceder,\nagindo assim com teus irmãos,\nainda que estrangeiros.\n6\nEles deram testemunho\nda tua caridade diante da Igreja.\nFarás bem em provê-los para a viagem\nde um modo digno de Deus.\n7\nPois, por amor do Nome,\neles empreenderam a viagem,\nsem aceitar nada da parte dos pagãos.\n8\nA nós, portanto, cabe acolhê-los,\npara sermos cooperadores da Verdade.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 111(112),1-2.3-4.5-6 (R. 1)",
+    "refrao": "",
+    "texto": "R.\nFeliz aquele que respeita o Senhor!\nOu:\nAleluia, Aleluia, Aleluia\n1\nFeliz o homem que respeita o Senhor *\ne que ama com carinho a sua lei!\n2\nSua descendência será forte sobre a terra, *\nabençoada a geração dos homens retos!\nR.\n3\nHaverá glória e riqueza em sua casa, *\ne permanece para sempre o bem que fez.\n4\nEle é correto, generoso e compassivo, *\ncomo luz brilha nas trevas para os justos.\nR.\n5\nFeliz o homem caridoso e prestativo, *\nque resolve seus negócios com justiça.\n6\nPorque jamais vacilará o homem reto, *\nsua lembrança permanece eternamente!\nR.\nAclamação ao Evangelho\nCf. 2Ts 2,14\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPelo evangelho o Pai nos chamou,\na fim de alcançarmos a glória\nde nosso Senhor Jesus Cristo."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "18,1-8",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n18,1-8\nNaquele tempo,\n1\nJesus contou aos discípulos uma parábola,\npara mostrar-lhes a necessidade de rezar sempre,\ne nunca desistir, dizendo:\n2\n\"Numa cidade havia um juiz\nque não temia a Deus,\ne não respeitava homem algum.\n3\nNa mesma cidade havia uma viúva,\nque vinha à procura do juiz, pedindo:\n'Faze-me justiça contra o meu adversário!'\n4\nDurante muito tempo, o juiz se recusou.\nPor fim, ele pensou:\n'Eu não temo a Deus,\ne não respeito homem algum.\n5\nMas esta viúva já me está aborrecendo.\nVou fazer-lhe justiça,\npara que ela não venha a agredir-me!' ''\n6\nE o Senhor acrescentou:\n\"Escutai o que diz este juiz injusto.\n7\nE Deus, não fará justiça aos seus escolhidos,\nque dia e noite gritam por ele?\nSerá que vai fazê-los esperar?\n8\nEu vos digo\nque Deus lhes fará justiça bem depressa.\nMas o Filho do homem, quando vier,\nserá que ainda vai encontrar fé sobre a terra?\"\nPalavra da Salvação."
+  }
+}

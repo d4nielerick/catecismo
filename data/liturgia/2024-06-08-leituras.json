@@ -1,0 +1,23 @@
+{
+  "data": "2024-06-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 61,9-11</div><div> 1Sm 2,1.4-5.6-7 8abcd (R. cf. 1a)</div><div></div><div> Lc 2,41-51</div></div>",
+  "primeira_leitura": {
+    "referencia": "61,9-11",
+    "texto": "9\nA descendência do meu povo\nserá conhecida entre as nações,\ne seus filhos se fixarão no meio dos povos;\nquem os vir há de reconhecê-los\ncomo descendentes abençoados por Deus.\n10\nExulto de alegria no Senhor\ne minh'alma regozija-se em meu Deus;\nele me vestiu com as vestes da salvação,\nenvolveu-me com o manto da justiça\ne adornou-me como um noivo com sua coroa,\nou uma noiva com suas joias.\n11\nAssim como a terra faz brotar a planta\ne o jardim faz germinar a semente,\nassim o Senhor Deus fará germinar a justiça\ne a sua glória diante de todas as nações.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "1Sm 2,1.4-5.6-7.8abcd (R. cf. 1a)",
+    "refrao": "",
+    "texto": "R.\nMeu coração se regozija no Senhor.\n1\nExulta no Senhor meu coração, *\ne se eleva a minha fronte no meu Deus;\nminha boca desafia os meus rivais *\nporque me alegro com a vossa salvação.\nR.\n4\nO arco dos fortes foi dobrado, foi quebrado, *\nmas os fracos se vestiram de vigor.\n5\nOs saciados se empregaram por um pão, *\nmas os pobres e os famintos se fartaram.\nMuitas vezes deu à luz a que era estéril, *\nmas a mãe de muitos filhos definhou.\nR.\n6\nÉ o Senhor quem dá a morte e dá a vida, *\nfaz descer à sepultura e faz voltar;\n7\né o Senhor quem faz o pobre e faz o rico, *\né o Senhor quem nos humilha e nos exalta.\nR.\n8a\nO Senhor ergue do pó o homem fraco, *\n8b\ndo lixo ele retira o indigente,\n8c\npara fazê-los assentar-se com os nobres *\n8d\nnum lugar de muita honra e distinção.\nR.\nEvangelho - Lc 2,41-51\nAclamação ao Evangelho\nLc 2,19\nR.\nAleluia, Aleluia, Aleluia.\nV.\nBendita é a Virgem Maria,\nque guardava a Palavra de Deus,\nmeditando-a no seu coração."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "2,41-51",
+    "texto": "2,41-51\n41\nOs pais de Jesus iam todos os anos a Jerusalém,\npara a festa da Páscoa.\n42\nQuando ele completou doze anos,\nsubiram para a festa, como de costume.\n43\nPassados os dias da Páscoa,\ncomeçaram a viagem\nde volta,\nmas o menino Jesus ficou em Jerusalém,\nsem que seus pais o notassem.\n44\nPensando que ele estivesse na caravana,\ncaminharam um dia inteiro.\nDepois começaram a procurá-lo\nentre os parentes e conhecidos.\n45\nNão o tendo encontrado,\nvoltaram para Jerusalém à sua procura.\n46\nTrês dias depois, o encontraram no Templo.\nEstava sentado no meio dos mestres,\nescutando e fazendo perguntas.\n47\nTodos os que ouviam o menino estavam maravilhados\ncom sua inteligência e suas respostas.\n48\nAo vê-lo, seus pais ficaram muito admirados\ne sua mãe lhe disse:\n\"Meu filho, por que agiste assim conosco?\nOlha que teu pai e eu estávamos, angustiados,\nà tua procura\".\n49\nJesus respondeu:\n\"Por que me procuráveis?\nNão sabeis que devo estar na casa de meu Pai?\"\n50\nEles, porém, não compreenderam\nas palavras que lhes dissera.\n51\nJesus desceu então com seus pais para Nazaré,\ne era-lhes obediente.\nSua mãe, porém,\nconservava no coração todas estas coisas.\nPalavra da Salvação."
+  }
+}

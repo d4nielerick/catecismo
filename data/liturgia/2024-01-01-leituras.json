@@ -1,0 +1,23 @@
+{
+  "data": "2024-01-01",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Nm 6,22-27</div><div> Sl 66(67),2-3.5.6.8 (R. 2a)</div><div> Gl 4,4-7</div><div> Lc 2,16-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,22-27",
+    "texto": "22\nO Senhor falou a Moisés, dizendo:\n23\n\"Fala a Aarão e a seus filhos:\nAo abençoar os filhos de Israel, dizei-lhes:\n24\nO Senhor te abençoe e te guarde!\n25\n'O Senhor faça brilhar sobre ti a sua face,\ne se compadeça de ti!\n26\nO Senhor volte para ti o seu rosto\ne te dê a paz!'\n27\nAssim invocarão o meu nome sobre os filhos de Israel,\ne eu os abençoarei\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 66(67),2-3.5.6.8  (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nQue Deus nos dê a sua graça e sua bênção.\n2\nQue Deus nos dê a sua graça e sua bênção, *\ne sua face resplandeça sobre nós!\n3\nQue na terra se conheça o seu caminho *\ne a sua salvação por entre os povos.\nR.\n5\nExulte de alegria a terra inteira, *\npois julgais o universo com justiça;\nos povos governais com retidão, *\ne guiais, em toda a terra, as nações.\nR.\n6\nQue as nações vos glorifiquem, ó Senhor, *\nque todas as nações vos glorifiquem!\n8\nQue o Senhor e nosso Deus nos abençoe, *\ne o respeitem os confins de toda a terra!\nR.\n2ª Leitura - Gl 4,4-7\nSEGUNDA LEITURA\nDeus enviou o seu Filho, nascido de uma mulher.\nLeitura da Carta de São Paulo aos Gálatas\n4,4-7\nIrmãos:\n4\nQuando se completou o tempo previsto,\nDeus enviou o seu Filho, nascido de uma mulher,\nnascido sujeito à Lei,\n5\na fim de resgatar os que eram sujeitos à Lei\ne para que todos recebêssemos a filiação adotiva.\n6\nE porque sois filhos,\nDeus enviou aos nossos corações o Espírito do seu Filho,\nque clama: Abá - ó Pai!\n7\nAssim já não és mais escravo, mas filho;\ne se és filho, és também herdeiro:\ntudo isso, por graça de Deus.\nPalavra do Senhor.\nAclamação ao Evangelho\nHb 1,1-2\nR.\nAleluia, Aleluia, Aleluia.\nV.\nDe muitos modos, Deus outrora\nnos falou pelos profetas;\nnestes tempos derradeiros,\nnos falou pelo seu Filho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "2,16-21",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n2,16-21\nNaquele tempo,\n16\nos pastores foram às pressas a Belém\ne encontraram Maria e José,\ne o recém-nascido, deitado na manjedoura.\n17\nTendo-o visto, contaram o que lhes fora dito\nsobre o menino.\n18\nE todos os que ouviram os pastores\nficaram maravilhados com aquilo que contavam.\n19\nQuanto a Maria, guardava todos estes fatos\ne meditava sobre eles em seu coração.\n20\nOs pastores voltaram, glorificando e louvando a Deus\npor tudo que tinham visto e ouvido,\nconforme lhes tinha sido dito.\n21\nQuando se completaram os oito dias\npara a circuncisão do menino,\nderam-lhe o nome de Jesus,\ncomo fora chamado pelo anjo antes de ser concebido.\nPalavra da Salvação."
+  }
+}

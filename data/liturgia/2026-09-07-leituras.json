@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-07",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 5,1-8</div><div> Sl 5,5-6.7.12 (R. 9a)</div><div></div><div> Lc 6,6-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-8",
+    "texto": "Irmãos,\n1\né voz geral que está acontecendo,\nentre vós, um caso de imoralidade;\ne de imoralidade tal\nque nem entre os pagãos costuma acontecer:\num dentre vós está convivendo com a própria madrasta.\n2\nNo entanto, estais inchados de orgulho,\nao invés de vestirdes luto,\na fim de que fosse tirado do meio de vós\naquele que assim procede?\n3\nPois bem, embora ausente de corpo,\nmas presente em espírito,\neu julguei, como se estivesse aí entre vós,\nesse tal que tem procedido assim:\n4\nEm nome do Senhor Jesus\n- estando vós e eu espiritualmente reunidos\ncom o poder do Senhor nosso, Jesus -\n5\nentregamos tal homem a Satanás,\npara a ruína da carne,\na fim de que o espírito seja salvo,\nno dia do Senhor.\n6\nVós vos gloriais sem razão!\nAcaso ignorais\nque um pouco de fermento leveda a massa toda?\n7\nLançai fora o fermento velho,\npara que sejais uma massa nova,\njá que deveis ser sem fermento.\nPois o nosso cordeiro pascal, Cristo,\njá está imolado.\n8\nAssim, celebremos a festa,\nnão com velho fermento,\nnem com fermento de maldade ou de perversidade,\nmas com os pães ázimos de pureza e de verdade.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 5,5-6.7.12 (R. 9a)",
+    "refrao": "",
+    "texto": "R.\nNa vossa justiça guiai-me Senhor!\n5\nNão sois um Deus a quem agrade a iniquidade, *\nnão pode o mau morar convosco;\n6\nnem os ímpios poderão permanecer *\nperante os vossos olhos.\nR.\n7\nDetestais o que pratica a iniquidade *\ne destruís o mentiroso.\nÓ Senhor, abominais o sanguinário, *\no perverso e enganador.\nR.\n12\nMas exulte de alegria todo aquele *\nque em vós se refugia;\nsob a vossa proteção se regozijem, *\nos que amam vosso nome!\nR.\nEvangelho - Lc 6,6-11\nAclamação ao Evangelho\nJo  10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz\ne eu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,6-11",
+    "texto": "6,6-11\nAconteceu num dia de sábado\n6\nque Jesus entrou na sinagoga,\ne começou a ensinar.\nAí havia um homem cuja mão direita era seca.\n7\nOs mestres da Lei e os fariseus o observavam,\npara verem se Jesus iria curá-lo em dia de sábado,\ne assim encontrarem motivo para acusá-lo.\n8\nJesus, porém, conhecendo seus pensamentos,\ndisse ao homem da mão seca:\n\"Levanta-te, e fica aqui no meio\".\nEle se levantou, e ficou de pé.\n9\nDisse-lhes Jesus:\n\"Eu vos pergunto:\nO que é permitido fazer no sábado:\no bem ou o mal,\nsalvar uma vida ou deixar que se perca?\"\n10\nEntão Jesus olhou para todos\nos que estavam ao seu redor,\ne disse ao homem:\n\"Estende a tua mão.\"\nO homem assim o fez e sua mão ficou curada.\n11\nEles ficaram com muita raiva,\ne começaram a discutir entre si\nsobre o que poderiam fazer contra Jesus.\nPalavra da Salvação."
+  }
+}

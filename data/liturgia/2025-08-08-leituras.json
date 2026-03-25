@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-08",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Dt 4,32-40</div><div> Sl 76(77),12-13.14-15.16 e 21 (R. 12a)</div><div></div><div> Mt 16,24-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,32-40",
+    "texto": "Moisés falou ao povo dizendo:\n32\n\"Interroga os tempos antigos que te precederam,\ndesde o dia em que Deus criou o homem sobre a terra,\ne investiga de um extremo ao outro dos céus,\nse houve jamais um acontecimento tão grande,\nou se ouviu algo semelhante.\n33\nExiste, porventura, algum povo\nque tenha ouvido a voz de Deus\nfalando-lhe do meio do fogo,\ncomo tu ouviste,\ne tenha permanecido vivo?\n34\nOu terá vindo algum Deus escolher para si\num povo entre as nações,\npor meio de provações, de sinais e prodígios,\npor meio de combates,\ncom mão forte e braço estendido,\ne por meio de grandes terrores,\ncomo tudo o que por ti o Senhor vosso Deus fez no Egito,\ndiante de teus próprios olhos?\n35\nA ti foi dado ver tudo isso,\npara que reconheças que o Senhor é na verdade Deus,\ne que não há outro Deus fora ele.\n36\nDo céu ele te fez ouvir sua voz para te instruir,\ne sobre a terra te fez ver o seu grande fogo;\ne do meio do fogo ouviste suas palavras,\n37\nporque amou teus pais\ne, depois deles, escolheu seus descendentes.\nEle te fez sair do Egito por seu grande poder,\n38\npara expulsar, diante de ti,\nnações maiores e mais fortes do que tu,\ne para te introduzir na terra deles\ne dá-la a ti como herança,\ncomo tu estás vendo hoje.\n39\nReconhece, pois, hoje, e grava-o em teu coração,\nque o Senhor é o Deus lá em cima do céu\ne cá embaixo na terra,\ne que não há outro além dele.\n40\nGuarda suas leis e seus mandamentos\nque hoje te prescrevo, para que sejas feliz,\ntu e teus filhos depois de ti,\ne vivas longos dias sobre a terra\nque o Senhor teu Deus te vai dar para sempre\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 76(77),12-13.14-15.16 e 21 (R.12a)",
+    "refrao": "",
+    "texto": "R.\nPenso em vossas maravilhas, ó Senhor!\n12\nRecordando os grandes feitos do passado, *\nvossos prodígios eu relembro, ó Senhor;\n13\neu medito sobre as vossas maravilhas *\ne sobre as obras grandiosas que fizestes.\nR.\n14\nSão santos, ó Senhor, vossos caminhos! *\nHaverá deus que se compare ao nosso Deus?\n15\nSois o Deus que operastes maravilhas, *\nvosso poder manifestastes entre os povos.\nR.\n16\nCom vosso braço redimistes vosso povo, *\nos filhos de Jacó e de José.\n21\nComo um rebanho conduzistes vosso povo *\ne o guiastes por Moisés e Aarão.\nR.\nEvangelho - Mt 16,24-2\nAclamação ao Evangelho\nMt 5,10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os que são perseguidos\npor causa da justiça do Senhor,\nporque o reino dos céus há de ser deles!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,24-28",
+    "texto": "16,24-28\nNaquele tempo,\n24\nJesus disse aos discípulos:\n\"Se alguém quer me seguir, renuncie a si mesmo,\ntome a sua cruz e me siga.\n25\nPois quem quiser salvar a sua vida vai perdê-la;\ne quem perder a sua vida por causa de mim,\nvai encontrá-la.\n26\nDe fato, que adianta ao homem ganhar o mundo inteiro,\nmas perder a sua vida?\nO que poderá alguém dar em troca de sua vida?\n27\nPorque o Filho do Homem\nvirá na glória do seu Pai, com os seus anjos,\ne então retribuirá a cada um\nde acordo com a sua conduta.\n28\nEm verdade vos digo:\nAlguns daqueles que estão aqui não morrerão\nantes de verem o Filho do Homem vindo com o seu Reino\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2026-05-28",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Pd 2,2-5.9-12</div><div> Sl 99(100),2.3.4.5 (R. 2c)</div><div></div><div> Mc 10,46-52</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,2-5.9-12",
+    "texto": "Caríssimos,\n2\ncomo criancinhas recém-nascidas,\ndesejai o leite legítimo e puro,\nque vos vai fazer crescer na salvação.\n3\nPois já provastes que o Senhor é bom.\n4\nAproximai-vos do Senhor,\npedra viva, rejeitada pelos homens,\nmas escolhida e honrosa aos olhos de Deus.\n5\nDo mesmo modo, também vós, como pedras vivas,\nformai um edifício espiritual,\num sacerdócio santo,\na fim de oferecerdes sacrifícios espirituais,\nagradáveis a Deus, por Jesus Cristo.\n9\no sacerdócio do Reino,\na nação santa, o povo que ele conquistou\npara proclamar as obras admiráveis\ndaquele que vos chamou das trevas\npara a sua luz maravilhosa.\n10\nVós sois aqueles que \"antes não eram povo,\nagora porém são povo de Deus;\nos que não eram objeto de misericórdia,\nagora porém alcançaram miserícórdia\".\n11\nAmados, eu vos exorto\ncomo a estrangeiros emigrantes:\nafastai-vos das humanas paixões,\nque fazem guerra contra vós mesmos.\n12\nTende bom procedimento no meio dos gentios.\nDeste modo, mesmo caluniando-vos,\ncomo se fósseis malfeitores,\neles poderão observar a vossa boa atuação\ne glorificar a Deus, no dia de sua visitação.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 99(100),2.3.4.5 (R. 2c)",
+    "refrao": "",
+    "texto": "R.\nCom canto apresentai-vos diante do Senhor!\n2\nAclamai o Senhor, ó terra inteira, †\nservi ao Senhor com alegria, *\nide a ele cantando jubilosos!\nR.\n3\nSabei que o Senhor, só ele, é Deus, †\nEle mesmo nos fez, e somos seus, *\nnós somos seu povo e seu rebanho.\nR.\n4\nEntrai por suas portas dando graças, †\ne em seus átrios com hinos de louvor; *\ndai-lhe graças, seu nome bendizei!\nR.\n5\nSim, é bom o Senhor e nosso Deus, †\nsua bondade perdura para sempre, *\nseu amor é fiel eternamente!\nR.\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou a luz do mundo,\naquele que me segue,\nnão caminha entre as trevas,\nmas terá a luz da vida."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,46-52",
+    "texto": "10,46-52\nNaquele tempo,\n46\nJesus saiu de Jericó,\njunto com seus discípulos e uma grande multidão.\nO filho de Timeu, Bartimeu, cego e mendigo,\nestava sentado à beira do caminho.\n47\nQuando ouviu dizer que Jesus, o Nazareno, estava passando,\ncomeçou a gritar:\n\"Jesus, filho de Davi, tem piedade de mim!\"\n48\nMuitos o repreendiam para que se calasse.\nMas ele gritava mais ainda:\n\"Filho de Davi, tem piedade de mim!\"\n49\nEntão Jesus parou e disse:\n\"Chamai-o\" .\nEles o chamaram e disseram:\n\"Coragem, levanta-te, Jesus te chama!\"\n50\nO cego jogou o manto, deu um pulo e foi até Jesus.\n\"Eis que nós deixamos tudo e te seguimos\".\n51\nEntão Jesus lhe perguntou:\n\"O que queres que eu te faça?\"\nO cego respondeu:\n\"Mestre, que eu veja!\"\n52\nJesus disse:\n\"Vai, a tua fé te curou\".\nNo mesmo instante, ele recuperou a vista\nPalavra da Salvação."
+  }
+}

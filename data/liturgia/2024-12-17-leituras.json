@@ -1,0 +1,23 @@
+{
+  "data": "2024-12-17",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 49,2.8-10</div><div> Sl 71(72),1-2.3-4ab.7-8.17 (R. cf. 7)</div><div></div><div> Mt 1,1-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "49,2.8-10",
+    "texto": "Naqueles dias, Jacó chamou seus filhos e disse:\n2\n\"Juntai-vos e ouvi, filhos de Jacó,\nouvi Israel, vosso pai!\n8\nJudá, teus irmãos te louvarão;\npesará tua mão sobre a nuca de teus inimigos,\nse prostrarão diante de ti os filhos de teu pai.\n9\nJudá, filhote de leão:\nsubiste, meu filho, da pilhagem;\nele se agacha e se deita como um leão,\ne como uma leoa; quem o despertará?\n10\nO cetro não será tirado de Judá,\nnem o bastão de comando dentre seus pés,\naté que venha Aquele a quem pertencem,\ne a quem obedecerão os povos\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 71(72),1-2.3-4ab.7-8.17 (R. cf. 7)",
+    "refrao": "",
+    "texto": "R.\nNos seus dias a justiça florirá\ne paz em abundância, para sempre.\n1\nDai ao Rei vossos poderes, Senhor Deus, *\nvossa justiça ao descendente da realeza!\n2\nCom justiça ele governe o vosso povo, *\ncom equidade ele julgue os vossos pobres.\nR.\n3\nDas montanhas venha a paz a todo o povo, *\ne desça das colinas a justiça!\n4a\nEste Rei defenderá os que são pobres, *\n4b\nos filhos dos humildes salvará\nR.\n7\nNos seus dias a justiça florirá *\ne grande paz, até que a lua perca o brilho!\n8\nDe mar a mar estenderá o seu domínio, *\ne desde o rio até os confins de toda a terra!\nR.\n17\nSeja bendito o seu nome para sempre! *\nE que dure como o sol sua memória!\nTodos os povos serão nele abençoados, *\ntodas as gentes cantarão o seu louvor!\nR\nEvangelho - Mt 1,1-17\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nÓ Sabedoria do Altíssimo,\nque tudo determina com doçura e com vigor:\noh, vem nos ensinar o caminho da prudência!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,1-17",
+    "texto": "1,1-17\n1\nLivro da origem de Jesus Cristo,\nfilho de Davi, filho de Abraão.\n2\nAbraão gerou Isaac; Isaac gerou Jacó;\nJacó gerou Judá e seus irmãos.\n3\nJudá gerou Farés e Zara, cuja mãe era Tamar.\nFarés gerou Esrom; Esrom gerou Aram;\n4\nAram gerou Aminadab; Aminadab gerou Naasson;\nNaasson gerou Salmon;\n5\nSalmon gerou Booz, cuja mãe era Raab.\nBooz gerou Obed, cuja mãe era Rute.\nObed gerou Jessé.\n6\nJessé gerou o rei Davi.\nDavi gerou Salomão,\ndaquela que tinha sido a mulher de Urias.\n7\nSalomão gerou Roboão; Roboão gerou Abias;\nAbias gerou Asa;\n8\nAsa gerou Josafá; Josafá gerou Jorão;\nJorão gerou Ozias;\n9\nOzias gerou Joatão; Joatão gerou Acaz;\nAcaz gerou Ezequias;\n10\nEzequias gerou Manassés; Manassés gerou Amon;\nAmon gerou Josias.\n11\nJosias gerou Jeconias e seus irmãos,\nno tempo do exílio na Babilônia.\n12\nDepois do exílio na Babilônia,\nJeconias gerou Salatiel; Salatiel gerou Zorobabel;\n13\nZorobabel gerou Abiud; Abiud gerou Eliaquim;\nEliaquim gerou Azor;\n14\nAzor gerou Sadoc; Sadoc gerou Aquim;\nAquim gerou Eliud;\n15\nEliud gerou Eleazar; Eleazar gerou Matã;\nMatã gerou Jacó.\n16\nJacó gerou José, o esposo de Maria,\nda qual nasceu Jesus, que é chamado o Cristo.\n17\nAssim, as gerações desde Abraão até Davi são quatorze;\nde Davi até o exílio na Babilônia, quatorze;\ne do exílio na Babilônia até Cristo, quatorze.\nPalavra da Salvação."
+  }
+}

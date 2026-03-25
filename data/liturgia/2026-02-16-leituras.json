@@ -1,0 +1,23 @@
+{
+  "data": "2026-02-16",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Tg 1,1-11</div><div> Sl 118(119),67.68.71.72.75.76 (R. 77a)</div><div></div><div> Mc 8,11-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-11",
+    "texto": "1\nTiago, servo de Deus e do Senhor Jesus Cristo,\nàs doze tribos que vivem na dispersão:\nsaudações.\n2\nMeus irmãos,\nquando deveis passar por diversas provações,\nconsiderai isso motivo de grande alegria,\n3\npor saberdes que a comprovação da fé\nproduz em vós a perseverança.\n4\nMas é preciso que a perseverança\ngere uma obra de perfeição,\npara que vos torneis perfeitos e íntegros,\nsem falta ou deficiência alguma.\n5\nSe a alguém de vós falta sabedoria,\npeça-a a Deus,\nque a concede generosamente a todos,\nsem impor condições;\ne ela lhe será dada.\n6\nMas peça com fé, sem duvidar,\nporque aquele que duvida\né semelhante a uma onda do mar,\nimpelida e agitada pelo vento.\n7\nNão pense tal pessoa\nque receberá alguma coisa do Senhor:\n8\no homem de duas almas\né inconstante em todos os seus caminhos.\n9\nO irmão humilde pode ufanar-se de sua exaltação,\n10\nmas o rico deve gloriar-se de sua humilhação.\nPois há de passar como a flor da erva.\n11\nCom efeito, basta que surja o sol com o seu calor,\nlogo seca a erva, cai a sua flor,\ne desaparece a beleza do seu aspecto.\nAssim também acabará por murchar\no rico no meio de seus negócios.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),67.68.71.72.75.76 (R. 77a)",
+    "refrao": "",
+    "texto": "R.\nVenha a mim o vosso amor e viverei.\n67\nAntes de ser por vós provado, eu me perdera; *\nmas agora sigo firme em vossa lei!\nR.\n68\nPorque sois bom e realizais somente o bem, *\nensinai-me a fazer vossa vontade!\nR.\n71\nPara mim foi muito bom ser humilhado, *\nporque assim eu aprendi vossa vontade!\nR.\n72\nA lei de vossa boca, para mim, *\nvale mais do que milhões em ouro e prata.\nR.\n75\nSei que os vossos julgamentos são corretos, *\ne com justiça me provastes, ó Senhor!\nR.\n76\nVosso amor seja um consolo para mim, *\nconforme a vosso servo prometestes.\nR.\nEvangelho - Mc 8,11-13\nAclamação ao Evangelho\nJo 14,6\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSou o Caminho, a Verdade e a Vida,\nninguém vem ao Pai, senão por mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,11-13",
+    "texto": "8,11-13\nNaquele tempo,\n11\nos fariseus vieram e começaram a discutir com Jesus.\nE, para pô-lo à prova, pediam-lhe um sinal do céu.\n12\nMas Jesus deu um suspiro profundo\ne disse:\n\"Por que esta gente pede um sinal?\nEm verdade vos digo,\na esta gente não será dado nenhum sinal\".\n13\nE, deixando-os, Jesus entrou de novo na barca\ne se dirigiu para a outra margem.\nPalavra da Salvação."
+  }
+}

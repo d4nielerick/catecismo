@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Tm 4,12-16</div><div> Sl 110(111),7-8.9.10 (R. 2a)</div><div></div><div> Lc 7,36-50</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,12-16",
+    "texto": "Caríssimo,\n12\nninguém te despreze por seres jovem.\nPelo contrário, serve de exemplo para os fiéis,\nna palavra, na conduta, na caridade,\nna fé, na pureza.\n13\nAté que eu chegue, dedica-te à leitura,\nà exortação, ao ensino.\n14\nNão descuides o dom da graça que tu tens\ne que te foi dada por indicação da profecia,\nacompanhada da imposição das mãos do presbitério.\n15\nCom perseverança, põe estas coisas em prática,\npara que todos vejam o teu progresso.\n16\nCuida de ti mesmo e daquilo que ensinas.\nMostra-te perseverante.\nAssim te salvarás a ti mesmo\ne também àqueles que te escutam.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 110(111),7-8.9.10 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nGrandiosas são as obras do Senhor!\n7\nSuas obras são verdade e são justiça, *\nseus preceitos, todos eles, são estáveis,\n8\nconfirmados para sempre e pelos séculos, *\nrealizados na verdade e retidão.\nR.\n9\nEnviou libertação para o seu povo, †\nconfirmou sua Aliança para sempre. *\nSeu nome é santo e é digno de respeito.\nR.\n10\nTemer a Deus é o princípio do saber, †\ne é sábio todo aquele que o pratica. *\nPermaneça eternamente o seu louvor.\nR.\nAclamação ao Evangelho\nMt 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVinde a mim, todos vós que estais cansados,\ne descanso eu vos darei, diz o Senhor."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,36-50",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n7,36-50\nNaquele tempo,\n36\num fariseu convidou Jesus\npara uma refeição em sua casa.\nJesus entrou na casa do fariseu\ne pôs-se à mesa.\n37\nCerta mulher, conhecida na cidade como pecadora,\nsoube que Jesus estava à mesa, na casa do fariseu.\nEla trouxe um frasco de alabastro com perfume,\n38\ne, ficando por detrás, chorava aos pés de Jesus;\ncom as lágrimas começou a banhar-lhe os pés,\nenxugava-os com os cabelos,\ncobria-os de beijos e os ungia com o perfume.\n39\nVendo isso, o fariseu que o havia convidado\nficou pensando:\n\"Se este homem fosse um profeta,\nsaberia que tipo de mulher está tocando nele,\npois é uma pecadora\".\n40\nJesus disse então ao fariseu:\n\"Simão, tenho uma coisa para te dizer\".\nSimão respondeu:\n\"Fala, mestre!\"\n41\n\"Certo credor tinha dois devedores;\num lhe devia quinhentas moedas de prata,\no outro cinquenta.\n42\nComo não tivessem com que pagar,\no homem perdoou os dois.\nQual deles o amará mais?\"\n43\nSimão respondeu:\n\"Acho que é aquele ao qual perdoou mais\".\nJesus lhe disse:\n\"Tu julgaste corretamente\".\n44\nEntão Jesus virou-se para a mulher\ne disse a Simão:\n\"Estás vendo esta mulher?\nQuando entrei em tua casa,\ntu não me ofereceste água para lavar os pés;\nela, porém, banhou meus pés com lágrimas\ne enxugou-os com os cabelos.\n45\nTu não me deste o beijo de saudação;\nela, porém, desde que entrei,\nnão parou de beijar meus pés.\n46\nTu não derramaste óleo na minha cabeça;\nela, porém, ungiu meus pés com perfume.\nPor esta razão, eu te declaro:\n47\nos muitos pecados que ela cometeu estão perdoados\nporque ela mostrou muito amor.\nAquele a quem se perdoa pouco mostra pouco amor\".\n48\nE Jesus disse à mulher:\n\"Teus pecados estão perdoados\".\n49\nEntão, os convidados começaram a pensar:\n\"Quem é este que até perdoa pecados?\"\n50\nMas Jesus disse à mulher:\n\"Tua fé te salvou. Vai em paz!\"\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2026-07-21",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Mq 7,14-15.18-20</div><div> Sl 84(85),2-4.5-6.7-8 (R. 8a)</div><div></div><div> Mt 12,46-50</div></div>",
+  "primeira_leitura": {
+    "referencia": "7,14-15.18-20",
+    "texto": "14\nApascenta o teu povo com o cajado da autoridade,\no rebanho de tua propriedade,\nos habitantes dispersos pela mata\ne pelos campos cultivados;\nque eles desfrutem a terra de Basã e Galaad,\ncomo nos velhos tempos.\n15\nE, como foi nos dias\nem que nos fizeste sair do Egito,\nfaze-nos ver novos prodígios.\n18\nQual Deus existe, como tu,\nque apagas a iniquidade\ne esqueces o pecado\ndaqueles que são resto de tua propriedade?\nEle não guarda rancor para sempre,\no que ama é a misericórdia.\n19\nVoltará a compadecer-se de nós,\nesquecerá nossas iniquidades\ne lançará ao fundo do mar\ntodos os nossos pecados.\n20\nTu manterás fidelidade a Jacó\ne terás compaixão de Abraão,\ncomo juraste a nossos pais,\ndesde tempos remotos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 84(85),2-4.5-6.7-8 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nMostrai-nos, ó Senhor, vossa bondade.\n2\nFavorecestes, ó Senhor, a vossa terra, *\nlibertastes os cativos de Jacó.\n3\nPerdoastes o pecado ao vosso povo, *\nencobristes toda a falta cometida;\n4\nretirastes a ameaça que fizestes, *\nacalmastes o furor de vossa ira.\nR.\n5\nRenovai-nos, nosso Deus e Salvador, *\nesquecei a vossa mágoa contra nós!\n6\nFicareis eternamente irritado? *\nGuardareis a vossa ira pelos séculos?\nR.\n7\nNão vireis restituir a nossa vida, *\npara que em vós se rejubile o vosso povo?\n8\nMostrai-nos, ó Senhor, vossa bondade, *\nconcedei-nos também vossa salvação!\nR.\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama, realmente, guardará minha palavra\ne meu Pai o amará, e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,46-50",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n12,46-50\nNaquele tempo,\n46\nenquanto Jesus estava falando às multidões,\nsua mãe e seus irmãos ficaram do lado de fora,\nprocurando falar com ele.\n47\nAlguém disse a Jesus:\n\"Olha! Tua mãe e teus irmãos estão aí fora,\ne querem falar contigo\".\n48\nJesus perguntou àquele que tinha falado:\n\"Quem é minha mãe, e quem são meus irmãos?\"\n49\nE, estendendo a mão para os discípulos, Jesus disse:\n\"Eis minha mãe e meus irmãos.\n50\nPois todo aquele que faz a vontade do meu Pai,\nque está nos céus,\nesse é meu irmão, minha irmã e minha mãe\".\nPalavra da Salvação."
+  }
+}

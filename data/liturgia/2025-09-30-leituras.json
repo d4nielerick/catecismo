@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-30",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Zc 8,20-23</div><div> Sl 86(87),1-3.4-5.6-7 (R. Zc 8,23)</div><div></div><div> Lc 9,51-56</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,20-23",
+    "texto": "20\nIsto diz o Senhor dos exércitos:\n\"Virão ainda povos e habitantes de cidades grandes,\n21\ndizendo os habitantes\nde uma para os de outra cidade:\n'Vamos orar na presença do Senhor,\nvamos visitar o Senhor dos exércitos;\neu irei também'.\n22\nVirão muitos povos e nações fortes\nvisitar o Senhor dos exércitos\ne orar na presença do Senhor\".\n23\nIsto diz o Senhor dos exércitos:\n\"Naqueles dias, dez homens\nde todas as línguas faladas entre as nações\nvão segurar pelas bordas da roupa\num homem de Judá, dizendo:\n'Nós iremos convosco;\nporque ouvimos dizer que Deus está convosco'\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 86(87),1-3.4-5.6-7 (R. Zc 8,23)",
+    "refrao": "",
+    "texto": "R.\nNós temos ouvido que Deus está convosco.\n1\nO Senhor ama a cidade *\nque fundou no Monte santo;\n2\nama as portas de Sião *\nmais que as casas de Jacó.\n3\nDizem coisas gloriosas *\nda Cidade do Senhor.\nR.\n4\nLembro o Egito e Babilônia *\nentre os meus veneradores.\nNa Filisteia ou em Tiro †\nou no país da Etiópia, *\neste ou aquele ali nasceu.\n5\nDe Sião, porém, se diz: †\n\"Nasceu nela todo homem; *\nDeus é sua segurança\".\nR.\n6\nDeus anota no seu livro, †\nonde inscreve os povos todos: *\n\"Foi ali que estes nasceram\".\n7\nE por isso todos juntos *\na cantar se alegrarão;\ne, dançando, exclamarão: *\n\"Estão em ti as nossas fontes!\"\nR.\nEvangelho - Lc 9,51-56\nAclamação ao Evangelho\nMc 10,45\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVeio o Filho do Homem, a fim de servir\ne dar sua vida em resgate por muitos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,51-56",
+    "texto": "9,51-56\n51\nEstava chegando o tempo\nde Jesus ser levado para o céu.\nEntão ele tomou a firme decisão\nde partir para Jerusalém\n52\ne enviou mensageiros à sua frente.\nEstes puseram-se a caminho\ne entraram num povoado de samaritanos,\npara preparar hospedagem para Jesus.\n53\nMas os samaritanos não o receberam,\npois Jesus dava a impressão de que ia a Jerusalém.\n54\nVendo isso, os discípulos Tiago e João disseram:\n\"Senhor, queres que mandemos descer fogo do céu\npara destruí-los?\"\n55\nJesus, porém, voltou-se e repreendeu-os.\n56\nE partiram para outro povoado.\nPalavra da Salvação."
+  }
+}

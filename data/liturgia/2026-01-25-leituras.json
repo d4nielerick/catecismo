@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 8,23b-9,3</div><div> Sl 26(27),1.4.13-14 (R. 1a.1c)</div><div> 1Cor 1,10-13.17</div><div> Mt 4,12-23</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,23b-9,3",
+    "texto": "23b\nNo tempo passado o Senhor humilhou\na terra de Zabulon e a terra de Neftali;\nmas recentemente cobriu de glória o caminho do mar,\ndo além-Jordão e da Galileia das nações.\n9,1\nO povo, que andava na escuridão,\nviu uma grande luz;\npara os que habitavam nas sombras da morte,\numa luz resplandeceu.\n2\nFizeste crescer a alegria,\ne aumentaste a felicidade;\ntodos se regozijam em tua presença\ncomo alegres ceifeiros na colheita,\nou como exaltados guerreiros ao dividirem os despojos.\n3\nPois o jugo que oprimia o povo,\n- a carga sobre os ombros, o orgulho dos fiscais -\ntu os abateste como na jornada de Madiã.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 26(27),1.4.13-14 (R.1a.1c)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é minha luz e salvação.\nO Senhor é a proteção da minha vida.\n1a\nO Senhor é minha luz e salvação;*\nb\nde quem eu terei medo?\nc\nO Senhor é a proteção da minha vida;*\nd\nperante quem eu tremerei?\nR.\n4\nAo Senhor eu peço apenas uma coisa,*\ne é só isto que eu desejo:\nhabitar no santuário do Senhor*\npor toda a minha vida;\nsaborear a suavidade do Senhor*\ne contemplá-lo no seu templo.\nR.\n13\nSei que a bondade do Senhor eu hei de ver*\nna terra dos viventes.\n14\nEspera no Senhor e tem coragem,*\nespera no Senhor!\nR.\n2ª Leitura - 1Cor 1,1\nSEGUNDA LEITURA\nSede todos concordes uns com os outros\ne não admitais divisões entre vós.\nLeitura da Primeira Carta de São Paulo aos Coríntios\n1,10-13.17\n10\nIrmãos, eu vos exorto,\npelo nome do Senhor nosso, Jesus Cristo,\na que sejais todos concordes uns com os outros\ne não admitais divisões entre vós.\nPelo contrário, sede bem unidos e concordes\nno pensar e no falar.\n11\nCom efeito, pessoas da família de Cloé\ninformaram-me a vosso respeito, meus irmãos,\nque está havendo contendas entre vós.\n12\nDigo isto, porque cada um de vós afirma:\n\"Eu sou de Paulo\"; ou: \"Eu sou de Apolo\";\nou: \"Eu sou de Cefas\"; ou: \"Eu sou de Cristo!\"\n13\nSerá que Cristo está dividido?\nAcaso Paulo é que foi crucificado por amor de vós?\nOu é no nome de Paulo que fostes batizados?\n17\nDe fato, Cristo não me enviou para batizar,\nmas para pregar a boa nova da salvação,\nsem me valer dos recursos da oratória,\npara não privar a cruz de Cristo da sua força própria.\nPalavra do Senhor.\nAclamação ao Evangelho\nMt 4,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPois do Reino a Boa Nova Jesus Cristo anunciava\ne as dores do seu povo, com poder, Jesus curava."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "4,12-23",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n4,12-23\n12\nAo saber que João tinha sido preso,\nJesus voltou para a Galileia.\n13\nDeixou Nazaré e foi morar em Cafarnaum,\nque fica às margens do mar da Galileia,\n14\nno território de Zabulon e Neftali,\npara se cumprir o que foi dito pelo profeta Isaías:\n15\n\"Terra de Zabulon, terra de Neftali, caminho do mar,\nregião do outro lado do rio Jordão,\nGalileia dos pagãos!\n16\nO povo que vivia nas trevas viu uma grande luz\ne para os que viviam na região escura da morte\nbrilhou uma luz\".\n17\nDaí em diante Jesus começou a pregar dizendo:\n\"Convertei-vos, porque o Reino dos Céus está próximo\".\n18\nQuando Jesus andava à beira do mar da Galileia,\nviu dois irmãos:\nSimão, chamado Pedro, e seu irmão André.\nEstavam lançando a rede ao mar, pois eram pescadores.\n19\nJesus disse a eles: \"Segui-me,\ne eu farei de vós pescadores de homens\".\n20\nEles, imediatamente deixaram as redes e o seguiram.\n21\nCaminhando um pouco mais, Jesus viu outros dois irmãos:\nTiago, filho de Zebedeu, e seu irmão João.\nEstavam na barca com seu pai Zebedeu\nconsertando as  redes.\nJesus os chamou.\n22\nEles, imediatamente deixaram a barca e o pai,\ne o seguiram.\n23\nJesus andava por toda a Galileia,\nensinando em suas sinagogas,\npregando o Evangelho do Reino\ne curando todo tipo de doença e enfermidade do povo.\nPalavra da Salvação."
+  }
+}

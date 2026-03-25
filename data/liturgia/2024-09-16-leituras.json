@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-16",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 11,17-26.33</div><div> Sl 39(40),7-8a.8b-9.10.17 (R. 1Cor 11,26b)</div><div></div><div> Lc 7,1-10</div></div>",
+  "primeira_leitura": {
+    "referencia": "11,17-26.33",
+    "texto": "Irmãos,\n17\nno que tenho a dizer-vos, eu não vos louvo,\npois vossas reuniões\nnão têm sido para o vosso bem,\nmas para o mal.\n18\nCom efeito, e em primeiro lugar, ouço dizer que,\nquando vos reunis em assembleia,\ntêm surgido divisões entre vós.\nE, em parte, acredito.\n19\nNa verdade, convém que haja até cisões entre vós,\npara que também se tornem bem conhecidos\naqueles que dentre vós que resistem à prova.\n20\nDe fato, não é para comer a Ceia do Senhor\nque vos reunis em comum.\n21\nPois cada um se apressa\na comer a sua própria ceia;\ne enquanto um passa fome\no outro se embriaga.\n22\nNão tendes casas onde comer e beber?\nOu desprezais a Igreja de Deus\ne quereis envergonhar aqueles que nada têm?\nQue vos direi?\nHei de elogiar-vos?\nNeste ponto, não posso elogiar-vos.\n23\nO que eu recebi do Senhor\nfoi isso que eu vos transmiti:\nNa noite em que foi entregue,\no Senhor Jesus tomou o pão\n24\ne, depois de dar graças, partiu-o\ne disse:\n\"Isto é o meu corpo\nque é dado por vós.\nFazei-o em memória de mim\".\n25\nDo mesmo modo, depois da ceia,\ntomou também o cálice e disse:\n\"Este cálice é a nova aliança, em meu sangue.\nTodas as vezes que dele beberdes,\nfazei isto em minha memória\".\n26\nTodas as vezes, de fato, que comerdes deste pão\ne beberdes deste cálice,\nestareis proclamando a morte do Senhor,\naté que ele venha.\n33\nPortanto, meus irmãos,\nquando vos reunirdes para a Ceia,\nesperai uns pelos outros.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 39(40),7-8a.8b-9.10.17 (R. 1Cor 11,26b)",
+    "refrao": "",
+    "texto": "R.\nIrmãos, anunciai a morte do Senhor, até que ele venha!\n7\nSacrifício e oblação não quisestes, *\nmas abristes, Senhor, meus ouvidos;\nnão pedistes ofertas nem vítimas, †\nholocaustos por nossos pecados, *\n8a\nE então eu vos disse: \"Eis que venho!\"\nR.\nb\nSobre mim está escrito no livro: †\n9\n\"Com prazer faço a vossa vontade, *\nguardo em meu coração vossa lei!\"\nR.\n10\nBoas-novas de vossa justiça †\nanunciei numa grande assembleia; *\nvós sabeis: não fechei os meus lábios!\nR.\n17\nMas se alegre e em vós rejubile *\ntodo ser que vos busca, Senhor!\n18\nDigam sempre: \"É grande o Senhor!\" *\nos que buscam em vós seu auxílio.\nR.\nEvangelho - Lc 7,1-10\nAclamação ao Evangelho\nJo 3,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nDeus o mundo tanto amou,\nque lhe deu seu próprio Filho,\npara que todo o que nele crer,\nencontre vida eterna."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,1-10",
+    "texto": "7,1-10\nNaquele tempo,\n1\nquando acabou de falar ao povo que o escutava,\nJesus entrou em Cafarnaum.\n2\nHavia lá um oficial romano\nque tinha um empregado a quem estimava muito,\ne que estava doente, à beira da morte.\n3\nO oficial ouviu falar de Jesus\ne enviou alguns anciãos dos judeus,\npara pedirem\nque Jesus viesse salvar seu empregado.\n4\nChegando onde Jesus estava,\npediram-lhe com insistência:\n\"O oficial merece que lhe faças este favor,\n5\nporque ele estima o nosso povo.\nEle até nos construiu uma sinagoga\".\n6\nEntão Jesus pôs-se a caminho com eles.\nPorém, quando já estava perto da casa,\no oficial mandou alguns amigos dizerem a Jesus:\n\"Senhor, não te incomodes,\npois não sou digno de que entres em minha casa.\n7\nNem mesmo me achei digno\nde ir pessoalmente ao teu encontro.\nMas ordena com a tua palavra,\ne o meu empregado ficará curado.\n8\nEu também estou debaixo de autoridade,\nmas tenho soldados que obedecem às minhas ordens.\nSe ordeno a um :\n'Vai!', ele vai;\ne a outro: 'Vem!', ele vem;\ne ao meu empregado 'Faze isto!', e ele o faz\".\n9\nOuvindo isso, Jesus ficou admirado.\nVirou-se para a multidão que o seguia, e disse:\n\"Eu vos declaro que nem mesmo em Israel\nencontrei tamanha fé\".\n10\nOs mensageiros voltaram para a casa do oficial\ne encontraram o empregado em perfeita saúde.\nPalavra da Salvação."
+  }
+}

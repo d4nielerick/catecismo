@@ -1,0 +1,23 @@
+{
+  "data": "2025-08-27",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Ts 2,9-13</div><div> Sl 138(139),7-8.9-10.11-12ab (R. 1a)</div><div></div><div> Mt 23,27-32</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,9-13",
+    "texto": "9\nIrmãos, certamente ainda vos lembrais\ndos nossos trabalhos e fadigas.\nTrabalhamos dia e noite,\npara não sermos pesados a nenhum de vós.\nFoi assim que anunciamos o evangelho de Deus.\n10\nVós sois testemunhas, e Deus também,\nde quão santo, justo, irrepreensível foi\no nosso proceder para convosco, os fiéis.\n11\nBem sabeis que, como um pai a seus filhos,\n12\nnós exortamos a cada um de vós\ne encorajamos e insistimos,\npara que vos comporteis de modo digno de Deus,\nque vos chama ao seu reino e à sua glória.\n13\nPor isso, agradecemos a Deus sem cessar\npor vós terdes acolhido\na pregação da palavra de Deus,\nnão como palavra humana,\nmas como aquilo que de fato é:\nPalavra de Deus,\nque está produzindo efeito em vós\nque abraçastes a fé.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 138 (139),7-8.9-10.11-12ab (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nSenhor, vós me sondais e me conheceis!\n7\nEm que lugar me ocultarei de vosso espírito? *\nE para onde fugirei de vossa face?\n8\nSe eu subir até os céus, ali estais; *\nse eu descer até o abismo, estais presente.\nR.\n9\nSe a aurora me emprestar as suas asas, *\npara eu voar e habitar no fim dos mares;\n10\nmesmo lá vai me guiar a vossa mão *\ne segurar-me com firmeza a vossa destra.\nR.\n11\nSe eu pensasse: \"A escuridão venha esconder-me *\ne que a luz ao meu redor se faça noite!\"\n12a\nMesmo as trevas para vós não são escuras, *\nb\na própria noite resplandece como o dia.\nR.\nEvangelho - Mt 23,27-3\nAclamação ao Evangelho  1Jo 2,5\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO amor de Deus se realiza em todo aquele\nque guarda sua palavra fielmente."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "23,27-32",
+    "texto": "23,27-32\nNaquele tempo, disse Jesus:\n27\n\"Ai de vós, mestres da Lei e fariseus hipócritas!\nVós sois como sepulcros caiados:\npor fora parecem belos,\nmas por dentro estão cheios de ossos de mortos\ne de toda podridão!\n28\nAssim também vós:\npor fora, pareceis justos diante dos outros,\nmas por dentro\nestais cheios de hipocrisia e injustiça.\n29\nAí de vós, mestres da Lei e fariseus hipócritas!\nVós construís sepulcros para os profetas\ne enfeitais os túmulos dos justos,\n30\ne dizeis:\n'Se tivéssemos vivido no tempo de nossos pais,\nnão teríamos sido cúmplices da morte dos profetas'.\n31\nCom isso, confessais que sois filhos\ndaqueles que mataram os profetas.\n32\nCompletai, pois, a medida de vossos pais!\"\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Sm 5,1-3</div><div> Sl 121(122),1-2.4-5 (R. cf. 1)</div><div> Cl 1,12-20</div><div> Lc 23,35-43</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,1-3",
+    "texto": "Naqueles dias,\n1\nTodas as tribos de Israel\nvieram encontrar-se com Davi em Hebron e disseram-lhe:\n\"Aqui estamos. Somos teus ossos e tua carne.\n2\nTempo atrás, quando Saul era nosso rei,\neras tu que dirigias os negócios de Israel.\nE o Senhor te disse:\n'Tu apascentarás o meu povo Israel e serás o seu chefe' \".\n3\nVieram, pois, todos os anciãos de Israel\naté ao rei em Hebron.\nO rei Davi fez com eles uma aliança em Hebron,\nna presença do Senhor, e eles o ungiram rei de Israel.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 121(122),1-2.4-5 (R. cf.1)",
+    "refrao": "",
+    "texto": "R.\nQuanta alegria e felicidade: vamos à casa do Senhor!\n1\nQue alegria, quando ouvi que me disseram:*\n\"Vamos à casa do Senhor!\"\n2\nE agora nossos pés já se detêm,*\nJerusalém, em tuas portas.\nR.\n4\nPara lá sobem as tribos de Israel,*\nas tribos do Senhor.\nPara louvar, segundo a lei de Israel,\no nome do Senhor.*\n5\nA sede da justiça lá está\ne o trono de Davi.\nR.\nSEGUNDA LEITURA\nRecebeu-nos no reino de seu Filho amado.\nLeitura da Carta de São Paulo aos Colossenses\n1,12-20\nIrmãos:\n12\nCom alegria dai graças ao Pai,\nque vos tornou capazes de participar da luz,\nque é a herança dos santos.\n13\nEle nos libertou do poder das trevas\ne nos recebeu no reino de seu Filho amado,\n14\npor quem temos a redenção, o perdão dos pecados.\n15\nEle é a imagem do Deus invisível,\no primogênito de toda a criação,\n16\npois por causa dele foram criadas todas as coisas\nno céu e na terra,\nas visíveis e as invisíveis,\ntronos e dominações, soberanias e poderes.\nTudo foi criado por meio dele e para ele.\n17\nEle existe antes de todas as coisas\ne todas têm nele a sua consistência.\n18\nEle é a Cabeça do corpo, isto é, da Igreja.\nEle é o Princípio,\no Primogênito dentre os mortos;\nde sorte que em tudo ele tem a primazia,\n19\nporque Deus quis habitar nele\ncom toda a sua plenitude\n20\ne por ele reconciliar consigo todos os seres,\nos que estão na terra e no céu,\nrealizando a paz pelo sangue da sua cruz.\nPalavra do Senhor.\nAclamação ao Evangelho\nMc 11,9.10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nÉ bendito aquele que vem vindo,\nque vem vindo em nome do Senhor;\ne o reino que vem, seja bendito,\nao que vem e a seu reino, o louvor!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "23,35-43",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n23,35-43\nNaquele tempo,\n35\nos chefes zombavam de Jesus dizendo:\n\"A outros ele salvou.\nSalve-se a si mesmo,\nse, de fato, é o Cristo de Deus, o Escolhido!\"\n36\nOs soldados também caçoavam dele;\naproximavam-se, ofereciam-lhe vinagre,\n37\ne diziam:\n\"Se és o rei dos judeus,\nsalva-te a ti mesmo!\"\n38\nAcima dele havia um letreiro:\n\"Este é o Rei dos Judeus.\"\n39\nUm dos malfeitores crucificados o insultava, dizendo:\n\"Tu não és o Cristo?\nSalva-te a ti mesmo e a nós!\"\n40\nMas o outro o repreendeu, dizendo:\n\"Nem sequer temes a Deus,\ntu que sofres a mesma condenação?\n41\nPara nós, é justo,\nporque estamos recebendo o que merecemos;\nmas ele não fez nada de mal\".\n42\nE acrescentou:\n'\"Jesus, lembra-te de mim,\nquando entrares no teu reinado.\"\n43\nJesus lhe respondeu:\n\"Em verdade eu te digo:\nainda hoje estarás comigo no Paraíso\".\nPalavra da Salvação."
+  }
+}

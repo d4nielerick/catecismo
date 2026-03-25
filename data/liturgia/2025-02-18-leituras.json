@@ -1,0 +1,23 @@
+{
+  "data": "2025-02-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 6,5-8;7,1-5.10</div><div> Sl 28(29),1a e 2.3ac-4.3b e 9b-10 (R. 11b)</div><div></div><div> Mc 8,14-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,5-8; 7,1-5.10",
+    "texto": "5\nO Senhor viu\nque havia crescido a maldade do homem na terra,\ne como os projetos do seu coração\ntendiam sempre para o mal.\n6\nEntão o Senhor arrependeu-se\nde ter feito o homem na terra\ne ficou com o coração muito magoado,\n7\ne disse:\n\"Vou exterminar da face da terra o homem que criei;\ne com ele, os animais, os répteis e até as aves do céu,\npois estou arrependido de os ter feito!\"\n8\nMas Noé encontrou graça aos olhos do Senhor.\n7,1\nO Senhor disse a Noé:\n\"Entra na arca com toda a tua família,\npois tu és o único homem justo\nque vejo no meio desta geração.\n2\nDe todos os animais puros toma sete casais,\nmachos e fêmeas,\ne dos animais impuros, um casal, macho e fêmea.\n3\nTambém das aves do céu tomarás sete casais,\nmachos e fêmeas,\npara que suas espécies se conservem vivas\nsobre a face da terra.\n4\nPois, dentro de sete dias, farei chover sobre a terra,\nquarenta dias e quarenta noites,\ne exterminarei da superfície da terra\ntodos os seres vivos que fiz\".\n5\nNoé fez tudo o que o Senhor lhe havia ordenado.\n10\nE, passados os sete dias,\ncaíram sobre a terra as águas do dilúvio.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 28(29),1a e 2.3ac-4.3b e 9b-10 (R. 11b)",
+    "refrao": "",
+    "texto": "R.\nQue o Senhor abençoe, com a paz, o seu povo!\n1a\nFilhos de Deus, tributai ao Senhor,*\ntributai-lhe a glória e o poder!\n2\nDai-lhe a glória devida ao seu nome;*\nadorai-o com santo ornamento!\nR.\n3a\nEis a voz do Senhor sobre as águas,*\nc\nsua voz sobre as águas imensas!\n4\nEis a voz do Senhor com poder!*\nEis a voz do Senhor majestosa.\nR.\n3b\nSua voz no trovão reboando!*\n9b\nNo seu templo os fiéis bradam: \"Glória!\"\n10\nÉ o Senhor que domina os dilúvios,*\no Senhor reinará para sempre!\nR.\nEvangelho - Mc 8,14-21\nAclamação ao Evangelho\nJo 14,2\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama, realmente, guardará minha palavra\ne meu Pai o amará, e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,14-21",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n8,14-21\nNaquele tempo,\n14\nos discípulos tinham se esquecido de levar pães.\nTinham consigo na barca apenas um pão.\n15\nEntão Jesus os advertiu:\n\"Prestai atenção e tomai cuidado\ncom o fermento dos fariseus\ne com o fermento de Herodes\".\n16\nOs discípulos diziam entre si:\n\"É porque não temos pão\".\n17\nMas Jesus percebeu e perguntou-lhes:\n\"Por que discutis sobre a falta de pão?\nAinda não entendeis e nem compreendeis?\nVós tendes o coração endurecido?\n18\nTendo olhos, vós não vedes,\ne tendo ouvidos, não ouvis?\nNão vos lembrais\n19\nde quando reparti cinco pães para cinco mil pessoas?\nQuantos cestos vós recolhestes cheios de pedaços?\"\nEles responderam:\n\"Doze\".\n20\nJesus perguntou:\nE quando reparti sete pães com quatro mil pessoas,\nquantos cestos vós recolhestes cheios de pedaços?\nEles responderam:\n\"Sete.\"\n21\nJesus disse:\n\"E vós ainda não compreendeis?\"\nPalavra da Salvação."
+  }
+}

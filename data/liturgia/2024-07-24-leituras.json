@@ -1,0 +1,23 @@
+{
+  "data": "2024-07-24",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jr 1,1.4-10</div><div> Sl 70(71),1-2.3-4a.5-6ab.15ab (R. 15)</div><div></div><div> Mt 13,1-9</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1.4-10",
+    "texto": "1\nPalavras de Jeremias, filho de Helcias,\num dos sacerdotes de Anatot, da tribo de Benjamim.\n4\nFoi-me dirigida a palavra do Senhor, dizendo:\n5\n\"Antes de formar-te no ventre materno, eu te conheci;\nantes de saíres do seio de tua mãe,\neu te consagrei e te fiz profeta das nações\".\n6\nDisse eu:\n\"Ah! Senhor Deus,\neu não sei falar, sou muito novo\".\n7\nDisse-me o Senhor:\n\"Não digas que és muito novo;\na todos a quem eu te enviar, irás,\ne tudo que eu te mandar dizer, dirás.\n8\nNão tenhas medo deles,\npois estou contigo para defender-te\",\ndiz o Senhor.\n9\nO Senhor estendeu a mão,\ntocou-me a boca e disse-me:\n\"Eis que ponho minhas palavras em tua boca.\n10\nEu te constituí hoje  sobre povos e reinos\ncom poder para extirpar e destruir,\ndevastar e derrubar,\nconstruir e plantar\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 70(71),1-2.3-4a.5-6ab.15ab e 17 (R. 15)",
+    "refrao": "",
+    "texto": "R.\nMinha boca anunciará vossa justiça.\n1\nEu procuro meu refúgio em vós, Senhor: *\nque eu não seja envergonhado para sempre!\n2\nPorque sois justo, defendei-me e libertai-me! *\nEscutai a minha voz, vinde salvar-me!\nR.\n3\nSede uma rocha protetora para mim, *\num abrigo bem seguro que me salve!\nPorque sois a minha força e meu amparo, †\no meu refúgio, proteção e segurança! *\n4a\nLibertai-me, ó meu Deus, das mãos do ímpio\nR.\n5\nPorque sois, ó Senhor Deus, minha esperança, *\nem vós confio desde a minha juventude!\n6a\nSois meu apoio desde antes que eu nascesse, *\nb\ndesde o seio maternal, o meu amparo.\nR.\n15a\nMinha boca anunciará todos os dias *\nb\nvossa justiça e vossas graças incontáveis.\n17\nVós me ensinastes desde a minha juventude, *\ne até hoje canto as vossas maravilhas.\nR.\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA semente é de Deus a palavra,\no Cristo é o semeador;\ntodo aquele que o encontra,\nvida eterna encontrou."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "13,1-9",
+    "texto": "13,1-9\n1\nNaquele dia, Jesus saiu de casa\ne foi sentar-se às margens do mar da Galileia.\n2\nUma grande multidão reuniu-se em volta dele.\nPor isso Jesus entrou numa barca e sentou-se,\nenquanto a multidão ficava de pé, na praia.\n3\nE disse-lhes muitas coisas em parábolas:\n\"O semeador saiu para semear.\n4\nEnquanto semeava,\nalgumas sementes caíram à beira do caminho,\ne os pássaros vieram e as comeram.\n5\nOutras sementes caíram em terreno pedregoso,\nonde não havia muita terra.\nAs sementes logo brotaram,\nporque a terra não era profunda.\n6\nMas, quando o sol apareceu,\nas plantas ficaram queimadas e secaram,\nporque não tinham raiz.\n7\nOutras sementes caíram no meio dos espinhos.\nOs espinhos cresceram e sufocaram as plantas.\n8\nOutras sementes, porém, caíram em terra boa,\ne produziram à base de cem,\nde sessenta e de trinta frutos por semente.\n9\nQuem tem ouvidos, ouça!\"\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-11",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jl 4,12-21</div><div> Sl 96(97),1-2.5-6.11-12 (R. 12a)</div><div></div><div> Lc 11,27-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,12-21",
+    "texto": "Assim fala o Senhor:\n12\n\"Levantem-se e ponham-se em marcha os povos\nrumo ao Vale de Josafá;\nali me sentarei como juiz para julgar\ntodas as nações em redor.\n13\nTomai a foice,\npois a colheita está madura;\nvinde calcar,\nque o lagar está cheio:\nas tinas transbordam,\nporque grande é a sua malícia.\n14\nPovos e mais povos\nno Vale da Decisão:\no dia do Senhor está próximo\nno Vale da Decisão.\n15\nEscureceram o sol e a lua\ne as estrelas perderam o brilho.\n16\nDesde Sião rugirá o Senhor,\nfará ouvir sua voz desde Jerusalém;\ntremerão céus e terra,\nmas o Senhor será refúgio para o seu povo,\nserá a fortaleza dos filhos de Israel.\n17\nSabereis, então,\nque eu sou o Senhor, vosso Deus,\nque habito em Sião, meu santo monte;\nJerusalém será lugar sagrado,\npor onde não mais passarão estranhos.\n18\nAcontecerá naquele dia\nque os montes farão correr vinho,\ne as colinas manarão leite;\naos regatos de Judá não há de faltar água,\ne da casa do Senhor brotará uma fonte,\nque irá alimentar a torrente de Setim.\n19\nO Egito será devastado,\ne a Idumeia, devastada e deserta,\npor causa de suas atrocidades\ncontra os filhos de Judá,\nderramando sangue inocente em suas terras.\n20\nJudá será habitada para sempre,\ne Jerusalém, por todos os séculos.\n21\nVingarei meu sangue,\nnão o deixarei sem castigo\".\nO Senhor está habitando em Sião.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 96(97),1-2.5-6.11-12 (R. 12a)",
+    "refrao": "",
+    "texto": "R.\nÓ justos, alegrai-vos no Senhor!\n1\nDeus é Rei! Exulte a terra de alegria, *\ne as ilhas numerosas rejubilem!\n2\nTreva e nuvem o rodeiam no seu trono, *\nque se apoia na justiça e no direito.\nR.\n5\nAs montanhas se derretem como cera *\nante a face do Senhor de toda a terra;\n6\ne assim proclama o céu sua justiça, *\ntodos os povos podem ver a sua glória.\nR.\n11\nUma luz já se levanta para os justos, *\ne a alegria, para os retos corações.\n12\nHomens justos, alegrai-vos no Senhor, *\ncelebrai e bendizei seu santo nome!\nR.\nEvangelho - Lc 11,27-2\nAclamação ao Evangelho\nLc 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFeliz quem ouve e observa a palavra de Deus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,27-28",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,27-28\nNaquele tempo,\n27\nenquanto Jesus falava,\numa mulher levantou a voz no meio da multidão\ne lhe disse:\n\"Feliz o ventre que te trouxe\ne os seios que te amamentaram\".\n28\nJesus respondeu:\n\"Muito mais felizes são aqueles\nque ouvem a palavra de Deus\ne a põem em prática\".\nPalavra da Salvação."
+  }
+}

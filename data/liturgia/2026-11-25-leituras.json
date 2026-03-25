@@ -1,0 +1,23 @@
+{
+  "data": "2026-11-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 15,1-4</div><div> Sl 97(98),1.2-3ab.7-8.9 (R. Ap 15,3b)</div><div></div><div> Lc 21,12-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,1-4",
+    "texto": "Eu, João,\n1\nvi no céu outro sinal,\ngrande e admirável:\nsete anjos, com as sete últimas pragas.\nCom elas o furor de Deus ia-se consumar.\n2\nVi também como que um mar de vidro\nmisturado com fogo.\nSobre este mar estavam, de pé,\ntodos aqueles que saíram vitoriosos\ndo confronto com a besta, com a imagem dela\ne com o número do nome da besta.\nSeguravam as harpas de Deus.\n3\nEntoavam o cântico de Moisés, o servo de Deus,\ne o cântico do Cordeiro, dizendo:\n\"Grandes e admiráveis são as tuas obras,\nSenhor Deus, Todo-poderoso!\nJustos e verdadeiros são os teus caminhos,\nó Rei das nações!\n4\nQuem não temeria, Senhor,\ne não glorificaria o teu nome?\nSó tu és santo!\nTodas as nações virão prostrar-se diante de Ti,\nporque tuas justas decisões se tornaram manifestas\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.2-3ab.7-8.9 (R. Ap 15,3b)",
+    "refrao": "",
+    "texto": "R.\nComo são grandes e admiráveis vossas obras,\nó Senhor e nosso Deus onipotente!\n1\nCantai ao Senhor Deus um canto novo, *\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo *\nalcançaram-lhe a vitória.\nR\n.\n2\nO Senhor fez conhecer a salvação, *\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel *\nb\npela casa de Israel\nR.\n7\nAplauda o mar com todo ser que nele vive, *\no mundo inteiro e toda gente!\n8\nAs montanhas e os rios batam palmas *\ne exultem de alegria.\nR.\n9\nna presença do Senhor, pois ele vem, *\nvem julgar a terra inteira.\nJulgará o universo com justiça *\ne as nações com equidade.\nR.\nEvangelho - Lc 21,12-1\nAclamação ao Evangelho\nAp 2,10c\nR.\nAleluia, Aleluia, Aleluia.\nV.\nPermanece fiel até a morte\ne a coroa da vida eu te darei!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,12-19",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n21,12-19\nNaquele tempo, disse Jesus aos seus discípulos:\n12\n\"Antes que estas coisas aconteçam,\nsereis presos e perseguidos;\nsereis entregues às sinagogas e postos na prisão;\nsereis levados diante de reis e governadores\npor causa do meu nome.\n13\nEsta será a ocasião\nem que testemunhareis a vossa fé.\n14\nFazei o firme propósito\nde não planejar com antecedência a própria defesa;\n15\nporque eu vos darei palavras tão acertadas,\nque nenhum dos inimigos\nvos poderá resistir ou rebater.\n16\nSereis entregues até mesmo pelos próprios pais,\nirmãos, parentes e amigos.\nE eles matarão alguns de vós.\n17\nTodos vos odiarão por causa do meu nome.\n18\nMas vós não perdereis\num só fio de cabelo da vossa cabeça.\n19\nÉ permanecendo firmes que ireis ganhar a vida!\"\nPalavra da Salvação."
+  }
+}

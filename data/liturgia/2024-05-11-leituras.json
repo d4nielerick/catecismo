@@ -1,0 +1,23 @@
+{
+  "data": "2024-05-11",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 18,23-28</div><div> Sl 46(47),2-3.8-9.10 (R. 8a)</div><div></div><div> Jo 16,23b-28</div></div>",
+  "primeira_leitura": {
+    "referencia": "18,23-28",
+    "texto": "23\nPaulo permaneceu algum tempo em Antioquia.\nEm seguida, partiu de novo,\npercorrendo sucessivamente\nas regiões da Galácia e da Frígia,\nfortalecendo todos os discípulos.\n24\nChegou a Éfeso um judeu chamado Apolo,\nnatural de Alexandria.\nEra homem eloquente, versado nas Escrituras.\n25\nFora instruído no caminho do Senhor\ne, com muito entusiasmo,\nfalava e ensinava com exatidão a respeito de Jesus,\nembora só conhecesse o batismo de João.\n26\nEntão, ele começou a falar\ncom muita convicção na sinagoga.\nAo escutá-lo,\nPriscila e Áquila tomaram-no consigo\ne, com mais exatidão,\nexpuseram-lhe o caminho de Deus.\n27\nComo ele estava querendo passar para a Acaia,\nos irmãos apoiaram-no\ne escreveram aos discípulos\npara que o acolhessem bem.\nPela graça de Deus, a presença de Apolo aí\nfoi muito útil aos fiéis.\n28\nCom efeito, ele refutava vigorosamente\nos judeus em público,\ndemonstrando pelas Escrituras\nque Jesus é o Messias.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 46(47),2-3.8-9.10 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é o grande Rei de toda a terra.\nOu:\nAleluia, Aleluia, Aleluia.\n2\nPovos todos do universo, batei palmas, *\ngritai a Deus aclamações de alegria!\n3\nPorque sublime é o Senhor, o Deus Altíssimo, *\no soberano que domina toda a terra.\nR.\n8\nPorque Deus é o grande Rei de toda a terra, *\nao som da harpa acompanhai os seus louvores!\n9\nDeus reina sobre todas as nações, *\nestá sentado no seu trono glorioso.\nR.\n10\nOs chefes das nações se reuniram *\ncom o povo do Deus santo de Abraão,\npois só Deus é realmente o Altíssimo, *\ne os poderosos desta terra lhe pertencem!\nR.\nEvangelho - Jo 16,23b-\nAclamação ao Evangelho\nJo 16,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSaí do Pai e vim ao mundo,\neu deixo o mundo e vou ao Pai."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,23b-28",
+    "texto": "16,23b-28\nNaquele tempo, disse Jesus aos seus discípulos:\n23b\n\"Em verdade, em verdade vos digo:\nse pedirdes ao Pai alguma coisa em meu nome,\nele vo-la dará.\n24\nAté agora nada pedistes em meu nome;\npedi, e recebereis;\npara que a vossa alegria seja completa.\n25\nDisse-vos estas coisas em linguagem figurativa.\nVem a hora em que não vos falarei mais em figuras,\nmas claramente vos falarei do Pai.\n26\nNaquele dia pedireis em meu nome,\ne não vos digo que vou pedir ao Pai por vós,\n27\npois o próprio Pai vos ama,\nporque vós me amastes\ne acreditastes que eu vim da parte de Deus.\n28\nEu saí do Pai e vim ao mundo;\ne novamente parto do mundo e vou para o Pai\".\nPalavra da Salvação."
+  }
+}

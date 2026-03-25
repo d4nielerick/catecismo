@@ -1,0 +1,23 @@
+{
+  "data": "2025-04-28",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 4,23-31</div><div> Sl 2,1-3.4-6.7-9 (R. cf. 12d)</div><div></div><div> Jo 3,1-8</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,23-31",
+    "texto": "Naqueles dias,\n23\nlogo que foram postos em liberdade,\nPedro e João voltaram para junto dos irmãos\ne contaram tudo\no que os sumos sacerdotes e os anciãos haviam dito.\n24\nAo ouvirem o relato,\ntodos eles elevaram a voz a Deus, dizendo:\n\"Senhor, tu criaste o céu, a terra, o mar\ne tudo o que neles existe.\n25\nPor meio do Espírito Santo,\ndisseste através do teu servo Davi, nosso pai:\n'Por que se enfureceram as nações,\ne os povos imaginaram coisas vãs?\n26\nOs reis da terra se insurgem\ne os príncipes conspiram unidos\ncontra o Senhor e contra o seu Messias'.\n27\nFoi assim que aconteceu nesta cidade:\nHerodes e Pôncio Pilatos\nuniram-se com os pagãos e os povos de Israel\ncontra Jesus, teu santo servo, a quem ungiste,\n28\na fim de executarem tudo o que a tua mão e a tua vontade\nhaviam predeterminado que sucedesse.\n29\nAgora, Senhor, olha as ameaças que fazem\ne concede que os teus servos\nanunciem corajosamente a tua palavra.\n30\nEstende a mão\npara que se realizem curas, sinais e prodígios\npor meio do nome do teu santo servo Jesus\".\n31\nQuando terminaram a oração,\ntremeu o lugar onde estavam reunidos.\nTodos, então, ficaram cheios do Espírito Santo\ne anunciavam corajosamente a palavra de Deus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 2,1-3.4-6.7-9 (R. cf. 12d)",
+    "refrao": "",
+    "texto": "R.\nFelizes hão de ser todos aqueles\nque põem sua esperança no Senhor.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nPor que os povos agitados se revoltam? *\npor que tramam as nações projetos vãos?\n2\nPor que os reis de toda a terra se reúnem, †\ne conspiram os governos todos juntos *\ncontra o Deus onipotente e o seu Ungido?\n3\n\"Vamos quebrar suas correntes\", dizem eles, *\n\"e lançar longe de nós o seu domínio!\"\nR.\n4\nRi-se deles que mora lá nos céus; *\nzomba deles o Senhor onipotente.\n5\nEle, então, em sua ira os ameaça, *\ne em seu furor os faz tremer, quando lhes diz:\n6\n\"Fui eu mesmo que escolhi este meu Rei, *\ne em Sião, meu monte santo, o consagrei!\"\nR.\n7\nO decreto do Senhor promulgarei, †\nfoi assim que me falou o Senhor Deus: *\n\"Tu és meu Filho, e eu hoje te gerei!\n8\nPodes pedir-me, e em resposta eu te darei †\npor tua herança os povos todos e as nações, *\ne há de ser a terra inteira o teu domínio.\n9\nCom cetro férreo haverás de dominá-los, *\ne quebrá-los como um vaso de argila!\"\nR.\nEvangelho - Jo 3,1-8\nAclamação ao Evangelho\nCl 3,1\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSe com Cristo ressurgistes, procurai o que é do alto,\nonde Cristo está sentado à direita de Deus Pai."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,1-8",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n3,1-8\n1\nHavia um chefe judaico,\nmembro do grupo dos fariseus,\nchamado Nicodemos,\n2\nque foi ter com Jesus, de noite,\ne lhe disse:\n\"Rabi, sabemos que vieste como mestre\nda parte de Deus.\nDe fato, ninguém pode realizar os sinais que tu fazes,\na não ser que Deus esteja com ele\".\n3\nJesus respondeu:\n\"Em verdade, em verdade te digo,\nse alguém não nasce do alto,\nnão pode ver o Reino de Deus\".\n4\nNicodemos disse:\n\"Como é que alguém pode nascer, se já é velho?\nPoderá entrar outra vez no ventre de sua mãe?\"\n5\nJesus respondeu:\n\"Em verdade, em verdade te digo,\nse alguém não nasce da água e do Espírito,\nnão pode entrar no Reino de Deus\".\n6\nQuem nasce da carne é carne;\nquem nasce do Espírito é espírito.\n7\nNão te admires por eu haver dito:\nVós deveis nascer do alto.\n8\nO vento sopra onde quer\ne tu podes ouvir o seu ruído,\nmas não sabes de onde vem, nem para onde vai.\nAssim acontece a todo aquele que nasceu do Espírito\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-04-21",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 4,8-12</div><div> Sl 117(118),1.8-9.21-23.26.28cd.29 (R. 22)</div><div> 1Jo 3,1-2</div><div> Jo 10,11-18</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,8-12",
+    "texto": "Naqueles dias,\n8\nPedro, cheio do Espírito Santo, disse:\n\"Chefes do povo e anciãos:\n9\nhoje estamos sendo interrogados\npor termos feito o bem a um enfermo\ne pelo modo como foi curado.\n10\nFicai, pois, sabendo todos vós e todo o povo de Israel:\né pelo nome de Jesus Cristo, de Nazaré,\n— aquele que vós crucificastes\ne que Deus ressuscitou dos mortos —\nque este homem está curado, diante de vós.\n11\nJesus é a pedra, que vós, os construtores,\ndesprezastes, e que se tornou a pedra angular.\n12\nEm nenhum outro há salvação,\npois não existe debaixo do céu outro nome\ndado aos homens, pelo qual possamos ser salvos\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 117(118),1.8-9.21-23.26.28cd.29 (R. 22)",
+    "refrao": "",
+    "texto": "R.\nA pedra que os pedreiros rejeitaram,\ntornou-se agora a pedra angular.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nDai graças ao Senhor, porque ele é bom! *\n\"Eterna é a sua misericórdia!\"\n8\nÉ melhor buscar refúgio no Senhor, *\ndo que pôr no ser humano a esperança;\n9\né melhor buscar refúgio no Senhor, *\ndo que contar com os poderosos deste mundo!\nR.\n21\nDou-vos graças, ó Senhor, porque me ouvistes *\ne vos tornastes para mim o Salvador!\n22\nA pedra que os pedreiros rejeitaram, *\ntornou-se agora a pedra angular.\n23\nPelo Senhor é que foi feito tudo isso: *\nQue maravilhas ele fez a nossos olhos!\nR.\n26\nBendito seja, em nome do Senhor, *\naquele que em seus átrios vai entrando!\n28\nVós sois meu Deus, eu vos bendigo e agradeço! *\nVós sois meu Deus, eu vos exalto com louvores!\n29\nDai graças ao Senhor, porque ele é bom! *\n\"Eterna é a sua misericórdia!\"\nR.\n2ª Leitura - 1Jo 3,1-\nSEGUNDA LEITURA\nVeremos a Deus tal como ele é.\nLeitura da Primeira Carta de São João\n3,1-2\nCaríssimos:\n1\nVede que grande presente de amor o Pai nos deu:\nde sermos chamados filhos de Deus!\nE nós o somos!\nSe o mundo não nos conhece,\né porque não conheceu o Pai.\n2\nCaríssimos, desde já somos filhos de Deus,\nmas nem sequer se manifestou o que seremos!\nSabemos que,\nquando Jesus se manifestar,\nseremos semelhantes a ele,\nporque o veremos tal como ele é.\nPalavra do Senhor.\nAclamação ao Evangelho\nJo 10,14\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou o bom pastor, diz o Senhor;\neu conheço minhas ovelhas\ne elas me conhecem a mim."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,11-18",
+    "texto": "10,11-18\nNaquele tempo, disse Jesus:\n11\n\"Eu sou o bom pastor.\nO bom pastor dá a vida por suas ovelhas.\n12\nO mercenário, que não é pastor\ne não é dono das ovelhas,\nvê o lobo chegar, abandona as ovelhas e foge,\ne o lobo as ataca e dispersa.\n13\nPois ele é apenas um mercenário\ne não se importa com as ovelhas.\n14\nEu sou o bom pastor.\nConheço as minhas ovelhas,\ne elas me conhecem,\n15\nassim como o Pai me conhece\ne eu conheço o Pai.\nEu dou minha vida pelas ovelhas.\n16\nTenho ainda outras ovelhas que não são deste redil:\ntambém a elas devo conduzir;\nescutarão a minha voz,\ne haverá um só rebanho e um só pastor.\n17\nÉ por isso que o Pai me ama,\nporque dou a minha vida,\npara depois recebê-la novamente.\n18\nNinguém tira a minha vida,\neu a dou por mim mesmo;\ntenho poder de entregá-la\ne tenho poder de recebê-la novamente;\nesta é a ordem que recebi do meu Pai\".\nPalavra da Salvação."
+  }
+}

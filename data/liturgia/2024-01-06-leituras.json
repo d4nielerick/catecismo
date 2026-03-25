@@ -1,0 +1,23 @@
+{
+  "data": "2024-01-06",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 5,5-13</div><div> Sl 147(147B),12-13.14-15.19-20 (R. 12a)</div><div></div><div> Mc 1,7-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "5,5-13",
+    "texto": "Caríssimos,\n5\nquem é o vencedor do mundo,\nsenão aquele que crê\nque Jesus é o Filho de Deus?\n6\nEste é o que veio pela água e pelo sangue:\nJesus Cristo.\n(Não veio somente com a água,\nmas com a água e o sangue).\nE o Espírito é que dá testemunho,\nporque o Espírito é a Verdade.\n7\nAssim, são três que dão testemunho:\n8\no Espírito, a água e o sangue;\ne os três são unânimes.\n9\nSe aceitamos o testemunho dos homens,\no testemunho de Deus é maior.\nEste é o testemunho de Deus,\npois ele deu testemunho a respeito de seu Filho.\n10\nAquele que crê no Filho de Deus\ntem este testemunho dentro de si.\nAquele que não crê em Deus\nfaz dele um mentiroso,\nporque não crê no testemunho\nque Deus deu a respeito de seu Filho.\n11\nE o testemunho é este:\nDeus nos deu a vida eterna,\ne esta vida está em seu Filho.\n12\nQuem tem o Filho, tem a vida;\nquem não tem o Filho, não tem a vida.\n13\nEu vos escrevo estas coisas\na vós que acreditastes no nome do Filho de Deus,\npara que saibais que possuís a vida eterna.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 147(147B), 12-13.14-15.19-20 (R. 12a)",
+    "refrao": "",
+    "texto": "R.\nGlorifica o Senhor, Jerusalém!\nOu:\nAleluia, Aleluia, Aleluia.\n12\nGlorifica o Senhor, Jerusalém!*\nÓ Sião, canta louvores ao teu Deus!\n13\nPois reforçou com segurança as tuas portas,*\ne os teus filhos em teu seio abençoou;\nR.\n14\npaz em teus limites garantiu*\ne te dá como alimento a flor do trigo.\n15\nEle envia suas ordens para a terra,*\ne a palavra que ele diz corre veloz.\nR.\n19\nAnuncia a Jacó sua palavra,*\nseus preceitos, suas leis a Israel.\n20\nNenhum povo recebeu tanto carinho,*\na nenhum outro revelou os seus preceitos.\nR.\nEvangelho - Mc 1,7-11\nAclamação ao Evangelho\nCf. Mc 9,7\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAbriram-se os céus, e fez-se ouvir a voz do Pai:\nEis meu Filho muito amado, escutai-o, todos vós!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,7-11",
+    "texto": "1,7-11\nNaquele tempo,\n7\nJoão pregava, dizendo:\n\"Depois de mim virá alguém mais forte do que eu.\nEu nem sou digno de me abaixar\npara desamarrar suas sandálias.\n8\nEu vos batizei com água,\nmas ele vos batizará com o Espírito Santo\".\n9\nNaqueles dias, Jesus veio de Nazaré da Galileia,\ne foi batizado por João no rio Jordão.\n10\nE logo, ao sair da água, viu o céu se abrindo,\ne o Espírito, como pomba, descer sobre ele.\n11\nE do céu veio uma voz:\n\"Tu és o meu Filho amado,\nem ti ponho meu bem-querer\".\nPalavra da Salvação."
+  }
+}

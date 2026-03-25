@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Ts 3,6-10.16-18</div><div> Sl 127(128),1-2.4-5 (R. 1a)</div><div></div><div> Mt 23,27-32</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,6-10.16-18",
+    "texto": "6\nNós vos ordenamos, irmãos,\nem nome de nosso Senhor Jesus Cristo,\nque vos afasteis de todo irmão\nque se comporta de maneira desordenada\ne contrária à tradição que de nós receberam.\n7\nBem sabeis como deveis seguir o nosso exemplo,\npois não temos vivido entre vós na ociosidade.\n8\nDe ninguém recebemos de graça o pão que comemos.\nPelo contrário,\ntrabalhamos com esforço e cansaço,\nde dia e de noite,\npara não sermos pesados a ninguém.\n9\nNão que não tivéssemos o direito de fazê-lo,\nmas queríamos apresentar-nos como exemplo\na ser imitado.\n10\nCom efeito, quando estávamos entre vós,\ndemos esta regra:\n\"Quem não quer trabalhar,\ntambém não deve comer\".\n16\nQue o Senhor da paz, ele próprio, vos dê a paz,\nsempre e em toda a parte.\nO Senhor esteja com todos vós.\n17\nEsta saudação é de meu próprio punho, de Paulo.\nAssim é que assino todas as minhas cartas;\né a minha letra.\n18\nA graça de nosso Senhor Jesus Cristo\nesteja com todos vós.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 127(128),1-2.4-5 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nFelizes todos que respeitam o Senhor!\n1\nFeliz és tu se temes o Senhor*\ne trilhas seus caminhos!\n2\nDo trabalho de tuas mãos hás de viver,*\nserás feliz, tudo irá bem!\nR.\n4\nSerá assim abençoado todo homem*\nque teme o Senhor.\n5\nO Senhor te abençoe de Sião,*\ncada dia de tua vida.\nR.\nAclamação ao Evangelho\n1Jo 2,5\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO amor de Deus se realiza em todo aquele,\nque guarda sua palavra fielmente."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "23,27-32",
+    "texto": "23,27-32\nNaquele tempo, disse Jesus:\n27\n\"Ai de vós, mestres da Lei e fariseus hipócritas!\nVós sois como sepulcros caiados:\npor fora parecem belos,\nmas por dentro estão cheios de ossos de mortos\ne de toda podridão!\n28\nAssim também vós:\npor fora, pareceis justos diante dos outros,\nmas por dentro\nestais cheios de hipocrisia e injustiça.\n29\nAí de vós, mestres da Lei e fariseus hipócritas!\nVós construís sepulcros para os profetas\ne enfeitais os túmulos dos justos,\n30\ne dizeis:\n'Se tivéssemos vivido no tempo de nossos pais,\nnão teríamos sido cúmplices da morte dos profetas'.\n31\nCom isso, confessais que sois filhos\ndaqueles que mataram os profetas.\n32\nCompletai, pois, a medida de vossos pais!\"\nPalavra da Salvação."
+  }
+}

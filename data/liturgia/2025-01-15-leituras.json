@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-15",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 2,14-18</div><div> Sl 104(105),1-2.3-4.6-7.8-9 (R. 8a)</div><div></div><div> Mc 1,29-39</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,14-18",
+    "texto": "14\nVisto que os filhos têm em comum a carne e o sangue,\ntambém Jesus participou da mesma condição,\npara assim destruir, com a sua morte,\naquele que tinha o poder da morte,\nisto é, o diabo,\n15\ne libertar os que, por medo da morte,\nestavam a vida toda sujeitos à escravidão.\n16\nPois, afinal, não veio ocupar-se com os anjos,\nmas com a descendência de Abraão.\n17\nPor isso devia fazer-se em tudo semelhante aos irmãos,\npara se tornar um sumo sacerdote misericordioso\ne digno de confiança nas coisas referentes a Deus,\na fim de expiar os pecados do povo.\n18\nPois, tendo ele próprio sofrido ao ser tentado,\né capaz de socorrer os que agora sofrem a tentação.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 104(105),1-2.3-4.6-7.8-9 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor se lembra sempre da Aliança.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nDai graças ao Senhor, gritai seu nome, *\nanunciai entre as nações seus grandes feitos!\n2\nCantai, entoai salmos para ele, *\npublicai todas as suas maravilhas!\nR.\n3\nGloriai-vos em seu nome que é santo, *\nexulte o coração que busca a Deus!\n4\nProcurai o Senhor Deus e seu poder, *\nbuscai constantemente a sua face!\nR.\n6\nDescendentes de Abraão, seu servidor, *\ne filhos de Jacó, seu escolhido,\n7\nele mesmo, o Senhor, é nosso Deus, *\nvigoram suas leis em toda a terra.\nR.\n8\nEle sempre se recorda da Aliança, *\npromulgada a incontáveis gerações;\n9\nda Aliança que ele fez com Abraão, *\ne do seu santo juramento a Isaac.\nR.\nEvangelho - Mc 1,29-39\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\ne as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,29-39",
+    "texto": "1,29-39\nNaquele tempo,\n29\nJesus saiu da sinagoga\ne foi, com Tiago e João,\npara a casa de Simão e André.\n30\nA sogra de Simão estava de cama, com febre,\ne eles logo contaram a Jesus.\n31\nE ele se aproximou, segurou sua mão\ne ajudou-a a levantar-se.\nEntão, a febre desapareceu;\ne ela começou a servi-los.\n32\nÀ tarde, depois do pôr-do-sol,\nlevaram a Jesus todos os doentes\ne os possuídos pelo demônio.\n33\nA cidade inteira se reuniu em frente da casa.\n34\nJesus curou muitas pessoas de diversas doenças\ne expulsou muitos demônios.\nE não deixava que os demônios falassem,\npois sabiam quem ele era.\n35\nDe madrugada, quando ainda estava escuro,\nJesus se levantou e foi rezar num lugar deserto.\n36\nSimão e seus companheiros foram à procura de Jesus.\n37\nQuando o encontraram, disseram:\n\"Todos estão te procurando\".\n38\nJesus respondeu:\n\"Vamos a outros lugares, às aldeias da redondeza!\nDevo pregar também ali,\npois foi para isso que eu vim\".\n39\nE andava por toda a Galileia,\npregando em suas sinagogas\ne expulsando os demônios.\nPalavra da Salvação."
+  }
+}

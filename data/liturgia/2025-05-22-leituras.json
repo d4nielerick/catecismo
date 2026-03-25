@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-22",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 15,7-21</div><div> Sl 95(96),1-2a.2b-3.10 (R. cf. 3)</div><div></div><div> Jo 15,9-11</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,7-21",
+    "texto": "Naqueles dias,\n7\nDepois de longa discussão,\nPedro levantou-se e falou aos apóstolos e anciãos:\n\"Irmãos, vós sabeis que, desde os primeiros dias,\nDeus me escolheu, do vosso meio,\npara que os pagãos ouvissem de minha boca\na palavra do Evangelho e acreditassem.\n8\nOra, Deus, que conhece os corações,\ntestemunhou a favor deles,\ndando-lhes o Espírito Santo como o deu a nós.\n9\nE não fez nenhuma distinção entre nós e eles,\npurificando o coração deles mediante a fé.\n10\nEntão, por que vós agora colocais Deus à prova,\nquerendo impor aos discípulos um jugo\nque nem nossos pais e nem nós mesmos\ntivemos força para suportar?\n11\nAo contrário, é pela graça do Senhor Jesus\nque acreditamos ser salvos,\nexatamente como eles\".\n12\nHouve então um grande silêncio em toda a assembleia.\nDepois disso, ouviram Barnabé e Paulo\ncontar todos os sinais e prodígios\nque Deus havia realizado,\npor meio deles, entre os pagãos.\n13\nQuando Barnabé e Paulo terminaram de falar,\nTiago tomou a palavra e disse:\n\"Irmãos, ouvi-me:\n14\nSimão acaba de nos lembrar como, desde o começo,\nDeus se dignou tomar homens das nações pagãs\npara formar um povo dedicado ao seu Nome.\n15\nIsso concorda com as palavras dos profetas,\npois está escrito:\n16\n'Depois disso, eu voltarei\ne reconstruirei a tenda de Davi que havia caído;\nreconstruirei as ruínas que ficaram e a reerguerei,\na fim de que o resto dos homens\nprocure o Senhor com todas as nações\nque foram consagradas ao meu Nome.\nÉ o que diz o Senhor, que fez estas coisas,\n18\nconhecidas há muito tempo'.\n19\nPor isso, sou do parecer\nque devemos parar de importunar\nos pagãos que se convertem a Deus.\n20\nVamos somente prescrever\nque eles evitem o que está contaminado pelos ídolos,\nas uniões ilegítimas,\ncomer carne de animal sufocado\ne o uso do sangue.\n21\nCom efeito, desde os tempos antigos,\nem cada cidade, Moisés tem os seus pregadores,\nque o lêem todos os sábados nas sinagogas\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 95(96),1-2a.2b-3.10 (R. cf. 3)",
+    "refrao": "",
+    "texto": "R.\nAnunciai as maravilhas do Senhor\nentre todas as nações.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nCantai ao Senhor Deus um canto novo, †\ncantai ao Senhor Deus, ó terra inteira! *\n2a\nCantai e bendizei seu santo nome!\nR.\n2b\nDia após dia anunciai sua salvação, †\n3\nmanifestai a sua glória entre as nações, *\ne entre os povos do universo seus prodígios!\nR.\n10\nPublicai entre as nações: \"Reina o Senhor!\" †\nEle firmou o universo inabalável *\npois os povos ele julga com justiça.\nR.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\nminha voz estão elas a escutar;\neu conheço, então, minhas ovelhas,\nque me seguem, comigo a caminhar."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,9-11",
+    "texto": "15,9-11\nNaquele tempo, disse Jesus a seus discípulos:\n9\n\"Como meu Pai me amou,\nassim também eu vos amei.\nPermanecei no meu amor.\n10\nSe guardardes os meus mandamentos,\npermanecereis no meu amor,\nassim como eu guardei os mandamentos do meu Pai\ne permaneço no seu amor.\n11\nEu vos disse isto,\npara que a minha alegria esteja em vós\ne a vossa alegria seja plena\".\nPalavra da Salvação."
+  }
+}

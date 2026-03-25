@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-09",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 4,19-5,4</div><div> Sl 71(72),1-2.14 e 15bc.17 (R. cf. 11)</div><div></div><div> Lc 4,14-22a</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,19-5,4",
+    "texto": "Caríssimos,\n19\nquanto a nós, amemos Deus\nporque ele nos amou primeiro.\n20\nSe alguém disser:\n\"Amo a Deus\",\nmas entretanto odeia o seu irmão,\né um mentiroso;\npois quem não ama o seu irmão, a quem vê,\nnão poderá amar a Deus, a quem não vê.\n21\nE este é o mandamento que dele recebemos:\naquele que ama a Deus,\name também o seu irmão.\n5,1\nTodo o que crê que Jesus é o Cristo,\nnasceu de Deus,\ne quem ama aquele que gerou alguém,\namará também aquele que dele nasceu.\n2\nPodemos saber que amamos os filhos de Deus,\nquando amamos a Deus e guardamos os seus mandamentos.\n3\nPois isto é amar a Deus:\nobservar os seus mandamentos.\nE os seus mandamentos não são pesados,\n4\npois todo o que nasceu de Deus vence o mundo.\nE esta é a vitória que venceu o mundo: a nossa fé.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 71(72),1-2.14.15bc.17 (R. cf. 11)",
+    "refrao": "",
+    "texto": "R.\nAs nações de toda a terra,\nhão de adorar-vos, ó Senhor!\n1\nDai ao Rei vossos poderes, Senhor Deus, *\nvossa justiça ao descendente da realeza!\n2\nCom justiça ele governe o vosso povo, *\ncom equidade ele julgue os vossos pobres.\nR.\n14\nHá de livrá-los da violência e opressão, *\npois vale muito o sangue deles a seus olhos!\n15b\nHão de rezar também por ele sem cessar, *\nc\nbendizê-lo e honrá-lo cada dia.\nR.\n17\nSeja bendito o seu nome para sempre! *\nE que dure como o sol sua memória!\nTodos os povos serão nele abençoados, *\ntodas as gentes cantarão o seu louvor!\nR.\nEvangelho - Lc 4,14-22\nAclamação ao Evangelho\nLc 4,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor repousa sobre mim\ne enviou-me a anunciar aos pobres o Evangelho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "4,14-22a",
+    "texto": "4,14-22a\nNaquele tempo,\n14\nJesus voltou para a Galileia, com a força do Espírito,\ne sua fama espalhou-se por toda a redondeza.\n15\nEle ensinava nas suas sinagogas e todos o elogiavam.\n16\nE veio à cidade de Nazaré, onde se tinha criado.\nConforme seu costume, entrou na sinagoga no sábado,\ne levantou-se para fazer a leitura.\n17\nDeram-lhe o livro do profeta Isaías.\nAbrindo o livro, Jesus achou a passagem em que está escrito:\n18\n\"O Espírito do Senhor está sobre mim,\nporque ele me consagrou com a unção\npara anunciar a Boa-Nova aos pobres;\nenviou-me para proclamar a libertação aos cativos\ne aos cegos a recuperação da vista;\npara libertar os oprimidos\n19\ne para proclamar um ano da graça do Senhor\".\n20\nDepois fechou o livro,\nentregou-o ao ajudante, e sentou-se.\nTodos os que estavam na sinagoga\ntinham os olhos fixos nele.\n21\nEntão começou a dizer-lhes:\n\"Hoje se cumpriu esta passagem da Escritura\nque acabastes de ouvir\".\n22a\nTodos davam testemunho a seu respeito,\nadmirados com as palavras cheias de encanto\nque saíam da sua boca.\nPalavra da Salvação."
+  }
+}

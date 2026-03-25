@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 6,19-23</div><div> Sl 1,1-2.3.4 e 6 (R. Sl 39,5a)</div><div></div><div> Lc 12,49-53</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,19-23",
+    "texto": "Irmãos,\n19\nuso uma linguagem humana,\npor causa da vossa limitação.\nOutrora, oferecestes vossos membros como escravos\npara servirem à impureza\ne à sempre crescente desordem moral.\nPois bem, agora, colocai vossos membros\nao serviço da justiça, em vista da vossa santificação.\n20\nQuando éreis escravos do pecado,\nestáveis livres em relação à justiça.\n21\nQue fruto colhíeis, então,\nde ações das quais hoje vos envergonhais?\nPois o fim daquelas ações era a morte.\n22\nAgora, porém, libertados do pecado,\ne como escravos de Deus,\nfrutificais para a santidade até à vida eterna,\nque é a meta final.\n23\nCom efeito, a paga do pecado é a morte,\nmas o dom de Deus é a vida eterna\nem Jesus Cristo, nosso Senhor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 1,1-2.",
+    "refrao": "",
+    "texto": "3.4 e 6 (R. Sl 39,5a)\nR.\nÉ feliz quem a Deus se confia!\n1\nFeliz é todo aquele que não anda *\nconforme os conselhos dos perversos;\nque não entra no caminho dos malvados, *\nnem junto aos zombadores vai sentar-se;\n2\nmas encontra seu prazer na lei de Deus *\ne a medita, dia e noite, sem cessar.\nR.\n3\nEis que ele é semelhante a uma árvore *\nque à beira da torrente está plantada;\nela sempre dá seus frutos a seu tempo, †\ne jamais as suas folhas vão murchar. *\nEis que tudo o que ele faz vai prosperar,\nR.\n4\nmas bem outra é a sorte dos perversos. †\nAo contrário, são iguais à palha seca *\nespalhada e dispersada pelo vento.\n6\nPois Deus vigia o caminho dos eleitos, *\nmas a estrada dos malvados leva à morte.\nR.\nEvangelho - Lc 12,49-5\nAclamação ao Evangelho\nFl 3,8-9\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu tudo considero como perda e como lixo,\na fim de eu ganhar Cristo e ser achado nele!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,49-53",
+    "texto": "12,49-53\nNaquele tempo, disse Jesus a seus discípulos:\n49\n\"Eu vim para lançar fogo sobre a terra,\ne como gostaria que já estivesse aceso!\n50\nDevo receber um batismo,\ne como estou ansioso até que isto se cumpra!\n51\nVós pensais que eu vim trazer a paz sobre a terra?\nPelo contrário, eu vos digo, vim trazer divisão.\n52\nPois, daqui em diante,\nnuma família de cinco pessoas,\ntrês ficarão divididas contra duas\ne duas contra três;\n53\nficarão divididos:\no pai contra o filho e o filho contra o pai;\na mãe contra a filha e a filha contra a mãe;\na sogra contra a nora e a nora contra a sogra\".\nPalavra da Salvação."
+  }
+}

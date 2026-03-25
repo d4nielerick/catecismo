@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Rs 17,10-16</div><div> Sl 145(146),7.8-9a.9bc-10 (R. 1)</div><div> Hb 9,24-28</div><div> Mc 12,38-44</div></div>",
+  "primeira_leitura": {
+    "referencia": "17,10-16",
+    "texto": "Naqueles dias,\n10\nElias pôs-se a caminho e foi para Sarepta.\nAo chegar à porta da cidade,\nviu uma viúva apanhando lenha.\nEle chamou-a e disse:\n\"Por favor, traze-me um pouco de água numa vasilha\npara eu beber\".\n11\nQuando ela ia buscar água, Elias gritou-lhe:\n\"Por favor, traze-me também um pedaço de pão\nem tua mão\".\n12\nEla respondeu:\n\"Pela vida do Senhor, teu Deus, não tenho pão.\nSó tenho um punhado de farinha numa vasilha\ne um pouco de azeite na jarra.\nEu estava apanhando dois pedaços de lenha,\na fim de preparar esse resto para mim e meu filho,\npara comermos e depois esperar a morte\".\n13\nElias replicou-lhe:\n\"Não te preocupes!\nVai e faze como disseste.\nMas, primeiro, prepara-me com isso um pãozinho, e traze-o.\nDepois farás o mesmo para ti e teu filho.\n14\nPorque assim fala o Senhor, Deus de Israel:\n'A vasilha de farinha não acabará\ne a jarra de azeite não diminuirá,\naté ao dia em que o Senhor enviar\na chuva sobre a face da terra'\".\n15\nA mulher foi e fez como Elias lhe tinha dito.\nE comeram, ele e ela e sua casa, durante muito tempo.\n16\nA farinha da vasilha não acabou\nnem diminuiu o óleo da jarra,\nconforme o que o Senhor tinha dito\npor intermédio de Elias.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 145(146),7.8-9a.9bc-10 (R.1)",
+    "refrao": "",
+    "texto": "R.\nBendize, minh'alma, bendize ao Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n7\nO Senhor é fiel para sempre, *\nfaz justiça aos que são oprimidos;\nele dá alimento aos famintos, *\né o Senhor quem liberta os cativos.\nR.\n8\nO Senhor abre os olhos aos cegos †\no Senhor faz erguer-se o caído; *\no Senhor ama aquele que é justo.\n9a\nÉ o Senhor quem protege o estrangeiro, †.\nbc\nQuem ampara a viúva e o órfão *\nmas confunde os caminhos dos maus.\nR.\n10\nO Senhor reinará para sempre! †\nÓ Sião, o teu Deus reinará *\npara sempre e por todos os séculos!\nR.\n2ª Leitura - Hb 9,24-\nSEGUNDA LEITURA\nCristo foi oferecido uma vez, para\ntirar os pecados da multidão.\nLeitura da Carta aos Hebreus\n9,24-28\n24\nCristo não entrou num santuário feito por mão humana,\nimagem do verdadeiro,\nmas no próprio céu,\na fim de comparecer, agora, na presença de Deus,\nem nosso favor.\n25\nE não foi para se oferecer a si muitas vezes,\ncomo o sumo sacerdote que, cada ano,\nentra no Santuário com sangue alheio.\n26\nPorque, se assim fosse,\ndeveria ter sofrido muitas vezes,\ndesde a fundação do mundo.\nMas foi agora, na plenitude dos tempos,\nque, uma vez por todas, ele se manifestou\npara destruir o pecado pelo sacrifício de si mesmo.\n27\nO destino de todo homem é morrer uma só vez,\ne depois vem o julgamento.\n28\nDo mesmo modo, também Cristo,\noferecido uma vez por todas,\npara tirar os pecados da multidão,\naparecerá uma segunda vez, fora do pecado,\npara salvar aqueles que o esperam.\nPalavra do Senhor.\nAclamação ao Evangelho\nMt 5,3\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFelizes os pobres em espírito,\nporque deles é o Reino dos Céus."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,38-44",
+    "texto": "12,38-44\nNaquele tempo,\n38\nJesus dizia, no seu ensinamento a uma grande multidão:\n\"Tomai cuidado com os doutores da Lei!\nEles gostam de andar com roupas vistosas,\nde ser cumprimentados nas praças públicas;\n39\ngostam das primeiras cadeiras nas sinagogas\ne dos melhores lugares nos banquetes.\n40\nEles devoram as casas das viúvas,\nfingindo fazer longas orações.\nPor isso eles receberão a pior condenação\".\n41\nJesus estava sentado no Templo,\ndiante do cofre das esmolas,\ne observava como a multidão depositava\nsuas moedas no cofre.\nMuitos ricos depositavam grandes quantias.\n42\nEntão chegou uma pobre viúva\nque deu duas pequenas moedas,\nque não valiam quase nada.\n43\nJesus chamou os discípulos e disse:\n\"Em verdade vos digo,\nesta pobre viúva deu mais do que todos os outros\nque ofereceram esmolas.\n44\nTodos deram do que tinham de sobra,\nenquanto ela, na sua pobreza,\nofereceu tudo aquilo que possuía para viver\".\nPalavra da Salvação."
+  }
+}

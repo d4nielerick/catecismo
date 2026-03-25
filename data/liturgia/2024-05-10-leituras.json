@@ -1,0 +1,23 @@
+{
+  "data": "2024-05-10",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 18,9-18</div><div> Sl 46(47),2-3.4-5.6-7 (R. 8a)</div><div></div><div> Jo 16,20-23a</div></div>",
+  "primeira_leitura": {
+    "referencia": "18,9-18",
+    "texto": "Estando Paulo em Corinto,\n9\numa noite, o Senhor disse-lhe em visão:\n\"Não tenhas medo;\ncontinua a falar e não te cales,\n10\nporque eu estou contigo.\nNinguém te porá a mão para fazer mal.\nNesta cidade há um povo numeroso que me pertence\".\n11\nAssim Paulo ficou um ano e meio entre eles,\nensinando-lhes a Palavra de Deus.\n12\nNa época em que Galião era proncônsul na Acaia,\nos judeus insurgiram-se em massa contra Paulo\ne levaram-no diante do tribunal,\n13\ndizendo:\n\"Este homem induz o povo a adorar a Deus\nde modo contrário à Lei\".\n14\nPaulo ia tomar a palavra,\nquando Galião falou aos judeus, dizendo:\n\"Judeus, se fosse por causa de um delito\nou de uma ação criminosa,\nseria justo que eu atendesse a vossa queixa.\n15\nMas, como é questão de palavras,\nde nomes e da vossa Lei,\ntratai disso vós mesmos.\nEu não quero ser juiz nessas coisas\".\n16\nE Galião mandou-os sair do tribunal.\n17\nEntão todos agarraram Sóstenes,\no chefe da sinagoga,\ne espancaram-no diante do tribunal.\nE Galião nem se incomodou com isso.\n18\nPaulo permaneceu ainda vários dias em Corinto.\nDespedindo-se dos irmãos, embarcou para a Síria,\nem companhia de Priscila e Áquila.\nEm Cencreia, Paulo rapou a cabeça\npois tinha feito uma promessa.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 46(47),2-3.4-5.6-7 (R. 8a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é o grande Rei de toda a terra.\nOu:\nAleluia, Aleluia, Aleluia.\n2\nPovos todos do universo, batei palmas, *\ngritai a Deus aclamações de alegria!\n3\nPorque sublime é o Senhor, o Deus Altíssimo, *\no soberano que domina toda a terra.\nR.\n4\nOs povos sujeitou ao nosso jugo *\ne colocou muitas nações aos nossos pés.\n5\nFoi ele que escolheu a nossa herança, *\na glória de Jacó, seu bem-amado.\nR.\n6\nPor entre aclamações Deus se elevou, *\no Senhor subiu ao toque da trombeta.\n7\nSalmodiai ao nosso Deus ao som da harpa, *\nsalmodiai ao som da harpa ao nosso Rei!\nR.\nAclamação ao Evangelho\nLc 24,46.26\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEra preciso que Cristo sofresse\ne ressuscitasse dos mortos,\npara entrar em sua glória."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "16,20-23a",
+    "texto": "16,20-23a\nNaquele tempo, disse Jesus aos seus discípulos:\n20\n\"Em verdade, em verdade vos digo:\nVós chorareis e vos lamentareis,\nmas o mundo se alegrará;\nvós ficareis tristes,\nmas a vossa tristeza se transformará em alegria.\n21\nA mulher, quando deve dar à luz,\nfica angustiada porque chegou a sua hora;\nmas, depois que a criança nasceu,\nela já não se lembra dos sofrimentos,\npor causa da alegria de um homem ter vindo ao mundo.\n22\nTambém vós agora sentis tristeza,\nmas eu hei de ver-vos novamente\ne o vosso coração se alegrará,\ne ninguém vos poderá tirar a vossa alegria.\n23a\nNaquele dia, não me perguntareis mais nada\".\nPalavra da Salvação."
+  }
+}

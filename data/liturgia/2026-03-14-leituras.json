@@ -1,0 +1,23 @@
+{
+  "data": "2026-03-14",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Os 6,1-6</div><div> Sl 50(51),3-4.18-19.20-21ab (R. cf. Os 6,6)</div><div></div><div> Lc 18,9-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,1-6",
+    "texto": "1\n\"Vinde, voltemos para o Senhor,\nele nos feriu e há de tratar-nos,\nele nos machucou e há de curar-nos.\n2\nEm dois dias, nos dará vida,\ne, ao terceiro dia, há de restaurar-nos,\ne viveremos em sua presença.\n3\nÉ preciso saber segui-lo\npara reconhecer o Senhor.\nCerta como a aurora é a sua vinda,\nele virá até nós como as primeiras chuvas,\ncomo as chuvas tardias que regam o solo\".\n4\nComo vou tratar-te, Efraim?\nComo vou tratar-te, Judá?\nO vosso amor é como nuvem pela manhã,\ncomo orvalho que cedo se desfaz.\n5\nEu os desbastei por meio dos profetas,\narrasei-os com as palavras de minha boca,\nmas, como luz, expandem-se meus juízos;\n6\nquero amor, e não sacrifícios,\nconhecimento de Deus, mais do que holocaustos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 50(51),3-4.18-19.20-21ab (R. cf. Os 6,6)",
+    "refrao": "",
+    "texto": "R.\nEu quis misericórdia e não o sacrifício!\n3\nTende piedade, ó meu Deus, misericórdia! *\nNa imensidão de vosso amor, purificai-me!\n4\nLavai-me todo inteiro do pecado, *\ne apagai completamente a minha culpa!\nR.\n18\nPois não são de vosso agrado os sacrifícios, *\ne, se oferto um holocausto, o rejeitais.\n19\nMeu sacrifício é minha alma penitente, *\nnão desprezeis um coração arrependido!\nR.\n20\nSede benigno com Sião, por vossa graça, *\nreconstruí Jerusalém e os seus muros!\n21a\nE aceitareis o verdadeiro sacrifício, *\nb\nos holocaustos e oblações em vosso altar!\nR.\nEvangelho - Lc 18,9-14\nAclamação ao Evangelho  Cf.\nSl 94(95),8ab\nR.\nHonra, glória, poder e louvor\na Jesus, nosso Deus e Senhor!\nV.\nOxalá ouvísseis hoje a sua voz:\nnão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "18,9-14",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n18,9-14\nNaquele tempo,\n9\nJesus contou esta parábola\npara alguns que confiavam na sua própria justiça\ne desprezavam os outros:\n10\n\"Dois homens subiram ao Templo para rezar:\num era fariseu, o outro cobrador de impostos.\n11\nO fariseu, de pé, rezava assim em seu íntimo:\n'Ó Deus, eu te agradeço\nporque não sou como os outros homens,\nladrões, desonestos, adúlteros,\nnem como este cobrador de impostos.\n12\nEu jejuo duas vezes por semana,\ne dou o dízimo de toda a minha renda'.\n13\nO cobrador de impostos, porém, ficou à distância,\ne nem se atrevia a levantar os olhos para o céu;\nmas batia no peito, dizendo:\n'Meu Deus, tem piedade de mim que sou pecador!'\n14\nEu vos digo:\neste último voltou para casa justificado,\no outro não.\nPois quem se eleva será humilhado,\ne quem se humilha será elevado\".\nPalavra da Salvação."
+  }
+}

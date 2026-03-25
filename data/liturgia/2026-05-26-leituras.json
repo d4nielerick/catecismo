@@ -1,0 +1,23 @@
+{
+  "data": "2026-05-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Pd 1,10-16</div><div> Sl 97(98),1.2-3ab.3cd-4 (R. 2a)</div><div></div><div> Mc 10,28-31</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,10-16",
+    "texto": "Caríssimos,\n10\nEsta salvação tem sido objeto\ndas investigações e meditações dos profetas.\nEles profetizaram a respeito da graça\nque vos estava destinada.\n11\nProcuraram saber a que época\ne a que circunstâncias\nse referia o Espírito de Cristo,\nque estava neles,\nao anunciar com antecedência\nos sofrimentos de Cristo\ne a glória consequente.\n12\nFoi-lhes revelado que, não para si mesmos,\nmas para vós, estavam ministrando estas coisas,\nque agora são anunciadas a vós\npor aqueles que vos pregam o evangelho\nem virtude do Espírito Santo, enviado do céu;\nrevelações essas,\nque até os anjos desejam contemplar!\n13\nPor isso, aprontai a vossa mente;\nsede sóbrios e colocai toda a vossa esperança\nna graça que vos será oferecida\nna revelação de Jesus Cristo.\n14\nComo filhos obedientes,\nnão modeleis a vossa vida\nde acordo com as paixões de antigamente,\ndo tempo da vossa ignorância.\n15\nAntes, como é santo aquele que vos chamou,\ntornai-vos santos, também vós,\nem todo o vosso proceder.\n16\nPois está na Escritura:\n\"Sede santos, porque eu sou santo\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1. 2-3ab.3c-4 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor fez conhecer seu poder salvador,\nperante as nações.\n1\nCantai ao Senhor Deus um canto novo,*\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo*\nalcançaram-lhe a vitória.\nR.\n2\nO Senhor fez conhecer a salvação,*\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel*\nb\npela casa de Israel\nR.\nc\nOs confins do universo contemplaram*\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira,*\nalegrai-vos e exultai!\nR.\nEvangelho - Mc 10,28-3\nAclamação ao Evangelho  Cf.\nMt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois, revelaste os mistérios do teu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,28-31",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n10,28-31\nNaquele tempo,\n28\ncomeçou Pedro a dizer a Jesus:\n\"Eis que nós deixamos tudo e te seguimos\".\n29\nRespondeu Jesus:\n\"Em verdade vos digo,\nquem tiver deixado casa,\nirmãos, irmãs, mãe, pai, filhos,\ncampos, por causa de mim e do Evangelho,\n30\nreceberá cem vezes mais agora, durante esta vida\n— casa, irmãos, irmãs, mães, filhos e campos,\ncom perseguições —\ne, no mundo futuro, a vida eterna.\n31\nMuitos que agora são os primeiros serão os últimos.\nE muitos que agora são os últimos serão os primeiros\".\nPalavra da Salvação."
+  }
+}

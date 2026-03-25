@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 14,1-3.4b-5</div><div> Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)</div><div></div><div> Lc 21,1-4</div></div>",
+  "primeira_leitura": {
+    "referencia": "14,1-3.4b-5",
+    "texto": "Eu, João,\n1\ntive esta visão:\no Cordeiro estava de pé sobre o monte Sião.\nCom ele, os cento e quarenta e quatro mil\nque tinham a fronte marcada com o nome dele\ne o nome do seu Pai.\n2\nOuvi uma voz que vinha do céu;\nparecia o barulho de águas torrenciais\ne o estrondo de um forte trovão.\nO ruído que ouvi era como o som\nde músicos tocando harpa.\n3\nEstavam diante do trono,\ndiante dos quatro Seres vivos e dos Anciãos,\ne cantavam um cântico novo.\nEra um cântico que ninguém podia aprender;\nsó os cento e quarenta e quatro mil marcados,\nque foram resgatados da terra.\n4b\nEles seguem o Cordeiro aonde quer que vá.\nForam resgatados do meio dos homens,\ncomo primeira oferta a Deus a ao Cordeiro.\n5\nNa sua boca nunca foi encontrada mentira.\nSão íntegros!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)",
+    "refrao": "",
+    "texto": "R.\nÉ assim a geração dos que buscam vossa face,\nó Senhor, Deus de Israel.\n1\nAo Senhor pertence a terra e o que ela encerra, *\no mundo inteiro com os seres que o povoam;\n2\nporque ele a tornou firme sobre os mares, *\ne sobre as águas a mantém inabalável.\nR.\n3\n\"Quem subirá até o monte do Senhor, *\nquem ficará em sua santa habitação?\"\n4a\n\"Quem tem mãos puras e inocente coração, *\nb\nquem não dirige sua  mente para o crime.\nR.\n5\nSobre este desce a bênção do Senhor *\ne a recompensa de seu Deus e Salvador\".\n6\n\"É assim a geração dos que o procuram, *\ne do Deus de Israel buscam a face\".\nR.\nEvangelho - Lc 21,1-4\nAclamação ao Evangelho\nMt 24,42a.44\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVigiai, diz Jesus, vigiai,\npois, no dia em que não esperais,\no vosso Senhor há de vir."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "21,1-4",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n21,1-4\nNaquele tempo,\n1\nJesus ergueu os olhos e viu pessoas ricas\ndepositando ofertas no tesouro do Templo.\n2\nViu também uma pobre viúva\nque depositou duas pequenas moedas.\n3\nDiante disto, ele disse:\n\"Em verdade vos digo que essa pobre viúva\nofertou mais do que todos.\n4\nPois todos eles depositaram,\ncomo oferta feita a Deus,\naquilo que lhes sobrava.\nMas a viúva, na sua pobreza,\nofertou tudo quanto tinha para viver\".\nPalavra da Salvação."
+  }
+}

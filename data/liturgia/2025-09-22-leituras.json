@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-22",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Esd 1,1-6</div><div> Sl 125(126),1-2ab.2cd-3.4-5.6 (R. 3a)</div><div></div><div> Lc 8,16-18</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-6",
+    "texto": "1\nNo primeiro ano do reinado de Ciro, rei da Pérsia,\npara que se cumprisse a palavra do Senhor\npronunciada pela boca de Jeremias,\no Senhor moveu o espírito de Ciro, rei da Pérsia,\nque mandou publicar em todo o seu reino,\nde viva voz e por escrito,\na seguinte proclamação:\n2\n\"Assim fala Ciro, rei da Pérsia:\nO Senhor, Deus do Céu,\nme deu todos os reinos da terra\ne me encarregou de lhe construir\num templo em Jerusalém, na terra de Judá.\n3\nQuem, dentre vós todos, pertence ao seu povo?\nQue o Senhor, seu Deus, esteja com ele,\ne que se ponha a caminho e suba a Jerusalém,\ne construa o templo do Senhor, Deus de Israel,\no Deus que está em Jerusalém.\n4\nE a todos os sobreviventes,\nonde quer que residam,\nas pessoas do lugar proporcionem\nprata, ouro, bens e animais,\nalém de donativos espontâneos\npara o templo de Deus, que está em Jerusalém\".\n5\nEntão se levantaram\nos chefes de família de Judá e de Benjamim,\nos sacerdotes e os levitas,\ntodos aqueles que se sentiram inspirados por Deus\npara ir edificar o templo do Senhor,\nque está em Jerusalém.\n6\nE todos os seus vizinhos lhes trouxeram\ntoda a espécie de ajuda em prata, ouro, bens,\nanimais e objetos preciosos,\nsem falar em todas as doações espontâneas.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 125(126),1-2ab.2cd-3.4-5.6 (R. 3a)",
+    "refrao": "",
+    "texto": "R.\nMaravilhas fez conosco o Senhor!\n1\nQuando o Senhor reconduziu nossos cativos, *\nparecíamos sonhar;\n2a\nencheu-se de sorriso nossa boca, *\nb\nnossos lábios, de canções.\nR.\nc\nEntre os gentios se dizia: \"Maravilhas *\nd\nfez com eles o Senhor!\"\n3\nSim, maravilhas fez conosco o Senhor, *\nexultemos de alegria!\nR.\n4\nMudai a nossa sorte, ó Senhor, *\ncomo torrentes no deserto.\n5\nOs que lançam as sementes entre lágrimas, *\nceifarão com alegria.\nR.\n6\nChorando de tristeza sairão, *\nespalhando suas sementes;\ncantando de alegria voltarão, *\ncarregando os seus feixes!\nR.\nEvangelho - Lc 8,16-18\nAclamação ao Evangelho\nMt 5,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVós sois a luz do mundo; brilhe a todos a vossa luz.\nVendo eles vossas obras, deem glória ao Pai celeste!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,16-18",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n8,16-18\nNaquele tempo, disse Jesus à multidão:\n16\n\"Ninguém acende uma lâmpada\npara cobri-la com uma vasilha\nou colocá-la debaixo da cama;\nao contrário, coloca-a no candeeiro,\na fim de que todos os que entram, vejam a luz.\n17\nCom efeito, tudo o que está escondido\ndeverá tornar-se manifesto;\ne tudo o que está em segredo deverá tornar-se conhecido\ne claramente manifesto.\n18\nPortanto, prestai atenção à maneira como vós ouvis!\nPois a quem tem alguma coisa, será dado ainda mais;\ne àquele que não tem,\nserá tirado até mesmo o que ele pensa ter\".\nPalavra da Salvação."
+  }
+}

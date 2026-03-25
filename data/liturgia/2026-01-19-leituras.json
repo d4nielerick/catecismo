@@ -1,0 +1,23 @@
+{
+  "data": "2026-01-19",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Sm 15,16-23</div><div> Sl 49(50),8-9.16bc-17.21.23 (R. 23b)</div><div></div><div> Mc 2,18-22</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,16-23",
+    "texto": "Naqueles dias,\n16\nSamuel disse a Saul:\n\"Basta!\nDeixa-me dizer-te o que o Senhor me revelou esta noite\".\nSaul disse:\n\"Fala!\"\n17\nEntão Samuel começou:\n\"Por menor que sejas aos teus próprios olhos,\nacaso não és o chefe das tribos de Israel?\nO Senhor ungiu-te rei sobre Israel\n18\ne te enviou em expedição,\ncom a ordem de eliminar os amalecitas, esses malfeitores,\ncombatendo-os até que fossem exterminados.\n19\nPor que não ouviste a voz do Senhor,\ne te precipitaste sobre os despojos\ne fizeste o que desagrada ao Senhor?\"\n20\nSaul respondeu a Samuel:\n\"Mas eu obedeci ao Senhor!\nRealizei a expedição a que ele me enviou.\nTrouxe Agag, rei de Amalec, para cá,\ne exterminei os amalecitas.\n21\nQuanto aos despojos,\no povo reteve, das ovelhas e dos bois,\no melhor do que devia ser eliminado,\npara sacrificar ao Senhor teu Deus em Guilgal\".\n22\nMas Samuel replicou:\n\"O Senhor quer holocaustos e sacrifícios,\nou quer a obediência à sua palavra?\nA obediência vale mais que o sacrifício,\na docilidade mais que oferecer gordura de carneiros.\n23\nA rebelião é um verdadeiro pecado de magia,\num crime de idolatria, uma obstinação.\nAssim, porque rejeitaste a palavra do Senhor,\nele te rejeitou:\ntu não és mais rei\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 49(50),8-9.16bc-17.21.23 (R. 23b)",
+    "refrao": "",
+    "texto": "R.\nA todo homem que procede retamente,\neu mostrarei a salvação que vem de Deus.\n8\nEu não venho censurar teus sacrifícios, *\npois sempre estão perante mim teus holocaustos;\n9\nnão preciso dos novilhos de tua casa *\nnem dos carneiros que estão nos teus rebanhos.\nR.\n16b\nComo ousas repetir os meus preceitos *\nc\ne trazer minha Aliança em tua boca?\n17\nTu que odiaste minhas leis e meus conselhos *\ne deste as costas às palavras dos meus lábios!\nR.\n21\nDiante disso que fizeste, eu calarei? *\nAcaso pensas que eu sou igual a ti?\nÉ disso que te acuso e repreendo *\ne manifesto essas coisas aos teus olhos.\nR.\n23\nQuem me oferece um sacrício de louvor, *\nEvangelho - Mc 2,18-22\neste sim é que me honra de verdade.\nA todo homem que procede retamente, *\neu mostrarei a salvação que vem de Deus.\nR.\nAclamação ao Evangelho\nHb 4,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nA palavra do Senhor é viva e eficaz:\nela julga os pensamentos e as intenções do coração."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "2,18-22",
+    "texto": "2,18-22\nNaquele tempo,\n18\nos discípulos de João Batista e os fariseus estavam jejuando.\nEntão, vieram dizer a Jesus:\n\"Por que os discípulos de João\ne os discípulos dos fariseus jejuam,\ne os teus discípulos não jejuam?\"\n19\nJesus respondeu:\n\"Os convidados de um casamento\npoderiam, por acaso, fazer jejum,\nenquanto o noivo está com eles?\nEnquanto o noivo está com eles,\nos convidados não podem jejuar.\n20\nMas vai chegar o tempo\nem que o noivo será tirado do meio deles;\naí, então, eles vão jejuar.\n21\nNinguém põe um remendo de pano novo numa roupa velha;\nporque o remendo novo repuxa o pano velho\ne o rasgão fica maior ainda.\n22\nNinguém põe vinho novo em odres velhos;\nporque o vinho novo arrebenta os odres velhos\ne o vinho e os odres se perdem.\nPor isso, vinho novo em odres novos\".\nPalavra da Salvação."
+  }
+}

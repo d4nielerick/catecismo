@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-12",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Tm 1,1-2.12-14</div><div> Sl 15(16),1-2a e 5.7-8.11 (R. cf. 5a)</div><div></div><div> Lc 6,39-42</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-2.12-14,1",
+    "texto": "1\nPaulo, apóstolo de Cristo Jesus,\npor ordem de Deus, nosso Salvador,\ne de Cristo Jesus, nossa esperança,\n2\na Timóteo, verdadeiro filho na fé:\na graça, a misericórdia e a paz de Deus Pai\ne de Cristo Jesus, nosso Senhor.\n12\nAgradeço àquele que me deu força,\nCristo Jesus, nosso Senhor,\npela confiança que teve em mim\nao designar-me para o seu serviço,\n13\na mim, que antes blasfemava,\nperseguia e insultava.\nMas encontrei misericórdia,\nporque agia com a ignorância de quem não tem fé.\n14\nTransbordou a graça de nosso Senhor\ncom a fé e o amor que há em Cristo Jesus.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 15(16),1-2a.5.7-8.11 (R. cf. 5a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor é a porção da minha herança!\n1\nGuardai-me, ó Deus, porque em vós me refugio! *\n2a\nDigo ao Senhor: \"Somente vós sois meu Senhor.\n5\nÓ Senhor, sois minha herança e minha taça, *\nmeu destino está seguro em vossas mãos!\nR.\n7\nEu bendigo o Senhor, que me aconselha, *\ne até de noite me adverte o coração.\n8\nTenho sempre o Senhor ante meus olhos, *\npois se o tenho a meu lado não vacilo.\nR.\n11\nVós me ensinais vosso caminho para a vida; †\njunto a vós, felicidade sem limites, *\ndelícia eterna e alegria ao vosso lado!\nR.\nAclamação ao Evangelho\nJo 17,17\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVossa palavra é a verdade;\nsantificai-nos na verdade!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,39-42",
+    "texto": "6,39-42\nNaquele tempo,\n39\nJesus contou uma parábola aos discípulos:\nPode um cego guiar outro cego?\nNão cairão os dois num buraco?\n40\nUm discípulo não é maior do que o mestre;\ntodo discípulo bem formado será como o mestre.\n41\nPor que vês tu o cisco no olho do teu irmão,\ne não percebes a trave\nque há no teu próprio olho?\n42\nComo podes dizer a teu irmão:\nIrmão, deixa-me tirar o cisco do teu olho,\nquando tu não vês a trave no teu próprio olho?\nHipócrita!\nTira primeiro a trave do teu olho,\ne então poderás enxergar bem\npara tirar o cisco do olho do teu irmão.\nPalavra da Salvação."
+  }
+}

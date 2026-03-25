@@ -1,0 +1,23 @@
+{
+  "data": "2025-03-07",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 58,1-9a</div><div> Sl 50(51),3-4.5-6a.18-19 (R. 19b)</div><div></div><div> Mt 9,14-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "58,1-9a",
+    "texto": "Assim fala o Senhor Deus:\n1\n\"Grita forte, sem cessar,\nlevanta a voz como trombeta\ne denuncia os crimes do meu povo\ne os pecados da casa de Jacó.\n2\nBuscam-me cada dia\ne desejam conhecer meus propósitos,\ncomo gente que pratica a justiça\ne não abandonou a lei de Deus.\nExigem de mim julgamentos justos\ne querem estar na proximidade de Deus:\n3\n'Por que não te regozijaste, quando jejuávamos,\ne o ignoraste, quando nos humilhávamos?'\n- É porque no dia do vosso jejum tratais de negócios\ne oprimis os vossos empregados.\n4\nÉ porque ao mesmo tempo que jejuais,\nfazeis litígios e brigas\ne agressões impiedosas.\nNão façais jejum com esse espírito,\nse quereis que vosso pedido seja ouvido no céu.\n5\nAcaso é esse jejum que aprecio,\no dia em que uma pessoa se mortifica?\nTrata-se talvez de curvar a cabeça como junco,\ne de deitar-se em saco e sobre cinza?\nAcaso chamas a isso jejum,\ndia grato ao Senhor?\n6\nAcaso o jejum que prefiro não é outro:\n- quebrar as cadeias injustas,\ndesligar as amarras do jugo,\ntornar livres os que estão detidos,\nenfim, romper todo tipo de sujeição?\n7\nNão é repartir o pão com o faminto,\nacolher em casa os pobres e peregrinos?\nQuando encontrares um nu, cobre-o,\ne não desprezes a tua carne.\n8\nEntão, brilhará tua luz como a aurora\ne tua saúde há de recuperar-se mais depressa;\nà frente caminhará tua justiça\ne a glória do Senhor te seguirá.\n9a\nEntão invocarás o Senhor e ele te atenderá,\npedirás socorro, e ele dirá: 'Eis-me aqui' \".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 50(51),3-4.5-6a.18-19 (R. 19b)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, não desprezeis um coração arrependido!\n3\nTende piedade, ó meu Deus, misericórdia! *\nNa imensidão de vosso amor, purificai-me!\n4\nLavai-me todo inteiro do pecado, *\ne apagai completamente a minha culpa!\nR.\n5\nEu reconheço toda a minha iniquidade,*\no meu pecado está sempre à minha frente.\n6a\nFoi contra vós, só contra vós, que eu pequei,*\ne pratiquei o que é mau aos vossos olhos!\nR.\n18\nPois não são de vosso agrado os sacrifícios, *\ne, se oferto um holocausto, o rejeitais.\n19\nMeu sacrifício é minha alma penitente, *\nnão desprezeis um coração arrependido!\nR.\nAclamação ao Evangelho\nCf. Am 5,14\nR.\nSalve, Cristo, luz da vida,\ncompanheiro na partilha!\nV.\nBuscai o bem, não o mal, pois assim vivereis;\nentão o Senhor, nosso Deus, convosco estará!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,14-15",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n9,14-15\nNaquele tempo,\n14\nos discípulos de João aproximaram-se de Jesus\ne perguntaram:\n\"Por que razão nós e os fariseus praticamos jejuns,\nmas os teus discípulos não?\"\n15\nDisse-lhes Jesus:\n\"Por acaso, os amigos do noivo podem estar de luto\nenquanto o noivo está com eles?\nDias virão em que o noivo será tirado do meio deles.\nEntão, sim, eles jejuarão\".\nPalavra da Salvação."
+  }
+}

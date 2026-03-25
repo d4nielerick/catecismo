@@ -1,0 +1,23 @@
+{
+  "data": "2026-10-16",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ef 1,11-14</div><div> Sl 32(33),1-2.4-5.12-13 (R. 12b)</div><div></div><div> Lc 12,1-7</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,11-14",
+    "texto": "Irmãos,\n11\nem Cristo nós recebemos a nossa parte.\nSegundo o projeto daquele\nque conduz tudo conforme a decisão de sua vontade,\nnós fomos predestinados\n12\na sermos, para o louvor de sua glória,\nos que de antemão colocaram a sua esperança em Cristo.\n13\nNele também vós ouvistes a palavra da verdade,\no evangelho que vos salva.\nNele, ainda, acreditastes\ne fostes marcados com o selo do Espírito prometido,\no Espírito Santo,\n14\no que é o penhor da nossa herança\npara a redenção do povo que ele adquiriu,\npara o louvor da sua glória.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),1-2.4-5.12-13 (R. 12b)",
+    "refrao": "",
+    "texto": "R.\nFeliz o povo que o Senhor  escolheu por sua herança!\n1\nÓ justos, alegrai-vos no Senhor! *\naos retos fica bem glorificá-lo.\n2\nDai graças ao Senhor ao som da harpa, *\nna lira de dez cordas celebrai-o!\nR.\n4\nPois reta é a palavra do Senhor, *\ne tudo o que ele faz merece fé.\n5\nDeus ama o direito e a justiça, *\ntransborda em toda a terra a sua graça.\nR.\n12\nFeliz o povo cujo Deus é o Senhor, *\ne a nação que escolheu por sua herança!\n13\nDos altos céus o Senhor olha e observa; *\nele se inclina para olhar todos os homens.\nR.\nEvangelho - Lc 12,1-7\nAclamação ao Evangelho\nLucas 12,1-7\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSobre nós venha, Senhor, a vossa graça,\nda mesma forma que em vós nós esperamos!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,1-7",
+    "texto": "12,1-7\nNaquele tempo,\n1\nmilhares de pessoas se reuniram,\na ponto de uns pisarem os outros.\nJesus começou a falar,\nprimeiro a seus discípulos:\n\"Tomai cuidado com o fermento dos fariseus,\nque é a hipocrisia.\n2\nNão há nada de escondido,\nque não venha  a ser revelado,\ne não há nada de oculto\nque não venha a ser conhecido.\n3\nPortanto, tudo o que tiverdes dito na escuridão,\nserá ouvido à luz do dia;\ne o que tiverdes pronunciado ao pé do ouvido,\nno quarto,\nserá proclamado sobre os telhados.\n4\nPois bem, meus amigos, eu vos digo:\nnão tenhais medo daqueles que matam o corpo,\nnão podendo fazer mais do que isto.\n5\nVou mostrar-vos a quem deveis temer:\ntemei aquele que, depois de tirar a vida,\ntem o poder de lançar-vos no inferno.\nSim, eu vos digo, a este temei.\n6\nNão se vendem cinco pardais\npor uma pequena quantia?\nNo entanto,\nnenhum deles é esquecido por Deus.\n7\nAté mesmo os cabelos de vossa cabeça\nestão todos contados.\nNão tenhais medo!\nVós valeis mais do que muitos pardais\".\nPalavra da Salvação."
+  }
+}

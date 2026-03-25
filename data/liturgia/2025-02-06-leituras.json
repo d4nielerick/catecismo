@@ -1,0 +1,23 @@
+{
+  "data": "2025-02-06",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 12,18-19.21-24</div><div> Sl 47(48),2-3a.3b-4.9.10-11 (R. cf. 10)</div><div></div><div> Mc 6,7-13</div></div>",
+  "primeira_leitura": {
+    "referencia": "12,18-19.21-24",
+    "texto": "Irmãos,\n18\nvós não vos aproximastes de uma realidade palpável:\n\"fogo ardente e escuridão, trevas e tempestade,\n19\nsom da trombeta e voz poderosa\",\nque os ouvintes suplicaram não continuasse.\n21\nEles ficaram tão espantados com esse espetáculo,\nque Moisés disse:\n\"Estou apavorado e com medo\".\n22\nMas vós vos aproximastes do monte Sião\ne da cidade do Deus vivo, a Jerusalém celeste;\nda reunião festiva de milhões de anjos;\n23\nda assembleia dos primogênitos,\ncujos nomes estão escritos nos céus;\nde Deus, o Juiz de todos;\ndos espíritos dos justos, que chegaram à perfeição;\n24\nde Jesus, mediador da nova aliança,\ne da aspersão do sangue mais eloquente que o de Abel.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 47(48),2-3a.3b-4.9.10-11 (R. cf. 10)",
+    "refrao": "",
+    "texto": "R.\nRecordamos, ó Senhor, vossa bondade\nem meio ao vosso templo.\n2\nGrande é o Senhor e muito digno de louvores *\nna cidade onde ele mora;\n3a\nseu Monte santo, esta colina encantadora *\né a alegria do universo.\nR.\nb\nMonte Sião, no extremo norte situado, *\nés a mansão do grande Rei!\n4\nDeus revelou-se em suas fortes cidadelas *\num refúgio poderoso.\nR.\n9\nComo ouvimos dos antigos, contemplamos: *\nDeus habita esta cidade,\na cidade do Senhor onipotente, *\nque ele a guarde eternamente!\nR.\nEvangelho - Mc 5,21-43\n10\nRecordamos, Senhor Deus, vossa bondade *\nem meio ao vosso templo;\n11\ncom vosso nome vai também vosso louvor *\naos confins de toda a terra.\nR.\nAclamação ao Evangelho\nMt 1,15\nR.\nAleluia, Aleluia, Aleluia.\nV.\nConvertei-vos e crede no Evangelho,\npois, o Reino de Deus está chegando!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,7-13",
+    "texto": "6,7-13\nNaquele tempo,\n7\nJesus chamou os doze,\ne começou a enviá-los dois a dois,\ndando-lhes poder sobre os espíritos impuros.\n8\nRecomendou-lhes que não levassem nada para o caminho,\na não ser um cajado;\nnem pão, nem sacola, nem dinheiro na cintura.\n9\nMandou que andassem de sandálias\ne que não levassem duas túnicas.\n10\nE Jesus disse ainda:\n\"Quando entrardes numa casa,\nficai ali até vossa partida.\n11\nSe em algum lugar não vos receberem,\nnem quiserem vos escutar,\nquando sairdes,\nsacudi a poeira dos pés,\ncomo testemunho contra eles!\"\n12\nEntão os doze partiram\npregaram que todos se convertessem.\n13\nExpulsavam muitos demônios\ne curavam numerosos doentes,\nungindo-os com óleo.\nPalavra da Salvação."
+  }
+}

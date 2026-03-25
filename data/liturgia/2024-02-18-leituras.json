@@ -1,0 +1,23 @@
+{
+  "data": "2024-02-18",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "roxo",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 9,8-15</div><div> Sl 24(25),4bc-5ab.6-7bc.8-9 (R. cf. 10)</div><div> 1Pd 3,18-22</div><div> Mc 1,12-15</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,8-15",
+    "texto": "8\nDisse Deus a Noé e a seus filhos:\n9\n\"Eis que vou estabelecer minha aliança convosco\ne com vossa descendência,\n10\ncom todos os seres vivos que estão convosco:\naves, animais domésticos e selvagens,\nenfim, com todos os animais da terra,\nque saíram convosco da arca.\n11\nEstabeleço convosco a minha aliança:\nnunca mais nenhuma criatura será exterminada\npelas águas do dilúvio,\ne não haverá mais dilúvio para devastar a terra\".\n12\nE Deus disse:\n\"Este é o sinal da aliança que coloco entre mim e vós,\ne todos os seres vivos que estão convosco,\npor todas as gerações futuras:\n13\nponho meu arco nas nuvens\ncomo sinal de aliança entre mim e a terra.\n14\nQuando eu reunir as nuvens sobre a terra,\naparecerá meu arco nas nuvens.\n15\nEntão eu me lembrarei de minha aliança convosco\ne com todas as espécies de seres vivos.\nE não tornará mais a haver dilúvio\nque faça perecer nas suas águas toda criatura\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 24(25),4bc-5ab.6-7bc.8-9 (R. cf. 10)",
+    "refrao": "",
+    "texto": "R.\nVerdade e amor, são os caminhos do Senhor.\n4b\nMostrai-me, ó Senhor, vossos caminhos, *\nc\ne fazei-me conhecer a vossa estrada!\n5a\nVossa verdade me oriente e me conduza, *\nb\nporque sois o Deus da minha salvação.\nR.\n6\nRecordai, Senhor meu Deus, vossa ternura *\ne a vossa compaixão que são eternas!\n7b\nDe mim lembrai-vos, porque sois misericórdia *\nc\ne sois bondade sem limites, ó Senhor!\nR.\n8\nO Senhor é piedade e retidão, *\ne reconduz ao bom caminho os pecadores.\n9\nEle dirige os humildes na justiça, *\ne aos pobres ele ensina o seu caminho.\nR.\n2ª Leitura - 1Pd 3,18\nSEGUNDA LEITURA\nO Batismo agora vos salva.\nLeitura da Primeira Carta de São Pedro\n3,18-22\nCaríssimos:\n18\nCristo morreu, uma vez por todas,\npor causa dos pecados, o justo, pelos injustos,\na fim de nos conduzir a Deus.\nSofreu a morte, na sua existência humana,\nmas recebeu nova vida pelo Espírito.\n19\nNo Espírito,\nele foi também pregar aos espíritos na prisão,\n20\na saber, aos que foram desobedientes antigamente,\nquando Deus usava de longanimidade,\nnos dias em que Noé construía a arca.\nNesta arca, umas poucas pessoas — oito —\nforam salvas por meio da água.\n21\nÀ arca corresponde o batismo,\nque hoje é a vossa salvação.\nPois o batismo\nnão serve para limpar o corpo da\nimundície,\nmas é um\npedido a Deus para obter uma boa consciência,\nem virtude da ressurreição de Jesus Cristo.\n22\nEle subiu ao céu e está à direita de Deus,\nsubmetendo-se a ele anjos, dominações e potestades.\nPalavra do Senhor.\nAclamação ao Evangelho\nMt 4,4b\nR.\nLouvor e glória a ti, Senhor, Cristo, palavra de Deus.\nV.\nO homem não vive somente de pão,\nmas de toda a palavra da boca de Deus"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,12-15",
+    "texto": "1,12-15\nNaquele tempo,\n12\no Espírito levou Jesus para o deserto.\n13\nE ele ficou no deserto durante quarenta dias,\ne aí foi tentado por Satanás.\nVivia entre os animais selvagens, e os anjos o serviam.\n14\nDepois que João Batista foi preso,\nJesus foi para a Galileia,\npregando o Evangelho de Deus e dizendo:\n15\n\"O tempo já se completou\ne o Reino de Deus está próximo.\nConvertei-vos e crede no Evangelho!\"\nPalavra da Salvação."
+  }
+}

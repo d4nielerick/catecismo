@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-14",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 1,15-17.20-26</div><div> Sl 112(113),1-2.3-4.5-6.7-8 (R. cf. 8)</div><div></div><div> Jo 15,9-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,15-17.20-26",
+    "texto": "15\nNaqueles dias,\nPedro levantou-se no meio dos irmãos e disse:\n16\n\"Irmãos, era preciso que se cumprisse\no que o Espírito Santo, por meio de Davi,\nanunciou na Escritura sobre Judas,\nque se tornou o guia daqueles que prenderam Jesus.\n17\nJudas era um dos nossos\ne participava do mesmo ministério.\n20\nDe fato, no livro dos Salmos está escrito:\n'fique deserta a sua morada,\nnem haja quem nela habite!'\nE ainda:\n'Que outro ocupe o seu lugar!'\n21\nHá homens que nos acompanharam\ndurante todo o tempo em que o Senhor Jesus\nvivia no meio de nós,\n22\na começar pelo batismo de João\naté ao dia em que foi elevado ao céu.\nAgora, é preciso que um deles se junte a nós\npara ser testemunha da sua ressurreição\".\n23\nEntão eles apresentaram dois homens:\nJosé, chamado Barsabás,\nque tinha o apelido de Justo, e Matias.\n24\nEm seguida, fizeram esta oração:\n\"Senhor, tu conheces os corações de todos.\nMostra-nos qual destes dois escolhestes\n25\npara ocupar, neste ministério e apostolado,\no lugar que Judas abandonou\npara seguir o seu destino!\"\n26\nEntão tiraram a sorte entre os dois.\nA sorte caiu em Matias,\no qual foi juntado ao número dos onze apóstolos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 112(113),1-2.3-4.5-6.7-8 (R. cf. 8)",
+    "refrao": "",
+    "texto": "R.\nO Senhor fez o indigente assentar-se com os nobres.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nLouvai, louvai, ó servos do Senhor, *\nlouvai, louvai o nome do Senhor!\n2\nBendito seja o nome do Senhor, *\nagora e por toda a eternidade!\nR.\n3\nDo nascer do sol até o seu ocaso, *\nlouvado seja o nome do Senhor!\n4\nO Senhor está acima das nações, *\nsua glória vai além dos altos céus.\nR.\n5\nQuem pode comparar-se ao nosso Deus, †\nao Senhor, que no alto céu tem o seu trono *\n6\ne se inclina para olhar o céu e a terra?\nR.\n7\nLevanta da poeira o indigente *\ne do lixo ele retira o pobrezinho,\n8\npara fazê-lo assentar-se com os nobres, *\nassentar-se com nobres do seu povo.\nR.\nAclamação ao Evangelho\nJo 15,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos designei para que vades e deis frutos\ne o vosso fruto permaneça."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "15,9-17",
+    "texto": "15,9-17\nNaquele tempo, disse Jesus a seus discípulos:\n9\nComo meu Pai me amou,\nassim também eu vos amei.\nPermanecei no meu amor.\n10\nSe guardardes os meus mandamentos,\npermanecereis no meu amor,\nassim como eu guardei os mandamentos do meu Pai\ne permaneço no seu amor.\n11\nEu vos disse isto,\npara que a minha alegria esteja em vós\ne a vossa alegria seja plena.\n12\nEste é o meu mandamento:\namai-vos uns aos outros, assim como eu vos amei.\n13\nNinguém tem amor maior\ndo que aquele que dá sua vida pelos amigos.\n14\nVós sois meus amigos,\nse fizerdes o que eu vos mando.\n15\nJá não vos chamo servos,\npois o servo não sabe o que faz o seu senhor.\nEu vos chamo amigos,\nporque vos dei a conhecer\ntudo o que ouvi de meu Pai.\n16\nNão fostes vós que me escolhestes,\nmas fui eu que vos escolhi\ne vos designei para irdes\ne para que produzais fruto\ne o vosso fruto permaneça.\nO que então pedirdes ao Pai em meu nome,\nele vo-lo concederá.\n17\nIsto é o que vos ordeno:\namai-vos uns aos outros.\nPalavra da Salvação."
+  }
+}

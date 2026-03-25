@@ -1,0 +1,23 @@
+{
+  "data": "2024-11-18",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 1,1-4.2,1-5a</div><div> Sl 1,1-2.3.4 e 6 (R. Ap 2,7b)</div><div></div><div> Lc 18,35-43</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-4; 2,1-5a",
+    "texto": "1\nRevelação que Deus confiou a Jesus Cristo,\npara que mostre aos seus servos\nas coisas que devem acontecer em breve.\nJesus as deu a conhecer, através do seu anjo,\nao seu servo João.\n2\nEste dá testemunho\nque tudo quanto viu é palavra de Deus\ne testemunho de Jesus Cristo.\n3\nFeliz aquele que lê\ne aqueles que escutam\nas palavras desta profecia\ne também praticam o que nela está escrito.\nPois o momento está chegando.\n4\nJoão às sete Igrejas que estão na região da Ásia:\nA vós, graça e paz,\nda parte daquele que é, que era e que vem;\nda parte dos sete espíritos\nque estão diante do trono de Deus.\n2,1\nOuvi o Senhor que me dizia:\nEscreve ao anjo da Igreja que está em Éfeso:\nAssim fala aquele\nque tem na mão direita as sete estrelas,\naquele que está andando\nno meio dos sete candelabros de ouro:\n2\nConheço a tua conduta,\no teu esforço e a tua perseverança.\nSei que não suportas os maus.\nColocaste à prova alguns que se diziam apóstolos\ne descobriste que não eram apóstolos,\nmas mentirosos.\n3\nÉs perseverante.\nSofreste por causa do meu nome\ne não desanimaste.\n4\nTodavia, há uma coisa que eu reprovo:\nabandonaste o teu primeiro amor.\n5a\nLembra-te de onde caíste!\nConverte-te e volta à tua prática inicial.\nSe, pelo contrário, não te converteres,\nvirei depressa\ne arrancarei o teu candelabro do seu lugar.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 1,1-2.3.4 e 6 (R. Ap 2,7b)",
+    "refrao": "",
+    "texto": "R.\nAo vencedor concederei, comer da Árvore da Vida!\n1\nFeliz é todo aquele que não anda*\nconforme os conselhos dos perversos;\nque não entra no caminho dos malvados,*\nnem junto aos zombadores vai sentar-se;\n2\nmas encontra seu prazer na lei de Deus*\ne a medita, dia e noite, sem cessar.\nR.\n3\nEis que ele é semelhante a uma árvore,*\nque à beira da torrente está plantada;\nela sempre dá seus frutos a seu tempo,\n†\ne jamais as suas folhas vão murchar.*\nEis que tudo o que ele faz vai prosperar.\nR.\n4\nMas bem outra é a sorte dos perversos.\n†\nAo contrário, são iguais à palha seca*\nespalhada e dispersada pelo vento.\n6\nPois Deus vigia o caminho dos eleitos,*\nmas a estrada dos malvados leva à morte.\nR.\nAclamação ao Evangelho\nJo 8,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou a luz do mundo;\naquele que me segue\nnão caminha entre as trevas,\nmas terá a luz da vida"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "18,35-43",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n18,35-43\n35\nQuando Jesus se aproximava de Jericó,\num cego estava sentado à beira do caminho,\npedindo esmolas.\n36\nOuvindo a multidão passar,\nele perguntou o que estava acontecendo.\n37\nDisseram-lhe que Jesus Nazareno\nestava passando por ali.\n38\nEntão o cego gritou:\n\"Jesus, filho de Davi, tem piedade de mim!\"\n39\nAs pessoas que iam na frente\nmandavam que ele ficasse calado.\nMas ele gritava mais ainda:\n\"Filho de Davi, tem piedade de mim!\"\n40\nJesus parou e mandou que levassem o cego até ele.\nQuando o cego chegou perto, Jesus perguntou:\n41\n\"O que queres que eu faça por ti?\"\nO cego respondeu:\n\"Senhor, eu quero enxergar de novo\".\n42\nJesus disse:\n\"Enxerga, pois, de novo.\nA tua fé te salvou.\"\n43\nNo mesmo instante, o cego começou a ver de novo\ne seguia Jesus, glorificando a Deus.\nVendo isso, todo o povo deu louvores a Deus.\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-07",
+  "titulo": "Tempo do Natal",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Jo 4,7-10</div><div> Sl 71(72),1-2.3-4ab.7-8 (R. cf. 11)</div><div></div><div> Mc 6,34-44</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,7-10",
+    "texto": "7\nCaríssimos, amemo-nos uns aos outros,\nporque o amor vem de Deus\ne todo aquele que ama\nnasceu de Deus e conhece Deus.\n8\nQuem não ama, não chegou a conhecer a Deus,\npois Deus é amor.\n9\nFoi assim que o amor de Deus se manifestou entre nós:\nDeus enviou o seu Filho único ao mundo,\npara que tenhamos vida por meio dele.\n10\nNisto consiste o amor:\nnão fomos nós que amamos a Deus,\nmas foi ele que nos amou\ne enviou o seu Filho\ncomo vítima de reparação pelos nossos pecados.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 71(72),1-2.3-4ab.7-8 (R. Cf. 11)",
+    "refrao": "",
+    "texto": "R.\nOs reis de toda a terra,\nhão de adorar-vos, ó Senhor!\n1\nDai ao Rei vossos poderes, Senhor Deus, *\nvossa justiça ao descendente da realeza!\n2\nCom justiça ele governe o vosso povo, *\ncom equidade ele julgue os vossos pobres.\nR.\n3\nDas montanhas venha a paz a todo o povo, *\ne desça das colinas a justiça!\n4a\nEste Rei defenderá os que são pobres, *\nb\nos filhos dos humildes salvará.\nR.\n7\nNos seus dias a justiça florirá *\ne grande paz, até que a lua perca o brilho!\n8\nDe mar a mar estenderá o seu domínio, *\ne desde o rio até os confins de toda a terra!\nR.\nEvangelho - Lc 4,14-22\nAclamação ao Evangelho\nLc 4,18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor repousa sobre mim\ne enviou-me a anunciar aos pobres o Evangelho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,34-44",
+    "texto": "São Marcos\n6,34-44\nNaquele tempo,\n34\nJesus viu uma numerosa multidão e teve compaixão,\nporque eram como ovelhas sem pastor.\nComeçou, pois, a ensinar-lhes muitas coisas.\n35\nQuando estava ficando tarde,\nos discípulos chegaram perto de Jesus\ne disseram:\n\"Este lugar é deserto e já é tarde.\n36\nDespede o povo,\npara que possa ir aos campos e povoados vizinhos\ncomprar alguma coisa para comer\".\n37\nMas, Jesus respondeu:\n\"Dai-lhes vós mesmos de comer\".\nOs discípulos perguntaram:\n\"Queres que gastemos duzentos denários\npara comprar pão e dar-lhes de comer?\"\n38\nJesus perguntou:\n\"Quantos pães tendes? Ide ver\".\nEles foram e responderam:\n\"Cinco pães e dois peixes\".\n39\nEntão Jesus mandou\nque todos se sentassem na grama verde, formando grupos.\n40\nE todos se sentaram,\nformando grupos de cem e de cinquenta pessoas.\n41\nDepois Jesus pegou os cinco pães e os dois peixes,\nergueu os olhos para o céu,\npronunciou a bênção, partiu os pães\ne ia dando aos discípulos, para que os distribuíssem.\nDividiu entre todos também os dois peixes.\n42\nTodos comeram, ficaram satisfeitos,\n43\ne recolheram doze cestos\ncheios de pedaços de pão e também dos peixes.\n44\nO número dos que comeram os pães\nera de cinco mil homens.\nPalavra da Salvação."
+  }
+}

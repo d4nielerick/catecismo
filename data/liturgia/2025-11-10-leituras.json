@@ -1,0 +1,23 @@
+{
+  "data": "2025-11-10",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Sb 1,1-7</div><div> Sl 138(139),1-3.4-6.7-8.9-10 (R. 24b)</div><div></div><div> Lc 17,1-6</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1-7",
+    "texto": "1\nAmai a justiça, vós que governais a terra;\ntende bons sentimentos para com o Senhor\ne procurai-o com simplicidade de coração.\n2\nEle se deixa encontrar pelos que não exigem provas,\ne se manifesta aos que nele confiam.\n3\nPois os pensamentos perversos afastam de Deus;\ne seu poder, posto à prova, confunde os insensatos.\n4\nA Sabedoria não entra numa alma que trama o mal\nnem mora num corpo sujeito ao pecado.\n5\nO espírito santo, que a ensina, foge da astúcia,\nafasta-se dos pensamentos insensatos\ne retrai-se quando sobrevém a injustiça.\n6\nCom efeito, a Sabedoria é o espírito que ama os homens,\nmas não deixa sem castigo\nquem blasfema com seus próprios lábios,\npois Deus é testemunha dos seus pensamentos,\ninvestiga seu coração segundo a verdade\ne mantém-se à escuta da sua língua;\n7\nporque o espírito do Senhor enche toda a terra,\nmantém unidas todas as coisas\ne tem conhecimento de tudo o que se diz.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 138(139),1-3.4-6.7-8.9-10 (R. 24b)",
+    "refrao": "",
+    "texto": "R.\nConduzi-me no caminho para a vida, ó Senhor!\n1\nSenhor, vós me sondais e conheceis, *\n2\nsabeis quando me sento ou me levanto;\nde longe penetrais meus pensamentos, †\n3\npercebeis quando me deito e quando eu ando, *\nos meus caminhos vos são todos conhecidos.\nR.\n4\nA palavra nem chegou à minha língua, *\ne já, Senhor, a conheceis inteiramente.\n5\nPor detrás e pela frente me envolveis; *\npusestes sobre mim a vossa mão.\n6\nEsta Verdade é por demais maravilhosa, *\né tão sublime que não posso compreendê-la.\nR.\n7\nEm que lugar me ocultarei de vosso espírito? *\nE para onde fugirei de vossa face?\n8\nSe eu subir até os céus, ali estais; *\nse eu descer até o abismo, estais presente.\nR.\n9\nSe a aurora me emprestar as suas asas, *\npara eu voar e habitar no fim dos mares;\n10\nmesmo lá vai me guiar a vossa mão *\ne segurar-me com firmeza a vossa destra.\nR.\nEvangelho - Lc 17,1-6\nAclamação ao Evangelho\nFl 2,15d.16a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nComo astros no mundo brilheis,\npregando a Palavra da vida!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "17,1-6",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n17,1-6\nNaquele tempo,\n1\nJesus disse a seus discípulos:\n\"É inevitável que aconteçam escândalos.\nMas ai daquele que produz escândalos!\n2\nSeria melhor para ele\nque lhe amarrassem uma pedra de moinho no pescoço\ne o jogassem no mar,\ndo que escandalizar um desses pequeninos.\n3\nPrestai atenção:\nse o teu irmão pecar, repreende-o.\nSe ele se converter, perdoa-lhe.\n4\nSe ele pecar contra ti sete vezes num só dia,\ne sete vezes vier a ti, dizendo:\n'Estou arrependido',\ntu deves perdoá-lo\".\n5\nOs apóstolos disseram ao Senhor:\n\"Aumenta a nossa fé!\"\n6\nO Senhor respondeu:\n\"Se vós tivésseis fé,\nmesmo pequena como um grão de mostarda,\npoderíeis dizer a esta amoreira:\n'Arranca-te daqui e planta-te no mar',\ne ela vos obedeceria\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-06-16",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Cor 6,1-10</div><div> Sl 97(98),1.2-3ab.3cd-4 (R. 2a)</div><div></div><div> Mt 5,38-42</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,1-10",
+    "texto": "Irmãos,\n1\ncomo colaboradores de Cristo,\nnós vos exortamos\na não receberdes em vão a graça de Deus,\n2\npois ele diz:\n\"No momento favorável, eu te ouvi\ne no dia da salvação, eu te socorri\".\nÉ agora o momento favorável,\né agora o dia da salvação.\n3\nNão damos a ninguém nenhum motivo de escândalo,\npara que o nosso ministério não seja desacreditado.\n4\nMas em tudo nos recomendamos como ministros de Deus,\ncom muita paciência,\nem tribulações, em necessidades, em angústias,\n5\nem açoites, em prisões, em tumultos,\nem fadigas, em insônias, em jejuns,\n6\nem castidade, em compreensão, em longanimidade,\nem bondade, no Espírito Santo, em amor sincero,\n7\nem palavras verdadeiras, no poder de Deus,\nem armas de justiça, ofensivas e defensivas,\n8\nem honra e desonra, em má ou boa fama;\nconsiderados sedutores, sendo, porém, verazes;\n9\ncomo desconhecidos, sendo porém, bem conhecidos;\ncomo moribundos, embora vivamos;\ncomo castigados mas não mortos;\n10\ncomo aflitos, mas sempre alegres;\ncomo pobres, mas enriquecendo muitos;\ncomo quem nada possui, mas tendo tudo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 97(98),1.2-3ab.3cd-4 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor fez conhecer a salvação.\n1\nCantai ao Senhor Deus um canto novo,*\nporque ele fez prodígios!\nSua mão e o seu braço forte e santo*\nalcançaram-lhe a vitória.\nR.\n2\nO Senhor fez conhecer a salvação,*\ne às nações, sua justiça;\n3a\nrecordou o seu amor sempre fiel*\nb\npela casa de Israel\nR.\nc\nOs confins do universo contemplaram*\nd\na salvação do nosso Deus.\n4\nAclamai o Senhor Deus, ó terra inteira,*\nR.\nalegrai-vos e exultai!\nEvangelho - Mt 5,38-42\nAclamação ao Evangelho\nSl 118(119),105\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVossa palavra é uma luz para os meus passos,\ne uma lâmpada luzente em meu caminho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,38-42",
+    "texto": "5,38-42\nNaquele tempo, disse Jesus aos seus discípulos:\n38\n\"Ouvistes o que foi dito:\n'Olho por olho e dente por dente!'\n39\nEu, porém, vos digo:\nNão enfrenteis quem é malvado!\nPelo contrário, se alguém te dá um tapa na face direita,\noferece-lhe também a esquerda!\n40\nSe alguém quiser abrir um processo\npara tomar a tua túnica, dá-lhe também o manto!\n41\nSe alguém te forçar a andar um quilômetro,\ncaminha dois com ele!\n42\nDá a quem te pedir\ne não vires as costas a quem te pede emprestado\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-17",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Tm 3,14-16</div><div> Sl 110(111),1-2.3-4.5-6 (R. 2a)</div><div></div><div> Lc 7,31-35</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,14-16",
+    "texto": "Caríssimo,\n14\nEscrevo com a esperança de ir ver-te em breve.\n15\nSe tardar, porém,\nquero que saibas como proceder na casa de Deus,\nque é a Igreja de Deus vivo,\ncoluna e fundamento da verdade.\n16\nNão pode haver dúvida\nde que é grande o mistério da piedade:\nEle foi manifestado na carne,\nfoi justificado no espírito,\ncontemplado pelos anjos,\npregado às nações,\nacreditado no mundo,\nexaltado na glória!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 110 (111),1-2.3-4.5-6 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nGrandiosas são as obras do Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nEu agradeço a Deus de todo o coração *\njunto com todos os seus justos reunidos!\n2\nQue grandiosas são as obras do Senhor, *\nelas merecem todo o amor e admiração!\nR.\n3\nQue beleza e esplendor são os seus feitos! *\nSua justiça permanece eternamente!\n4\nO Senhor bom e clemente nos deixou *\na lembrança de suas grandes maravilhas.\nR.\n5\nEle dá o alimento aos que o temem *\ne jamais esquecerá sua Aliança.\n6\nAo seu povo manifesta seu poder, *\ndando a ele a herança das nações.\nR.\nEvangelho - Lc 7,31-35\nAclamação ao Evangelho  Cf.\nJo 6,63c.68c\nR.\nAleluia, Aleluia, Aleluia.\nV.\nSenhor, tuas palavras são espírito, são vida;\nsó tu tens palavras de vida eterna."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,31-35",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n7,31-35\nNaquele tempo, disse Jesus:\n31\n\"Com quem hei de comparar os homens desta geração?\nCom quem eles se parecem?\n32\nSão como crianças que se sentam nas praças,\ne se dirigem aos colegas, dizendo:\n'Tocamos flauta para vós e não dançastes;\nfizemos lamentações e não chorastes!'\n33\nPois veio João Batista,\nque não comia pão nem bebia vinho,\ne vós dissestes:\n'Ele está com um demônio!'\n34\nVeio o Filho do Homem, que come e bebe, e vós dizeis:\n'Ele é um comilão e beberrão,\namigo dos publicanos e dos pecadores!'\n35\nMas a sabedoria foi justificada\npor todos os seus filhos\".\nPalavra da Salvação."
+  }
+}

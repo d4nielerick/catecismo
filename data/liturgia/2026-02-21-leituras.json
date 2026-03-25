@@ -1,0 +1,23 @@
+{
+  "data": "2026-02-21",
+  "titulo": "Tempo da Quaresma",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Is 58,9b-14</div><div> Sl 85(86),1-2.3-4.5-6 (R. 11a)</div><div></div><div> Lc 5,27-32</div></div>",
+  "primeira_leitura": {
+    "referencia": "58,9b-14",
+    "texto": "Assim fala o Senhor:\n9b\n\"Se destruíres teus instrumentos de opressão,\ne deixares os hábitos autoritários\ne a linguagem maldosa;\n10\nse acolheres de coração aberto o indigente\ne prestares todo socorro ao necessitado,\nnascerá nas trevas a tua luz\ne tua vida obscura será como o meio-dia.\n11\nO Senhor te conduzirá sempre\ne saciará tua sede na aridez da vida,\ne renovará o vigor do teu corpo;\nserás como um jardim bem regado,\ncomo uma fonte de águas que jamais secarão.\n12\nTeu povo reconstruirá as ruínas antigas;\ntu levantarás os fundamentos das gerações passadas:\nserás chamado reconstrutor de ruínas,\nrestaurador de caminhos, nas terras a povoar.\n13\nSe não puseres o pé fora de casa no sábado,\nnem tratares de negócios em meu dia santo,\nse considerares o sábado teu dia favorito,\no dia glorioso, consagrado ao Senhor,\nse o honrares, pondo de lado atividades,\nnegócios e conversações,\n14\nentão te deleitarás no Senhor;\neu te farei transportar sobre as alturas da terra\ne desfrutar a herança de Jacó, teu pai\".\nFalou a boca do Senhor.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 85(86),1-2.3-4.5-6 (R. 11a)",
+    "refrao": "",
+    "texto": "R.\nEnsinai-me os vossos caminhos\ne na vossa verdade andarei.\n1\nInclinai, ó Senhor, vosso ouvido, *\nescutai, pois sou pobre e infeliz!\n2\nProtegei-me, que sou vosso amigo, †\ne salvai vosso servo, meu Deus, *\nque espera e confia em vós!\nR.\n3\nPiedade de mim, ó Senhor, *\nporque clamo por vós todo o dia!\n4\nAnimai e alegrai vosso servo, *\npois a vós eu elevo a minh'alma.\nR.\n5\nÓ Senhor, vós sois bom e clemente, *\nsois perdão para quem vos invoca.\n6\nEscutai, ó Senhor, minha prece, *\no lamento da minha oração!\nR.\nAclamação ao Evangelho\nEz 33,11\nR.\nGlória a vós, Senhor Jesus,\nPrimogênito dentre os mortos!\nV.\nNão quero a morte do pecador, diz o Senhor,\nmas que ele volte, se converta e tenha vida."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,27-32",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n5,27-32\nNaquele tempo,\n27\nJesus viu um cobrador de impostos, chamado Levi,\nsentado na coletoria.\nJesus lhe disse:\n\"Segue-me.\"\n28\nLevi deixou tudo, levantou-se e o seguiu.\n29\nDepois, Levi preparou em casa\num grande banquete para Jesus.\nEstava aí grande número de cobradores de impostos\ne outras pessoas sentadas à mesa com eles.\n30\nOs fariseus e seus mestres da Lei murmuravam\ne diziam aos discípulos de Jesus:\n\"Por que vós comeis e bebeis\ncom os cobradores de impostos e com os pecadores?\"\n31\nJesus respondeu:\n\"Os que são sadios não precisam de médico,\nmas sim os que estão doentes.\n32\nEu não vim chamar os justos,\nmas sim os pecadores para a conversão\".\nPalavra da Salvação."
+  }
+}

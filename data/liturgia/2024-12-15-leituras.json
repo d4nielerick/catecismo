@@ -1,0 +1,23 @@
+{
+  "data": "2024-12-15",
+  "titulo": "Tempo do Advento",
+  "cor_liturgica": "rosa",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Sf 3,14-18a</div><div> Is 12,2-3.4bcd.5-6 (R. 6)</div><div> Fl 4,4-7</div><div> Lc 3,10-18</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,14-18a",
+    "texto": "14\nCanta de alegria, cidade de Sião;\nrejubila, povo de Israel!\nAlegra-te e exulta de todo o coração,\ncidade de Jerusalém!\n15\nO Senhor revogou a sentença contra ti,\nafastou teus inimigos;\no rei de Israel é o Senhor, ele está no meio de ti,\nnunca mais temerás o mal.\n16\nNaquele dia, se dirá a Jerusalém:\n\"Não temas, Sião,\nnão te deixes levar pelo desânimo!\n17\nO Senhor, teu Deus, está no meio de ti,\no valente guerreiro que te salva;\nele exultará de alegria por ti,\nmovido por amor;\nexultará por ti, entre louvores,\n18a\ncomo nos dias de festa\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Is 12,2-3.4bcd.5-6 (R.6)",
+    "refrao": "",
+    "texto": "R.\nExultai cantando alegres, habitantes de Sião,\nporque é grande em vosso meio o Deus Santo de Israel!\n2\nEis o Deus, meu Salvador, eu confio e nada temo; *\no Senhor é minha força, meu louvor e salvação.\n3\nCom alegria bebereis no manancial da salvação, *\n4\ne direis naquele dia: \"Dai louvores ao Senhor.\nR.\ninvocai seu santo nome, anunciai suas maravilhas, *\nentre os povos proclamai que seu nome é o mais sublime.\nR.\n5\nLouvai cantando ao nosso Deus, que fez prodígios e portentos,*\npublicai em toda a terra suas grandes maravilhas!\n6\nExultai cantando alegres, habitantes de Sião,*\nporque é grande em vosso meio o Deus Santo de Israel!'\nR.\nSEGUNDA LEITURA\nO Senhor está próximo.\nLeitura da Carta de São Paulo aos Filipenses\n4,4-7\nIrmãos:\n4\nAlegrai-vos sempre no Senhor;\neu repito, alegrai-vos.\n5\nQue a vossa bondade seja conhecida de todos os homens!\nO Senhor está próximo!\n6\nNão vos inquieteis com coisa alguma,\nmas apresentai as vossas necessidades a Deus,\nem orações e súplicas, acompanhadas de ação de graças.\n7\nE a paz de Deus, que ultrapassa todo o entendimento,\nguardará os vossos corações e pensamento\nem Cristo Jesus.\nPalavra do Senhor.\nAclamação ao Evangelho\nIs 61,1\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO Espírito do Senhor sobre mim fez a sua unção;\nenviou-me aos empobrecidos a fazer feliz proclamação!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,10-18",
+    "texto": "3,10-18\nNaquele tempo,\n10\nas multidões perguntavam a João:\n\"Que devemos fazer?\"\n11\nJoão respondia:\n\"Quem tiver duas túnicas, dê uma a quem não tem;\ne quem tiver comida, faça o mesmo!\"\n12\nForam também para o batismo cobradores de impostos,\ne perguntaram a João:\n\"Mestre, que devemos fazer?\"\n13\nJoão respondeu:\n\"Não cobreis mais do que foi estabelecido\".\n14\nHavia também soldados que perguntavam:\n\"E nós, que devemos fazer?\"\nJoão respondia:\n\"Não tomeis à força dinheiro de ninguém,\nnem façais falsas acusações;\nficai satisfeitos com o vosso salário!\"\n15\nO povo estava na expectativa\ne todos se perguntavam no seu íntimo\nse João não seria o Messias.\n16\nPor isso, João declarou a todos:\n\"Eu vos batizo com água,\nmas virá aquele que é mais forte do que eu.\nEu não sou digno\nde desamarrar a correia de suas sandálias.\nEle vos batizará no Espírito Santo e no fogo.\n17\nEle virá com a pá na mão:\nvai limpar sua eira e recolher o trigo no celeiro;\nmas a palha ele a queimará no fogo que não se apaga\".\n18\nE ainda de muitos outros modos,\nJoão anunciava ao povo a Boa-Nova.\nPalavra da Salvação."
+  }
+}

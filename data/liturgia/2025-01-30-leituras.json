@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-30",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 10,19-25</div><div> Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6)</div><div></div><div> Mc 4,21-25</div></div>",
+  "primeira_leitura": {
+    "referencia": "10,19-25",
+    "texto": "19\nSendo assim, irmãos, temos plena liberdade\npara entrar no Santuário, pelo sangue de Jesus.\n20\nEle nos abriu um caminho novo e vivo,\natravés da cortina,\nquer dizer, através da sua humanidade.\n21\nTemos um grande sacerdote\nconstituído sobre a casa de Deus.\n22\nAproximemo-nos, portanto,\nde coração sincero e cheio de fé,\ncom coração purificado de toda a má consciência\ne o corpo lavado com água pura.\n23\nSem desânimo, continuemos a afirmar a nossa esperança,\nporque é fiel quem fez a promessa.\n24\nSejamos atentos uns aos outros,\npara nos incentivar à caridade e às boas obras.\n25\nNão abandonemos as nossas assembleias,\ncomo alguns costumam fazer.\nAntes, procuremos animar-nos mutuamente,\ne tanto mais quanto vedes o dia aproximar-se.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 23(24),l-2.3-4ab.5-6 (R. cf. 6)",
+    "refrao": "",
+    "texto": "R.\nÉ assim a geração dos que buscam vossa face,\nó Senhor, Deus de Israel.\n1\nAo Senhor pertence a terra e o que ela encerra, *\no mundo inteiro com os seres que o povoam;\n2\nporque ele a tornou firme sobre os mares, *\ne sobre as águas a mantém inabalável.\nR.\n3\n\"Quem subirá até o monte do Senhor, *\nquem ficará em sua santa habitação?\"\n4a\n\"Quem tem mãos puras e inocente coração *\nb\nquem não dirige sua mente para o crime.\nR.\n5\nSobre este desce a bênção do Senhor *\ne a recompensa de seu Deus e Salvador\".\n6\n\"É assim a geração dos que o procuram, *\ne do Deus de Israel buscam a face\".\nR.\nAclamação ao Evangelho\nSl 118(119),105\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVossa palavra é uma luz para os meus passos,\ne uma lâmpada luzente em meu caminho."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "",
+    "texto": "também vós sereis medidos.\nProclamação do Evangelho de Jesus Cristo segundo Marcos\n4,21-25\nNaquele tempo, Jesus disse à multidão:\n21\n\"Quem é que traz uma lâmpada\npara colocá-Ia debaixo de um caixote,\nou debaixo da cama?\nAo contrário, não a coloca num candeeiro?\n22\nAssim, tudo o que está escondido\ndeverá tornar-se manifesto,\ne tudo o que está em segredo deverá ser descoberto.\n23\nSe alguém tem ouvidos para ouvir, ouça\".\n24\nJesus dizia ainda:\n\"Prestai atenção no que ouvis:\ncom a mesma medida com que medirdes,\ntambém vós sereis medidos;\ne vos será dado ainda mais.\n25\nAo que tem alguma coisa, será dado ainda mais;\ndo que não tem, será tirado até mesmo o que ele tem\".\nPalavra da Salvação."
+  }
+}

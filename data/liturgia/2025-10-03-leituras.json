@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-03",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Br 1,15-22</div><div> Sl 78(79),1-2.3-5.8.9 (R. 9b)</div><div></div><div> Lc 10,13-16</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,15-22",
+    "texto": "15\nAo Senhor nosso Deus, cabe justiça;\nenquanto a nós, resta-nos corar de vergonha,\ncomo acontece no dia de hoje aos homens de Judá\ne aos habitantes de Jerusalém,\n16\naos nossos reis, nossos príncipes e sacerdotes,\naos nossos profetas e nossos antepassados:\n17\npois pecamos diante do Senhor e lhe desobedecemos\n18\ne não ouvimos a voz do Senhor, nosso Deus,\nque nos exortava a viver de acordo com os mandamentos\nque ele pôs sob os nossos olhos.\n19\nDesde o dia\nem que o Senhor tirou nossos pais do Egito,\naté hoje,\ntemos sido desobedientes ao Senhor nosso Deus,\nprocedemos inconsideradamente,\ndeixando de ouvir sua voz;\n20\npor isso perseguem-nos as calamidades\ne a maldição,\nque o Senhor nos lançou\npor meio de Moisés, seu servo,\nno dia em que tirou nossos pais do Egito,\npara nos dar uma terra que mana leite e mel,\ncomo de fato é hoje.\n21\nMas não escutamos a voz do Senhor, nosso Deus,\ncomo vem nas palavras dos profetas\nque ele nos enviou,\n22\ne entregamo-nos, cada qual,\nàs inclinações do perverso coração,\npara servir a outros deuses\ne praticar o mal aos olhos do Senhor, nosso Deus!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 78(79),1-2.3-5.8.9 (R. 9b)",
+    "refrao": "",
+    "texto": "R.\nPor vosso nome e vossa glória,\nlibertai-nos, ó Senhor!\n1\nInvadiram vossa herança os infiéis, †\nprofanaram, ó Senhor, o vosso templo, *\nJerusalém foi reduzida a ruínas!\n2\nLançaram aos abutres como pasto *\nos cadáveres dos vossos servidores;\ne às feras da floresta entregaram *\nos corpos dos fiéis, vossos eleitos.\nR.\n3\nDerramaram o seu sangue como água †\nem torno das muralhas de Sião, *\ne não houve quem lhes desse sepultura!\n4\nNós nos tornamos o opróbrio dos vizinhos, †\num objeto de desprezo e zombaria *\npara os povos e àqueles que nos cercam.\n5\nMas até quando, ó Senhor, veremos isto? †\nConservareis eternamente a vossa ira? *\nComo fogo arderá a vossa cólera?\nR.\n8\nNão lembreis as nossas culpas do passado, †\nmas venha logo sobre nós vossa bondade, *\npois estamos humilhados em extremo.\nR.\n9\nAjudai-nos, nosso Deus e Salvador! †\nPor vosso nome e vossa glória, libertai-nos! *\nPor vosso nome, perdoai nossos pecados!\nR.\nEvangelho - Lc 10,13-1\nAclamação ao Evangelho  Cf.\nSl 94(95),8ab\nR.\nAleluia, Aleluia, Aleluia.\nV.\nOxalá ouvísseis hoje a sua voz:\nNão fecheis os corações como em Meriba!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,13-16",
+    "texto": "10,13-16\nNaquele tempo, disse Jesus:\n13\n\"Ai de ti, Corazim! Aí de ti, Betsaida!\nPorque se em Tiro e Sidônia\ntivessem sido realizados os milagres\nque foram feitos no vosso meio,\nhá muito tempo teriam feito penitência,\nvestindo-se de cilício\ne sentando-se sobre cinzas.\n14\nPois bem:\nno dia do julgamento,\nTiro e Sidônia\nterão uma sentença menos dura do que vós.\n15\nAi de ti, Cafarnaum!\nSerás elevada até o céu?\nNão, tu serás atirada no inferno.\n16\nQuem vos escuta, a mim escuta;\ne quem vos rejeita, a mim despreza;\nmas quem me rejeita,\nrejeita aquele que me enviou\".\nPalavra da Salvação."
+  }
+}

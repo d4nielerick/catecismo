@@ -1,0 +1,23 @@
+{
+  "data": "2025-09-13",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Tm 1,15-17</div><div> Sl 112(113),1-2.3-4.5a e 6-7 (R. 2)</div><div></div><div> Lc 6,43-49</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,15-17",
+    "texto": "Caríssimo,\n15\nsegura e digna de ser acolhida por todos\né esta palavra:\nCristo veio ao mundo para salvar os pecadores.\nE eu sou o primeiro deles!\n16\nPor isso encontrei misericórdia,\npara que em mim, como primeiro,\nCristo Jesus demonstrasse\ntoda a grandeza de seu coração;\nele fez de mim\num modelo de todos os que crerem nele\npara alcançar a vida eterna.\n17\nAo Rei dos séculos,\nao único Deus, imortal e invisível,\nhonra e glória pelos séculos dos séculos.\nAmém!\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 112(113),1-2.3-4.5a e 6-7 (R. 2)",
+    "refrao": "",
+    "texto": "R.\nBendito seja o nome do Senhor,\nagora e para sempre!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nLouvai, louvai, ó servos do Senhor, *\nlouvai, louvai o nome do Senhor!\n2\nBendito seja o nome do Senhor, *\nagora e por toda a eternidade!\nR.\n3\nDo nascer do sol até o seu ocaso, *\nlouvado seja o nome do Senhor!\n4\nO Senhor está acima das nações, *\nsua glória vai além dos altos céus.\nR.\n5a\nQuem pode comparar-se ao nosso Deus, *\n6\nque se inclina para olhar o céu e a terra?\n7\nLevanta da poeira o indigente *\ne do lixo ele retira o pobrezinho.\nR.\nEvangelho - Lc 6,43-49\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQuem me ama, realmente, guardará minha palavra\ne meu Pai o amará e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,43-49",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n6,43-49\nNaquele tempo, disse Jesus aos seus discípulos:\n43\n\"Não existe árvore boa que dê frutos ruins,\nnem árvore ruim que dê frutos bons.\n44\nToda árvore é reconhecida pelos seus frutos.\nNão se colhem figos de espinheiros,\nnem uvas de plantas espinhosas.\n45\nO homem bom tira coisas boas\ndo bom tesouro do seu coração.\nMas o homem mau tira coisas más\ndo seu mau tesouro,\npois sua boca fala do que o coração está cheio.\n46\nPor que me chamais:\n'Senhor! Senhor!',\nmas não fazeis o que eu digo?\n47\nVou mostrar-vos com quem se parece\ntodo aquele que vem a mim,\nouve as minhas palavras\ne as põe em prática.\n48\nÉ semelhante a um homem que construiu uma casa:\ncavou fundo e colocou o alicerce sobre a rocha.\nVeio a enchente, a torrente deu contra a casa,\nmas não conseguiu derrubá-la,\nporque estava bem construída.\n49\nAquele, porém, que ouve e não põe em prática,\né semelhante a um homem\nque construiu uma casa no chão,\nsem alicerce.\nA torrente deu contra a casa,\ne ela imediatamente desabou;\ne foi grande a ruína dessa casa\".\nPalavra da Salvação."
+  }
+}

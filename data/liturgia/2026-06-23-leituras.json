@@ -1,0 +1,23 @@
+{
+  "data": "2026-06-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Rs 19,9b-11.14-21.31-35a.36</div><div> Sl 47(48),2-3a.3b-4.10-11 (R. cf. 9d)</div><div></div><div> Mt 7,6.12-14</div></div>",
+  "primeira_leitura": {
+    "referencia": "19,9b-11.14-21.31-35a.36",
+    "texto": "Naqueles dias,\n9b\nSenaquerib, rei da Assíria, enviou de novo\nmensageiros a Ezequias para dizer-lhe:\n10\n\"Não te seduza o teu Deus, em quem confias,\npensando: 'Jerusalém não será entregue\nnas mãos do rei dos assírios'.\n11\nPorque tu mesmo tens ouvido\no que os reis da Assíria fizeram a todas as nações\ne como as devastaram.\nSó tu te vais salvar?\"\n14\nEzequias tomou a carta da mão dos mensageiros e leu-a.\nDepois subiu ao templo do Senhor,\nestendeu a carta diante do Senhor\n15\ne, na presença do Senhor, fez a seguinte oração:\n\"Senhor, Deus de Israel,\nque estás sentado sobre os querubins!\nTu és o único Deus de todos os reinos da terra.\nTu fizeste o céu e a terra.\n16\nInclina o teu ouvido, Senhor e ouve.\nAbre, Senhor, os teus olhos e vê.\nOuve todas as palavras de Senaquerib,\nque mandou emissários para insultar o Deus vivo.\n17\nÉ verdade, Senhor,\nque os reis da Assíria\ndevastaram as nações e seus territórios;\n18\nlançaram os seus deuses ao fogo,\nporque não eram deuses,\nmas obras das mãos dos homens, de madeira e pedra,\npor isso os puderam destruir.\n19\nMas agora, Senhor, nosso Deus,\nlivra-nos de suas mãos,\npara que todos os reinos da terra\nsaibam que só tu, Senhor, és Deus\".\n20\nEntão Isaías, filho de Amós,\nmandou dizer a Ezequias:\n\"Assim fala o Senhor, Deus de Israel:\nOuvi a prece que me dirigiste\na respeito de Senaquerib, rei da Assíria.\n21\nEis o que o Senhor disse dele:\n'A virgem filha de Sion despreza-te e zomba de ti.\nA filha de Jerusalém meneia a cabeça nas tuas costas.\n31\nPois um resto sairá de Jerusalém,\ne sobreviventes, do monte Sião.\nEis o que fará o zelo do Senhor Todo-poderoso'.\n32\nPor isso, assim diz o Senhor\nacerca do rei da Assíria:\n'Ele não entrará nesta cidade,\nnem lançará nenhuma flecha contra ela,\nnem a assaltará com escudo,\nnem a cercará com trincheira alguma.\n33\nPelo caminho, por onde veio, há de voltar,\ne não entrará nesta cidade, diz o Senhor.\n34\nProtegerei esta cidade e a salvarei\nem atenção a mim mesmo e ao meu servo Davi'\".\n35a\nNaquela mesma noite, saiu o Anjo do Senhor\ne exterminou no acampamento assírio\ncento e oitenta e cinco mil homens.\n36\nSenaquerib, rei da Assíria,\nlevantou acampamento e partiu.\nVoltou para Nínive e aí permaneceu.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 47(48),2-3a.3b-4.10-11 (R. cf. 9d)",
+    "refrao": "",
+    "texto": "R.\nO Senhor estabelece sua cidade para sempre.\n2\nGrande é o Senhor e muito digno de louvores *\nna cidade onde ele mora;\n3a\nseu Monte santo, esta colina encantadora *\né a alegria do universo.\nR.\nb\nMonte Sião, no extremo norte situado, *\nés a mansão do grande Rei!\n4\nDeus revelou-se em suas fortes cidadelas *\num refúgio poderoso.\nR.\n10\nRecordamos, Senhor Deus, vossa bondade *\nem meio ao vosso templo;\n11\ncom vosso nome vai também vosso louvor *\naos confins de toda a terra.\nR.\nAclamação ao Evangelho\nJo 8,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu sou a luz do mundo;\naquele que me segue\nnão caminha entre as trevas,\nmas terá a luz da vida."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,6.12-14",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n7,6.12-14\nNaquele tempo, disse Jesus aos seus discípulos:\n6\n\"Não deis aos cães as coisas santas,\nnem atireis vossas pérolas aos porcos;\npara que eles não as pisem com os pés\ne, voltando-se contra vós, vos despedacem.\n12\nTudo quanto quereis que os outros vos façam,\nfazei também a eles.\nNisto consiste a Lei e os Profetas.\n13\nEntrai pela porta estreita,\nporque larga é a porta\ne espaçoso é o caminho que leva à perdição,\ne muitos são os que entram por ele!\n14\nComo é estreita a porta\ne apertado o caminho que leva à vida!\nE são poucos os que o encontram\"!\nPalavra da Salvação."
+  }
+}

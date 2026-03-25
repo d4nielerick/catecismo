@@ -1,0 +1,23 @@
+{
+  "data": "2025-01-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 7,25-8,6</div><div> Sl 39(40),7-8a.8b-9.10.17 (R. cf. 8a.9a)</div><div></div><div> Mc 3,7-12</div></div>",
+  "primeira_leitura": {
+    "referencia": "7,25-8,6",
+    "texto": "Irmãos,\n25\nJesus é capaz de salvar para sempre\naqueles que, por seu intermédio,\nse aproximam de Deus.\nEle está sempre vivo para interceder por eles.\n26\nTal é precisamente o sumo sacerdote que nos convinha:\nsanto, inocente, sem mancha,\nseparado dos pecadores\ne elevado acima dos céus.\n27\nEle não precisa, como os sumos sacerdotes\noferecer sacrifícios em cada dia,\nprimeiro por seus próprios pecados\ne depois pelos do povo.\nEle já o fez uma vez por todas,\noferecendo-se a si mesmo.\n28\nA Lei, com efeito,\nconstituiu sumos sacerdotes sujeitos à fraqueza,\nenquanto a palavra do juramento,\nque veio depois da Lei,\nconstituiu alguém que é Filho,\nperfeito para sempre.\n8,1\nO tema mais importante da nossa exposição é este:\ntemos um sumo sacerdote tão grande,\nque se assentou à direita do trono da majestade, nos céus.\n2\nEle é ministro do Santuário e da Tenda verdadeira,\narmada pelo Senhor,\ne não por mão humana.\n3\nTodo sumo sacerdote, com efeito, é constituído\npara oferecer dádivas e sacrifícios;\nportanto, é necessário que tenha algo a oferecer.\n4\nNa verdade, se Cristo estivesse na terra,\nnão seria nem mesmo sacerdote,\npois já existem os que oferecem dádivas\nde acordo com a Lei.\n5\nEstes celebram um culto\nque é cópia e sombra das realidades celestes,\ncomo foi dito a Moisés,\nquando estava para executar a construção da Tenda:\n\"Vê, faze tudo segundo o modelo\nque te foi mostrado sobre a montanha\".\n6\nAgora, porém, Cristo possui um ministério superior.\nPois ele é o mediador de uma aliança bem melhor,\nbaseada em promessas melhores.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 39(40),7-8a.8b-9.10.17 (R. cf. 8a.9a)",
+    "refrao": "",
+    "texto": "R.\nEis que venho fazer, com prazer,\na vossa vontade, Senhor!\n7\nSacrifício e oblação não quisestes,*\nmas abristes, Senhor, meus ouvidos;\nnão pedistes ofertas nem vítimas, †\nholocaustos por nossos pecados,*\n8a\nE então eu vos disse: \"Eis que venho!\"\nR.\nb\nSobre mim está escrito no livro:  †\n9\n\"Com prazer faço a vossa vontade, *\nguardo em meu coração vossa lei!\"\nR.\n10\nBoas-novas de vossa justiça  †\nanunciei numa grande assembleia; *\nvós sabeis: não fechei os meus lábios!\nR.\n17\nMas se alegre e em vós  rejubile *\ntodo ser que vos busca, Senhor!\nDigam sempre: \"É grande o Senhor!\" *\nos que buscam em vós seu auxílio.\nR.\nAclamação ao Evangelho\nCf. 2Tm 1,10\nR.\nAleluia, Aleluia, Aleluia.\nV.\nJesus Cristo Salvador destruiu o mal e a morte;\nfez brilhar pelo Evangelho a luz e a vida imperecíveis."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,7-12",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n3,7-12\nNaquele tempo,\n7\nJesus se retirou para a beira do mar,\njunto com seus discípulos.\nMuita gente da Galileia o seguia.\n8\nE também muita gente da Judeia,\nde Jerusalém, da Idumeia, do outro lado do Jordão,\ndos territórios de Tiro e Sidônia,\nfoi até Jesus, porque tinham ouvido falar\nde tudo o que ele fazia.\n9\nEntão Jesus pediu aos discípulos\nque lhe providenciassem uma barca, por causa da multidão,\npara que não o comprimisse.\n10\nCom efeito, Jesus tinha curado muitas pessoas,\ne todos os que sofriam de algum mal\njogavam-se sobre ele para tocá-lo.\n11\nVendo Jesus, os espíritos maus caíam a seus pés, gritando:\n\"Tu és o Filho de Deus!\"\n12\nMas Jesus ordenava severamente\npara não dizerem quem ele era.\nPalavra da Salvação."
+  }
+}

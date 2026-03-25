@@ -1,0 +1,23 @@
+{
+  "data": "2024-04-13",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 6,1-7</div><div> Sl 32(33),1-2.4-5.18-19 (R. 22)</div><div></div><div> Jo 6,16-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,1-7",
+    "texto": "1\nNaqueles dias,\no número dos discípulos tinha aumentado,\ne os fiéis de origem grega começaram a queixar-se\ndos fiéis de origem hebraica.\nOs de origem grega diziam que suas viúvas\neram deixadas de lado no atendimento diário.\n2\nEntão os Doze Apóstolos\nreuniram a multidão dos discípulos e disseram:\n\"Não está certo que nós deixemos\na pregação da Palavra de Deus para servir às mesas.\n3\nIrmãos, é melhor que escolhais entre vós\nsete homens de boa fama,\nrepletos do Espírito e de sabedoria,\ne nós os encarregaremos dessa tarefa.\n4\nDesse modo nós poderemos dedicar-nos inteiramente\nà oração e ao serviço da Palavra\".\n5\nA proposta agradou a toda a multidão.\nEntão escolheram Estêvão,\nhomem cheio de fé e do Espírito Santo;\ne também Felipe, Prócoro, Nicanor,\nTimon, Pármenas e Nicolau de Antioquia,\num pagão que seguia a religião dos judeus.\n6\nEles foram apresentados aos apóstolos,\nque oraram e impuseram as mãos sobre eles.\n7\nEntretanto, a Palavra do Senhor se espalhava.\nO número dos discípulos crescia muito em Jerusalém,\ne grande multidão de sacerdotes judeus aceitava a fé.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 32(33),1-2.4-5.18-19 (R. 22)",
+    "refrao": "",
+    "texto": "R.\nSobre nós venha, Senhor, a vossa graça,\nda mesma forma que em vós nós esperamos!\nOu:\nAleluia, Aleluia, Aleluia.\n1\nÓ justos, alegrai-vos no Senhor! *\naos retos fica bem glorificá-lo.\n2\nDai graças ao Senhor ao som da harpa, *\nna lira de dez cordas celebrai-o!\nR.\n4\nPois reta é a palavra do Senhor, *\ne tudo o que ele faz merece fé.\n5\nDeus ama o direito e a justiça, *\ntransborda em toda a terra a sua graça.\nR.\n18\nO Senhor pousa o olhar sobre os que o temem, *\ne que confiam esperando em seu amor,\n19\npara da morte libertar as suas vidas *\ne alimentá-los quando é tempo de penúria.\nR.\nEvangelho - Jo 6,16-21\nAclamação ao Evangelho\nR.\nAleluia, Aleluia, Aleluia.\nV.\nRessurgiu Cristo, o Senhor, que criou tudo;\nele teve compaixão da humanidade."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,16-21",
+    "texto": "6,16-21\n16\nAo cair da tarde,\nos discípulos desceram ao mar.\n17\nEntraram na barca\ne foram em direção a Cafarnaum,\ndo outro lado do mar.\nJá estava escuro,\ne Jesus ainda não tinha vindo ao encontro deles.\n18\nSoprava um vento forte\ne o mar estava agitado.\n19\nOs discípulos tinham remado\nmais ou menos cinco quilômetros,\nquando enxergaram Jesus,\nandando sobre as águas\ne aproximando-se da barca.\nE ficaram com medo.\n20\nMas Jesus disse:\n\"Sou eu. Não tenhais medo\".\n21\nQuiseram, então, recolher Jesus na barca,\nmas imediatamente a barca chegou à margem\npara onde estavam indo.\nPalavra da Salvação."
+  }
+}

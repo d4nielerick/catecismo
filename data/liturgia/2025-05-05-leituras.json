@@ -1,0 +1,23 @@
+{
+  "data": "2025-05-05",
+  "titulo": "Tempo da Páscoa",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>At 6,8-15</div><div> Sl 118(119),23-24.26-27.29-30 (R. 1b)</div><div></div><div> Jo 6,22-29</div></div>",
+  "primeira_leitura": {
+    "referencia": "6,8-15",
+    "texto": "Naqueles dias,\n8\nEstêvão, cheio de graça e poder,\nfazia prodígios e grandes sinais entre o povo.\n9\nMas alguns membros da chamada Sinagoga dos Libertos,\njunto com cirenenses e alexandrinos,\ne alguns da Cilícia e da Ásia,\ncomeçaram a discutir com Estêvão.\n10\nPorém, não conseguiam\nresistir à sabedoria e ao Espírito com que ele falava.\n11\nEntão subornaram alguns indivíduos, que disseram:\n\"Ouvimos este homem dizendo blasfêmias\ncontra Moisés e contra Deus\".\n12\nDesse modo, incitaram o povo,\nos anciãos e os doutores da Lei,\nque prenderam Estêvão e o conduziram ao Sinédrio.\n13\nAí apresentaram falsas testemunhas, que diziam:\n\"Este homem não cessa de falar\ncontra este lugar santo e contra a Lei.\n14\nE nós o ouvimos afirmar que Jesus Nazareno\nia destruir este lugar e ia mudar os costumes\nque Moisés nos transmitiu\".\n15\nTodos os que estavam sentados no Sinédrio\ntinham os olhos fixos sobre Estêvão,\ne viram seu rosto como o rosto de um anjo.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 118(119),23-24. 26-27. 29-30 (R. 1b)",
+    "refrao": "",
+    "texto": "R.\nFeliz é quem na lei do Senhor Deus vai progredindo.\nOu:\nAleluia, Aleluia, Aleluia.\n23\nQue os poderosos reunidos me condenem; *\no que me importa é o vosso julgamento!\n24\nMinha alegria é a vossa Aliança, *\nmeus conselheiros são os vossos mandamentos.\nR.\n26\nEu vos narrei a minha sorte e me atendestes, *\nensinai-me, ó Senhor, vossa vontade!\n27\nFazei-me conhecer vossos caminhos, *\ne então meditarei vossos prodígios!\nR.\n29\nAfastai-me do caminho da mentira *\ne dai-me a vossa lei como um presente!\n30\nEscolhi seguir a trilha da verdade, *\ndiante de mim eu coloquei vossos preceitos.\nR.\nEvangelho - Jo 6,22-29\nAclamação ao Evangelho\nMt 4,4b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nO homem não vive somente de pão,\nmas de toda palavra da boca de Deus."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "6,22-29",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo João\n6,22-29\nDepois que Jesus saciara os cinco mil homens,\nseus discípulos o viram andando sobre o mar.\n22\nNo dia seguinte, a multidão\nque tinha ficado do outro lado do mar\nconstatou que havia só uma barca\ne que Jesus não tinha subido para ela com os discípulos,\nmas que eles tinham partido sozinhos.\n23\nEntretanto, tinham chegado outras barcas de Tiberíades,\nperto do lugar onde tinham comido o pão\ndepois de o Senhor ter dado graças.\n24\nQuando a multidão viu\nque Jesus não estava ali,\nnem os seus discípulos,\nsubiram às barcas\ne foram à procura de Jesus, em Cafarnaum.\n25\nQuando o encontraram no outro lado do mar,\nperguntaram-lhe:\n\"Rabi, quando chegaste aqui?\"\n26\nJesus respondeu:\n\"Em verdade, em verdade, eu vos digo:\nestais me procurando não porque vistes sinais,\nmas porque comestes pão e ficastes satisfeitos.\n27\nEsforçai-vos não pelo alimento que se perde,\nmas pelo alimento que permanece até a vida eterna,\ne que o Filho do homem vos dará.\nPois este é quem o Pai marcou com seu selo\".\n28\nEntão perguntaram:\n\"Que devemos fazer para realizar as obras de Deus?\"\n29\nJesus respondeu:\n\"A obra de Deus é que acrediteis\nnaquele que ele enviou\".\nPalavra da Salvação."
+  }
+}

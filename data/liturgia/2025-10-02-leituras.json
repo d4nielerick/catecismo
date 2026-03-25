@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-02",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 23,20-23</div><div> Sl 90(91),1-2.3-4.5-6.10-11 (R. 11)</div><div></div><div> Mt 18,1-5.10</div></div>",
+  "primeira_leitura": {
+    "referencia": "23,20-23",
+    "texto": "Assim diz o Senhor:\n20\n\"Vou enviar um anjo que vá à tua frente,\nque te guarde pelo caminho\ne te conduza ao lugar que te preparei.\n21\nRespeita-o e ouve a sua voz.\nNão lhe sejas rebelde,\nporque não suportará as vossas transgressões,\ne nele está o meu nome.\n22\nSe ouvires a sua voz\ne fizeres tudo o que eu disser,\nserei inimigo dos teus inimigos,\ne adversário dos teus adversários.\n23\nO meu anjo irá à tua frente\ne te conduzirá à terra dos amorreus,\ndos hititas, dos fereseus, dos cananeus,\ndos heveus e dos jebuseus, e eu os exterminarei\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 90(91),1-2.3-4.5-6.10-11 (R. 11)",
+    "refrao": "",
+    "texto": "R.\nO Senhor deu uma ordem aos seus anjos,\npara em todos os caminhos te guardarem.\n1\nQuem habita ao abrigo do Altíssimo *\ne vive à sombra do Senhor onipotente,\n2\ndiz ao Senhor: \"Sois meu refúgio e proteção, *\nsois o meu Deus, no qual confio inteiramente\".\nR.\n3\nDo caçador e do seu laço ele te livra. *\nEle te salva da palavra que destrói.\n4\nCom suas asas haverá de proteger-te, *\ncom seu escudo e suas armas, defender-te.\nR.\n5\nNão temerás terror algum durante a noite, *\nnem a flecha disparada em pleno dia;\n6\nnem a peste que caminha pelo escuro, *\nnem a desgraça que devasta ao meio-dia.\nR.\n10\nNenhum mal há de chegar perto de ti, *\nnem a desgraça baterá à tua porta;\n11\npois o Senhor deu uma ordem a seus anjos *\npara em todos os caminhos te guardarem.\nR.\nEvangelho - Mt 18,1-5.\nAclamação ao Evangelho\nSl 102(103),21\nR.\nAleluia, Aleluia, Aleluia.\nV.\nBendizei ao Senhor Deus, os seus poderes,\nseus ministros que fazeis sua vontade!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "18,1-5.10",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n18,1-5.10\nNaquela hora,\n1\nOs discípulos aproximaram-se de Jesus\ne perguntaram:\n\"Quem é o maior no Reino dos Céus?\"\n2\nJesus chamou uma criança,\ncolocou-a no meio deles\n3\ne disse:\n\"Em verdade vos digo,\nse não vos converterdes,\ne não vos tornardes como crianças,\nnão entrareis no Reino dos Céus.\n4\nQuem se faz pequeno como esta criança,\nesse é o maior no Reino dos Céus.\n5\nE quem recebe em meu nome uma criança como esta,\né a mim que recebe.\n10\nNão desprezeis nenhum desses pequeninos,\npois eu vos digo que os seus anjos nos céus\nveem sem cessar a face do meu Pai que está nos céus\".\nPalavra da Salvação."
+  }
+}

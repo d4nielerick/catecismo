@@ -1,0 +1,23 @@
+{
+  "data": "2026-08-24",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ap 21,9b-14</div><div> Sl 144(145),10-11.12-13ab.17-18 (R. cf. 12a)</div><div></div><div> Jo 1,45-51</div></div>",
+  "primeira_leitura": {
+    "referencia": "21,9b-14",
+    "texto": "9b\nUm anjo falou comigo e disse:\n\"Vem!\nVou mostrar-te a noiva,\na esposa do Cordeiro\".\n10\nEntão me levou em espírito\na uma montanha grande e alta.\nMostrou-me a cidade santa, Jerusalém,\ndescendo do céu, de junto de Deus,\n11\nbrilhando com a glória de Deus.\nSeu brilho era como o de uma pedra preciosíssima,\ncomo o brilho de jaspe cristalino.\n12\nEstava cercada por uma muralha maciça e alta,\ncom doze portas.\nSobre as portas estavam doze anjos,\ne nas portas estavam escritos os nomes\ndas doze tribos de Israel.\n13\nHavia três portas do lado do oriente,\ntrês portas do lado norte,\ntrês portas do lado sul\ne três portas do lado do ocidente.\n14\nA muralha da cidade tinha doze alicerces,\ne sobre eles estavam escritos\nos nomes dos doze apóstolos do Cordeiro.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 144(145),10-11.12-13ab.17-18 (R. cf. 12a)",
+    "refrao": "",
+    "texto": "R.\nÓ Senhor, vossos amigos anunciem vosso Reino glorioso!\n10\nQue vossas obras, ó Senhor, vos glorifiquem, *\ne os vossos santos com louvores vos bendigam!\n11\nNarrem a glória e o esplendor do vosso reino *\ne saibam proclamar vosso poder!\nR.\n12\nPara espalhar vossos prodígios entre os homens *\ne o fulgor de vosso reino esplendoroso.\n13a\nO vosso reino é um reino para sempre, *\n13b\nvosso poder, de geração em geração.\nR.\n17\nÉ justo o Senhor em seus caminhos, *\né santo em toda obra que ele faz.\n18\nEle está perto da pessoa que o invoca, *\nde todo aquele que o invoca lealmente.\nR.\nEvangelho - Jo 1,45-51\nAclamação ao Evangelho\nJo 1,49b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMestre, tu és o filho de Deus, és rei de Israel!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "1,45-51",
+    "texto": "1,45-51\n45\nFilipe encontrou-se com Natanael e lhe disse:\n\"Encontramos aquele de quem Moisés escreveu na Lei,\ne também os profetas:\nJesus de Nazaré, o filho de José\".\n46\nNatanael disse:\n\"De Nazaré pode sair coisa boa?\"\nFilipe respondeu:\n\"Vem ver!\"\n47\nJesus viu Natanael que vinha para ele e comentou:\n\"Aí vem um israelita de verdade,\num homem sem falsidade\".\n48\nNatanael perguntou:\n\"De onde me conheces?\"\nJesus respondeu:\n\"Antes que Filipe te chamasse,\nenquanto estavas debaixo da figueira,\neu te vi\".\n49\nNatanael respondeu:\n\"Rabi, tu és o Filho de Deus,\ntu és o Rei de Israel\".\n50\nJesus disse:\n\"Tu crês porque te disse:\nEu te vi debaixo da figueira?\nCoisas maiores que esta verás!\"\n51\nE Jesus continuou:\n\"Em verdade, em verdade, eu vos digo:\nVereis o céu aberto\ne os anjos de Deus subindo e descendo\nsobre o Filho do Homem\".\nPalavra da Salvação."
+  }
+}

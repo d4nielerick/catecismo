@@ -1,0 +1,23 @@
+{
+  "data": "2026-02-01",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Sf 2,3;3,12-13</div><div> Sl 145(146),7.8-9a.9bc-10 (R. Mt 5,3)</div><div> 1Cor 1,26-31</div><div> Mt 5,1-12a</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,3;3,12-13",
+    "texto": "3\nBuscai o Senhor, humildes da terra,\nque pondes em prática seus preceitos;\npraticai a justiça, procurai a humildade;\ntalvez achareis um refúgio\nno dia da cólera do Senhor.\n3,12\nE deixarei entre vós\num punhado de homens humildes e pobres.\nE no nome do Senhor porá sua esperança\no resto de Israel.\n13\nEles não cometerão iniquidades\nnem falarão mentiras;\nnão se encontrará em sua boca\numa língua enganadora;\nserão apascentados e repousarão,\ne ninguém os molestará.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 145(146),7.8-9a.9bc-10 (R. Mt 5,3)",
+    "refrao": "",
+    "texto": "R.\nFelizes os pobres em espírito,\nporque deles é o Reino dos Céus.\nOu:\nAleluia, Aleluia, Aleluia.\n7\nO Senhor é fiel para sempre,*\nfaz justiça aos que são oprimidos;\nele dá alimento aos famintos,*\né o Senhor quem liberta os cativos.\nR.\n8\nO Senhor abre os olhos aos cegos*\no Senhor faz erguer-se o caído;\no Senhor ama aquele que é justo*\n9a\nÉ o Senhor quem protege o estrangeiro\nR.\n9bc\nEle ampara a viúva e o órfão*\nmas confunde os caminhos dos maus.\n10\nO Senhor reinará para sempre!\n†\nÓ Sião, o teu Deus reinará*\npara sempre e por todos os séculos!\nR.\n2ª Leitura - 1Cor_1,\nSEGUNDA LEITURA\nDeus escolheu o que o mundo considera como fraco.\nLeitura da Primeira Carta de São Paulo aos Coríntios\n1, 26-31\n26\nConsiderai vós mesmos, irmãos,\ncomo fostes chamados por Deus.\nPois entre vós não há muitos sábios de sabedoria humana\nnem muitos poderosos nem muitos nobres.\n27\nNa verdade,\nDeus escolheu o que o mundo considera como estúpido,\npara assim confundir os sábios;\nDeus escolheu o que o mundo considera como fraco,\npara assim confundir o que é forte;\n28\nDeus escolheu o que para o mundo\né sem importância e desprezado,\no que não tem nenhuma serventia,\npara assim mostrar a inutilidade\ndo que é considerado importante,\n29\npara que ninguém possa gloriar-se diante dele.\n30\nÉ graças a ele que vós estais em Cristo Jesus,\no qual se tornou para nós, da parte de Deus:\nsabedoria, justiça, santificação e libertação,\n31\npara que, como está escrito,\n\"quem se gloria, glorie-se no Senhor\".\nPalavra do Senhor.\nAclamação ao Evangelho\nMt 5,12\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMeus discípulos, alegrai-vos, exultai de alegria,\npois bem grande é a recompensa\nque nos céus tereis um dia!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,1-12a",
+    "texto": "5,1-12a\nNaquele tempo,\n1\nvendo Jesus as multidões, subiu ao monte e sentou-se.\nOs discípulos aproximaram-se,\n2\ne Jesus começou a ensiná-los:\n3\n\"Bem-aventurados os pobres em espírito,\nporque deles é o Reino dos Céus.\n4\nBem-aventurados os aflitos,\nporque serão consolados.\n5\nBem-aventurados os mansos,\nporque possuirão a terra.\n6\nBem-aventurados os que têm fome e sede de justiça,\nporque serão saciados.\n7\nBem-aventurados os misericordiosos,\nporque alcançarão misericórdia.\n8\nBem-aventurados os puros de coração,\nporque verão a Deus.\n9\nBem-aventurados os que promovem a paz,\nporque serão chamados filhos de Deus.\n10\nBem-aventurados os que são perseguidos\npor causa da justiça,\nporque deles é o Reino dos Céus.\n11\nBem-aventurados sois vós, quando vos injuriarem\ne perseguirem, e mentindo,\ndisserem todo tipo de mal contra vós, por causa de mim.\n12a\nAlegrai-vos e exultai,\nporque será grande a vossa recompensa nos céus\".\nPalavra da Salvação."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2024-09-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Cor 15,12-20</div><div> Sl 16(17),1.6-7.8b e 15 (R. 15b)</div><div></div><div> Lc 8,1-3</div></div>",
+  "primeira_leitura": {
+    "referencia": "15,12-20",
+    "texto": "Irmãos,\n12\nse se prega que Cristo ressuscitou dos mortos,\ncomo podem alguns dizer entre vós\nque não há ressurreição dos mortos?\n13\nSe não há ressurreição dos mortos,\nentão Cristo não ressuscitou.\n14\nE se Cristo não ressuscitou,\na nossa pregação é vã\ne a vossa fé é vã também.\n15\nNesse caso, nós seríamos\ntestemunhas mentirosas de Deus,\nporque teríamos atestado - contra Deus -\nque ele ressuscitou Cristo,\nquando, de fato, ele não o teria ressuscitado\n- se é verdade que os mortos não ressuscitam.\n16\nPois, se os mortos não ressuscitam,\nentão Cristo também não ressuscitou.\n17\nE se Cristo não ressuscitou,\na vossa fé não tem nenhum valor\ne ainda estais nos vossos pecados.\n18\nEntão, também os que morreram em Cristo pereceram.\n19\nSe é para esta vida\nque pusemos a nossa esperança em Cristo,\nnós somos - de todos os homens -\nos mais dignos de compaixão.\n20\nMas, na realidade, Cristo ressuscitou dos mortos\ncomo primícias dos que morreram.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 16(17),1.6-7.8b e 15 (R. 15b)",
+    "refrao": "",
+    "texto": "R.\nAo despertar, me saciará vossa presença, ó Senhor.\n1\nÓ Senhor, ouvi a minha justa causa, *\nescutai-me e atendei o meu clamor!\nInclinai o vosso ouvido à minha prece, *\npois não existe falsidade nos meus lábios!\nR.\n6\nEu vos chamo, ó meu Deus, porque me ouvis, *\ninclinai o vosso ouvido e escutai-me!\n7\nMostrai-me vosso amor maravilhoso, †\nvós que salvais e libertais do inimigo *\nquem procura a proteção junto de vós.\nR.\n8b\nProtegei-me qual dos olhos a pupila *\ne guardai-me, à proteção de vossas asas,\n15\nMas eu verei, justificado, a vossa face *\ne ao despertar me saciará vossa presença.\nR.\nAclamação ao Evangelho\ncf. Mt 11,25\nR.\nAleluia, Aleluia, Aleluia.\nV.\nGraças te dou, ó Pai, Senhor do céu e da terra,\npois, revelaste os mistérios do teu Reino\naos pequeninos, escondendo-os aos doutores!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,1-3",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n8,1-3\nNaquele tempo,\n1\nJesus andava por cidades e povoados,\npregando e anunciando a Boa-Nova do Reino de Deus.\nOs doze iam com ele;\n2\ne também algumas mulheres\nque haviam sido curadas de maus espíritos e doenças:\nMaria, chamada Madalena,\nda qual tinham saído sete demônios;\n3\nJoana, mulher de Cuza, alto funcionário de Herodes;\nSusana, e várias outras mulheres\nque ajudavam a Jesus e aos discípulos\ncom os bens que possuíam.\nPalavra da Salvação."
+  }
+}

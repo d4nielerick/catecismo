@@ -1,0 +1,23 @@
+{
+  "data": "2025-10-15",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rm 2,1-11</div><div> Sl 61(62),2-3.6-7.9 (R. 13b)</div><div></div><div> Lc 11,42-46</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-11",
+    "texto": "1\nÓ\nhomem, qualquer que sejas,\ntu que julgas, não tens desculpa;\npois, julgando os outros,\nte condenas a ti mesmo,\njá que fazes as mesmas coisas,\ntu que julgas.\n2\nOra, sabemos que o julgamento de Deus\nse exerce segundo a verdade\ncontra os que praticam tais coisas.\n3\nÓ homem, tu que julgas os que praticam tais coisas\ne, no entanto, as fazes também tu,\npensas que escaparás ao julgamento de Deus?\n4\nOu será que desprezas as riquezas de sua bondade,\nde sua tolerância, de sua longanimidade,\nnão entendendo que a benignidade de Deus\né um insistente convite para te converteres?\n5\nPor causa de teu endurecimento no mal\ne por teu coração impenitente,\nestás acumulando ira para ti mesmo,\nno dia da ira,\nquando se revelará o justo juízo de Deus.\n6\nDeus retribuirá a cada um segundo as suas obras.\n7\nPara aqueles que,\nperseverando na prática do bem,\nbuscam a glória, a honra e a incorruptibilidade,\nDeus dará a vida eterna;\n8\nporém, para os que, por espírito de rebeldia,\ndesobedecem à verdade\ne se submetem à iniquidade,\nestão reservadas ira e indignação.\n9\nTribulação e angústia\npara toda pessoa que faz o mal,\nprimeiro para o judeu,\nmas também para o grego;\n10\nglória, honra e paz\npara todo aquele que pratica o bem,\nprimeiro para o judeu,\nmas também para o grego;\n11\npois Deus não faz distinção de pessoas.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 61(62),2-3.6-7.9 (R. 13b)",
+    "refrao": "",
+    "texto": "R.\nSenhor, pagais a cada um, conforme suas obras.\n2\nSó em Deus a minha alma tem repouso, *\nporque dele é que me vem a salvação!\n3\nSó ele é meu rochedo e salvação, *\na fortaleza, onde encontro segurança!\nR.\n6\nSó em Deus a minha alma tem repouso, *\nporque dele é que me vem a salvação!\n7\nSó ele é meu rochedo e salvação, *\na fortaleza, onde encontro segurança!\nR.\n9\nPovo todo, esperai sempre no Senhor, †\ne abri diante dele o coração: *\nnosso Deus é um refúgio para nós!\nR.\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,42-46",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n11,42-46\nNaquele tempo, disse o Senhor:\n42\n\"Aí de vós, fariseus,\nporque pagais o dízimo da hortelã,\nda arruda e de todas as outras ervas,\nmas deixais de lado a justiça e o amor de Deus.\nVós deveríeis praticar isso,\nsem deixar de lado aquilo.\n43\nAí de vós, fariseus,\nporque gostais do lugar de honra nas sinagogas,\ne de serdes cumprimentados nas praças públicas.\n44\nAí de vós,\nporque sois como túmulos que não se veem,\nsobre os quais os homens andam sem saber\".\n45\nUm mestre da Lei tomou a palavra e disse:\n\"Mestre, falando assim,\ninsultas-nos também a nós!\"\n46\nJesus respondeu:\n\"Ai de vós também, mestres da Lei,\nporque colocais sobre os homens cargas insuportáveis,\ne vós mesmos não tocais nessas cargas,\nnem com um só dedo\".\nPalavra da Salvação."
+  }
+}

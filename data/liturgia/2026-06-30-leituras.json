@@ -1,0 +1,23 @@
+{
+  "data": "2026-06-30",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Am 3,1-8.4,11-12</div><div> Sl 5,5-6.7.8 (R. 9a)</div><div></div><div> Mt 8,23-27</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-8; 4,11-12",
+    "texto": "1\nOuvi, filhos de Israel,\na palavra que disse o Senhor para vós\ne para todas as tribos\nque eu retirei do Egito:\n2\n\"Dentre todas as nações da terra,\nsomente a vós reconheci;\npor isso usarei o castigo\npor todas as vossas iniquidades.\n3\nSe duas pessoas caminham juntas,\nnão é porque estão de acordo?\n4\nSe o leão ruge na selva,\nnão é porque encontrou a presa?\nSe no covil rosna o filhote do leão,\nnão é porque agarrou sua parte?\n5\nAcaso, sem armadilha,\nse prende uma ave no chão?\nAcaso dispara a armadilha,\nantes de capturar a presa?\n6\nSe ressoa na cidade o toque da trombeta,\nnão fica a população apavorada?\nSe acontece uma desgraça na cidade,\nnão foi o Senhor que fez?\n7\nPois nada fará o Senhor Deus,\nque não revele o plano a seus servos, os profetas.\n8\nRuge o leão,\nquem não terá medo?\nFalou o Senhor Deus,\nquem não será seu profeta?\n4,11\nEu arrasei-vos,\ncomo arrasei Sodoma e Gomorra,\ne ficastes como um tição,\nretirado da fogueira;\ne, contudo, não voltastes para mim\",\ndiz o Senhor.\n12\n\"Por isso, assim te tratarei, Israel;\ne, porque sabes como te vou tratar,\nprepara-te, Israel,\npara ajustar contas com o teu Deus\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 5,5-6.7.8 (R. 9a)",
+    "refrao": "",
+    "texto": "R.\nNa vossa justiça guiai-me Senhor!\n5\nNão sois um Deus a quem agrade a iniquidade, *\nnão pode o mau morar convosco;\n6\nnem os ímpios poderão permanecer *\nperante os vossos olhos.\nR.\n7\nDetestais o que pratica a iniquidade *\ne destruís o mentiroso.\nÓ Senhor, abominais o sanguinário, *\no perverso e enganador.\nR.\n8\nEu, porém, por vossa graça generosa, *\nposso entrar em vossa casa.\nE, voltado reverente ao vosso templo, *\ncom respeito vos adoro.\nR.\nAclamação ao Evangelho\nSl 129(130),5\nR.\nAleluia, Aleluia, Aleluia.\nV.\nNo Senhor ponho a minha esperança,\nespero em sua palavra."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,23-27",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n8,23-27\nNaquele tempo,\n23\nJesus entrou na barca,\ne seus discípulos o acompanharam.\n24\nE eis que houve uma grande tempestade no mar,\nde modo que a barca estava sendo coberta pelas ondas.\nJesus, porém, dormia.\n25\nOs discípulos aproximaram-se\ne o acordaram, dizendo:\n\"Senhor, salva-nos,\npois estamos perecendo!\"\n26\nJesus respondeu:\n\"Por que tendes tanto medo, homens fracos na fé?\"\nEntão, levantando-se, ameaçou os ventos e o mar,\ne fez-se uma grande calmaria.\n27\nOs homens ficaram admirados e diziam:\n\"Quem é este homem,\nque até os ventos e o mar lhe obedecem?\"\nPalavra da Salvação."
+  }
+}
