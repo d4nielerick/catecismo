@@ -5,6 +5,8 @@
  * Endpoints:
  *   POST /api/resumo            — resumo de parágrafos do CIC via Grok
  *   POST /api/liturgia-reflexao — reflexão do Evangelho do dia via Grok (com cache em arquivo)
+ *   POST /api/correcao          — registra correção de erro (salva em data/correcoes.json)
+ *   GET  /api/correcoes         — lista correções (requer Authorization: Bearer $ADMIN_TOKEN)
  */
 
 import http from 'node:http';
@@ -205,14 +207,69 @@ async function handleLiturgiaReflexao(req, res, ip) {
   sendJson(res, 200, parsed);
 }
 
+// ── Handler: /api/correcao (POST) ─────────────────────────────────────────────
+const CORRECOES_FILE = path.join(__dirname, 'data', 'correcoes.json');
+
+function lerCorrecoes() {
+  try { return JSON.parse(fs.readFileSync(CORRECOES_FILE, 'utf8')); }
+  catch { return []; }
+}
+
+function salvarCorrecoes(lista) {
+  fs.mkdirSync(path.dirname(CORRECOES_FILE), { recursive: true });
+  fs.writeFileSync(CORRECOES_FILE, JSON.stringify(lista, null, 2), 'utf8');
+}
+
+async function handleCorrecao(req, res) {
+  let body;
+  try { body = await readBody(req); }
+  catch { return sendJson(res, 400, { error: 'JSON inválido.' }); }
+
+  const { paragrafo, descricao } = body;
+  if (!paragrafo || !descricao || typeof descricao !== 'string')
+    return sendJson(res, 400, { error: 'Parâmetros inválidos.' });
+
+  const descTrimmed = descricao.trim().slice(0, 1000);
+  if (!descTrimmed)
+    return sendJson(res, 400, { error: 'Descrição vazia.' });
+
+  const entrada = {
+    id: Date.now(),
+    paragrafo,
+    descricao: descTrimmed,
+    data: new Date().toISOString(),
+  };
+
+  try {
+    const lista = lerCorrecoes();
+    lista.push(entrada);
+    salvarCorrecoes(lista);
+    sendJson(res, 200, { ok: true });
+  } catch (err) {
+    sendJson(res, 500, { error: 'Erro ao salvar.' });
+  }
+}
+
+// ── Handler: /api/correcoes (GET, protegido por token) ────────────────────────
+function handleListarCorrecoes(req, res) {
+  const adminToken = process.env.ADMIN_TOKEN;
+  const authHeader  = req.headers['authorization'] ?? '';
+  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : '';
+
+  if (!adminToken || token !== adminToken)
+    return sendJson(res, 401, { error: 'Não autorizado.' });
+
+  sendJson(res, 200, lerCorrecoes());
+}
+
 // ── Servidor HTTP ─────────────────────────────────────────────────────────────
 const server = http.createServer(async (req, res) => {
   // CORS preflight
   if (req.method === 'OPTIONS') {
     res.writeHead(204, {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     });
     res.end();
     return;
@@ -228,6 +285,10 @@ const server = http.createServer(async (req, res) => {
       await handleResumo(req, res, ip);
     } else if (req.method === 'POST' && url === '/api/liturgia-reflexao') {
       await handleLiturgiaReflexao(req, res, ip);
+    } else if (req.method === 'POST' && url === '/api/correcao') {
+      await handleCorrecao(req, res);
+    } else if (req.method === 'GET' && url === '/api/correcoes') {
+      handleListarCorrecoes(req, res);
     } else {
       res.writeHead(404);
       res.end('Not found');

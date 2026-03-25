@@ -275,7 +275,8 @@
 }
 
 .card-save-btn,
-.card-share-btn {
+.card-share-btn,
+.card-flag-btn {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
@@ -293,6 +294,7 @@
 
 .resultado-card:hover .card-save-btn,
 .resultado-card:hover .card-share-btn,
+.resultado-card:hover .card-flag-btn,
 .card-save-btn.salvo {
   opacity: 1;
 }
@@ -313,6 +315,86 @@
   color: var(--color-accent-dk);
   border-color: var(--color-accent);
   background: rgba(197,160,40,0.1);
+}
+
+.card-flag-btn:hover {
+  color: #c0392b;
+  border-color: #c0392b;
+  background: rgba(192,57,43,0.07);
+}
+
+/* ── Formulário de correção inline ──────────────────────────────────────── */
+.card-correcao-form {
+  margin-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.card-correcao-form textarea {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 4px);
+  padding: 0.4rem 0.6rem;
+  resize: vertical;
+  min-height: 64px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-correcao-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.card-correcao-form-acoes {
+  display: flex;
+  gap: var(--space-xs);
+  justify-content: flex-end;
+}
+
+.card-correcao-form-acoes button {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 0.2rem 0.75rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.btn-correcao-cancelar {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+.btn-correcao-cancelar:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.btn-correcao-enviar {
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: #fff;
+}
+
+.btn-correcao-enviar:hover {
+  opacity: 0.85;
+}
+
+.card-correcao-ok {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-top: var(--space-xs);
 }
 
 .card-trecho {

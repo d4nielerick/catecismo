@@ -794,6 +794,9 @@ function criarCard(p, query) {
       <span class="card-num">\u00A7${p.numero}</span>
       ${labelContexto ? `<span class="card-artigo">${escapeHtml(labelContexto)}</span>` : ''}
       <div class="card-acoes">
+        <button class="card-flag-btn" type="button" aria-label="Reportar erro no parágrafo ${p.numero}" title="Reportar erro">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </button>
         <button class="card-share-btn" type="button" aria-label="Copiar link do parágrafo ${p.numero}" title="Copiar link">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
         </button>
@@ -819,6 +822,58 @@ function criarCard(p, query) {
     e.stopPropagation();
     const url = `${location.origin}/#paragrafo-${p.numero}`;
     navigator.clipboard.writeText(url).then(() => mostrarToast('Link copiado!'));
+  });
+
+  card.querySelector('.card-flag-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    // toggle: se já existe form, remove
+    const existing = card.querySelector('.card-correcao-form');
+    if (existing) { existing.remove(); return; }
+
+    const form = document.createElement('div');
+    form.className = 'card-correcao-form';
+    form.innerHTML = `
+      <textarea placeholder="Descreva o erro encontrado neste parágrafo…" rows="3"></textarea>
+      <div class="card-correcao-form-acoes">
+        <button class="btn-correcao-cancelar" type="button">Cancelar</button>
+        <button class="btn-correcao-enviar" type="button">Enviar</button>
+      </div>
+    `;
+    card.appendChild(form);
+    form.querySelector('textarea').focus();
+
+    form.querySelector('.btn-correcao-cancelar').addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      form.remove();
+    });
+
+    form.querySelector('.btn-correcao-enviar').addEventListener('click', async (ev) => {
+      ev.stopPropagation();
+      const descricao = form.querySelector('textarea').value.trim();
+      if (!descricao) return;
+      const btn = form.querySelector('.btn-correcao-enviar');
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      try {
+        const resp = await fetch('/api/correcao', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ paragrafo: p.numero, descricao }),
+        });
+        if (resp.ok) {
+          form.innerHTML = '<p class="card-correcao-ok">Obrigado! Correção recebida.</p>';
+          setTimeout(() => form.remove(), 2500);
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Enviar';
+          mostrarToast('Erro ao enviar. Tente novamente.');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Enviar';
+        mostrarToast('Erro ao enviar. Tente novamente.');
+      }
+    });
   });
 
   return card;
