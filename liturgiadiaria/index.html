@@ -224,6 +224,53 @@
       user-select: none;
     }
 
+    /* ── Salmo ────────────────────────────────────────────────────────────── */
+    .salmo-refrao {
+      background: rgba(197,160,40,0.07);
+      border-left: 2px solid var(--color-accent);
+      border-radius: 0 6px 6px 0;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--color-text);
+    }
+
+    .salmo-r-label {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-accent-dk);
+      margin-right: 0.4rem;
+    }
+
+    .salmo-estrofe {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--color-text);
+      margin-bottom: 0.25rem;
+    }
+
+    .salmo-r-sep {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-accent-dk);
+      margin: 0.75rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .salmo-r-sep::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+    }
+
     .loading, .erro {
       font-family: var(--font-sans);
       color: var(--color-muted);
@@ -438,47 +485,128 @@
 
 <script type="module">
 
-// ── Extrai o livro (ex: "Nm") a partir do HTML de referências ─────────────────
+// ── Extrai o livro (ex: "Nm") a partir do HTML de referências ────────────────
 function extrairLivro(htmlRef, refSuffix) {
-  // refSuffix = "21,4-9" → procura "Nm 21,4-9" no HTML
   const escaped = refSuffix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const m = htmlRef.match(new RegExp('([A-Za-záéíóúàâêôãõç1-9]+(?:\\([^)]+\\))?(?:\\s+[A-Z][a-z]+)*)\\s+' + escaped));
-  return m ? m[1].trim() : refSuffix;
+  const m = htmlRef.match(new RegExp('([A-Za-záéíóúàâêôãõç1-9]+(?:\\([^)]+\\))?)\\s+' + escaped));
+  return m ? m[1].trim() + ' ' + refSuffix : refSuffix;
 }
 
-// ── Converte texto CNBB em HTML com números de versículo como superscript ─────
-function renderTexto(texto) {
+// ── Separa o salmo da 2ª leitura embutida (quando houver) ────────────────────
+function parsearSalmo(salmoObj) {
+  const raw = salmoObj.texto ?? '';
+
+  // Separa 2ª Leitura embutida
+  const split2a = raw.split(/\n2ª Leitura\s*[-–]\s*/);
+  const psalmoRaw = split2a[0];
+
+  let segunda = null;
+  if (split2a[1]) {
+    const linhas = split2a[1].split('\n').map(l => l.trim()).filter(Boolean);
+    // 1ª linha: referência (ex: "Hb 10,4-" ou "Hb 10,4-10")
+    const refRaw = linhas[0]?.replace(/-$/, '').trim() ?? '';
+    // Encontra início do texto (após "Leitura d...")
+    const ini = linhas.findIndex(l => /^Leitura d/i.test(l));
+    let textoLinhas = ini >= 0 ? linhas.slice(ini + 1) : linhas.slice(2);
+    // Remove Aclamação ao final
+    const iacl = textoLinhas.findIndex(l => /Aclamação ao Evangelho|ACLAMAÇÃO/i.test(l));
+    if (iacl >= 0) textoLinhas = textoLinhas.slice(0, iacl);
+    segunda = { referencia: refRaw, texto: textoLinhas.join('\n') };
+  }
+
+  return { psalmoRaw, segunda };
+}
+
+// ── Renderiza salmo com Refrão + Estrofes ─────────────────────────────────────
+function renderSalmoHtml(texto) {
   if (!texto) return '<em>Texto não disponível.</em>';
 
-  const linhas = texto.split('\n').map(l => l.trim()).filter(Boolean);
-  let html = '';
-  let skipRef = false;
+  // Remove marcas de execução e strip whitespace
+  const linhas = texto
+    .replace(/[*†]/g, '')
+    .split('\n')
+    .map(l => l.trim())
+    .filter(Boolean);
+
+  let refrao = [];
+  let coletandoRefrao = false;
+  let primeiroR = true;
+  let estrofes = [];         // array de arrays de linhas
+  let estrofeAtual = [];
 
   for (const linha of linhas) {
-    // Ignora cabeçalhos litúrgicos e linha de referência (ex: "8,21-30")
-    if (/^Proclamação|^Leitura d|^LEITURA|^EVANGELHO|^Palavra do|^Evangelho do Senhor/.test(linha)) continue;
-    if (/^\d+,\d/.test(linha) && linha.length < 20) { skipRef = true; continue; }
-    skipRef = false;
+    if (linha === 'R.' || linha === 'R') {
+      if (primeiroR) {
+        primeiroR = false;
+        coletandoRefrao = true;
+      } else {
+        coletandoRefrao = false;
+        // Fecha estrofe atual e marca "cantar refrão"
+        if (estrofeAtual.length) estrofes.push({ linhas: estrofeAtual, refrao: true });
+        estrofeAtual = [];
+      }
+    } else if (coletandoRefrao) {
+      // Verso numérico indica fim do refrão
+      if (/^\d+[a-z]?$/.test(linha)) {
+        coletandoRefrao = false;
+        estrofeAtual.push(linha);
+      } else {
+        refrao.push(linha);
+      }
+    } else {
+      estrofeAtual.push(linha);
+    }
+  }
+  if (estrofeAtual.length) estrofes.push({ linhas: estrofeAtual, refrao: false });
 
+  let html = '';
+
+  // Refrão
+  if (refrao.length) {
+    html += `<div class="salmo-refrao"><span class="salmo-r-label">R.</span>${refrao.join('<br>')}</div>`;
+  }
+
+  // Estrofes
+  for (const estrofe of estrofes) {
+    html += `<div class="salmo-estrofe">`;
+    for (const linha of estrofe.linhas) {
+      if (/^\d+[a-z]?$/.test(linha)) {
+        html += `<sup class="vers-num">${linha}</sup>`;
+      } else {
+        html += linha + ' ';
+      }
+    }
+    html += `</div>`;
+    if (estrofe.refrao) html += `<div class="salmo-r-sep">R.</div>`;
+  }
+
+  return html;
+}
+
+// ── Converte texto CNBB em HTML (leituras gerais) ────────────────────────────
+function renderTexto(texto) {
+  if (!texto) return '<em>Texto não disponível.</em>';
+  const linhas = texto.split('\n').map(l => l.trim()).filter(Boolean);
+  let html = '';
+  for (const linha of linhas) {
+    if (/^Proclamação|^Leitura d|^LEITURA|^EVANGELHO|^Palavra do|^Evangelho do Senhor/.test(linha)) continue;
+    if (/^\d+,\d/.test(linha) && linha.length < 20) continue;
     if (/^\d+$/.test(linha)) {
-      // Número de versículo isolado
       html += `<sup class="vers-num">${linha}</sup>`;
     } else {
       html += linha + ' ';
     }
   }
-
   return `<p>${html.trim()}</p>`;
 }
 
-function renderCard(label, refDisplay, texto, id, isGospel = false) {
-  const textHtml = renderTexto(texto);
+function renderCard(label, refDisplay, htmlConteudo, id, isGospel = false) {
   const gospelExtra = isGospel ? `<div id="reflexao-conteudo"></div>` : '';
   return `
     <div class="leitura-card${isGospel ? ' card-evangelho' : ''}" id="${id}">
       <div class="leitura-label">${label}</div>
       <div class="leitura-ref">${refDisplay}</div>
-      <div class="leitura-texto">${textHtml}</div>
+      <div class="leitura-texto">${htmlConteudo}</div>
       ${gospelExtra}
     </div>
   `;
@@ -542,30 +670,32 @@ async function init() {
   }
 
   const htmlRef = raw.referencias ?? '';
-  const pl = raw.primeira_leitura;
-  const sl = raw.salmo;
-  const sl2 = raw.segunda_leitura;
-  const ev = raw.evangelho;
+  const pl  = raw.primeira_leitura;
+  const sl  = raw.salmo;
+  const ev  = raw.evangelho;
 
-  // Monta referências completas (livro + capítulo/versículo)
-  const refPL  = pl  ? extrairLivro(htmlRef, pl.referencia)  : '';
-  const refEV  = ev  ? extrairLivro(htmlRef, ev.referencia)  : '';
-  const refSL  = sl?.referencia ?? '';
-  const refSL2 = sl2 ? extrairLivro(htmlRef, sl2.referencia) : '';
+  // Referências completas
+  const refPL = pl ? extrairLivro(htmlRef, pl.referencia) : '';
+  const refEV = ev ? extrairLivro(htmlRef, ev.referencia) : '';
+  const refSL = sl?.referencia ?? '';
 
-  const leituras = [
-    pl  ? { label: '1ª Leitura', refDisplay: refPL,  texto: pl.texto,  id: 'primeira-leitura' } : null,
-    sl  ? { label: 'Salmo',      refDisplay: refSL,  texto: sl.texto,  id: 'salmo'            } : null,
-    sl2 ? { label: '2ª Leitura', refDisplay: refSL2, texto: sl2.texto, id: 'segunda-leitura'  } : null,
-    ev  ? { label: 'Evangelho',  refDisplay: refEV,  texto: ev.texto,  id: 'evangelho'        } : null,
+  // Extrai 2ª leitura embutida no salmo (festas)
+  const { psalmoRaw, segunda } = sl ? parsearSalmo(sl) : { psalmoRaw: '', segunda: null };
+  const refSL2 = segunda ? (segunda.referencia || extrairLivro(htmlRef, segunda.referencia)) : '';
+
+  const blocos = [
+    pl      ? { label: '1ª Leitura', html: renderTexto(pl.texto),        refDisplay: refPL,  id: 'primeira-leitura' } : null,
+    sl      ? { label: 'Salmo',      html: renderSalmoHtml(psalmoRaw),    refDisplay: refSL,  id: 'salmo'            } : null,
+    segunda ? { label: '2ª Leitura', html: renderTexto(segunda.texto),    refDisplay: refSL2, id: 'segunda-leitura'  } : null,
+    ev      ? { label: 'Evangelho',  html: renderTexto(ev.texto),         refDisplay: refEV,  id: 'evangelho'        } : null,
   ].filter(Boolean);
 
   document.getElementById('conteudo').innerHTML =
-    leituras.map(({ label, refDisplay, texto, id }) =>
-      renderCard(label, refDisplay, texto, id, id === 'evangelho')
+    blocos.map(({ label, html, refDisplay, id }) =>
+      renderCard(label, refDisplay, html, id, id === 'evangelho')
     ).join('');
 
-  construirNav(leituras);
+  construirNav(blocos);
 
   if (ev) {
     window._liturgiaData = {
