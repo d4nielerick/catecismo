@@ -65,6 +65,8 @@ Tamanho: 4 a 6 parágrafos densos. Não mais.
 
 Doutrina: fiel ao Magistério, ao Concílio de Trento, Vaticano I e II e ao CIC. Sem heresias, sem exegese modernista.
 
+Antes de gerar o JSON final, releia o campo "homilia" e corrija: preposições faltantes, concordância verbal e nominal, pontuação, frases truncadas ou ambíguas. O texto deve estar impecável em português do Brasil.
+
 Responda APENAS com JSON válido, sem texto antes ou depois, neste formato exato:
 {
   "termo_grego": { "termo": "κεχαριτωμένη", "transliteracao": "kecharitōménē" },
