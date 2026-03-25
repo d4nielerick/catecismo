@@ -70,7 +70,7 @@ Antes de gerar o JSON final, releia o campo "homilia" e corrija: preposições f
 Responda APENAS com JSON válido, sem texto antes ou depois, neste formato exato:
 {
   "termos_gregos": [
-    { "termo": "κεχαριτωμένη", "transliteracao": "kecharitōménē" }
+    { "termo": "κεχαριτωμένη", "transliteracao": "kecharitōménē", "traducao": "cheia de graça / perfeitamente agraciada" }
   ],
   "paragrafos": [484, 488, 490],
   "homilia": "Texto corrido da homilia, 4 a 6 parágrafos, separados por \\n\\n."
