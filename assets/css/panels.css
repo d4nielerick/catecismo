@@ -1335,8 +1335,12 @@
   white-space: pre-wrap;
 }
 
-/* ── Botão + no parágrafo ativo ──────────────────────────────────────────── */
+/* ── Botão + no parágrafo ativo (oculto — substituído pelos botões por parágrafo) ── */
 .para-coletar-btn {
+  display: none !important;
+}
+
+.para-coletar-btn-hidden {
   position: absolute;
   top: var(--space-sm);
   right: 2.25rem;
