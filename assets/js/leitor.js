@@ -373,21 +373,11 @@ function renderizarCapitulo(idx) {
     textoSpan.className = 'leitor-paragrafo-texto';
     renderizarTextoComNotas(textoSpan, p.texto, p.numero);
 
-    const saveBtn = document.createElement('button');
-    saveBtn.className = 'leitor-para-save-btn' + (contemNumero(p.numero) ? ' salvo' : '');
-    saveBtn.type = 'button';
-    saveBtn.setAttribute('aria-label', `Salvar parágrafo ${p.numero}`);
-    saveBtn.innerHTML = contemNumero(p.numero)
-      ? `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>`
-      : `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`;
-    saveBtn.addEventListener('click', (e) => { e.stopPropagation(); salvarParagrafoLeitor(p, saveBtn); });
-
-    const flagBtn = criarFlagBtn(p.numero);
+    const acoes = criarLeitorAcoes(p);
 
     div.appendChild(numSpan);
     div.appendChild(textoSpan);
-    div.appendChild(saveBtn);
-    div.appendChild(flagBtn);
+    div.appendChild(acoes);
     wrapper.appendChild(div);
   }
 
@@ -402,6 +392,77 @@ function renderizarCapitulo(idx) {
   // Scroll TOC para item ativo
   const ativoEl = tocEl.querySelector('.toc-cap-link.ativo');
   if (ativoEl) ativoEl.scrollIntoView({ block: 'nearest' });
+}
+
+// ── Wrapper de ações do parágrafo (salvar + reportar) ────────────────────────
+function criarLeitorAcoes(p) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'para-acoes';
+
+  const salvo = contemNumero(p.numero);
+  const saveBtn = document.createElement('button');
+  saveBtn.className = 'para-btn' + (salvo ? ' salvo' : '');
+  saveBtn.type = 'button';
+  saveBtn.innerHTML = `
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="${salvo ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+    <span class="para-btn-label">${salvo ? 'Salvo' : 'Salvar'}</span>
+  `;
+  saveBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    salvarParagrafoLeitor(p, saveBtn);
+    saveBtn.querySelector('svg').setAttribute('fill', 'currentColor');
+    saveBtn.querySelector('.para-btn-label').textContent = 'Salvo';
+  });
+
+  const flagBtn = document.createElement('button');
+  flagBtn.className = 'para-btn para-btn-flag';
+  flagBtn.type = 'button';
+  flagBtn.innerHTML = `
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+    <span class="para-btn-label">Reportar</span>
+  `;
+  flagBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const container = flagBtn.closest('.leitor-paragrafo');
+    if (!container) return;
+    const existing = container.querySelector('.card-correcao-form');
+    if (existing) { existing.remove(); return; }
+
+    const form = document.createElement('div');
+    form.className = 'card-correcao-form';
+    form.innerHTML = `
+      <textarea placeholder="Descreva o erro encontrado neste parágrafo…" rows="3"></textarea>
+      <div class="card-correcao-form-acoes">
+        <button class="btn-correcao-cancelar" type="button">Cancelar</button>
+        <button class="btn-correcao-enviar" type="button">Enviar</button>
+      </div>
+    `;
+    container.appendChild(form);
+    form.querySelector('textarea').focus();
+    form.querySelector('.btn-correcao-cancelar').addEventListener('click', (ev) => { ev.stopPropagation(); form.remove(); });
+    form.querySelector('.btn-correcao-enviar').addEventListener('click', async (ev) => {
+      ev.stopPropagation();
+      const descricao = form.querySelector('textarea').value.trim();
+      if (!descricao) return;
+      const enviarBtn = form.querySelector('.btn-correcao-enviar');
+      enviarBtn.disabled = true; enviarBtn.textContent = 'Enviando…';
+      try {
+        const resp = await fetch('/api/correcao', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ paragrafo: p.numero, descricao }),
+        });
+        if (resp.ok) {
+          form.innerHTML = '<p class="card-correcao-ok">Obrigado! Correção recebida.</p>';
+          setTimeout(() => form.remove(), 2500);
+        } else { enviarBtn.disabled = false; enviarBtn.textContent = 'Enviar'; }
+      } catch { enviarBtn.disabled = false; enviarBtn.textContent = 'Enviar'; }
+    });
+  });
+
+  wrapper.appendChild(saveBtn);
+  wrapper.appendChild(flagBtn);
+  return wrapper;
 }
 
 // ── Botão de correção ─────────────────────────────────────────────────────────
