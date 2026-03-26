@@ -578,10 +578,7 @@
 })();
 
 document.getElementById('bf-doar').addEventListener('click', () => {
-  const doacao = document.getElementById('pix-qr-area');
-  if (doacao) {
-    doacao.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
+  document.getElementById('modal-contribuicao-overlay')?.classList.remove('oculto');
 });
 </script>
 
