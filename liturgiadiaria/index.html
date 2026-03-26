@@ -18,8 +18,9 @@
   <style>
     /* ── Base ─────────────────────────────────────────────────────────────── */
     html, body {
-      background: var(--color-bg);
+      background: var(--litur-bg, var(--color-bg));
       min-height: 100%;
+      transition: background 0.7s ease;
     }
 
     body {
@@ -30,9 +31,23 @@
     /* ── Layout dois painéis ──────────────────────────────────────────────── */
     .lp-wrap {
       display: flex;
-      min-height: 100vh;
       max-width: 1080px;
-      margin: 0 auto;
+      margin: 2rem auto 5rem;
+      min-height: calc(100vh - 7rem);
+      background: var(--color-surface);
+      border-radius: 16px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    /* Nome do dia litúrgico */
+    .nome-dia {
+      font-family: var(--font-serif);
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--color-text);
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
     }
 
     /* ── Sidebar ──────────────────────────────────────────────────────────── */
@@ -541,7 +556,7 @@
 
     /* ── Responsivo ───────────────────────────────────────────────────────── */
     @media (max-width: 700px) {
-      .lp-wrap { flex-direction: column; }
+      .lp-wrap { flex-direction: column; margin: 0; border-radius: 0; box-shadow: none; min-height: 100vh; }
 
       .lp-sidebar {
         position: static;
@@ -582,6 +597,7 @@
       <span class="cor-dot" id="lp-cor-dot"></span>
       <span class="tempo-badge" id="lp-tempo"></span>
     </div>
+    <p class="nome-dia" id="lp-nome-dia" style="display:none"></p>
 
     <ul class="lp-nav" id="lp-nav" aria-label="Leituras do dia">
       <!-- preenchido pelo JS -->
@@ -792,11 +808,99 @@ async function init() {
   document.getElementById('lp-data').textContent = dataFmt;
 
   if (raw.titulo) {
-    const COR_MAP = { roxo:'#7c3aed', branco:'#b8972e', verde:'#15803d', vermelho:'#dc2626', rosa:'#db2777' };
+    const COR_MAP    = { roxo:'#7c3aed', branco:'#b8972e', verde:'#15803d', vermelho:'#dc2626', rosa:'#db2777' };
+    const COR_BG_MAP = { roxo:'#ede6f5', branco:'#f5f0e5', verde:'#e2f0e5', vermelho:'#f5e6e0', rosa:'#f5e0ec', preto:'#ddd8d4' };
     document.getElementById('lp-tempo').textContent = raw.titulo;
     document.getElementById('lp-cor-dot').style.background = COR_MAP[raw.cor_liturgica] ?? '#888';
     document.getElementById('lp-tempo-wrap').style.display = '';
+    // Fundo litúrgico
+    const bg = COR_BG_MAP[raw.cor_liturgica];
+    if (bg) document.documentElement.style.setProperty('--litur-bg', bg);
+    // Nome do dia
+    const nome = nomeDiaLiturgico(raw.data, raw.titulo);
+    if (nome) {
+      const el = document.getElementById('lp-nome-dia');
+      el.textContent = nome;
+      el.style.display = '';
+    }
   }
+
+// ── Nome do dia litúrgico ─────────────────────────────────────────────────────
+function nomeDiaLiturgico(dataStr, titulo) {
+  const [y, m, d] = dataStr.split('-').map(Number);
+  const key = `${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+
+  const FIXAS = {
+    '01-01':'Solenidade de Maria Santíssima','01-06':'Epifania do Senhor',
+    '02-02':'Apresentação do Senhor','03-19':'São José',
+    '03-25':'Anunciação do Senhor','06-13':'Santo Antônio de Pádua',
+    '06-24':'Natividade de São João Batista','06-29':'São Pedro e São Paulo',
+    '08-06':'Transfiguração do Senhor','08-15':'Assunção de Nossa Senhora',
+    '09-08':'Natividade de Maria','09-14':'Exaltação da Santa Cruz',
+    '10-07':'Nossa Senhora do Rosário','11-01':'Todos os Santos',
+    '11-02':'Comemoração dos Fiéis Defuntos','12-08':'Imaculada Conceição',
+    '12-25':'Natal do Senhor','12-26':'Santo Estêvão','12-28':'Santos Inocentes',
+  };
+  if (FIXAS[key]) return FIXAS[key];
+
+  function calcEaster(yr) {
+    const a=yr%19,b=Math.floor(yr/100),c=yr%100,d2=Math.floor(b/4),e=b%4;
+    const f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3);
+    const h=(19*a+b-d2-g+15)%30,i=Math.floor(c/4),k=c%4;
+    const l=(32+2*e+2*i-h-k)%7,mm=Math.floor((a+11*h+22*l)/451);
+    const mo=Math.floor((h+l-7*mm+114)/31),dy=((h+l-7*mm+114)%31)+1;
+    return new Date(yr,mo-1,dy);
+  }
+
+  const dt = new Date(y,m-1,d);
+  const easter = calcEaster(y);
+  function off(n){return new Date(easter.getFullYear(),easter.getMonth(),easter.getDate()+n);}
+  function same(a,b){return a.getDate()===b.getDate()&&a.getMonth()===b.getMonth()&&a.getFullYear()===b.getFullYear();}
+
+  const MOVEIS=[[-46,'Quarta-Feira de Cinzas'],[-7,'Domingo de Ramos'],[-3,'Quinta-Feira Santa'],
+    [-2,'Sexta-Feira Santa'],[-1,'Sábado Santo'],[0,'Domingo de Páscoa'],[1,'Segunda-Feira de Páscoa'],
+    [39,'Ascensão do Senhor'],[49,'Pentecostes'],[56,'Santíssima Trindade'],[60,'Corpus Christi']];
+  for(const [n,name] of MOVEIS) if(same(dt,off(n))) return name;
+
+  const ORDS=['1ª','2ª','3ª','4ª','5ª','6ª','7ª','8ª','9ª','10ª','11ª','12ª','13ª','14ª','15ª','16ª','17ª','18ª','19ª','20ª','21ª','22ª','23ª','24ª','25ª','26ª','27ª','28ª','29ª','30ª','31ª','32ª','33ª','34ª'];
+  const dow = dt.getDay();
+
+  if(titulo==='Tempo da Quaresma'||titulo==='Semana Santa'){
+    const ashWed=off(-46);
+    const diff=Math.round((dt-ashWed)/86400000);
+    if(diff>=4&&diff<=38){
+      const wi=Math.floor((diff-4)/7);
+      if(wi<5) return dow===0?`${ORDS[wi]} Domingo da Quaresma`:`${ORDS[wi]} Semana da Quaresma`;
+    }
+  }
+
+  if(titulo==='Tempo do Advento'){
+    const nov27=new Date(y,10,27);
+    const adv1=new Date(y,10,27+((7-nov27.getDay())%7));
+    const diff=Math.round((dt-adv1)/86400000);
+    if(diff>=0&&diff<=27){
+      const wi=Math.floor(diff/7);
+      if(wi<4) return dow===0?`${ORDS[wi]} Domingo do Advento`:`${ORDS[wi]} Semana do Advento`;
+    }
+  }
+
+  if(titulo==='Tempo Comum'){
+    const jan6=new Date(y,0,6);
+    const bapt=new Date(y,0,6+((7-jan6.getDay())%7||7));
+    const ashWed=off(-46), pent=off(49);
+    if(dt>=bapt&&dt<ashWed){
+      const wi=Math.floor(Math.round((dt-bapt)/86400000)/7)+1;
+      if(wi>=1&&wi<=8) return dow===0?`${ORDS[wi-1]} Domingo do Tempo Comum`:`${ORDS[wi-1]} Semana do Tempo Comum`;
+    }
+    if(dt>pent){
+      const weeksPreLent=Math.floor(Math.round((ashWed-bapt)/86400000)/7);
+      const wn=weeksPreLent+Math.floor(Math.round((dt-pent)/86400000)/7)+1;
+      if(wn>=1&&wn<=34) return dow===0?`${ORDS[wn-1]} Domingo do Tempo Comum`:`${ORDS[wn-1]} Semana do Tempo Comum`;
+    }
+  }
+
+  return null;
+}
 
   const htmlRef = raw.referencias ?? '';
   const pl  = raw.primeira_leitura;
