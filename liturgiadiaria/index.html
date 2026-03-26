@@ -32,11 +32,11 @@
     .lp-wrap {
       display: flex;
       max-width: 1080px;
-      margin: 2rem auto 5rem;
-      min-height: calc(100vh - 7rem);
+      margin: 0.75rem auto 0.75rem;
+      min-height: calc(100vh - 1.5rem);
       background: var(--color-surface);
-      border-radius: 16px;
-      box-shadow: 0 4px 40px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
       overflow: hidden;
     }
 
@@ -809,7 +809,7 @@ async function init() {
 
   if (raw.titulo) {
     const COR_MAP    = { roxo:'#7c3aed', branco:'#b8972e', verde:'#15803d', vermelho:'#dc2626', rosa:'#db2777' };
-    const COR_BG_MAP = { roxo:'#ede6f5', branco:'#f5f0e5', verde:'#e2f0e5', vermelho:'#f5e6e0', rosa:'#f5e0ec', preto:'#ddd8d4' };
+    const COR_BG_MAP = { roxo:'#f0ecf8', branco:'#faf7ee', verde:'#edf5ef', vermelho:'#f8edeb', rosa:'#f8edf2', preto:'#eeeceb' };
     document.getElementById('lp-tempo').textContent = raw.titulo;
     document.getElementById('lp-cor-dot').style.background = COR_MAP[raw.cor_liturgica] ?? '#888';
     document.getElementById('lp-tempo-wrap').style.display = '';
