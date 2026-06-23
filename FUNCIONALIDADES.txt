@@ -260,9 +260,10 @@ DEPOIS (requer mais esforço)
 ════════════════════════════════════════════════════════════════
 
 Stack atual: Vanilla JS, sem framework, sem bundler.
-Hosting: VPS própria (Ubuntu + Nginx + Node/PM2) + deploy automático via GitHub webhook.
-IA: Grok (xAI) via API REST.
-Custo mensal estimado: R$40-80 (VPS Hostinger) + uso da API Grok.
+Hosting: Vercel (site estático + Edge Functions em api/) + deploy automático via push no main.
+IA: Grok (xAI) via API REST. Homilias da liturgia são pré-geradas (estáticas).
+Correções de erro são encaminhadas via Telegram.
+Custo mensal estimado: ~R$0 (Vercel free tier) + uso pontual da API Grok.
 
 A arquitetura atual é simples, barata e escalável.
 Não há necessidade de migrar de stack para implementar
