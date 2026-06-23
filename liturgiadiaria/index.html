@@ -59,7 +59,8 @@
       border-right: 1px solid var(--color-border);
       position: sticky;
       top: 0;
-      height: 100vh;
+      align-self: flex-start;   /* não estica junto com o conteúdo: dá espaço pro sticky */
+      max-height: 100vh;        /* curto fica colado no topo; longo rola internamente */
       overflow-y: auto;
       display: flex;
       flex-direction: column;

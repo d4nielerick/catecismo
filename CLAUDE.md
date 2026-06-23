@@ -13,7 +13,7 @@ Dois mini-sites independentes num mesmo repositório:
 
 Funcionalidades: busca client-side, modo leitura, índice analítico temático, resumos via IA (Grok), coletor de trechos, referências bíblicas em hover, cross-links entre os dois catecismos, doação via PIX.
 
-Hospedagem: **Vercel** (site estático + Edge Function em `api/resumo.js`).
+Hospedagem: **Vercel** (site estático + Edge Functions em `api/`). Backend único na Vercel — não há mais `server.js` de VPS.
 
 ---
 
@@ -60,8 +60,10 @@ catecismo/
 │   ├── normalizar_portugues.py
 │   └── scrape_indice.py
 │
-├── api/
-│   └── resumo.js           # Edge Function Vercel — resumos via Grok
+├── api/                    # Edge Functions Vercel
+│   ├── resumo.js           # resumos de busca/coleção via Grok
+│   ├── correcao.js         # encaminha correções de erro para o Telegram
+│   └── liturgia-reflexao.js# homilia do dia via Grok (fallback; ver pré-geração)
 │
 ├── vercel.json             # Config de deploy
 └── test-search.mjs         # Testes do motor de busca
@@ -124,7 +126,22 @@ O deploy é automático pelo Vercel ao fazer push para `main`. Configurado em `v
 - Raiz do projeto é o diretório estático
 - `cleanUrls: true` (sem `.html` nas URLs)
 
-A Edge Function `api/resumo.js` requer a variável de ambiente `GROK_API_KEY` configurada no painel do Vercel.
+Variáveis de ambiente no painel da Vercel:
+- `GROK_API_KEY` — usada por `api/resumo.js` e `api/liturgia-reflexao.js`
+- `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` — usadas por `api/correcao.js` (encaminha correções)
+
+### Liturgia: homilias pré-geradas
+
+A página `/liturgiadiaria/` e o widget da home leem `data/liturgia/<data>-reflexao.json` (cache
+estático). Para gerar/atualizar essas homilias offline (sem custo de runtime), rode:
+
+```bash
+GROK_API_KEY=xxxx node scripts/gerar-reflexoes.mjs          # todas as datas que faltam
+GROK_API_KEY=xxxx node scripts/gerar-reflexoes.mjs 2026-06  # só um mês
+```
+
+Os arquivos `*-reflexao.json` gerados são commitados. `api/liturgia-reflexao.js` serve apenas de
+fallback para datas ainda sem cache.
 
 ---
 
