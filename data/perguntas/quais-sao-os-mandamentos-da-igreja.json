@@ -1,0 +1,23 @@
+{
+  "pergunta": "Quais são os mandamentos da Igreja?",
+  "slug": "quais-sao-os-mandamentos-da-igreja",
+  "resposta": "O Catecismo trata do tema nos §§ 2041–2043.",
+  "paragrafos": [
+    {
+      "id": 2041,
+      "motivo": "Introduz os preceitos da Igreja, cinco ao todo, ligados à vida litúrgica e moral.",
+      "trecho": "Os preceitos da Igreja inserem-se nesta linha duma vida moral ligada à vida litúrgica e nutrindo-se dela. O carácter obrigatório destas leis positivas, promulgadas pelas autoridades pastorais, tem por fim garantir aos fiéis o mínimo indispensável de espírito de oração e de esforço moral e de crescimento no amor a Deus e ao próximo. Os preceitos mais gerais da Igreja são cinco:"
+    },
+    {
+      "id": 2042,
+      "motivo": "Detalha o primeiro preceito: participar na missa aos domingos e festas de guarda.",
+      "trecho": "O primeiro preceito («Ouvir missa inteira e abster-se de trabalhos servis nos domingos e festas de guarda») exige aos fiéis que santifiquem o dia em que se comemora a ressurreição do Senhor, bem como as principais festas litúrgicas em honra dos mistérios do Senhor, da Bem-aventurada Virgem Maria e dos Santos, que a Igreja declara como sendo de preceito, sobretudo participando na celebração eucarística em que a comunidade cristã se reúne e descansando de trabalhos e ocupações que possam impedir a santificação desses dias (86).\nO segundo preceito («Confessar-se ao menos uma vez em cada ano») assegura a preparação para a Eucaristia, mediante a recepção do sacramento da Reconciliação que continua a obra de conversão e perdão do Baptismo (87).\nO terceiro preceito («Comungar ao menos pela Páscoa da Ressurreição») garante um mínimo na recepção do Corpo e Sangue do Senhor, em ligação com as festas pascais, origem e centro da liturgia cristã (88)."
+    },
+    {
+      "id": 2043,
+      "motivo": "Detalha o quarto preceito: jejuar e guardar abstinência nos dias determinados.",
+      "trecho": "O quarto preceito («Guardar abstinência e jejuar nos dias determinados pela Igreja») assegura os dias de ascese e de penitência que nos preparam para as festas litúrgicas e contribuem para nos fazer adquirir domínio sobre os nossos instintos e a liberdade do coração (89).\nO quinto preceito («prover as necessidades da Igreja, segundo os legítimos usos e costumes e as determinações») aponta ainda aos fiéis a obrigação de prover, às necessidades materiais da Igreja consoante as possibilidades de cada um (90)."
+    }
+  ],
+  "gerado_em": "2026-07-23T13:24:38.255Z"
+}
