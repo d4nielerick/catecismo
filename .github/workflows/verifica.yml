@@ -15,5 +15,7 @@ jobs:
         run: node scripts/verifica-integridade.mjs
       - name: Citações das perguntas (byte a byte)
         run: node scripts/verifica-citacoes.mjs
+      - name: Notas de rodapé (reprodutível + cobertura)
+        run: node scripts/verifica-notas.mjs
       - name: Motor de busca
         run: node test-search.mjs

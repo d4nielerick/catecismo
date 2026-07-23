@@ -154,6 +154,21 @@ Para corrigir texto: nunca edite `catecismo.json` diretamente — registre um pa
 vocabulário). Se o Vaticano atualizar o texto (como o §2267 em 2018), re-rode o scraper e
 o `aplica-fonte.mjs` + `aplica-grafia.mjs`.
 
+### Notas de rodapé (NÃO editar notas.json à mão)
+
+`data/notas.json` (`{ "§": { "marcador": "texto" } }`, consumido por `assets/js/data.js`) é
+reconstruído deterministicamente e o CI valida via `scripts/verifica-notas.mjs`:
+
+```
+cache HTML do vatican.va (../cache-vaticano) --scrape-notas-vaticano.mjs--> data/fonte-notas-vaticano.json
+data/fonte-notas-vaticano.json + marcadores "(N)" de catecismo.json --build-notas.mjs--> data/notas.json
+```
+
+As notas são numeradas contínuas POR ARQUIVO (capítulo); `build-notas.mjs` casa a nota N com o §
+cujo texto tem o marcador "(N)". Cobertura atual ~99,4% (21 marcadores sem nota por número de nota
+danificado no OCR da fonte — ex.: §2831 nota "101" saiu como "10.1" grudada na 100). `verifica-notas.mjs`
+exige reprodutibilidade (notas.json == build) + piso de cobertura. Helpers HTML em `scripts/lib-html.mjs`.
+
 ---
 
 ## Scripts Python (processamento offline)
