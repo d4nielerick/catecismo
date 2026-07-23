@@ -136,6 +136,24 @@ saía com cara de IA e alucinava). `/liturgiadiaria/` e o widget da home mostram
 oficiais. `scripts/gerar-reflexoes.mjs` continua no repo como ferramenta offline para uma eventual
 retomada, mas não é mais chamado por nenhuma página nem função de API.
 
+### Integridade do texto do Catecismo (NÃO editar catecismo.json à mão)
+
+`data/catecismo.json` é gerado deterministicamente e o CI (`.github/workflows/verifica.yml`)
+prova isso a cada PR via `scripts/verifica-integridade.mjs`:
+
+```
+data/fonte-vaticano.json        texto oficial (scrape validado de vatican.va — scripts/scrape-cic-vaticano.mjs)
+  + data/grafia-ptbr-pares.json adaptação ortográfica pt-PT → pt-BR (palavra inteira, caixa preservada)
+  + data/grafia-ajustes.json    ajustes por ocorrência (concordância de particípios, errata da fonte)
+  = data/catecismo.json
+```
+
+Para corrigir texto: nunca edite `catecismo.json` diretamente — registre um par em
+`grafia-ptbr-pares.json` (vale para todas as ocorrências) ou um ajuste escopado por § em
+`grafia-ajustes.json`, e rode `node scripts/aplica-grafia.mjs` (idempotente, com trava de
+vocabulário). Se o Vaticano atualizar o texto (como o §2267 em 2018), re-rode o scraper e
+o `aplica-fonte.mjs` + `aplica-grafia.mjs`.
+
 ---
 
 ## Scripts Python (processamento offline)

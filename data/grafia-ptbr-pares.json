@@ -1,0 +1,930 @@
+[
+ {
+  "de": "baptismo",
+  "para": "batismo"
+ },
+ {
+  "de": "acção",
+  "para": "ação"
+ },
+ {
+  "de": "matrimónio",
+  "para": "matrimônio"
+ },
+ {
+  "de": "facto",
+  "para": "fato"
+ },
+ {
+  "de": "actos",
+  "para": "atos"
+ },
+ {
+  "de": "acto",
+  "para": "ato"
+ },
+ {
+  "de": "carácter",
+  "para": "caráter"
+ },
+ {
+  "de": "objecto",
+  "para": "objeto"
+ },
+ {
+  "de": "acções",
+  "para": "ações"
+ },
+ {
+  "de": "baptizados",
+  "para": "batizados"
+ },
+ {
+  "de": "baptismal",
+  "para": "batismal"
+ },
+ {
+  "de": "baptizado",
+  "para": "batizado"
+ },
+ {
+  "de": "género",
+  "para": "gênero"
+ },
+ {
+  "de": "egipto",
+  "para": "egito"
+ },
+ {
+  "de": "adopção",
+  "para": "adoção"
+ },
+ {
+  "de": "connosco",
+  "para": "conosco"
+ },
+ {
+  "de": "económica",
+  "para": "econômica"
+ },
+ {
+  "de": "omnipotente",
+  "para": "onipotente"
+ },
+ {
+  "de": "actividade",
+  "para": "atividade"
+ },
+ {
+  "de": "directamente",
+  "para": "diretamente"
+ },
+ {
+  "de": "recta",
+  "para": "reta"
+ },
+ {
+  "de": "ecuménico",
+  "para": "ecumênico"
+ },
+ {
+  "de": "demónios",
+  "para": "demônios"
+ },
+ {
+  "de": "direcção",
+  "para": "direção"
+ },
+ {
+  "de": "directa",
+  "para": "direta"
+ },
+ {
+  "de": "actual",
+  "para": "atual"
+ },
+ {
+  "de": "omnipotência",
+  "para": "onipotência"
+ },
+ {
+  "de": "secção",
+  "para": "seção"
+ },
+ {
+  "de": "efectivamente",
+  "para": "efetivamente"
+ },
+ {
+  "de": "actua",
+  "para": "atua"
+ },
+ {
+  "de": "baptista",
+  "para": "batista"
+ },
+ {
+  "de": "rectidão",
+  "para": "retidão"
+ },
+ {
+  "de": "protecção",
+  "para": "proteção"
+ },
+ {
+  "de": "unigénito",
+  "para": "unigênito"
+ },
+ {
+  "de": "blasfémia",
+  "para": "blasfêmia"
+ },
+ {
+  "de": "adoptivos",
+  "para": "adotivos"
+ },
+ {
+  "de": "primogénito",
+  "para": "primogênito"
+ },
+ {
+  "de": "activa",
+  "para": "ativa"
+ },
+ {
+  "de": "económicas",
+  "para": "econômicas"
+ },
+ {
+  "de": "recto",
+  "para": "reto"
+ },
+ {
+  "de": "excepção",
+  "para": "exceção"
+ },
+ {
+  "de": "factos",
+  "para": "fatos"
+ },
+ {
+  "de": "baptizar",
+  "para": "batizar"
+ },
+ {
+  "de": "indirectamente",
+  "para": "indiretamente"
+ },
+ {
+  "de": "baptiza",
+  "para": "batiza"
+ },
+ {
+  "de": "actualiza",
+  "para": "atualiza"
+ },
+ {
+  "de": "fracção",
+  "para": "fração"
+ },
+ {
+  "de": "projecto",
+  "para": "projeto"
+ },
+ {
+  "de": "afecto",
+  "para": "afeto"
+ },
+ {
+  "de": "objectivos",
+  "para": "objetivos"
+ },
+ {
+  "de": "afectos",
+  "para": "afetos"
+ },
+ {
+  "de": "reflectem",
+  "para": "refletem"
+ },
+ {
+  "de": "deuteronómio",
+  "para": "deuteronômio"
+ },
+ {
+  "de": "atracção",
+  "para": "atração"
+ },
+ {
+  "de": "contacto",
+  "para": "contato"
+ },
+ {
+  "de": "actuais",
+  "para": "atuais"
+ },
+ {
+  "de": "actividades",
+  "para": "atividades"
+ },
+ {
+  "de": "objectos",
+  "para": "objetos"
+ },
+ {
+  "de": "génesis",
+  "para": "gênesis"
+ },
+ {
+  "de": "baptismos",
+  "para": "batismos"
+ },
+ {
+  "de": "actuação",
+  "para": "atuação"
+ },
+ {
+  "de": "objectivo",
+  "para": "objetivo"
+ },
+ {
+  "de": "objectivamente",
+  "para": "objetivamente"
+ },
+ {
+  "de": "adoptados",
+  "para": "adotados"
+ },
+ {
+  "de": "económicos",
+  "para": "econômicos"
+ },
+ {
+  "de": "directo",
+  "para": "direto"
+ },
+ {
+  "de": "efectiva",
+  "para": "efetiva"
+ },
+ {
+  "de": "susceptíveis",
+  "para": "suscetíveis"
+ },
+ {
+  "de": "afectividade",
+  "para": "afetividade"
+ },
+ {
+  "de": "correcção",
+  "para": "correção"
+ },
+ {
+  "de": "património",
+  "para": "patrimônio"
+ },
+ {
+  "de": "factores",
+  "para": "fatores"
+ },
+ {
+  "de": "erróneo",
+  "para": "errôneo"
+ },
+ {
+  "de": "baptizo",
+  "para": "batizo"
+ },
+ {
+  "de": "baptizai-os",
+  "para": "batizai-os"
+ },
+ {
+  "de": "pós-baptismal",
+  "para": "pós-batismal"
+ },
+ {
+  "de": "baptismais",
+  "para": "batismais"
+ },
+ {
+  "de": "actuante",
+  "para": "atuante"
+ },
+ {
+  "de": "activo",
+  "para": "ativo"
+ },
+ {
+  "de": "actuam",
+  "para": "atuam"
+ },
+ {
+  "de": "objectiva",
+  "para": "objetiva"
+ },
+ {
+  "de": "objectivas",
+  "para": "objetivas"
+ },
+ {
+  "de": "adoptiva",
+  "para": "adotiva"
+ },
+ {
+  "de": "adoptivo",
+  "para": "adotivo"
+ },
+ {
+  "de": "rectamente",
+  "para": "retamente"
+ },
+ {
+  "de": "demónio",
+  "para": "demônio"
+ },
+ {
+  "de": "afecta",
+  "para": "afeta"
+ },
+ {
+  "de": "génese",
+  "para": "gênese"
+ },
+ {
+  "de": "predilecção",
+  "para": "predileção"
+ },
+ {
+  "de": "calcedónia",
+  "para": "calcedônia"
+ },
+ {
+  "de": "colectânea",
+  "para": "coletânea"
+ },
+ {
+  "de": "colectiva",
+  "para": "coletiva"
+ },
+ {
+  "de": "distracção",
+  "para": "distração"
+ },
+ {
+  "de": "baptizando-os",
+  "para": "batizando-os"
+ },
+ {
+  "de": "actas",
+  "para": "atas"
+ },
+ {
+  "de": "actualizar",
+  "para": "atualizar"
+ },
+ {
+  "de": "actualização",
+  "para": "atualização"
+ },
+ {
+  "de": "actuar",
+  "para": "atuar"
+ },
+ {
+  "de": "actores",
+  "para": "atores"
+ },
+ {
+  "de": "actor",
+  "para": "ator"
+ },
+ {
+  "de": "géneros",
+  "para": "gêneros"
+ },
+ {
+  "de": "adoptado",
+  "para": "adotado"
+ },
+ {
+  "de": "económico",
+  "para": "econômico"
+ },
+ {
+  "de": "ecuménica",
+  "para": "ecumênica"
+ },
+ {
+  "de": "afectiva",
+  "para": "afetiva"
+ },
+ {
+  "de": "atractivo",
+  "para": "atrativo"
+ },
+ {
+  "de": "erróneos",
+  "para": "errôneos"
+ },
+ {
+  "de": "erróneas",
+  "para": "errôneas"
+ },
+ {
+  "de": "anónima",
+  "para": "anônima"
+ },
+ {
+  "de": "espectáculo",
+  "para": "espetáculo"
+ },
+ {
+  "de": "espectáculos",
+  "para": "espetáculos"
+ },
+ {
+  "de": "predilecto",
+  "para": "predileto"
+ },
+ {
+  "de": "reacção",
+  "para": "reação"
+ },
+ {
+  "de": "sinópticos",
+  "para": "sinóticos"
+ },
+ {
+  "de": "matrimónios",
+  "para": "matrimônios"
+ },
+ {
+  "de": "coacção",
+  "para": "coação"
+ },
+ {
+  "de": "fenómenos",
+  "para": "fenômenos"
+ },
+ {
+  "de": "canónica",
+  "para": "canônica"
+ },
+ {
+  "de": "getsémani",
+  "para": "getsêmani"
+ },
+ {
+  "de": "tacto",
+  "para": "tato"
+ },
+ {
+  "de": "tecto",
+  "para": "teto"
+ },
+ {
+  "de": "começámos",
+  "para": "começamos"
+ },
+ {
+  "de": "baptistério",
+  "para": "batistério"
+ },
+ {
+  "de": "baptizeis",
+  "para": "batizeis"
+ },
+ {
+  "de": "recém-baptizado",
+  "para": "recém-batizado"
+ },
+ {
+  "de": "recém-baptizada",
+  "para": "recém-batizada"
+ },
+ {
+  "de": "baptizada",
+  "para": "batizada"
+ },
+ {
+  "de": "baptizassem",
+  "para": "batizassem"
+ },
+ {
+  "de": "baptizadas",
+  "para": "batizadas"
+ },
+ {
+  "de": "baptizasse",
+  "para": "batizasse"
+ },
+ {
+  "de": "não-baptizado",
+  "para": "não-batizado"
+ },
+ {
+  "de": "redactores",
+  "para": "redatores"
+ },
+ {
+  "de": "actualidade",
+  "para": "atualidade"
+ },
+ {
+  "de": "actuando",
+  "para": "atuando"
+ },
+ {
+  "de": "activar",
+  "para": "ativar"
+ },
+ {
+  "de": "actualiza-os",
+  "para": "atualiza-os"
+ },
+ {
+  "de": "actualmente",
+  "para": "atualmente"
+ },
+ {
+  "de": "activamente",
+  "para": "ativamente"
+ },
+ {
+  "de": "actuem",
+  "para": "atuem"
+ },
+ {
+  "de": "actualizam-nas",
+  "para": "atualizam-nas"
+ },
+ {
+  "de": "actualizada",
+  "para": "atualizada"
+ },
+ {
+  "de": "activismo",
+  "para": "ativismo"
+ },
+ {
+  "de": "objecta-se",
+  "para": "objeta-se"
+ },
+ {
+  "de": "objecções",
+  "para": "objeções"
+ },
+ {
+  "de": "objecta",
+  "para": "objeta"
+ },
+ {
+  "de": "adoptar",
+  "para": "adotar"
+ },
+ {
+  "de": "adopta",
+  "para": "adota"
+ },
+ {
+  "de": "adoptadas",
+  "para": "adotadas"
+ },
+ {
+  "de": "adoptando",
+  "para": "adotando"
+ },
+ {
+  "de": "adoptando-nos",
+  "para": "adotando-nos"
+ },
+ {
+  "de": "sócio-económicos",
+  "para": "sócio-econômicos"
+ },
+ {
+  "de": "sócio-económicas",
+  "para": "sócio-econômicas"
+ },
+ {
+  "de": "directório",
+  "para": "diretório"
+ },
+ {
+  "de": "directrizes",
+  "para": "diretrizes"
+ },
+ {
+  "de": "directas",
+  "para": "diretas"
+ },
+ {
+  "de": "directos",
+  "para": "diretos"
+ },
+ {
+  "de": "indirecta",
+  "para": "indireta"
+ },
+ {
+  "de": "rectifica",
+  "para": "retifica"
+ },
+ {
+  "de": "rectas",
+  "para": "retas"
+ },
+ {
+  "de": "ecuménicos",
+  "para": "ecumênicos"
+ },
+ {
+  "de": "efectuaram",
+  "para": "efetuaram"
+ },
+ {
+  "de": "susceptível",
+  "para": "suscetível"
+ },
+ {
+  "de": "protectora",
+  "para": "protetora"
+ },
+ {
+  "de": "protector",
+  "para": "protetor"
+ },
+ {
+  "de": "primogénitos",
+  "para": "primogênitos"
+ },
+ {
+  "de": "excepto",
+  "para": "exceto"
+ },
+ {
+  "de": "excepções",
+  "para": "exceções"
+ },
+ {
+  "de": "projectos",
+  "para": "projetos"
+ },
+ {
+  "de": "projectar",
+  "para": "projetar"
+ },
+ {
+  "de": "projecta",
+  "para": "projeta"
+ },
+ {
+  "de": "afectam-no",
+  "para": "afetam-no"
+ },
+ {
+  "de": "afectar",
+  "para": "afetar"
+ },
+ {
+  "de": "afectivas",
+  "para": "afetivas"
+ },
+ {
+  "de": "reflecte",
+  "para": "reflete"
+ },
+ {
+  "de": "reflectida",
+  "para": "refletida"
+ },
+ {
+  "de": "reflectir",
+  "para": "refletir"
+ },
+ {
+  "de": "atractivos",
+  "para": "atrativos"
+ },
+ {
+  "de": "contactar",
+  "para": "contatar"
+ },
+ {
+  "de": "correcções",
+  "para": "correções"
+ },
+ {
+  "de": "correcto",
+  "para": "correto"
+ },
+ {
+  "de": "patrimónios",
+  "para": "patrimônios"
+ },
+ {
+  "de": "facturas",
+  "para": "faturas"
+ },
+ {
+  "de": "errónea",
+  "para": "errônea"
+ },
+ {
+  "de": "filémon",
+  "para": "filêmon"
+ },
+ {
+  "de": "canónico",
+  "para": "canônico"
+ },
+ {
+  "de": "canónicos",
+  "para": "canônicos"
+ },
+ {
+  "de": "canónicas",
+  "para": "canônicas"
+ },
+ {
+  "de": "sinónimo",
+  "para": "sinônimo"
+ },
+ {
+  "de": "tónica",
+  "para": "tônica"
+ },
+ {
+  "de": "redacção",
+  "para": "redação"
+ },
+ {
+  "de": "polémicas",
+  "para": "polêmicas"
+ },
+ {
+  "de": "homogénea",
+  "para": "homogênea"
+ },
+ {
+  "de": "erectos",
+  "para": "eretos"
+ },
+ {
+  "de": "nocturno",
+  "para": "noturno"
+ },
+ {
+  "de": "arménio",
+  "para": "armênio"
+ },
+ {
+  "de": "arménia",
+  "para": "armênia"
+ },
+ {
+  "de": "génio",
+  "para": "gênio"
+ },
+ {
+  "de": "colecta",
+  "para": "coleta"
+ },
+ {
+  "de": "colectivismo",
+  "para": "coletivismo"
+ },
+ {
+  "de": "colectividade",
+  "para": "coletividade"
+ },
+ {
+  "de": "colectivos",
+  "para": "coletivos"
+ },
+ {
+  "de": "indemnizar",
+  "para": "indenizar"
+ },
+ {
+  "de": "indemnizado",
+  "para": "indenizado"
+ },
+ {
+  "de": "duradoiro",
+  "para": "duradouro"
+ },
+ {
+  "de": "oiro",
+  "para": "ouro"
+ },
+ {
+  "de": "infracção",
+  "para": "infração"
+ },
+ {
+  "de": "sectores",
+  "para": "setores"
+ },
+ {
+  "de": "sector",
+  "para": "setor"
+ },
+ {
+  "de": "sémen",
+  "para": "sêmen"
+ },
+ {
+  "de": "exacta",
+  "para": "exata"
+ },
+ {
+  "de": "exacto",
+  "para": "exato"
+ },
+ {
+  "de": "abstracto",
+  "para": "abstrato"
+ },
+ {
+  "de": "abstracção",
+  "para": "abstração"
+ },
+ {
+  "de": "congénita",
+  "para": "congênita"
+ },
+ {
+  "de": "efémera",
+  "para": "efêmera"
+ },
+ {
+  "de": "atómicas",
+  "para": "atômicas"
+ },
+ {
+  "de": "selectiva",
+  "para": "seletiva"
+ },
+ {
+  "de": "distracções",
+  "para": "distrações"
+ },
+ {
+  "de": "dilecção",
+  "para": "dileção"
+ },
+ {
+  "de": "adjectivo",
+  "para": "adjetivo"
+ },
+ {
+  "de": "crónicas",
+  "para": "crônicas"
+ },
+ {
+  "de": "escutámos",
+  "para": "escutamos"
+ },
+ {
+  "de": "contemplámos",
+  "para": "contemplamos"
+ },
+ {
+  "de": "encontrámos",
+  "para": "encontramos"
+ },
+ {
+  "de": "ressuscitámos",
+  "para": "ressuscitamos"
+ },
+ {
+  "de": "tornámos",
+  "para": "tornamos"
+ },
+ {
+  "de": "deixámos",
+  "para": "deixamos"
+ },
+ {
+  "de": "amámos",
+  "para": "amamos"
+ },
+ {
+  "de": "act",
+  "para": "at"
+ },
+ {
+  "de": "desporto",
+  "para": "esporte"
+ },
+ {
+  "de": "desportivo",
+  "para": "esportivo"
+ },
+ {
+  "de": "desportivos",
+  "para": "esportivos"
+ }
+]
