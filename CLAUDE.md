@@ -62,8 +62,7 @@ catecismo/
 │
 ├── api/                    # Edge Functions Vercel
 │   ├── resumo.js           # resumos de busca/coleção via Grok
-│   ├── correcao.js         # encaminha correções de erro para o Telegram
-│   └── liturgia-reflexao.js# homilia do dia via Grok (fallback; ver pré-geração)
+│   └── correcao.js         # encaminha correções de erro para o Telegram
 │
 ├── vercel.json             # Config de deploy
 └── test-search.mjs         # Testes do motor de busca
@@ -127,21 +126,15 @@ O deploy é automático pelo Vercel ao fazer push para `main`. Configurado em `v
 - `cleanUrls: true` (sem `.html` nas URLs)
 
 Variáveis de ambiente no painel da Vercel:
-- `GROK_API_KEY` — usada por `api/resumo.js` e `api/liturgia-reflexao.js`
+- `GROK_API_KEY` — usada por `api/resumo.js`
 - `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` — usadas por `api/correcao.js` (encaminha correções)
 
-### Liturgia: homilias pré-geradas
+### Liturgia: reflexão/homilia por IA (removida)
 
-A página `/liturgiadiaria/` e o widget da home leem `data/liturgia/<data>-reflexao.json` (cache
-estático). Para gerar/atualizar essas homilias offline (sem custo de runtime), rode:
-
-```bash
-GROK_API_KEY=xxxx node scripts/gerar-reflexoes.mjs          # todas as datas que faltam
-GROK_API_KEY=xxxx node scripts/gerar-reflexoes.mjs 2026-06  # só um mês
-```
-
-Os arquivos `*-reflexao.json` gerados são commitados. `api/liturgia-reflexao.js` serve apenas de
-fallback para datas ainda sem cache.
+A homilia gerada por IA para o Evangelho do dia foi removida do runtime (decisão do dono: o texto
+saía com cara de IA e alucinava). `/liturgiadiaria/` e o widget da home mostram só as leituras
+oficiais. `scripts/gerar-reflexoes.mjs` continua no repo como ferramenta offline para uma eventual
+retomada, mas não é mais chamado por nenhuma página nem função de API.
 
 ---
 
