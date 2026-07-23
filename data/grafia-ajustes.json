@@ -1,0 +1,50 @@
+[
+ {
+  "numero": 32,
+  "de": "«Ptdcher»",
+  "para": "«Pulcher»",
+  "motivo": "OCR do vatican.va — Pulcher (Sto. Agostinho)"
+ },
+ {
+  "numero": 32,
+  "de": "sujeite à mudança",
+  "para": "sujeito à mudança",
+  "motivo": "typo da fonte"
+ },
+ {
+  "numero": 266,
+  "de": "sepa-raptes",
+  "para": "separantes",
+  "motivo": "OCR da fonte no Símbolo Quicumque (latim)"
+ },
+ {
+  "numero": 612,
+  "de": "é aceite seguidamente",
+  "para": "é aceito seguidamente",
+  "motivo": "particípio; sujeito masc. (o cálice)"
+ },
+ {
+  "numero": 1460,
+  "de": "são aceites pelo Pai",
+  "para": "são aceitos pelo Pai",
+  "motivo": "particípio plural masc."
+ },
+ {
+  "numero": 1579,
+  "de": "aceite de coração alegre",
+  "para": "aceito de coração alegre",
+  "motivo": "particípio; sujeito masc. (o celibato)"
+ },
+ {
+  "numero": 2266,
+  "de": "voluntariamente aceite",
+  "para": "voluntariamente aceita",
+  "motivo": "particípio; sujeito fem. (a pena)"
+ },
+ {
+  "numero": 2384,
+  "de": "livremente aceite",
+  "para": "livremente aceito",
+  "motivo": "particípio; sujeito masc. (o contrato)"
+ }
+]

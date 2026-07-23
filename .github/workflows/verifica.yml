@@ -1,0 +1,19 @@
+name: verifica
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Integridade do Catecismo (fonte oficial + grafia pt-BR)
+        run: node scripts/verifica-integridade.mjs
+      - name: Citações das perguntas (byte a byte)
+        run: node scripts/verifica-citacoes.mjs
+      - name: Motor de busca
+        run: node test-search.mjs

@@ -8,6 +8,10 @@
     "pergunta": "A Igreja reconhece o batismo de outras religiões?"
   },
   {
+    "slug": "a-pena-de-morte-e-permitida-pela-igreja",
+    "pergunta": "A pena de morte é permitida pela Igreja?"
+  },
+  {
     "slug": "casamento-civil-tem-valor-para-a-igreja",
     "pergunta": "Casamento civil tem valor para a Igreja?"
   },
@@ -138,6 +142,10 @@
   {
     "slug": "por-que-rezar-para-os-santos",
     "pergunta": "Por que rezar para os santos?"
+  },
+  {
+    "slug": "quais-sao-os-mandamentos-da-igreja",
+    "pergunta": "Quais são os mandamentos da Igreja?"
   },
   {
     "slug": "quais-sao-os-sete-sacramentos-da-igreja",

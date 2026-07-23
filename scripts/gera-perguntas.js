@@ -36,9 +36,7 @@ const perguntas = [
   "O que é pecado mortal?",
   "Qual a diferença entre pecado mortal e venial?",
   "O que a Igreja ensina sobre aborto?",
-  // "A pena de morte é permitida pela Igreja?" — SUSPENSA: data/catecismo.json traz o §2267
-  // truncado (falta a revisão de 2018 que declara a pena de morte inadmissível). Reativar
-  // somente após corrigir a fonte, senão a resposta deturpa o ensinamento atual.
+  "A pena de morte é permitida pela Igreja?",
   "O que é a eutanásia segundo o Catecismo?",
   "O que o Catecismo ensina sobre mentira?",
   "O que é a consciência moral segundo a Igreja?",
@@ -62,8 +60,7 @@ const perguntas = [
   "O que é o Rosário e por que rezar?",
   "É obrigação ir à missa todo domingo?",
   "O que é o jejum e a abstinência na Igreja?",
-  // "Quais são os mandamentos da Igreja?" — SUSPENSA: §2042/§2043 truncados na fonte (só 2 dos
-  // 5 preceitos têm texto; o §2041 anuncia "são cinco"). Reativar após corrigir data/catecismo.json.
+  "Quais são os mandamentos da Igreja?",
   "O que é a oração segundo o Catecismo?",
   "O que é a lectio divina?",
 

@@ -1,0 +1,9192 @@
+{
+  "geradoEm": "2026-07-23T13:21:37.639Z",
+  "totalParagrafosFonte": 2865,
+  "totalParagrafosCatecismo": 2865,
+  "totalComparado": 2865,
+  "contagens": {
+    "identico": 1114,
+    "leve": 1263,
+    "truncado": 476,
+    "divergente": 12,
+    "semCorrespondenteNoCatecismo": 0
+  },
+  "somaBatendoComTotal": true,
+  "extrasNoCatecismoAusentesNaFonte": [],
+  "semCorrespondenteNoCatecismo": [],
+  "truncados": [
+    {
+      "numero": 24,
+      "tamanhoAtual": 385,
+      "tamanhoFonte": 1266,
+      "crescimentoPercentual": 228.8
+    },
+    {
+      "numero": 25,
+      "tamanhoAtual": 105,
+      "tamanhoFonte": 599,
+      "crescimentoPercentual": 470.5
+    },
+    {
+      "numero": 27,
+      "tamanhoAtual": 238,
+      "tamanhoFonte": 627,
+      "crescimentoPercentual": 163.4
+    },
+    {
+      "numero": 28,
+      "tamanhoAtual": 316,
+      "tamanhoFonte": 673,
+      "crescimentoPercentual": 113
+    },
+    {
+      "numero": 30,
+      "tamanhoAtual": 377,
+      "tamanhoFonte": 933,
+      "crescimentoPercentual": 147.5
+    },
+    {
+      "numero": 31,
+      "tamanhoAtual": 355,
+      "tamanhoFonte": 461,
+      "crescimentoPercentual": 29.9
+    },
+    {
+      "numero": 32,
+      "tamanhoAtual": 161,
+      "tamanhoFonte": 858,
+      "crescimentoPercentual": 432.9
+    },
+    {
+      "numero": 37,
+      "tamanhoAtual": 159,
+      "tamanhoFonte": 1136,
+      "crescimentoPercentual": 614.5
+    },
+    {
+      "numero": 53,
+      "tamanhoAtual": 403,
+      "tamanhoFonte": 691,
+      "crescimentoPercentual": 71.5
+    },
+    {
+      "numero": 55,
+      "tamanhoAtual": 327,
+      "tamanhoFonte": 476,
+      "crescimentoPercentual": 45.6
+    },
+    {
+      "numero": 65,
+      "tamanhoAtual": 244,
+      "tamanhoFonte": 941,
+      "crescimentoPercentual": 285.7
+    },
+    {
+      "numero": 67,
+      "tamanhoAtual": 493,
+      "tamanhoFonte": 726,
+      "crescimentoPercentual": 47.3
+    },
+    {
+      "numero": 74,
+      "tamanhoAtual": 261,
+      "tamanhoFonte": 418,
+      "crescimentoPercentual": 60.2
+    },
+    {
+      "numero": 76,
+      "tamanhoAtual": 79,
+      "tamanhoFonte": 446,
+      "crescimentoPercentual": 464.6
+    },
+    {
+      "numero": 81,
+      "tamanhoAtual": 96,
+      "tamanhoFonte": 387,
+      "crescimentoPercentual": 303.1
+    },
+    {
+      "numero": 83,
+      "tamanhoAtual": 311,
+      "tamanhoFonte": 723,
+      "crescimentoPercentual": 132.5
+    },
+    {
+      "numero": 94,
+      "tamanhoAtual": 134,
+      "tamanhoFonte": 604,
+      "crescimentoPercentual": 350.7
+    },
+    {
+      "numero": 102,
+      "tamanhoAtual": 139,
+      "tamanhoFonte": 420,
+      "crescimentoPercentual": 202.2
+    },
+    {
+      "numero": 105,
+      "tamanhoAtual": 182,
+      "tamanhoFonte": 477,
+      "crescimentoPercentual": 162.1
+    },
+    {
+      "numero": 111,
+      "tamanhoAtual": 274,
+      "tamanhoFonte": 401,
+      "crescimentoPercentual": 46.4
+    },
+    {
+      "numero": 112,
+      "tamanhoAtual": 276,
+      "tamanhoFonte": 648,
+      "crescimentoPercentual": 134.8
+    },
+    {
+      "numero": 117,
+      "tamanhoAtual": 161,
+      "tamanhoFonte": 780,
+      "crescimentoPercentual": 384.5
+    },
+    {
+      "numero": 118,
+      "tamanhoAtual": 62,
+      "tamanhoFonte": 286,
+      "crescimentoPercentual": 361.3
+    },
+    {
+      "numero": 119,
+      "tamanhoAtual": 415,
+      "tamanhoFonte": 611,
+      "crescimentoPercentual": 47.2
+    },
+    {
+      "numero": 120,
+      "tamanhoAtual": 317,
+      "tamanhoFonte": 1311,
+      "crescimentoPercentual": 313.6
+    },
+    {
+      "numero": 122,
+      "tamanhoAtual": 130,
+      "tamanhoFonte": 511,
+      "crescimentoPercentual": 293.1
+    },
+    {
+      "numero": 126,
+      "tamanhoAtual": 58,
+      "tamanhoFonte": 1050,
+      "crescimentoPercentual": 1710.3
+    },
+    {
+      "numero": 127,
+      "tamanhoAtual": 192,
+      "tamanhoFonte": 588,
+      "crescimentoPercentual": 206.3
+    },
+    {
+      "numero": 152,
+      "tamanhoAtual": 471,
+      "tamanhoFonte": 559,
+      "crescimentoPercentual": 18.7
+    },
+    {
+      "numero": 163,
+      "tamanhoAtual": 245,
+      "tamanhoFonte": 429,
+      "crescimentoPercentual": 75.1
+    },
+    {
+      "numero": 186,
+      "tamanhoAtual": 271,
+      "tamanhoFonte": 692,
+      "crescimentoPercentual": 155.4
+    },
+    {
+      "numero": 193,
+      "tamanhoAtual": 219,
+      "tamanhoFonte": 309,
+      "crescimentoPercentual": 41.1
+    },
+    {
+      "numero": 197,
+      "tamanhoAtual": 338,
+      "tamanhoFonte": 489,
+      "crescimentoPercentual": 44.7
+    },
+    {
+      "numero": 202,
+      "tamanhoAtual": 454,
+      "tamanhoFonte": 722,
+      "crescimentoPercentual": 59
+    },
+    {
+      "numero": 205,
+      "tamanhoAtual": 539,
+      "tamanhoFonte": 987,
+      "crescimentoPercentual": 83.1
+    },
+    {
+      "numero": 226,
+      "tamanhoAtual": 205,
+      "tamanhoFonte": 408,
+      "crescimentoPercentual": 99
+    },
+    {
+      "numero": 256,
+      "tamanhoAtual": 130,
+      "tamanhoFonte": 1067,
+      "crescimentoPercentual": 720.8
+    },
+    {
+      "numero": 260,
+      "tamanhoAtual": 343,
+      "tamanhoFonte": 920,
+      "crescimentoPercentual": 168.2
+    },
+    {
+      "numero": 293,
+      "tamanhoAtual": 603,
+      "tamanhoFonte": 935,
+      "crescimentoPercentual": 55.1
+    },
+    {
+      "numero": 296,
+      "tamanhoAtual": 207,
+      "tamanhoFonte": 470,
+      "crescimentoPercentual": 127.1
+    },
+    {
+      "numero": 297,
+      "tamanhoAtual": 169,
+      "tamanhoFonte": 773,
+      "crescimentoPercentual": 357.4
+    },
+    {
+      "numero": 301,
+      "tamanhoAtual": 277,
+      "tamanhoFonte": 632,
+      "crescimentoPercentual": 128.2
+    },
+    {
+      "numero": 302,
+      "tamanhoAtual": 335,
+      "tamanhoFonte": 608,
+      "crescimentoPercentual": 81.5
+    },
+    {
+      "numero": 311,
+      "tamanhoAtual": 470,
+      "tamanhoFonte": 675,
+      "crescimentoPercentual": 43.6
+    },
+    {
+      "numero": 313,
+      "tamanhoAtual": 123,
+      "tamanhoFonte": 796,
+      "crescimentoPercentual": 547.2
+    },
+    {
+      "numero": 344,
+      "tamanhoAtual": 133,
+      "tamanhoFonte": 688,
+      "crescimentoPercentual": 417.3
+    },
+    {
+      "numero": 356,
+      "tamanhoAtual": 309,
+      "tamanhoFonte": 606,
+      "crescimentoPercentual": 96.1
+    },
+    {
+      "numero": 358,
+      "tamanhoAtual": 120,
+      "tamanhoFonte": 582,
+      "crescimentoPercentual": 385
+    },
+    {
+      "numero": 359,
+      "tamanhoAtual": 111,
+      "tamanhoFonte": 769,
+      "crescimentoPercentual": 592.8
+    },
+    {
+      "numero": 360,
+      "tamanhoAtual": 181,
+      "tamanhoFonte": 774,
+      "crescimentoPercentual": 327.6
+    },
+    {
+      "numero": 364,
+      "tamanhoAtual": 247,
+      "tamanhoFonte": 641,
+      "crescimentoPercentual": 159.5
+    },
+    {
+      "numero": 401,
+      "tamanhoAtual": 577,
+      "tamanhoFonte": 1063,
+      "crescimentoPercentual": 84.2
+    },
+    {
+      "numero": 409,
+      "tamanhoAtual": 130,
+      "tamanhoFonte": 504,
+      "crescimentoPercentual": 287.7
+    },
+    {
+      "numero": 425,
+      "tamanhoAtual": 339,
+      "tamanhoFonte": 867,
+      "crescimentoPercentual": 155.8
+    },
+    {
+      "numero": 457,
+      "tamanhoAtual": 273,
+      "tamanhoFonte": 870,
+      "crescimentoPercentual": 218.7
+    },
+    {
+      "numero": 461,
+      "tamanhoAtual": 277,
+      "tamanhoFonte": 616,
+      "crescimentoPercentual": 122.4
+    },
+    {
+      "numero": 462,
+      "tamanhoAtual": 46,
+      "tamanhoFonte": 338,
+      "crescimentoPercentual": 634.8
+    },
+    {
+      "numero": 467,
+      "tamanhoAtual": 253,
+      "tamanhoFonte": 1137,
+      "crescimentoPercentual": 349.4
+    },
+    {
+      "numero": 469,
+      "tamanhoAtual": 194,
+      "tamanhoFonte": 742,
+      "crescimentoPercentual": 282.5
+    },
+    {
+      "numero": 470,
+      "tamanhoAtual": 727,
+      "tamanhoFonte": 979,
+      "crescimentoPercentual": 34.7
+    },
+    {
+      "numero": 488,
+      "tamanhoAtual": 362,
+      "tamanhoFonte": 589,
+      "crescimentoPercentual": 62.7
+    },
+    {
+      "numero": 491,
+      "tamanhoAtual": 228,
+      "tamanhoFonte": 484,
+      "crescimentoPercentual": 112.3
+    },
+    {
+      "numero": 494,
+      "tamanhoAtual": 598,
+      "tamanhoFonte": 1097,
+      "crescimentoPercentual": 83.4
+    },
+    {
+      "numero": 496,
+      "tamanhoAtual": 467,
+      "tamanhoFonte": 922,
+      "crescimentoPercentual": 97.4
+    },
+    {
+      "numero": 499,
+      "tamanhoAtual": 277,
+      "tamanhoFonte": 355,
+      "crescimentoPercentual": 28.2
+    },
+    {
+      "numero": 518,
+      "tamanhoAtual": 156,
+      "tamanhoFonte": 557,
+      "crescimentoPercentual": 257.1
+    },
+    {
+      "numero": 521,
+      "tamanhoAtual": 341,
+      "tamanhoFonte": 827,
+      "crescimentoPercentual": 142.5
+    },
+    {
+      "numero": 525,
+      "tamanhoAtual": 252,
+      "tamanhoFonte": 474,
+      "crescimentoPercentual": 88.1
+    },
+    {
+      "numero": 526,
+      "tamanhoAtual": 368,
+      "tamanhoFonte": 734,
+      "crescimentoPercentual": 99.5
+    },
+    {
+      "numero": 533,
+      "tamanhoAtual": 123,
+      "tamanhoFonte": 853,
+      "crescimentoPercentual": 593.5
+    },
+    {
+      "numero": 537,
+      "tamanhoAtual": 347,
+      "tamanhoFonte": 729,
+      "crescimentoPercentual": 110.1
+    },
+    {
+      "numero": 538,
+      "tamanhoAtual": 274,
+      "tamanhoFonte": 549,
+      "crescimentoPercentual": 100.4
+    },
+    {
+      "numero": 543,
+      "tamanhoAtual": 235,
+      "tamanhoFonte": 481,
+      "crescimentoPercentual": 104.7
+    },
+    {
+      "numero": 551,
+      "tamanhoAtual": 358,
+      "tamanhoFonte": 572,
+      "crescimentoPercentual": 59.8
+    },
+    {
+      "numero": 555,
+      "tamanhoAtual": 629,
+      "tamanhoFonte": 933,
+      "crescimentoPercentual": 48.3
+    },
+    {
+      "numero": 556,
+      "tamanhoAtual": 764,
+      "tamanhoFonte": 1244,
+      "crescimentoPercentual": 62.8
+    },
+    {
+      "numero": 576,
+      "tamanhoAtual": 105,
+      "tamanhoFonte": 389,
+      "crescimentoPercentual": 270.5
+    },
+    {
+      "numero": 577,
+      "tamanhoAtual": 169,
+      "tamanhoFonte": 639,
+      "crescimentoPercentual": 278.1
+    },
+    {
+      "numero": 597,
+      "tamanhoAtual": 829,
+      "tamanhoFonte": 1184,
+      "crescimentoPercentual": 42.8
+    },
+    {
+      "numero": 598,
+      "tamanhoAtual": 461,
+      "tamanhoFonte": 1378,
+      "crescimentoPercentual": 198.9
+    },
+    {
+      "numero": 618,
+      "tamanhoAtual": 676,
+      "tamanhoFonte": 786,
+      "crescimentoPercentual": 16.3
+    },
+    {
+      "numero": 625,
+      "tamanhoAtual": 273,
+      "tamanhoFonte": 738,
+      "crescimentoPercentual": 170.3
+    },
+    {
+      "numero": 626,
+      "tamanhoAtual": 243,
+      "tamanhoFonte": 696,
+      "crescimentoPercentual": 186.4
+    },
+    {
+      "numero": 631,
+      "tamanhoAtual": 334,
+      "tamanhoFonte": 640,
+      "crescimentoPercentual": 91.6
+    },
+    {
+      "numero": 635,
+      "tamanhoAtual": 546,
+      "tamanhoFonte": 1228,
+      "crescimentoPercentual": 124.9
+    },
+    {
+      "numero": 638,
+      "tamanhoAtual": 461,
+      "tamanhoFonte": 557,
+      "crescimentoPercentual": 20.8
+    },
+    {
+      "numero": 683,
+      "tamanhoAtual": 565,
+      "tamanhoFonte": 1031,
+      "crescimentoPercentual": 82.5
+    },
+    {
+      "numero": 684,
+      "tamanhoAtual": 343,
+      "tamanhoFonte": 986,
+      "crescimentoPercentual": 187.5
+    },
+    {
+      "numero": 688,
+      "tamanhoAtual": 113,
+      "tamanhoFonte": 650,
+      "crescimentoPercentual": 475.2
+    },
+    {
+      "numero": 690,
+      "tamanhoAtual": 545,
+      "tamanhoFonte": 1175,
+      "crescimentoPercentual": 115.6
+    },
+    {
+      "numero": 691,
+      "tamanhoAtual": 185,
+      "tamanhoFonte": 757,
+      "crescimentoPercentual": 309.2
+    },
+    {
+      "numero": 702,
+      "tamanhoAtual": 478,
+      "tamanhoFonte": 858,
+      "crescimentoPercentual": 79.5
+    },
+    {
+      "numero": 703,
+      "tamanhoAtual": 95,
+      "tamanhoFonte": 316,
+      "crescimentoPercentual": 232.6
+    },
+    {
+      "numero": 711,
+      "tamanhoAtual": 328,
+      "tamanhoFonte": 502,
+      "crescimentoPercentual": 53
+    },
+    {
+      "numero": 712,
+      "tamanhoAtual": 179,
+      "tamanhoFonte": 434,
+      "crescimentoPercentual": 142.5
+    },
+    {
+      "numero": 714,
+      "tamanhoAtual": 109,
+      "tamanhoFonte": 370,
+      "crescimentoPercentual": 239.4
+    },
+    {
+      "numero": 727,
+      "tamanhoAtual": 184,
+      "tamanhoFonte": 451,
+      "crescimentoPercentual": 145.1
+    },
+    {
+      "numero": 732,
+      "tamanhoAtual": 383,
+      "tamanhoFonte": 542,
+      "crescimentoPercentual": 41.5
+    },
+    {
+      "numero": 736,
+      "tamanhoAtual": 382,
+      "tamanhoFonte": 671,
+      "crescimentoPercentual": 75.7
+    },
+    {
+      "numero": 738,
+      "tamanhoAtual": 294,
+      "tamanhoFonte": 939,
+      "crescimentoPercentual": 219.4
+    },
+    {
+      "numero": 760,
+      "tamanhoAtual": 512,
+      "tamanhoFonte": 651,
+      "crescimentoPercentual": 27.1
+    },
+    {
+      "numero": 771,
+      "tamanhoAtual": 237,
+      "tamanhoFonte": 1291,
+      "crescimentoPercentual": 444.7
+    },
+    {
+      "numero": 782,
+      "tamanhoAtual": 148,
+      "tamanhoFonte": 1288,
+      "crescimentoPercentual": 770.3
+    },
+    {
+      "numero": 786,
+      "tamanhoAtual": 597,
+      "tamanhoFonte": 1143,
+      "crescimentoPercentual": 91.5
+    },
+    {
+      "numero": 795,
+      "tamanhoAtual": 145,
+      "tamanhoFonte": 1156,
+      "crescimentoPercentual": 697.2
+    },
+    {
+      "numero": 796,
+      "tamanhoAtual": 747,
+      "tamanhoFonte": 1419,
+      "crescimentoPercentual": 90
+    },
+    {
+      "numero": 797,
+      "tamanhoAtual": 506,
+      "tamanhoFonte": 878,
+      "crescimentoPercentual": 73.5
+    },
+    {
+      "numero": 813,
+      "tamanhoAtual": 661,
+      "tamanhoFonte": 866,
+      "crescimentoPercentual": 31
+    },
+    {
+      "numero": 815,
+      "tamanhoAtual": 188,
+      "tamanhoFonte": 412,
+      "crescimentoPercentual": 119.1
+    },
+    {
+      "numero": 816,
+      "tamanhoAtual": 401,
+      "tamanhoFonte": 929,
+      "crescimentoPercentual": 131.7
+    },
+    {
+      "numero": 817,
+      "tamanhoAtual": 477,
+      "tamanhoFonte": 878,
+      "crescimentoPercentual": 84.1
+    },
+    {
+      "numero": 821,
+      "tamanhoAtual": 49,
+      "tamanhoFonte": 915,
+      "crescimentoPercentual": 1767.3
+    },
+    {
+      "numero": 826,
+      "tamanhoAtual": 152,
+      "tamanhoFonte": 703,
+      "crescimentoPercentual": 362.5
+    },
+    {
+      "numero": 831,
+      "tamanhoAtual": 85,
+      "tamanhoFonte": 699,
+      "crescimentoPercentual": 722.4
+    },
+    {
+      "numero": 839,
+      "tamanhoAtual": 118,
+      "tamanhoFonte": 692,
+      "crescimentoPercentual": 486.4
+    },
+    {
+      "numero": 842,
+      "tamanhoAtual": 112,
+      "tamanhoFonte": 440,
+      "crescimentoPercentual": 292.9
+    },
+    {
+      "numero": 844,
+      "tamanhoAtual": 115,
+      "tamanhoFonte": 364,
+      "crescimentoPercentual": 216.5
+    },
+    {
+      "numero": 846,
+      "tamanhoAtual": 193,
+      "tamanhoFonte": 809,
+      "crescimentoPercentual": 319.2
+    },
+    {
+      "numero": 847,
+      "tamanhoAtual": 91,
+      "tamanhoFonte": 386,
+      "crescimentoPercentual": 324.2
+    },
+    {
+      "numero": 857,
+      "tamanhoAtual": 87,
+      "tamanhoFonte": 910,
+      "crescimentoPercentual": 946
+    },
+    {
+      "numero": 874,
+      "tamanhoAtual": 131,
+      "tamanhoFonte": 451,
+      "crescimentoPercentual": 244.3
+    },
+    {
+      "numero": 896,
+      "tamanhoAtual": 391,
+      "tamanhoFonte": 613,
+      "crescimentoPercentual": 56.8
+    },
+    {
+      "numero": 899,
+      "tamanhoAtual": 275,
+      "tamanhoFonte": 664,
+      "crescimentoPercentual": 141.5
+    },
+    {
+      "numero": 904,
+      "tamanhoAtual": 210,
+      "tamanhoFonte": 315,
+      "crescimentoPercentual": 50
+    },
+    {
+      "numero": 905,
+      "tamanhoAtual": 322,
+      "tamanhoFonte": 511,
+      "crescimentoPercentual": 58.7
+    },
+    {
+      "numero": 908,
+      "tamanhoAtual": 208,
+      "tamanhoFonte": 469,
+      "crescimentoPercentual": 125.5
+    },
+    {
+      "numero": 933,
+      "tamanhoAtual": 184,
+      "tamanhoFonte": 477,
+      "crescimentoPercentual": 159.2
+    },
+    {
+      "numero": 948,
+      "tamanhoAtual": 173,
+      "tamanhoFonte": 530,
+      "crescimentoPercentual": 206.4
+    },
+    {
+      "numero": 949,
+      "tamanhoAtual": 155,
+      "tamanhoFonte": 294,
+      "crescimentoPercentual": 89.7
+    },
+    {
+      "numero": 954,
+      "tamanhoAtual": 331,
+      "tamanhoFonte": 610,
+      "crescimentoPercentual": 84.3
+    },
+    {
+      "numero": 956,
+      "tamanhoAtual": 404,
+      "tamanhoFonte": 581,
+      "crescimentoPercentual": 43.8
+    },
+    {
+      "numero": 957,
+      "tamanhoAtual": 462,
+      "tamanhoFonte": 753,
+      "crescimentoPercentual": 63
+    },
+    {
+      "numero": 964,
+      "tamanhoAtual": 290,
+      "tamanhoFonte": 779,
+      "crescimentoPercentual": 168.6
+    },
+    {
+      "numero": 966,
+      "tamanhoAtual": 452,
+      "tamanhoFonte": 679,
+      "crescimentoPercentual": 50.2
+    },
+    {
+      "numero": 972,
+      "tamanhoAtual": 457,
+      "tamanhoFonte": 707,
+      "crescimentoPercentual": 54.7
+    },
+    {
+      "numero": 976,
+      "tamanhoAtual": 419,
+      "tamanhoFonte": 662,
+      "crescimentoPercentual": 58
+    },
+    {
+      "numero": 980,
+      "tamanhoAtual": 94,
+      "tamanhoFonte": 365,
+      "crescimentoPercentual": 288.3
+    },
+    {
+      "numero": 981,
+      "tamanhoAtual": 532,
+      "tamanhoFonte": 795,
+      "crescimentoPercentual": 49.4
+    },
+    {
+      "numero": 983,
+      "tamanhoAtual": 257,
+      "tamanhoFonte": 804,
+      "crescimentoPercentual": 212.8
+    },
+    {
+      "numero": 989,
+      "tamanhoAtual": 326,
+      "tamanhoFonte": 559,
+      "crescimentoPercentual": 71.5
+    },
+    {
+      "numero": 991,
+      "tamanhoAtual": 182,
+      "tamanhoFonte": 504,
+      "crescimentoPercentual": 176.9
+    },
+    {
+      "numero": 992,
+      "tamanhoAtual": 453,
+      "tamanhoFonte": 701,
+      "crescimentoPercentual": 54.7
+    },
+    {
+      "numero": 999,
+      "tamanhoAtual": 346,
+      "tamanhoFonte": 845,
+      "crescimentoPercentual": 144.2
+    },
+    {
+      "numero": 1000,
+      "tamanhoAtual": 210,
+      "tamanhoFonte": 521,
+      "crescimentoPercentual": 148.1
+    },
+    {
+      "numero": 1001,
+      "tamanhoAtual": 179,
+      "tamanhoFonte": 334,
+      "crescimentoPercentual": 86.6
+    },
+    {
+      "numero": 1002,
+      "tamanhoAtual": 255,
+      "tamanhoFonte": 547,
+      "crescimentoPercentual": 114.5
+    },
+    {
+      "numero": 1004,
+      "tamanhoAtual": 213,
+      "tamanhoFonte": 537,
+      "crescimentoPercentual": 152.1
+    },
+    {
+      "numero": 1007,
+      "tamanhoAtual": 401,
+      "tamanhoFonte": 561,
+      "crescimentoPercentual": 39.9
+    },
+    {
+      "numero": 1010,
+      "tamanhoAtual": 496,
+      "tamanhoFonte": 804,
+      "crescimentoPercentual": 62.1
+    },
+    {
+      "numero": 1011,
+      "tamanhoAtual": 295,
+      "tamanhoFonte": 504,
+      "crescimentoPercentual": 70.8
+    },
+    {
+      "numero": 1012,
+      "tamanhoAtual": 84,
+      "tamanhoFonte": 251,
+      "crescimentoPercentual": 198.8
+    },
+    {
+      "numero": 1014,
+      "tamanhoAtual": 293,
+      "tamanhoFonte": 850,
+      "crescimentoPercentual": 190.1
+    },
+    {
+      "numero": 1020,
+      "tamanhoAtual": 426,
+      "tamanhoFonte": 1066,
+      "crescimentoPercentual": 150.2
+    },
+    {
+      "numero": 1022,
+      "tamanhoAtual": 285,
+      "tamanhoFonte": 343,
+      "crescimentoPercentual": 20.4
+    },
+    {
+      "numero": 1023,
+      "tamanhoAtual": 232,
+      "tamanhoFonte": 1107,
+      "crescimentoPercentual": 377.2
+    },
+    {
+      "numero": 1025,
+      "tamanhoAtual": 163,
+      "tamanhoFonte": 266,
+      "crescimentoPercentual": 63.2
+    },
+    {
+      "numero": 1028,
+      "tamanhoAtual": 277,
+      "tamanhoFonte": 595,
+      "crescimentoPercentual": 114.8
+    },
+    {
+      "numero": 1031,
+      "tamanhoAtual": 340,
+      "tamanhoFonte": 767,
+      "crescimentoPercentual": 125.6
+    },
+    {
+      "numero": 1032,
+      "tamanhoAtual": 530,
+      "tamanhoFonte": 832,
+      "crescimentoPercentual": 57
+    },
+    {
+      "numero": 1036,
+      "tamanhoAtual": 511,
+      "tamanhoFonte": 910,
+      "crescimentoPercentual": 78.1
+    },
+    {
+      "numero": 1037,
+      "tamanhoAtual": 350,
+      "tamanhoFonte": 563,
+      "crescimentoPercentual": 60.9
+    },
+    {
+      "numero": 1039,
+      "tamanhoAtual": 267,
+      "tamanhoFonte": 884,
+      "crescimentoPercentual": 231.1
+    },
+    {
+      "numero": 1042,
+      "tamanhoAtual": 191,
+      "tamanhoFonte": 498,
+      "crescimentoPercentual": 160.7
+    },
+    {
+      "numero": 1046,
+      "tamanhoAtual": 103,
+      "tamanhoFonte": 531,
+      "crescimentoPercentual": 415.5
+    },
+    {
+      "numero": 1050,
+      "tamanhoAtual": 469,
+      "tamanhoFonte": 703,
+      "crescimentoPercentual": 49.9
+    },
+    {
+      "numero": 1064,
+      "tamanhoAtual": 340,
+      "tamanhoFonte": 489,
+      "crescimentoPercentual": 43.8
+    },
+    {
+      "numero": 1065,
+      "tamanhoAtual": 304,
+      "tamanhoFonte": 466,
+      "crescimentoPercentual": 53.3
+    },
+    {
+      "numero": 1068,
+      "tamanhoAtual": 137,
+      "tamanhoFonte": 400,
+      "crescimentoPercentual": 192
+    },
+    {
+      "numero": 1070,
+      "tamanhoAtual": 419,
+      "tamanhoFonte": 968,
+      "crescimentoPercentual": 131
+    },
+    {
+      "numero": 1076,
+      "tamanhoAtual": 699,
+      "tamanhoFonte": 918,
+      "crescimentoPercentual": 31.3
+    },
+    {
+      "numero": 1093,
+      "tamanhoAtual": 329,
+      "tamanhoFonte": 635,
+      "crescimentoPercentual": 93
+    },
+    {
+      "numero": 1100,
+      "tamanhoAtual": 196,
+      "tamanhoFonte": 532,
+      "crescimentoPercentual": 171.4
+    },
+    {
+      "numero": 1122,
+      "tamanhoAtual": 429,
+      "tamanhoFonte": 659,
+      "crescimentoPercentual": 53.6
+    },
+    {
+      "numero": 1130,
+      "tamanhoAtual": 717,
+      "tamanhoFonte": 1282,
+      "crescimentoPercentual": 78.8
+    },
+    {
+      "numero": 1141,
+      "tamanhoAtual": 361,
+      "tamanhoFonte": 691,
+      "crescimentoPercentual": 91.4
+    },
+    {
+      "numero": 1157,
+      "tamanhoAtual": 438,
+      "tamanhoFonte": 744,
+      "crescimentoPercentual": 69.9
+    },
+    {
+      "numero": 1159,
+      "tamanhoAtual": 210,
+      "tamanhoFonte": 501,
+      "crescimentoPercentual": 138.6
+    },
+    {
+      "numero": 1160,
+      "tamanhoAtual": 156,
+      "tamanhoFonte": 628,
+      "crescimentoPercentual": 302.6
+    },
+    {
+      "numero": 1161,
+      "tamanhoAtual": 527,
+      "tamanhoFonte": 1220,
+      "crescimentoPercentual": 131.5
+    },
+    {
+      "numero": 1165,
+      "tamanhoAtual": 321,
+      "tamanhoFonte": 716,
+      "crescimentoPercentual": 123.1
+    },
+    {
+      "numero": 1166,
+      "tamanhoAtual": 605,
+      "tamanhoFonte": 975,
+      "crescimentoPercentual": 61.2
+    },
+    {
+      "numero": 1167,
+      "tamanhoAtual": 337,
+      "tamanhoFonte": 818,
+      "crescimentoPercentual": 142.7
+    },
+    {
+      "numero": 1183,
+      "tamanhoAtual": 255,
+      "tamanhoFonte": 478,
+      "crescimentoPercentual": 87.5
+    },
+    {
+      "numero": 1184,
+      "tamanhoAtual": 125,
+      "tamanhoFonte": 328,
+      "crescimentoPercentual": 162.4
+    },
+    {
+      "numero": 1185,
+      "tamanhoAtual": 199,
+      "tamanhoFonte": 563,
+      "crescimentoPercentual": 182.9
+    },
+    {
+      "numero": 1216,
+      "tamanhoAtual": 325,
+      "tamanhoFonte": 887,
+      "crescimentoPercentual": 172.9
+    },
+    {
+      "numero": 1217,
+      "tamanhoAtual": 194,
+      "tamanhoFonte": 372,
+      "crescimentoPercentual": 91.8
+    },
+    {
+      "numero": 1218,
+      "tamanhoAtual": 175,
+      "tamanhoFonte": 310,
+      "crescimentoPercentual": 77.1
+    },
+    {
+      "numero": 1219,
+      "tamanhoAtual": 174,
+      "tamanhoFonte": 351,
+      "crescimentoPercentual": 101.7
+    },
+    {
+      "numero": 1221,
+      "tamanhoAtual": 144,
+      "tamanhoFonte": 309,
+      "crescimentoPercentual": 114.6
+    },
+    {
+      "numero": 1225,
+      "tamanhoAtual": 433,
+      "tamanhoFonte": 658,
+      "crescimentoPercentual": 52
+    },
+    {
+      "numero": 1227,
+      "tamanhoAtual": 113,
+      "tamanhoFonte": 497,
+      "crescimentoPercentual": 339.8
+    },
+    {
+      "numero": 1243,
+      "tamanhoAtual": 227,
+      "tamanhoFonte": 343,
+      "crescimentoPercentual": 51.1
+    },
+    {
+      "numero": 1266,
+      "tamanhoAtual": 92,
+      "tamanhoFonte": 414,
+      "crescimentoPercentual": 350
+    },
+    {
+      "numero": 1293,
+      "tamanhoAtual": 116,
+      "tamanhoFonte": 440,
+      "crescimentoPercentual": 279.3
+    },
+    {
+      "numero": 1297,
+      "tamanhoAtual": 325,
+      "tamanhoFonte": 877,
+      "crescimentoPercentual": 169.8
+    },
+    {
+      "numero": 1299,
+      "tamanhoAtual": 184,
+      "tamanhoFonte": 671,
+      "crescimentoPercentual": 264.7
+    },
+    {
+      "numero": 1303,
+      "tamanhoAtual": 88,
+      "tamanhoFonte": 920,
+      "crescimentoPercentual": 945.5
+    },
+    {
+      "numero": 1308,
+      "tamanhoAtual": 345,
+      "tamanhoFonte": 754,
+      "crescimentoPercentual": 118.6
+    },
+    {
+      "numero": 1312,
+      "tamanhoAtual": 53,
+      "tamanhoFonte": 593,
+      "crescimentoPercentual": 1018.9
+    },
+    {
+      "numero": 1329,
+      "tamanhoAtual": 184,
+      "tamanhoFonte": 831,
+      "crescimentoPercentual": 351.6
+    },
+    {
+      "numero": 1330,
+      "tamanhoAtual": 44,
+      "tamanhoFonte": 726,
+      "crescimentoPercentual": 1550
+    },
+    {
+      "numero": 1339,
+      "tamanhoAtual": 134,
+      "tamanhoFonte": 906,
+      "crescimentoPercentual": 576.1
+    },
+    {
+      "numero": 1342,
+      "tamanhoAtual": 92,
+      "tamanhoFonte": 359,
+      "crescimentoPercentual": 290.2
+    },
+    {
+      "numero": 1345,
+      "tamanhoAtual": 333,
+      "tamanhoFonte": 1599,
+      "crescimentoPercentual": 380.2
+    },
+    {
+      "numero": 1346,
+      "tamanhoAtual": 218,
+      "tamanhoFonte": 629,
+      "crescimentoPercentual": 188.5
+    },
+    {
+      "numero": 1351,
+      "tamanhoAtual": 250,
+      "tamanhoFonte": 594,
+      "crescimentoPercentual": 137.6
+    },
+    {
+      "numero": 1352,
+      "tamanhoAtual": 122,
+      "tamanhoFonte": 411,
+      "crescimentoPercentual": 236.9
+    },
+    {
+      "numero": 1353,
+      "tamanhoAtual": 330,
+      "tamanhoFonte": 590,
+      "crescimentoPercentual": 78.8
+    },
+    {
+      "numero": 1354,
+      "tamanhoAtual": 179,
+      "tamanhoFonte": 483,
+      "crescimentoPercentual": 169.8
+    },
+    {
+      "numero": 1355,
+      "tamanhoAtual": 201,
+      "tamanhoFonte": 541,
+      "crescimentoPercentual": 169.2
+    },
+    {
+      "numero": 1358,
+      "tamanhoAtual": 39,
+      "tamanhoFonte": 204,
+      "crescimentoPercentual": 423.1
+    },
+    {
+      "numero": 1368,
+      "tamanhoAtual": 621,
+      "tamanhoFonte": 875,
+      "crescimentoPercentual": 40.9
+    },
+    {
+      "numero": 1369,
+      "tamanhoAtual": 588,
+      "tamanhoFonte": 988,
+      "crescimentoPercentual": 68
+    },
+    {
+      "numero": 1371,
+      "tamanhoAtual": 184,
+      "tamanhoFonte": 877,
+      "crescimentoPercentual": 376.6
+    },
+    {
+      "numero": 1375,
+      "tamanhoAtual": 299,
+      "tamanhoFonte": 1096,
+      "crescimentoPercentual": 266.6
+    },
+    {
+      "numero": 1380,
+      "tamanhoAtual": 552,
+      "tamanhoFonte": 851,
+      "crescimentoPercentual": 54.2
+    },
+    {
+      "numero": 1381,
+      "tamanhoAtual": 455,
+      "tamanhoFonte": 1086,
+      "crescimentoPercentual": 138.7
+    },
+    {
+      "numero": 1383,
+      "tamanhoAtual": 718,
+      "tamanhoFonte": 1047,
+      "crescimentoPercentual": 45.8
+    },
+    {
+      "numero": 1386,
+      "tamanhoAtual": 401,
+      "tamanhoFonte": 631,
+      "crescimentoPercentual": 57.4
+    },
+    {
+      "numero": 1391,
+      "tamanhoAtual": 424,
+      "tamanhoFonte": 732,
+      "crescimentoPercentual": 72.6
+    },
+    {
+      "numero": 1393,
+      "tamanhoAtual": 330,
+      "tamanhoFonte": 673,
+      "crescimentoPercentual": 103.9
+    },
+    {
+      "numero": 1394,
+      "tamanhoAtual": 364,
+      "tamanhoFonte": 869,
+      "crescimentoPercentual": 138.7
+    },
+    {
+      "numero": 1396,
+      "tamanhoAtual": 630,
+      "tamanhoFonte": 1010,
+      "crescimentoPercentual": 60.3
+    },
+    {
+      "numero": 1397,
+      "tamanhoAtual": 178,
+      "tamanhoFonte": 489,
+      "crescimentoPercentual": 174.7
+    },
+    {
+      "numero": 1423,
+      "tamanhoAtual": 184,
+      "tamanhoFonte": 347,
+      "crescimentoPercentual": 88.6
+    },
+    {
+      "numero": 1424,
+      "tamanhoAtual": 302,
+      "tamanhoFonte": 724,
+      "crescimentoPercentual": 139.7
+    },
+    {
+      "numero": 1429,
+      "tamanhoAtual": 426,
+      "tamanhoFonte": 572,
+      "crescimentoPercentual": 34.3
+    },
+    {
+      "numero": 1432,
+      "tamanhoAtual": 596,
+      "tamanhoFonte": 800,
+      "crescimentoPercentual": 34.2
+    },
+    {
+      "numero": 1449,
+      "tamanhoAtual": 291,
+      "tamanhoFonte": 591,
+      "crescimentoPercentual": 103.1
+    },
+    {
+      "numero": 1456,
+      "tamanhoAtual": 462,
+      "tamanhoFonte": 901,
+      "crescimentoPercentual": 95
+    },
+    {
+      "numero": 1458,
+      "tamanhoAtual": 466,
+      "tamanhoFonte": 1061,
+      "crescimentoPercentual": 127.7
+    },
+    {
+      "numero": 1460,
+      "tamanhoAtual": 644,
+      "tamanhoFonte": 1125,
+      "crescimentoPercentual": 74.7
+    },
+    {
+      "numero": 1469,
+      "tamanhoAtual": 595,
+      "tamanhoFonte": 1016,
+      "crescimentoPercentual": 70.8
+    },
+    {
+      "numero": 1471,
+      "tamanhoAtual": 118,
+      "tamanhoFonte": 684,
+      "crescimentoPercentual": 479.7
+    },
+    {
+      "numero": 1511,
+      "tamanhoAtual": 168,
+      "tamanhoFonte": 427,
+      "crescimentoPercentual": 154.2
+    },
+    {
+      "numero": 1513,
+      "tamanhoAtual": 206,
+      "tamanhoFonte": 701,
+      "crescimentoPercentual": 240.3
+    },
+    {
+      "numero": 1519,
+      "tamanhoAtual": 303,
+      "tamanhoFonte": 382,
+      "crescimentoPercentual": 26.1
+    },
+    {
+      "numero": 1532,
+      "tamanhoAtual": 70,
+      "tamanhoFonte": 465,
+      "crescimentoPercentual": 564.3
+    },
+    {
+      "numero": 1536,
+      "tamanhoAtual": 259,
+      "tamanhoFonte": 432,
+      "crescimentoPercentual": 66.8
+    },
+    {
+      "numero": 1541,
+      "tamanhoAtual": 281,
+      "tamanhoFonte": 596,
+      "crescimentoPercentual": 112.1
+    },
+    {
+      "numero": 1542,
+      "tamanhoAtual": 44,
+      "tamanhoFonte": 678,
+      "crescimentoPercentual": 1440.9
+    },
+    {
+      "numero": 1543,
+      "tamanhoAtual": 75,
+      "tamanhoFonte": 316,
+      "crescimentoPercentual": 321.3
+    },
+    {
+      "numero": 1548,
+      "tamanhoAtual": 347,
+      "tamanhoFonte": 801,
+      "crescimentoPercentual": 130.8
+    },
+    {
+      "numero": 1554,
+      "tamanhoAtual": 767,
+      "tamanhoFonte": 987,
+      "crescimentoPercentual": 28.7
+    },
+    {
+      "numero": 1584,
+      "tamanhoAtual": 186,
+      "tamanhoFonte": 620,
+      "crescimentoPercentual": 233.3
+    },
+    {
+      "numero": 1586,
+      "tamanhoAtual": 622,
+      "tamanhoFonte": 1289,
+      "crescimentoPercentual": 107.2
+    },
+    {
+      "numero": 1587,
+      "tamanhoAtual": 162,
+      "tamanhoFonte": 749,
+      "crescimentoPercentual": 362.3
+    },
+    {
+      "numero": 1589,
+      "tamanhoAtual": 278,
+      "tamanhoFonte": 1353,
+      "crescimentoPercentual": 386.7
+    },
+    {
+      "numero": 1618,
+      "tamanhoAtual": 500,
+      "tamanhoFonte": 708,
+      "crescimentoPercentual": 41.6
+    },
+    {
+      "numero": 1620,
+      "tamanhoAtual": 346,
+      "tamanhoFonte": 678,
+      "crescimentoPercentual": 96
+    },
+    {
+      "numero": 1625,
+      "tamanhoAtual": 180,
+      "tamanhoFonte": 267,
+      "crescimentoPercentual": 48.3
+    },
+    {
+      "numero": 1631,
+      "tamanhoAtual": 179,
+      "tamanhoFonte": 665,
+      "crescimentoPercentual": 271.5
+    },
+    {
+      "numero": 1632,
+      "tamanhoAtual": 206,
+      "tamanhoFonte": 951,
+      "crescimentoPercentual": 361.7
+    },
+    {
+      "numero": 1642,
+      "tamanhoAtual": 678,
+      "tamanhoFonte": 1228,
+      "crescimentoPercentual": 81.1
+    },
+    {
+      "numero": 1651,
+      "tamanhoAtual": 315,
+      "tamanhoFonte": 684,
+      "crescimentoPercentual": 117.1
+    },
+    {
+      "numero": 1652,
+      "tamanhoAtual": 182,
+      "tamanhoFonte": 910,
+      "crescimentoPercentual": 400
+    },
+    {
+      "numero": 1676,
+      "tamanhoAtual": 360,
+      "tamanhoFonte": 1242,
+      "crescimentoPercentual": 245
+    },
+    {
+      "numero": 1690,
+      "tamanhoAtual": 263,
+      "tamanhoFonte": 675,
+      "crescimentoPercentual": 156.7
+    },
+    {
+      "numero": 1697,
+      "tamanhoAtual": 154,
+      "tamanhoFonte": 1303,
+      "crescimentoPercentual": 746.1
+    },
+    {
+      "numero": 1698,
+      "tamanhoAtual": 335,
+      "tamanhoFonte": 914,
+      "crescimentoPercentual": 172.8
+    },
+    {
+      "numero": 1707,
+      "tamanhoAtual": 266,
+      "tamanhoFonte": 472,
+      "crescimentoPercentual": 77.4
+    },
+    {
+      "numero": 1716,
+      "tamanhoAtual": 259,
+      "tamanhoFonte": 1015,
+      "crescimentoPercentual": 291.9
+    },
+    {
+      "numero": 1718,
+      "tamanhoAtual": 176,
+      "tamanhoFonte": 621,
+      "crescimentoPercentual": 252.8
+    },
+    {
+      "numero": 1720,
+      "tamanhoAtual": 300,
+      "tamanhoFonte": 486,
+      "crescimentoPercentual": 62
+    },
+    {
+      "numero": 1722,
+      "tamanhoAtual": 220,
+      "tamanhoFonte": 616,
+      "crescimentoPercentual": 180
+    },
+    {
+      "numero": 1723,
+      "tamanhoAtual": 469,
+      "tamanhoFonte": 1031,
+      "crescimentoPercentual": 119.8
+    },
+    {
+      "numero": 1730,
+      "tamanhoAtual": 318,
+      "tamanhoFonte": 418,
+      "crescimentoPercentual": 31.4
+    },
+    {
+      "numero": 1742,
+      "tamanhoAtual": 612,
+      "tamanhoFonte": 779,
+      "crescimentoPercentual": 27.3
+    },
+    {
+      "numero": 1755,
+      "tamanhoAtual": 222,
+      "tamanhoFonte": 436,
+      "crescimentoPercentual": 96.4
+    },
+    {
+      "numero": 1778,
+      "tamanhoAtual": 376,
+      "tamanhoFonte": 710,
+      "crescimentoPercentual": 88.8
+    },
+    {
+      "numero": 1779,
+      "tamanhoAtual": 257,
+      "tamanhoFonte": 409,
+      "crescimentoPercentual": 59.1
+    },
+    {
+      "numero": 1781,
+      "tamanhoAtual": 460,
+      "tamanhoFonte": 632,
+      "crescimentoPercentual": 37.4
+    },
+    {
+      "numero": 1789,
+      "tamanhoAtual": 43,
+      "tamanhoFonte": 514,
+      "crescimentoPercentual": 1095.3
+    },
+    {
+      "numero": 1794,
+      "tamanhoAtual": 179,
+      "tamanhoFonte": 368,
+      "crescimentoPercentual": 105.6
+    },
+    {
+      "numero": 1803,
+      "tamanhoAtual": 167,
+      "tamanhoFonte": 520,
+      "crescimentoPercentual": 211.4
+    },
+    {
+      "numero": 1804,
+      "tamanhoAtual": 352,
+      "tamanhoFonte": 530,
+      "crescimentoPercentual": 50.6
+    },
+    {
+      "numero": 1809,
+      "tamanhoAtual": 640,
+      "tamanhoFonte": 1003,
+      "crescimentoPercentual": 56.7
+    },
+    {
+      "numero": 1821,
+      "tamanhoAtual": 483,
+      "tamanhoFonte": 816,
+      "crescimentoPercentual": 68.9
+    },
+    {
+      "numero": 1825,
+      "tamanhoAtual": 250,
+      "tamanhoFonte": 632,
+      "crescimentoPercentual": 152.8
+    },
+    {
+      "numero": 1828,
+      "tamanhoAtual": 305,
+      "tamanhoFonte": 598,
+      "crescimentoPercentual": 96.1
+    },
+    {
+      "numero": 1831,
+      "tamanhoAtual": 300,
+      "tamanhoFonte": 559,
+      "crescimentoPercentual": 86.3
+    },
+    {
+      "numero": 1848,
+      "tamanhoAtual": 414,
+      "tamanhoFonte": 875,
+      "crescimentoPercentual": 111.4
+    },
+    {
+      "numero": 1856,
+      "tamanhoAtual": 225,
+      "tamanhoFonte": 824,
+      "crescimentoPercentual": 266.2
+    },
+    {
+      "numero": 1863,
+      "tamanhoAtual": 528,
+      "tamanhoFonte": 966,
+      "crescimentoPercentual": 83
+    },
+    {
+      "numero": 1868,
+      "tamanhoAtual": 129,
+      "tamanhoFonte": 347,
+      "crescimentoPercentual": 169
+    },
+    {
+      "numero": 1886,
+      "tamanhoAtual": 230,
+      "tamanhoFonte": 1028,
+      "crescimentoPercentual": 347
+    },
+    {
+      "numero": 1897,
+      "tamanhoAtual": 204,
+      "tamanhoFonte": 350,
+      "crescimentoPercentual": 71.6
+    },
+    {
+      "numero": 1900,
+      "tamanhoAtual": 205,
+      "tamanhoFonte": 781,
+      "crescimentoPercentual": 281
+    },
+    {
+      "numero": 1901,
+      "tamanhoAtual": 194,
+      "tamanhoFonte": 496,
+      "crescimentoPercentual": 155.7
+    },
+    {
+      "numero": 1902,
+      "tamanhoAtual": 221,
+      "tamanhoFonte": 530,
+      "crescimentoPercentual": 139.8
+    },
+    {
+      "numero": 1905,
+      "tamanhoAtual": 178,
+      "tamanhoFonte": 335,
+      "crescimentoPercentual": 88.2
+    },
+    {
+      "numero": 1929,
+      "tamanhoAtual": 159,
+      "tamanhoFonte": 367,
+      "crescimentoPercentual": 130.8
+    },
+    {
+      "numero": 1935,
+      "tamanhoAtual": 108,
+      "tamanhoFonte": 348,
+      "crescimentoPercentual": 222.2
+    },
+    {
+      "numero": 1937,
+      "tamanhoAtual": 367,
+      "tamanhoFonte": 927,
+      "crescimentoPercentual": 152.6
+    },
+    {
+      "numero": 1938,
+      "tamanhoAtual": 135,
+      "tamanhoFonte": 483,
+      "crescimentoPercentual": 257.8
+    },
+    {
+      "numero": 1939,
+      "tamanhoAtual": 156,
+      "tamanhoFonte": 538,
+      "crescimentoPercentual": 244.9
+    },
+    {
+      "numero": 1942,
+      "tamanhoAtual": 379,
+      "tamanhoFonte": 804,
+      "crescimentoPercentual": 112.1
+    },
+    {
+      "numero": 1949,
+      "tamanhoAtual": 181,
+      "tamanhoFonte": 322,
+      "crescimentoPercentual": 77.9
+    },
+    {
+      "numero": 1951,
+      "tamanhoAtual": 489,
+      "tamanhoFonte": 775,
+      "crescimentoPercentual": 58.5
+    },
+    {
+      "numero": 1954,
+      "tamanhoAtual": 283,
+      "tamanhoFonte": 635,
+      "crescimentoPercentual": 124.4
+    },
+    {
+      "numero": 1955,
+      "tamanhoAtual": 523,
+      "tamanhoFonte": 1078,
+      "crescimentoPercentual": 106.1
+    },
+    {
+      "numero": 1956,
+      "tamanhoAtual": 248,
+      "tamanhoFonte": 647,
+      "crescimentoPercentual": 160.9
+    },
+    {
+      "numero": 1958,
+      "tamanhoAtual": 386,
+      "tamanhoFonte": 552,
+      "crescimentoPercentual": 43
+    },
+    {
+      "numero": 1962,
+      "tamanhoAtual": 439,
+      "tamanhoFonte": 521,
+      "crescimentoPercentual": 18.7
+    },
+    {
+      "numero": 1964,
+      "tamanhoAtual": 440,
+      "tamanhoFonte": 1039,
+      "crescimentoPercentual": 136.1
+    },
+    {
+      "numero": 1966,
+      "tamanhoAtual": 218,
+      "tamanhoFonte": 521,
+      "crescimentoPercentual": 139
+    },
+    {
+      "numero": 1970,
+      "tamanhoAtual": 295,
+      "tamanhoFonte": 417,
+      "crescimentoPercentual": 41.4
+    },
+    {
+      "numero": 1974,
+      "tamanhoAtual": 372,
+      "tamanhoFonte": 793,
+      "crescimentoPercentual": 113.2
+    },
+    {
+      "numero": 1987,
+      "tamanhoAtual": 185,
+      "tamanhoFonte": 582,
+      "crescimentoPercentual": 214.6
+    },
+    {
+      "numero": 1988,
+      "tamanhoAtual": 256,
+      "tamanhoFonte": 463,
+      "crescimentoPercentual": 80.9
+    },
+    {
+      "numero": 1992,
+      "tamanhoAtual": 440,
+      "tamanhoFonte": 1118,
+      "crescimentoPercentual": 154.1
+    },
+    {
+      "numero": 1993,
+      "tamanhoAtual": 270,
+      "tamanhoFonte": 549,
+      "crescimentoPercentual": 103.3
+    },
+    {
+      "numero": 1995,
+      "tamanhoAtual": 129,
+      "tamanhoFonte": 443,
+      "crescimentoPercentual": 243.4
+    },
+    {
+      "numero": 1999,
+      "tamanhoAtual": 256,
+      "tamanhoFonte": 459,
+      "crescimentoPercentual": 79.3
+    },
+    {
+      "numero": 2001,
+      "tamanhoAtual": 342,
+      "tamanhoFonte": 804,
+      "crescimentoPercentual": 135.1
+    },
+    {
+      "numero": 2002,
+      "tamanhoAtual": 461,
+      "tamanhoFonte": 756,
+      "crescimentoPercentual": 64
+    },
+    {
+      "numero": 2004,
+      "tamanhoAtual": 167,
+      "tamanhoFonte": 573,
+      "crescimentoPercentual": 243.1
+    },
+    {
+      "numero": 2005,
+      "tamanhoAtual": 543,
+      "tamanhoFonte": 944,
+      "crescimentoPercentual": 73.8
+    },
+    {
+      "numero": 2011,
+      "tamanhoAtual": 346,
+      "tamanhoFonte": 792,
+      "crescimentoPercentual": 128.9
+    },
+    {
+      "numero": 2013,
+      "tamanhoAtual": 212,
+      "tamanhoFonte": 604,
+      "crescimentoPercentual": 184.9
+    },
+    {
+      "numero": 2015,
+      "tamanhoAtual": 233,
+      "tamanhoFonte": 405,
+      "crescimentoPercentual": 73.8
+    },
+    {
+      "numero": 2042,
+      "tamanhoAtual": 531,
+      "tamanhoFonte": 952,
+      "crescimentoPercentual": 79.3
+    },
+    {
+      "numero": 2043,
+      "tamanhoAtual": 272,
+      "tamanhoFonte": 511,
+      "crescimentoPercentual": 87.9
+    },
+    {
+      "numero": 2055,
+      "tamanhoAtual": 484,
+      "tamanhoFonte": 773,
+      "crescimentoPercentual": 59.7
+    },
+    {
+      "numero": 2057,
+      "tamanhoAtual": 396,
+      "tamanhoFonte": 823,
+      "crescimentoPercentual": 107.8
+    },
+    {
+      "numero": 2061,
+      "tamanhoAtual": 245,
+      "tamanhoFonte": 587,
+      "crescimentoPercentual": 139.6
+    },
+    {
+      "numero": 2063,
+      "tamanhoAtual": 380,
+      "tamanhoFonte": 835,
+      "crescimentoPercentual": 119.7
+    },
+    {
+      "numero": 2067,
+      "tamanhoAtual": 158,
+      "tamanhoFonte": 375,
+      "crescimentoPercentual": 137.3
+    },
+    {
+      "numero": 2070,
+      "tamanhoAtual": 319,
+      "tamanhoFonte": 545,
+      "crescimentoPercentual": 70.8
+    },
+    {
+      "numero": 2071,
+      "tamanhoAtual": 202,
+      "tamanhoFonte": 492,
+      "crescimentoPercentual": 143.6
+    },
+    {
+      "numero": 2083,
+      "tamanhoAtual": 273,
+      "tamanhoFonte": 889,
+      "crescimentoPercentual": 225.6
+    },
+    {
+      "numero": 2085,
+      "tamanhoAtual": 287,
+      "tamanhoFonte": 688,
+      "crescimentoPercentual": 139.7
+    },
+    {
+      "numero": 2088,
+      "tamanhoAtual": 180,
+      "tamanhoFonte": 545,
+      "crescimentoPercentual": 202.8
+    },
+    {
+      "numero": 2091,
+      "tamanhoAtual": 103,
+      "tamanhoFonte": 340,
+      "crescimentoPercentual": 230.1
+    },
+    {
+      "numero": 2103,
+      "tamanhoAtual": 87,
+      "tamanhoFonte": 594,
+      "crescimentoPercentual": 582.8
+    },
+    {
+      "numero": 2132,
+      "tamanhoAtual": 340,
+      "tamanhoFonte": 632,
+      "crescimentoPercentual": 85.9
+    },
+    {
+      "numero": 2141,
+      "tamanhoAtual": 123,
+      "tamanhoFonte": 318,
+      "crescimentoPercentual": 158.5
+    },
+    {
+      "numero": 2144,
+      "tamanhoAtual": 179,
+      "tamanhoFonte": 661,
+      "crescimentoPercentual": 269.3
+    },
+    {
+      "numero": 2148,
+      "tamanhoAtual": 680,
+      "tamanhoFonte": 789,
+      "crescimentoPercentual": 16
+    },
+    {
+      "numero": 2149,
+      "tamanhoAtual": 172,
+      "tamanhoFonte": 357,
+      "crescimentoPercentual": 107.6
+    },
+    {
+      "numero": 2167,
+      "tamanhoAtual": 40,
+      "tamanhoFonte": 371,
+      "crescimentoPercentual": 827.5
+    },
+    {
+      "numero": 2173,
+      "tamanhoAtual": 538,
+      "tamanhoFonte": 619,
+      "crescimentoPercentual": 15.1
+    },
+    {
+      "numero": 2174,
+      "tamanhoAtual": 439,
+      "tamanhoFonte": 704,
+      "crescimentoPercentual": 60.4
+    },
+    {
+      "numero": 2175,
+      "tamanhoAtual": 422,
+      "tamanhoFonte": 617,
+      "crescimentoPercentual": 46.2
+    },
+    {
+      "numero": 2177,
+      "tamanhoAtual": 246,
+      "tamanhoFonte": 532,
+      "crescimentoPercentual": 116.3
+    },
+    {
+      "numero": 2178,
+      "tamanhoAtual": 228,
+      "tamanhoFonte": 640,
+      "crescimentoPercentual": 180.7
+    },
+    {
+      "numero": 2179,
+      "tamanhoAtual": 498,
+      "tamanhoFonte": 774,
+      "crescimentoPercentual": 55.4
+    },
+    {
+      "numero": 2185,
+      "tamanhoAtual": 522,
+      "tamanhoFonte": 616,
+      "crescimentoPercentual": 18
+    },
+    {
+      "numero": 2196,
+      "tamanhoAtual": 387,
+      "tamanhoFonte": 1195,
+      "crescimentoPercentual": 208.8
+    },
+    {
+      "numero": 2199,
+      "tamanhoAtual": 511,
+      "tamanhoFonte": 718,
+      "crescimentoPercentual": 40.5
+    },
+    {
+      "numero": 2211,
+      "tamanhoAtual": 100,
+      "tamanhoFonte": 923,
+      "crescimentoPercentual": 823
+    },
+    {
+      "numero": 2218,
+      "tamanhoAtual": 275,
+      "tamanhoFonte": 969,
+      "crescimentoPercentual": 252.4
+    },
+    {
+      "numero": 2223,
+      "tamanhoAtual": 677,
+      "tamanhoFonte": 943,
+      "crescimentoPercentual": 39.3
+    },
+    {
+      "numero": 2233,
+      "tamanhoAtual": 256,
+      "tamanhoFonte": 465,
+      "crescimentoPercentual": 81.6
+    },
+    {
+      "numero": 2237,
+      "tamanhoAtual": 210,
+      "tamanhoFonte": 502,
+      "crescimentoPercentual": 139
+    },
+    {
+      "numero": 2240,
+      "tamanhoAtual": 158,
+      "tamanhoFonte": 898,
+      "crescimentoPercentual": 468.4
+    },
+    {
+      "numero": 2241,
+      "tamanhoAtual": 296,
+      "tamanhoFonte": 729,
+      "crescimentoPercentual": 146.3
+    },
+    {
+      "numero": 2242,
+      "tamanhoAtual": 567,
+      "tamanhoFonte": 909,
+      "crescimentoPercentual": 60.3
+    },
+    {
+      "numero": 2243,
+      "tamanhoAtual": 109,
+      "tamanhoFonte": 389,
+      "crescimentoPercentual": 256.9
+    },
+    {
+      "numero": 2244,
+      "tamanhoAtual": 570,
+      "tamanhoFonte": 972,
+      "crescimentoPercentual": 70.5
+    },
+    {
+      "numero": 2257,
+      "tamanhoAtual": 205,
+      "tamanhoFonte": 431,
+      "crescimentoPercentual": 110.2
+    },
+    {
+      "numero": 2260,
+      "tamanhoAtual": 128,
+      "tamanhoFonte": 421,
+      "crescimentoPercentual": 228.9
+    },
+    {
+      "numero": 2264,
+      "tamanhoAtual": 267,
+      "tamanhoFonte": 626,
+      "crescimentoPercentual": 134.5
+    },
+    {
+      "numero": 2267,
+      "tamanhoAtual": 250,
+      "tamanhoFonte": 1041,
+      "crescimentoPercentual": 316.4
+    },
+    {
+      "numero": 2268,
+      "tamanhoAtual": 192,
+      "tamanhoFonte": 503,
+      "crescimentoPercentual": 162
+    },
+    {
+      "numero": 2270,
+      "tamanhoAtual": 280,
+      "tamanhoFonte": 550,
+      "crescimentoPercentual": 96.4
+    },
+    {
+      "numero": 2271,
+      "tamanhoAtual": 219,
+      "tamanhoFonte": 611,
+      "crescimentoPercentual": 179
+    },
+    {
+      "numero": 2273,
+      "tamanhoAtual": 143,
+      "tamanhoFonte": 1257,
+      "crescimentoPercentual": 779
+    },
+    {
+      "numero": 2274,
+      "tamanhoAtual": 184,
+      "tamanhoFonte": 565,
+      "crescimentoPercentual": 207.1
+    },
+    {
+      "numero": 2275,
+      "tamanhoAtual": 281,
+      "tamanhoFonte": 731,
+      "crescimentoPercentual": 160.1
+    },
+    {
+      "numero": 2277,
+      "tamanhoAtual": 161,
+      "tamanhoFonte": 537,
+      "crescimentoPercentual": 233.5
+    },
+    {
+      "numero": 2282,
+      "tamanhoAtual": 189,
+      "tamanhoFonte": 360,
+      "crescimentoPercentual": 90.5
+    },
+    {
+      "numero": 2286,
+      "tamanhoAtual": 89,
+      "tamanhoFonte": 611,
+      "crescimentoPercentual": 586.5
+    },
+    {
+      "numero": 2288,
+      "tamanhoAtual": 172,
+      "tamanhoFonte": 409,
+      "crescimentoPercentual": 137.8
+    },
+    {
+      "numero": 2301,
+      "tamanhoAtual": 189,
+      "tamanhoFonte": 289,
+      "crescimentoPercentual": 52.9
+    },
+    {
+      "numero": 2302,
+      "tamanhoAtual": 135,
+      "tamanhoFonte": 570,
+      "crescimentoPercentual": 322.2
+    },
+    {
+      "numero": 2308,
+      "tamanhoAtual": 78,
+      "tamanhoFonte": 344,
+      "crescimentoPercentual": 341
+    },
+    {
+      "numero": 2309,
+      "tamanhoAtual": 209,
+      "tamanhoFonte": 856,
+      "crescimentoPercentual": 309.6
+    },
+    {
+      "numero": 2313,
+      "tamanhoAtual": 106,
+      "tamanhoFonte": 504,
+      "crescimentoPercentual": 375.5
+    },
+    {
+      "numero": 2317,
+      "tamanhoAtual": 302,
+      "tamanhoFonte": 717,
+      "crescimentoPercentual": 137.4
+    },
+    {
+      "numero": 2330,
+      "tamanhoAtual": 85,
+      "tamanhoFonte": 313,
+      "crescimentoPercentual": 268.2
+    },
+    {
+      "numero": 2331,
+      "tamanhoAtual": 263,
+      "tamanhoFonte": 538,
+      "crescimentoPercentual": 104.6
+    },
+    {
+      "numero": 2336,
+      "tamanhoAtual": 129,
+      "tamanhoFonte": 453,
+      "crescimentoPercentual": 251.2
+    },
+    {
+      "numero": 2337,
+      "tamanhoAtual": 382,
+      "tamanhoFonte": 477,
+      "crescimentoPercentual": 24.9
+    },
+    {
+      "numero": 2347,
+      "tamanhoAtual": 260,
+      "tamanhoFonte": 470,
+      "crescimentoPercentual": 80.8
+    },
+    {
+      "numero": 2349,
+      "tamanhoAtual": 412,
+      "tamanhoFonte": 620,
+      "crescimentoPercentual": 50.5
+    },
+    {
+      "numero": 2352,
+      "tamanhoAtual": 631,
+      "tamanhoFonte": 946,
+      "crescimentoPercentual": 49.9
+    },
+    {
+      "numero": 2361,
+      "tamanhoAtual": 402,
+      "tamanhoFonte": 1112,
+      "crescimentoPercentual": 176.6
+    },
+    {
+      "numero": 2362,
+      "tamanhoAtual": 275,
+      "tamanhoFonte": 626,
+      "crescimentoPercentual": 127.6
+    },
+    {
+      "numero": 2363,
+      "tamanhoAtual": 282,
+      "tamanhoFonte": 395,
+      "crescimentoPercentual": 40.1
+    },
+    {
+      "numero": 2365,
+      "tamanhoAtual": 242,
+      "tamanhoFonte": 691,
+      "crescimentoPercentual": 185.5
+    },
+    {
+      "numero": 2368,
+      "tamanhoAtual": 400,
+      "tamanhoFonte": 892,
+      "crescimentoPercentual": 123
+    },
+    {
+      "numero": 2370,
+      "tamanhoAtual": 566,
+      "tamanhoFonte": 1131,
+      "crescimentoPercentual": 99.8
+    },
+    {
+      "numero": 2382,
+      "tamanhoAtual": 172,
+      "tamanhoFonte": 315,
+      "crescimentoPercentual": 83.1
+    },
+    {
+      "numero": 2383,
+      "tamanhoAtual": 133,
+      "tamanhoFonte": 325,
+      "crescimentoPercentual": 144.4
+    },
+    {
+      "numero": 2384,
+      "tamanhoAtual": 425,
+      "tamanhoFonte": 570,
+      "crescimentoPercentual": 34.1
+    },
+    {
+      "numero": 2390,
+      "tamanhoAtual": 118,
+      "tamanhoFonte": 763,
+      "crescimentoPercentual": 546.6
+    },
+    {
+      "numero": 2400,
+      "tamanhoAtual": 99,
+      "tamanhoFonte": 161,
+      "crescimentoPercentual": 62.6
+    },
+    {
+      "numero": 2409,
+      "tamanhoAtual": 381,
+      "tamanhoFonte": 969,
+      "crescimentoPercentual": 154.3
+    },
+    {
+      "numero": 2411,
+      "tamanhoAtual": 388,
+      "tamanhoFonte": 653,
+      "crescimentoPercentual": 68.3
+    },
+    {
+      "numero": 2412,
+      "tamanhoAtual": 123,
+      "tamanhoFonte": 778,
+      "crescimentoPercentual": 532.5
+    },
+    {
+      "numero": 2423,
+      "tamanhoAtual": 127,
+      "tamanhoFonte": 301,
+      "crescimentoPercentual": 137
+    },
+    {
+      "numero": 2424,
+      "tamanhoAtual": 272,
+      "tamanhoFonte": 669,
+      "crescimentoPercentual": 146
+    },
+    {
+      "numero": 2428,
+      "tamanhoAtual": 237,
+      "tamanhoFonte": 373,
+      "crescimentoPercentual": 57.4
+    },
+    {
+      "numero": 2436,
+      "tamanhoAtual": 105,
+      "tamanhoFonte": 360,
+      "crescimentoPercentual": 242.9
+    },
+    {
+      "numero": 2445,
+      "tamanhoAtual": 99,
+      "tamanhoFonte": 806,
+      "crescimentoPercentual": 714.1
+    },
+    {
+      "numero": 2446,
+      "tamanhoAtual": 327,
+      "tamanhoFonte": 548,
+      "crescimentoPercentual": 67.6
+    },
+    {
+      "numero": 2447,
+      "tamanhoAtual": 620,
+      "tamanhoFonte": 1060,
+      "crescimentoPercentual": 71
+    },
+    {
+      "numero": 2449,
+      "tamanhoAtual": 814,
+      "tamanhoFonte": 1077,
+      "crescimentoPercentual": 32.3
+    },
+    {
+      "numero": 2463,
+      "tamanhoAtual": 212,
+      "tamanhoFonte": 407,
+      "crescimentoPercentual": 92
+    },
+    {
+      "numero": 2474,
+      "tamanhoAtual": 204,
+      "tamanhoFonte": 892,
+      "crescimentoPercentual": 337.3
+    },
+    {
+      "numero": 2477,
+      "tamanhoAtual": 148,
+      "tamanhoFonte": 555,
+      "crescimentoPercentual": 275
+    },
+    {
+      "numero": 2478,
+      "tamanhoAtual": 159,
+      "tamanhoFonte": 579,
+      "crescimentoPercentual": 264.2
+    },
+    {
+      "numero": 2494,
+      "tamanhoAtual": 164,
+      "tamanhoFonte": 513,
+      "crescimentoPercentual": 212.8
+    },
+    {
+      "numero": 2500,
+      "tamanhoAtual": 987,
+      "tamanhoFonte": 1515,
+      "crescimentoPercentual": 53.5
+    },
+    {
+      "numero": 2513,
+      "tamanhoAtual": 444,
+      "tamanhoFonte": 734,
+      "crescimentoPercentual": 65.3
+    },
+    {
+      "numero": 2516,
+      "tamanhoAtual": 338,
+      "tamanhoFonte": 866,
+      "crescimentoPercentual": 156.2
+    },
+    {
+      "numero": 2517,
+      "tamanhoAtual": 244,
+      "tamanhoFonte": 372,
+      "crescimentoPercentual": 52.5
+    },
+    {
+      "numero": 2518,
+      "tamanhoAtual": 413,
+      "tamanhoFonte": 651,
+      "crescimentoPercentual": 57.6
+    },
+    {
+      "numero": 2520,
+      "tamanhoAtual": 215,
+      "tamanhoFonte": 1126,
+      "crescimentoPercentual": 423.7
+    },
+    {
+      "numero": 2533,
+      "tamanhoAtual": 114,
+      "tamanhoFonte": 415,
+      "crescimentoPercentual": 264
+    },
+    {
+      "numero": 2536,
+      "tamanhoAtual": 292,
+      "tamanhoFonte": 589,
+      "crescimentoPercentual": 101.7
+    },
+    {
+      "numero": 2537,
+      "tamanhoAtual": 315,
+      "tamanhoFonte": 750,
+      "crescimentoPercentual": 138.1
+    },
+    {
+      "numero": 2538,
+      "tamanhoAtual": 450,
+      "tamanhoFonte": 735,
+      "crescimentoPercentual": 63.3
+    },
+    {
+      "numero": 2539,
+      "tamanhoAtual": 198,
+      "tamanhoFonte": 413,
+      "crescimentoPercentual": 108.6
+    },
+    {
+      "numero": 2540,
+      "tamanhoAtual": 231,
+      "tamanhoFonte": 509,
+      "crescimentoPercentual": 120.3
+    },
+    {
+      "numero": 2541,
+      "tamanhoAtual": 183,
+      "tamanhoFonte": 400,
+      "crescimentoPercentual": 118.6
+    },
+    {
+      "numero": 2546,
+      "tamanhoAtual": 212,
+      "tamanhoFonte": 421,
+      "crescimentoPercentual": 98.6
+    },
+    {
+      "numero": 2550,
+      "tamanhoAtual": 107,
+      "tamanhoFonte": 988,
+      "crescimentoPercentual": 823.4
+    },
+    {
+      "numero": 2558,
+      "tamanhoAtual": 427,
+      "tamanhoFonte": 604,
+      "crescimentoPercentual": 41.5
+    },
+    {
+      "numero": 2569,
+      "tamanhoAtual": 533,
+      "tamanhoFonte": 732,
+      "crescimentoPercentual": 37.3
+    },
+    {
+      "numero": 2583,
+      "tamanhoAtual": 221,
+      "tamanhoFonte": 967,
+      "crescimentoPercentual": 337.6
+    },
+    {
+      "numero": 2589,
+      "tamanhoAtual": 697,
+      "tamanhoFonte": 1044,
+      "crescimentoPercentual": 49.8
+    },
+    {
+      "numero": 2604,
+      "tamanhoAtual": 653,
+      "tamanhoFonte": 962,
+      "crescimentoPercentual": 47.3
+    },
+    {
+      "numero": 2606,
+      "tamanhoAtual": 591,
+      "tamanhoFonte": 1070,
+      "crescimentoPercentual": 81
+    },
+    {
+      "numero": 2613,
+      "tamanhoAtual": 65,
+      "tamanhoFonte": 732,
+      "crescimentoPercentual": 1026.2
+    },
+    {
+      "numero": 2616,
+      "tamanhoAtual": 801,
+      "tamanhoFonte": 1057,
+      "crescimentoPercentual": 32
+    },
+    {
+      "numero": 2658,
+      "tamanhoAtual": 361,
+      "tamanhoFonte": 783,
+      "crescimentoPercentual": 116.9
+    },
+    {
+      "numero": 2670,
+      "tamanhoAtual": 440,
+      "tamanhoFonte": 602,
+      "crescimentoPercentual": 36.8
+    },
+    {
+      "numero": 2671,
+      "tamanhoAtual": 382,
+      "tamanhoFonte": 692,
+      "crescimentoPercentual": 81.2
+    },
+    {
+      "numero": 2676,
+      "tamanhoAtual": 101,
+      "tamanhoFonte": 1690,
+      "crescimentoPercentual": 1573.3
+    },
+    {
+      "numero": 2677,
+      "tamanhoAtual": 482,
+      "tamanhoFonte": 990,
+      "crescimentoPercentual": 105.4
+    },
+    {
+      "numero": 2684,
+      "tamanhoAtual": 678,
+      "tamanhoFonte": 845,
+      "crescimentoPercentual": 24.6
+    },
+    {
+      "numero": 2690,
+      "tamanhoAtual": 249,
+      "tamanhoFonte": 694,
+      "crescimentoPercentual": 178.7
+    },
+    {
+      "numero": 2691,
+      "tamanhoAtual": 263,
+      "tamanhoFonte": 971,
+      "crescimentoPercentual": 269.2
+    },
+    {
+      "numero": 2709,
+      "tamanhoAtual": 195,
+      "tamanhoFonte": 523,
+      "crescimentoPercentual": 168.2
+    },
+    {
+      "numero": 2737,
+      "tamanhoAtual": 487,
+      "tamanhoFonte": 798,
+      "crescimentoPercentual": 63.9
+    },
+    {
+      "numero": 2743,
+      "tamanhoAtual": 190,
+      "tamanhoFonte": 372,
+      "crescimentoPercentual": 95.8
+    },
+    {
+      "numero": 2744,
+      "tamanhoAtual": 265,
+      "tamanhoFonte": 487,
+      "crescimentoPercentual": 83.8
+    },
+    {
+      "numero": 2745,
+      "tamanhoAtual": 473,
+      "tamanhoFonte": 637,
+      "crescimentoPercentual": 34.7
+    },
+    {
+      "numero": 2762,
+      "tamanhoAtual": 147,
+      "tamanhoFonte": 315,
+      "crescimentoPercentual": 114.3
+    },
+    {
+      "numero": 2763,
+      "tamanhoAtual": 334,
+      "tamanhoFonte": 605,
+      "crescimentoPercentual": 81.1
+    },
+    {
+      "numero": 2768,
+      "tamanhoAtual": 99,
+      "tamanhoFonte": 547,
+      "crescimentoPercentual": 452.5
+    },
+    {
+      "numero": 2777,
+      "tamanhoAtual": 530,
+      "tamanhoFonte": 1014,
+      "crescimentoPercentual": 91.3
+    },
+    {
+      "numero": 2779,
+      "tamanhoAtual": 740,
+      "tamanhoFonte": 976,
+      "crescimentoPercentual": 31.9
+    },
+    {
+      "numero": 2782,
+      "tamanhoAtual": 260,
+      "tamanhoFonte": 583,
+      "crescimentoPercentual": 124.2
+    },
+    {
+      "numero": 2783,
+      "tamanhoAtual": 116,
+      "tamanhoFonte": 680,
+      "crescimentoPercentual": 486.2
+    },
+    {
+      "numero": 2784,
+      "tamanhoAtual": 163,
+      "tamanhoFonte": 691,
+      "crescimentoPercentual": 323.9
+    },
+    {
+      "numero": 2785,
+      "tamanhoAtual": 143,
+      "tamanhoFonte": 716,
+      "crescimentoPercentual": 400.7
+    },
+    {
+      "numero": 2794,
+      "tamanhoAtual": 315,
+      "tamanhoFonte": 675,
+      "crescimentoPercentual": 114.3
+    },
+    {
+      "numero": 2796,
+      "tamanhoAtual": 280,
+      "tamanhoFonte": 396,
+      "crescimentoPercentual": 41.4
+    },
+    {
+      "numero": 2813,
+      "tamanhoAtual": 465,
+      "tamanhoFonte": 982,
+      "crescimentoPercentual": 111.2
+    },
+    {
+      "numero": 2814,
+      "tamanhoAtual": 103,
+      "tamanhoFonte": 1085,
+      "crescimentoPercentual": 953.4
+    },
+    {
+      "numero": 2816,
+      "tamanhoAtual": 432,
+      "tamanhoFonte": 747,
+      "crescimentoPercentual": 72.9
+    },
+    {
+      "numero": 2817,
+      "tamanhoAtual": 85,
+      "tamanhoFonte": 586,
+      "crescimentoPercentual": 589.4
+    },
+    {
+      "numero": 2819,
+      "tamanhoAtual": 231,
+      "tamanhoFonte": 549,
+      "crescimentoPercentual": 137.7
+    },
+    {
+      "numero": 2825,
+      "tamanhoAtual": 552,
+      "tamanhoFonte": 1182,
+      "crescimentoPercentual": 114.1
+    },
+    {
+      "numero": 2827,
+      "tamanhoAtual": 329,
+      "tamanhoFonte": 592,
+      "crescimentoPercentual": 79.9
+    },
+    {
+      "numero": 2830,
+      "tamanhoAtual": 445,
+      "tamanhoFonte": 643,
+      "crescimentoPercentual": 44.5
+    },
+    {
+      "numero": 2836,
+      "tamanhoAtual": 247,
+      "tamanhoFonte": 480,
+      "crescimentoPercentual": 94.3
+    },
+    {
+      "numero": 2837,
+      "tamanhoAtual": 790,
+      "tamanhoFonte": 1496,
+      "crescimentoPercentual": 89.4
+    },
+    {
+      "numero": 2845,
+      "tamanhoAtual": 436,
+      "tamanhoFonte": 752,
+      "crescimentoPercentual": 72.5
+    },
+    {
+      "numero": 2847,
+      "tamanhoAtual": 452,
+      "tamanhoFonte": 801,
+      "crescimentoPercentual": 77.2
+    },
+    {
+      "numero": 2852,
+      "tamanhoAtual": 492,
+      "tamanhoFonte": 836,
+      "crescimentoPercentual": 69.9
+    },
+    {
+      "numero": 2854,
+      "tamanhoAtual": 627,
+      "tamanhoFonte": 876,
+      "crescimentoPercentual": 39.7
+    }
+  ],
+  "leves": [
+    {
+      "numero": 1,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 6,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 10,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 11,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 12,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 13,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 14,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 15,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 16,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 17,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 19,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 21,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 23,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 29,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 33,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 36,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 38,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 41,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 43,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 45,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 51,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 52,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 56,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 58,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 59,
+      "similaridade": 0.9895
+    },
+    {
+      "numero": 63,
+      "similaridade": 0.9906
+    },
+    {
+      "numero": 66,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 70,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 77,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 79,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 80,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 84,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 87,
+      "similaridade": 0.9909
+    },
+    {
+      "numero": 89,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 90,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 91,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 92,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 110,
+      "similaridade": 0.9897
+    },
+    {
+      "numero": 113,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 114,
+      "similaridade": 0.986
+    },
+    {
+      "numero": 115,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 116,
+      "similaridade": 0.9926
+    },
+    {
+      "numero": 124,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 128,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 130,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 132,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 133,
+      "similaridade": 0.9915
+    },
+    {
+      "numero": 135,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 142,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 144,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 145,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 146,
+      "similaridade": 0.9892
+    },
+    {
+      "numero": 147,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 148,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 150,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 151,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 153,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 154,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 155,
+      "similaridade": 0.9876
+    },
+    {
+      "numero": 156,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 157,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 158,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 159,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 160,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 161,
+      "similaridade": 0.9833
+    },
+    {
+      "numero": 162,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 164,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 165,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 166,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 167,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 168,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 169,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 170,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 171,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 172,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 180,
+      "similaridade": 0.9897
+    },
+    {
+      "numero": 181,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 184,
+      "similaridade": 0.9878
+    },
+    {
+      "numero": 187,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 188,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 189,
+      "similaridade": 0.9829
+    },
+    {
+      "numero": 190,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 191,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 194,
+      "similaridade": 0.9919
+    },
+    {
+      "numero": 195,
+      "similaridade": 0.992
+    },
+    {
+      "numero": 198,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 199,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 201,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 206,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 207,
+      "similaridade": 0.9857
+    },
+    {
+      "numero": 208,
+      "similaridade": 0.9941
+    },
+    {
+      "numero": 210,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 211,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 212,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 214,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 215,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 217,
+      "similaridade": 0.9875
+    },
+    {
+      "numero": 219,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 220,
+      "similaridade": 0.9864
+    },
+    {
+      "numero": 221,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 223,
+      "similaridade": 0.9884
+    },
+    {
+      "numero": 224,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 225,
+      "similaridade": 0.9925
+    },
+    {
+      "numero": 232,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 234,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 238,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 239,
+      "similaridade": 0.9989
+    },
+    {
+      "numero": 240,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 241,
+      "similaridade": 0.9873
+    },
+    {
+      "numero": 242,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 243,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 245,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 246,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 248,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 249,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 252,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 254,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 255,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 257,
+      "similaridade": 0.9882
+    },
+    {
+      "numero": 265,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 266,
+      "similaridade": 0.9905
+    },
+    {
+      "numero": 268,
+      "similaridade": 0.9918
+    },
+    {
+      "numero": 269,
+      "similaridade": 0.9926
+    },
+    {
+      "numero": 270,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 272,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 273,
+      "similaridade": 0.989
+    },
+    {
+      "numero": 275,
+      "similaridade": 0.9911
+    },
+    {
+      "numero": 276,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 277,
+      "similaridade": 0.9928
+    },
+    {
+      "numero": 279,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 280,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 281,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 283,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 285,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 286,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 287,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 290,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 291,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 294,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 298,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 299,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 300,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 303,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 305,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 307,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 308,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 312,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 314,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 317,
+      "similaridade": 0.9859
+    },
+    {
+      "numero": 318,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 322,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 326,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 329,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 331,
+      "similaridade": 0.9941
+    },
+    {
+      "numero": 333,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 335,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 336,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 339,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 340,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 341,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 342,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 345,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 347,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 350,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 355,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 362,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 367,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 368,
+      "similaridade": 0.9884
+    },
+    {
+      "numero": 369,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 370,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 371,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 372,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 373,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 378,
+      "similaridade": 0.992
+    },
+    {
+      "numero": 383,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 385,
+      "similaridade": 0.9925
+    },
+    {
+      "numero": 388,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 389,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 390,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 391,
+      "similaridade": 0.9894
+    },
+    {
+      "numero": 392,
+      "similaridade": 0.9836
+    },
+    {
+      "numero": 393,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 394,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 395,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 396,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 398,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 402,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 403,
+      "similaridade": 0.9933
+    },
+    {
+      "numero": 404,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 405,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 406,
+      "similaridade": 0.9989
+    },
+    {
+      "numero": 408,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 410,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 411,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 412,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 419,
+      "similaridade": 0.9839
+    },
+    {
+      "numero": 422,
+      "similaridade": 0.9904
+    },
+    {
+      "numero": 423,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 424,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 427,
+      "similaridade": 0.9952
+    },
+    {
+      "numero": 428,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 429,
+      "similaridade": 0.9928
+    },
+    {
+      "numero": 430,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 431,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 432,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 433,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 434,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 435,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 438,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 440,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 441,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 442,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 443,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 444,
+      "similaridade": 0.9933
+    },
+    {
+      "numero": 445,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 446,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 448,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 449,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 450,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 451,
+      "similaridade": 0.9912
+    },
+    {
+      "numero": 453,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 454,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 455,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 456,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 458,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 459,
+      "similaridade": 0.9856
+    },
+    {
+      "numero": 460,
+      "similaridade": 0.9895
+    },
+    {
+      "numero": 463,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 465,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 466,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 472,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 478,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 484,
+      "similaridade": 0.9896
+    },
+    {
+      "numero": 486,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 489,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 490,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 492,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 495,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 497,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 498,
+      "similaridade": 0.9989
+    },
+    {
+      "numero": 500,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 501,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 504,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 505,
+      "similaridade": 0.992
+    },
+    {
+      "numero": 506,
+      "similaridade": 0.9922
+    },
+    {
+      "numero": 507,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 512,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 514,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 515,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 516,
+      "similaridade": 0.9855
+    },
+    {
+      "numero": 517,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 519,
+      "similaridade": 0.9913
+    },
+    {
+      "numero": 523,
+      "similaridade": 0.9914
+    },
+    {
+      "numero": 524,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 527,
+      "similaridade": 0.9907
+    },
+    {
+      "numero": 528,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 530,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 531,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 532,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 534,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 535,
+      "similaridade": 0.9902
+    },
+    {
+      "numero": 536,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 540,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 541,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 542,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 544,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 545,
+      "similaridade": 0.9848
+    },
+    {
+      "numero": 546,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 550,
+      "similaridade": 0.9893
+    },
+    {
+      "numero": 552,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 553,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 554,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 557,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 558,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 559,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 561,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 562,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 565,
+      "similaridade": 0.9879
+    },
+    {
+      "numero": 571,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 572,
+      "similaridade": 0.9916
+    },
+    {
+      "numero": 574,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 575,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 578,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 580,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 581,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 582,
+      "similaridade": 0.9989
+    },
+    {
+      "numero": 584,
+      "similaridade": 0.9909
+    },
+    {
+      "numero": 586,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 588,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 589,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 590,
+      "similaridade": 0.9896
+    },
+    {
+      "numero": 591,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 592,
+      "similaridade": 0.9826
+    },
+    {
+      "numero": 594,
+      "similaridade": 0.9918
+    },
+    {
+      "numero": 595,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 596,
+      "similaridade": 0.9941
+    },
+    {
+      "numero": 599,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 600,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 601,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 602,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 603,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 604,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 605,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 606,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 607,
+      "similaridade": 0.99
+    },
+    {
+      "numero": 608,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 609,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 610,
+      "similaridade": 0.9921
+    },
+    {
+      "numero": 611,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 612,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 615,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 616,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 617,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 622,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 623,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 624,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 627,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 628,
+      "similaridade": 0.9916
+    },
+    {
+      "numero": 630,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 632,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 634,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 639,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 640,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 641,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 643,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 644,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 645,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 646,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 647,
+      "similaridade": 0.9989
+    },
+    {
+      "numero": 648,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 649,
+      "similaridade": 0.9903
+    },
+    {
+      "numero": 651,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 653,
+      "similaridade": 0.993
+    },
+    {
+      "numero": 654,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 655,
+      "similaridade": 0.9925
+    },
+    {
+      "numero": 656,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 659,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 660,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 661,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 662,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 663,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 665,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 668,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 670,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 671,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 673,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 674,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 675,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 678,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 679,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 680,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 687,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 692,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 694,
+      "similaridade": 0.9921
+    },
+    {
+      "numero": 695,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 696,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 697,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 698,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 700,
+      "similaridade": 0.9865
+    },
+    {
+      "numero": 701,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 704,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 705,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 709,
+      "similaridade": 0.9919
+    },
+    {
+      "numero": 713,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 715,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 716,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 717,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 718,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 719,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 720,
+      "similaridade": 0.9925
+    },
+    {
+      "numero": 721,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 722,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 723,
+      "similaridade": 0.9908
+    },
+    {
+      "numero": 724,
+      "similaridade": 0.9924
+    },
+    {
+      "numero": 725,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 726,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 728,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 729,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 730,
+      "similaridade": 0.9863
+    },
+    {
+      "numero": 733,
+      "similaridade": 0.9889
+    },
+    {
+      "numero": 734,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 735,
+      "similaridade": 0.9859
+    },
+    {
+      "numero": 737,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 739,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 740,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 741,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 742,
+      "similaridade": 0.9828
+    },
+    {
+      "numero": 751,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 752,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 753,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 754,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 756,
+      "similaridade": 0.9922
+    },
+    {
+      "numero": 759,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 761,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 764,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 765,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 769,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 772,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 773,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 774,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 776,
+      "similaridade": 0.986
+    },
+    {
+      "numero": 778,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 784,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 785,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 787,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 789,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 790,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 791,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 792,
+      "similaridade": 0.9883
+    },
+    {
+      "numero": 793,
+      "similaridade": 0.9904
+    },
+    {
+      "numero": 798,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 799,
+      "similaridade": 0.9914
+    },
+    {
+      "numero": 800,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 801,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 804,
+      "similaridade": 0.9952
+    },
+    {
+      "numero": 806,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 810,
+      "similaridade": 0.9926
+    },
+    {
+      "numero": 814,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 818,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 820,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 822,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 824,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 828,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 829,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 835,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 838,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 848,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 849,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 851,
+      "similaridade": 0.9941
+    },
+    {
+      "numero": 852,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 854,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 855,
+      "similaridade": 0.9918
+    },
+    {
+      "numero": 858,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 859,
+      "similaridade": 0.9893
+    },
+    {
+      "numero": 860,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 863,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 865,
+      "similaridade": 0.9922
+    },
+    {
+      "numero": 866,
+      "similaridade": 0.9815
+    },
+    {
+      "numero": 867,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 868,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 869,
+      "similaridade": 0.9933
+    },
+    {
+      "numero": 871,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 872,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 875,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 876,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 877,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 878,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 879,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 882,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 883,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 886,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 887,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 889,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 890,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 891,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 893,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 897,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 900,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 901,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 903,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 912,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 913,
+      "similaridade": 0.9902
+    },
+    {
+      "numero": 915,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 916,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 921,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 922,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 923,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 924,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 925,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 929,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 931,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 941,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 945,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 950,
+      "similaridade": 0.9926
+    },
+    {
+      "numero": 951,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 952,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 953,
+      "similaridade": 0.9908
+    },
+    {
+      "numero": 955,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 958,
+      "similaridade": 0.9921
+    },
+    {
+      "numero": 959,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 960,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 961,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 963,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 967,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 969,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 970,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 971,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 973,
+      "similaridade": 0.9913
+    },
+    {
+      "numero": 977,
+      "similaridade": 0.9905
+    },
+    {
+      "numero": 978,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 979,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 984,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 985,
+      "similaridade": 0.9928
+    },
+    {
+      "numero": 990,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 993,
+      "similaridade": 0.9911
+    },
+    {
+      "numero": 994,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 995,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 998,
+      "similaridade": 0.9952
+    },
+    {
+      "numero": 1003,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 1005,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1006,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 1008,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 1009,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1013,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 1017,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 1021,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 1027,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 1029,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 1033,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 1034,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 1038,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 1041,
+      "similaridade": 0.9869
+    },
+    {
+      "numero": 1043,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 1044,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1045,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 1053,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1059,
+      "similaridade": 0.9952
+    },
+    {
+      "numero": 1063,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1066,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 1067,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 1071,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1073,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 1077,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 1079,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 1081,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1083,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1084,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 1085,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 1088,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1092,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1094,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 1096,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 1098,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 1099,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 1101,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1103,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 1104,
+      "similaridade": 0.9897
+    },
+    {
+      "numero": 1105,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1109,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1110,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 1112,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1113,
+      "similaridade": 0.9894
+    },
+    {
+      "numero": 1117,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 1119,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1120,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 1121,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 1124,
+      "similaridade": 0.988
+    },
+    {
+      "numero": 1126,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 1128,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 1129,
+      "similaridade": 0.9904
+    },
+    {
+      "numero": 1132,
+      "similaridade": 0.9924
+    },
+    {
+      "numero": 1133,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 1136,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1137,
+      "similaridade": 0.992
+    },
+    {
+      "numero": 1138,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1140,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 1142,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 1144,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 1151,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1153,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 1156,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 1162,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 1163,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 1170,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1171,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1174,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 1179,
+      "similaridade": 0.992
+    },
+    {
+      "numero": 1181,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1182,
+      "similaridade": 0.9952
+    },
+    {
+      "numero": 1186,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 1188,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 1191,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 1203,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 1204,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 1205,
+      "similaridade": 0.9894
+    },
+    {
+      "numero": 1212,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 1213,
+      "similaridade": 0.9846
+    },
+    {
+      "numero": 1214,
+      "similaridade": 0.9898
+    },
+    {
+      "numero": 1215,
+      "similaridade": 0.9868
+    },
+    {
+      "numero": 1220,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 1222,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 1223,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1224,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 1226,
+      "similaridade": 0.9905
+    },
+    {
+      "numero": 1228,
+      "similaridade": 0.9823
+    },
+    {
+      "numero": 1229,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 1230,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 1231,
+      "similaridade": 0.9861
+    },
+    {
+      "numero": 1232,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1233,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1234,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1236,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 1237,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 1238,
+      "similaridade": 0.9891
+    },
+    {
+      "numero": 1239,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 1242,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 1244,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 1245,
+      "similaridade": 0.9853
+    },
+    {
+      "numero": 1246,
+      "similaridade": 0.9885
+    },
+    {
+      "numero": 1247,
+      "similaridade": 0.9913
+    },
+    {
+      "numero": 1250,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 1252,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1253,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 1254,
+      "similaridade": 0.9819
+    },
+    {
+      "numero": 1255,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 1256,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 1257,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 1258,
+      "similaridade": 0.9843
+    },
+    {
+      "numero": 1259,
+      "similaridade": 0.9855
+    },
+    {
+      "numero": 1260,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1261,
+      "similaridade": 0.9866
+    },
+    {
+      "numero": 1262,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 1263,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 1264,
+      "similaridade": 0.9899
+    },
+    {
+      "numero": 1265,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1267,
+      "similaridade": 0.9857
+    },
+    {
+      "numero": 1268,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 1269,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 1270,
+      "similaridade": 0.9911
+    },
+    {
+      "numero": 1271,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 1272,
+      "similaridade": 0.9861
+    },
+    {
+      "numero": 1273,
+      "similaridade": 0.9861
+    },
+    {
+      "numero": 1274,
+      "similaridade": 0.9855
+    },
+    {
+      "numero": 1275,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1277,
+      "similaridade": 0.9886
+    },
+    {
+      "numero": 1278,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 1279,
+      "similaridade": 0.9895
+    },
+    {
+      "numero": 1282,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 1283,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 1285,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1286,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 1287,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 1288,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1289,
+      "similaridade": 0.9907
+    },
+    {
+      "numero": 1290,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 1291,
+      "similaridade": 0.9914
+    },
+    {
+      "numero": 1294,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1295,
+      "similaridade": 0.9897
+    },
+    {
+      "numero": 1296,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 1298,
+      "similaridade": 0.99
+    },
+    {
+      "numero": 1300,
+      "similaridade": 0.9912
+    },
+    {
+      "numero": 1304,
+      "similaridade": 0.9906
+    },
+    {
+      "numero": 1305,
+      "similaridade": 0.9906
+    },
+    {
+      "numero": 1306,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1309,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1311,
+      "similaridade": 0.9913
+    },
+    {
+      "numero": 1313,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 1314,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1316,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 1317,
+      "similaridade": 0.9884
+    },
+    {
+      "numero": 1318,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1320,
+      "similaridade": 0.9898
+    },
+    {
+      "numero": 1321,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 1322,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1326,
+      "similaridade": 0.9933
+    },
+    {
+      "numero": 1328,
+      "similaridade": 0.9833
+    },
+    {
+      "numero": 1333,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 1334,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 1336,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 1341,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 1343,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 1344,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1348,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 1349,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1356,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1362,
+      "similaridade": 0.9891
+    },
+    {
+      "numero": 1363,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 1364,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 1365,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 1367,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 1373,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 1374,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 1378,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 1384,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 1385,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 1392,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1395,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 1398,
+      "similaridade": 0.9916
+    },
+    {
+      "numero": 1399,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 1402,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 1403,
+      "similaridade": 0.9908
+    },
+    {
+      "numero": 1404,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 1405,
+      "similaridade": 0.9898
+    },
+    {
+      "numero": 1408,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 1411,
+      "similaridade": 0.9861
+    },
+    {
+      "numero": 1412,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 1416,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 1420,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 1425,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 1426,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 1427,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 1431,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 1434,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1437,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 1441,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 1442,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 1443,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 1444,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1446,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 1447,
+      "similaridade": 0.9993
+    },
+    {
+      "numero": 1448,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 1450,
+      "similaridade": 0.9904
+    },
+    {
+      "numero": 1451,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 1462,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1463,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 1470,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 1476,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 1481,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 1482,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 1484,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 1485,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 1486,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 1491,
+      "similaridade": 0.993
+    },
+    {
+      "numero": 1494,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 1496,
+      "similaridade": 0.9859
+    },
+    {
+      "numero": 1502,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 1503,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 1504,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 1505,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 1506,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1507,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 1508,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 1509,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 1518,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1520,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 1523,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 1524,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1525,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 1533,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 1534,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 1535,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 1537,
+      "similaridade": 0.9853
+    },
+    {
+      "numero": 1538,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1539,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 1544,
+      "similaridade": 0.989
+    },
+    {
+      "numero": 1546,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 1547,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 1549,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1550,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 1551,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 1553,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 1558,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1559,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1560,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 1563,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 1565,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1566,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 1568,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1569,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 1570,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 1571,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 1574,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 1577,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1579,
+      "similaridade": 0.9941
+    },
+    {
+      "numero": 1582,
+      "similaridade": 0.9921
+    },
+    {
+      "numero": 1583,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 1588,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 1591,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1592,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 1595,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 1597,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 1601,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1602,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 1603,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1604,
+      "similaridade": 0.9916
+    },
+    {
+      "numero": 1605,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 1606,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 1607,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 1609,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1610,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 1611,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 1613,
+      "similaridade": 0.9916
+    },
+    {
+      "numero": 1614,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 1615,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 1616,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1617,
+      "similaridade": 0.9894
+    },
+    {
+      "numero": 1619,
+      "similaridade": 0.9928
+    },
+    {
+      "numero": 1621,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 1622,
+      "similaridade": 0.9819
+    },
+    {
+      "numero": 1623,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 1627,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 1628,
+      "similaridade": 0.9917
+    },
+    {
+      "numero": 1629,
+      "similaridade": 0.9897
+    },
+    {
+      "numero": 1630,
+      "similaridade": 0.9851
+    },
+    {
+      "numero": 1633,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 1634,
+      "similaridade": 0.9907
+    },
+    {
+      "numero": 1635,
+      "similaridade": 0.9841
+    },
+    {
+      "numero": 1636,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 1637,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 1638,
+      "similaridade": 0.9886
+    },
+    {
+      "numero": 1640,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 1641,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 1643,
+      "similaridade": 0.9909
+    },
+    {
+      "numero": 1644,
+      "similaridade": 0.9912
+    },
+    {
+      "numero": 1645,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 1647,
+      "similaridade": 0.9868
+    },
+    {
+      "numero": 1649,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 1650,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 1654,
+      "similaridade": 0.9872
+    },
+    {
+      "numero": 1656,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 1657,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1658,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1660,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 1661,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 1662,
+      "similaridade": 0.9883
+    },
+    {
+      "numero": 1663,
+      "similaridade": 0.9926
+    },
+    {
+      "numero": 1664,
+      "similaridade": 0.9851
+    },
+    {
+      "numero": 1668,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1669,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 1671,
+      "similaridade": 0.9924
+    },
+    {
+      "numero": 1672,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 1673,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 1682,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1684,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 1685,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 1686,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1687,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 1689,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 1692,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1693,
+      "similaridade": 0.9858
+    },
+    {
+      "numero": 1694,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 1695,
+      "similaridade": 0.9891
+    },
+    {
+      "numero": 1696,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 1700,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 1701,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1709,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 1717,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1719,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1721,
+      "similaridade": 0.9928
+    },
+    {
+      "numero": 1724,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 1732,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 1734,
+      "similaridade": 0.99
+    },
+    {
+      "numero": 1735,
+      "similaridade": 0.9907
+    },
+    {
+      "numero": 1737,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 1739,
+      "similaridade": 0.9952
+    },
+    {
+      "numero": 1740,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 1741,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 1744,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 1745,
+      "similaridade": 0.9884
+    },
+    {
+      "numero": 1746,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 1749,
+      "similaridade": 0.9925
+    },
+    {
+      "numero": 1751,
+      "similaridade": 0.983
+    },
+    {
+      "numero": 1752,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1753,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1754,
+      "similaridade": 0.9912
+    },
+    {
+      "numero": 1756,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 1757,
+      "similaridade": 0.9804
+    },
+    {
+      "numero": 1760,
+      "similaridade": 0.981
+    },
+    {
+      "numero": 1762,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 1766,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 1767,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 1768,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 1770,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 1771,
+      "similaridade": 0.9915
+    },
+    {
+      "numero": 1780,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1782,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1783,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1786,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 1790,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 1798,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 1799,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 1805,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 1806,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 1807,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 1808,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1810,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 1812,
+      "similaridade": 0.9904
+    },
+    {
+      "numero": 1814,
+      "similaridade": 0.9895
+    },
+    {
+      "numero": 1815,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 1816,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 1817,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 1818,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1819,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 1820,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 1823,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 1824,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 1826,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 1827,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 1832,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 1834,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1839,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 1840,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 1846,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 1847,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 1849,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 1850,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 1852,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 1853,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 1857,
+      "similaridade": 0.9801
+    },
+    {
+      "numero": 1858,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 1859,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 1860,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1861,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 1864,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1865,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 1866,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 1867,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1871,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 1872,
+      "similaridade": 0.9902
+    },
+    {
+      "numero": 1873,
+      "similaridade": 0.9921
+    },
+    {
+      "numero": 1879,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 1881,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 1882,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 1883,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 1884,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 1889,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 1890,
+      "similaridade": 0.9917
+    },
+    {
+      "numero": 1899,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 1903,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 1904,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 1907,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 1908,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 1909,
+      "similaridade": 0.9928
+    },
+    {
+      "numero": 1914,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 1915,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 1932,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 1953,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 1960,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 1965,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 1968,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 1969,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 1971,
+      "similaridade": 0.9907
+    },
+    {
+      "numero": 1972,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 1984,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 1989,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 1991,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 1994,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 1996,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 1997,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 2003,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 2008,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 2009,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 2010,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2012,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2016,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2017,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 2021,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 2024,
+      "similaridade": 0.993
+    },
+    {
+      "numero": 2026,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 2029,
+      "similaridade": 0.9889
+    },
+    {
+      "numero": 2032,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2035,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 2037,
+      "similaridade": 0.9885
+    },
+    {
+      "numero": 2040,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 2041,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 2045,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 2052,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 2053,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 2054,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 2056,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 2058,
+      "similaridade": 0.9908
+    },
+    {
+      "numero": 2059,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 2060,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 2062,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 2065,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2066,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2068,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2074,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2084,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 2086,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2089,
+      "similaridade": 0.993
+    },
+    {
+      "numero": 2092,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 2094,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 2096,
+      "similaridade": 0.9898
+    },
+    {
+      "numero": 2098,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 2099,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 2100,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 2101,
+      "similaridade": 0.9851
+    },
+    {
+      "numero": 2102,
+      "similaridade": 0.9906
+    },
+    {
+      "numero": 2104,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 2109,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2111,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 2112,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 2113,
+      "similaridade": 0.9985
+    },
+    {
+      "numero": 2115,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 2116,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 2118,
+      "similaridade": 0.993
+    },
+    {
+      "numero": 2119,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 2120,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 2121,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 2122,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 2123,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 2129,
+      "similaridade": 0.993
+    },
+    {
+      "numero": 2131,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 2135,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 2139,
+      "similaridade": 0.9928
+    },
+    {
+      "numero": 2143,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 2147,
+      "similaridade": 0.9918
+    },
+    {
+      "numero": 2150,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2152,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 2153,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 2156,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 2157,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 2159,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 2166,
+      "similaridade": 0.9922
+    },
+    {
+      "numero": 2168,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 2169,
+      "similaridade": 0.9918
+    },
+    {
+      "numero": 2170,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2171,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 2172,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 2184,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 2188,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2192,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 2198,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 2200,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 2201,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2202,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 2205,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2206,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 2208,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 2210,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 2214,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 2215,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 2216,
+      "similaridade": 0.9893
+    },
+    {
+      "numero": 2217,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 2219,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 2220,
+      "similaridade": 0.9927
+    },
+    {
+      "numero": 2221,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 2222,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 2225,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 2227,
+      "similaridade": 0.9896
+    },
+    {
+      "numero": 2232,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 2235,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 2238,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 2239,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 2245,
+      "similaridade": 0.9966
+    },
+    {
+      "numero": 2249,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 2258,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 2259,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 2261,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 2262,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 2263,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 2266,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 2269,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2272,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 2278,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 2284,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 2285,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 2287,
+      "similaridade": 0.988
+    },
+    {
+      "numero": 2289,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 2291,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 2294,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 2295,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 2296,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2297,
+      "similaridade": 0.9858
+    },
+    {
+      "numero": 2298,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 2303,
+      "similaridade": 0.9906
+    },
+    {
+      "numero": 2304,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 2305,
+      "similaridade": 0.9868
+    },
+    {
+      "numero": 2310,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2312,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 2315,
+      "similaridade": 0.9905
+    },
+    {
+      "numero": 2322,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2333,
+      "similaridade": 0.9921
+    },
+    {
+      "numero": 2335,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 2340,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 2345,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 2348,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 2350,
+      "similaridade": 0.9914
+    },
+    {
+      "numero": 2351,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 2353,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 2354,
+      "similaridade": 0.99
+    },
+    {
+      "numero": 2355,
+      "similaridade": 0.9934
+    },
+    {
+      "numero": 2356,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 2358,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 2360,
+      "similaridade": 0.9917
+    },
+    {
+      "numero": 2364,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 2366,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 2369,
+      "similaridade": 0.9912
+    },
+    {
+      "numero": 2371,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2372,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 2373,
+      "similaridade": 0.993
+    },
+    {
+      "numero": 2374,
+      "similaridade": 0.9915
+    },
+    {
+      "numero": 2375,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 2377,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 2378,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 2379,
+      "similaridade": 0.9972
+    },
+    {
+      "numero": 2380,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 2381,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 2385,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 2386,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 2387,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 2388,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 2391,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 2397,
+      "similaridade": 0.9926
+    },
+    {
+      "numero": 2399,
+      "similaridade": 0.9922
+    },
+    {
+      "numero": 2402,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 2403,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2404,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2405,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 2407,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 2408,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2414,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 2415,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 2416,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2418,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2420,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 2421,
+      "similaridade": 0.998
+    },
+    {
+      "numero": 2426,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 2427,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 2430,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 2431,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2435,
+      "similaridade": 0.9877
+    },
+    {
+      "numero": 2438,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 2440,
+      "similaridade": 0.9987
+    },
+    {
+      "numero": 2441,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 2442,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 2443,
+      "similaridade": 0.9903
+    },
+    {
+      "numero": 2448,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 2455,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 2459,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 2464,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 2465,
+      "similaridade": 0.9933
+    },
+    {
+      "numero": 2466,
+      "similaridade": 0.9931
+    },
+    {
+      "numero": 2468,
+      "similaridade": 0.989
+    },
+    {
+      "numero": 2470,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2471,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 2472,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 2473,
+      "similaridade": 0.992
+    },
+    {
+      "numero": 2475,
+      "similaridade": 0.9925
+    },
+    {
+      "numero": 2480,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 2481,
+      "similaridade": 0.9947
+    },
+    {
+      "numero": 2482,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 2483,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 2484,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 2487,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 2490,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2491,
+      "similaridade": 0.9941
+    },
+    {
+      "numero": 2492,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 2496,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 2497,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2501,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 2502,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 2506,
+      "similaridade": 0.9938
+    },
+    {
+      "numero": 2525,
+      "similaridade": 0.9963
+    },
+    {
+      "numero": 2534,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 2542,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2543,
+      "similaridade": 0.9943
+    },
+    {
+      "numero": 2545,
+      "similaridade": 0.9917
+    },
+    {
+      "numero": 2559,
+      "similaridade": 0.9923
+    },
+    {
+      "numero": 2560,
+      "similaridade": 0.9978
+    },
+    {
+      "numero": 2561,
+      "similaridade": 0.9942
+    },
+    {
+      "numero": 2565,
+      "similaridade": 0.995
+    },
+    {
+      "numero": 2567,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2568,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 2570,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 2572,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 2574,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2575,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 2576,
+      "similaridade": 0.9951
+    },
+    {
+      "numero": 2577,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 2578,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 2580,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 2582,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 2585,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 2587,
+      "similaridade": 0.9979
+    },
+    {
+      "numero": 2588,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 2599,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 2600,
+      "similaridade": 0.9986
+    },
+    {
+      "numero": 2601,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2603,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 2605,
+      "similaridade": 0.9866
+    },
+    {
+      "numero": 2608,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2609,
+      "similaridade": 0.9941
+    },
+    {
+      "numero": 2610,
+      "similaridade": 0.9924
+    },
+    {
+      "numero": 2611,
+      "similaridade": 0.9915
+    },
+    {
+      "numero": 2612,
+      "similaridade": 0.9949
+    },
+    {
+      "numero": 2614,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2615,
+      "similaridade": 0.9937
+    },
+    {
+      "numero": 2617,
+      "similaridade": 0.9956
+    },
+    {
+      "numero": 2618,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 2619,
+      "similaridade": 0.9955
+    },
+    {
+      "numero": 2623,
+      "similaridade": 0.9936
+    },
+    {
+      "numero": 2624,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 2625,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2628,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 2630,
+      "similaridade": 0.9925
+    },
+    {
+      "numero": 2631,
+      "similaridade": 0.9918
+    },
+    {
+      "numero": 2632,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 2633,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 2634,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 2635,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2636,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 2637,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 2638,
+      "similaridade": 0.9912
+    },
+    {
+      "numero": 2639,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2640,
+      "similaridade": 0.991
+    },
+    {
+      "numero": 2641,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 2646,
+      "similaridade": 0.9905
+    },
+    {
+      "numero": 2653,
+      "similaridade": 0.9903
+    },
+    {
+      "numero": 2654,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 2655,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 2656,
+      "similaridade": 0.9952
+    },
+    {
+      "numero": 2657,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 2659,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 2663,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 2665,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2667,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2668,
+      "similaridade": 0.9953
+    },
+    {
+      "numero": 2678,
+      "similaridade": 0.9893
+    },
+    {
+      "numero": 2681,
+      "similaridade": 0.9945
+    },
+    {
+      "numero": 2683,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 2685,
+      "similaridade": 0.9946
+    },
+    {
+      "numero": 2708,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 2710,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 2713,
+      "similaridade": 0.9877
+    },
+    {
+      "numero": 2715,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 2716,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 2717,
+      "similaridade": 0.9974
+    },
+    {
+      "numero": 2718,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2726,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 2727,
+      "similaridade": 0.9941
+    },
+    {
+      "numero": 2729,
+      "similaridade": 0.9969
+    },
+    {
+      "numero": 2730,
+      "similaridade": 0.9944
+    },
+    {
+      "numero": 2731,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 2732,
+      "similaridade": 0.997
+    },
+    {
+      "numero": 2733,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 2736,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2740,
+      "similaridade": 0.9962
+    },
+    {
+      "numero": 2742,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 2747,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2759,
+      "similaridade": 0.9988
+    },
+    {
+      "numero": 2760,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2761,
+      "similaridade": 0.9915
+    },
+    {
+      "numero": 2764,
+      "similaridade": 0.9971
+    },
+    {
+      "numero": 2765,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 2766,
+      "similaridade": 0.9939
+    },
+    {
+      "numero": 2769,
+      "similaridade": 0.9948
+    },
+    {
+      "numero": 2771,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 2772,
+      "similaridade": 0.994
+    },
+    {
+      "numero": 2774,
+      "similaridade": 0.9932
+    },
+    {
+      "numero": 2788,
+      "similaridade": 0.996
+    },
+    {
+      "numero": 2790,
+      "similaridade": 0.9929
+    },
+    {
+      "numero": 2791,
+      "similaridade": 0.9964
+    },
+    {
+      "numero": 2798,
+      "similaridade": 0.9873
+    },
+    {
+      "numero": 2803,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2804,
+      "similaridade": 0.9965
+    },
+    {
+      "numero": 2805,
+      "similaridade": 0.9961
+    },
+    {
+      "numero": 2807,
+      "similaridade": 0.9975
+    },
+    {
+      "numero": 2809,
+      "similaridade": 0.9935
+    },
+    {
+      "numero": 2810,
+      "similaridade": 0.9976
+    },
+    {
+      "numero": 2812,
+      "similaridade": 0.9982
+    },
+    {
+      "numero": 2815,
+      "similaridade": 0.9967
+    },
+    {
+      "numero": 2822,
+      "similaridade": 0.9906
+    },
+    {
+      "numero": 2823,
+      "similaridade": 0.9954
+    },
+    {
+      "numero": 2824,
+      "similaridade": 0.9904
+    },
+    {
+      "numero": 2826,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 2828,
+      "similaridade": 0.9919
+    },
+    {
+      "numero": 2831,
+      "similaridade": 0.9977
+    },
+    {
+      "numero": 2835,
+      "similaridade": 0.9968
+    },
+    {
+      "numero": 2839,
+      "similaridade": 0.9959
+    },
+    {
+      "numero": 2841,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 2842,
+      "similaridade": 0.9877
+    },
+    {
+      "numero": 2843,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2846,
+      "similaridade": 0.9984
+    },
+    {
+      "numero": 2848,
+      "similaridade": 0.9912
+    },
+    {
+      "numero": 2849,
+      "similaridade": 0.9973
+    },
+    {
+      "numero": 2850,
+      "similaridade": 0.9981
+    },
+    {
+      "numero": 2851,
+      "similaridade": 0.9957
+    },
+    {
+      "numero": 2853,
+      "similaridade": 0.9958
+    },
+    {
+      "numero": 2855,
+      "similaridade": 0.9983
+    },
+    {
+      "numero": 2857,
+      "similaridade": 0.9972
+    }
+  ],
+  "divergentes": [
+    {
+      "numero": 511,
+      "similaridade": 0.9764,
+      "tamanhoAtual": 252,
+      "tamanhoFonte": 254
+    },
+    {
+      "numero": 693,
+      "similaridade": 0.9584,
+      "tamanhoAtual": 369,
+      "tamanhoFonte": 385
+    },
+    {
+      "numero": 757,
+      "similaridade": 0.9765,
+      "tamanhoAtual": 332,
+      "tamanhoFonte": 340
+    },
+    {
+      "numero": 1135,
+      "similaridade": 0.8873,
+      "tamanhoAtual": 543,
+      "tamanhoFonte": 612
+    },
+    {
+      "numero": 1280,
+      "similaridade": 0.9788,
+      "tamanhoAtual": 185,
+      "tamanhoFonte": 189
+    },
+    {
+      "numero": 1366,
+      "similaridade": 0.1694,
+      "tamanhoAtual": 143,
+      "tamanhoFonte": 844
+    },
+    {
+      "numero": 1439,
+      "similaridade": 0.224,
+      "tamanhoAtual": 372,
+      "tamanhoFonte": 1027
+    },
+    {
+      "numero": 1626,
+      "similaridade": 0.9773,
+      "tamanhoAtual": 176,
+      "tamanhoFonte": 176
+    },
+    {
+      "numero": 1736,
+      "similaridade": 0.1127,
+      "tamanhoAtual": 56,
+      "tamanhoFonte": 497
+    },
+    {
+      "numero": 1750,
+      "similaridade": 0.1479,
+      "tamanhoAtual": 38,
+      "tamanhoFonte": 257
+    },
+    {
+      "numero": 1837,
+      "similaridade": 0.9792,
+      "tamanhoAtual": 96,
+      "tamanhoFonte": 96
+    },
+    {
+      "numero": 2622,
+      "similaridade": 0.9767,
+      "tamanhoAtual": 126,
+      "tamanhoFonte": 129
+    }
+  ],
+  "identicos": [
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    18,
+    20,
+    22,
+    26,
+    34,
+    35,
+    39,
+    40,
+    42,
+    44,
+    46,
+    47,
+    48,
+    49,
+    50,
+    54,
+    57,
+    60,
+    61,
+    62,
+    64,
+    68,
+    69,
+    71,
+    72,
+    73,
+    75,
+    78,
+    82,
+    85,
+    86,
+    88,
+    93,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    103,
+    104,
+    106,
+    107,
+    108,
+    109,
+    121,
+    123,
+    125,
+    129,
+    131,
+    134,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    143,
+    149,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    182,
+    183,
+    185,
+    192,
+    196,
+    200,
+    203,
+    204,
+    209,
+    213,
+    216,
+    218,
+    222,
+    227,
+    228,
+    229,
+    230,
+    231,
+    233,
+    235,
+    236,
+    237,
+    244,
+    247,
+    250,
+    251,
+    253,
+    258,
+    259,
+    261,
+    262,
+    263,
+    264,
+    267,
+    271,
+    274,
+    278,
+    282,
+    284,
+    288,
+    289,
+    292,
+    295,
+    304,
+    306,
+    309,
+    310,
+    315,
+    316,
+    319,
+    320,
+    321,
+    323,
+    324,
+    325,
+    327,
+    328,
+    330,
+    332,
+    334,
+    337,
+    338,
+    343,
+    346,
+    348,
+    349,
+    351,
+    352,
+    353,
+    354,
+    357,
+    361,
+    363,
+    365,
+    366,
+    374,
+    375,
+    376,
+    377,
+    379,
+    380,
+    381,
+    382,
+    384,
+    386,
+    387,
+    397,
+    399,
+    400,
+    407,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    420,
+    421,
+    426,
+    436,
+    437,
+    439,
+    447,
+    452,
+    464,
+    468,
+    471,
+    473,
+    474,
+    475,
+    476,
+    477,
+    479,
+    480,
+    481,
+    482,
+    483,
+    485,
+    487,
+    493,
+    502,
+    503,
+    508,
+    509,
+    510,
+    513,
+    520,
+    522,
+    529,
+    539,
+    547,
+    548,
+    549,
+    560,
+    563,
+    564,
+    566,
+    567,
+    568,
+    569,
+    570,
+    573,
+    579,
+    583,
+    585,
+    587,
+    593,
+    613,
+    614,
+    619,
+    620,
+    621,
+    629,
+    633,
+    636,
+    637,
+    642,
+    650,
+    652,
+    657,
+    658,
+    664,
+    666,
+    667,
+    669,
+    672,
+    676,
+    677,
+    681,
+    682,
+    685,
+    686,
+    689,
+    699,
+    706,
+    707,
+    708,
+    710,
+    731,
+    743,
+    744,
+    745,
+    746,
+    747,
+    748,
+    749,
+    750,
+    755,
+    758,
+    762,
+    763,
+    766,
+    767,
+    768,
+    770,
+    775,
+    777,
+    779,
+    780,
+    781,
+    783,
+    788,
+    794,
+    802,
+    803,
+    805,
+    807,
+    808,
+    809,
+    811,
+    812,
+    819,
+    823,
+    825,
+    827,
+    830,
+    832,
+    833,
+    834,
+    836,
+    837,
+    840,
+    841,
+    843,
+    845,
+    850,
+    853,
+    856,
+    861,
+    862,
+    864,
+    870,
+    873,
+    880,
+    881,
+    884,
+    885,
+    888,
+    892,
+    894,
+    895,
+    898,
+    902,
+    906,
+    907,
+    909,
+    910,
+    911,
+    914,
+    917,
+    918,
+    919,
+    920,
+    926,
+    927,
+    928,
+    930,
+    932,
+    934,
+    935,
+    936,
+    937,
+    938,
+    939,
+    940,
+    942,
+    943,
+    944,
+    946,
+    947,
+    962,
+    965,
+    968,
+    974,
+    975,
+    982,
+    986,
+    987,
+    988,
+    996,
+    997,
+    1015,
+    1016,
+    1018,
+    1019,
+    1024,
+    1026,
+    1030,
+    1035,
+    1040,
+    1047,
+    1048,
+    1049,
+    1051,
+    1052,
+    1054,
+    1055,
+    1056,
+    1057,
+    1058,
+    1060,
+    1061,
+    1062,
+    1069,
+    1072,
+    1074,
+    1075,
+    1078,
+    1080,
+    1082,
+    1086,
+    1087,
+    1089,
+    1090,
+    1091,
+    1095,
+    1097,
+    1102,
+    1106,
+    1107,
+    1108,
+    1111,
+    1114,
+    1115,
+    1116,
+    1118,
+    1123,
+    1125,
+    1127,
+    1131,
+    1134,
+    1139,
+    1143,
+    1145,
+    1146,
+    1147,
+    1148,
+    1149,
+    1150,
+    1152,
+    1154,
+    1155,
+    1158,
+    1164,
+    1168,
+    1169,
+    1172,
+    1173,
+    1175,
+    1176,
+    1177,
+    1178,
+    1180,
+    1187,
+    1189,
+    1190,
+    1192,
+    1193,
+    1194,
+    1195,
+    1196,
+    1197,
+    1198,
+    1199,
+    1200,
+    1201,
+    1202,
+    1206,
+    1207,
+    1208,
+    1209,
+    1210,
+    1211,
+    1235,
+    1240,
+    1241,
+    1248,
+    1249,
+    1251,
+    1276,
+    1281,
+    1284,
+    1292,
+    1301,
+    1302,
+    1307,
+    1310,
+    1315,
+    1319,
+    1323,
+    1324,
+    1325,
+    1327,
+    1331,
+    1332,
+    1335,
+    1337,
+    1338,
+    1340,
+    1347,
+    1350,
+    1357,
+    1359,
+    1360,
+    1361,
+    1370,
+    1372,
+    1376,
+    1377,
+    1379,
+    1382,
+    1387,
+    1388,
+    1389,
+    1390,
+    1400,
+    1401,
+    1406,
+    1407,
+    1409,
+    1410,
+    1413,
+    1414,
+    1415,
+    1417,
+    1418,
+    1419,
+    1421,
+    1422,
+    1428,
+    1430,
+    1433,
+    1435,
+    1436,
+    1438,
+    1440,
+    1445,
+    1452,
+    1453,
+    1454,
+    1455,
+    1457,
+    1459,
+    1461,
+    1464,
+    1465,
+    1466,
+    1467,
+    1468,
+    1472,
+    1473,
+    1474,
+    1475,
+    1477,
+    1478,
+    1479,
+    1480,
+    1483,
+    1487,
+    1488,
+    1489,
+    1490,
+    1492,
+    1493,
+    1495,
+    1497,
+    1498,
+    1499,
+    1500,
+    1501,
+    1510,
+    1512,
+    1514,
+    1515,
+    1516,
+    1517,
+    1521,
+    1522,
+    1526,
+    1527,
+    1528,
+    1529,
+    1530,
+    1531,
+    1540,
+    1545,
+    1552,
+    1555,
+    1556,
+    1557,
+    1561,
+    1562,
+    1564,
+    1567,
+    1572,
+    1573,
+    1575,
+    1576,
+    1578,
+    1580,
+    1581,
+    1585,
+    1590,
+    1593,
+    1594,
+    1596,
+    1598,
+    1599,
+    1600,
+    1608,
+    1612,
+    1624,
+    1639,
+    1646,
+    1648,
+    1653,
+    1655,
+    1659,
+    1665,
+    1666,
+    1667,
+    1670,
+    1674,
+    1675,
+    1677,
+    1678,
+    1679,
+    1680,
+    1681,
+    1683,
+    1688,
+    1691,
+    1699,
+    1702,
+    1703,
+    1704,
+    1705,
+    1706,
+    1708,
+    1710,
+    1711,
+    1712,
+    1713,
+    1714,
+    1715,
+    1725,
+    1726,
+    1727,
+    1728,
+    1729,
+    1731,
+    1733,
+    1738,
+    1743,
+    1747,
+    1748,
+    1758,
+    1759,
+    1761,
+    1763,
+    1764,
+    1765,
+    1769,
+    1772,
+    1773,
+    1774,
+    1775,
+    1776,
+    1777,
+    1784,
+    1785,
+    1787,
+    1788,
+    1791,
+    1792,
+    1793,
+    1795,
+    1796,
+    1797,
+    1800,
+    1801,
+    1802,
+    1811,
+    1813,
+    1822,
+    1829,
+    1830,
+    1833,
+    1835,
+    1836,
+    1838,
+    1841,
+    1842,
+    1843,
+    1844,
+    1845,
+    1851,
+    1854,
+    1855,
+    1862,
+    1869,
+    1870,
+    1874,
+    1875,
+    1876,
+    1877,
+    1878,
+    1880,
+    1885,
+    1887,
+    1888,
+    1891,
+    1892,
+    1893,
+    1894,
+    1895,
+    1896,
+    1898,
+    1906,
+    1910,
+    1911,
+    1912,
+    1913,
+    1916,
+    1917,
+    1918,
+    1919,
+    1920,
+    1921,
+    1922,
+    1923,
+    1924,
+    1925,
+    1926,
+    1927,
+    1928,
+    1930,
+    1931,
+    1933,
+    1934,
+    1936,
+    1940,
+    1941,
+    1943,
+    1944,
+    1945,
+    1946,
+    1947,
+    1948,
+    1950,
+    1952,
+    1957,
+    1959,
+    1961,
+    1963,
+    1967,
+    1973,
+    1975,
+    1976,
+    1977,
+    1978,
+    1979,
+    1980,
+    1981,
+    1982,
+    1983,
+    1985,
+    1986,
+    1990,
+    1998,
+    2000,
+    2006,
+    2007,
+    2014,
+    2018,
+    2019,
+    2020,
+    2022,
+    2023,
+    2025,
+    2027,
+    2028,
+    2030,
+    2031,
+    2033,
+    2034,
+    2036,
+    2038,
+    2039,
+    2044,
+    2046,
+    2047,
+    2048,
+    2049,
+    2050,
+    2051,
+    2064,
+    2069,
+    2072,
+    2073,
+    2075,
+    2076,
+    2077,
+    2078,
+    2079,
+    2080,
+    2081,
+    2082,
+    2087,
+    2090,
+    2093,
+    2095,
+    2097,
+    2105,
+    2106,
+    2107,
+    2108,
+    2110,
+    2114,
+    2117,
+    2124,
+    2125,
+    2126,
+    2127,
+    2128,
+    2130,
+    2133,
+    2134,
+    2136,
+    2137,
+    2138,
+    2140,
+    2142,
+    2145,
+    2146,
+    2151,
+    2154,
+    2155,
+    2158,
+    2160,
+    2161,
+    2162,
+    2163,
+    2164,
+    2165,
+    2176,
+    2180,
+    2181,
+    2182,
+    2183,
+    2186,
+    2187,
+    2189,
+    2190,
+    2191,
+    2193,
+    2194,
+    2195,
+    2197,
+    2203,
+    2204,
+    2207,
+    2209,
+    2212,
+    2213,
+    2224,
+    2226,
+    2228,
+    2229,
+    2230,
+    2231,
+    2234,
+    2236,
+    2246,
+    2247,
+    2248,
+    2250,
+    2251,
+    2252,
+    2253,
+    2254,
+    2255,
+    2256,
+    2265,
+    2276,
+    2279,
+    2280,
+    2281,
+    2283,
+    2290,
+    2292,
+    2293,
+    2299,
+    2300,
+    2306,
+    2307,
+    2311,
+    2314,
+    2316,
+    2318,
+    2319,
+    2320,
+    2321,
+    2323,
+    2324,
+    2325,
+    2326,
+    2327,
+    2328,
+    2329,
+    2332,
+    2334,
+    2338,
+    2339,
+    2341,
+    2342,
+    2343,
+    2344,
+    2346,
+    2357,
+    2359,
+    2367,
+    2376,
+    2389,
+    2392,
+    2393,
+    2394,
+    2395,
+    2396,
+    2398,
+    2401,
+    2406,
+    2410,
+    2413,
+    2417,
+    2419,
+    2422,
+    2425,
+    2429,
+    2432,
+    2433,
+    2434,
+    2437,
+    2439,
+    2444,
+    2450,
+    2451,
+    2452,
+    2453,
+    2454,
+    2456,
+    2457,
+    2458,
+    2460,
+    2461,
+    2462,
+    2467,
+    2469,
+    2476,
+    2479,
+    2485,
+    2486,
+    2488,
+    2489,
+    2493,
+    2495,
+    2498,
+    2499,
+    2503,
+    2504,
+    2505,
+    2507,
+    2508,
+    2509,
+    2510,
+    2511,
+    2512,
+    2514,
+    2515,
+    2519,
+    2521,
+    2522,
+    2523,
+    2524,
+    2526,
+    2527,
+    2528,
+    2529,
+    2530,
+    2531,
+    2532,
+    2535,
+    2544,
+    2547,
+    2548,
+    2549,
+    2551,
+    2552,
+    2553,
+    2554,
+    2555,
+    2556,
+    2557,
+    2562,
+    2563,
+    2564,
+    2566,
+    2571,
+    2573,
+    2579,
+    2581,
+    2584,
+    2586,
+    2590,
+    2591,
+    2592,
+    2593,
+    2594,
+    2595,
+    2596,
+    2597,
+    2598,
+    2602,
+    2607,
+    2620,
+    2621,
+    2626,
+    2627,
+    2629,
+    2642,
+    2643,
+    2644,
+    2645,
+    2647,
+    2648,
+    2649,
+    2650,
+    2651,
+    2652,
+    2660,
+    2661,
+    2662,
+    2664,
+    2666,
+    2669,
+    2672,
+    2673,
+    2674,
+    2675,
+    2679,
+    2680,
+    2682,
+    2686,
+    2687,
+    2688,
+    2689,
+    2692,
+    2693,
+    2694,
+    2695,
+    2696,
+    2697,
+    2698,
+    2699,
+    2700,
+    2701,
+    2702,
+    2703,
+    2704,
+    2705,
+    2706,
+    2707,
+    2711,
+    2712,
+    2714,
+    2719,
+    2720,
+    2721,
+    2722,
+    2723,
+    2724,
+    2725,
+    2728,
+    2734,
+    2735,
+    2738,
+    2739,
+    2741,
+    2746,
+    2748,
+    2749,
+    2750,
+    2751,
+    2752,
+    2753,
+    2754,
+    2755,
+    2756,
+    2757,
+    2758,
+    2767,
+    2770,
+    2773,
+    2775,
+    2776,
+    2778,
+    2780,
+    2781,
+    2786,
+    2787,
+    2789,
+    2792,
+    2793,
+    2795,
+    2797,
+    2799,
+    2800,
+    2801,
+    2802,
+    2806,
+    2808,
+    2811,
+    2818,
+    2820,
+    2821,
+    2829,
+    2832,
+    2833,
+    2834,
+    2838,
+    2840,
+    2844,
+    2856,
+    2858,
+    2859,
+    2860,
+    2861,
+    2862,
+    2863,
+    2864,
+    2865
+  ],
+  "piores15Divergentes": [
+    {
+      "numero": 1736,
+      "similaridade": 0.1127,
+      "trechoAtual": "Todo o ato diretamente querido é imputável ao seu autor.",
+      "trechoFonte": "Todo o acto directamente querido é imputável ao seu autor.\nAssim, depois do pecado no paraíso, o Senhor pergunta a Adão: «Que fizeste'?» (Gn"
+    },
+    {
+      "numero": 1750,
+      "similaridade": 0.1479,
+      "trechoAtual": "A moralidade dos atos humanos depende:",
+      "trechoFonte": "A moralidade dos actos humanos depende:\n– do objecto escolhido; – do fim que se tem em vista ou da intenção: – das circunstâncias da acção.\n"
+    },
+    {
+      "numero": 1366,
+      "similaridade": 0.1694,
+      "trechoAtual": "A Eucaristia é, pois, um sacrifício, porquerepresenta (torna presente) o sacrifício da cruz, porque é dele o memorial eporqueaplicao seu fru",
+      "trechoFonte": "A Eucaristia é, pois, um sacrifício, porque representa (torna presente) o sacrifício da cruz, porque é dele o memorial e porque aplica o seu"
+    },
+    {
+      "numero": 1439,
+      "similaridade": 0.224,
+      "trechoAtual": "As nações ricas têm uma grave responsabilidade moral em relação aquelas que não podem, por si mesmas, assegurar os meios do seu desenvolvime",
+      "trechoFonte": "O dinamismo da conversão e da penitência foi maravilhosamente descrito por Jesus na parábola do «filho pródigo», cujo centro é «o pai miseri"
+    },
+    {
+      "numero": 1135,
+      "similaridade": 0.8873,
+      "trechoAtual": "A catequese da liturgia implica, primeiramente, a compreensão da economia sacramental (capítulo primeiro). A esta luz revela-se a novidade d",
+      "trechoFonte": "A catequese da liturgia implica, primeiramente, a compreensão da economia sacramental (capítulo primeiro). A esta luz revela-se a novidade d"
+    },
+    {
+      "numero": 693,
+      "similaridade": 0.9584,
+      "trechoAtual": "Além do seu nome próprio, que é o mais empregado nos Atos dos Apóstolos e nas epístolas, encontramos em S. Paulo as designações: Espírito da",
+      "trechoFonte": "Além do seu nome próprio, que é o mais empregado nos Actos dos Apóstolos e nas epístolas, encontramos em S. Paulo as designações: Espírito d"
+    },
+    {
+      "numero": 511,
+      "similaridade": 0.9764,
+      "trechoAtual": "A Virgem Maria «cooperou livremente, pela sua fé e obediência, na salvação dos homens» (184). Pronunciou o seu«fiat» –faça-se –«loco totius ",
+      "trechoFonte": "A Virgem Maria «cooperou livremente, pela sua fé e obediência, na salvação dos homens» (184). Pronunciou o seu «fiat» – faça-se – «loco toti"
+    },
+    {
+      "numero": 757,
+      "similaridade": 0.9765,
+      "trechoAtual": "«A Igreja é também chamada\"Jerusalém do Alto\" e\"nossa mãe\" (Gl4, 26) (149); é também descrita como a Esposa imaculada do Cordeiro sem mancha",
+      "trechoFonte": "«A Igreja é também chamada \"Jerusalém do Alto\" e \"nossa mãe\" (Gl 4, 26) (149); é também descrita como a Esposa imaculada do Cordeiro sem man"
+    },
+    {
+      "numero": 2622,
+      "similaridade": 0.9767,
+      "trechoAtual": "A oração da Virgem Maria, no seu«Fiat»e no seu«Magnificat», caracteriza-se pelo oferecimento generoso de todo o seu ser na fé.",
+      "trechoFonte": "A oração da Virgem Maria, no seu «Fiat» e no seu «Magnificat», caracteriza-se pelo oferecimento generoso de todo o seu ser na fé."
+    },
+    {
+      "numero": 1626,
+      "similaridade": 0.9773,
+      "trechoAtual": "A Igreja considera a permuta dos consentimentos entre os esposos como o elemento indispensável «que constitui o matrimônios (141). Se faltar",
+      "trechoFonte": "A Igreja considera a permuta dos consentimentos entre os esposos como o elemento indispensável «que constitui o Matrimónios (141). Se faltar"
+    },
+    {
+      "numero": 1280,
+      "similaridade": 0.9788,
+      "trechoAtual": "O Batismo imprime na alma um sinal espiritual indelével, o caráter; que consagra o baptizado para o culto da religião cristã. Por causa do c",
+      "trechoFonte": "O Baptismo imprime na alma um sinal espiritual indelével, o carácter; que consagra o baptizado para o culto da religião cristã. Por causa do"
+    },
+    {
+      "numero": 1837,
+      "similaridade": 0.9792,
+      "trechoAtual": "A. fortaleza assegura, no meio das dificuldades, a firmeza e a constância na prossecução do bem.",
+      "trechoFonte": "A .fortaleza assegura, no meio das dificuldades, a firmeza e a constância na prossecução do bem."
+    }
+  ]
+}
