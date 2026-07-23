@@ -1,0 +1,23 @@
+{
+  "pergunta": "O que a Igreja ensina sobre o meio ambiente?",
+  "slug": "o-que-a-igreja-ensina-sobre-o-meio-ambiente",
+  "resposta": "O Catecismo trata do tema nos §§ 2415–2417.",
+  "paragrafos": [
+    {
+      "id": 2415,
+      "motivo": "Exige o respeito pela integridade da criação, incluindo as gerações futuras.",
+      "trecho": "O sétimo mandamento exige o respeito pela integridade da criação. Os animais, tal como as plantas e os seres inanimados, são naturalmente destinados ao bem comum da humanidade, passada, presente e futura (155) O uso dos recursos minerais, vegetais e animais do universo não pode ser desvinculado do respeito pelas exigências morais. O domínio concedido pelo Criador ao homem sobre os seres inanimados e os outros seres vivos, não é absoluto, mas regulado pela preocupação da qualidade de vida do próximo, inclusive das gerações futuras; exige um respeito reli­gioso pela integridade da criação (156)."
+    },
+    {
+      "id": 2416,
+      "motivo": "Situa os animais como criaturas de Deus, merecedoras de estima.",
+      "trecho": "Os animais são criaturas de Deus. Deus envolve-os na sua solicitude providencial (157). Pelo simples fato de existirem, eles O bendizem e Lhe dão glória (158). Por isso, os homens devem estimá-los. É de lembrar com que delicadeza os santos, como São Francisco de Assis ou São Filipe de Néri, tratavam os animais."
+    },
+    {
+      "id": 2417,
+      "motivo": "Define os limites morais do uso humano dos animais.",
+      "trecho": "Deus confiou os animais ao governo daquele que foi criado à Sua imagem (159). É, portanto, legítimo servimo-nos dos animais para a alimentação e para a confecção do vestuário. Podemos domesticá-los para que sirvam o homem nos seus trabalhos e lazeres. As experiências médicas e científicas em animais são práticas moralmente admissíveis desde que não ultrapassem os limites do razoável e contribuam para curar ou poupar vidas humanas."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.449Z"
+}

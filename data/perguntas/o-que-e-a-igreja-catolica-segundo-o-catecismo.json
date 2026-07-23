@@ -1,0 +1,23 @@
+{
+  "pergunta": "O que é a Igreja Católica segundo o Catecismo?",
+  "slug": "o-que-e-a-igreja-catolica-segundo-o-catecismo",
+  "resposta": "O Catecismo trata do tema nos §§ 748, 811 e 813.",
+  "paragrafos": [
+    {
+      "id": 748,
+      "motivo": "Explica que a Igreja não tem luz própria, apenas reflete a de Cristo.",
+      "trecho": "«A luz dos povos é Cristo: por isso, este sagrado Concílio, reunido no Espírito Santo, deseja ardentemente iluminar todos os homens com a sua luz que resplandece no rosto da Igreja, anunciando o Evangelho a toda a criatura» (120). É com estas palavras que começa a «Constituição Dogmática sobre a Igreja» do II Concilio do Vaticano. Desse modo, o Concílio mostra que o artigo de fé sobre a Igreja depende inteiramente dos artigos relativos a Jesus Cristo. A Igreja não tem outra luz senão a de Cristo. Ela é, segundo uma imagem cara aos Padres da Igreja, comparável à lua, cuja luz é toda reflexo da do sol."
+    },
+    {
+      "id": 811,
+      "motivo": "Enumera os quatro atributos da Igreja: una, santa, católica e apostólica.",
+      "trecho": "«Esta é a única Igreja de Cristo, que no Credo confessamos ser una, santa, católica e apostólica» (263). Estes quatro atributos, inseparavelmente ligados entre si (264) indicam traços essenciais da Igreja e da sua missão. A Igreja não os confere a si mesma; é Cristo que, pelo Espírito Santo, concede à sua Igreja que seja una, santa, católica e apostólica, e é ainda Ele que a chama a realizar cada uma destas qualidades."
+    },
+    {
+      "id": 813,
+      "motivo": "Detalha por que a Igreja é una: pela sua fonte, seu fundador e sua alma.",
+      "trecho": "A Igreja é una, graças à sua fonte:«Osupremo modelo e princípio deste mistério é a unidade na Trindade das pessoas, dum só Deus, Pai e Filho no Espírito Santo» (267). A Igreja é una graças ao seu fundador:«O próprio Filho encarnado [...] reconciliou todos os homens com Deus pela sua Cruz, restabelecendo a unidade de todos num só povo e num só Corpo» (268). A Igreja é una graças à sua «alma»:«O Espírito Santo que habita nos crentes e que enche e rege toda a Igreja, realiza esta admirável comunhão dos fiéis e une-os todos tão intimamente em Cristo que é o princípio da unidade da Igreja» (269). Pertence, pois, à própria essência da Igreja que ela seja una:"
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.449Z"
+}

@@ -1,0 +1,23 @@
+{
+  "pergunta": "É obrigação ir à missa todo domingo?",
+  "slug": "e-obrigacao-ir-a-missa-todo-domingo",
+  "resposta": "O Catecismo trata do tema nos §§ 2042 e 2180–2181.",
+  "paragrafos": [
+    {
+      "id": 2180,
+      "motivo": "Cita o mandamento da Igreja que obriga à participação na missa dominical.",
+      "trecho": "O mandamento da Igreja determina e precisa a lei do Senhor: «No domingo e nos outros dias festivos de preceito, os fiéis têm obrigação de participar na missa» (102). «Cumpre o preceito de participar na missa quem a ela assiste onde quer que se celebre em rito católico, quer no próprio dia festivo quer na tarde do antecedente» (103)."
+    },
+    {
+      "id": 2181,
+      "motivo": "Qualifica como pecado grave faltar deliberadamente a essa obrigação.",
+      "trecho": "A Eucaristia dominical fundamenta e sanciona toda a prática cristã. É por isso que os fiéis têm obrigação de participar na Eucaristia nos dias de preceito, a menos que estejam justificados, por motivo sério (por exemplo, doença, obrigação de cuidar de crianças de peito) ou dispensados pelo seu pastor (104). Os que deliberadamente faltam a esta obrigação cometem um pecado grave."
+    },
+    {
+      "id": 2042,
+      "motivo": "Explica o primeiro preceito da Igreja: santificar o domingo participando na Eucaristia.",
+      "trecho": "O primeiro preceito («Ouvir missa inteira e abster-se de trabalhos servis nos domingos e festas de guarda») exige aos fiéis que santifiquem o dia em que se comemora a ressurreição do Senhor, bem como as principais festas litúrgicas em honra dos mistérios do Senhor, da Bem-aventurada Virgem Maria e dos Santos, que a Igreja declara como sendo de preceito, sobretudo participando na celebração eucarística em que a comunidade cristã se reúne e descansando de trabalhos e ocupações que possam impedir a santificação desses dias (86)."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.448Z"
+}

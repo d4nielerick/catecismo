@@ -1,0 +1,23 @@
+{
+  "pergunta": "O que é o Purgatório?",
+  "slug": "o-que-e-o-purgatorio",
+  "resposta": "O Catecismo trata do tema nos §§ 1030–1032.",
+  "paragrafos": [
+    {
+      "id": 1030,
+      "motivo": "Descreve a purificação de quem morre em graça mas ainda não perfeitamente puro.",
+      "trecho": "Os que morrem na graça e na amizade de Deus, mas não de todo purificados, embora seguros da sua salvação eterna, sofrem depois da morte uma purificação, a fim de obterem a santidade necessária para entrar na alegria do céu."
+    },
+    {
+      "id": 1031,
+      "motivo": "Nomeia essa purificação como Purgatório e cita os concílios que a definiram.",
+      "trecho": "A Igreja chama Purgatório a esta purificação final dos eleitos, que é absolutamente distinta do castigo dos condenados. A Igreja formulou a doutrina da fé relativamente ao Purgatório sobretudo nos concílios de Florença (622) e de Trento (623). A Tradição da Igreja, referindo-se a certos textos da Escritura (624) fala dum fogo purificador:"
+    },
+    {
+      "id": 1032,
+      "motivo": "Liga a doutrina do Purgatório à prática da oração pelos defuntos.",
+      "trecho": "Esta doutrina apoia-se também na prática da oração pelos defuntos, de que já fala a Sagrada Escritura: «Por isso, [Judas Macabeu] pediu um sacrifício expiatório para que os mortos fossem livres das suas faltas» (2Mac12, 46). Desde os primeiros tempos, a Igreja honrou a memória dos defuntos, oferecendo sufrágios em seu favor, particularmente o Sacrifício eucarístico para que, purificados, possam chegar à visão beatífica de Deus. A Igreja recomenda também a esmola, as indulgências e as obras de penitência a favor dos defuntos:"
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.448Z"
+}

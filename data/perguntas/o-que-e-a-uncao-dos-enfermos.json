@@ -1,0 +1,28 @@
+{
+  "pergunta": "O que é a Unção dos Enfermos?",
+  "slug": "o-que-e-a-uncao-dos-enfermos",
+  "resposta": "O Catecismo trata do tema nos §§ 1499, 1511, 1514 e 1520.",
+  "paragrafos": [
+    {
+      "id": 1499,
+      "motivo": "Descreve o efeito da Unção dos Enfermos: encomendar o doente ao Senhor.",
+      "trecho": "«Pela santa Unção dos Enfermos e pela oração dos presbíteros, toda a Igreja encomenda os doentes ao Senhor, sofredor e glorificado, para que os alivie e os salve: mais ainda, exorta-os a que, associando-se livremente à paixão e morte de Cristo, concorram para o bem do povo de Deus» (95)."
+    },
+    {
+      "id": 1511,
+      "motivo": "Situa a Unção entre os sete sacramentos como o dedicado à doença.",
+      "trecho": "A Igreja crê e confessa que, entre os sete sacramentos, há um, especialmente destinado a reconfortar os que se encontram sob a provação da doença: a Unção dos enfermos:"
+    },
+    {
+      "id": 1514,
+      "motivo": "Esclarece que não é sacramento só para quem está prestes a morrer.",
+      "trecho": "A Unção dos Enfermos «não é sacramento só dos que estão prestes a morrer. Por isso, o tempo oportuno para a receber é certamente quando o fiel começa, por doença ou por velhice, a estar em perigo de morte» (125)."
+    },
+    {
+      "id": 1520,
+      "motivo": "Detalha a graça de conforto, paz e coragem que o sacramento confere.",
+      "trecho": "Um dom particular do Espírito Santo. A primeira graça deste sacramento é uma graça de reconforto, de paz e de coragem para vencer as dificuldades próprias do estado de doença grave ou da fragilidade da velhice. Esta graça é um dom do Espírito Santo, que renova a confiança e a fé em Deus, e dá força contra as tentações do Maligno, especialmente a tentação do desânimo e da angústia da morte (130). Esta assistência do Senhor pela força do seu Espírito visa levar o doente à cura da alma, mas também à do corpo, se tal for a vontade de Deus (131). Além disso, «se ele cometeu pecados, ser-lhe-ão perdoados» (Tg5, 15) (132)."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.446Z"
+}

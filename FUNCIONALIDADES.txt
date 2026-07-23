@@ -261,7 +261,10 @@ DEPOIS (requer mais esforço)
 
 Stack atual: Vanilla JS, sem framework, sem bundler.
 Hosting: Vercel (site estático + Edge Functions em api/) + deploy automático via push no main.
-IA: Grok (xAI) via API REST. Homilias da liturgia são pré-geradas (estáticas).
+IA: Grok (xAI) via API REST. A homilia/reflexão gerada por IA para a liturgia
+foi removida do runtime (texto soava artificial e alucinava); a página de
+liturgia mostra só as leituras oficiais. Script de geração offline fica no
+repo (scripts/gerar-reflexoes.mjs) para retomada futura.
 Correções de erro são encaminhadas via Telegram.
 Custo mensal estimado: ~R$0 (Vercel free tier) + uso pontual da API Grok.
 

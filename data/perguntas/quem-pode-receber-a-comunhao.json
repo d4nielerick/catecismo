@@ -1,0 +1,23 @@
+{
+  "pergunta": "Quem pode receber a comunhão?",
+  "slug": "quem-pode-receber-a-comunhao",
+  "resposta": "O Catecismo trata do tema nos §§ 1385, 1415 e 1457.",
+  "paragrafos": [
+    {
+      "id": 1385,
+      "motivo": "Cita São Paulo sobre o exame de consciência antes de comungar.",
+      "trecho": "Para responder a este convite, devemospreparar-nospara este momento tão grande e santo. São Paulo exorta a um exame de consciência: «Quem comer o pão ou beber do cálice do Senhor indignamente será réu do corpo e do sangue do Senhor. Examine-se, pois, cada qual a si mesmo e então coma desse pão e beba deste cálice; pois quem come e bebe, sem discernir o corpo do Senhor, come e bebe a própria condenação» (1Cor11, 27-29). Aquele que tiver consciência dum pecado grave deve receber o sacramento da Reconciliação antes de se aproximar da Comunhão."
+    },
+    {
+      "id": 1415,
+      "motivo": "Define a exigência de estar em estado de graça para comungar.",
+      "trecho": "Aquele que quiser receber Cristo na Comunhão eucarística deve encontrar-se em estado de graça. Se alguém tiver consciência de ter pecado mortalmente, não deve aproximar-se da Eucaristia sem primeiro ter recebido a absolvição no sacramento da Penitência."
+    },
+    {
+      "id": 1457,
+      "motivo": "Explica a obrigação de confessar pecado mortal antes da Comunhão.",
+      "trecho": "Segundo o mandamento da Igreja, «todo o fiel que tenha atingido a idade da discrição, está obrigado a confessar fielmente os pecados graves, ao menos uma vez ao ano» (50). Aquele que tem consciência de haver cometido um pecado mortal, não deve receber a sagrada Comunhão, mesmo que tenha uma grande contrição, sem ter previamente recebido a absolvição sacramental (51); a não ser que tenha um motivo grave para comungar e não lhe seja possível encontrar-se com um confessor (52). As crianças devem aceder ao sacramento da Penitência antes de receberem pela primeira vez a Sagrada Comunhão (53)."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.445Z"
+}

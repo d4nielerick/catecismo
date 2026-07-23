@@ -1,0 +1,28 @@
+{
+  "pergunta": "O que é a eutanásia segundo o Catecismo?",
+  "slug": "o-que-e-a-eutanasia-segundo-o-catecismo",
+  "resposta": "O Catecismo trata do tema nos §§ 2276–2279.",
+  "paragrafos": [
+    {
+      "id": 2276,
+      "motivo": "Afirma o respeito devido às pessoas com vida deficiente ou enfraquecida.",
+      "trecho": "Aqueles que têm uma vida deficiente ou enfraquecida reclamam um respeito especial. As pessoas doentes ou deficientes devem ser amparadas, para que possam levar uma vida tão normal quanto possível."
+    },
+    {
+      "id": 2277,
+      "motivo": "Define a eutanásia direta como moralmente inaceitável.",
+      "trecho": "Quaisquer que sejam os motivos e os meios, a eutanásia direta consiste em pôr fim à vida de pessoas deficientes, doentes ou moribundas. É moralmente inaceitável."
+    },
+    {
+      "id": 2278,
+      "motivo": "Distingue a eutanásia da legítima recusa de tratamentos desproporcionados.",
+      "trecho": "A cessação de tratamentos médicos onerosos, perigosos, extraordinários ou desproporcionados aos resultados esperados, pode ser legítima. É a rejeição do «encarniçamento terapêutico». Não que assim se pretenda dar a morte; simplesmente se aceita o fato de a não poder impedir. As decisões devem ser tomadas pelo paciente se para isso tiver competência e capacidade; de contrário, por quem para tal tenha direitos legais, respeitando sempre a vontade razoável e os interesses legítimos do paciente."
+    },
+    {
+      "id": 2279,
+      "motivo": "Trata do uso de analgésicos no fim da vida e dos cuidados paliativos.",
+      "trecho": "Mesmo que a morte seja considerada iminente, os cuidados habitualmente devidos a uma pessoa doente não podem ser legitimamente interrompidos. O uso dos analgésicos para aliviar os sofrimentos do moribundo, mesmo correndo-se o risco de abreviar os seus dias, pode ser moralmente conforme com a dignidade humana, se a morte não for querida, nem como fim nem como meio, mas somente prevista e tolerada como inevitável. Os cuidados paliativos constituem uma forma excepcional da caridade desinteressada; a esse título, devem ser encorajados."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.447Z"
+}

@@ -1,0 +1,23 @@
+{
+  "pergunta": "Por que Maria é chamada de Mãe de Deus?",
+  "slug": "por-que-maria-e-chamada-de-mae-de-deus",
+  "resposta": "O Catecismo trata do tema nos §§ 466, 495 e 509.",
+  "paragrafos": [
+    {
+      "id": 495,
+      "motivo": "Explica por que a Igreja confessa Maria como \"Theotokos\", Mãe de Deus.",
+      "trecho": "Chamada nos evangelhos «a Mãe de Jesus» (Jo2, 1; 19, 25)(150), Maria é aclamada, sob o impulso do Espírito Santo e desde antes do nascimento do seu Filho, como «a Mãe do meu Senhor» (Lc1, 43). Com efeito, Aquele que Ela concebeu como homem por obra do Espírito Santo, e que Se tornou verdadeiramente seu Filho segundo a carne, não é outro senão o Filho eterno do Pai, a segunda pessoa da Santíssima Trindade. A Igreja confessa que Maria é, verdadeiramente, Mãe de Deus («Theotokos») (151)."
+    },
+    {
+      "id": 466,
+      "motivo": "Cita o Concílio de Éfeso (431), que proclamou o título Mãe de Deus.",
+      "trecho": "A heresia nestoriana via em Cristo uma pessoa humana unida à pessoa divina do Filho de Deus. Perante esta heresia, São Cirilo de Alexandria e o terceiro Concilio ecuménico, reunido em Éfeso em 431, confessaram que «o Verbo, unindo na sua pessoa uma carne animada por uma alma racional, Se fez homem» (91). A humanidade de Cristo não tem outro sujeito senão a pessoa divina do Filho de Deus, que a assumiu e a fez sua desde que foi concebida. Por isso, o Concílio de Éfeso proclamou, cm 431, que Maria se tornou, com toda a verdade. Mãe de Deus, por ter concebido humanamente o Filho de Deus em seu seio: «Mãe de Deus, não porque o Verbo de Deus dela tenha recebido a natureza divina, mas porque dela recebeu o corpo sagrado, dotado duma alma racional, unido ao qual, na sua pessoa, se diz que o Verbo nasceu segundo a carne» (92)."
+    },
+    {
+      "id": 509,
+      "motivo": "Resume por que Maria é verdadeiramente Mãe de Deus.",
+      "trecho": "Maria é verdadeiramente «Mãe de Deus», pois é a Mãe do Filho eterno de Deus feito homem que, Ele próprio, é Deus."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.447Z"
+}

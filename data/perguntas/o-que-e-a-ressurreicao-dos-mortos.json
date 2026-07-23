@@ -1,0 +1,28 @@
+{
+  "pergunta": "O que é a ressurreição dos mortos?",
+  "slug": "o-que-e-a-ressurreicao-dos-mortos",
+  "resposta": "O Catecismo trata do tema nos §§ 988, 990, 997 e 1001.",
+  "paragrafos": [
+    {
+      "id": 988,
+      "motivo": "Situa a ressurreição dos mortos como o ponto culminante do Credo.",
+      "trecho": "O Credo cristão — profissão da nossa fé em Deus Pai, Filho e Espírito Santo, e na sua acção criadora, salvadora e santificadora — culmina na proclamação da ressurreição dos mortos no fim dos tempos, e na vida eterna."
+    },
+    {
+      "id": 990,
+      "motivo": "Define o que significa \"ressurreição da carne\".",
+      "trecho": "A palavra «carne» designa o homem na sua condição de fraqueza e mortalidade (560) «Ressurreição da carne» significa que, depois da morte, não haverá somente a vida da alma imortal, mas também os nossos «corpos mortais» (Rm8, 11) retomarão a vida."
+    },
+    {
+      "id": 997,
+      "motivo": "Explica o que é ressuscitar: a reunião do corpo glorificado à alma.",
+      "trecho": "O que é ressuscitar? Na morte, separação da alma e do corpo, o corpo do homem cai na corrupção, enquanto a sua alma vai ao encontro de Deus, embora ficando à espera de se reunir ao seu corpo glorificado. Deus, na sua omnipotência, restituirá definitivamente a vida incorruptível aos nossos corpos, unindo-os às nossas almas pela virtude da ressurreição de Jesus."
+    },
+    {
+      "id": 1001,
+      "motivo": "Liga a ressurreição dos mortos à Parusia de Cristo.",
+      "trecho": "Quando? Definitivamente o no último dia» (Jo6, 39-40.44.54; 11, 24), «no fim do mundo» (578). Com efeito, a ressurreição dos mortos está intimamente associada à Parusia de Cristo:"
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.448Z"
+}

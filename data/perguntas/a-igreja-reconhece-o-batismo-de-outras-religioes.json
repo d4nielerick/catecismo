@@ -1,0 +1,18 @@
+{
+  "pergunta": "A Igreja reconhece o batismo de outras religiões?",
+  "slug": "a-igreja-reconhece-o-batismo-de-outras-religioes",
+  "resposta": "O Catecismo trata do tema nos §§ 818 e 1271.",
+  "paragrafos": [
+    {
+      "id": 1271,
+      "motivo": "Afirma que o Batismo é o vínculo de comunhão entre todos os cristãos batizados.",
+      "trecho": "O Batismo constitui o fundamento da comunhão entre todos os cristãos, mesmo com aqueles que ainda não estão em plena comunhão com a Igreja Católica: «Pois aqueles que crê em em Cristo e foram devidamente baptizados, estão numa certa comunhão, embora não perfeita, com a Igreja Católica justificados no Batismo pela fé, são incorporados em Cristo, e, por isso, com direito se honram com o nome de cristãos e justamente são reconhecidos pelos filhos da Igreja Católica como irmãos no Senhor» (78). «O Batismo, pois, constitui o vínculo sacramental da unidade vigente entre todos os que por ele foram regenerados» (79)."
+    },
+    {
+      "id": 818,
+      "motivo": "Reconhece como irmãos, batizados válidos fora da plena comunhão católica.",
+      "trecho": "Os que hoje nascem em comunidades provenientes de tais rupturas, «e que vivem a fé de Cristo, não podem ser acusados do pecado da divisão. A Igreja Católica abraça-os com respeito e caridade fraterna [...]. Justificados pela fé recebida no Batismo, incorporados em Cristo, é a justo título que se honram com o nome de cristãos e os filhos da Igreja Católica reconhecem-nos legitimamente como irmãos no Senhor» (278)."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.446Z"
+}

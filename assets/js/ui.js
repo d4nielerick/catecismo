@@ -374,31 +374,6 @@ function registrarEventos() {
   document.getElementById('btn-ler-header')
     ?.addEventListener('click', () => abrirLeitor(0));
 
-  // Contribuição
-  document.getElementById('btn-contribuir-hero')
-    ?.addEventListener('click', abrirModalContribuicao);
-  document.getElementById('btn-contribuir-header')
-    ?.addEventListener('click', abrirModalContribuicao);
-  document.getElementById('modal-contribuicao-fechar')
-    ?.addEventListener('click', fecharModalContribuicao);
-  document.getElementById('modal-contribuicao-overlay')
-    ?.addEventListener('click', (e) => {
-      if (e.target.id === 'modal-contribuicao-overlay') fecharModalContribuicao();
-    });
-  document.getElementById('btn-copiar-pix')
-    ?.addEventListener('click', copiarPix);
-  document.getElementById('btn-toggle-qr')
-    ?.addEventListener('click', toggleQR);
-  document.querySelector('.pix-valores')
-    ?.addEventListener('click', (e) => {
-      const btn = e.target.closest('.pix-valor-btn');
-      if (btn) selecionarValorPix(btn.dataset.valor);
-    });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !document.getElementById('modal-contribuicao-overlay').classList.contains('oculto')) {
-      fecharModalContribuicao();
-    }
-  });
 }
 
 // ── Busca ────────────────────────────────────────────────────────────────────
@@ -1127,57 +1102,6 @@ function escapeHtml(s) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
-}
-
-// ── Contribuição ──────────────────────────────────────────────────────────────
-const PIX_QR = {
-  '10':    '/assets/img/pix-qr-10.webp',
-  '20':    '/assets/img/pix-qr-20.webp',
-  '50':    '/assets/img/pix-qr-50.webp',
-  'livre': '/assets/img/pix-qr-livre.webp',
-};
-
-let _valorPix = '10';
-
-function abrirModalContribuicao() {
-  document.getElementById('modal-contribuicao-overlay')?.classList.remove('oculto');
-}
-
-function fecharModalContribuicao() {
-  document.getElementById('modal-contribuicao-overlay')?.classList.add('oculto');
-}
-
-function selecionarValorPix(valor) {
-  _valorPix = valor;
-  document.querySelectorAll('.pix-valor-btn').forEach(b =>
-    b.classList.toggle('ativo', b.dataset.valor === valor)
-  );
-  const img = document.getElementById('pix-qr-img');
-  if (img) {
-    img.src = PIX_QR[valor];
-    img.alt = `QR Code PIX${valor !== 'livre' ? ` R$${valor}` : ' — valor livre'}`;
-  }
-}
-
-function copiarPix() {
-  const chave = document.getElementById('pix-chave')?.textContent?.trim();
-  if (!chave) return;
-  const btn = document.getElementById('btn-copiar-pix');
-  navigator.clipboard.writeText(chave).then(() => {
-    btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Copiado!`;
-    setTimeout(() => {
-      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copiar chave`;
-    }, 2000);
-  });
-}
-
-function toggleQR() {
-  const modal = document.getElementById('modal-contribuicao');
-  const btn   = document.getElementById('btn-toggle-qr');
-  const ativo = modal.classList.toggle('qr-ativo');
-  btn.innerHTML = ativo
-    ? `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg> Fechar QR`
-    : `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3m0 4h4m-4 0h-4m4 0v-4"/></svg> Ver QR Code`;
 }
 
 // ── Barra de nav mobile ───────────────────────────────────────────────────────

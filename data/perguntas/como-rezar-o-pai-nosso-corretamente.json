@@ -1,0 +1,23 @@
+{
+  "pergunta": "Como rezar o Pai Nosso corretamente?",
+  "slug": "como-rezar-o-pai-nosso-corretamente",
+  "resposta": "O Catecismo trata do tema nos §§ 2759, 2761 e 2765.",
+  "paragrafos": [
+    {
+      "id": 2759,
+      "motivo": "Traz o texto integral do Pai Nosso confiado por Jesus aos discípulos.",
+      "trecho": "«Um dia, estava Jesus em oração, em certo lugar. Quando acabou, disse-lhe um dos seus discípulos: \"Senhor, ensina-nos a orar, como João Batista também ensinou os seus discípulos\"» (Lc 11, 1). Foi em resposta a este pedido que o Senhor confiou aos seus discípulos e à sua Igreja a oração cristã fundamental. São Lucas apresenta-nos um texto breve dessa oração (cinco petições)(1); São Mateus, uma versão mais desenvolvida (sete petições) (2). A tradição litúrgica da Igreja reteve o texto de São Mateus (Mt 6, 9-13): Pai Nosso que estais nos céus, santificado seja o vosso Nome, venha a nós o vosso Reino, seja feita a vossa vontade assim na terra como no céu. O pão nosso de cada dia nos dai hoje, perdoai-nos as nossas ofensas assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do Mal."
+    },
+    {
+      "id": 2761,
+      "motivo": "Chama o Pai Nosso de \"resumo de todo o Evangelho\" e oração fundamental.",
+      "trecho": "«A oração dominical é verdadeiramente o resumo de todo o Evangelho» (7). «Depois de o Senhor nos ter legado esta fórmula de oração, acrescentou\"Pedi e recebereis\" (Jo16, 24). Cada um pode, portanto, dirigir ao céu diversas orações segundo as suas necessidades, mas começando sempre pela oração do Senhor, que continua a ser a oração fundamental» (8)."
+    },
+    {
+      "id": 2765,
+      "motivo": "Explica por que essa oração é chamada \"do Senhor\": Ele é mestre e modelo dela.",
+      "trecho": "A expressão tradicional «oração dominical» (isto é, «oração do Senhor») significa que a prece dirigida ao nosso Pai nos foi ensinada e legada pelo Senhor Jesus. Tal oração, que nos vem de Jesus, é verdadeiramente única: é «do Senhor». Efetivamente, por um lado, nas palavras desta oração o Filho Único dá-nos as palavras que o Pai Lhe deu (13): Ele é o mestre da nossa oração. Por outro lado, sendo o Verbo encarnado, Ele conhece no seu coração de homem as necessidades dos seus irmãos e irmãs humanos e revela-no-las: Ele é o modelo da nossa oração."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.448Z"
+}

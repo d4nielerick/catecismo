@@ -6,6 +6,21 @@
 
   <title>Liturgia do Dia — Catecismo da Igreja Católica</title>
   <meta name="description" content="Leituras litúrgicas do dia, com texto completo em português.">
+  <link rel="canonical" href="https://santadoutrina.cloud/liturgiadiaria/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Liturgia do Dia — Catecismo da Igreja Católica">
+  <meta property="og:description" content="Leituras litúrgicas do dia, com texto completo em português.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://santadoutrina.cloud/liturgiadiaria/">
+  <meta property="og:image"       content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
+  <meta property="og:locale"      content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="Liturgia do Dia — Catecismo da Igreja Católica">
+  <meta name="twitter:description" content="Leituras litúrgicas do dia, com texto completo em português.">
+  <meta name="twitter:image"       content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
 
   <link rel="icon" type="image/png" href="../assets/favicon.png">
   <link rel="apple-touch-icon" href="../assets/favicon.png">
@@ -15,6 +30,20 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
 
   <link rel="stylesheet" href="../assets/css/main.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Liturgia do Dia — Catecismo da Igreja Católica",
+    "url": "https://santadoutrina.cloud/liturgiadiaria/",
+    "description": "Leituras litúrgicas do dia, com texto completo em português."
+  }
+  </script>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://umami.danielerick.com/script.js" data-website-id="28c35f85-bd1b-4ea9-8f52-fc98d33b4974"></script>
   <style>
     /* ── Base ─────────────────────────────────────────────────────────────── */
     html, body {
@@ -230,37 +259,6 @@
 
     .lp-nav a.ativa .nav-dot { opacity: 1; }
 
-    /* Botão reflexão no sidebar */
-    .lp-sidebar-footer {
-      margin-top: auto;
-      padding-top: 2rem;
-    }
-
-    #btn-reflexao {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.45rem;
-      background: none;
-      border: 1.5px solid var(--color-primary);
-      color: var(--color-primary);
-      font-family: var(--font-sans);
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.65rem 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    #btn-reflexao:hover:not(:disabled) {
-      background: var(--color-primary);
-      color: #fff;
-    }
-
-    #btn-reflexao:disabled { opacity: 0.45; cursor: not-allowed; }
-
     /* ── Conteúdo principal ───────────────────────────────────────────────── */
     .lp-main {
       flex: 1;
@@ -374,153 +372,6 @@
       font-size: 0.9rem;
     }
 
-    /* ── Reflexão IA ──────────────────────────────────────────────────────── */
-    #reflexao-conteudo { margin-top: 1.5rem; }
-
-    .reflexao-card {
-      background: var(--color-bg);
-      border: 1px solid var(--color-border);
-      border-radius: 10px;
-      padding: 1.25rem 1.5rem 1.25rem;
-    }
-
-    .ia-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-family: var(--font-sans);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--color-muted);
-      margin-bottom: 1rem;
-    }
-
-    .ia-badge svg { opacity: 0.5; }
-
-    /* Palavra grega */
-    .palavra-grega-bloco {
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .palavra-grega-label {
-      font-family: var(--font-sans);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--color-muted);
-      margin-bottom: 0.35rem;
-    }
-
-    .palavra-grega-row {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-    }
-
-    .audio-btn {
-      background: none;
-      border: 1px solid var(--color-border);
-      border-radius: 6px;
-      cursor: pointer;
-      color: var(--color-muted);
-      display: inline-flex;
-      align-items: center;
-      padding: 0.2rem 0.45rem;
-      gap: 0.3rem;
-      font-size: 0.72rem;
-      font-family: var(--font-sans);
-      transition: color 0.12s, border-color 0.12s;
-    }
-
-    .audio-btn:hover { color: var(--color-primary); border-color: var(--color-primary); }
-
-    .reflexao-p {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--color-text);
-      margin: 0 0 0.85rem;
-    }
-
-    .reflexao-p:last-of-type { margin-bottom: 1rem; }
-
-    .termo-inline {
-      font-weight: 600;
-      color: var(--color-primary);
-    }
-
-    /* Pills dos parágrafos */
-    .cic-refs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.25rem;
-    }
-
-    .cic-ref-pill {
-      font-family: var(--font-sans);
-      font-size: 0.78rem;
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 6px;
-      padding: 0.25em 0.6em;
-      color: var(--color-primary);
-      cursor: pointer;
-      transition: background 0.12s, border-color 0.12s;
-    }
-
-    .cic-ref-pill:hover,
-    .cic-ref-pill.aberta { background: rgba(197,160,40,0.1); border-color: var(--color-accent); }
-
-    /* Card expandido do parágrafo CIC */
-    .cic-paragrafo-card {
-      margin-top: 0.75rem;
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-left: 3px solid var(--color-accent);
-      border-radius: 8px;
-      padding: 1rem 1.25rem;
-      animation: _fadeIn 0.18s ease;
-    }
-
-    @keyframes _fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
-
-    .cic-paragrafo-num {
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--color-muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .cic-paragrafo-texto {
-      font-family: var(--font-serif);
-      font-size: 0.97rem;
-      line-height: 1.75;
-      color: var(--color-text);
-      margin: 0 0 0.75rem;
-    }
-
-    .cic-ver-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-family: var(--font-sans);
-      font-size: 0.78rem;
-      color: var(--color-primary);
-      text-decoration: none;
-      opacity: 0.75;
-      transition: opacity 0.12s;
-    }
-
-    .cic-ver-link:hover { opacity: 1; }
-
     /* ── Mobile tabs ──────────────────────────────────────────────────────── */
     .lp-tabs {
       display: none;
@@ -571,7 +422,7 @@
         gap: 0;
       }
 
-      .lp-nav, .lp-sidebar-footer { display: none; }
+      .lp-nav { display: none; }
       .lp-tabs { display: flex; }
 
       .lp-main { padding: 1.25rem 1.25rem 4rem; }
@@ -608,12 +459,6 @@
     <!-- Calendário -->
     <div class="cal-wrap" id="cal-wrap"></div>
 
-    <div class="lp-sidebar-footer" id="area-reflexao" style="display:none">
-      <button id="btn-reflexao" type="button">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4M12 16h.01"/></svg>
-        Explicar o Evangelho
-      </button>
-    </div>
   </aside>
 
   <!-- ── Tabs mobile ─────────────────────────────────────────────────────── -->
@@ -744,7 +589,6 @@ function renderTexto(texto) {
 }
 
 function renderCard(label, refDisplay, htmlConteudo, id, isGospel = false) {
-  const gospelExtra = isGospel ? `<div id="reflexao-conteudo"></div>` : '';
   const flagSvg = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>`;
   return `
     <div class="leitura-card${isGospel ? ' card-evangelho' : ''}" id="${id}" style="position:relative;">
@@ -752,7 +596,6 @@ function renderCard(label, refDisplay, htmlConteudo, id, isGospel = false) {
       <div class="leitura-label">${label}</div>
       <div class="leitura-ref">${refDisplay}</div>
       <div class="leitura-texto">${htmlConteudo}</div>
-      ${gospelExtra}
     </div>
   `;
 }
@@ -933,16 +776,6 @@ function nomeDiaLiturgico(dataStr, titulo) {
   construirNav(blocos);
   construirCalendario(dt);
   configurarFlagButtons();
-
-  if (ev) {
-    window._liturgiaData = {
-      data: dt,
-      evangelhoRef: refEV,
-      evangelhoTexto: ev.texto,
-    };
-    document.getElementById('area-reflexao').style.display = '';
-    iniciarReflexao();
-  }
 }
 
 // ── Flag buttons de correção nas leituras ────────────────────────────────────
@@ -1011,45 +844,6 @@ function configurarFlagButtons() {
   });
 }
 
-// ── Reflexão via Grok ─────────────────────────────────────────────────────────
-async function iniciarReflexao() {
-  const btn = document.getElementById('btn-reflexao');
-  const { data, evangelhoRef } = window._liturgiaData;
-
-  // Cache estático primeiro
-  try {
-    const r = await fetch(`../data/liturgia/${data}-reflexao.json`);
-    if (r.ok) {
-      renderReflexao(await r.json());
-      btn.style.display = 'none';
-      return;
-    }
-  } catch { /* mostra botão */ }
-
-  btn.addEventListener('click', async () => {
-    btn.disabled = true;
-    btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Gerando…`;
-
-    const texto = window._liturgiaData.evangelhoTexto ?? '';
-
-    try {
-      const r = await fetch('/api/liturgia-reflexao', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data, evangelhoRef, evangelhoTexto: texto }),
-      });
-      if (!r.ok) throw new Error(`Erro ${r.status}`);
-      renderReflexao(await r.json());
-      btn.style.display = 'none';
-    } catch {
-      btn.disabled = false;
-      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> Tentar novamente`;
-      const out = document.getElementById('reflexao-conteudo');
-      if (out) out.innerHTML = `<p style="color:var(--color-muted);font-size:0.85rem;margin-top:1rem">Não foi possível gerar. Tente novamente.</p>`;
-    }
-  });
-}
-
 // ── Calendário ────────────────────────────────────────────────────────────────
 const DATA_MIN = '2024-01-01';
 const DATA_MAX = '2026-12-31';
@@ -1113,131 +907,6 @@ function construirCalendario(dtAtual) {
   render();
 }
 
-// ── Áudio da palavra grega ────────────────────────────────────────────────────
-function pronunciar(termo, translit) {
-  if (!window.speechSynthesis) return;
-  speechSynthesis.cancel();
-  // Tenta grego; fallback para transliteração em português
-  const u = new SpeechSynthesisUtterance(termo);
-  u.lang  = 'el-GR';
-  u.rate  = 0.7;
-  u.onerror = () => {
-    const u2 = new SpeechSynthesisUtterance(translit);
-    u2.lang = 'pt-BR';
-    u2.rate = 0.7;
-    speechSynthesis.speak(u2);
-  };
-  speechSynthesis.speak(u);
-}
-
-// ── Cache do catecismo para lookup inline ────────────────────────────────────
-let _catecismo = null;
-async function buscarParagrafo(n) {
-  if (!_catecismo) {
-    const r = await fetch('../data/catecismo.json');
-    const d = await r.json();
-    _catecismo = d.paragrafos ?? d;
-  }
-  return _catecismo.find(p => p.numero === n);
-}
-
-function renderReflexao(r) {
-  const out = document.getElementById('reflexao-conteudo');
-  if (!out) return;
-
-  // Suporta novo formato (termos_gregos[]) e legado (termo_grego{})
-  const termos = r.termos_gregos ?? (r.termo_grego ? [r.termo_grego] : []);
-  const nums   = r.paragrafos ?? r.catecismo?.paragrafos ?? [];
-  const homilia = r.homilia ?? '';
-
-  const pills = nums.map(n =>
-    `<button class="cic-ref-pill" data-n="${n}" aria-expanded="false">§${n}</button>`
-  ).join('');
-
-  const termosHtml = termos.map(t => `
-    <div class="palavra-grega-bloco">
-      <div class="palavra-grega-label">Palavra grega</div>
-      <div class="palavra-grega-row">
-        <span class="termo-inline">${t.termo}</span>
-        <span style="font-style:italic;color:var(--color-muted);font-family:var(--font-serif);font-size:0.95rem">${t.transliteracao ?? ''}</span>
-        ${t.traducao ? `<span style="color:var(--color-muted);font-family:var(--font-sans);font-size:0.8rem">— ${t.traducao}</span>` : ''}
-        <button class="audio-btn" data-termo="${t.termo}" data-translit="${t.transliteracao ?? ''}" title="Ouvir pronúncia">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-          Ouvir
-        </button>
-      </div>
-    </div>
-  `).join('');
-
-  const homiliaHtml = homilia
-    .split(/\n\n+/)
-    .filter(Boolean)
-    .map(p => `<p class="reflexao-p">${p.trim()}</p>`)
-    .join('');
-
-  out.innerHTML = `
-    <div class="reflexao-card">
-      <div class="ia-badge">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-        Resumo gerado por IA
-      </div>
-      ${termosHtml}
-      ${homiliaHtml}
-      ${pills ? `<div class="cic-refs" id="cic-refs-wrap">${pills}</div><div id="cic-cards"></div>` : ''}
-    </div>
-  `;
-
-  // Botões de áudio
-  out.querySelectorAll('.audio-btn').forEach(btn => {
-    btn.addEventListener('click', () => pronunciar(btn.dataset.termo, btn.dataset.translit));
-  });
-
-  // Clique nas pills → abre card inline
-  out.querySelectorAll('.cic-ref-pill').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const n   = Number(btn.dataset.n);
-      const wrap = document.getElementById('cic-cards');
-      const id  = `cic-card-${n}`;
-
-      // Toggle
-      const existing = document.getElementById(id);
-      if (existing) {
-        existing.remove();
-        btn.classList.remove('aberta');
-        btn.setAttribute('aria-expanded', 'false');
-        return;
-      }
-
-      btn.classList.add('aberta');
-      btn.setAttribute('aria-expanded', 'true');
-
-      const card = document.createElement('div');
-      card.id = id;
-      card.className = 'cic-paragrafo-card';
-      card.innerHTML = `<p class="cic-paragrafo-num">Carregando §${n}…</p>`;
-      wrap.appendChild(card);
-
-      try {
-        const p = await buscarParagrafo(n);
-        if (p) {
-          card.innerHTML = `
-            <div class="cic-paragrafo-num">§${p.numero}</div>
-            <p class="cic-paragrafo-texto">${p.texto}</p>
-            <a class="cic-ver-link" href="/#paragrafo-${p.numero}" target="_blank" rel="noopener">
-              Ver no Catecismo
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
-          `;
-        } else {
-          card.innerHTML = `<p class="cic-paragrafo-num">Parágrafo §${n} não encontrado.</p>`;
-        }
-      } catch {
-        card.innerHTML = `<p class="cic-paragrafo-num">Erro ao carregar §${n}.</p>`;
-      }
-    });
-  });
-}
-
 init();
 </script>
 
@@ -1255,10 +924,6 @@ init();
     <span class="bf-icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
     <span class="bf-label">Liturgia</span>
   </a>
-  <a href="/" class="bf-item" title="Fazer uma doação">
-    <span class="bf-icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
-    <span class="bf-label">Doar</span>
-  </a>
   <a href="https://wa.me/?text=Acesse%20a%20Liturgia%20Di%C3%A1ria%20online%3A%20https%3A%2F%2Fsantadoutrina.cloud%2Fliturgiadiaria%2F" class="bf-item" target="_blank" rel="noopener" title="Compartilhar no WhatsApp">
     <span class="bf-icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></span>
     <span class="bf-label">Zap</span>
@@ -1273,8 +938,7 @@ init();
 .bf-item:nth-child(1):hover .bf-icone{color:#2d6a4f}
 .bf-item:nth-child(2):hover .bf-icone{color:#2c4a8c}
 .bf-item:nth-child(3):hover .bf-icone{color:#8c4a2c}
-.bf-item:nth-child(4):hover .bf-icone{color:#8c2c3e}
-.bf-item:nth-child(5):hover .bf-icone{color:#25D366}
+.bf-item:nth-child(4):hover .bf-icone{color:#25D366}
 .bf-item.ativo .bf-icone{background:rgba(255,255,255,.95);color:#8c4a2c}
 .bf-label{font-size:.62rem;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,0);transition:color .15s;white-space:nowrap}
 .bf-item:hover .bf-label{color:rgba(255,255,255,.95)}

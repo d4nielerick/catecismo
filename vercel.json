@@ -5,6 +5,9 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/perguntas/:slug", "destination": "/perguntas/resposta.html" }
+  ],
   "headers": [
     {
       "source": "/data/(.*)",

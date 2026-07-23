@@ -1,0 +1,23 @@
+{
+  "pergunta": "O que o Catecismo diz sobre o trabalho?",
+  "slug": "o-que-o-catecismo-diz-sobre-o-trabalho",
+  "resposta": "O Catecismo trata do tema nos §§ 378 e 2427–2428.",
+  "paragrafos": [
+    {
+      "id": 2427,
+      "motivo": "Define o trabalho humano como dever e como possível meio de santificação.",
+      "trecho": "O trabalho humano procede imediatamente das pessoas criadas à imagem de Deus e chamadas a prolongar, umas com as outras, a obra da criação, dominando a terra (170). Portanto, o trabalho é um dever: «Se algum de vós não quer trabalhar, também não coma» (2 Ts3, 10) (171). O trabalho honra os dons do Criador e os talentos recebidos. Também pode ser redentor: suportando o que o trabalho tem de penoso (172) em união com Jesus, o artesão de Nazaré e crucificado do Calvário, o homem colabora, de certo modo, com o Filho de Deus na sua obra redentora. Mostra-se discípulo de Cristo, levando a cruz de cada dia na atividade que foi chamado a exercer (173). O trabalho pode ser um meio de santificação e uma animação das realidades terrenas no Espírito de Cristo."
+    },
+    {
+      "id": 2428,
+      "motivo": "Afirma que o trabalho é para o homem, e não o homem para o trabalho.",
+      "trecho": "No trabalho, a pessoa exerce e cumpre uma parte das capacidades inscritas na sua natureza. O valor primordial do trabalho pertence ao próprio homem, seu autor e destinatário. O trabalho é para o homem e não o homem para o trabalho (174)."
+    },
+    {
+      "id": 378,
+      "motivo": "Situa o trabalho, desde a criação, como colaboração do homem com Deus.",
+      "trecho": "Sinal da familiaridade com Deus é o fato de Deus o colocar no jardim (252). Ali vive «a fim de o cultivar e guardar» (Gn2, 15): o trabalho não é um castigo (253), mas a colaboração do homem e da mulher com Deus no aperfeiçoamento da criação visível."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.449Z"
+}

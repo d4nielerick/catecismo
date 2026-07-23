@@ -1,0 +1,18 @@
+{
+  "pergunta": "O que é o jejum e a abstinência na Igreja?",
+  "slug": "o-que-e-o-jejum-e-a-abstinencia-na-igreja",
+  "resposta": "O Catecismo trata do tema nos §§ 1438 e 2043.",
+  "paragrafos": [
+    {
+      "id": 2043,
+      "motivo": "Cita o quarto preceito da Igreja: guardar abstinência e jejuar nos dias determinados.",
+      "trecho": "O quarto preceito («Guardar abstinência e jejuar nos dias determinados pela Igreja») assegura os dias de ascese e de penitência que nos preparam para as festas litúrgicas e contribuem para nos fazer adquirir domínio sobre os nossos instintos e a liberdade do coração (89)."
+    },
+    {
+      "id": 1438,
+      "motivo": "Situa os tempos de penitência do Ano Litúrgico em que se pratica o jejum.",
+      "trecho": "Os tempos e os dias de penitência no decorrer do Ano Litúrgico (tempo da Quaresma, cada sexta-feira em memória da morte do Senhor) são momentos fortes da prática penitencial da Igreja (31). Estes tempos são particularmente apropriados para os exercícios espirituais, as liturgias penitenciais, as peregrinações em sinal de penitência, as privações voluntárias como o jejum e a esmola, a partilha fraterna (obras caritativas e missionárias)."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.449Z"
+}
