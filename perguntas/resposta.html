@@ -6,12 +6,30 @@
 
   <title id="page-title">Pergunta — Catecismo da Igreja Católica</title>
   <meta name="description" id="page-desc" content="Resposta do Catecismo da Igreja Católica.">
+  <link rel="canonical" id="page-canonical" href="https://santadoutrina.cloud/perguntas/">
+
+  <!-- Open Graph (fallback estático — atualizado por JS quando a pergunta carrega) -->
+  <meta property="og:title"       id="og-title"       content="Pergunta — Catecismo da Igreja Católica">
+  <meta property="og:description" id="og-description" content="Resposta do Catecismo da Igreja Católica.">
+  <meta property="og:type"        content="article">
+  <meta property="og:url"         id="og-url"          content="https://santadoutrina.cloud/perguntas/">
+  <meta property="og:image"       content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
+  <meta property="og:locale"      content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       id="twitter-title"       content="Pergunta — Catecismo da Igreja Católica">
+  <meta name="twitter:description" id="twitter-description" content="Resposta do Catecismo da Igreja Católica.">
+  <meta name="twitter:image"       content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
 
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Umami Analytics -->
+  <script defer src="https://umami.danielerick.com/script.js" data-website-id="28c35f85-bd1b-4ea9-8f52-fc98d33b4974"></script>
 
   <style>
     .resposta-container {
@@ -168,10 +186,32 @@ async function carregarResposta() {
     if (!res.ok) throw new Error('Não encontrado');
     const data = await res.json();
 
+    const urlCanonica = `https://santadoutrina.cloud/perguntas/${slug}`;
+    const descricao = data.resposta.substring(0, 160);
+
     document.title = `${data.pergunta} — Catecismo`;
-    document.getElementById('page-desc').content = data.resposta.substring(0, 160);
+    document.getElementById('page-desc').content = descricao;
+    document.getElementById('page-canonical').href = urlCanonica;
+    document.getElementById('og-title').content = `${data.pergunta} — Catecismo`;
+    document.getElementById('og-description').content = descricao;
+    document.getElementById('og-url').content = urlCanonica;
+    document.getElementById('twitter-title').content = `${data.pergunta} — Catecismo`;
+    document.getElementById('twitter-description').content = descricao;
     document.getElementById('pergunta').textContent = data.pergunta;
     document.getElementById('resposta').textContent = data.resposta;
+
+    // JSON-LD Article
+    const jsonLd = document.createElement('script');
+    jsonLd.type = 'application/ld+json';
+    jsonLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: data.pergunta,
+      description: descricao,
+      url: urlCanonica,
+      inLanguage: 'pt-BR',
+    });
+    document.head.appendChild(jsonLd);
 
     const paragrafosEl = document.getElementById('paragrafos');
     for (const p of data.paragrafos) {

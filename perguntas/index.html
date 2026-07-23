@@ -6,12 +6,30 @@
 
   <title>Perguntas sobre a fé católica — Catecismo da Igreja Católica</title>
   <meta name="description" content="O que a Igreja ensina sobre Eucaristia, pecado, divórcio, Maria e mais. Respostas diretas do Catecismo da Igreja Católica.">
+  <link rel="canonical" href="https://santadoutrina.cloud/perguntas/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Perguntas sobre a fé católica — Catecismo da Igreja Católica">
+  <meta property="og:description" content="O que a Igreja ensina sobre Eucaristia, pecado, divórcio, Maria e mais. Respostas diretas do Catecismo da Igreja Católica.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://santadoutrina.cloud/perguntas/">
+  <meta property="og:image"       content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
+  <meta property="og:locale"      content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="Perguntas sobre a fé católica — Catecismo da Igreja Católica">
+  <meta name="twitter:description" content="O que a Igreja ensina sobre Eucaristia, pecado, divórcio, Maria e mais. Respostas diretas do Catecismo da Igreja Católica.">
+  <meta name="twitter:image"       content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
 
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Umami Analytics -->
+  <script defer src="https://umami.danielerick.com/script.js" data-website-id="28c35f85-bd1b-4ea9-8f52-fc98d33b4974"></script>
 
   <style>
     .perguntas-container {
@@ -130,6 +148,21 @@ async function carregarPerguntas() {
       `;
       lista.appendChild(a);
     }
+
+    // JSON-LD ItemList, montado a partir do índice já carregado
+    const itemList = document.createElement('script');
+    itemList.type = 'application/ld+json';
+    itemList.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: perguntas.map(({ slug, pergunta }, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: pergunta,
+        url: `https://santadoutrina.cloud/perguntas/${slug}`,
+      })),
+    });
+    document.head.appendChild(itemList);
 
     loading.style.display = 'none';
     lista.style.display = 'flex';
