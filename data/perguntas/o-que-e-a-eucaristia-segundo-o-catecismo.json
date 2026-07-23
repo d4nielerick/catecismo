@@ -1,0 +1,28 @@
+{
+  "pergunta": "O que é a Eucaristia segundo o Catecismo?",
+  "slug": "o-que-e-a-eucaristia-segundo-o-catecismo",
+  "resposta": "O Catecismo trata do tema nos §§ 1323–1324, 1374 e 1376.",
+  "paragrafos": [
+    {
+      "id": 1323,
+      "motivo": "Cita a fórmula litúrgica que define a instituição da Eucaristia na última ceia.",
+      "trecho": "«O nosso Salvador instituiu na última ceia, na noite em que foi entregue, o sacrifício eucarístico do seu corpo e sangue, para perpetuar pelo decorrer dos séculos, até voltar, o sacrifício da cruz, confiando à Igreja, sua esposa amada, o memorial da sua morte e ressurreição: sacramento de piedade, sinal de unidade, vínculo de caridade, banquete pascal em que se recebe Cristo, a alma se enche de graça e nos é dado o penhor da glória futura» (145)."
+    },
+    {
+      "id": 1324,
+      "motivo": "Situa a Eucaristia como \"fonte e cume de toda a vida cristã\".",
+      "trecho": "A Eucaristia é «fonte e cume de toda a vida cristã» (146). «Os restantes sacramentos, assim como todos os ministérios eclesiásticos e obras de apostolado, estão vinculados com a sagrada Eucaristia e a ela se ordenam. Com efeito, na santíssima Eucaristia está contido todo o tesouro espiritual da Igreja, isto é, o próprio Cristo, nossa Páscoa» (147)."
+    },
+    {
+      "id": 1374,
+      "motivo": "Explica por que a presença de Cristo na Eucaristia é chamada \"real\" por excelência.",
+      "trecho": "O modo da presença de Cristo sob as espécies eucarísticas é único. Ele eleva a Eucaristia acima de todos os sacramentos e faz dela «como que a perfeição da vida espiritual e o fim para que tendem todos os sacramentos» (203). No santíssimo sacramento da Eucaristia estão «contidos, verdadeira, real e substancialmente, o corpo e o sangue, conjuntamente com a alma e a divindade de nosso Senhor Jesus Cristo e, por conseguinte, Cristo completo» (204). «Esta presença chama-se\"real\", não a título exclusivo como se as outras presenças não fossem\"reais\", mas por excelência, porque ésubstancial, e porque por ela se torna presente Cristo completo, Deus e homem» (205)."
+    },
+    {
+      "id": 1376,
+      "motivo": "Traz a definição de transubstanciação do Concílio de Trento.",
+      "trecho": "O Concílio de Trento resume a fé católica declarando: «Porque Cristo, nosso Redentor, disse que o que Ele oferecia sob a espécie do pão era verdadeiramente o seu corpo, sempre na Igreja se teve esta convicção que o sagrado Concílio de novo declara: pela consagração do pão e do vinho opera-se a conversão de toda a substância do pão na substância do corpo de Cristo nosso Senhor, e de toda a substância do vinho na substância do seu sangue; a esta mudança, a Igreja católica chama, de modo conveniente e apropriado, transubstanciação» (209)."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.430Z"
+}

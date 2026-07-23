@@ -1,0 +1,23 @@
+{
+  "pergunta": "O que acontece depois da morte segundo a Igreja?",
+  "slug": "o-que-acontece-depois-da-morte-segundo-a-igreja",
+  "resposta": "O Catecismo trata do tema nos §§ 1021–1023.",
+  "paragrafos": [
+    {
+      "id": 1021,
+      "motivo": "Explica a retribuição imediata depois da morte de cada um.",
+      "trecho": "A morte põe termo à vida do homem, enquanto tempo aberto à aceitação ou à rejeição da graça divina, manifestada em Jesus Cristo (606). O Novo Testamento fala do juízo, principalmente na perspetiva do encontro final com Cristo na sua segunda vinda. Mas também afirma, reiteradamente, a retribuição imediata depois da morte de cada qual, em função das suas obras e da sua fé. A parábola do pobre Lázaro (607) e a palavra de Cristo crucificado ao bom ladrão (608), assim como outros textos do Novo Testamento (609), falam dum destino final da alma (610), o qual pode ser diferente para umas e para outras."
+    },
+    {
+      "id": 1022,
+      "motivo": "Define o juízo particular que decide o destino eterno da alma.",
+      "trecho": "Ao morrer, cada homem recebe na sua alma imortal a retribuição eterna, num juízo particular que põe a sua vida em referência a Cristo, quer através duma purificação (611), quer para entrar imediatamente na felicidade do céu (612), quer para se condenar imediatamente para sempre (613)."
+    },
+    {
+      "id": 1023,
+      "motivo": "Descreve a visão beatífica de quem morre em graça e já purificado.",
+      "trecho": "Os que morrerem na graça e na amizade de Deus e estiverem perfeitamente purificados, viverão para sempre com Cristo. Serão para sempre semelhantes a Deus, porque O verão «tal como Ele é» (1 Jo3, 2), «face a face» (1Cor13, 12) (615):"
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.448Z"
+}

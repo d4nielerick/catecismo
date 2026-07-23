@@ -1,0 +1,23 @@
+{
+  "pergunta": "O que é a doutrina social da Igreja?",
+  "slug": "o-que-e-a-doutrina-social-da-igreja",
+  "resposta": "O Catecismo trata do tema nos §§ 2419–2421.",
+  "paragrafos": [
+    {
+      "id": 2419,
+      "motivo": "Situa a doutrina social como fruto da Revelação aplicada às leis da vida social.",
+      "trecho": "«A Revelação cristã conduz [...] a uma inteligência mais penetrante das leis da vida social» (160). A Igreja recebe do Evangelho a revelação plena da verdade acerca do homem. Quando cumpre a sua missão de anunciar o Evangelho, a Igreja atesta ao homem, em nome de Cristo, a sua dignidade própria e a sua vocação para a comunhão das pessoas, e ensina-lhe as exigências da justiça e da paz, conformes à sabedoria divina."
+    },
+    {
+      "id": 2420,
+      "motivo": "Define quando a Igreja emite juízo moral em matéria econômica e social.",
+      "trecho": "A Igreja emite um juízo moral em matéria económica e social, «quando os direitos fundamentais da pessoa ou a salvação das almas o exigem» (161). Na ordem da moralidade, ela exerce uma missão diferente da que concerne às autoridades políticas: a Igreja preocupa-se com os aspetos temporais do bem comum em razão da sua ordenação ao Bem soberano, nosso fim último. E esforça-se por inspirar as atitudes justas, no que respeita aos bens terrenos e às relações sócio-económicas."
+    },
+    {
+      "id": 2421,
+      "motivo": "Localiza no século XIX o desenvolvimento da doutrina social diante da sociedade industrial.",
+      "trecho": "A doutrina social da Igreja desenvolveu-se no século XIX aquando do confronto do Evangelho com a sociedade industrial moderna, as suas novas estruturas para a produção de bens de consumo, o seu novo conceito de sociedade, de Estado e de autoridade, as suas novas formas de trabalho e de propriedade. O desenvolvimento da doutrina da Igreja em matéria económica e social comprova o valor permanente da doutrina da mesma Igreja, ao mesmo tempo que o verdadeiro sentido da sua Tradição, sempre viva e ativa (162)."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.449Z"
+}

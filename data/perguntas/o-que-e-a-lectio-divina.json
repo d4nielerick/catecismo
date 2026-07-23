@@ -1,0 +1,23 @@
+{
+  "pergunta": "O que é a lectio divina?",
+  "slug": "o-que-e-a-lectio-divina",
+  "resposta": "O Catecismo trata do tema nos §§ 2705–2706 e 2708.",
+  "paragrafos": [
+    {
+      "id": 2705,
+      "motivo": "Define a meditação como busca apoiada em textos como a Sagrada Escritura.",
+      "trecho": "A meditação é sobretudo uma busca. O espírito procura compreender o porquê e o como da vida cristã, para aderir e corresponder ao que o Senhor lhe pede. Exige uma atenção difícil de disciplinar. Habitualmente, recorre-se à ajuda dum livro e os cristãos não têm falta deles: a Sagrada Escritura, em especial o Evangelho, os santos ícones (as imagens), os textos litúrgicos do dia ou do tempo, os escritos dos Padres espirituais, as obras de espiritualidade, o grande livro da criação e o da história, a página do «hoje» de Deus."
+    },
+    {
+      "id": 2706,
+      "motivo": "Explica como meditar no que se lê leva a confrontá-lo com a própria vida.",
+      "trecho": "Meditar no que se lê leva a assimilá-lo, confrontando-o consigo mesmo. Abre-se aqui um outro livro: o da vida. Passa-se dos pensamentos à realidade. Segundo a medida da humildade e da fé, descobrem-se nela os movimentos que agitam o coração e é possível discerni-los. Trata-se de praticar a verdade para chegar à luz: «Senhor, que quereis que eu faça?»."
+    },
+    {
+      "id": 2708,
+      "motivo": "Cita nominalmente a \"lectio divina\" como forma de meditar nos mistérios de Cristo.",
+      "trecho": "A meditação põe em acção o pensamento, a imaginação, a emoção e o desejo. Esta mobilização é necessária para aprofundar as convicções da fé, suscitar a conversão do coração e fortalecer a vontade de seguir a Cristo. A oração cristã dedica-se, de preferência, a meditar nos «mistérios de Cristo», como na «lectio divina»ou no rosário. Esta forma de reflexão orante é de grande valor, mas a oração cristã deve ir mais longe: até ao conhecimento amoroso do Senhor Jesus, até à união com Ele."
+    }
+  ],
+  "gerado_em": "2026-07-23T12:29:49.449Z"
+}
