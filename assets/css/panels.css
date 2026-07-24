@@ -946,6 +946,16 @@
   display: block;
 }
 
+.nota-fonte-link {
+  color: #ecc95e;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.nota-fonte-link:hover {
+  color: #fff;
+}
+
 .nota-tooltip-verso {
   display: block;
   margin-top: 0.45rem;

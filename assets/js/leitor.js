@@ -7,6 +7,7 @@
 import { notasDoParagrafo } from './data.js';
 import { adicionarTrecho, atualizarBadge as _atualizarBadge, contemNumero } from './coletor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
+import { carregarFontes, linkificarNota } from './fontes.js';
 
 // ── Utilitários ───────────────────────────────────────────────────────────────
 function _sentenceCase(str) {
@@ -626,6 +627,7 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       const spanNota = document.createElement('span');
       spanNota.className = 'nota-tooltip-nota';
       spanNota.textContent = noteText;
+      carregarFontes().then((idx) => { const h = linkificarNota(noteText, idx); if (h) spanNota.innerHTML = h; });
 
       const spanVerso = document.createElement('span');
       spanVerso.className = 'nota-tooltip-verso';
