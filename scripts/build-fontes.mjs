@@ -153,6 +153,7 @@ ${secoesHtml}
 }
 
 const index = [];
+const trechos = {}; // { slug: { secNum: "texto da seção (sem marcadores)" } } — para o tooltip
 for (const doc of manifest) {
   const html = fs.readFileSync(path.join(CACHE, doc.arquivo), 'latin1');
   const est = estruturar(paragrafos(html));
@@ -160,7 +161,10 @@ for (const doc of manifest) {
   fs.mkdirSync(path.join('fontes', doc.slug), { recursive: true });
   fs.writeFileSync(path.join('fontes', doc.slug, 'index.html'), pagina(doc, est));
   index.push({ slug: doc.slug, titulo: doc.titulo, tipo: doc.tipo });
+  trechos[doc.slug] = Object.fromEntries(est.secoes.map((s) =>
+    [s.num, s.paragrafos.join(' ').replace(/\((\d{1,3})\)/g, '').replace(/\s+/g, ' ').trim()]));
   console.log(`fontes/${doc.slug}.html — ${est.secoes.length} seções, ${Object.keys(est.notas).length} notas, fecho:${est.fecho.length}`);
 }
 fs.writeFileSync('data/fontes-index.json', JSON.stringify(index, null, 1));
-console.log(`\n${manifest.length} documento(s) → fontes/ + data/fontes-index.json`);
+fs.writeFileSync('data/fontes-trechos.json', JSON.stringify(trechos));
+console.log(`\n${manifest.length} documento(s) → fontes/ + data/fontes-index.json + data/fontes-trechos.json`);

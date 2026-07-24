@@ -940,7 +940,27 @@
 .ref-nota:hover .nota-tooltip,
 .ref-nota.tooltip-visivel .nota-tooltip {
   opacity: 1;
+  pointer-events: auto;
 }
+
+.nota-tooltip-fechar {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  background: none;
+  border: none;
+  color: rgba(245,240,232,0.6);
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 2px 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.nota-tooltip-fechar:hover { color: #fff; }
+
+.ref-nota.tooltip-visivel .nota-tooltip { padding-right: 1.5rem; }
+.ref-nota.tooltip-visivel .nota-tooltip-fechar { display: block; }
 
 .nota-tooltip-nota {
   display: block;

@@ -39,3 +39,49 @@ export function linkificarNota(texto, index) {
   }
   return casou ? html : null;
 }
+
+/** Primeiro documento hospedado citado na nota → { slug, titulo, sec } ou null. */
+export function detectarFonte(texto, index) {
+  if (!texto || !index || !index.length) return null;
+  for (const { slug, titulo } of index) {
+    const m = texto.match(new RegExp(`${_escRe(titulo)}(?:\\s*,\\s*(\\d{1,3}))?`, 'i'));
+    if (m) return { slug, titulo, sec: m[1] || null };
+  }
+  return null;
+}
+
+// ── Trechos das seções (para citar no tooltip) ────────────────────────────────
+let _trechos = null;
+let _trechosPromise = null;
+
+async function carregarTrechos() {
+  if (_trechos) return _trechos;
+  if (_trechosPromise) return _trechosPromise;
+  _trechosPromise = fetch('/data/fontes-trechos.json')
+    .then((r) => (r.ok ? r.json() : {}))
+    .then((d) => { _trechos = d && typeof d === 'object' ? d : {}; return _trechos; })
+    .catch(() => { _trechos = {}; return _trechos; });
+  return _trechosPromise;
+}
+
+/** Trecho da seção citada (truncado em `max` chars, sem cortar palavra). */
+export async function trechoFonte(slug, sec, max = 220) {
+  if (!slug || !sec) return null;
+  const t = await carregarTrechos();
+  const txt = t?.[slug]?.[String(sec)];
+  if (!txt) return null;
+  return txt.length > max ? txt.slice(0, max).replace(/\s+\S*$/, '') + '…' : txt;
+}
+
+// ── Fechar tooltips fixados (Esc / clique fora) ──────────────────────────────
+function _desfixarTodos() {
+  document.querySelectorAll('.ref-nota.tooltip-visivel')
+    .forEach((el) => el.classList.remove('tooltip-visivel'));
+}
+if (typeof document !== 'undefined') {
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.ref-nota') || e.target.closest('.nota-tooltip')) return;
+    _desfixarTodos();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') _desfixarTodos(); });
+}

@@ -7,7 +7,7 @@
 import { notasDoParagrafo } from './data.js';
 import { adicionarTrecho, atualizarBadge as _atualizarBadge, contemNumero } from './coletor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
-import { carregarFontes, linkificarNota } from './fontes.js';
+import { carregarFontes, linkificarNota, detectarFonte, trechoFonte } from './fontes.js';
 
 // ── Utilitários ───────────────────────────────────────────────────────────────
 function _sentenceCase(str) {
@@ -627,11 +627,27 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       const spanNota = document.createElement('span');
       spanNota.className = 'nota-tooltip-nota';
       spanNota.textContent = noteText;
-      carregarFontes().then((idx) => { const h = linkificarNota(noteText, idx); if (h) spanNota.innerHTML = h; });
 
       const spanVerso = document.createElement('span');
       spanVerso.className = 'nota-tooltip-verso';
 
+      // Linka documentos-fonte citados e mostra um trecho da seção citada no tooltip
+      carregarFontes().then((idx) => {
+        const h = linkificarNota(noteText, idx); if (h) spanNota.innerHTML = h;
+        const f = detectarFonte(noteText, idx);
+        if (f) trechoFonte(f.slug, f.sec).then((tr) => {
+          if (tr) spanVerso.textContent = `${f.titulo}${f.sec ? ', ' + f.sec : ''}: «${tr}»`;
+        });
+      });
+
+      const btnFechar = document.createElement('button');
+      btnFechar.className = 'nota-tooltip-fechar';
+      btnFechar.type = 'button';
+      btnFechar.setAttribute('aria-label', 'Fechar');
+      btnFechar.textContent = '×';
+      btnFechar.addEventListener('click', (e) => { e.stopPropagation(); sup.classList.remove('tooltip-visivel'); });
+
+      tooltip.appendChild(btnFechar);
       tooltip.appendChild(spanNota);
       tooltip.appendChild(spanVerso);
       sup.appendChild(tooltip);
@@ -646,7 +662,7 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
         if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
       });
 
-      // Clique: mobile → card com nota + verso; desktop → card só com verso
+      // Clique: mobile → card; desktop → fixa/desfixa o tooltip até fechar
       sup.addEventListener('click', async (e) => {
         e.stopPropagation();
         if (window.innerWidth < 768) {
@@ -656,8 +672,10 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
             if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
           }
           mostrarCardMobile(ref, noteText, _verse);
-        } else if (_verse) {
-          mostrarCard(_verse.referencia, _verse.texto);
+        } else {
+          const jaFixo = sup.classList.contains('tooltip-visivel');
+          document.querySelectorAll('.ref-nota.tooltip-visivel').forEach((el) => el.classList.remove('tooltip-visivel'));
+          if (!jaFixo) sup.classList.add('tooltip-visivel');
         }
       });
 
