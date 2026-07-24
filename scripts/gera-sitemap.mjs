@@ -71,6 +71,17 @@ function main() {
     entries.push(urlEntry(`${BASE_URL}/perguntas/${slug}`, lastmod, 'monthly', '0.6'));
   }
 
+  // documentos-fonte hospedados (/fontes/{slug}), se houver
+  const fontesPath = path.join(ROOT, 'data/fontes-index.json');
+  let nFontes = 0;
+  if (fs.existsSync(fontesPath)) {
+    const fontes = JSON.parse(fs.readFileSync(fontesPath, 'utf-8'));
+    for (const { slug } of fontes) {
+      entries.push(urlEntry(`${BASE_URL}/fontes/${slug}`, lastmod, 'yearly', '0.6'));
+      nFontes++;
+    }
+  }
+
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -80,7 +91,7 @@ function main() {
   ].join('\n');
 
   fs.writeFileSync(OUT_PATH, xml, 'utf-8');
-  console.log(`sitemap.xml gerado com ${PAGINAS_ESTATICAS.length + indice.length} URLs (${lastmod}).`);
+  console.log(`sitemap.xml gerado com ${PAGINAS_ESTATICAS.length + indice.length + nFontes} URLs (${lastmod}).`);
 }
 
 main();
