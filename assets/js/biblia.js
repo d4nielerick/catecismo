@@ -2,6 +2,7 @@
  * biblia.js
  * Busca de versículos na Bíblia Ave-Maria para enriquecer as notas de rodapé.
  */
+import { extrairReferencias } from './biblia-refs.js';
 
 // ── Cache por livro ───────────────────────────────────────────────────────────
 const _livros   = new Map(); // abrev → caps object
@@ -28,46 +29,59 @@ async function _carregarLivro(abrev) {
   return p;
 }
 
-// ── Mapa de abreviações alternativas → chave canônica do biblia.json ──────────
-const ABREV = {
-  // Variantes encontradas nas notas do Catecismo
-  'Act': 'At',   // Atos (abreviação latina)
-  'Heb': 'Hb',   // Hebreus
-  'Jn':  'Jo',   // João (variante)
-  'Job': 'Jó',   // Jó
-  'Rom': 'Rm',   // Romanos
-  'SI':  'Sl',   // Salmos (typo maiúscula)
-  'Ec':  'Ecl',  // Eclesiastes
-};
+// ── Resolução de versículos ───────────────────────────────────────────────────
 
-function _norm(abrev) {
-  return ABREV[abrev] ?? abrev;
+/** [17,19,20] → "17,19-20" (colapsa runs consecutivos, para rótulos compactos). */
+function _colapsa(nums) {
+  const s = [...new Set(nums)].sort((a, b) => a - b);
+  const runs = [];
+  for (let i = 0; i < s.length; ) {
+    let j = i;
+    while (j + 1 < s.length && s[j + 1] === s[j] + 1) j++;
+    runs.push(i === j ? `${s[i]}` : `${s[i]}-${s[j]}`);
+    i = j + 1;
+  }
+  return runs.join(',');
 }
 
-// ── Parser de referência bíblica ──────────────────────────────────────────────
-// Extrai a primeira referência do tipo "Jo 3, 16" ou "1Cor10, 2" do texto da nota.
-const _REF_RE = /([1-4]?[A-Za-zó]+)\s*(\d+)(?:-\d+)?[,\s]+(\d+)/;
+/** Resolve TODAS as referências bíblicas de uma nota → [{referencia, texto, …}].
+ *  Trata glue, intervalos e múltiplas refs (via biblia-refs.js). Limita a
+ *  `maxVersos` para não gerar tooltips gigantes. */
+export async function buscarVersiculos(textoNota, maxVersos = 6) {
+  const refs = extrairReferencias(textoNota);
+  if (!refs.length) return [];
+  const nomes = await _carregarNomes().catch(() => ({}));
+  const out = [];
+  for (const { abrev, cap, versos } of refs) {
+    let caps;
+    try { caps = await _carregarLivro(abrev); } catch { continue; }
+    if (!caps) continue;
+    const nome = nomes?.[abrev] ?? abrev;
+    for (const v of versos) {
+      const texto = caps?.[cap]?.[String(v)];
+      if (!texto) continue;
+      out.push({ abrev, nome, cap, v, referencia: `${nome} ${cap},${v}`, texto: texto.replace(/\*+/g, '').trim() });
+      if (out.length >= maxVersos) return out;
+    }
+  }
+  return out;
+}
 
+/** Compat (usado pelos tooltips): uma referência combinada — rótulo compacto
+ *  (ex.: "Romanos 1,19-20") + texto de todos os versículos resolvidos. */
 export async function buscarVersiculo(textoNota) {
-  if (!textoNota) return null;
-
-  const m = textoNota.match(_REF_RE);
-  if (!m) return null;
-
-  const abrev = _norm(m[1]);
-  const cap   = m[2];
-  const vers  = m[3];
-
-  let caps, nomes;
-  try {
-    [caps, nomes] = await Promise.all([_carregarLivro(abrev), _carregarNomes()]);
-  } catch { return null; }
-
-  const texto = caps?.[cap]?.[vers];
-  if (!texto) return null;
-
-  const nome = nomes?.[abrev] ?? abrev;
-  return { referencia: `${nome} ${cap},${vers}`, texto };
+  const vs = await buscarVersiculos(textoNota);
+  if (!vs.length) return null;
+  const grupos = [];
+  for (const v of vs) {
+    const chave = `${v.nome} ${v.cap}`;
+    let g = grupos.find((x) => x.chave === chave);
+    if (!g) { g = { chave, nome: v.nome, cap: v.cap, versos: [] }; grupos.push(g); }
+    g.versos.push(v.v);
+  }
+  const referencia = grupos.map((g) => `${g.nome} ${g.cap},${_colapsa(g.versos)}`).join('; ');
+  const texto = vs.length === 1 ? vs[0].texto : vs.map((v) => `${v.v}. ${v.texto}`).join('  ');
+  return { referencia, texto };
 }
 
 // ── Card flutuante ────────────────────────────────────────────────────────────
