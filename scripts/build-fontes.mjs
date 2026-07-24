@@ -110,7 +110,8 @@ function pagina(doc, est) {
   <link rel="stylesheet" href="/assets/css/main.css">
   <script defer src="https://umami.danielerick.com/script.js" data-website-id="28c35f85-bd1b-4ea9-8f52-fc98d33b4974"></script>
   <style>
-    .fonte-doc { max-width: 720px; margin: 2rem auto; padding: 2.5rem 2.2rem 4rem; background: var(--color-bg, #FAF8F3); border-radius: var(--radius-lg, 16px); box-shadow: var(--shadow-md, 0 4px 24px rgba(0,0,0,.12)); font-family: var(--font-serif, 'EB Garamond', serif); color: var(--color-text, #2C2C2C); line-height: 1.7; }
+    .fonte-doc { max-width: 720px; margin: 2rem auto; padding: 2.5rem 2.2rem 4rem; background: var(--color-bg, #FAF8F3); border-radius: var(--radius-lg, 16px); box-shadow: var(--shadow-md, 0 4px 24px rgba(0,0,0,.12)); font-family: var(--font-serif, 'EB Garamond', serif); color: var(--color-text, #2C2C2C); font-size: 1.05rem; line-height: 1.85; }
+    .fonte-secao p { font-size: 1.05rem; line-height: 1.85; }
     @media (max-width: 760px) { .fonte-doc { margin: 0.75rem; padding: 1.5rem 1.2rem 3rem; } }
     .fonte-voltar { font-family: var(--font-sans, 'Inter', sans-serif); font-size: .85rem; }
     .fonte-voltar a { color: var(--color-accent, #663300); text-decoration: none; }

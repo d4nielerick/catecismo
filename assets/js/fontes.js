@@ -73,6 +73,15 @@ export async function trechoFonte(slug, sec, max = 220) {
   return txt.length > max ? txt.slice(0, max).replace(/\s+\S*$/, '') + '…' : txt;
 }
 
+/** HTML do trecho para o tooltip: rótulo + citação + link "Ler no documento →". */
+export async function trechoFonteHtml(fonte, max = 220) {
+  const tr = await trechoFonte(fonte.slug, fonte.sec, max);
+  if (!tr) return null;
+  const rotulo = `${_esc(fonte.titulo)}${fonte.sec ? ', ' + fonte.sec : ''}`;
+  const anchor = fonte.sec ? `#s${fonte.sec}` : '';
+  return `${rotulo}: «${_esc(tr)}» <a class="nota-tooltip-mais" href="/fontes/${fonte.slug}/${anchor}" target="_blank" rel="noopener">Ler no documento →</a>`;
+}
+
 // ── Fechar tooltips fixados (Esc / clique fora) ──────────────────────────────
 function _desfixarTodos() {
   document.querySelectorAll('.ref-nota.tooltip-visivel')

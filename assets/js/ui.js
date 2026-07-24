@@ -12,7 +12,7 @@ import { buscar, agrupar, destacar, trecho } from './search.js';
 import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
 import { iniciarLeitor, abrirLeitor } from './leitor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
-import { carregarFontes, linkificarNota, detectarFonte, trechoFonte } from './fontes.js';
+import { carregarFontes, linkificarNota, detectarFonte, trechoFonteHtml } from './fontes.js';
 import { gerarVariantes } from './variantes.js';
 import { APP_VERSION } from './version.js';
 
@@ -997,9 +997,7 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       carregarFontes().then((idx) => {
         const h = linkificarNota(noteText, idx); if (h) spanNota.innerHTML = h;
         const f = detectarFonte(noteText, idx);
-        if (f) trechoFonte(f.slug, f.sec).then((tr) => {
-          if (tr) spanVerso.textContent = `${f.titulo}${f.sec ? ', ' + f.sec : ''}: «${tr}»`;
-        });
+        if (f) trechoFonteHtml(f).then((html) => { if (html) spanVerso.innerHTML = html; });
       });
 
       const btnFechar = document.createElement('button');
@@ -1257,6 +1255,7 @@ function iniciarTooltips() {
   document.addEventListener('mouseleave', (e) => {
     const sup = e.target.closest?.('.ref-nota');
     if (!sup) return;
+    if (sup.classList.contains('tooltip-visivel')) return; // fixado: mantém posição
     const tooltip = sup.querySelector('.nota-tooltip');
     if (!tooltip) return;
     tooltip.style.cssText = '';

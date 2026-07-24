@@ -937,7 +937,6 @@
   border-bottom-color: #1A3C2E;
 }
 
-.ref-nota:hover .nota-tooltip,
 .ref-nota.tooltip-visivel .nota-tooltip {
   opacity: 1;
   pointer-events: auto;
@@ -975,6 +974,17 @@
 .nota-fonte-link:hover {
   color: #fff;
 }
+
+.nota-tooltip-mais {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: #ecc95e;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nota-tooltip-mais:hover { text-decoration: underline; }
 
 .nota-tooltip-verso {
   display: block;
