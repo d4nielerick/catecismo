@@ -78,7 +78,7 @@ function corpoComNotas(texto, maxNota) {
 
 function pagina(doc, est) {
   const maxNota = Math.max(0, ...Object.keys(est.notas).map(Number));
-  const canonical = `https://santadoutrina.cloud/fontes/${doc.slug}`;
+  const canonical = `https://santadoutrina.cloud/fontes/${doc.slug}/`;
   const desc = `${doc.titulo} — ${doc.subtitulo}. Texto integral (${doc.tipo}, ${doc.data}).`;
   const secoesHtml = est.secoes.map((s) => `
       <section id="s${s.num}" class="fonte-secao">

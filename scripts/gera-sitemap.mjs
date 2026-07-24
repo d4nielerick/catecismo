@@ -77,7 +77,7 @@ function main() {
   if (fs.existsSync(fontesPath)) {
     const fontes = JSON.parse(fs.readFileSync(fontesPath, 'utf-8'));
     for (const { slug } of fontes) {
-      entries.push(urlEntry(`${BASE_URL}/fontes/${slug}`, lastmod, 'yearly', '0.6'));
+      entries.push(urlEntry(`${BASE_URL}/fontes/${slug}/`, lastmod, 'yearly', '0.6'));
       nFontes++;
     }
   }
