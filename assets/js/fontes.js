@@ -82,6 +82,58 @@ export async function trechoFonteHtml(fonte, max = 220) {
   return `${rotulo}: «${_esc(tr)}» <a class="nota-tooltip-mais" href="/fontes/${fonte.slug}/${anchor}" target="_blank" rel="noopener">Ler no documento →</a>`;
 }
 
+// ── Catecismo Romano (Trento): passagens citadas por "CatRom P, C, N" ────────
+let _catrom = null;
+let _catromPromise = null;
+
+async function carregarCatRom() {
+  if (_catrom) return _catrom;
+  if (_catromPromise) return _catromPromise;
+  _catromPromise = fetch('/data/catromano.json')
+    .then((r) => (r.ok ? r.json() : null))
+    .then((d) => { _catrom = new Map((d?.passagens || []).map((p) => [p.ref, p])); return _catrom; })
+    .catch(() => { _catrom = new Map(); return _catrom; });
+  return _catromPromise;
+}
+
+const _ROM = { I: '1', II: '2', III: '3', IV: '4', V: '5', VI: '6', VII: '7', VIII: '8', IX: '9', X: '10', XI: '11', XII: '12', XIII: '13' };
+const _num = (x) => _ROM[String(x).toUpperCase()] ?? String(x);
+const _CATROM = 'CatRom\\s*[.,]?\\s*([IVX0-9]+)[.,\\s]+([IVX0-9]+)[.,\\s]+([IVX0-9]+)';
+
+/**
+ * Enriquece o tooltip de uma nota: linka os documentos-fonte citados (Nostra
+ * Aetate, Catecismo Romano…) no texto da nota e mostra o trecho/tradução no
+ * slot do versículo. Chamado por leitor.js/ui.js. Não bloqueia a renderização.
+ */
+export async function enriquecerNota(noteText, spanNota, spanVerso) {
+  if (!noteText) return;
+  const [idx, cr] = await Promise.all([carregarFontes(), carregarCatRom()]);
+
+  // 1) Linkificação: documentos genéricos + Catecismo Romano ("CatRom P,C,N")
+  const linkGen = linkificarNota(noteText, idx);
+  let base = linkGen ?? _esc(noteText);
+  let mudou = linkGen != null;
+  base = base.replace(new RegExp(_CATROM, 'gi'), (m, p, c, n) => {
+    const pass = cr.get(`${_num(p)},${_num(c)},${_num(n)}`);
+    if (!pass) return m;
+    mudou = true;
+    return `<a class="nota-fonte-link" href="/fontes/catecismo-romano/#${pass.anchor}" target="_blank" rel="noopener">${m}</a>`;
+  });
+  if (mudou) spanNota.innerHTML = base;
+
+  // 2) Trecho no tooltip: fonte genérica (com seção) OU tradução do Catecismo Romano
+  const f = detectarFonte(noteText, idx);
+  if (f) { const h = await trechoFonteHtml(f); if (h) spanVerso.innerHTML = h; return; }
+  const mcr = noteText.match(new RegExp(_CATROM, 'i'));
+  if (mcr) {
+    const pass = cr.get(`${_num(mcr[1])},${_num(mcr[2])},${_num(mcr[3])}`);
+    if (pass) {
+      const t = pass.pt.length > 240 ? pass.pt.slice(0, 240).replace(/\s+\S*$/, '') + '…' : pass.pt;
+      spanVerso.innerHTML = `<em>Catecismo Romano (tradução de trabalho):</em> «${_esc(t)}» <a class="nota-tooltip-mais" href="/fontes/catecismo-romano/#${pass.anchor}" target="_blank" rel="noopener">Ler no documento →</a>`;
+    }
+  }
+}
+
 // ── Fechar tooltips fixados (Esc / clique fora) ──────────────────────────────
 function _desfixarTodos() {
   document.querySelectorAll('.ref-nota.tooltip-visivel')

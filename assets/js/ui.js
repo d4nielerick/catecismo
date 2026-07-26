@@ -12,7 +12,7 @@ import { buscar, agrupar, destacar, trecho } from './search.js';
 import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
 import { iniciarLeitor, abrirLeitor } from './leitor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
-import { carregarFontes, linkificarNota, detectarFonte, trechoFonteHtml } from './fontes.js';
+import { enriquecerNota } from './fontes.js';
 import { gerarVariantes } from './variantes.js';
 import { APP_VERSION } from './version.js';
 
@@ -993,12 +993,8 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       const spanVerso = document.createElement('span');
       spanVerso.className = 'nota-tooltip-verso';
 
-      // Linka documentos-fonte citados e mostra um trecho da seção citada no tooltip
-      carregarFontes().then((idx) => {
-        const h = linkificarNota(noteText, idx); if (h) spanNota.innerHTML = h;
-        const f = detectarFonte(noteText, idx);
-        if (f) trechoFonteHtml(f).then((html) => { if (html) spanVerso.innerHTML = html; });
-      });
+      // Linka documentos-fonte citados (Nostra Aetate, Catecismo Romano…) e mostra o trecho no tooltip
+      enriquecerNota(noteText, spanNota, spanVerso);
 
       const btnFechar = document.createElement('button');
       btnFechar.className = 'nota-tooltip-fechar';

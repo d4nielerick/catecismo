@@ -7,7 +7,7 @@
 import { notasDoParagrafo } from './data.js';
 import { adicionarTrecho, atualizarBadge as _atualizarBadge, contemNumero } from './coletor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
-import { carregarFontes, linkificarNota, detectarFonte, trechoFonteHtml } from './fontes.js';
+import { enriquecerNota } from './fontes.js';
 
 // ── Utilitários ───────────────────────────────────────────────────────────────
 function _sentenceCase(str) {
@@ -631,12 +631,8 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       const spanVerso = document.createElement('span');
       spanVerso.className = 'nota-tooltip-verso';
 
-      // Linka documentos-fonte citados e mostra um trecho da seção citada no tooltip
-      carregarFontes().then((idx) => {
-        const h = linkificarNota(noteText, idx); if (h) spanNota.innerHTML = h;
-        const f = detectarFonte(noteText, idx);
-        if (f) trechoFonteHtml(f).then((html) => { if (html) spanVerso.innerHTML = html; });
-      });
+      // Linka documentos-fonte citados (Nostra Aetate, Catecismo Romano…) e mostra o trecho no tooltip
+      enriquecerNota(noteText, spanNota, spanVerso);
 
       const btnFechar = document.createElement('button');
       btnFechar.className = 'nota-tooltip-fechar';
