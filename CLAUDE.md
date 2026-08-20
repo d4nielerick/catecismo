@@ -13,7 +13,8 @@ Dois mini-sites independentes num mesmo repositório:
 
 Funcionalidades: busca client-side, modo leitura, índice analítico temático, resumos via IA (Grok), coletor de trechos, referências bíblicas em hover, cross-links entre os dois catecismos, doação via PIX.
 
-Hospedagem: **Vercel** (site estático + Edge Functions em `api/`). Backend único na Vercel — não há mais `server.js` de VPS.
+Hospedagem: **VPS Contabo + Caddy** (produção real). A Vercel existe como espelho/preview,
+mas não é o que serve `santadoutrina.cloud` — ver seção Deploy.
 
 ---
 
@@ -120,14 +121,33 @@ node test-search.mjs
 
 ## Deploy
 
-O deploy é automático pelo Vercel ao fazer push para `main`. Configurado em `vercel.json`:
-- Sem build command
-- Raiz do projeto é o diretório estático
-- `cleanUrls: true` (sem `.html` nas URLs)
+**A produção é a VPS Contabo, NÃO a Vercel.** O domínio `santadoutrina.cloud` é servido
+por **Caddy** a partir de `/opt/mediaserver/catecismo`, que é uma cópia rsync — não um
+`git clone` no servidor. A Vercel recebe os mesmos pushes e funciona como espelho/preview,
+mas não é o que o público acessa. O DNS é gerenciado na Hostinger (que também é a
+registrar); a outra VPS, a KVM 2 da Hostinger, **não** hospeda este projeto.
 
-Variáveis de ambiente no painel da Vercel:
-- `GROK_API_KEY` — usada por `api/resumo.js`
+Deploy a partir de um clone local com a `main` atualizada:
+
+```bash
+rsync -az --delete --exclude={.git,api-server.mjs,.gitignore} ./ vps:/opt/mediaserver/catecismo/
+```
+
+⚠️ O `--delete` apaga na VPS o que não existe no clone. **Nunca rode isso com a `main`
+desatualizada ou com o working tree sujo** — rode `git pull` e os verificadores antes.
+
+Se algo em `api/` mudou, depois do rsync: `docker restart catecismo-api` na VPS.
+
+Coisas que existem só na VPS e nunca aparecem no `git status`: `api-server.mjs` e o
+`Caddyfile`. IP/SSH/credenciais: memória privada `infra-servers`.
+
+Variáveis de ambiente (container `catecismo-api`; as mesmas existem no painel da Vercel
+para o espelho):
+- `GROK_API_KEY` — usada por `api/resumo.js` (**hoje vazia em produção** → o botão
+  "Resumir com IA" está quebrado no ar; ver `HANDOFF.md` §5)
 - `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` — usadas por `api/correcao.js` (encaminha correções)
+
+Contexto completo de arquitetura, pipelines e pendências: **`HANDOFF.md`**.
 
 ### Liturgia: reflexão/homilia por IA (removida)
 
