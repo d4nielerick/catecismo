@@ -51,6 +51,15 @@ Detalhes de IP/SSH/senha: ver memória privada `infra-servers` — **não reprod
 Outras notas de arquitetura:
 - Caddy tem rewrite `/perguntas/{slug}` → `/perguntas/resposta.html` e redirect `www` → apex
   (mesmas regras replicadas em `vercel.json` para o espelho Vercel).
+- **Subdomínio `liturgia.santadoutrina.cloud`** (criado 19/ago/2026): CNAME → apex no DNS
+  da Hostinger + bloco no Caddyfile que faz `redir` 301 para
+  `https://santadoutrina.cloud/liturgiadiaria/`. É só URL curta para divulgação — **não**
+  é uma origem separada: o canonical continua no apex, então não há conteúdo duplicado
+  nem necessidade de verificar o subdomínio no GSC. Se algum dia virar site próprio,
+  aí sim vale reler a seção de SEO antes.
+- O redirect `/tv` → `dashboard.santadoutrina.cloud/tv.apk` foi **removido** (19/ago/2026):
+  o subdomínio `dashboard` não resolve desde o takedown dos subdomínios de mídia, então
+  era um 301 público para o vazio. `/tv` agora responde 404.
 - Analytics: Umami, instância própria (`umami` + `umami-db` no compose do mediaserver).
   Acesso e website ID: ver memória privada — não reproduzidos aqui.
 - CI: GitHub Actions (`.github/workflows/verifica.yml`), roda em todo PR e push em `main`
@@ -156,8 +165,15 @@ Vaticano (português europeu → pt-BR), **não** é a tradução oficial da CNB
   sumir do servidor sem querer (ex.: rsync sem `--exclude`), quebra `/api/*` em produção.
 - **Nunca editar à mão:** `catecismo.json`, `notas.json`, `data/perguntas/*.json`
   (mexer sempre na entrada humana + rodar o gerador — seção 3).
-- **`Cache-Control` no Caddy precisa de restart, não reload.** `caddy reload` a quente
-  não aplicou o novo header; só `docker restart caddy` aplicou.
+- **Editar o Caddyfile: use `cp`, nunca `mv`.** O Caddyfile é bind-mount de **arquivo
+  único** (`/opt/mediaserver/caddy/Caddyfile` → `/etc/caddy/Caddyfile`). `mv` troca o
+  inode e o container continua preso ao inode antigo: o arquivo no host muda, mas o
+  Caddy segue lendo o conteúdo velho e o `caddy reload` roda com sucesso sem aplicar
+  nada. Sintoma: `docker exec caddy md5sum /etc/caddy/Caddyfile` difere do `md5sum` no
+  host. Escreva sempre *dentro* do arquivo existente (`cp novo Caddyfile`), aí
+  `caddy reload` funciona normalmente. Se já usou `mv`, só `docker restart caddy`
+  religa o mount. (Era essa a causa do antigo "Cache-Control precisa de restart, não
+  reload" — não havia nada de especial no header.)
 - **Certificados TLS de subdomínios antigos ficam permanentemente em CT logs
   públicos** (ex.: os subdomínios de mídia removidos de sob `santadoutrina.cloud`)
   — não é possível "apagar" esse rastro, é público por design do Certificate Transparency.
