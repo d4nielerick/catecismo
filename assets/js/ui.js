@@ -302,15 +302,25 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
 // ── Eventos ──────────────────────────────────────────────────────────────────
 function registrarEventos() {
   campoBusca.addEventListener('input', () => {
+    botaoLimpar.classList.toggle('oculto', campoBusca.value === '');
+
+    // Antes do Enter, a hero não reage — digitar não abre nada. Uma vez já
+    // na seção de resultados, mantém a busca ao vivo de sempre (refinar).
+    if (!app.classList.contains('estado-busca')) return;
+
     clearTimeout(debounceTimer);
     clearTimeout(autoSelectTimer);
     const delay = window.matchMedia('(pointer: coarse)').matches ? 500 : 200;
     debounceTimer = setTimeout(() => executarBusca(campoBusca.value), delay);
-    botaoLimpar.classList.toggle('oculto', campoBusca.value === '');
   });
 
   campoBusca.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') limparBusca();
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      clearTimeout(debounceTimer);
+      executarBusca(campoBusca.value);
+    }
   });
 
   botaoLimpar.addEventListener('click', limparBusca);
@@ -375,6 +385,13 @@ function registrarEventos() {
   document.getElementById('btn-ler-header')
     ?.addEventListener('click', () => abrirLeitor(0));
 
+  // "Início": em vez de recarregar a página inteira, só volta pro estado
+  // inicial (mesma transição suave do Esc) — bem menos brusco.
+  document.querySelector('.btn-home')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    limparBusca();
+  });
+
 }
 
 // ── Busca ────────────────────────────────────────────────────────────────────
@@ -394,7 +411,7 @@ function executarBusca(query) {
     const num = parseInt(numMatch[1], 10);
     const p = paragrafos.find(x => x.numero === num);
     if (p) {
-      ativarEstadoBusca();
+      const foiAtivada = ativarEstadoBusca();
       resultadosAtuais = [p];
       indiceAtivo = -1;
       renderizarResultados(agrupar([p]), 1, '');
@@ -404,11 +421,16 @@ function executarBusca(query) {
         const card = listaResultados.querySelector(`[data-num="${num}"]`);
         if (card) selecionarParagrafo(num, card);
       }, 100);
+      // Só rola depois que todo o trabalho síncrono acima (incluindo, na
+      // 1ª busca, montar o texto contínuo inteiro) já terminou — chamar a
+      // rolagem antes disso deixava a thread ocupada demais e a animação
+      // ficava presa a meio caminho.
+      if (foiAtivada) revelarResultados();
       return;
     }
   }
 
-  ativarEstadoBusca();
+  const foiAtivada = ativarEstadoBusca();
 
   const { total, paragrafos: encontrados } = buscar(queryAtual, paragrafos);
   const grupos = agrupar(encontrados);
@@ -421,6 +443,8 @@ function executarBusca(query) {
   mostrarSugestao(queryAtual, total);
   renderizarIndiceAnalitico(queryAtual);
 
+  if (foiAtivada) revelarResultados();
+
   // Seleciona o 1º resultado automaticamente após 1s de inatividade
   clearTimeout(autoSelectTimer);
   if (encontrados.length > 0) {
@@ -429,20 +453,51 @@ function executarBusca(query) {
 }
 
 // ── Estados da UI ────────────────────────────────────────────────────────────
+const reduzirMovimento = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Rolagem suave até um alvo. Chamada só depois que todo o trabalho síncrono
+// da busca (render de resultados, texto contínuo etc.) já terminou — ver
+// revelarResultados() — então não compete com DOM pesado sendo montado.
+function scrollSuaveAte(getAlvoY) {
+  window.scrollTo({ top: getAlvoY(), behavior: reduzirMovimento() ? 'auto' : 'smooth' });
+
+  // Rede de segurança: em navegadores/ambientes que ignoram behavior:'smooth'
+  // (ou cancelam a animação), garante que a página realmente chega no alvo.
+  setTimeout(() => {
+    const alvo = getAlvoY();
+    if (Math.abs(window.scrollY - alvo) > 4) window.scrollTo(0, alvo);
+  }, 700);
+}
+
+// Retorna true só na transição inicial→busca (é nesse caso que quem chamou
+// deve, no fim do próprio trabalho, chamar revelarResultados()).
 function ativarEstadoBusca() {
-  if (app.classList.contains('estado-busca')) return;
+  if (app.classList.contains('estado-busca')) return false;
 
   app.classList.remove('estado-inicial');
   app.classList.add('estado-busca');
 
   buscarTopoWrap.appendChild(campoBusca);
   buscarTopoWrap.appendChild(botaoLimpar);
-  campoBusca.focus();
+  campoBusca.focus({ preventScroll: true });
 
   // Renderiza texto contínuo na primeira vez
   if (!textoRenderizado) {
     renderizarTextoCompleto();
     textoRenderizado = true;
+  }
+
+  return true;
+}
+
+// A hero fica no lugar (com parallax); rola só até a seção de resultados, que
+// ocupa a tela toda logo abaixo. Chamada só depois que TODO o trabalho síncrono
+// da busca (incluindo montar o texto contínuo na 1ª vez) já terminou — rolar
+// no meio desse trabalho pesado deixava a animação presa a meio caminho.
+function revelarResultados() {
+  const secao = document.getElementById('resultados-secao');
+  if (secao) {
+    scrollSuaveAte(() => secao.getBoundingClientRect().top + window.scrollY);
   }
 }
 
@@ -453,6 +508,8 @@ function voltarEstadoInicial() {
   const heroWrapper = hero.querySelector('.campo-busca-container');
   heroWrapper.appendChild(campoBusca);
   heroWrapper.appendChild(botaoLimpar);
+
+  scrollSuaveAte(() => 0);
 
   listaResultados.innerHTML = '';
   contagemEl.textContent = '';
@@ -950,8 +1007,9 @@ export function ativarBuscaEAbrirParagrafo(numero) {
   const p = paragrafos.find(x => x.numero === numero);
   if (!p) return;
 
-  ativarEstadoBusca();
+  const foiAtivada = ativarEstadoBusca();
   scrollParaParagrafo(numero);
+  if (foiAtivada) revelarResultados();
 
   if (window.innerWidth < 768) {
     painelConteudo.classList.add('aberto');
