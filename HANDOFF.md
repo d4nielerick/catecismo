@@ -44,7 +44,24 @@ e recebe os mesmos pushes (é um espelho útil para preview), mas o domínio ape
 rsync -az --delete --exclude={.git,api-server.mjs,.gitignore} ./ vps:/opt/mediaserver/catecismo/
 ```
 
-Se algo em `api/` mudou, depois do rsync: `docker restart catecismo-api` no VPS.
+Se algo em `api/` mudou, depois do rsync: `docker restart catecismo-api` no VPS — **exceto**
+se a mudança foi numa variável de ambiente interpolada via `${VAR}` no `docker-compose.yml`
+(ex.: `GROK_API_KEY=${GROK_API_KEY}`); nesse caso `restart` **não** reaplica, porque o valor
+é resolvido só na criação do container. Use `docker compose up -d --force-recreate catecismo-api`.
+
+**Deploy rápido (poucos arquivos, sem tocar em `api/`):** dá pra pular o rsync completo e
+copiar só o que mudou:
+
+```bash
+# Backup antes de sobrescrever (convenção adotada em 2026-08) — cria
+# /opt/mediaserver/catecismo.bak-<timestamp> como cópia completa do estado anterior
+ssh vps "cp -a /opt/mediaserver/catecismo /opt/mediaserver/catecismo.bak-\$(date +%Y%m%d-%H%M%S)"
+
+scp <arquivo-alterado> vps:/opt/mediaserver/catecismo/<mesmo-caminho>
+```
+
+Depois, confirme por hash (`md5`/`md5sum`) que o arquivo local e o remoto batem. Vários
+`catecismo.bak-*` já se acumularam em `/opt/mediaserver/` — vale podar de tempos em tempos.
 
 Detalhes de IP/SSH/senha: ver memória privada `infra-servers` — **não reproduzidos aqui**.
 
@@ -87,6 +104,23 @@ no tooltip; o tooltip só abre no clique e fica fixo até o usuário fechar, com
 
 ## 4. Estado atual (o que está no ar, em produção via VPS)
 
+- **Hero fotográfica + busca com scroll-to-reveal (CIC, 2026-08):** hero da home redesenhada
+  (foto do papa em duas camadas com parallax sutil, full-width, sem moldura/menu flutuante
+  antigos). Campo de busca compacto por padrão, expande ao focar. Digitar não busca mais a
+  cada tecla — só ao apertar **Enter**, que dispara scroll suave até a seção de resultados
+  (`#resultados-secao`), um card flutuante com margem lateral que sobrepõe levemente a hero.
+  Header de resultados (`#busca-topo`) fica *sticky* ao rolar, com "Início" (label + ícone)
+  voltando ao estado inicial via transição suave in-page (sem reload de página). Todo o CSS/JS
+  compacto/escopado usa o prefixo `#resultados-secao` pra não vazar pro `/saopiox/`, que
+  reaproveita as mesmas classes base (`.btn-home`, `#busca-topo #campo-busca`,
+  `.busca-topo-inner`, `#btn-ler-header`) — **sempre escopar por `#resultados-secao` ao mexer
+  nesses elementos**, nunca editar a regra base sem checar o Pio X antes/depois.
+- **Resumo por IA (`/api/resumo.js`) corrigido (2026-08):** estava fora do ar
+  porque `GROK_API_KEY` chegava vazia no container — `docker-compose.yml` interpola
+  `${GROK_API_KEY}` a partir de `/opt/mediaserver/.env`, que não existia. Criado o `.env` com
+  a chave (console.x.ai) e recriado o container. Testado de ponta a ponta (clique real no
+  botão em produção → resposta da IA renderizada). Ver gotcha na §6 sobre esse padrão de
+  interpolação silenciosamente vazia.
 - **SEO/técnico:** sitemap, robots.txt, canonical/OG/JSON-LD, meta tag de verificação do
   Google Search Console no `<head>` do `index.html`. GSC verificado, sitemap enviado e
   processado (44 páginas na última checagem).
@@ -132,9 +166,6 @@ Vaticano (português europeu → pt-BR), **não** é a tradução oficial da CNB
 - **Padres da Igreja / Doutores e Denzinger:** decisão adiada — traduções em português
   costumam ter direitos autorais, então provavelmente serão **linkados** para a fonte
   externa em vez de hospedados na íntegra.
-- **`GROK_API_KEY` vazio no container de produção** → `/api/resumo.js` (resumo por IA
-  da busca/coleção) está quebrado em prod. Decidir: repor a chave ou remover a
-  funcionalidade do front.
 - **Doação:** trocar a chave PIX (que era o CPF do Daniel, removida) por uma chave
   anônima e recriar uma página dedicada `/apoie` (o modal antigo foi removido, não
   substituído ainda).
@@ -166,6 +197,17 @@ Vaticano (português europeu → pt-BR), **não** é a tradução oficial da CNB
   corretamente ao mexer em textos/rodapés.
 - **Sem build/bundler:** abrir `index.html` direto no browser não funciona (ES modules +
   `fetch()` exigem um servidor, mesmo local — ver seção 7).
+- **Variável `${VAR}` no `docker-compose.yml` do mediaserver resolve pra vazio em silêncio**
+  se o `.env` correspondente (`/opt/mediaserver/.env`, fora do repo) não existir ou não tiver
+  a chave — o container sobe normalmente, `docker inspect` mostra o *nome* da variável, mas
+  o valor fica `""`. Sintoma típico: a feature falha com um erro específico de "chave não
+  configurada" em vez de o container simplesmente não subir. `docker restart` não corrige;
+  precisa `docker compose up -d --force-recreate <serviço>` depois de criar/corrigir o `.env`.
+- **`python3 -m http.server` local não manda `Cache-Control`** — o navegador pode cachear
+  agressivamente `.css`/`.js` durante desenvolvimento ativo e "não refletir" edições mesmo
+  após salvar. Não é bug do site; ou força reload sem cache (DevTools → Network → Disable
+  cache) ou rode um servidor que force `Cache-Control: no-store` (ex.: um wrapper simples
+  em cima de `http.server` sobrescrevendo `end_headers`).
 
 ---
 
