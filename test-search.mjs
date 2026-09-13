@@ -53,6 +53,18 @@ console.log('\nbuscar()');
 }
 
 // ── agrupar() ────────────────────────────────────────────────────────────────
+{
+  const p = (texto) => ({ texto, artigo: '', capitulo: '' });
+  assert('encontra oração depois de uma ocorrência dentro de coração',
+    buscar('oração', [p('O coração se abre à oração.')]).total === 1);
+  assert('não aceita oração apenas dentro de coração',
+    buscar('oração', [p('O coração se abre.')]).total === 0);
+  assert('procura além de várias ocorrências inválidas',
+    buscar('fé', [p('café café fé')]).total === 1);
+  assert('preserva busca literal de pontuação',
+    buscar('a+b', [p('a+b')]).total === 1);
+}
+
 console.log('\nagrupar()');
 {
   const { paragrafos: ps } = buscar('sacramentos', paragrafos);

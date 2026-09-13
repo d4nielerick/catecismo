@@ -9,13 +9,14 @@
 import fs from 'node:fs';
 import { buildNotas } from './build-notas.mjs';
 
-const PISO_COBERTURA = 99.0; // % (atual ~99.4)
+const PISO_COBERTURA = 100.0;
 
 const fonte = JSON.parse(fs.readFileSync('data/fonte-notas-vaticano.json', 'utf8'));
 const cat = JSON.parse(fs.readFileSync('data/catecismo.json', 'utf8'));
 const commit = JSON.parse(fs.readFileSync('data/notas.json', 'utf8'));
 
-const { notas, stats } = buildNotas(fonte, cat);
+const ajustes = JSON.parse(fs.readFileSync('data/notas-ajustes.json', 'utf8'));
+const { notas, stats } = buildNotas(fonte, cat, ajustes);
 
 if (JSON.stringify(notas) !== JSON.stringify(commit)) {
   console.error('✗ data/notas.json diverge da reconstrução (fonte-notas + catecismo). Rode build-notas.mjs.');
@@ -29,4 +30,4 @@ if (pct < PISO_COBERTURA) {
 }
 
 console.log(`✅ notas OK: reprodutível e ${stats.resolvidos}/${stats.totMarcadores} marcadores resolvidos (${pct.toFixed(1)}%).`);
-console.log(`   ${stats.marcadoresSemNota.length} marcadores sem nota (OCR danificado na fonte): ${stats.marcadoresSemNota.join(' ')}`);
+console.log(`   ${stats.marcadoresSemNota.length} marcadores sem nota; ${stats.notasOrfas.length} notas órfãs para revisão editorial.`);

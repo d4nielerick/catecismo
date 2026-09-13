@@ -34,11 +34,11 @@ const MAX_RENDERIZADOS = 200; // limite de itens renderizados no painel esquerdo
  * Ex: "oracao" bate em "oracao", "oracoes", mas NÃO em "coracao".
  */
 function contemPalavra(haystack, needle) {
-  const idx = haystack.indexOf(needle);
-  if (idx === -1) return false;
-  // O caractere imediatamente anterior não pode ser uma letra
-  if (idx > 0 && /[a-z]/.test(haystack[idx - 1])) return false;
-  return true;
+  for (let idx = haystack.indexOf(needle); idx !== -1;
+       idx = haystack.indexOf(needle, idx + 1)) {
+    if (idx === 0 || !/[a-z]/.test(haystack[idx - 1])) return true;
+  }
+  return false;
 }
 
 /**

@@ -560,9 +560,11 @@
 /* Parágrafo individual no texto contínuo */
 .tc-paragrafo {
   position: relative;
+  /* Simétrico: .para-acoes fica no fluxo, numa linha própria abaixo do texto
+     (não é absolute), então não precisa de canaleta à direita. O antigo
+     padding-right de 3.75rem era espaço morto — comia 60px de linha, o que
+     em retrato é 16% da largura da tela. */
   padding: var(--space-md) var(--space-lg);
-  /* reserva espaço à direita para os botões rovings (+) e (link) */
-  padding-right: 3.75rem;
   margin-bottom: var(--space-xs);
   border-radius: var(--radius);
   border-left: none;
@@ -644,6 +646,18 @@
     transition: transform 0.28s ease;
     z-index: 10;
     padding: var(--space-lg);
+  }
+
+  /* Em retrato a linha é curta: o recuo lateral encolhe (no CIC — o São Pio X
+     compartilha #painel-conteudo e fica com o padding original). */
+  #resultados-secao #painel-conteudo {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  #resultados-secao .tc-paragrafo {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 
   #painel-conteudo.aberto {
@@ -869,6 +883,17 @@
 
 @media (max-width: 767px) {
   #nav-paragrafo { display: none; }
+}
+
+/* Recuo lateral da leitura, só no CIC — #painel-conteudo é compartilhado com
+   o São Pio X, que não tem #resultados-secao. À direita fica uma folga maior:
+   é onde as setas prev/next flutuam (≥768px), e sem ela uma linha cheia
+   encostaria nos botões. */
+@media (min-width: 768px) {
+  #resultados-secao #painel-conteudo {
+    padding-left: var(--space-2xl);
+    padding-right: 3.25rem;
+  }
 }
 
 /* ── Ícone de copiar link no parágrafo ativo ─────────────────────────────── */
@@ -1419,3 +1444,6 @@
   background: #FEF9EC;
 }
 
+
+/* Trecho da fonte no card móvel, separado dos versículos bíblicos. */
+.biblia-card-fonte:not(:empty) { display: block; margin-top: .65rem; }

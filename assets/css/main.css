@@ -338,7 +338,9 @@ body {
 @media (max-width: 767px) {
   #hero.hero-foto {
     min-height: 100dvh;
-    padding-bottom: 2.5rem;
+    /* Respiro maior no pé + safe area: no iPhone as pills ficavam quase
+       encostando na barra de gestos. */
+    padding-bottom: calc(3.25rem + env(safe-area-inset-bottom, 0px));
   }
 
   /* Em retrato a foto é cortada na horizontal (é landscape), então a figura
@@ -386,7 +388,9 @@ body {
      empurraria sozinho para o topo. Quem alinha é o justify-content da hero. */
   #hero-acoes {
     flex-wrap: wrap;
-    gap: 0.5rem 1.75rem;
+    /* O campo ocupa a linha inteira (order:-1) e PESQUISAR/LER ficam lado a
+       lado na de baixo — 1.75rem deixava os dois rótulos quase colados. */
+    gap: 0.65rem 2.75rem;
     margin-top: 0;
   }
 

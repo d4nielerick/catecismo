@@ -389,7 +389,7 @@ function registrarEventos() {
   // inicial (mesma transição suave do Esc) — bem menos brusco.
   document.querySelector('.btn-home')?.addEventListener('click', (e) => {
     e.preventDefault();
-    limparBusca();
+    limparBusca({ focar: false });
   });
 
 }
@@ -565,12 +565,16 @@ function mostrarSugestao(query, nAtual) {
   });
 }
 
-function limparBusca() {
+// `focar` só vale quando a ação partiu do próprio campo (Esc, botão ×): ali o
+// teclado já está aberto e devolver o cursor é o esperado. Vindo do "Início" a
+// intenção é sair da busca — focar abriria o teclado e, no iPhone, ainda daria
+// zoom na página.
+function limparBusca({ focar = true } = {}) {
   campoBusca.value = '';
   botaoLimpar.classList.add('oculto');
   if (_sugestaoEl) _sugestaoEl.className = 'sugestao-variante oculto';
   voltarEstadoInicial();
-  campoBusca.focus();
+  if (focar) campoBusca.focus();
 }
 
 // ── Renderização do texto completo (contínuo) ────────────────────────────────
@@ -668,8 +672,9 @@ function atualizarHighlightsTexto(query, encontrados) {
     if (!el) continue;
     const textoEl = el.querySelector('.tc-paragrafo-texto');
     if (textoEl) {
-      // Durante a busca: highlight simples (notas ficam como texto plano)
-      textoEl.innerHTML = destacar(p.texto, query);
+      // Reconstrói o destaque sem descartar os controles e links das notas.
+      textoEl.replaceChildren();
+      renderizarTextoComNotas(textoEl, p.texto, p.numero, query);
       _paragrafosComHighlight.add(textoEl);
     }
   }
@@ -1021,10 +1026,10 @@ export function ativarBuscaEAbrirParagrafo(numero) {
  * Preenche `el` com o texto do parágrafo, substituindo (n) por <sup> interativo
  * quando a nota existir em notas.json.
  */
-function renderizarTextoComNotas(el, texto, numeroParagrafo) {
+function renderizarTextoComNotas(el, texto, numeroParagrafo, query = '') {
   const notas = notasDoParagrafo(numeroParagrafo);
   if (!notas) {
-    el.textContent = texto;
+    el.innerHTML = destacar(texto, query);
     return;
   }
 
@@ -1079,6 +1084,7 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       // Clique: mobile → card; desktop → fixa/desfixa o tooltip até fechar
       sup.addEventListener('click', async (e) => {
         e.stopPropagation();
+        if (e.target.closest('a, button')) return;
         if (window.innerWidth < 768) {
           if (!_fetched) {
             _fetched = true;
@@ -1095,7 +1101,9 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
 
       el.appendChild(sup);
     } else {
-      el.appendChild(document.createTextNode(parte));
+      const trechoTexto = document.createElement('span');
+      trechoTexto.innerHTML = destacar(parte, query);
+      el.appendChild(trechoTexto);
     }
   }
 }

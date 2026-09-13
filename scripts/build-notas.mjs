@@ -21,13 +21,26 @@ const rangeDoArquivo = (nome) => {
 };
 
 /** Reconstrói o mapa de notas. Determinístico: mesmas entradas → mesma saída. */
-export function buildNotas(fonte, cat) {
+export function buildNotas(fonte, cat, ajustes = []) {
+  // A fonte bruta permanece intacta. Cada exceção exige o valor anterior exato.
+  const corrigida = structuredClone(fonte);
+  const ajustadas = new Set();
+  for (const a of ajustes) {
+    const id = `${a.arquivo}#${a.nota}`;
+    if (!corrigida[a.arquivo] || !/^\d{1,3}$/.test(a.nota) ||
+        typeof a.para !== 'string' || !a.para.trim() || !a.motivo || !a.fonte ||
+        ajustadas.has(id) || (corrigida[a.arquivo][a.nota] ?? null) !== a.de) {
+      throw new Error(`Ajuste de nota inválido ou fonte alterada: ${id}`);
+    }
+    corrigida[a.arquivo][a.nota] = a.para;
+    ajustadas.add(id);
+  }
   const texto = new Map(cat.paragrafos.map((p) => [p.numero, p.texto]));
   const notas = {};
   let totMarcadores = 0, resolvidos = 0;
   const marcadoresSemNota = [], notasOrfas = [];
 
-  for (const [arquivo, notasArq] of Object.entries(fonte)) {
+  for (const [arquivo, notasArq] of Object.entries(corrigida)) {
     const rng = rangeDoArquivo(arquivo);
     if (!rng) continue;
     const [a, b] = rng;
@@ -55,7 +68,8 @@ export function buildNotas(fonte, cat) {
 if (process.argv[1] && fileURLToPath(import.meta.url) === fs.realpathSync(process.argv[1])) {
   const fonte = JSON.parse(fs.readFileSync('data/fonte-notas-vaticano.json', 'utf8'));
   const cat = JSON.parse(fs.readFileSync('data/catecismo.json', 'utf8'));
-  const { notas, stats } = buildNotas(fonte, cat);
+  const ajustes = JSON.parse(fs.readFileSync('data/notas-ajustes.json', 'utf8'));
+  const { notas, stats } = buildNotas(fonte, cat, ajustes);
   fs.writeFileSync('data/notas.json', JSON.stringify(notas));
   const nParag = Object.keys(notas).length;
   const nNotas = Object.values(notas).reduce((s, d) => s + Object.keys(d).length, 0);

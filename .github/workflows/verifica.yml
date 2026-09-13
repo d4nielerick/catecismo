@@ -19,3 +19,5 @@ jobs:
         run: node scripts/verifica-notas.mjs
       - name: Motor de busca
         run: node test-search.mjs
+      - name: Regressões de notas e fontes
+        run: node test-notas.mjs
