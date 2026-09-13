@@ -1,0 +1,894 @@
+{
+ "nomes": {
+  "1": "Abandono",
+  "2": "Abba",
+  "3": "Abel",
+  "4": "Aborto",
+  "5": "Abraão",
+  "7": "Aceitação/aceitar (acolhimento/acolher)",
+  "10": "Adesão",
+  "12": "Adolescência",
+  "13": "Adoração",
+  "14": "Adoção",
+  "15": "Adultos",
+  "16": "Adultério",
+  "17": "Advento",
+  "18": "Advogado",
+  "19": "Adão",
+  "21": "Alegria",
+  "22": "Alimento",
+  "23": "Alma",
+  "24": "Altar",
+  "26": "Amigo",
+  "27": "Amizade",
+  "28": "Amor",
+  "29": "Amém",
+  "30": "Analogia",
+  "32": "Animais",
+  "33": "Ano litúrgico",
+  "34": "Anunciação",
+  "36": "Anúncio conforme evangelização",
+  "37": "Apostasia",
+  "38": "Apostolado",
+  "40": "Apóstolo",
+  "41": "Arca da aliança",
+  "43": "Arma",
+  "44": "Arte",
+  "46": "Ascensão de Cristo",
+  "47": "Ascese",
+  "48": "Assembleia",
+  "49": "Assistência/assistir",
+  "50": "Associações",
+  "51": "Ateísmo",
+  "52": "Atividade",
+  "53": "Ato humano",
+  "54": "Autonomia",
+  "55": "Autoridade",
+  "59": "Ação/agir",
+  "61": "Bom conforme bem",
+  "62": "Batismo",
+  "64": "Beleza",
+  "65": "Bem comum",
+  "66": "Bem-aventurança",
+  "67": "Bem-aventuranças evangélicas",
+  "68": "Bem",
+  "69": "Benevolência",
+  "70": "Bens morais e espirituais",
+  "71": "Bens terrenos",
+  "72": "Bispo conforme ordem: episcopado",
+  "73": "Blasfémia",
+  "74": "Boa nova",
+  "75": "Bondade de Deus",
+  "76": "Bondade",
+  "78": "Bênção",
+  "79": "Calúnia",
+  "81": "Capitalismo",
+  "82": "Cegos",
+  "83": "Cegueira",
+  "84": "Ciúme",
+  "85": "Circuncisão",
+  "87": "Comércio",
+  "89": "Contracepção",
+  "90": "Contrato",
+  "92": "correção fraterna",
+  "94": "Quotidiano",
+  "97": "Caminho(s)",
+  "98": "Canto",
+  "99": "Caridade",
+  "100": "Carisma conforme Espírito Santo",
+  "101": "Carne",
+  "102": "Caráter sacramental",
+  "103": "Casal",
+  "104": "Castidade",
+  "105": "Catecismo da Igreja Católica",
+  "106": "Catecumenato",
+  "107": "Catecúmeno",
+  "108": "Catequese",
+  "109": "Catequista",
+  "110": "Catolicidade",
+  "111": "Ceia do Senhor",
+  "112": "Castidade e celibato",
+  "114": "Chamado",
+  "115": "Chaves do reino",
+  "116": "Cidadão",
+  "117": "Cidade",
+  "119": "Cobiça",
+  "120": "Colaboração",
+  "121": "Colégio apostólico",
+  "122": "Colégio episcopal (corpo episcopal)",
+  "123": "Combate",
+  "124": "Compaixão",
+  "125": "Comunhão",
+  "126": "Comunhão dos santos",
+  "127": "Comunicação",
+  "128": "Comunidade",
+  "129": "Conceção",
+  "130": "Concílio(s)",
+  "131": "Concupiscência",
+  "132": "Condenação",
+  "133": "Confiança",
+  "134": "Confiança filial",
+  "135": "Configuração",
+  "136": "Conflito(s)",
+  "137": "Conhecimento",
+  "138": "Consagração",
+  "139": "Consciência",
+  "140": "Consubstancial",
+  "141": "Consumação",
+  "142": "Contemplação",
+  "143": "Continência",
+  "144": "Conversão",
+  "145": "Convívio",
+  "147": "Coração",
+  "148": "Cordeiro",
+  "149": "Corpo (humano)",
+  "150": "Crente(s)",
+  "151": "Crer",
+  "152": "Crescimento",
+  "153": "Crianças",
+  "154": "Criaturas",
+  "155": "Criação-criado",
+  "156": "Confirmação ou crisma",
+  "157": "Crisma",
+  "158": "Cristo",
+  "159": "Cruz",
+  "160": "Cruz (= sinal da Cruz)",
+  "161": "Culpa",
+  "162": "Culto",
+  "164": "Cultura(s)",
+  "165": "Cumprimento",
+  "166": "Cura",
+  "168": "Cálice da nova aliança e Eucaristia",
+  "169": "Céu",
+  "171": "Desemprego",
+  "172": "Desespero",
+  "174": "Diocese",
+  "177": "Defesa",
+  "178": "Defuntos",
+  "179": "demónio",
+  "180": "Desejo",
+  "181": "Desenvolvimento",
+  "182": "Deserto",
+  "183": "Desigualdade",
+  "184": "Desobediência",
+  "185": "Destino",
+  "186": "Deus",
+  "187": "Dever",
+  "188": "Deveres dos cidadãos",
+  "189": "Deveres religiosos",
+  "190": "Devoção",
+  "191": "Dia",
+  "193": "Diácono",
+  "194": "Dignidade",
+  "195": "Dinheiro",
+  "196": "Direito(s)",
+  "197": "Discernimento",
+  "198": "Discriminação",
+  "199": "Discípulos de Jesus de Nazaré",
+  "201": "Divindade",
+  "202": "Divisões",
+  "203": "Divórcio",
+  "204": "Diálogo",
+  "205": "Doentes",
+  "206": "Dogma",
+  "207": "Domingo",
+  "208": "Domínio",
+  "210": "Dons de Deus",
+  "211": "Dor",
+  "212": "Doutrina social da Igreja",
+  "213": "Doutrina cristã",
+  "214": "Doxologia",
+  "215": "Drogas",
+  "216": "Dúvida",
+  "217": "Epifania",
+  "218": "Episcopado",
+  "219": "Escola",
+  "222": "Estipêndio",
+  "224": "Estruturas",
+  "225": "Eutanásia",
+  "226": "Excomunhão",
+  "227": "Exegese",
+  "228": "Exercícios espirituais",
+  "230": "Economia da salvação",
+  "231": "Economia",
+  "232": "Ecumenismo",
+  "233": "Educação",
+  "234": "Efusão do Espírito Santo",
+  "235": "Egoísmo",
+  "236": "Eleição(ões)/escolha(er)",
+  "237": "Elevação",
+  "238": "Embrião humano",
+  "239": "Encarnação",
+  "240": "Encontro",
+  "242": "Epiclese",
+  "243": "Erro",
+  "245": "Escravidão",
+  "246": "Escândalo",
+  "247": "Esforço",
+  "248": "Esmola",
+  "249": "Esperança",
+  "250": "Espiritualidade (vida espiritual/vida nova no Espírito)",
+  "251": "Espírito santo",
+  "252": "Espírito",
+  "253": "Estado (político)",
+  "254": "Estado",
+  "256": "Eucaristia",
+  "258": "Pão e vinho",
+  "259": "Eva",
+  "260": "Evangelho(s)",
+  "261": "Evangelização",
+  "262": "Eventos salvadores",
+  "263": "Eventos",
+  "264": "Exame de consciência",
+  "265": "Exclusão",
+  "266": "Exemplo",
+  "267": "Exorcismo",
+  "268": "Experiência",
+  "269": "Experiências científicas",
+  "270": "Expiação",
+  "271": "Exéquias",
+  "272": "Exílio",
+  "273": "Família",
+  "274": "Fariseus",
+  "275": "Fecundação artificial",
+  "276": "Fecundidade",
+  "277": "Felicidade",
+  "278": "Festividade",
+  "279": "Fidelidade conjugal",
+  "280": "Fidelidade",
+  "281": "Filho(s)",
+  "282": "Filhos de Deus",
+  "283": "Finalidade/fim",
+  "284": "Fogo",
+  "285": "Fome",
+  "286": "Formação",
+  "287": "Fornicação",
+  "288": "Fortaleza",
+  "289": "Força",
+  "290": "Fraqueza",
+  "291": "Fraternidade/irmandade",
+  "292": "Fraude",
+  "293": "Fracção do pão",
+  "294": "Furto",
+  "295": "Futuro",
+  "296": "Fé cf crer",
+  "297": "Fórmula(s)",
+  "298": "Fórmulas e símbolos da fé",
+  "303": "Gesto",
+  "304": "Glória",
+  "305": "Gozo",
+  "306": "Gratidão",
+  "308": "Graça",
+  "309": "Guerra",
+  "310": "Guia/dirigir",
+  "311": "género humano",
+  "315": "Hóstia",
+  "317": "Harmonia",
+  "318": "Herança",
+  "319": "Heresia",
+  "320": "Hierarquia",
+  "321": "Hino",
+  "322": "Hipóstase",
+  "323": "História da salvação (história sagrada)",
+  "324": "História",
+  "325": "Homem",
+  "326": "Homicídio",
+  "327": "Homilia",
+  "328": "Honra",
+  "330": "Humanidade",
+  "331": "Humildade",
+  "334": "Igualdade",
+  "335": "Imaculada",
+  "337": "Imaginação",
+  "338": "Imigrantes",
+  "339": "Imortalidade",
+  "342": "Incesto",
+  "343": "Incorporação",
+  "344": "Incredulidade",
+  "345": "Inculturação",
+  "352": "Iniquidade",
+  "355": "Interioridade",
+  "356": "Irreligião",
+  "357": "Idade",
+  "358": "Identidade",
+  "359": "Idolatria/ídolo",
+  "360": "Ignorância",
+  "361": "Igreja",
+  "362": "Igrejas ortodoxas",
+  "363": "Imposição das mãos",
+  "364": "Indulgências",
+  "365": "Infalibilidade",
+  "366": "Inferno",
+  "367": "Infernos",
+  "368": "Infidelidade",
+  "369": "Informação",
+  "370": "Infância",
+  "371": "Iniciação cristã",
+  "372": "Inimigo",
+  "373": "Injustiça",
+  "374": "Inseminação artificial",
+  "375": "Inspiração",
+  "376": "Instituições",
+  "378": "Inteligência",
+  "379": "Intenção",
+  "380": "Intercessão",
+  "381": "Interesse(s)",
+  "382": "Interpretação",
+  "383": "Intimidade",
+  "384": "Inveja",
+  "385": "Invocação",
+  "386": "Ira",
+  "387": "Irmão(s)",
+  "388": "Israel",
+  "390": "José",
+  "391": "Jovens",
+  "392": "Jejum",
+  "393": "Juramento",
+  "394": "Justificação",
+  "395": "Justiça",
+  "396": "Justo(s)",
+  "397": "Juízo",
+  "400": "Lectio divina",
+  "401": "Lex orandi",
+  "404": "Luxúria",
+  "405": "Legítima defesa",
+  "406": "Lei",
+  "407": "Leigo",
+  "408": "Leitura da Sagrada Escritura",
+  "409": "Liberdade",
+  "410": "Libertação",
+  "411": "Linguagem",
+  "412": "Liturgia",
+  "413": "Louvor(es)",
+  "415": "Luz",
+  "417": "Maligno",
+  "421": "Maria",
+  "426": "Mediador",
+  "427": "Meios de comunicação social",
+  "428": "Mentalidade",
+  "429": "Mesa",
+  "430": "Messianismo",
+  "431": "Mestre(s)",
+  "433": "Místico",
+  "441": "Magistério da Igreja e dos pastores",
+  "442": "Mal cf bem",
+  "443": "Mandamento/preceito",
+  "444": "Manifestação",
+  "445": "Matar",
+  "446": "Matrimónio",
+  "447": "Meditação",
+  "448": "Membros do corpo de Cristo",
+  "449": "Memorial",
+  "450": "Memória",
+  "451": "Mentira",
+  "452": "Messias",
+  "453": "Milagre(s)",
+  "454": "Ministro(s)",
+  "455": "Ministério",
+  "456": "Misericórdia",
+  "457": "Missionário",
+  "458": "Missão(ões)",
+  "459": "Mistério",
+  "460": "Modelo de vida para os fiéis",
+  "461": "Modo de agir",
+  "462": "Moralidade",
+  "463": "Morte",
+  "464": "Mulher",
+  "465": "Mundo",
+  "466": "Mártires",
+  "467": "Médico",
+  "468": "Mérito",
+  "469": "Noé",
+  "470": "Noivos",
+  "472": "Nuvens",
+  "473": "Natureza",
+  "474": "Nação",
+  "475": "Necessidade",
+  "476": "Nome",
+  "477": "Norma",
+  "478": "Nova aliança",
+  "479": "Novo testamento",
+  "480": "Novidade",
+  "481": "Novo nascimento/Natal",
+  "482": "Núpcias",
+  "483": "Obséquio",
+  "486": "Omissão",
+  "490": "Obediência",
+  "491": "Oblação da Igreja",
+  "492": "Obra(s)",
+  "493": "Obrigação",
+  "494": "Oração",
+  "495": "Ordem",
+  "496": "Ordem",
+  "497": "Ouvir",
+  "498": "Paciência",
+  "503": "Palavra do homem",
+  "506": "Paraíso",
+  "509": "Paternidade",
+  "510": "Patriarca",
+  "512": "Pensamento(s)",
+  "513": "Perjúrio",
+  "515": "Perseguição",
+  "516": "Perseverança",
+  "517": "Pertença",
+  "518": "Pesquisa científica",
+  "519": "Pessoas deficientes",
+  "521": "Piedade",
+  "522": "Poligamia",
+  "524": "Pomba",
+  "527": "Prazer(es)",
+  "529": "Prefiguração(ões)",
+  "530": "Pregação",
+  "531": "Preguiça",
+  "533": "Presbítério",
+  "534": "Presidir",
+  "535": "Presunção",
+  "536": "Primado",
+  "537": "Primícias",
+  "538": "Procissão (ato de culto)",
+  "539": "Proclamação da palavra de Deus",
+  "540": "Procriação",
+  "542": "Profecia",
+  "545": "Propósito",
+  "546": "Propriedade privada",
+  "548": "Prudência",
+  "549": "Publicano(s)",
+  "550": "Pudor",
+  "551": "Pureza",
+  "553": "Pai Deus",
+  "555": "Pais",
+  "556": "Paixão(ões)",
+  "557": "Palavra de Deus",
+  "558": "Participação",
+  "560": "Parábola(s)",
+  "561": "Pastoral",
+  "562": "Pastores da Igreja",
+  "563": "Paz",
+  "564": "Pecado original",
+  "565": "Pecado",
+  "566": "Pecador(es)",
+  "567": "Pedro -apóstolo",
+  "568": "Pena",
+  "569": "Penitência e reconciliação",
+  "570": "Pentecostes",
+  "571": "Perdão",
+  "572": "Peregrinação",
+  "573": "Perfeição",
+  "574": "Pessoa",
+  "575": "Plenitude",
+  "576": "Pobre/pobreza",
+  "577": "Poder de Deus",
+  "578": "Poderes ou potestades",
+  "579": "Político",
+  "580": "Povo",
+  "581": "Povo de Deus",
+  "582": "Presbítero",
+  "583": "Presença de Cristo",
+  "584": "Presença de Deus",
+  "585": "Profeta(s)",
+  "586": "Profissão",
+  "587": "Promessa(s)",
+  "588": "Provação/ões",
+  "589": "Providência",
+  "590": "Próximo",
+  "591": "Purificar",
+  "592": "Páscoa",
+  "593": "Pátria",
+  "594": "Pão",
+  "595": "Raça",
+  "597": "Rebanho",
+  "602": "Reflexão",
+  "604": "Regeneração (cristã)",
+  "610": "Religioso(a)",
+  "611": "Renovação",
+  "613": "Reparação",
+  "614": "Repouso",
+  "617": "Riquezas",
+  "618": "Rito",
+  "620": "Razão",
+  "621": "Realidades",
+  "622": "Redenção",
+  "623": "Regra moral",
+  "624": "Reino de Deus",
+  "625": "Religião/ões",
+  "626": "Remissão dos pecados",
+  "627": "Respeito",
+  "628": "Responsabilidade",
+  "629": "Ressurreição dos mortos",
+  "630": "Revelação",
+  "632": "Sagrado",
+  "634": "Salário",
+  "635": "Santuário",
+  "641": "Sepulcro",
+  "644": "Silêncio",
+  "646": "Simplicidade",
+  "650": "Soberba",
+  "654": "Sofrimento",
+  "655": "Sopro",
+  "657": "Submissão (do homem)",
+  "659": "Substância",
+  "660": "Sucessão apostólica",
+  "664": "Súplica",
+  "665": "Sabedoria de Deus",
+  "666": "Sabedoria do homem",
+  "667": "Sacerdote/sacerdócio",
+  "668": "Sacramentais",
+  "669": "Sacramentos",
+  "670": "Sacrifícios",
+  "671": "Sagrada escritura",
+  "672": "Salmos",
+  "673": "Salvador",
+  "674": "Salvação",
+  "675": "Sangue",
+  "676": "Santificação",
+  "677": "Santos",
+  "678": "Saúde física",
+  "679": "Seguimento de Cristo",
+  "680": "Selo",
+  "681": "Semelhança",
+  "682": "Sentido",
+  "683": "Sermão da montanha",
+  "684": "Serviço",
+  "685": "Servo",
+  "686": "Servo (Cristo)",
+  "687": "Sexualidade",
+  "688": "Sobrenatural",
+  "689": "Sociedade",
+  "690": "Solidariedade",
+  "691": "Solidariedade entre os povos",
+  "692": "Sumo pontífice",
+  "693": "Sábado",
+  "694": "Símbolo dos apóstolos",
+  "695": "Símbolos",
+  "696": "Sinais (no sacramentos)",
+  "697": "Sinais",
+  "701": "Temor",
+  "702": "Temperança",
+  "704": "Teologia",
+  "705": "Terra",
+  "712": "Transgressão",
+  "716": "Trevas",
+  "717": "Tribulações",
+  "719": "Tristeza",
+  "721": "Templo",
+  "722": "Tempo",
+  "723": "Tentação",
+  "724": "Testemunhas",
+  "725": "Testemunho",
+  "726": "Trabalho",
+  "727": "Tradição",
+  "728": "Trindade",
+  "730": "Unção",
+  "731": "Unção dos enfermos",
+  "732": "União",
+  "733": "Unidade",
+  "735": "Universo",
+  "736": "Usura",
+  "739": "Velhos",
+  "740": "Veneração",
+  "742": "Ver a Deus",
+  "744": "Veste",
+  "745": "Viático",
+  "746": "Vícios",
+  "748": "Vigário",
+  "749": "Vigilância",
+  "751": "Vinho/vinha/",
+  "753": "Violência",
+  "755": "Virgindade",
+  "757": "Visão de Deus",
+  "759": "Vitória",
+  "762": "Voto (religioso)",
+  "763": "Voz",
+  "764": "Valores",
+  "765": "Verdade",
+  "766": "Vida",
+  "767": "Virtude",
+  "768": "Vocação do homem",
+  "769": "Vontade",
+  "771": "Vontade do homem",
+  "772": "Yhwh",
+  "774": "Zelo-ciúme"
+ },
+ "remete": {
+  "17": [
+   141
+  ],
+  "28": [
+   99
+  ],
+  "33": [
+   17,
+   570,
+   592
+  ],
+  "34": [
+   421
+  ],
+  "46": [
+   158
+  ],
+  "52": [
+   59,
+   726
+  ],
+  "53": [
+   325,
+   556
+  ],
+  "62": [
+   669
+  ],
+  "74": [
+   260,
+   479
+  ],
+  "75": [
+   186
+  ],
+  "81": [
+   212,
+   395
+  ],
+  "99": [
+   28
+  ],
+  "102": [
+   680
+  ],
+  "108": [
+   213
+  ],
+  "114": [
+   768
+  ],
+  "119": [
+   131,
+   180
+  ],
+  "131": [
+   180,
+   556
+  ],
+  "140": [
+   728
+  ],
+  "141": [
+   165
+  ],
+  "151": [
+   296
+  ],
+  "152": [
+   181
+  ],
+  "156": [
+   669
+  ],
+  "157": [
+   156
+  ],
+  "158": [
+   452
+  ],
+  "161": [
+   565
+  ],
+  "178": [
+   271
+  ],
+  "180": [
+   119,
+   131
+  ],
+  "181": [
+   152
+  ],
+  "184": [
+   490
+  ],
+  "205": [
+   731
+  ],
+  "211": [
+   654
+  ],
+  "213": [
+   108
+  ],
+  "218": [
+   72
+  ],
+  "225": [
+   211
+  ],
+  "233": [
+   286
+  ],
+  "253": [
+   689
+  ],
+  "256": [
+   138,
+   669
+  ],
+  "260": [
+   74,
+   478,
+   671
+  ],
+  "263": [
+   324
+  ],
+  "271": [
+   178
+  ],
+  "273": [
+   446
+  ],
+  "281": [
+   233,
+   273,
+   446,
+   555
+  ],
+  "283": [
+   141,
+   165
+  ],
+  "308": [
+   766
+  ],
+  "311": [
+   325,
+   330
+  ],
+  "330": [
+   311
+  ],
+  "373": [
+   196,
+   395
+  ],
+  "413": [
+   412
+  ],
+  "426": [
+   158
+  ],
+  "433": [
+   149,
+   158,
+   361
+  ],
+  "446": [
+   203,
+   669
+  ],
+  "452": [
+   158
+  ],
+  "477": [
+   406,
+   623
+  ],
+  "478": [
+   479
+  ],
+  "479": [
+   671
+  ],
+  "493": [
+   187
+  ],
+  "494": [
+   412,
+   555,
+   672
+  ],
+  "495": [
+   455,
+   669
+  ],
+  "506": [
+   169
+  ],
+  "519": [
+   205
+  ],
+  "555": [
+   273,
+   281,
+   328
+  ],
+  "557": [
+   108,
+   671
+  ],
+  "569": [
+   669
+  ],
+  "571": [
+   569
+  ],
+  "574": [
+   325,
+   689
+  ],
+  "582": [
+   667
+  ],
+  "589": [
+   186
+  ],
+  "602": [
+   447
+  ],
+  "610": [
+   766
+  ],
+  "618": [
+   412,
+   727
+  ],
+  "623": [
+   406,
+   477
+  ],
+  "626": [
+   569
+  ],
+  "627": [
+   194
+  ],
+  "654": [
+   211
+  ],
+  "667": [
+   496
+  ],
+  "671": [
+   479
+  ],
+  "673": [
+   158,
+   476
+  ],
+  "675": [
+   256
+  ],
+  "680": [
+   102
+  ],
+  "687": [
+   446
+  ],
+  "689": [
+   766
+  ],
+  "695": [
+   697
+  ],
+  "697": [
+   695
+  ],
+  "705": [
+   465
+  ],
+  "728": [
+   186,
+   252,
+   281,
+   555,
+   677
+  ],
+  "731": [
+   669
+  ],
+  "735": [
+   465
+  ],
+  "751": [
+   386
+  ]
+ }
+}

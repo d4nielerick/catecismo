@@ -55,3 +55,82 @@ export function gerarVariantes(query) {
 
   return [...vs].filter(v => v !== w && v.length >= 3);
 }
+
+// ── Proximidade ortográfica ─────────────────────────────────────────────────
+// As variantes acima resolvem morfologia (plural/singular), não erro de grafia.
+// "magua" não encontra "mágoa" por um caractere, e o Catecismo inteiro tem uma
+// única ocorrência dessa palavra — o usuário fica sem nada e sem pista.
+
+let _vocabulario = null; // Map<comprimento, Array<[palavra, frequência]>>
+
+/** Índice do vocabulário do corpus, agrupado por comprimento. Construído uma
+ *  vez, sob demanda — os parágrafos já estão em memória, não baixa nada. */
+function vocabularioDe(paragrafos) {
+  if (_vocabulario) return _vocabulario;
+
+  const freq = new Map();
+  for (const p of paragrafos) {
+    for (const w of norm(p.texto || '').split(/[^a-z0-9]+/)) {
+      if (w.length >= 4) freq.set(w, (freq.get(w) || 0) + 1);
+    }
+  }
+
+  _vocabulario = new Map();
+  for (const [palavra, n] of freq) {
+    const balde = _vocabulario.get(palavra.length);
+    if (balde) balde.push([palavra, n]);
+    else _vocabulario.set(palavra.length, [[palavra, n]]);
+  }
+  return _vocabulario;
+}
+
+/** Distância de Levenshtein com corte: devolve `max + 1` assim que passar. */
+function distancia(a, b, max) {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+
+  let anterior = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const atual = [i];
+    let menor = i;
+    for (let j = 1; j <= b.length; j++) {
+      const custo = a[i - 1] === b[j - 1] ? 0 : 1;
+      atual[j] = Math.min(atual[j - 1] + 1, anterior[j] + 1, anterior[j - 1] + custo);
+      if (atual[j] < menor) menor = atual[j];
+    }
+    if (menor > max) return max + 1; // nenhuma célula da linha salva mais
+    anterior = atual;
+  }
+  return anterior[b.length];
+}
+
+/**
+ * Palavras do corpus graficamente próximas da query, mais frequentes primeiro.
+ * Só para busca de uma palavra — em frase, o ruído passa a compensar pouco.
+ * @returns {string[]} até 3 candidatos
+ */
+export function sugerirPorGrafia(query, paragrafos) {
+  const partes = query.trim().split(/\s+/);
+  if (partes.length !== 1) return [];
+
+  const w = norm(partes[0]);
+  if (w.length < 4) return [];
+
+  // Palavra longa tolera dois erros; curta, só um (senão vira outra palavra).
+  const max = w.length >= 8 ? 2 : 1;
+  const vocab = vocabularioDe(paragrafos);
+
+  const candidatos = [];
+  for (let len = w.length - max; len <= w.length + max; len++) {
+    for (const [palavra, n] of vocab.get(len) || []) {
+      if (palavra === w) return []; // a palavra existe: o problema não é grafia
+      // Erro de digitação quase nunca troca o começo da palavra. Sem esta
+      // trava, "magua" sugere "agua" (distância 1) — pior que não sugerir.
+      if (palavra[0] !== w[0] || palavra[1] !== w[1]) continue;
+      const d = distancia(w, palavra, max);
+      if (d <= max) candidatos.push({ palavra, n, d });
+    }
+  }
+
+  candidatos.sort((a, b) => a.d - b.d || b.n - a.n);
+  return candidatos.slice(0, 3).map(c => c.palavra);
+}

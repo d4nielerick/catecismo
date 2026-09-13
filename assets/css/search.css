@@ -242,6 +242,44 @@
   min-width: 0;
 }
 
+/* ── Remissões do índice ("Ver também") ─────────────────────────────────── */
+.indice-remissoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  /* Linha própria: o wrapper de subtemas é flex, e sem isto a remissão fica
+     encostada ao lado do último subtema. */
+  flex-basis: 100%;
+  margin-top: 0.35rem;
+  padding-left: 0.1rem;
+}
+
+.indice-remissoes-rotulo {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.indice-remissao-btn {
+  padding: 0.12rem 0.5rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.indice-remissao-btn:hover {
+  background: var(--color-surface);
+  border-style: solid;
+}
+
 .indice-analitico-subtema {
   display: inline-flex;
   align-items: center;

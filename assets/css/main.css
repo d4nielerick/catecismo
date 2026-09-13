@@ -263,7 +263,9 @@ body {
   gap: clamp(0.85rem, 3.2vw, 3.3rem);
   width: 100%;
   max-width: 1000px;
-  margin-top: auto;
+  /* Sem margin-top:auto: o justify-content:flex-end da hero já encosta tudo
+     no pé, e o auto empurraria sozinho para o topo qualquer item de fluxo
+     anterior (o chip de continuar lendo, e o título no mobile). */
 }
 
 /* Halo suave por trás da linha de ação — garante contraste dos rótulos
@@ -322,6 +324,61 @@ body {
   margin-top: calc(-1 * var(--space-md));
 }
 .btn-outro-catecismo:hover { color: var(--color-primary); }
+
+/* ── Continuar lendo ────────────────────────────────────────────────────── */
+#continuar-lendo {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  /* Acompanha a largura do campo de busca logo abaixo. */
+  max-width: min(100%, 420px);
+  padding: 0.5rem 0.95rem;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 100px;
+  background: rgba(20,16,12,0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.9);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+#continuar-lendo:hover {
+  background: rgba(20,16,12,0.62);
+  border-color: var(--color-hero-ouro);
+}
+
+.continuar-lendo-rotulo {
+  flex-shrink: 0;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-hero-ouro);
+}
+
+.continuar-lendo-num {
+  flex-shrink: 0;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* O trecho é o que cede espaço: some antes de espremer o rótulo e o §. */
+.continuar-lendo-trecho {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0.72;
+}
+
+/* Em busca a hero vira pano de fundo do card de resultados — o chip sairia
+   flutuando sobre ele. */
+#app.estado-busca #continuar-lendo { display: none; }
+
+#continuar-lendo.oculto { display: none; }
 
 /* ── Rodapé do hero ─────────────────────────────────────────────────────── */
 #hero-rodape {
@@ -391,7 +448,6 @@ body {
     /* O campo ocupa a linha inteira (order:-1) e PESQUISAR/LER ficam lado a
        lado na de baixo — 1.75rem deixava os dois rótulos quase colados. */
     gap: 0.65rem 2.75rem;
-    margin-top: 0;
   }
 
   .hero-rotulo {

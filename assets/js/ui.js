@@ -13,7 +13,8 @@ import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
 import { iniciarLeitor, abrirLeitor } from './leitor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
 import { enriquecerNota } from './fontes.js';
-import { gerarVariantes } from './variantes.js';
+import { gerarVariantes, sugerirPorGrafia } from './variantes.js';
+import { salvarUltimaLeitura, lerUltimaLeitura } from './ultima-leitura.js';
 import { APP_VERSION } from './version.js';
 
 // ── Elementos do DOM ─────────────────────────────────────────────────────────
@@ -30,6 +31,7 @@ const hintColetor     = document.getElementById('hint-coletor');
 const painelConteudo  = document.getElementById('painel-conteudo');
 const btnFecharConteudo = document.getElementById('btn-fechar-conteudo');
 const btnResumir      = document.getElementById('btn-resumir');
+const btnContinuar    = document.getElementById('continuar-lendo');
 const aiCard          = document.getElementById('ai-resumo-card');
 const aiCorpo         = document.getElementById('ai-resumo-corpo');
 const aiFechar        = document.getElementById('ai-resumo-fechar');
@@ -50,6 +52,8 @@ const MAX_TEMAS_VISIVEIS = 2;
 let indiceAnalitico = null;
 let subtemaAtivoEl  = null;
 
+let remissoes = null; // { nomes: {id: nome limpo}, remete: {id: [ids]} }
+
 async function carregarIndiceAnalitico() {
   if (indiceAnalitico) return indiceAnalitico;
   try {
@@ -59,6 +63,23 @@ async function carregarIndiceAnalitico() {
     indiceAnalitico = [];
   }
   return indiceAnalitico;
+}
+
+/** Grafo de remissões do índice (gerado por scripts/build-remissoes.mjs). */
+async function carregarRemissoes() {
+  if (remissoes) return remissoes;
+  try {
+    const r = await fetch('data/remissoes.json');
+    remissoes = await r.json();
+  } catch {
+    remissoes = { nomes: {}, remete: {} };
+  }
+  return remissoes;
+}
+
+/** Nome do tema sem a cauda "vide também …", que é remissão, não título. */
+function nomeDoTema(tema) {
+  return remissoes?.nomes?.[tema.id] || tema.nome;
 }
 
 function normalizarSimples(s) {
@@ -81,6 +102,7 @@ function limparIndiceAnalitico() {
 async function renderizarIndiceAnalitico(query) {
   limparIndiceAnalitico();
   const dados = await carregarIndiceAnalitico();
+  await carregarRemissoes();
 
   const matches = [];
   const subtemaVistos = new Set();
@@ -127,7 +149,8 @@ async function renderizarIndiceAnalitico(query) {
 
       const temaHeader = document.createElement('button');
       temaHeader.className = 'indice-analitico-tema-header';
-      temaHeader.innerHTML = `<span class="indice-analitico-tema-nome">${tema.nome}</span><svg class="indice-tema-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>`;
+      temaHeader.innerHTML = `<span class="indice-analitico-tema-nome"></span><svg class="indice-tema-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>`;
+      temaHeader.querySelector('.indice-analitico-tema-nome').textContent = nomeDoTema(tema);
       const subtemasWrap = document.createElement('div');
       subtemasWrap.className = 'indice-analitico-subtemas-wrap';
       temaHeader.addEventListener('click', () => {
@@ -174,6 +197,37 @@ async function renderizarIndiceAnalitico(query) {
         });
         subtemasWrap.appendChild(subEl);
       }
+
+      // Remissões do próprio índice ("Perdão vide também penitência"): viram
+      // atalhos em vez de ficarem escondidas no nome do tema.
+      const remetidos = remissoes?.remete?.[tema.id] || [];
+      if (remetidos.length) {
+        const linha = document.createElement('div');
+        linha.className = 'indice-remissoes';
+
+        const rotulo = document.createElement('span');
+        rotulo.className = 'indice-remissoes-rotulo';
+        rotulo.textContent = 'Ver também';
+        linha.appendChild(rotulo);
+
+        for (const id of remetidos) {
+          const alvo = remissoes.nomes[id];
+          if (!alvo) continue;
+          const btn = document.createElement('button');
+          btn.className = 'indice-remissao-btn';
+          btn.type = 'button';
+          btn.textContent = alvo;
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            campoBusca.value = alvo;
+            botaoLimpar.classList.remove('oculto');
+            executarBusca(alvo);
+          });
+          linha.appendChild(btn);
+        }
+        subtemasWrap.appendChild(linha);
+      }
+
       temasContainer.appendChild(temaEl);
     }
 
@@ -292,6 +346,8 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
   const versionEl = document.getElementById('app-version');
   if (versionEl) versionEl.textContent = APP_VERSION;
 
+  renderizarContinuarLendo();
+
   // Verifica se há um hash na URL para abrir diretamente
   if (location.hash) {
     const num = parseInt(location.hash.replace('#paragrafo-', ''), 10);
@@ -390,6 +446,11 @@ function registrarEventos() {
   document.querySelector('.btn-home')?.addEventListener('click', (e) => {
     e.preventDefault();
     limparBusca({ focar: false });
+  });
+
+  btnContinuar?.addEventListener('click', () => {
+    const ultima = lerUltimaLeitura();
+    if (ultima) ativarBuscaEAbrirParagrafo(ultima.numero);
   });
 
 }
@@ -521,6 +582,9 @@ function voltarEstadoInicial() {
   painelConteudo.classList.remove('aberto');
   fecharMobileNavBar();
 
+  // Voltando pra hero, o chip reflete o § que acabou de ser lido.
+  renderizarContinuarLendo();
+
   // Limpa highlights do texto contínuo
   limparHighlights();
   limparParagrafoAtivo();
@@ -541,7 +605,10 @@ function getSugestaoEl() {
 
 function mostrarSugestao(query, nAtual) {
   const el = getSugestaoEl();
+  // Morfologia primeiro (plural/singular); só quando a busca vem pobre é que
+  // vale pagar a varredura por proximidade de grafia.
   const variantes = gerarVariantes(query);
+  if (nAtual < 5) variantes.push(...sugerirPorGrafia(query, paragrafos));
   if (!variantes.length) { el.className = 'sugestao-variante oculto'; return; }
 
   const THRESHOLD = 5;
@@ -732,6 +799,41 @@ function selecionarParagrafo(numero, cardEl) {
   // Atualiza índice e setas de navegação
   indiceAtivo = resultadosAtuais.findIndex(p => p.numero === numero);
   atualizarNav();
+
+  salvarUltimaLeitura(paragrafos.find(p => p.numero === numero));
+}
+
+/**
+ * Chip "Continuar lendo" na hero. Só aparece no estado inicial e quando há
+ * leitura anterior guardada — some assim que o usuário entra em busca, senão
+ * ficaria flutuando sobre o card de resultados.
+ */
+function renderizarContinuarLendo() {
+  if (!btnContinuar) return;
+
+  const ultima = lerUltimaLeitura();
+  if (!ultima) {
+    btnContinuar.classList.add('oculto');
+    return;
+  }
+
+  // textContent, não innerHTML: o conteúdo vem do localStorage, que o usuário
+  // (ou um script de terceiro) consegue editar.
+  const rotulo = document.createElement('span');
+  rotulo.className = 'continuar-lendo-rotulo';
+  rotulo.textContent = 'Continuar lendo';
+
+  const num = document.createElement('span');
+  num.className = 'continuar-lendo-num';
+  num.textContent = `§${ultima.numero}`;
+
+  const trecho = document.createElement('span');
+  trecho.className = 'continuar-lendo-trecho';
+  trecho.textContent = ultima.trecho || '';
+
+  btnContinuar.replaceChildren(rotulo, num, trecho);
+  btnContinuar.setAttribute('aria-label', `Continuar lendo o parágrafo ${ultima.numero}`);
+  btnContinuar.classList.remove('oculto');
 }
 
 function scrollParaParagrafo(numero) {

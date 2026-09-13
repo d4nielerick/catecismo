@@ -17,6 +17,8 @@ jobs:
         run: node scripts/verifica-citacoes.mjs
       - name: Notas de rodapé (reprodutível + cobertura)
         run: node scripts/verifica-notas.mjs
+      - name: Remissões do índice (reprodutível + grafo íntegro)
+        run: node scripts/verifica-remissoes.mjs
       - name: Motor de busca
         run: node test-search.mjs
       - name: Regressões de notas e fontes
