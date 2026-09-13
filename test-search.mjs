@@ -52,6 +52,46 @@ console.log('\nbuscar()');
   assert('busca é case-insensitive', r1.total === r2.total);
 }
 
+// ── Seleção por relevância quando estoura o teto ─────────────────────────────
+{
+  const norm = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const ocorrencias = (p, n) => {
+    const t = norm(p.texto);
+    let c = 0;
+    for (let i = t.indexOf(n); i !== -1; i = t.indexOf(n, i + 1)) {
+      if (i === 0 || !/[a-z]/.test(t[i - 1])) c++;
+    }
+    return c;
+  };
+
+  const r = buscar('oração', paragrafos);
+  assert('"oração" estoura o teto de renderizados', r.total > r.paragrafos.length);
+
+  // Exibir em ordem canônica é o que faz a lista ser legível como catecismo.
+  const canonica = r.paragrafos.every((p, i, a) => i === 0 || a[i - 1].numero <= p.numero);
+  assert('resultados saem em ordem canônica', canonica);
+
+  // O corte era feito na ordem numérica e descartava em bloco o fim do livro.
+  const q = norm('oração');
+  const densidadeExibida = r.paragrafos.reduce((s, p) => s + ocorrencias(p, q), 0);
+  const todos = paragrafos.filter(p =>
+    ocorrencias(p, q) > 0 || norm(p.artigo).includes(q) || norm(p.capitulo).includes(q));
+  const densidadePorNumero = todos.slice(0, r.paragrafos.length)
+    .reduce((s, p) => s + ocorrencias(p, q), 0);
+  assert('seleção por relevância supera o corte numérico', densidadeExibida > densidadePorNumero);
+
+  const maisDenso = todos.reduce((a, b) => (ocorrencias(b, q) > ocorrencias(a, q) ? b : a));
+  assert('o parágrafo mais denso não fica de fora',
+    r.paragrafos.some(p => p.numero === maisDenso.numero));
+}
+{
+  // Quem cabe no teto não deve ser reordenado nem filtrado.
+  const r = buscar('eucaristia', paragrafos);
+  if (r.total <= 200) {
+    assert('busca que cabe no teto devolve tudo', r.paragrafos.length === r.total);
+  }
+}
+
 // ── agrupar() ────────────────────────────────────────────────────────────────
 {
   const p = (texto) => ({ texto, artigo: '', capitulo: '' });
