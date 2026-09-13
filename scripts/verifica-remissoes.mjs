@@ -12,11 +12,11 @@ import { construir } from './build-remissoes.mjs';
 const indice   = JSON.parse(readFileSync('data/indice_analitico.json', 'utf8'));
 const commitado = JSON.parse(readFileSync('data/remissoes.json', 'utf8'));
 
-const { nomes, remete } = construir(indice);
+const { nomes, remete, paragrafos } = construir(indice);
 const erros = [];
 
 // 1. Reprodutibilidade byte-a-byte.
-const esperado = JSON.stringify({ nomes, remete }, null, 1) + '\n';
+const esperado = JSON.stringify({ nomes, remete, paragrafos }, null, 1) + '\n';
 const atual    = readFileSync('data/remissoes.json', 'utf8');
 if (esperado !== atual) {
   erros.push('remissoes.json não reproduz a build — rode scripts/build-remissoes.mjs');
@@ -39,6 +39,19 @@ for (const [origem, alvos] of Object.entries(commitado.remete)) {
     if (!idsIndice.has(alvo)) erros.push(`tema ${origem} remete ao inexistente ${alvo}`);
     if (Number(origem) === alvo) erros.push(`tema ${origem} remete a si mesmo`);
   }
+}
+
+// 4. A contagem de § serve à interface ("Perdão · 25 §§"): tem de bater com o
+//    índice, senão o número engana quem decide se vale clicar.
+for (const [id, n] of Object.entries(commitado.paragrafos || {})) {
+  if (!idsIndice.has(Number(id))) {
+    erros.push(`contagem para o tema inexistente ${id}`);
+    continue;
+  }
+  const tema = indice.find(t => t.id === Number(id));
+  const real = new Set();
+  for (const sub of tema.subtemas || []) for (const p of sub.paragrafos || []) real.add(p);
+  if (real.size !== n) erros.push(`tema ${id} diz ${n} §§ mas alcança ${real.size}`);
 }
 
 const ligacoes = Object.values(commitado.remete).reduce((n, v) => n + v.length, 0);

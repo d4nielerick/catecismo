@@ -91,11 +91,21 @@ export function construir(indice) {
 
   const nomes = {};
   const remete = {};
+  const paragrafos = {}; // quantos § distintos cada tema alcança
   const naoResolvidos = [];
 
   for (const tema of indice) {
     const { nome, alvos } = separar(tema.nome);
     nomes[tema.id] = nome;
+
+    // Contagem vai junto para a interface poder dizer "Perdão · 25 §§" sem
+    // precisar do índice analítico inteiro (990 KB) já carregado.
+    const distintos = new Set();
+    for (const sub of tema.subtemas || []) {
+      for (const n of sub.paragrafos || []) distintos.add(n);
+    }
+    if (distintos.size) paragrafos[tema.id] = distintos.size;
+
     if (!alvos) continue;
 
     const ids = new Set();
@@ -115,17 +125,17 @@ export function construir(indice) {
     if (ids.size) remete[tema.id] = [...ids].sort((a, b) => a - b);
   }
 
-  return { nomes, remete, naoResolvidos };
+  return { nomes, remete, paragrafos, naoResolvidos };
 }
 
 function principal() {
   const indice = JSON.parse(readFileSync(ENTRADA, 'utf8'));
-  const { nomes, remete, naoResolvidos } = construir(indice);
+  const { nomes, remete, paragrafos, naoResolvidos } = construir(indice);
 
   const comRemissao = Object.keys(remete).length;
   const ligacoes = Object.values(remete).reduce((n, v) => n + v.length, 0);
 
-  writeFileSync(SAIDA, JSON.stringify({ nomes, remete }, null, 1) + '\n');
+  writeFileSync(SAIDA, JSON.stringify({ nomes, remete, paragrafos }, null, 1) + '\n');
 
   console.log(`✅ remissões: ${comRemissao} temas ligados, ${ligacoes} ligações.`);
   if (naoResolvidos.length) {

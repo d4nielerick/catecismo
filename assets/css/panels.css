@@ -181,6 +181,15 @@
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;
 }
+/* Sem resultados a lista fica vazia, mas o flex:1 continuava reservando toda
+   a altura e empurrava o estado vazio para fora da tela — em retrato ele
+   nascia abaixo da dobra e parecia que nada tinha sido renderizado.
+   Escopado no CIC: #lista-resultados e #sem-resultados também existem no
+   São Pio X, que tem o mesmo defeito mas está fora do escopo desta rodada. */
+#resultados-secao #painel-resultados:has(#sem-resultados:not(.oculto)) #lista-resultados {
+  flex: 0 0 auto;
+}
+
 #lista-resultados::-webkit-scrollbar { width: 5px; }
 #lista-resultados::-webkit-scrollbar-track { background: transparent; }
 #lista-resultados::-webkit-scrollbar-thumb {
@@ -189,67 +198,78 @@
 }
 
 /* ── Grupos de resultado ─────────────────────────────────────────────────── */
+/* O respiro entre grupos é o que dá ritmo a uma lista longa: separa mais do
+   que a distância entre cards do mesmo grupo, senão tudo lê como um bloco só. */
 .grupo-parte {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-2xl);
 }
 
 .grupo-parte:last-child {
   margin-bottom: 0;
 }
 
+/* A Parte é o nível mais alto da hierarquia e precisa pesar mais que o texto
+   dos cards — antes era o menor tipo da tela, invertendo a leitura. */
 .grupo-parte-titulo {
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-muted);
-  padding: var(--space-xs) var(--space-sm);
-  margin-bottom: var(--space-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  padding: 0 var(--space-sm) 0.45rem;
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .grupo-secao-titulo {
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--color-primary);
-  padding: var(--space-xs) var(--space-sm) var(--space-sm);
-  margin-bottom: var(--space-xs);
+  padding: var(--space-sm) var(--space-sm) 0.2rem;
+  margin-bottom: var(--space-sm);
 }
 
 /* ── Card de resultado individual ────────────────────────────────────────── */
+/* Em uma lista de até 200 itens, moldura em cada card vira ruído e nada se
+   destaca. O card fica liso e o relevo aparece só onde importa: sob o cursor
+   e no selecionado. A borda esquerda transparente reserva o espaço do realce,
+   para o texto não deslocar no hover. */
 .resultado-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
   border-radius: var(--radius);
-  padding: var(--space-md);
-  margin-bottom: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: 0.15rem;
   cursor: pointer;
-  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  transition: border-color var(--transition), background var(--transition);
 }
 
 .resultado-card:last-child { margin-bottom: 0; }
 
 .resultado-card:hover {
-  border-color: #c8bfb2;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  border-left-color: var(--color-border);
   background: var(--color-surface);
 }
 
 .resultado-card.selecionado {
-  border-color: var(--color-accent);
+  border-left-color: var(--color-accent);
   background: var(--color-surface);
-  box-shadow: 0 0 0 2px rgba(197,160,40,0.18);
 }
 
 .card-meta {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.35rem;
 }
 
+/* O número é a âncora do resultado: é por ele que se cita e se volta. */
 .card-num {
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
   color: var(--color-accent-dk);
   background: #FEF9EC;
   border: 1px solid #f0e3a8;
@@ -259,9 +279,14 @@
   line-height: 1.4;
 }
 
+/* O artigo é contexto, não título — antes tinha o mesmo tamanho do número e
+   competia com ele. Fica menor e mais claro. */
 .card-artigo {
-  font-size: 0.72rem;
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   color: var(--color-muted);
+  opacity: 0.85;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

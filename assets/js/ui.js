@@ -102,6 +102,26 @@ function nomeDoTema(tema) {
   return remissoes?.nomes?.[tema.id] || tema.nome;
 }
 
+let _paragrafosPorTema = null;
+
+/**
+ * Quantos § distintos um tema alcança. É o que dá confiança para clicar:
+ * "Perdão · 25 §§" diz o que esperar, "Perdão" sozinho não diz nada.
+ * Vem de remissoes.json (23 KB), que carrega no início — o índice analítico
+ * tem 990 KB e só é buscado quando a primeira busca acontece.
+ */
+function paragrafosDoTema(nome) {
+  if (!remissoes?.paragrafos) return 0;
+  if (!_paragrafosPorTema) {
+    _paragrafosPorTema = new Map();
+    for (const [id, n] of Object.entries(remissoes.paragrafos)) {
+      const chave = remissoes.nomes[id];
+      if (chave) _paragrafosPorTema.set(chave, (_paragrafosPorTema.get(chave) || 0) + n);
+    }
+  }
+  return _paragrafosPorTema.get(nome) || 0;
+}
+
 function normalizarSimples(s) {
   return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
@@ -171,6 +191,36 @@ async function renderizarIndiceAnalitico(query) {
       temaHeader.className = 'indice-analitico-tema-header';
       temaHeader.innerHTML = `<span class="indice-analitico-tema-nome"></span><svg class="indice-tema-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>`;
       temaHeader.querySelector('.indice-analitico-tema-nome').textContent = nomeDoTema(tema);
+
+      // Remissão do próprio índice ("Perdão vide também penitência"): fica
+      // colada ao nome do tema a que pertence. Solta entre dois temas, como
+      // uma linha própria, não dava para saber de quem era.
+      const remetidos = remissoes?.remete?.[tema.id] || [];
+      if (remetidos.length) {
+        const wrapRem = document.createElement('span');
+        wrapRem.className = 'indice-remissoes';
+        for (const id of remetidos) {
+          const alvo = remissoes.nomes[id];
+          if (!alvo) continue;
+          const link = document.createElement('span');
+          link.className = 'indice-remissao-link';
+          link.setAttribute('role', 'button');
+          link.setAttribute('tabindex', '0');
+          link.textContent = alvo;
+          const ir = (e) => {
+            e.stopPropagation();
+            campoBusca.value = alvo;
+            botaoLimpar.classList.remove('oculto');
+            executarBusca(alvo);
+          };
+          link.addEventListener('click', ir);
+          link.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') ir(e);
+          });
+          wrapRem.appendChild(link);
+        }
+        temaHeader.insertBefore(wrapRem, temaHeader.querySelector('.indice-tema-chevron'));
+      }
       const subtemasWrap = document.createElement('div');
       subtemasWrap.className = 'indice-analitico-subtemas-wrap';
       temaHeader.addEventListener('click', () => {
@@ -216,36 +266,6 @@ async function renderizarIndiceAnalitico(query) {
           navegarParaSubtema(sub.paragrafos);
         });
         subtemasWrap.appendChild(subEl);
-      }
-
-      // Remissões do próprio índice ("Perdão vide também penitência"): viram
-      // atalhos em vez de ficarem escondidas no nome do tema.
-      const remetidos = remissoes?.remete?.[tema.id] || [];
-      if (remetidos.length) {
-        const linha = document.createElement('div');
-        linha.className = 'indice-remissoes';
-
-        const rotulo = document.createElement('span');
-        rotulo.className = 'indice-remissoes-rotulo';
-        rotulo.textContent = 'Ver também';
-        linha.appendChild(rotulo);
-
-        for (const id of remetidos) {
-          const alvo = remissoes.nomes[id];
-          if (!alvo) continue;
-          const btn = document.createElement('button');
-          btn.className = 'indice-remissao-btn';
-          btn.type = 'button';
-          btn.textContent = alvo;
-          btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            campoBusca.value = alvo;
-            botaoLimpar.classList.remove('oculto');
-            executarBusca(alvo);
-          });
-          linha.appendChild(btn);
-        }
-        subtemasWrap.appendChild(linha);
       }
 
       temasContainer.appendChild(temaEl);
@@ -367,7 +387,9 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
   if (versionEl) versionEl.textContent = APP_VERSION;
 
   renderizarContinuarLendo();
-  carregarLexico(); // pequeno; deixa pronto antes da primeira busca frustrada
+  // Ambos pequenos e necessários já na primeira busca frustrada.
+  carregarLexico();
+  carregarRemissoes();
 
   // Verifica se há um hash na URL para abrir diretamente
   if (location.hash) {
@@ -695,28 +717,121 @@ function mostrarConceitos(query, nAtual, el) {
   const temas = conceitosPara(query);
   if (!temas || !temas.length) return false;
 
-  el.className = 'sugestao-variante sugestao-conceitos';
+  // Sem nenhum resultado, o espaço nobre é o do estado vazio — não adianta
+  // anunciar "nada encontrado" no meio da tela e esconder a saída numa tarja
+  // fina em cima. Com resultados na lista, aí sim a tarja é o lugar certo.
+  if (nAtual === 0) {
+    el.className = 'sugestao-variante oculto';
+    renderizarPainelConceitos(query, temas);
+    return true;
+  }
+
+  el.className = 'sugestao-variante';
   el.replaceChildren();
 
   const prefixo = document.createElement('span');
-  prefixo.textContent = nAtual === 0
-    ? 'Sem resultado para essa palavra. O Catecismo trata do assunto em:'
-    : 'O Catecismo também trata do assunto em:';
+  prefixo.textContent = 'Também tratam do assunto:';
   el.appendChild(prefixo);
 
   for (const tema of temas) {
-    const btn = document.createElement('button');
-    btn.className = 'sugestao-btn';
-    btn.type = 'button';
-    btn.textContent = tema;
-    btn.addEventListener('click', () => {
+    el.appendChild(criarBotaoTema(tema, { comContagem: true }));
+  }
+  return true;
+}
+
+/** Botão de tema com a contagem de parágrafos que ele alcança. */
+function criarBotaoTema(tema, { comContagem = false } = {}) {
+  const btn = document.createElement('button');
+  btn.className = 'sugestao-btn';
+  btn.type = 'button';
+
+  const nome = document.createElement('span');
+  nome.textContent = tema;
+  btn.appendChild(nome);
+
+  if (comContagem) {
+    const n = paragrafosDoTema(tema);
+    if (n > 0) {
+      const cont = document.createElement('span');
+      cont.className = 'sugestao-count';
+      cont.textContent = `${n} §§`;
+      btn.appendChild(cont);
+    }
+  }
+
+  btn.addEventListener('click', () => {
+    campoBusca.value = tema;
+    botaoLimpar.classList.remove('oculto');
+    executarBusca(tema);
+  });
+  return btn;
+}
+
+/** Mensagem genérica do estado vazio, para quando não há tema a oferecer. */
+function restaurarSemResultados() {
+  semResultados.className = '';
+  semResultados.replaceChildren();
+
+  const forte = document.createElement('strong');
+  forte.textContent = 'Nenhum resultado encontrado.';
+  semResultados.appendChild(forte);
+  semResultados.appendChild(
+    document.createTextNode(' Tente termos como "graça", "fé", "batismo" ou "oração".')
+  );
+}
+
+/** Estado vazio que resolve em vez de só informar que não achou. */
+function renderizarPainelConceitos(query, temas) {
+  semResultados.classList.remove('oculto');
+  semResultados.className = 'painel-conceitos';
+  semResultados.replaceChildren();
+
+  const titulo = document.createElement('p');
+  titulo.className = 'painel-conceitos-titulo';
+  titulo.textContent = `O Catecismo não usa a palavra “${query.trim()}”.`;
+  semResultados.appendChild(titulo);
+
+  const sub = document.createElement('p');
+  sub.className = 'painel-conceitos-sub';
+  sub.textContent = 'Mas trata do assunto nestes temas:';
+  semResultados.appendChild(sub);
+
+  const lista = document.createElement('div');
+  lista.className = 'painel-conceitos-lista';
+
+  for (const tema of temas) {
+    const item = document.createElement('button');
+    item.className = 'painel-conceito-item';
+    item.type = 'button';
+
+    const nome = document.createElement('span');
+    nome.className = 'painel-conceito-nome';
+    nome.textContent = tema;
+    item.appendChild(nome);
+
+    const n = paragrafosDoTema(tema);
+    if (n > 0) {
+      const cont = document.createElement('span');
+      cont.className = 'painel-conceito-count';
+      cont.textContent = `${n} §§`;
+      item.appendChild(cont);
+    }
+
+    const seta = document.createElement('span');
+    seta.className = 'painel-conceito-seta';
+    seta.setAttribute('aria-hidden', 'true');
+    seta.textContent = '→';
+    item.appendChild(seta);
+
+    item.addEventListener('click', () => {
       campoBusca.value = tema;
       botaoLimpar.classList.remove('oculto');
       executarBusca(tema);
     });
-    el.appendChild(btn);
+    lista.appendChild(item);
   }
-  return true;
+
+  semResultados.appendChild(lista);
 }
 
 function limparBusca({ focar = true } = {}) {
@@ -953,6 +1068,9 @@ function renderizarResultados(grupos, total, query) {
 
   if (total === 0) {
     contagemEl.textContent = '';
+    // Volta ao texto padrão: mostrarConceitos() troca por um painel de temas
+    // logo depois, quando a palavra buscada existir no léxico.
+    restaurarSemResultados();
     semResultados.classList.remove('oculto');
     hintColetor.classList.add('oculto');
     btnResumir.classList.add('oculto');
