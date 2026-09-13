@@ -441,4 +441,34 @@
     max-width: none;
     order: -1;
   }
+
+  /* No toque o campo não encolhe: 46px é o alvo mínimo confortável, e
+     font-size 16px impede o zoom automático do iOS ao focar o input.
+     Sem estado compacto/expandido aqui — em retrato ele já ocupa a linha. */
+  #hero.hero-foto #campo-busca,
+  #hero.hero-foto .campo-busca-container:focus-within #campo-busca,
+  #hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) #campo-busca {
+    height: 46px;
+    padding: 0 2.75rem 0 1.1rem;
+    font-size: 16px;
+  }
+
+  #hero.hero-foto .campo-busca-container .icone-busca,
+  #hero.hero-foto .campo-busca-container:focus-within .icone-busca,
+  #hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) .icone-busca {
+    right: 1rem;
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+
+  #hero.hero-foto #botao-limpar,
+  #hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) #botao-limpar {
+    right: 0.9rem;
+  }
+
+  /* Mesmo cuidado no header de resultados (input compacto do desktop). */
+  #resultados-secao #campo-busca {
+    font-size: 16px;
+    padding: 0.5rem 2.25rem;
+  }
 }

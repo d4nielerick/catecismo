@@ -341,27 +341,53 @@ body {
     padding-bottom: 2.5rem;
   }
 
-  /* O título quebra em linhas; deixa de ser faixa única. */
+  /* Em retrato a foto é cortada na horizontal (é landscape), então a figura
+     fica sempre alta no quadro e o rosto ocupa a faixa dos 6%–31%. Não há
+     como reposicionar a cena por CSS sem zoom absurdo — logo o título sai do
+     absolute e entra no fluxo, empilhado acima do campo, sobre a área que o
+     véu já escurece. Ganha legibilidade e preenche o vão morto do meio. */
   #hero.hero-foto h1 {
-    top: 15%;
-    width: min(90vw, 11em);
+    position: relative;
+    z-index: 4;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: none;
     white-space: normal;
-    font-size: clamp(1.9rem, 11.5vw, 3.2rem);
+    text-wrap: balance;
+    font-size: clamp(1.75rem, 8.5vw, 2.5rem);
     letter-spacing: -0.045em;
-    line-height: 0.98;
+    line-height: 1.02;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 1px 6px rgba(0,0,0,0.4);
   }
 
   #hero.hero-foto .logo { height: clamp(52px, 8.5vh, 74px); }
 
-  /* Em tela estreita o título fica ACIMA do recorte: legibilidade vem antes
-     do efeito de profundidade. */
-  #hero.hero-foto h1 { z-index: 3; }
+  /* Reforça o véu na faixa do título/campo (o gradiente base é calibrado para
+     paisagem, onde esse bloco cai mais embaixo). */
+  #hero.hero-foto .hero-veu {
+    background:
+      linear-gradient(to bottom,
+        rgba(20,16,12,0.42) 0%,
+        rgba(20,16,12,0.10) 24%,
+        rgba(20,16,12,0.02) 36%,
+        rgba(20,16,12,0.48) 52%,
+        rgba(20,16,12,0.78) 66%,
+        rgba(20,16,12,0.90) 80%,
+        rgba(20,16,12,0.94) 100%
+      );
+  }
 
   /* Campo em uma linha; PESQUISAR / LER logo abaixo. (max-width do campo é
-     resetado em search.css, que carrega depois e domina a cascata) */
+     resetado em search.css, que carrega depois e domina a cascata)
+     `margin-top: auto` sai: no desktop ele cola a linha de ação no pé e o
+     título é absolute; aqui o título está no fluxo logo acima e o auto o
+     empurraria sozinho para o topo. Quem alinha é o justify-content da hero. */
   #hero-acoes {
     flex-wrap: wrap;
     gap: 0.5rem 1.75rem;
+    margin-top: 0;
   }
 
   .hero-rotulo {
@@ -370,6 +396,22 @@ body {
   }
 
   #temas-rapidos { max-width: 100%; }
+
+  /* Em retrato cada pixel de largura conta: a margem lateral do card cai de
+     15px para 8px. Ainda sobra a faixa da hero por baixo (é o efeito de card
+     flutuante), mas devolve 14px de texto por linha. */
+  #app.estado-busca #resultados-secao {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  /* Sem isso "N resultados (exibindo 200)" quebra em duas linhas e espreme o
+     botão de resumo ao lado. Escopado: #contagem-resultados também existe no
+     São Pio X, que não tem #resultados-secao nem override próprio. */
+  #resultados-secao #contagem-resultados {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
 }
 
 /* #busca-topo é mostrado/escondido junto com #resultados-secao (seu pai). */
