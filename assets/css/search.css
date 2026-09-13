@@ -248,84 +248,107 @@
 .painel-conceitos {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: 0;
-  max-width: 30rem;
+  align-items: center;
+  max-width: 28rem;
   margin: var(--space-2xl) auto;
   padding: 0 var(--space-lg);
-  text-align: left;
+  text-align: center;
+}
+
+/* A marca entra como vinheta: dá respiro editorial ao estado vazio e evita
+   que ele pareça uma tela de erro. Discreta, para não competir com o texto. */
+.painel-conceitos-marca {
+  width: auto;
+  height: clamp(56px, 9vh, 78px);
+  margin-bottom: var(--space-lg);
+  opacity: 0.75;
 }
 
 .painel-conceitos-titulo {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.18rem;
+  font-weight: 500;
   line-height: 1.45;
   color: var(--color-text);
 }
 
 .painel-conceitos-sub {
-  margin: 0.35rem 0 var(--space-lg);
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
+  margin: 0.3rem 0 var(--space-xl);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
   color: var(--color-muted);
 }
 
+/* Sem caixa: os temas são uma lista de leitura, não um menu de aplicativo.
+   A régua fina entre eles basta para separar. */
 .painel-conceitos-lista {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--color-surface);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 19rem;
+}
+
+.painel-conceitos-lista li + li {
+  border-top: 1px solid var(--color-border);
 }
 
 .painel-conceito-item {
   display: flex;
-  align-items: center;
-  gap: var(--space-md);
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
   width: 100%;
-  padding: 0.7rem var(--space-lg);
+  padding: 0.62rem 0.25rem;
   border: none;
-  border-bottom: 1px solid var(--color-border);
   background: transparent;
-  font-family: var(--font-sans);
-  font-size: 0.92rem;
-  color: var(--color-text);
-  text-align: left;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--color-primary);
   cursor: pointer;
-  transition: background var(--transition);
+  transition: color var(--transition);
 }
-
-.painel-conceito-item:last-child { border-bottom: none; }
 
 .painel-conceito-item:hover,
 .painel-conceito-item:focus-visible {
-  background: var(--color-bg);
+  color: var(--color-accent-dk);
   outline: none;
 }
 
 .painel-conceito-nome {
-  flex: 1;
-  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.painel-conceito-item:hover .painel-conceito-nome,
+.painel-conceito-item:focus-visible .painel-conceito-nome {
+  border-bottom-color: currentColor;
 }
 
 .painel-conceito-count {
   flex-shrink: 0;
-  font-size: 0.72rem;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
   font-variant-numeric: tabular-nums;
   color: var(--color-muted);
 }
 
-.painel-conceito-seta {
-  flex-shrink: 0;
-  color: var(--color-muted);
-  transition: transform var(--transition), color var(--transition);
-}
+@media (max-width: 767px) {
+  /* Em retrato a altura é o recurso escasso: a vinheta encolhe e o bloco
+     sobe, para os temas não nascerem abaixo da dobra. */
+  .painel-conceitos {
+    margin: var(--space-lg) auto;
+  }
 
-.painel-conceito-item:hover .painel-conceito-seta {
-  color: var(--color-primary);
-  transform: translateX(2px);
+  .painel-conceitos-marca {
+    height: 48px;
+    margin-bottom: var(--space-md);
+  }
+
+  .painel-conceitos-titulo { font-size: 1.05rem; }
+  .painel-conceitos-sub { margin-bottom: var(--space-lg); }
 }
 
 /* ── Remissões do índice ─────────────────────────────────────────────────

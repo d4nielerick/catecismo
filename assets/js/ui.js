@@ -786,6 +786,15 @@ function renderizarPainelConceitos(query, temas) {
   semResultados.className = 'painel-conceitos';
   semResultados.replaceChildren();
 
+  const marca = document.createElement('img');
+  marca.className = 'painel-conceitos-marca';
+  marca.src = 'assets/marca-catecismo-marrom.svg';
+  marca.alt = '';
+  marca.setAttribute('aria-hidden', 'true');
+  marca.width = 146;
+  marca.height = 210;
+  semResultados.appendChild(marca);
+
   const titulo = document.createElement('p');
   titulo.className = 'painel-conceitos-titulo';
   titulo.textContent = `O Catecismo não usa a palavra “${query.trim()}”.`;
@@ -796,10 +805,11 @@ function renderizarPainelConceitos(query, temas) {
   sub.textContent = 'Mas trata do assunto nestes temas:';
   semResultados.appendChild(sub);
 
-  const lista = document.createElement('div');
+  const lista = document.createElement('ul');
   lista.className = 'painel-conceitos-lista';
 
   for (const tema of temas) {
+    const li = document.createElement('li');
     const item = document.createElement('button');
     item.className = 'painel-conceito-item';
     item.type = 'button';
@@ -817,18 +827,13 @@ function renderizarPainelConceitos(query, temas) {
       item.appendChild(cont);
     }
 
-    const seta = document.createElement('span');
-    seta.className = 'painel-conceito-seta';
-    seta.setAttribute('aria-hidden', 'true');
-    seta.textContent = '→';
-    item.appendChild(seta);
-
     item.addEventListener('click', () => {
       campoBusca.value = tema;
       botaoLimpar.classList.remove('oculto');
       executarBusca(tema);
     });
-    lista.appendChild(item);
+    li.appendChild(item);
+    lista.appendChild(li);
   }
 
   semResultados.appendChild(lista);
