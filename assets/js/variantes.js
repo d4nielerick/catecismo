@@ -85,7 +85,7 @@ function vocabularioDe(paragrafos) {
 }
 
 /** Distância de Levenshtein com corte: devolve `max + 1` assim que passar. */
-function distancia(a, b, max) {
+export function distancia(a, b, max) {
   if (Math.abs(a.length - b.length) > max) return max + 1;
 
   let anterior = Array.from({ length: b.length + 1 }, (_, i) => i);

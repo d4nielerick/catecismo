@@ -1,0 +1,86 @@
+{
+  "_leia_me": [
+    "Ponte entre o vocabulário de quem pergunta e os verbetes do índice analítico.",
+    "O Catecismo não usa as palavras do dia a dia: quem busca 'mágoa' não acha nada",
+    "(a palavra tem uma única ocorrência, §2733, em outro sentido), mas o que",
+    "procura está em 'Perdão' e 'Misericórdia'.",
+    "",
+    "Curadoria humana. Cada termo aponta para nomes de temas do índice — e",
+    "scripts/verifica-lexico.mjs falha se algum tema citado não existir.",
+    "Do mais próximo ao mais distante: a ordem é a que aparece na interface.",
+    "Mapear é indicar onde o Catecismo trata do assunto, não emitir juízo."
+  ],
+  "termos": {
+    "mágoa": ["Perdão", "Misericórdia", "Ira"],
+    "rancor": ["Perdão", "Ira", "Inimigo"],
+    "raiva": ["Ira", "Paixão(ões)", "Temperança"],
+    "briga": ["Ira", "Paz", "Inimigo"],
+    "vingança": ["Perdão", "Ira", "Justiça"],
+    "ressentimento": ["Perdão", "Ira", "Misericórdia"],
+
+    "ansiedade": ["Confiança", "Providência", "Temor"],
+    "estresse": ["Repouso", "Confiança", "Trabalho"],
+    "depressão": ["Tristeza", "Desespero", "Esperança"],
+    "desânimo": ["Desespero", "Preguiça", "Esperança"],
+    "vergonha": ["Pudor", "Culpa", "Pecado"],
+    "autoestima": ["Dignidade", "Humildade", "Filhos de Deus"],
+
+    "luto": ["Defuntos", "Exéquias", "Ressurreição dos mortos", "Esperança"],
+    "câncer": ["Doentes", "Sofrimento", "Unção dos enfermos"],
+    "doença grave": ["Doentes", "Unção dos enfermos", "Saúde física"],
+    "suicídio": ["Matar", "Vida", "Desespero"],
+    "eutanásia": ["Eutanásia", "Vida", "Sofrimento"],
+
+    "traição": ["Adultério", "Fidelidade conjugal", "Perdão"],
+    "namoro": ["Castidade", "Noivos", "Matrimónio"],
+    "casamento": ["Matrimónio", "Núpcias", "Fidelidade conjugal"],
+    "separação": ["Divórcio", "Matrimónio", "Fidelidade conjugal"],
+    "camisinha": ["Contracepção", "Castidade", "Procriação"],
+    "anticoncepcional": ["Contracepção", "Procriação", "Castidade"],
+    "gravidez": ["Procriação", "Fecundidade", "Embrião humano"],
+    "homossexualidade": ["Castidade", "Sexualidade", "Dignidade"],
+    "pornografia": ["Castidade", "Luxúria", "Pudor"],
+    "masturbação": ["Castidade", "Luxúria", "Pureza"],
+
+    "bebida": ["Temperança", "Vícios"],
+    "álcool": ["Temperança", "Vícios", "Drogas"],
+    "droga": ["Drogas", "Vícios", "Temperança"],
+    "vício": ["Vícios", "Temperança", "Liberdade"],
+    "jogo": ["Vícios", "Temperança", "Justiça"],
+
+    "dívida": ["Justiça", "Usura", "Dinheiro"],
+    "ganância": ["Cobiça", "Riquezas", "Dinheiro"],
+    "desemprego": ["Desemprego", "Trabalho", "Salário"],
+    "salário injusto": ["Salário", "Justiça", "Trabalho"],
+    "sonegar": ["Furto", "Justiça", "Deveres dos cidadãos"],
+    "corrupção": ["Fraude", "Justiça", "Bem comum"],
+
+    "fofoca": ["Calúnia", "Mentira", "Próximo"],
+    "calúnia": ["Calúnia", "Verdade", "Próximo"],
+    "mentir": ["Mentira", "Verdade"],
+    "preconceito": ["Discriminação", "Igualdade", "Dignidade"],
+    "racismo": ["Discriminação", "Igualdade", "Raça"],
+    "bullying": ["Discriminação", "Próximo", "Dignidade"],
+
+    "descrença": ["Incredulidade", "Dúvida", "Crer"],
+    "ateu": ["Ateísmo", "Incredulidade", "Crer"],
+    "perder a fé": ["Incredulidade", "Dúvida", "Perseverança"],
+    "rezar": ["Oração", "Súplica", "Pai Deus"],
+    "confissão": ["Penitência e reconciliação", "Perdão", "Exame de consciência"],
+    "comungar": ["Eucaristia", "Comunhão", "Ceia do Senhor"],
+    "batizar": ["Batismo", "Iniciação cristã"],
+    "crismar": ["Confirmação ou crisma", "Espírito santo"],
+
+    "inveja": ["Inveja", "Cobiça", "Caridade"],
+    "ciúme": ["Zelo-ciúme", "Inveja", "Caridade"],
+    "orgulho": ["Soberba", "Humildade"],
+    "preguiça": ["Preguiça", "Trabalho", "Esforço"],
+    "egoísmo": ["Egoísmo", "Caridade", "Próximo"],
+
+    "aborto": ["Aborto", "Vida", "Embrião humano"],
+    "pena de morte": ["Pena", "Vida", "Legítima defesa"],
+    "guerra": ["Guerra", "Paz", "Legítima defesa"],
+    "refugiado": ["Imigrantes", "Próximo", "Solidariedade"],
+    "meio ambiente": ["Criação-criado", "Criaturas", "Bens terrenos"]
+  }
+}

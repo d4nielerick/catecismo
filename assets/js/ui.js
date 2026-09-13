@@ -13,7 +13,7 @@ import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
 import { iniciarLeitor, abrirLeitor } from './leitor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
 import { enriquecerNota } from './fontes.js';
-import { gerarVariantes, sugerirPorGrafia } from './variantes.js';
+import { gerarVariantes, sugerirPorGrafia, distancia } from './variantes.js';
 import { salvarUltimaLeitura, lerUltimaLeitura } from './ultima-leitura.js';
 import { APP_VERSION } from './version.js';
 
@@ -63,6 +63,26 @@ async function carregarIndiceAnalitico() {
     indiceAnalitico = [];
   }
   return indiceAnalitico;
+}
+
+let lexico = null; // { termo normalizado → [nomes de tema] }
+
+/**
+ * Léxico de conceitos: ponte entre a palavra de quem busca e o verbete do
+ * índice. O Catecismo não diz "mágoa", diz "perdão" e "misericórdia".
+ */
+async function carregarLexico() {
+  if (lexico) return lexico;
+  try {
+    const r = await fetch('data/lexico-conceitos.json');
+    const bruto = await r.json();
+    lexico = new Map(
+      Object.entries(bruto.termos || {}).map(([termo, temas]) => [normalizarSimples(termo), temas])
+    );
+  } catch {
+    lexico = new Map();
+  }
+  return lexico;
 }
 
 /** Grafo de remissões do índice (gerado por scripts/build-remissoes.mjs). */
@@ -347,6 +367,7 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
   if (versionEl) versionEl.textContent = APP_VERSION;
 
   renderizarContinuarLendo();
+  carregarLexico(); // pequeno; deixa pronto antes da primeira busca frustrada
 
   // Verifica se há um hash na URL para abrir diretamente
   if (location.hash) {
@@ -605,8 +626,14 @@ function getSugestaoEl() {
 
 function mostrarSugestao(query, nAtual) {
   const el = getSugestaoEl();
-  // Morfologia primeiro (plural/singular); só quando a busca vem pobre é que
-  // vale pagar a varredura por proximidade de grafia.
+
+  // O léxico vem primeiro: quando a palavra do usuário não é a palavra do
+  // Catecismo, corrigir a grafia não adianta — "mágoa" está escrito certo, o
+  // assunto é que se chama "perdão" lá dentro.
+  if (nAtual < 5 && mostrarConceitos(query, nAtual, el)) return;
+
+  // Morfologia (plural/singular); só quando a busca vem pobre é que vale
+  // pagar a varredura por proximidade de grafia.
   const variantes = gerarVariantes(query);
   if (nAtual < 5) variantes.push(...sugerirPorGrafia(query, paragrafos));
   if (!variantes.length) { el.className = 'sugestao-variante oculto'; return; }
@@ -636,6 +663,62 @@ function mostrarSugestao(query, nAtual) {
 // teclado já está aberto e devolver o cursor é o esperado. Vindo do "Início" a
 // intenção é sair da busca — focar abriria o teclado e, no iPhone, ainda daria
 // zoom na página.
+/**
+ * Temas do léxico para a busca. Aceita um deslize de grafia: quem procura o
+ * assunto de "mágoa" costuma escrever "magua", e as duas camadas precisam
+ * conversar — senão a correção de grafia leva a "magia" e o léxico nunca é
+ * consultado.
+ */
+function conceitosPara(query) {
+  if (!lexico?.size) return null;
+  const q = normalizarSimples(query.trim());
+  if (!q) return null;
+
+  const direto = lexico.get(q);
+  if (direto) return direto;
+  if (q.length < 4) return null;
+
+  for (const [termo, temas] of lexico) {
+    // Mesma trava da correção de grafia: o começo da palavra não muda.
+    if (termo[0] !== q[0] || termo[1] !== q[1]) continue;
+    if (distancia(q, termo, 1) <= 1) return temas;
+  }
+  return null;
+}
+
+/**
+ * Oferece os verbetes do índice que tratam do assunto buscado, quando a
+ * palavra digitada não é a que o Catecismo usa.
+ * @returns {boolean} true se assumiu a sugestão (e o fluxo normal deve parar)
+ */
+function mostrarConceitos(query, nAtual, el) {
+  const temas = conceitosPara(query);
+  if (!temas || !temas.length) return false;
+
+  el.className = 'sugestao-variante sugestao-conceitos';
+  el.replaceChildren();
+
+  const prefixo = document.createElement('span');
+  prefixo.textContent = nAtual === 0
+    ? 'Sem resultado para essa palavra. O Catecismo trata do assunto em:'
+    : 'O Catecismo também trata do assunto em:';
+  el.appendChild(prefixo);
+
+  for (const tema of temas) {
+    const btn = document.createElement('button');
+    btn.className = 'sugestao-btn';
+    btn.type = 'button';
+    btn.textContent = tema;
+    btn.addEventListener('click', () => {
+      campoBusca.value = tema;
+      botaoLimpar.classList.remove('oculto');
+      executarBusca(tema);
+    });
+    el.appendChild(btn);
+  }
+  return true;
+}
+
 function limparBusca({ focar = true } = {}) {
   campoBusca.value = '';
   botaoLimpar.classList.add('oculto');
