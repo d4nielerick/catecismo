@@ -289,12 +289,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  /* Visível por padrão: no toque não existe hover, e esconder aqui custava
+     um tap só para revelar (o primeiro tap virava hover simulado, o segundo
+     é que abria o parágrafo) — além de deixar botões invisíveis clicáveis. */
+  opacity: 1;
   transition: opacity var(--transition), color var(--transition), background var(--transition), border-color var(--transition);
 }
 
-.resultado-card:hover .card-save-btn,
-.resultado-card:hover .card-share-btn,
+/* Só onde existe ponteiro de verdade eles somem até o hover. */
+@media (hover: hover) and (pointer: fine) {
+  .card-save-btn,
+  .card-share-btn,
+  .card-flag-btn {
+    opacity: 0;
+  }
+
+  .resultado-card:hover .card-save-btn,
+  .resultado-card:hover .card-share-btn {
+    opacity: 1;
+  }
+}
+
 .card-save-btn.salvo {
   opacity: 1;
 }
@@ -329,13 +344,17 @@
   align-items: center;
   gap: 0.35rem;
   flex-shrink: 0;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.2s;
 }
 
-.tc-paragrafo:hover .para-acoes,
-.leitor-paragrafo:hover .para-acoes {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .para-acoes { opacity: 0; }
+
+  .tc-paragrafo:hover .para-acoes,
+  .leitor-paragrafo:hover .para-acoes {
+    opacity: 1;
+  }
 }
 
 .para-btn {

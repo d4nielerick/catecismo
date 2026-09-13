@@ -303,11 +303,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  opacity: 1;
   transition: opacity var(--transition), color var(--transition), background var(--transition), border-color var(--transition);
 }
 
-.leitor-paragrafo:hover .leitor-para-save-btn,
+@media (hover: hover) and (pointer: fine) {
+  .leitor-para-save-btn { opacity: 0; }
+  .leitor-paragrafo:hover .leitor-para-save-btn { opacity: 1; }
+}
+
 .leitor-para-save-btn.salvo {
   opacity: 1;
 }

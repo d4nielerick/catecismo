@@ -1,2 +1,2 @@
 // Versão do app — atualizar a cada deploy significativo
-export const APP_VERSION = 'v0.3';
+export const APP_VERSION = 'v0.5';
