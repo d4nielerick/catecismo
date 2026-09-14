@@ -1118,25 +1118,30 @@
   color: var(--color-primary);
 }
 
+/* A nota é a referência bibliográfica: contexto, corpo menor. */
 #biblia-card-nota {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   line-height: 1.55;
-  color: var(--color-text);
-  margin: 0 0 0.6rem;
-  padding-bottom: 0.6rem;
+  color: var(--color-muted);
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.7rem;
   border-bottom: 1px solid var(--color-border);
 }
 
 #biblia-card-nota:empty { display: none; }
 
+/* O versículo é o que a pessoa abriu o card para ler, então é ele que tem o
+   corpo maior. Sem itálico: ele marca destaque, não blocos de leitura, e em
+   tela pequena atrapalha — a citação já se anuncia pelas aspas e pela barra. */
 #biblia-card-texto {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 1.02rem;
+  line-height: 1.65;
   color: var(--color-text);
   margin: 0;
-  font-style: italic;
+  padding-left: 0.7rem;
+  border-left: 2px solid var(--color-border);
 }
 
 #biblia-card-texto:empty { display: none; }
@@ -1154,6 +1159,16 @@
     border-radius: var(--radius) var(--radius) 0 0;
     padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
     z-index: 600;
+    /* Nota longa não empurra o versículo para fora da folha. */
+    max-height: 70dvh;
+    overflow-y: auto;
+  }
+
+  /* No toque este card é a única forma de ler a passagem — o tooltip está
+     desligado aqui. Corpo de leitura, não de legenda. */
+  #biblia-card-texto {
+    font-size: 1.08rem;
+    line-height: 1.7;
   }
 }
 

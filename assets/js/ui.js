@@ -1379,27 +1379,30 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo, query = '') {
       tooltip.appendChild(spanVerso);
       sup.appendChild(tooltip);
 
-      // Carrega versículo ao primeiro hover (desktop)
-      let _fetched = false;
-      let _verse   = null;
-      sup.addEventListener('mouseenter', async () => {
-        if (_fetched) return;
-        _fetched = true;
-        _verse = await buscarVersiculo(noteText);
-        if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
-      });
+      // Uma promessa só, compartilhada pelos dois caminhos. Com um booleano
+      // havia corrida no toque: o tap dispara um mouseenter sintético que já
+      // marcava "buscado" e saía para buscar; o click chegava logo atrás, via
+      // a marca e abria o card com o versículo ainda em voo — a nota aparecia
+      // sem a passagem correspondente, de forma intermitente.
+      let _versePromise = null;
+      const obterVerso = () => {
+        if (!_versePromise) {
+          _versePromise = buscarVersiculo(noteText).then((v) => {
+            if (v) spanVerso.textContent = `${v.referencia}: "${v.texto}"`;
+            return v;
+          });
+        }
+        return _versePromise;
+      };
+
+      sup.addEventListener('mouseenter', obterVerso);
 
       // Clique: mobile → card; desktop → fixa/desfixa o tooltip até fechar
       sup.addEventListener('click', async (e) => {
         e.stopPropagation();
         if (e.target.closest('a, button')) return;
         if (window.innerWidth < 768) {
-          if (!_fetched) {
-            _fetched = true;
-            _verse = await buscarVersiculo(noteText);
-            if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
-          }
-          mostrarCardMobile(ref, noteText, _verse);
+          mostrarCardMobile(ref, noteText, await obterVerso());
         } else {
           const jaFixo = sup.classList.contains('tooltip-visivel');
           document.querySelectorAll('.ref-nota.tooltip-visivel').forEach((el) => el.classList.remove('tooltip-visivel'));
