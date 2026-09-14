@@ -101,8 +101,6 @@ function corpoLeitura(s) {
 const rotuloCompleto = s => s.rotulo + (s.variante ? ` (${s.variante})` : '');
 
 // ── Cards ────────────────────────────────────────────────────────────────────
-const FLAG_SVG = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>`;
-
 const ANCORA = { salmo: 'salmo', sequencia: 'sequencia', aclamacao: 'aclamacao', evangelho: 'evangelho' };
 function ancora(s) {
   if (s.tipo !== 'leitura') return ANCORA[s.tipo];
@@ -130,8 +128,7 @@ function renderBloco({ leitura: s, id, alternativas }) {
         ${corpoLeitura(a)}
       </details>`).join('');
   return `
-    <article class="leitura-card${s.tipo === 'evangelho' ? ' card-evangelho' : ''}${['aclamacao', 'sequencia'].includes(s.tipo) ? ' secao-menor' : ''}" id="${id}" data-rotulo="${esc(rotuloCompleto(s))}" style="position:relative;">
-      <button class="leitura-flag-btn" type="button" aria-label="Reportar erro nesta leitura" title="Reportar erro" style="position:absolute;top:1rem;right:1rem;background:transparent;border:1px solid var(--color-border);border-radius:50%;width:24px;height:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--color-muted);opacity:0;transition:opacity 0.15s;">${FLAG_SVG}</button>
+    <article class="leitura-card${s.tipo === 'evangelho' ? ' card-evangelho' : ''}${['aclamacao', 'sequencia'].includes(s.tipo) ? ' secao-menor' : ''}" id="${id}">
       <div class="leitura-label">${esc(rotuloCompleto(s))}</div>
       ${s.referencia ? `<div class="leitura-ref">${esc(s.referencia)}</div>` : ''}
       ${corpoLeitura(s)}
@@ -140,12 +137,29 @@ function renderBloco({ leitura: s, id, alternativas }) {
 }
 
 // ── Cabeçalho ────────────────────────────────────────────────────────────────
+// Dia marcado no calendário na cor litúrgica (a branca vira dourado, para aparecer no fundo claro).
+const COR_CALENDARIO = { roxo: '#5b2d86', verde: '#1f6e3d', vermelho: '#b8282a', rosa: '#c7688b', preto: '#262422', branco: '#b8972e' };
+const DIA_DA_SEMANA =/\b(?:Domingo|Segunda-feira|Terça-feira|Quarta-feira|Quinta-feira|Sexta-feira|Sábado)\b/;
+const semTempo = s => s.replace(/\s+d[oa] (?:Tempo Comum|Páscoa|Advento|Quaresma)$/, ''); // o tempo já está no selo
+
 function preencherCabecalho(dt, dia, santos) {
   const data = new Date(`${dt}T12:00:00`);
-  document.getElementById('lp-data').textContent =
-    data.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  const elData = document.getElementById('lp-data');
+  const semDiaDaSemana = data.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+  elData.textContent = data.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   if (!dia) return;
   pendurarFita(dia.cor);
+  if (COR_CALENDARIO[dia.cor]) document.documentElement.style.setProperty('--lp-cor-dia', COR_CALENDARIO[dia.cor]);
+
+  // Sem repetir o dia da semana: na memória, a data vem primeiro e o dia do temporal depois
+  // ("15 de setembro · Terça-feira da 24ª Semana"; o ano está no calendário logo abaixo);
+  // se o nome do dia já diz o dia da semana, a data vem sem ele.
+  if (dia.complemento) {
+    const curta = data.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long' });
+    elData.textContent = `${curta} · ${semTempo(dia.complemento)}`;
+  } else if (DIA_DA_SEMANA.test(dia.celebracao || '')) {
+    elData.textContent = semDiaDaSemana;
+  }
 
   if (dia.tempo) {
     document.getElementById('lp-tempo').textContent = dia.tempo;
@@ -157,25 +171,16 @@ function preencherCabecalho(dt, dia, santos) {
 
   if (dia.celebracao) {
     const el = document.getElementById('lp-nome-dia');
+    el.textContent = dia.celebracao;
     const slug = santos?.[dia.celebracao];
     if (slug) {
-      const botao = document.createElement('button');
-      botao.type = 'button';
-      botao.className = 'nome-dia-link';
-      botao.title = 'Sobre a celebração (Wikipédia)';
-      // A última palavra vai junto com o ícone, para o ícone nunca ficar sozinho numa linha.
-      const corte = dia.celebracao.lastIndexOf(' ') + 1;
-      botao.innerHTML = `${esc(dia.celebracao.slice(0, corte))}<span class="nome-dia-fim">${esc(dia.celebracao.slice(corte))}${ICONE_SOBRE}</span>`;
-      botao.addEventListener('click', () => abrirSobre(slug, dia.celebracao));
-      el.replaceChildren(botao);
-    } else {
-      el.textContent = dia.celebracao;
-    }
-    if (dia.complemento) {
-      const c = document.createElement('span');
-      c.className = 'complemento';
-      c.textContent = dia.complemento;
-      el.appendChild(c);
+      const mais = document.createElement('button'); // só aparece no celular
+      mais.type = 'button';
+      mais.className = 'nome-dia-mais';
+      mais.textContent = 'Saiba mais';
+      mais.addEventListener('click', () => abrirSobre(slug, dia.celebracao));
+      el.append(mais);
+      mostrarSobre(slug, dia.celebracao);
     }
     el.style.display = '';
   }
@@ -209,71 +214,6 @@ function construirNav(blocos) {
     });
   }, { rootMargin: '-90px 0px -55% 0px' }); // ativa a leitura que passa logo abaixo das abas fixas
   cards.forEach(c => obs.observe(c));
-}
-
-// ── Correções ────────────────────────────────────────────────────────────────
-function configurarFlagButtons(dt) {
-  document.querySelectorAll('.leitura-card').forEach(card => {
-    const btn = card.querySelector('.leitura-flag-btn');
-    if (!btn) return;
-
-    card.addEventListener('mouseenter', () => { btn.style.opacity = '1'; });
-    card.addEventListener('mouseleave', () => {
-      if (!card.querySelector('.leitura-correcao-form')) btn.style.opacity = '0';
-    });
-
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const existing = card.querySelector('.leitura-correcao-form');
-      if (existing) { existing.remove(); btn.style.opacity = '0'; return; }
-
-      const form = document.createElement('div');
-      form.className = 'leitura-correcao-form';
-      form.style.cssText = 'margin-top:1rem;border-top:1px solid var(--color-border);padding-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;';
-      form.innerHTML = `
-        <textarea placeholder="Descreva o erro encontrado nesta leitura…" rows="3" style="font-size:0.8rem;padding:0.4rem 0.6rem;border:1px solid var(--color-border);border-radius:6px;background:var(--color-bg);color:var(--color-text);resize:vertical;width:100%;box-sizing:border-box;font-family:inherit;"></textarea>
-        <div style="display:flex;gap:0.5rem;justify-content:flex-end;">
-          <button class="leitura-correcao-cancelar" type="button" style="font-size:0.75rem;font-weight:600;padding:0.2rem 0.75rem;border-radius:100px;background:transparent;border:1px solid var(--color-border);color:var(--color-muted);cursor:pointer;">Cancelar</button>
-          <button class="leitura-correcao-enviar" type="button" style="font-size:0.75rem;font-weight:600;padding:0.2rem 0.75rem;border-radius:100px;background:var(--color-primary);border:1px solid var(--color-primary);color:#fff;cursor:pointer;">Enviar</button>
-        </div>
-      `;
-      card.appendChild(form);
-      form.querySelector('textarea').focus();
-
-      form.querySelector('.leitura-correcao-cancelar').addEventListener('click', (ev) => {
-        ev.stopPropagation();
-        form.remove();
-        btn.style.opacity = '0';
-      });
-
-      form.querySelector('.leitura-correcao-enviar').addEventListener('click', async (ev) => {
-        ev.stopPropagation();
-        const descricao = form.querySelector('textarea').value.trim();
-        if (!descricao) return;
-        const enviarBtn = form.querySelector('.leitura-correcao-enviar');
-        enviarBtn.disabled = true;
-        enviarBtn.textContent = 'Enviando…';
-        try {
-          const resp = await fetch('/api/correcao', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            // A data vai junto: "Evangelho" sozinho não diz de que dia é o erro.
-            body: JSON.stringify({ paragrafo: `Liturgia ${dt} · ${card.dataset.rotulo}`, descricao }),
-          });
-          if (resp.ok) {
-            form.innerHTML = '<p style="font-size:0.78rem;color:var(--color-muted);font-style:italic;">Obrigado! Correção recebida.</p>';
-            setTimeout(() => { form.remove(); btn.style.opacity = '0'; }, 2500);
-          } else {
-            enviarBtn.disabled = false;
-            enviarBtn.textContent = 'Enviar';
-          }
-        } catch {
-          enviarBtn.disabled = false;
-          enviarBtn.textContent = 'Enviar';
-        }
-      });
-    });
-  });
 }
 
 // ── Calendário ───────────────────────────────────────────────────────────────
@@ -487,12 +427,26 @@ function montarAvisos(indice, hoje) {
   if (!avisos.length) return;
 
   const texto = wrap.querySelector('.lp-aviso-texto');
-  texto.innerHTML = avisos[0];
   wrap.hidden = false;
+  let atual = 0;
+  // Reserva a altura do aviso mais longo: quando um quebra linha, a troca não empurra a página.
+  const reservarAltura = () => {
+    texto.style.minHeight = '';
+    let maior = 0;
+    for (const a of avisos) {
+      texto.innerHTML = a;
+      maior = Math.max(maior, texto.offsetHeight);
+    }
+    texto.style.minHeight = `${maior}px`;
+    texto.innerHTML = avisos[atual];
+  };
+  reservarAltura();
+  document.fonts?.ready.then(reservarAltura);
+  let esperaResize;
+  addEventListener('resize', () => { clearTimeout(esperaResize); esperaResize = setTimeout(reservarAltura, 150); });
   if (avisos.length < 2) return;
 
   const reduzido = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let atual = 0;
   let pausado = false;
   let troca;
   function avancar() {
@@ -514,7 +468,44 @@ function montarAvisos(indice, hoje) {
 
 // ── Sobre a celebração (resumo da Wikipédia) ─────────────────────────────────
 // data/santos/indice.json › { celebração: slug }; o texto vem pronto de scripts/build-santos.mjs.
-const ICONE_SOBRE = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.6"/><path d="M8 7.2v4" stroke-linecap="round"/><circle cx="8" cy="4.9" r="0.25" fill="currentColor"/></svg>';
+// Telas largas: o texto fica aberto embaixo do calendário. Celular: "Saiba mais" abre um modal.
+const SOBRE_AO_LADO = matchMedia('(min-width: 761px)');
+const sobreCache = new Map();
+
+function carregarSobre(slug) {
+  if (!sobreCache.has(slug)) sobreCache.set(slug, buscarJson(`/data/santos/${slug}.json`));
+  return sobreCache.get(slug);
+}
+
+function htmlDosArtigos(dados, classe) {
+  const varios = dados.artigos.length > 1;
+  return dados.artigos.map(a => `
+    <section class="${classe}-artigo">
+      ${a.imagem ? `<img class="${classe}-img" src="${esc(a.imagem.src)}" width="${a.imagem.largura}" height="${a.imagem.altura}" alt="${esc(a.titulo)}" loading="lazy" referrerpolicy="no-referrer">` : ''}
+      ${varios ? `<h3>${esc(a.titulo)}</h3>` : ''}
+      ${a.resumo.map(p => `<p>${esc(p)}</p>`).join('')}
+      <a class="${classe}-link" href="${esc(a.url)}" target="_blank" rel="noopener">Ler o artigo completo na Wikipédia ↗</a>
+    </section>`).join('');
+}
+
+function mostrarSobre(slug, celebracao) {
+  const box = document.getElementById('lp-sobre');
+  if (!box) return;
+  const desenhar = async () => {
+    if (!SOBRE_AO_LADO.matches || box.dataset.slug === slug) return;
+    const dados = await carregarSobre(slug);
+    if (!dados) return;
+    box.dataset.slug = slug;
+    box.innerHTML = `
+      <p class="lp-sobre-rotulo">Sobre a celebração</p>
+      <h2 class="lp-sobre-titulo">${esc(celebracao)}</h2>
+      ${htmlDosArtigos(dados, 'lp-sobre')}
+      <p class="lp-sobre-credito">Texto da <a href="https://pt.wikipedia.org/" target="_blank" rel="noopener">Wikipédia</a>, licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p>`;
+    box.hidden = false;
+  };
+  desenhar();
+  SOBRE_AO_LADO.addEventListener('change', desenhar);
+}
 
 async function abrirSobre(slug, celebracao) {
   const dlg = document.getElementById('lp-santo');
@@ -524,19 +515,10 @@ async function abrirSobre(slug, celebracao) {
   corpo.innerHTML = '<p class="lp-modal-carregando">Carregando…</p>';
   dlg.showModal();
 
-  const dados = await buscarJson(`/data/santos/${slug}.json`);
-  if (!dados) {
-    corpo.innerHTML = '<p class="lp-modal-carregando">Não foi possível carregar o texto agora.</p>';
-    return;
-  }
-  const varios = dados.artigos.length > 1;
-  corpo.innerHTML = dados.artigos.map(a => `
-    <section class="lp-modal-artigo">
-      ${a.imagem ? `<img class="lp-modal-img" src="${esc(a.imagem.src)}" width="${a.imagem.largura}" height="${a.imagem.altura}" alt="${esc(a.titulo)}" loading="lazy" referrerpolicy="no-referrer">` : ''}
-      ${varios ? `<h3>${esc(a.titulo)}</h3>` : ''}
-      ${a.resumo.map(p => `<p>${esc(p)}</p>`).join('')}
-      <a class="lp-modal-link" href="${esc(a.url)}" target="_blank" rel="noopener">Ler o artigo completo na Wikipédia ↗</a>
-    </section>`).join('');
+  const dados = await carregarSobre(slug);
+  corpo.innerHTML = dados
+    ? htmlDosArtigos(dados, 'lp-modal')
+    : '<p class="lp-modal-carregando">Não foi possível carregar o texto agora.</p>';
 }
 
 function configurarModal() {
@@ -586,7 +568,6 @@ async function init() {
   conteudo.innerHTML = html;
 
   construirNav(blocos);
-  configurarFlagButtons(dt);
   animarEntrada();
 }
 

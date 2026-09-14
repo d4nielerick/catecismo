@@ -135,6 +135,10 @@
       position: sticky;
       top: 0;
       align-self: start;
+      max-height: 100vh;
+      overflow-y: auto; /* o texto sobre o santo pode passar da altura da tela */
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
       padding: 3.25rem 2rem 3rem 2.25rem;
     }
     .cal-wrap { max-width: 257px; }
@@ -157,9 +161,10 @@
       border-radius: 4px; cursor: pointer; color: var(--lp-suave); text-decoration: none;
       transition: background 0.1s, color 0.1s;
     }
-    .cal-dia:hover { background: rgba(26, 60, 46, 0.08); color: var(--lp-tinta); }
-    .cal-dia.hoje { background: var(--color-primary); color: #fff; font-weight: 600; }
-    .cal-dia.selecionado { background: rgba(26, 60, 46, 0.15); color: var(--color-primary); font-weight: 600; }
+    /* --lp-cor-dia: cor litúrgica do dia aberto (liturgiadiaria.js › COR_CALENDARIO) */
+    .cal-dia:hover { background: color-mix(in srgb, var(--lp-cor-dia, var(--color-primary)) 10%, transparent); color: var(--lp-tinta); }
+    .cal-dia.hoje { background: var(--lp-cor-dia, var(--color-primary)); color: #fff; font-weight: 600; }
+    .cal-dia.selecionado { background: color-mix(in srgb, var(--lp-cor-dia, var(--color-primary)) 16%, transparent); color: var(--lp-cor-dia, var(--color-primary)); font-weight: 600; }
     .cal-dia.vazio { cursor: default; }
     .cal-dia.fora-range { opacity: 0.3; pointer-events: none; }
 
@@ -352,7 +357,7 @@
     @media (max-width: 1080px) {
       .lp-pagina { grid-template-columns: 290px 72px minmax(0, 1fr); grid-template-rows: auto 1fr; }
       .lp-lateral { position: static; max-height: none; overflow: visible; }
-      .lp-direita { grid-column: 1; grid-row: 2; position: static; padding: 0 2rem 3rem 1.95rem; }
+      .lp-direita { grid-column: 1; grid-row: 2; position: static; max-height: none; overflow: visible; padding: 0 2rem 3rem 1.95rem; }
       .lp-faixa-esq, .lp-main { grid-row: 1 / span 2; }
       .cal-wrap { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--lp-linha); }
     }
@@ -453,23 +458,56 @@
       html { scroll-behavior: smooth; }
     }
 
-    /* ── Nome do dia com link para o resumo da Wikipédia ─────────────────── */
-    .nome-dia-link {
-      font: inherit;
-      color: inherit;
-      text-align: left;
+    /* ── Sobre a celebração (resumo da Wikipédia) ────────────────────────── */
+    /* Telas largas: aberto embaixo do calendário */
+    .lp-sobre {
+      max-width: 257px;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--lp-linha);
+      animation: lp-sobre-entra 0.6s ease both;
+    }
+    @keyframes lp-sobre-entra { from { opacity: 0; } to { opacity: 1; } }
+    .lp-sobre-rotulo {
+      font-family: var(--font-sans); font-size: 0.56rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--lp-suave); margin: 0 0 0.3rem;
+    }
+    .lp-sobre-titulo {
+      font-family: var(--font-titulo); font-style: italic; font-weight: 400;
+      font-size: 26px; line-height: 1.1; letter-spacing: -0.02em; color: var(--lp-tinta);
+      margin: 0 0 1rem;
+    }
+    .lp-sobre-img {
+      display: block; width: 100%; height: auto; max-height: 190px;
+      object-fit: cover; object-position: center 20%;
+      border-radius: 3px; margin: 0 0 0.8rem; background: rgba(0, 0, 0, 0.05);
+    }
+    .lp-sobre-artigo h3 { font-size: 0.88rem; font-weight: 700; color: var(--lp-tinta); margin: 0 0 0.3rem; }
+    .lp-sobre-artigo p { font-size: 0.8rem; line-height: 1.6; color: var(--lp-texto); margin: 0 0 0.6rem; }
+    .lp-sobre-artigo + .lp-sobre-artigo { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dotted rgba(0, 0, 0, 0.28); }
+    .lp-sobre-link { font-size: 0.76rem; color: var(--lp-vermelho); text-decoration: none; }
+    .lp-sobre-link:hover { text-decoration: underline; }
+    .lp-sobre-credito { font-size: 0.64rem; line-height: 1.5; color: var(--lp-suave); margin: 1.1rem 0 0; }
+    .lp-sobre-credito a { color: inherit; }
+
+    /* Celular: "Saiba mais" miúdo ao lado do nome, abre o modal */
+    .nome-dia-mais {
+      display: none;
+      font-family: var(--font-sans);
+      font-size: 0.56rem;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--lp-vermelho);
       background: none;
       border: 0;
-      padding: 0;
+      padding: 0.3rem 0.2rem;
+      margin-left: 0.4rem;
+      vertical-align: 0.2em;
       cursor: pointer;
-      text-decoration: underline dotted rgba(0, 0, 0, 0.35);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.22em;
-      transition: color 0.15s, text-decoration-color 0.15s;
+      white-space: nowrap;
     }
-    .nome-dia-link:hover, .nome-dia-link:focus-visible { color: var(--lp-vermelho); text-decoration-color: currentColor; }
-    .nome-dia-fim { white-space: nowrap; }
-    .nome-dia-link svg { width: 0.8em; height: 0.8em; margin-left: 0.3em; vertical-align: -0.05em; opacity: 0.55; }
 
     .lp-modal {
       width: min(560px, calc(100% - 2rem));
@@ -527,13 +565,19 @@
 
     @media (max-width: 760px) {
       .lp-fita { right: 3.125rem; width: 18px; height: 42px; }
-      .lp-avisos { max-width: none; }
+      /* O aviso sobe para cima do título (a folga à direita é da fita) */
+      .lp-lateral { display: flex; flex-direction: column; }
+      .lp-avisos { order: -1; max-width: none; margin: 0 0 0.35rem; padding-right: 1.5rem; }
+      .lp-aviso-texto { font-size: 0.72rem; }
+      .lp-data { font-size: 0.8rem; }
+      .lp-sobre { display: none; }
+      .nome-dia-mais { display: inline; }
       .lp-modal-caixa { padding: 1.75rem 1.4rem 1.5rem; }
       .lp-modal-titulo { font-size: 32px; }
       .lp-modal-img { float: none; display: block; width: 100%; max-width: none; max-height: 260px; object-fit: cover; object-position: center 20%; margin: 0 0 1rem; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .lp-fita, .lp-modal[open] { animation: none; }
+      .lp-fita, .lp-modal[open], .lp-sobre { animation: none; }
       .lp-aviso-texto { transition: none; }
     }
   </style>
@@ -582,6 +626,7 @@
   <!-- ── Direita: calendário ─────────────────────────────────────────────── -->
   <aside class="lp-direita" aria-label="Calendário da liturgia">
     <div class="cal-wrap" id="cal-wrap"></div>
+    <section class="lp-sobre" id="lp-sobre" aria-label="Sobre a celebração" hidden></section>
   </aside>
 
 </div>

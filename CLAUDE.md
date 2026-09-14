@@ -157,7 +157,8 @@ aparelho, não UTC).
 O `indice.json` também leva `marcos` (Advento, Natal, Cinzas, Páscoa, dias de preceito do Brasil…),
 usados nos avisos "faltam N dias" da página; a tabela fica em `MARCOS` no build.
 
-O nome do dia abre um modal com o resumo da Wikipédia. `data/santos/` é gerado (com rede) por
+O resumo da Wikipédia sobre o santo ou a festa do dia fica embaixo do calendário (telas > 760px) ou
+num modal aberto por "Saiba mais" (celular). `data/santos/` é gerado (com rede) por
 `node scripts/build-santos.mjs` a partir de `data/santos-fonte.json` (celebração → títulos de artigo
 da pt.wikipedia, curado à mão). Para trocar ou acrescentar um artigo, edite a fonte e rode o
 script; ele falha em título inexistente ou desambiguação. O CI confere que toda celebração do
