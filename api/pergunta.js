@@ -123,7 +123,25 @@ function guardarNoCache(chave, resposta) {
   gravarDepois();
 }
 
-async function chamarModelo(apiKey, { sistema, usuario, maxTokens, emJson = false, prazoMs }) {
+/**
+ * Uma chamada ao modelo, com uma nova tentativa em falha passageira (prazo
+ * estourado, 429, 5xx, rede). Na simulação com o modelo real, 3 de 14
+ * perguntas estouraram o prazo do redator enquanto as outras levavam 1–4 s.
+ */
+async function chamarModelo(apiKey, opcoes, tentativas = 2) {
+  for (let i = 1; ; i++) {
+    try {
+      return await chamarUmaVez(apiKey, opcoes);
+    } catch (err) {
+      const passageira = err.name === 'TimeoutError' || err.name === 'AbortError'
+        || /^modelo (429|5\d\d)/.test(err.message) || /fetch failed/.test(err.message);
+      if (!passageira || i >= tentativas) throw err;
+      console.error(`[pergunta] tentativa ${i} falhou (${err.message}); repetindo`);
+    }
+  }
+}
+
+async function chamarUmaVez(apiKey, { sistema, usuario, maxTokens, emJson = false, prazoMs }) {
   const resp = await fetch(URL_MODELO, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
@@ -204,7 +222,7 @@ function montar(textoModelo, enviados, entendimento = null, registro = {}) {
 export async function planejar(pergunta, apiKey) {
   try {
     const r = await chamarModelo(apiKey, {
-      sistema: PLANEJADOR, usuario: `Pergunta: ${pergunta}`, maxTokens: 200, emJson: true, prazoMs: 10000,
+      sistema: PLANEJADOR, usuario: `Pergunta: ${pergunta}`, maxTokens: 200, emJson: true, prazoMs: 8000,
     });
     return { plano: lerPlano(r.texto), uso: r.uso };
   } catch (err) {
@@ -248,7 +266,7 @@ export async function responder(pergunta, apiKey) {
     sistema: REDATOR,
     usuario: `Parágrafos do Catecismo:\n\n${contexto}\n\n---\nPergunta: ${pergunta}`,
     maxTokens: 220,
-    prazoMs: 20000,
+    prazoMs: 15000,
   });
   uso.push(r.uso);
 
