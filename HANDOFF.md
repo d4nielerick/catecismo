@@ -130,11 +130,18 @@ no tooltip; o tooltip só abre no clique e fica fixo até o usuário fechar, com
   2. **Busca determinística** (`api/_recuperar.mjs`): BM25 com radical + índice analítico + léxico;
      pergunta, assunto, hipótese (peso 0,5) e termos (0,5) fundidos por RRF (K=5); completa blocos
      de subtema curto do índice. O servidor lê o texto dos §§ — o cliente só manda a pergunta.
-  3. **Redator** (xAI): 2–3 frases, cada uma com `[§N]`.
-  4. **Travas sem IA** (`api/_guardas.mjs`): frase sem citação, com § não enviado ou sem apoio
-     lexical no § citado (sustentação < 0,5) é removida; nada de pé = "não encontrei". Não pega
-     inversão de sentido com as mesmas palavras.
-  Custos/limites: ~US$ 0,0004 por pergunta; cache por pergunta normalizada, 6 novas por IP/10 min,
+  3. **Seletor** (xAI): lê o começo de até 48 candidatos (12 fundidos + 10 primeiros de cada
+     consulta) e escolhe até 8 pelo assunto doutrinal — só números da lista. Os escolhidos vão
+     **na frente** dos fundidos (até 16); substituindo, ele já trocou os §§ certos por outros.
+  4. **Redator** (xAI, JSON): um parágrafo que responde e raciocina ("Segundo o Catecismo, …"),
+     e para cada § citado um **trecho copiado literalmente** dele.
+  5. **Travas sem IA** (`api/_guardas.mjs`): trecho conferido palavra por palavra contra o §
+     (ignora pontuação/caixa/acento); citação sem trecho verificado cai com a frase; frase com
+     apoio lexical < 0,2 sai e < 0,5 vai para o registro como aviso (frase de conclusão sem
+     citação também pode usar as palavras da pergunta); nada de pé = "não encontrei". A página
+     mostra os trechos literais entre aspas. Não pega conclusão errada escrita com as palavras
+     certas, nem trecho literal pouco pertinente — por isso os avisos vão para o registro.
+  Custos/limites: ~US$ 0,0013 por pergunta (três chamadas curtas), 5–7 s (até ~15 s com reforço); cache por pergunta normalizada, 6 novas por IP/10 min,
   **teto de 100/dia**. **Registro anônimo** (sem IP) em JSONL dentro do container:
   `ssh vps 'docker exec catecismo-api cat /tmp/catecismo-perguntas-registro.jsonl'` (pergunta,
   tipo, §§ citados, frases cortadas, ms, tokens). Fica no `/tmp` do container: sobrevive a
