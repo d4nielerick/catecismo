@@ -1,0 +1,23 @@
+{
+  "data": "2027-06-25",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Gn 17,1.9-10.15-22</div><div> Sl 127(128),1-2.3.4-5 (R. 4)</div><div></div><div> Mt 8,1-4</div></div>",
+  "primeira_leitura": {
+    "referencia": "17,1.9-10.15-22",
+    "texto": "1\nAbrão tinha noventa e nove anos de idade,\nquando o Senhor lhe apareceu e lhe disse:\n\"Eu sou o Deus Poderoso.\nAnda na minha presença e sê perfeito\".\n9\nDeus disse ainda a Abraão:\n\"Guarda a minha aliança,\ntu e a tua descendência para sempre.\n10\nEsta é a minha aliança que devereis observar,\naliança entre mim e vós e tua descendência futura:\ntodo homem entre vós deverá ser circuncidado\".\n15\nDeus disse também a Abraão:\n\"Quanto à tua mulher, Sarai,\njá não a chamarás Sarai, mas Sara.\n16\nEu a abençoarei e também dela te darei um filho.\nVou abençoá-la, e ela será mãe de nações,\ne reis de povos dela sairão\".\n17\nAbraão prostrou-se com o rosto em terra,\ne pôs-se a rir, dizendo consigo mesmo:\n\"Será que um homem de cem anos vai ter um filho\ne que, aos noventa anos, Sara vai dar à luz?\".\n18\nE, dirigindo-se a Deus, disse:\n\"Se ao menos Ismael pudesse viver em tua presença\".\n19\nDeus, porém, disse:\n\"Na verdade, é Sara, tua mulher,\nque te dará um filho, a quem chamarás Isaac.\nCom ele estabelecerei a minha aliança,\numa aliança perpétua para a sua descendência.\n20\nAtendo ao teu pedido, também, a respeito de Ismael.\nEu o abençoarei e tornarei fecundo\ne extremamente numeroso.\nSerá pai de doze príncipes\ne farei dele uma grande nação.\n21\nMas, quanto à minha aliança,\neu a estabelecerei com Isaac,\no filho que Sara te dará no ano que vem,\npor este tempo\".\n22\nTendo acabado de falar com Abraão,\nDeus se retirou.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 127 (128),1-2.3.4-5 (R. 4)",
+    "refrao": "",
+    "texto": "R.\nSerá assim abençoado todo aquele\nque respeita o Senhor.\n1\nFeliz és tu se temes o Senhor*\ne trilhas seus caminhos!\n2\nDo trabalho de tuas mãos hás de viver,*\nserás feliz, tudo irá bem!\nR.\n3\nA tua esposa é uma videira bem fecunda*\nno coração da tua casa;\nos teus filhos são rebentos de oliveira*\nao redor de tua mesa.\nR.\n4\nSerá assim abençoado todo homem*\nque teme o Senhor.\n5\nO Senhor te abençoe de Sião,*\ncada dia de tua vida.\nR.\nEvangelho - Mt 8,1-4\nAclamação ao Evangelho\nMt 8,17\nR.\nAleluia, Aleluia, Aleluia.\nV.\nCristo tomou sobre si nossas dores,\ncarregou em seu corpo as nossas fraquezas."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "8,1-4",
+    "texto": "8,1-4\n1\nTendo Jesus descido do monte,\nnumerosas multidões o seguiam.\n2\nEis que um leproso se aproximou\ne se ajoelhou  diante dele, dizendo:\n\"Senhor, se queres,\ntu tens o poder de me purificar\".\n3\nJesus estendeu a mão, tocou nele e disse:\n\"Eu quero, fica limpo\".\nNo mesmo instante, o homem ficou curado da lepra.\n4\nEntão Jesus lhe disse:\n\"Olha, não digas nada a ninguém,\nmas vai mostrar-te ao sacerdote,\ne faze a oferta que Moisés ordenou,\npara servir de testemunho para eles\".\nPalavra da Salvação."
+  }
+}

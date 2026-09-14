@@ -1,0 +1,23 @@
+{
+  "data": "2027-07-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Ex 14,21-15,1</div><div> Ex 15,8-9.10 e 12.17 (R. 1a)</div><div></div><div> Mt 12,46-50</div></div>",
+  "primeira_leitura": {
+    "referencia": "14,21-15,1",
+    "texto": "Naqueles dias,\n14,21\nMoisés estendeu a mão sobre o mar,\ne durante toda a noite\no Senhor fez soprar sobre o mar\num vento leste muito forte;\ne as águas se dividiram.\n22\nEntão, os filhos de Israel entraram\npelo meio do mar a pé enxuto,\nenquanto as águas formavam como que uma muralha\nà direita e à esquerda.\n23\nOs egípcios puseram-se a persegui-los,\ne todos os cavalos do Faraó,\ncarros e cavaleiros os seguiram mar adentro.\n24\nOra, de madrugada,\no Senhor lançou um olhar,\ndesde a coluna de fogo e da nuvem,\nsobre as tropas egípcias e as pôs em pânico.\n25\nBloqueou as rodas dos seus carros,\nde modo que só a muito custo podiam avançar.\nDisseram, então, os egípcios:\n\"Fujamos de Israel!\nPois o Senhor combate a favor deles,\ncontra nós\".\n26\nO Senhor disse a Moisés:\n\"Estende a mão sobre o mar,\npara que as águas se voltem contra os egípcios,\nseus carros e cavaleiros\".\n27\nMoisés estendeu a mão sobre o mar\ne, ao romper da manhã,\no mar voltou ao seu leito normal,\nenquanto os egípcios, em fuga,\ncorriam ao encontro das águas,\ne o Senhor os mergulhou no meio das ondas.\n28\nAs águas voltaram e cobriram carros,\ncavaleiros e todo o exército do Faraó,\nque tinha entrado no mar em perseguição de Israel.\nNão escapou um só.\n29\nOs filhos de Israel, ao contrário,\ntinham passado a pé enxuto pelo meio do mar,\ncujas águas lhes formavam uma muralha\nà direita e à esquerda.\n30\nNaquele dia,\no Senhor livrou Israel da mão dos egípcios,\ne Israel viu os egípcios mortos nas praias do mar,\n31\ne a mão poderosa do Senhor agir contra eles.\nO povo temeu o Senhor,\ne teve fé no Senhor\ne em Moisés, seu servo.\n15,1\nEntão, Moisés e os filhos de Israel\ncantaram ao Senhor este cântico:\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Ex 15,8-9.10 e 12.17 (R. 1a)",
+    "refrao": "",
+    "texto": "R.\nAo Senhor quero cantar,\npois fez brilhar a sua glória!\n8\nAo soprar a vossa ira amontoaram-se as águas, †\nlevantaram-se as ondas e formaram uma muralha, *\ne imóveis se fizeram, em meio ao mar, as grandes vagas.\n9\nO inimigo tinha dito: \"Hei de segui-los e alcançá-los! †\nRepartirei os seus despojos e minh'alma saciarei; *\narrancarei da minha espada e minha mão os matará!\"\nR.\n10\nMas soprou o vosso vento, e o mar os recobriu; †\nafundaram como chumbo entre as águas agitadas. *\n12\nEstendestes vossa mão, e a terra os devorou;\nR.\n17\nVós, Senhor, o levareis e o plantareis em vosso Monte, †\nno lugar que preparastes para a vossa habitação, *\nno Santuário construído pelas vossas próprias mãos.\nR.\nEvangelho - Mt 12,38-4\nAclamação ao Evangelho\nJo 14,23\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQue me ama, realmente, guardará minha palavra\ne meu Pai o amará e a ele nós viremos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,46-50",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n12,46-50\nNaquele tempo,\n46\nenquanto Jesus estava falando às multidões,\nsua mãe e seus irmãos ficaram do lado de fora,\nprocurando falar com ele.\n47\nAlguém disse a Jesus:\n\"Olha! Tua mãe e teus irmãos estão aí fora,\ne querem falar contigo\".\n48\nJesus perguntou àquele que tinha falado:\n\"Quem é minha mãe, e quem são meus irmãos?\"\n49\nE, estendendo a mão para os discípulos, Jesus disse:\n\"Eis minha mãe e meus irmãos.\n50\nPois todo aquele que faz a vontade do meu Pai,\nque está nos céus,\nesse é meu irmão, minha irmã e minha mãe\".\nPalavra da Salvação."
+  }
+}

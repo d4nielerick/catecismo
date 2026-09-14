@@ -1,0 +1,23 @@
+{
+  "data": "2027-06-09",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>2Cor 3,4-11</div><div> Sl 98(99),5.6.7.8.9 (R. cf. 9c)</div><div></div><div> Mt 5,17-19</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,4-11",
+    "texto": "Irmãos,\n4\né por Cristo que temos tal confiança perante Deus,\n5\nnão porque sejamos capazes por nós mesmos,\nde ter algum pensamento, como de nós mesmos,\nmas essa nossa capacidade vem de Deus.\n6\nEle é que nos tornou capazes\nde exercer o ministério de uma aliança nova.\nEsta não é uma aliança da letra, mas do Espírito.\nPois a letra mata, mas o Espírito comunica a vida.\n7\nSe o ministério da morte,\ngravado em pedras com letras,\nfoi cercado de tanta glória,\nque os israelitas não podiam fitar o rosto de Moisés,\npor causa do seu fulgor, ainda que passageiro,\n8\nquanto mais glorioso\nnão será o ministério do Espírito?\n9\nPois, se o ministério da condenação foi glorioso,\nmuito mais glorioso há de ser o ministério\nao serviço da justificação.\n10\nRealmente, em comparação com uma glória tão eminente,\njá não se pode chamar glória\no que então tinha sido glorioso.\n11\nPois, se o que era passageiro foi marcado de glória,\nmuito mais glorioso será o que permanece.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 98(99),5.6.7.8.9 (R. cf. 9c)",
+    "refrao": "",
+    "texto": "R.\nSanto é o Senhor nosso Deus!\n5\nExaltai o Senhor nosso Deus, †\ne prostrai-vos perante seus pés, *\npois é santo o Senhor nosso Deus!\nR.\n6\nEis Moisés e Aarão entre os seus sacerdotes. †\nE também Samuel invocava seu nome, *\ne ele mesmo, o Senhor, os ouvia.\nR.\n7\nDa coluna de nuvem falava com eles. †\nE guardavam a lei e os preceitos divinos, *\nque o Senhor nosso Deus tinha dado.\nR.\n8\nRespondíeis a eles, Senhor nosso Deus, †\nporque éreis um Deus paciente com eles, *\nmas sabíeis punir seu pecado.\nR.\n9\nExaltai o Senhor nosso Deus, †\ne prostrai-vos perante seu monte, *\npois é santo o Senhor nosso Deus!\nR.\nEvangelho - Mt 5,17-19\nAclamação ao Evangelho\nSl 24,4b.5a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFazei-me conhecer vossa estrada,\nvossa verdade me oriente e me conduza!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "5,17-19",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n5,17-19\nNaquele tempo, disse Jesus aos seus discípulos:\n17\n\"Não penseis que vim abolir a Lei e os Profetas.\nNão vim para abolir,\nmas para dar-lhes pleno cumprimento.\n18\nEm verdade, eu vos digo:\nantes que o céu e a terra deixem de existir,\nnem uma só letra ou vírgula serão tiradas da Lei,\nsem que tudo se cumpra.\n19\nPortanto, quem desobedecer a um só destes mandamentos,\npor menor que seja,\ne ensinar os outros a fazerem o mesmo,\nserá considerado o menor no Reino dos Céus.\nPorém, quem os praticar e ensinar\nserá considerado grande no Reino dos Céus\".\nPalavra da Salvação."
+  }
+}

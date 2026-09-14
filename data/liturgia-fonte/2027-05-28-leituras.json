@@ -1,0 +1,23 @@
+{
+  "data": "2027-05-28",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "verde",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Eclo 44,1.9-13</div><div> Sl 149,1-2.3-4.5-6a e 9b (R. 4a)</div><div></div><div> Mc 11,11-26</div></div>",
+  "primeira_leitura": {
+    "referencia": "44,1.9-13",
+    "texto": "1\nVamos fazer o elogio dos homens famosos,\nnossos antepassados através das gerações.\n9\nOutros não deixaram lembrança alguma, '\ndesaparecendo como se não tivessem existido.\nViveram como se não tivessem vivido,\ne seus filhos também, depois deles.\n10\nMas estes, ao contrário,\nsão homens de misericórdia;\nseus gestos de bondade não serão esquecidos.\n11\nEles permanecem com seus descendentes;\nseus próprios netos são a sua melhor herança.\n12\nA descendência deles mantém-se fiel às alianças,\n13\ne, graças a eles, também os seus filhos.\nSua descendência permanece para sempre,\ne sua glória jamais se apagará.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 149,1-2.3-4.5-6a e 9b (R 4a)",
+    "refrao": "",
+    "texto": "R.\nO Senhor ama seu povo de verdade.\nOu:\nAleluia, Aleluia, Aleluia.\n1\nCantai ao Senhor Deus um canto novo, *\ne o seu louvor na assembleia dos fiéis!\n2\nAlegre-se Israel em quem o fez, *\ne Sião se rejubile no seu Rei!\nR.\n3\nCom danças glorifiquem o seu nome, *\ntoquem harpa e tambor em sua honra!\n4\nPorque, de fato, o Senhor ama seu povo *\ne coroa com vitória os seus humildes.\nR.\n5\nExultem os fiéis por sua glória, *\ne cantando se levantem de seus leitos,\n6a\ncom louvores do Senhor em sua boca *\n9b\nEis a glória para todos os seus santos.\nR.\nAclamação ao Evangelho\nCf. Jo 15,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nEu vos escolhi a fim de que deis\nno meio do mundo um fruto que dure."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "11,11-26",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n11,11-26\nTendo sido aclamado pela multidão,\n11\nJesus entrou, no Templo, em Jerusalém,\ne observou tudo.\nMas, como já era tarde,\nsaiu para Betânia com os doze.\n12\nNo dia seguinte, quando saíam de Betânia,\nJesus teve fome.\n13\nDe longe, ele viu uma figueira coberta de folhas\ne foi até lá ver se encontrava algum fruto.\nQuando chegou perto, encontrou somente folhas,\npois não era tempo de figos.\n14\nEntão Jesus disse à figueira:\n\"Que ninguém mais coma de teus frutos\".\nE os discípulos escutaram o que ele disse.\n15\nChegaram a Jerusalém.\nJesus entrou no Templo e começou a expulsar\nos que vendiam e os que compravam no Templo.\nDerrubou as mesas dos cambistas\ne as cadeiras dos vendedores de pombas.\n16\nEle não deixava ninguém carregar nada através do Templo.\n17\nE ensinava o povo, dizendo:\n\"Não está escrito:\n'Minha casa será chamada casa de oração\npara todos os povos'?\nNo entanto, vós fizestes dela uma toca de ladrões\".\n18\nOs sumos sacerdotes e os mestres da Lei ouviram isso\ne começaram a procurar uma maneira de o matar.\nMas tinham medo de Jesus,\nporque a multidão estava maravilhada\ncom o ensinamento dele.\n19\nAo entardecer,\nJesus e os discípulos saíram da cidade.\n20\nNa manhã seguinte, quando passavam,\nJesus e os discípulos viram\nque a figueira tinha secado até a raiz.\n21\nPedro lembrou-se e disse a Jesus:\n\"Olha, Mestre:\na figueira que amaldiçoaste secou\".\n22\nJesus lhes disse:\n\"Tende fé em Deus.\n23\nEm verdade vos digo,\nse alguém disser a esta montanha:\n'Levanta-te e atira-te no mar',\ne não duvidar no seu coração,\nmas acreditar que isso vai acontecer,\nassim acontecerá.\n24\nPor isso vos digo,\ntudo o que pedirdes na oração,\nacreditai que já o recebestes, e assim será.\n25\nQuando estiverdes rezando,\nperdoai tudo o que tiverdes contra alguém,\npara que vosso Pai que está nos céus\ntambém perdoe os vossos pecados\".\n[26]\nPalavra da Salvação."
+  }
+}

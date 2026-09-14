@@ -1,0 +1,23 @@
+{
+  "data": "2027-10-05",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Jn 3,1-10</div><div> Sl 129(130),1-2.3-4ab.7-8 (R. 3)</div><div></div><div> Lc 10,38-42</div></div>",
+  "primeira_leitura": {
+    "referencia": "3,1-10",
+    "texto": "1\nA palavra do Senhor foi dirigida a Jonas,\npela segunda vez:\n2\n\"Levanta-te\ne põe-te a caminho da grande cidade de Nínive\ne anuncia-lhe a mensagem que eu te vou confiar\".\n3\nJonas pôs-se a caminho de Nínive,\nconforme a ordem do Senhor.\nOra, Nínive era uma cidade muito grande;\neram necessários três dias para ser atravessada.\n4\nJonas entrou na cidade,\npercorrendo o caminho de um dia;\npregava ao povo, dizendo:\n\"Ainda quarenta dias,\ne Nínive será destruída\".\n5\nOs ninivitas acreditaram em Deus;\naceitaram fazer jejum, e vestiram sacos,\ndesde o superior ao inferior.\n6\nA pregação chegara aos ouvidos do rei de Nínive;\nele levantou-se do trono\ne pôs de lado o manto real,\nvestiu-se de saco\ne sentou-se em cima de cinza.\n7\nEm seguida, fez proclamar, em Nínive,\ncomo decreto do rei e dos príncipes:\n\"Homens e animais bovinos e ovinos\nnão provarão nada!\nNão comerão e não beberão água.\n8\nHomens e animais se cobrirão de sacos,\ne os homens rezarão a Deus com força;\ncada um deve afastar-se do mau caminho\ne de suas práticas perversas.\n9\nDeus talvez volte atrás,\npara perdoar-nos e aplacar sua ira,\ne assim não venhamos a perecer\".\n10\nVendo Deus as suas obras de conversão\ne que os ninivitas se afastavam do mau caminho,\ncompadeceu-se e suspendeu o mal,\nque tinha ameaçado fazer-lhes,\ne não o fez.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 129(130),1-2.3-4ab.7-8 (R. 3)",
+    "refrao": "",
+    "texto": "R.\nSe levardes em conta nossas faltas,\nquem haverá de subsistir?\n1\nDas profundezas eu clamo a vós, Senhor, *\n2\nescutai a minha voz!\nVossos ouvidos estejam bem atentos *\nao clamor da minha prece!\nR.\n3\nSe levardes em conta nossas faltas, *\nquem haverá de subsistir?\n4a\nMas em vós se encontra o perdão, *\nb\neu vos temo e em vós espero.\nR.\n7\nEspere Israel pelo Senhor,*\nmais que o vigia pela aurora!\nPois no Senhor se encontra toda graça *\ne copiosa redenção.\n8\nEle vem libertar a Israel*\nde toda a sua culpa.\nR.\nEvangelho - Lc 10,38-4\nAclamação ao Evangelho\nLc 11,28\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFeliz quem ouve e observa a palavra de Deus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,38-42",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Lucas\n10,38-42\nNaquele tempo,\n38\nJesus entrou num povoado,\ne certa mulher, de nome Marta,\nrecebeu-o em sua casa.\n39\nSua irmã, chamada Maria,\nsentou-se aos pés do Senhor,\ne escutava a sua palavra.\n40\nMarta, porém, estava ocupada com muitos afazeres.\nEla aproximou-se e disse:\n\"Senhor, não te importas que minha irmã\nme deixe sozinha, com todo o serviço?\nManda que ela me venha ajudar!\"\n41\nO Senhor, porém, lhe respondeu:\n\"Marta, Marta! Tu te preocupas\ne andas agitada por muitas coisas.\n42\nPorém, uma só coisa é necessária.\nMaria escolheu a melhor parte\ne esta não lhe será tirada\".\nPalavra da Salvação."
+  }
+}

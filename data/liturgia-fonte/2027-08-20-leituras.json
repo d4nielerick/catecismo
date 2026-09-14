@@ -1,0 +1,23 @@
+{
+  "data": "2027-08-20",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Rt 1,1.3-6.14b-16.22</div><div> Sl 145(146),5-6.7.8-9a.9bc-10 (R. 2a)</div><div></div><div> Mt 22,34-40</div></div>",
+  "primeira_leitura": {
+    "referencia": "1,1.3-6.14b-16.22",
+    "texto": "1\nNo tempo em que os juízes governavam,\nhouve uma fome no país\ne um homem de Belém de Judá\nfoi morar nos campos de Moab\ncom sua mulher e seus dois filhos.\n3\nEntretanto, morreu Elimelec, marido de Noemi,\ne esta ficou sozinha com seus dois filhos.\n4\nEles casaram-se com mulheres moabitas,\numa das quais se chamava Orfa, a outra, Rute.\nE ali permaneceram uns dez anos.\n5\nDepois morreram também os dois, Maalon e Quelion\ne a mulher ficou só,\nsem os dois filhos e sem o marido.\n6\nEntão ela se dispôs a voltar do campo de Moab\npara a sua pátria com as duas noras,\nporque tinha ouvido dizer\nque o Senhor havia olhado para o seu povo,\ne lhe tinha dado alimentos.\n14b\nOrfa beijou sua sogra e partiu.\nRute, porém, ficou com Noemi.\n15\nEsta disse-lhe:\n\"Olha, tua cunhada voltou para o seu povo\ne para os seus deuses.\nVai com ela\".\n16\nMas Rute respondeu:\n\"Não insistas comigo para que te deixe\ne me afaste de ti.\nPorque para onde fores irei contigo,\nonde pousares, lá pousarei eu também.\nTeu povo será o meu povo,\ne o teu Deus será o meu Deus\".\n22\nAssim Noemi voltou dos campos de Moab,\nacompanhada de sua nora Rute, a moabita.\nRegressaram a Belém,\nquando começava a colheita da cevada.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 145(146),5-6.7.8-9a.9bc-10 (R. 2a)",
+    "refrao": "",
+    "texto": "R.\nBendize, ó minha alma, ao Senhor!\nOu:\nAleluia, Aleluia, Aleluia.\n5\nÉ feliz todo homem que busca †\nseu auxílio no Deus de Jacó, *\ne que põe no Senhor a esperança.\n6\nO Senhor fez o céu e a terra, *\nfez o mar e o que neles existe.\nR.\n7\nFaz justiça aos que são oprimidos; †\nele dá alimento aos famintos, *\né o Senhor quem liberta os cativos.\nR.\n8\nO Senhor abre os olhos aos cegos *\no Senhor faz erguer-se o caído;\no Senhor ama aquele que é justo *\nÉ o Senhor quem protege o estrangeiro.\nR.\n9b\nEle ampara a viúva e o órfão, *\nc\nmas confunde os caminhos dos maus.\n10\nO Senhor reinará para sempre! †\nÓ Sião, o teu Deus reinará *\npara sempre e por todos os séculos!\nR.\nEvangelho - Mt 22,34-4\nAclamação ao Evangelho\nSl 24(25),4b.5a\nR.\nAleluia, Aleluia, Aleluia.\nV.\nFazei-me conhecer vossa estrada,\nvossa verdade me oriente e me conduza!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "22,34-40",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Mateus\n22,34-40\nNaquele tempo,\n34\nos fariseus ouviram dizer que Jesus\ntinha feito calar os saduceus.\nEntão eles se reuniram em grupo,\n35\ne um deles perguntou a Jesus,\npara experimentá-lo:\n36\n\"Mestre, qual é o maior mandamento da Lei?\"\n37\nJesus respondeu:\n\"'Amarás o Senhor teu Deus\nde todo o teu coração, de toda a tua alma,\ne de todo o teu entendimento!'\n38\nEsse é o maior e o primeiro mandamento.\n39\nO segundo é semelhante a esse:\n'Amarás ao teu próximo como a ti mesmo'.\n40\nToda a Lei e os profetas\ndependem desses dois mandamentos\".\nPalavra da Salvação"
+  }
+}
