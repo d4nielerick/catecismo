@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santo Inácio de Antioquia, bispo e mártir",
+  "artigos": [
+    {
+      "titulo": "Inácio de Antioquia",
+      "url": "https://pt.wikipedia.org/wiki/In%C3%A1cio_de_Antioquia",
+      "resumo": [
+        "Inácio de Antioquia (em grego clássico: Ἰγνάτιος Ἀντιοχείας; romaniz.: Ignátios Antiokheías; em siríaco: ܐܺܝܓܢܰܐܛܺܝܳܘܣ ܕܰܐܢܛܺܝܳܘܟܝܳܐ; romaniz.: Ignaṭios də(ʔ)Anṭioḵīyo), também chamado O Teóforo (em grego clássico: ὁ Θεοφόρος; romaniz.: ho Theophóros; \"o Portador de Deus\") e em fontes siríacas ortodoxas apelidado de Nurono (em siríaco: ܢܽܘܪܳܢܳܐ; \"o iluminador\"), foi, segundo o historiador Eusébio de Cesareia, o terceiro bispo da Igreja de Antioquia, entre 68 e 100 ou 107. Inácio foi um dos pais apostólicos, os mais antigos pais da Igreja, que viveram no primeiro século e conheceram os apóstolos, desempenhando um papel crucial na história do cristianismo e na tradição eclesiástica. Antes de sofrer o martírio em Roma, escreveu uma série de cartas destinadas às igrejas locais da Grécia e da Ásia, nas quais critica os movimentos heterodoxos que se espalhavam nas igrejas, ressaltando a unidade e universalidade dos cristãos ortodoxos, esta sintetizada por ele nos termos \"Igreja Católica\" e \"Cristianismo\", sendo Inácio o primeiro a usar ambas as expressões."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Hosios_Loukas_%28south_west_chapel%2C_south_side%29_-_Ignatios.jpg/500px-Hosios_Loukas_%28south_west_chapel%2C_south_side%29_-_Ignatios.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 1025
+      }
+    }
+  ]
+}

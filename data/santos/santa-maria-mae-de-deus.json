@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santa Maria, Mãe de Deus",
+  "artigos": [
+    {
+      "titulo": "Teótoco",
+      "url": "https://pt.wikipedia.org/wiki/Te%C3%B3toco",
+      "resumo": [
+        "Teótoco (em grego: Θεοτόκος; romaniz.: Theotókos) é um dos mais antigos títulos da Virgem Maria, utilizado principalmente pelas Igrejas Católica e Ortodoxa, bem como reconhecido, em graus diversos, por comunidades anglicanas e por algumas denominações protestantes de tradição histórica.",
+        "A palavra compõe-se de dois elementos do grego clássico e bíblico: Θεο- (Theo-) vem de Θεός (Theós), que significa \"Deus\", e em -τόκος (-tokos) que vem de τίκτω (tíktō), que significa \"dar à luz\", \"parir\", \"gerar\". Assim, a tradução literal do termo é “Aquela que dá à luz a Deus”, donde derivam expressões consagradas na tradição cristã como “Mãe de Deus” e “Portadora de Deus”. No uso pastoral e litúrgico, católicos, anglicanos e diversos cristãos ocidentais empregam com maior frequência a expressão Mãe de Deus, enquanto o termo Teótoco permanece especialmente caro à teologia e à liturgia oriental."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Murillo_immaculate_conception.jpg/500px-Murillo_immaculate_conception.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 704
+      }
+    }
+  ]
+}

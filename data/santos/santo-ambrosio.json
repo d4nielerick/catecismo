@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santo Ambrósio",
+  "artigos": [
+    {
+      "titulo": "Ambrósio de Milão",
+      "url": "https://pt.wikipedia.org/wiki/Ambr%C3%B3sio_de_Mil%C3%A3o",
+      "resumo": [
+        "Santo Ambrósio de Milão, nascido Aurélio Ambrósio (em latim: Aurelius Ambrosius; Tréveris, c. 340 – Mediolano, 4 de abril de 397), foi um dos mais eminentes bispos e teólogos da Igreja do século IV, exercendo papel decisivo na defesa da fé católica e na formação espiritual e intelectual da cristandade latina. Alcançou o cargo de prefeito consular da Ligúria e Emília, cuja capital era Mediolano, então centro político do Império Romano do Ocidente. Sua vida tomou rumos inesperados quando, em 374, durante a eleição do novo bispo, foi aclamado pelo povo como pastor da diocese, apesar de ainda ser catecúmeno. Aceitou o chamado, recebeu rapidamente os sacramentos da iniciação cristã e, logo depois, foi ordenado bispo."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9a/AmbroseOfMilan.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 312,
+        "altura": 600
+      }
+    }
+  ]
+}

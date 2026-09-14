@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Vicente de Paulo",
+  "artigos": [
+    {
+      "titulo": "Vicente de Paulo",
+      "url": "https://pt.wikipedia.org/wiki/Vicente_de_Paulo",
+      "resumo": [
+        "Vicente de Paulo, nascido Vincent de Paul ou Vincent Depaul, (Pouy, 24 de abril de 1581 – Paris, 27 de setembro de 1660) foi um sacerdote católico francês, reconhecido como santo pelo Papa Clemente XII em 1737. Foi um dos grandes protagonistas da Reforma Católica na França do século XVII."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Vincent_de_Paul.PNG/500px-Vincent_de_Paul.PNG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 582
+      }
+    }
+  ]
+}

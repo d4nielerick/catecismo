@@ -1,0 +1,30 @@
+{
+  "celebracao": "São Timóteo e São Tito, bispos",
+  "artigos": [
+    {
+      "titulo": "Timóteo de Éfeso",
+      "url": "https://pt.wikipedia.org/wiki/Tim%C3%B3teo_de_%C3%89feso",
+      "resumo": [
+        "Timóteo (em grego: Τιμόθεος - Timótheos, que significa \"honrando a Deus\" ou \"honrado por Deus\") foi um bispo cristão do século I que morreu por volta do ano 80 d.C. O Novo Testamento indica que Timóteo esteve com Paulo de Tarso, seu mentor, durante as viagens missionárias que empreendeu. É considerado o destinatário das Epístolas a Timóteo e consta da lista dos Setenta Discípulos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Rembrandt_Harmensz._van_Rijn_153.jpg/500px-Rembrandt_Harmensz._van_Rijn_153.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 620
+      }
+    },
+    {
+      "titulo": "Tito (bíblico)",
+      "url": "https://pt.wikipedia.org/wiki/Tito_(b%C3%ADblico)",
+      "resumo": [
+        "Tito era um companheiro de Paulo, mencionado em diversas epístolas paulinas. Tito estava com Paulo e Barnabé em Antioquia e os acompanhou no Concílio de Jerusalém, embora seu nome não seja citado nos Atos dos Apóstolos. Ele está listado como um dos Setenta Discípulos.",
+        "Tito Justo - «Então Paulo saiu da sinagoga e foi para a casa de Tício Justo, que era temente a Deus e que morava ao lado da sinagoga.» (Atos 18:7), aqui é mencionado um outro Tito (ou Tício Justo). Este é um romano, temente a Deus (uma espécie de \"convertido\" ao judaísmo), que hospedou Paulo e a Igreja em Corinto, ao menos no seu nascedouro, por ocasião da rejeição à pregação do Apóstolo Paulo na cidade de Corinto."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/da/Saint_Titus_%28Kosovo%2C_14th_c._Pech_Patriarch.%2C_S._Nicholas_church%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 402,
+        "altura": 479
+      }
+    }
+  ]
+}

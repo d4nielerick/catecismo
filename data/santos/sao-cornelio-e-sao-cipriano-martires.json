@@ -1,0 +1,29 @@
+{
+  "celebracao": "São Cornélio e São Cipriano, mártires",
+  "artigos": [
+    {
+      "titulo": "Papa Cornélio",
+      "url": "https://pt.wikipedia.org/wiki/Papa_Corn%C3%A9lio",
+      "resumo": [
+        "Cornélio ou São Cornélio (em latim: Cornelius); (Roma, 180 – Roma, junho de 253) foi o Papa da Igreja Católica de 6 de março de 251 até a data de seu martírio. São Cornélio foi Oapa em um dos momentos mais problemáticos da Igreja, entre duas grandes Perseguições e um Cisma, e mostrou grande capacidade tanto de ser um líder teológico e espiritual, bem como um grande líder político e diplomático. São Cornélio dedicou sua vida ao cristianismo, e é considerado como modelo e inspiração para os futuros Papas."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Pope_Cornelius_%E2%80%93_Santa_Maria_in_Trastevere.jpg/500px-Pope_Cornelius_%E2%80%93_Santa_Maria_in_Trastevere.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 820
+      }
+    },
+    {
+      "titulo": "Cipriano de Cartago",
+      "url": "https://pt.wikipedia.org/wiki/Cipriano_de_Cartago",
+      "resumo": [
+        "São Cipriano de Cartago (nascido Táscio Cecílio Cipriano; em latim: Thascius Caecilius Cyprianus) foi um bispo de Cartago do século III, e santo da Igreja Católica. Considerado um dos Padres latinos, morreu como mártir na perseguição de Valeriano em 258. A principal fonte sobre sua vida é a obra Vida de São Cipriano, escrita por seu discípulo Pôncio de Cartago."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Heiliger_Cyprianus.jpg/500px-Heiliger_Cyprianus.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 1048
+      }
+    }
+  ]
+}

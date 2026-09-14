@@ -1,0 +1,19 @@
+{
+  "celebracao": "São Lucas, evangelista",
+  "artigos": [
+    {
+      "titulo": "Lucas, o Evangelista",
+      "url": "https://pt.wikipedia.org/wiki/Lucas,_o_Evangelista",
+      "resumo": [
+        "São Lucas, o Evangelista (em grego clássico: Λουκᾶς; romaniz.: Loukás), é venerado pela tradição cristã como o autor do Evangelho segundo São Lucas e dos Atos dos Apóstolos, o terceiro e o quinto livros do Novo Testamento, respectivamente.",
+        "Segundo a tradição e o testemunho patrístico, Lucas foi médico de profissão e companheiro de viagem do apóstolo Paulo, que o chama de “o médico amado” (Colossenses 4:14). De origem pagã, provavelmente nascido em Antioquia da Síria, converteu-se ao cristianismo e tornou-se um dos mais fiéis colaboradores de Paulo, acompanhando-o em suas missões apostólicas e permanecendo com ele até o fim de sua vida.",
+        "O Evangelho escrito por ele distingue-se pela sensibilidade e pela ênfase na misericórdia divina, no cuidado com os pobres, na dignidade da mulher e na oração como centro da vida cristã. É também o evangelista que mais fala sobre a infância de Jesus, narrando com detalhes o Anúncio do Anjo a Maria, a Visitação, o Nascimento de Cristo e a apresentação no Templo — passagens que, segundo a tradição, Lucas teria aprendido dos lábios da própria Virgem Maria. Além disso, é a ele atribuída a autoria dos Atos dos Apóstolos, onde descreve com precisão o nascimento e a expansão da Igreja primitiva, a ação do Espírito Santo e a pregação missionária de Pedro e Paulo."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/St_Luke_the_Evangelist.jpg/500px-St_Luke_the_Evangelist.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 488
+      }
+    }
+  ]
+}

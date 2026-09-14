@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santa Teresa de Jesus",
+  "artigos": [
+    {
+      "titulo": "Teresa de Ávila",
+      "url": "https://pt.wikipedia.org/wiki/Teresa_de_%C3%81vila",
+      "resumo": [
+        "Santa Teresa dʼÁvila, O.C.D., conhecida como Santa Teresa de Jesus (Gotarrendura, 28 de março de 1515 – Alba de Tormes, 4 de outubro de 1582), nascida Teresa Sánchez de Cepeda y Ahumada, foi uma freira carmelita, mística e santa católica do século XVI, importante por suas obras sobre a vida contemplativa e espiritual e por sua atuação durante a Contrarreforma. Foi também uma das reformadoras da Ordem Carmelita e é considerada cofundadora da Ordem dos Carmelitas Descalços, juntamente com São João da Cruz.",
+        "Em 1622, quarenta anos depois de sua morte, foi canonizada pelo papa Gregório XV. Em 27 de setembro de 1970, Paulo VI proclamou-a uma Doutora da Igreja e reconheceu seu título de Mater Spiritualium (Mãe da Espiritualidade), em razão da contribuição que a santa proporcionou à espiritualidade católica. Seus livros, inclusive uma autobiografia (\"A Vida de Teresa de Jesus\") e sua obra-prima, \"O Castelo Interior\" (em castelhano: El Castillo Interior), são parte integral da literatura renascentista espanhola e do corpus do misticismo cristão. Suas práticas meditativas estão detalhadas em outra obra importante, o \"Caminho da Perfeição\" (Camino de Perfección)."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Santa_Teresa_en_gloria_%28Novelli%29.jpg/500px-Santa_Teresa_en_gloria_%28Novelli%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 605
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santa Clara, virgem",
+  "artigos": [
+    {
+      "titulo": "Clara de Assis",
+      "url": "https://pt.wikipedia.org/wiki/Clara_de_Assis",
+      "resumo": [
+        "Clara de Assis, em italiano Santa Chiara d'Assisi, nascida Chiara d'Offreducci (Assis, 16 de julho de 1194 – Assis, 11 de agosto de 1253), foi uma religiosa italiana, fundadora da Ordem de Santa Clara (Ordo Sanctae Clarae), conhecida como Ordem das Clarissas, o ramo feminino da família franciscana. Discípula e estreita colaboradora de São Francisco de Assis, destacou-se pela vida de oração, pobreza evangélica e clausura, tornando-se uma das mais influentes figuras do cristianismo medieval.",
+        "Clara foi canonizada pelo Papa Alexandre IV em 1255, apenas dois anos após sua morte. Em 1958, o Papa Pio XII proclamou-a padroeira da televisão e das telecomunicações, em referência a um episódio de sua vida, no qual teria acompanhado milagrosamente a celebração da Missa sem estar fisicamente presente. Sua memória litúrgica é celebrada em 11 de agosto, sendo venerada por diversas tradições cristãs, especialmente pela Igreja Católica."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Simone_Martini_047.jpg/500px-Simone_Martini_047.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 584
+      }
+    }
+  ]
+}

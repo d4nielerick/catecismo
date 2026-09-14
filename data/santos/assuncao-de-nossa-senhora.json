@@ -1,0 +1,18 @@
+{
+  "celebracao": "Assunção de Nossa Senhora",
+  "artigos": [
+    {
+      "titulo": "Assunção de Maria",
+      "url": "https://pt.wikipedia.org/wiki/Assun%C3%A7%C3%A3o_de_Maria",
+      "resumo": [
+        "A Assunção da Virgem Maria — chamada, de modo mais simples, apenas A Assunção — é, segundo a tradição da Igreja Católica Apostólica Romana, da Igreja Ortodoxa, das Igrejas Ortodoxas Orientais e também de alguns setores do Anglicanismo, o mistério pelo qual a Virgem Maria foi elevada ao Céu em corpo e alma ao término de sua vida terrena.",
+        "No catolicismo romano, trata-se de um dogma de fé: Maria, ao concluir o “curso de sua vida terrena”, foi assumida gloriosamente por Deus à vida eterna, sem experimentar a corrupção do túmulo. Essa verdade foi proclamada solenemente em 1º de novembro de 1950 pelo Papa Pio XII, por meio da constituição apostólica Munificentissimus Deus, no exercício da infalibilidade papal."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Peter_Paul_Rubens_-_L%27assomption_de_la_vierge.jpg/500px-Peter_Paul_Rubens_-_L%27assomption_de_la_vierge.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 692
+      }
+    }
+  ]
+}

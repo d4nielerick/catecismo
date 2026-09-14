@@ -1,0 +1,19 @@
+{
+  "celebracao": "Apresentação do Senhor",
+  "artigos": [
+    {
+      "titulo": "Apresentação de Jesus no Templo",
+      "url": "https://pt.wikipedia.org/wiki/Apresenta%C3%A7%C3%A3o_de_Jesus_no_Templo",
+      "resumo": [
+        "A Apresentação de Jesus no Templo, festividade litúrgica celebrada no dia 2 de fevereiro, celebra um episódio da infância de Jesus. É também a data em que se comemora a Festa da Candelária (festa à luz de velas), uma festa de origem pagã e latina comemorada tradicionalmente em alguns países, que depois se tornou uma festa religiosa cristã.[carece de fontes]?",
+        "Na Igreja Ortodoxa e em algumas Igrejas Católicas Orientais,",
+        "ela é uma das doze Grandes Festas, e é por vezes chamada de Hypapante (literalmente \"Encontro\", em grego); outros nomes tradicionais são Dia de Nossa Senhora das Candeias, ou da Candelária, ou da Purificação da Virgem Maria. Na Igreja Católica Apostólica Romana, esta festividade religiosa é uma das mais importantes, sendo realizada entre a Festa da Conversão de São Paulo, no dia 25 de janeiro, e a Festa do Trono de São Pedro, no dia 22 de fevereiro."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Symeon_i_Nikolai_kyrka.jpg/500px-Symeon_i_Nikolai_kyrka.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 571
+      }
+    }
+  ]
+}

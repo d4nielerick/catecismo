@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Bartolomeu, apóstolo",
+  "artigos": [
+    {
+      "titulo": "Bartolomeu, o Apóstolo",
+      "url": "https://pt.wikipedia.org/wiki/Bartolomeu,_o_Ap%C3%B3stolo",
+      "resumo": [
+        "Bartolomeu de Caná (em aramaico: ܒ݁ܰܪ‌ܬ݁ܽܘܠܡܰܝ, Bar-Ṯūlmay; em hebraico: בר-תולמי, Bar-Tôlmay; em grego: Βαρθολομαῖος, romanizado: Bartholomaîos; em latim: Bartholomaeus), popularmente designado como São Bartolomeu e Bartolomeu Apóstolo, foi um dos apóstolos de Jesus. Ele é mencionado nos três Evangelhos Sinópticos, sempre na companhia de Filipe. No Evangelho de João, o apóstolo não é mencionado pelo nome de Bartolomeu. Em seu lugar, aparece o nome Natanael (em hebraico: נְתַנְאֵל, Netan'el; em grego: Ναθαναήλ, Nathanaḗl; em latim: Nathanaēl), o qual é também consistentemente associado a Filipe nas narrativas joaninas.",
+        "Seu nome vem do aramaico, com uma referência patronímica: Bar Talmay - filho de Talmay. Há historiadores que também mantêm uma referência patronímica, mas dá outro significado para o nome: Bar Ptolomeu - Filho de Ptolomeu. Esta última hipótese não é inverossímil, visto que Ptolomeu (suposto pai de Bartolomeu) possuía um prenome grego, e a cultura grega tinha uma grande influência na Judeia da época e em todo território."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/St._Barholomew_icon_in_Saint_Michael_Archangel_church_in_Baku.JPG/500px-St._Barholomew_icon_in_Saint_Michael_Archangel_church_in_Baku.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 700
+      }
+    }
+  ]
+}

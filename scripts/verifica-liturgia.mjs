@@ -11,7 +11,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { buildDia, listarFonte, lerFonte, SAIDA, RE, cabecalho } from './build-liturgia.mjs';
+import { buildDia, listarFonte, lerFonte, indiceDe, SAIDA, RE, cabecalho } from './build-liturgia.mjs';
 
 const semEspaco = s => (s || '').replace(/\s+/g, '');
 const tem = (dia, tipo, ...trechos) => dia.missas
@@ -72,9 +72,31 @@ for (const f of arquivos) {
 const datas = arquivos.map(f => f.slice(0, 10));
 const saidas = fs.readdirSync(SAIDA).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f));
 if (saidas.length !== datas.length) erros.push(`data/liturgia tem ${saidas.length} dias; a fonte tem ${datas.length}`);
-const indice = JSON.parse(fs.readFileSync(path.join(SAIDA, 'indice.json'), 'utf8'));
-if (indice.inicio !== datas[0] || indice.fim !== datas.at(-1) || indice.dias !== datas.length) {
+if (fs.readFileSync(path.join(SAIDA, 'indice.json'), 'utf8') !== JSON.stringify(indiceDe(datas))) {
   erros.push('data/liturgia/indice.json desatualizado (rode node scripts/build-liturgia.mjs)');
+}
+const { marcos } = indiceDe(datas);
+for (const [nome, porAno] of [['1º Domingo do Advento', 1], ['Natal do Senhor', 1], ['Santíssimo Corpo e Sangue de Cristo', 1]]) {
+  const anos = new Set(datas.map(d => d.slice(0, 4))).size;
+  const n = marcos.filter(m => m.nome === nome).length;
+  if (n !== anos * porAno) erros.push(`indice.json: "${nome}" aparece ${n} vez(es) em ${anos} ano(s)`);
+}
+
+// Resumos da Wikipédia (scripts/build-santos.mjs): toda celebração do índice existe no calendário
+// e tem arquivo com texto e link.
+const SANTOS = path.join(SAIDA, '..', 'santos');
+const celebracoes = new Set(saidas.map(f => JSON.parse(fs.readFileSync(path.join(SAIDA, f), 'utf8')).celebracao));
+const santos = JSON.parse(fs.readFileSync(path.join(SANTOS, 'indice.json'), 'utf8'));
+const fonteSantos = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'santos-fonte.json'), 'utf8'));
+if (JSON.stringify(Object.keys(santos)) !== JSON.stringify(Object.keys(fonteSantos))) {
+  erros.push('data/santos/indice.json desatualizado (rode node scripts/build-santos.mjs)');
+}
+for (const [celebracao, s] of Object.entries(santos)) {
+  if (!celebracoes.has(celebracao)) erros.push(`santos: "${celebracao}" não é o nome de nenhum dia da liturgia`);
+  const arq = path.join(SANTOS, `${s}.json`);
+  const ok = fs.existsSync(arq) && JSON.parse(fs.readFileSync(arq, 'utf8')).artigos
+    .every(a => a.resumo.length && /^https:\/\/pt\.wikipedia\.org\//.test(a.url));
+  if (!ok) erros.push(`santos: ${s}.json ausente ou sem resumo/link`);
 }
 
 if (erros.length) {

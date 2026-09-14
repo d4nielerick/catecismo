@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo Irineu, bispo e mártir",
+  "artigos": [
+    {
+      "titulo": "Ireneu de Lyon",
+      "url": "https://pt.wikipedia.org/wiki/Ireneu_de_Lyon",
+      "resumo": [
+        "Ireneu ou Irineu de Lyon ou Lião, em grego Εἰρηναῖος [pacífico] transliterado [Eirenaios], em latim Irenaeus, (c. 130–202) foi um bispo grego, teólogo e escritor que nasceu, segundo se crê, na província romana da Ásia Menor Proconsular — a parte mais ocidental da actual Turquia — provavelmente Esmirna.",
+        "O livro mais famoso de Irineu, Sobre a detecção e refutação da chamada Gnosis, também conhecido como Contra Heresias (Adversus haereses, ca. 180 d.C.) é um ataque minucioso ao gnosticismo, que era então uma séria ameaça à Igreja primitiva e, especialmente, ao sistema proposto pelo gnóstico Valentim. Como um dos primeiros grandes teólogos cristãos, ele enfatizava os elementos da Igreja, especialmente o episcopado, as Escrituras e a tradição. Irineu escreveu que a única forma de os cristãos se manterem unidos era aceitarem humildemente uma autoridade doutrinária dos concílios episcopais."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/San_Ireneo%2C_vitral_%28cropped%29.jpg/500px-San_Ireneo%2C_vitral_%28cropped%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 503
+      }
+    }
+  ]
+}

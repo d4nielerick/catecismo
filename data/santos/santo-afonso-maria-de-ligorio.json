@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo Afonso Maria de Ligório",
+  "artigos": [
+    {
+      "titulo": "Afonso de Ligório",
+      "url": "https://pt.wikipedia.org/wiki/Afonso_de_Lig%C3%B3rio",
+      "resumo": [
+        "Santo Afonso Maria de Ligório, C.Ss.R., nascido Afonso Maria Antônio João Francisco Cosme Damião Miguel Ângelo Gaspar de Ligório (Mariglianella, 27 de setembro de 1696 – Pagani, 1 de agosto de 1787), foi um bispo católico italiano que se destacou como escritor espiritual, filósofo escolástico e teólogo.",
+        "Nascido numa família nobre de Nápoles, Ligório teve uma brilhante carreira em direito antes de ser ordenado padre. Depois disso, fundou uma ordem religiosa, a Congregação do Santíssimo Redentor (chamados \"redentoristas\") dedicada ao trabalho entre os pobres. Em 1762, foi nomeado bispo da Diocese de Sant'Agata de' Goti. Afonso foi um escritor prolífico, publicando nove edições de sua \"Teologia Moral\" ainda em vida, além de outras obras devocionais e ascetas, assim com muitas cartas. Entre suas obras mais famosas estão \"As Glórias de Maria\" e \"O Caminho da Cruz\", esta última utilizada ainda hoje em muitas paróquias durante os serviços religiosos da Quaresma."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/19/St_Alphonsus_Liguori.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 193,
+        "altura": 236
+      }
+    }
+  ]
+}

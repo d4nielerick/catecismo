@@ -1,0 +1,29 @@
+{
+  "celebracao": "São Filipe e São Tiago, apóstolos",
+  "artigos": [
+    {
+      "titulo": "Filipe (apóstolo)",
+      "url": "https://pt.wikipedia.org/wiki/Filipe_(ap%C3%B3stolo)",
+      "resumo": [
+        "Filipe, o Apóstolo (em grego: Φίλιππος, translit.: Phílippos; Betsaida c. 5 - c. 80) é mencionado no Novo Testamento como um dos doze apóstolos de Cristo e mártir. Diz a tradição, através de Eusébio de Cesareia, que era casado, tinha duas filhas e teria realizado muitos milagres, inclusive revivido um defunto em Hierápolis, onde teria sido martirizado por crucificação e apedrejamento segundo o apócrifo Atos de Filipe, livro que também registra a obra missionária do apóstolo em terras da Grécia, Síria e Frígia. Foi constantemente confundido com Filipe, o Evangelista, o diácono que evangelizava Samaria, de acordo com a história relatada nos Atos dos Apóstolos, o que levou as biografias dos dois personagens bíblicos terem sido erroneamente ligadas na criação de lendas."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Rubens_apostel_philippus.jpg/500px-Rubens_apostel_philippus.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 627
+      }
+    },
+    {
+      "titulo": "Santiago Menor",
+      "url": "https://pt.wikipedia.org/wiki/Santiago_Menor",
+      "resumo": [
+        "Santiago Menor ou São Tiago Menor (para distingui-lo de Santiago Maior), é referido pelos católicos romanos no Novo Testamento como um irmão do apóstolo Judas e filho de Maria de Alfeu. Alguns estudiosos e especialistas consideram que Santiago Menor, Tiago, o Justo e Tiago, filho de Alfeu são a mesma pessoa."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/e/eb/El_Greco_-_St._James_the_Less_%28Glens_Falls%29.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 499,
+        "altura": 674
+      }
+    }
+  ]
+}

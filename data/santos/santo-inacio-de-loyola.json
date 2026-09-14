@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo Inácio de Loyola",
+  "artigos": [
+    {
+      "titulo": "Inácio de Loyola",
+      "url": "https://pt.wikipedia.org/wiki/In%C3%A1cio_de_Loyola",
+      "resumo": [
+        "Inácio de Loyola (Loyola, 1491 – Roma, 31 de julho de 1556) foi um soldado e sacerdote espanhol, fundador da Companhia de Jesus, da qual foi o primeiro geral. Nesta ordem, professam-se os votos habituais de pobreza, castidade e obediência, além de um voto especial de obediência ao Papa. A Companhia de Jesus teve um papel importante durante a Contrarreforma.",
+        "O Papa Gregório XV o canonizou em 12 de março de 1622, juntamente com Francisco Xavier, Filipe Néri, Teresa de Ávila e Isidro Labrador. Pio XI o declarou patrono dos exercícios espirituais em 1922. O metodista Jesse Lyman Hurlbut considerou Inácio de Loyola uma das personalidades mais notáveis e influentes do século XVI."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/St_Ignatius_of_Loyola_%281491-1556%29_Founder_of_the_Jesuits.jpg/500px-St_Ignatius_of_Loyola_%281491-1556%29_Founder_of_the_Jesuits.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 790
+      }
+    }
+  ]
+}

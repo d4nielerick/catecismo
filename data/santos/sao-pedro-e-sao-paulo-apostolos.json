@@ -1,0 +1,32 @@
+{
+  "celebracao": "São Pedro e São Paulo, apóstolos",
+  "artigos": [
+    {
+      "titulo": "Pedro (apóstolo)",
+      "url": "https://pt.wikipedia.org/wiki/Pedro_(ap%C3%B3stolo)",
+      "resumo": [
+        "Simão Pedro, São Pedro ou São Pedro Apóstolo (em hebraico: שמעון בר יונה, \"Shimon Bar Yonah\", em grego koiné: Πέτρος, Petros , em copta: Ⲡⲉⲧⲣⲟⲥ, Petros, em latim: Petrus); (Betsaida, 1 a.C., — Roma, c. 29 de junho de 67) foi um dos doze apóstolos de Jesus Cristo, segundo o Novo Testamento e, mais especificamente, os quatro Evangelhos.",
+        "Historiadores e as Igrejas Católica e Ortodoxa consideram Pedro como o primeiro Bispo de Roma e, por isso, o primeiro Papa, e também como o primeiro Bispo e Patriarca da Igreja de Antioquia, tendo sido seu fundador.",
+        "Ele seria, até hoje, segundo o Catolicismo, o primeiro Papa e o detentor do mais longo Pontificado da história: quase 37 anos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Pope-peter_pprubens.jpg/500px-Pope-peter_pprubens.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 632
+      }
+    },
+    {
+      "titulo": "Paulo de Tarso",
+      "url": "https://pt.wikipedia.org/wiki/Paulo_de_Tarso",
+      "resumo": [
+        "Paulo (nascido Saulo de Tarso; c. 5 AD), comumente conhecido como Paulo de Tarso ou São Paulo, foi um missionário judeu e um dos mais influentes escritores, teólogos e pregadores do cristianismo, cujas obras compõem parte significativa do Novo Testamento. A influência que exerceu no pensamento cristão, chamada \"paulinismo\", foi fundamental por causa do seu papel como preeminente apóstolo do Cristianismo durante a propagação inicial do Evangelho pelo Império Romano. Paulo também exerce uma grande influência na filosofia cristã, tendo Agostinho de Hipona e Tomás de Aquino usufruido de seu pensamento.",
+        "Conhecido também como Saulo, se dedicava à perseguição dos primeiros discípulos de Jesus na região de Jerusalém. De acordo com o relato na Bíblia, durante uma viagem entre Jerusalém e Damasco, numa missão para que, encontrando fiéis por lá, \"os levasse presos a Jerusalém\", Saulo teve uma visão de Jesus envolto numa grande luz, ficou cego, mas teve a visão recuperada após três dias por Ananias, que também o batizou. Começou então a pregar o Cristianismo. Juntamente com Simão Pedro e Tiago, o Justo, ele foi um dos mais proeminentes líderes do nascente cristianismo. Era também cidadão romano, o que lhe conferia uma situação legal privilegiada. A questão de sua cidadania romana gera certa curiosidade. Paulo afirma em Atos 22, 28 ser romano \"de nascimento\". Tal declaração parece indicar que o apóstolo herdou essa posição de seu pai."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg/500px-Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 655
+      }
+    }
+  ]
+}

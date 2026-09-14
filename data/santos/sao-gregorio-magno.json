@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Gregório Magno",
+  "artigos": [
+    {
+      "titulo": "Papa Gregório I",
+      "url": "https://pt.wikipedia.org/wiki/Papa_Greg%C3%B3rio_I",
+      "resumo": [
+        "Gregório I; São Gregório I; Gregório, Magno ou Gregório, o Grande (em latim: Gregorius I), nascido Gregório Anício (em latim: Gregorius Anicius); (Roma, 540 - Roma, 12 de março de 604) foi o 64.º Papa da Igreja Católica de 3 de setembro de 590 até a data de sua morte. É conhecido principalmente por suas obras, mais numerosas que as de seus predecessores. Ele é também conhecido como Gregório, o Dialogador na Ortodoxia por causa de seus \"Diálogos\" e é por isso que seu nome aparece em algumas obras listado como \"Gregório Dialogus\". Foi o primeiro Papa a ter sido monge antes do pontificado.",
+        "Gregório é reconhecido como um Doutor da Igreja e um dos Padres latinos. É também venerado como santo por católicos, ortodoxos, anglicanos e alguns luteranos. Foi canonizado assim que morreu, por aclamação popular, como era o costume. O reformador protestante João Calvino admirava Gregório e declarou em seus \"Institutos\" que ele teria sido o \"último bom papa\"."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Gregorius_I.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 126,
+        "altura": 120
+      }
+    }
+  ]
+}

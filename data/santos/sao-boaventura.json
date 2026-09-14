@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Boaventura",
+  "artigos": [
+    {
+      "titulo": "Boaventura",
+      "url": "https://pt.wikipedia.org/wiki/Boaventura",
+      "resumo": [
+        "Boaventura, O.F.M. (em italiano: Bonaventura) (Bagnoregio, c. 1217– Lyon, 15 de julho de 1274), nascido Giovanni di Fidanza, foi um teólogo e filósofo escolástico medieval nascido na Itália no século XIII. Sétimo ministro-geral da Ordem dos Frades Menores, foi também cardeal-bispo de Albano. Boaventura foi canonizado em 14 de abril de 1482 pelo papa Sisto IV e declarado Doutor da Igreja em 1588 pelo papa Sisto V como \"Doutor Seráfico\" (em latim: Doctor Seraphicus). Diversas obras que durante a Idade Média se acreditava ser de Boaventura foram depois atribuídas ao chamado \"Pseudo-Boaventura\"."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Fran%C3%A7ois%2C_Claude_%28dit_Fr%C3%A8re_Luc%29_-_Saint_Bonaventure.jpg/500px-Fran%C3%A7ois%2C_Claude_%28dit_Fr%C3%A8re_Luc%29_-_Saint_Bonaventure.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 437
+      }
+    }
+  ]
+}

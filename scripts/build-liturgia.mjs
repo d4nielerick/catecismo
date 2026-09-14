@@ -475,6 +475,32 @@ export function lerFonte(arquivo) {
   return JSON.parse(fs.readFileSync(path.join(FONTE, arquivo), 'utf8'));
 }
 
+// Datas que a página anuncia ("faltam 76 dias para o Advento", "dia de preceito"). Preceito no
+// Brasil além dos domingos (CNBB, cân. 1246 §2): Natal, Santa Maria Mãe de Deus, Corpus Christi e
+// Imaculada Conceição; Epifania, Ascensão, São Pedro e São Paulo e Assunção vão para o domingo.
+const MARCOS = {
+  '1º Domingo do Advento': { curto: 'o Advento', inicio: true },
+  'Natal do Senhor': { curto: 'o Natal', preceito: true },
+  'Santa Maria, Mãe de Deus': { curto: 'Santa Maria, Mãe de Deus', preceito: true },
+  'Quarta-feira de Cinzas': { curto: 'a Quarta-feira de Cinzas', jejum: true },
+  'Domingo de Ramos e da Paixão do Senhor': { curto: 'a Semana Santa', inicio: true },
+  'Sexta-feira da Paixão do Senhor': { curto: 'a Sexta-feira Santa', jejum: true },
+  'Domingo de Páscoa na Ressurreição do Senhor': { curto: 'a Páscoa' },
+  'Domingo de Pentecostes': { curto: 'Pentecostes' },
+  'Santíssimo Corpo e Sangue de Cristo': { curto: 'Corpus Christi', preceito: true },
+  'Nossa Senhora da Conceição Aparecida': { curto: 'Nossa Senhora Aparecida' },
+  'Imaculada Conceição de Nossa Senhora': { curto: 'a Imaculada Conceição', preceito: true },
+};
+
+export function indiceDe(datas) {
+  const marcos = [];
+  for (const data of datas) {
+    const { celebracao } = diaLiturgico(data);
+    if (MARCOS[celebracao]) marcos.push({ data, nome: celebracao, ...MARCOS[celebracao] });
+  }
+  return { inicio: datas[0], fim: datas.at(-1), dias: datas.length, marcos };
+}
+
 if (process.argv[1] && fileURLToPath(import.meta.url) === fs.realpathSync(process.argv[1])) {
   fs.mkdirSync(SAIDA, { recursive: true });
   for (const f of fs.readdirSync(SAIDA)) if (f.endsWith('.json')) fs.unlinkSync(path.join(SAIDA, f));
@@ -486,6 +512,6 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === fs.realpathSync(proces
     fs.writeFileSync(path.join(SAIDA, `${dia.data}.json`), JSON.stringify(dia));
   }
   const datas = arquivos.map(f => f.slice(0, 10));
-  fs.writeFileSync(path.join(SAIDA, 'indice.json'), JSON.stringify({ inicio: datas[0], fim: datas.at(-1), dias: datas.length }));
+  fs.writeFileSync(path.join(SAIDA, 'indice.json'), JSON.stringify(indiceDe(datas)));
   console.log(`data/liturgia: ${arquivos.length} dias (${datas[0]} a ${datas.at(-1)}), ${perdidas} linha(s) sem destino`);
 }

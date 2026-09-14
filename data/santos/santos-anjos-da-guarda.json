@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santos Anjos da Guarda",
+  "artigos": [
+    {
+      "titulo": "Anjo da guarda",
+      "url": "https://pt.wikipedia.org/wiki/Anjo_da_guarda",
+      "resumo": [
+        "Anjos da guarda são os anjos quem deve proteger cada um dos fiéis em algumas religiões abraâmicas."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Bernhard_Plockhorst_-_Schutzengel.jpg/500px-Bernhard_Plockhorst_-_Schutzengel.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 669
+      }
+    }
+  ]
+}

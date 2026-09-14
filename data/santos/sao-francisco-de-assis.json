@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Francisco de Assis",
+  "artigos": [
+    {
+      "titulo": "Francisco de Assis",
+      "url": "https://pt.wikipedia.org/wiki/Francisco_de_Assis",
+      "resumo": [
+        "São Francisco de Assis (batizado como Giovanni di Pietro di Bernardone; Assis, 1181 ou 1182 — 3 de outubro de 1226), foi um frade católico nascido na atual Itália. Depois de uma juventude irrequieta e mundana, voltou-se para uma vida religiosa de completa pobreza, fundando a ordem mendicante dos Frades Menores, mais conhecidos como Franciscanos, que renovaram o Catolicismo de seu tempo. Com o hábito da pregação itinerante, quando os religiosos de seu tempo costumavam fixar-se em mosteiros, e com sua crença de que o Evangelho devia ser seguido à risca, imitando-se a vida de Cristo, desenvolveu uma profunda identificação com os problemas de seus semelhantes e com a humanidade do próprio Cristo. Sua atitude foi original também quando afirmou a bondade e a maravilha da Criação num tempo em que o mundo era visto como essencialmente mau, quando se dedicou aos mais pobres dos pobres, e quando amou todas as criaturas chamando-as de irmãos. Alguns estudiosos afirmam que sua visão positiva da natureza e do homem, que impregnou a imaginação de toda a sociedade de sua época, foi uma das forças primeiras que levaram à formação da filosofia da Renascença."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Bonaventura_Berlinghieri%2C_San_Francesco_e_storie_della_sua_vita%2C_1235%2C_01b.jpg/500px-Bonaventura_Berlinghieri%2C_San_Francesco_e_storie_della_sua_vita%2C_1235%2C_01b.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 655
+      }
+    }
+  ]
+}

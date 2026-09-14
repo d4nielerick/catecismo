@@ -1,0 +1,18 @@
+{
+  "celebracao": "Sábado Santo",
+  "artigos": [
+    {
+      "titulo": "Sábado de Aleluia",
+      "url": "https://pt.wikipedia.org/wiki/S%C3%A1bado_de_Aleluia",
+      "resumo": [
+        "O Sábado Santo (em latim: Sabbatum Sanctum), também conhecido como Sábado de Aleluia e Véspera da Páscoa, é uma festividade religiosa que recorda o aguardo pela ressurreição de Jesus após sua crucificação no Calvário, conforme o relato do Novo Testamento. É o último dia da Semana Santa, na qual os cristãos se preparam para a celebração da festa da Páscoa. Nele se celebra o dia que o corpo de Jesus Cristo permaneceu sepultado no túmulo.",
+        "Na tradição cristã, especialmente na católica, este é também o dia marcado pela solidão de Virgem Maria, que, permanecendo firme na fé mesmo em meio à dor, é invocada sob o título de Nossa Senhora da Solidão. Essa devoção expressa não apenas o luto materno, mas também a esperança silenciosa e confiante na promessa da ressurreição. Segundo a tradição da Igreja, acredita-se que neste dia Jesus, em sua alma gloriosa, desceu à Mansão dos Mortos\" (o \"sheol\" ou \"hades\"), também chamado de Limbo, Seio de Abraão ou Infernos, resgatando os justos do Antigo Testamento que aguardavam a salvação prometida. Esse mistério, conhecido como a \"descida de Cristo aos infernos\", é professado no Credo dos Apóstolos: \"desceu à mansão dos mortos, ao terceiro dia ressuscitou dos mortos...\""
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Kalvarienbergkapelle_%28Millstatt%29_13.JPG/500px-Kalvarienbergkapelle_%28Millstatt%29_13.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 720
+      }
+    }
+  ]
+}

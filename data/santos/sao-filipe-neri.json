@@ -1,0 +1,19 @@
+{
+  "celebracao": "São Filipe Néri",
+  "artigos": [
+    {
+      "titulo": "Filipe Néri",
+      "url": "https://pt.wikipedia.org/wiki/Filipe_N%C3%A9ri",
+      "resumo": [
+        "Filipe Rômulo Néri (em italiano: Filippo Romolo Neri; Florença, 21 de julho de 1515 – 26 de maio de 1595), comumente conhecido como São Filipe Néri, também conhecido pelos cognomes de «O Apóstolo de Roma» (em latim: Romæ apostolus) e «O Santo da Alegria» (em italiano: Il santo della gioia), foi um padre e santo católico.",
+        "Filho de Francesco e Lucrezia Neri, que faleceu quando Filipe ainda era criança, teve duas irmãs menores, Caterina, Elisabetta, e um irmão que morreu ainda muito pequeno.",
+        "Seu pai, que alternava a profissão liberal com a de notário, tinha grande amizade com os dominicanos, e os frades do Mosteiro de São Marcos seriam os que receberiam Filipe Néri para muitos de seus ensinamentos religiosos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Frari_%28Venice%29_-_Sacristy_-_Saint_Philip_Neri.jpg/500px-Frari_%28Venice%29_-_Sacristy_-_Saint_Philip_Neri.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 616
+      }
+    }
+  ]
+}

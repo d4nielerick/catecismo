@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santa Cecília, virgem e mártir",
+  "artigos": [
+    {
+      "titulo": "Cecília de Roma",
+      "url": "https://pt.wikipedia.org/wiki/Cec%C3%ADlia_de_Roma",
+      "resumo": [
+        "Santa Cecília é uma mártir cristã da Antiguidade, identificada como uma jovem nobre romana que abraçou a fé em Cristo e entregou a própria vida por fidelidade ao Evangelho. Venerada em 22 de novembro, tornou-se universalmente reconhecida como padroeira dos músicos e da música sacra, pois a tradição narra que, nos instantes derradeiros de seu martírio, elevou cânticos de louvor a Deus.",
+        "Os dados históricos sobre sua vida são escassos. Os primeiros relatos hagiográficos datam do século V, na obra conhecida como Paixão de Santa Cecília, que preserva referências valiosas à devoção que já lhe era prestada nos primeiros séculos. Escavações arqueológicas realizadas nas catacumbas e na região do Trastevere contribuíram para confirmar sua existência e a antiguidade de seu culto."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/St_cecilia_guido_reni.jpg/500px-St_cecilia_guido_reni.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 608
+      }
+    }
+  ]
+}

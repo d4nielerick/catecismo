@@ -1,0 +1,19 @@
+{
+  "celebracao": "Santo André Kim Taegon, São Paulo Chong Hasang e companheiros, mártires",
+  "artigos": [
+    {
+      "titulo": "André Kim Taegon",
+      "url": "https://pt.wikipedia.org/wiki/Andr%C3%A9_Kim_Taegon",
+      "resumo": [
+        "André Kim Taegon (Dangjin, 21 de agosto de 1821 — Seul, 16 de setembro de 1846) foi um sacerdote católico coreano, declarado santo pela Igreja Católica. André foi canonizado em 1984, pelo Papa João Paulo II, juntamente com seus companheiros mártires.",
+        "Nascido numa família nobre coreana, aos quinze anos ele foi enviado pelos fiéis coreanos para Macau, onde buscou formação como missionário e padre. Durante os seus estudos de teologia em Macau, frequentou como fiel a Igreja de Santo Antônio.",
+        "Ele era o primeiro sacerdote de etnia coreana e dedicou a sua vida inteira para cristianizar a sua pátria. Foi decapitado em 1846, aos 25 anos de idade, tornando-se o primeiro mártir coreano, junto a mais 102 companheiros católicos, que foram igualmente martirizados na Coreia, Eles foram canonizados por João Paulo II, durante a sua visita à Coreia, no dia 6 de Maio de 1984. A Diocese de Macau o venera na Igreja de Santo Antônio que ele sempre frequentou."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Bust_of_Andrew_Kim_Taegon_outside_Myeongdong_Cathedral.jpg/500px-Bust_of_Andrew_Kim_Taegon_outside_Myeongdong_Cathedral.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 720
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "celebracao": "Bem-aventurada Virgem Maria, Mãe da Igreja",
+  "artigos": [
+    {
+      "titulo": "Mãe da Igreja",
+      "url": "https://pt.wikipedia.org/wiki/M%C3%A3e_da_Igreja",
+      "resumo": [
+        "Mãe da Igreja (latim: Maria, Mater Ecclesiae) é um título, oficialmente dado à Virgem Maria durante o Concílio Vaticano II pelo Papa Paulo VI. O título foi utilizado pela primeira vez por Santo Ambrósio de Milão (338 - 397) e redescoberto por Hugo Rahner, um jesuíta irmão de Karl Rahner.",
+        "Maria é vista como mãe da Igreja e de todos os seus membros, ou seja, todos os cristãos, pois os cristãos na Bíblia são parte do corpo de Cristo, a Igreja. Eles, portanto, compartilham com Cristo a paternidade de Deus e também a maternidade de Maria. Mais uma vez, no Novo Testamento, (João 19:26–27) o apóstolo João diz que Jesus na cruz é filho de Maria. O Catecismo da Igreja Católica afirma:"
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Murillo_immaculate_conception.jpg/500px-Murillo_immaculate_conception.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 704
+      }
+    }
+  ]
+}

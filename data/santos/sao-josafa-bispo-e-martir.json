@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Josafá, bispo e mártir",
+  "artigos": [
+    {
+      "titulo": "Josafá Kuntsevytch",
+      "url": "https://pt.wikipedia.org/wiki/Josaf%C3%A1_Kuntsevytch",
+      "resumo": [
+        "Josafá Kuncewicz, O.S.B.M. (em polonês/polaco: Jozafat Kuncewicz, em lituano: Juozapatas Kuncevičius, em ucraniano: Йосафат Кунцевич, Josafat Kuntsevych; Volodimíria, c. 1580 – Vitebsk, 12 de novembro de 1623), foi um monge basiliano e arcebispo de Polotsk, pertencente à Igreja Católica de rito bizantino (Igreja Rutena). É venerado pela Igreja Católica como santo e mártir da unidade da Igreja.",
+        "No contexto da União de Brest (1596), pela qual parte significativa da Igreja Rutena aceitou a comunhão com Roma, reconhecendo a autoridade do Papa sem abandonar o rito bizantino, Josafá destacou-se como um ardoroso defensor da unidade católica. Em 1618, foi nomeado arcebispo de Polotsk, onde trabalhou pela reconciliação entre católicos e ortodoxos, enfrentando, porém, forte resistência e hostilidade."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/%D0%A1%D0%B2_%D0%99%D0%BE%D1%81%D0%B0%D1%84%D0%B0%D1%82.JPG/500px-%D0%A1%D0%B2_%D0%99%D0%BE%D1%81%D0%B0%D1%84%D0%B0%D1%82.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 360
+      }
+    }
+  ]
+}

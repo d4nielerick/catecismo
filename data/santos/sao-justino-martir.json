@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Justino, mártir",
+  "artigos": [
+    {
+      "titulo": "Justino",
+      "url": "https://pt.wikipedia.org/wiki/Justino",
+      "resumo": [
+        "Flávio Justino (em latim: Flavius Iustinus; 100–165), também conhecido como Justino Mártir (em latim: Iustinus Martir) ou Justino de Nablus, foi um teólogo romano do século II, mártir e santo da Igreja Cristã. Foi um dos primeiros apologistas gregos a escrever em defesa do Cristianismo."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Justin_Martyr.jpg/500px-Justin_Martyr.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 580
+      }
+    }
+  ]
+}

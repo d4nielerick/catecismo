@@ -1,0 +1,18 @@
+{
+  "celebracao": "Natividade de Nossa Senhora",
+  "artigos": [
+    {
+      "titulo": "Natividade de Nossa Senhora",
+      "url": "https://pt.wikipedia.org/wiki/Natividade_de_Nossa_Senhora",
+      "resumo": [
+        "A Natividade da Bem-Aventurada Virgem Maria — também chamada Natividade de Nossa Senhora — é uma festa litúrgica celebrada em 8 de setembro pela Igreja Católica e pela Comunhão Anglicana, nove meses após a solenidade da Imaculada Conceição (8 de dezembro). A data é igualmente observada pelos cristãos sírios em 8 de setembro e pelos coptas em 1º de Bashans (9 de maio). Na Igreja Ortodoxa, a festa da Teótoco é uma das doze grandes solenidades do ano litúrgico, sendo comemorada em 8 de setembro segundo o calendário gregoriano e em 21 de setembro para as comunidades que seguem o calendário juliano.",
+        "A origem da celebração remonta a Jerusalém, no século V, vinculada à dedicação da Basílica Sanctae Mariae ubi nata est, atualmente conhecida como Basílica de Santa Ana, erguida no local onde, segundo a tradição, nasceu a Virgem Maria. Já no século VII, a festa era celebrada tanto nas Igrejas bizantinas como em Roma, consolidando-se posteriormente no calendário romano-tridentino na data de 8 de setembro, onde permanece até hoje."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Murillo_immaculate_conception.jpg/500px-Murillo_immaculate_conception.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 704
+      }
+    }
+  ]
+}

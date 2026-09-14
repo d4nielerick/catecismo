@@ -1,0 +1,31 @@
+{
+  "celebracao": "São Basílio Magno e São Gregório Nazianzeno",
+  "artigos": [
+    {
+      "titulo": "Basílio de Cesareia",
+      "url": "https://pt.wikipedia.org/wiki/Bas%C3%ADlio_de_Cesareia",
+      "resumo": [
+        "Basílio de Cesareia, também chamado São Basílio Magno ou Basílio, o Grande (em grego: Ἅγιος Βασίλειος ὁ Μέγας), foi o bispo de Cesareia, na Capadócia (atualmente a cidade de Kayseri, na Turquia), e um dos mais influentes teólogos a apoiar o Credo de Niceia. Foi também adversário das heresias que surgiram nos primeiros anos do cristianismo como religião oficial do Império Romano, lutando principalmente contra o arianismo e os seguidores de Apolinário de Laodiceia. Sua habilidade em balancear suas convicções teológicas com suas conexões políticas fez de Basílio um poderoso advogado da posição nicena.",
+        "Além de sua obra como teólogo, Basílio ficou conhecido por seu cuidado com os pobres e necessitados. Ele estabeleceu padrões para a vida monástica com foco na comunidade, na oração e no trabalho manual. Juntamente com São Pacômio, é lembrando como pai do monasticismo comunal no cristianismo oriental."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/92/Basil-the-Great.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 305,
+        "altura": 450
+      }
+    },
+    {
+      "titulo": "Gregório de Nazianzo",
+      "url": "https://pt.wikipedia.org/wiki/Greg%C3%B3rio_de_Nazianzo",
+      "resumo": [
+        "Gregório de Nazianzo ou Gregório Nazianzeno (perto de Arianzo, Capadócia, 329 – Arianzo, Capadócia, 389) foi um Patriarca de Constantinopla, teólogo e escritor cristão. Conhecido também por Gregório Teólogo ou Gregório, o Teólogo, é amplamente considerado como o mais talentoso retórico da era patrística. Como orador treinado nos escritos chamados \"clássicos\" (greco-romanos) e filósofo, infundiu o helenismo na igreja antiga.. Era filho de Gregório de Nazianzo, o Velho.",
+        "Gregório teve impacto significativo na formação da teologia trinitária tanto entre os teólogos latinos como entre os gregos, e é lembrado como o \"teólogo trinitário\". Muito de sua obra teológica continua influenciando os teólogos modernos, especialmente no que diz respeito à relação entre as três pessoas da Trindade. É um dos Padres da Igreja que, juntamente com os irmãos Basílio Magno e Gregório de Níssa, são denominados Padres Capadócios."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Icon_02036_Svyatiteli_Ioann_Zlatoust_i_Grigorij_Bogoslov._Ikona_XVIII_v._Rossiya.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 369,
+        "altura": 424
+      }
+    }
+  ]
+}

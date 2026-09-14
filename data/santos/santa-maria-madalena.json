@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santa Maria Madalena",
+  "artigos": [
+    {
+      "titulo": "Maria Madalena",
+      "url": "https://pt.wikipedia.org/wiki/Maria_Madalena",
+      "resumo": [
+        "Maria de Magdala, mais conhecida como Maria Madalena, ou somente Madalena (em hebraico: מִרְיָם הַמַּגְדָּלִית; em grego: Μαρία Μαγδαληνή; em latim: Maria Magdalena) foi uma discípula de Jesus Cristo que ocupa lugar de grande destaque nos Evangelhos canônicos. Segundo o testemunho concorde dos quatro evangelistas, ela seguiu Jesus durante o seu ministério público, esteve presente em momentos centrais da sua Paixão e foi testemunha direta da Crucificação, do sepultamento e da Ressurreição. O epíteto “Madalena” é geralmente entendido como um topônimo, indicando sua origem na cidade de Magdala, uma vila de pescadores situada na costa ocidental do mar da Galileia, na Judeia romana."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/TINTORETTO_-_Magdalena_penitente_%28Musei_Capitolini%2C_Roma%2C_1598-1602%29_-_copia.jpg/500px-TINTORETTO_-_Magdalena_penitente_%28Musei_Capitolini%2C_Roma%2C_1598-1602%29_-_copia.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 593
+      }
+    }
+  ]
+}

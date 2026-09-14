@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santa Catarina de Sena",
+  "artigos": [
+    {
+      "titulo": "Catarina de Siena",
+      "url": "https://pt.wikipedia.org/wiki/Catarina_de_Siena",
+      "resumo": [
+        "Caterina di Jacopo di Benincasa (Siena, 25 de março de 1347 – Roma, 29 de abril de 1380), conhecida como Santa Catarina de Siena ou Santa Catarina de Sena, foi uma terceira da Ordem dos Pregadores (dominicanos), filósofa escolástica e teóloga do século XIV. Lutou arduamente para trazer o papado de Gregório XI, pois os Papas estavam residindo em Avinhão desde o reinado de Clemente V. Ela também exortou o Papa Urbano VI a ser mais compreensivo e evitar os conflitos, mas ele não lhe ouviu. Devido a isso, se ocasionou um cisma com a eleição de Clemente VII. Assim, se originou o \"Cisma do Ocidente\", que se estendeu por quase quarenta anos. Ela também foi fundamental para a restauração da paz entre as cidades-estado italianas."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Dolci%2C_Carlo_-_St._Catherine_of_Siena_-_Google_Art_Project.jpg/500px-Dolci%2C_Carlo_-_St._Catherine_of_Siena_-_Google_Art_Project.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 590
+      }
+    }
+  ]
+}

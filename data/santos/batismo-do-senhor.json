@@ -1,0 +1,18 @@
+{
+  "celebracao": "Batismo do Senhor",
+  "artigos": [
+    {
+      "titulo": "Batismo de Jesus",
+      "url": "https://pt.wikipedia.org/wiki/Batismo_de_Jesus",
+      "resumo": [
+        "O batismo de Jesus marca o início do ministério público de Jesus. Este evento é narrado nos três evangelhos sinóticos (Mateus, Lucas e Marcos), enquanto que em João 1:29–33, que não é uma narrativa direta, João Batista testemunha o episódio. O batismo é um dos seis eventos mais importantes da narrativa evangélica sobre a vida de Jesus, os outros sendo a encarnação do verbo e nascimento, a transfiguração, a crucificação, a ressurreição e a ascensão.",
+        "João Batista pregava o \"batismo pela água\", não de perdão ou contrição, mas para a remissão dos pecados (Lucas 3:3) e se declarava um precursor d'Aquele que iria batizar \"com o Espírito Santo e com o fogo\" (Lucas 3:16). Ao fazê-lo, ele estava preparando o caminho para o \"Senhor\". Jesus veio até o Rio Jordão, onde ele foi batizado por João num lugar que é tradicionalmente conhecido como Qasr al-Yahud (\"Castelo dos Judeus\"). Este evento termina com o céu se abrindo, a descida do Espírito Santo na forma de uma pomba e uma voz divina anunciando: \"Tu és o meu Filho dileto, em ti me agrado.\". A voz combina frases chave do Antigo Testamento: \"Meu Filho\" (o rei da linhagem de David adotado como Filho de Deus em Salmos 2:1 e Salmos 10:1, \"dileto\" (ou \"bem-amado\" - como Isaque em Gênesis 22:) e \"em ti me agrado\" (o servo de Deus em Isaías 42:1)"
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Pietro_Perugino_-_Baptism_of_Christ_-_Sistine_Chapel_-_cat13a.jpg/500px-Pietro_Perugino_-_Baptism_of_Christ_-_Sistine_Chapel_-_cat13a.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 305
+      }
+    }
+  ]
+}

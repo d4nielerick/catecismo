@@ -1,0 +1,18 @@
+{
+  "celebracao": "Sagrada Família de Jesus, Maria e José",
+  "artigos": [
+    {
+      "titulo": "Sagrada Família",
+      "url": "https://pt.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia",
+      "resumo": [
+        "A Sagrada Família é o termo utilizado pela tradição cristã para designar a família de Jesus de Nazaré, composta por Jesus, pela Virgem Maria, sua Mãe, e por São José, seu pai adotivo e guardião legal. Esta família, humilde em suas circunstâncias históricas e sociais, ocupa um lugar central na fé cristã, pois segundo a Bíblia foi no seio dela que o Verbo quis encarnar-se, crescer, ser educado e viver a maior parte de sua vida terrena.",
+        "A Igreja Católica contempla na Sagrada Família o modelo perfeito de vida familiar, fundamentado no amor, na obediência à vontade divina, na pureza, no trabalho honesto e na fidelidade mútua. Em Nazaré, Jesus santificou a vida cotidiana, dignificando o matrimônio, a paternidade, a maternidade e a infância, e elevando a família à condição de verdadeira “igreja doméstica”."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Sagrada_Familia_del_pajarito_%28Murillo%29.jpg/500px-Sagrada_Familia_del_pajarito_%28Murillo%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 360
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "celebracao": "Santa Marta, Santa Maria e São Lázaro",
+  "artigos": [
+    {
+      "titulo": "Marta de Betânia",
+      "url": "https://pt.wikipedia.org/wiki/Marta_de_Bet%C3%A2nia",
+      "resumo": [
+        "Marta é uma personagem bíblica descrita nos Evangelhos. De acordo com João 11:1–45 - João 12:2, ela era irmã de Maria de Betânia e de Lázaro, e residia na aldeia de Betânia. Marta foi uma das mulheres que acompanharam Jesus no calvário e na ressurreição.",
+        "O nome Marta é uma transliteração do grego Μαρθα, que já é uma tradução do aramaico מַרְתָּא, que significa \"mestra\" ou \"a senhora\". A forma aramaica ocorre em uma inscrição datada como sendo do primeiro século, que encontra-se no Museu de Nápoles."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/97/Harold_Copping_Jesus_at_the_home_of_Martha_and_Mary_400.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 400,
+        "altura": 630
+      }
+    },
+    {
+      "titulo": "Maria de Betânia",
+      "url": "https://pt.wikipedia.org/wiki/Maria_de_Bet%C3%A2nia",
+      "resumo": [
+        "Maria de Betânia ou Maria, irmã de Marta é uma personagem do Novo Testamento da Bíblia e que aparece no episódio da vida de Jesus conhecido como Jesus na casa de Marta e Maria, relatado em Lucas 10:38–42. Segundo a narrativa bíblica, ela era irmã de Marta e Lázaro."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project.jpg/500px-Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 555
+      }
+    },
+    {
+      "titulo": "Lázaro",
+      "url": "https://pt.wikipedia.org/wiki/L%C3%A1zaro",
+      "resumo": [
+        "Lázaro de Betânia é uma personagem bíblico descrito no Evangelho segundo João como um amigo que Jesus teria ressuscitado, irmão de Marta e de Maria. Seu nome, provavelmente do grego, corresponde ao hebraico Eleazar (אלעזר), e significa literalmente \"Deus ajudou\".",
+        "De acordo com a tradição católica, Lázaro ressuscitado teria se dirigido à Provença depois da morte de Jesus em companhia de suas irmãs e de outras pessoas. Ele também teria sido o primeiro bispo de Marselha. Esta versão, porém, é contestada por historiadores. Segundo registros históricos mais completos, para escapar da perseguição, Lázaro teria se dirigido para Chipre, se estabelecendo na então cidade de Cítio, hoje Lárnaca, encontrando-se com o apóstolo Paulo, tendo vivido por 30 anos e morrido de velhice. Sua tumba original, feita de mármore, estava localizada no local onde hoje está a igreja de São Lázaro, em Lárnaca. De acordo com os registros históricos, os restos mortais de Lázaro foram levados para Constantinopla por ordem do Imperador Leo VI. Porém, em 1972 foram encontrados remanescentes dos restos mortais de Lázaro escondidos na igreja atual. O local onde estes remanescentes foram encontrados está hoje preservado sob a igreja e está aberto para visita."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Juan_de_Flandes_001.jpg/500px-Juan_de_Flandes_001.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 682
+      }
+    }
+  ]
+}

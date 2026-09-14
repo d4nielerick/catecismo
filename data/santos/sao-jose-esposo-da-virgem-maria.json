@@ -1,0 +1,18 @@
+{
+  "celebracao": "São José, esposo da Virgem Maria",
+  "artigos": [
+    {
+      "titulo": "São José",
+      "url": "https://pt.wikipedia.org/wiki/S%C3%A3o_Jos%C3%A9",
+      "resumo": [
+        "José de Nazaré, conhecido como São José, foi o esposo da Virgem Maria e o pai adotivo e legal de Jesus Cristo, conforme testemunhado pelos Evangelhos segundo Mateus, Lucas e João. Descendente da casa real de David, pertenceu à linhagem messiânica prometida no Antigo Testamento e exerceu um papel essencial no mistério da Encarnação, ao acolher Maria e assumir a missão de proteger e educar o Messias.",
+        "São José é venerado como santo pelas Igrejas Católica, Ortodoxas, Anglicana e Luterana, sendo reconhecido como modelo de justiça, silêncio contemplativo, trabalho honesto e obediência à vontade de Deus. A liturgia da Igreja Católica, bem como de diversas tradições cristãs ocidentais, dedica-lhe o dia 19 de março, sob títulos tradicionais como Esposo da Virgem Maria e Tutor de Nosso Senhor. Além disso, desde 1955, a Igreja celebra também São José Operário em 1.º de maio, apresentando-o como Padroeiro dos Trabalhadores, em razão de sua vida simples e laboriosa como carpinteiro. José também empresta seu nome a muitas igrejas e lugares ao redor do mundo."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Agust%C3%ADn_Rodr%C3%ADguez_-_San_Jos%C3%A9_y_el_Ni%C3%B1o.jpg/500px-Agust%C3%ADn_Rodr%C3%ADguez_-_San_Jos%C3%A9_y_el_Ni%C3%B1o.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 625
+      }
+    }
+  ]
+}

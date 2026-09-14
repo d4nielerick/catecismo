@@ -140,11 +140,12 @@ function renderBloco({ leitura: s, id, alternativas }) {
 }
 
 // ── Cabeçalho ────────────────────────────────────────────────────────────────
-function preencherCabecalho(dt, dia) {
+function preencherCabecalho(dt, dia, santos) {
   const data = new Date(`${dt}T12:00:00`);
   document.getElementById('lp-data').textContent =
     data.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   if (!dia) return;
+  pendurarFita(dia.cor);
 
   if (dia.tempo) {
     document.getElementById('lp-tempo').textContent = dia.tempo;
@@ -156,7 +157,20 @@ function preencherCabecalho(dt, dia) {
 
   if (dia.celebracao) {
     const el = document.getElementById('lp-nome-dia');
-    el.textContent = dia.celebracao;
+    const slug = santos?.[dia.celebracao];
+    if (slug) {
+      const botao = document.createElement('button');
+      botao.type = 'button';
+      botao.className = 'nome-dia-link';
+      botao.title = 'Sobre a celebração (Wikipédia)';
+      // A última palavra vai junto com o ícone, para o ícone nunca ficar sozinho numa linha.
+      const corte = dia.celebracao.lastIndexOf(' ') + 1;
+      botao.innerHTML = `${esc(dia.celebracao.slice(0, corte))}<span class="nome-dia-fim">${esc(dia.celebracao.slice(corte))}${ICONE_SOBRE}</span>`;
+      botao.addEventListener('click', () => abrirSobre(slug, dia.celebracao));
+      el.replaceChildren(botao);
+    } else {
+      el.textContent = dia.celebracao;
+    }
     if (dia.complemento) {
       const c = document.createElement('span');
       c.className = 'complemento';
@@ -193,7 +207,7 @@ function construirNav(blocos) {
     entries.forEach(e => {
       if (e.isIntersecting) links.forEach(a => a.classList.toggle('ativa', a.getAttribute('href') === `#${e.target.id}`));
     });
-  }, { threshold: 0.3 });
+  }, { rootMargin: '-90px 0px -55% 0px' }); // ativa a leitura que passa logo abaixo das abas fixas
   cards.forEach(c => obs.observe(c));
 }
 
@@ -319,11 +333,11 @@ function construirCalendario(dtAtual, hoje, indice) {
 // Cada palavra vira um <span>; a posição real na tela agrupa as palavras em linhas, e cada linha
 // entra quando aparece no viewport (as que entram juntas vêm em cascata, de cima para baixo).
 const SELETOR_ENTRADA = [
-  '.lp-titulo', '.lp-data', '.tempo-wrap', '.nome-dia',
+  '.lp-titulo', '.lp-data', '.tempo-wrap', '.nome-dia', '.lp-avisos',
   '.leitura-label', '.leitura-ref', '.leitura-titulo', '.leitura-texto p',
   '.salmo-refrao', '.salmo-estrofe', '.salmo-r-sep.com-texto', '.acl-verso',
 ].join(', ');
-const BLOCOS_INTEIROS = '.lp-data, .tempo-wrap, .nome-dia, .leitura-label, .leitura-ref';
+const BLOCOS_INTEIROS = '.lp-data, .tempo-wrap, .nome-dia, .lp-avisos, .leitura-label, .leitura-ref';
 const UNIDADES_INLINE = 'sup, .salmo-r-label, .salmo-ou';
 const PASSO_LINHA_MS = 55;
 const LEVA_MAX_MS = 1000;
@@ -420,6 +434,119 @@ function animarEntrada() {
   });
 }
 
+// ── Fita da cor litúrgica ────────────────────────────────────────────────────
+const NOME_COR = { roxo: 'roxa', branco: 'branca', verde: 'verde', vermelho: 'vermelha', rosa: 'rósea', preto: 'preta' };
+
+function pendurarFita(cor) {
+  const fita = document.getElementById('lp-fita');
+  if (!fita || !NOME_COR[cor]) return;
+  fita.dataset.cor = cor;
+  fita.setAttribute('aria-label', `Cor litúrgica do dia: ${NOME_COR[cor]}`);
+  fita.title = `Cor litúrgica: ${NOME_COR[cor]}`;
+  fita.hidden = false;
+}
+
+// ── Avisos do calendário ─────────────────────────────────────────────────────
+// indice.json › marcos (scripts/build-liturgia.mjs): Advento, Natal, Cinzas, dias de preceito…
+// Contados a partir de hoje, não do dia aberto no calendário.
+const AVISOS_MAX = 4;
+const AVISO_MS = 5000;
+const ATENCAO_DIAS = 21;
+
+const diasEntre = (de, ate) => Math.round((Date.parse(`${ate}T00:00:00Z`) - Date.parse(`${de}T00:00:00Z`)) / 86400000);
+const diaCurto = iso => new Date(`${iso}T12:00:00`)
+  .toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'short' }).replace('.', '');
+const semArtigo = s => s.replace(/^(?:o|a) /, '');
+
+// Curto de propósito: cabe numa linha na lateral.
+function textoDoAviso(m, n) {
+  const rotulo = m.preceito ? 'Preceito' : m.jejum ? 'Jejum' : '';
+  if (rotulo && n <= ATENCAO_DIAS) {
+    const quando = n === 0 ? 'hoje' : n === 1 ? 'amanhã' : esc(diaCurto(m.data));
+    return `<span class="lp-aviso-rotulo">${rotulo}</span>${quando} · <strong>${esc(semArtigo(m.curto))}</strong>`;
+  }
+  if (n <= 1) {
+    const dia = n === 0 ? 'Hoje' : 'Amanhã';
+    return m.inicio ? `${dia} começa <strong>${esc(m.curto)}</strong>` : `${dia}: <strong>${esc(semArtigo(m.curto))}</strong>`;
+  }
+  return `Faltam <strong>${n} dias</strong> para ${m.inicio ? 'começar ' : ''}${esc(m.curto)}`;
+}
+
+function montarAvisos(indice, hoje) {
+  const wrap = document.getElementById('lp-avisos');
+  if (!wrap || !indice?.marcos) return;
+
+  const vistos = new Set();
+  const avisos = [];
+  for (const m of indice.marcos) {
+    if (m.data < hoje || vistos.has(m.nome)) continue;
+    vistos.add(m.nome);
+    avisos.push(textoDoAviso(m, diasEntre(hoje, m.data)));
+    if (avisos.length === AVISOS_MAX) break;
+  }
+  if (!avisos.length) return;
+
+  const texto = wrap.querySelector('.lp-aviso-texto');
+  texto.innerHTML = avisos[0];
+  wrap.hidden = false;
+  if (avisos.length < 2) return;
+
+  const reduzido = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let atual = 0;
+  let pausado = false;
+  let troca;
+  function avancar() {
+    atual = (atual + 1) % avisos.length;
+    clearTimeout(troca);
+    if (reduzido) { texto.innerHTML = avisos[atual]; return; }
+    texto.classList.add('saindo');
+    troca = setTimeout(() => {
+      texto.innerHTML = avisos[atual];
+      texto.classList.remove('saindo');
+    }, 250);
+  }
+
+  setInterval(() => { if (!pausado && !document.hidden) avancar(); }, AVISO_MS);
+  texto.addEventListener('click', avancar);
+  wrap.addEventListener('mouseenter', () => { pausado = true; });
+  wrap.addEventListener('mouseleave', () => { pausado = false; });
+}
+
+// ── Sobre a celebração (resumo da Wikipédia) ─────────────────────────────────
+// data/santos/indice.json › { celebração: slug }; o texto vem pronto de scripts/build-santos.mjs.
+const ICONE_SOBRE = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.6"/><path d="M8 7.2v4" stroke-linecap="round"/><circle cx="8" cy="4.9" r="0.25" fill="currentColor"/></svg>';
+
+async function abrirSobre(slug, celebracao) {
+  const dlg = document.getElementById('lp-santo');
+  const corpo = document.getElementById('lp-santo-corpo');
+  if (!dlg?.showModal) return;
+  document.getElementById('lp-santo-titulo').textContent = celebracao;
+  corpo.innerHTML = '<p class="lp-modal-carregando">Carregando…</p>';
+  dlg.showModal();
+
+  const dados = await buscarJson(`/data/santos/${slug}.json`);
+  if (!dados) {
+    corpo.innerHTML = '<p class="lp-modal-carregando">Não foi possível carregar o texto agora.</p>';
+    return;
+  }
+  const varios = dados.artigos.length > 1;
+  corpo.innerHTML = dados.artigos.map(a => `
+    <section class="lp-modal-artigo">
+      ${a.imagem ? `<img class="lp-modal-img" src="${esc(a.imagem.src)}" width="${a.imagem.largura}" height="${a.imagem.altura}" alt="${esc(a.titulo)}" loading="lazy" referrerpolicy="no-referrer">` : ''}
+      ${varios ? `<h3>${esc(a.titulo)}</h3>` : ''}
+      ${a.resumo.map(p => `<p>${esc(p)}</p>`).join('')}
+      <a class="lp-modal-link" href="${esc(a.url)}" target="_blank" rel="noopener">Ler o artigo completo na Wikipédia ↗</a>
+    </section>`).join('');
+}
+
+function configurarModal() {
+  const dlg = document.getElementById('lp-santo');
+  if (!dlg) return;
+  dlg.querySelector('.lp-modal-fechar').addEventListener('click', () => dlg.close());
+  // Clique no fundo escurecido: o alvo é o próprio <dialog>, fora da caixa.
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+}
+
 // ── Início ───────────────────────────────────────────────────────────────────
 const buscarJson = url => fetch(url).then(r => (r.ok ? r.json() : null)).catch(() => null);
 
@@ -428,12 +555,15 @@ async function init() {
   const pedida = new URLSearchParams(location.search).get('data') || '';
   const dt = /^\d{4}-\d{2}-\d{2}$/.test(pedida) ? pedida : hoje;
 
-  const [indice, dia] = await Promise.all([
+  const [indice, dia, santos] = await Promise.all([
     buscarJson('/data/liturgia/indice.json'),
     buscarJson(`/data/liturgia/${dt}.json`),
+    buscarJson('/data/santos/indice.json'),
   ]);
 
-  preencherCabecalho(dt, dia);
+  preencherCabecalho(dt, dia, santos);
+  montarAvisos(indice, hoje);
+  configurarModal();
   construirCalendario(dt, hoje, indice);
 
   const conteudo = document.getElementById('conteudo');

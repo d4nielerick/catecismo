@@ -1,0 +1,18 @@
+{
+  "celebracao": "Dedicação da Basílica do Latrão",
+  "artigos": [
+    {
+      "titulo": "Arquibasílica de São João de Latrão",
+      "url": "https://pt.wikipedia.org/wiki/Arquibas%C3%ADlica_de_S%C3%A3o_Jo%C3%A3o_de_Latr%C3%A3o",
+      "resumo": [
+        "A Arquibasílica do Santíssimo Salvador e dos Santos João Batista e João Evangelista de Latrão (em latim: Archibasilica Sanctissimi Salvatoris et Sanctorum Iohannes Baptista et Evangelista in Laterano), chamada geralmente apenas de São João de Latrão (em italiano: San Giovanni in Laterano) ou Basílica de Latrão, é a catedral da Diocese de Roma e a sé episcopal oficial do Bispo de Roma, o Papa. É sede da paróquia de mesmo nome.",
+        "É a mais antiga e a mais importante entre as seis basílicas papais do mundo e entre as quatro basílicas maiores de Roma (todas elas basílicas papais também), sendo a mais antiga igreja no ocidente e conhecida por abrigar a cátedra do Bispo de Roma. Ela também tem o título de Igreja Mãe ecumênica entre os católicos romanos. O atual Arcipreste é Baldassare Reina, vigário-geral da Diocese de Roma. O Presidente da França é ex officio o \"primeiro e único cônego honorário\" da Arquibasílica, um título ostentado pelos chefes de estado franceses desde a época do rei Henrique IV."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/San_Giovanni_in_Laterano_2021.jpg/500px-San_Giovanni_in_Laterano_2021.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 360
+      }
+    }
+  ]
+}

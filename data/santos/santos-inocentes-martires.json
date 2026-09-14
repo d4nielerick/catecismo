@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santos Inocentes, mártires",
+  "artigos": [
+    {
+      "titulo": "Massacre dos Inocentes",
+      "url": "https://pt.wikipedia.org/wiki/Massacre_dos_Inocentes",
+      "resumo": [
+        "O Massacre dos Inocentes é um episódio de infanticídio pelo rei da Judeia, Herodes, o Grande, que aparece no Evangelho de Mateus (Mateus 2:16–18). O autor, tradicionalmente Mateus, reporta que Herodes teria ordenado a execução de todos os meninos da vila de Belém para evitar perder o trono para o recém-nascido \"Rei dos Judeus\", cujo nascimento fora revelado para ele pelos Reis Magos. O incidente, como outros descritos em Mateus, é descrito como a realização de uma passagem no Antigo Testamento, entendida como uma profecia de Jeremias:",
+        "Os meninos, conhecidos na Igreja como \"Santos Inocentes\", já foram chamados de os primeiros mártires cristãos. Relatos tradicionais falam em mais de dez mil mortos, mas estimativas mais conservadoras estimam algo em torno de poucas dezenas. Os biógrafos modernos de Herodes geralmente negam que o evento sequer tenha ocorrido."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Guido_Reni_-_Massacre_of_the_Innocents_-_Pinacoteca_Nazionale_Bologna.jpg/500px-Guido_Reni_-_Massacre_of_the_Innocents_-_Pinacoteca_Nazionale_Bologna.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 752
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santa Paulina do Coração Agonizante de Jesus",
+  "artigos": [
+    {
+      "titulo": "Paulina do Coração Agonizante de Jesus",
+      "url": "https://pt.wikipedia.org/wiki/Paulina_do_Cora%C3%A7%C3%A3o_Agonizante_de_Jesus",
+      "resumo": [
+        "Paulina do Coração Agonizante de Jesus (Vigolo Vattaro, 16 de dezembro de 1865 — São Paulo, 9 de julho de 1942), foi uma religiosa tirolesa canonizada em 19 de maio de 2002 pelo Papa João Paulo II, recebendo o título de Santa Paulina. Seu nome de batismo era Amabile Lúcia Visintainer."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Santa_Paolina.jpg/500px-Santa_Paolina.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 630
+      }
+    }
+  ]
+}

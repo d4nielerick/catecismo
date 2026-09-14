@@ -1,0 +1,18 @@
+{
+  "celebracao": "Exaltação da Santa Cruz",
+  "artigos": [
+    {
+      "titulo": "Exaltação da Santa Cruz",
+      "url": "https://pt.wikipedia.org/wiki/Exalta%C3%A7%C3%A3o_da_Santa_Cruz",
+      "resumo": [
+        "Esta festa é chamada em Grego de Ὕψωσις τοῦ Τιμίου Σταυροῦ e em Latim de Exaltatio Sanctae Crucis (literalmente, \"Exaltação da Santa Cruz\"). Em algumas partes da Comunhão Anglicana a festa é chamada Santo Dia da Cruz, um nome também utilizado por Luteranos. A celebração é às vezes chamada Festa da Cruz Gloriosa.",
+        "No calendário litúrgico cristão há várias Festas relacionadas à Cruz, todas com a intenção de relembrar a crucificação de Jesus Cristo, evento central da fé, como diz o apóstolo São Paulo: \"nós pregamos a Cristo crucificado, que é para os judeus, na verdade, uma pedra de tropeço, e para os gentios uma estultícia; mas para os que são chamados, tanto judeus como gregos, Cristo, poder de Deus e sabedoria de Deus.\" Enquanto a Sexta-Feira Santa é dedicada à paixão e Crucificação, a Festa da Exaltação da Santa Cruz, em 14 de Setembro, celebra a cruz como instrumento de salvação, fonte de santidade e símbolo revelador da vitória de Jesus sobre o pecado, a morte e o demônio."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Feast_of_the_Cross.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 410,
+        "altura": 470
+      }
+    }
+  ]
+}

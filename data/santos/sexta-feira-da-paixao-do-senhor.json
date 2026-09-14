@@ -1,0 +1,19 @@
+{
+  "celebracao": "Sexta-feira da Paixão do Senhor",
+  "artigos": [
+    {
+      "titulo": "Sexta-feira Santa",
+      "url": "https://pt.wikipedia.org/wiki/Sexta-feira_Santa",
+      "resumo": [
+        "A Sexta-feira Santa, também chamada Sexta-feira da Paixão ou Sexta-feira Maior, é um dia santo cristão de caráter solene que recorda a crucificação e a morte de Jesus Cristo no Calvário (Gólgota). É celebrada durante a Semana Santa e integra o Tríduo Pascal, período central do ano litúrgico cristão, dedicado à memória da Paixão, Morte e Ressurreição de Cristo.",
+        "A data da Sexta-feira Santa varia a cada ano, sendo determinada em função da celebração da Páscoa, segundo os calendários gregoriano e juliano, adotados por diferentes tradições cristãs. Por esse motivo, pode ocorrer em datas distintas no cristianismo ocidental e oriental.",
+        "A data é observada por diversas denominações cristãs, incluindo as tradições católica, ortodoxa, anglicana, luterana, metodista e outras comunidades protestantes. Em muitas dessas tradições, o dia é marcado por práticas como o jejum, a abstinência e a realização de celebrações litúrgicas ou cultos solenes. Entre as devoções mais difundidas estão a meditação da Paixão de Cristo, a celebração das Três Horas da Agonia e a prática da Via Sacra. Não se celebra a Missa na Igreja Católica, sendo realizada, em seu lugar, uma ação litúrgica própria centrada na proclamação da Paixão e na veneração da Cruz."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/500px-Cristo_crucificado.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 716
+      }
+    }
+  ]
+}

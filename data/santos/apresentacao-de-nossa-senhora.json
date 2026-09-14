@@ -1,0 +1,18 @@
+{
+  "celebracao": "Apresentação de Nossa Senhora",
+  "artigos": [
+    {
+      "titulo": "Apresentação de Nossa Senhora",
+      "url": "https://pt.wikipedia.org/wiki/Apresenta%C3%A7%C3%A3o_de_Nossa_Senhora",
+      "resumo": [
+        "A Apresentação da Virgem Maria (no ocidente) ou A Entrada da Mais Sagrada Thetokos no Templo (no oriente) são nomes de uma festa litúrgica celebrada pela Igreja Católica, inclusive as de tradição oriental, e pela Igreja Ortodoxa.",
+        "A festa está associada com um evento que não está relatado no Novo Testamento, mas no apócrifo Evangelho de Tiago. De acordo com o relato, os pais da Virgem Maria, Joaquim e Ana, que não podiam ter filhos, receberam uma mensagem de que teriam um filho. Como agradecimento pela graça da filha que lhes veio, eles a levaram ainda pequena para o Templo em Jerusalém para consagrá-la a Deus. Versões posteriores da história (como no Evangelho de Pseudo-Mateus e no Evangelho da Natividade de Maria) nos contam que Maria foi levada para o Templo com cerca de três anos de idade para cumprir uma promessa. A tradição conta que ela permaneceu ali para se preparar para o seu futuro papel como Mãe de Deus (Teótoco em grego)."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Young_Mary_presented_to_the_Temple_-_Palazzo_Reale_-_Milan_2014.jpg/500px-Young_Mary_presented_to_the_Temple_-_Palazzo_Reale_-_Milan_2014.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 320
+      }
+    }
+  ]
+}

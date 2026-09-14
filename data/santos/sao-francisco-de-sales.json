@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Francisco de Sales",
+  "artigos": [
+    {
+      "titulo": "Francisco de Sales",
+      "url": "https://pt.wikipedia.org/wiki/Francisco_de_Sales",
+      "resumo": [
+        "Francisco de Sales, em francês: François de Sales (Castelo de Sales, 21 de agosto de 1567 ─ Lyon, 28 de dezembro de 1622), foi um sacerdote católico saboiano.",
+        "Foi bispo de Genebra do século XVII e declarado santo e Doutor da Igreja pela Igreja Católica. Ficou famoso por sua profunda fé e por sua abordagem gentil aos conflitos religiosos que inflamaram sua diocese durante a Reforma Protestante. Escreveu também muitas obras sobre direção e formação espiritual, particularmente a \"Introdução à Vida Devota\" e ao \"Tratado do Amor de Deus\"."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Saint_Fran%C3%A7ois_de_Sales.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 470,
+        "altura": 700
+      }
+    }
+  ]
+}

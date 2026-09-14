@@ -1,0 +1,19 @@
+{
+  "celebracao": "São Lourenço, diácono e mártir",
+  "artigos": [
+    {
+      "titulo": "Lourenço de Huesca",
+      "url": "https://pt.wikipedia.org/wiki/Louren%C3%A7o_de_Huesca",
+      "resumo": [
+        "São Lourenço (em espanhol: San Lorenzo; em latim: Sanctus Laurentius; Huesca ou Valência, Hispânia, 225? – Roma, 10 de agosto de 258) foi um mártir cristão.",
+        "O cargo de diácono era de grande responsabilidade, pois consistia no cuidado dos bens da Igreja e a distribuição de esmolas aos pobres. No ano 257, o imperador romano Valeriano decretou a perseguição aos cristãos e, ao ano seguinte, foi detido e decapitado o Papa Sisto II.",
+        "Segundo as tradições, quando o Papa São Sisto se dirigia ao local da execução, São Lourenço ia junto a ele e chorava. \"aonde vai sem seu diácono, meu pai?\", perguntava-lhe. O Pontífice respondeu: \"Não pense que te abandono, meu filho, pois dentro de três dias me seguirá\"."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/The_Martyrdom_of_St._Lawrence_by_Rubens_%281614%29_-_Alte_Pinakothek_-_Munich_-_Germany_2017.jpg/500px-The_Martyrdom_of_St._Lawrence_by_Rubens_%281614%29_-_Alte_Pinakothek_-_Munich_-_Germany_2017.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 680
+      }
+    }
+  ]
+}

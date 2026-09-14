@@ -1,0 +1,18 @@
+{
+  "celebracao": "Nossa Senhora das Dores",
+  "artigos": [
+    {
+      "titulo": "Nossa Senhora das Dores",
+      "url": "https://pt.wikipedia.org/wiki/Nossa_Senhora_das_Dores",
+      "resumo": [
+        "Nossa Senhora das Dores, também chamada de Nossa Senhora da Piedade, Nossa Senhora da Soledade, Nossa Senhora das Angústias, Nossa Senhora da Agonia, Nossa Senhora das Lágrimas, Nossa Senhora das Sete Dores, Nossa Senhora do Calvário, Nossa Senhora do Monte Calvário, Mãe Soberana e Nossa Senhora do Pranto, invocada em latim como Beata Maria Virgo Perdolens ou Mater Dolorosa (sendo, sob essa designação, particularmente cultuada em Portugal), é uma forma pela qual é venerada a Virgem Maria, mãe de Jesus.",
+        "A Sua iconografia é geralmente reconhecida por ter uma ou mais espadas ou punhais, geralmente sete, atravessando Seu Doloroso e Imaculado Coração."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Getaria_-_Iglesia_del_Salvador_26.jpg/500px-Getaria_-_Iglesia_del_Salvador_26.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 640
+      }
+    }
+  ]
+}

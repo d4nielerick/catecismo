@@ -1,0 +1,17 @@
+{
+  "celebracao": "São João da Cruz",
+  "artigos": [
+    {
+      "titulo": "João da Cruz",
+      "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_da_Cruz",
+      "resumo": [
+        "São João da Cruz, O.C.D. (em castelhano: Juan de la Cruz; Fontiveros, 24 de junho de 1542 — Úbeda, 14 de dezembro de 1591), foi um místico, sacerdote e frade carmelita espanhol, venerado como santo e Doutor da Igreja pela Igreja Católica, sendo uma das figuras mais célebres da espiritualidade cristã e da literatura religiosa do Ocidente. Nascido em Fontiveros, na região de Castela a Velha, viveu em pleno século XVI, período marcado por grandes transformações religiosas e culturais, no contexto da Contrarreforma, à qual contribuiu de modo decisivo por meio de sua vida ascética, de sua ação reformadora e de seus escritos de profunda densidade teológica."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Zurbar%C3%A1n_%28atribuido%29-John_of_the_Cross-1656.jpg/500px-Zurbar%C3%A1n_%28atribuido%29-John_of_the_Cross-1656.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 612
+      }
+    }
+  ]
+}

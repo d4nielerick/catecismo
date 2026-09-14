@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santa Teresinha do Menino Jesus",
+  "artigos": [
+    {
+      "titulo": "Teresa de Lisieux",
+      "url": "https://pt.wikipedia.org/wiki/Teresa_de_Lisieux",
+      "resumo": [
+        "Teresa de Lisieux, O.C.D. (Alençon, 2 de janeiro de 1873 – Lisieux, 30 de setembro de 1897), nascida Marie-Françoise-Thérèse Martin e universalmente conhecida como Santa Teresinha do Menino Jesus e da Santa Face, foi uma freira carmelita descalça francesa. É lembrada como um dos mais influentes modelos de santidade para católicos e religiosos em geral, sobretudo por sua espiritualidade marcada pela confiança filial em Deus e por sua \"forma prática e simples de viver e ensinar a vida interior\". Ela, ao lado de São Francisco de Assis, figura entre os santos mais amados e populares de toda a história da Igreja. São Pio X chamou-a de \"a maior entre os santos modernos\", antes mesmo de ser beatificada e canonizada."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Teresa-de-Lisieux.jpg/500px-Teresa-de-Lisieux.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 612
+      }
+    }
+  ]
+}

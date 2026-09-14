@@ -154,6 +154,15 @@ as leituras. Para novo ano: pôr os arquivos crus em `data/liturgia-fonte/` e ro
 `node scripts/build-liturgia.mjs`. Página: `liturgiadiaria/liturgiadiaria.js` (data local do
 aparelho, não UTC).
 
+O `indice.json` também leva `marcos` (Advento, Natal, Cinzas, Páscoa, dias de preceito do Brasil…),
+usados nos avisos "faltam N dias" da página; a tabela fica em `MARCOS` no build.
+
+O nome do dia abre um modal com o resumo da Wikipédia. `data/santos/` é gerado (com rede) por
+`node scripts/build-santos.mjs` a partir de `data/santos-fonte.json` (celebração → títulos de artigo
+da pt.wikipedia, curado à mão). Para trocar ou acrescentar um artigo, edite a fonte e rode o
+script; ele falha em título inexistente ou desambiguação. O CI confere que toda celebração do
+índice existe no calendário e tem resumo e link.
+
 ### Integridade do texto do Catecismo (NÃO editar catecismo.json à mão)
 
 `data/catecismo.json` é gerado deterministicamente e o CI (`.github/workflows/verifica.yml`)
