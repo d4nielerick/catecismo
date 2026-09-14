@@ -15,7 +15,7 @@ import { join } from 'node:path';
 // um cache de execução anterior mudaria o resultado dos testes.
 process.env.TMPDIR = mkdtempSync(join(tmpdir(), 'test-hub-'));
 let falhas = 0;
-const { default: handler, _montar, lerPlano, lerSelecao } = await import('./api/pergunta.js');
+const { default: handler, _montar, lerPlano, lerSelecao, responder } = await import('./api/pergunta.js');
 const req = (body, ip = '1.1.1.1') => new Request('http://x/api/pergunta', {
   method: 'POST', headers: { 'content-type': 'application/json', 'x-forwarded-for': ip }, body: JSON.stringify(body) });
 const ok = (nome, cond) => { if (!cond) falhas++; console.log((cond ? '✓ ' : '✗ ') + nome); };
@@ -63,6 +63,13 @@ ok('frase sem citação e fora do assunto sai', (() => {
   const r = _montar(redacao('A Igreja chama Purgatório a purificação final dos eleitos [§1031]. O campeonato brasileiro tem vinte clubes rivais.', [{ paragrafo: 1031, trecho: LIT_1031 }]), enviados);
   return r.tipo === 'resposta' && !r.texto.includes('campeonato');
 })());
+ok('conclusão sem citação que retoma a pergunta fica', (() => {
+  const texto = 'Segundo o Catecismo, não é lícito pedir a morte de alguém. O ódio voluntário é contra a caridade [§2303].';
+  const apoio = [{ paragrafo: 2303, trecho: 'O ódio voluntário é contra a caridade' }];
+  const com = _montar(redacao(texto, apoio), [2303], null, {}, 'Posso rezar pedindo a morte de alguém?');
+  const sem = _montar(redacao(texto, apoio), [2303], null, {}, '');
+  return com.texto.includes('não é lícito') && !sem.texto.includes('não é lícito');
+})());
 ok('NAO_ENCONTRADO → nao-encontrado', _montar(redacao('NAO_ENCONTRADO'), enviados).tipo === 'nao-encontrado');
 ok('texto solto, sem JSON → nao-encontrado', _montar('O purgatório é a purificação final dos eleitos [§1031].', enviados).tipo === 'nao-encontrado');
 
@@ -104,6 +111,9 @@ planoSimulado = '{"escopo":true,"assunto":"purgatório purificação final","ter
 const r4b = await (await handler(req({ pergunta: 'O que é a purificação final dos eleitos?' }, '5.5.5.6'))).json();
 ok('seletor quebrado → segue com os fundidos e responde', r4b.tipo === 'resposta');
 seletorQuebrado = false;
+const rr = await responder('Existe purificação final dos eleitos no purgatório?', 'teste');
+ok(`seletor acrescenta aos fundidos, não substitui (${rr.enviados.length} enviados)`,
+  rr.selecionados?.[0] === 1031 && rr.enviados[0] === 1031 && rr.enviados.length > rr.selecionados.length && rr.enviados.length <= 16);
 
 // ── nova tentativa em falha passageira
 const fetchNormal = globalThis.fetch;

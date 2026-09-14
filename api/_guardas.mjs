@@ -10,7 +10,8 @@
  *   - apoio a § que não foi enviado → descartado;
  *   - trecho que não está, literalmente, no § → citação inválida;
  *   - frase que só cita §§ sem trecho verificado → sai;
- *   - frase (citada ou não) sem quase nada em comum com os §§ verificados → sai;
+ *   - frase sem quase nada em comum com os §§ verificados (e, se não cita nada,
+ *     com a pergunta) → sai;
  *     com apoio fraco → fica, mas vai para o registro como aviso;
  *   - nenhuma citação verificada de pé → "não encontrei".
  *
@@ -37,11 +38,14 @@ function prefixosDe(numero) {
   return _prefixos.get(numero);
 }
 
-/** Fração dos radicais da frase presentes nos §§ dados (0..1). */
-export function sustentacao(frase, numeros) {
+/**
+ * Fração dos radicais da frase presentes nos §§ dados (0..1). `extra` soma
+ * outro vocabulário aceito — o da pergunta, para a frase de conclusão.
+ */
+export function sustentacao(frase, numeros, extra = '') {
   const rs = [...new Set(termos(frase).map(pref))];
   if (!rs.length) return 0;
-  const doc = new Set();
+  const doc = new Set(termos(extra).map(pref));
   for (const n of numeros) for (const p of prefixosDe(n)) doc.add(p);
   return rs.filter((r) => doc.has(r)).length / rs.length;
 }
@@ -74,7 +78,7 @@ function normalizarCitacoes(texto) {
  * Aplica as travas a { resposta, apoios } do redator.
  * @returns {{ texto: string, citados: {numero:number, trecho:string}[], removidas: object[], avisos: object[] }}
  */
-export function filtrarRedacao({ resposta, apoios }, enviados) {
+export function filtrarRedacao({ resposta, apoios }, enviados, pergunta = '') {
   const permitidos = new Set(enviados);
   const verificados = new Map(); // § → trecho literal
   const removidas = [];
@@ -106,10 +110,13 @@ export function filtrarRedacao({ resposta, apoios }, enviados) {
       continue;
     }
 
-    // Frase citada responde pelos §§ que cita; frase de raciocínio, sem
-    // citação, pelo conjunto dos §§ verificados.
-    const base = validas.length ? validas : [...verificados.keys()];
-    const s = base.length ? sustentacao(corpo, base) : 0;
+    // Frase citada responde pelos §§ que cita. Frase de raciocínio, sem
+    // citação, pelo conjunto dos §§ verificados e pelas palavras da pergunta:
+    // a conclusão retoma a pergunta — "não é lícito pedir a morte de alguém"
+    // saía com sustentação 0 porque "pedir" e "morte" não estão no §2303.
+    const s = validas.length
+      ? sustentacao(corpo, validas)
+      : verificados.size ? sustentacao(corpo, [...verificados.keys()], pergunta) : 0;
     if (s < SUSTENTACAO_MINIMA) {
       removidas.push({ corpo, motivo: `sustentação ${s.toFixed(2)}` });
       continue;

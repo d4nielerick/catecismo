@@ -11,7 +11,8 @@
  *      §§. O texto enviado ao modelo sai do catecismo.json do servidor — o
  *      cliente só manda a pergunta, então o endpoint não é proxy do modelo.
  *   3. Seletor: lê o começo de até 48 candidatos da busca e escolhe até 8 que
- *      tratam do assunto — só números da lista; falhou, seguem os fundidos.
+ *      tratam do assunto — só números da lista. Os escolhidos vão na frente dos
+ *      12 fundidos (até 16); falhou, seguem só os fundidos.
  *   4. Redator: um parágrafo que responde e raciocina, com um trecho literal
  *      de cada § citado.
  *   5. Travas sem IA (_guardas.mjs): frase sem citação, com citação a § não
@@ -109,7 +110,7 @@ Devolva só um objeto JSON com quatro campos:
 
 const SELETOR = `Você escolhe, entre parágrafos do Catecismo da Igreja Católica, os que ajudam a responder uma pergunta. De cada candidato você vê só o começo do texto.
 
-Devolva só um objeto JSON {"paragrafos": [números]}, com até 8 números da lista, do mais ao menos útil. Escolha os que tratam diretamente do assunto da pergunta, inclusive os que trazem a distinção necessária para responder (por exemplo, o que é lícito e o que não é). Não escolha parágrafo que só repete uma palavra da pergunta em outro assunto. Se nenhum serve, devolva {"paragrafos": []}.`;
+Devolva só um objeto JSON {"paragrafos": [números]}, com até 8 números da lista, do mais ao menos útil. Escolha os que tratam diretamente do assunto da pergunta, inclusive os que trazem a distinção necessária para responder (por exemplo, o que é lícito e o que não é). Escolha pelo assunto doutrinal da pergunta: não escolha parágrafo só porque repete uma palavra dela em outro assunto, nem porque trata de pessoas, cargos ou instituições que a pergunta menciona. Se nenhum serve, devolva {"paragrafos": []}.`;
 
 const REDATOR = `Você responde o que o Catecismo da Igreja Católica ensina, usando apenas os parágrafos do Catecismo que recebe.
 
@@ -120,7 +121,7 @@ Devolva só um objeto JSON com dois campos:
 Regras:
 1. Tudo o que a resposta afirma precisa estar nos parágrafos fornecidos. Raciocinar a partir deles é permitido; acrescentar ensinamento, exemplo, fonte ou opinião que não esteja neles, não. Não use parágrafo de outro assunto como justificativa.
 2. Se nenhum parágrafo trata do assunto da pergunta, devolva {"resposta": "NAO_ENCONTRADO", "apoios": []}. Se algum trata, responda, mesmo que não cubra cada detalhe.
-3. Se a pergunta traz algo que os parágrafos não dizem (um nome, uma data, um acontecimento), não confirme nem negue.
+3. Se a pergunta traz algo que os parágrafos não dizem (um nome, uma data, um acontecimento), não confirme nem negue, e não use outros parágrafos para insinuar uma resposta a isso: responda só o assunto doutrinal.
 4. Em pergunta pessoal, não aconselhe como um sacerdote nem julgue a pessoa: diga o que o Catecismo ensina sobre o assunto.
 5. Sem títulos, listas, negrito ou saudação dentro da resposta.`;
 
@@ -189,7 +190,7 @@ export function lerRedacao(bruto) {
  * Monta a resposta final: travas de _guardas.mjs e trechos dos §§ citados.
  * `registro` recebe as frases removidas, para log e simulação.
  */
-function montar(textoModelo, enviados, entendimento = null, registro = {}) {
+function montar(textoModelo, enviados, entendimento = null, registro = {}, pergunta = '') {
   const redacao = lerRedacao(textoModelo);
   // "Não encontrado" vai sem lista: se o modelo leu os §§ e disse que não
   // respondem, chamá-los de "assuntos próximos" afirmaria uma relevância que
@@ -199,7 +200,7 @@ function montar(textoModelo, enviados, entendimento = null, registro = {}) {
     return { tipo: 'nao-encontrado' };
   }
 
-  const { texto, citados, removidas, avisos } = filtrarRedacao(redacao, enviados);
+  const { texto, citados, removidas, avisos } = filtrarRedacao(redacao, enviados, pergunta);
   registro.removidas = removidas;
   registro.avisos = avisos;
   if (!citados.length) return { tipo: 'nao-encontrado' };
@@ -231,6 +232,7 @@ export function lerSelecao(bruto, permitidos) {
 }
 
 const CANDIDATOS_POR_CONSULTA = 10;
+const MAX_ENVIADOS = 16;             // escolhidos pelo seletor + fundidos
 const MAX_CANDIDATOS = 48;
 
 /** Os fundidos primeiro; depois os de cada consulta, intercalados por posição. */
@@ -313,7 +315,11 @@ export async function responder(pergunta, apiKey) {
   const candidatos = candidatosPara(consultas, fundidos);
   const { selecionados, uso: usoSelecao } = await selecionar(pergunta, plano, candidatos, apiKey);
   if (usoSelecao) uso.push(usoSelecao);
-  const enviados = selecionados?.length ? selecionados : fundidos;
+  //    O seletor acrescenta, não substitui: os escolhidos vão na frente dos
+  //    fundidos. Substituindo, ele trocou §2629–2633 (súplica) por §§ sobre a
+  //    intenção nos atos morais na pergunta do futebol, e puxou a
+  //    infalibilidade (§2034–2035) para a pergunta sobre o Papa Francisco.
+  const enviados = [...new Set([...(selecionados || []), ...fundidos])].slice(0, MAX_ENVIADOS);
 
   // 4. Redator + 5. travas.
   const contexto = enviados
@@ -330,7 +336,7 @@ export async function responder(pergunta, apiKey) {
   uso.push(r.uso);
 
   const registro = {};
-  const resposta = montar(r.texto, enviados, plano?.assunto || null, registro);
+  const resposta = montar(r.texto, enviados, plano?.assunto || null, registro, pergunta);
   return { resposta, plano, candidatos, selecionados, enviados, uso, removidas: registro.removidas || [], avisos: registro.avisos || [], bruto: r.texto };
 }
 
