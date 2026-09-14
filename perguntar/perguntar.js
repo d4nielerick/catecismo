@@ -66,7 +66,23 @@ function paragrafoDaResposta(texto) {
 function renderizar(pergunta, dados) {
   resultado.replaceChildren(el('p', 'pq-pergunta-eco', `«${pergunta}»`));
 
+  if (dados.tipo === 'fora-do-escopo') {
+    const sub = el('p', 'pq-vazio-sub', 'Aqui as respostas vêm só do Catecismo. Tente perguntar de outro jeito, ou ');
+    const busca = el('a', null, 'busque um termo no Catecismo');
+    busca.href = '../';
+    sub.append(busca, '.');
+    resultado.append(el('p', 'pq-vazio-titulo', 'Essa pergunta não parece ser sobre a fé ou a vida cristã.'), sub);
+    return;
+  }
+
   if (dados.tipo === 'resposta') {
+    // O que a IA entendeu da pergunta — é por isso que a busca foi feita, e o
+    // leitor pode julgar se o entendimento foi certo antes de ler a resposta.
+    if (dados.entendimento) {
+      const ent = el('p', 'pq-entendimento', 'Busquei por: ');
+      ent.appendChild(el('span', null, dados.entendimento));
+      resultado.appendChild(ent);
+    }
     resultado.append(
       paragrafoDaResposta(dados.texto),
       el('h2', 'pq-rotulo', dados.citados.length > 1 ? 'Parágrafos citados' : 'Parágrafo citado'),

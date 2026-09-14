@@ -9,7 +9,11 @@
  * entre os LIMITE primeiros. `node scripts/avalia-recuperacao.mjs [-v]`
  */
 
-import { recuperar, PARAGRAFOS_POR_PERGUNTA } from '../api/_recuperar.mjs';
+import { recuperarFundido, PARAGRAFOS_POR_PERGUNTA } from '../api/_recuperar.mjs';
+
+// Mede a busca fundida só com a pergunta — o caminho da produção quando o
+// planejador falha, e o piso de qualidade que o plano da IA só pode melhorar.
+const recuperar = (pergunta, limite) => recuperarFundido([{ texto: pergunta }], limite);
 
 const LIMITE = PARAGRAFOS_POR_PERGUNTA; // o mesmo corte que vai ao modelo
 const PISO = 0.85; // fração mínima de casos com acerto

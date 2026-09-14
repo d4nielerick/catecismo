@@ -66,7 +66,7 @@ const SUFIXOS = [
  * O que sobra precisa de 5 letras: com 4, "mentir" virava "ment" (e colidia
  * com "mente") enquanto "mentira" virava "mentir" — os dois nem se achavam.
  */
-function radical(w) {
+export function radical(w) {
   for (const s of SUFIXOS) {
     if (w.endsWith(s) && w.length - s.length >= 5) { w = w.slice(0, -s.length); break; }
   }
@@ -74,12 +74,12 @@ function radical(w) {
 }
 
 /** Palavras de conteúdo, normalizadas e sem as vazias. */
-function palavras(texto) {
+export function palavras(texto) {
   return norm(texto).split(/[^a-z0-9]+/)
     .filter((w) => w.length >= 3 && !VAZIAS.has(w) && !/^\d+$/.test(w));
 }
 
-const termos = (texto) => palavras(texto).map(radical);
+export const termos = (texto) => palavras(texto).map(radical);
 
 // ── Carga e índices (uma vez por processo) ────────────────────────────────────
 
@@ -291,6 +291,51 @@ export function recuperar(pergunta, limite = PARAGRAFOS_POR_PERGUNTA) {
     .sort((x, y) => y[1] - x[1] || x[0] - y[0])
     .slice(0, limite)
     .map(([numero, score]) => ({ numero, score: Math.round(score * 100) / 100 }));
+}
+
+/**
+ * Várias consultas, um ranking: Reciprocal Rank Fusion. Cada consulta vota nos
+ * seus §§ pela posição, 1/(60 + posição), multiplicado pelo peso. É semântica
+ * de "ou": rodar "súplica", "pedido" e "bens convenientes" separados e somar
+ * votos deixa sinônimo ajudar sem virar exigência — juntos numa consulta só, a
+ * coordenação cobraria que o § tivesse todos.
+ * @param {{ texto: string, peso?: number }[]} consultas
+ */
+export function recuperarFundido(consultas, limite = PARAGRAFOS_POR_PERGUNTA) {
+  // K pequeno deixa a curva íngreme. Com o K=60 clássico, o 1º e o 40º votavam
+  // quase igual (0,016 × 0,010) e o bônus de vizinhança abaixo atropelava a
+  // ordem: o §1577, 2º colocado, saía dos 12 enviados.
+  const K = 5;
+  const PROFUNDIDADE = 40;
+  const votos = new Map();
+  for (const { texto, peso = 1 } of consultas) {
+    if (!texto?.trim()) continue;
+    recuperar(texto, PROFUNDIDADE).forEach(({ numero }, i) => {
+      votos.set(numero, (votos.get(numero) || 0) + peso / (K + i + 1));
+    });
+  }
+  // Vizinhança: o Catecismo argumenta em blocos de §§ seguidos. Se §2631 e
+  // §2632 vieram, o §2633 — "qualquer necessidade pode tornar-se objeto de
+  // pedido" — provavelmente completa o raciocínio, mesmo sem repetir as
+  // palavras de nenhuma consulta. O vizinho de ±1 recebe metade do voto e o
+  // de ±2, um quarto — mas só quem tem ao menos dois §§ votados na janela.
+  // Sem essa exigência, vizinho de acerto isolado tirava do corte acertos
+  // precisos como o §1577 (ordenação) e o §1866 (pecados capitais).
+  const b = base();
+  const suavizados = new Map(votos);
+  const candidatos = new Set();
+  for (const n of votos.keys()) for (let d = -2; d <= 2; d++) if (d && b.porNumero.has(n + d)) candidatos.add(n + d);
+  for (const m of candidatos) {
+    const vizinhos = [-2, -1, 1, 2].filter((d) => votos.has(m + d));
+    if (vizinhos.length < 2) continue;
+    const bonus = vizinhos.reduce((a, d) => a + votos.get(m + d) * (Math.abs(d) === 1 ? 0.5 : 0.25), 0);
+    suavizados.set(m, (suavizados.get(m) || 0) + bonus);
+  }
+
+  return [...suavizados]
+    .sort((x, y) => y[1] - x[1] || x[0] - y[0])
+    .slice(0, limite)
+    .map(([numero, v]) => ({ numero, score: Math.round(v * 1e4) / 1e4 }));
 }
 
 /** Texto do § sem os marcadores de nota "(12)" — só gastariam tokens. */
