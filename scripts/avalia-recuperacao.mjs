@@ -9,9 +9,9 @@
  * entre os LIMITE primeiros. `node scripts/avalia-recuperacao.mjs [-v]`
  */
 
-import { recuperar } from '../api/_recuperar.mjs';
+import { recuperar, PARAGRAFOS_POR_PERGUNTA } from '../api/_recuperar.mjs';
 
-const LIMITE = 12;
+const LIMITE = PARAGRAFOS_POR_PERGUNTA; // o mesmo corte que vai ao modelo
 const PISO = 0.85; // fração mínima de casos com acerto
 
 // Faixa contínua de §§ — o gabarito é o trecho do Catecismo que trata do
@@ -37,7 +37,7 @@ const CASOS = [
   ['Qual a posição sobre o aborto?',                       faixa(2270, 2275)],
   ['O que é a graça de Deus?',                             faixa(1996, 2005)],
   ['Mulher pode ser padre?',                               faixa(1577, 1578)],
-  ['O que é a comunhão dos santos?',                       faixa(946, 948)],
+  ['O que é a comunhão dos santos?',                       faixa(946, 962)], // seção inteira
   ['Qual o papel do padrinho no batismo?',                 [1255]],
 ];
 
@@ -71,7 +71,10 @@ function avaliar(titulo, casos) {
     const ok = posicoes.length > 0;
     if (ok) { acertos++; somaRank += Math.min(...posicoes) + 1; }
 
-    const marca = ok ? '✓' : '✗';
+    // ⚠: acertou, mas fora da primeira metade do corte — um ajuste pequeno
+    // o tira do que vai ao modelo (o §1577 passava aqui em 12º e caía na produção).
+    const noLimite = ok && Math.min(...posicoes) + 1 > LIMITE / 2;
+    const marca = !ok ? '✗' : noLimite ? '⚠' : '✓';
     const onde = ok ? `#${Math.min(...posicoes) + 1}, ${posicoes.length}/${esperados.length}` : 'fora';
     console.log(`${marca} ${pergunta.padEnd(54)} ${onde}`);
     if (verbose || !ok) console.log(`    veio: ${achados.join(' ')}`);

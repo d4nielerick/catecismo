@@ -18,10 +18,9 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { recuperar, textoDoParagrafo } from './_recuperar.mjs';
+import { recuperar, textoDoParagrafo, PARAGRAFOS_POR_PERGUNTA } from './_recuperar.mjs';
 
 const MODELO = 'grok-4-1-fast-non-reasoning';
-const PARAGRAFOS_ENVIADOS = 10;
 const MAX_CHARS_PARAGRAFO = 1200;
 
 const LIMITE_POR_IP = 6;                  // perguntas novas por janela
@@ -78,10 +77,11 @@ const SISTEMA = `Você ajuda a encontrar o que o Catecismo da Igreja Católica e
 
 Regras:
 1. Use SOMENTE os parágrafos fornecidos. Nada de conhecimento próprio, outras fontes, opinião ou exemplos inventados.
-2. Se os parágrafos não respondem à pergunta, responda apenas: NAO_ENCONTRADO
-3. Se respondem, escreva de 2 a 4 frases curtas em português do Brasil dizendo o que o Catecismo ensina, próximo das palavras do texto. Termine cada frase com o parágrafo que a sustenta, assim: [§1385].
-4. Não aconselhe, não julgue a situação de quem pergunta e não faça papel de sacerdote. Em pergunta pessoal, diga só o que o Catecismo ensina.
-5. Sem títulos, listas, negrito ou saudação.`;
+2. Responda apenas NAO_ENCONTRADO quando nenhum parágrafo tratar do assunto da pergunta. Se algum trata, responda, mesmo que não cubra cada detalhe.
+3. Escreva de 2 a 4 frases curtas em português do Brasil dizendo o que o Catecismo ensina, próximo das palavras do texto. Termine cada frase com o parágrafo que a sustenta, assim: [§1385].
+4. Se a pergunta traz algo que os parágrafos não dizem (um nome, uma data, um acontecimento), não confirme nem negue: diga só o que o Catecismo ensina sobre o assunto.
+5. Em pergunta pessoal ("o que eu faço?"), não aconselhe, não julgue e não faça papel de sacerdote: diga o que o Catecismo ensina sobre o assunto dela.
+6. Sem títulos, listas, negrito ou saudação.`;
 
 // ── Utilitários ───────────────────────────────────────────────────────────────
 
@@ -117,10 +117,11 @@ function montar(textoModelo, enviados) {
     .slice(0, 5)
     .map((n) => ({ numero: n, trecho: trechoDe(textoDoParagrafo(n)) }));
 
+  // "Não encontrado" vai sem lista: se o modelo leu os §§ e disse que não
+  // respondem, chamá-los de "assuntos próximos" afirmaria uma relevância que
+  // ninguém verificou — na pergunta sobre futebol vinham §158, §127, §2275.
   const bruto = (textoModelo || '').trim();
-  if (!bruto || /NAO_ENCONTRADO/.test(bruto)) {
-    return { tipo: 'nao-encontrado', relacionados: relacionados([]) };
-  }
+  if (!bruto || /NAO_ENCONTRADO/.test(bruto)) return { tipo: 'nao-encontrado' };
 
   const citados = [];
   const texto = bruto
@@ -134,7 +135,7 @@ function montar(textoModelo, enviados) {
     .replace(/[ \t]+([.,;])/g, '$1')
     .trim();
 
-  if (!citados.length) return { tipo: 'nao-encontrado', relacionados: relacionados([]) };
+  if (!citados.length) return { tipo: 'nao-encontrado' };
 
   return {
     tipo: 'resposta',
@@ -164,9 +165,9 @@ export default async function handler(req) {
   const chave = chaveDe(pergunta);
   if (estado.cache[chave]) return json({ ...estado.cache[chave], cache: true });
 
-  const enviados = recuperar(pergunta, PARAGRAFOS_ENVIADOS).map((r) => r.numero);
+  const enviados = recuperar(pergunta, PARAGRAFOS_POR_PERGUNTA).map((r) => r.numero);
   if (!enviados.length) {
-    const vazio = { tipo: 'nao-encontrado', relacionados: [] };
+    const vazio = { tipo: 'nao-encontrado' };
     guardarNoCache(chave, vazio);
     return json(vazio);
   }
@@ -201,6 +202,8 @@ export default async function handler(req) {
         max_tokens: 350,
         temperature: 0.2,
       }),
+      // Sem prazo, uma xAI travada deixou o leitor 5 minutos em "Procurando…".
+      signal: AbortSignal.timeout(20000),
     });
 
     if (!resp.ok) {

@@ -9,6 +9,9 @@
  *   2. o índice analítico — curadoria humana que já liga temas a §§;
  *   3. o léxico de conceitos — ponte entre palavra comum e verbete.
  *
+ * Por cima, um fator de coordenação: numa pergunta com mais de um conceito,
+ * o § que cobre todos vence o que repete um só.
+ *
  * Só números de § saem daqui. O texto enviado ao modelo é sempre lido do
  * catecismo.json no servidor, nunca vindo do cliente: assim o endpoint não
  * serve de proxy genérico para o modelo.
@@ -21,13 +24,19 @@ import { readFileSync } from 'node:fs';
 
 const ler = (rel) => JSON.parse(readFileSync(new URL(rel, import.meta.url), 'utf8'));
 
+/** Quantos §§ vão ao modelo. O avaliador mede exatamente este corte — se
+ *  medisse outro, o teste passaria com um § que a produção nunca envia. */
+export const PARAGRAFOS_POR_PERGUNTA = 12;
+
 // ── Normalização ──────────────────────────────────────────────────────────────
 
 const norm = (s = '') =>
   s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 // Palavras de pergunta e as que aparecem em quase todo §. "igreja" é conteúdo,
-// mas casa com o tema "Igreja" do índice e afoga qualquer outra pergunta.
+// mas casa com o tema "Igreja" do índice e afoga qualquer outra pergunta. As de
+// primeira pessoa ("tenho", "estou") são o jeito de perguntar, não o assunto:
+// "tenho" sozinho puxava "Tenho sede" para uma pergunta sobre mágoa.
 const VAZIAS = new Set((
   'a ao aos as com como da das de do dos e ela ele em entre era essa esse esta este eu ' +
   'faz fazer foi ha isso isto ja la lhe mais mas me meu minha muito muita na nas nao no nos ' +
@@ -36,7 +45,8 @@ const VAZIAS = new Set((
   'voce vou ate apos antes depois onde ainda devo deve devemos preciso precisa existe ' +
   'igreja catolica catolico catolicos catecismo ensina ensinamento diz dizer significa ' +
   'significado explica explique fala falar sentido ok certo errado verdade gostaria saber ' +
-  'gente pessoa pessoas coisa coisas acontece posicao permitido permitida'
+  'gente pessoa pessoas coisa coisas acontece posicao permitido permitida ' +
+  'tenho estou sou fui quero queria sinto acho faco fiz alguem'
 ).split(' '));
 
 // Do mais longo ao mais curto: a primeira terminação que couber é a retirada.
@@ -158,7 +168,7 @@ const idfDe = (b, df) => Math.log(1 + (b.N - df + 0.5) / (df + 0.5));
  * o prolongam: "morre" alcança "morrer". Exige 5 letras em comum, para não
  * voltar a juntar "mente" com "mentir".
  */
-function conceitoDe(b, r, fraco) {
+function conceitoDe(b, r) {
   const formas = r.length >= 5
     ? b.vocab.filter((k) => k.length >= 5 && (k.startsWith(r) || r.startsWith(k)))
     : [];
@@ -166,52 +176,63 @@ function conceitoDe(b, r, fraco) {
   // df da união aproximado pela soma: superestima, e erra para o lado de dar
   // menos peso — nunca inventa raridade.
   const df = Math.min(b.N, formas.reduce((a, k) => a + (b.df.get(k) || 0), 0));
-  return { formas, idf: idfDe(b, df), existe: df > 0, fraco };
+  return { r, formas, idf: idfDe(b, df), existe: df > 0, fraco: false, viaLexico: new Set() };
 }
 
 /**
  * Os §§ mais prováveis de responder a pergunta, do mais ao menos relevante.
  * @returns {{ numero: number, score: number }[]}
  */
-export function recuperar(pergunta, limite = 12) {
+export function recuperar(pergunta, limite = PARAGRAFOS_POR_PERGUNTA) {
   const b = base();
   const ws = [...new Set(palavras(pergunta))];
-  const q = [...new Set(ws.map(radical))];
-  if (!q.length) return [];
+  const conceitos = [...new Set(ws.map(radical))].map((r) => conceitoDe(b, r));
+  if (!conceitos.length) return [];
 
   const frase = ` ${norm(pergunta).replace(/[^a-z0-9]+/g, ' ').trim()} `;
   const scores = new Map();
   const somar = (n, v) => scores.set(n, (scores.get(n) || 0) + v);
 
+  // Quais conceitos cada § cobre, por qualquer um dos três sinais.
+  const cobertura = new Map();
+  const cobrir = (n, i) => {
+    const s = cobertura.get(n);
+    if (s) s.add(i); else cobertura.set(n, new Set([i]));
+  };
+
   // Léxico primeiro: palavra com verbete no léxico perde força no texto. É
   // exatamente o caso em que a palavra literal engana — "mágoa" aparece uma
   // vez no Catecismo, em outro sentido, e ganharia de tudo por ser rara.
   const temasDoLexico = [];
-  const enfraquecidos = new Set();
   for (const { chave, temas } of b.lexico) {
     const w = casaChave(chave, ws, frase);
     if (!w) continue;
-    temasDoLexico.push(temas);
-    if (!chave.includes(' ')) enfraquecidos.add(radical(w));
+    const i = chave.includes(' ') ? -1 : conceitos.findIndex((c) => c.r === radical(w));
+    if (i >= 0) conceitos[i].fraco = true;
+    temasDoLexico.push({ temas, i });
   }
 
-  const conceitos = q.map((r) => conceitoDe(b, r, enfraquecidos.has(r)));
-
-  // 1. BM25 no texto, normalizado para 0..10 — os outros sinais somam na mesma escala.
+  // 1. BM25 no texto. A escala 0..10 vem do placar *sem* o enfraquecimento:
+  //    normalizar pelo máximo já enfraquecido desfazia o efeito quando a
+  //    palavra do léxico era o único termo — ela voltava a valer 10.
   const bm25 = new Map();
+  let maxPleno = 0;
   for (const [numero, { tf, tam }] of b.docs) {
     let s = 0;
-    for (const c of conceitos) {
+    let pleno = 0;
+    conceitos.forEach((c, i) => {
       let f = 0;
       for (const k of c.formas) f += tf.get(k) || 0;
-      if (!f) continue;
-      const peso = c.fraco ? 0.3 : 1;
-      s += peso * c.idf * (f * (K1 + 1)) / (f + K1 * (1 - B + B * tam / b.tamMedio));
-    }
+      if (!f) return;
+      const v = c.idf * (f * (K1 + 1)) / (f + K1 * (1 - B + B * tam / b.tamMedio));
+      pleno += v;
+      s += c.fraco ? 0.3 * v : v;
+      cobrir(numero, i);
+    });
+    if (pleno > maxPleno) maxPleno = pleno;
     if (s > 0) bm25.set(numero, s);
   }
-  const maxBm25 = Math.max(0, ...bm25.values());
-  for (const [n, s] of bm25) somar(n, (s / maxBm25) * 10);
+  for (const [n, s] of bm25) somar(n, (s / maxPleno) * 10);
 
   // 2. Índice analítico. Uma entrada vale pela fração da pergunta que ela cobre,
   //    pesada por idf — "comunhão" rende pouco, "purgatório" rende muito. Tema
@@ -222,28 +243,51 @@ export function recuperar(pergunta, limite = 12) {
   for (const e of b.entradas) {
     let cobre = 0;
     let noTema = false;
-    for (const c of conceitos) {
-      if (!c.formas.some((k) => e.radicais.has(k))) continue;
+    const cobertos = [];
+    conceitos.forEach((c, i) => {
+      if (!c.formas.some((k) => e.radicais.has(k))) return;
       cobre += c.idf;
+      cobertos.push(i);
       if (c.formas.some((k) => e.tema.has(k))) noTema = true;
-    }
+    });
     if (!cobre) continue;
     const v = 6 * (cobre / pesoQ) * (noTema ? 1 : 0.6) / Math.sqrt(e.paragrafos.length);
-    for (const n of e.paragrafos) somar(n, v);
+    for (const n of e.paragrafos) {
+      somar(n, v);
+      for (const i of cobertos) cobrir(n, i);
+    }
   }
 
   // 3. Temas do léxico, do mais próximo ao mais distante (a ordem é curadoria).
-  for (const temas of temasDoLexico) {
-    temas.forEach((nomeTema, i) => {
+  for (const { temas, i } of temasDoLexico) {
+    temas.forEach((nomeTema, ordem) => {
       const nums = b.paragrafosPorTema.get(norm(nomeTema));
       if (!nums?.size) return;
-      const v = (12 / (i + 1)) / Math.sqrt(nums.size);
-      for (const n of nums) somar(n, v);
+      const v = (12 / (ordem + 1)) / Math.sqrt(nums.size);
+      for (const n of nums) {
+        somar(n, v);
+        if (i >= 0) { cobrir(n, i); conceitos[i].viaLexico.add(n); }
+      }
     });
   }
 
+  // 4. Coordenação. Em "Mulher pode ser padre?", §§ que só repetem "mulher"
+  //    venciam o §1577, que trata das duas coisas. Cada conceito pesa pela
+  //    raridade; o que o Catecismo não usa e o léxico não liga fica de fora.
+  const contam = conceitos
+    .map((c, i) => ({ i, peso: c.idf }))
+    .filter(({ i }) => conceitos[i].existe || conceitos[i].viaLexico.size);
+  const pesoTotal = contam.reduce((a, x) => a + x.peso, 0);
+  if (contam.length > 1) {
+    for (const [n, s] of scores) {
+      const tem = cobertura.get(n);
+      const coberto = contam.reduce((a, x) => a + (tem?.has(x.i) ? x.peso : 0), 0);
+      scores.set(n, s * (coberto / pesoTotal));
+    }
+  }
+
   return [...scores]
-    .filter(([n]) => b.porNumero.has(n))
+    .filter(([n, s]) => s > 0 && b.porNumero.has(n))
     .sort((x, y) => y[1] - x[1] || x[0] - y[0])
     .slice(0, limite)
     .map(([numero, score]) => ({ numero, score: Math.round(score * 100) / 100 }));
@@ -253,8 +297,4 @@ export function recuperar(pergunta, limite = 12) {
 export function textoDoParagrafo(numero) {
   const p = base().porNumero.get(numero);
   return p ? p.texto.replace(/\s*\(\d+\)/g, '') : null;
-}
-
-export function existeParagrafo(numero) {
-  return base().porNumero.has(numero);
 }

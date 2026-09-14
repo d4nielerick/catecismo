@@ -81,16 +81,13 @@ function renderizar(pergunta, dados) {
     return;
   }
 
-  // Não encontrado: dizer isso com clareza é a função, não uma falha.
-  resultado.append(el('p', 'pq-vazio-titulo', 'Não encontrei resposta a essa pergunta no Catecismo.'));
-  if (dados.relacionados?.length) {
-    resultado.append(
-      el('p', 'pq-vazio-sub', 'Estes parágrafos tratam de assuntos próximos:'),
-      listaDeParagrafos(dados.relacionados),
-    );
-  } else {
-    resultado.append(el('p', 'pq-vazio-sub', 'Tente perguntar com outras palavras.'));
-  }
+  // Não encontrado: dizer isso com clareza é a função, não uma falha. Sem
+  // lista de "parágrafos próximos" — o servidor não manda, porque não sabe.
+  const sub = el('p', 'pq-vazio-sub', 'Tente perguntar com outras palavras, ou ');
+  const busca = el('a', null, 'busque um termo no Catecismo');
+  busca.href = '../';
+  sub.append(busca, '.');
+  resultado.append(el('p', 'pq-vazio-titulo', 'Não encontrei resposta a essa pergunta no Catecismo.'), sub);
 }
 
 let emAndamento = false;
