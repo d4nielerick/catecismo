@@ -27,7 +27,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inria+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
 
   <link rel="stylesheet" href="../assets/css/main.css">
 
@@ -45,463 +45,354 @@
   <!-- Umami Analytics -->
   <script defer src="https://umami.danielerick.com/script.js" data-website-id="28c35f85-bd1b-4ea9-8f52-fc98d33b4974"></script>
   <style>
-    /* ── Base ─────────────────────────────────────────────────────────────── */
-    html, body {
-      background: var(--litur-bg, var(--color-bg));
-      min-height: 100%;
-      transition: background 0.7s ease;
+    /* Layout do Figma "Catecismo" › MacBook Pro 16" - 1 (node 65:3):
+       lateral (título + calendário) · faixa floral · coluna de leitura · faixa floral · respiro */
+    :root {
+      --lp-fundo: #fcfaf7;
+      --lp-tinta: #000;
+      --lp-texto: rgba(0, 0, 0, 0.67);
+      --lp-suave: rgba(0, 0, 0, 0.45);
+      --lp-linha: rgba(0, 0, 0, 0.08);
+      --lp-faixa-w: 120px;
+      --font-titulo: 'Times New Roman', Times, 'EB Garamond', Georgia, serif;
+      --font-leitura: 'Inria Serif', 'EB Garamond', Georgia, serif;
     }
 
-    body {
-      font-family: var(--font-sans);
-      color: var(--color-text);
+    html, body { background: var(--lp-fundo); min-height: 100%; }
+    body { font-family: var(--font-leitura); color: var(--lp-texto); }
+
+    .lp-pagina {
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) var(--lp-faixa-w) minmax(0, 500px) var(--lp-faixa-w) minmax(290px, 1fr);
+      min-height: 100vh;
     }
 
-    /* ── Layout dois painéis ──────────────────────────────────────────────── */
-    .lp-wrap {
-      display: flex;
-      width: calc(100% - 1.5rem);
-      max-width: 1400px;
-      margin: 0.75rem auto;
-      min-height: calc(100vh - 1.5rem);
-      background: var(--color-surface);
-      border-radius: 12px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-      overflow: hidden;
-    }
-
-    /* Nome do dia litúrgico */
-    .nome-dia {
-      font-family: var(--font-serif);
-      font-size: 0.88rem;
-      font-style: italic;
-      color: var(--color-text);
-      line-height: 1.4;
-      margin-bottom: 1.5rem;
-    }
-
-    /* ── Sidebar ──────────────────────────────────────────────────────────── */
-    .lp-sidebar {
-      width: 360px;
-      flex-shrink: 0;
-      padding: 2rem 1.5rem 3rem;
-      border-right: 1px solid var(--color-border);
+    /* ── Lateral ─────────────────────────────────────────────────────────── */
+    .lp-lateral {
+      grid-column: 1;
+      grid-row: 1;
       position: sticky;
       top: 0;
-      align-self: flex-start;   /* não estica junto com o conteúdo: dá espaço pro sticky */
-      max-height: 100vh;        /* curto fica colado no topo; longo rola internamente */
+      align-self: start;
+      max-height: 100vh;
       overflow-y: auto;
-      display: flex;
-      flex-direction: column;
+      padding: 1.5rem 2rem 3rem 1.95rem;
     }
 
     .lp-back {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      color: var(--color-muted);
+      gap: 0.4rem;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--lp-suave);
       text-decoration: none;
-      font-size: 0.8rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
       transition: color 0.15s;
     }
-    .lp-back:hover { color: var(--color-primary); }
-    .lp-back svg { flex-shrink: 0; }
+    .lp-back:hover { color: var(--lp-tinta); }
 
     .lp-titulo {
-      font-family: var(--font-serif);
-      font-size: 1.7rem;
-      font-weight: 600;
-      color: var(--color-text);
-      margin: 0 0 0.4rem;
-      line-height: 1.3;
+      font-family: var(--font-titulo);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 78px;
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      color: var(--lp-tinta);
+      margin: 0 0 1.5rem;
     }
 
     .lp-data {
-      font-size: 0.78rem;
-      color: var(--color-muted);
-      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
       line-height: 1.5;
+      color: var(--lp-suave);
+      margin: 0 0 0.35rem;
     }
+    .lp-data::first-letter { text-transform: uppercase; }
 
-    .tempo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .cor-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
+    .tempo-wrap { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .cor-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
     .tempo-badge {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--color-muted);
-    }
-
-    /* ── Calendário ───────────────────────────────────────────────────────── */
-    .cal-wrap {
-      margin-top: 1.5rem;
-      border-top: 1px solid var(--color-border);
-      padding-top: 1.25rem;
-    }
-
-    .cal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.6rem;
-    }
-
-    .cal-mes {
       font-family: var(--font-sans);
-      font-size: 0.78rem;
+      font-size: 0.64rem;
       font-weight: 600;
-      color: var(--color-text);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--lp-suave);
     }
 
-    .cal-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--color-muted);
+    .nome-dia {
+      font-style: italic;
       font-size: 1rem;
-      padding: 0.1rem 0.4rem;
-      border-radius: 4px;
+      line-height: 1.45;
+      color: var(--lp-tinta);
+      margin: 0;
+    }
+    .nome-dia .complemento {
+      display: block;
+      margin-top: 0.15rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--lp-suave);
+    }
+
+    .lp-nav { display: none; }
+
+    /* ── Calendário ──────────────────────────────────────────────────────── */
+    /* Coluna da direita, depois do ornamento; fica parada enquanto a leitura rola */
+    .lp-direita {
+      grid-column: 5;
+      grid-row: 1;
+      position: sticky;
+      top: 0;
+      align-self: start;
+      padding: 3.25rem 2rem 3rem 2.25rem;
+    }
+    .cal-wrap { max-width: 257px; }
+    .cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; }
+    .cal-mes { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; color: var(--lp-tinta); }
+    .cal-btn {
+      background: none; border: none; cursor: pointer; color: var(--lp-suave);
+      font-size: 1rem; padding: 0.1rem 0.4rem; border-radius: 4px;
       transition: color 0.12s, background 0.12s;
     }
-
-    .cal-btn:hover { color: var(--color-primary); background: rgba(26,60,46,0.06); }
-
-    .cal-grid {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 2px;
-    }
-
+    .cal-btn:hover { color: var(--lp-tinta); background: rgba(0, 0, 0, 0.05); }
+    .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
     .cal-dow {
-      font-family: var(--font-sans);
-      font-size: 0.6rem;
-      font-weight: 600;
-      text-align: center;
-      color: var(--color-muted);
-      padding: 0.2rem 0;
-      text-transform: uppercase;
+      font-family: var(--font-sans); font-size: 0.56rem; font-weight: 600; text-align: center;
+      color: var(--lp-suave); padding: 0.2rem 0; text-transform: uppercase;
     }
-
     .cal-dia {
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      text-align: center;
-      padding: 0.3rem 0;
-      border-radius: 4px;
-      cursor: pointer;
-      color: var(--color-muted);
+      font-family: var(--font-sans); font-size: 0.66rem; text-align: center; padding: 0.28rem 0;
+      border-radius: 4px; cursor: pointer; color: var(--lp-suave); text-decoration: none;
       transition: background 0.1s, color 0.1s;
-      text-decoration: none;
     }
-
-    .cal-dia:hover { background: rgba(26,60,46,0.08); color: var(--color-text); }
+    .cal-dia:hover { background: rgba(26, 60, 46, 0.08); color: var(--lp-tinta); }
     .cal-dia.hoje { background: var(--color-primary); color: #fff; font-weight: 600; }
-    .cal-dia.selecionado { background: rgba(26,60,46,0.15); color: var(--color-primary); font-weight: 600; }
+    .cal-dia.selecionado { background: rgba(26, 60, 46, 0.15); color: var(--color-primary); font-weight: 600; }
     .cal-dia.vazio { cursor: default; }
     .cal-dia.fora-range { opacity: 0.3; pointer-events: none; }
 
-    /* Nav de leituras */
-    .lp-nav {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-      margin: 0;
-      padding: 0;
+    /* ── Faixas florais ──────────────────────────────────────────────────── */
+    /* Fixas: ocupam a altura da tela e ficam paradas enquanto a leitura rola */
+    .lp-faixa {
+      grid-row: 1;
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      background: #1b1a18 url('/assets/img/liturgia-faixa.webp') repeat-y center top / 100% auto;
     }
+    .lp-faixa-esq { grid-column: 2; }
+    .lp-faixa-dir { grid-column: 4; }
 
-    .lp-nav a {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.55rem 0.75rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      color: var(--color-muted);
-      text-decoration: none;
-      transition: background 0.12s, color 0.12s;
-    }
-
-    .lp-nav a:hover {
-      background: rgba(26,60,46,0.06);
-      color: var(--color-text);
-    }
-
-    .lp-nav a.ativa {
-      background: rgba(26,60,46,0.08);
-      color: var(--color-primary);
-      font-weight: 600;
-    }
-
-    .lp-nav .nav-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: 0.4;
-      flex-shrink: 0;
-    }
-
-    .lp-nav a.ativa .nav-dot { opacity: 1; }
-
-    /* ── Conteúdo principal ───────────────────────────────────────────────── */
+    /* ── Coluna de leitura ───────────────────────────────────────────────── */
     .lp-main {
-      flex: 1;
-      padding: 2.5rem 2.5rem 5rem;
+      grid-column: 3;
+      grid-row: 1;
       min-width: 0;
+      padding: 3.25rem 2.5rem 7rem;
     }
 
-    /* Cards de leitura */
-    .leitura-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      padding: 1.75rem 2rem;
-      margin-bottom: 1.25rem;
-      scroll-margin-top: 1.5rem;
-    }
+    .leitura-card { position: relative; scroll-margin-top: 1.5rem; }
 
-    .leitura-card.card-evangelho {
-      border-color: rgba(26,60,46,0.2);
-      box-shadow: 0 2px 12px rgba(26,60,46,0.06);
+    /* Ornamento com a cruz entre as seções */
+    .leitura-card + .leitura-card::before,
+    .missa-extra::before {
+      content: '';
+      display: block;
+      width: min(386px, 100%);
+      height: 77px;
+      margin: 4.5rem auto;
+      background: url('/assets/img/liturgia-divisor.svg') center / contain no-repeat;
     }
+    /* A aclamação anuncia o evangelho: os dois ficam juntos, sem ornamento entre eles */
+    .leitura-card.secao-menor + .leitura-card::before { display: none; }
+    .leitura-card.secao-menor + .leitura-card { margin-top: 2.5rem; }
 
     .leitura-label {
-      font-family: var(--font-sans);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-muted);
-      margin-bottom: 0.3rem;
+      font-family: var(--font-titulo);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 65px;
+      line-height: 1.5;
+      letter-spacing: -0.03em;
+      color: var(--lp-tinta);
+      text-transform: none;
     }
-
-    .card-evangelho .leitura-label { color: var(--color-accent-dk); }
+    .secao-menor .leitura-label { font-size: 40px; line-height: 1.3; margin-bottom: 0.35rem; }
 
     .leitura-ref {
-      font-family: var(--font-serif);
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--color-text);
-      margin-bottom: 1.25rem;
-    }
-
-    .leitura-texto {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: var(--color-text);
-    }
-
-    .vers-num {
-      font-size: 0.65rem;
-      font-family: var(--font-sans);
-      color: var(--color-muted);
-      vertical-align: super;
-      margin-right: 0.2em;
-      user-select: none;
-    }
-
-    /* ── Salmo ────────────────────────────────────────────────────────────── */
-    .salmo-refrao {
-      background: rgba(197,160,40,0.07);
-      border-left: 2px solid var(--color-accent);
-      border-radius: 0 6px 6px 0;
-      padding: 0.6rem 1rem;
-      margin-bottom: 1.25rem;
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--color-text);
-    }
-
-    .salmo-r-label {
-      font-style: normal;
-      font-weight: 600;
-      color: var(--color-accent-dk);
-      margin-right: 0.4rem;
-    }
-
-    .salmo-estrofe {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: var(--color-text);
-      margin-bottom: 0.25rem;
-    }
-
-    .salmo-r-sep {
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--color-accent-dk);
-      margin: 0.75rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .salmo-r-sep::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--color-border);
-    }
-
-    .loading, .erro {
-      font-family: var(--font-sans);
-      color: var(--color-muted);
-      text-align: center;
-      padding: 3rem 0;
-      font-size: 0.9rem;
-    }
-
-    .nome-dia .complemento {
-      display: block;
-      margin-top: 0.2rem;
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-style: normal;
-      color: var(--color-muted);
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--lp-tinta);
+      margin-bottom: 11px;
     }
 
     .leitura-titulo {
-      font-family: var(--font-serif);
       font-style: italic;
-      color: var(--color-muted);
+      font-size: 16px;
       line-height: 1.5;
-      margin: -0.75rem 0 1rem;
+      color: var(--lp-tinta);
+      margin: 0 0 11px;
     }
 
-    .acl-verso {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: var(--color-text);
+    .leitura-texto {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--lp-texto);
     }
+    .leitura-texto p { margin: 0; }
+
+    .vers-num {
+      font-size: 0.66em;
+      color: var(--lp-suave);
+      vertical-align: super;
+      margin-right: 0.15em;
+      user-select: none;
+    }
+
+    /* Salmo: refrão e estrofes em parágrafos, com uma linha de respiro */
+    .salmo-refrao, .acl-verso { margin-bottom: 24px; }
+    .salmo-r-label { margin-right: 0.3rem; color: var(--lp-tinta); }
+    .salmo-estrofe { margin-bottom: 24px; }
+    .salmo-r-sep { display: none; }
+    .salmo-r-sep.com-texto { display: block; margin-bottom: 24px; font-style: italic; }
+    .leitura-texto > :last-child { margin-bottom: 0; }
 
     .salmo-ou, .leitura-alt-ou {
       font-family: var(--font-sans);
-      font-size: 0.68rem;
+      font-size: 0.64rem;
       font-style: normal;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--color-accent-dk);
+      color: var(--lp-suave);
       margin: 0 0.35rem;
     }
 
-    /* Leitura "à escolha" (mais breve, outra opção): recolhida dentro do card */
-    .leitura-alt {
-      margin-top: 1.25rem;
-      padding-top: 0.75rem;
-      border-top: 1px dashed var(--color-border);
-    }
-    .leitura-alt > summary { cursor: pointer; font-size: 0.8rem; color: var(--color-muted); }
+    /* Leitura "à escolha": recolhida sob a principal */
+    .leitura-alt { margin-top: 1.75rem; padding-top: 0.9rem; border-top: 1px dotted rgba(0, 0, 0, 0.28); }
+    .leitura-alt > summary { cursor: pointer; font-size: 0.9rem; color: var(--lp-suave); }
     .leitura-alt > summary .leitura-alt-ou { margin-left: 0; }
     .leitura-alt[open] > summary { margin-bottom: 1rem; }
 
     /* Outras missas do dia (vigília, noite, aurora, leituras à escolha) */
-    .missa-extra { margin: 2rem 0 1.25rem; }
     .missa-extra > summary {
       cursor: pointer;
-      font-family: var(--font-serif);
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--color-text);
-      padding: 0.5rem 0;
+      font-family: var(--font-titulo);
+      font-style: italic;
+      font-size: 40px;
+      line-height: 1.3;
+      letter-spacing: -0.03em;
+      color: var(--lp-tinta);
+      list-style-position: outside;
     }
-    .missa-extra[open] > summary { margin-bottom: 1rem; }
+    .missa-extra[open] > summary { margin-bottom: 2.5rem; }
 
-    /* ── Mobile tabs ──────────────────────────────────────────────────────── */
+    .loading, .erro {
+      font-style: italic;
+      color: var(--lp-suave);
+      text-align: center;
+      padding: 4rem 0;
+      font-size: 1rem;
+    }
+
+    /* ── Entrada do texto, linha a linha (liturgiadiaria.js › animarEntrada) ── */
+    .lp-palavra { display: inline-block; }
+    .lp-oculto { opacity: 0; }
+    .lp-entra {
+      animation: lp-entrada 0.85s cubic-bezier(0.2, 0.65, 0.25, 1) both;
+      animation-delay: var(--lp-atraso, 0ms);
+    }
+    @keyframes lp-entrada {
+      from { opacity: 0; transform: translateY(0.6em); filter: blur(3px); }
+      to   { opacity: 1; transform: none; filter: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .lp-oculto { opacity: 1; }
+      .lp-entra { animation: none; }
+    }
+
+    /* ── Abas (celular) ──────────────────────────────────────────────────── */
     .lp-tabs {
       display: none;
       overflow-x: auto;
       gap: 0.25rem;
-      padding: 1rem 1.25rem 0;
+      padding: 0.75rem 1.25rem 0;
       scrollbar-width: none;
-      border-bottom: 1px solid var(--color-border);
-      background: var(--color-surface);
+      border-bottom: 1px solid var(--lp-linha);
+      background: var(--lp-fundo);
       position: sticky;
       top: 0;
       z-index: 10;
     }
-
     .lp-tabs::-webkit-scrollbar { display: none; }
-
     .lp-tabs a {
       display: inline-block;
       white-space: nowrap;
       padding: 0.5rem 0.9rem;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--color-muted);
+      font-size: 0.9rem;
+      color: var(--lp-suave);
       text-decoration: none;
       border-bottom: 2px solid transparent;
       margin-bottom: -1px;
       transition: color 0.12s, border-color 0.12s;
     }
+    .lp-tabs a.ativa { color: var(--lp-tinta); border-bottom-color: var(--lp-tinta); }
 
-    .lp-tabs a.ativa {
-      color: var(--color-primary);
-      border-bottom-color: var(--color-primary);
-      font-weight: 600;
+    /* ── Responsivo ──────────────────────────────────────────────────────── */
+    /* Até 1320px: some a faixa da direita; o calendário vem logo depois do texto */
+    @media (max-width: 1320px) {
+      .lp-pagina { grid-template-columns: 250px 88px minmax(0, 560px) 300px minmax(0, 1fr); }
+      .lp-faixa-dir { display: none; }
+      .lp-direita { grid-column: 4; padding: 3.25rem 1.5rem 3rem 1rem; }
+      .lp-main { padding: 3.25rem clamp(1.75rem, 3.5vw, 2.75rem) 7rem; }
+      .lp-titulo { font-size: 62px; }
     }
 
-    /* ── Responsivo ───────────────────────────────────────────────────────── */
-    @media (max-width: 700px) {
-      .lp-wrap { flex-direction: column; margin: 0; border-radius: 0; box-shadow: none; min-height: 100vh; }
+    /* Até 1080px: sem espaço para três colunas de conteúdo; o calendário volta para baixo do título */
+    @media (max-width: 1080px) {
+      .lp-pagina { grid-template-columns: 290px 72px minmax(0, 1fr); grid-template-rows: auto 1fr; }
+      .lp-lateral { position: static; max-height: none; overflow: visible; }
+      .lp-direita { grid-column: 1; grid-row: 2; position: static; padding: 0 2rem 3rem 1.95rem; }
+      .lp-faixa-esq, .lp-main { grid-row: 1 / span 2; }
+      .cal-wrap { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--lp-linha); }
+    }
 
-      .lp-sidebar {
-        position: static;
-        height: auto;
-        width: 100%;
-        border-right: none;
-        border-bottom: none;
-        padding: 1.5rem 1.25rem 0;
-        flex-direction: column;
-        gap: 0;
-      }
-
-      .lp-nav { display: none; }
+    @media (max-width: 760px) {
+      .lp-pagina { display: flex; flex-direction: column; }
+      .lp-lateral { order: 1; }
+      .lp-direita { order: 2; padding: 0 1.5rem 0.5rem; }
+      .lp-lateral, .lp-direita { align-self: stretch; }
+      .lp-tabs { order: 3; }
+      .lp-main { order: 4; }
+      .lp-faixa { display: none; }
+      .lp-lateral { position: static; max-height: none; overflow: visible; padding: 1.25rem 1.5rem 0.5rem; }
+      .lp-titulo { font-size: 52px; margin-bottom: 1rem; }
       .lp-tabs { display: flex; }
-
-      .lp-main { padding: 1.25rem 1.25rem 4rem; }
-
-      .leitura-card { padding: 1.25rem 1.25rem; }
+      .lp-main { padding: 2rem 1.5rem 6rem; max-width: none; }
+      .leitura-label { font-size: 48px; line-height: 1.3; }
+      .secao-menor .leitura-label, .missa-extra > summary { font-size: 32px; }
+      .leitura-card + .leitura-card::before, .missa-extra::before { margin: 3rem auto; height: 60px; }
     }
   </style>
 </head>
 <body>
 
-<div class="lp-wrap">
+<div class="lp-pagina">
 
-  <!-- ── Sidebar ─────────────────────────────────────────────────────────── -->
-  <aside class="lp-sidebar">
+  <!-- ── Lateral: título e dia litúrgico ─────────────────────────────────── -->
+  <aside class="lp-lateral">
     <a href="../" class="lp-back" aria-label="Voltar ao Catecismo">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M19 12H5M12 5l-7 7 7 7"/>
       </svg>
       Catecismo da Igreja Católica
     </a>
 
-    <h1 class="lp-titulo">Liturgia do Dia</h1>
+    <h1 class="lp-titulo">Liturgia<br>Diária</h1>
     <p class="lp-data" id="lp-data">Carregando…</p>
     <div class="tempo-wrap" id="lp-tempo-wrap" style="display:none">
       <span class="cor-dot" id="lp-cor-dot"></span>
@@ -509,63 +400,28 @@
     </div>
     <p class="nome-dia" id="lp-nome-dia" style="display:none"></p>
 
-    <ul class="lp-nav" id="lp-nav" aria-label="Leituras do dia">
-      <!-- preenchido pelo JS -->
-    </ul>
-
-    <!-- Calendário -->
-    <div class="cal-wrap" id="cal-wrap"></div>
-
+    <ul class="lp-nav" id="lp-nav" aria-label="Leituras do dia"></ul>
   </aside>
 
-  <!-- ── Tabs mobile ─────────────────────────────────────────────────────── -->
+  <div class="lp-faixa lp-faixa-esq" aria-hidden="true"></div>
+
+  <!-- ── Abas (celular) ──────────────────────────────────────────────────── -->
   <nav class="lp-tabs" id="lp-tabs" aria-label="Leituras"></nav>
 
-  <!-- ── Conteúdo ────────────────────────────────────────────────────────── -->
+  <!-- ── Leituras ────────────────────────────────────────────────────────── -->
   <main class="lp-main" id="conteudo">
     <p class="loading">Buscando leituras do dia…</p>
   </main>
 
+  <div class="lp-faixa lp-faixa-dir" aria-hidden="true"></div>
+
+  <!-- ── Direita: calendário ─────────────────────────────────────────────── -->
+  <aside class="lp-direita" aria-label="Calendário da liturgia">
+    <div class="cal-wrap" id="cal-wrap"></div>
+  </aside>
+
 </div>
 
 <script type="module" src="/liturgiadiaria/liturgiadiaria.js"></script>
-
-<!-- ── Barra flutuante de navegação ──────────────────────────────────────── -->
-<nav id="barra-flutuante" aria-label="Navegação principal">
-  <a href="/" class="bf-item" title="Catecismo da Igreja Católica">
-    <span class="bf-icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
-    <span class="bf-label">CIC</span>
-  </a>
-  <a href="/saopiox/" class="bf-item" title="Catecismo de São Pio X">
-    <span class="bf-icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="9" x2="22" y2="9"/></svg></span>
-    <span class="bf-label">Pio X</span>
-  </a>
-  <a href="/liturgiadiaria/" class="bf-item ativo" title="Liturgia Diária">
-    <span class="bf-icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
-    <span class="bf-label">Liturgia</span>
-  </a>
-  <a href="https://wa.me/?text=Acesse%20a%20Liturgia%20Di%C3%A1ria%20online%3A%20https%3A%2F%2Fsantadoutrina.cloud%2Fliturgiadiaria%2F" class="bf-item" target="_blank" rel="noopener" title="Compartilhar no WhatsApp">
-    <span class="bf-icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></span>
-    <span class="bf-label">Zap</span>
-  </a>
-</nav>
-<style>
-#barra-flutuante{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);z-index:1000;display:flex;align-items:center;gap:.75rem;background:#c39e27;border-radius:28px 28px 0 0;padding:.85rem 1.25rem 1.1rem;box-shadow:0 -4px 24px rgba(0,0,0,.12);transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
-#barra-flutuante.visivel{transform:translateX(-50%) translateY(0)}
-.bf-item{display:flex;flex-direction:column;align-items:center;gap:.3rem;border:none;background:transparent;text-decoration:none;cursor:pointer;font-family:var(--font-sans,sans-serif);padding:0;-webkit-tap-highlight-color:transparent}
-.bf-icone{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);background:rgba(255,255,255,.15);transition:transform .18s,background .18s,color .18s}
-.bf-item:hover .bf-icone{transform:scale(1.1);background:rgba(255,255,255,.9)}
-.bf-item:nth-child(1):hover .bf-icone{color:#2d6a4f}
-.bf-item:nth-child(2):hover .bf-icone{color:#2c4a8c}
-.bf-item:nth-child(3):hover .bf-icone{color:#8c4a2c}
-.bf-item:nth-child(4):hover .bf-icone{color:#25D366}
-.bf-item.ativo .bf-icone{background:rgba(255,255,255,.95);color:#8c4a2c}
-.bf-label{font-size:.62rem;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,0);transition:color .15s;white-space:nowrap}
-.bf-item:hover .bf-label{color:rgba(255,255,255,.95)}
-</style>
-<script>
-(function(){const b=document.getElementById('barra-flutuante');const Z=80;let t;function show(){clearTimeout(t);b.classList.add('visivel')}function hide(d=600){clearTimeout(t);t=setTimeout(()=>b.classList.remove('visivel'),d)}show();hide(3000);document.addEventListener('mousemove',e=>{if(e.clientY>window.innerHeight-Z){show()}else if(!b.matches(':hover')){hide()}});b.addEventListener('mouseenter',show);b.addEventListener('mouseleave',()=>hide())})();
-</script>
-
 </body>
 </html>

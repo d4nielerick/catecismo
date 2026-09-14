@@ -60,9 +60,10 @@ function renderSalmo(texto) {
     const l = linhas[i].replace(/[*†]/g, '').trim();
     if (!l) continue;
     if (/^R\.?$/.test(l)) { fechar(); html += '<div class="salmo-r-sep">R.</div>'; continue; }
-    if (/^R\.\s/.test(l)) { fechar(); html += `<div class="salmo-r-sep">R. ${esc(l.slice(2).trim())}</div>`; continue; }
+    if (/^R\.\s/.test(l)) { fechar(); html += `<div class="salmo-r-sep com-texto">R. ${esc(l.slice(2).trim())}</div>`; continue; }
     if (VERSO.test(l)) { estrofe += `<sup class="vers-num">${esc(l)}</sup>`; continue; }
-    estrofe += /^Ou:?$/i.test(l) ? `${OU} ` : `${esc(l)}<br>`;
+    // Estrofe em texto corrido, como no layout (a linha do salmo não quebra).
+    estrofe += /^Ou:?$/i.test(l) ? `${OU} ` : `${esc(l)} `;
   }
   fechar();
   return html;
@@ -129,7 +130,7 @@ function renderBloco({ leitura: s, id, alternativas }) {
         ${corpoLeitura(a)}
       </details>`).join('');
   return `
-    <article class="leitura-card${s.tipo === 'evangelho' ? ' card-evangelho' : ''}" id="${id}" data-rotulo="${esc(rotuloCompleto(s))}" style="position:relative;">
+    <article class="leitura-card${s.tipo === 'evangelho' ? ' card-evangelho' : ''}${['aclamacao', 'sequencia'].includes(s.tipo) ? ' secao-menor' : ''}" id="${id}" data-rotulo="${esc(rotuloCompleto(s))}" style="position:relative;">
       <button class="leitura-flag-btn" type="button" aria-label="Reportar erro nesta leitura" title="Reportar erro" style="position:absolute;top:1rem;right:1rem;background:transparent;border:1px solid var(--color-border);border-radius:50%;width:24px;height:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--color-muted);opacity:0;transition:opacity 0.15s;">${FLAG_SVG}</button>
       <div class="leitura-label">${esc(rotuloCompleto(s))}</div>
       ${s.referencia ? `<div class="leitura-ref">${esc(s.referencia)}</div>` : ''}
@@ -314,6 +315,111 @@ function construirCalendario(dtAtual, hoje, indice) {
   render();
 }
 
+// ── Entrada do texto, linha a linha ──────────────────────────────────────────
+// Cada palavra vira um <span>; a posição real na tela agrupa as palavras em linhas, e cada linha
+// entra quando aparece no viewport (as que entram juntas vêm em cascata, de cima para baixo).
+const SELETOR_ENTRADA = [
+  '.lp-titulo', '.lp-data', '.tempo-wrap', '.nome-dia',
+  '.leitura-label', '.leitura-ref', '.leitura-titulo', '.leitura-texto p',
+  '.salmo-refrao', '.salmo-estrofe', '.salmo-r-sep.com-texto', '.acl-verso',
+].join(', ');
+const BLOCOS_INTEIROS = '.lp-data, .tempo-wrap, .nome-dia, .leitura-label, .leitura-ref';
+const UNIDADES_INLINE = 'sup, .salmo-r-label, .salmo-ou';
+const PASSO_LINHA_MS = 55;
+const LEVA_MAX_MS = 1000;
+
+function quebrarEmPalavras(bloco) {
+  const textos = [];
+  const walker = document.createTreeWalker(bloco, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) textos.push(walker.currentNode);
+  for (const no of textos) {
+    const inline = no.parentElement.closest(UNIDADES_INLINE);
+    if (inline && bloco.contains(inline)) { inline.classList.add('lp-palavra', 'lp-oculto'); continue; }
+    if (!no.textContent.trim()) continue;
+    const frag = document.createDocumentFragment();
+    for (const parte of no.textContent.split(/(\s+)/)) {
+      if (!parte) continue;
+      if (/^\s+$/.test(parte)) { frag.append(parte); continue; }
+      const span = document.createElement('span');
+      span.className = 'lp-palavra lp-oculto';
+      span.textContent = parte;
+      frag.append(span);
+    }
+    no.replaceWith(frag);
+  }
+}
+
+function animarEntrada() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+
+  for (const bloco of document.querySelectorAll(SELETOR_ENTRADA)) {
+    if (bloco.closest('details') || bloco.dataset.lpBloco) continue;
+    bloco.dataset.lpBloco = '1';
+    if (bloco.matches(BLOCOS_INTEIROS)) bloco.classList.add('lp-oculto');
+    else quebrarEmPalavras(bloco);
+  }
+
+  let obs = null;
+  const linhaDo = new Map(); // primeira unidade da linha → unidades da linha
+
+  function revelar(unidades, atraso) {
+    for (const u of unidades) {
+      u.style.setProperty('--lp-atraso', `${atraso}ms`);
+      u.classList.replace('lp-oculto', 'lp-entra');
+    }
+  }
+
+  function montar() {
+    obs?.disconnect();
+    linhaDo.clear();
+    const linhas = [];
+    let atual = null;
+    for (const u of document.querySelectorAll('.lp-oculto')) {
+      if (!u.getClientRects().length) { u.classList.remove('lp-oculto'); continue; } // escondido (display: none)
+      const bloco = u.closest('[data-lp-bloco]');
+      const r = u.getBoundingClientRect();
+      const mesmaLinha = atual && atual.bloco === bloco && Math.abs(r.top - atual.top) < r.height * 0.5;
+      if (!mesmaLinha) { atual = { bloco, top: r.top, unidades: [] }; linhas.push(atual); }
+      atual.unidades.push(u);
+    }
+    obs = new IntersectionObserver(entradas => {
+      // Lateral e leitura fazem cada uma a sua cascata, em paralelo; o passo encolhe quando
+      // muitas linhas entram de uma vez, para a leva inteira caber em ~1s.
+      const colunas = new Map();
+      for (const e of entradas) {
+        if (!e.isIntersecting) continue;
+        const coluna = e.target.closest('.lp-lateral') ? 'lateral' : 'leitura';
+        if (!colunas.has(coluna)) colunas.set(coluna, []);
+        colunas.get(coluna).push(e);
+      }
+      for (const lista of colunas.values()) {
+        lista.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        const passo = Math.min(PASSO_LINHA_MS, LEVA_MAX_MS / lista.length);
+        lista.forEach((e, k) => {
+          revelar(linhaDo.get(e.target), Math.round(k * passo));
+          obs.unobserve(e.target);
+        });
+      }
+    }, { rootMargin: '0px 0px -6% 0px' });
+    for (const l of linhas) {
+      linhaDo.set(l.unidades[0], l.unidades);
+      obs.observe(l.unidades[0]);
+    }
+  }
+
+  // Mede depois da webfont (a quebra de linha muda com ela), mas sem esperar para sempre.
+  Promise.race([document.fonts?.ready, new Promise(r => setTimeout(r, 1500))]).then(montar);
+
+  let espera;
+  addEventListener('resize', () => {
+    clearTimeout(espera);
+    espera = setTimeout(() => { if (document.querySelector('.lp-oculto')) montar(); }, 200);
+  });
+  document.addEventListener('animationend', e => {
+    if (e.animationName === 'lp-entrada') e.target.classList.remove('lp-entra');
+  });
+}
+
 // ── Início ───────────────────────────────────────────────────────────────────
 const buscarJson = url => fetch(url).then(r => (r.ok ? r.json() : null)).catch(() => null);
 
@@ -333,6 +439,7 @@ async function init() {
   const conteudo = document.getElementById('conteudo');
   if (!dia) {
     conteudo.innerHTML = `<p class="erro">${dt === hoje ? 'Leituras de hoje não disponíveis.' : 'Leituras deste dia não disponíveis.'}</p>`;
+    animarEntrada();
     return;
   }
 
@@ -350,6 +457,7 @@ async function init() {
 
   construirNav(blocos);
   configurarFlagButtons(dt);
+  animarEntrada();
 }
 
 init();
