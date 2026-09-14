@@ -233,29 +233,26 @@
 /* ── Card de resultado individual ────────────────────────────────────────── */
 /* Em uma lista de até 200 itens, moldura em cada card vira ruído e nada se
    destaca. O card fica liso e o relevo aparece só onde importa: sob o cursor
-   e no selecionado. A borda esquerda transparente reserva o espaço do realce,
-   para o texto não deslocar no hover. */
+   e no selecionado. */
 .resultado-card {
   background: transparent;
   border: none;
-  border-left: 2px solid transparent;
   border-radius: var(--radius);
   padding: var(--space-md) var(--space-lg);
   margin-bottom: 0.15rem;
   cursor: pointer;
-  transition: border-color var(--transition), background var(--transition);
+  transition: background var(--transition);
 }
 
 .resultado-card:last-child { margin-bottom: 0; }
 
+/* Seleção pelo fundo, nunca por barra lateral. */
 .resultado-card:hover {
-  border-left-color: var(--color-border);
   background: var(--color-surface);
 }
 
 .resultado-card.selecionado {
-  border-left-color: var(--color-accent);
-  background: var(--color-surface);
+  background: rgba(197,160,40,0.10);
 }
 
 .card-meta {
@@ -1134,15 +1131,13 @@
 /* O versículo é o que a pessoa abriu o card para ler, então tem o maior corpo
    do card — mas fica abaixo do texto do Catecismo (1.1rem), que é o conteúdo
    principal da página. Sem itálico: ele marca destaque, não blocos de
-   leitura — a citação já se anuncia pelas aspas e pela barra lateral. */
+   leitura — a citação já se anuncia pelas aspas e pela serifa. */
 #biblia-card-texto {
   font-family: var(--font-serif);
   font-size: 1rem;
   line-height: 1.65;
   color: var(--color-text);
   margin: 0;
-  padding-left: 0.7rem;
-  border-left: 2px solid var(--color-border);
 }
 
 #biblia-card-texto:empty { display: none; }
