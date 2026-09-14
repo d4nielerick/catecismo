@@ -3,6 +3,8 @@
  * Recebe query + parágrafos relevantes, retorna resumo via Grok.
  */
 
+import { chamarModelo } from './_xai.mjs';
+
 export const config = { runtime: 'edge' };
 
 // ── Rate limiting in-memory (por IP, por instância Edge) ─────────────────────
@@ -100,36 +102,16 @@ export default async function handler(req) {
     : `Tema pesquisado: "${query}"\n\nParágrafos do Catecismo:\n\n${contexto}`;
 
   try {
-    const resp = await fetch('https://api.x.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: 'grok-4-1-fast-non-reasoning',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user',   content: userMessage },
-        ],
-        max_tokens: 400,
-        temperature: 0.3,
-      }),
-      // Sem prazo, uma xAI travada deixava o botão de resumo pendurado por
-      // minutos (visto numa chamada de 301 s durante os testes do hub).
-      signal: AbortSignal.timeout(20000),
+    // Prazo e reforço em _xai.mjs: sem prazo, uma xAI travada deixava o botão
+    // de resumo pendurado por minutos (visto numa chamada de 301 s).
+    const { texto } = await chamarModelo(apiKey, {
+      sistema: systemPrompt,
+      usuario: userMessage,
+      maxTokens: 400,
+      temperatura: 0.3,
+      prazoMs: 25000,
+      reforcoMs: 8000,
     });
-
-    if (!resp.ok) {
-      const err = await resp.text();
-      return new Response(JSON.stringify({ error: `Erro da API: ${resp.status}`, detail: err }), {
-        status: 502,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
-
-    const data = await resp.json();
-    const texto = data.choices?.[0]?.message?.content ?? '';
 
     return new Response(JSON.stringify({ resumo: texto }), {
       status: 200,

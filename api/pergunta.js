@@ -18,7 +18,7 @@
  * Se o planejador falhar, a busca segue só com a pergunta original.
  *
  * Guardas de custo: cache por pergunta normalizada, limite por IP, teto diário
- * de perguntas, prazo em cada chamada. Cache e contador ficam no tmp do
+ * de perguntas, prazo e reforço em cada chamada (_xai.mjs). Cache e contador ficam no tmp do
  * container — sobrevivem a `docker restart` e nunca na pasta que o Caddy serve.
  */
 
@@ -27,9 +27,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { recuperarFundido, textoDoParagrafo } from './_recuperar.mjs';
 import { filtrarResposta } from './_guardas.mjs';
+import { chamarModelo } from './_xai.mjs';
 
-const MODELO = 'grok-4-1-fast-non-reasoning';
-const URL_MODELO = 'https://api.x.ai/v1/chat/completions';
 const MAX_CHARS_PARAGRAFO = 1200;
 
 const LIMITE_POR_IP = 6;                  // perguntas novas por janela
@@ -124,43 +123,6 @@ function guardarNoCache(chave, resposta) {
 }
 
 /**
- * Uma chamada ao modelo, com uma nova tentativa em falha passageira (prazo
- * estourado, 429, 5xx, rede). Na simulação com o modelo real, 3 de 14
- * perguntas estouraram o prazo do redator enquanto as outras levavam 1–4 s.
- */
-async function chamarModelo(apiKey, opcoes, tentativas = 2) {
-  for (let i = 1; ; i++) {
-    try {
-      return await chamarUmaVez(apiKey, opcoes);
-    } catch (err) {
-      const passageira = err.name === 'TimeoutError' || err.name === 'AbortError'
-        || /^modelo (429|5\d\d)/.test(err.message) || /fetch failed/.test(err.message);
-      if (!passageira || i >= tentativas) throw err;
-      console.error(`[pergunta] tentativa ${i} falhou (${err.message}); repetindo`);
-    }
-  }
-}
-
-async function chamarUmaVez(apiKey, { sistema, usuario, maxTokens, emJson = false, prazoMs }) {
-  const resp = await fetch(URL_MODELO, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model: MODELO,
-      messages: [{ role: 'system', content: sistema }, { role: 'user', content: usuario }],
-      max_tokens: maxTokens,
-      temperature: 0.1,
-      ...(emJson ? { response_format: { type: 'json_object' } } : {}),
-    }),
-    // Sem prazo, uma xAI travada deixou o leitor 5 minutos em "Procurando…".
-    signal: AbortSignal.timeout(prazoMs),
-  });
-  if (!resp.ok) throw new Error(`modelo ${resp.status}: ${(await resp.text()).slice(0, 200)}`);
-  const dados = await resp.json();
-  return { texto: dados.choices?.[0]?.message?.content ?? '', uso: dados.usage || {} };
-}
-
-/**
  * Valida o JSON do planejador. Nada dele chega ao leitor sem passar por aqui:
  * campos com tipo errado caem no padrão, textos são cortados e limpos.
  */
@@ -222,7 +184,7 @@ function montar(textoModelo, enviados, entendimento = null, registro = {}) {
 export async function planejar(pergunta, apiKey) {
   try {
     const r = await chamarModelo(apiKey, {
-      sistema: PLANEJADOR, usuario: `Pergunta: ${pergunta}`, maxTokens: 200, emJson: true, prazoMs: 8000,
+      sistema: PLANEJADOR, usuario: `Pergunta: ${pergunta}`, maxTokens: 200, emJson: true, prazoMs: 12000, reforcoMs: 4000,
     });
     return { plano: lerPlano(r.texto), uso: r.uso };
   } catch (err) {
@@ -266,7 +228,8 @@ export async function responder(pergunta, apiKey) {
     sistema: REDATOR,
     usuario: `Parágrafos do Catecismo:\n\n${contexto}\n\n---\nPergunta: ${pergunta}`,
     maxTokens: 220,
-    prazoMs: 15000,
+    prazoMs: 25000,
+    reforcoMs: 7000,
   });
   uso.push(r.uso);
 
