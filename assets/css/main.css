@@ -313,6 +313,22 @@ body {
   text-shadow: 0 1px 14px rgba(0,0,0,0.6);
 }
 
+/* Entrada para o hub de perguntas: um convite na mesma voz da tagline, não
+   um botão — a busca continua sendo a ação principal da hero. */
+#hero.hero-foto .hero-perguntar {
+  margin-top: -0.35rem;
+  font-family: var(--font-serif);
+  font-size: clamp(0.92rem, 1.2vw, 1.02rem);
+  font-style: italic;
+  color: var(--color-hero-ouro);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,222,75,0.35);
+  text-shadow: 0 1px 14px rgba(0,0,0,0.6);
+  transition: border-color var(--transition);
+}
+
+#hero.hero-foto .hero-perguntar:hover { border-bottom-color: var(--color-hero-ouro); }
+
 /* ── Link discreto entre catecismos (São Pio X) ─────────────────────────── */
 .btn-outro-catecismo {
   font-family: var(--font-sans);

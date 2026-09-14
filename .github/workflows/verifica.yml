@@ -21,6 +21,8 @@ jobs:
         run: node scripts/verifica-remissoes.mjs
       - name: Léxico de conceitos (temas existem no índice)
         run: node scripts/verifica-lexico.mjs
+      - name: Recuperação do hub de perguntas (§§ certos no top 12)
+        run: node scripts/avalia-recuperacao.mjs
       - name: Liturgia diária (reprodutível + texto preservado + calendário)
         run: node scripts/verifica-liturgia.mjs
       - name: Motor de busca

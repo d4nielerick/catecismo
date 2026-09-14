@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pergunte ao Catecismo — Catecismo da Igreja Católica</title>
+  <meta name="description" content="Faça uma pergunta e veja o que o Catecismo da Igreja Católica ensina, com os parágrafos citados.">
+  <link rel="canonical" href="https://santadoutrina.cloud/perguntar/">
+
+  <meta property="og:title"       content="Pergunte ao Catecismo">
+  <meta property="og:description" content="Faça uma pergunta e veja o que o Catecismo da Igreja Católica ensina, com os parágrafos citados.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://santadoutrina.cloud/perguntar/">
+  <meta property="og:image"       content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
+  <meta property="og:locale"      content="pt_BR">
+
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+  <script defer src="https://umami.danielerick.com/script.js" data-website-id="28c35f85-bd1b-4ea9-8f52-fc98d33b4974"></script>
+
+  <style>
+    body { background: var(--color-bg); }
+
+    .pq {
+      max-width: 38rem;
+      margin: 0 auto;
+      padding: clamp(1.25rem, 4vw, 2.5rem) 1.25rem 5rem;
+    }
+
+    .pq-voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .pq-voltar:hover { color: var(--color-primary); }
+
+    /* ── Cabeçalho editorial ───────────────────────────────────────────── */
+    .pq-cabeca {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: clamp(1.5rem, 5vh, 3rem) 0 var(--space-2xl);
+    }
+
+    .pq-marca {
+      height: clamp(64px, 11vh, 92px);
+      width: auto;
+      margin-bottom: var(--space-lg);
+      opacity: 0.8;
+    }
+
+    .pq-titulo {
+      font-family: var(--font-serif);
+      font-size: clamp(1.7rem, 5vw, 2.2rem);
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--color-text);
+    }
+
+    .pq-sub {
+      margin-top: 0.45rem;
+      font-family: var(--font-serif);
+      font-size: 1.02rem;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--color-muted);
+      max-width: 28rem;
+    }
+
+    /* ── Campo ─────────────────────────────────────────────────────────── */
+    .pq-form {
+      display: flex;
+      gap: 0.6rem;
+      align-items: stretch;
+    }
+
+    .pq-campo {
+      flex: 1;
+      min-width: 0;
+      /* 16px evita o zoom automático do iPhone ao focar. */
+      font-size: 16px;
+      font-family: var(--font-serif);
+      color: var(--color-text);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 0.8rem 0.95rem;
+      transition: border-color var(--transition);
+    }
+    .pq-campo::placeholder { color: #a9a39a; font-style: italic; }
+    .pq-campo:focus { outline: none; border-color: var(--color-accent); }
+
+    .pq-botao {
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--color-primary);
+      border: none;
+      border-radius: var(--radius);
+      padding: 0 1.2rem;
+      cursor: pointer;
+      transition: background var(--transition), opacity var(--transition);
+    }
+    .pq-botao:disabled { opacity: 0.55; cursor: default; }
+    @media (hover: hover) and (pointer: fine) {
+      .pq-botao:not(:disabled):hover { background: #245240; }
+    }
+
+    .pq-aviso-limite {
+      margin-top: 0.5rem;
+      font-size: 0.74rem;
+      color: var(--color-muted);
+      text-align: right;
+    }
+
+    /* ── Listas de leitura (exemplos, citados, relacionados) ───────────── */
+    .pq-rotulo {
+      margin: var(--space-2xl) 0 0;
+      padding-bottom: 0.45rem;
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .pq-lista { list-style: none; }
+    .pq-lista li + li { border-top: 1px solid var(--color-border); }
+
+    .pq-exemplo {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 0.7rem 0.1rem;
+      border: none;
+      background: transparent;
+      font-family: var(--font-serif);
+      font-size: 1.06rem;
+      color: var(--color-primary);
+      cursor: pointer;
+      transition: color var(--transition);
+    }
+    .pq-exemplo:hover, .pq-exemplo:focus-visible { color: var(--color-accent-dk); outline: none; }
+
+    .pq-item {
+      display: block;
+      padding: 0.85rem 0.1rem;
+      text-decoration: none;
+      color: inherit;
+      scroll-margin-top: 1rem;
+      border-radius: 4px;
+      transition: background-color 0.6s ease;
+    }
+    .pq-item.realce { background-color: rgba(197,160,40,0.12); }
+
+    .pq-item-num {
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--color-accent-dk);
+    }
+
+    .pq-item-trecho {
+      display: block;
+      margin-top: 0.2rem;
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--color-text);
+    }
+
+    .pq-item-ler {
+      display: inline-block;
+      margin-top: 0.3rem;
+      font-size: 0.74rem;
+      color: var(--color-muted);
+    }
+    .pq-item:hover .pq-item-ler { color: var(--color-primary); }
+
+    /* ── Resposta ──────────────────────────────────────────────────────── */
+    .pq-resultado { margin-top: var(--space-2xl); }
+
+    .pq-pergunta-eco {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--color-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .pq-resposta {
+      font-family: var(--font-serif);
+      font-size: 1.18rem;
+      line-height: 1.72;
+      color: var(--color-text);
+    }
+
+    .pq-cita {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--color-accent-dk);
+      background: none;
+      border: none;
+      padding: 0 0.1rem;
+      margin-left: 0.1rem;
+      vertical-align: 0.3em;
+      cursor: pointer;
+    }
+    .pq-cita:hover { text-decoration: underline; }
+
+    .pq-carregando {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-muted);
+      animation: pq-pulso 1.4s ease-in-out infinite;
+    }
+    @keyframes pq-pulso { 50% { opacity: 0.45; } }
+
+    .pq-vazio-titulo {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      line-height: 1.45;
+      color: var(--color-text);
+    }
+    .pq-vazio-sub {
+      margin-top: 0.3rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-muted);
+    }
+
+    .pq-erro { font-size: 0.9rem; color: #8a4b2c; }
+
+    .pq-nota {
+      margin-top: var(--space-2xl);
+      font-size: 0.74rem;
+      line-height: 1.55;
+      color: var(--color-muted);
+    }
+
+    @media (max-width: 520px) {
+      .pq-form { flex-direction: column; }
+      .pq-botao { padding: 0.8rem; }
+      .pq-resposta { font-size: 1.1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pq-carregando { animation: none; }
+      .pq-item { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<main class="pq">
+
+  <a href="../" class="pq-voltar">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Catecismo da Igreja Católica
+  </a>
+
+  <header class="pq-cabeca">
+    <img src="../assets/marca-catecismo-marrom.svg" class="pq-marca" alt="" aria-hidden="true" width="146" height="210">
+    <h1 class="pq-titulo">Pergunte ao Catecismo</h1>
+    <p class="pq-sub">A resposta vem só do texto do Catecismo, sempre com os parágrafos que a sustentam.</p>
+  </header>
+
+  <form class="pq-form" id="pq-form" role="search">
+    <label for="pq-campo" class="sr-only">Sua pergunta</label>
+    <input id="pq-campo" class="pq-campo" type="text" maxlength="300" autocomplete="off"
+           placeholder="Ex.: posso comungar sem me confessar?" enterkeyhint="send">
+    <button id="pq-botao" class="pq-botao" type="submit">Perguntar</button>
+  </form>
+
+  <section id="pq-exemplos">
+    <h2 class="pq-rotulo">Por exemplo</h2>
+    <ul class="pq-lista">
+      <li><button type="button" class="pq-exemplo">O que é o purgatório?</button></li>
+      <li><button type="button" class="pq-exemplo">Posso comungar se não me confessei?</button></li>
+      <li><button type="button" class="pq-exemplo">Por que os católicos rezam para Maria?</button></li>
+      <li><button type="button" class="pq-exemplo">O que a Igreja ensina sobre a cremação?</button></li>
+    </ul>
+  </section>
+
+  <section id="pq-resultado" class="pq-resultado" aria-live="polite"></section>
+
+  <p class="pq-nota">
+    A resposta é redigida por inteligência artificial a partir dos parágrafos citados e pode
+    conter imprecisões. A referência é sempre o texto do Catecismo — abra os parágrafos para ler.
+  </p>
+
+</main>
+
+<script type="module" src="perguntar.js"></script>
+</body>
+</html>

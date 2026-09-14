@@ -649,6 +649,9 @@ function getSugestaoEl() {
 function mostrarSugestao(query, nAtual) {
   const el = getSugestaoEl();
 
+  // Frase com cara de pergunta: a busca procura palavras, o hub responde.
+  if (pareceNPergunta(query)) { oferecerPergunta(query, nAtual, el); return; }
+
   // O léxico vem primeiro: quando a palavra do usuário não é a palavra do
   // Catecismo, corrigir a grafia não adianta — "mágoa" está escrito certo, o
   // assunto é que se chama "perdão" lá dentro.
@@ -780,8 +783,8 @@ function restaurarSemResultados() {
   );
 }
 
-/** Estado vazio que resolve em vez de só informar que não achou. */
-function renderizarPainelConceitos(query, temas) {
+/** Estado vazio editorial: marca, título e subtítulo. Devolve o painel. */
+function abrirPainelEditorial(tituloTexto, subTexto) {
   semResultados.classList.remove('oculto');
   semResultados.className = 'painel-conceitos';
   semResultados.replaceChildren();
@@ -793,17 +796,72 @@ function renderizarPainelConceitos(query, temas) {
   marca.setAttribute('aria-hidden', 'true');
   marca.width = 146;
   marca.height = 210;
-  semResultados.appendChild(marca);
 
   const titulo = document.createElement('p');
   titulo.className = 'painel-conceitos-titulo';
-  titulo.textContent = `O Catecismo não usa a palavra “${query.trim()}”.`;
-  semResultados.appendChild(titulo);
+  titulo.textContent = tituloTexto;
 
   const sub = document.createElement('p');
   sub.className = 'painel-conceitos-sub';
-  sub.textContent = 'Mas trata do assunto nestes temas:';
-  semResultados.appendChild(sub);
+  sub.textContent = subTexto;
+
+  semResultados.append(marca, titulo, sub);
+  return semResultados;
+}
+
+const INTERROGATIVAS = /^(o que|oque|por ?que|pq|como|quando|qual|quais|quem|onde|posso|pode|podem|devo|deve|e pecado|existe|sera)\b/;
+
+/** Frase com cara de pergunta — o tipo de busca em que procurar palavra pouco ajuda. */
+function pareceNPergunta(query) {
+  const t = normalizarSimples(query.trim());
+  const palavras = t.split(/\s+/).filter(Boolean).length;
+  return t.endsWith('?') || palavras >= 5 || (palavras >= 3 && INTERROGATIVAS.test(t));
+}
+
+/** Leva a frase ao hub: painel no estado vazio, tarja fina quando há resultados. */
+function oferecerPergunta(query, nAtual, el) {
+  const href = `perguntar/?q=${encodeURIComponent(query.trim())}`;
+
+  if (nAtual > 0) {
+    el.className = 'sugestao-variante';
+    el.replaceChildren();
+    const prefixo = document.createElement('span');
+    prefixo.textContent = 'Parece uma pergunta:';
+    const link = document.createElement('a');
+    link.className = 'sugestao-btn';
+    link.href = href;
+    link.textContent = 'Perguntar ao Catecismo';
+    el.append(prefixo, link);
+    return;
+  }
+
+  el.className = 'sugestao-variante oculto';
+  const painel = abrirPainelEditorial(
+    'Isto parece uma pergunta.',
+    'A busca procura palavras; o Catecismo pode responder com os parágrafos que tratam dela.'
+  );
+
+  const lista = document.createElement('ul');
+  lista.className = 'painel-conceitos-lista';
+  const li = document.createElement('li');
+  const link = document.createElement('a');
+  link.className = 'painel-conceito-item';
+  link.href = href;
+  const nome = document.createElement('span');
+  nome.className = 'painel-conceito-nome';
+  nome.textContent = 'Perguntar ao Catecismo →';
+  link.appendChild(nome);
+  li.appendChild(link);
+  lista.appendChild(li);
+  painel.appendChild(lista);
+}
+
+/** Estado vazio que resolve em vez de só informar que não achou. */
+function renderizarPainelConceitos(query, temas) {
+  abrirPainelEditorial(
+    `O Catecismo não usa a palavra “${query.trim()}”.`,
+    'Mas trata do assunto nestes temas:'
+  );
 
   const lista = document.createElement('ul');
   lista.className = 'painel-conceitos-lista';
