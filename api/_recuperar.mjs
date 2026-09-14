@@ -129,8 +129,19 @@ function base() {
 
   const lexico = Object.entries(lexicoBruto).map(([k, temas]) => ({ chave: norm(k), temas }));
 
+  // Subtemas curtos do índice, por §. Entrada com mais de 12 §§ é assunto
+  // largo, não bloco de argumento — fica fora da completação por bloco.
+  const blocosPorParagrafo = new Map();
+  for (const e of entradas) {
+    if (e.paragrafos.length > 12) continue;
+    for (const n of e.paragrafos) {
+      const l = blocosPorParagrafo.get(n);
+      if (l) l.push(e); else blocosPorParagrafo.set(n, [e]);
+    }
+  }
+
   _base = {
-    porNumero, docs, df, entradas, paragrafosPorTema, lexico,
+    porNumero, docs, df, entradas, paragrafosPorTema, lexico, blocosPorParagrafo,
     vocab: [...df.keys()],
     N: paragrafos.length,
     tamMedio: somaTam / paragrafos.length,
@@ -331,6 +342,39 @@ export function recuperarFundido(consultas, limite = PARAGRAFOS_POR_PERGUNTA) {
     const bonus = vizinhos.reduce((a, d) => a + votos.get(m + d) * (Math.abs(d) === 1 ? 0.5 : 0.25), 0);
     suavizados.set(m, (suavizados.get(m) || 0) + bonus);
   }
+
+  // Bloco do índice: quando metade ou mais de um subtema curto do índice
+  // analítico já está entre os primeiros colocados, os §§ que faltam dele
+  // entram logo abaixo do membro mais fraco presente — até 4, os mais
+  // próximos em numeração primeiro. "Súplica" lista §2629–2633 (+2676): vindo
+  // §2629–2631, entram §2632 (hierarquia dos pedidos) e §2633 ("qualquer
+  // necessidade pode tornar-se objeto de pedido"). A curadoria humana diz que
+  // é o mesmo assunto, ainda que sem as palavras de nenhuma consulta.
+  // Por posição, não por fração do voto: com 0,9 do menor voto, medido com
+  // planos reais, o §2632 ficava em 15º — os §§ gerais de oração no meio.
+  const MAX_ENCAIXES = 4;
+  const topo = new Map([...suavizados].sort((x, y) => y[1] - x[1] || x[0] - y[0]).slice(0, limite));
+  const encaixes = new Map(); // § → { teto, distancia }
+  const vistos = new Set();
+  for (const n of topo.keys()) {
+    for (const e of b.blocosPorParagrafo.get(n) || []) {
+      if (vistos.has(e)) continue;
+      vistos.add(e);
+      const presentes = e.paragrafos.filter((m) => topo.has(m));
+      if (presentes.length < 2 || presentes.length * 2 < e.paragrafos.length) continue;
+      const teto = Math.min(...presentes.map((m) => topo.get(m)));
+      for (const m of e.paragrafos) {
+        if (topo.has(m) || !b.porNumero.has(m)) continue;
+        const distancia = Math.min(...presentes.map((p) => Math.abs(p - m)));
+        const atual = encaixes.get(m);
+        if (!atual || distancia < atual.distancia) encaixes.set(m, { teto, distancia });
+      }
+    }
+  }
+  [...encaixes]
+    .sort((x, y) => x[1].distancia - y[1].distancia || x[0] - y[0])
+    .slice(0, MAX_ENCAIXES)
+    .forEach(([m, { teto }], i) => suavizados.set(m, teto - 1e-6 * (i + 1)));
 
   return [...suavizados]
     .sort((x, y) => y[1] - x[1] || x[0] - y[0])

@@ -42,19 +42,27 @@ export function sustentacao(frase, numeros) {
  * Divide o texto do modelo em frases com suas citações. Aceita "frase [§1]."
  * e "frase. [§1]"; o que vier depois da última citação não tem citação.
  */
+// Ponto final seguido de espaço e de começo de frase (maiúscula ou aspas).
+const FIM_DE_FRASE = /(?<=[.!?])\s+(?=[«"“A-ZÁÉÍÓÚÂÊÔÃÕÇ])/;
+
 export function frasesComCitacao(texto) {
   const frases = [];
   const re = /([^[]+?)((?:\s*\[§\s*\d+\])+)\s*\.?/g;
+  const emFrases = (s) => s.split(FIM_DE_FRASE).map((x) => x.trim()).filter((x) => x.replace(/[\s.]/g, ''));
   let fim = 0;
   let m;
   while ((m = re.exec(texto)) !== null) {
-    const corpo = m[1].replace(/^[\s.]+/, '').trim();
     const numeros = [...m[2].matchAll(/\d+/g)].map((x) => Number(x[0]));
-    if (corpo) frases.push({ corpo, numeros });
+    // A citação no fim de um trecho vale só para a última frase dele. Sem isto,
+    // três frases seguidas de "[§2629][§2631][§2614]" passavam juntas — as duas
+    // primeiras sem citação nenhuma (visto na simulação com o modelo real).
+    const partes = emFrases(m[1].replace(/^[\s.]+/, ''));
+    const ultima = partes.pop();
+    for (const p of partes) frases.push({ corpo: p, numeros: [] });
+    if (ultima) frases.push({ corpo: ultima, numeros });
     fim = re.lastIndex;
   }
-  const resto = texto.slice(fim).trim();
-  if (resto.replace(/[\s.]/g, '')) frases.push({ corpo: resto, numeros: [] });
+  for (const p of emFrases(texto.slice(fim))) frases.push({ corpo: p, numeros: [] });
   return frases;
 }
 
