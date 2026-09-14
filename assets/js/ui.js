@@ -650,7 +650,7 @@ function mostrarSugestao(query, nAtual) {
   const el = getSugestaoEl();
 
   // Frase com cara de pergunta: a busca procura palavras, o hub responde.
-  if (pareceNPergunta(query)) { oferecerPergunta(query, nAtual, el); return; }
+  if (HUB_ABERTO && pareceNPergunta(query)) { oferecerPergunta(query, nAtual, el); return; }
 
   // O léxico vem primeiro: quando a palavra do usuário não é a palavra do
   // Catecismo, corrigir a grafia não adianta — "mágoa" está escrito certo, o
@@ -808,6 +808,11 @@ function abrirPainelEditorial(tituloTexto, subTexto) {
   semResultados.append(marca, titulo, sub);
   return semResultados;
 }
+
+// Hub de perguntas em publicação silenciosa: a página /perguntar/ existe, mas
+// a busca ainda não oferece o atalho. Abrir = trocar para true (e mostrar o
+// convite da hero em index.html).
+const HUB_ABERTO = false;
 
 const INTERROGATIVAS = /^(o que|oque|por ?que|pq|como|quando|qual|quais|quem|onde|posso|pode|podem|devo|deve|e pecado|existe|sera)\b/;
 

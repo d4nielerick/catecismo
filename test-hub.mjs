@@ -7,7 +7,7 @@
  *
  * `node test-hub.mjs`
  */
-import { mkdtempSync } from 'node:fs';
+import { mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -132,6 +132,13 @@ const presa = (opts) => new Promise((_, rej) =>
   await new Promise((r) => setTimeout(r, 200));
   ok('erro 400 → falha na hora, sem reforço', /modelo 400/.test(e.message) && n === 1);
 }
+
+// ── registro da fase silenciosa
+const registro = readFileSync(join(process.env.TMPDIR, 'catecismo-perguntas-registro.jsonl'), 'utf8')
+  .trim().split('\n').map((l) => JSON.parse(l));
+ok(`registro grava a pergunta e o tipo (${registro.length} linhas)`, registro.some((l) => l.pergunta === 'O que é o Purgatório?!' && l.tipo === 'resposta' && Array.isArray(l.citados)));
+ok('registro marca cache, fora do escopo, erro e limite', ['fora-do-escopo', 'erro', 'limite-ip'].every((t) => registro.some((l) => l.tipo === t)) && registro.some((l) => l.cache));
+ok('registro não guarda IP', !/\b\d{1,3}(\.\d{1,3}){3}\b/.test(JSON.stringify(registro)));
 
 globalThis.fetch = undefined;
 if (falhas) {

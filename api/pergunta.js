@@ -22,7 +22,7 @@
  * container — sobrevivem a `docker restart` e nunca na pasta que o Caddy serve.
  */
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { appendFileSync, readFileSync, renameSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { recuperarFundido, textoDoParagrafo } from './_recuperar.mjs';
@@ -33,10 +33,12 @@ const MAX_CHARS_PARAGRAFO = 1200;
 
 const LIMITE_POR_IP = 6;                  // perguntas novas por janela
 const JANELA_IP_MS = 10 * 60 * 1000;
-const TETO_DIARIO = 400;                  // perguntas que chegam ao modelo, por dia
+const TETO_DIARIO = 100;                  // perguntas que chegam ao modelo, por dia (fase silenciosa)
 const MAX_CACHE = 3000;
 
 const ARQUIVO_ESTADO = join(tmpdir(), 'catecismo-perguntas.json');
+const ARQUIVO_REGISTRO = join(tmpdir(), 'catecismo-perguntas-registro.jsonl');
+const MAX_REGISTRO_BYTES = 5 * 1024 * 1024;
 
 // ── Estado persistente (best-effort) ─────────────────────────────────────────
 
@@ -63,6 +65,19 @@ function contarPergunta() {
 }
 
 const tetoAtingido = () => estado.dia === hoje() && estado.perguntas >= TETO_DIARIO;
+
+// ── Registro (fase de publicação silenciosa) ────────────────────────────────
+// O que perguntaram, o que a trava cortou e quanto demorou — para ajustar o
+// hub com perguntas reais antes de abri-lo. Sem IP nem nada que identifique
+// quem pergunta. Nunca derruba a resposta.
+function registrar(linha) {
+  try {
+    if ((statSync(ARQUIVO_REGISTRO, { throwIfNoEntry: false })?.size || 0) > MAX_REGISTRO_BYTES) {
+      renameSync(ARQUIVO_REGISTRO, `${ARQUIVO_REGISTRO}.1`);
+    }
+    appendFileSync(ARQUIVO_REGISTRO, JSON.stringify({ quando: new Date().toISOString().slice(0, 16), ...linha }) + '\n');
+  } catch { /* sem disco: segue sem registro */ }
+}
 
 // ── Limite por IP (em memória; o teto diário é quem protege de verdade) ───────
 
@@ -256,14 +271,19 @@ export default async function handler(req) {
   }
 
   const chave = chaveDe(pergunta);
-  if (estado.cache[chave]) return json({ ...estado.cache[chave], cache: true });
+  if (estado.cache[chave]) {
+    registrar({ pergunta, tipo: estado.cache[chave].tipo, cache: true });
+    return json({ ...estado.cache[chave], cache: true });
+  }
 
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0].trim()
           ?? req.headers.get('x-real-ip') ?? 'desconhecido';
   if (!ipLiberado(ip)) {
+    registrar({ pergunta, tipo: 'limite-ip' });
     return json({ error: 'Muitas perguntas seguidas. Aguarde alguns minutos.' }, 429, { 'Retry-After': '600' });
   }
   if (tetoAtingido()) {
+    registrar({ pergunta, tipo: 'teto-diario' });
     return json({ error: 'O limite de perguntas de hoje foi atingido. Volte amanhã.' }, 503);
   }
 
@@ -271,14 +291,25 @@ export default async function handler(req) {
   if (!apiKey) return json({ error: 'Serviço indisponível.' }, 503);
 
   contarPergunta();
+  const t0 = Date.now();
   try {
     const { resposta, uso, removidas } = await responder(pergunta, apiKey);
     const tokens = uso.map((u) => `${u.prompt_tokens}+${u.completion_tokens}`).join(' e ');
     console.log(`[pergunta] ${resposta.tipo} · ${tokens} tokens · ${removidas.length} frase(s) removida(s) · ${estado.perguntas}/${TETO_DIARIO} hoje`);
+    registrar({
+      pergunta,
+      tipo: resposta.tipo,
+      entendimento: resposta.entendimento || null,
+      citados: (resposta.citados || []).map((c) => c.numero),
+      removidas: removidas.map(({ motivo, corpo }) => ({ motivo, corpo })),
+      ms: Date.now() - t0,
+      tokens,
+    });
     guardarNoCache(chave, resposta);
     return json(resposta);
   } catch (err) {
     console.error('[pergunta] redator:', err.message);
+    registrar({ pergunta, tipo: 'erro', erro: err.message, ms: Date.now() - t0 });
     return json({ error: 'Não foi possível responder agora. Tente novamente.' }, 502);
   }
 }
