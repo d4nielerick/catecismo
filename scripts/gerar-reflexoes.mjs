@@ -1,8 +1,8 @@
 /**
  * scripts/gerar-reflexoes.mjs — gerador offline das homilias da liturgia.
  *
- * Percorre data/liturgia/*-leituras.json, chama o Grok e grava
- * data/liturgia/<data>-reflexao.json. Os arquivos gerados são commitados;
+ * Percorre data/liturgia-fonte/*-leituras.json, chama o Grok e grava
+ * data/liturgia-fonte/<data>-reflexao.json. Os arquivos gerados são commitados;
  * a página /liturgiadiaria/ e o widget da home leem esse cache estático,
  * sem custo de runtime.
  *
@@ -19,7 +19,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const LIT_DIR   = path.join(__dirname, '..', 'data', 'liturgia');
+const LIT_DIR   = path.join(__dirname, '..', 'data', 'liturgia-fonte');
 const apiKey    = process.env.GROK_API_KEY;
 const filtro    = process.argv[2] || '';
 

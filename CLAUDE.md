@@ -136,6 +136,24 @@ saía com cara de IA e alucinava). `/liturgiadiaria/` e o widget da home mostram
 oficiais. `scripts/gerar-reflexoes.mjs` continua no repo como ferramenta offline para uma eventual
 retomada, mas não é mais chamado por nenhuma página nem função de API.
 
+### Liturgia diária (NÃO editar data/liturgia/ à mão)
+
+`data/liturgia/` é gerado e o CI prova isso via `scripts/verifica-liturgia.mjs`:
+
+```
+data/liturgia-fonte/AAAA-MM-DD-leituras.json   formato cru da API de origem (intocado)
+  --scripts/build-liturgia.mjs-->              data/liturgia/AAAA-MM-DD.json + indice.json
+```
+
+A fonte mistura tudo nos campos `salmo`/`evangelho` (2ª leitura, sequência, aclamação, vigílias,
+leituras à escolha) e parte do texto vem em Unicode NFD; o build separa cada leitura em
+`missas[].leituras[]` com referência completa. O nome do dia ("24º Domingo do Tempo Comum",
+transferências do Brasil) vem de `scripts/lib-calendario-liturgico.mjs`. O verificador exige
+reprodutibilidade, zero linha da fonte perdida, nenhum cabeçalho vazado e calendário coerente com
+as leituras. Para novo ano: pôr os arquivos crus em `data/liturgia-fonte/` e rodar
+`node scripts/build-liturgia.mjs`. Página: `liturgiadiaria/liturgiadiaria.js` (data local do
+aparelho, não UTC).
+
 ### Integridade do texto do Catecismo (NÃO editar catecismo.json à mão)
 
 `data/catecismo.json` é gerado deterministicamente e o CI (`.github/workflows/verifica.yml`)

@@ -1,7 +1,7 @@
 /**
  * liturgia.js — Widget da Liturgia do Dia (hero da home)
- * Lê data/liturgia/YYYY-MM-DD-leituras.json e mostra um resumo com link para
- * a página completa (/liturgiadiaria/).
+ * Lê data/liturgia/AAAA-MM-DD.json (scripts/build-liturgia.mjs) e mostra um resumo com link
+ * para a página completa (/liturgiadiaria/).
  */
 
 function esc(s = '') {
@@ -12,24 +12,26 @@ function esc(s = '') {
     .replace(/"/g, '&quot;');
 }
 
+// Data do aparelho, não UTC: às 22h em Brasília toISOString() já é o dia seguinte.
+function hojeLocal() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
 export async function iniciarLiturgia() {
   const el = document.getElementById('liturgia-widget');
   if (!el) return;
 
-  const hoje = new Date().toISOString().slice(0, 10);
+  const hoje = hojeLocal();
 
   try {
-    const res = await fetch(`/data/liturgia/${hoje}-leituras.json`);
+    const res = await fetch(`/data/liturgia/${hoje}.json`);
     if (!res.ok) { el.remove(); return; }
 
     const d  = await res.json();
-    const ev = d.evangelho || {};
-
-    // Evangelista a partir do texto ("...segundo Mateus")
-    const m = (ev.texto || '').match(/segundo\s+([A-Za-zÀ-ÿ]+)/i);
-    const refEvangelho = [m ? m[1] : '', ev.referencia].filter(Boolean).join(' ');
-    const titulo = d.titulo || 'Liturgia do Dia';
-    const teaser = 'Leituras do dia.';
+    const ev = d.missas?.[0]?.leituras.find(s => s.tipo === 'evangelho' && !s.alternativa);
+    const titulo = d.celebracao || d.tempo || 'Liturgia do Dia';
+    const teaser = d.tempo && d.tempo !== titulo ? d.tempo : 'Leituras do dia.';
 
     el.innerHTML = `
       <a class="liturgia-inner" href="/liturgiadiaria/" style="display:block;text-decoration:none;">
@@ -39,7 +41,7 @@ export async function iniciarLiturgia() {
           </svg>
           ${esc(titulo)}
         </span>
-        ${refEvangelho ? `<p class="liturgia-tema">Evangelho · ${esc(refEvangelho)}</p>` : ''}
+        ${ev?.referencia ? `<p class="liturgia-tema">Evangelho · ${esc(ev.referencia)}</p>` : ''}
         <p class="liturgia-resumo">${esc(teaser)}</p>
         <span class="liturgia-para-link">Ler a liturgia de hoje →</span>
       </a>

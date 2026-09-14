@@ -372,6 +372,63 @@
       font-size: 0.9rem;
     }
 
+    .nome-dia .complemento {
+      display: block;
+      margin-top: 0.2rem;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-style: normal;
+      color: var(--color-muted);
+    }
+
+    .leitura-titulo {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-muted);
+      line-height: 1.5;
+      margin: -0.75rem 0 1rem;
+    }
+
+    .acl-verso {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--color-text);
+    }
+
+    .salmo-ou, .leitura-alt-ou {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent-dk);
+      margin: 0 0.35rem;
+    }
+
+    /* Leitura "à escolha" (mais breve, outra opção): recolhida dentro do card */
+    .leitura-alt {
+      margin-top: 1.25rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--color-border);
+    }
+    .leitura-alt > summary { cursor: pointer; font-size: 0.8rem; color: var(--color-muted); }
+    .leitura-alt > summary .leitura-alt-ou { margin-left: 0; }
+    .leitura-alt[open] > summary { margin-bottom: 1rem; }
+
+    /* Outras missas do dia (vigília, noite, aurora, leituras à escolha) */
+    .missa-extra { margin: 2rem 0 1.25rem; }
+    .missa-extra > summary {
+      cursor: pointer;
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-text);
+      padding: 0.5rem 0;
+    }
+    .missa-extra[open] > summary { margin-bottom: 1rem; }
+
     /* ── Mobile tabs ──────────────────────────────────────────────────────── */
     .lp-tabs {
       display: none;
@@ -471,444 +528,7 @@
 
 </div>
 
-<script type="module">
-
-// ── Extrai o livro (ex: "Nm") a partir do HTML de referências ────────────────
-function extrairLivro(htmlRef, refSuffix) {
-  const escaped = refSuffix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const m = htmlRef.match(new RegExp('([A-Za-záéíóúàâêôãõç1-9]+(?:\\([^)]+\\))?)\\s+' + escaped));
-  return m ? m[1].trim() + ' ' + refSuffix : refSuffix;
-}
-
-// ── Separa o salmo da 2ª leitura embutida (quando houver) ────────────────────
-function parsearSalmo(salmoObj) {
-  const raw = salmoObj.texto ?? '';
-
-  // Separa 2ª Leitura embutida
-  const split2a = raw.split(/\n2ª Leitura\s*[-–]\s*/);
-  const psalmoRaw = split2a[0];
-
-  let segunda = null;
-  if (split2a[1]) {
-    const linhas = split2a[1].split('\n').map(l => l.trim()).filter(Boolean);
-    // 1ª linha: referência (ex: "Hb 10,4-" ou "Hb 10,4-10")
-    const refRaw = linhas[0]?.replace(/-$/, '').trim() ?? '';
-    // Encontra início do texto (após "Leitura d...")
-    const ini = linhas.findIndex(l => /^Leitura d/i.test(l));
-    let textoLinhas = ini >= 0 ? linhas.slice(ini + 1) : linhas.slice(2);
-    // Remove Aclamação ao final
-    const iacl = textoLinhas.findIndex(l => /Aclamação ao Evangelho|ACLAMAÇÃO/i.test(l));
-    if (iacl >= 0) textoLinhas = textoLinhas.slice(0, iacl);
-    segunda = { referencia: refRaw, texto: textoLinhas.join('\n') };
-  }
-
-  return { psalmoRaw, segunda };
-}
-
-// ── Renderiza salmo com Refrão + Estrofes ─────────────────────────────────────
-function renderSalmoHtml(texto) {
-  if (!texto) return '<em>Texto não disponível.</em>';
-
-  // Remove marcas de execução e strip whitespace
-  const linhas = texto
-    .replace(/[*†]/g, '')
-    .split('\n')
-    .map(l => l.trim())
-    .filter(Boolean);
-
-  let refrao = [];
-  let coletandoRefrao = false;
-  let primeiroR = true;
-  let estrofes = [];         // array de arrays de linhas
-  let estrofeAtual = [];
-
-  for (const linha of linhas) {
-    if (linha === 'R.' || linha === 'R') {
-      if (primeiroR) {
-        primeiroR = false;
-        coletandoRefrao = true;
-      } else {
-        coletandoRefrao = false;
-        // Fecha estrofe atual e marca "cantar refrão"
-        if (estrofeAtual.length) estrofes.push({ linhas: estrofeAtual, refrao: true });
-        estrofeAtual = [];
-      }
-    } else if (coletandoRefrao) {
-      // Verso numérico indica fim do refrão
-      if (/^\d+[a-z]?$/.test(linha)) {
-        coletandoRefrao = false;
-        estrofeAtual.push(linha);
-      } else {
-        refrao.push(linha);
-      }
-    } else {
-      estrofeAtual.push(linha);
-    }
-  }
-  if (estrofeAtual.length) estrofes.push({ linhas: estrofeAtual, refrao: false });
-
-  let html = '';
-
-  // Refrão
-  if (refrao.length) {
-    html += `<div class="salmo-refrao"><span class="salmo-r-label">R.</span>${refrao.join('<br>')}</div>`;
-  }
-
-  // Estrofes
-  for (const estrofe of estrofes) {
-    html += `<div class="salmo-estrofe">`;
-    for (const linha of estrofe.linhas) {
-      if (/^\d+[a-z]?$/.test(linha)) {
-        html += `<sup class="vers-num">${linha}</sup>`;
-      } else {
-        html += linha + ' ';
-      }
-    }
-    html += `</div>`;
-    if (estrofe.refrao) html += `<div class="salmo-r-sep">R.</div>`;
-  }
-
-  return html;
-}
-
-// ── Converte texto CNBB em HTML (leituras gerais) ────────────────────────────
-function renderTexto(texto) {
-  if (!texto) return '<em>Texto não disponível.</em>';
-  const linhas = texto.split('\n').map(l => l.trim()).filter(Boolean);
-  let html = '';
-  for (const linha of linhas) {
-    if (/^Proclamação|^Leitura d|^LEITURA|^EVANGELHO|^Palavra do|^Evangelho do Senhor/.test(linha)) continue;
-    if (/^\d+,\d/.test(linha) && linha.length < 20) continue;
-    if (/^\d+$/.test(linha)) {
-      html += `<sup class="vers-num">${linha}</sup>`;
-    } else {
-      html += linha + ' ';
-    }
-  }
-  return `<p>${html.trim()}</p>`;
-}
-
-function renderCard(label, refDisplay, htmlConteudo, id, isGospel = false) {
-  const flagSvg = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>`;
-  return `
-    <div class="leitura-card${isGospel ? ' card-evangelho' : ''}" id="${id}" style="position:relative;">
-      <button class="leitura-flag-btn" type="button" aria-label="Reportar erro nesta leitura" title="Reportar erro" data-leitura-id="${id}" style="position:absolute;top:1rem;right:1rem;background:transparent;border:1px solid var(--color-border);border-radius:50%;width:24px;height:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--color-muted);opacity:0;transition:opacity 0.15s;">${flagSvg}</button>
-      <div class="leitura-label">${label}</div>
-      <div class="leitura-ref">${refDisplay}</div>
-      <div class="leitura-texto">${htmlConteudo}</div>
-    </div>
-  `;
-}
-
-function construirNav(leituras) {
-  const navEl  = document.getElementById('lp-nav');
-  const tabsEl = document.getElementById('lp-tabs');
-  navEl.innerHTML  = '';
-  tabsEl.innerHTML = '';
-
-  leituras.forEach(({ label, id }, i) => {
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="#${id}"${i === 0 ? ' class="ativa"' : ''}><span class="nav-dot"></span>${label}</a>`;
-    navEl.appendChild(li);
-
-    const a = document.createElement('a');
-    a.href = `#${id}`;
-    a.textContent = label;
-    if (i === 0) a.classList.add('ativa');
-    tabsEl.appendChild(a);
-  });
-
-  // Highlight ao scroll
-  const cards = leituras.map(({ id }) => document.getElementById(id)).filter(Boolean);
-  const allLinks = [...navEl.querySelectorAll('a'), ...tabsEl.querySelectorAll('a')];
-
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        allLinks.forEach(a => a.classList.toggle('ativa', a.getAttribute('href') === `#${e.target.id}`));
-      }
-    });
-  }, { threshold: 0.3 });
-
-  cards.forEach(c => obs.observe(c));
-}
-
-async function init() {
-  const hoje  = new Date();
-  const params = new URLSearchParams(location.search);
-  const dt    = params.get('data') || hoje.toISOString().slice(0, 10);
-
-  let raw;
-  try {
-    const r = await fetch(`../data/liturgia/${dt}-leituras.json`);
-    if (!r.ok) throw new Error();
-    raw = await r.json();
-  } catch {
-    document.getElementById('conteudo').innerHTML = `<p class="erro">Leituras de hoje não disponíveis.</p>`;
-    document.getElementById('lp-data').textContent = '';
-    return;
-  }
-
-  const dataFmt = hoje.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-  document.getElementById('lp-data').textContent = dataFmt;
-
-  if (raw.titulo) {
-    const COR_MAP    = { roxo:'#7c3aed', branco:'#b8972e', verde:'#15803d', vermelho:'#dc2626', rosa:'#db2777' };
-    const COR_BG_MAP = { roxo:'#f0ecf8', branco:'#faf7ee', verde:'#edf5ef', vermelho:'#f8edeb', rosa:'#f8edf2', preto:'#eeeceb' };
-    document.getElementById('lp-tempo').textContent = raw.titulo;
-    document.getElementById('lp-cor-dot').style.background = COR_MAP[raw.cor_liturgica] ?? '#888';
-    document.getElementById('lp-tempo-wrap').style.display = '';
-    // Fundo litúrgico
-    const bg = COR_BG_MAP[raw.cor_liturgica];
-    if (bg) document.documentElement.style.setProperty('--litur-bg', bg);
-    // Nome do dia
-    const nome = nomeDiaLiturgico(raw.data, raw.titulo);
-    if (nome) {
-      const el = document.getElementById('lp-nome-dia');
-      el.textContent = nome;
-      el.style.display = '';
-    }
-  }
-
-// ── Nome do dia litúrgico ─────────────────────────────────────────────────────
-function nomeDiaLiturgico(dataStr, titulo) {
-  const [y, m, d] = dataStr.split('-').map(Number);
-  const key = `${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-
-  const FIXAS = {
-    '01-01':'Solenidade de Maria Santíssima','01-06':'Epifania do Senhor',
-    '02-02':'Apresentação do Senhor','03-19':'São José',
-    '03-25':'Anunciação do Senhor','06-13':'Santo Antônio de Pádua',
-    '06-24':'Natividade de São João Batista','06-29':'São Pedro e São Paulo',
-    '08-06':'Transfiguração do Senhor','08-15':'Assunção de Nossa Senhora',
-    '09-08':'Natividade de Maria','09-14':'Exaltação da Santa Cruz',
-    '10-07':'Nossa Senhora do Rosário','11-01':'Todos os Santos',
-    '11-02':'Comemoração dos Fiéis Defuntos','12-08':'Imaculada Conceição',
-    '12-25':'Natal do Senhor','12-26':'Santo Estêvão','12-28':'Santos Inocentes',
-  };
-  if (FIXAS[key]) return FIXAS[key];
-
-  function calcEaster(yr) {
-    const a=yr%19,b=Math.floor(yr/100),c=yr%100,d2=Math.floor(b/4),e=b%4;
-    const f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3);
-    const h=(19*a+b-d2-g+15)%30,i=Math.floor(c/4),k=c%4;
-    const l=(32+2*e+2*i-h-k)%7,mm=Math.floor((a+11*h+22*l)/451);
-    const mo=Math.floor((h+l-7*mm+114)/31),dy=((h+l-7*mm+114)%31)+1;
-    return new Date(yr,mo-1,dy);
-  }
-
-  const dt = new Date(y,m-1,d);
-  const easter = calcEaster(y);
-  function off(n){return new Date(easter.getFullYear(),easter.getMonth(),easter.getDate()+n);}
-  function same(a,b){return a.getDate()===b.getDate()&&a.getMonth()===b.getMonth()&&a.getFullYear()===b.getFullYear();}
-
-  const MOVEIS=[[-46,'Quarta-Feira de Cinzas'],[-7,'Domingo de Ramos'],[-3,'Quinta-Feira Santa'],
-    [-2,'Sexta-Feira Santa'],[-1,'Sábado Santo'],[0,'Domingo de Páscoa'],[1,'Segunda-Feira de Páscoa'],
-    [39,'Ascensão do Senhor'],[49,'Pentecostes'],[56,'Santíssima Trindade'],[60,'Corpus Christi']];
-  for(const [n,name] of MOVEIS) if(same(dt,off(n))) return name;
-
-  const ORDS=['1ª','2ª','3ª','4ª','5ª','6ª','7ª','8ª','9ª','10ª','11ª','12ª','13ª','14ª','15ª','16ª','17ª','18ª','19ª','20ª','21ª','22ª','23ª','24ª','25ª','26ª','27ª','28ª','29ª','30ª','31ª','32ª','33ª','34ª'];
-  const dow = dt.getDay();
-
-  if(titulo==='Tempo da Quaresma'||titulo==='Semana Santa'){
-    const ashWed=off(-46);
-    const diff=Math.round((dt-ashWed)/86400000);
-    if(diff>=4&&diff<=38){
-      const wi=Math.floor((diff-4)/7);
-      if(wi<5) return dow===0?`${ORDS[wi]} Domingo da Quaresma`:`${ORDS[wi]} Semana da Quaresma`;
-    }
-  }
-
-  if(titulo==='Tempo do Advento'){
-    const nov27=new Date(y,10,27);
-    const adv1=new Date(y,10,27+((7-nov27.getDay())%7));
-    const diff=Math.round((dt-adv1)/86400000);
-    if(diff>=0&&diff<=27){
-      const wi=Math.floor(diff/7);
-      if(wi<4) return dow===0?`${ORDS[wi]} Domingo do Advento`:`${ORDS[wi]} Semana do Advento`;
-    }
-  }
-
-  if(titulo==='Tempo Comum'){
-    const jan6=new Date(y,0,6);
-    const bapt=new Date(y,0,6+((7-jan6.getDay())%7||7));
-    const ashWed=off(-46), pent=off(49);
-    if(dt>=bapt&&dt<ashWed){
-      const wi=Math.floor(Math.round((dt-bapt)/86400000)/7)+1;
-      if(wi>=1&&wi<=8) return dow===0?`${ORDS[wi-1]} Domingo do Tempo Comum`:`${ORDS[wi-1]} Semana do Tempo Comum`;
-    }
-    if(dt>pent){
-      const weeksPreLent=Math.floor(Math.round((ashWed-bapt)/86400000)/7);
-      const wn=weeksPreLent+Math.floor(Math.round((dt-pent)/86400000)/7)+1;
-      if(wn>=1&&wn<=34) return dow===0?`${ORDS[wn-1]} Domingo do Tempo Comum`:`${ORDS[wn-1]} Semana do Tempo Comum`;
-    }
-  }
-
-  return null;
-}
-
-  const htmlRef = raw.referencias ?? '';
-  const pl  = raw.primeira_leitura;
-  const sl  = raw.salmo;
-  const ev  = raw.evangelho;
-
-  // Referências completas
-  const refPL = pl ? extrairLivro(htmlRef, pl.referencia) : '';
-  const refEV = ev ? extrairLivro(htmlRef, ev.referencia) : '';
-  const refSL = sl?.referencia ?? '';
-
-  // Extrai 2ª leitura embutida no salmo (festas)
-  const { psalmoRaw, segunda } = sl ? parsearSalmo(sl) : { psalmoRaw: '', segunda: null };
-  const refSL2 = segunda ? (segunda.referencia || extrairLivro(htmlRef, segunda.referencia)) : '';
-
-  const blocos = [
-    pl      ? { label: '1ª Leitura', html: renderTexto(pl.texto),        refDisplay: refPL,  id: 'primeira-leitura' } : null,
-    sl      ? { label: 'Salmo',      html: renderSalmoHtml(psalmoRaw),    refDisplay: refSL,  id: 'salmo'            } : null,
-    segunda ? { label: '2ª Leitura', html: renderTexto(segunda.texto),    refDisplay: refSL2, id: 'segunda-leitura'  } : null,
-    ev      ? { label: 'Evangelho',  html: renderTexto(ev.texto),         refDisplay: refEV,  id: 'evangelho'        } : null,
-  ].filter(Boolean);
-
-  document.getElementById('conteudo').innerHTML =
-    blocos.map(({ label, html, refDisplay, id }) =>
-      renderCard(label, refDisplay, html, id, id === 'evangelho')
-    ).join('');
-
-  construirNav(blocos);
-  construirCalendario(dt);
-  configurarFlagButtons();
-}
-
-// ── Flag buttons de correção nas leituras ────────────────────────────────────
-function configurarFlagButtons() {
-  document.querySelectorAll('.leitura-card').forEach(card => {
-    const btn = card.querySelector('.leitura-flag-btn');
-    if (!btn) return;
-
-    // Mostrar/ocultar no hover do card
-    card.addEventListener('mouseenter', () => { btn.style.opacity = '1'; });
-    card.addEventListener('mouseleave', () => {
-      if (!card.querySelector('.leitura-correcao-form')) btn.style.opacity = '0';
-    });
-
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const existing = card.querySelector('.leitura-correcao-form');
-      if (existing) { existing.remove(); btn.style.opacity = '0'; return; }
-
-      const leituraId = btn.dataset.leituraId;
-      const form = document.createElement('div');
-      form.className = 'leitura-correcao-form';
-      form.style.cssText = 'margin-top:1rem;border-top:1px solid var(--color-border);padding-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;';
-      form.innerHTML = `
-        <textarea placeholder="Descreva o erro encontrado nesta leitura…" rows="3" style="font-size:0.8rem;padding:0.4rem 0.6rem;border:1px solid var(--color-border);border-radius:6px;background:var(--color-bg);color:var(--color-text);resize:vertical;width:100%;box-sizing:border-box;font-family:inherit;"></textarea>
-        <div style="display:flex;gap:0.5rem;justify-content:flex-end;">
-          <button class="leitura-correcao-cancelar" type="button" style="font-size:0.75rem;font-weight:600;padding:0.2rem 0.75rem;border-radius:100px;background:transparent;border:1px solid var(--color-border);color:var(--color-muted);cursor:pointer;">Cancelar</button>
-          <button class="leitura-correcao-enviar" type="button" style="font-size:0.75rem;font-weight:600;padding:0.2rem 0.75rem;border-radius:100px;background:var(--color-primary);border:1px solid var(--color-primary);color:#fff;cursor:pointer;">Enviar</button>
-        </div>
-      `;
-      card.appendChild(form);
-      form.querySelector('textarea').focus();
-
-      form.querySelector('.leitura-correcao-cancelar').addEventListener('click', (ev) => {
-        ev.stopPropagation();
-        form.remove();
-        btn.style.opacity = '0';
-      });
-
-      form.querySelector('.leitura-correcao-enviar').addEventListener('click', async (ev) => {
-        ev.stopPropagation();
-        const descricao = form.querySelector('textarea').value.trim();
-        if (!descricao) return;
-        const enviarBtn = form.querySelector('.leitura-correcao-enviar');
-        enviarBtn.disabled = true;
-        enviarBtn.textContent = 'Enviando…';
-        try {
-          const resp = await fetch('/api/correcao', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ paragrafo: leituraId, descricao }),
-          });
-          if (resp.ok) {
-            form.innerHTML = '<p style="font-size:0.78rem;color:var(--color-muted);font-style:italic;">Obrigado! Correção recebida.</p>';
-            setTimeout(() => { form.remove(); btn.style.opacity = '0'; }, 2500);
-          } else {
-            enviarBtn.disabled = false;
-            enviarBtn.textContent = 'Enviar';
-          }
-        } catch {
-          enviarBtn.disabled = false;
-          enviarBtn.textContent = 'Enviar';
-        }
-      });
-    });
-  });
-}
-
-// ── Calendário ────────────────────────────────────────────────────────────────
-const DATA_MIN = '2024-01-01';
-const DATA_MAX = '2026-12-31';
-
-function construirCalendario(dtAtual) {
-  const wrap = document.getElementById('cal-wrap');
-  if (!wrap) return;
-
-  const sel  = new Date(dtAtual + 'T12:00:00');
-  let ano  = sel.getFullYear();
-  let mes  = sel.getMonth(); // 0-indexed
-
-  function render() {
-    const hoje = new Date().toISOString().slice(0, 10);
-    const MESES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
-                   'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
-    const DIAS_SEMANA = ['D','S','T','Q','Q','S','S'];
-
-    const primeiroDia = new Date(ano, mes, 1).getDay();
-    const ultimoDia   = new Date(ano, mes + 1, 0).getDate();
-
-    let html = `
-      <div class="cal-header">
-        <button class="cal-btn" id="cal-prev">‹</button>
-        <span class="cal-mes">${MESES[mes]} ${ano}</span>
-        <button class="cal-btn" id="cal-next">›</button>
-      </div>
-      <div class="cal-grid">
-        ${DIAS_SEMANA.map(d => `<div class="cal-dow">${d}</div>`).join('')}
-        ${Array(primeiroDia).fill('<div class="cal-dia vazio"></div>').join('')}
-    `;
-
-    for (let d = 1; d <= ultimoDia; d++) {
-      const dtStr = `${ano}-${String(mes+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-      const foraRange = dtStr < DATA_MIN || dtStr > DATA_MAX;
-      const isHoje    = dtStr === hoje;
-      const isSel     = dtStr === dtAtual;
-      const cls = [
-        'cal-dia',
-        foraRange ? 'fora-range' : '',
-        isHoje    ? 'hoje'       : '',
-        isSel && !isHoje ? 'selecionado' : '',
-      ].filter(Boolean).join(' ');
-
-      html += foraRange
-        ? `<div class="${cls}">${d}</div>`
-        : `<a class="${cls}" href="?data=${dtStr}">${d}</a>`;
-    }
-
-    html += '</div>';
-    wrap.innerHTML = html;
-
-    document.getElementById('cal-prev')?.addEventListener('click', () => {
-      mes--; if (mes < 0) { mes = 11; ano--; } render();
-    });
-    document.getElementById('cal-next')?.addEventListener('click', () => {
-      mes++; if (mes > 11) { mes = 0; ano++; } render();
-    });
-  }
-
-  render();
-}
-
-init();
-</script>
+<script type="module" src="/liturgiadiaria/liturgiadiaria.js"></script>
 
 <!-- ── Barra flutuante de navegação ──────────────────────────────────────── -->
 <nav id="barra-flutuante" aria-label="Navegação principal">
