@@ -1,35 +1,43 @@
 /**
  * api/_guardas.mjs — verificação determinística da resposta do modelo.
  *
- * O prompt pede que cada frase termine com o § que a sustenta. Aqui isso é
- * cobrado, sem IA:
- *   - frase sem citação sai;
- *   - citação a § que não foi enviado sai;
- *   - frase cujas palavras não estão no § citado sai (sustentação baixa).
+ * A resposta é um parágrafo que raciocina a partir dos §§ — responde, explica
+ * e distingue. Por isso a trava não exige que cada frase repita as palavras do
+ * texto. Exige outra coisa, mais forte: cada § citado vem com um trecho copiado
+ * dele, e esse trecho é conferido aqui palavra por palavra. O leitor vê os
+ * trechos logo abaixo da resposta e pode julgar o raciocínio contra o texto.
  *
- * Sustentação = fração dos radicais de conteúdo da frase que aparecem no texto
- * dos §§ que ela cita. O modelo parafraseia pouco quando instruído a ficar
- * perto do texto, então resposta fiel fica alta e frase inventada fica baixa.
- * O corte foi calibrado com respostas reais — ver scripts/calibra-guardas.mjs.
+ *   - apoio a § que não foi enviado → descartado;
+ *   - trecho que não está, literalmente, no § → citação inválida;
+ *   - frase que só cita §§ sem trecho verificado → sai;
+ *   - frase (citada ou não) sem quase nada em comum com os §§ verificados → sai;
+ *     com apoio fraco → fica, mas vai para o registro como aviso;
+ *   - nenhuma citação verificada de pé → "não encontrei".
+ *
+ * O que isto não pega: um raciocínio que usa as palavras certas para concluir
+ * errado. Contra isso, o prompt e os trechos literais à vista do leitor.
+ * Cortes calibrados em scripts/calibra-guardas.mjs.
  */
 
 import { termos, textoDoParagrafo } from './_recuperar.mjs';
 
-export const SUSTENTACAO_MINIMA = 0.5;
+export const SUSTENTACAO_MINIMA = 0.2; // abaixo disso a frase sai
+export const SUSTENTACAO_AVISO = 0.5;  // abaixo disso fica, mas vai para o registro
+const TRECHO_MINIMO = 25;              // caracteres; "o amor" não prova nada
 
 // Radicais comparados por prefixo de 5: "confessar"/"confessor" contam juntos,
 // e o corte do radical em 6 letras não vira falso negativo.
 const pref = (r) => r.slice(0, 5);
 
-const _radicaisDoParagrafo = new Map();
+const _prefixos = new Map();
 function prefixosDe(numero) {
-  if (!_radicaisDoParagrafo.has(numero)) {
-    _radicaisDoParagrafo.set(numero, new Set(termos(textoDoParagrafo(numero) || '').map(pref)));
+  if (!_prefixos.has(numero)) {
+    _prefixos.set(numero, new Set(termos(textoDoParagrafo(numero) || '').map(pref)));
   }
-  return _radicaisDoParagrafo.get(numero);
+  return _prefixos.get(numero);
 }
 
-/** Fração dos radicais da frase presentes nos §§ citados (0..1). */
+/** Fração dos radicais da frase presentes nos §§ dados (0..1). */
 export function sustentacao(frase, numeros) {
   const rs = [...new Set(termos(frase).map(pref))];
   if (!rs.length) return 0;
@@ -38,54 +46,87 @@ export function sustentacao(frase, numeros) {
   return rs.filter((r) => doc.has(r)).length / rs.length;
 }
 
-/**
- * Divide o texto do modelo em frases com suas citações. Aceita "frase [§1]."
- * e "frase. [§1]"; o que vier depois da última citação não tem citação.
- */
+/** Texto reduzido a palavras: sem acento, caixa, pontuação nem marcador "(12)". */
+const soPalavras = (s) =>
+  String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+    .replace(/\(\d+\)/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+
+/** O trecho está, palavra por palavra e em sequência, no texto do §? */
+export function trechoLiteral(trecho, numero) {
+  const t = soPalavras(trecho || '');
+  if (t.length < TRECHO_MINIMO) return false;
+  return ` ${soPalavras(textoDoParagrafo(numero) || '')} `.includes(` ${t} `);
+}
+
 // Ponto final seguido de espaço e de começo de frase (maiúscula ou aspas).
 const FIM_DE_FRASE = /(?<=[.!?])\s+(?=[«"“A-ZÁÉÍÓÚÂÊÔÃÕÇ])/;
 
-export function frasesComCitacao(texto) {
-  const frases = [];
-  const re = /([^[]+?)((?:\s*\[§\s*\d+\])+)\s*\.?/g;
-  const emFrases = (s) => s.split(FIM_DE_FRASE).map((x) => x.trim()).filter((x) => x.replace(/[\s.]/g, ''));
-  let fim = 0;
-  let m;
-  while ((m = re.exec(texto)) !== null) {
-    const numeros = [...m[2].matchAll(/\d+/g)].map((x) => Number(x[0]));
-    // A citação no fim de um trecho vale só para a última frase dele. Sem isto,
-    // três frases seguidas de "[§2629][§2631][§2614]" passavam juntas — as duas
-    // primeiras sem citação nenhuma (visto na simulação com o modelo real).
-    const partes = emFrases(m[1].replace(/^[\s.]+/, ''));
-    const ultima = partes.pop();
-    for (const p of partes) frases.push({ corpo: p, numeros: [] });
-    if (ultima) frases.push({ corpo: ultima, numeros });
-    fim = re.lastIndex;
-  }
-  for (const p of emFrases(texto.slice(fim))) frases.push({ corpo: p, numeros: [] });
-  return frases;
+/** "o §2303", "(§2303)" e "[§ 2303]" viram "[§2303]". */
+function normalizarCitacoes(texto) {
+  return String(texto)
+    .replace(/\*\*/g, '')
+    .replace(/\[\s*§\s*(\d{1,4})\s*\]/g, '[§$1]')
+    .replace(/(?<!\[)§\s*(\d{1,4})(?!\d)/g, '[§$1]')
+    .replace(/\(\s*(\[§\d+\](?:\s*[,;e]\s*\[§\d+\])*)\s*\)/g, '$1');
 }
 
 /**
- * Aplica as três travas. Devolve só o que se sustenta.
- * @returns {{ texto: string, citados: number[], removidas: object[] }}
+ * Aplica as travas a { resposta, apoios } do redator.
+ * @returns {{ texto: string, citados: {numero:number, trecho:string}[], removidas: object[], avisos: object[] }}
  */
-export function filtrarResposta(textoModelo, enviados) {
+export function filtrarRedacao({ resposta, apoios }, enviados) {
   const permitidos = new Set(enviados);
-  const mantidas = [];
+  const verificados = new Map(); // § → trecho literal
   const removidas = [];
+  const avisos = [];
 
-  for (const { corpo, numeros } of frasesComCitacao(textoModelo.replace(/\*\*/g, ''))) {
-    const validos = [...new Set(numeros.filter((n) => permitidos.has(n)))];
-    if (!validos.length) { removidas.push({ corpo, motivo: 'sem citação válida' }); continue; }
-    const s = sustentacao(corpo, validos);
-    if (s < SUSTENTACAO_MINIMA) { removidas.push({ corpo, motivo: `sustentação ${s.toFixed(2)}` }); continue; }
-    mantidas.push({ corpo: corpo.replace(/[.;,\s]+$/, ''), validos });
+  for (const a of Array.isArray(apoios) ? apoios : []) {
+    const n = Number(a?.paragrafo);
+    if (!permitidos.has(n)) {
+      removidas.push({ corpo: `§${a?.paragrafo}`, motivo: 'apoio a § não enviado' });
+    } else if (!trechoLiteral(a.trecho, n)) {
+      removidas.push({ corpo: `§${n}: ${String(a?.trecho ?? '').slice(0, 140)}`, motivo: 'trecho não é literal' });
+    } else if (!verificados.has(n)) {
+      verificados.set(n, String(a.trecho).replace(/\s+/g, ' ').trim());
+    }
   }
 
-  const citados = [...new Set(mantidas.flatMap((f) => f.validos))];
-  const texto = mantidas
-    .map(({ corpo, validos }) => `${corpo} ${validos.map((n) => `[§${n}]`).join('')}.`)
-    .join(' ');
-  return { texto, citados, removidas };
+  const mantidas = [];
+  const ordem = [];
+  const frases = normalizarCitacoes(resposta).split(FIM_DE_FRASE).map((x) => x.trim()).filter(Boolean);
+
+  for (const frase of frases) {
+    const citadas = [...frase.matchAll(/\[§(\d+)\]/g)].map((m) => Number(m[1]));
+    const corpo = frase.replace(/\s*\[§\d+\]/g, '').trim();
+    if (!corpo.replace(/[\s.,;]/g, '')) continue;
+
+    const validas = [...new Set(citadas.filter((n) => verificados.has(n)))];
+    if (citadas.length && !validas.length) {
+      removidas.push({ corpo, motivo: 'citação sem trecho verificado' });
+      continue;
+    }
+
+    // Frase citada responde pelos §§ que cita; frase de raciocínio, sem
+    // citação, pelo conjunto dos §§ verificados.
+    const base = validas.length ? validas : [...verificados.keys()];
+    const s = base.length ? sustentacao(corpo, base) : 0;
+    if (s < SUSTENTACAO_MINIMA) {
+      removidas.push({ corpo, motivo: `sustentação ${s.toFixed(2)}` });
+      continue;
+    }
+    if (s < SUSTENTACAO_AVISO) avisos.push({ corpo, sustentacao: Number(s.toFixed(2)) });
+
+    mantidas.push(
+      frase.replace(/\[§(\d+)\]/g, (m, n) => (verificados.has(Number(n)) ? `[§${Number(n)}]` : ''))
+        .replace(/\s+([.,;])/g, '$1').replace(/\s{2,}/g, ' ').trim(),
+    );
+    for (const n of validas) if (!ordem.includes(n)) ordem.push(n);
+  }
+
+  return {
+    texto: mantidas.join(' '),
+    citados: ordem.map((numero) => ({ numero, trecho: verificados.get(numero) })),
+    removidas,
+    avisos,
+  };
 }

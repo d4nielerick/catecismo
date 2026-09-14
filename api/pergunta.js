@@ -10,8 +10,11 @@
  *      termo viram consultas separadas, fundidas por RRF. Mesma entrada, mesmos
  *      §§. O texto enviado ao modelo sai do catecismo.json do servidor — o
  *      cliente só manda a pergunta, então o endpoint não é proxy do modelo.
- *   3. Redator: 2 ou 3 frases, cada uma com o § que a sustenta.
- *   4. Travas sem IA (_guardas.mjs): frase sem citação, com citação a § não
+ *   3. Seletor: lê o começo de até 48 candidatos da busca e escolhe até 8 que
+ *      tratam do assunto — só números da lista; falhou, seguem os fundidos.
+ *   4. Redator: um parágrafo que responde e raciocina, com um trecho literal
+ *      de cada § citado.
+ *   5. Travas sem IA (_guardas.mjs): frase sem citação, com citação a § não
  *      enviado ou cujas palavras não estão no § citado é removida. Sem nenhuma
  *      frase de pé, a resposta é "não encontrei".
  *
@@ -25,8 +28,8 @@
 import { appendFileSync, readFileSync, renameSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { recuperarFundido, textoDoParagrafo } from './_recuperar.mjs';
-import { filtrarResposta } from './_guardas.mjs';
+import { recuperar, recuperarFundido, textoDoParagrafo } from './_recuperar.mjs';
+import { filtrarRedacao } from './_guardas.mjs';
 import { chamarModelo } from './_xai.mjs';
 
 const MAX_CHARS_PARAGRAFO = 1200;
@@ -104,15 +107,22 @@ Devolva só um objeto JSON com quatro campos:
 - "termos": de 3 a 6 palavras ou expressões curtas que o próprio Catecismo usa para esse assunto.
 - "hipotese": uma ou duas frases escritas como o próprio Catecismo trataria esse assunto, com o vocabulário dele. Serve só para a busca e nunca é mostrada a ninguém.`;
 
-const REDATOR = `Você diz o que o Catecismo da Igreja Católica ensina, usando apenas os parágrafos do Catecismo que recebe.
+const SELETOR = `Você escolhe, entre parágrafos do Catecismo da Igreja Católica, os que ajudam a responder uma pergunta. De cada candidato você vê só o começo do texto.
+
+Devolva só um objeto JSON {"paragrafos": [números]}, com até 8 números da lista, do mais ao menos útil. Escolha os que tratam diretamente do assunto da pergunta, inclusive os que trazem a distinção necessária para responder (por exemplo, o que é lícito e o que não é). Não escolha parágrafo que só repete uma palavra da pergunta em outro assunto. Se nenhum serve, devolva {"paragrafos": []}.`;
+
+const REDATOR = `Você responde o que o Catecismo da Igreja Católica ensina, usando apenas os parágrafos do Catecismo que recebe.
+
+Devolva só um objeto JSON com dois campos:
+- "resposta": UM parágrafo, de 3 a 5 frases, em português do Brasil. Comece respondendo diretamente à pergunta ("Segundo o Catecismo, ..."). Depois explique o porquê com o que os parágrafos ensinam e, quando eles permitirem, faça a distinção que ajuda quem pergunta (por exemplo, o que é lícito e o que não é). Não repita a mesma ideia com outras palavras. Cite os parágrafos no próprio texto, assim: [§2303].
+- "apoios": para cada parágrafo citado na resposta, um objeto {"paragrafo": 2303, "trecho": "..."}, em que "trecho" é uma frase COPIADA LITERALMENTE daquele parágrafo, sem trocar nenhuma palavra, que sustenta o que a resposta diz dele.
 
 Regras:
-1. Use SOMENTE os parágrafos fornecidos. Nada de conhecimento próprio, outras fontes, opinião ou exemplos inventados.
-2. Responda apenas NAO_ENCONTRADO quando nenhum parágrafo tratar do assunto da pergunta. Se algum trata, responda, mesmo que não cubra cada detalhe.
-3. Escreva 2 ou 3 frases curtas em português do Brasil, perto das palavras do texto, começando pelo que responde diretamente à pergunta. Termine cada frase com o parágrafo que a sustenta, assim: [§1385].
-4. Se a pergunta traz algo que os parágrafos não dizem (um nome, uma data, um acontecimento), não confirme nem negue: diga só o que o Catecismo ensina sobre o assunto.
-5. Em pergunta pessoal, não aconselhe, não julgue e não faça papel de sacerdote: diga o que o Catecismo ensina sobre o assunto dela.
-6. Sem títulos, listas, negrito ou saudação.`;
+1. Tudo o que a resposta afirma precisa estar nos parágrafos fornecidos. Raciocinar a partir deles é permitido; acrescentar ensinamento, exemplo, fonte ou opinião que não esteja neles, não. Não use parágrafo de outro assunto como justificativa.
+2. Se nenhum parágrafo trata do assunto da pergunta, devolva {"resposta": "NAO_ENCONTRADO", "apoios": []}. Se algum trata, responda, mesmo que não cubra cada detalhe.
+3. Se a pergunta traz algo que os parágrafos não dizem (um nome, uma data, um acontecimento), não confirme nem negue.
+4. Em pergunta pessoal, não aconselhe como um sacerdote nem julgue a pessoa: diga o que o Catecismo ensina sobre o assunto.
+5. Sem títulos, listas, negrito ou saudação dentro da resposta.`;
 
 // ── Utilitários ───────────────────────────────────────────────────────────────
 
@@ -123,8 +133,10 @@ const json = (corpo, status = 200, extra = {}) =>
   });
 
 /** Chave do cache: sem acento, caixa, pontuação nem espaço repetido. */
+// A versão entra na chave: mudou o formato da resposta, o cache antigo não serve.
+const VERSAO_RESPOSTA = 2;
 const chaveDe = (s) =>
-  s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+  `v${VERSAO_RESPOSTA} ` + s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ').trim();
 
 const trechoDe = (texto, n = 180) =>
@@ -137,18 +149,19 @@ function guardarNoCache(chave, resposta) {
   gravarDepois();
 }
 
+/** Objeto JSON da resposta do modelo, mesmo com texto em volta; ou null. */
+function lerJson(bruto) {
+  try { return JSON.parse(bruto); } catch { /* tenta o trecho entre chaves */ }
+  const m = String(bruto).match(/\{[\s\S]*\}/);
+  try { return m ? JSON.parse(m[0]) : null; } catch { return null; }
+}
+
 /**
  * Valida o JSON do planejador. Nada dele chega ao leitor sem passar por aqui:
  * campos com tipo errado caem no padrão, textos são cortados e limpos.
  */
 export function lerPlano(bruto) {
-  let obj;
-  try {
-    obj = JSON.parse(bruto);
-  } catch {
-    const m = String(bruto).match(/\{[\s\S]*\}/);
-    try { obj = m ? JSON.parse(m[0]) : null; } catch { obj = null; }
-  }
+  const obj = lerJson(bruto);
   if (!obj || typeof obj !== 'object') return null;
 
   const limpar = (s, max) => String(s).replace(/[^\p{L}\p{N} ,\-]/gu, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
@@ -165,31 +178,87 @@ export function lerPlano(bruto) {
   };
 }
 
+/** JSON do redator → { resposta, apoios }, ou null. Texto solto não passa: sem apoios, nada se verifica. */
+export function lerRedacao(bruto) {
+  const obj = lerJson(bruto);
+  if (!obj || typeof obj.resposta !== 'string') return null;
+  return { resposta: obj.resposta.slice(0, 1500), apoios: Array.isArray(obj.apoios) ? obj.apoios.slice(0, 12) : [] };
+}
+
 /**
  * Monta a resposta final: travas de _guardas.mjs e trechos dos §§ citados.
  * `registro` recebe as frases removidas, para log e simulação.
  */
 function montar(textoModelo, enviados, entendimento = null, registro = {}) {
-  const bruto = (textoModelo || '').trim();
+  const redacao = lerRedacao(textoModelo);
   // "Não encontrado" vai sem lista: se o modelo leu os §§ e disse que não
   // respondem, chamá-los de "assuntos próximos" afirmaria uma relevância que
   // ninguém verificou.
-  if (!bruto || /NAO_ENCONTRADO/.test(bruto)) return { tipo: 'nao-encontrado' };
+  if (!redacao || /NAO_ENCONTRADO/.test(redacao.resposta)) {
+    registro.removidas = redacao ? [] : [{ corpo: String(textoModelo).slice(0, 140), motivo: 'redação não é JSON válido' }];
+    return { tipo: 'nao-encontrado' };
+  }
 
-  const { texto, citados, removidas } = filtrarResposta(bruto, enviados);
+  const { texto, citados, removidas, avisos } = filtrarRedacao(redacao, enviados);
   registro.removidas = removidas;
+  registro.avisos = avisos;
   if (!citados.length) return { tipo: 'nao-encontrado' };
 
   return {
     tipo: 'resposta',
     texto,
     entendimento,
-    citados: citados.map((n) => ({ numero: n, trecho: trechoDe(textoDoParagrafo(n)) })),
+    citados, // trecho = frase literal do § que sustenta a citação, já conferida
     relacionados: enviados
-      .filter((n) => !citados.includes(n))
+      .filter((n) => !citados.some((c) => c.numero === n))
       .slice(0, 5)
       .map((n) => ({ numero: n, trecho: trechoDe(textoDoParagrafo(n)) })),
   };
+}
+
+/** Números escolhidos pelo seletor: só os da lista, sem repetição, até 8; ou null. */
+export function lerSelecao(bruto, permitidos) {
+  const obj = lerJson(bruto);
+  if (!obj || !Array.isArray(obj.paragrafos)) return null;
+  const aceitos = new Set(permitidos);
+  const saida = [];
+  for (const x of obj.paragrafos) {
+    const n = Number(x);
+    if (Number.isInteger(n) && aceitos.has(n) && !saida.includes(n)) saida.push(n);
+    if (saida.length >= 8) break;
+  }
+  return saida;
+}
+
+const CANDIDATOS_POR_CONSULTA = 10;
+const MAX_CANDIDATOS = 48;
+
+/** Os fundidos primeiro; depois os de cada consulta, intercalados por posição. */
+function candidatosPara(consultas, fundidos) {
+  const listas = consultas
+    .filter((c) => c.texto?.trim())
+    .map((c) => recuperar(c.texto, CANDIDATOS_POR_CONSULTA).map((r) => r.numero));
+  const saida = [...fundidos];
+  for (let i = 0; i < CANDIDATOS_POR_CONSULTA; i++) {
+    for (const l of listas) if (l[i] != null && !saida.includes(l[i])) saida.push(l[i]);
+  }
+  return saida.slice(0, MAX_CANDIDATOS);
+}
+
+/** O seletor. Nunca lança: falha vira null e a busca segue com os fundidos. */
+async function selecionar(pergunta, plano, candidatos, apiKey) {
+  const lista = candidatos.map((n) => `§${n}: ${trechoDe(textoDoParagrafo(n), 160)}`).join('\n');
+  try {
+    const r = await chamarModelo(apiKey, {
+      sistema: SELETOR,
+      usuario: `Pergunta: ${pergunta}${plano?.assunto ? `\nAssunto: ${plano.assunto}` : ''}\n\nCandidatos:\n${lista}`,
+      maxTokens: 80, emJson: true, prazoMs: 12000, reforcoMs: 5000,
+    });
+    return { selecionados: lerSelecao(r.texto, candidatos), uso: r.uso };
+  } catch (err) {
+    console.error('[pergunta] seletor:', err.message);
+    return { selecionados: null, uso: null };
+  }
 }
 
 /**
@@ -220,10 +289,11 @@ export async function responder(pergunta, apiKey) {
   const { plano, uso: usoPlano } = await planejar(pergunta, apiKey);
   if (usoPlano) uso.push(usoPlano);
 
-  if (plano && !plano.escopo) return { resposta: { tipo: 'fora-do-escopo' }, plano, enviados: [], uso, removidas: [] };
+  if (plano && !plano.escopo) return { resposta: { tipo: 'fora-do-escopo' }, plano, enviados: [], uso, removidas: [], avisos: [] };
 
-  // 2. Busca determinística fundida.
-  const enviados = recuperarFundido([
+  // 2. Busca determinística: as consultas fundidas e, em volta, um conjunto
+  //    maior de candidatos — os 10 primeiros de cada consulta.
+  const consultas = [
     { texto: pergunta, peso: 1 },
     { texto: plano?.assunto, peso: 1 },
     // Meio peso: é texto inventado. Com peso 1, a hipótese do futebol ("vitória
@@ -231,26 +301,37 @@ export async function responder(pergunta, apiKey) {
     // prova perdia o §2633. Medido com planos reais do modelo.
     { texto: plano?.hipotese, peso: 0.5 },
     ...(plano?.termos || []).map((t) => ({ texto: t, peso: 0.5 })),
-  ]).map((r) => r.numero);
+  ];
+  const fundidos = recuperarFundido(consultas).map((r) => r.numero);
+  if (!fundidos.length) return { resposta: { tipo: 'nao-encontrado' }, plano, enviados: [], uso, removidas: [], avisos: [] };
 
-  if (!enviados.length) return { resposta: { tipo: 'nao-encontrado' }, plano, enviados, uso, removidas: [] };
+  // 3. Seletor. A fusão soma votos, e a palavra repetida ganha do conceito que
+  //    responde: em "posso rezar pedindo a morte de alguém?", "morte" (na
+  //    pergunta, no assunto e na hipótese) tirava do corte o §2303 ("o ódio
+  //    voluntário é contra a caridade"), que a consulta "ódio" trazia em 2º.
+  //    O seletor lê o começo de cada candidato e escolhe — só números da lista.
+  const candidatos = candidatosPara(consultas, fundidos);
+  const { selecionados, uso: usoSelecao } = await selecionar(pergunta, plano, candidatos, apiKey);
+  if (usoSelecao) uso.push(usoSelecao);
+  const enviados = selecionados?.length ? selecionados : fundidos;
 
-  // 3. Redator + 4. travas.
+  // 4. Redator + 5. travas.
   const contexto = enviados
     .map((n) => `§${n}: ${textoDoParagrafo(n).slice(0, MAX_CHARS_PARAGRAFO)}`)
     .join('\n\n');
   const r = await chamarModelo(apiKey, {
     sistema: REDATOR,
     usuario: `Parágrafos do Catecismo:\n\n${contexto}\n\n---\nPergunta: ${pergunta}`,
-    maxTokens: 220,
-    prazoMs: 25000,
-    reforcoMs: 7000,
+    maxTokens: 700,
+    emJson: true,
+    prazoMs: 30000,
+    reforcoMs: 9000,
   });
   uso.push(r.uso);
 
   const registro = {};
   const resposta = montar(r.texto, enviados, plano?.assunto || null, registro);
-  return { resposta, plano, enviados, uso, removidas: registro.removidas || [], bruto: r.texto };
+  return { resposta, plano, candidatos, selecionados, enviados, uso, removidas: registro.removidas || [], avisos: registro.avisos || [], bruto: r.texto };
 }
 
 // ── Handler ───────────────────────────────────────────────────────────────────
@@ -293,15 +374,17 @@ export default async function handler(req) {
   contarPergunta();
   const t0 = Date.now();
   try {
-    const { resposta, uso, removidas } = await responder(pergunta, apiKey);
+    const { resposta, uso, removidas, avisos, enviados } = await responder(pergunta, apiKey);
     const tokens = uso.map((u) => `${u.prompt_tokens}+${u.completion_tokens}`).join(' e ');
     console.log(`[pergunta] ${resposta.tipo} · ${tokens} tokens · ${removidas.length} frase(s) removida(s) · ${estado.perguntas}/${TETO_DIARIO} hoje`);
     registrar({
       pergunta,
       tipo: resposta.tipo,
       entendimento: resposta.entendimento || null,
+      enviados,
       citados: (resposta.citados || []).map((c) => c.numero),
       removidas: removidas.map(({ motivo, corpo }) => ({ motivo, corpo })),
+      avisos,
       ms: Date.now() - t0,
       tokens,
     });

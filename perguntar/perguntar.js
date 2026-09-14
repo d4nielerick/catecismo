@@ -18,8 +18,12 @@ const el = (tag, classe, texto) => {
   return n;
 };
 
-/** Lista de §§ com trecho e link para abrir no leitor do Catecismo. */
-function listaDeParagrafos(itens, prefixoId) {
+/**
+ * Lista de §§ com trecho e link para abrir no leitor do Catecismo. Nos citados,
+ * o trecho é a frase literal do § que sustenta a resposta (conferida no
+ * servidor) — por isso vai entre aspas.
+ */
+function listaDeParagrafos(itens, prefixoId, { citacao = false } = {}) {
   const ul = el('ul', 'pq-lista');
   for (const { numero, trecho } of itens) {
     const li = document.createElement('li');
@@ -28,7 +32,7 @@ function listaDeParagrafos(itens, prefixoId) {
     if (prefixoId) a.id = `${prefixoId}-${numero}`;
     a.append(
       el('span', 'pq-item-num', `§${numero}`),
-      el('span', 'pq-item-trecho', trecho),
+      el('span', 'pq-item-trecho', citacao ? `«${trecho}»` : trecho),
       el('span', 'pq-item-ler', 'Ler no Catecismo →'),
     );
     li.appendChild(a);
@@ -86,7 +90,7 @@ function renderizar(pergunta, dados) {
     resultado.append(
       paragrafoDaResposta(dados.texto),
       el('h2', 'pq-rotulo', dados.citados.length > 1 ? 'Parágrafos citados' : 'Parágrafo citado'),
-      listaDeParagrafos(dados.citados, 'citado'),
+      listaDeParagrafos(dados.citados, 'citado', { citacao: true }),
     );
     if (dados.relacionados?.length) {
       resultado.append(
