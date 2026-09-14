@@ -121,11 +121,29 @@ no tooltip; o tooltip só abre no clique e fica fixo até o usuário fechar, com
   a chave (console.x.ai) e recriado o container. Testado de ponta a ponta (clique real no
   botão em produção → resposta da IA renderizada). Ver gotcha na §6 sobre esse padrão de
   interpolação silenciosamente vazia.
+- **Hub "Pergunte ao Catecismo" — publicação silenciosa (2026-09-14):** `/perguntar/` está no
+  ar, mas **sem link** (convite da hero com `hidden` em `index.html`, atalho da busca desligado por
+  `HUB_ABERTO = false` em `assets/js/ui.js`) e com `noindex`. Abrir = tirar o `hidden`, trocar para
+  `true` e remover o `noindex`. Pipeline (`api/pergunta.js`):
+  1. **Planejador** (xAI, JSON validado por `lerPlano`): escopo, assunto, termos e uma frase
+     hipotética no estilo do Catecismo usada só na busca. Fora do escopo não chama o redator.
+  2. **Busca determinística** (`api/_recuperar.mjs`): BM25 com radical + índice analítico + léxico;
+     pergunta, assunto, hipótese (peso 0,5) e termos (0,5) fundidos por RRF (K=5); completa blocos
+     de subtema curto do índice. O servidor lê o texto dos §§ — o cliente só manda a pergunta.
+  3. **Redator** (xAI): 2–3 frases, cada uma com `[§N]`.
+  4. **Travas sem IA** (`api/_guardas.mjs`): frase sem citação, com § não enviado ou sem apoio
+     lexical no § citado (sustentação < 0,5) é removida; nada de pé = "não encontrei". Não pega
+     inversão de sentido com as mesmas palavras.
+  Custos/limites: ~US$ 0,0004 por pergunta; cache por pergunta normalizada, 6 novas por IP/10 min,
+  **teto de 100/dia**. **Registro anônimo** (sem IP) em JSONL dentro do container:
+  `ssh vps 'docker exec catecismo-api cat /tmp/catecismo-perguntas-registro.jsonl'` (pergunta,
+  tipo, §§ citados, frases cortadas, ms, tokens). Fica no `/tmp` do container: sobrevive a
+  `docker restart`, some em `--force-recreate`. Rota registrada à mão no `api-server.mjs` da VPS.
 - **SEO/técnico:** sitemap, robots.txt, canonical/OG/JSON-LD, meta tag de verificação do
   Google Search Console no `<head>` do `index.html`. GSC verificado, sitemap enviado e
   processado (44 páginas na última checagem).
 - **`/perguntas/`:** ~40 respostas citação-first no ar.
-- **Sem IA de runtime:** a homilia/reflexão do Evangelho do dia gerada por Grok foi
+- **Homilia por IA removida:** a homilia/reflexão do Evangelho do dia gerada por Grok foi
   **removida** (soava artificial e alucinava fatos). `/liturgiadiaria/` e o widget da
   home mostram só as leituras oficiais. `scripts/gerar-reflexoes.mjs` continua no repo
   como ferramenta offline, não é mais chamado em nenhuma página nem função de API.
@@ -135,9 +153,13 @@ no tooltip; o tooltip só abre no clique e fica fixo até o usuário fechar, com
   com adaptação ortográfica pt-BR e CI garantindo reprodutibilidade.
 - **Revisão ortográfica §-a-§:** 57 correções de artefatos de OCR/grafia da fonte oficial
   (a integridade por si só não pega erro de conteúdo da fonte, só reprodutibilidade).
-- **Notas de rodapé reconstruídas:** ~99,4% de cobertura dos marcadores "(N)".
+- **Notas de rodapé reconstruídas:** 100% dos marcadores "(N)" resolvidos (`verifica-notas`),
+  49 notas órfãs para revisão editorial.
 - **Escritura inline:** referências bíblicas com intervalos e múltiplas refs viram
-  tooltip com o(s) versículo(s) reais.
+  tooltip com o(s) versículo(s) reais. **Salmos corrigidos (2026-09-14):** as notas usam a
+  numeração hebraica e `data/biblia/Sl.json` a da Vulgata; `salmoParaVulgata()` em
+  `assets/js/biblia-refs.js` converte (78 das 89 citações de versículo de Salmo abriam o endereço
+  errado). Rótulo no padrão das Bíblias católicas: "Salmos 22(21),2".
 - **Hospedagem de documentos-fonte:** teste em produção com o **Nostra Aetate** —
   página própria em `/fontes/nostra-aetate/`, linkada a partir das notas que o citam,
   com trecho no tooltip.
@@ -169,11 +191,19 @@ Vaticano (português europeu → pt-BR), **não** é a tradução oficial da CNB
 - **Doação:** trocar a chave PIX (que era o CPF do Daniel, removida) por uma chave
   anônima e recriar uma página dedicada `/apoie` (o modal antigo foi removido, não
   substituído ainda).
-- **21 marcadores de nota sem texto** (de ~3.650) por OCR danificado na fonte
-  (ex.: número de nota "101" saiu grudado como "10.1"). Baixo impacto, documentado.
+- **Hub: ajustar com o registro e abrir** — perguntas reais que falharem viram casos em
+  `scripts/avalia-recuperacao.mjs`; decidir redator estrito ("é pecado torcer contra o rival?"
+  dá "não encontrei") e trava de inversão de sentido; depois abrir (ver §4) e subir a versão.
+- **`/api/resumo` sem trava de citação:** o resumo antigo acrescenta coisas que não estão nos §§
+  recebidos (visto em 2026-09-14). Candidato a usar `_guardas.mjs` como o hub.
+- **Notas sem correspondência no tooltip** (mapa de 2026-09-14, 3.643 notas; 48,5% mostram algo):
+  ~700 citam o Vaticano II sem documento hospedado (hospedar LG, GS, DV, SC cobre a maior fatia);
+  ~1.060 citam Padres/Denzinger/papas/liturgia/Direito Canônico (link externo, por direitos);
+  52 são referências bíblicas que o parser não lê por OCR ("Lc 24. 25-27", "Lc 1 , 3 1 .") —
+  24 delas de Evangelho; 33 citam só capítulo ("Cf. Lc 15"); 7 são "Ibid.".
 - Ideias de maior prazo (ver `FUNCIONALIDADES.txt`, gerado março/2026 — trata a Vercel
   como produção, desatualizado nesse ponto mas as ideias continuam válidas): links
-  compartilháveis de trechos, pergunta livre à IA com citação, PWA, planos de estudo
+  compartilháveis de trechos, PWA, planos de estudo
   guiados, parcerias institucionais.
 
 ---
@@ -208,6 +238,17 @@ Vaticano (português europeu → pt-BR), **não** é a tradução oficial da CNB
   após salvar. Não é bug do site; ou força reload sem cache (DevTools → Network → Disable
   cache) ou rode um servidor que force `Cache-Control: no-store` (ex.: um wrapper simples
   em cima de `http.server` sobrescrevendo `end_headers`).
+- **A xAI às vezes não responde por ~30 s** (1 em ~20 chamadas, medido de dentro do container
+  com conexão nova e IPv4 forçado — TCP e TLS abrem em ~30 ms; a espera é do servidor). Toda
+  chamada ao modelo passa por `api/_xai.mjs`: prazo total + **reforço** (segunda chamada idêntica
+  se a primeira não responde em poucos segundos; vale a que chegar antes). Nunca chamar `fetch`
+  direto para a xAI sem prazo — o `/api/resumo` já ficou 301 s pendurado assim.
+- **`api-server.mjs` (só na VPS) lista as rotas à mão**: `/api/correcao`, `/api/resumo` e
+  `/api/pergunta`. Os `api/_*.mjs` são módulos auxiliares, não rotas.
+- **Cuidado com `rsync --delete` do clone inteiro:** outras sessões deixam arquivos sem commit no
+  working tree (ex.: dados de liturgia e santos) — o rsync os publicaria. Para deploy parcial,
+  mande a lista explícita de arquivos e confira hashes antes (produção == versão anterior) e depois.
+- **Acesso à VPS só por `ssh vps`** (Cloudflare Tunnel); a porta 22 do IP direto é fechada.
 
 ---
 
@@ -229,8 +270,12 @@ node scripts/verifica-integridade.mjs   # catecismo.json reproduz fonte + grafia
 node scripts/verifica-citacoes.mjs      # perguntas citam §§ reais, byte-a-byte
 node scripts/verifica-notas.mjs         # notas.json reproduz + piso de cobertura (99%)
 node test-search.mjs                    # smoke tests do motor de busca
+node test-notas.mjs                     # regressões de notas, fontes e Salmos
+node test-hub.mjs                       # endpoint do hub com modelo simulado (sem chave)
+node scripts/avalia-recuperacao.mjs     # busca do hub: §§ certos no top 12 (32 perguntas)
+node scripts/calibra-guardas.mjs        # trava de sustentação separa frase fiel de inventada
 ```
 
-CI (`.github/workflows/verifica.yml`) roda esses quatro passos em todo PR e push em
-`main`, nessa mesma ordem. Se algum falhar, o problema quase sempre é edição manual de
+CI (`.github/workflows/verifica.yml`) roda esses verificadores (e os de remissões, léxico e
+liturgia) em todo PR e push em `main`. Se algum falhar, o problema quase sempre é edição manual de
 um `.json` gerado (seção 3) — corrija a entrada humana, não a saída.
