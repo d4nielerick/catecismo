@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import { buildNotas } from './scripts/build-notas.mjs';
 import { marcadoresDeNota } from './scripts/lib-html.mjs';
 import { linkificarNota, detectarFonte } from './assets/js/fontes.js';
+import { salmoParaVulgata } from './assets/js/biblia-refs.js';
 
 const read = (file) => JSON.parse(fs.readFileSync(`data/${file}`, 'utf8'));
 const fonte = read('fonte-notas-vaticano.json');
@@ -38,6 +39,19 @@ const probe26 = { paragrafos: [{ numero: 2200, texto: '(26)' }] };
 assert.match(buildNotas(fonte, probe26, ajustes).notas[2200][26], /Diogneto/);
 assert.throws(() => buildNotas(fonte, cat, [{ ...ajustes[0], de: 'fonte mudou' }]), /fonte alterada/);
 assert.throws(() => buildNotas(fonte, cat, [ajustes[0], ajustes[0]]), /inválido/);
+
+// Salmos: notas em numeração hebraica, data/biblia/Sl.json na da Vulgata.
+const sl = JSON.parse(fs.readFileSync('data/biblia/Sl.json', 'utf8'));
+const salmo = (c, v) => { const a = salmoParaVulgata(c, v); return sl[a.cap]?.[a.verso] || ''; };
+assert.match(salmo(22, 2), /por que me abandonastes/, 'Sl 22,2 (hebr.) é o "por que me abandonaste"');
+assert.match(salmo(23, 1), /O Senhor é meu pastor/);
+assert.match(salmo(51, 3), /Tende piedade de mim/);
+assert.match(salmo(10, 1), /por que ficais tão longe/);
+assert.match(salmo(115, 1), /Não a nós, Senhor/);
+assert.match(salmo(116, 10), /Conservei a confiança/);
+assert.match(salmo(147, 12), /Louva, ó Jerusalém/);
+assert.deepEqual(salmoParaVulgata(8, 2), { cap: 8, verso: 2 }, 'Sl 1–9 e 148–150 não mudam');
+assert.deepEqual(salmoParaVulgata(150, 6), { cap: 150, verso: 6 });
 
 const idx = read('fontes-index.json');
 assert.match(linkificarNota(notas[841][334], idx), /\/fontes\/nostra-aetate\/#s3/);

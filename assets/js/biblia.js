@@ -2,7 +2,7 @@
  * biblia.js
  * Busca de versículos na Bíblia Ave-Maria para enriquecer as notas de rodapé.
  */
-import { extrairReferencias } from './biblia-refs.js';
+import { extrairReferencias, salmoParaVulgata } from './biblia-refs.js';
 import { enriquecerNota } from './fontes.js';
 
 // ── Cache por livro ───────────────────────────────────────────────────────────
@@ -59,9 +59,13 @@ export async function buscarVersiculos(textoNota, maxVersos = 6) {
     if (!caps) continue;
     const nome = nomes?.[abrev] ?? abrev;
     for (const v of versos) {
-      const texto = caps?.[cap]?.[String(v)];
+      // Salmos: a nota usa a numeração hebraica, o arquivo a da Vulgata. O
+      // rótulo mostra as duas, como nas Bíblias católicas: "Salmos 22(21),2".
+      const alvo = abrev === 'Sl' ? salmoParaVulgata(cap, v) : { cap: Number(cap), verso: v };
+      const texto = caps?.[String(alvo.cap)]?.[String(alvo.verso)];
       if (!texto) continue;
-      out.push({ abrev, nome, cap, v, referencia: `${nome} ${cap},${v}`, texto: texto.replace(/\*+/g, '').trim() });
+      const capRotulo = alvo.cap === Number(cap) ? cap : `${cap}(${alvo.cap})`;
+      out.push({ abrev, nome, cap: capRotulo, v, referencia: `${nome} ${capRotulo},${v}`, texto: texto.replace(/\*+/g, '').trim() });
       if (out.length >= maxVersos) return out;
     }
   }
