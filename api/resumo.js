@@ -115,6 +115,9 @@ export default async function handler(req) {
         max_tokens: 400,
         temperature: 0.3,
       }),
+      // Sem prazo, uma xAI travada deixava o botão de resumo pendurado por
+      // minutos (visto numa chamada de 301 s durante os testes do hub).
+      signal: AbortSignal.timeout(20000),
     });
 
     if (!resp.ok) {
