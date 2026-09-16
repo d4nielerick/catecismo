@@ -30,6 +30,11 @@ export const lerModelo = () => fs.readFileSync(MODELO, 'utf8');
 export const lerIndice = () => JSON.parse(fs.readFileSync(path.join(DADOS, 'indice.json'), 'utf8'));
 export const listarDias = () => fs.readdirSync(DADOS).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).map(f => f.slice(0, 10)).sort();
 export const lerDia = dt => JSON.parse(fs.readFileSync(path.join(DADOS, `${dt}.json`), 'utf8'));
+const RESUMOS = path.join(RAIZ, 'data', 'liturgia-resumos');
+export const lerResumo = dt => {
+  const arq = path.join(RESUMOS, `${dt}.json`);
+  return fs.existsSync(arq) ? JSON.parse(fs.readFileSync(arq, 'utf8')) : null;
+};
 
 const formatar = (dt, opcoes) => new Date(`${dt}T12:00:00Z`).toLocaleDateString('pt-BR', { timeZone: 'UTC', ...opcoes });
 const numerica = dt => dt.split('-').reverse().join('/');
@@ -62,9 +67,9 @@ function trocar(html, de, para) {
 const meta = (html, atributo, nome, valor) =>
   trocar(html, new RegExp(`(<meta ${atributo}="${nome}"\\s+content=")[^"]*(")`), `<meta ${atributo}="${nome}" content="${esc(valor)}"`);
 
-export function paginaDoDia(modelo, dt, dia, indice) {
+export function paginaDoDia(modelo, dt, dia, indice, resumo = lerResumo(dt)) {
   const cab = cabecalhoDoDia(dt, dia);
-  const { html: leituras, blocos } = conteudoDoDia(dia);
+  const { html: leituras, blocos } = conteudoDoDia(dia, resumo);
   const url = `${SITE}${urlDoDia(dt)}`;
   const imagem = `${SITE}/liturgiadiaria/og/${dt}.jpg`;
   const titulo = `Liturgia Diária ${numerica(dt)}: ${dia.celebracao}`;

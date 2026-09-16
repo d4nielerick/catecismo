@@ -181,6 +181,16 @@ redesenha, então não há salto de layout). O modelo é `liturgiadiaria/index.h
 de o gerador não encaixar, `verifica-liturgia.mjs` falha no CI. No Caddy, fontes, imagens, os JSON dos
 dias, os santos e as imagens `og/` têm cache de 30 dias; HTML, JS, CSS e `indice.json`, não.
 
+### Liturgia Diária: resumo das leituras
+
+Antes da 1ª leitura, um parágrafo resume as leituras do dia ("Hoje, a primeira leitura (…) …; o
+Salmo …; e o Evangelho …"). Os textos ficam em `data/liturgia-resumos/AAAA-MM-DD.json` (sem o
+"Hoje,"/"Neste dia,", que a página acrescenta), escritos fora do site e gravados com
+`node scripts/grava-resumos.mjs resumos.json`. Cada arquivo guarda as referências que resume: se as
+leituras do dia mudarem, o resumo some e `verifica-liturgia.mjs` falha. O verificador também exige
+40–110 palavras e que todo nome próprio do resumo esteja nas leituras daquele dia (só o que está no
+texto: nada de interpretação). Nenhuma chamada de IA em tempo de execução.
+
 ### Integridade do texto do Catecismo (NÃO editar catecismo.json à mão)
 
 `data/catecismo.json` é gerado deterministicamente e o CI (`.github/workflows/verifica.yml`)

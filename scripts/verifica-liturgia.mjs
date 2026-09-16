@@ -13,6 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { buildDia, listarFonte, lerFonte, indiceDe, SAIDA, RE, cabecalho } from './build-liturgia.mjs';
 import { lerModelo, lerIndice, listarDias, lerDia, paginaDoDia, sitemapLiturgia } from './build-paginas-liturgia.mjs';
+import { referenciasDoDia } from '../liturgiadiaria/render.mjs';
 
 const semEspaco = s => (s || '').replace(/\s+/g, '');
 const tem = (dia, tipo, ...trechos) => dia.missas
@@ -120,6 +121,28 @@ for (const [celebracao, s] of Object.entries(santos)) {
     if (falta.length) erros.push(`página ${dt}: ${falta.join(', ')}`);
   }
   if ((sitemapLiturgia(dias).match(/<loc>/g) || []).length !== dias.length + 1) erros.push('sitemap-liturgia.xml incompleto');
+}
+
+// Resumos das leituras (scripts/grava-resumos.mjs): cobrem as leituras atuais do dia, têm o tamanho
+// combinado, citam as referências e não trazem nomes próprios que não estão nas leituras.
+{
+  const RESUMOS = path.join(SAIDA, '..', 'liturgia-resumos');
+  const COMUNS = new Set(['Salmo', 'Evangelho', 'Senhor', 'Deus', 'Reino', 'Filho', 'Homem', 'Espírito', 'Pai', 'Palavra', 'Lei', 'Criador']);
+  const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  for (const arq of fs.existsSync(RESUMOS) ? fs.readdirSync(RESUMOS).filter(f => f.endsWith('.json')) : []) {
+    const r = JSON.parse(fs.readFileSync(path.join(RESUMOS, arq), 'utf8'));
+    const destino = path.join(SAIDA, `${r.data}.json`);
+    if (!fs.existsSync(destino)) { erros.push(`resumo ${r.data}: dia sem leituras`); continue; }
+    const dia = JSON.parse(fs.readFileSync(destino, 'utf8'));
+    if (r.leituras !== referenciasDoDia(dia)) erros.push(`resumo ${r.data}: as leituras do dia mudaram (refaça o resumo)`);
+    const palavras = r.texto.split(/\s+/).length;
+    if (palavras < 40 || palavras > 110) erros.push(`resumo ${r.data}: ${palavras} palavras (esperado 40–110)`);
+    const leituras = norm(dia.missas.flatMap(m => m.leituras).map(l => l.texto).join(' '));
+    const semRefs = r.texto.replace(/\([^)]*\)/g, '');
+    for (const nome of new Set(semRefs.match(/\p{Lu}[\p{Ll}]+/gu) || [])) {
+      if (!COMUNS.has(nome) && !leituras.includes(norm(nome))) erros.push(`resumo ${r.data}: "${nome}" não aparece nas leituras`);
+    }
+  }
 }
 
 if (erros.length) {

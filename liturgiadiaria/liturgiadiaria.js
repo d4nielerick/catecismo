@@ -134,10 +134,11 @@ function construirCalendario(dtAtual, hoje, indice) {
 // Cada palavra vira um <span>; a posição real na tela agrupa as palavras em linhas, e cada linha
 // entra quando aparece no viewport (as que entram juntas vêm em cascata, de cima para baixo).
 const SELETOR_ENTRADA = [
+  '.lp-resumo-rotulo', '.lp-resumo-texto',
   '.leitura-label', '.leitura-ref', '.leitura-titulo', '.leitura-texto p',
   '.salmo-refrao', '.salmo-estrofe', '.salmo-r-sep.com-texto', '.acl-verso',
 ].join(', ');
-const BLOCOS_INTEIROS = '.leitura-label, .leitura-ref';
+const BLOCOS_INTEIROS = '.leitura-label, .leitura-ref, .lp-resumo-rotulo';
 const UNIDADES_INLINE = 'sup, .salmo-r-label, .salmo-ou';
 const PASSO_LINHA_MS = 55;
 const LEVA_MAX_MS = 1000;
@@ -497,7 +498,7 @@ function trocarData(aplicar) {
   }, aplicar);
 }
 
-function aplicarDia(dt, dia, { primeira = false } = {}) {
+function aplicarDia(dt, dia, resumo, { primeira = false } = {}) {
   estado.dt = dt;
   preencherCabecalho(dt, dia, estado.santos);
   construirCalendario(dt, estado.hoje, estado.indice);
@@ -512,7 +513,7 @@ function aplicarDia(dt, dia, { primeira = false } = {}) {
     return;
   }
   // Nas páginas de cada dia o HTML já veio pronto e é idêntico: redesenhar não mexe no layout.
-  const { html, blocos } = conteudoDoDia(dia);
+  const { html, blocos } = conteudoDoDia(dia, resumo, { hoje: dt === estado.hoje });
   conteudo.innerHTML = html;
   construirNav(blocos);
   animarEntrada();
@@ -522,12 +523,15 @@ let pedidoDeDia = 0;
 async function irParaDia(dt) {
   if (dt === estado.dt) { rolarPara(0); return; }
   const vez = ++pedidoDeDia;
-  const dia = await buscarJson(`/data/liturgia/${dt}.json`);
+  const [dia, resumo] = await Promise.all([
+    buscarJson(`/data/liturgia/${dt}.json`),
+    buscarJson(`/data/liturgia-resumos/${dt}.json`),
+  ]);
   if (vez !== pedidoDeDia) return;
   // O endereço volta a ser o da página de hoje: recarregar sempre abre o dia atual.
   if (location.pathname !== '/liturgiadiaria/' || location.search) history.replaceState(null, '', '/liturgiadiaria/');
   if (scrollY > 40) rolarPara(0);
-  trocarData(() => aplicarDia(dt, dia));
+  trocarData(() => aplicarDia(dt, dia, resumo));
 }
 
 const LINK_DE_DIA = /^\/liturgiadiaria\/(\d{4}-\d{2}-\d{2})\/$/;
@@ -688,16 +692,17 @@ async function init() {
   configurarModal();
   iniciarLenis();
 
-  const [indice, dia, santos] = await Promise.all([
+  const [indice, dia, santos, resumo] = await Promise.all([
     buscarJson('/data/liturgia/indice.json'),
     buscarJson(`/data/liturgia/${dt}.json`),
     buscarJson('/data/santos/indice.json'),
+    buscarJson(`/data/liturgia-resumos/${dt}.json`),
   ]);
   estado.indice = indice;
   estado.santos = santos;
   estado.destaques = new Map((indice?.destaques || []).map(d => [d.data, d]));
 
   montarAvisos(indice, hoje);
-  aplicarDia(dt, dia, { primeira: true });
+  aplicarDia(dt, dia, resumo, { primeira: true });
 }
 init();

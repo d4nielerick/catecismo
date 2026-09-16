@@ -184,11 +184,28 @@ export const NOME_COR = { roxo: 'roxa', branco: 'branca', verde: 'verde', vermel
 // ── Leituras, abas e outros dias ─────────────────────────────────────────────
 export const urlDoDia = d => `/liturgiadiaria/${d}/`;
 
+/** Referências da missa principal que o resumo cobre; se mudarem, o resumo fica desatualizado. */
+export const referenciasDoDia = dia => dia.missas[0].leituras
+  .filter(l => !l.alternativa && ['leitura', 'salmo', 'evangelho'].includes(l.tipo))
+  .map(l => l.referencia).join(' | ');
+
+/** Resumo das leituras (data/liturgia-resumos/). "Hoje" só quando o dia aberto é o de hoje:
+ *  nas páginas de cada dia (geradas) e nos outros dias, "Neste dia". */
+export function resumoHtml(resumo, { hoje = false } = {}) {
+  if (!resumo?.texto) return '';
+  return `
+    <section class="lp-resumo" aria-label="Resumo das leituras">
+      <p class="lp-resumo-rotulo">Resumo das leituras</p>
+      <p class="lp-resumo-texto">${hoje ? 'Hoje' : 'Neste dia'}, ${esc(resumo.texto)}</p>
+    </section>`;
+}
+
 /** HTML das leituras do dia (missa principal + outras missas recolhidas) e os blocos da principal. */
-export function conteudoDoDia(dia) {
+export function conteudoDoDia(dia, resumo = null, opcoes = {}) {
   const [principal, ...outras] = dia.missas;
   const blocos = blocosDaMissa(principal, '');
-  let html = blocos.map(renderBloco).join('');
+  const valido = resumo && resumo.leituras === referenciasDoDia(dia);
+  let html = (valido ? resumoHtml(resumo, opcoes) : '') + blocos.map(renderBloco).join('');
   outras.forEach((missa, k) => {
     html += `
       <details class="missa-extra">
