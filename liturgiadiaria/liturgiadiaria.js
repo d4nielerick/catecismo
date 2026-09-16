@@ -427,7 +427,6 @@ function montarAvisos(indice, hoje) {
   if (!avisos.length) return;
 
   const texto = wrap.querySelector('.lp-aviso-texto');
-  wrap.hidden = false;
   let atual = 0;
   // Reserva a altura do aviso mais longo: quando um quebra linha, a troca não empurra a página.
   const reservarAltura = () => {

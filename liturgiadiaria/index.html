@@ -22,12 +22,12 @@
   <meta name="twitter:description" content="Leituras litúrgicas do dia, com texto completo em português.">
   <meta name="twitter:image"       content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
 
-  <link rel="icon" type="image/png" href="../assets/favicon.png">
-  <link rel="apple-touch-icon" href="../assets/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inria+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
+  <!-- Fonte servida daqui: sem terceiro no caminho e sem o texto pular quando ela chega -->
+  <link rel="preload" href="/assets/fonts/inria-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inria-serif-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="../assets/css/main.css">
 
@@ -45,6 +45,24 @@
   <!-- Umami Analytics -->
   <script defer src="https://umami.danielerick.com/script.js" data-website-id="28c35f85-bd1b-4ea9-8f52-fc98d33b4974"></script>
   <style>
+    @font-face {
+      font-family: 'Inria Serif'; font-style: normal; font-weight: 400; font-display: swap;
+      src: url('/assets/fonts/inria-serif-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inria Serif'; font-style: italic; font-weight: 400; font-display: swap;
+      src: url('/assets/fonts/inria-serif-400-italic.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inria Serif'; font-style: normal; font-weight: 700; font-display: swap;
+      src: url('/assets/fonts/inria-serif-700.woff2') format('woff2');
+    }
+    /* Georgia ajustada para ocupar o mesmo espaço da Inria: o texto não se mexe quando a fonte chega */
+    @font-face {
+      font-family: 'Inria reserva';
+      src: local('Georgia'), local('Times New Roman');
+      size-adjust: 102.9%; ascent-override: 95.2%; descent-override: 21.4%; line-gap-override: 0%;
+    }
     /* Layout do Figma "Catecismo" › MacBook Pro 16" - 1 (node 65:3):
        lateral (título + calendário) · faixa floral · coluna de leitura · faixa floral · respiro */
     :root {
@@ -55,8 +73,9 @@
       --lp-linha: rgba(0, 0, 0, 0.08);
       --lp-vermelho: #cb2e2e; /* o mesmo da cruz do divisor */
       --lp-faixa-w: 120px;
-      --font-titulo: 'Times New Roman', Times, 'EB Garamond', Georgia, serif;
-      --font-leitura: 'Inria Serif', 'EB Garamond', Georgia, serif;
+      --font-titulo: 'Times New Roman', Times, Georgia, serif;
+      --font-leitura: 'Inria Serif', 'Inria reserva', Georgia, serif;
+      --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
     }
 
     html, body { background: var(--lp-fundo); min-height: 100%; }
@@ -92,6 +111,7 @@
     }
 
     .lp-data {
+      min-height: 1.5em; /* alturas reservadas: o conteúdo chega sem empurrar a página */
       font-size: 0.85rem;
       line-height: 1.5;
       color: var(--lp-suave);
@@ -99,7 +119,7 @@
     }
     .lp-data::first-letter { text-transform: uppercase; }
 
-    .tempo-wrap { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .tempo-wrap { display: flex; align-items: center; gap: 0.5rem; min-height: 1.15rem; margin-bottom: 0.35rem; }
     .cor-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
     .tempo-badge {
       font-family: var(--font-sans);
@@ -111,6 +131,7 @@
     }
 
     .nome-dia {
+      min-height: 1.45em;
       font-style: italic;
       font-size: 1rem;
       line-height: 1.45;
@@ -141,7 +162,7 @@
       scrollbar-width: thin;
       padding: 3.25rem 2rem 3rem 2.25rem;
     }
-    .cal-wrap { max-width: 257px; }
+    .cal-wrap { max-width: 257px; min-height: 202px; }
     .cal-header { display: flex; align-items: center; justify-content: center; gap: 0.35rem; margin-bottom: 0.6rem; }
     .cal-mes { min-width: 7.5rem; text-align: center; }
     .cal-mes { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; color: var(--lp-tinta); }
@@ -191,6 +212,7 @@
       padding: var(--lp-main-topo) var(--lp-main-lado) 7rem;
     }
 
+    .lp-conteudo { min-height: 70vh; } /* espaço reservado: a leitura cresce sem empurrar o rodapé */
     .leitura-card { position: relative; scroll-margin-top: 5rem; } /* abaixo das abas fixas */
     /* Com o ornamento em cima, a aba leva ao título da leitura, não à cruz */
     .leitura-card + .leitura-card { scroll-margin-top: -5rem; }
@@ -320,6 +342,7 @@
       display: flex;
       overflow-x: auto;
       gap: 0.25rem;
+      min-height: 3.05rem;
       margin: calc(-1 * var(--lp-main-topo)) calc(-1 * var(--lp-main-lado)) 2.75rem;
       padding: 0.9rem calc(var(--lp-main-lado) - 0.9rem) 0;
       scrollbar-width: none;
@@ -417,6 +440,7 @@
     /* ── Avisos do calendário (faltam N dias…) ───────────────────────────── */
     /* Uma linha miúda sob o nome do dia; troca sozinha, ou no clique */
     .lp-avisos { margin-top: 0.4rem; max-width: 22rem; }
+    .lp-aviso-texto { min-height: 1.45em; }
     .lp-aviso-texto {
       margin: 0;
       font-size: 0.78rem;
@@ -590,13 +614,13 @@
   <aside class="lp-lateral">
     <h1 class="lp-titulo">Liturgia<br>Diária</h1>
     <p class="lp-data" id="lp-data">Carregando…</p>
-    <div class="tempo-wrap" id="lp-tempo-wrap" style="display:none">
+    <div class="tempo-wrap" id="lp-tempo-wrap">
       <span class="cor-dot" id="lp-cor-dot"></span>
       <span class="tempo-badge" id="lp-tempo"></span>
     </div>
-    <p class="nome-dia" id="lp-nome-dia" style="display:none"></p>
+    <p class="nome-dia" id="lp-nome-dia"></p>
 
-    <div class="lp-avisos" id="lp-avisos" hidden>
+    <div class="lp-avisos" id="lp-avisos">
       <p class="lp-aviso-texto" title="Próximo aviso"></p>
     </div>
 
@@ -615,7 +639,7 @@
   <!-- ── Leituras (com as abas fixas no alto da coluna) ─────────────────── -->
   <main class="lp-main">
     <nav class="lp-tabs" id="lp-tabs" aria-label="Leituras"></nav>
-    <div id="conteudo">
+    <div id="conteudo" class="lp-conteudo">
       <p class="loading">Buscando leituras do dia…</p>
     </div>
     <a class="lp-topo" href="#top">↑ Voltar ao topo</a>
