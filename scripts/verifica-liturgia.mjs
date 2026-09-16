@@ -12,6 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { buildDia, listarFonte, lerFonte, indiceDe, SAIDA, RE, cabecalho } from './build-liturgia.mjs';
+import { lerModelo, lerIndice, listarDias, lerDia, paginaDoDia, sitemapLiturgia } from './build-paginas-liturgia.mjs';
 
 const semEspaco = s => (s || '').replace(/\s+/g, '');
 const tem = (dia, tipo, ...trechos) => dia.missas
@@ -97,6 +98,28 @@ for (const [celebracao, s] of Object.entries(santos)) {
   const ok = fs.existsSync(arq) && JSON.parse(fs.readFileSync(arq, 'utf8')).artigos
     .every(a => a.resumo.length && /^https:\/\/pt\.wikipedia\.org\//.test(a.url));
   if (!ok) erros.push(`santos: ${s}.json ausente ou sem resumo/link`);
+}
+
+// Páginas de cada dia (scripts/build-paginas-liturgia.mjs): o modelo continua encaixando em todos os
+// dias e cada página sai com título, canonical, dados estruturados e as leituras no HTML.
+{
+  const modelo = lerModelo();
+  const indiceLit = lerIndice();
+  const dias = listarDias();
+  for (const dt of dias) {
+    let html;
+    try { html = paginaDoDia(modelo, dt, lerDia(dt), indiceLit); }
+    catch (e) { erros.push(`página ${dt}: ${e.message}`); break; }
+    const falta = [
+      [`<link rel="canonical" href="https://santadoutrina.cloud/liturgiadiaria/${dt}/">`, 'canonical'],
+      ['<script type="application/ld+json">', 'dados estruturados'],
+      ['class="leitura-card', 'leituras no HTML'],
+      [`og/${dt}.jpg`, 'imagem de compartilhamento'],
+    ].filter(([trecho]) => !html.includes(trecho)).map(([, nome]) => nome);
+    if (/Carregando…|Buscando leituras/.test(html)) falta.push('texto de carregamento sobrou');
+    if (falta.length) erros.push(`página ${dt}: ${falta.join(', ')}`);
+  }
+  if ((sitemapLiturgia(dias).match(/<loc>/g) || []).length !== dias.length + 1) erros.push('sitemap-liturgia.xml incompleto');
 }
 
 if (erros.length) {

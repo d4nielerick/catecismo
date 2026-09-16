@@ -7,167 +7,20 @@
  * aqui só se desenha.
  */
 
-const pad = n => String(n).padStart(2, '0');
-
-// Data do aparelho, não UTC: às 22h em Brasília toISOString() já é o dia seguinte.
-function hojeLocal() {
-  const d = new Date();
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-}
-
-const esc = s => String(s ?? '')
-  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-
-const COR_PONTO = { roxo: '#7c3aed', branco: '#b8972e', verde: '#15803d', vermelho: '#dc2626', rosa: '#db2777', preto: '#44403c' };
-const COR_FUNDO = { roxo: '#f0ecf8', branco: '#faf7ee', verde: '#edf5ef', vermelho: '#f8edeb', rosa: '#f8edf2', preto: '#eeeceb' };
-
-// ── Texto ────────────────────────────────────────────────────────────────────
-const VERSO = /^\d+[a-z]?$|^\d+,\d+[a-z]?$|^[a-z]$/;
-const OU = '<span class="salmo-ou">ou</span>';
-
-function renderProsa(texto) {
-  let html = '';
-  for (const l of texto.split('\n')) {
-    html += VERSO.test(l) ? `<sup class="vers-num">${esc(l)}</sup>` : `${esc(l)} `;
-  }
-  return `<p>${html.trim()}</p>`;
-}
-
-function renderPoema(texto) {
-  return `<p>${texto.split('\n').map(esc).join('<br>')}</p>`;
-}
-
-function renderSalmo(texto) {
-  const linhas = texto.split('\n').map(l => l.trim()).filter(Boolean);
-  let i = 0;
-  const refrao = [];
-  if (/^R\.?(\s|$)/.test(linhas[0] || '')) {
-    const resto = linhas[0].replace(/^R\.?\s*/, '');
-    if (resto) refrao.push(esc(resto));
-    // O refrão termina no primeiro versículo (número ou linha com "*" de mediação).
-    for (i = 1; i < linhas.length; i++) {
-      const l = linhas[i];
-      if (VERSO.test(l) || l.includes('*')) break;
-      if (/^R\.?$/.test(l)) continue;
-      refrao.push(/^Ou:?$/i.test(l) ? OU : esc(l));
-    }
-  }
-
-  let html = refrao.length ? `<div class="salmo-refrao"><span class="salmo-r-label">R.</span>${refrao.join(' ')}</div>` : '';
-  let estrofe = '';
-  const fechar = () => { if (estrofe) html += `<div class="salmo-estrofe">${estrofe}</div>`; estrofe = ''; };
-  for (; i < linhas.length; i++) {
-    const l = linhas[i].replace(/[*†]/g, '').trim();
-    if (!l) continue;
-    if (/^R\.?$/.test(l)) { fechar(); html += '<div class="salmo-r-sep">R.</div>'; continue; }
-    if (/^R\.\s/.test(l)) { fechar(); html += `<div class="salmo-r-sep com-texto">R. ${esc(l.slice(2).trim())}</div>`; continue; }
-    if (VERSO.test(l)) { estrofe += `<sup class="vers-num">${esc(l)}</sup>`; continue; }
-    // Estrofe em texto corrido, como no layout (a linha do salmo não quebra).
-    estrofe += /^Ou:?$/i.test(l) ? `${OU} ` : `${esc(l)} `;
-  }
-  fechar();
-  return html;
-}
-
-function renderAclamacao(texto) {
-  let html = '';
-  let modo = null;
-  let buf = [];
-  const fechar = () => {
-    if (!buf.length) return;
-    if (modo === 'R') html += `<div class="salmo-refrao"><span class="salmo-r-label">R.</span>${buf.join('<br>')}</div>`;
-    else if (modo === 'V') html += `<div class="acl-verso"><span class="salmo-r-label">V.</span>${buf.join('<br>')}</div>`;
-    else html += `<p>${buf.join('<br>')}</p>`;
-    buf = [];
-  };
-  for (const l of texto.split('\n').map(x => x.trim()).filter(Boolean)) {
-    const m = l.match(/^([RV])\.\s*(.*)$/);
-    if (m) { fechar(); modo = m[1]; if (m[2]) buf.push(esc(m[2])); continue; }
-    buf.push(/^Ou:?$/i.test(l) ? OU : esc(l));
-  }
-  fechar();
-  return html;
-}
-
-function corpoLeitura(s) {
-  const texto = s.tipo === 'salmo' ? renderSalmo(s.texto)
-    : s.tipo === 'aclamacao' ? renderAclamacao(s.texto)
-    : s.tipo === 'sequencia' ? renderPoema(s.texto)
-    : renderProsa(s.texto);
-  const titulo = s.titulo ? `<p class="leitura-titulo">${esc(s.titulo)}</p>` : '';
-  return `${titulo}<div class="leitura-texto">${texto}</div>`;
-}
-
-const rotuloCompleto = s => s.rotulo + (s.variante ? ` (${s.variante})` : '');
-
-// ── Cards ────────────────────────────────────────────────────────────────────
-const ANCORA = { salmo: 'salmo', sequencia: 'sequencia', aclamacao: 'aclamacao', evangelho: 'evangelho' };
-function ancora(s) {
-  if (s.tipo !== 'leitura') return ANCORA[s.tipo];
-  return s.rotulo === '1ª Leitura' ? 'primeira-leitura' : s.rotulo === '2ª Leitura' ? 'segunda-leitura' : s.rotulo === 'Epístola' ? 'epistola' : `leitura-${parseInt(s.rotulo, 10)}`;
-}
-
-/** Agrupa cada leitura com as suas alternativas ("ou…") e gera ids únicos. */
-function blocosDaMissa(missa, prefixo) {
-  const blocos = [];
-  const usados = new Map();
-  for (const s of missa.leituras) {
-    if (s.alternativa && blocos.length) { blocos.at(-1).alternativas.push(s); continue; }
-    const base = prefixo + ancora(s);
-    const n = (usados.get(base) || 0) + 1;
-    usados.set(base, n);
-    blocos.push({ leitura: s, id: n > 1 ? `${base}-${n}` : base, alternativas: [] });
-  }
-  return blocos;
-}
-
-function renderBloco({ leitura: s, id, alternativas }) {
-  const alts = alternativas.map(a => `
-      <details class="leitura-alt">
-        <summary><span class="leitura-alt-ou">ou</span> ${esc(rotuloCompleto(a))}${a.referencia ? ` · ${esc(a.referencia)}` : ''}</summary>
-        ${corpoLeitura(a)}
-      </details>`).join('');
-  return `
-    <article class="leitura-card${s.tipo === 'evangelho' ? ' card-evangelho' : ''}${['aclamacao', 'sequencia'].includes(s.tipo) ? ' secao-menor' : ''}" id="${id}">
-      <div class="leitura-label">${esc(rotuloCompleto(s))}</div>
-      ${s.referencia ? `<div class="leitura-ref">${esc(s.referencia)}</div>` : ''}
-      ${corpoLeitura(s)}
-      ${alts}
-    </article>`;
-}
-
-// ── Cabeçalho ────────────────────────────────────────────────────────────────
-// Dia marcado no calendário na cor litúrgica (a branca vira dourado, para aparecer no fundo claro).
-const COR_CALENDARIO = { roxo: '#5b2d86', verde: '#1f6e3d', vermelho: '#b8282a', rosa: '#c7688b', preto: '#262422', branco: '#b8972e' };
-const DIA_DA_SEMANA =/\b(?:Domingo|Segunda-feira|Terça-feira|Quarta-feira|Quinta-feira|Sexta-feira|Sábado)\b/;
-const semTempo = s => s.replace(/\s+d[oa] (?:Tempo Comum|Páscoa|Advento|Quaresma)$/, ''); // o tempo já está no selo
+import {
+  esc, pad, hojeLocal, abasHtml, cabecalhoDoDia, conteudoDoDia, diasHtml, itensDasAbas, urlDoDia, NOME_COR,
+} from '/liturgiadiaria/render.mjs';
 
 function preencherCabecalho(dt, dia, santos) {
-  const data = new Date(`${dt}T12:00:00`);
-  const elData = document.getElementById('lp-data');
-  const semDiaDaSemana = data.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
-  elData.textContent = data.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  const cab = cabecalhoDoDia(dt, dia);
+  document.getElementById('lp-data').textContent = cab.linha;
   if (!dia) return;
   pendurarFita(dia.cor);
-  if (COR_CALENDARIO[dia.cor]) document.documentElement.style.setProperty('--lp-cor-dia', COR_CALENDARIO[dia.cor]);
-
-  // Sem repetir o dia da semana: na memória, a data vem primeiro e o dia do temporal depois
-  // ("15 de setembro · Terça-feira da 24ª Semana"; o ano está no calendário logo abaixo);
-  // se o nome do dia já diz o dia da semana, a data vem sem ele.
-  if (dia.complemento) {
-    const curta = data.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long' });
-    elData.textContent = `${curta} · ${semTempo(dia.complemento)}`;
-  } else if (DIA_DA_SEMANA.test(dia.celebracao || '')) {
-    elData.textContent = semDiaDaSemana;
+  if (cab.corDia) document.documentElement.style.setProperty('--lp-cor-dia', cab.corDia);
+  if (cab.tempo) {
+    document.getElementById('lp-tempo').textContent = cab.tempo;
+    document.getElementById('lp-cor-dot').style.background = cab.corPonto || '#888';
   }
-
-  if (dia.tempo) {
-    document.getElementById('lp-tempo').textContent = dia.tempo;
-    document.getElementById('lp-cor-dot').style.background = COR_PONTO[dia.cor] ?? '#888';
-    document.getElementById('lp-tempo-wrap').style.display = '';
-  }
-  const fundo = COR_FUNDO[dia.cor];
-  if (fundo) document.documentElement.style.setProperty('--litur-bg', fundo);
 
   if (dia.celebracao) {
     const el = document.getElementById('lp-nome-dia');
@@ -188,26 +41,12 @@ function preencherCabecalho(dt, dia, santos) {
 
 // ── Navegação ────────────────────────────────────────────────────────────────
 function construirNav(blocos) {
-  const navEl = document.getElementById('lp-nav');
   const tabsEl = document.getElementById('lp-tabs');
-  navEl.innerHTML = '';
-  tabsEl.innerHTML = '';
-
-  const itens = blocos.filter(b => !['aclamacao', 'sequencia'].includes(b.leitura.tipo));
-  itens.forEach(({ leitura, id }, i) => {
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="#${id}"${i === 0 ? ' class="ativa"' : ''}><span class="nav-dot"></span>${esc(leitura.rotulo)}</a>`;
-    navEl.appendChild(li);
-
-    const a = document.createElement('a');
-    a.href = `#${id}`;
-    a.textContent = leitura.rotulo;
-    if (i === 0) a.classList.add('ativa');
-    tabsEl.appendChild(a);
-  });
+  tabsEl.innerHTML = abasHtml(blocos);
+  const itens = itensDasAbas(blocos);
 
   const cards = itens.map(({ id }) => document.getElementById(id)).filter(Boolean);
-  const links = [...navEl.querySelectorAll('a'), ...tabsEl.querySelectorAll('a')];
+  const links = [...tabsEl.querySelectorAll('a')];
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) links.forEach(a => a.classList.toggle('ativa', a.getAttribute('href') === `#${e.target.id}`));
@@ -252,7 +91,7 @@ function construirCalendario(dtAtual, hoje, indice) {
         .filter(Boolean).join(' ');
       html += foraRange
         ? `<div class="${cls}">${d}</div>`
-        : `<a class="${cls}" href="?data=${dtStr}">${d}</a>`;
+        : `<a class="${cls}" href="${urlDoDia(dtStr)}">${d}</a>`;
     }
 
     html += '</div>';
@@ -304,7 +143,8 @@ function quebrarEmPalavras(bloco) {
 }
 
 function animarEntrada() {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  const pronto = () => document.documentElement.classList.add('lp-pronto');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) { pronto(); return; }
 
   for (const bloco of document.querySelectorAll(SELETOR_ENTRADA)) {
     if (bloco.closest('details') || bloco.dataset.lpBloco) continue;
@@ -312,6 +152,7 @@ function animarEntrada() {
     if (bloco.matches(BLOCOS_INTEIROS)) bloco.classList.add('lp-oculto');
     else quebrarEmPalavras(bloco);
   }
+  pronto();
 
   let obs = null;
   const linhaDo = new Map(); // primeira unidade da linha → unidades da linha
@@ -375,7 +216,6 @@ function animarEntrada() {
 }
 
 // ── Fita da cor litúrgica ────────────────────────────────────────────────────
-const NOME_COR = { roxo: 'roxa', branco: 'branca', verde: 'verde', vermelho: 'vermelha', rosa: 'rósea', preto: 'preta' };
 
 function pendurarFita(cor) {
   const fita = document.getElementById('lp-fita');
@@ -533,7 +373,9 @@ const buscarJson = url => fetch(url).then(r => (r.ok ? r.json() : null)).catch((
 
 async function init() {
   const hoje = hojeLocal();
-  const pedida = new URLSearchParams(location.search).get('data') || '';
+  // /liturgiadiaria/AAAA-MM-DD/ (página de cada dia) · ?data= (links antigos) · hoje
+  const doCaminho = location.pathname.match(/\/liturgiadiaria\/(\d{4}-\d{2}-\d{2})\/?$/)?.[1];
+  const pedida = doCaminho || new URLSearchParams(location.search).get('data') || '';
   const dt = /^\d{4}-\d{2}-\d{2}$/.test(pedida) ? pedida : hoje;
 
   const [indice, dia, santos] = await Promise.all([
@@ -546,6 +388,7 @@ async function init() {
   montarAvisos(indice, hoje);
   configurarModal();
   construirCalendario(dt, hoje, indice);
+  document.getElementById('lp-dias').innerHTML = diasHtml(dt, indice);
 
   const conteudo = document.getElementById('conteudo');
   if (!dia) {
@@ -554,20 +397,10 @@ async function init() {
     return;
   }
 
-  const [principal, ...outras] = dia.missas;
-  const blocos = blocosDaMissa(principal, '');
-  let html = blocos.map(renderBloco).join('');
-  outras.forEach((missa, k) => {
-    html += `
-      <details class="missa-extra">
-        <summary>${esc(missa.nome)}</summary>
-        ${blocosDaMissa(missa, `m${k + 1}-`).map(renderBloco).join('')}
-      </details>`;
-  });
+  // Nas páginas de cada dia o HTML já veio pronto e é idêntico: redesenhar não mexe no layout.
+  const { html, blocos } = conteudoDoDia(dia);
   conteudo.innerHTML = html;
-
   construirNav(blocos);
   animarEntrada();
 }
-
 init();

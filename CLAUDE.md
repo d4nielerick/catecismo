@@ -164,6 +164,23 @@ da pt.wikipedia, curado à mão). Para trocar ou acrescentar um artigo, edite a 
 script; ele falha em título inexistente ou desambiguação. O CI confere que toda celebração do
 índice existe no calendário e tem resumo e link.
 
+### Liturgia Diária: páginas por dia e SEO (gerar antes do deploy)
+
+`/liturgiadiaria/` mostra hoje (JavaScript). Para o Google, cada dia tem uma página pronta, com
+título, descrição, canonical, dados estruturados (WebPage + BreadcrumbList) e as leituras no HTML:
+
+```
+node scripts/build-paginas-liturgia.mjs   # liturgiadiaria/AAAA-MM-DD/index.html + sitemap-liturgia.xml
+python3 scripts/build-og-liturgia.py      # liturgiadiaria/og/AAAA-MM-DD.jpg (imagem do WhatsApp; --tudo refaz)
+```
+
+Esses arquivos são gerados e ficam fora do git (.gitignore): **rode os dois antes de cada deploy** e
+envie `liturgiadiaria/`, `sitemap-liturgia.xml` e `robots.txt`. O desenho das leituras mora em
+`liturgiadiaria/render.mjs`, usado pela página e pelo gerador (o HTML pronto é idêntico ao que o JS
+redesenha, então não há salto de layout). O modelo é `liturgiadiaria/index.html`; se ele mudar a ponto
+de o gerador não encaixar, `verifica-liturgia.mjs` falha no CI. No Caddy, fontes, imagens, os JSON dos
+dias, os santos e as imagens `og/` têm cache de 30 dias; HTML, JS, CSS e `indice.json`, não.
+
 ### Integridade do texto do Catecismo (NÃO editar catecismo.json à mão)
 
 `data/catecismo.json` é gerado deterministicamente e o CI (`.github/workflows/verifica.yml`)
