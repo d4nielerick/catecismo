@@ -492,13 +492,64 @@ const MARCOS = {
   'Imaculada Conceição de Nossa Senhora': { curto: 'a Imaculada Conceição', preceito: true },
 };
 
+// Dias marcados com uma bolinha no calendário da página: festas de Nossa Senhora e santos de grande
+// devoção no Brasil. Os que o calendário já celebra vêm pelo nome do dia; as devoções que não são
+// memória obrigatória (Fátima, Lourdes, São Jorge, Santa Rita…) vêm pela data fixa.
+const FESTAS_MARIANAS = new Set([
+  'Santa Maria, Mãe de Deus', 'Anunciação do Senhor', 'Visitação de Nossa Senhora',
+  'Bem-aventurada Virgem Maria, Mãe da Igreja', 'Imaculado Coração de Maria', 'Assunção de Nossa Senhora',
+  'Nossa Senhora Rainha', 'Natividade de Nossa Senhora', 'Nossa Senhora das Dores', 'Nossa Senhora do Rosário',
+  'Nossa Senhora da Conceição Aparecida', 'Apresentação de Nossa Senhora', 'Imaculada Conceição de Nossa Senhora',
+  'Nossa Senhora de Guadalupe',
+]);
+const SANTOS_DE_DEVOCAO = new Set([
+  'São José, esposo da Virgem Maria', 'Natividade de São João Batista', 'São Pedro e São Paulo, apóstolos',
+  'Santo Antônio de Pádua', 'São Bento, abade', 'Santa Clara, virgem', 'Santo Agostinho', 'Santa Mônica',
+  'São João Maria Vianney', 'São Pio de Pietrelcina', 'São Miguel, São Gabriel e São Rafael, arcanjos',
+  'Santos Anjos da Guarda', 'Santa Teresinha do Menino Jesus', 'São Francisco de Assis',
+  'Santo Antônio de Sant’Ana Galvão', 'São Simão e São Judas, apóstolos', 'Todos os Santos',
+  'Santa Luzia, virgem e mártir', 'Santa Paulina do Coração Agonizante de Jesus', 'São João Bosco',
+  'São Tomás de Aquino', 'Santa Teresa de Jesus', 'São Vicente de Paulo', 'Santa Cecília, virgem e mártir',
+  // apóstolos, evangelistas e santos muito conhecidos
+  'São João, apóstolo e evangelista', 'Santo André, apóstolo', 'São Mateus, apóstolo e evangelista',
+  'São Marcos, evangelista', 'São Lucas, evangelista', 'São Tiago, apóstolo', 'São Tomé, apóstolo',
+  'São Bartolomeu, apóstolo', 'São Filipe e São Tiago, apóstolos', 'Conversão de São Paulo', 'Cátedra de São Pedro',
+  'Santa Maria Madalena', 'Santo Estêvão, primeiro mártir', 'São Lourenço, diácono e mártir',
+  'Santo Inácio de Loyola', 'São Domingos', 'São Bernardo', 'Santa Catarina de Sena', 'São Pio X, papa',
+  'São Maximiliano Maria Kolbe, mártir', 'São Jerônimo', 'Santa Marta, Santa Maria e São Lázaro',
+  'São Carlos Borromeu', 'São Martinho de Tours', 'São Francisco Xavier', 'São Filipe Néri', 'São Luís Gonzaga',
+  'Santo Afonso Maria de Ligório', 'São João da Cruz', 'Martírio de São João Batista', 'Santa Inês, virgem e mártir',
+]);
+const DEVOCOES_FIXAS = {
+  '01-20': ['santo', 'São Sebastião'],
+  '02-03': ['santo', 'São Brás'],
+  '02-11': ['mariana', 'Nossa Senhora de Lourdes'],
+  '04-23': ['santo', 'São Jorge'],
+  '05-13': ['mariana', 'Nossa Senhora de Fátima'],
+  '05-22': ['santo', 'Santa Rita de Cássia'],
+  '07-16': ['mariana', 'Nossa Senhora do Carmo'],
+  '07-26': ['santo', 'São Joaquim e Sant’Ana'],
+  '10-05': ['santo', 'Santa Faustina Kowalska'],
+  '10-16': ['santo', 'Santa Edwiges'],
+  '02-08': ['santo', 'Santa Josefina Bakhita'],
+  '09-05': ['santo', 'Santa Teresa de Calcutá'],
+  '09-26': ['santo', 'São Cosme e São Damião'],
+  '10-22': ['santo', 'São João Paulo II'],
+  '12-06': ['santo', 'São Nicolau'],
+};
+
 export function indiceDe(datas) {
   const marcos = [];
+  const destaques = [];
   for (const data of datas) {
     const { celebracao } = diaLiturgico(data);
     if (MARCOS[celebracao]) marcos.push({ data, nome: celebracao, ...MARCOS[celebracao] });
+    const fixa = DEVOCOES_FIXAS[data.slice(5)];
+    if (FESTAS_MARIANAS.has(celebracao)) destaques.push({ data, tipo: 'mariana', nome: celebracao });
+    else if (SANTOS_DE_DEVOCAO.has(celebracao)) destaques.push({ data, tipo: 'santo', nome: celebracao });
+    else if (fixa) destaques.push({ data, tipo: fixa[0], nome: fixa[1] });
   }
-  return { inicio: datas[0], fim: datas.at(-1), dias: datas.length, marcos };
+  return { inicio: datas[0], fim: datas.at(-1), dias: datas.length, marcos, destaques };
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === fs.realpathSync(process.argv[1])) {

@@ -55,7 +55,10 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   padding: 1.5rem 2rem 3rem 1.95rem;
 }
 
+.lp-cabeca { position: relative; }
 .lp-titulo {
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-titulo);
   font-style: italic;
   font-weight: 400;
@@ -63,8 +66,29 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   line-height: 0.9;
   letter-spacing: -0.03em;
   color: var(--lp-tinta);
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.15rem; /* a linha da semana fica colada na data */
 }
+/* "Liturgia Diária" pequeno em cima; a data grande no lugar onde o título entrou */
+.lp-marca { font-size: 0.3em; line-height: 1; letter-spacing: -0.01em; margin-bottom: 0.3em; color: var(--lp-cor-titulo, inherit); transition: color 0.3s; }
+.lp-titulo-data { line-height: 0.95; white-space: nowrap; }
+
+/* Entrada (liturgiadiaria.js › abrirCabecalho): o título grande entra e dá lugar à data */
+.lp-intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-titulo);
+  font-style: italic;
+  font-size: 78px;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--lp-tinta);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.lp-intro span { display: block; will-change: transform, opacity, filter; }
 
 .lp-data {
   min-height: 1.5em; /* alturas reservadas: o conteúdo chega sem empurrar a página */
@@ -74,6 +98,7 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   margin: 0 0 0.35rem;
 }
 .lp-data::first-letter { text-transform: uppercase; }
+.lp-data:empty, .nome-dia:empty { display: none; }
 
 .tempo-wrap { display: flex; align-items: center; gap: 0.5rem; min-height: 1.15rem; margin-bottom: 0.35rem; }
 .cor-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
@@ -118,7 +143,7 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   scrollbar-width: thin;
   padding: 3.25rem 2rem 3rem 2.25rem;
 }
-.cal-wrap { max-width: 257px; min-height: 202px; }
+.cal-wrap { max-width: 257px; min-height: 163px; } /* altura de um mês de 5 semanas; o de 6 cresce já no primeiro desenho */
 .cal-header { display: flex; align-items: center; justify-content: center; gap: 0.35rem; margin-bottom: 0.6rem; }
 .cal-mes { min-width: 7.5rem; text-align: center; }
 .cal-mes { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; color: var(--lp-tinta); }
@@ -134,10 +159,89 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   color: var(--lp-suave); padding: 0.2rem 0; text-transform: uppercase;
 }
 .cal-dia {
-  font-family: var(--font-sans); font-size: 0.66rem; text-align: center; padding: 0.28rem 0;
+  position: relative;
+  font-family: var(--font-sans); font-size: 0.66rem; text-align: center; padding: 0.26rem 0 0.5rem; /* espaço para a bolinha dos dias especiais */
   border-radius: 4px; cursor: pointer; color: var(--lp-suave); text-decoration: none;
   transition: background 0.1s, color 0.1s;
 }
+/* Dias especiais: bolinha embaixo do número (azul-acinzentado para Nossa Senhora, dourado para santos) */
+.cal-dia.tem-destaque::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 3px;
+  height: 3px;
+  margin-left: -1.5px;
+  border-radius: 50%;
+  background: #8fa6c4;
+}
+.cal-dia.destaque-santo::after { background: #c9ab6b; }
+.cal-dia.hoje.tem-destaque::after { background: rgba(255, 255, 255, 0.85); }
+
+/* Dica do dia especial */
+.lp-dica {
+  position: fixed;
+  z-index: 60;
+  max-width: 13.5rem;
+  padding: 0.5rem 0.7rem 0.55rem;
+  border-radius: 8px;
+  background: #fffdf9;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 28px rgba(30, 24, 16, 0.14), 0 2px 6px rgba(30, 24, 16, 0.06);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px) scale(0.98);
+  transform-origin: var(--seta-x, 50%) bottom;
+  transition: opacity 0.18s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lp-dica.abaixo { transform-origin: var(--seta-x, 50%) top; transform: translateY(-4px) scale(0.98); }
+.lp-dica.visivel { opacity: 1; transform: none; }
+.lp-dica.medindo { transition: none; visibility: hidden; opacity: 1; }
+.lp-dica::after {
+  content: '';
+  position: absolute;
+  left: var(--seta-x, 50%);
+  bottom: -5px;
+  width: 9px;
+  height: 9px;
+  margin-left: -5px;
+  background: #fffdf9;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  transform: rotate(45deg);
+}
+.lp-dica.abaixo::after { bottom: auto; top: -5px; transform: rotate(225deg); }
+.lp-dica-tipo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--lp-suave);
+}
+.lp-dica-tipo::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #8fa6c4; }
+.lp-dica-santo::before { background: #c9ab6b; }
+.lp-dica-nome {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--font-leitura);
+  font-style: italic;
+  font-size: 0.86rem;
+  line-height: 1.3;
+  color: var(--lp-tinta);
+}
+.lp-dica-toque { display: block; margin-top: 0.3rem; font-size: 0.66rem; color: var(--lp-suave); }
+
+/* Lenis (rolagem suave) */
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 /* --lp-cor-dia: cor litúrgica do dia aberto (liturgiadiaria.js › COR_CALENDARIO) */
 .cal-dia:hover { background: color-mix(in srgb, var(--lp-cor-dia, var(--color-primary)) 10%, transparent); color: var(--lp-tinta); }
 .cal-dia.hoje { background: var(--lp-cor-dia, var(--color-primary)); color: #fff; font-weight: 600; }
@@ -294,12 +398,62 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
 
 /* ── Abas (celular) ──────────────────────────────────────────────────── */
 /* Ocupa a largura toda da coluna (margens negativas = padding do .lp-main) */
+/* Barra compacta (telas até 1080px): quando o cabeçalho já sumiu, a data por extenso aparece no
+   respiro de cima da barra das abas, e a fita volta pequena no mesmo lugar de antes (canto direito).
+   Não ocupa espaço no fluxo (margem negativa) e as abas não se mexem. */
+.lp-compacto {
+  --lp-compacto-h: 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  display: flex;
+  align-items: flex-end;
+  height: var(--lp-compacto-h);
+  margin: calc(-1 * var(--lp-main-topo)) calc(-1 * var(--lp-main-lado)) calc(-1 * var(--lp-compacto-h));
+  padding: 0 var(--lp-main-lado);
+  font-size: 0.7rem;
+  line-height: 1;
+  color: var(--lp-suave);
+  white-space: nowrap;
+  pointer-events: none;
+}
+#lp-compacto-data {
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.35s ease, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lp-compacto-fita {
+  position: absolute;
+  top: 0;
+  right: 3.125rem;
+  width: 11px;
+  height: 24px;
+  background: var(--lp-cor-dia, var(--lp-suave));
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 24' preserveAspectRatio='none'%3E%3Cpath d='M0 0H11V24L5.5 19.5L0 24Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 24' preserveAspectRatio='none'%3E%3Cpath d='M0 0H11V24L5.5 19.5L0 24Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.2s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lp-compacto-on #lp-compacto-data { opacity: 1; transform: none; }
+/* A fita só desce junto com a data da barra compacta */
+.lp-compacto-on .lp-compacto-fita { opacity: 1; transform: none; transition-delay: 0.08s; }
+@media (min-width: 761px) and (max-width: 1080px) { .lp-compacto-fita { right: var(--lp-main-lado); } }
+@media (min-width: 1081px) { .lp-compacto { display: none; } }
+@media (max-width: 1080px) { .lp-main .lp-tabs { padding-top: 1.25rem; } } /* o respiro onde a data aparece */
+
+/* O que sai do alto da tela ao rolar encolhe e some (liturgiadiaria.js › configurarRolagem) */
+@media (max-width: 1080px) {
+  .lp-lateral > .lp-cabeca, .lp-lateral > .tempo-wrap, .lp-lateral > .nome-dia, .lp-lateral > .lp-avisos,
+  .lp-direita > .cal-wrap, .lp-direita > .lp-avisos, .lp-direita > .lp-sobre { transform-origin: left top; }
+}
+
 .lp-tabs {
   display: flex;
   overflow-x: auto;
   gap: 0.25rem;
   min-height: 3.05rem;
-  margin: calc(-1 * var(--lp-main-topo)) calc(-1 * var(--lp-main-lado)) 2.75rem;
+  margin: 0 calc(-1 * var(--lp-main-lado)) 2.75rem;
   padding: 0.9rem calc(var(--lp-main-lado) - 0.9rem) 0;
   scrollbar-width: none;
   border-bottom: 1px solid var(--lp-linha);
@@ -329,7 +483,7 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   .lp-faixa-dir { display: none; }
   .lp-direita { grid-column: 4; padding: 3.25rem 1.5rem 3rem 1rem; }
   .lp-main { --lp-main-lado: clamp(1.75rem, 3.5vw, 2.75rem); }
-  .lp-titulo { font-size: 62px; }
+  .lp-titulo, .lp-intro { font-size: 62px; }
 }
 
 /* Até 1080px: sem espaço para três colunas de conteúdo; o calendário volta para baixo do título */
@@ -338,7 +492,7 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   .lp-lateral { position: static; max-height: none; overflow: visible; }
   .lp-direita { grid-column: 1; grid-row: 2; position: static; max-height: none; overflow: visible; padding: 0 2rem 3rem 1.95rem; }
   .lp-faixa-esq, .lp-main { grid-row: 1 / span 2; }
-  .cal-wrap { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--lp-linha); }
+  .cal-wrap { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--lp-linha); min-height: 184px; }
 }
 
 @media (max-width: 760px) {
@@ -352,7 +506,8 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   .lp-faixa-esq { left: -30px; }
   .lp-faixa-dir { right: -30px; }
   .lp-lateral { position: static; max-height: none; overflow: visible; padding: 1.75rem 3.125rem 0.5rem; }
-  .lp-titulo { font-size: 52px; margin-bottom: 1rem; }
+  .lp-titulo, .lp-intro { font-size: 52px; }
+  .lp-titulo { margin-bottom: 0.15rem; }
   .lp-tabs { margin-bottom: 2rem; }
   .leitura-card + .leitura-card { scroll-margin-top: -1.5rem; } /* ornamento menor no celular */
   .lp-main { --lp-main-topo: 0.5rem; --lp-main-lado: 3.125rem; padding-bottom: 6rem; max-width: none; }
@@ -395,7 +550,23 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
 
 /* ── Avisos do calendário (faltam N dias…) ───────────────────────────── */
 /* Uma linha miúda sob o nome do dia; troca sozinha, ou no clique */
-.lp-avisos { margin-top: 0.4rem; max-width: 22rem; }
+.lp-avisos { display: flex; align-items: flex-start; gap: 0.45rem; margin-top: 0.4rem; max-width: 22rem; }
+/* Ícone do lembrete: uma fitinha, no tom pastel da cor do dia */
+.lp-avisos::before {
+  content: '';
+  flex: none;
+  width: 7px;
+  height: 11px;
+  margin-top: 0.22em;
+  background: var(--lp-cor-titulo, var(--lp-suave));
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 11'%3E%3Cpath d='M0 0H7V11L3.5 8.2L0 11Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 11'%3E%3Cpath d='M0 0H7V11L3.5 8.2L0 11Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+/* Desktop: o lembrete desce para o pé da coluna do título */
+@media (min-width: 1081px) {
+  .lp-lateral { display: flex; flex-direction: column; box-sizing: border-box; min-height: 100vh; }
+  .lp-avisos { margin-top: auto; padding-top: 1.5rem; }
+}
 .lp-aviso-texto { min-height: 1.45em; }
 .lp-aviso-texto {
   margin: 0;
@@ -445,7 +616,8 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
 .lp-dias + .lp-topo { margin-top: 2.5rem; }
 
 /* Até a animação de entrada assumir, o texto pronto do HTML fica escondido (sem piscar) */
-.lp-anima:not(.lp-pronto) :is(.lp-titulo, .lp-data, .tempo-wrap, .nome-dia, .lp-conteudo) { opacity: 0; }
+.lp-anima:not(.lp-pronto) .lp-conteudo { opacity: 0; }
+.lp-anima:not(.lp-cabeca-pronta) :is(.lp-titulo, .lp-data, .tempo-wrap, .nome-dia, .lp-avisos) { opacity: 0; }
 
 /* ── Voltar ao topo ──────────────────────────────────────────────────── */
 .lp-topo {
@@ -576,7 +748,7 @@ html:has(.lp-modal[open]) { overflow: hidden; }
   .lp-fita { right: 3.125rem; width: 18px; height: 42px; }
   /* O aviso sobe para cima do título (a folga à direita é da fita) */
   .lp-lateral { display: flex; flex-direction: column; }
-  .lp-avisos { order: -1; max-width: none; margin: 0 0 0.35rem; padding-right: 1.5rem; }
+  .lp-avisos { max-width: none; margin: 0.6rem 0 0.5rem; } /* colado embaixo do calendário */
   .lp-aviso-texto { font-size: 0.72rem; }
   .lp-data { font-size: 0.8rem; }
   .lp-sobre { display: none; }

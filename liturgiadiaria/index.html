@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Recarregar a página sempre abre o dia de hoje (quem chega por um link de dia vê aquele dia).
+    if (performance.getEntriesByType('navigation')[0]?.type === 'reload'
+      && (/^\/liturgiadiaria\/\d{4}-\d{2}-\d{2}\/?$/.test(location.pathname) || location.search.includes('data='))) {
+      location.replace('/liturgiadiaria/');
+    }
+  </script>
 
   <title>Liturgia do Dia — Catecismo da Igreja Católica</title>
   <meta name="description" content="Leituras litúrgicas do dia, com texto completo em português.">
@@ -33,11 +40,14 @@
 
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/liturgiadiaria/liturgiadiaria.css">
+  <!-- A entrada do cabeçalho roda assim que o script chega: busca os dois módulos já no começo -->
+  <link rel="modulepreload" href="/liturgiadiaria/liturgiadiaria.js">
+  <link rel="modulepreload" href="/liturgiadiaria/render.mjs">
   <!-- O texto já vem no HTML; some até a animação de entrada assumir (nunca mais que 3s) -->
   <script>
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.classList.add('lp-anima');
-      setTimeout(() => document.documentElement.classList.add('lp-pronto'), 3000);
+      setTimeout(() => document.documentElement.classList.add('lp-pronto', 'lp-cabeca-pronta'), 3000);
     }
   </script>
 
@@ -61,8 +71,10 @@
 
   <!-- ── Lateral: título e dia litúrgico ─────────────────────────────────── -->
   <aside class="lp-lateral">
-    <h1 class="lp-titulo">Liturgia<br>Diária</h1>
-    <p class="lp-data" id="lp-data">Carregando…</p>
+    <div class="lp-cabeca">
+      <h1 class="lp-titulo"><span class="lp-marca">Liturgia Diária</span><span class="lp-titulo-data" id="lp-titulo-data" aria-hidden="true"></span><span class="lp-so-leitor" id="lp-titulo-leitor"></span></h1>
+      <p class="lp-data" id="lp-data">Carregando…</p>
+    </div>
     <div class="tempo-wrap" id="lp-tempo-wrap">
       <span class="cor-dot" id="lp-cor-dot"></span>
       <span class="tempo-badge" id="lp-tempo"></span>
@@ -86,6 +98,7 @@
 
   <!-- ── Leituras (com as abas fixas no alto da coluna) ─────────────────── -->
   <main class="lp-main">
+    <div class="lp-compacto" id="lp-compacto" aria-hidden="true"><span class="lp-compacto-fita"></span><span id="lp-compacto-data"></span></div>
     <nav class="lp-tabs" id="lp-tabs" aria-label="Leituras"></nav>
     <div id="conteudo" class="lp-conteudo">
       <p class="loading">Buscando leituras do dia…</p>
@@ -97,14 +110,18 @@
   <div class="lp-faixa lp-faixa-dir" aria-hidden="true"></div>
 
   <!-- ── Direita: calendário ─────────────────────────────────────────────── -->
-  <aside class="lp-direita" aria-label="Calendário da liturgia">
+  <aside class="lp-direita" aria-label="Calendário da liturgia" data-lenis-prevent>
     <div class="cal-wrap" id="cal-wrap"></div>
     <section class="lp-sobre" id="lp-sobre" aria-label="Sobre a celebração" hidden></section>
   </aside>
+  <!-- No celular o lembrete fica embaixo do calendário (move antes de pintar; liturgiadiaria.js cuida das mudanças de tamanho) -->
+  <script>
+    if (matchMedia('(max-width: 760px)').matches) document.querySelector('.lp-direita').append(document.getElementById('lp-avisos'));
+  </script>
 
 </div>
 
-<dialog class="lp-modal" id="lp-santo" aria-labelledby="lp-santo-titulo">
+<dialog class="lp-modal" id="lp-santo" aria-labelledby="lp-santo-titulo" data-lenis-prevent>
   <div class="lp-modal-caixa">
     <button class="lp-modal-fechar" type="button" aria-label="Fechar">×</button>
     <p class="lp-modal-sobre">Sobre a celebração</p>

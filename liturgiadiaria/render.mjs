@@ -137,27 +137,43 @@ export function renderBloco({ leitura: s, id, alternativas }) {
 // ── Cabeçalho ────────────────────────────────────────────────────────────────
 // Dia marcado no calendário na cor litúrgica (a branca vira dourado, para aparecer no fundo claro).
 export const COR_CALENDARIO = { roxo: '#5b2d86', verde: '#1f6e3d', vermelho: '#b8282a', rosa: '#c7688b', preto: '#262422', branco: '#b8972e' };
+// Tons pastéis da cor litúrgica para o título ("Liturgia Diária"): presentes sem chamar atenção.
+export const COR_TITULO = { roxo: '#9585b3', verde: '#7ba287', vermelho: '#cc8b82', rosa: '#d7a3b5', preto: '#8a837c', branco: '#c9b27a' };
 export const DIA_DA_SEMANA =/\b(?:Domingo|Segunda-feira|Terça-feira|Quarta-feira|Quinta-feira|Sexta-feira|Sábado)\b/;
-export const semTempo = s => s.replace(/\s+d[oa] (?:Tempo Comum|Páscoa|Advento|Quaresma)$/, ''); // o tempo já está no selo
+export const semTempo = s => s.replace(/\s+d[oa] (?:Tempo Comum|Páscoa|Advento|Quaresma|Tempo do Natal)$/, ''); // o tempo já está no selo
+// Nome do temporal ("24º Domingo do Tempo Comum", "Quinta-feira da 24ª Semana…"): vira a linha de baixo da data.
+const TEMPORAL = /^(?:\d+º Domingo\b|\d+º dia da Oitava|(?:Domingo|Segunda-feira|Terça-feira|Quarta-feira|Quinta-feira|Sexta-feira|Sábado) (?:da \d+ª Semana|depois d|da Oitava|do Tempo do Natal))/;
+const MES_CURTO = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
 // ── Cabeçalho do dia ─────────────────────────────────────────────────────────
 const MEIO_DIA = d => new Date(`${d}T12:00:00Z`);
 const formatar = (d, opcoes) => MEIO_DIA(d).toLocaleDateString('pt-BR', { timeZone: 'UTC', ...opcoes });
 
-/** Textos do cabeçalho, sem repetir o dia da semana: na memória, a data vem primeiro e o dia do
- *  temporal depois ("15 de setembro · Terça-feira da 24ª Semana"); se o nome do dia já diz o dia
- *  da semana, a data vem sem ele. */
+/** Textos do cabeçalho: a data grande ("16/set"), embaixo o dia da semana e a semana do tempo
+ *  ("Quarta-feira da 24ª Semana") e, só quando é uma celebração própria, o nome dela. Nada se repete:
+ *  num dia do temporal o nome já está na linha de baixo; numa festa que já diz o dia da semana
+ *  ("Quarta-feira de Cinzas"), a linha de baixo some. */
 export function cabecalhoDoDia(dt, dia) {
-  let linha = formatar(dt, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-  if (dia?.complemento) linha = `${formatar(dt, { day: 'numeric', month: 'long' })} · ${semTempo(dia.complemento)}`;
-  else if (DIA_DA_SEMANA.test(dia?.celebracao || '')) linha = formatar(dt, { day: 'numeric', month: 'long', year: 'numeric' });
+  const [, m, d] = dt.split('-').map(Number);
+  const celebracao = dia?.celebracao || '';
+  const temporal = TEMPORAL.test(celebracao);
+  let linha = formatar(dt, { weekday: 'long' });
+  if (dia?.complemento) linha = semTempo(dia.complemento);
+  else if (temporal) linha = semTempo(celebracao);
+  else if (DIA_DA_SEMANA.test(celebracao)) linha = '';
+  const extenso = formatar(dt, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   return {
+    dataCurta: `${d}/${MES_CURTO[m - 1]}`,
+    dataExtenso: extenso[0].toUpperCase() + extenso.slice(1),
+    dataLonga: formatar(dt, { day: 'numeric', month: 'long', year: 'numeric' }),
     linha,
+    nome: temporal ? '' : celebracao,
     tempo: dia?.tempo || '',
     celebracao: dia?.celebracao || '',
     cor: dia?.cor || '',
     corPonto: COR_PONTO[dia?.cor] || '',
     corDia: COR_CALENDARIO[dia?.cor] || '',
+    corTitulo: COR_TITULO[dia?.cor] || '',
   };
 }
 

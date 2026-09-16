@@ -93,7 +93,7 @@ export function paginaDoDia(modelo, dt, dia, indice) {
   const jsonLd = JSON.stringify(dados, null, 2).replace(/<\//g, '<\\/').replace(/\n/g, '\n  ');
 
   let h = modelo;
-  h = trocar(h, '<html lang="pt-BR">', `<html lang="pt-BR"${cab.corDia ? ` style="--lp-cor-dia: ${cab.corDia}"` : ''}>`);
+  h = trocar(h, '<html lang="pt-BR">', `<html lang="pt-BR"${cab.corDia ? ` style="--lp-cor-dia: ${cab.corDia}; --lp-cor-titulo: ${cab.corTitulo}"` : ''}>`);
   h = trocar(h, /<title>[^<]*<\/title>/, `<title>${esc(titulo)}</title>`);
   h = meta(h, 'name', 'description', descricao);
   h = trocar(h, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
@@ -107,13 +107,13 @@ export function paginaDoDia(modelo, dt, dia, indice) {
   h = meta(h, 'name', 'twitter:image', imagem);
   h = trocar(h, /<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">\n  ${jsonLd}\n  </script>`);
 
-  h = trocar(h, '<h1 class="lp-titulo">Liturgia<br>Diária</h1>',
-    `<h1 class="lp-titulo">Liturgia<br>Diária<span class="lp-so-leitor"> de ${esc(quando)}</span></h1>`);
+  h = trocar(h, '<span class="lp-titulo-data" id="lp-titulo-data" aria-hidden="true"></span><span class="lp-so-leitor" id="lp-titulo-leitor"></span>',
+    `<span class="lp-titulo-data" id="lp-titulo-data" aria-hidden="true">${cab.dataCurta}</span><span class="lp-so-leitor" id="lp-titulo-leitor"> de ${esc(cab.dataLonga)}</span>`);
   h = trocar(h, '<p class="lp-data" id="lp-data">Carregando…</p>', `<p class="lp-data" id="lp-data">${esc(cab.linha)}</p>`);
   h = trocar(h, '<span class="cor-dot" id="lp-cor-dot"></span>',
     `<span class="cor-dot" id="lp-cor-dot"${cab.corPonto ? ` style="background: ${cab.corPonto}"` : ''}></span>`);
   h = trocar(h, '<span class="tempo-badge" id="lp-tempo"></span>', `<span class="tempo-badge" id="lp-tempo">${esc(cab.tempo)}</span>`);
-  h = trocar(h, '<p class="nome-dia" id="lp-nome-dia"></p>', `<p class="nome-dia" id="lp-nome-dia">${esc(cab.celebracao)}</p>`);
+  h = trocar(h, '<p class="nome-dia" id="lp-nome-dia"></p>', `<p class="nome-dia" id="lp-nome-dia">${esc(cab.nome)}</p>`);
   if (NOME_COR[cab.cor]) {
     h = trocar(h, '<span class="lp-fita" id="lp-fita" role="img" hidden>',
       `<span class="lp-fita" id="lp-fita" role="img" data-cor="${cab.cor}" aria-label="Cor litúrgica do dia: ${NOME_COR[cab.cor]}" title="Cor litúrgica: ${NOME_COR[cab.cor]}">`);
