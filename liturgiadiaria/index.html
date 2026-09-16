@@ -117,6 +117,7 @@
   <!-- No celular o lembrete fica embaixo do calendário (move antes de pintar; liturgiadiaria.js cuida das mudanças de tamanho) -->
   <script>
     if (matchMedia('(max-width: 760px)').matches) document.querySelector('.lp-direita').append(document.getElementById('lp-avisos'));
+    else if (matchMedia('(max-width: 1080px)').matches) document.querySelector('.lp-lateral').append(document.querySelector('.lp-direita'));
   </script>
 
 </div>

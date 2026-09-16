@@ -15,7 +15,7 @@ import {
 const estado = { dt: null, hoje: null, indice: null, santos: null, destaques: new Map() };
 const REDUZIDO = matchMedia('(prefers-reduced-motion: reduce)');
 const PODE_PAIRAR = matchMedia('(hover: hover) and (pointer: fine)');
-const TELA_ESTREITA = matchMedia('(max-width: 1080px)');
+const TELA_ESTREITA = matchMedia('(max-width: 760px)');   // onde o cabeçalho rola junto com a leitura
 
 function preencherData(dt, dia) {
   const cab = cabecalhoDoDia(dt, dia);
@@ -87,6 +87,7 @@ function construirCalendario(dtAtual, hoje, indice) {
 
     let html = `
       <div class="cal-header">
+        ${dtAtual !== hoje ? '<button class="cal-hoje" type="button" id="cal-hoje">Hoje</button>' : ''}
         <button class="cal-btn" id="cal-prev" aria-label="Mês anterior">‹</button>
         <span class="cal-mes">${MESES[mes]} ${ano}</span>
         <button class="cal-btn" id="cal-next" aria-label="Próximo mês">›</button>
@@ -119,6 +120,10 @@ function construirCalendario(dtAtual, hoje, indice) {
     });
     document.getElementById('cal-next')?.addEventListener('click', () => {
       mes++; if (mes > 11) { mes = 0; ano++; } render();
+    });
+    document.getElementById('cal-hoje')?.addEventListener('click', () => {
+      if (estado.indice) irParaDia(hoje);
+      else location.href = '/liturgiadiaria/';
     });
   }
 
@@ -274,14 +279,6 @@ function textoDoAviso(m, n) {
 
 function montarAvisos(indice, hoje) {
   const wrap = document.getElementById('lp-avisos');
-  // No celular o lembrete mora embaixo do calendário; nas telas largas, na coluna do título.
-  const celular = matchMedia('(max-width: 760px)');
-  const posicionar = () => {
-    const destino = celular.matches ? document.querySelector('.lp-direita') : document.querySelector('.lp-lateral');
-    if (destino && wrap && wrap.parentElement !== destino) destino.append(wrap);
-  };
-  posicionar();
-  celular.addEventListener('change', posicionar);
   if (!wrap || !indice?.marcos) return;
 
   const vistos = new Set();
@@ -453,6 +450,33 @@ function abrirCabecalho() {
   raiz.classList.add('lp-cabeca-pronta');
 }
 
+// ── Colunas conforme a largura ───────────────────────────────────────────────
+// Celular: o lembrete fica embaixo do calendário. Tablet (761–1080px): o calendário e o "sobre"
+// entram na coluna do título, que fica fixa e rola sozinha, sem arrastar a leitura. Desktop: cada um
+// na sua coluna. O <script> logo depois do calendário no HTML já faz isso antes de pintar.
+const CELULAR = matchMedia('(max-width: 760px)');
+const TABLET = matchMedia('(min-width: 761px) and (max-width: 1080px)');
+
+function organizarColunas() {
+  const lateral = document.querySelector('.lp-lateral');
+  const direita = document.querySelector('.lp-direita');
+  const avisos = document.getElementById('lp-avisos');
+  const faixaDir = document.querySelector('.lp-faixa-dir');
+  if (!lateral || !direita || !avisos) return;
+  // No tablet a lateral rola sozinha: a rolagem suave da página não deve capturar a roda ali.
+  lateral.toggleAttribute('data-lenis-prevent', TABLET.matches);
+  if (TABLET.matches) {
+    if (avisos.parentElement !== lateral || avisos.nextElementSibling !== direita) lateral.append(avisos);
+    if (direita.parentElement !== lateral) lateral.append(direita);
+  } else {
+    if (direita.parentElement === lateral) faixaDir.after(direita);
+    const destino = CELULAR.matches ? direita : lateral;
+    if (avisos.parentElement !== destino) (CELULAR.matches ? direita : lateral).append(avisos);
+  }
+}
+CELULAR.addEventListener('change', organizarColunas);
+TABLET.addEventListener('change', organizarColunas);
+
 // ── Troca de dia (sem recarregar) ────────────────────────────────────────────
 // Só a data sai pela esquerda e a nova sobe de baixo; "Liturgia Diária" não entra de novo.
 function trocarData(aplicar) {
@@ -578,7 +602,7 @@ function configurarDicas() {
 }
 
 // ── Rolagem ──────────────────────────────────────────────────────────────────
-// Telas até 1080px: o cabeçalho e o calendário encolhem e somem ao subir; quando somem de vez,
+// Celular: o cabeçalho e o calendário encolhem e somem ao subir; quando somem de vez,
 // a data por extenso e a fitinha aparecem pequenas em cima das abas. No desktop eles ficam fixos.
 const SOME_NA_ROLAGEM = [
   '.lp-lateral > .lp-cabeca', '.lp-lateral > .tempo-wrap', '.lp-lateral > .nome-dia', '.lp-lateral > .lp-avisos',
@@ -657,6 +681,7 @@ async function init() {
   abrirCabecalho();
   // O calendário também já pode ser desenhado (o intervalo real de datas chega com o índice).
   construirCalendario(dt, hoje, { inicio: '0000-00-00', fim: '9999-99-99' });
+  organizarColunas();
   configurarDicas();
   configurarNavegacao();
   configurarRolagem();

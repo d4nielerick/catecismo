@@ -144,7 +144,30 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
   padding: 3.25rem 2rem 3rem 2.25rem;
 }
 .cal-wrap { max-width: 257px; min-height: 163px; } /* altura de um mês de 5 semanas; o de 6 cresce já no primeiro desenho */
-.cal-header { display: flex; align-items: center; justify-content: center; gap: 0.35rem; margin-bottom: 0.6rem; }
+.cal-header { position: relative; display: flex; align-items: center; justify-content: center; gap: 0.35rem; margin-bottom: 0.6rem; }
+/* "Hoje": aparece quando o dia aberto não é o de hoje; fica à esquerda sem deslocar o mês */
+.cal-hoje {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--lp-cor-dia, var(--color-primary));
+  background: color-mix(in srgb, var(--lp-cor-dia, var(--color-primary)) 10%, transparent);
+  border: 0;
+  border-radius: 100px;
+  padding: 0.28rem 0.6rem;
+  cursor: pointer;
+  animation: cal-hoje-entra 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.cal-hoje:hover { background: color-mix(in srgb, var(--lp-cor-dia, var(--color-primary)) 18%, transparent); }
+@keyframes cal-hoje-entra { from { opacity: 0; transform: translate(-6px, -50%); } to { opacity: 1; transform: translateY(-50%); } }
+/* O selo do tempo litúrgico ficou redundante: a linha da semana já diz ("… do Tempo Comum") */
+.tempo-wrap { display: none; }
 .cal-mes { min-width: 7.5rem; text-align: center; }
 .cal-mes { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; color: var(--lp-tinta); }
 .cal-btn {
@@ -398,7 +421,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 
 /* ── Abas (celular) ──────────────────────────────────────────────────── */
 /* Ocupa a largura toda da coluna (margens negativas = padding do .lp-main) */
-/* Barra compacta (telas até 1080px): quando o cabeçalho já sumiu, a data por extenso aparece no
+/* Barra compacta (celular): quando o cabeçalho já sumiu, a data por extenso aparece no
    respiro de cima da barra das abas, e a fita volta pequena no mesmo lugar de antes (canto direito).
    Não ocupa espaço no fluxo (margem negativa) e as abas não se mexem. */
 .lp-compacto {
@@ -438,12 +461,10 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lp-compacto-on #lp-compacto-data { opacity: 1; transform: none; }
 /* A fita só desce junto com a data da barra compacta */
 .lp-compacto-on .lp-compacto-fita { opacity: 1; transform: none; transition-delay: 0.08s; }
-@media (min-width: 761px) and (max-width: 1080px) { .lp-compacto-fita { right: var(--lp-main-lado); } }
-@media (min-width: 1081px) { .lp-compacto { display: none; } }
-@media (max-width: 1080px) { .lp-main .lp-tabs { padding-top: 1.25rem; } } /* o respiro onde a data aparece */
+@media (max-width: 760px) { .lp-main .lp-tabs { padding-top: 1.25rem; } } /* o respiro onde a data aparece */
 
 /* O que sai do alto da tela ao rolar encolhe e some (liturgiadiaria.js › configurarRolagem) */
-@media (max-width: 1080px) {
+@media (max-width: 760px) {
   .lp-lateral > .lp-cabeca, .lp-lateral > .tempo-wrap, .lp-lateral > .nome-dia, .lp-lateral > .lp-avisos,
   .lp-direita > .cal-wrap, .lp-direita > .lp-avisos, .lp-direita > .lp-sobre { transform-origin: left top; }
 }
@@ -489,8 +510,11 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 /* Até 1080px: sem espaço para três colunas de conteúdo; o calendário volta para baixo do título */
 @media (max-width: 1080px) {
   .lp-pagina { grid-template-columns: 290px 72px minmax(0, 1fr); grid-template-rows: auto 1fr; }
-  .lp-lateral { position: static; max-height: none; overflow: visible; }
+  /* Tablet: título, calendário e "sobre" numa coluna só, fixa, que rola sozinha (o calendário é
+     movido para dentro da lateral por liturgiadiaria.js › organizarColunas) */
+  .lp-lateral { overscroll-behavior: contain; scrollbar-width: thin; }
   .lp-direita { grid-column: 1; grid-row: 2; position: static; max-height: none; overflow: visible; padding: 0 2rem 3rem 1.95rem; }
+  .lp-lateral > .lp-direita { padding: 0; }
   .lp-faixa-esq, .lp-main { grid-row: 1 / span 2; }
   .cal-wrap { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--lp-linha); min-height: 184px; }
 }
@@ -507,6 +531,8 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   .lp-faixa-dir { right: -30px; }
   .lp-lateral { position: static; max-height: none; overflow: visible; padding: 1.75rem 3.125rem 0.5rem; }
   .lp-titulo, .lp-intro { font-size: 52px; }
+  .lp-titulo-data { font-size: 68px; }
+  .cal-wrap { margin-inline: auto; } /* calendário centralizado */
   .lp-titulo { margin-bottom: 0.15rem; }
   .lp-tabs { margin-bottom: 2rem; }
   .leitura-card + .leitura-card { scroll-margin-top: -1.5rem; } /* ornamento menor no celular */

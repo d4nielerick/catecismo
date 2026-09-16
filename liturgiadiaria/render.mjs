@@ -157,10 +157,12 @@ export function cabecalhoDoDia(dt, dia) {
   const [, m, d] = dt.split('-').map(Number);
   const celebracao = dia?.celebracao || '';
   const temporal = TEMPORAL.test(celebracao);
-  let linha = formatar(dt, { weekday: 'long' });
-  if (dia?.complemento) linha = semTempo(dia.complemento);
-  else if (temporal) linha = semTempo(celebracao);
-  else if (DIA_DA_SEMANA.test(celebracao)) linha = '';
+  // A linha de baixo já diz o tempo litúrgico (o selo "Tempo Comum" saiu da página).
+  const tempo = dia?.tempo || '';
+  let linha = [formatar(dt, { weekday: 'long' }), tempo].filter(Boolean).join(' · ');
+  if (dia?.complemento) linha = dia.complemento;
+  else if (temporal) linha = celebracao;
+  else if (DIA_DA_SEMANA.test(celebracao)) linha = tempo;
   const extenso = formatar(dt, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   return {
     dataCurta: `${d}/${MES_CURTO[m - 1]}`,
@@ -211,7 +213,7 @@ export function somarDias(d, n) {
 /** Dia anterior · hoje · dia seguinte (só os que têm leituras). */
 export function diasHtml(dt, indice) {
   const existe = d => indice && d >= indice.inicio && d <= indice.fim;
-  const rotulo = d => esc(formatar(d, { day: 'numeric', month: 'long' }));
+  const rotulo = d => { const [, m, dd] = d.split('-').map(Number); return `${dd}/${MES_CURTO[m - 1]}`; };
   const ant = somarDias(dt, -1);
   const prox = somarDias(dt, 1);
   return [
