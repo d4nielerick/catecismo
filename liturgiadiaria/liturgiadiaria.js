@@ -476,6 +476,22 @@ function organizarColunas() {
   }
 }
 CELULAR.addEventListener('change', organizarColunas);
+
+// Celular: o resumo vira uma linha expansível acima das abas; no resto, abre o conteúdo.
+function posicionarResumo() {
+  const resumo = document.querySelector('.lp-resumo');
+  if (!resumo) return;
+  if (CELULAR.matches) document.getElementById('lp-compacto').before(resumo);
+  else if (resumo.parentElement.id !== 'conteudo') document.getElementById('conteudo').prepend(resumo);
+}
+CELULAR.addEventListener('change', posicionarResumo);
+document.addEventListener('click', e => {
+  const botao = e.target.closest('.lp-resumo-botao');
+  if (!botao) return;
+  const aberto = botao.closest('.lp-resumo').classList.toggle('lp-resumo-aberto');
+  botao.setAttribute('aria-expanded', aberto);
+  botao.textContent = aberto ? 'ocultar' : 'mostrar';
+});
 TABLET.addEventListener('change', organizarColunas);
 
 // ── Troca de dia (sem recarregar) ────────────────────────────────────────────
@@ -514,7 +530,9 @@ function aplicarDia(dt, dia, resumo, { primeira = false } = {}) {
   }
   // Nas páginas de cada dia o HTML já veio pronto e é idêntico: redesenhar não mexe no layout.
   const { html, blocos } = conteudoDoDia(dia, resumo, { hoje: dt === estado.hoje });
+  document.querySelector('.lp-main > .lp-resumo')?.remove();
   conteudo.innerHTML = html;
+  posicionarResumo();
   construirNav(blocos);
   animarEntrada();
 }

@@ -195,7 +195,7 @@ export function resumoHtml(resumo, { hoje = false } = {}) {
   if (!resumo?.texto) return '';
   return `
     <section class="lp-resumo" aria-label="Resumo das leituras">
-      <p class="lp-resumo-rotulo">Resumo das leituras</p>
+      <p class="lp-resumo-rotulo">Resumo das leituras <button type="button" class="lp-resumo-botao" aria-expanded="false">mostrar</button></p>
       <p class="lp-resumo-texto">${hoje ? 'Hoje' : 'Neste dia'}, ${esc(resumo.texto)}</p>
     </section>`;
 }

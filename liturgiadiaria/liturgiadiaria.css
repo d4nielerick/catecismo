@@ -292,7 +292,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   grid-column: 3;
   grid-row: 1;
   min-width: 0;
-  padding: var(--lp-main-topo) var(--lp-main-lado) 7rem;
+  padding: var(--lp-main-topo) var(--lp-main-lado) 8rem;
 }
 
 .lp-conteudo { min-height: 70vh; } /* espaço reservado: a leitura cresce sem empurrar o rodapé */
@@ -407,12 +407,24 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lp-palavra { display: inline-block; }
 .lp-oculto { opacity: 0; }
 .lp-entra {
-  animation: lp-entrada 0.85s cubic-bezier(0.2, 0.65, 0.25, 1) both;
+  animation: lp-entrada 0.5s cubic-bezier(0.2, 0.65, 0.25, 1) both;
   animation-delay: var(--lp-atraso, 0ms);
 }
 @keyframes lp-entrada {
-  from { opacity: 0; transform: translateY(0.6em); filter: blur(3px); }
-  to   { opacity: 1; transform: none; filter: none; }
+  from { opacity: 0; transform: translateY(0.4em); }
+  to   { opacity: 1; transform: none; }
+}
+/* O desfoque não fica em cada palavra (pesa): uma única camada presa ao pé da tela desfoca o texto
+   que ainda está chegando, com a intensidade sumindo para cima, como nas bordas do iOS/macOS. */
+.lp-borda-desfoque {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; /* acima das faixas de ornamento */
+  height: 9rem;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  /* Vinheta: forte nos cantos de baixo, some em direção ao centro e ao topo */
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,.85), transparent 55%), radial-gradient(120% 140% at 50% 0%, transparent 45%, #000 85%);
+  mask-image: linear-gradient(to top, rgba(0,0,0,.85), transparent 55%), radial-gradient(120% 140% at 50% 0%, transparent 45%, #000 85%);
+  -webkit-mask-composite: source-over; mask-composite: add;
 }
 @media (prefers-reduced-motion: reduce) {
   .lp-oculto { opacity: 1; }
@@ -532,11 +544,18 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   .lp-lateral { position: static; max-height: none; overflow: visible; padding: 1.75rem 3.125rem 0.5rem; }
   .lp-titulo, .lp-intro { font-size: 52px; }
   .lp-titulo-data { font-size: 68px; }
-  .cal-wrap { margin-inline: auto; } /* calendário centralizado */
+  /* Calendário centralizado e fluido: ocupa a coluna até 460px e as fontes crescem com a largura */
+  .cal-wrap { margin-inline: auto; width: 100%; max-width: 460px; container-type: inline-size; }
+  .cal-mes { font-size: clamp(0.72rem, 4.2cqi, 1.05rem); min-width: 0; }
+  .cal-btn { font-size: clamp(1rem, 5.5cqi, 1.4rem); }
+  .cal-header { gap: clamp(0.35rem, 3cqi, 1rem); margin-bottom: clamp(0.6rem, 3cqi, 1rem); }
+  .cal-dow { font-size: clamp(0.56rem, 3.2cqi, 0.82rem); }
+  .cal-dia { font-size: clamp(0.66rem, 4cqi, 1rem); padding: clamp(0.26rem, 1.6cqi, 0.5rem) 0 clamp(0.5rem, 2.6cqi, 0.8rem); border-radius: 6px; }
+  .cal-dia.tem-destaque::after { width: 4px; height: 4px; margin-left: -2px; bottom: clamp(2px, 1cqi, 5px); }
   .lp-titulo { margin-bottom: 0.15rem; }
   .lp-tabs { margin-bottom: 2rem; }
   .leitura-card + .leitura-card { scroll-margin-top: -1.5rem; } /* ornamento menor no celular */
-  .lp-main { --lp-main-topo: 0.5rem; --lp-main-lado: 3.125rem; padding-bottom: 6rem; max-width: none; }
+  .lp-main { --lp-main-topo: 0.5rem; --lp-main-lado: 3.125rem; padding-bottom: 7rem; max-width: none; }
   .leitura-label { font-size: 48px; line-height: 1.3; }
   .secao-menor .leitura-label, .missa-extra > summary { font-size: 32px; }
   .leitura-card + .leitura-card::before, .missa-extra::before { margin: 3rem auto; height: 60px; }
@@ -625,9 +644,8 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lp-resumo {
   margin: 0 0 3.5rem;
   padding: 1.1rem 1.25rem 1.2rem;
-  border-left: 2px solid var(--lp-cor-titulo, var(--lp-linha));
   background: color-mix(in srgb, var(--lp-cor-titulo, #000) 6%, transparent);
-  border-radius: 0 6px 6px 0;
+  border-radius: 6px;
 }
 .lp-resumo-rotulo {
   font-family: var(--font-sans);
@@ -639,6 +657,17 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   margin: 0 0 0.45rem;
 }
 .lp-resumo-texto { font-size: 15px; line-height: 1.65; color: var(--lp-texto); margin: 0; }
+.lp-resumo:not(.lp-resumo-aberto) { padding-block: 0.7rem; }
+.lp-resumo:not(.lp-resumo-aberto) .lp-resumo-texto { display: none; }
+.lp-resumo:not(.lp-resumo-aberto) .lp-resumo-rotulo { margin: 0; }
+.lp-resumo-rotulo { display: flex; align-items: center; justify-content: space-between; }
+.lp-resumo-botao {
+  background: none; border: none; padding: 0.2rem 0; cursor: pointer;
+  font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--lp-tinta);
+}
+@media (max-width: 760px) {
+  .lp-main > .lp-resumo { margin: 0 0 0.25rem; padding-inline: 1rem; }
+}
 
 /* ── Outros dias (anterior · hoje · seguinte) ───────────────────────────── */
 .lp-dias {
@@ -666,6 +695,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 
 /* ── Voltar ao topo ──────────────────────────────────────────────────── */
 .lp-topo {
+  position: relative; z-index: 30; /* fica nítido, por cima da camada de desfoque */
   display: block;
   width: max-content;
   margin: 5rem auto 0;
