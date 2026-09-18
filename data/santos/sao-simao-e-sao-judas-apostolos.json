@@ -1,0 +1,30 @@
+{
+  "celebracao": "São Simão e São Judas, apóstolos",
+  "artigos": [
+    {
+      "titulo": "Simão, o Zelote",
+      "url": "https://pt.wikipedia.org/wiki/Sim%C3%A3o,_o_Zelote",
+      "resumo": [
+        "São Simão ou Simão Apóstolo, dito Simão, o Zelote ou Simão, o Cananeu, natural da Galileia, foi um dos discípulos de Jesus Cristo que fazia parte do grupo dos doze apóstolos. É referido como o Cananeu de acordo com o Livro de Mateus Livro de Marcos (Mc 3:16-19) e como o Zelote no Livro de Lucas e em Atos dos Apóstolos.",
+        "A palavra grega Cananeu e a palavra Zelote, derivada do aramaico e significam a mesma coisa: \"zeloso\". Supõe-se por esse apelido que Simão pertencia à seita judaica conhecida como zelotes."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/San_Sim%C3%B3n%2C_de_Francisco_de_Herrera_el_Viejo_%28Museo_de_Bellas_Artes_de_C%C3%B3rdoba%29.jpg/500px-San_Sim%C3%B3n%2C_de_Francisco_de_Herrera_el_Viejo_%28Museo_de_Bellas_Artes_de_C%C3%B3rdoba%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 605
+      }
+    },
+    {
+      "titulo": "Judas Tadeu",
+      "url": "https://pt.wikipedia.org/wiki/Judas_Tadeu",
+      "resumo": [
+        "Judas, o Apóstolo (em grego antigo: Ἰούδας Ἰακώβου, transl. Ioúdas Iakóbou; sirío-aramaico: ܝܗܘܕܐ ܒܪ ܝܥܩܘܒ, transl. Yahwada bar Yaʿqub), popularmente designado como São Judas Tadeu, foi um dos Doze Apóstolos de Jesus Cristo, conforme relatado no Novo Testamento. Ele é comumente identificado como Tadeu (em grego antigo: Θαδδαῖος, Thaddaîos; em aramaico: תַדַּי, Ṯaday; em copta: ⲑⲁⲇⲇⲉⲟⲥ, Thaddeos), sendo também conhecido pelos nomes de Judas de Tiago ou Judas Lebeu (em hebraico: לבא, Libbā; em grego: Λεββαῖος, Lebbaios, em latim: Lebbaeus). Embora em algumas tradições seja associado a Judas, o irmão de Jesus, o texto neotestamentário o distingue claramente de Judas Iscariotes, o apóstolo que traiu Jesus pouco antes de sua crucificação."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Anthonis_van_Dyck%2C_Kunsthistorisches_Museum_Wien%2C_Gem%C3%A4ldegalerie_-_Apostel_Judas_Thadd%C3%A4us_-_GG_6809_-_Kunsthistorisches_Museum.jpg/500px-Anthonis_van_Dyck%2C_Kunsthistorisches_Museum_Wien%2C_Gem%C3%A4ldegalerie_-_Apostel_Judas_Thadd%C3%A4us_-_GG_6809_-_Kunsthistorisches_Museum.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 600
+      }
+    }
+  ]
+}

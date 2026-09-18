@@ -1,0 +1,23 @@
+{
+  "data": "2027-05-26",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Eclo 36,1-2a.5-6.13-19</div><div> Sl 78(79),8.9.11.13 (R. Eclo 36,1b)</div><div></div><div> Mc 10,32-45</div></div>",
+  "primeira_leitura": {
+    "referencia": "36,1-2a.5-6.13-19 (gr. 1.4-5a.10-17)",
+    "texto": "1\nTende piedade de nós, Senhor,\nDeus do mundo inteiro, e olhai!\nMostrai-nos a luz do vosso amor.\n2a\nInfundi o vosso temor em todos os povos\nque não vos procuram,\npara que saibam que não há outro Deus senão vós.\n5\nQue eles vos reconheçam,\ncomo nós reconhecemos,\nque não há Deus além de vós, Senhor.\n6\nFazei novos milagres,\nrenovai os prodígios.\n13\nReuni as tribos todas de Jacó,\ne dai-lhes a herança como no tempo antigo.\n14\nTende piedade do povo chamado pelo vosso nome,\ne de Israel, a quem tratastes como primogênito.\n15\nCompadecei-vos de vossa santa cidade,\nde Jerusalém, lugar de vossa morada.\n16\nEnchei Sião de vossa majestade,\ne de vossa glória o templo.\n17\nDai testemunho daqueles que, desde o início,\nsão vossas criaturas,\nrealizai o que os profetas em vosso nome disseram.\n18\nDai a recompensa àqueles que esperam em vós,\nmostrai que os vossos profetas tinham razão.\nEscutai, Senhor, a oração dos vossos servos,\n19\npela benevolência que tendes para com vosso povo,\nconduzi-nos no caminho da justiça,\ne que o mundo inteiro reconheça\nque vós sois o Senhor, o Deus de todos os tempos.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 78(79),8.9.11.13 (R. Eclo 36,1b)",
+    "refrao": "",
+    "texto": "R.\nTende compaixão e olhai por nós, Senhor!\n8\nNão lembreis as nossas culpas do passado, †\nmas venha logo sobre nós vossa bondade, *\npois estamos humilhados em extremo.\nR.\n9\nAjudai-nos, nosso Deus e Salvador! †\nPor vosso nome e vossa glória, libertai-nos! *\nPor vosso nome, perdoai nossos pecados!\nR.\n11\nAté vós chegue o gemido dos cativos: †\nlibertai com vosso braço poderoso *\nos que foram condenados a morrer!\nR.\n13\nQuanto a nós, vosso rebanho e vosso povo, †\ncelebraremos vosso nome para sempre, *\nde geração em geração vos louvaremos.\nR.\nAclamação ao Evangelho\nMc 10,45\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVeio o Filho do Homem, a fim de servir\ne dar sua vida em resgate por muitos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "10,32-45",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n10,32-45\nNaquele tempo,\n32\nos discípulos estavam a caminho,\nsubindo para Jerusalém.\nJesus ia na frente.\nOs discípulos estavam espantados,\ne aqueles que iam atrás estavam com medo.\nJesus chamou de novo os Doze à parte\ne começou a dizer-lhes\no que estava para acontecer com ele:\n33\n\"Eis que estamos subindo para Jerusalém,\ne o Filho do Homem vai ser entregue\naos sumos sacerdotes e aos doutores da Lei.\nEles o condenarão à morte\ne o entregarão aos pagãos.\n34\nVão zombar dele, cuspir nele,\nvão torturá-lo e matá-lo.\nE depois de três dias ele ressuscitará\".\n35\nTiago e João, filhos de Zebedeu,\nforam a Jesus e lhe disseram:\n\"Mestre, queremos que faças por nós\no que vamos pedir\".\n36\nEle perguntou:\n\"O que quereis que eu vos faça?\"\n37\nEles responderam:\n\"Deixa-nos sentar um à tua direita\ne outro à tua esquerda,\nquando estiveres na tua glória!\"\n38\nJesus então lhes disse:\n\"Vós não sabeis o que pedis.\nPor acaso podeis beber o cálice que eu vou beber?\nPodeis ser batizados com o batismo\ncom que vou ser batizado?\"\n39\nEles responderam:\n\"Podemos\" .\nE ele lhes disse:\n\"Vós bebereis o cálice que eu devo beber,\ne sereis batizados com o batismo\ncom que eu devo ser batizado.\n40\nMas não depende de mim conceder\no lugar à minha direita ou à minha esquerda.\nÉ para aqueles a quem foi reservado\".\n41\nQuando os outros dez discípulos ouviram isso,\nindignaram-se com Tiago e João.\n42\nJesus os chamou e disse:\n\"Vós sabeis que os chefes das nações as oprimem\ne os grandes as tiranizam.\n43\nMas, entre vós, não deve ser assim:\nquem quiser ser grande, seja vosso servo;\n44\ne quem quiser ser o primeiro,\nseja o escravo de todos.\n45\nPorque o Filho do Homem não veio para ser servido,\nmas para servir e dar a sua vida\ncomo resgate para muitos\".\nPalavra da Salvação."
+  }
+}

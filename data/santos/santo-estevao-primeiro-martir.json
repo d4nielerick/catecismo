@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santo Estêvão, primeiro mártir",
+  "artigos": [
+    {
+      "titulo": "Estêvão (mártir)",
+      "url": "https://pt.wikipedia.org/wiki/Est%C3%AAv%C3%A3o_(m%C3%A1rtir)",
+      "resumo": [
+        "Estêvão (em grego: Στέφανος, romaniz.: Stéphanos) é o primeiro mártir do cristianismo, sendo considerado santo por algumas das denominações cristãs (católica, ortodoxa e a anglicana). É celebrado em 26 de Dezembro no Ocidente e em 27 de Dezembro no Oriente por tais denominações. Ele também está listado entre os Setenta Discípulos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Luis_de_Morales_-_St_Stephen.jpg/500px-Luis_de_Morales_-_St_Stephen.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 648
+      }
+    }
+  ]
+}

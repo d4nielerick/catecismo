@@ -1,0 +1,44 @@
+{
+  "celebracao": "São Miguel, São Gabriel e São Rafael, arcanjos",
+  "artigos": [
+    {
+      "titulo": "Miguel (arcanjo)",
+      "url": "https://pt.wikipedia.org/wiki/Miguel_(arcanjo)",
+      "resumo": [
+        "Miguel ou Micael (em hebraico: מִיכָאֵ, Micha'el ou Mîkhā'ēl; em grego: Μιχαήλ, Mikhaḗl; em latim: Michael ou Míchaël; em arabe المريض, Mīkhā'īl) é um arcanjo nas doutrinas religiosas judaicas, cristãs e islâmicas. Os católicos, anglicanos, ortodoxos e luteranos se referem a ele como Arcanjo Miguel ou simplesmente São Miguel.",
+        "Em hebraico, Miguel significa \"Quem como Deus?\" (Mi-\"quem\", kha-\"como\", El-\"Deus\"), o que é tradicionalmente interpretado como uma pergunta retórica: \"Quem como Deus?\". para a qual se espera uma resposta negativa, e que implica que ninguém é como Deus. Assim, Miguel é reinterpretado como um símbolo de humildade perante Deus. Ao contrário de Lúcifer que queria ser como Deus, Miguel é: Quem como Deus? Ninguém como Deus. Miguel é o contrário da inveja, é a humildade."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/GuidoReni_MichaelDefeatsSatan.jpg/500px-GuidoReni_MichaelDefeatsSatan.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 707
+      }
+    },
+    {
+      "titulo": "Gabriel (anjo)",
+      "url": "https://pt.wikipedia.org/wiki/Gabriel_(anjo)",
+      "resumo": [
+        "Gabriel (em hebraico גַּבְרִיאֵ ל, no hebraico moderno Gevriʼel, no hebraico tiberiano Gaḇrîʼēl; em latim Gabrielus; em árabe صحي trans. Jibrīil do aramaico Gbri-el, \"mensageiro (palavra) de Deus\") é, segundo as religiões abraâmicas, um anjo que serve como mensageiro de Deus. Aparece pela primeira vez numa menção no Livro de Daniel, na Bíblia hebraica. Em algumas tradições é tido como um dos arcanjos.",
+        "Com base em duas passagens do Evangelho segundo Lucas, diversos cristãos e muçulmanos Gabriel teria anunciado os nascimentos de João Batista e Jesus. O Islã, além disso, acredita que Gabriel teria sido o meio pelo qual Deus optou por revelar o Corão a Maomé, e que através dele teria enviado uma mensagem para a os profetas revelando-lhes suas obrigações. É conhecido como um dos quatro anjos favorecidos, e o espírito da verdade, e em certas crenças seria uma personificação do Espírito Santo. Gabriel também é mencionado na fé Bahá'í, especificamente na obra mística de Bahá'u'lláh, Sete Vales."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Archangels.JPG/500px-Archangels.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 585
+      }
+    },
+    {
+      "titulo": "Rafael (arcanjo)",
+      "url": "https://pt.wikipedia.org/wiki/Rafael_(arcanjo)",
+      "resumo": [
+        "Rafael (do hebraico רָפָאֵל, transl. Rāp̄āʾēl, \"Deus cura\"; em árabe: ه - وك transl; Rafail. amárico: ሩፋ, também conhecido como São Rafael Arcanjo, é um dos três arcanjos reconhecidos pelo Cristianismo, ao lado de Miguel e Gabriel. Seu nome, em hebraico Rafāʼēl (רָפָאֵל), significa literalmente \"Deus cura\", ressaltando sua missão de ser o portador da saúde e do socorro divino. É uma figura presente nas tradições, cristã, islâmica, e indiana, sendo associado à cura. — física, emocional e espiritual.",
+        "Na tradição cristã, sua principal menção encontra-se no Livro de Tobias, no Antigo Testamento, onde Rafael aparece como um jovem viajante e acompanha Tobias em sua jornada de sabedoria. Durante essa missão, ele guia, afasta o mal e realiza curas, ensina como expulsar de Sara um espírito maligno e a \"cura\" da cegueira do pai de Tobias. Por isso, é reconhecido como intercessor dos enfermos, figura mistica para os médicos e de todos os que buscam a restauração da saúde."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Saint_Raphael.JPG/500px-Saint_Raphael.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 710
+      }
+    }
+  ]
+}

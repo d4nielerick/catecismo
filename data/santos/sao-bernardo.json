@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Bernardo",
+  "artigos": [
+    {
+      "titulo": "Bernardo de Claraval",
+      "url": "https://pt.wikipedia.org/wiki/Bernardo_de_Claraval",
+      "resumo": [
+        "Bernardo de Claraval (em francês: Bernard de Clairvaux; castelo de Fontaine-lès-Dijon, 1090 — Ville-sous-la-Ferté, 20 de agosto de 1153) foi um abade francês, canonizado em 1174 e proclamado Doutor da Igreja. Foi o principal responsável por reformar a Ordem de Cister, na qual entrou logo depois da morte de sua mãe. Foi o fundador da Abadia de Claraval (Clairvaux), na Diocese de Langres.",
+        "Em 1128 Bernardo participou do Concílio de Troyes, que delineou a regra monástica que guiaria os Cavaleiros Templários e que rapidamente tornou-se o ideal de nobreza utilizado no mundo cristão. Depois da morte do Papa Honório II em 1130, Bernardo foi instrumental para reconciliar a Igreja durante o chamado \"cisma papal de 1130\", que só terminaria definitivamente com a morte do antipapa Anacleto II em 1138."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Saint_Bernard_Philippe_de_Champaigne_%28d%27apr%C3%A8s%29_Saint_Etienne_du_Mont.jpg/500px-Saint_Bernard_Philippe_de_Champaigne_%28d%27apr%C3%A8s%29_Saint_Etienne_du_Mont.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 597
+      }
+    }
+  ]
+}

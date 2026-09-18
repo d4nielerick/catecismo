@@ -1,0 +1,17 @@
+{
+  "celebracao": "São João Crisóstomo",
+  "artigos": [
+    {
+      "titulo": "João Crisóstomo",
+      "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Cris%C3%B3stomo",
+      "resumo": [
+        "João Crisóstomo (Antioquia, c. 347 – Comana Pôntica, 14 de setembro de 407) foi um arcebispo de Constantinopla e um dos mais importantes patronos do cristianismo primitivo. É conhecido por suas poderosas homilias, por sua habilidade em oratória, por sua denúncia dos abusos cometidos por líderes políticos e eclesiásticos de sua época, por sua \"Divina Liturgia\" e por suas práticas ascetas. O epíteto Χρυσόστομος (\"Chrysostomos\", em português \"Crisóstomo\") significa \"da boca de ouro\" em língua grega e lhe foi dado por conta de sua lendária eloquência. O título apareceu pela primeira vez na \"Constituição\" do papa Vigílio em 553, sendo João Crisóstomo considerado o maior pregador cristão da história."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Johnchrysostom.jpg/500px-Johnchrysostom.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 570
+      }
+    }
+  ]
+}

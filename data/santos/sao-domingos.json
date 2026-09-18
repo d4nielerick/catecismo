@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Domingos",
+  "artigos": [
+    {
+      "titulo": "Domingos de Gusmão",
+      "url": "https://pt.wikipedia.org/wiki/Domingos_de_Gusm%C3%A3o",
+      "resumo": [
+        "Domingos de Gusmão (Caleruega, 24 de junho de 1170 – Bolonha, 6 de agosto de 1221) foi um frade espanhol e santo católico, fundador da Ordem dos Pregadores, cujos membros são conhecidos como frades dominicanos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/SaintDominic.jpg/500px-SaintDominic.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 726
+      }
+    }
+  ]
+}

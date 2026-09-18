@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo André Dung-Lac e companheiros, mártires",
+  "artigos": [
+    {
+      "titulo": "Mártires do Vietname",
+      "url": "https://pt.wikipedia.org/wiki/M%C3%A1rtires_do_Vietname",
+      "resumo": [
+        "Os Mártires do Vietname (em vietnamita: Các thánh tử đạo Việt Nam), também conhecidos como Mártires da Indochina, Tonquim, Aname e Cochinchina ou André Dũng Lạc e seus Companheiros Mártires (Anrê Dũng Lạc và Các bạn tử đạo), são mártires e santos católicos canonizados pelo papa João Paulo II a 19 de junho de 1988, onde milhares de vietnamitas se reuniram na Basílica de São Pedro no Vaticano para celebrar a canonização dos cento e dezessete mártires vietnamitas, que foi presidida pelo monsenhor Filipe Trần Văn Hoài. A sua festa litúrgica é celebrada a 24 de novembro.",
+        "O grupo de mártires era constituído por membros religiosos da Ordem dos Pregadores, jesuítas, membros da Sociedade para as Missões Estrangeiras de Paris e pelos civis vietnamitas que foram perseguidos por serem católicos, durante os séculos XVIII e XIX no Vietname."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Martyrs_of_Tonkin.jpg/500px-Martyrs_of_Tonkin.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 777
+      }
+    }
+  ]
+}

@@ -13,7 +13,8 @@ import { adicionarEAbrir, contemNumero, onMudanca } from './coletor.js';
 import { iniciarLeitor, abrirLeitor } from './leitor.js';
 import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
 import { enriquecerNota } from './fontes.js';
-import { gerarVariantes } from './variantes.js';
+import { gerarVariantes, sugerirPorGrafia, distancia } from './variantes.js';
+import { salvarUltimaLeitura, lerUltimaLeitura } from './ultima-leitura.js';
 import { APP_VERSION } from './version.js';
 
 // ── Elementos do DOM ─────────────────────────────────────────────────────────
@@ -30,6 +31,7 @@ const hintColetor     = document.getElementById('hint-coletor');
 const painelConteudo  = document.getElementById('painel-conteudo');
 const btnFecharConteudo = document.getElementById('btn-fechar-conteudo');
 const btnResumir      = document.getElementById('btn-resumir');
+const btnContinuar    = document.getElementById('continuar-lendo');
 const aiCard          = document.getElementById('ai-resumo-card');
 const aiCorpo         = document.getElementById('ai-resumo-corpo');
 const aiFechar        = document.getElementById('ai-resumo-fechar');
@@ -50,6 +52,8 @@ const MAX_TEMAS_VISIVEIS = 2;
 let indiceAnalitico = null;
 let subtemaAtivoEl  = null;
 
+let remissoes = null; // { nomes: {id: nome limpo}, remete: {id: [ids]} }
+
 async function carregarIndiceAnalitico() {
   if (indiceAnalitico) return indiceAnalitico;
   try {
@@ -59,6 +63,63 @@ async function carregarIndiceAnalitico() {
     indiceAnalitico = [];
   }
   return indiceAnalitico;
+}
+
+let lexico = null; // { termo normalizado → [nomes de tema] }
+
+/**
+ * Léxico de conceitos: ponte entre a palavra de quem busca e o verbete do
+ * índice. O Catecismo não diz "mágoa", diz "perdão" e "misericórdia".
+ */
+async function carregarLexico() {
+  if (lexico) return lexico;
+  try {
+    const r = await fetch('data/lexico-conceitos.json');
+    const bruto = await r.json();
+    lexico = new Map(
+      Object.entries(bruto.termos || {}).map(([termo, temas]) => [normalizarSimples(termo), temas])
+    );
+  } catch {
+    lexico = new Map();
+  }
+  return lexico;
+}
+
+/** Grafo de remissões do índice (gerado por scripts/build-remissoes.mjs). */
+async function carregarRemissoes() {
+  if (remissoes) return remissoes;
+  try {
+    const r = await fetch('data/remissoes.json');
+    remissoes = await r.json();
+  } catch {
+    remissoes = { nomes: {}, remete: {} };
+  }
+  return remissoes;
+}
+
+/** Nome do tema sem a cauda "vide também …", que é remissão, não título. */
+function nomeDoTema(tema) {
+  return remissoes?.nomes?.[tema.id] || tema.nome;
+}
+
+let _paragrafosPorTema = null;
+
+/**
+ * Quantos § distintos um tema alcança. É o que dá confiança para clicar:
+ * "Perdão · 25 §§" diz o que esperar, "Perdão" sozinho não diz nada.
+ * Vem de remissoes.json (23 KB), que carrega no início — o índice analítico
+ * tem 990 KB e só é buscado quando a primeira busca acontece.
+ */
+function paragrafosDoTema(nome) {
+  if (!remissoes?.paragrafos) return 0;
+  if (!_paragrafosPorTema) {
+    _paragrafosPorTema = new Map();
+    for (const [id, n] of Object.entries(remissoes.paragrafos)) {
+      const chave = remissoes.nomes[id];
+      if (chave) _paragrafosPorTema.set(chave, (_paragrafosPorTema.get(chave) || 0) + n);
+    }
+  }
+  return _paragrafosPorTema.get(nome) || 0;
 }
 
 function normalizarSimples(s) {
@@ -81,6 +142,7 @@ function limparIndiceAnalitico() {
 async function renderizarIndiceAnalitico(query) {
   limparIndiceAnalitico();
   const dados = await carregarIndiceAnalitico();
+  await carregarRemissoes();
 
   const matches = [];
   const subtemaVistos = new Set();
@@ -127,7 +189,38 @@ async function renderizarIndiceAnalitico(query) {
 
       const temaHeader = document.createElement('button');
       temaHeader.className = 'indice-analitico-tema-header';
-      temaHeader.innerHTML = `<span class="indice-analitico-tema-nome">${tema.nome}</span><svg class="indice-tema-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>`;
+      temaHeader.innerHTML = `<span class="indice-analitico-tema-nome"></span><svg class="indice-tema-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>`;
+      temaHeader.querySelector('.indice-analitico-tema-nome').textContent = nomeDoTema(tema);
+
+      // Remissão do próprio índice ("Perdão vide também penitência"): fica
+      // colada ao nome do tema a que pertence. Solta entre dois temas, como
+      // uma linha própria, não dava para saber de quem era.
+      const remetidos = remissoes?.remete?.[tema.id] || [];
+      if (remetidos.length) {
+        const wrapRem = document.createElement('span');
+        wrapRem.className = 'indice-remissoes';
+        for (const id of remetidos) {
+          const alvo = remissoes.nomes[id];
+          if (!alvo) continue;
+          const link = document.createElement('span');
+          link.className = 'indice-remissao-link';
+          link.setAttribute('role', 'button');
+          link.setAttribute('tabindex', '0');
+          link.textContent = alvo;
+          const ir = (e) => {
+            e.stopPropagation();
+            campoBusca.value = alvo;
+            botaoLimpar.classList.remove('oculto');
+            executarBusca(alvo);
+          };
+          link.addEventListener('click', ir);
+          link.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') ir(e);
+          });
+          wrapRem.appendChild(link);
+        }
+        temaHeader.insertBefore(wrapRem, temaHeader.querySelector('.indice-tema-chevron'));
+      }
       const subtemasWrap = document.createElement('div');
       subtemasWrap.className = 'indice-analitico-subtemas-wrap';
       temaHeader.addEventListener('click', () => {
@@ -174,6 +267,7 @@ async function renderizarIndiceAnalitico(query) {
         });
         subtemasWrap.appendChild(subEl);
       }
+
       temasContainer.appendChild(temaEl);
     }
 
@@ -292,6 +386,11 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
   const versionEl = document.getElementById('app-version');
   if (versionEl) versionEl.textContent = APP_VERSION;
 
+  renderizarContinuarLendo();
+  // Ambos pequenos e necessários já na primeira busca frustrada.
+  carregarLexico();
+  carregarRemissoes();
+
   // Verifica se há um hash na URL para abrir diretamente
   if (location.hash) {
     const num = parseInt(location.hash.replace('#paragrafo-', ''), 10);
@@ -302,15 +401,25 @@ let textoRenderizado = false; // se o texto contínuo já foi montado
 // ── Eventos ──────────────────────────────────────────────────────────────────
 function registrarEventos() {
   campoBusca.addEventListener('input', () => {
+    botaoLimpar.classList.toggle('oculto', campoBusca.value === '');
+
+    // Antes do Enter, a hero não reage — digitar não abre nada. Uma vez já
+    // na seção de resultados, mantém a busca ao vivo de sempre (refinar).
+    if (!app.classList.contains('estado-busca')) return;
+
     clearTimeout(debounceTimer);
     clearTimeout(autoSelectTimer);
     const delay = window.matchMedia('(pointer: coarse)').matches ? 500 : 200;
     debounceTimer = setTimeout(() => executarBusca(campoBusca.value), delay);
-    botaoLimpar.classList.toggle('oculto', campoBusca.value === '');
   });
 
   campoBusca.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') limparBusca();
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      clearTimeout(debounceTimer);
+      executarBusca(campoBusca.value);
+    }
   });
 
   botaoLimpar.addEventListener('click', limparBusca);
@@ -375,6 +484,18 @@ function registrarEventos() {
   document.getElementById('btn-ler-header')
     ?.addEventListener('click', () => abrirLeitor(0));
 
+  // "Início": em vez de recarregar a página inteira, só volta pro estado
+  // inicial (mesma transição suave do Esc) — bem menos brusco.
+  document.querySelector('.btn-home')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    limparBusca({ focar: false });
+  });
+
+  btnContinuar?.addEventListener('click', () => {
+    const ultima = lerUltimaLeitura();
+    if (ultima) ativarBuscaEAbrirParagrafo(ultima.numero);
+  });
+
 }
 
 // ── Busca ────────────────────────────────────────────────────────────────────
@@ -394,7 +515,7 @@ function executarBusca(query) {
     const num = parseInt(numMatch[1], 10);
     const p = paragrafos.find(x => x.numero === num);
     if (p) {
-      ativarEstadoBusca();
+      const foiAtivada = ativarEstadoBusca();
       resultadosAtuais = [p];
       indiceAtivo = -1;
       renderizarResultados(agrupar([p]), 1, '');
@@ -404,11 +525,16 @@ function executarBusca(query) {
         const card = listaResultados.querySelector(`[data-num="${num}"]`);
         if (card) selecionarParagrafo(num, card);
       }, 100);
+      // Só rola depois que todo o trabalho síncrono acima (incluindo, na
+      // 1ª busca, montar o texto contínuo inteiro) já terminou — chamar a
+      // rolagem antes disso deixava a thread ocupada demais e a animação
+      // ficava presa a meio caminho.
+      if (foiAtivada) revelarResultados();
       return;
     }
   }
 
-  ativarEstadoBusca();
+  const foiAtivada = ativarEstadoBusca();
 
   const { total, paragrafos: encontrados } = buscar(queryAtual, paragrafos);
   const grupos = agrupar(encontrados);
@@ -421,6 +547,8 @@ function executarBusca(query) {
   mostrarSugestao(queryAtual, total);
   renderizarIndiceAnalitico(queryAtual);
 
+  if (foiAtivada) revelarResultados();
+
   // Seleciona o 1º resultado automaticamente após 1s de inatividade
   clearTimeout(autoSelectTimer);
   if (encontrados.length > 0) {
@@ -429,20 +557,51 @@ function executarBusca(query) {
 }
 
 // ── Estados da UI ────────────────────────────────────────────────────────────
+const reduzirMovimento = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Rolagem suave até um alvo. Chamada só depois que todo o trabalho síncrono
+// da busca (render de resultados, texto contínuo etc.) já terminou — ver
+// revelarResultados() — então não compete com DOM pesado sendo montado.
+function scrollSuaveAte(getAlvoY) {
+  window.scrollTo({ top: getAlvoY(), behavior: reduzirMovimento() ? 'auto' : 'smooth' });
+
+  // Rede de segurança: em navegadores/ambientes que ignoram behavior:'smooth'
+  // (ou cancelam a animação), garante que a página realmente chega no alvo.
+  setTimeout(() => {
+    const alvo = getAlvoY();
+    if (Math.abs(window.scrollY - alvo) > 4) window.scrollTo(0, alvo);
+  }, 700);
+}
+
+// Retorna true só na transição inicial→busca (é nesse caso que quem chamou
+// deve, no fim do próprio trabalho, chamar revelarResultados()).
 function ativarEstadoBusca() {
-  if (app.classList.contains('estado-busca')) return;
+  if (app.classList.contains('estado-busca')) return false;
 
   app.classList.remove('estado-inicial');
   app.classList.add('estado-busca');
 
   buscarTopoWrap.appendChild(campoBusca);
   buscarTopoWrap.appendChild(botaoLimpar);
-  campoBusca.focus();
+  campoBusca.focus({ preventScroll: true });
 
   // Renderiza texto contínuo na primeira vez
   if (!textoRenderizado) {
     renderizarTextoCompleto();
     textoRenderizado = true;
+  }
+
+  return true;
+}
+
+// A hero fica no lugar (com parallax); rola só até a seção de resultados, que
+// ocupa a tela toda logo abaixo. Chamada só depois que TODO o trabalho síncrono
+// da busca (incluindo montar o texto contínuo na 1ª vez) já terminou — rolar
+// no meio desse trabalho pesado deixava a animação presa a meio caminho.
+function revelarResultados() {
+  const secao = document.getElementById('resultados-secao');
+  if (secao) {
+    scrollSuaveAte(() => secao.getBoundingClientRect().top + window.scrollY);
   }
 }
 
@@ -454,6 +613,8 @@ function voltarEstadoInicial() {
   heroWrapper.appendChild(campoBusca);
   heroWrapper.appendChild(botaoLimpar);
 
+  scrollSuaveAte(() => 0);
+
   listaResultados.innerHTML = '';
   contagemEl.textContent = '';
   semResultados.classList.add('oculto');
@@ -463,6 +624,9 @@ function voltarEstadoInicial() {
   aiCard.classList.add('oculto');
   painelConteudo.classList.remove('aberto');
   fecharMobileNavBar();
+
+  // Voltando pra hero, o chip reflete o § que acabou de ser lido.
+  renderizarContinuarLendo();
 
   // Limpa highlights do texto contínuo
   limparHighlights();
@@ -484,7 +648,19 @@ function getSugestaoEl() {
 
 function mostrarSugestao(query, nAtual) {
   const el = getSugestaoEl();
+
+  // Frase com cara de pergunta: a busca procura palavras, o hub responde.
+  if (HUB_ABERTO && pareceNPergunta(query)) { oferecerPergunta(query, nAtual, el); return; }
+
+  // O léxico vem primeiro: quando a palavra do usuário não é a palavra do
+  // Catecismo, corrigir a grafia não adianta — "mágoa" está escrito certo, o
+  // assunto é que se chama "perdão" lá dentro.
+  if (nAtual < 5 && mostrarConceitos(query, nAtual, el)) return;
+
+  // Morfologia (plural/singular); só quando a busca vem pobre é que vale
+  // pagar a varredura por proximidade de grafia.
   const variantes = gerarVariantes(query);
+  if (nAtual < 5) variantes.push(...sugerirPorGrafia(query, paragrafos));
   if (!variantes.length) { el.className = 'sugestao-variante oculto'; return; }
 
   const THRESHOLD = 5;
@@ -508,12 +684,230 @@ function mostrarSugestao(query, nAtual) {
   });
 }
 
-function limparBusca() {
+// `focar` só vale quando a ação partiu do próprio campo (Esc, botão ×): ali o
+// teclado já está aberto e devolver o cursor é o esperado. Vindo do "Início" a
+// intenção é sair da busca — focar abriria o teclado e, no iPhone, ainda daria
+// zoom na página.
+/**
+ * Temas do léxico para a busca. Aceita um deslize de grafia: quem procura o
+ * assunto de "mágoa" costuma escrever "magua", e as duas camadas precisam
+ * conversar — senão a correção de grafia leva a "magia" e o léxico nunca é
+ * consultado.
+ */
+function conceitosPara(query) {
+  if (!lexico?.size) return null;
+  const q = normalizarSimples(query.trim());
+  if (!q) return null;
+
+  const direto = lexico.get(q);
+  if (direto) return direto;
+  if (q.length < 4) return null;
+
+  for (const [termo, temas] of lexico) {
+    // Mesma trava da correção de grafia: o começo da palavra não muda.
+    if (termo[0] !== q[0] || termo[1] !== q[1]) continue;
+    if (distancia(q, termo, 1) <= 1) return temas;
+  }
+  return null;
+}
+
+/**
+ * Oferece os verbetes do índice que tratam do assunto buscado, quando a
+ * palavra digitada não é a que o Catecismo usa.
+ * @returns {boolean} true se assumiu a sugestão (e o fluxo normal deve parar)
+ */
+function mostrarConceitos(query, nAtual, el) {
+  const temas = conceitosPara(query);
+  if (!temas || !temas.length) return false;
+
+  // Sem nenhum resultado, o espaço nobre é o do estado vazio — não adianta
+  // anunciar "nada encontrado" no meio da tela e esconder a saída numa tarja
+  // fina em cima. Com resultados na lista, aí sim a tarja é o lugar certo.
+  if (nAtual === 0) {
+    el.className = 'sugestao-variante oculto';
+    renderizarPainelConceitos(query, temas);
+    return true;
+  }
+
+  el.className = 'sugestao-variante';
+  el.replaceChildren();
+
+  const prefixo = document.createElement('span');
+  prefixo.textContent = 'Também tratam do assunto:';
+  el.appendChild(prefixo);
+
+  for (const tema of temas) {
+    el.appendChild(criarBotaoTema(tema, { comContagem: true }));
+  }
+  return true;
+}
+
+/** Botão de tema com a contagem de parágrafos que ele alcança. */
+function criarBotaoTema(tema, { comContagem = false } = {}) {
+  const btn = document.createElement('button');
+  btn.className = 'sugestao-btn';
+  btn.type = 'button';
+
+  const nome = document.createElement('span');
+  nome.textContent = tema;
+  btn.appendChild(nome);
+
+  if (comContagem) {
+    const n = paragrafosDoTema(tema);
+    if (n > 0) {
+      const cont = document.createElement('span');
+      cont.className = 'sugestao-count';
+      cont.textContent = `${n} §§`;
+      btn.appendChild(cont);
+    }
+  }
+
+  btn.addEventListener('click', () => {
+    campoBusca.value = tema;
+    botaoLimpar.classList.remove('oculto');
+    executarBusca(tema);
+  });
+  return btn;
+}
+
+/** Mensagem genérica do estado vazio, para quando não há tema a oferecer. */
+function restaurarSemResultados() {
+  semResultados.className = '';
+  semResultados.replaceChildren();
+
+  const forte = document.createElement('strong');
+  forte.textContent = 'Nenhum resultado encontrado.';
+  semResultados.appendChild(forte);
+  semResultados.appendChild(
+    document.createTextNode(' Tente termos como "graça", "fé", "batismo" ou "oração".')
+  );
+}
+
+/** Estado vazio editorial: marca, título e subtítulo. Devolve o painel. */
+function abrirPainelEditorial(tituloTexto, subTexto) {
+  semResultados.classList.remove('oculto');
+  semResultados.className = 'painel-conceitos';
+  semResultados.replaceChildren();
+
+  const marca = document.createElement('img');
+  marca.className = 'painel-conceitos-marca';
+  marca.src = 'assets/marca-catecismo-marrom.svg';
+  marca.alt = '';
+  marca.setAttribute('aria-hidden', 'true');
+  marca.width = 146;
+  marca.height = 210;
+
+  const titulo = document.createElement('p');
+  titulo.className = 'painel-conceitos-titulo';
+  titulo.textContent = tituloTexto;
+
+  const sub = document.createElement('p');
+  sub.className = 'painel-conceitos-sub';
+  sub.textContent = subTexto;
+
+  semResultados.append(marca, titulo, sub);
+  return semResultados;
+}
+
+// Hub de perguntas em publicação silenciosa: a página /perguntar/ existe, mas
+// a busca ainda não oferece o atalho. Abrir = trocar para true (e mostrar o
+// convite da hero em index.html).
+const HUB_ABERTO = false;
+
+const INTERROGATIVAS = /^(o que|oque|por ?que|pq|como|quando|qual|quais|quem|onde|posso|pode|podem|devo|deve|e pecado|existe|sera)\b/;
+
+/** Frase com cara de pergunta — o tipo de busca em que procurar palavra pouco ajuda. */
+function pareceNPergunta(query) {
+  const t = normalizarSimples(query.trim());
+  const palavras = t.split(/\s+/).filter(Boolean).length;
+  return t.endsWith('?') || palavras >= 5 || (palavras >= 3 && INTERROGATIVAS.test(t));
+}
+
+/** Leva a frase ao hub: painel no estado vazio, tarja fina quando há resultados. */
+function oferecerPergunta(query, nAtual, el) {
+  const href = `perguntar/?q=${encodeURIComponent(query.trim())}`;
+
+  if (nAtual > 0) {
+    el.className = 'sugestao-variante';
+    el.replaceChildren();
+    const prefixo = document.createElement('span');
+    prefixo.textContent = 'Parece uma pergunta:';
+    const link = document.createElement('a');
+    link.className = 'sugestao-btn';
+    link.href = href;
+    link.textContent = 'Perguntar ao Catecismo';
+    el.append(prefixo, link);
+    return;
+  }
+
+  el.className = 'sugestao-variante oculto';
+  const painel = abrirPainelEditorial(
+    'Isto parece uma pergunta.',
+    'A busca procura palavras; o Catecismo pode responder com os parágrafos que tratam dela.'
+  );
+
+  const lista = document.createElement('ul');
+  lista.className = 'painel-conceitos-lista';
+  const li = document.createElement('li');
+  const link = document.createElement('a');
+  link.className = 'painel-conceito-item';
+  link.href = href;
+  const nome = document.createElement('span');
+  nome.className = 'painel-conceito-nome';
+  nome.textContent = 'Perguntar ao Catecismo →';
+  link.appendChild(nome);
+  li.appendChild(link);
+  lista.appendChild(li);
+  painel.appendChild(lista);
+}
+
+/** Estado vazio que resolve em vez de só informar que não achou. */
+function renderizarPainelConceitos(query, temas) {
+  abrirPainelEditorial(
+    `O Catecismo não usa a palavra “${query.trim()}”.`,
+    'Mas trata do assunto nestes temas:'
+  );
+
+  const lista = document.createElement('ul');
+  lista.className = 'painel-conceitos-lista';
+
+  for (const tema of temas) {
+    const li = document.createElement('li');
+    const item = document.createElement('button');
+    item.className = 'painel-conceito-item';
+    item.type = 'button';
+
+    const nome = document.createElement('span');
+    nome.className = 'painel-conceito-nome';
+    nome.textContent = tema;
+    item.appendChild(nome);
+
+    const n = paragrafosDoTema(tema);
+    if (n > 0) {
+      const cont = document.createElement('span');
+      cont.className = 'painel-conceito-count';
+      cont.textContent = `${n} §§`;
+      item.appendChild(cont);
+    }
+
+    item.addEventListener('click', () => {
+      campoBusca.value = tema;
+      botaoLimpar.classList.remove('oculto');
+      executarBusca(tema);
+    });
+    li.appendChild(item);
+    lista.appendChild(li);
+  }
+
+  semResultados.appendChild(lista);
+}
+
+function limparBusca({ focar = true } = {}) {
   campoBusca.value = '';
   botaoLimpar.classList.add('oculto');
   if (_sugestaoEl) _sugestaoEl.className = 'sugestao-variante oculto';
   voltarEstadoInicial();
-  campoBusca.focus();
+  if (focar) campoBusca.focus();
 }
 
 // ── Renderização do texto completo (contínuo) ────────────────────────────────
@@ -611,8 +1005,9 @@ function atualizarHighlightsTexto(query, encontrados) {
     if (!el) continue;
     const textoEl = el.querySelector('.tc-paragrafo-texto');
     if (textoEl) {
-      // Durante a busca: highlight simples (notas ficam como texto plano)
-      textoEl.innerHTML = destacar(p.texto, query);
+      // Reconstrói o destaque sem descartar os controles e links das notas.
+      textoEl.replaceChildren();
+      renderizarTextoComNotas(textoEl, p.texto, p.numero, query);
       _paragrafosComHighlight.add(textoEl);
     }
   }
@@ -670,6 +1065,41 @@ function selecionarParagrafo(numero, cardEl) {
   // Atualiza índice e setas de navegação
   indiceAtivo = resultadosAtuais.findIndex(p => p.numero === numero);
   atualizarNav();
+
+  salvarUltimaLeitura(paragrafos.find(p => p.numero === numero));
+}
+
+/**
+ * Chip "Continuar lendo" na hero. Só aparece no estado inicial e quando há
+ * leitura anterior guardada — some assim que o usuário entra em busca, senão
+ * ficaria flutuando sobre o card de resultados.
+ */
+function renderizarContinuarLendo() {
+  if (!btnContinuar) return;
+
+  const ultima = lerUltimaLeitura();
+  if (!ultima) {
+    btnContinuar.classList.add('oculto');
+    return;
+  }
+
+  // textContent, não innerHTML: o conteúdo vem do localStorage, que o usuário
+  // (ou um script de terceiro) consegue editar.
+  const rotulo = document.createElement('span');
+  rotulo.className = 'continuar-lendo-rotulo';
+  rotulo.textContent = 'Continuar lendo';
+
+  const num = document.createElement('span');
+  num.className = 'continuar-lendo-num';
+  num.textContent = `§${ultima.numero}`;
+
+  const trecho = document.createElement('span');
+  trecho.className = 'continuar-lendo-trecho';
+  trecho.textContent = ultima.trecho || '';
+
+  btnContinuar.replaceChildren(rotulo, num, trecho);
+  btnContinuar.setAttribute('aria-label', `Continuar lendo o parágrafo ${ultima.numero}`);
+  btnContinuar.classList.remove('oculto');
 }
 
 function scrollParaParagrafo(numero) {
@@ -706,6 +1136,9 @@ function renderizarResultados(grupos, total, query) {
 
   if (total === 0) {
     contagemEl.textContent = '';
+    // Volta ao texto padrão: mostrarConceitos() troca por um painel de temas
+    // logo depois, quando a palavra buscada existir no léxico.
+    restaurarSemResultados();
     semResultados.classList.remove('oculto');
     hintColetor.classList.add('oculto');
     btnResumir.classList.add('oculto');
@@ -950,8 +1383,9 @@ export function ativarBuscaEAbrirParagrafo(numero) {
   const p = paragrafos.find(x => x.numero === numero);
   if (!p) return;
 
-  ativarEstadoBusca();
+  const foiAtivada = ativarEstadoBusca();
   scrollParaParagrafo(numero);
+  if (foiAtivada) revelarResultados();
 
   if (window.innerWidth < 768) {
     painelConteudo.classList.add('aberto');
@@ -963,10 +1397,10 @@ export function ativarBuscaEAbrirParagrafo(numero) {
  * Preenche `el` com o texto do parágrafo, substituindo (n) por <sup> interativo
  * quando a nota existir em notas.json.
  */
-function renderizarTextoComNotas(el, texto, numeroParagrafo) {
+function renderizarTextoComNotas(el, texto, numeroParagrafo, query = '') {
   const notas = notasDoParagrafo(numeroParagrafo);
   if (!notas) {
-    el.textContent = texto;
+    el.innerHTML = destacar(texto, query);
     return;
   }
 
@@ -1008,26 +1442,30 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       tooltip.appendChild(spanVerso);
       sup.appendChild(tooltip);
 
-      // Carrega versículo ao primeiro hover (desktop)
-      let _fetched = false;
-      let _verse   = null;
-      sup.addEventListener('mouseenter', async () => {
-        if (_fetched) return;
-        _fetched = true;
-        _verse = await buscarVersiculo(noteText);
-        if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
-      });
+      // Uma promessa só, compartilhada pelos dois caminhos. Com um booleano
+      // havia corrida no toque: o tap dispara um mouseenter sintético que já
+      // marcava "buscado" e saía para buscar; o click chegava logo atrás, via
+      // a marca e abria o card com o versículo ainda em voo — a nota aparecia
+      // sem a passagem correspondente, de forma intermitente.
+      let _versePromise = null;
+      const obterVerso = () => {
+        if (!_versePromise) {
+          _versePromise = buscarVersiculo(noteText).then((v) => {
+            if (v) spanVerso.textContent = `${v.referencia}: "${v.texto}"`;
+            return v;
+          });
+        }
+        return _versePromise;
+      };
+
+      sup.addEventListener('mouseenter', obterVerso);
 
       // Clique: mobile → card; desktop → fixa/desfixa o tooltip até fechar
       sup.addEventListener('click', async (e) => {
         e.stopPropagation();
+        if (e.target.closest('a, button')) return;
         if (window.innerWidth < 768) {
-          if (!_fetched) {
-            _fetched = true;
-            _verse = await buscarVersiculo(noteText);
-            if (_verse) spanVerso.textContent = `${_verse.referencia}: "${_verse.texto}"`;
-          }
-          mostrarCardMobile(ref, noteText, _verse);
+          mostrarCardMobile(ref, noteText, await obterVerso());
         } else {
           const jaFixo = sup.classList.contains('tooltip-visivel');
           document.querySelectorAll('.ref-nota.tooltip-visivel').forEach((el) => el.classList.remove('tooltip-visivel'));
@@ -1037,7 +1475,9 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
 
       el.appendChild(sup);
     } else {
-      el.appendChild(document.createTextNode(parte));
+      const trechoTexto = document.createElement('span');
+      trechoTexto.innerHTML = destacar(parte, query);
+      el.appendChild(trechoTexto);
     }
   }
 }

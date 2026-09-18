@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Tomé, apóstolo",
+  "artigos": [
+    {
+      "titulo": "Tomé, o Apóstolo",
+      "url": "https://pt.wikipedia.org/wiki/Tom%C3%A9,_o_Ap%C3%B3stolo",
+      "resumo": [
+        "Tomé, São Tomé Apóstolo, também conhecido como São Tomás ou, em grego, Dídimo, foi um dos doze apóstolos originalmente escolhidos por Jesus, segundo os Evangelhos sinóticos (Mateus 10:3, Marcos 3:18, Lucas 6:15) e os Atos dos Apóstolos, havendo pouco registro além. Sua festa litúrgica é em 3 de julho."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Santo_Tom%C3%A1s%2C_por_Diego_Vel%C3%A1zquez.JPG/500px-Santo_Tom%C3%A1s%2C_por_Diego_Vel%C3%A1zquez.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 619
+      }
+    }
+  ]
+}

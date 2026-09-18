@@ -1,0 +1,18 @@
+{
+  "celebracao": "Domingo de Páscoa na Ressurreição do Senhor",
+  "artigos": [
+    {
+      "titulo": "Páscoa",
+      "url": "https://pt.wikipedia.org/wiki/P%C3%A1scoa",
+      "resumo": [
+        "Páscoa (em aramaico: פַּסְחָא; romaniz.: pasḥā; em grego: πάσχα; romaniz.: páskha) ou Domingo da Ressurreição, é um festival cristão e feriado cultural que comemora a ressurreição de Jesus dentre os mortos, descrita no Novo Testamento como tendo ocorrido no terceiro dia de seu sepultamento após sua crucificação pelos romanos no Calvário por volta do ano 30. É o ponto culminante da Paixão de Jesus, precedida pela Quaresma (ou Grande Quaresma), um período de 40 dias de jejum, oração e penitência.",
+        "Os cristãos que celebram a Páscoa geralmente se referem à última semana da Quaresma, antes da Páscoa, como Semana Santa, que no cristianismo ocidental começa no Domingo de Ramos (que marca a entrada de Jesus em Jerusalém), inclui a Quarta-feira Santa (na qual se lamenta a traição a Jesus) e contém os dias do Tríduo Pascal, incluindo a Quinta-feira Santa, que comemora a Ceia do Senhor e a Última Ceia, bem como a Sexta-feira Santa, que comemora a crucificação e morte de Jesus. No cristianismo oriental, os mesmos eventos são comemorados com nomes de dias que começam com \"Santo\" ou \"Santo e Grande\" e a própria Páscoa pode ser chamada de Grande e Santa Páscoa. Tanto no cristianismo ocidental quanto no oriental, o Tempo Pascal começa no Domingo de Páscoa e continua por sete semanas, terminando no 50º dia, o Domingo de Pentecostes. No entanto, no cristianismo oriental, a despedida da festa ocorre no 39º dia, na véspera da Festa da Ascensão."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Raffaello_Sanzio_Auferstehung_Christi_Sao_Paulo.jpg/500px-Raffaello_Sanzio_Auferstehung_Christi_Sao_Paulo.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 586
+      }
+    }
+  ]
+}

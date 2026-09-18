@@ -1,0 +1,19 @@
+{
+  "celebracao": "São Pio X, papa",
+  "artigos": [
+    {
+      "titulo": "Papa Pio X",
+      "url": "https://pt.wikipedia.org/wiki/Papa_Pio_X",
+      "resumo": [
+        "Pio X ou São Pio X (em italiano: Pio X, em latim: Pius X), O.F.S., nascido Giuseppe Melchiorre Sarto; (Riese, 2 de junho de 1835 – Roma, 20 de agosto de 1914) foi o 257.º Papa da Igreja Católica e Bispo de Roma de 4 de agosto de 1903 até a data de sua morte.",
+        "Seu Pontificado ficou profundamente marcado pela renovação da vida sacramental, pelo impulso dado à catequese e pela defesa da integridade da fé católica. É lembrado como o “Papa da Eucaristia”, expressão que alude à sua decisão de promover a comunhão frequente, encorajar a primeira comunhão das crianças e reafirmar a centralidade da Eucaristia na vida cristã.",
+        "Pio X também empreendeu importantes reformas na Cúria Romana, incentivou a codificação do Direito Canônico e combateu o modernismo teológico, que ele considerava um dos mais sérios desafios à fé na contemporaneidade."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Pius_X%2C_by_Ernest_Walter_Histed_%28retouched%29.jpg/500px-Pius_X%2C_by_Ernest_Walter_Histed_%28retouched%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 602
+      }
+    }
+  ]
+}

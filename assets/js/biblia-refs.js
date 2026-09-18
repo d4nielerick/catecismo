@@ -33,6 +33,27 @@ export function normalizarLivro(raw) {
   return CANON.has(cap) ? cap : null;
 }
 
+/**
+ * As notas do Catecismo citam os Salmos pela numeração hebraica; a Bíblia
+ * Ave-Maria de data/biblia/Sl.json usa a da Vulgata. Sem converter, "Sl 22, 2"
+ * (por que me abandonaste?) abria o Salmo 22 da Vulgata — "O Senhor é meu
+ * pastor". Conferido verso a verso contra Sl.json: 51,3→50,3 · 23,1→22,1 ·
+ * 22,2→21,2 · 10,1→9,22 · 115,1→113,9 · 116,10→115,1 · 147,12→147,1.
+ * @returns {{ cap: number, verso: number }}
+ */
+export function salmoParaVulgata(cap, verso) {
+  const c = Number(cap);
+  const v = Number(verso);
+  if (c <= 9 || c >= 148) return { cap: c, verso: v };
+  if (c === 10) return { cap: 9, verso: v + 21 };       // Vulg 9 = hebr 9 (21 vv) + 10
+  if (c <= 113) return { cap: c - 1, verso: v };
+  if (c === 114) return { cap: 113, verso: v };
+  if (c === 115) return { cap: 113, verso: v + 8 };     // Vulg 113 = hebr 114 (8 vv) + 115
+  if (c === 116) return v <= 9 ? { cap: 114, verso: v } : { cap: 115, verso: v - 9 };
+  if (c <= 146) return { cap: c - 1, verso: v };
+  return v <= 11 ? { cap: 146, verso: v } : { cap: 147, verso: v - 11 }; // hebr 147
+}
+
 /** "15, 17-18" → [15,17,18]. Intervalos longos (>12) reduzem ao início (evita
  *  explodir cross-chapter tipo "1-22, 5"). */
 export function expandirVersos(spec) {

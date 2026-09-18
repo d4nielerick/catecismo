@@ -1,0 +1,23 @@
+{
+  "data": "2027-01-23",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Hb 9,2-3.11-14</div><div> Sl 46(47),2-3.6-7.8-9 (R. 6)</div><div></div><div> Mc 3,20-21</div></div>",
+  "primeira_leitura": {
+    "referencia": "9,2-3.11-14",
+    "texto": "Irmãos,\n2\nfoi construída uma primeira tenda, chamada o Santo,\nonde se encontravam o candelabro,\na mesa e os pães da proposição.\n3\nAtrás da segunda cortina, havia outra tenda,\nchamada o Santo dos Santos.\n11\nCristo, porém, veio como sumo sacerdote dos bens futuros.\nAtravés de uma tenda maior e mais perfeita,\nque não é obra de mãos humanas,\nisto é, que não faz parte desta criação,\n12\ne não com o sangue de bodes e bezerros,\nmas com o seu próprio sangue,\nele entrou no Santuário uma vez por todas,\nobtendo uma redenção eterna.\n13\nDe fato, se o sangue de bodes e touros,\ne a cinza de novilhas\nespalhada sobre os seres impuros\nos santifica e realiza a pureza ritual dos corpos,\n14\nquanto mais o Sangue de Cristo,\npurificará a nossa consciência das obras mortas,\npara servirmos ao Deus vivo,\npois, em virtude do espírito eterno,\nCristo se ofereceu a si mesmo a Deus\ncomo vítima sem mancha.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 46(47),2-3.6-7.8-9 (R. 6)",
+    "refrao": "",
+    "texto": "R.\nPor entre aclamações Deus se elevou,\no Senhor subiu ao toque da trombeta.\n2\nPovos todos do universo, batei palmas,*\ngritai a Deus aclamações de alegria!\n3\nPorque sublime é o Senhor, o Deus Altíssimo,*\no soberano que domina toda a terra.\nR.\n6\nPor entre aclamações Deus se elevou,*\no Senhor subiu ao toque da trombeta.\n7\nSalmodiai ao nosso Deus ao som da harpa,*\nsalmodiai ao som da harpa ao nosso Rei!\nR.\n8\nPorque Deus é o grande Rei de toda a terra,*\nao som da harpa acompanhai os seus louvores!\n9\nDeus reina sobre todas as nações,*\nestá sentado no seu trono glorioso.\nR.\nEvangelho - Mc 3,20-21\nAclamação ao Evangelho\nCf. At 16,14b\nR.\nAleluia, Aleluia, Aleluia.\nV.\nAbri-nos, ó Senhor, o coração,\npara ouvirmos a palavra de Jesus!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "3,20-21",
+    "texto": "3,20-21\nNaquele tempo,\n20\nJesus voltou para casa com os discípulos.\nE de novo se reuniu tanta gente\nque eles nem sequer podiam comer.\n21\nQuando souberam disso,\nos parentes de Jesus saíram para agarrá-lo,\nporque diziam que estava fora de si.\nPalavra da Salvação."
+  }
+}

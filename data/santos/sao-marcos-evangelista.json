@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Marcos, evangelista",
+  "artigos": [
+    {
+      "titulo": "Marcos, o Evangelista",
+      "url": "https://pt.wikipedia.org/wiki/Marcos,_o_Evangelista",
+      "resumo": [
+        "Marcos, o Evangelista (em grego: Μάρκος; romaniz.: Mârkos; em aramaico: ܡܪܩܘܣ; romaniz.: Marqōs; em latim: Marcus; em árabe egípcio: مرقص; Cirene, c. 10 a.C. — Alexandria, 25 de abril de 68), também conhecido como João Marcos (em grego: Ἰωάννης Μάρκος, romaniz.: Iōannēs Mârkos) ou São Marcos, é uma figura do cristianismo primitivo, tradicionalmente identificado como discípulo dos apóstolos Pedro e Paulo. É considerado o autor do Evangelho segundo Marcos, um dos quatro evangelhos canônicos do Novo Testamento.",
+        "Segundo antigas tradições cristãs, Marcos teria colaborado com o apóstolo Pedro na pregação do Evangelho, sendo seu intérprete ou secretário, e posteriormente acompanhado Paulo em algumas de suas viagens missionárias. É também mencionado no Novo Testamento com o nome de João Marcos, associado à comunidade cristã primitiva de Jerusalém."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Grandes_Heures_Anne_de_Bretagne_Saint_Marc.jpg/500px-Grandes_Heures_Anne_de_Bretagne_Saint_Marc.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 728
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Tiago, apóstolo",
+  "artigos": [
+    {
+      "titulo": "Santiago Maior",
+      "url": "https://pt.wikipedia.org/wiki/Santiago_Maior",
+      "resumo": [
+        "Santiago Maior ou São Tiago Maior (em grego koiné: Ἰάκωβος, romanizado: Iákōbos; em siríaco clássico: ܝܥܩܘܒ, romanizado: Yaʿqōḇ; morreu c. 44), foi um dos Doze Apóstolos de Jesus. De acordo com o Novo Testamento, ele foi o segundo dos apóstolos a morrer, depois de Judas Iscariotes, e o primeiro a ser martirizado. São Tiago é o santo padroeiro da Espanha e, segundo a tradição, o que se acredita serem seus restos mortais estão guardados em Santiago de Compostela, na Galícia, Espanha. São Tiago é designado nos textos bíblicos como Tiago, filho de Zebedeu, e Tiago Boanerges (em grego: Boanergés; em aramaico: בני רגז, bəney rəgaz, \"filho do trovão\"). Na tradição cristã, também é designado como São Tiago Apóstolo e Santiago Matamoros."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Peter_Paul_Rubens_-_St_James_the_Apostle_-_WGA20192.jpg/500px-Peter_Paul_Rubens_-_St_James_the_Apostle_-_WGA20192.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 630
+      }
+    }
+  ]
+}

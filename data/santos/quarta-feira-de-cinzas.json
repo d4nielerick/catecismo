@@ -1,0 +1,18 @@
+{
+  "celebracao": "Quarta-feira de Cinzas",
+  "artigos": [
+    {
+      "titulo": "Quarta-feira de Cinzas",
+      "url": "https://pt.wikipedia.org/wiki/Quarta-feira_de_Cinzas",
+      "resumo": [
+        "A Quarta-feira de Cinzas é o primeiro dia da Quaresma no calendário litúrgico da Igreja Católica. As cinzas que os fiéis recebem nesse dia possuem um caráter simbólico, remetendo ao chamado à conversão, à penitência e à mudança de vida, bem como à recordação da condição frágil e transitória da existência humana, sujeita à morte.",
+        "A data ocorre quarenta dias antes da Páscoa, quando não se contabilizam os domingos no cômputo quaresmal, ou quarenta e seis dias antes, quando estes são incluídos. O seu posicionamento no calendário varia a cada ano, pois depende da data da Páscoa, podendo situar-se entre o início de fevereiro e a segunda semana de março."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Crossofashes.jpg/500px-Crossofashes.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 343
+      }
+    }
+  ]
+}

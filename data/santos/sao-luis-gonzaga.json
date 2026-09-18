@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Luís Gonzaga",
+  "artigos": [
+    {
+      "titulo": "Luís de Gonzaga",
+      "url": "https://pt.wikipedia.org/wiki/Lu%C3%ADs_de_Gonzaga",
+      "resumo": [
+        "Luís Gonzaga, S.J. (Castiglione delle Stiviere, 9 de março de 1568 – Roma, 21 de junho de 1591) foi um religioso italiano e santo da Igreja Católica. Sua festa litúrgica é em 21 de junho."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/San_Luis_Gonzaga_%28Goya%29.jpg/500px-San_Luis_Gonzaga_%28Goya%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 841
+      }
+    }
+  ]
+}

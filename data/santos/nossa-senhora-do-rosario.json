@@ -1,0 +1,17 @@
+{
+  "celebracao": "Nossa Senhora do Rosário",
+  "artigos": [
+    {
+      "titulo": "Nossa Senhora do Rosário",
+      "url": "https://pt.wikipedia.org/wiki/Nossa_Senhora_do_Ros%C3%A1rio",
+      "resumo": [
+        "Nossa Senhora do Rosário, Nossa Senhora do Santo Rosário ou Nossa Senhora do Santíssimo Rosário é o título mariano apresentado aquando da aparição da Santíssima Virgem Maria a São Domingos de Gusmão em 1214 na igreja do mosteiro de Prouille, na qual a mãe de Jesus entregou o Rosário ao fiel frade dominicano. É também o título pelo qual a Virgem Maria se apresentou aos três pastorinhos nas suas aparições em Fátima."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/2017-03_Brescia_Mattes_Pana_%28111%29.JPG/500px-2017-03_Brescia_Mattes_Pana_%28111%29.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 621
+      }
+    }
+  ]
+}

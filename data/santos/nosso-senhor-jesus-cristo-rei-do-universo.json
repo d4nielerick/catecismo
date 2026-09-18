@@ -1,0 +1,17 @@
+{
+  "celebracao": "Nosso Senhor Jesus Cristo, Rei do Universo",
+  "artigos": [
+    {
+      "titulo": "Cristo Rei",
+      "url": "https://pt.wikipedia.org/wiki/Cristo_Rei",
+      "resumo": [
+        "Cristo Rei é um título de Jesus baseado em várias passagens bíblicas e, em geral, usada por todos os cristãos. A Igreja Católica, a Igreja Anglicana, bem como várias outras denominações cristãs protestantes, incluindo os presbiterianos, luteranos e metodistas, celebram, em honra de Cristo sob este título, a Festa de Cristo Rei no último domingo do ano litúrgico, antes que o novo ano comece com o primeiro domingo do Advento, podendo cair entre 20 e 26 de Novembro. A inauguração do Santuário Nacional de Cristo Rei em Portugal foi no dia 17 de maio de 1959."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Cathedral_of_Saint_Mary_of_the_Immaculate_Conception_%28Peoria%2C_Illinois%29_-_statue_of_Christ_the_King.jpg/500px-Cathedral_of_Saint_Mary_of_the_Immaculate_Conception_%28Peoria%2C_Illinois%29_-_statue_of_Christ_the_King.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 674
+      }
+    }
+  ]
+}

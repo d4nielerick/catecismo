@@ -156,6 +156,61 @@ saía com cara de IA e alucinava). `/liturgiadiaria/` e o widget da home mostram
 oficiais. `scripts/gerar-reflexoes.mjs` continua no repo como ferramenta offline para uma eventual
 retomada, mas não é mais chamado por nenhuma página nem função de API.
 
+### Liturgia diária (NÃO editar data/liturgia/ à mão)
+
+`data/liturgia/` é gerado e o CI prova isso via `scripts/verifica-liturgia.mjs`:
+
+```
+data/liturgia-fonte/AAAA-MM-DD-leituras.json   formato cru da API de origem (intocado)
+  --scripts/build-liturgia.mjs-->              data/liturgia/AAAA-MM-DD.json + indice.json
+```
+
+A fonte mistura tudo nos campos `salmo`/`evangelho` (2ª leitura, sequência, aclamação, vigílias,
+leituras à escolha) e parte do texto vem em Unicode NFD; o build separa cada leitura em
+`missas[].leituras[]` com referência completa. O nome do dia ("24º Domingo do Tempo Comum",
+transferências do Brasil) vem de `scripts/lib-calendario-liturgico.mjs`. O verificador exige
+reprodutibilidade, zero linha da fonte perdida, nenhum cabeçalho vazado e calendário coerente com
+as leituras. Para novo ano: pôr os arquivos crus em `data/liturgia-fonte/` e rodar
+`node scripts/build-liturgia.mjs`. Página: `liturgiadiaria/liturgiadiaria.js` (data local do
+aparelho, não UTC).
+
+O `indice.json` também leva `marcos` (Advento, Natal, Cinzas, Páscoa, dias de preceito do Brasil…),
+usados nos avisos "faltam N dias" da página; a tabela fica em `MARCOS` no build.
+
+O resumo da Wikipédia sobre o santo ou a festa do dia fica embaixo do calendário (telas > 760px) ou
+num modal aberto por "Saiba mais" (celular). `data/santos/` é gerado (com rede) por
+`node scripts/build-santos.mjs` a partir de `data/santos-fonte.json` (celebração → títulos de artigo
+da pt.wikipedia, curado à mão). Para trocar ou acrescentar um artigo, edite a fonte e rode o
+script; ele falha em título inexistente ou desambiguação. O CI confere que toda celebração do
+índice existe no calendário e tem resumo e link.
+
+### Liturgia Diária: páginas por dia e SEO (gerar antes do deploy)
+
+`/liturgiadiaria/` mostra hoje (JavaScript). Para o Google, cada dia tem uma página pronta, com
+título, descrição, canonical, dados estruturados (WebPage + BreadcrumbList) e as leituras no HTML:
+
+```
+node scripts/build-paginas-liturgia.mjs   # liturgiadiaria/AAAA-MM-DD/index.html + sitemap-liturgia.xml
+python3 scripts/build-og-liturgia.py      # liturgiadiaria/og/AAAA-MM-DD.jpg (imagem do WhatsApp; --tudo refaz)
+```
+
+Esses arquivos são gerados e ficam fora do git (.gitignore): **rode os dois antes de cada deploy** e
+envie `liturgiadiaria/`, `sitemap-liturgia.xml` e `robots.txt`. O desenho das leituras mora em
+`liturgiadiaria/render.mjs`, usado pela página e pelo gerador (o HTML pronto é idêntico ao que o JS
+redesenha, então não há salto de layout). O modelo é `liturgiadiaria/index.html`; se ele mudar a ponto
+de o gerador não encaixar, `verifica-liturgia.mjs` falha no CI. No Caddy, fontes, imagens, os JSON dos
+dias, os santos e as imagens `og/` têm cache de 30 dias; HTML, JS, CSS e `indice.json`, não.
+
+### Liturgia Diária: resumo das leituras
+
+Antes da 1ª leitura, um parágrafo resume as leituras do dia ("Hoje, a primeira leitura (…) …; o
+Salmo …; e o Evangelho …"). Os textos ficam em `data/liturgia-resumos/AAAA-MM-DD.json` (sem o
+"Hoje,"/"Neste dia,", que a página acrescenta), escritos fora do site e gravados com
+`node scripts/grava-resumos.mjs resumos.json`. Cada arquivo guarda as referências que resume: se as
+leituras do dia mudarem, o resumo some e `verifica-liturgia.mjs` falha. O verificador também exige
+40–110 palavras e que todo nome próprio do resumo esteja nas leituras daquele dia (só o que está no
+texto: nada de interpretação). Nenhuma chamada de IA em tempo de execução.
+
 ### Integridade do texto do Catecismo (NÃO editar catecismo.json à mão)
 
 `data/catecismo.json` é gerado deterministicamente e o CI (`.github/workflows/verifica.yml`)

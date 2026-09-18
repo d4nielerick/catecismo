@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Pio de Pietrelcina",
+  "artigos": [
+    {
+      "titulo": "Padre Pio",
+      "url": "https://pt.wikipedia.org/wiki/Padre_Pio",
+      "resumo": [
+        "Padre Pio de Pietrelcina, nascido Francesco Forgione, O.F.M. Cap. (Pietrelcina, 25 de maio de 1887 – San Giovanni Rotondo, 23 de setembro de 1968) foi um frade capuchinho e sacerdote católico italiano, elevado aos altares pela Igreja Católica em 2002, quando foi canonizado pelo Papa São João Paulo II com o título de São Pio de Pietrelcina.",
+        "Desde muito jovem, demonstrou profunda piedade e inclinação à vida espiritual, ingressando na Ordem dos Frades Menores Capuchinhos aos 15 anos. Ordenado sacerdote em 1910, logo se destacou pela intensidade de sua vida de oração, pelo espírito penitente e pela entrega radical a Cristo. Em 1918, recebeu os estigmas da Paixão de Cristo, tornando-se o primeiro sacerdote estigmatizado da história da Igreja, o que despertou grande devoção popular, mas também muitas investigações da parte das autoridades eclesiásticas."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Padre_Pio_portraitFXD.jpg/500px-Padre_Pio_portraitFXD.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 598
+      }
+    }
+  ]
+}

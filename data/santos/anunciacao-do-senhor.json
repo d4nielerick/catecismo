@@ -1,0 +1,17 @@
+{
+  "celebracao": "Anunciação do Senhor",
+  "artigos": [
+    {
+      "titulo": "Anunciação",
+      "url": "https://pt.wikipedia.org/wiki/Anuncia%C3%A7%C3%A3o",
+      "resumo": [
+        "A Anunciação, também conhecida como Anunciação da Virgem Maria, é a celebração cristã que recorda e celebra o anúncio dado pelo Arcanjo Gabriel à Virgem Maria de que ela seria a mãe de Jesus Cristo. Apesar de sua virgindade perpétua, Maria milagrosamente conceberia uma criança, que seria chamada de Filho de Deus. Gabriel também disse a Maria que ela deveria chamar a criança de Jesus (\"Salvador\"). Muitos cristãos celebram este evento na festa da Anunciação, em 25 de março, exatamente nove meses antes do Natal. De acordo com a Bíblia (em Lucas 1:26), a Anunciação ocorreu no \"no sexto mês\" da gravidez de Isabel, a prima de Maria e mãe de João Batista."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Botticelli%2C_annunciazione_del_Metropolitan.jpg/500px-Botticelli%2C_annunciazione_del_Metropolitan.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 298
+      }
+    }
+  ]
+}

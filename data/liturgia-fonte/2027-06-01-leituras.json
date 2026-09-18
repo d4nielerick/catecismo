@@ -1,0 +1,23 @@
+{
+  "data": "2027-06-01",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Tb 2,9-14</div><div> Sl 111(112),1-2.7bc-8.9 (R. cf. 7c)</div><div></div><div> Mc 12,13-17</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,9-14",
+    "texto": "Eu, Tobias, na noite de Pentecostes,\ndepois de ter sepultado um morto,\n9\ntomei banho,\nentrei no pátio de minha casa\ne deitei-me, junto à parede do pátio,\ndeixando o rosto descoberto por causa do calor.\n10\nNão sabia que, na parede, por cima de mim,\nhavia pardais aninhados.\nSeu excremento quente caiu nos meus olhos\ne provocou manchas brancas.\nFui procurar os médicos para me tratarem.\nQuanto mais remédios me aplicavam,\nmais meus olhos se obscureciam com as manchas,\naté que fiquei completamente cego.\nDurante quatro anos estive privado da vista.\nTodos os meus irmãos se afligiram por minha causa.\nAicar cuidou do meu sustento, durante dois anos,\naté que partiu para Elimaida.\n11\nNaquela ocasião, Ana, minha mulher,\ndedicou-se a trabalhos femininos, tecendo lã.\n12\nEntregava o produto aos patrões\ne estes lhe pagavam o salário\nNo sétimo dia do mês de Distros,\nela separou a peça de tecido que estava pronta,\ne mandou-a aos patrões.\nEstes pagaram-lhe todo o salário\ne ainda lhe deram um cabrito para a mesa.\n13\nQuando entrou em minha casa,\no cabrito começou a balar.\nChamei minha mulher e perguntei-lhe:\n\"De onde vem este cabrito?\nNão terá sido roubado?\nDevolve-o a seus donos,\npois não temos o direito\nde comer coisa alguma roubada\".\n14\nEla respondeu-me: 'É um presente\nque me foi dado além do salário'.\nMas não acreditei nela\ne insisti que o devolvesse aos patrões,\nficando bastante contrariado por causa disso.\nEla então replicou: 'Onde estão as tuas esmolas?\nOnde estão as tuas obras de justiça?\nVê-se bem em ti o que elas são!\"\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 111(112),1-2.7bc-8.9 (R. cf. 7c)",
+    "refrao": "",
+    "texto": "R.\nO coração do justo é firme e confiante no Senhor.\nOu:\nAleluia, Aleluia, Aleluia\n1\nFeliz o homem que respeita o Senhor *\ne que ama com carinho a sua lei!\n2\nSua descendência será forte sobre a terra, *\nabençoada a geração dos homens retos!\nR.\n7b\nEle não teme receber notícias más: *\nc\nconfiando em Deus, seu coração está seguro.\n8\nSeu coração está tranquilo e nada teme, *\ne confusos há de ver seus inimigos.\nR.\n9\nEle reparte com os pobres os seus bens, †\npermanece para sempre o bem que fez, *\ne crescerão a sua glória e seu poder.\nR.\nEvangelho - Mc 12,13-1\nAclamação ao Evangelho\nCf. Ef 1,17-18\nR.\nAleluia, Aleluia, Aleluia.\nV.\nQue o Pai do Senhor Jesus Cristo\nnos dê do saber o Espírito,\npara que conheçais a esperança\nreservada para vós como herança!"
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "12,13-17",
+    "texto": "Proclamação do Evangelho de Jesus Cristo segundo Marcos\n12,13-17\nNaquele tempo,\n13\nas autoridades mandaram alguns fariseus\ne alguns partidários de Herodes,\npara apanharem Jesus em alguma palavra.\n14\nQuando chegaram, disseram a Jesus:\n\"Mestre, sabemos que tu és verdadeiro,\ne não dás preferência a ninguém.\nCom efeito, tu não olhas para as aparências do homem,\nmas ensinas, com verdade, o caminho de Deus.\nDize-nos:\nÉ lícito ou não pagar o imposto a César?\nDevemos pagar ou não?\"\n15\nJesus percebeu a hipocrisia deles, e respondeu:\n\"Por que me tentais?\nTrazei-me uma moeda para que eu a veja\".\n16\nEles levaram a moeda, e Jesus perguntou:\n\"De quem é a figura e a inscrição\nque está nessa moeda?\"\nEles responderam:\n\"É de César\".\n17\nEntão Jesus disse:\n\"Dai, pois, a César o que é de César,\ne a Deus o que é de Deus\".\nE eles ficaram admirados com Jesus.\nPalavra da Salvação."
+  }
+}

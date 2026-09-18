@@ -14,9 +14,11 @@
   --color-mark-bg:  #fefce8;
   --hero-grad-mid:  #F0EDE4;
   --hero-grad-end:  #E8E4DB;
+  --color-hero-ouro:#FFDE4B;
   --header-bg:      rgba(255,255,255,0.97);
 
   --font-serif: 'EB Garamond', Georgia, serif;
+  --font-display: 'Aboreto', 'EB Garamond', Georgia, serif;
   --font-sans:  'Inter', system-ui, sans-serif;
 
   --space-xs:  0.25rem;   /*  4px */
@@ -92,27 +94,57 @@ body {
   min-height: 100vh;
 }
 
-/* Modo busca: trava altura em 100vh para scroll independente dos painéis */
-#app.estado-busca {
-  height: 100dvh;
-  overflow: hidden;
+/* ── Estado inicial — só a hero, página não rola (nada pra rolar ainda) ──── */
+#app.estado-inicial #resultados-secao { display: none; }
+
+/* ── Estado de busca — hero continua no topo (com parallax); os resultados
+   ficam numa seção de 100dvh logo abaixo, revelada com scroll ao apertar
+   Enter. Por dentro, #resultados-secao é idêntica ao app-shell antigo
+   (header fixo + #painel-busca flex:1) — só mudou onde ela mora. ────────── */
+#app.estado-busca #resultados-secao {
+  display: flex;
+  flex-direction: column;
+  /* Sobe e "invade" a hero um pouco (a sobreposição vem do margin-top
+     negativo); a altura cresce na mesma medida pra não sobrar nem faltar
+     nada no fim da página. Margem lateral (em vez de padding) encolhe a
+     própria caixa — sobra do que está atrás por baixo (hero na faixa da
+     sobreposição, o fundo da página dali pra baixo). */
+  height: calc(100dvh + 44px);
+  margin: -44px clamp(0.75rem, 4vw, 2.5rem) 0;
+  background: var(--color-bg);
+  box-shadow: 0 -16px 44px rgba(0,0,0,0.28);
+  position: relative;
+  /* Sem overflow:hidden aqui de propósito — isso quebraria o
+     position:sticky do #busca-topo (a caixa com overflow!=visible vira a
+     referência do sticky, e essa caixa não tem scroll próprio). O
+     arredondamento do topo vem de #busca-topo e #painel-busca terem seus
+     próprios cantos arredondados, não de recortar o pai. */
 }
 
-/* ── Estado inicial — busca centralizada (Spotlight) ────────────────────── */
-#app.estado-inicial #hero         { display: flex; }
-#app.estado-busca   #hero         { display: none; }
-#app.estado-leitura #hero         { display: none; }
-#app.estado-inicial #painel-busca { display: none; }
-#app.estado-leitura #painel-busca { display: none; }
+/* Já em resultados, o campo de busca vive no header — esconde a fileira de
+   ação da hero (senão sobra uma pílula vazia quando o usuário rola de volta
+   pro topo). Título, marca e temas continuam como pano de fundo. */
+#app.estado-busca #hero-acoes { visibility: hidden; }
 
 /* ── Estado de leitura ───────────────────────────────────────────────────── */
+#app.estado-inicial #hero,
+#app.estado-busca   #hero { display: flex; }
+#app.estado-leitura #hero { display: none; }
+
 #app.estado-leitura {
   height: 100dvh;
   overflow: hidden;
 }
-#app.estado-leitura #busca-topo      { display: none; }
+#app.estado-leitura #resultados-secao { display: none; }
 #app:not(.estado-leitura) #leitor-container { display: none; }
 
+/* ══════════════════════════════════════════════════════════════════════════
+   HERO — cena fotográfica em tela cheia
+   Camadas (z-index): foto → título → recorte da figura → véu → interface.
+   O título passa POR TRÁS da figura; é isso que dá profundidade à cena.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Base compartilhada com o São Pio X — só o layout de flex/centralização. */
 #hero {
   flex: 1;
   flex-direction: column;
@@ -122,45 +154,182 @@ body {
   padding: var(--space-2xl) var(--space-lg) 3rem;
   text-align: center;
   position: relative;
-  background: linear-gradient(
-    160deg,
-    var(--color-bg) 0%,
-    var(--hero-grad-mid) 55%,
-    var(--hero-grad-end) 100%
-  );
 }
 
-#hero .logo {
-  width: 108px;
-  height: auto;
-  border-radius: 18px;
+/* Especialização do CIC: cena fotográfica em vez do gradiente do São Pio X. */
+#hero.hero-foto {
+  justify-content: flex-end;
+  gap: clamp(1rem, 2.6vh, 1.75rem);
+  padding: 0 var(--space-lg) clamp(1.75rem, 5vh, 3rem);
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(100dvh, 860px);
+  background: #1b1712;
+}
+
+/* ── Camadas da cena ────────────────────────────────────────────────────── */
+/* 9% de sobra em cima/embaixo — dá margem pro parallax (hero-parallax.js)
+   deslocar a camada verticalmente sem revelar borda vazia. */
+#hero.hero-foto .hero-cena {
+  position: absolute;
+  top: -9%;
+  left: 0;
+  width: 100%;
+  height: 118%;
+  object-fit: cover;
+  object-position: center 22%;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+#hero.hero-foto .hero-cena-fundo  { z-index: 0; }
+#hero.hero-foto .hero-cena-figura { z-index: 2; }
+
+/* Véu: escurece o topo (legibilidade do título) e dissolve o pé da foto
+   no creme do restante do app. */
+#hero.hero-foto .hero-veu {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom,
+      rgba(20,16,12,0.42) 0%,
+      rgba(20,16,12,0.10) 26%,
+      rgba(20,16,12,0.00) 42%,
+      rgba(20,16,12,0.32) 56%,
+      rgba(20,16,12,0.66) 72%,
+      rgba(20,16,12,0.86) 88%,
+      rgba(20,16,12,0.93) 100%
+    );
+}
+
+/* ── Título ─────────────────────────────────────────────────────────────── */
+#hero.hero-foto h1 {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 96vw;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.65rem, 6.25vw, 7.6rem);
+  line-height: 1;
+  letter-spacing: -0.085em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.35);
+  white-space: nowrap;
+}
+
+/* ── Marca ──────────────────────────────────────────────────────────────── */
+#hero.hero-foto .logo {
+  position: absolute;
+  z-index: 4;
+  top: clamp(1.75rem, 7vh, 4.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: clamp(58px, 11vh, 110px);
+  filter: drop-shadow(0 2px 18px rgba(0,0,0,0.4));
   transition: transform 0.3s ease;
 }
 
-#hero .logo:hover {
-  transform: translateY(-3px);
+#hero.hero-foto .logo:hover {
+  transform: translateX(-50%) translateY(-3px);
 }
 
-#hero h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 4vw, 2.6rem);
-  font-weight: 500;
-  color: var(--color-primary);
-  line-height: 1.2;
-  max-width: 520px;
-  margin-top: var(--space-xs);
-  letter-spacing: -0.01em;
+/* ── Selo beta ──────────────────────────────────────────────────────────── */
+#hero.hero-foto .badge-beta {
+  position: absolute;
+  z-index: 4;
+  top: clamp(1rem, 3vh, 1.75rem);
+  right: clamp(1rem, 3vw, 2rem);
+  transform: none;
 }
 
-#hero .tagline {
-  font-size: 0.95rem;
-  color: var(--color-muted);
-  max-width: 400px;
-  margin-top: calc(-1 * var(--space-sm));
+/* ── Linha de ação: PESQUISAR · campo · LER ─────────────────────────────── */
+#hero-acoes {
+  position: relative;
+  z-index: 4;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.85rem, 3.2vw, 3.3rem);
+  width: 100%;
+  max-width: 1000px;
+  /* Sem margin-top:auto: o justify-content:flex-end da hero já encosta tudo
+     no pé, e o auto empurraria sozinho para o topo qualquer item de fluxo
+     anterior (o chip de continuar lendo, e o título no mobile). */
+}
+
+/* Halo suave por trás da linha de ação — garante contraste dos rótulos
+   independentemente do que a foto tiver naquela faixa. */
+#hero-acoes::before {
+  content: "";
+  position: absolute;
+  inset: -120% -4%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(52% 46% at 50% 50%, rgba(20,16,12,0.62) 0%, rgba(20,16,12,0.34) 58%, rgba(20,16,12,0) 100%);
+}
+
+.hero-rotulo {
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(0.68rem, 1.1vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 1px 18px rgba(0,0,0,0.6);
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+.hero-rotulo:hover { color: #fff; }
+
+.hero-rotulo-ativo {
+  color: var(--color-hero-ouro);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 0 26px rgba(255,222,75,0.35);
+}
+
+/* ── Tagline ────────────────────────────────────────────────────────────── */
+#hero.hero-foto .tagline {
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  color: rgba(255,255,255,0.7);
+  max-width: 420px;
+  margin: 0;
   line-height: 1.55;
+  text-shadow: 0 1px 14px rgba(0,0,0,0.6);
 }
 
-/* ── Link discreto entre catecismos ─────────────────────────────────────── */
+/* Entrada para o hub de perguntas: um convite na mesma voz da tagline, não
+   um botão — a busca continua sendo a ação principal da hero. */
+#hero.hero-foto .hero-perguntar {
+  margin-top: -0.35rem;
+  font-family: var(--font-serif);
+  font-size: clamp(0.92rem, 1.2vw, 1.02rem);
+  font-style: italic;
+  color: var(--color-hero-ouro);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,222,75,0.35);
+  text-shadow: 0 1px 14px rgba(0,0,0,0.6);
+  transition: border-color var(--transition);
+}
+
+#hero.hero-foto .hero-perguntar:hover { border-bottom-color: var(--color-hero-ouro); }
+
+/* ── Link discreto entre catecismos (São Pio X) ─────────────────────────── */
 .btn-outro-catecismo {
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -172,13 +341,156 @@ body {
 }
 .btn-outro-catecismo:hover { color: var(--color-primary); }
 
-/* ── Estado de busca ativa ───────────────────────────────────────────────── */
-#app.estado-busca #busca-topo {
+/* ── Continuar lendo ────────────────────────────────────────────────────── */
+#continuar-lendo {
+  position: relative;
+  z-index: 4;
   display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  /* Acompanha a largura do campo de busca logo abaixo. */
+  max-width: min(100%, 420px);
+  padding: 0.5rem 0.95rem;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 100px;
+  background: rgba(20,16,12,0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.9);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition), border-color var(--transition);
 }
-#app.estado-inicial #busca-topo {
-  display: none;
+
+#continuar-lendo:hover {
+  background: rgba(20,16,12,0.62);
+  border-color: var(--color-hero-ouro);
 }
+
+.continuar-lendo-rotulo {
+  flex-shrink: 0;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-hero-ouro);
+}
+
+.continuar-lendo-num {
+  flex-shrink: 0;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* O trecho é o que cede espaço: some antes de espremer o rótulo e o §. */
+.continuar-lendo-trecho {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0.72;
+}
+
+/* Em busca a hero vira pano de fundo do card de resultados — o chip sairia
+   flutuando sobre ele. */
+#app.estado-busca #continuar-lendo { display: none; }
+
+#continuar-lendo.oculto { display: none; }
+
+/* ── Rodapé do hero ─────────────────────────────────────────────────────── */
+#hero-rodape {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.6rem, 1.6vh, 1rem);
+  width: 100%;
+}
+
+/* ── Hero em telas estreitas ────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  #hero.hero-foto {
+    min-height: 100dvh;
+    /* Respiro maior no pé + safe area: no iPhone as pills ficavam quase
+       encostando na barra de gestos. */
+    padding-bottom: calc(3.25rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Em retrato a foto é cortada na horizontal (é landscape), então a figura
+     fica sempre alta no quadro e o rosto ocupa a faixa dos 6%–31%. Não há
+     como reposicionar a cena por CSS sem zoom absurdo — logo o título sai do
+     absolute e entra no fluxo, empilhado acima do campo, sobre a área que o
+     véu já escurece. Ganha legibilidade e preenche o vão morto do meio. */
+  #hero.hero-foto h1 {
+    position: relative;
+    z-index: 4;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    white-space: normal;
+    text-wrap: balance;
+    font-size: clamp(1.75rem, 8.5vw, 2.5rem);
+    letter-spacing: -0.045em;
+    line-height: 1.02;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 1px 6px rgba(0,0,0,0.4);
+  }
+
+  #hero.hero-foto .logo { height: clamp(52px, 8.5vh, 74px); }
+
+  /* Reforça o véu na faixa do título/campo (o gradiente base é calibrado para
+     paisagem, onde esse bloco cai mais embaixo). */
+  #hero.hero-foto .hero-veu {
+    background:
+      linear-gradient(to bottom,
+        rgba(20,16,12,0.42) 0%,
+        rgba(20,16,12,0.10) 24%,
+        rgba(20,16,12,0.02) 36%,
+        rgba(20,16,12,0.48) 52%,
+        rgba(20,16,12,0.78) 66%,
+        rgba(20,16,12,0.90) 80%,
+        rgba(20,16,12,0.94) 100%
+      );
+  }
+
+  /* Campo em uma linha; PESQUISAR / LER logo abaixo. (max-width do campo é
+     resetado em search.css, que carrega depois e domina a cascata)
+     `margin-top: auto` sai: no desktop ele cola a linha de ação no pé e o
+     título é absolute; aqui o título está no fluxo logo acima e o auto o
+     empurraria sozinho para o topo. Quem alinha é o justify-content da hero. */
+  #hero-acoes {
+    flex-wrap: wrap;
+    /* O campo ocupa a linha inteira (order:-1) e PESQUISAR/LER ficam lado a
+       lado na de baixo — 1.75rem deixava os dois rótulos quase colados. */
+    gap: 0.65rem 2.75rem;
+  }
+
+  .hero-rotulo {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+  }
+
+  #temas-rapidos { max-width: 100%; }
+
+  /* Em retrato cada pixel de largura conta: a margem lateral do card cai de
+     15px para 8px. Ainda sobra a faixa da hero por baixo (é o efeito de card
+     flutuante), mas devolve 14px de texto por linha. */
+  #app.estado-busca #resultados-secao {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  /* Sem isso "N resultados (exibindo 200)" quebra em duas linhas e espreme o
+     botão de resumo ao lado. Escopado: #contagem-resultados também existe no
+     São Pio X, que não tem #resultados-secao nem override próprio. */
+  #resultados-secao #contagem-resultados {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+}
+
+/* #busca-topo é mostrado/escondido junto com #resultados-secao (seu pai). */
 
 /* Header externo: full-width, sticky */
 #busca-topo {
@@ -190,6 +502,16 @@ body {
   flex-shrink: 0;
 }
 
+/* Só no CIC (dentro de #resultados-secao) — fica visível mesmo rolando de
+   volta em direção à hero. #busca-topo sozinho também existe no São Pio X,
+   que não tem essa seção/scroll, então escopamos pra não afetar lá. */
+#resultados-secao #busca-topo {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-radius: 6px 6px 0 0;
+}
+
 /* Inner wrapper: max-width centrado */
 .busca-topo-inner {
   display: flex;
@@ -199,6 +521,14 @@ body {
   max-width: var(--max-width-app);
   margin: 0 auto;
   width: 100%;
+}
+
+/* No CIC, mais discreto — a hero já é o protagonista, a barra aqui é só
+   utilidade pra refinar a busca. (São Pio X também usa .busca-topo-inner,
+   por isso escopado a #resultados-secao, que só existe no CIC.) */
+#resultados-secao .busca-topo-inner {
+  gap: var(--space-sm);
+  padding: 0.5rem var(--space-lg);
 }
 
 .btn-home {
@@ -213,6 +543,24 @@ body {
   transition: color var(--transition), background var(--transition);
 }
 
+/* No CIC ganha o label "Início" ao lado do ícone — vira uma pílula em vez
+   do botão quadrado (que o São Pio X mantém, por isso escopado). */
+#resultados-secao .btn-home {
+  justify-content: flex-start;
+  gap: 0.4rem;
+  width: auto;
+  height: 30px;
+  padding: 0 0.55rem 0 0.45rem;
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#resultados-secao .btn-home svg { flex-shrink: 0; }
+
 .btn-home:hover {
   color: var(--color-primary);
   background: var(--color-bg);
@@ -225,7 +573,6 @@ body {
   gap: var(--space-sm);
   justify-content: center;
   max-width: 540px;
-  margin-top: var(--space-sm);
 }
 
 #temas-rapidos button {
@@ -238,7 +585,7 @@ body {
   border-radius: 100px;
   padding: 0.35rem 0.9rem;
   cursor: pointer;
-  transition: background var(--transition), border-color var(--transition), transform 0.15s ease, box-shadow 0.15s ease;
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 #temas-rapidos button:hover {
@@ -251,6 +598,22 @@ body {
 
 #temas-rapidos button:active {
   transform: scale(0.97);
+}
+
+/* Sobre a foto do hero do CIC, os chips ganham vidro escuro. */
+#hero.hero-foto #temas-rapidos button {
+  color: rgba(255,255,255,0.82);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: rgba(255,255,255,0.28);
+}
+
+#hero.hero-foto #temas-rapidos button:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: var(--color-hero-ouro);
+  color: #fff;
+  box-shadow: 0 2px 14px rgba(255,222,75,0.18);
 }
 
 /* ── mark global ─────────────────────────────────────────────────────────── */
@@ -343,35 +706,13 @@ mark {
 
 /* ── Frame "app" — borda dourada em telas com espaço ────────────────────── */
 @media (min-width: 860px) {
-  html {
-    /* Fundo sólido fora do #app */
-    background: #C5A028;
-    min-height: 100%;
-  }
-
-  body {
-    padding: 1.25rem;
-    background: transparent;
-  }
-
   #app {
-    border-radius: 20px;
-    background: var(--color-bg);
-    /* overflow: hidden para respeitar o border-radius nas bordas */
-    overflow: hidden;
-    /* Anel dourado + sombra profunda */
-    box-shadow:
-      0 0 0 2px rgba(197, 160, 40, 0.75),   /* borda dourada */
-      0 0 0 4px rgba(197, 160, 40, 0.12),    /* halo suave    */
-      0 24px 60px rgba(0, 0, 0, 0.18),       /* sombra grande */
-      0 6px 18px rgba(0, 0, 0, 0.12);        /* sombra próxima*/
-    min-height: calc(100dvh - 2.5rem);
+    min-height: 100dvh;
   }
 
-  /* Em modo busca e leitura a altura fica travada — desconta o padding */
-  #app.estado-busca,
+  /* Em modo leitura a altura fica travada (imersivo, tela cheia) */
   #app.estado-leitura {
-    height: calc(100dvh - 2.5rem);
+    height: 100dvh;
     min-height: 0;
   }
 }
@@ -384,9 +725,11 @@ mark {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-accent-dk);
-  background: rgba(197,160,40,0.12);
-  border: 1px solid rgba(197,160,40,0.35);
+  color: var(--color-hero-ouro);
+  background: rgba(20,16,12,0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,222,75,0.35);
   border-radius: 100px;
   padding: 0.15rem 0.5rem;
   vertical-align: middle;
@@ -490,70 +833,4 @@ a.badge-beta:hover {
   border-color: rgba(197,160,40,0.6);
 }
 
-/* ── Widget Liturgia do Dia ──────────────────────────────────────────────── */
-#liturgia-widget {
-  width: 100%;
-  max-width: 420px;
-  margin: 0.5rem auto 0;
-}
 
-.liturgia-inner {
-  background: rgba(197,160,40,0.08);
-  border: 1px solid rgba(197,160,40,0.3);
-  border-radius: var(--radius);
-  padding: 0.85rem 1.1rem;
-  text-align: left;
-}
-
-.liturgia-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-family: var(--font-sans);
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--color-accent-dk);
-  margin-bottom: 0.4rem;
-}
-
-.liturgia-tema {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  margin: 0 0 0.4rem;
-  line-height: 1.3;
-}
-
-.liturgia-resumo {
-  font-size: 0.82rem;
-  line-height: 1.55;
-  color: var(--color-text);
-  margin: 0 0 0.6rem;
-}
-
-.liturgia-paragrafos {
-  display: flex;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-}
-
-.liturgia-para-link {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--color-accent-dk);
-  text-decoration: none;
-  background: rgba(197,160,40,0.12);
-  border: 1px solid rgba(197,160,40,0.25);
-  border-radius: 4px;
-  padding: 0.15rem 0.4rem;
-  transition: background 0.15s;
-}
-
-.liturgia-para-link:hover {
-  background: rgba(197,160,40,0.22);
-  color: var(--color-primary);
-}

@@ -1,0 +1,18 @@
+{
+  "celebracao": "São João Maria Vianney",
+  "artigos": [
+    {
+      "titulo": "João Maria Vianney",
+      "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Maria_Vianney",
+      "resumo": [
+        "João Maria Vianney, também conhecido como Santo Cura d'Ars (Dardilly, Ródano, 8 de maio de 1786 – Ars-sur-Formans, 4 de agosto de 1859) foi um sacerdote católico francês, célebre por seu ministério paroquial na pequena aldeia de Ars, onde exerceu intensa atividade pastoral durante mais de quatro décadas. É venerado como santo pela Igreja Católica e considerado uma das figuras mais representativas da espiritualidade sacerdotal do século XIX.",
+        "Destacou-se pela dedicação ao sacramento da Reconciliação, pela simplicidade de vida, pela pregação e pela direção espiritual, atraindo milhares de peregrinos a Ars em busca de aconselhamento e confissão. A sua atuação pastoral contribuiu para tornar a paróquia um importante centro de peregrinação religiosa na França."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Jean-Marie_Vianney.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 500,
+        "altura": 739
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "data": "2027-11-19",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "vermelho",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Mc 4,36-37.52-59</div><div> 1Cr 29,10.11abc.11d-12a.12bcd (R. 13b)</div><div></div><div> Lc 19,45-48</div></div>",
+  "primeira_leitura": {
+    "referencia": "4,36-37.52-59",
+    "texto": "36\nNaqueles dias, Judas e seus irmãos disseram:\n\"Nossos inimigos foram esmagados.\nVamos purificar o lugar santo e reconsagrá-lo\".\n37\nTodo o exército então se reuniu\ne subiu ao monte Sião.\n52\nNo vigésimo quinto dia do nono mês, chamado Casleu,\ndo ano cento e quarenta e oito,\nlevantaram-se ao romper da aurora,\n53\ne ofereceram um sacrifício conforme a Lei,\nsobre o novo altar dos holocaustos que haviam construído.\n54\nO altar foi novamente consagrado ao som de cânticos,\nacompanhados de cítaras, harpas e címbalos,\nna mesma época do ano e no mesmo dia\nem que os pagãos o haviam profanado.\n55\nTodo o povo prostrou-se com o rosto em terra\npara adorar e louvar a Deus\nque lhes tinha dado um feliz triunfo.\n56\nDurante oito dias celebraram a dedicação do altar,\noferecendo com alegria holocaustos\ne sacrifícios de comunhão e de louvor.\n57\nOrnaram com coroas de ouro e pequenos escudos\na fachada do templo.\nReconstruíram as entradas e os alojamentos,\nnos quais colocaram portas.\n58\nGrande alegria tomou conta do povo,\npois fora reparado o ultraje infligido pelos pagãos.\n59\nDe comum acordo com os irmãos\ne toda a assembleia de Israel,\nJudas determinou que os dias da dedicação do altar\nfossem celebrados anualmente com alegres festejos,\nno tempo exato, durante oito dias,\na partir do dia vinte e cinco do mês de Casleu.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "1Cr 29,10.11abc.11d-12a.12bcd (R. 13b)",
+    "refrao": "",
+    "texto": "R.\nQueremos celebrar o vosso nome glorioso.\n10\nBendito sejais vós, ó Senhor Deus, †\nSenhor Deus de Israel, o nosso pai. *\ndesde sempre e por toda a eternidade!\nR.\n11a\nA Vós pertencem a grandeza e o poder, †\nb\ntoda a glória, esplendor e majestade, *\nc\npois tudo é vosso: o que há no céu e sobre a terra!\nR.\nd\nA vós, Senhor, também pertence a realeza, †\npois sobre a terra, como rei, vos elevais! *\n12a\nToda glória e riqueza vêm de vós!\nR.\nb\nSois o Senhor e dominais o universo, †\nc\nem vossa mão se encontra a força e o poder, *\nd\nem vossa mão tudo se afirma e tudo cresce!\nR.\nEvangelho - Lc 19,45-4\nAclamação ao Evangelho\nJo 10,27\nR.\nAleluia, Aleluia, Aleluia.\nV.\nMinhas ovelhas escutam minha voz,\neu as conheço e elas me seguem."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "19,45-48",
+    "texto": "19,45-48\nNaquele tempo,\n45\nJesus entrou no Templo\ne começou a expulsar os vendedores.\n46\nE disse:\n\"Está escrito:\n'Minha casa será casa de oração'.\nNo entanto, vós fizestes dela um antro de ladrões\".\n47\nJesus ensinava todos os dias no Templo.\nOs sumos sacerdotes,\nos mestres da Lei e os notáveis do povo\nprocuravam modo de matá-lo.\n48\nMas não sabiam o que fazer,\nporque o povo todo ficava fascinado\nquando ouvia Jesus falar.\nPalavra da Salvação."
+  }
+}

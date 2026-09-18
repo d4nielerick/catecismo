@@ -1,0 +1,18 @@
+{
+  "celebracao": "São João Bosco",
+  "artigos": [
+    {
+      "titulo": "Dom Bosco",
+      "url": "https://pt.wikipedia.org/wiki/Dom_Bosco",
+      "resumo": [
+        "João Melchior Bosco, mais conhecido como Dom Bosco (Castelnuovo Don Bosco, 16 de agosto de 1815 — Turim, 31 de janeiro de 1888) foi um sacerdote católico italiano, fundador da Pia Sociedade São Francisco de Sales e proclamado santo em 1934. Aclamado por João Paulo II como o \"Pai e Mestre da Juventude\", é o padroeiro da capital federal do Brasil, Brasília.",
+        "Seguidor da espiritualidade e filosofia de Francisco de Sales, Dom Bosco era um fervoroso devoto de Maria Auxiliadora. Mais tarde, dedicou seus trabalhos a Sales, quando fundou os Salesianos, com sede em Turim. Juntamente com Maria Domenica Mazzarello, fundou o Instituto das Filhas de Maria Auxiliadora, uma congregação religiosa de freiras dedicada ao cuidado e educação de meninas pobres. Ele ensinou São Domingos Sávio, de quem escreveu uma biografia que ajudou o menino a ser canonizado."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Don_Bosco_%40_Torino%2C_1880_%28original%29.jpg/500px-Don_Bosco_%40_Torino%2C_1880_%28original%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 642
+      }
+    }
+  ]
+}

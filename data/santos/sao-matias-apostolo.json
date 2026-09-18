@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Matias, apóstolo",
+  "artigos": [
+    {
+      "titulo": "Matias (apóstolo)",
+      "url": "https://pt.wikipedia.org/wiki/Matias_(ap%C3%B3stolo)",
+      "resumo": [
+        "São Matias ou Matias Apóstolo foi, segundo a Bíblia, o discípulo escolhido para ocupar o lugar que o traidor Judas Iscariotes abandonou para viver seu destino."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Wehr%28Eifel%29_St.Potentinus275.JPG/500px-Wehr%28Eifel%29_St.Potentinus275.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 719
+      }
+    }
+  ]
+}

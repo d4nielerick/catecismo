@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Mateus, apóstolo e evangelista",
+  "artigos": [
+    {
+      "titulo": "Mateus, o Evangelista",
+      "url": "https://pt.wikipedia.org/wiki/Mateus,_o_Evangelista",
+      "resumo": [
+        "Apóstolo Mateus, também chamado de São Mateus (em hebraico: מַתִּתְיָהוּ, Mattiṯyāhū; em aramaico: מַתַּי, Mattay; em grego: Ματθαῖος, Matthaîos; em latim: Matthaeus) ou Mateus, o Evangelista, foi um dos doze apóstolos de Jesus Cristo e é reconhecido como autor do Evangelho segundo Mateus, um dos quatro Evangelhos canônicos. Originalmente conhecido como Levi, filho de Alfeu, exercia a profissão de publicano, isto é, cobrador de impostos para o Império Romano, função considerada impura e desprezada pelos judeus de sua época. Segundo os Evangelhos, foi chamado por Jesus enquanto trabalhava em sua coletoria em Cafarnaum (Mateus 9:9), ocasião em que deixou tudo imediatamente para segui-Lo."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/The_Evangelist_Matthew_Inspired_by_an_Angel.jpg/500px-The_Evangelist_Matthew_Inspired_by_an_Angel.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 613
+      }
+    }
+  ]
+}

@@ -11,3 +11,8 @@ assets/css/*.bak
 catecismo/
 .vercel
 .env*.local
+
+# Liturgia Diária: gerados antes do deploy (scripts/build-paginas-liturgia.mjs, scripts/build-og-liturgia.py)
+/liturgiadiaria/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+/liturgiadiaria/og/
+/sitemap-liturgia.xml

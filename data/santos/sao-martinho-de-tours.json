@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Martinho de Tours",
+  "artigos": [
+    {
+      "titulo": "Martinho de Tours",
+      "url": "https://pt.wikipedia.org/wiki/Martinho_de_Tours",
+      "resumo": [
+        "Martinho de Tours (em latim: Martinus Turonensis; Sabária, Panónia, 316 – Condate, Gália, 8 de novembro de 397), foi um militar, monge e, mais tarde, bispo da Cidade dos Turões (atual Tours), sendo considerado santo pela Igreja Católica."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Sao_Martinho_Tours.JPG/500px-Sao_Martinho_Tours.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 764
+      }
+    }
+  ]
+}

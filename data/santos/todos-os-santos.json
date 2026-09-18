@@ -1,0 +1,14 @@
+{
+  "celebracao": "Todos os Santos",
+  "artigos": [
+    {
+      "titulo": "Dia de Todos os Santos",
+      "url": "https://pt.wikipedia.org/wiki/Dia_de_Todos_os_Santos",
+      "resumo": [
+        "Dia de Todos os Santos é uma solene celebração cristã dedicada a honrar todos os santos e mártires — conhecidos ou desconhecidos — que já alcançaram a visão beatífica de Deus. A festa recorda a comunhão universal dos santos, unindo a Igreja Triunfante (os santos no Céu), a Igreja Padecente (as almas do Purgatório) e a Igreja Militante (os fiéis na Terra). É o segundo dia da chamada Estação de Todos os Santos, sendo seguido pela Comemoração de Todos os Fiéis Defuntos, que ocorre no dia 2 de novembro.",
+        "Na Igreja Católica, a solenidade é denominada Festum Omnium Sanctorum (Festa de Todos os Santos) e celebra-se em 1º de novembro, data fixada oficialmente pelo Papa Gregório III no século VIII, ao dedicar uma capela da Basílica de São Pedro a “todos os santos”. Mais tarde, o Papa Gregório IV estendeu a celebração a toda a Igreja universal. A solenidade recorda que todos são chamados à santidade, conforme as palavras de Jesus: “Sede santos, porque eu sou santo” (1Pd 1,16)."
+      ],
+      "imagem": null
+    }
+  ]
+}

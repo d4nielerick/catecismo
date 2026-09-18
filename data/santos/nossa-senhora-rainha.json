@@ -1,0 +1,19 @@
+{
+  "celebracao": "Nossa Senhora Rainha",
+  "artigos": [
+    {
+      "titulo": "Nossa Senhora Rainha",
+      "url": "https://pt.wikipedia.org/wiki/Nossa_Senhora_Rainha",
+      "resumo": [
+        "Nossa Senhora Rainha é um dos títulos de Maria, mãe de Jesus, segundo a Igreja Católica. Na Ladainha Lauretana Maria é invocada como rainha treze vezes, atualmente:",
+        "Nossa Senhora Rainha é festejada em 22 de agosto. Três das antífonas marianas mais conhecidas pelos cristãos invocam Maria com o título de Rainha: Salve Rainha, Regina caeli e Ave Regina Caelorum. Entre estas, a mais conhecida é a Salve Rainha, composta por Bernardo de Claraval, o último padre entre os padres latinos.",
+        "A Virgem Maria não é considerada uma deusa pela Igreja Católica, nem pela Igreja Ortodoxa. Também não faz parte da Santíssima Trindade, como alegam os islâmicos no Alcorão. Ela é venerada como Mãe de Deus, Teótoco, e Bendita entre todas as mulheres da Terra e tem um culto especial chamado hiperdulia. Nesse sentido, adoração é devida somente a Deus, prestando-lhe culto de latria e aos santos o culto de veneração simples denominado de dulia."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg/500px-Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 639
+      }
+    }
+  ]
+}

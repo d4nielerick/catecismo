@@ -2,7 +2,8 @@
  * biblia.js
  * Busca de versículos na Bíblia Ave-Maria para enriquecer as notas de rodapé.
  */
-import { extrairReferencias } from './biblia-refs.js';
+import { extrairReferencias, salmoParaVulgata } from './biblia-refs.js';
+import { enriquecerNota } from './fontes.js';
 
 // ── Cache por livro ───────────────────────────────────────────────────────────
 const _livros   = new Map(); // abrev → caps object
@@ -58,9 +59,13 @@ export async function buscarVersiculos(textoNota, maxVersos = 6) {
     if (!caps) continue;
     const nome = nomes?.[abrev] ?? abrev;
     for (const v of versos) {
-      const texto = caps?.[cap]?.[String(v)];
+      // Salmos: a nota usa a numeração hebraica, o arquivo a da Vulgata. O
+      // rótulo mostra as duas, como nas Bíblias católicas: "Salmos 22(21),2".
+      const alvo = abrev === 'Sl' ? salmoParaVulgata(cap, v) : { cap: Number(cap), verso: v };
+      const texto = caps?.[String(alvo.cap)]?.[String(alvo.verso)];
       if (!texto) continue;
-      out.push({ abrev, nome, cap, v, referencia: `${nome} ${cap},${v}`, texto: texto.replace(/\*+/g, '').trim() });
+      const capRotulo = alvo.cap === Number(cap) ? cap : `${cap}(${alvo.cap})`;
+      out.push({ abrev, nome, cap: capRotulo, v, referencia: `${nome} ${capRotulo},${v}`, texto: texto.replace(/\*+/g, '').trim() });
       if (out.length >= maxVersos) return out;
     }
   }
@@ -90,6 +95,7 @@ const _cardRef    = document.getElementById('biblia-card-ref');
 const _cardNota   = document.getElementById('biblia-card-nota');
 const _cardTexto  = document.getElementById('biblia-card-texto');
 const _cardFechar = document.getElementById('biblia-card-fechar');
+let _cardGeneration = 0;
 
 if (_cardFechar) {
   _cardFechar.addEventListener('click', ocultarCard);
@@ -110,6 +116,7 @@ document.addEventListener('keydown', e => {
 // Desktop: clique numa nota com referência bíblica → mostra só o versículo
 export function mostrarCard(referencia, texto) {
   if (!_card) return;
+  _cardGeneration++;
   _cardRef.textContent    = referencia;
   _cardNota.textContent   = '';
   _cardNota.style.display = 'none';
@@ -121,6 +128,7 @@ export function mostrarCard(referencia, texto) {
 // Mobile: tap numa nota → mostra texto da nota + versículo (se houver)
 export function mostrarCardMobile(refNum, noteText, verse) {
   if (!_card) return;
+  const generation = ++_cardGeneration;
   _cardRef.textContent    = `Nota ${refNum}`;
   _cardNota.textContent   = noteText;
   _cardNota.style.display = '';
@@ -132,8 +140,19 @@ export function mostrarCardMobile(refNum, noteText, verse) {
     _cardTexto.style.display = 'none';
   }
   _card.classList.remove('oculto');
+
+  // Enriquece fora do DOM para uma resposta atrasada não trocar a nota aberta.
+  const nota = document.createElement('span');
+  nota.textContent = noteText;
+  const fonte = document.createElement('span');
+  fonte.className = 'biblia-card-fonte';
+  enriquecerNota(noteText, nota, fonte).then(() => {
+    if (generation !== _cardGeneration) return;
+    _cardNota.replaceChildren(nota, fonte);
+  }).catch(() => { /* A nota original continua disponível sem rede. */ });
 }
 
 export function ocultarCard() {
+  _cardGeneration++;
   _card?.classList.add('oculto');
 }

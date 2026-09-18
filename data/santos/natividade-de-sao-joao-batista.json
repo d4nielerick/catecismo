@@ -1,0 +1,17 @@
+{
+  "celebracao": "Natividade de São João Batista",
+  "artigos": [
+    {
+      "titulo": "João Baptista",
+      "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Baptista",
+      "resumo": [
+        "João Baptista (em aramaico: יוחנן בר זכריא; romaniz.: Yōḥannan bar Zəḵaryā; Judeia, século I a.C., c. 28–30) é uma das principais figuras do cristianismo, tendo sido um pregador e profeta itinerante cuja mensagem era baseada no arrependimento, pregando o batismo para a remissão dos pecados, e na anunciação da chegada do messias Jesus Cristo, motivo pelo qual é também conhecido como São João, o Precursor na Igreja Ortodoxa e em outras igrejas cristãs de tradições e ritos orientais. João Baptista também é reverenciado como profeta no islã, no judaísmo nazareno, na fé bahá'í, no druzismo e no mandeísmo, considerado pelo último como o messias e o profeta final. É amplamente acreditado como uma figura histórica no meio acadêmico e sua menção em todos os manuscritos conhecidos das Antiguidades dos Judeus de Josefo é considerada pela maioria dos pesquisadores como um texto autêntico, e não uma inserção posterior de escribas cristãos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Anton_Raphael_Mengs_-_St._John_the_Baptist_Preaching_in_the_Wilderness_-_Google_Art_Project.jpg/500px-Anton_Raphael_Mengs_-_St._John_the_Baptist_Preaching_in_the_Wilderness_-_Google_Art_Project.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 701
+      }
+    }
+  ]
+}

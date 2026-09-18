@@ -34,11 +34,11 @@ const MAX_RENDERIZADOS = 200; // limite de itens renderizados no painel esquerdo
  * Ex: "oracao" bate em "oracao", "oracoes", mas NÃO em "coracao".
  */
 function contemPalavra(haystack, needle) {
-  const idx = haystack.indexOf(needle);
-  if (idx === -1) return false;
-  // O caractere imediatamente anterior não pode ser uma letra
-  if (idx > 0 && /[a-z]/.test(haystack[idx - 1])) return false;
-  return true;
+  for (let idx = haystack.indexOf(needle); idx !== -1;
+       idx = haystack.indexOf(needle, idx + 1)) {
+    if (idx === 0 || !/[a-z]/.test(haystack[idx - 1])) return true;
+  }
+  return false;
 }
 
 /**
@@ -49,6 +49,37 @@ function contemPalavra(haystack, needle) {
  * @param {Array} paragrafos  array completo em memória
  * @returns {{ total: number, paragrafos: Array }}
  */
+/** Quantas vezes `needle` aparece em `haystack` como início de palavra. */
+function contarOcorrencias(haystack, needle) {
+  let n = 0;
+  for (let i = haystack.indexOf(needle); i !== -1; i = haystack.indexOf(needle, i + 1)) {
+    if (i === 0 || !/[a-z]/.test(haystack[i - 1])) n++;
+  }
+  return n;
+}
+
+/**
+ * Relevância de um parágrafo para a query.
+ *
+ * Estar no título do artigo ou do capítulo vale mais que estar no corpo: quer
+ * dizer que a seção inteira trata do assunto. A contagem no texto entra com
+ * saturação (log) para que um parágrafo longo não vença só por ser longo, e a
+ * densidade desempata a favor do parágrafo que fala mais do tema por linha.
+ */
+function pontuar(p, q) {
+  const noTexto = contarOcorrencias(normalizar(p.texto), q);
+  let score = 0;
+
+  if (contemPalavra(normalizar(p.artigo), q))   score += 6;
+  if (contemPalavra(normalizar(p.capitulo), q)) score += 3;
+
+  if (noTexto > 0) {
+    score += 1 + Math.log2(noTexto);
+    score += Math.min(2, (noTexto / Math.max(1, p.texto.length)) * 800);
+  }
+  return score;
+}
+
 export function buscar(query, paragrafos) {
   const q = normalizar(query.trim());
 
@@ -60,9 +91,24 @@ export function buscar(query, paragrafos) {
     contemPalavra(normalizar(p.capitulo), q)
   );
 
+  // O teto de renderizados era aplicado na ordem numérica, então uma busca
+  // popular descartava em bloco a segunda metade do Catecismo — "oração"
+  // perdia o §2691, que é dos que mais falam do assunto. Agora o corte leva
+  // os mais relevantes; a exibição volta à ordem canônica logo abaixo, que é
+  // como se lê um catecismo.
+  let selecionados = encontrados;
+  if (encontrados.length > MAX_RENDERIZADOS) {
+    selecionados = encontrados
+      .map(p => ({ p, s: pontuar(p, q) }))
+      .sort((a, b) => b.s - a.s || a.p.numero - b.p.numero)
+      .slice(0, MAX_RENDERIZADOS)
+      .map(x => x.p)
+      .sort((a, b) => a.numero - b.numero);
+  }
+
   return {
     total: encontrados.length,
-    paragrafos: encontrados.slice(0, MAX_RENDERIZADOS),
+    paragrafos: selecionados,
   };
 }
 

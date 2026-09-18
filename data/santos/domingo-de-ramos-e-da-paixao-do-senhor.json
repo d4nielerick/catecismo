@@ -1,0 +1,18 @@
+{
+  "celebracao": "Domingo de Ramos e da Paixão do Senhor",
+  "artigos": [
+    {
+      "titulo": "Domingo de Ramos",
+      "url": "https://pt.wikipedia.org/wiki/Domingo_de_Ramos",
+      "resumo": [
+        "O Domingo de Ramos, também chamado Domingo da Paixão do Senhor, é uma celebração cristã móvel realizada no domingo que antecede a Páscoa. A data comemora a entrada triunfal de Jesus em Jerusalém, episódio narrado nos quatro evangelhos canônicos, no qual Ele é acolhido pela multidão que estende mantos e agita ramos pelo caminho. O nome da celebração deriva desse gesto simbólico, especialmente do uso de ramos de palmeira para saudar Jesus.",
+        "O dia marca o início da Semana Santa, período que recorda os acontecimentos finais da vida de Cristo, culminando em sua paixão, morte e ressurreição. No cristianismo ocidental, esse dia inaugura a última semana da Quaresma e introduz imediatamente as celebrações que conduzem ao Tríduo Pascal. No cristianismo oriental, embora também se celebre a entrada em Jerusalém no domingo anterior à Páscoa, a organização do calendário litúrgico apresenta particularidades próprias, estando a data vinculada ao término da Grande Quaresma e à transição para a Semana da Paixão."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Assisi-frescoes-entry-into-jerusalem-pietro_lorenzetti.jpg/500px-Assisi-frescoes-entry-into-jerusalem-pietro_lorenzetti.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 415
+      }
+    }
+  ]
+}

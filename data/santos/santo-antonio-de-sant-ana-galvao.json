@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo Antônio de Sant’Ana Galvão",
+  "artigos": [
+    {
+      "titulo": "Frei Galvão",
+      "url": "https://pt.wikipedia.org/wiki/Frei_Galv%C3%A3o",
+      "resumo": [
+        "Santo Antônio de Sant'Ana Galvão, O.F.M (Guaratinguetá, 1739 — São Paulo, 23 de dezembro de 1822), mais conhecido como Frei Galvão ou São Frei Galvão foi um frade franciscano brasileiro, reconhecido por sua vida de virtude exemplar, profunda humildade e dons extraordinários de oração e caridade. É considerado uma das figuras religiosas mais veneradas do Brasil, conhecido por seus poderes de cura, dom de profecia e cuidado incansável com os pobres, os enfermos e os aflitos.",
+        "Foi canonizado pelo Papa Bento XVI em 11 de maio de 2007, durante sua visita apostólica ao Brasil, tornando-se assim o primeiro santo nascido em território brasileiro. A causa de sua canonização foi conduzida pela Irmã Célia Cadorin, da Congregação das Irmãzinhas da Imaculada Conceição, com apoio decisivo do Cardeal Dom Paulo Evaristo Arns, então arcebispo de São Paulo."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Freigalvao.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 397,
+        "altura": 524
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo André, apóstolo",
+  "artigos": [
+    {
+      "titulo": "André, o Apóstolo",
+      "url": "https://pt.wikipedia.org/wiki/Andr%C3%A9,_o_Ap%C3%B3stolo",
+      "resumo": [
+        "André, Santo André ou André Apóstolo (em grego: 'Ανδρέας; romaniz.: Andréas) (Betsaida, Galileia, século I a.C., — Patras, 60 d.C.), conhecido na tradição ortodoxa como Protocletos (o \"primeiro [a ser] chamado\"), é um apóstolo cristão, irmão do Apóstolo Pedro. O nome \"André\" (do grego \"ανδρεία\", andreía, \"hombridade\" ou \"coragem\"), como diversos outros nomes gregos, parece ter sido comum entre os judeus dos séculos III ou II a.C. Não se tem registro de qualquer nome hebraico ou aramaico seu.",
+        "De acordo com Hipólito de Roma, ele pregou na Trácia e sua presença em Bizâncio também é mencionada no apócrifo \"Atos de André\", escrito no século II. Esta diocese se desenvolverá e acabará por se tornar o Patriarcado de Constantinopla. André é, por isso, considerado como seu fundador."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/St_Andrew_the_Apostle_-_Bulgarian_icon.jpg/500px-St_Andrew_the_Apostle_-_Bulgarian_icon.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 702
+      }
+    }
+  ]
+}

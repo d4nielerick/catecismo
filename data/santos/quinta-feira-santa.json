@@ -1,0 +1,18 @@
+{
+  "celebracao": "Quinta-feira Santa",
+  "artigos": [
+    {
+      "titulo": "Quinta-feira Santa",
+      "url": "https://pt.wikipedia.org/wiki/Quinta-feira_Santa",
+      "resumo": [
+        "A Quinta-feira Santa, também chamada Quinta-feira de Endoenças ou Quinta-feira da Ceia do Senhor, é uma celebração cristã móvel realizada na quinta-feira da Semana Santa. Nesse dia recordam-se, de modo particular, o Lava-pés e a Última Ceia de Jesus com seus apóstolos, ocasião em que, segundo os Evangelhos canônicos, foi instituída a Eucaristia. A celebração marca o início do Tríduo Pascal.",
+        "É o quinto dia da Semana Santa, sucedendo a Quarta-feira Santa e antecedendo a Sexta-feira Santa. A sua data varia a cada ano, em função do cálculo da Páscoa, conforme o calendário gregoriano ou o calendário juliano, adotado por diferentes tradições cristãs. Em diversas Igrejas orientais, que seguem o calendário juliano ou o calendário juliano revisado, a celebração pode ocorrer em datas distintas das observadas no Ocidente."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Duccio_di_Buoninsegna_029.jpg/500px-Duccio_di_Buoninsegna_029.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 905
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "celebracao": "Ascensão do Senhor",
+  "artigos": [
+    {
+      "titulo": "Ascensão de Jesus",
+      "url": "https://pt.wikipedia.org/wiki/Ascens%C3%A3o_de_Jesus",
+      "resumo": [
+        "A Ascensão de Jesus foi um evento na vida de Jesus relatado no Novo Testamento, no qual Jesus ressuscitado foi elevado ao céu com seu corpo físico, na presença de onze de seus apóstolos, ocorrendo no quadragésimo dia após a sua ressurreição e foi exaltado como Senhor e Cristo, sentando à direita de Deus. Na narrativa bíblica, dois anjos aparecem aos discípulos e lhes informam que a segunda vinda de Jesus irá ocorrer da mesma forma que a sua Ascensão.",
+        "Os evangelhos canônicos incluem duas breves descrições da Ascensão de Jesus, em Lucas 24:50–53 e Marcos 16:19. Uma descrição mais detalhada da ascensão corporal de Jesus às nuvens aparece em Atos 1:9–11."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Jesus_ascending_to_heaven.jpg/500px-Jesus_ascending_to_heaven.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 537
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Bonifácio, bispo e mártir",
+  "artigos": [
+    {
+      "titulo": "Bonifácio de Mogúncia",
+      "url": "https://pt.wikipedia.org/wiki/Bonif%C3%A1cio_de_Mog%C3%BAncia",
+      "resumo": [
+        "Bonifácio (em latim: Bonifacius, \"aquele que faz o bem\"; ca. 672 – 5 de Junho de 754 ou 755), de seu nome verdadeiro Vinfrido (Wynfrith ou Winfrid; com o mesmo significado em anglo-saxão), e cognominado Apóstolo dos Germanos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Saint_Boniface_by_Cornelis_Bloemaert.jpg/500px-Saint_Boniface_by_Cornelis_Bloemaert.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 720
+      }
+    }
+  ]
+}

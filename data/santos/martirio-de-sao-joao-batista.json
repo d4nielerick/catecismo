@@ -1,0 +1,18 @@
+{
+  "celebracao": "Martírio de São João Batista",
+  "artigos": [
+    {
+      "titulo": "Decapitação de João Baptista",
+      "url": "https://pt.wikipedia.org/wiki/Decapita%C3%A7%C3%A3o_de_Jo%C3%A3o_Baptista",
+      "resumo": [
+        "Decapitação de João Batista (alternativamente Decapitação de São João Batista ou Decapitação do Anunciador) é um dia santo observado por várias denominações cristãs. Este dia comemora o martírio de João Batista.",
+        "Em 29 de agosto de 2012, durante uma audiência pública televisionada no palácio de verão de Castel Gandolfo, papa Bento XVI defendeu que a descoberta da cabeça fragmentada de São João Batista pela segunda vez atesta a veneração milenar da santidade da relíquia, que data da era apostólica. Além disso, o pontífice também lembrou da festa que comemora o translado desta relíquia para o novo santuário na Basílica de San Silvestro in Capite, em Roma."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Benedito_Calixto_-_Degola%C3%A7%C3%A3o_de_S%C3%A3o_Jo%C3%A3o_Batista.jpg/500px-Benedito_Calixto_-_Degola%C3%A7%C3%A3o_de_S%C3%A3o_Jo%C3%A3o_Batista.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 578
+      }
+    }
+  ]
+}

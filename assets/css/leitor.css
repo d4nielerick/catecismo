@@ -303,11 +303,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  opacity: 1;
   transition: opacity var(--transition), color var(--transition), background var(--transition), border-color var(--transition);
 }
 
-.leitor-paragrafo:hover .leitor-para-save-btn,
+@media (hover: hover) and (pointer: fine) {
+  .leitor-para-save-btn { opacity: 0; }
+  .leitor-paragrafo:hover .leitor-para-save-btn { opacity: 1; }
+}
+
 .leitor-para-save-btn.salvo {
   opacity: 1;
 }
@@ -386,7 +390,10 @@
 }
 
 /* ── Botão "Ler" no hero ────────────────────────────────────────────────── */
-#btn-ler-hero {
+/* No CIC (hero-foto) o botão é filho de #hero-acoes e sua aparência vem de
+   .hero-rotulo em main.css. Este seletor por filho direto de #hero alcança
+   só o São Pio X, que manteve o botão solto direto no #hero. */
+#hero > #btn-ler-hero {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -403,7 +410,7 @@
   transition: color var(--transition), background var(--transition), border-color var(--transition), opacity var(--transition);
 }
 
-#btn-ler-hero:hover {
+#hero > #btn-ler-hero:hover {
   background: rgba(26,60,46,0.07);
   opacity: 1;
 }
@@ -463,6 +470,13 @@
   color: var(--color-muted);
   cursor: pointer;
   transition: color var(--transition), background var(--transition);
+}
+
+/* No CIC combina com o resto do header, mais compacto (São Pio X mantém
+   36px). */
+#resultados-secao #btn-ler-header {
+  width: 30px;
+  height: 30px;
 }
 
 #btn-ler-header:hover {

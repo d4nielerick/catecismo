@@ -1,0 +1,23 @@
+{
+  "data": "2027-09-13",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>1Tm 2,1-8</div><div> Sl 27(28),2.7.8-9 (R. 6)</div><div></div><div> Lc 7,1-10</div></div>",
+  "primeira_leitura": {
+    "referencia": "2,1-8",
+    "texto": "Caríssimo,\n1\nantes de tudo,\nrecomendo que se façam preces e orações,\nsúplicas e ações de graças,\npor todos os homens;\n2\npelos que governam\ne por todos que ocupam altos cargos,\na fim de que possamos\nlevar uma vida tranquila e\nserena,\ncom toda piedade e dignidade.\n3\nIsto é bom e agradável a Deus, nosso Salvador;\n4\nele quer que todos os homens sejam salvos\ne cheguem ao conhecimento da verdade.\n5\nPois há um só Deus,\ne um só mediador entre Deus e os homens:\no homem Cristo Jesus,\n6\nque se entregou em resgate por todos.\nEste é\no testemunho\ndado no tempo estabelecido por Deus,\n7\ne para este testemunho\neu fui designado pregador e apóstolo,\ne — falo a verdade, não minto —\nmestre das nações pagãs na fé e na verdade.\n8\nQuero, portanto, que em todo lugar\nos homens façam a oração,\nerguendo mãos santas,\nsem ira e sem discussões.\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 27(28),2.7.8-9 (R. 6)",
+    "refrao": "",
+    "texto": "R.\nBendito seja o Senhor, porque ouviu\no clamor da minha súplica!\n2\nEscutai o meu clamor, a minha súplica, *\nquando eu grito para vós;\nquando eu elevo, ó Senhor, as minhas mãos *\npara o vosso santuário.\nR.\n7\nMinha força e escudo é o Senhor; *\nmeu coração nele confia.\nEle ajudou-me e alegrou meu coração; *\neu canto em festa o seu louvor.\nR.\n8\nO Senhor é a fortaleza do seu povo *\ne a salvação do seu Ungido.\n9\nSalvai o vosso povo e libertai-o; *\nabençoai a vossa herança!\nSede vós o seu pastor e o seu guia *\npelos séculos eternos!\nR.\nEvangelho - Lc 7,1-10\nAclamação ao Evangelho\nJo 3,16\nR.\nAleluia, Aleluia, Aleluia.\nV.\nDeus o mundo tanto amou,\nque lhe deu seu próprio Filho,\npara que todo o que nele crer,\nencontre vida eterna."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "7,1-10",
+    "texto": "7,1-10\nNaquele tempo,\n1\nquando acabou de falar ao povo que o escutava,\nJesus entrou em Cafarnaum.\n2\nHavia lá um oficial romano\nque tinha um empregado a quem estimava muito,\ne que estava doente, à beira da morte.\n3\nO oficial ouviu falar de Jesus\ne enviou alguns anciãos dos judeus,\npara pedirem\nque Jesus viesse salvar seu empregado.\n4\nChegando onde Jesus estava,\npediram-lhe com insistência:\n\"O oficial merece que lhe faças este favor,\n5\nporque ele estima o nosso povo.\nEle até nos construiu uma sinagoga\".\n6\nEntão Jesus pôs-se a caminho com eles.\nPorém, quando já estava perto da casa,\no oficial mandou alguns amigos dizerem a Jesus:\n\"Senhor, não te incomodes,\npois não sou digno de que entres em minha casa.\n7\nNem mesmo me achei digno\nde ir pessoalmente ao teu encontro.\nMas ordena com a tua palavra,\ne o meu empregado ficará curado.\n8\nEu também estou debaixo de autoridade,\nmas tenho soldados que obedecem às minhas ordens.\nSe ordeno a um :\n'Vai!', ele vai;\ne a outro: 'Vem!', ele vem;\ne ao meu empregado 'Faze isto!', e ele o faz\".\n9\nOuvindo isso, Jesus ficou admirado.\nVirou-se para a multidão que o seguia,\ne disse:\n\"Eu vos declaro que nem mesmo em Israel\nencontrei tamanha fé\".\n10\nOs mensageiros voltaram para a casa do oficial\ne encontraram o empregado em perfeita saúde.\nPalavra da Salvação."
+  }
+}

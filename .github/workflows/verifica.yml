@@ -17,5 +17,19 @@ jobs:
         run: node scripts/verifica-citacoes.mjs
       - name: Notas de rodapé (reprodutível + cobertura)
         run: node scripts/verifica-notas.mjs
+      - name: Remissões do índice (reprodutível + grafo íntegro)
+        run: node scripts/verifica-remissoes.mjs
+      - name: Léxico de conceitos (temas existem no índice)
+        run: node scripts/verifica-lexico.mjs
+      - name: Recuperação do hub de perguntas (§§ certos no top 12)
+        run: node scripts/avalia-recuperacao.mjs
+      - name: Trava de sustentação do hub (frase fiel passa, inventada não)
+        run: node scripts/calibra-guardas.mjs
+      - name: Hub de perguntas (endpoint, travas e reforço, com modelo simulado)
+        run: node test-hub.mjs
+      - name: Liturgia diária (reprodutível + texto preservado + calendário)
+        run: node scripts/verifica-liturgia.mjs
       - name: Motor de busca
         run: node test-search.mjs
+      - name: Regressões de notas e fontes
+        run: node test-notas.mjs

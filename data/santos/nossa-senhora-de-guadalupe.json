@@ -1,0 +1,17 @@
+{
+  "celebracao": "Nossa Senhora de Guadalupe",
+  "artigos": [
+    {
+      "titulo": "Nossa Senhora de Guadalupe (México)",
+      "url": "https://pt.wikipedia.org/wiki/Nossa_Senhora_de_Guadalupe_(M%C3%A9xico)",
+      "resumo": [
+        "Nossa Senhora de Guadalupe (em espanhol: Nuestra Señora de Guadalupe, em náuatle: Tonantzin Coatlaxopeuh), também chamada Virgem de Guadalupe, é um dos títulos mais célebres da Virgem Maria na Igreja Católica, associado a uma série de aparições marianas que teriam ocorrido no mês de dezembro de 1531, no Tepeyac, região próxima à atual Cidade do México. Maria teria aparecido quatro vezes ao indígena Juan Diego, e uma vez ao seu tio, Juan Bernardino, deixando como sinal perene de sua presença a milagrosa imagem impressa no tilmàtli, o manto de fibra de agave usado pelo vidente. Esta imagem, conservada inexplicavelmente há séculos, tornou-se um dos ícones marianos mais reconhecíveis da cristandade."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Guadalupe_Tilma.gif/500px-Guadalupe_Tilma.gif?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 820
+      }
+    }
+  ]
+}

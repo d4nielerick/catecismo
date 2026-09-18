@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Carlos Lwanga e companheiros, mártires",
+  "artigos": [
+    {
+      "titulo": "Mártires de Uganda",
+      "url": "https://pt.wikipedia.org/wiki/M%C3%A1rtires_de_Uganda",
+      "resumo": [
+        "Os mártires de Uganda são um grupo de 23 Anglicanos e 22 católicos convertidos ao cristianismo no reino histórico de Buganda, agora parte de Uganda, que foram executados entre 31 de janeiro de 1885 e 27 de janeiro de 1887.",
+        "Eles foram mortos por ordem de Muanga II, o cabaca (rei) de Buganda. As mortes ocorreram numa época em que havia uma luta religiosa de três vias por influência política na corte real de Buganda. O episódio também ocorreu no contexto da Partilha de África - a invasão, ocupação, divisão, colonização e anexação do território africano pelas potências europeias. A Igreja Católica beatificou os 22 mártires católicos de sua fé em 1920 e canonizou-os em 1964."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Karoli_Lwanga_and_his_followers.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 300,
+        "altura": 427
+      }
+    }
+  ]
+}

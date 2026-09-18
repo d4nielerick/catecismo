@@ -370,5 +370,26 @@
   "de": "ajuda d oração",
   "para": "ajuda à oração",
   "motivo": "revisão grafia (OCR fonte/typo)"
+ },
+ {
+  "numero": 460,
+  "de": "feito homem, fizesse os homens deuses» (84)",
+  "para": "feito homem, fizesse os homens deuses» (85)",
+  "motivo": "Corrige marcador repetido: a nota 85 da fonte identifica São Tomás de Aquino e a passagem citada; a 84 pertence à citação anterior de Santo Atanásio.",
+  "fonte": "https://www.vatican.va/archive/cathechism_po/index_new/p1s2cap2_422-682_po.html"
+ },
+ {
+  "numero": 469,
+  "de": "como canta a Liturgia Romana (90)",
+  "para": "como canta a Liturgia Romana (99)",
+  "motivo": "Corrige marcador: a nota 99 da fonte identifica a antífona citada; a nota 90 trata do Símbolo de Niceia.",
+  "fonte": "https://www.vatican.va/archive/cathechism_po/index_new/p1s2cap2_422-682_po.html"
+ },
+ {
+  "numero": 1396,
+  "de": "seja verdadeiro» (326)",
+  "para": "seja verdadeiro» (236)",
+  "motivo": "Corrige inversão de algarismos: a nota 236 da fonte identifica Santo Agostinho, Sermão 272, citado neste parágrafo.",
+  "fonte": "https://www.vatican.va/archive/cathechism_po/index_new/p2s2cap1_1210-1419_po.html"
  }
 ]

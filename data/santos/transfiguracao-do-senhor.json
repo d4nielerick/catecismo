@@ -1,0 +1,18 @@
+{
+  "celebracao": "Transfiguração do Senhor",
+  "artigos": [
+    {
+      "titulo": "Transfiguração de Jesus",
+      "url": "https://pt.wikipedia.org/wiki/Transfigura%C3%A7%C3%A3o_de_Jesus",
+      "resumo": [
+        "A Transfiguração de Jesus é um episódio do Novo Testamento no qual Jesus é transfigurado e se torna radiante no alto de uma montanha. Os evangelhos sinóticos (Mateus 17:1–9, Marcos 9:2–8 e Lucas 9:28–36) e uma epístola (II Pedro 1:16–18) fazem referência ao evento. Nestes relatos, Jesus e três de seus apóstolos vão para uma montanha (conhecida como Monte da Transfiguração). Lá, Jesus começa a brilhar e os profetas Moisés e Elias aparecem ao seu lado, conversando com ele. Jesus é então chamado de Filho por uma voz no céu – presumivelmente Deus Pai – como já ocorrera antes no seu batismo.",
+        "A Transfiguração é um dos milagres de Jesus nos evangelhos, diferente dos demais pois, neste caso, o objeto do milagre é o próprio Jesus. Tomás de Aquino considerava a Transfiguração como o \"maior dos milagres\", uma vez que ele complementou o batismo e mostrou a perfeição da vida no céu. A Transfiguração é também um dos cinco grandes marcos da vida de Jesus na narrativa dos evangelhos (os outros são o batismo, a crucificação, a ressurreição e a ascensão)."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Giovanni_bellini%2C_trasfigurazione_di_napoli_01.jpg/500px-Giovanni_bellini%2C_trasfigurazione_di_napoli_01.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 382
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santa Inês, virgem e mártir",
+  "artigos": [
+    {
+      "titulo": "Inês de Roma",
+      "url": "https://pt.wikipedia.org/wiki/In%C3%AAs_de_Roma",
+      "resumo": [
+        "Santa Inês (Roma, c. 291 – Roma, 21 de janeiro de 304) foi uma mártir católica e patrícia romana, executada durante a perseguição de Diocleciano e venerada como santa pela Igreja Católica e pela Igreja Ortodoxa."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Sant-Agnese-Vergine-e-martire.jpg/500px-Sant-Agnese-Vergine-e-martire.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 639
+      }
+    }
+  ]
+}

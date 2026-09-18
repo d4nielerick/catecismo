@@ -1,0 +1,18 @@
+{
+  "celebracao": "Natal do Senhor",
+  "artigos": [
+    {
+      "titulo": "Natal",
+      "url": "https://pt.wikipedia.org/wiki/Natal",
+      "resumo": [
+        "Natal é uma festa anual que comemora o nascimento de Jesus Cristo, celebrada principalmente em 25 de dezembro como uma celebração religiosa e cultural por bilhões de pessoas em todo o mundo. Festa litúrgica central para o cristianismo, a preparação para o Natal começa no primeiro domingo do Advento e é seguida pelo período natalino, que historicamente no Ocidente dura doze dias e culmina na Noite de Reis. O dia de Natal é feriado em muitos países, é comemorado religiosamente pela maioria dos cristãos, bem como celebrado culturalmente por muitos não cristãos, sendo parte integrante da temporada de festas anual.",
+        "A narrativa tradicional do Natal, contada no Novo Testamento e conhecida como o Nascimento de Jesus, diz que Jesus nasceu em Belém, de acordo com as profecias messiânicas. Quando José e Maria chegaram à cidade, a hospedaria estava lotada, então ofereceram-lhes um estábulo onde o Menino Jesus nasceu, com anjos proclamando a notícia aos pastores, que então a espalharam."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Adoration_of_the_sheperds_-_Matthias_Stomer.jpg/500px-Adoration_of_the_sheperds_-_Matthias_Stomer.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 325
+      }
+    }
+  ]
+}

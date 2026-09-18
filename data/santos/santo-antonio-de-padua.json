@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo Antônio de Pádua",
+  "artigos": [
+    {
+      "titulo": "António de Lisboa",
+      "url": "https://pt.wikipedia.org/wiki/Ant%C3%B3nio_de_Lisboa",
+      "resumo": [
+        "Santo António (português europeu) ou Antônio (português brasileiro) de Lisboa ou de Pádua, (Lisboa, 15 de agosto de 1195? — Pádua, 13 de junho de 1231) foi um Doutor da Igreja que viveu na viragem do século XII para o século XIII. Foi batizado com o nome de Fernando, mas o seu sobrenome de família é incerto, embora seja comum referir-se de Bulhões.",
+        "Primeiramente pertenceu à Ordem dos Cónegos Regulares da Santa Cruz, que seguiam a Regra de Santo Agostinho, no Convento de São Vicente de Fora, em Lisboa, indo posteriormente para o Convento de Santa Cruz, em Coimbra, onde aprofundou os seus estudos religiosos através da leitura da Bíblia e da literatura patrística, científica e clássica. Ingressou na Ordem dos Frades Menores (franciscanos) em 1220 e viajou muito, vivendo inicialmente em Portugal, depois na Itália e em França, retornando posteriormente à Itália, onde encerrou sua carreira. No ano de 1221 fez parte do Capítulo Geral da Ordem em Assis, convocado pelo fundador, Francisco de Assis. Posteriormente, quando a sua eloquência e cultura teológica se tornaram conhecidas, foi nomeado mestre de teologia em Bolonha, tendo, a seguir, pregado contra os albigenses e valdenses em diversas cidades do norte da Itália e no sul de França. Em seguida foi para Pádua, onde morreu aos 36 ou 40 anos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Kessler_Antonius_von_Padua.jpg/500px-Kessler_Antonius_von_Padua.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 697
+      }
+    }
+  ]
+}

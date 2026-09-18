@@ -1,0 +1,23 @@
+{
+  "data": "2027-09-27",
+  "titulo": "Tempo Comum",
+  "cor_liturgica": "branco",
+  "referencias": "<div style=\"color: #2a2a2a; font-weight: bold; padding-bottom: 10px; font-size: 18px\">Leituras:</div><div>Zc 8,1-8</div><div> Sl 101(102),16-18.19-21.29 e 22-23 (R. 17)</div><div></div><div> Lc 9,46-50</div></div>",
+  "primeira_leitura": {
+    "referencia": "8,1-8",
+    "texto": "1\nA palavra do Senhor dos exércitos\nfoi manifestada nos seguintes termos:\n2\n\"Isto diz o Senhor dos exércitos:\nTomei-me de forte ciúme por Sião,\nconsumo-me de zelo ciumento por ela.\n3\nIsto diz o Senhor:\nVoltei a Sião e habitarei no meio de Jerusalém;\nJerusalém será chamada Cidade Fiel,\ne o monte do Senhor dos exércitos,\nMonte Santo.\n4\nIsto diz o Senhor dos exércitos:\nVelhos e velhas\nainda se sentarão nas praças de Jerusalém,\ncada qual com seu bastão na mão,\ndevido à idade avançada;\n5\nas praças da cidade\nse encherão de meninos e meninas\na brincar em suas praças.\n6\nIsto diz o Senhor dos exércitos:\nSe tais cenas parecerem difíceis\naos olhos do resto do povo, naqueles dias,\nacaso serão também difíceis aos meus olhos?\n- diz o Senhor dos exércitos.\n7\nIsto diz o Senhor dos exércitos:\nEis que eu vou salvar o meu povo da terra do oriente\ne da terra do pôr do sol:\n8\neu os conduzirei,\ne eles habitarão no meio de Jerusalém;\nserão meu povo\ne eu serei seu Deus,\nem verdade e com justiça\".\nPalavra do Senhor."
+  },
+  "salmo": {
+    "referencia": "Sl 101(102),16-18.19-21.29.22-23 (R. 17)",
+    "refrao": "",
+    "texto": "R.\nO Senhor edificou Jerusalém,\ne apareceu na sua glória!\n16\nAs nações respeitarão o vosso nome, *\ne os reis de toda a terra, a vossa glória;\n17\nquando o Senhor reconstruir Jerusalém *\ne aparecer com gloriosa majestade,\n18\nele ouvirá a oração dos oprimidos *\ne não desprezará a sua prece.\nR.\n19\nPara as futuras gerações se escreva isto, *\ne um povo novo a ser criado louve a Deus.\n20\nEle inclinou-se de seu templo nas alturas, *\ne o Senhor olhou a terra do alto céu,\n21\npara os gemidos dos cativos escutar *\ne da morte libertar os condenados.\nR.\n29\nAssim também a geração dos vossos servos †\nterá casa e viverá em segurança, *\ne ante vós se firmará sua descendência.\n22\nPara que cantem o seu nome em Sião *\ne louve ao Senhor Jerusalém,\n23\nquando os povos e as nações se reunirem *\ne todos os impérios o servirem.\nR.\nEvangelho - Lc 9,51-56\nAclamação ao Evangelho\nMc 10,45\nR.\nAleluia, Aleluia, Aleluia.\nV.\nVeio o Filho do homem, a fim de servir\ne dar sua vida em resgate por muitos."
+  },
+  "aclamacao": {
+    "refrao": "",
+    "verso": ""
+  },
+  "evangelho": {
+    "referencia": "9,46-50",
+    "texto": "9,46-50\nNaquele tempo,\n46\nhouve entre os discípulos uma discussão,\npara saber qual deles seria o maior.\n47\nJesus sabia o que estavam pensando.\nPegou então uma criança, colocou-a junto de si\n48\ne disse-lhes:\n\"Quem receber esta criança em meu nome,\nestará recebendo a mim.\nE quem me receber,\nestará recebendo aquele que me enviou.\nPois aquele que entre todos vós for o menor,\nesse é o maior\".\n49\nJoão disse a Jesus:\n\"Mestre, vimos um homem\nque expulsa demônios em teu nome.\nMas nós o proibimos,\nporque não anda conosco\".\n50\nJesus disse-lhe:\n\"Não o proibais, pois quem não está contra vós,\nestá a vosso favor\".\nPalavra da Salvação."
+  }
+}

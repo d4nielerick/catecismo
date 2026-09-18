@@ -1,0 +1,17 @@
+{
+  "celebracao": "Imaculada Conceição de Nossa Senhora",
+  "artigos": [
+    {
+      "titulo": "Imaculada Conceição",
+      "url": "https://pt.wikipedia.org/wiki/Imaculada_Concei%C3%A7%C3%A3o",
+      "resumo": [
+        "Imaculada Conceição ou Imaculada Concepção, comumente conhecido pelos brasileiros como Nossa Senhora da Conceição, é um dos dogmas centrais da Igreja Católica e afirma que a Virgem Maria, por singular graça e privilégio de Deus, foi preservada imune de toda mancha do pecado original desde o primeiro instante de sua concepção. Segundo o dogma, tal preservação não se deu por mérito próprio, mas em vista dos méritos redentores de Jesus Cristo, antecipados à Mãe que Ele escolheria para si. Assim, Maria recebeu desde sua origem a plenitude da Graça santificante, sendo por isso venerada como a “cheia de Graça” e modelo perfeito da humanidade redimida. A Igreja professa também que Maria viveu toda a sua existência sem cometer pecados pessoais, correspondendo de modo pleno à graça divina."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Antonio_de_Fr%C3%ADas_y_Escalante._Inmaculada_Concepci%C3%B3n.jpg/500px-Juan_Antonio_de_Fr%C3%ADas_y_Escalante._Inmaculada_Concepci%C3%B3n.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 569
+      }
+    }
+  ]
+}

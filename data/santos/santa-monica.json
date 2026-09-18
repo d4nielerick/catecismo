@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santa Mônica",
+  "artigos": [
+    {
+      "titulo": "Mônica de Hipona",
+      "url": "https://pt.wikipedia.org/wiki/M%C3%B4nica_de_Hipona",
+      "resumo": [
+        "Santa Mônica (português brasileiro) ou Santa Mónica (português europeu) (331–387) é a mãe de Santo Agostinho de Hipona e uma santa cristã. A sua festa realiza-se em 27 de agosto."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Saint_Augustine_and_Saint_Monica.jpg/500px-Saint_Augustine_and_Saint_Monica.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 618
+      }
+    }
+  ]
+}

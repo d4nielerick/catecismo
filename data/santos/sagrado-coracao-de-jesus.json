@@ -1,0 +1,18 @@
+{
+  "celebracao": "Sagrado Coração de Jesus",
+  "artigos": [
+    {
+      "titulo": "Sagrado Coração de Jesus",
+      "url": "https://pt.wikipedia.org/wiki/Sagrado_Cora%C3%A7%C3%A3o_de_Jesus",
+      "resumo": [
+        "Sagrado Coração de Jesus é uma das três solenidades do Tempo Comum, dentro da Liturgia da Igreja Católica, comemorada na Segunda Sexta-feira após a solenidade de Corpus Christi. Além disso, essa devoção também é cultivada pela Igreja Católica ao longo de todas as primeiras sextas-feiras de cada mês do ano. Consiste na veneração do Coração de Jesus, do mais íntimo de Seu Amor. É seguido pelas devoções ao Imaculado Coração de Maria e ao Castíssimo Coração de José.",
+        "A devoção está especialmente preocupada com o que a Igreja considera ser o amor e a compaixão sofridos do coração de Cristo em relação à humanidade. A popularização dessa devoção em sua forma moderna deriva de uma freira católica da França, Santa Margarida Maria de Alacoque, que disse que aprendeu a devoção de Jesus durante uma série de aparições para ela entre 1673 e 1675 e mais tarde, no século XIX, a partir das revelações místicas de outra freira católica em Portugal, a Beata Maria do Divino Coração Droste zu Vischering, Religiosa do Bom Pastor, que solicitou em nome de Cristo que o Papa Leão XIII consagrasse o mundo inteiro ao Sagrado Coração de Jesus. Os antecessores da devoção moderna surgiram inconfundivelmente na Idade Média em várias facetas do misticismo católico, particularmente Santa Gertrudes, a Grande."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Sagrado_Cora%C3%A7%C3%A3o_de_Jesus_-_escola_portuguesa%2C_s%C3%A9culo_XIX.png/500px-Sagrado_Cora%C3%A7%C3%A3o_de_Jesus_-_escola_portuguesa%2C_s%C3%A9culo_XIX.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 644
+      }
+    }
+  ]
+}

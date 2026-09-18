@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santíssima Trindade",
+  "artigos": [
+    {
+      "titulo": "Domingo da Trindade",
+      "url": "https://pt.wikipedia.org/wiki/Domingo_da_Trindade",
+      "resumo": [
+        "Domingo da Trindade, também conhecido como Domingo da Santíssima Trindade, é o primeiro domingo após o Pentecostes no calendário litúrgico cristão ocidental, e o domingo de Pentecostes no cristianismo oriental. O Domingo da Trindade celebra a doutrina cristã da Trindade, as três Pessoas de Deus: o Pai, o Filho e o Espírito Santo."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Andrej_Rubl%C3%ABv_001.jpg/500px-Andrej_Rubl%C3%ABv_001.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 592
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Jerônimo",
+  "artigos": [
+    {
+      "titulo": "Jerônimo",
+      "url": "https://pt.wikipedia.org/wiki/Jer%C3%B4nimo",
+      "resumo": [
+        "Jerônimo (português brasileiro) ou Jerónimo (português europeu), nascido Eusébio Sofrônio Jerônimo (em latim: Eusebius Sophronius Hieronymus; em grego: Εὐσέβιος Σωφρόνιος Ἱερώνυμος) e também conhecido como Jerônimo de Estridão (Estridão, c. 347 – Belém, 30 de setembro de 420), foi um sacerdote cristão ilírio, destacado como teólogo, historiador e confessor, é considerado santo e Doutor da Igreja pela Igreja Católica. Filho de Eusébio, da cidade de Estridão, na fronteira entre a Dalmácia e a Panônia, é mais conhecido por sua tradução da Bíblia para o latim (conhecida como Vulgata) e por seus comentários sobre o Evangelho dos Hebreus, mas sua lista de obras é extensa."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Francisco_de_Zurbar%C3%A1n_041.jpg/500px-Francisco_de_Zurbar%C3%A1n_041.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 894
+      }
+    }
+  ]
+}

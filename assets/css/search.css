@@ -80,39 +80,92 @@
 
 #botao-limpar.oculto { display: none !important; }
 
-/* ── Versão hero (estado inicial) ─────────────────────────────────────────── */
-#hero .campo-busca-container {
-  max-width: 540px;
-  filter: drop-shadow(0 4px 24px rgba(26,60,46,0.10));
+/* ── Versão hero (estado inicial) — pílula de vidro sobre a foto ─────────── */
+#hero.hero-foto .campo-busca-container {
+  flex: 1 1 auto;
+  max-width: min(400px, 36vw);
 }
 
-#hero #campo-busca {
-  font-size: 1.05rem;
-  padding: 1rem 3.2rem;
-  border-width: 1.5px;
-  border-color: rgba(226,221,213,0.8);
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  box-shadow: 0 4px 24px rgba(26,60,46,0.08), 0 1px 4px rgba(26,60,46,0.05);
+/* Compacto por padrão; expande ao focar ou quando já tem texto digitado. */
+#hero.hero-foto #campo-busca {
+  height: clamp(32px, 3vw, 40px);
+  padding: 0 clamp(1.8rem, 2.6vw, 2.2rem) 0 clamp(0.9rem, 1.4vw, 1.15rem);
+  font-size: clamp(0.76rem, 0.85vw, 0.85rem);
+  font-weight: 400;
+  color: #fff;
+  background: rgba(217,217,217,0.06);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 74px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+  transition:
+    height 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    padding 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    font-size 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.32s ease,
+    background var(--transition), border-color var(--transition);
 }
 
-#hero #campo-busca:focus {
-  background: #FFFFFF;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 4px rgba(197,160,40,0.14), 0 4px 24px rgba(26,60,46,0.08);
+#hero.hero-foto #campo-busca::placeholder {
+  color: rgba(255,255,255,0.7);
+  font-size: inherit;
 }
 
-#hero .campo-busca-container .icone-busca {
-  left: 1.1rem;
-  width: 1.15rem;
-  height: 1.15rem;
-  color: var(--color-primary);
-  opacity: 0.7;
+#hero.hero-foto #campo-busca:focus {
+  background: rgba(217,217,217,0.14);
+  border-color: var(--color-hero-ouro);
+  box-shadow: 0 0 0 4px rgba(255,222,75,0.16), 0 18px 50px rgba(0,0,0,0.25);
 }
 
-#hero #botao-limpar {
-  right: 1rem;
+/* Expandido: em foco, ou já com texto (pra não encolher com o campo preenchido) */
+#hero.hero-foto .campo-busca-container:focus-within #campo-busca,
+#hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) #campo-busca {
+  height: clamp(38px, 4vw, 50px);
+  padding: 0 clamp(2rem, 3vw, 2.6rem) 0 clamp(1.1rem, 1.8vw, 1.5rem);
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+}
+
+#hero.hero-foto .campo-busca-container .icone-busca {
+  left: auto;
+  right: clamp(0.7rem, 1.2vw, 1rem);
+  width: clamp(0.75rem, 0.9vw, 0.95rem);
+  height: clamp(0.75rem, 0.9vw, 0.95rem);
+  color: #fff;
+  opacity: 1;
+  transition: opacity var(--transition), color var(--transition), right 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94), width 0.32s ease, height 0.32s ease;
+}
+
+#hero.hero-foto .campo-busca-container:focus-within .icone-busca,
+#hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) .icone-busca {
+  right: clamp(1rem, 1.7vw, 1.5rem);
+  width: clamp(0.9rem, 1.1vw, 1.2rem);
+  height: clamp(0.9rem, 1.1vw, 1.2rem);
+}
+
+#hero.hero-foto .campo-busca-container:focus-within .icone-busca {
+  color: var(--color-hero-ouro);
+}
+
+/* Com texto digitado, o × substitui a lupa */
+#hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) .icone-busca {
+  opacity: 0;
+}
+
+#hero.hero-foto #botao-limpar {
+  right: clamp(0.8rem, 1.3vw, 1.2rem);
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+  transition: right 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94), background var(--transition);
+}
+
+#hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) #botao-limpar {
+  right: clamp(1rem, 1.7vw, 1.6rem);
+}
+
+#hero.hero-foto #botao-limpar:hover {
+  background: rgba(255,255,255,0.38);
 }
 
 /* ── Índice Analítico ────────────────────────────────────────────────────── */
@@ -187,6 +240,151 @@
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
+}
+
+/* ── Estado vazio que oferece caminho ────────────────────────────────────
+   Quando a palavra buscada não é a do Catecismo, o espaço do "nada
+   encontrado" passa a ser a própria saída: os temas que tratam do assunto. */
+.painel-conceitos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 28rem;
+  margin: var(--space-2xl) auto;
+  padding: 0 var(--space-lg);
+  text-align: center;
+}
+
+/* A marca entra como vinheta: dá respiro editorial ao estado vazio e evita
+   que ele pareça uma tela de erro. Discreta, para não competir com o texto. */
+.painel-conceitos-marca {
+  width: auto;
+  height: clamp(56px, 9vh, 78px);
+  margin-bottom: var(--space-lg);
+  opacity: 0.75;
+}
+
+.painel-conceitos-titulo {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--color-text);
+}
+
+.painel-conceitos-sub {
+  margin: 0.3rem 0 var(--space-xl);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+/* Sem caixa: os temas são uma lista de leitura, não um menu de aplicativo.
+   A régua fina entre eles basta para separar. */
+.painel-conceitos-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 19rem;
+}
+
+.painel-conceitos-lista li + li {
+  border-top: 1px solid var(--color-border);
+}
+
+.painel-conceito-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.62rem 0.25rem;
+  border: none;
+  background: transparent;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.painel-conceito-item:hover,
+.painel-conceito-item:focus-visible {
+  color: var(--color-accent-dk);
+  outline: none;
+}
+
+.painel-conceito-nome {
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.painel-conceito-item:hover .painel-conceito-nome,
+.painel-conceito-item:focus-visible .painel-conceito-nome {
+  border-bottom-color: currentColor;
+}
+
+.painel-conceito-count {
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted);
+}
+
+@media (max-width: 767px) {
+  /* Em retrato a altura é o recurso escasso: a vinheta encolhe e o bloco
+     sobe, para os temas não nascerem abaixo da dobra. */
+  .painel-conceitos {
+    margin: var(--space-lg) auto;
+  }
+
+  .painel-conceitos-marca {
+    height: 48px;
+    margin-bottom: var(--space-md);
+  }
+
+  .painel-conceitos-titulo { font-size: 1.05rem; }
+  .painel-conceitos-sub { margin-bottom: var(--space-lg); }
+}
+
+/* ── Remissões do índice ─────────────────────────────────────────────────
+   Ficam na mesma linha do nome do tema, em peso menor: é um "ver em", não
+   uma ação concorrente com os subtemas (que são o alvo principal do clique). */
+.indice-remissoes {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-left: 0.45rem;
+  min-width: 0;
+}
+
+.indice-remissao-link {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 1px dotted var(--color-border);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+/* A seta diz o que o item faz — troca a busca — sem gastar um rótulo. */
+.indice-remissao-link::before {
+  content: '→ ';
+  opacity: 0.65;
+}
+
+.indice-remissao-link:hover,
+.indice-remissao-link:focus-visible {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  outline: none;
 }
 
 .indice-analitico-subtema {
@@ -336,6 +534,8 @@
 }
 
 /* ── Versão topo (estado de busca ativa) ──────────────────────────────────── */
+/* Discreto de propósito — a hero já é o protagonista; aqui é só uma barra de
+   utilidade pra refinar a busca, não precisa dominar a tela. */
 #busca-topo .campo-busca-container {
   flex: 1;
   max-width: 600px;
@@ -353,4 +553,67 @@
 #busca-topo #campo-busca:focus {
   background: #FFFFFF;
   box-shadow: 0 0 0 2px rgba(197,160,40,0.12);
+}
+
+/* No CIC, mais discreto (a hero é o protagonista). São Pio X mantém o
+   tamanho original, por isso escopado a #resultados-secao. */
+#resultados-secao .campo-busca-container {
+  max-width: 380px;
+}
+
+#resultados-secao #campo-busca {
+  padding: 0.4rem 2rem;
+  font-size: 0.82rem;
+}
+
+#resultados-secao .campo-busca-container .icone-busca {
+  left: 0.85rem;
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+#resultados-secao #botao-limpar {
+  right: 0.55rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  font-size: 0.65rem;
+}
+
+/* ── Hero do CIC em telas estreitas: campo em linha própria ─────────────── */
+@media (max-width: 767px) {
+  #hero.hero-foto .campo-busca-container {
+    flex: 1 1 100%;
+    max-width: none;
+    order: -1;
+  }
+
+  /* No toque o campo não encolhe: 46px é o alvo mínimo confortável, e
+     font-size 16px impede o zoom automático do iOS ao focar o input.
+     Sem estado compacto/expandido aqui — em retrato ele já ocupa a linha. */
+  #hero.hero-foto #campo-busca,
+  #hero.hero-foto .campo-busca-container:focus-within #campo-busca,
+  #hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) #campo-busca {
+    height: 46px;
+    padding: 0 2.75rem 0 1.1rem;
+    font-size: 16px;
+  }
+
+  #hero.hero-foto .campo-busca-container .icone-busca,
+  #hero.hero-foto .campo-busca-container:focus-within .icone-busca,
+  #hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) .icone-busca {
+    right: 1rem;
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+
+  #hero.hero-foto #botao-limpar,
+  #hero.hero-foto .campo-busca-container:has(#botao-limpar:not(.oculto)) #botao-limpar {
+    right: 0.9rem;
+  }
+
+  /* Mesmo cuidado no header de resultados (input compacto do desktop). */
+  #resultados-secao #campo-busca {
+    font-size: 16px;
+    padding: 0.5rem 2.25rem;
+  }
 }

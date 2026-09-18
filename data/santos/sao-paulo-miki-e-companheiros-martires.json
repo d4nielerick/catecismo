@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Paulo Miki e companheiros, mártires",
+  "artigos": [
+    {
+      "titulo": "Paulo Miki",
+      "url": "https://pt.wikipedia.org/wiki/Paulo_Miki",
+      "resumo": [
+        "Paulo Miki foi um religioso jesuíta e um dos mártires do Japão, filho de um renomado militar, membro de uma família samurai da província de Harima, foi catequista, ingressou na Companhia de Jesus ordenando-se sacerdote, e ficou conhecido como excelente pregador e orador.",
+        "Paulo era filho de pais nobres e foi educado no colégio jesuita em Anziquiama, no Japão. A convivência na escola jesuíta logo despertou em Paulo o interesse em se unir à Companhia de Jesus e assim o fez. Passou a pregar com eloquência tornando-se um grande pregador. Como não havia nenhum bispo na região de Fusai, Paulo não pode ser ordenado no tempo certo, mais tarde tornou-se o primeiro sacerdote jesuíta em sua pátria."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Bamberg_St_Martin_Figur_Paul_Miki.jpg/500px-Bamberg_St_Martin_Figur_Paul_Miki.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 778
+      }
+    }
+  ]
+}

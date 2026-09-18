@@ -1,0 +1,18 @@
+{
+  "celebracao": "Imaculado Coração de Maria",
+  "artigos": [
+    {
+      "titulo": "Imaculado Coração de Maria",
+      "url": "https://pt.wikipedia.org/wiki/Imaculado_Cora%C3%A7%C3%A3o_de_Maria",
+      "resumo": [
+        "O Imaculado Coração de Maria (em latim: Cor Immaculatum Mariae) é uma devoção católica que se refere à vida interior de Maria, suas alegrias e tristezas, suas virtudes e perfeições ocultas e, sobretudo, ao seu amor virginal por Deus Pai, seu amor materno por seu filho Jesus Cristo e seu amor compassivo por toda a humanidade. Tradicionalmente, o Imaculado Coração é representado perfurado por sete espadas ou feridas, em homenagem às sete dores de Maria, e cercado por rosas, geralmente vermelhas ou brancas, que o envolvem.",
+        "As Igrejas Católicas Orientais ocasionalmente utilizam a imagem, a devoção e a teologia associadas ao Imaculado Coração de Maria. No entanto, isso gera certa controvérsia, pois alguns veem nisso uma forma de latinização litúrgica. A visão católica é baseada em sua interpretação de certos versículos das Escrituras, particularmente do Evangelho segundo Lucas."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Gara%2C_r%C3%B3mai_katolikus_templom_bels%C5%91_tere_%E2%80%93_02_%C3%A9szaki_kereszthaj%C3%B3_2024_09.jpg/500px-Gara%2C_r%C3%B3mai_katolikus_templom_bels%C5%91_tere_%E2%80%93_02_%C3%A9szaki_kereszthaj%C3%B3_2024_09.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 720
+      }
+    }
+  ]
+}

@@ -659,6 +659,7 @@ function renderizarTextoComNotas(el, texto, numeroParagrafo) {
       // Clique: mobile → card; desktop → fixa/desfixa o tooltip até fechar
       sup.addEventListener('click', async (e) => {
         e.stopPropagation();
+        if (e.target.closest('a, button')) return;
         if (window.innerWidth < 768) {
           if (!_fetched) {
             _fetched = true;

@@ -175,11 +175,21 @@
 #lista-resultados {
   flex: 1;
   overflow-y: auto;
+  overscroll-behavior-y: auto; /* deixa a rolagem passar pra página ao chegar no fim */
   padding: var(--space-sm);
 
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;
 }
+/* Sem resultados a lista fica vazia, mas o flex:1 continuava reservando toda
+   a altura e empurrava o estado vazio para fora da tela — em retrato ele
+   nascia abaixo da dobra e parecia que nada tinha sido renderizado.
+   Escopado no CIC: #lista-resultados e #sem-resultados também existem no
+   São Pio X, que tem o mesmo defeito mas está fora do escopo desta rodada. */
+#resultados-secao #painel-resultados:has(#sem-resultados:not(.oculto)) #lista-resultados {
+  flex: 0 0 auto;
+}
+
 #lista-resultados::-webkit-scrollbar { width: 5px; }
 #lista-resultados::-webkit-scrollbar-track { background: transparent; }
 #lista-resultados::-webkit-scrollbar-thumb {
@@ -188,67 +198,75 @@
 }
 
 /* ── Grupos de resultado ─────────────────────────────────────────────────── */
+/* O respiro entre grupos é o que dá ritmo a uma lista longa: separa mais do
+   que a distância entre cards do mesmo grupo, senão tudo lê como um bloco só. */
 .grupo-parte {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-2xl);
 }
 
 .grupo-parte:last-child {
   margin-bottom: 0;
 }
 
+/* A Parte é o nível mais alto da hierarquia e precisa pesar mais que o texto
+   dos cards — antes era o menor tipo da tela, invertendo a leitura. */
 .grupo-parte-titulo {
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-muted);
-  padding: var(--space-xs) var(--space-sm);
-  margin-bottom: var(--space-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  padding: 0 var(--space-sm) 0.45rem;
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .grupo-secao-titulo {
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--color-primary);
-  padding: var(--space-xs) var(--space-sm) var(--space-sm);
-  margin-bottom: var(--space-xs);
+  padding: var(--space-sm) var(--space-sm) 0.2rem;
+  margin-bottom: var(--space-sm);
 }
 
 /* ── Card de resultado individual ────────────────────────────────────────── */
+/* Em uma lista de até 200 itens, moldura em cada card vira ruído e nada se
+   destaca. O card fica liso e o relevo aparece só onde importa: sob o cursor
+   e no selecionado. */
 .resultado-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: transparent;
+  border: none;
   border-radius: var(--radius);
-  padding: var(--space-md);
-  margin-bottom: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: 0.15rem;
   cursor: pointer;
-  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  transition: background var(--transition);
 }
 
 .resultado-card:last-child { margin-bottom: 0; }
 
+/* Seleção pelo fundo, nunca por barra lateral. */
 .resultado-card:hover {
-  border-color: #c8bfb2;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
   background: var(--color-surface);
 }
 
 .resultado-card.selecionado {
-  border-color: var(--color-accent);
-  background: var(--color-surface);
-  box-shadow: 0 0 0 2px rgba(197,160,40,0.18);
+  background: rgba(197,160,40,0.10);
 }
 
 .card-meta {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.35rem;
 }
 
+/* O número é a âncora do resultado: é por ele que se cita e se volta. */
 .card-num {
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
   color: var(--color-accent-dk);
   background: #FEF9EC;
   border: 1px solid #f0e3a8;
@@ -258,9 +276,14 @@
   line-height: 1.4;
 }
 
+/* O artigo é contexto, não título — antes tinha o mesmo tamanho do número e
+   competia com ele. Fica menor e mais claro. */
 .card-artigo {
-  font-size: 0.72rem;
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   color: var(--color-muted);
+  opacity: 0.85;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -288,12 +311,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  /* Visível por padrão: no toque não existe hover, e esconder aqui custava
+     um tap só para revelar (o primeiro tap virava hover simulado, o segundo
+     é que abria o parágrafo) — além de deixar botões invisíveis clicáveis. */
+  opacity: 1;
   transition: opacity var(--transition), color var(--transition), background var(--transition), border-color var(--transition);
 }
 
-.resultado-card:hover .card-save-btn,
-.resultado-card:hover .card-share-btn,
+/* Só onde existe ponteiro de verdade eles somem até o hover. */
+@media (hover: hover) and (pointer: fine) {
+  .card-save-btn,
+  .card-share-btn,
+  .card-flag-btn {
+    opacity: 0;
+  }
+
+  .resultado-card:hover .card-save-btn,
+  .resultado-card:hover .card-share-btn {
+    opacity: 1;
+  }
+}
+
 .card-save-btn.salvo {
   opacity: 1;
 }
@@ -328,13 +366,17 @@
   align-items: center;
   gap: 0.35rem;
   flex-shrink: 0;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.2s;
 }
 
-.tc-paragrafo:hover .para-acoes,
-.leitor-paragrafo:hover .para-acoes {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .para-acoes { opacity: 0; }
+
+  .tc-paragrafo:hover .para-acoes,
+  .leitor-paragrafo:hover .para-acoes {
+    opacity: 1;
+  }
 }
 
 .para-btn {
@@ -472,6 +514,7 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
+  overscroll-behavior-y: auto; /* deixa a rolagem passar pra página ao chegar no fim */
   padding: var(--space-2xl) var(--space-3xl);
   background: var(--color-surface);
 
@@ -558,9 +601,11 @@
 /* Parágrafo individual no texto contínuo */
 .tc-paragrafo {
   position: relative;
+  /* Simétrico: .para-acoes fica no fluxo, numa linha própria abaixo do texto
+     (não é absolute), então não precisa de canaleta à direita. O antigo
+     padding-right de 3.75rem era espaço morto — comia 60px de linha, o que
+     em retrato é 16% da largura da tela. */
   padding: var(--space-md) var(--space-lg);
-  /* reserva espaço à direita para os botões rovings (+) e (link) */
-  padding-right: 3.75rem;
   margin-bottom: var(--space-xs);
   border-radius: var(--radius);
   border-left: none;
@@ -642,6 +687,18 @@
     transition: transform 0.28s ease;
     z-index: 10;
     padding: var(--space-lg);
+  }
+
+  /* Em retrato a linha é curta: o recuo lateral encolhe (no CIC — o São Pio X
+     compartilha #painel-conteudo e fica com o padding original). */
+  #resultados-secao #painel-conteudo {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  #resultados-secao .tc-paragrafo {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 
   #painel-conteudo.aberto {
@@ -825,8 +882,8 @@
 /* ── Setas de navegação prev/next ────────────────────────────────────────── */
 #nav-paragrafo {
   position: absolute;
-  right: 0;
-  top: 50%;
+  right: 16px;
+  top: calc(50% + 31px); /* metade da altura do #busca-topo, pra centralizar no painel de leitura (abaixo do header), não no card inteiro */
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -867,6 +924,17 @@
 
 @media (max-width: 767px) {
   #nav-paragrafo { display: none; }
+}
+
+/* Recuo lateral da leitura, só no CIC — #painel-conteudo é compartilhado com
+   o São Pio X, que não tem #resultados-secao. À direita fica uma folga maior:
+   é onde as setas prev/next flutuam (≥768px), e sem ela uma linha cheia
+   encostaria nos botões. */
+@media (min-width: 768px) {
+  #resultados-secao #painel-conteudo {
+    padding-left: var(--space-2xl);
+    padding-right: 3.25rem;
+  }
 }
 
 /* ── Ícone de copiar link no parágrafo ativo ─────────────────────────────── */
@@ -1047,25 +1115,29 @@
   color: var(--color-primary);
 }
 
+/* A nota é a referência bibliográfica: contexto, corpo menor. */
 #biblia-card-nota {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   line-height: 1.55;
-  color: var(--color-text);
-  margin: 0 0 0.6rem;
-  padding-bottom: 0.6rem;
+  color: var(--color-muted);
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.7rem;
   border-bottom: 1px solid var(--color-border);
 }
 
 #biblia-card-nota:empty { display: none; }
 
+/* O versículo é o que a pessoa abriu o card para ler, então tem o maior corpo
+   do card — mas fica abaixo do texto do Catecismo (1.1rem), que é o conteúdo
+   principal da página. Sem itálico: ele marca destaque, não blocos de
+   leitura — a citação já se anuncia pelas aspas e pela serifa. */
 #biblia-card-texto {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.65;
   color: var(--color-text);
   margin: 0;
-  font-style: italic;
 }
 
 #biblia-card-texto:empty { display: none; }
@@ -1083,6 +1155,19 @@
     border-radius: var(--radius) var(--radius) 0 0;
     padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
     z-index: 600;
+    /* Nota longa não empurra o versículo para fora da folha. */
+    max-height: 70dvh;
+    overflow-y: auto;
+  }
+
+  /* No toque este card é a única forma de ler a passagem — o tooltip está
+     desligado aqui. Corpo de leitura, não de legenda, mas sempre abaixo do
+     texto do Catecismo (1rem no mobile): o versículo citado é apoio, e passar
+     à frente do texto principal inverte a hierarquia. A legibilidade aqui
+     vem de ter tirado o itálico, não de aumentar o corpo. */
+  #biblia-card-texto {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 }
 
@@ -1090,16 +1175,16 @@
 #btn-coletor {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   flex-shrink: 0;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--color-primary);
   background: #FEF9EC;
   border: 1px solid var(--color-accent);
   border-radius: 100px;
-  padding: 0.3rem 0.75rem 0.3rem 0.6rem;
+  padding: 0.25rem 0.6rem 0.25rem 0.5rem;
   cursor: pointer;
   transition: background var(--transition), box-shadow var(--transition);
 }
@@ -1417,3 +1502,6 @@
   background: #FEF9EC;
 }
 
+
+/* Trecho da fonte no card móvel, separado dos versículos bíblicos. */
+.biblia-card-fonte:not(:empty) { display: block; margin-top: .65rem; }

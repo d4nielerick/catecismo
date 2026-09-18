@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santa Luzia, virgem e mártir",
+  "artigos": [
+    {
+      "titulo": "Luzia de Siracusa",
+      "url": "https://pt.wikipedia.org/wiki/Luzia_de_Siracusa",
+      "resumo": [
+        "Santa Luzia de Siracusa (em italiano: Lucia; Siracusa, 7 de março de 283 — Siracusa, 13 de dezembro de 304), também conhecida como Santa Lúcia, foi uma virgem e mártir cristã de origem siciliana do início do século IV, morta durante a Perseguição de Diocleciano, uma das mais violentas investidas do Império Romano contra os cristãos. Natural da cidade de Siracusa, na Sicília, Luzia destacou-se desde cedo por sua fé profunda, por seu voto de consagração a Deus e por sua generosidade para com os pobres, virtudes que a conduziram ao martírio quando se recusou a renunciar à sua fé cristã.",
+        "A memória litúrgica de Santa Luzia é celebrada tradicionalmente no dia 13 de dezembro, data em que é venerada como santa por diversas tradições cristãs, incluindo as Igrejas Católica, Ortodoxa, Ortodoxa Oriental, Anglicana e Luterana. Seu nome figura entre os mais veneráveis da Igreja primitiva, sendo uma das oito mulheres, juntamente com a Virgem Maria, explicitamente mencionadas no Cânon Romano, a mais antiga oração eucarística da liturgia latina."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Francisco_de_Zurbar%C3%A1n%2C_Saint_Lucy%2C_c._1625-1630%2C_NGA_12209.jpg/500px-Francisco_de_Zurbar%C3%A1n%2C_Saint_Lucy%2C_c._1625-1630%2C_NGA_12209.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 648
+      }
+    }
+  ]
+}

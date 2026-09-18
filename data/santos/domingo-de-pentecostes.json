@@ -1,0 +1,18 @@
+{
+  "celebracao": "Domingo de Pentecostes",
+  "artigos": [
+    {
+      "titulo": "Pentecostes",
+      "url": "https://pt.wikipedia.org/wiki/Pentecostes",
+      "resumo": [
+        "Pentecostes, também conhecido como Domingo de Pentecostes ou Dia de Pentecostes, é um feriado cristão que ocorre no 49º dia (50º dia quando a contagem inclusiva é usada) após a Páscoa. Comemora a descida do Espírito Santo sobre os apóstolos de Jesus enquanto eles estavam em Jerusalém celebrando a Festa das Semanas, conforme descrito nos Atos dos Apóstolos (Atos 2:1-31). A Igreja Católica acredita que o Espírito Santo desceu sobre Maria, a mãe de Jesus, ao mesmo tempo, conforme registrado nos Atos dos Apóstolos (Atos 1:14).",
+        "Pentecostes é uma das grandes festas da Igreja Ortodoxa Oriental, uma solenidade no Rito Romano da Igreja Católica, um festival nas Igrejas Luteranas e uma festa principal na Comunhão Anglicana. Muitas denominações cristãs oferecem uma liturgia especial para esta celebração sagrada. Como sua data depende da data da Páscoa, Pentecostes é uma \"festa móvel\". A segunda-feira após Pentecostes é um feriado legal em muitos países europeus, africanos e caribenhos. É frequentemente considerado o dia do nascimento da Igreja e inspirou o movimento pentecostal, além de marcar o último dia da Festa do Divino Espírito Santo, uma tradição no catolicismo popular brasileiro e em outros países."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Vienna_Karlskirche_frescos4b.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 298,
+        "altura": 397
+      }
+    }
+  ]
+}

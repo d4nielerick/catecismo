@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santo Atanásio",
+  "artigos": [
+    {
+      "titulo": "Atanásio de Alexandria",
+      "url": "https://pt.wikipedia.org/wiki/Atan%C3%A1sio_de_Alexandria",
+      "resumo": [
+        "Atanásio de Alexandria (em grego: Ἀθανάσιος Ἀλεξανδρείας; romaniz.: Athanásios Alexandrías; em latim: Athanasius), foi o vigésimo arcebispo de Alexandria (como Atanásio I de Alexandria), Doutor da Igreja e santo da Igreja Católica (Alexandria, c. 296 – Alexandria, 2 de maio de 373). Seu episcopado durou aproximadamente 45 anos, de c. 8 de junho de 328 a 2 de maio de 373, dos quais dezessete ele passou exilado, em cinco ocasiões diferentes e por ordem de quatro diferentes imperadores romanos. Atanásio foi um teólogo cristão, um dos \"padres da Igreja\", um defensor do trinitarismo contra o arianismo e um líder da comunidade de Alexandria no século IV."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Ikone_Athanasius_von_Alexandria.jpg/500px-Ikone_Athanasius_von_Alexandria.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 644
+      }
+    }
+  ]
+}

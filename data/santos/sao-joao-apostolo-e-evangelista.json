@@ -1,0 +1,17 @@
+{
+  "celebracao": "São João, apóstolo e evangelista",
+  "artigos": [
+    {
+      "titulo": "João, o Evangelista",
+      "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o,_o_Evangelista",
+      "resumo": [
+        "João, o Evangelista, também conhecido como Apóstolo João (em grego: Ἰωάννης; romaniz.: Iōánnēs; em hebraico: יוחנן, romaniz.: Yoḥanan; em siro-aramaico: ܝܘܚܢܢ; romaniz.: Yuḥanan), foi um dos doze apóstolos de Jesus Cristo. Tradicionalmente, lhe é atribuída a autoria não apenas do Evangelho segundo João, mas também das três epístolas de João (1, 2, e 3) e do livro do Apocalipse. Entretanto, há uma controvérsia sobre a verdadeira autoria das cartas 2 e 3 e do livro de Apocalipse[carece de fontes]?. Embora a tradição representada por São Justino, e amplamente difundida no século II por Ireneu de Lyon, Clemente de Alexandria, Tertuliano e o Cânone Muratori, identificar João como autor do livro de Apocalipse, essa visão não é universalmente aceita. Até o século V, igrejas na Síria, Capadócia e Palestina não incluíam o Apocalipse no cânone das Escrituras, sugerindo que não o consideravam uma obra apostólica[carece de fontes]?. Embora o livro apresente semelhanças com os escritos joaninos, também se distingue claramente deles em linguagem, estilo e teologia, especialmente no que diz respeito à Parúsia de Cristo."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Zampieri_St_John_Evangelist.jpg/500px-Zampieri_St_John_Evangelist.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 630
+      }
+    }
+  ]
+}

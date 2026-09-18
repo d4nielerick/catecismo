@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Bento, abade",
+  "artigos": [
+    {
+      "titulo": "Bento de Núrsia",
+      "url": "https://pt.wikipedia.org/wiki/Bento_de_N%C3%BArsia",
+      "resumo": [
+        "Bento de Núrsia, mais conhecido como São Bento (em italiano: Benedetto da Norcia; em latim: Benedictus; Nórcia, Reino Ostrogótico, 2 de Março de 480 – Abadia de Monte Cassino, 21 de março de 547) foi um monge, ao qual é atribuída a organização das atividades da vida monástica. A Ordem de São Bento ou Ordem dos Beneditinos, uma das maiores ordens monásticas do mundo, recebe esse nome em homenagem a ele, bem como por seguir a regra proposta por ele. Embora não possa ser declarado fundador da Ordem dos Beneditinos, ele participou da fundação de mosteiros que adotaram essa denominação, posteriormente à sua morte. Foi o criador da Regra de São Bento, um dos mais importantes e utilizados regulamentos de vida monástica, inspiração de muitas outras comunidades religiosas. Era irmão gêmeo de Santa Escolástica. O papa Paulo VI designou-o patrono da Europa em 1964, sendo também patrono da Alemanha. É venerado não apenas por católicos, como também por ortodoxos e anglicanos. Fundou a Abadia de Monte Cassino, na Itália, destruída durante a Segunda Guerra Mundial e posteriormente restaurada. O calendário católico-romano comemora-o a 11 de julho, data em que se trasladaram suas relíquias para a Abadia de Saint-Benoît-sur-Loire."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Fra_Angelico_031.jpg/500px-Fra_Angelico_031.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 585
+      }
+    }
+  ]
+}

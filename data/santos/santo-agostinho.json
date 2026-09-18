@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santo Agostinho",
+  "artigos": [
+    {
+      "titulo": "Agostinho de Hipona",
+      "url": "https://pt.wikipedia.org/wiki/Agostinho_de_Hipona",
+      "resumo": [
+        "Aurélio Agostinho de Hipona (em latim: Aurelius Augustinus Hipponensis; Tagaste, 13 de novembro de 354 – Hipona, 28 de agosto de 430), conhecido universalmente como Santo Agostinho, foi um dos mais importantes teólogos e filósofos nos primeiros séculos do cristianismo, cujas obras foram muito influentes no desenvolvimento do cristianismo e filosofia ocidental. Foi bispo de Hipona, uma cidade na província romana da África. Escrevendo na era patrística, é amplamente considerado como o mais importante dos Padres da Igreja no ocidente. Suas obras-primas são De Civitate Dei (\"A Cidade de Deus\") e Confissões, ambas ainda muito estudadas atualmente."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg/500px-Saint_Augustine_by_Philippe_de_Champaigne.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 612
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo Antão, abade",
+  "artigos": [
+    {
+      "titulo": "Antão, o Grande",
+      "url": "https://pt.wikipedia.org/wiki/Ant%C3%A3o,_o_Grande",
+      "resumo": [
+        "Santo Antão foi um santo cristão do Egito, um líder de destaque entre os Padres do Deserto. Ele é venerado em muitas igrejas nas seguintes datas festivas: 30 de Janeiro, no antigo calendário da Igreja Ortodoxa e da Igreja Ortodoxa Copta; 17 de Janeiro, no novo calendário da Igreja Ortodoxa, da Igreja Ortodoxa Búlgara, da Igreja Católica Romana e da Igreja Católica Copta.",
+        "Uma vez que o seu nome latino é Antonius, em traduções displicentes de obras onde o seu nome figura, o nome do santo tem sido vertido para a língua portuguesa como António do Deserto, Antônio Abade , do Egito, o Grande etc., sendo um nome que, de resto, se mantém nas demais línguas europeias. Isso, porém, tem suscitado confusões pela homonímia com o Santo António. Por se tratar de dois santos distintos, para melhor diferenciá-los é preferível optar pelo nome — já consagrado pela tradição vernácula — de Santo Antão."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Saint_Anthony_%28Damaskinos%29.png/500px-Saint_Anthony_%28Damaskinos%29.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 616
+      }
+    }
+  ]
+}

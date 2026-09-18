@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santíssimo Corpo e Sangue de Cristo",
+  "artigos": [
+    {
+      "titulo": "Corpus Christi",
+      "url": "https://pt.wikipedia.org/wiki/Corpus_Christi",
+      "resumo": [
+        "Corpus Christi (em Latim eclesiástico: Dies Sanctissimi Corporis et Sanguinis Domini Iesu Christi, em tradução literal Dia do Santíssimo Corpo e Sangue do Senhor Jesus Cristo), também chamada de Solenidade do Santíssimo Corpo e Sangue de Cristo ou Corpus Domini, e generalizada em Portugal como Corpo de Deus, é uma celebração litúrgica dedicada à adoração e à veneração da presença real de Jesus Cristo na Eucaristia. É celebrada pela Igreja Católica, mas também, com algumas diferenças, por algumas igrejas ortodoxas de rito ocidental, luteranas evangélicas e anglicanas. A solenidade ocorre na quinta-feira seguinte ao Domingo da Santíssima Trindade, que sucede o Domingo de Pentecostes."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Fronleichnam_in_Moosburg_Nr_1.jpg/500px-Fronleichnam_in_Moosburg_Nr_1.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 640
+      }
+    }
+  ]
+}

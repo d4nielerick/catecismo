@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Barnabé, apóstolo",
+  "artigos": [
+    {
+      "titulo": "Barnabé (Bíblia)",
+      "url": "https://pt.wikipedia.org/wiki/Barnab%C3%A9_(B%C3%ADblia)",
+      "resumo": [
+        "Barnabé (Chipre, século I – Salamina, c. 61) foi um dos primeiros cristãos mencionados no Novo Testamento. Seus pais, judeus helênicos lhe deram o nome de José (em grego bizantino Ιὠσης), mas quando ele vendeu todos os seus bens e deu o dinheiro aos apóstolos em Jerusalém, eles lhe deram um novo nome, Barnabé, que parece originar-se do aramaico בר נביא, que significa \"(o filho da) exortação\". No entanto, o texto grego de Atos dos Apóstolos 4,36 explica o nome como υἱός παρακλήσεως (hyios paraklēseōs), que significa \"filho da exortação/consolação\".",
+        "Em Atos 14:14, ele está listado à frente de Paulo, \"Barnabé e Paulo\", e ambos são chamados ἀπόστολοι , translit. apostoloi, apóstolos \". Se Barnabé foi um apóstolo ou não, tornou-se uma questão importante debatida na Idade Média. Ele está listado entre os Setenta Discípulos."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/0a/San_Barnaba.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 494,
+        "altura": 701
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Leão Magno, papa",
+  "artigos": [
+    {
+      "titulo": "Papa Leão I",
+      "url": "https://pt.wikipedia.org/wiki/Papa_Le%C3%A3o_I",
+      "resumo": [
+        "Leão I, conhecido como São Leão Magno (em latim: Leo I); (Toscana, 400 – Roma, 10 de novembro de 461) foi o Papa da Igreja Católica de 29 de setembro de 440 até a data de sua morte. Nascido em território italiano, de origem aristocrática, destacou-se tanto por sua sabedoria teológica quanto por sua forte liderança pastoral e diplomática, em um período de profundas transformações políticas e doutrinais no Império Romano. Foi o primeiro Papa a receber o título de “Magno” (o Grande), em reconhecimento à sua notável influência sobre a Igreja e o mundo cristão.",
+        "O pontificado de Leão Magno marcou um dos períodos mais importantes do desenvolvimento da doutrina cristológica. Ele é lembrado especialmente pelo célebre “Tomo de Leão”, carta endereçada ao patriarca Flaviano de Constantinopla, na qual expressou a fé da Igreja sobre a dupla natureza de Cristo — verdadeiramente Deus e verdadeiramente homem, unidas sem confusão, sem mudança, sem divisão e sem separação. Este documento foi de importância decisiva no Concílio de Calcedônia (451), o quarto concílio ecumênico, que reafirmou esta doutrina contra as heresias monofisitas e consolidou a teologia cristã sobre a Encarnação do Verbo."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Herrera_mozo_San_Le%C3%B3n_magno_Lienzo._%C3%93valo._164_x_105_cm._Museo_del_Prado.png/500px-Herrera_mozo_San_Le%C3%B3n_magno_Lienzo._%C3%93valo._164_x_105_cm._Museo_del_Prado.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 753
+      }
+    }
+  ]
+}

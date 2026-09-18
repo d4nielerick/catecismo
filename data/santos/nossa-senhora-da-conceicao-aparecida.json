@@ -1,0 +1,18 @@
+{
+  "celebracao": "Nossa Senhora da Conceição Aparecida",
+  "artigos": [
+    {
+      "titulo": "Nossa Senhora da Conceição Aparecida",
+      "url": "https://pt.wikipedia.org/wiki/Nossa_Senhora_da_Concei%C3%A7%C3%A3o_Aparecida",
+      "resumo": [
+        "Nossa Senhora da Conceição Aparecida, popularmente chamada Nossa Senhora Aparecida, é uma das mais famosas invocações da Virgem Maria, mãe de Jesus Cristo. É reconhecida oficialmente como a Padroeira do Brasil, título que simboliza a maternal proteção de Maria sobre o povo brasileiro, e celebrada em 12 de outubro.",
+        "O título “Conceição Aparecida” está intimamente ligado ao dogma da Imaculada Conceição, segundo o qual Maria foi preservada do pecado original desde o primeiro instante de sua concepção, em virtude dos méritos de Cristo. A Igreja Católica celebra solenemente essa verdade de fé no dia 8 de dezembro, festa instituída antes de sua proclamação dogmática feita pelo Papa Pio IX, em 1854, através da bula Ineffabilis Deus. Essa devoção possui fortes raízes em Portugal, país que, desde 1147, consagrou-se à Imaculada Conceição — herança espiritual trazida ao Brasil pelos colonizadores e aqui florescida sob o título de “Aparecida”."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/8/8a/NS_Aparecida.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 320,
+        "altura": 443
+      }
+    }
+  ]
+}

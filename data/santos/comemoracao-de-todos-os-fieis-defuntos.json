@@ -1,0 +1,18 @@
+{
+  "celebracao": "Comemoração de todos os fiéis defuntos",
+  "artigos": [
+    {
+      "titulo": "Dia dos Fiéis Defuntos",
+      "url": "https://pt.wikipedia.org/wiki/Dia_dos_Fi%C3%A9is_Defuntos",
+      "resumo": [
+        "Dia dos Fiéis Defuntos (em Portugal); Dia de Finados ou Dia dos Mortos (no Brasil), é uma celebração instituída pela Igreja Católica em sufrágio de todas as almas que ainda passam pelo processo de purificação após a morte. É comemorado no dia 2 de novembro, logo após a Solenidade de Todos os Santos, e encerra o ciclo litúrgico conhecido como Estação de Todos os Santos.",
+        "A origem da data remonta às mais antigas práticas cristãs. Desde o século II, os fiéis já tinham o costume de rezar pelos falecidos, especialmente quando visitavam os túmulos dos mártires. No século V, a Igreja passou a dedicar um dia específico às orações por todos os mortos, inclusive os esquecidos. Essa tradição foi consolidada pelo abade Santo Odilo de Cluny, no final do século X, ao ordenar que todos os mosteiros da Ordem de Cluny celebrassem, no dia 2 de novembro, uma Missa especial por todos os defuntos."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/William-Adolphe_Bouguereau_%281825-1905%29_-_The_Day_of_the_Dead_%281859%29.jpg/500px-William-Adolphe_Bouguereau_%281825-1905%29_-_The_Day_of_the_Dead_%281859%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 619
+      }
+    }
+  ]
+}

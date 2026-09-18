@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Tomás de Aquino",
+  "artigos": [
+    {
+      "titulo": "Tomás de Aquino",
+      "url": "https://pt.wikipedia.org/wiki/Tom%C3%A1s_de_Aquino",
+      "resumo": [
+        "Tomás de Aquino, em italiano Tommaso d'Aquino (Roccasecca, 1225 – Fossanova, 7 de março de 1274), foi um frade católico italiano da Ordem dos Pregadores (dominicano) cujas obras tiveram enorme influência na teologia e na filosofia, principalmente na tradição conhecida como Escolástica, e que, por isso, é conhecido como \"Doctor Angelicus\", \"Doctor Communis\" e \"Doctor Universalis\". \"Aquino\" é uma referência ao condado de Aquino, uma região que foi propriedade de sua família até 1137. Tomás de Aquino tinha abordagens diferentes para com seus antecedentes como Agostinho de Hipona, apesar de ter utilizado muito do pensamento de filósofos anteriores em suas especulações. Seu pensamento teológico e filosófico inspiraram inúmeras gerações de pensadores. Seu magnum opus é chamado Suma Teológica."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Gentile_da_Fabriano_052.jpg/500px-Gentile_da_Fabriano_052.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 613
+      }
+    }
+  ]
+}

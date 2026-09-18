@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Carlos Borromeu",
+  "artigos": [
+    {
+      "titulo": "Carlos Borromeu",
+      "url": "https://pt.wikipedia.org/wiki/Carlos_Borromeu",
+      "resumo": [
+        "São Carlos Borromeu (Arona, 2 de outubro de 1538 – Milão, 3 de novembro de 1584) foi um Cardeal italiano e Arcebispo de Milão, sendo o primeiro bispo a fundar seminários para a formação dos futuros padres; promoveu sínodos diocesanos; abundou os escritos catequéticos e conhecimento da doutrina católica."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Carlo_Borromeo.jpg/500px-Carlo_Borromeo.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 554
+      }
+    }
+  ]
+}

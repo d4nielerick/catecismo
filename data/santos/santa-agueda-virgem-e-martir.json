@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santa Águeda, virgem e mártir",
+  "artigos": [
+    {
+      "titulo": "Águeda de Catânia",
+      "url": "https://pt.wikipedia.org/wiki/%C3%81gueda_de_Cat%C3%A2nia",
+      "resumo": [
+        "Águeda de Catânia, Águeda de Palermo ou Águeda da Sicília, também conhecida como Ágata (em italiano: Agata; em siciliano: Agata; em latim: Agatha; em grego clássico: Αγαθη; romaniz.: Agathe; Catânia ou Palermo, c. 235? – Catânia, 5 de fevereiro de 251) foi uma cristã martirizada no século III, de acordo com a tradição. Segundo seus \"atos\" era oriunda duma família rica de Catânia ou Palermo e teria vivido quando sua cidade era controlada pelo consular Quinciano. Seu martírio veio por ele durante a perseguição do imperador Décio (r. 251–253). Sua festa litúrgica é celebrada em 5 de fevereiro."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Lorenzo_Lippi_-_Saint_Agatha_-_Google_Art_Project.jpg/500px-Lorenzo_Lippi_-_Saint_Agatha_-_Google_Art_Project.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 554
+      }
+    }
+  ]
+}

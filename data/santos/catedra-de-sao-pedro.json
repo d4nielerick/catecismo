@@ -1,0 +1,18 @@
+{
+  "celebracao": "Cátedra de São Pedro",
+  "artigos": [
+    {
+      "titulo": "Cátedra de São Pedro",
+      "url": "https://pt.wikipedia.org/wiki/C%C3%A1tedra_de_S%C3%A3o_Pedro",
+      "resumo": [
+        "A Cátedra de Pedro ou Cadeira de São Pedro (em latim Cathedra Petri) é uma relíquia católica, conservada na Basílica de São Pedro, no Vaticano, dentro de um compartimento de bronze, dourado, projetado e construído por Gian Lorenzo Bernini entre 1647 e 1653, que possuí a forma de uma cadeira de espaldar alto. Os católicos celebram a festa da Cátedra de Pedro nos dias 18 de janeiro e 22 de fevereiro.",
+        "A cadeira de um bispo ou outra autoridade religiosa, especialmente se dentro de uma catedral, é chamada cátedra (cathedra do latim) e esta concretamente é a que está na Arquibasílica de São João de Latrão e que tem sido utilizada pelos Papas como trono para o seu exercício de autoridade máxima e ex cathedra."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Cathedrapetri%2Bgloria.jpg/500px-Cathedrapetri%2Bgloria.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 359
+      }
+    }
+  ]
+}
