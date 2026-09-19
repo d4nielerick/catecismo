@@ -41,7 +41,9 @@ e recebe os mesmos pushes (é um espelho útil para preview), mas o domínio ape
 **Deploy** (do seu clone local do repo, branch `main` atualizada):
 
 ```bash
-rsync -az --delete --exclude={.git,api-server.mjs,.gitignore} ./ vps:/opt/mediaserver/catecismo/
+rsync -az --delete \
+  --exclude={.git,.gitignore,api-server.mjs,'.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store} \
+  ./ vps:/opt/mediaserver/catecismo/
 ```
 
 Se algo em `api/` mudou, depois do rsync: `docker restart catecismo-api` no VPS — **exceto**

@@ -130,11 +130,19 @@ registrar); a outra VPS, a KVM 2 da Hostinger, **não** hospeda este projeto.
 Deploy a partir de um clone local com a `main` atualizada:
 
 ```bash
-rsync -az --delete --exclude={.git,api-server.mjs,.gitignore} ./ vps:/opt/mediaserver/catecismo/
+rsync -az --delete \
+  --exclude={.git,.gitignore,api-server.mjs,'.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store} \
+  ./ vps:/opt/mediaserver/catecismo/
 ```
 
 ⚠️ O `--delete` apaga na VPS o que não existe no clone. **Nunca rode isso com a `main`
 desatualizada ou com o working tree sujo** — rode `git pull` e os verificadores antes.
+
+⚠️ O rsync envia **tudo** o que está na pasta, inclusive o que o git ignora. As exclusões acima
+tiram o que é só local — `.env.local` (chaves), `.claude/`, `.vercel/`, a pasta antiga
+`catecismo/`, backups `.bak` — e sem elas esses arquivos vão para o ar. Rode antes um ensaio
+com `-n --itemize-changes` e confira o que ele apagaria (`*deleting`) e se sobe algo fora do
+git além de `liturgiadiaria/AAAA-MM-DD/`, `liturgiadiaria/og/` e `sitemap-liturgia.xml`.
 
 Se algo em `api/` mudou, depois do rsync: `docker restart catecismo-api` na VPS.
 
