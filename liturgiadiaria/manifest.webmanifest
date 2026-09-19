@@ -1,0 +1,15 @@
+{
+  "name": "Liturgia Diária",
+  "short_name": "Liturgia",
+  "description": "Leituras litúrgicas do dia, com texto completo em português.",
+  "lang": "pt-BR",
+  "start_url": "/liturgiadiaria/",
+  "scope": "/liturgiadiaria/",
+  "display": "standalone",
+  "background_color": "#fcfaf7",
+  "theme_color": "#fcfaf7",
+  "icons": [
+    { "src": "/assets/img/liturgia-icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/liturgia-icone-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

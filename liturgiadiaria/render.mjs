@@ -23,10 +23,18 @@ export const COR_FUNDO = { roxo: '#f0ecf8', branco: '#faf7ee', verde: '#edf5ef',
 export const VERSO = /^\d+[a-z]?$|^\d+,\d+[a-z]?$|^[a-z]$/;
 export const OU = '<span class="salmo-ou">ou</span>';
 
+/** Capitular: a primeira letra do texto, grande, como nos missais. O número do versículo fica de fora. */
+const capitular = s => s.replace(/^([^\p{L}]*)(\p{L})/u, (_, antes, letra) =>
+  `${antes}<span class="capitular" data-letra="${letra.toUpperCase()}">${letra}</span>`);
+
 export function renderProsa(texto) {
   let html = '';
+  let primeira = true;
   for (const l of texto.split('\n')) {
-    html += VERSO.test(l) ? `<sup class="vers-num">${esc(l)}</sup>` : `${esc(l)} `;
+    if (VERSO.test(l)) { html += `<sup class="vers-num">${esc(l)}</sup>`; continue; }
+    let corpo = esc(l);
+    if (primeira && /\p{L}/u.test(corpo)) { corpo = capitular(corpo); primeira = false; }
+    html += `${corpo} `;
   }
   return `<p>${html.trim()}</p>`;
 }
@@ -200,17 +208,20 @@ export function resumoHtml(resumo, { hoje = false } = {}) {
     </section>`;
 }
 
+/** A aclamação não é desenhada: o evangelho vem logo depois do salmo. */
+export const naPagina = blocos => blocos.filter(b => b.leitura.tipo !== 'aclamacao');
+
 /** HTML das leituras do dia (missa principal + outras missas recolhidas) e os blocos da principal. */
 export function conteudoDoDia(dia, resumo = null, opcoes = {}) {
   const [principal, ...outras] = dia.missas;
-  const blocos = blocosDaMissa(principal, '');
+  const blocos = naPagina(blocosDaMissa(principal, ''));
   const valido = resumo && resumo.leituras === referenciasDoDia(dia);
   let html = (valido ? resumoHtml(resumo, opcoes) : '') + blocos.map(renderBloco).join('');
   outras.forEach((missa, k) => {
     html += `
       <details class="missa-extra">
         <summary>${esc(missa.nome)}</summary>
-        ${blocosDaMissa(missa, `m${k + 1}-`).map(renderBloco).join('')}
+        ${naPagina(blocosDaMissa(missa, `m${k + 1}-`)).map(renderBloco).join('')}
       </details>`;
   });
   return { html, blocos };

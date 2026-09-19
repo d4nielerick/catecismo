@@ -280,7 +280,13 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   top: 0;
   align-self: start;
   height: 100vh;
-  background: #1b1a18 url('/assets/img/liturgia-faixa.webp') repeat-y center top / 100% auto;
+  /* Uma cor só sobre o fundo claro: o desenho vira máscara pela luminosidade
+     (o claro da arte pinta de vermelho, o preto some e deixa ver a página) */
+  background: var(--lp-vermelho);
+  -webkit-mask: url('/assets/img/liturgia-faixa.webp') repeat-y center top / 100% auto;
+  mask: url('/assets/img/liturgia-faixa.webp') repeat-y center top / 100% auto;
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
 }
 .lp-faixa-esq { grid-column: 2; }
 .lp-faixa-dir { grid-column: 4; }
@@ -348,6 +354,32 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   color: var(--lp-texto);
 }
 .leitura-texto p { margin: 0; }
+
+/* Capitular: primeira letra da leitura, na mesma serifada dos títulos, cobrindo --cap-linhas
+   linhas: o topo da maiúscula alinha com o topo das maiúsculas da 1ª linha e a base com a
+   linha de base da última. As contas usam as métricas reais das fontes (texto: Inria Serif
+   16px, entrelinha 25.6px, maiúscula 0.68, ascendente 0.976, descendente 0.223;
+   capitular: Times New Roman, maiúscula 0.662, ascendente 0.891, descendente 0.216).
+   ('initial-letter' faria isso sozinho, mas o Chrome só o aplica em ::first-letter, e aqui
+   o número do versículo vem antes da letra.) */
+.capitular {
+  --cap-linhas: 4;
+  --cap-l: 25.6px;                                   /* entrelinha do texto */
+  --cap-topo: 7.94px;                                /* do topo da linha ao topo da maiúscula */
+  --cap-base: 18.82px;                               /* do topo da linha à linha de base */
+  --cap-f: calc(((var(--cap-linhas) - 1) * var(--cap-l) + var(--cap-base) - var(--cap-topo)) / 0.662);
+  float: left;
+  font-family: var(--font-titulo);
+  font-size: var(--cap-f);
+  height: calc(var(--cap-linhas) * var(--cap-l) - 1px);  /* o texto volta à margem na linha seguinte */
+  line-height: calc(var(--cap-linhas) * var(--cap-l));
+  margin: 0 0.06em 0 0;
+  color: var(--lp-vermelho);
+  /* Encaixa a linha de base da letra na linha de base da última linha que ela cobre */
+  position: relative;
+  top: calc((var(--cap-linhas) - 1) * var(--cap-l) + var(--cap-base)
+            - var(--cap-linhas) * var(--cap-l) / 2 - 0.3375 * var(--cap-f));
+}
 
 .vers-num {
   font-size: 0.66em;
