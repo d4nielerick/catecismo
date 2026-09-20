@@ -675,10 +675,9 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 /* ── Resumo das leituras (antes da 1ª leitura) ─────────────────────────── */
 /* Abre e fecha por grid-template-rows (0fr → 1fr): dá para animar, ao contrário
    de height:auto, e não precisa de altura fixa. */
-@property --lp-resumo-ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
-
 .lp-resumo {
   position: relative;
+  cursor: pointer;
   display: grid;
   grid-template-rows: auto 1fr;
   margin: 0 0 1.6rem;
@@ -689,32 +688,29 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
               padding-block 0.42s cubic-bezier(0.22, 1, 0.36, 1),
               margin-bottom 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
-/* O cartão entra um pouco depois do resto */
-.lp-resumo { animation: lp-resumo-entra 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both; }
+/* O cartão entra um pouco depois do resto, e uma claridade passa por ele uma vez */
+.lp-resumo { animation: lp-resumo-entra 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both; }
 @keyframes lp-resumo-entra {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: none; }
 }
-/* e uma luz dá uma volta pela borda, uma vez só */
 .lp-resumo::after {
   content: ''; position: absolute; inset: 0; border-radius: inherit;
-  padding: 1px; pointer-events: none;
-  background: conic-gradient(from var(--lp-resumo-ang),
-    transparent 0deg,
-    color-mix(in srgb, var(--lp-vermelho) 85%, transparent) 14deg,
-    transparent 30deg 360deg);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-          mask-composite: exclude;
-  animation: lp-resumo-volta 1.5s linear 1.15s 1 both;
+  pointer-events: none;
+  background: linear-gradient(100deg,
+    transparent 30%,
+    color-mix(in srgb, #fff 55%, transparent) 50%,
+    transparent 70%);
+  background-size: 260% 100%;
+  animation: lp-resumo-luz 2.4s cubic-bezier(0.33, 0, 0.2, 1) 1s 1 both;
 }
-@keyframes lp-resumo-volta {
-  0%   { --lp-resumo-ang: 0deg;   opacity: 0; }
-  10%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { --lp-resumo-ang: 360deg; opacity: 0; }
+@keyframes lp-resumo-luz {
+  0%   { background-position: -30% 0; opacity: 0; }
+  18%  { opacity: 1; }
+  78%  { opacity: 1; }
+  100% { background-position: 130% 0; opacity: 0; }
 }
+
 .lp-resumo-rotulo {
   font-family: var(--font-sans);
   font-size: 0.58rem;
@@ -733,6 +729,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lp-resumo:not(.lp-resumo-aberto) .lp-resumo-texto { opacity: 0; transition-delay: 0s; }
 .lp-resumo-rotulo { margin-bottom: 0.45rem; }
 .lp-resumo:not(.lp-resumo-aberto) .lp-resumo-rotulo { margin-bottom: 0; }
+.lp-resumo-aberto .lp-resumo-texto { cursor: text; }
 .lp-resumo-rotulo { display: flex; align-items: center; justify-content: space-between; }
 .lp-resumo-botao {
   background: none; border: none; padding: 0.2rem 0; cursor: pointer;

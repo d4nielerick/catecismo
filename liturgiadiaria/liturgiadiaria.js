@@ -499,12 +499,17 @@ function posicionarResumo() {
   else if (resumo.parentElement.id !== 'conteudo') document.getElementById('conteudo').prepend(resumo);
 }
 CELULAR.addEventListener('change', posicionarResumo);
+// O cartão inteiro abre e fecha (o botão continua lá para teclado e leitor de tela)
 document.addEventListener('click', e => {
-  const botao = e.target.closest('.lp-resumo-botao');
-  if (!botao) return;
-  const aberto = botao.closest('.lp-resumo').classList.toggle('lp-resumo-aberto');
-  botao.setAttribute('aria-expanded', aberto);
-  botao.textContent = aberto ? 'ocultar' : 'mostrar';
+  const cartao = e.target.closest('.lp-resumo');
+  if (!cartao) return;
+  if (getSelection()?.isCollapsed === false) return;   // estava só selecionando o texto
+  // com o resumo aberto, clicar no texto não fecha: só o rótulo/botão fecham
+  if (cartao.classList.contains('lp-resumo-aberto') && e.target.closest('.lp-resumo-texto')) return;
+  const botao = cartao.querySelector('.lp-resumo-botao');
+  const aberto = cartao.classList.toggle('lp-resumo-aberto');
+  botao?.setAttribute('aria-expanded', aberto);
+  if (botao) botao.textContent = aberto ? 'ocultar' : 'mostrar';
 });
 TABLET.addEventListener('change', organizarColunas);
 
