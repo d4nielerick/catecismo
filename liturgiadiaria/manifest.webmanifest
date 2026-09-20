@@ -9,7 +9,7 @@
   "background_color": "#fcfaf7",
   "theme_color": "#fcfaf7",
   "icons": [
-    { "src": "/assets/img/liturgia-icone-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/assets/img/liturgia-icone-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/assets/img/liturgia-icone-192.png?v=2", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/liturgia-icone-512.png?v=2", "sizes": "512x512", "type": "image/png" }
   ]
 }
