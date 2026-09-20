@@ -721,6 +721,35 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lp-dia-prox { text-align: right; }
 .lp-dias + .lp-topo { margin-top: 2.5rem; }
 
+/* ── Preloader ───────────────────────────────────────────────────────────
+   Tela vermelha inteira e só o L do ícone — a forma é o contorno do próprio
+   favicon, e uma "caneta" (máscara que corre o miolo da letra) vai descobrindo
+   o traço, como se estivesse sendo escrito, enquanto os dados não chegam. */
+.lp-preloader {
+  position: fixed; inset: 0; z-index: 300;
+  display: grid; place-items: center;
+  background: #b3161b;
+  transition: opacity 0.55s ease, visibility 0.55s;
+}
+.lp-carregado .lp-preloader { opacity: 0; visibility: hidden; pointer-events: none; }
+.lp-preloader-l { width: min(42vmin, 210px); height: auto; }
+.lp-preloader-letra { fill: #fff; }
+.lp-preloader-pena {
+  stroke-dasharray: 1;
+  animation: lp-preloader-escreve 2.4s ease-in-out infinite;
+}
+/* 1 → 0: a caneta escreve; 0 → -1: a ponta de trás alcança e apaga no mesmo sentido */
+@keyframes lp-preloader-escreve {
+  0%   { stroke-dashoffset: 1; }
+  48%  { stroke-dashoffset: 0; }
+  62%  { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-preloader { transition-duration: 0.2s; }
+  .lp-preloader-pena { animation: none; stroke-dasharray: none; }
+}
+
 /* Até a animação de entrada assumir, o texto pronto do HTML fica escondido (sem piscar) */
 .lp-anima:not(.lp-pronto) .lp-conteudo { opacity: 0; }
 .lp-anima:not(.lp-cabeca-pronta) :is(.lp-titulo, .lp-data, .tempo-wrap, .nome-dia, .lp-avisos) { opacity: 0; }

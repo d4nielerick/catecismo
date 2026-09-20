@@ -421,6 +421,20 @@ function entrar(el, atraso, { duracao = 620, y = '0.4em', desfoque = 4 } = {}) {
   return anim;
 }
 
+// ── Preloader ────────────────────────────────────────────────────────────────
+// O ícone do site cobre a página enquanto as leituras não chegam. Fica no ar por
+// um tempo mínimo (não pisca quando o cache responde na hora) e sai assim que os
+// dados chegam — o <head> tem um limite de 4s caso algo dê errado.
+const PRELOADER_MIN = 1150; // o L chega a ser desenhado por inteiro antes de a tela sair
+const preloaderInicio = performance.now();
+
+function esconderPreloader() {
+  const falta = PRELOADER_MIN - (performance.now() - preloaderInicio);
+  const sair = () => document.documentElement.classList.add('lp-carregado');
+  if (falta <= 0) { sair(); return Promise.resolve(); }
+  return new Promise(pronto => setTimeout(() => { sair(); pronto(); }, falta));
+}
+
 function abrirCabecalho() {
   const raiz = document.documentElement;
   const cabeca = document.querySelector('.lp-cabeca');
@@ -700,7 +714,6 @@ async function init() {
 
   // A data já é conhecida: a entrada começa sem esperar as leituras.
   if (!doCaminho) preencherData(dt, null);
-  abrirCabecalho();
   // O calendário também já pode ser desenhado (o intervalo real de datas chega com o índice).
   construirCalendario(dt, hoje, { inicio: '0000-00-00', fim: '9999-99-99' });
   organizarColunas();
@@ -721,6 +734,9 @@ async function init() {
   estado.destaques = new Map((indice?.destaques || []).map(d => [d.data, d]));
 
   montarAvisos(indice, hoje);
+  // A entrada só começa depois que o ícone de carregamento sai de cena.
+  await esconderPreloader();
+  abrirCabecalho();
   aplicarDia(dt, dia, resumo, { primeira: true });
 }
 init();
