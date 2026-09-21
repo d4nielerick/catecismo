@@ -625,6 +625,20 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   to   { transform: none; }
 }
 
+/* Desktop: a fita fica pendurada na tela, não na página — some do alto quando o
+   texto rola e ela continua lá. Em item do grid dá para usar sticky (em vez de
+   absolute), e o lugar continua vindo da própria célula. */
+@media (min-width: 1081px) {
+  .lp-fita {
+    position: sticky;
+    top: 0;
+    right: auto;
+    justify-self: end;
+    align-self: start;
+    margin-right: 1.25rem;
+  }
+}
+
 /* ── Avisos do calendário (faltam N dias…) ───────────────────────────── */
 /* Uma linha miúda sob o nome do dia; troca sozinha, ou no clique */
 .lp-avisos { display: flex; align-items: flex-start; gap: 0.45rem; margin-top: 0.4rem; max-width: 22rem; }
