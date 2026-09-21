@@ -656,7 +656,9 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 /* Desktop: o lembrete desce para o pé da coluna do título */
 @media (min-width: 1081px) {
   .lp-lateral { display: flex; flex-direction: column; box-sizing: border-box; min-height: 100vh; }
-  .lp-avisos { margin-top: auto; padding-top: 1.5rem; }
+  /* Fica no pé da tela, bem onde passa a camada de desfoque: precisa ser pintado
+     por cima dela (backdrop-filter só embaça o que está atrás), como o "voltar ao topo" */
+  .lp-avisos { margin-top: auto; padding-top: 1.5rem; position: relative; z-index: 30; }
 }
 .lp-aviso-texto { min-height: 1.45em; }
 .lp-aviso-texto {
