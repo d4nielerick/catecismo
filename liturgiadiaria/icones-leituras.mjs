@@ -10,7 +10,7 @@
 const PERGAMINHO = '<path d="M6 4.5h11.5a2.5 2.5 0 0 1 0 5H17v8a2 2 0 0 1-2 2H6.5a2.5 2.5 0 0 1 0-5H7v-7.5a2.5 2.5 0 0 0-1-2.5Z"/>';
 const DESENHOS = {
   salmo: '<path d="M9 18V6.5l10-2V16"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/>',
-  evangelho: '<path d="M5.5 5.5A2 2 0 0 1 7.5 3.5h11v15h-11a2 2 0 0 0-2 2Z"/><path d="M5.5 20.5a2 2 0 0 1 2-2h11v2.5"/><path d="M12 7v7M9.5 9.5h5"/>',
+  evangelho: '<path d="M5 19V5.5A2.5 2.5 0 0 1 7.5 3H18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2Zm0 0a2 2 0 0 1 2-2h12"/><path d="M12 6.5v7M9.5 9h5"/>',
 };
 const ROMANOS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
 
