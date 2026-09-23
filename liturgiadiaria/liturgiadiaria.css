@@ -1113,9 +1113,10 @@ html:has(.lp-card[open]) { overflow: hidden; }
   .lp-main { padding-bottom: calc(6.5rem + env(safe-area-inset-bottom)); }
   /* três peças de vidro separadas: ( ‹ )  ( leituras do dia )  ( › ) — trocar de dia é outra ação */
   .lp-main .lp-tabs {
-    position: fixed; top: auto; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom));
+    /* dentro das faixas floridas das laterais: o vidro fica só sobre o papel (não puxa o rosa) */
+    position: fixed; top: auto; left: 30px; right: 30px; bottom: calc(12px + env(safe-area-inset-bottom));
     z-index: 40;
-    display: flex; align-items: center; gap: 6px;
+    display: flex; align-items: center; gap: 7px;
     min-height: 0; margin: 0; padding: 0;
     overflow: visible; border: 0; background: none;
   }
@@ -1123,15 +1124,15 @@ html:has(.lp-card[open]) { overflow: hidden; }
     position: relative;
     border-radius: 999px;
     /* o vidro: desfoca e satura o que passa por trás; claro o bastante para ler sobre qualquer texto */
-    background: rgba(252, 250, 247, 0.55);
-    -webkit-backdrop-filter: blur(18px) saturate(1.8);
-    backdrop-filter: blur(18px) saturate(1.8);
+    background: rgba(253, 252, 250, 0.74);
+    -webkit-backdrop-filter: blur(20px) saturate(1.15);
+    backdrop-filter: blur(20px) saturate(1.15);
     box-shadow:
       inset 0 1px 0.5px rgba(255, 255, 255, 0.95),     /* brilho especular na borda de cima */
-      inset 0 -1px 0.5px rgba(40, 30, 15, 0.08),       /* a borda de baixo, mais escura */
-      inset 0 0 0 0.5px rgba(40, 30, 15, 0.1),
-      0 10px 30px -6px rgba(40, 30, 15, 0.22),
-      0 2px 6px rgba(40, 30, 15, 0.08);
+      inset 0 -1px 0.5px rgba(40, 30, 15, 0.06),       /* a borda de baixo, mais escura */
+      inset 0 0 0 0.5px rgba(40, 30, 15, 0.09),
+      0 6px 20px -6px rgba(40, 30, 15, 0.2),
+      0 1px 3px rgba(40, 30, 15, 0.07);
   }
   /* reflexo curvo do vidro, só na metade de cima de cada peça */
   .lp-main .lp-tabs .lp-tabs-leituras::before, .lp-main .lp-tabs .lp-tabs-dia::before {
@@ -1139,20 +1140,20 @@ html:has(.lp-card[open]) { overflow: hidden; }
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
     pointer-events: none;
   }
-  .lp-tabs-leituras { display: flex; flex: 1; min-width: 0; justify-content: space-evenly; padding: 4px; }
+  .lp-tabs-leituras { display: flex; align-items: center; flex: 1; min-width: 0; height: 46px; justify-content: space-evenly; padding: 0 4px; }
   /* as abas são ícones; a ativa mostra também o nome, e a pílula de vidro se alarga para ela */
   .lp-main .lp-tabs .lp-tabs-leituras a {
     position: relative; z-index: 1; flex: 0 0 auto; min-width: 0;
     display: flex; align-items: center; gap: 0.4rem;
-    padding: 0.5rem 0.62rem; margin: 0; border: 0; border-radius: 999px;
-    font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600; letter-spacing: -0.005em;
+    height: 38px; padding: 0 0.62rem; margin: 0; border: 0; border-radius: 999px;
+    font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: -0.01em;
     color: rgba(0, 0, 0, 0.45);
     transition: color 0.25s ease;
     -webkit-tap-highlight-color: transparent;
   }
   .lp-main .lp-tabs .lp-tabs-leituras a.ativa { color: var(--lp-tinta); border: 0; }
   .lp-tabs .lp-aba-icone {
-    display: block; width: 22px; height: 22px; flex: 0 0 auto;
+    display: block; width: 21px; height: 21px; flex: 0 0 auto;
     fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round;
   }
   /* o número romano dentro do pergaminho: letra cheia, sem o traço do desenho */
@@ -1175,14 +1176,14 @@ html:has(.lp-card[open]) { overflow: hidden; }
 
   .lp-tabs .lp-tabs-dia {
     display: grid; place-items: center; flex: 0 0 auto;
-    width: 48px; height: 48px; border-radius: 50%;
+    width: 46px; height: 46px; border-radius: 50%;
     color: var(--lp-tinta); text-decoration: none;
     transition: background 0.2s ease, transform 0.15s ease;
     -webkit-tap-highlight-color: transparent;
   }
   .lp-main .lp-tabs a.lp-tabs-dia:active { background: rgba(255, 255, 255, 0.8); transform: scale(0.92); }
   .lp-main .lp-tabs span.lp-tabs-dia { opacity: 0.4; color: var(--lp-suave); }
-  .lp-tabs-dia svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .lp-tabs-dia svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 
   /* a barra compacta de cima (data por extenso) ganha fundo próprio, já que as abas desceram */
   .lp-compacto { --lp-compacto-h: 2rem; align-items: center; background: transparent; transition: background 0.25s ease; }
