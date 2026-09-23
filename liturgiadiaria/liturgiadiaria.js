@@ -9,7 +9,7 @@
 
 import {
   esc, pad, hojeLocal, abasHtml, cabecalhoDoDia, conteudoDoDia, diasHtml, itensDasAbas, urlDoDia, NOME_COR,
-  referenciasDoDia,
+  referenciasDoDia, somarDias,
 } from '/liturgiadiaria/render.mjs';
 
 // O que a página está mostrando; trocar de dia acontece aqui mesmo, sem recarregar.
@@ -54,21 +54,55 @@ function preencherCabecalho(dt, dia, santos) {
 
 // ── Navegação ────────────────────────────────────────────────────────────────
 let observadorAbas = null;
+const SETA_ANT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>';
+const SETA_PROX = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>';
+const rotuloCurto = r => r === 'Evangelho' || r === 'Salmo' ? r : r.replace(/ Leitura$/, '');   // "1ª Leitura" → "1ª"
+
+/** Abas das leituras. No celular viram uma barra de vidro presa embaixo, com "dia anterior" e
+ *  "dia seguinte" nas pontas e uma luz que desliza até a aba ativa (CSS: .lp-tabs no celular). */
 function construirNav(blocos) {
   observadorAbas?.disconnect();
   const tabsEl = document.getElementById('lp-tabs');
-  tabsEl.innerHTML = abasHtml(blocos);
+  const dias = (d, rel, seta, rotulo) => {
+    const existe = estado.indice && d >= estado.indice.inicio && d <= estado.indice.fim;
+    const [, m, dd] = d.split('-').map(Number);
+    const quando = `${dd}/${['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'][m - 1]}`;
+    return existe
+      ? `<a class="lp-tabs-dia" href="${urlDoDia(d)}" rel="${rel}" aria-label="${rotulo}: ${quando}" title="${rotulo} (${quando})">${seta}</a>`
+      : `<span class="lp-tabs-dia" aria-hidden="true">${seta}</span>`;
+  };
+  const dt = estado.dt;
+  tabsEl.innerHTML = (dt ? dias(somarDias(dt, -1), 'prev', SETA_ANT, 'Dia anterior') : '')
+    + `<span class="lp-tabs-leituras">${abasHtml(blocos)}<span class="lp-tabs-luz" aria-hidden="true"></span></span>`
+    + (dt ? dias(somarDias(dt, 1), 'next', SETA_PROX, 'Dia seguinte') : '');
   const itens = itensDasAbas(blocos);
+  const links = [...tabsEl.querySelectorAll('.lp-tabs-leituras a')];
+  links.forEach(a => { a.dataset.curto = rotuloCurto(a.textContent); });
+  tabsEl.classList.toggle('lp-tabs-muitas', links.length > 3);
 
   const cards = itens.map(({ id }) => document.getElementById(id)).filter(Boolean);
-  const links = [...tabsEl.querySelectorAll('a')];
   const obs = observadorAbas = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) links.forEach(a => a.classList.toggle('ativa', a.getAttribute('href') === `#${e.target.id}`));
     });
+    moverLuz();
   }, { rootMargin: '-90px 0px -55% 0px' }); // ativa a leitura que passa logo abaixo das abas fixas
   cards.forEach(c => obs.observe(c));
+  requestAnimationFrame(() => moverLuz(true));
 }
+
+/** A luz de vidro da barra de baixo vai até a aba ativa (com um leve passar do ponto: é líquida). */
+function moverLuz(sem = false) {
+  const tabsEl = document.getElementById('lp-tabs');
+  const luz = tabsEl?.querySelector('.lp-tabs-luz');
+  const ativa = tabsEl?.querySelector('.lp-tabs-leituras a.ativa') || tabsEl?.querySelector('.lp-tabs-leituras a');
+  if (!luz || !ativa) return;
+  if (sem) luz.style.transition = 'none';
+  luz.style.transform = `translateX(${ativa.offsetLeft}px)`;
+  luz.style.width = `${ativa.offsetWidth}px`;
+  if (sem) requestAnimationFrame(() => { luz.style.transition = ''; });
+}
+addEventListener('resize', () => moverLuz(true));
 
 // ── Calendário ───────────────────────────────────────────────────────────────
 const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
@@ -583,6 +617,7 @@ function trocarData(aplicarDeFato) {
   // devolve uma promessa que se cumpre quando o dia novo já está desenhado
   let pronto;
   const feito = new Promise(ok => { pronto = ok; });
+  let aplicado = false;
   const aplicar = () => { aplicarDeFato(); pronto(); };
   const alvos = [
     document.getElementById('lp-titulo-data'),
@@ -593,7 +628,11 @@ function trocarData(aplicarDeFato) {
     [{ opacity: 1, transform: 'none', filter: 'blur(0)' }, { opacity: 0, transform: 'translateX(-24px)', filter: 'blur(4px)' }],
     { duration: 340, delay: i * 45, easing: SAI, fill: 'forwards' },
   ));
-  Promise.all(saidas.map(x => x.finished)).then(() => {
+  // não espera para sempre: com a página em segundo plano a animação não termina
+  const limite = new Promise(ok => setTimeout(ok, 700));
+  Promise.race([Promise.all(saidas.map(x => x.finished)), limite]).then(() => {
+    if (aplicado) return;
+    aplicado = true;
     aplicar();
     saidas.forEach(x => x.cancel());
     entrar(alvos[0], 0, { duracao: 800, y: '0.55em', desfoque: 6 });
@@ -808,7 +847,8 @@ function rolarPara(alvo) {
   let y = 0;
   if (alvo instanceof Element) {
     const titulo = alvo.querySelector('.leitura-label') || alvo;
-    const abas = document.getElementById('lp-tabs').offsetHeight;
+    const tabsEl = document.getElementById('lp-tabs');
+    const abas = getComputedStyle(tabsEl).position === 'fixed' ? 0 : tabsEl.offsetHeight;   // no celular a barra fica embaixo
     const compacto = TELA_ESTREITA.matches ? document.getElementById('lp-compacto').offsetHeight : 0;
     y = titulo.getBoundingClientRect().top + scrollY - abas - compacto - 14;
   }
