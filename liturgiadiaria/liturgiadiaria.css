@@ -1111,13 +1111,13 @@ html:has(.lp-card[open]) { overflow: hidden; }
 
 @media (max-width: 760px) {
   /* tamanho da barra proporcional à largura da tela (46px num celular de 375px), com limites */
-  .lp-main { --lp-barra: clamp(44px, 12.3vw, 58px); padding-bottom: calc(var(--lp-barra) + 4.5rem + env(safe-area-inset-bottom)); }
+  .lp-main { --lp-barra: clamp(48px, 13.2vw, 64px); padding-bottom: calc(var(--lp-barra) + 4.5rem + env(safe-area-inset-bottom)); }
   /* três peças de vidro separadas: ( ‹ )  ( leituras do dia )  ( › ) — trocar de dia é outra ação */
   .lp-main .lp-tabs {
     /* dentro das faixas floridas das laterais: o vidro fica só sobre o papel (não puxa o rosa) */
-    position: fixed; top: auto; left: 30px; right: 30px; bottom: calc(clamp(22px, 6vw, 30px) + env(safe-area-inset-bottom));
+    position: fixed; top: auto; left: 30px; right: 30px; bottom: calc(clamp(30px, 9vw, 44px) + env(safe-area-inset-bottom));
     z-index: 40;
-    display: flex; align-items: center; justify-content: center; gap: calc(var(--lp-barra) * 0.15);
+    display: flex; align-items: center; justify-content: center; gap: calc(var(--lp-barra) * 0.12);
     min-height: 0; margin: 0; padding: 0;
     overflow: visible; border: 0; background: none;
   }
@@ -1145,15 +1145,15 @@ html:has(.lp-card[open]) { overflow: hidden; }
   /* as abas são ícones; a ativa mostra também o nome, e a pílula de vidro se alarga para ela */
   .lp-main .lp-tabs .lp-tabs-leituras a {
     position: relative; z-index: 1; flex: 0 0 auto; min-width: 0;
-    display: flex; align-items: center; gap: 0.4rem;
+    display: flex; align-items: center; gap: calc(var(--lp-barra) * 0.1);
     height: calc(var(--lp-barra) * 0.826); min-width: calc(var(--lp-barra) * 0.826); justify-content: center;
-    padding: 0 calc(var(--lp-barra) * 0.185); margin: 0; border: 0; border-radius: 999px;
-    font-family: var(--font-sans); font-size: calc(var(--lp-barra) * 0.278); font-weight: 600; letter-spacing: -0.01em;
-    color: rgba(0, 0, 0, 0.45);
+    padding: 0 calc(var(--lp-barra) * 0.14); margin: 0; border: 0; border-radius: 999px;
+    font-family: var(--font-sans); font-size: calc(var(--lp-barra) * 0.25); font-weight: 600; letter-spacing: -0.01em;
+    color: #8c867e;   /* sólido: com cor translúcida, os trechos do traço que se cruzam escureciam */
     transition: color 0.25s ease;
     -webkit-tap-highlight-color: transparent;
   }
-  .lp-main .lp-tabs .lp-tabs-leituras a.ativa { color: var(--lp-tinta); border: 0; }
+  .lp-main .lp-tabs .lp-tabs-leituras a.ativa { color: var(--lp-vermelho); border: 0; }
   .lp-tabs .lp-aba-icone {
     display: block; width: calc(var(--lp-barra) * 0.457); height: calc(var(--lp-barra) * 0.457); flex: 0 0 auto;
     fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round;
@@ -1163,7 +1163,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
   .lp-aba-nome { display: none; white-space: nowrap; }
   .lp-tabs-leituras a.ativa .lp-aba-nome { display: inline; padding-right: 4px; animation: lp-aba-nome 0.35s ease both; }
   /* 4 leituras (domingos, festas): a barra fica um pouco menor para caber o nome da ativa */
-  .lp-main .lp-tabs.lp-tabs-muitas { --lp-barra: clamp(42px, 11vw, 50px); }
+  .lp-main .lp-tabs.lp-tabs-muitas { --lp-barra: clamp(44px, 12vw, 54px); }
   /* 4 leituras (domingos, festas) em tela estreita: a ativa fica só com o ícone, a pílula já a indica */
   @media (max-width: 400px) { .lp-tabs-muitas .lp-tabs-leituras a.ativa .lp-aba-nome { display: none; } }
   @media (max-width: 350px) { .lp-tabs-leituras a.ativa .lp-aba-nome { display: none; } }   /* celulares bem estreitos */
@@ -1188,7 +1188,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
     -webkit-tap-highlight-color: transparent;
   }
   .lp-main .lp-tabs a.lp-tabs-dia:active { background: rgba(255, 255, 255, 0.8); transform: scale(0.92); }
-  .lp-main .lp-tabs span.lp-tabs-dia { opacity: 0.4; color: var(--lp-suave); }
+  .lp-main .lp-tabs span.lp-tabs-dia { color: #cfc9c0; }
   .lp-tabs-dia svg { width: calc(var(--lp-barra) * 0.41); height: calc(var(--lp-barra) * 0.41); fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 
   /* a barra compacta de cima (data por extenso) ganha fundo próprio, já que as abas desceram */
