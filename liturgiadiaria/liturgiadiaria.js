@@ -83,6 +83,7 @@ function construirNav(blocos) {
     a.setAttribute('aria-label', nome);
     a.innerHTML = `${icone(...iconeDaLeitura(itens[i].leitura))}<span class="lp-aba-nome">${esc(nome)}</span>`;
   });
+  tabsEl.classList.toggle('lp-tabs-muitas', links.length > 3);   // 4 leituras: barra um pouco menor para caber
 
   const cards = itens.map(({ id }) => document.getElementById(id)).filter(Boolean);
   const obs = observadorAbas = new IntersectionObserver(entries => {

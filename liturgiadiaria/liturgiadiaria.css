@@ -793,7 +793,10 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
    favicon, e uma "caneta" (máscara que corre o miolo da letra) vai descobrindo
    o traço, como se estivesse sendo escrito, enquanto os dados não chegam. */
 .lp-preloader {
-  position: fixed; inset: 0; z-index: 300;
+  /* absoluto, não fixo: o Safari do iOS tinge a área do relógio e a barra de baixo com a cor de
+     elementos FIXOS encostados na borda — ficava vermelho ao abrir. Na abertura a página está no
+     topo, então cobre a tela do mesmo jeito. */
+  position: absolute; top: 0; left: 0; width: 100%; height: 100vh; height: 100lvh; z-index: 300;
   display: grid; place-items: center;
   background: #b3161b;
   transition: opacity 0.55s ease, visibility 0.55s;
@@ -1111,7 +1114,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
 
 @media (max-width: 760px) {
   /* tamanho da barra proporcional à largura da tela (46px num celular de 375px), com limites */
-  .lp-main { --lp-barra: clamp(48px, 13.2vw, 64px); padding-bottom: calc(var(--lp-barra) + 4.5rem + env(safe-area-inset-bottom)); }
+  .lp-main { --lp-barra: clamp(52px, 15vw, 72px); padding-bottom: calc(var(--lp-barra) + 4.5rem + env(safe-area-inset-bottom)); }
   /* três peças de vidro separadas: ( ‹ )  ( leituras do dia )  ( › ) — trocar de dia é outra ação */
   .lp-main .lp-tabs {
     /* dentro das faixas floridas das laterais: o vidro fica só sobre o papel (não puxa o rosa) */
@@ -1125,6 +1128,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
     transition: transform 0.7s cubic-bezier(0.22, 1.25, 0.36, 1);
   }
   html.lp-barra-on .lp-main .lp-tabs { transform: none; }
+  .lp-main .lp-tabs.lp-tabs-muitas { --lp-barra: clamp(44px, 13vw, 62px); }   /* domingos e festas: 4 ícones */
   .lp-main .lp-tabs .lp-tabs-leituras, .lp-main .lp-tabs .lp-tabs-dia {
     position: relative;
     border-radius: 999px;
