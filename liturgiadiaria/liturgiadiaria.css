@@ -988,8 +988,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
   padding: max(0.75rem, env(safe-area-inset-top)) 0 max(1rem, env(safe-area-inset-bottom));
   font-family: var(--font-leitura);
 }
-.lp-card-topo { display: flex; align-items: center; gap: 0.25rem; padding: 0 0.75rem 0 1.25rem; }
-.lp-card-topo-vao { flex: 1; }
+.lp-card-topo { display: flex; align-items: center; justify-content: space-between; padding: 0 0.75rem 0 1.25rem; }
 .lp-card-titulo {
   margin: 0; font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600;
   letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242, 234, 216, 0.6);
@@ -1034,23 +1033,20 @@ html:has(.lp-card[open]) { overflow: hidden; }
   background: rgba(23, 20, 15, 0.55); color: #f2ead8; cursor: pointer;
   backdrop-filter: blur(6px); transition: background 0.2s, border-color 0.2s;
 }
-.lp-card-seta svg, .lp-card-som svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.lp-card-som {
-  width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; display: grid; place-items: center;
-  background: transparent; color: rgba(242, 234, 216, 0.55); cursor: pointer; transition: color 0.2s, background 0.2s;
-}
-.lp-card-som:hover { background: rgba(255, 255, 255, 0.08); color: #f2ead8; }
-.lp-card-som[aria-pressed="true"] { color: #f2ead8; }
+.lp-card-seta svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .lp-card-seta:hover { background: rgba(23, 20, 15, 0.8); border-color: rgba(242, 234, 216, 0.5); }
 .lp-card-ant { left: 1.25rem; }
 .lp-card-prox { right: 1.25rem; }
 
 .lp-card-fotos {
-  display: flex; gap: 0.55rem; justify-content: center; padding: 0.25rem 1rem 0.9rem;
+  display: flex; gap: 0.55rem; padding: 0.25rem 1rem 0.9rem;
   overflow-x: auto; scrollbar-width: none; transition: opacity 0.2s;
 }
 .lp-card-fotos::-webkit-scrollbar { display: none; }
 .lp-card-fotos.inativa { opacity: 0.25; pointer-events: none; }
+/* centraliza quando cabe; quando não cabe, rola a partir da primeira (center "puro" esconderia as da esquerda) */
+.lp-card-fotos > :first-child { margin-left: auto; }
+.lp-card-fotos > :last-child { margin-right: auto; }
 .lp-card-fotos button {
   flex: 0 0 auto; width: 44px; height: 44px; padding: 0; border-radius: 50%; overflow: hidden; cursor: pointer;
   border: 1px solid rgba(242, 234, 216, 0.2); background: none; opacity: 0.6;
@@ -1101,14 +1097,6 @@ html:has(.lp-card[open]) { overflow: hidden; }
 }
 .cal-btn:disabled { opacity: 0.25; cursor: default; background: none; }
 
-.cal-som {
-  position: absolute; right: -0.35rem; top: 50%; transform: translateY(-50%);
-  width: 32px; height: 32px; padding: 0; border: 0; border-radius: 50%; display: grid; place-items: center;
-  background: transparent; color: var(--lp-suave); cursor: pointer; transition: color 0.2s, background 0.2s;
-}
-.cal-som:hover { background: rgba(0, 0, 0, 0.05); color: var(--lp-tinta); }
-.cal-som[aria-pressed="true"] { color: var(--lp-cor-dia, var(--lp-tinta)); }
-.cal-som svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Marcador da troca de dia: sai da borda para onde a pessoa puxa */
 .lp-arrasto {

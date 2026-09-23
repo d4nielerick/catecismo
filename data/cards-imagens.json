@@ -1,5 +1,5 @@
 {
-  "_sobre": "Acervo de pinturas dos cards de compartilhar (liturgiadiaria/compartilhar.mjs). Arquivos em /assets/img/cards/<id>.webp e a miniatura em /assets/img/cards/mini/<id>.webp. 'tempos' usa os nomes de data/liturgia/*.json › tempo; 'cores' as cores litúrgicas. O card mostra primeiro as que batem o tempo do dia, depois as que batem a cor, depois as neutras (tempos: [\"todos\"]), que servem em qualquer dia. Todas geradas por IA no estilo óleo com impasto; as 'recriacao' seguem uma obra clássica.",
+  "_sobre": "Acervo de pinturas dos cards de compartilhar (liturgiadiaria/compartilhar.mjs). Arquivos em /assets/img/cards/<id>.webp e a miniatura em /assets/img/cards/mini/<id>.webp. 'tempos' usa os nomes de data/liturgia/*.json › tempo; 'cores' as cores litúrgicas. O card mostra até 6 que batem o tempo do dia (depois a cor) e sempre até 4 neutras (tempos: [\"todos\"]), que servem em qualquer dia. Todas geradas por IA no estilo óleo com impasto; as 'recriacao' seguem uma obra clássica.",
   "imagens": [
     {
       "id": "trigo-colina",

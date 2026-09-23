@@ -11,7 +11,6 @@ import {
   esc, pad, hojeLocal, abasHtml, cabecalhoDoDia, conteudoDoDia, diasHtml, itensDasAbas, urlDoDia, NOME_COR,
   referenciasDoDia, somarDias,
 } from '/liturgiadiaria/render.mjs';
-import * as som from '/liturgiadiaria/som.mjs';
 
 // O que a página está mostrando; trocar de dia acontece aqui mesmo, sem recarregar.
 const estado = { dt: null, hoje: null, indice: null, santos: null, destaques: new Map() };
@@ -78,7 +77,6 @@ const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
 // Troca de mês: pelas setas ou arrastando a grade para o lado (no toque). Só anda dentro do
 // intervalo que tem leituras; na ponta, a grade dá um "elástico" e volta.
 let calNav = null;
-let botaoSomCal = null;
 const mesDe = d => { const [a, m] = d.split('-').map(Number); return a * 12 + (m - 1); };
 
 function construirCalendario(dtAtual, hoje, indice) {
@@ -126,8 +124,6 @@ function construirCalendario(dtAtual, hoje, indice) {
     html += '</div>';
     esconderDica();
     wrap.innerHTML = html;
-    botaoSomCal ??= som.botaoDeSom('cal-som');
-    wrap.querySelector('.cal-header').append(botaoSomCal);
 
     // o mês novo entra do lado para onde se foi
     const grade = wrap.querySelector('.cal-grid');
@@ -153,7 +149,6 @@ function construirCalendario(dtAtual, hoje, indice) {
     ano = Math.floor(alvo / 12);
     mes = alvo % 12;
     render(delta);
-    som.tocar('deslizar');
     return true;
   }
 
@@ -253,7 +248,7 @@ function configurarArrastoDias() {
     const pronto = ok && p >= 1;
     if (pronto !== g.pronto) {
       g.pronto = pronto;
-      if (pronto) som.tocar('limiar');
+      if (pronto) navigator.vibrate?.(12);   // Android: um toque curto no ponto de confirmação
     }
     marca.classList.toggle('pronto', pronto);
     marca.classList.toggle('bloqueado', !ok);
@@ -289,7 +284,6 @@ function configurarArrastoDias() {
       conteudo.style.transition = 'transform 0.22s ease-in, opacity 0.22s ease-in';
       conteudo.style.transform = `translateX(${dx < 0 ? -40 : 40}px)`;
       conteudo.style.opacity = '0';
-      som.tocar('pagina');
       setTimeout(() => {
         conteudo.style.transition = 'none';
         conteudo.style.transform = `translateX(${dx < 0 ? 40 : -40}px)`;

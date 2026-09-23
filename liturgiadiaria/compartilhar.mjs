@@ -8,7 +8,6 @@
  */
 
 import { COR_FUNDO, COR_CALENDARIO } from '/liturgiadiaria/render.mjs';
-import * as som from '/liturgiadiaria/som.mjs';
 
 const SITE = 'santadoutrina.cloud/liturgiadiaria';
 const TITULO = "'Times New Roman', Times, Georgia, serif";
@@ -345,7 +344,6 @@ function montarJanela() {
     <div class="lp-card-caixa">
       <header class="lp-card-topo">
         <p class="lp-card-titulo">Compartilhar trecho</p>
-        <span class="lp-card-topo-vao"></span>
         <button class="lp-card-fechar" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
       </header>
       <nav class="lp-card-abas" aria-label="Layout">${LAYOUTS.map((l, i) => `<button type="button" data-i="${i}">${l.nome}</button>`).join('')}</nav>
@@ -365,7 +363,6 @@ function montarJanela() {
       <p class="lp-card-aviso" role="status"></p>
     </div>`;
   document.body.append(dlg);
-  dlg.querySelector('.lp-card-fechar').before(som.botaoDeSom('lp-card-som'));
 
   const trilho = dlg.querySelector('.lp-card-trilho');
   const passo = () => trilho.children[1].offsetLeft - trilho.children[0].offsetLeft;
@@ -374,10 +371,8 @@ function montarJanela() {
   let animacao = 0;
   let animando = false;   // enquanto a rolagem é nossa, o detector de arrasto não mexe na aba
   const ir = i => {
-    const antes = atual;
     atual = (i + LAYOUTS.length) % LAYOUTS.length;
     marcar();
-    if (atual !== antes) som.tocar('deslizar');
     const de = trilho.scrollLeft, para = atual * passo();
     cancelAnimationFrame(animacao);
     if (REDUZIDO.matches || de === para) { trilho.scrollLeft = para; return; }
@@ -412,12 +407,12 @@ function montarJanela() {
     cancelAnimationFrame(quadroRolagem);
     quadroRolagem = requestAnimationFrame(() => {
       const i = Math.max(0, Math.min(LAYOUTS.length - 1, Math.round(trilho.scrollLeft / passo())));
-      if (i !== atual) { atual = i; marcar(); som.tocar('deslizar'); }
+      if (i !== atual) { atual = i; marcar(); }
     });
   }, { passive: true });
   dlg.querySelector('.lp-card-fotos').addEventListener('click', e => {
     const b = e.target.closest('[data-foto]');
-    if (b) { som.tocar('toque'); trocarFoto(+b.dataset.foto); }
+    if (b) trocarFoto(+b.dataset.foto);
   });
   dlg.querySelector('.lp-card-acoes').addEventListener('click', e => {
     const destino = e.target.closest('[data-destino]')?.dataset.destino;
@@ -463,7 +458,6 @@ async function enviar(destino) {
   const texto = `“${conteudo.trecho}” (${conteudo.referencia})\n${link}`;
 
   if (destino === 'whatsapp') {
-    som.tocar('confirmar');
     const web = `https://wa.me/?text=${encodeURIComponent(texto)}`;
     if (TOQUE.matches) abrirApp(`whatsapp://send?text=${encodeURIComponent(texto)}`, () => { location.href = web; });
     else open(web, '_blank', 'noopener');
@@ -475,7 +469,6 @@ async function enviar(destino) {
       try {
         // o Safari exige que a escrita comece no próprio toque: vai a promessa do blob, não o blob
         await navigator.clipboard.write([new ClipboardItem({ 'image/png': blobDoCard() })]);
-        som.tocar('confirmar');
         avisar('Card copiado. No stories, toque em “Adicionar” ou cole.');
         setTimeout(() => abrirApp('instagram://story-camera', () => compartilharArquivo()), 700);
         return;
@@ -483,7 +476,6 @@ async function enviar(destino) {
     }
     if (TOQUE.matches && await compartilharArquivo()) return;
     baixar(await blobDoCard());
-    som.tocar('confirmar');
     avisar('Imagem salva. Publique pelo app do Instagram.');
     return;
   }
@@ -494,14 +486,13 @@ async function enviar(destino) {
     if (await compartilharArquivo()) return;
   }
   baixar(await blobDoCard());
-  som.tocar('confirmar');
   avisar('Imagem salva.');
 }
 
 async function compartilharArquivo() {
   const arquivo = new File([await blobDoCard()], nomeArquivo(), { type: 'image/png' });
   if (!navigator.canShare?.({ files: [arquivo] })) return false;
-  try { await navigator.share({ files: [arquivo] }); som.tocar('confirmar'); } catch { /* cancelou */ }
+  try { await navigator.share({ files: [arquivo] }); } catch { /* cancelou */ }
   return true;
 }
 
@@ -518,21 +509,20 @@ function avisar(msg) {
 const CARDS = '/assets/img/cards';
 const diaDoAno = dt => Math.round(Date.parse(`${dt}T00:00:00Z`) / 86400000);
 
-/** Pinturas oferecidas para o dia: a escolhida para a leitura (se houver) e depois as que batem
- *  o tempo litúrgico (+2) e a cor (+1), e por fim as neutras. Dentro do grupo de maior nota, a primeira gira com a data,
- *  para o card de cada dia não abrir sempre com a mesma. */
-export function escolherFotos(catalogo, { tempo, cor, dt, preferida }, max = 6) {
+/** Pinturas oferecidas para o dia: a escolhida para a leitura (se houver), até 6 das que batem o
+ *  tempo litúrgico (+2) e a cor (+1) e, sempre, até 4 neutras (as que valem em qualquer dia).
+ *  Cada grupo gira com a data, para o card não abrir sempre com a mesma pintura. */
+export function escolherFotos(catalogo, { tempo, cor, dt, preferida }, maxDoDia = 6, maxNeutras = 4) {
   const lista = catalogo?.imagens || [];
-  // tempo do dia vale 2, cor 1; as neutras ("todos") entram por último, em qualquer dia
-  const nota = im => (im.tempos.includes(tempo) ? 2 : 0) + (im.cores.includes(cor) ? 1 : 0)
-    + (im.tempos.includes('todos') ? 0.5 : 0);
-  const boas = lista.filter(im => nota(im) > 0).sort((a, b) => nota(b) - nota(a));
-  const topo = boas.filter(im => nota(im) === nota(boas[0]));
-  const giro = topo.length ? diaDoAno(dt) % topo.length : 0;
-  const ordem = [...topo.slice(giro), ...topo.slice(0, giro), ...boas.slice(topo.length)];
+  const girar = arr => { const k = arr.length ? diaDoAno(dt) % arr.length : 0; return [...arr.slice(k), ...arr.slice(0, k)]; };
+  const nota = im => (im.tempos.includes(tempo) ? 2 : 0) + (im.cores.includes(cor) ? 1 : 0);
+  const doDia = lista.filter(im => nota(im) > 0).sort((a, b) => nota(b) - nota(a));
+  const melhores = doDia.filter(im => nota(im) === nota(doDia[0]));
+  const ordem = [...girar(melhores), ...doDia.slice(melhores.length)].slice(0, maxDoDia);
+  const neutras = girar(lista.filter(im => im.tempos.includes('todos'))).slice(0, maxNeutras);
   const pref = preferida && lista.find(im => im.id === preferida);
-  const fotos = pref ? [pref, ...ordem.filter(im => im !== pref)] : ordem;
-  return fotos.slice(0, max).map(im => ({ ...im, src: `${CARDS}/${im.id}.webp`, mini: `${CARDS}/mini/${im.id}.webp` }));
+  const fotos = [...(pref ? [pref] : []), ...ordem, ...neutras].filter((im, i, arr) => arr.indexOf(im) === i);
+  return fotos.map(im => ({ ...im, src: `${CARDS}/${im.id}.webp`, mini: `${CARDS}/mini/${im.id}.webp` }));
 }
 
 const carregarArte = src => new Promise(ok => {
