@@ -77,13 +77,12 @@ function construirNav(blocos) {
     + (dt ? dias(somarDias(dt, 1), 'next', SETA_PROX, 'Dia seguinte') : '');
   const itens = itensDasAbas(blocos);
   const links = [...tabsEl.querySelectorAll('.lp-tabs-leituras a')];
-  // cada aba: ícone (só aparece no celular) + nome (no celular, só o da ativa)
+  // cada aba: ícone (só no celular, onde a barra é só de ícones) + nome (só no desktop)
   links.forEach((a, i) => {
     const nome = a.textContent;
     a.setAttribute('aria-label', nome);
     a.innerHTML = `${icone(...iconeDaLeitura(itens[i].leitura))}<span class="lp-aba-nome">${esc(nome)}</span>`;
   });
-  tabsEl.classList.toggle('lp-tabs-muitas', links.length > 3);   // em tela estreita, a ativa fica só com o ícone
 
   const cards = itens.map(({ id }) => document.getElementById(id)).filter(Boolean);
   const obs = observadorAbas = new IntersectionObserver(entries => {
@@ -94,37 +93,11 @@ function construirNav(blocos) {
     moverLuz();
   }, { rootMargin: '-90px 0px -55% 0px' }); // ativa a leitura que passa logo abaixo das abas fixas
   cards.forEach(c => obs.observe(c));
-  caberNomes();
   requestAnimationFrame(() => moverLuz(true));
 }
 
 /** A luz de vidro da barra de baixo vai até a aba ativa (com um leve passar do ponto: é líquida). */
 let abasTravadasAte = 0;   // depois de um toque, a rolagem até a leitura não mexe na aba ativa
-
-/** A barra tem de ser a mesma em qualquer aba do dia: mede o pior caso (cada aba ativa, com o
- *  seu nome) e, se algum não cabe, encolhe a barra um pouco; se nem assim, o dia inteiro fica só
- *  com os ícones (a pílula já indica a ativa). Roda ao montar as abas e ao mudar o tamanho da tela. */
-function caberNomes() {
-  const tabsEl = document.getElementById('lp-tabs');
-  const L = tabsEl?.querySelector('.lp-tabs-leituras');
-  if (!L || getComputedStyle(tabsEl).position !== 'fixed') return;
-  const links = [...L.querySelectorAll('a')];
-  const ativa = links.find(a => a.classList.contains('ativa'));
-  tabsEl.classList.remove('lp-tabs-sem-nome');
-  tabsEl.style.removeProperty('--lp-barra');
-  const base = parseFloat(getComputedStyle(tabsEl).getPropertyValue('--lp-barra')) || tabsEl.querySelector('.lp-tabs-dia')?.offsetHeight || 48;
-  const transborda = () => links.some(a => {
-    links.forEach(x => x.classList.toggle('ativa', x === a));
-    return L.scrollWidth > L.clientWidth + 1;
-  });
-  let cabe = false;
-  for (const f of [1, 0.95, 0.9, 0.86]) {
-    tabsEl.style.setProperty('--lp-barra', `${base * f}px`);
-    if (!transborda()) { cabe = true; break; }
-  }
-  if (!cabe) { tabsEl.style.removeProperty('--lp-barra'); tabsEl.classList.add('lp-tabs-sem-nome'); }
-  links.forEach(x => x.classList.toggle('ativa', x === ativa));
-}
 
 function moverLuz(sem = false) {
   if (performance.now() < abasTravadasAte) return;
@@ -149,7 +122,7 @@ function luzAoToque(alvo) {
 }
 {
   let espera;
-  addEventListener('resize', () => { clearTimeout(espera); espera = setTimeout(() => { caberNomes(); moverLuz(true); }, 120); });
+  addEventListener('resize', () => { clearTimeout(espera); espera = setTimeout(() => moverLuz(true), 120); });
 }
 
 // ── Calendário ───────────────────────────────────────────────────────────────
@@ -710,6 +683,7 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
   posicionarResumo();
   construirNav(blocos);
   botoesDeCompartilhar(dt, dia, blocos, trechos);
+  verEntradaDaBarra();
   animarEntrada();
 }
 
@@ -843,6 +817,24 @@ const SOME_NA_ROLAGEM = [
   '.lp-direita > .cal-wrap', '.lp-direita > .lp-avisos', '.lp-direita > .lp-sobre',
 ].join(', ');
 
+// A barra de leituras (celular) nasce fora da tela e sobe quando a 1ª leitura chega à metade da
+// tela; a partir daí fica (não recolhe mais). Checa no próprio evento de rolagem e se desliga.
+function configurarEntradaDaBarra() {
+  const raiz = document.documentElement;
+  const ver = () => {
+    const primeira = document.querySelector('#conteudo .leitura-card');
+    if (!primeira || primeira.getBoundingClientRect().top >= innerHeight / 2) return;
+    raiz.classList.add('lp-barra-on');
+    removeEventListener('scroll', ver);
+    removeEventListener('resize', ver);
+  };
+  addEventListener('scroll', ver, { passive: true });
+  addEventListener('resize', ver);
+  ver();
+  return ver;
+}
+let verEntradaDaBarra = () => {};
+
 function configurarRolagem() {
   const raiz = document.documentElement;
   let pedido = false;
@@ -872,6 +864,7 @@ function configurarRolagem() {
     // da página, bem em cima do título da 1ª leitura
     const presa = document.getElementById('lp-compacto').getBoundingClientRect().top <= 1;
     raiz.classList.toggle('lp-compacto-on', presa && document.querySelector('.lp-direita').getBoundingClientRect().bottom < 8);
+
   }
   const pedir = () => { if (!pedido) { pedido = true; requestAnimationFrame(atualizar); } };
   addEventListener('scroll', pedir, { passive: true });
@@ -922,6 +915,7 @@ async function init() {
   configurarDicas();
   configurarNavegacao();
   configurarRolagem();
+  verEntradaDaBarra = configurarEntradaDaBarra();
   configurarModal();
   configurarArrastoCalendario();
   iniciarLenis();

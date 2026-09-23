@@ -1120,7 +1120,11 @@ html:has(.lp-card[open]) { overflow: hidden; }
     display: flex; align-items: center; justify-content: center; gap: calc(var(--lp-barra) * 0.12);
     min-height: 0; margin: 0; padding: 0;
     overflow: visible; border: 0; background: none;
+    /* nasce abaixo da tela; sobe quando a 1ª leitura chega à metade (html.lp-barra-on) e fica */
+    transform: translateY(calc(100% + 60px + env(safe-area-inset-bottom)));
+    transition: transform 0.7s cubic-bezier(0.22, 1.25, 0.36, 1);
   }
+  html.lp-barra-on .lp-main .lp-tabs { transform: none; }
   .lp-main .lp-tabs .lp-tabs-leituras, .lp-main .lp-tabs .lp-tabs-dia {
     position: relative;
     border-radius: 999px;
@@ -1160,15 +1164,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
   }
   /* o número romano dentro do pergaminho: letra cheia, sem o traço do desenho */
   .lp-tabs .lp-aba-numeral { fill: currentColor; stroke: none; font-family: var(--font-titulo); font-weight: 700; letter-spacing: -0.02em; }
-  .lp-aba-nome { display: none; white-space: nowrap; }
-  .lp-tabs-leituras a.ativa .lp-aba-nome { display: inline; padding-right: 4px; animation: lp-aba-nome 0.35s ease both; }
-  /* 4 leituras (domingos, festas): a barra fica um pouco menor para caber o nome da ativa */
-  .lp-main .lp-tabs.lp-tabs-muitas { --lp-barra: clamp(44px, 12vw, 54px); }
-  /* 4 leituras (domingos, festas) em tela estreita: a ativa fica só com o ícone, a pílula já a indica */
-  @media (max-width: 400px) { .lp-tabs-muitas .lp-tabs-leituras a.ativa .lp-aba-nome { display: none; } }
-  @media (max-width: 350px) { .lp-tabs-leituras a.ativa .lp-aba-nome { display: none; } }   /* celulares bem estreitos */
-  .lp-main .lp-tabs.lp-tabs-sem-nome .lp-tabs-leituras a.ativa .lp-aba-nome { display: none; }   /* o nome não coube (liturgiadiaria.js › caberNome) */
-  @keyframes lp-aba-nome { from { opacity: 0; transform: translateX(-4px); } to { opacity: 1; transform: none; } }
+  .lp-aba-nome { display: none; }   /* no celular a barra é só de ícones; o nome fica no aria-label */
 
   /* a luz da aba ativa: uma pílula discreta que desliza até ela */
   .lp-tabs .lp-tabs-luz {
