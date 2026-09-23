@@ -11,6 +11,7 @@ import {
   esc, pad, hojeLocal, abasHtml, cabecalhoDoDia, conteudoDoDia, diasHtml, itensDasAbas, urlDoDia, NOME_COR,
   referenciasDoDia, somarDias,
 } from '/liturgiadiaria/render.mjs';
+import { icone, iconeDaLeitura } from '/liturgiadiaria/icones-leituras.mjs';
 
 // O que a página está mostrando; trocar de dia acontece aqui mesmo, sem recarregar.
 const estado = { dt: null, hoje: null, indice: null, santos: null, destaques: new Map() };
@@ -56,7 +57,6 @@ function preencherCabecalho(dt, dia, santos) {
 let observadorAbas = null;
 const SETA_ANT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>';
 const SETA_PROX = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>';
-const rotuloCurto = r => r === 'Evangelho' || r === 'Salmo' ? r : r.replace(/ Leitura$/, '');   // "1ª Leitura" → "1ª"
 
 /** Abas das leituras. No celular viram uma barra de vidro presa embaixo, com "dia anterior" e
  *  "dia seguinte" nas pontas e uma luz que desliza até a aba ativa (CSS: .lp-tabs no celular). */
@@ -77,11 +77,16 @@ function construirNav(blocos) {
     + (dt ? dias(somarDias(dt, 1), 'next', SETA_PROX, 'Dia seguinte') : '');
   const itens = itensDasAbas(blocos);
   const links = [...tabsEl.querySelectorAll('.lp-tabs-leituras a')];
-  links.forEach(a => { a.dataset.curto = rotuloCurto(a.textContent); });
-  tabsEl.classList.toggle('lp-tabs-muitas', links.length > 3);
+  // cada aba: ícone (só aparece no celular) + nome (no celular, só o da ativa)
+  links.forEach((a, i) => {
+    const nome = a.textContent;
+    a.setAttribute('aria-label', nome);
+    a.innerHTML = `${icone(iconeDaLeitura(itens[i].leitura))}<span class="lp-aba-nome">${esc(nome)}</span>`;
+  });
 
   const cards = itens.map(({ id }) => document.getElementById(id)).filter(Boolean);
   const obs = observadorAbas = new IntersectionObserver(entries => {
+    if (performance.now() < abasTravadasAte) return;   // rolando até a aba tocada: ela já está marcada
     entries.forEach(e => {
       if (e.isIntersecting) links.forEach(a => a.classList.toggle('ativa', a.getAttribute('href') === `#${e.target.id}`));
     });
@@ -92,15 +97,58 @@ function construirNav(blocos) {
 }
 
 /** A luz de vidro da barra de baixo vai até a aba ativa (com um leve passar do ponto: é líquida). */
+let luzAnimacao = null;
+let abasTravadasAte = 0;   // depois de um toque, a rolagem até a leitura não mexe na aba ativa
+
 function moverLuz(sem = false) {
+  if (performance.now() < abasTravadasAte) return;
   const tabsEl = document.getElementById('lp-tabs');
   const luz = tabsEl?.querySelector('.lp-tabs-luz');
   const ativa = tabsEl?.querySelector('.lp-tabs-leituras a.ativa') || tabsEl?.querySelector('.lp-tabs-leituras a');
-  if (!luz || !ativa) return;
+  if (!luz || !ativa || luzAnimacao) return;
   if (sem) luz.style.transition = 'none';
   luz.style.transform = `translateX(${ativa.offsetLeft}px)`;
   luz.style.width = `${ativa.offsetWidth}px`;
   if (sem) requestAnimationFrame(() => { luz.style.transition = ''; });
+}
+
+/** Toque numa aba (celular): a luz se ergue como uma lente de vidro, viaja esticada até o item
+ *  e assenta como pílula — o gesto das abas de "vidro líquido". */
+function luzAoToque(alvo) {
+  const tabsEl = document.getElementById('lp-tabs');
+  const luz = tabsEl?.querySelector('.lp-tabs-luz');
+  tabsEl?.querySelectorAll('.lp-tabs-leituras a').forEach(a => a.classList.toggle('ativa', a === alvo));
+  abasTravadasAte = performance.now() + 1400;
+  if (!luz || getComputedStyle(luz).display === 'none') return;
+  const x0 = new DOMMatrix(getComputedStyle(luz).transform).m41, w0 = luz.offsetWidth;
+  const x1 = alvo.offsetLeft, w1 = alvo.offsetWidth;
+  if (REDUZIDO.matches || !luz.animate) { moverLuz(true); return; }
+  const dist = Math.abs(x1 - x0);
+  const esticada = Math.max(w0, w1) + dist * 0.35;          // mais longe, mais comprida no meio do caminho
+  const meio = (x0 + x1) / 2 - (esticada - (w0 + w1) / 2) / 2;
+  luzAnimacao?.cancel();
+  luz.style.transition = 'none';
+  luz.classList.add('erguida');
+  alvo.classList.add('sob-lente');
+  const anim = luzAnimacao = luz.animate([
+    { transform: `translateX(${x0}px) scale(1, 1)`, width: `${w0}px`, offset: 0 },
+    { transform: `translateX(${x0}px) scale(1.12, 1.32)`, width: `${w0}px`, offset: 0.18, easing: 'cubic-bezier(0.4, 0, 0.2, 1)' },
+    { transform: `translateX(${meio}px) scale(1.08, 1.18)`, width: `${esticada}px`, offset: 0.55, easing: 'cubic-bezier(0.3, 0, 0.2, 1)' },
+    { transform: `translateX(${x1}px) scale(1.1, 1.26)`, width: `${w1}px`, offset: 0.78, easing: 'cubic-bezier(0.3, 1.4, 0.5, 1)' },
+    { transform: `translateX(${x1}px) scale(1, 1)`, width: `${w1}px`, offset: 1 },
+  ], { duration: dist ? 620 : 420, fill: 'forwards' });
+  const assentar = () => {
+    luz.style.transform = `translateX(${x1}px)`;
+    luz.style.width = `${w1}px`;
+    anim.cancel();
+    luz.classList.remove('erguida');
+    alvo.classList.remove('sob-lente');
+    requestAnimationFrame(() => { luz.style.transition = ''; });
+    if (luzAnimacao === anim) luzAnimacao = null;
+  };
+  anim.finished.then(assentar, () => { if (luzAnimacao === anim) luzAnimacao = null; });
+  // a luz já começa a "murchar" em pílula enquanto termina de assentar
+  setTimeout(() => luz.classList.remove('erguida'), dist ? 470 : 300);
 }
 addEventListener('resize', () => moverLuz(true));
 
@@ -727,7 +775,7 @@ function configurarNavegacao() {
     if (href === '#top') { e.preventDefault(); rolarPara(0); return; }
     if (href.startsWith('#') && a.closest('#lp-tabs')) {
       const card = document.getElementById(href.slice(1));
-      if (card) { e.preventDefault(); rolarPara(card); }
+      if (card) { e.preventDefault(); luzAoToque(a); rolarPara(card); }
       return;
     }
     const dia = href.match(LINK_DE_DIA)?.[1] || (href === '/liturgiadiaria/' ? estado.hoje : null);

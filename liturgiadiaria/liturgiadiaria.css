@@ -1106,6 +1106,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
 /* ── Barra de leituras em vidro líquido (celular) ─────────────────────────── */
 /* No desktop as abas seguem no alto da coluna; a moldura nova não existe lá. */
 .lp-tabs-leituras { display: contents; }
+.lp-aba-icone { display: none; }
 .lp-tabs .lp-tabs-dia, .lp-tabs .lp-tabs-luz { display: none; }
 
 @media (max-width: 760px) {
@@ -1134,28 +1135,46 @@ html:has(.lp-card[open]) { overflow: hidden; }
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
     pointer-events: none;
   }
-  .lp-tabs-leituras { display: flex; position: relative; flex: 1; min-width: 0; }
+  .lp-tabs-leituras { display: flex; position: relative; flex: 1; min-width: 0; justify-content: space-evenly; }
+  /* as abas são ícones; a ativa mostra também o nome, e a pílula de vidro se alarga para ela */
   .lp-main .lp-tabs .lp-tabs-leituras a {
-    position: relative; z-index: 1; flex: 1; min-width: 0;
-    display: grid; place-items: center;
-    padding: 0.62rem 0.35rem; margin: 0; border: 0; border-radius: 999px;
-    font-size: 0.84rem; color: rgba(0, 0, 0, 0.5);
+    position: relative; z-index: 1; flex: 0 0 auto; min-width: 0;
+    display: flex; align-items: center; gap: 0.4rem;
+    padding: 0.55rem 0.8rem; margin: 0; border: 0; border-radius: 999px;
+    font-size: 0.84rem; color: rgba(0, 0, 0, 0.45);
     transition: color 0.25s ease;
     -webkit-tap-highlight-color: transparent;
   }
   .lp-main .lp-tabs .lp-tabs-leituras a.ativa { color: var(--lp-tinta); border: 0; }
-  /* domingo e festas têm 4 abas: rótulos curtos ("1ª", "2ª") */
-  .lp-tabs-muitas .lp-tabs-leituras a { font-size: 0 !important; }
-  .lp-tabs-muitas .lp-tabs-leituras a::after { content: attr(data-curto); font-size: 0.84rem; }
+  .lp-tabs .lp-aba-icone { display: block; width: 22px; height: 22px; flex: 0 0 auto; }
+  .lp-aba-nome { display: none; white-space: nowrap; }
+  .lp-tabs-leituras a.ativa .lp-aba-nome { display: inline; animation: lp-aba-nome 0.35s ease both; }
+  @keyframes lp-aba-nome { from { opacity: 0; transform: translateX(-4px); } to { opacity: 1; transform: none; } }
 
-  /* a luz que desliza até a aba ativa: uma gota de vidro mais clara dentro da barra */
+  /* a luz da aba ativa: parada, uma pílula discreta; no toque, ergue-se como lente de vidro
+     (.erguida), viaja esticada e volta a assentar (liturgiadiaria.js › luzAoToque) */
   .lp-tabs .lp-tabs-luz {
     display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 0; z-index: 0;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: inset 0 1px 0 #fff, inset 0 -1px 1px rgba(40, 30, 15, 0.06), 0 2px 8px rgba(40, 30, 15, 0.12);
-    transition: transform 0.5s cubic-bezier(0.3, 1.35, 0.45, 1), width 0.38s cubic-bezier(0.3, 1.2, 0.45, 1);
+    border-radius: 999px; transform-origin: 50% 50%;
+    background: rgba(40, 30, 15, 0.07);
+    box-shadow: inset 0 0 0 0.5px rgba(40, 30, 15, 0.04);
+    transition: transform 0.5s cubic-bezier(0.3, 1.35, 0.45, 1), width 0.38s cubic-bezier(0.3, 1.2, 0.45, 1),
+      background 0.25s ease, box-shadow 0.25s ease;
   }
+  .lp-tabs .lp-tabs-luz.erguida {
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.22);
+    -webkit-backdrop-filter: blur(1.5px) saturate(1.6) brightness(1.06);
+    backdrop-filter: blur(1.5px) saturate(1.6) brightness(1.06);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.95),
+      inset 0 -1px 2px rgba(40, 30, 15, 0.12),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.6),
+      0 6px 18px rgba(40, 30, 15, 0.18), 0 1px 3px rgba(40, 30, 15, 0.12);
+  }
+  /* o rótulo sob a lente aparece levemente ampliado, como visto através do vidro */
+  .lp-main .lp-tabs .lp-tabs-leituras a { transition: color 0.25s ease, transform 0.35s cubic-bezier(0.3, 1.4, 0.5, 1); }
+  .lp-main .lp-tabs .lp-tabs-leituras a.sob-lente { transform: scale(1.08); }
 
   .lp-tabs .lp-tabs-dia {
     display: grid; place-items: center; flex: 0 0 auto;
