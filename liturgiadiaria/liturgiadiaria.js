@@ -94,25 +94,40 @@ function construirNav(blocos) {
     moverLuz();
   }, { rootMargin: '-90px 0px -55% 0px' }); // ativa a leitura que passa logo abaixo das abas fixas
   cards.forEach(c => obs.observe(c));
+  caberNomes();
   requestAnimationFrame(() => moverLuz(true));
 }
 
 /** A luz de vidro da barra de baixo vai até a aba ativa (com um leve passar do ponto: é líquida). */
 let abasTravadasAte = 0;   // depois de um toque, a rolagem até a leitura não mexe na aba ativa
 
-/** Se o nome da aba ativa não cabe na barra (fonte do aparelho, tela estreita, 4 leituras),
- *  a barra mostra só os ícones; a pílula já indica qual é a ativa. */
-function caberNome() {
+/** A barra tem de ser a mesma em qualquer aba do dia: mede o pior caso (cada aba ativa, com o
+ *  seu nome) e, se algum não cabe, encolhe a barra um pouco; se nem assim, o dia inteiro fica só
+ *  com os ícones (a pílula já indica a ativa). Roda ao montar as abas e ao mudar o tamanho da tela. */
+function caberNomes() {
   const tabsEl = document.getElementById('lp-tabs');
   const L = tabsEl?.querySelector('.lp-tabs-leituras');
-  if (!L) return;
+  if (!L || getComputedStyle(tabsEl).position !== 'fixed') return;
+  const links = [...L.querySelectorAll('a')];
+  const ativa = links.find(a => a.classList.contains('ativa'));
   tabsEl.classList.remove('lp-tabs-sem-nome');
-  if (L.scrollWidth > L.clientWidth + 1) tabsEl.classList.add('lp-tabs-sem-nome');
+  tabsEl.style.removeProperty('--lp-barra');
+  const base = parseFloat(getComputedStyle(tabsEl).getPropertyValue('--lp-barra')) || tabsEl.querySelector('.lp-tabs-dia')?.offsetHeight || 48;
+  const transborda = () => links.some(a => {
+    links.forEach(x => x.classList.toggle('ativa', x === a));
+    return L.scrollWidth > L.clientWidth + 1;
+  });
+  let cabe = false;
+  for (const f of [1, 0.95, 0.9, 0.86]) {
+    tabsEl.style.setProperty('--lp-barra', `${base * f}px`);
+    if (!transborda()) { cabe = true; break; }
+  }
+  if (!cabe) { tabsEl.style.removeProperty('--lp-barra'); tabsEl.classList.add('lp-tabs-sem-nome'); }
+  links.forEach(x => x.classList.toggle('ativa', x === ativa));
 }
 
 function moverLuz(sem = false) {
   if (performance.now() < abasTravadasAte) return;
-  caberNome();
   const tabsEl = document.getElementById('lp-tabs');
   const luz = tabsEl?.querySelector('.lp-tabs-luz');
   const ativa = tabsEl?.querySelector('.lp-tabs-leituras a.ativa') || tabsEl?.querySelector('.lp-tabs-leituras a');
@@ -128,11 +143,14 @@ function moverLuz(sem = false) {
 function luzAoToque(alvo) {
   const tabsEl = document.getElementById('lp-tabs');
   tabsEl?.querySelectorAll('.lp-tabs-leituras a').forEach(a => a.classList.toggle('ativa', a === alvo));
-  abasTravadasAte = 0;   // moverLuz confere se o nome cabe
+  abasTravadasAte = 0;
   moverLuz();
   abasTravadasAte = performance.now() + 1400;
 }
-addEventListener('resize', () => moverLuz(true));
+{
+  let espera;
+  addEventListener('resize', () => { clearTimeout(espera); espera = setTimeout(() => { caberNomes(); moverLuz(true); }, 120); });
+}
 
 // ── Calendário ───────────────────────────────────────────────────────────────
 const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
