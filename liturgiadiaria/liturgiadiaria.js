@@ -197,19 +197,104 @@ function configurarArrastoCalendario() {
 // ── Troca de dia arrastando a leitura (celular) ──────────────────────────────
 // Várias travas contra troca acidental: só conta movimento claramente horizontal, precisa
 // percorrer ~38% da tela e só confirma ao soltar (voltar o dedo desiste). Bordas da tela ficam
-// livres (no iPhone, arrastar da borda é o "voltar" do Safari). Um marcador na borda mostra
-// o dia de destino e muda de estado quando, solto ali, a troca acontece.
+// livres (no iPhone, arrastar da borda é o "voltar" do Safari).
+// O aviso é uma "gota": uma aba branca de contorno líquido que brota da borda na altura do dedo,
+// estica com o arrasto, traz a data na vertical e se enche da cor do dia no ponto de confirmação.
 const BORDA_LIVRE = 24;
 const FRACAO = 0.38;
+const GOTA_FUNDO = 64;       // quanto a gota avança da borda no ponto de confirmação (px)
+
+/** A gota da borda: um SVG da altura da tela; só o desenho do caminho muda a cada quadro. */
+function criarGota() {
+  const el = document.createElement('div');
+  el.className = 'lp-gota';
+  el.setAttribute('aria-hidden', 'true');
+  el.innerHTML = '<svg><path class="lp-gota-forma"/></svg><div class="lp-gota-rotulo"><i></i><b></b></div>';
+  document.body.append(el);
+  const svg = el.querySelector('svg'), forma = el.querySelector('path');
+  const rot = el.querySelector('.lp-gota-rotulo'), seta = rot.querySelector('i'), texto = rot.querySelector('b');
+  const W = 200;
+  let lado = 'prox', fundo = 0, y = innerHeight / 2, animacao = 0;
+
+  function desenhar() {
+    const H = innerHeight;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const d = Math.max(0, fundo);
+    const s = 70 + d * 1.25;                 // meia-altura da gota: cresce junto, fica mais "gorda"
+    const c = Math.min(Math.max(y, s * 0.6), H - s * 0.6);
+    // borda direita: x = W é a beira da tela; a gota avança para a esquerda
+    const bx = lado === 'prox' ? W : 0, k = lado === 'prox' ? -1 : 1;
+    const X = v => bx + k * v;
+    forma.setAttribute('d', [
+      `M${X(0)},${c - s * 1.6}`,
+      `C${X(0)},${c - s * 0.75} ${X(d)},${c - s * 0.62} ${X(d)},${c}`,
+      `C${X(d)},${c + s * 0.62} ${X(0)},${c + s * 0.75} ${X(0)},${c + s * 1.6}`,
+      'Z',
+    ].join(' '));
+    // o rótulo fica dentro da gota, mais perto da ponta
+    const visivel = Math.min(1, d / (GOTA_FUNDO * 0.55));
+    rot.style.opacity = visivel.toFixed(2);
+    rot.style.top = `${c}px`;
+    rot.style[lado === 'prox' ? 'right' : 'left'] = `${Math.max(4, d * 0.5 - 13)}px`;
+    rot.style[lado === 'prox' ? 'left' : 'right'] = 'auto';
+    el.style.visibility = d > 0.5 ? 'visible' : 'hidden';
+  }
+
+  /** Mola até o valor pedido (overshoot leve ao recolher: o "quique" do líquido). */
+  function animarAte(alvo, { dur = 420, quique = true, fim } = {}) {
+    cancelAnimationFrame(animacao);
+    const de = fundo, t0 = performance.now();
+    const passo = t => {
+      const p = Math.min(1, (t - t0) / dur);
+      const q = quique
+        ? 1 - Math.cos(p * Math.PI * 2.2) * Math.exp(-5.5 * p) * (1 - p * 0.15)
+        : 1 - (1 - p) ** 3;
+      fundo = de + (alvo - de) * (p >= 1 ? 1 : q);
+      desenhar();
+      if (p < 1) animacao = requestAnimationFrame(passo);
+      else fim?.();
+    };
+    animacao = requestAnimationFrame(passo);
+  }
+
+  return {
+    el,
+    mostrar({ lado: l, y: yy, p, pronto, ok, rotulo }) {
+      cancelAnimationFrame(animacao);
+      if (l !== lado) { lado = l; el.dataset.lado = l; }
+      y = yy;
+      // resistência: cresce rápido no começo e devagar perto do ponto (sensação de elástico)
+      const alvo = GOTA_FUNDO * (1 - (1 - Math.min(p, 1.2) / 1.2) ** 2) * 1.2;
+      fundo = ok ? alvo : Math.min(alvo, GOTA_FUNDO * 0.45);
+      el.classList.toggle('pronta', pronto);
+      el.classList.toggle('bloqueada', !ok);
+      seta.textContent = lado === 'prox' ? '›' : '‹';
+      texto.textContent = !ok ? 'sem leituras' : pronto ? 'solte' : rotulo;
+      desenhar();
+    },
+    recolher() { el.classList.remove('pronta'); animarAte(0); },
+    /** Confirmou: a gota incha e se desfaz, levando o olhar para a troca. */
+    confirmar() {
+      el.classList.add('pronta', 'saindo');
+      animarAte(GOTA_FUNDO * 2.6, {
+        dur: 260, quique: false,
+        fim: () => setTimeout(() => { el.classList.remove('pronta', 'saindo'); fundo = 0; desenhar(); }, 120),
+      });
+    },
+    dica(yy) {
+      lado = 'prox'; el.dataset.lado = 'prox'; y = yy;
+      seta.textContent = '›'; texto.textContent = 'arraste para mudar de dia';
+      el.classList.add('dica');
+      animarAte(GOTA_FUNDO * 0.9, { dur: 700, fim: () => setTimeout(() => { el.classList.remove('dica'); animarAte(0); }, 1600) });
+    },
+  };
+}
 
 function configurarArrastoDias() {
   const main = document.querySelector('.lp-main');
   const conteudo = document.getElementById('conteudo');
   if (!main || !conteudo) return;
-  const marca = document.createElement('div');
-  marca.className = 'lp-arrasto';
-  marca.setAttribute('aria-hidden', 'true');
-  document.body.append(marca);
+  const gota = criarGota();
   let g = null;
 
   const destinoDe = dx => {
@@ -220,7 +305,7 @@ function configurarArrastoDias() {
   const rotulo = d => {
     const [, m, dd] = d.split('-').map(Number);
     const sem = new Date(`${d}T12:00:00`).toLocaleDateString('pt-BR', { weekday: 'long' }).split('-')[0];
-    return `${dd}/${['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'][m - 1]} · ${sem[0].toUpperCase()}${sem.slice(1)}`;
+    return `${sem} · ${dd}/${['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'][m - 1]}`;
   };
 
   main.addEventListener('pointerdown', e => {
@@ -228,7 +313,7 @@ function configurarArrastoDias() {
     if (e.clientX < BORDA_LIVRE || e.clientX > innerWidth - BORDA_LIVRE) return;
     if (e.target.closest('.lp-tabs, .lp-resumo, #lp-compacto, a, button, summary, .lp-dias')) return;
     if (document.querySelector('dialog[open]') || getSelection()?.isCollapsed === false) return;
-    g = { x: e.clientX, y: e.clientY, modo: null, pronto: false, lado: 0 };
+    g = { x: e.clientX, y: e.clientY, modo: null, pronto: false };
   });
 
   main.addEventListener('pointermove', e => {
@@ -238,34 +323,20 @@ function configurarArrastoDias() {
     if (g.modo !== 'h') return;
     if (getSelection()?.isCollapsed === false) { cancelar(); return; }
     const { alvo, ok } = destinoDe(dx);
-    const lado = dx < 0 ? 1 : -1;
-    if (lado !== g.lado) {
-      g.lado = lado;
-      marca.dataset.lado = lado > 0 ? 'prox' : 'ant';
-      marca.dataset.alvo = alvo;
-    }
-    const p = Math.min(1.15, Math.abs(dx) / (innerWidth * FRACAO));
+    const p = Math.abs(dx) / (innerWidth * FRACAO);
     const pronto = ok && p >= 1;
     if (pronto !== g.pronto) {
       g.pronto = pronto;
       if (pronto) navigator.vibrate?.(12);   // Android: um toque curto no ponto de confirmação
     }
-    marca.classList.toggle('pronto', pronto);
-    marca.classList.toggle('bloqueado', !ok);
-    marca.innerHTML = !ok
-      ? '<span>Sem leituras</span>'
-      : lado > 0
-        ? `<span>${pronto ? 'Solte para abrir' : 'Próximo dia'}</span><strong>${rotulo(alvo)} ›</strong>`
-        : `<span>${pronto ? 'Solte para abrir' : 'Dia anterior'}</span><strong>‹ ${rotulo(alvo)}</strong>`;
-    marca.style.setProperty('--p', Math.min(1, p).toFixed(3));
-    marca.classList.add('visivel');
+    gota.mostrar({ lado: dx < 0 ? 'prox' : 'ant', y: e.clientY, p, pronto, ok, rotulo: rotulo(alvo) });
     // a leitura acompanha o dedo, "presa" (e trava mais onde não há dia para abrir)
-    conteudo.style.transform = `translateX(${dx * (ok ? 0.28 : 0.1)}px)`;
+    conteudo.style.transform = `translateX(${dx * (ok ? 0.22 : 0.08)}px)`;
   });
 
   function voltar() {
-    marca.classList.remove('visivel', 'pronto', 'bloqueado');
-    conteudo.style.transition = 'transform 0.35s cubic-bezier(0.2, 0.8, 0.3, 1)';
+    gota.recolher();
+    conteudo.style.transition = 'transform 0.45s cubic-bezier(0.34, 1.4, 0.5, 1)';
     conteudo.style.transform = '';
     conteudo.addEventListener('transitionend', () => { conteudo.style.transition = ''; }, { once: true });
   }
@@ -279,8 +350,8 @@ function configurarArrastoDias() {
     if (modo !== 'h') return;
     if (e.type === 'pointerup' && pronto) {
       const { alvo } = destinoDe(dx);
-      marca.classList.remove('visivel', 'pronto');
-      // a leitura sai para o lado do arrasto; a do outro dia entra redesenhada
+      gota.confirmar();
+      // a leitura sai para o lado do arrasto; a do outro dia entra do lado oposto
       conteudo.style.transition = 'transform 0.22s ease-in, opacity 0.22s ease-in';
       conteudo.style.transform = `translateX(${dx < 0 ? -40 : 40}px)`;
       conteudo.style.opacity = '0';
@@ -289,7 +360,7 @@ function configurarArrastoDias() {
         conteudo.style.transform = `translateX(${dx < 0 ? 40 : -40}px)`;
         irParaDia(alvo).then(() => {
           requestAnimationFrame(() => {
-            conteudo.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.3, 1), opacity 0.3s';
+            conteudo.style.transition = 'transform 0.35s cubic-bezier(0.2, 0.8, 0.3, 1), opacity 0.3s';
             conteudo.style.transform = '';
             conteudo.style.opacity = '';
           });
@@ -303,26 +374,22 @@ function configurarArrastoDias() {
   main.addEventListener('pointercancel', soltar);
   addEventListener('scroll', () => { if (g && g.modo !== 'h') g = null; }, { passive: true });
 
-  mostrarDicaDoArrasto(marca, conteudo);
+  mostrarDicaDoArrasto(gota, conteudo);
 }
 
-/** Primeira visita no celular: a leitura "balança" e o marcador espia da borda, uma vez só. */
-function mostrarDicaDoArrasto(marca, conteudo) {
+/** Primeira visita no celular: a leitura "balança" e a gota espia da borda, uma vez só. */
+function mostrarDicaDoArrasto(gota, conteudo) {
   const CHAVE = 'lp-dica-arrasto';
   try { if (localStorage.getItem(CHAVE)) return; } catch { return; }
   if (!TELA_ESTREITA.matches || !matchMedia('(pointer: coarse)').matches || REDUZIDO.matches) return;
   setTimeout(() => {
     if (document.querySelector('dialog[open]') || !estado.dt) return;
     try { localStorage.setItem(CHAVE, '1'); } catch { /* ignora */ }
-    marca.dataset.lado = 'prox';
-    marca.innerHTML = '<span>Arraste para o lado</span><strong>para mudar de dia</strong>';
-    marca.style.setProperty('--p', '0.55');
-    marca.classList.add('visivel', 'dica');
+    gota.dica(innerHeight * 0.55);
     conteudo.animate?.(
-      [{ transform: 'none' }, { transform: 'translateX(-22px)' }, { transform: 'none' }],
-      { duration: 900, easing: 'ease-in-out' },
+      [{ transform: 'none' }, { transform: 'translateX(-18px)' }, { transform: 'none' }],
+      { duration: 1000, easing: 'cubic-bezier(0.45, 0, 0.3, 1)' },
     );
-    setTimeout(() => marca.classList.remove('visivel', 'dica'), 2600);
   }, 3500);
 }
 

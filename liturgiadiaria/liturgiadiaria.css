@@ -1098,26 +1098,35 @@ html:has(.lp-card[open]) { overflow: hidden; }
 .cal-btn:disabled { opacity: 0.25; cursor: default; background: none; }
 
 
-/* Marcador da troca de dia: sai da borda para onde a pessoa puxa */
-.lp-arrasto {
-  --p: 0;
-  position: fixed; top: 50%; z-index: 60; pointer-events: none;
-  display: flex; flex-direction: column; gap: 0.15rem;
-  padding: 0.7rem 1rem; border-radius: 14px;
-  background: rgba(252, 250, 247, 0.96); color: var(--lp-tinta);
-  border: 1px solid var(--lp-linha); box-shadow: 0 8px 24px rgba(20, 16, 10, 0.14);
-  font-family: var(--font-leitura); opacity: 0;
-  transition: opacity 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
+/* Gota da troca de dia: aba branca de contorno líquido que brota da borda (liturgiadiaria.js) */
+.lp-gota {
+  position: fixed; top: 0; height: 100vh; height: 100dvh; width: 200px; z-index: 60;
+  pointer-events: none; visibility: hidden;
 }
-.lp-arrasto[data-lado="prox"] { right: 0; text-align: right; border-right: 0; border-radius: 14px 0 0 14px;
-  transform: translate(calc(100% - var(--p) * 100%), -50%); }
-.lp-arrasto[data-lado="ant"] { left: 0; border-left: 0; border-radius: 0 14px 14px 0;
-  transform: translate(calc(var(--p) * 100% - 100%), -50%); }
-.lp-arrasto.visivel { opacity: calc(0.35 + var(--p) * 0.65); }
-.lp-arrasto span { font-family: var(--font-sans); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-suave); }
-.lp-arrasto strong { font-weight: 400; font-style: italic; font-size: 1.05rem; white-space: nowrap; }
-.lp-arrasto.pronto { background: var(--lp-cor-dia, var(--lp-vermelho)); border-color: transparent; color: #fff; opacity: 1; }
-.lp-arrasto.pronto span { color: rgba(255, 255, 255, 0.8); }
-.lp-arrasto.bloqueado strong { display: none; }
-.lp-arrasto.dica { transition: opacity 0.4s, transform 0.6s cubic-bezier(0.2, 0.8, 0.3, 1); }
-@media (prefers-reduced-motion: reduce) { .lp-arrasto { transition: opacity 0.15s; } }
+.lp-gota[data-lado="prox"], .lp-gota:not([data-lado]) { right: 0; }
+.lp-gota[data-lado="ant"] { left: 0; }
+.lp-gota svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.lp-gota-forma {
+  fill: #fff;
+  filter: drop-shadow(0 6px 18px rgba(40, 30, 15, 0.16)) drop-shadow(0 0 1px rgba(40, 30, 15, 0.18));
+  transition: fill 0.25s ease;
+}
+.lp-gota.pronta .lp-gota-forma { fill: var(--lp-cor-dia, var(--lp-vermelho)); }
+.lp-gota.bloqueada .lp-gota-forma { fill: #f3efe8; }
+.lp-gota.saindo { opacity: 0; transition: opacity 0.3s ease 0.12s; }
+
+/* rótulo em pé, dentro da gota: a seta e a data escrita na vertical */
+.lp-gota-rotulo {
+  position: absolute; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+  color: var(--lp-tinta); transition: color 0.25s ease;
+}
+.lp-gota-rotulo i { font-style: normal; font-size: 1.35rem; line-height: 1; color: var(--lp-cor-dia, var(--lp-vermelho)); transition: color 0.25s ease; }
+.lp-gota-rotulo b {
+  writing-mode: vertical-rl; font-family: var(--font-leitura); font-style: italic; font-weight: 400;
+  font-size: 0.95rem; letter-spacing: 0.01em; white-space: nowrap;
+}
+.lp-gota[data-lado="ant"] .lp-gota-rotulo b { transform: rotate(180deg); }   /* do lado esquerdo, lê-se de baixo para cima */
+.lp-gota.pronta .lp-gota-rotulo, .lp-gota.pronta .lp-gota-rotulo i { color: #fff; }
+.lp-gota.bloqueada .lp-gota-rotulo { color: var(--lp-suave); }
+.lp-gota.dica .lp-gota-rotulo b { font-size: 0.82rem; }
