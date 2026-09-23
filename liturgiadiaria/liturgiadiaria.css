@@ -893,7 +893,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   inset: 0;
   padding: 0;
   border: 1px solid var(--lp-linha);
-  border-radius: 6px;
+  border-radius: 16px;
   background: var(--lp-fundo);
   color: var(--lp-texto);
   box-shadow: 0 24px 60px rgba(20, 16, 10, 0.28);
@@ -929,7 +929,7 @@ html:has(.lp-modal[open]) { overflow: hidden; }
 .lp-modal-artigo p { margin: 0 0 0.8rem; }
 .lp-modal-img {
   float: right; width: 38%; max-width: 180px; height: auto;
-  margin: 0.25rem 0 0.75rem 1.25rem; border-radius: 3px; background: rgba(0, 0, 0, 0.05);
+  margin: 0.25rem 0 0.75rem 1.25rem; border-radius: 10px; background: rgba(0, 0, 0, 0.05);
 }
 .lp-modal-link { font-size: 0.88rem; color: var(--lp-vermelho); text-decoration: none; }
 .lp-modal-link:hover { text-decoration: underline; }
@@ -956,4 +956,109 @@ html:has(.lp-modal[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .lp-fita, .lp-modal[open], .lp-sobre { animation: none; }
   .lp-aviso-texto { transition: none; }
+}
+
+/* ── Compartilhar trecho (compartilhar.mjs) ───────────────────────────────── */
+.lp-compartilhar {
+  display: inline-grid; place-items: center; width: 40px; height: 40px; margin-top: 1.25rem; padding: 0;
+  color: var(--lp-vermelho); background: transparent; border: 1px solid rgba(203, 46, 46, 0.35); border-radius: 50%;
+  cursor: pointer; transition: background 0.2s, border-color 0.2s;
+}
+.lp-compartilhar:hover { background: rgba(203, 46, 46, 0.06); border-color: var(--lp-vermelho); }
+.lp-compartilhar svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Janela em tela cheia, escura: o card é o protagonista, os vizinhos aparecem nas bordas */
+.lp-card {
+  width: 100vw; height: 100dvh; max-width: none; max-height: none;
+  margin: 0; inset: 0; padding: 0; border: 0;
+  background: #17140f; color: #f2ead8;
+}
+.lp-card[open] { display: block; animation: lp-card-abre 0.3s ease-out; }
+.lp-card::backdrop { background: #17140f; }
+@keyframes lp-card-abre { from { opacity: 0; } to { opacity: 1; } }
+html:has(.lp-card[open]) { overflow: hidden; }
+
+.lp-card-caixa {
+  height: 100%; display: flex; flex-direction: column;
+  padding: max(0.75rem, env(safe-area-inset-top)) 0 max(1rem, env(safe-area-inset-bottom));
+  font-family: var(--font-leitura);
+}
+.lp-card-topo { display: flex; align-items: center; justify-content: space-between; padding: 0 1rem 0 1.25rem; }
+.lp-card-titulo {
+  margin: 0; font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242, 234, 216, 0.6);
+}
+.lp-card-fechar {
+  width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.08);
+  color: #f2ead8; font-size: 1.5rem; line-height: 1; cursor: pointer;
+}
+.lp-card-fechar:hover { background: rgba(255, 255, 255, 0.16); }
+
+.lp-card-abas { display: flex; justify-content: center; gap: 0.35rem; margin: 0.6rem 0 0.25rem; }
+.lp-card-abas button {
+  border: 0; background: transparent; color: rgba(242, 234, 216, 0.5); cursor: pointer;
+  font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.03em;
+  padding: 0.45rem 0.95rem; border-radius: 999px; transition: background 0.2s, color 0.2s;
+}
+.lp-card-abas button:hover { color: #f2ead8; }
+.lp-card-abas button[aria-current="true"] { background: rgba(242, 234, 216, 0.14); color: #fff; }
+
+.lp-card-palco { position: relative; flex: 1; min-height: 0; }
+.lp-card-trilho {
+  height: 100%; display: flex; gap: 0.9rem; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 1rem 11vw; scroll-padding: 0 11vw; scrollbar-width: none; overscroll-behavior-x: contain;
+}
+.lp-card-trilho::-webkit-scrollbar { display: none; }
+.lp-card-slide {
+  flex: 0 0 78vw; margin: 0; min-height: 0; scroll-snap-align: center;
+  display: flex; justify-content: center; align-items: center;
+  opacity: 0.35; transform: scale(0.94); transition: opacity 0.3s, transform 0.3s; cursor: pointer;
+}
+.lp-card-slide.atual { opacity: 1; transform: none; cursor: default; }
+.lp-card-slide canvas {
+  display: block; max-width: 100%; max-height: 100%; width: auto; height: auto;
+  border-radius: 16px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+.lp-card-seta {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;
+  width: 48px; height: 48px; border-radius: 50%; border: 0;
+  background: rgba(255, 255, 255, 0.12); color: #fff; font-size: 1.8rem; line-height: 1; cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+.lp-card-seta:hover { background: rgba(255, 255, 255, 0.22); }
+.lp-card-ant { left: 1.25rem; }
+.lp-card-prox { right: 1.25rem; }
+
+.lp-card-acoes { display: flex; gap: 2.25rem; justify-content: center; padding: 0.5rem 1rem 0; }
+.lp-card-acoes button {
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  border: 0; background: transparent; color: rgba(242, 234, 216, 0.6); cursor: pointer;
+  font-family: var(--font-leitura); font-style: italic; font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.lp-card-acoes button:hover { color: #f2ead8; }
+.lp-card-icone {
+  display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid rgba(242, 234, 216, 0.28); color: #f2ead8;
+  transition: border-color 0.2s, background 0.2s;
+}
+.lp-card-icone svg { width: 22px; height: 22px; }
+.lp-card-acoes button:hover .lp-card-icone { border-color: rgba(242, 234, 216, 0.7); background: rgba(242, 234, 216, 0.06); }
+.lp-card-acoes button:active .lp-card-icone { background: rgba(242, 234, 216, 0.12); }
+.lp-card-aviso {
+  margin: 0.6rem 0 0; min-height: 1.2em; text-align: center; font-family: var(--font-sans); font-size: 0.78rem;
+  color: rgba(242, 234, 216, 0.75); opacity: 0; transition: opacity 0.25s;
+}
+.lp-card-aviso.visivel { opacity: 1; }
+
+/* Desktop: vizinhos mais estreitos e setas; no toque, troca-se arrastando */
+@media (min-width: 761px) {
+  .lp-card-trilho { padding: 1.25rem 30vw; scroll-padding: 0 30vw; }
+  .lp-card-slide { flex-basis: 40vw; }
+}
+@media (hover: none), (pointer: coarse) {
+  .lp-card-seta { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-card[open], .lp-card-slide { animation: none; transition: none; }
 }

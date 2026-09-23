@@ -9,6 +9,7 @@
 
 import {
   esc, pad, hojeLocal, abasHtml, cabecalhoDoDia, conteudoDoDia, diasHtml, itensDasAbas, urlDoDia, NOME_COR,
+  referenciasDoDia,
 } from '/liturgiadiaria/render.mjs';
 
 // O que a página está mostrando; trocar de dia acontece aqui mesmo, sem recarregar.
@@ -533,7 +534,7 @@ function trocarData(aplicar) {
   }, aplicar);
 }
 
-function aplicarDia(dt, dia, resumo, { primeira = false } = {}) {
+function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
   estado.dt = dt;
   preencherCabecalho(dt, dia, estado.santos);
   construirCalendario(dt, estado.hoje, estado.indice);
@@ -553,22 +554,52 @@ function aplicarDia(dt, dia, resumo, { primeira = false } = {}) {
   conteudo.innerHTML = html;
   posicionarResumo();
   construirNav(blocos);
+  botoesDeCompartilhar(dt, dia, blocos, trechos);
   animarEntrada();
+}
+
+// ── Compartilhar trecho (data/liturgia-trechos/) ─────────────────────────────
+// Só aparece o botão nas leituras que têm trecho escolhido, e só se as leituras do dia
+// ainda são as que o arquivo cobre.
+function botoesDeCompartilhar(dt, dia, blocos, trechos) {
+  if (!trechos?.trechos || trechos.leituras !== referenciasDoDia(dia)) return;
+  const cab = cabecalhoDoDia(dt, dia);
+  for (const { leitura, id } of blocos) {
+    const trecho = trechos.trechos[leitura.referencia];
+    const card = document.getElementById(id);
+    if (!trecho || !card) continue;
+    const botao = document.createElement('button');
+    botao.type = 'button';
+    botao.className = 'lp-compartilhar';
+    botao.setAttribute('aria-label', `Compartilhar trecho: ${leitura.rotulo}`);
+    botao.title = 'Compartilhar trecho';
+    botao.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
+    botao.addEventListener('click', async () => {
+      const { abrirCard } = await import('/liturgiadiaria/compartilhar.mjs');
+      lenis?.stop();
+      abrirCard({
+        dt, trecho, referencia: leitura.referencia.replace(/\s*\(R\..*\)$/, ''), rotulo: leitura.rotulo,
+        celebracao: dia.celebracao, data: cab.dataLonga, cor: dia.cor,
+      }, { aoFechar: () => lenis?.start() });
+    });
+    card.append(botao);
+  }
 }
 
 let pedidoDeDia = 0;
 async function irParaDia(dt) {
   if (dt === estado.dt) { rolarPara(0); return; }
   const vez = ++pedidoDeDia;
-  const [dia, resumo] = await Promise.all([
+  const [dia, resumo, trechos] = await Promise.all([
     buscarJson(`/data/liturgia/${dt}.json`),
     buscarJson(`/data/liturgia-resumos/${dt}.json`),
+    buscarJson(`/data/liturgia-trechos/${dt}.json`),
   ]);
   if (vez !== pedidoDeDia) return;
   // O endereço volta a ser o da página de hoje: recarregar sempre abre o dia atual.
   if (location.pathname !== '/liturgiadiaria/' || location.search) history.replaceState(null, '', '/liturgiadiaria/');
   if (scrollY > 40) rolarPara(0);
-  trocarData(() => aplicarDia(dt, dia, resumo));
+  trocarData(() => aplicarDia(dt, dia, resumo, trechos));
 }
 
 const LINK_DE_DIA = /^\/liturgiadiaria\/(\d{4}-\d{2}-\d{2})\/$/;
@@ -728,11 +759,12 @@ async function init() {
   configurarModal();
   iniciarLenis();
 
-  const [indice, dia, santos, resumo] = await Promise.all([
+  const [indice, dia, santos, resumo, trechos] = await Promise.all([
     buscarJson('/data/liturgia/indice.json'),
     buscarJson(`/data/liturgia/${dt}.json`),
     buscarJson('/data/santos/indice.json'),
     buscarJson(`/data/liturgia-resumos/${dt}.json`),
+    buscarJson(`/data/liturgia-trechos/${dt}.json`),
   ]);
   estado.indice = indice;
   estado.santos = santos;
@@ -742,6 +774,6 @@ async function init() {
   // A entrada só começa depois que o ícone de carregamento sai de cena.
   await esconderPreloader();
   abrirCabecalho();
-  aplicarDia(dt, dia, resumo, { primeira: true });
+  aplicarDia(dt, dia, resumo, trechos, { primeira: true });
 }
 init();
