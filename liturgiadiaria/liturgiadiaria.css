@@ -1096,44 +1096,9 @@ html:has(.lp-card[open]) { overflow: hidden; }
   .lp-card[open], .lp-card-slide { animation: none; transition: none; }
 }
 
-/* ── Arrastar para trocar de mês e de dia (liturgiadiaria.js) ─────────────── */
+/* ── Arrastar para trocar de mês (liturgiadiaria.js) ─────────────────────── */
 /* O vertical fica com o navegador (rolagem); o horizontal é nosso. */
 .cal-grid { touch-action: pan-y pinch-zoom; }
-@media (max-width: 760px) {
-  #conteudo { touch-action: pan-y pinch-zoom; }
-}
 .cal-btn:disabled { opacity: 0.25; cursor: default; background: none; }
 
 
-/* Gota da troca de dia: aba branca de contorno líquido que brota da borda (liturgiadiaria.js) */
-.lp-gota {
-  position: fixed; top: 0; height: 100vh; height: 100dvh; width: 200px; z-index: 60;
-  pointer-events: none; visibility: hidden;
-}
-.lp-gota[data-lado="prox"], .lp-gota:not([data-lado]) { right: 0; }
-.lp-gota[data-lado="ant"] { left: 0; }
-.lp-gota svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.lp-gota-forma {
-  fill: #fff;
-  filter: drop-shadow(0 6px 18px rgba(40, 30, 15, 0.16)) drop-shadow(0 0 1px rgba(40, 30, 15, 0.18));
-  transition: fill 0.25s ease;
-}
-.lp-gota.pronta .lp-gota-forma { fill: var(--lp-cor-dia, var(--lp-vermelho)); }
-.lp-gota.bloqueada .lp-gota-forma { fill: #f3efe8; }
-.lp-gota.saindo { opacity: 0; transition: opacity 0.3s ease 0.12s; }
-
-/* rótulo em pé, dentro da gota: a seta e a data escrita na vertical */
-.lp-gota-rotulo {
-  position: absolute; transform: translateY(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
-  color: var(--lp-tinta); transition: color 0.25s ease;
-}
-.lp-gota-rotulo i { font-style: normal; font-size: 1.35rem; line-height: 1; color: var(--lp-cor-dia, var(--lp-vermelho)); transition: color 0.25s ease; }
-.lp-gota-rotulo b {
-  writing-mode: vertical-rl; font-family: var(--font-leitura); font-style: italic; font-weight: 400;
-  font-size: 0.95rem; letter-spacing: 0.01em; white-space: nowrap;
-}
-.lp-gota[data-lado="ant"] .lp-gota-rotulo b { transform: rotate(180deg); }   /* do lado esquerdo, lê-se de baixo para cima */
-.lp-gota.pronta .lp-gota-rotulo, .lp-gota.pronta .lp-gota-rotulo i { color: #fff; }
-.lp-gota.bloqueada .lp-gota-rotulo { color: var(--lp-suave); }
-.lp-gota.dica .lp-gota-rotulo b { font-size: 0.82rem; }
