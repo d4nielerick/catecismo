@@ -760,7 +760,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 }
 @media (max-width: 760px) {
   .lp-main > .lp-resumo,
-  .lp-main > .lp-resumo:not(.lp-resumo-aberto) { margin: 0 0 0.25rem; padding-inline: 1rem; }
+  .lp-main > .lp-resumo:not(.lp-resumo-aberto) { margin: 0 0 2.75rem; padding-inline: 1rem; }   /* as abas desceram para o rodapé: o respiro fica aqui */
 }
 @media (prefers-reduced-motion: reduce) {
   .lp-resumo, .lp-resumo-texto { transition: none; }
