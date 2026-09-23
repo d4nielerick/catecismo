@@ -97,7 +97,6 @@ function construirNav(blocos) {
 }
 
 /** A luz de vidro da barra de baixo vai até a aba ativa (com um leve passar do ponto: é líquida). */
-let luzAnimacao = null;
 let abasTravadasAte = 0;   // depois de um toque, a rolagem até a leitura não mexe na aba ativa
 
 function moverLuz(sem = false) {
@@ -105,50 +104,21 @@ function moverLuz(sem = false) {
   const tabsEl = document.getElementById('lp-tabs');
   const luz = tabsEl?.querySelector('.lp-tabs-luz');
   const ativa = tabsEl?.querySelector('.lp-tabs-leituras a.ativa') || tabsEl?.querySelector('.lp-tabs-leituras a');
-  if (!luz || !ativa || luzAnimacao) return;
+  if (!luz || !ativa) return;
   if (sem) luz.style.transition = 'none';
   luz.style.transform = `translateX(${ativa.offsetLeft}px)`;
   luz.style.width = `${ativa.offsetWidth}px`;
   if (sem) requestAnimationFrame(() => { luz.style.transition = ''; });
 }
 
-/** Toque numa aba (celular): a luz se ergue como uma lente de vidro, viaja esticada até o item
- *  e assenta como pílula — o gesto das abas de "vidro líquido". */
+/** Toque numa aba: marca a aba já (a luz desliza até ela) e segura o detector de leitura ativa
+ *  enquanto a página rola até a leitura, para a luz não passear pelas do meio. */
 function luzAoToque(alvo) {
   const tabsEl = document.getElementById('lp-tabs');
-  const luz = tabsEl?.querySelector('.lp-tabs-luz');
   tabsEl?.querySelectorAll('.lp-tabs-leituras a').forEach(a => a.classList.toggle('ativa', a === alvo));
+  abasTravadasAte = 0;
+  moverLuz();
   abasTravadasAte = performance.now() + 1400;
-  if (!luz || getComputedStyle(luz).display === 'none') return;
-  const x0 = new DOMMatrix(getComputedStyle(luz).transform).m41, w0 = luz.offsetWidth;
-  const x1 = alvo.offsetLeft, w1 = alvo.offsetWidth;
-  if (REDUZIDO.matches || !luz.animate) { moverLuz(true); return; }
-  const dist = Math.abs(x1 - x0);
-  const esticada = Math.max(w0, w1) + dist * 0.35;          // mais longe, mais comprida no meio do caminho
-  const meio = (x0 + x1) / 2 - (esticada - (w0 + w1) / 2) / 2;
-  luzAnimacao?.cancel();
-  luz.style.transition = 'none';
-  luz.classList.add('erguida');
-  alvo.classList.add('sob-lente');
-  const anim = luzAnimacao = luz.animate([
-    { transform: `translateX(${x0}px) scale(1, 1)`, width: `${w0}px`, offset: 0 },
-    { transform: `translateX(${x0}px) scale(1.12, 1.32)`, width: `${w0}px`, offset: 0.18, easing: 'cubic-bezier(0.4, 0, 0.2, 1)' },
-    { transform: `translateX(${meio}px) scale(1.08, 1.18)`, width: `${esticada}px`, offset: 0.55, easing: 'cubic-bezier(0.3, 0, 0.2, 1)' },
-    { transform: `translateX(${x1}px) scale(1.1, 1.26)`, width: `${w1}px`, offset: 0.78, easing: 'cubic-bezier(0.3, 1.4, 0.5, 1)' },
-    { transform: `translateX(${x1}px) scale(1, 1)`, width: `${w1}px`, offset: 1 },
-  ], { duration: dist ? 620 : 420, fill: 'forwards' });
-  const assentar = () => {
-    luz.style.transform = `translateX(${x1}px)`;
-    luz.style.width = `${w1}px`;
-    anim.cancel();
-    luz.classList.remove('erguida');
-    alvo.classList.remove('sob-lente');
-    requestAnimationFrame(() => { luz.style.transition = ''; });
-    if (luzAnimacao === anim) luzAnimacao = null;
-  };
-  anim.finished.then(assentar, () => { if (luzAnimacao === anim) luzAnimacao = null; });
-  // a luz já começa a "murchar" em pílula enquanto termina de assentar
-  setTimeout(() => luz.classList.remove('erguida'), dist ? 470 : 300);
 }
 addEventListener('resize', () => moverLuz(true));
 
@@ -868,7 +838,10 @@ function configurarRolagem() {
         el.style.opacity = q ? (1 - q).toFixed(3) : '';
       }
     }
-    raiz.classList.toggle('lp-compacto-on', document.querySelector('.lp-direita').getBoundingClientRect().bottom < 8);
+    // a data compacta só acende quando já está presa no alto da tela: antes disso ela fica no meio
+    // da página, bem em cima do título da 1ª leitura
+    const presa = document.getElementById('lp-compacto').getBoundingClientRect().top <= 1;
+    raiz.classList.toggle('lp-compacto-on', presa && document.querySelector('.lp-direita').getBoundingClientRect().bottom < 8);
   }
   const pedir = () => { if (!pedido) { pedido = true; requestAnimationFrame(atualizar); } };
   addEventListener('scroll', pedir, { passive: true });

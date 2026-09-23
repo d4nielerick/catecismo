@@ -1146,13 +1146,15 @@ html:has(.lp-card[open]) { overflow: hidden; }
     -webkit-tap-highlight-color: transparent;
   }
   .lp-main .lp-tabs .lp-tabs-leituras a.ativa { color: var(--lp-tinta); border: 0; }
-  .lp-tabs .lp-aba-icone { display: block; width: 22px; height: 22px; flex: 0 0 auto; }
+  .lp-tabs .lp-aba-icone {
+    display: block; width: 23px; height: 23px; flex: 0 0 auto;
+    fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round;
+  }
   .lp-aba-nome { display: none; white-space: nowrap; }
   .lp-tabs-leituras a.ativa .lp-aba-nome { display: inline; animation: lp-aba-nome 0.35s ease both; }
   @keyframes lp-aba-nome { from { opacity: 0; transform: translateX(-4px); } to { opacity: 1; transform: none; } }
 
-  /* a luz da aba ativa: parada, uma pílula discreta; no toque, ergue-se como lente de vidro
-     (.erguida), viaja esticada e volta a assentar (liturgiadiaria.js › luzAoToque) */
+  /* a luz da aba ativa: uma pílula discreta que desliza até ela */
   .lp-tabs .lp-tabs-luz {
     display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 0; z-index: 0;
     border-radius: 999px; transform-origin: 50% 50%;
@@ -1161,20 +1163,6 @@ html:has(.lp-card[open]) { overflow: hidden; }
     transition: transform 0.5s cubic-bezier(0.3, 1.35, 0.45, 1), width 0.38s cubic-bezier(0.3, 1.2, 0.45, 1),
       background 0.25s ease, box-shadow 0.25s ease;
   }
-  .lp-tabs .lp-tabs-luz.erguida {
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.22);
-    -webkit-backdrop-filter: blur(1.5px) saturate(1.6) brightness(1.06);
-    backdrop-filter: blur(1.5px) saturate(1.6) brightness(1.06);
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.95),
-      inset 0 -1px 2px rgba(40, 30, 15, 0.12),
-      inset 0 0 0 0.5px rgba(255, 255, 255, 0.6),
-      0 6px 18px rgba(40, 30, 15, 0.18), 0 1px 3px rgba(40, 30, 15, 0.12);
-  }
-  /* o rótulo sob a lente aparece levemente ampliado, como visto através do vidro */
-  .lp-main .lp-tabs .lp-tabs-leituras a { transition: color 0.25s ease, transform 0.35s cubic-bezier(0.3, 1.4, 0.5, 1); }
-  .lp-main .lp-tabs .lp-tabs-leituras a.sob-lente { transform: scale(1.08); }
 
   .lp-tabs .lp-tabs-dia {
     display: grid; place-items: center; flex: 0 0 auto;
