@@ -380,6 +380,11 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
   top: calc((var(--cap-linhas) - 1) * var(--cap-l) + var(--cap-base)
             - var(--cap-linhas) * var(--cap-l) / 2 - 0.3375 * var(--cap-f));
 }
+/* aspas/parêntese que abrem a leitura: pequenos, pendurados na margem, à esquerda da letra */
+.capitular-antes {
+  position: absolute; right: 100%; top: 0.08em;
+  font-size: 0.32em; line-height: 1; margin-right: 0.04em;
+}
 
 .vers-num {
   font-size: 0.66em;
@@ -436,7 +441,9 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 }
 
 /* ── Entrada do texto, linha a linha (liturgiadiaria.js › animarEntrada) ── */
-.lp-palavra { display: inline-block; }
+/* inline-block só enquanto entra (transform precisa); depois volta a ser texto corrido: com milhares
+   de blocos, segurar o dedo (seleção/lupa do iPhone) fazia o texto tremer */
+.lp-palavra.lp-oculto, .lp-palavra.lp-entra { display: inline-block; }
 .lp-oculto { opacity: 0; }
 .lp-entra {
   animation: lp-entrada 0.5s cubic-bezier(0.2, 0.65, 0.25, 1) both;
@@ -1093,7 +1100,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
 /* O vertical fica com o navegador (rolagem); o horizontal é nosso. */
 .cal-grid { touch-action: pan-y pinch-zoom; }
 @media (max-width: 760px) {
-  #conteudo { touch-action: pan-y pinch-zoom; will-change: transform; }
+  #conteudo { touch-action: pan-y pinch-zoom; }
 }
 .cal-btn:disabled { opacity: 0.25; cursor: default; background: none; }
 

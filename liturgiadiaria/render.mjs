@@ -23,9 +23,15 @@ export const COR_FUNDO = { roxo: '#f0ecf8', branco: '#faf7ee', verde: '#edf5ef',
 export const VERSO = /^\d+[a-z]?$|^\d+,\d+[a-z]?$|^[a-z]$/;
 export const OU = '<span class="salmo-ou">ou</span>';
 
-/** Capitular: a primeira letra do texto, grande, como nos missais. O número do versículo fica de fora. */
-const capitular = s => s.replace(/^([^\p{L}]*)(\p{L})/u, (_, antes, letra) =>
-  `${antes}<span class="capitular" data-letra="${letra.toUpperCase()}">${letra}</span>`);
+/** Capitular: a primeira letra do texto, grande, como nos missais. O número do versículo fica de fora.
+ *  O texto já chega escapado: pula entidades HTML (o "&quot;" de uma leitura que abre aspas não pode
+ *  virar capitular "q"). */
+const capitular = s => s.replace(/^((?:&[#\w]+;|[^\p{L}&])*)(\p{L})/u, (_, antes, letra) =>
+  // pontuação de abertura (aspas, parêntese) vai junto, pequena e pendurada à esquerda da letra:
+  // se ficasse fora, a capitular (que flutua) a deixaria presa no meio da palavra
+  antes.trim()
+    ? `<span class="capitular" data-letra="${letra.toUpperCase()}"><span class="capitular-antes">${antes.trim()}</span>${letra}</span>`
+    : `${antes}<span class="capitular" data-letra="${letra.toUpperCase()}">${letra}</span>`);
 
 export function renderProsa(texto) {
   let html = '';
