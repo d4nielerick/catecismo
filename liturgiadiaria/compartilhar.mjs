@@ -8,6 +8,7 @@
  */
 
 import { COR_FUNDO, COR_CALENDARIO } from '/liturgiadiaria/render.mjs';
+import * as som from '/liturgiadiaria/som.mjs';
 
 const SITE = 'santadoutrina.cloud/liturgiadiaria';
 const TITULO = "'Times New Roman', Times, Georgia, serif";
@@ -195,7 +196,7 @@ function soTexto(ctx, W, H, c) {
   // Maior corpo em que tudo cabe; a capitular ocupa as 3 primeiras linhas, do topo da
   // maiúscula da 1ª linha à linha de base da 3ª, como na página.
   let plano = null;
-  for (let t = 64; t >= 34; t -= 2) {
+  for (let t = 68; t >= 38; t -= 2) {
     const lh = t * 1.38;
     const F = ((LINHAS_CAP - 1) * lh + MAIUSC_TEXTO * t) / ALTURA_MAIUSC;
     ctx.font = `400 ${F}px ${TITULO}`;
@@ -211,16 +212,16 @@ function soTexto(ctx, W, H, c) {
     if (linha) linhas.push(linha);
     const n = Math.max(linhas.length, LINHAS_CAP);
     plano = { t, lh, F, recuo, linhas, altura: t + (n - 1) * lh };
-    if (plano.altura <= H - 640) break;
+    if (plano.altura <= H - 680) break;
   }
   const { t, lh, F, recuo, linhas } = plano;
-  const bloco = plano.altura + 150;
+  const bloco = plano.altura + 170;
   const topo = Math.max(250, (H - bloco) / 2 - 30);   // topo da 1ª linha
   const base0 = topo + t;
 
   ctx.textAlign = 'left';
-  ctx.fillStyle = 'rgba(0,0,0,0.5)'; ctx.font = `600 24px ${LEITURA}`;
-  ctx.fillText(c.rotulo.toUpperCase(), m, topo - 50);
+  ctx.fillStyle = 'rgba(0,0,0,0.5)'; ctx.font = `600 30px ${LEITURA}`;
+  ctx.fillText(c.rotulo.toUpperCase(), m, topo - 56);
 
   ctx.fillStyle = VERMELHO; ctx.font = `400 ${F}px ${TITULO}`;
   ctx.fillText(letra, m - F * 0.02, base0 + (LINHAS_CAP - 1) * lh);
@@ -229,15 +230,15 @@ function soTexto(ctx, W, H, c) {
   linhas.forEach((l, i) => ctx.fillText(l, i < LINHAS_CAP ? m + recuo : m, base0 + i * lh));
   const fim = topo + plano.altura;
 
-  ctx.font = `italic 36px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.62)';
-  ctx.fillText(c.referencia, m, fim + 90);
-  ctx.font = `italic 28px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.45)';
-  ctx.fillText(`${c.data} · ${c.celebracao}`, m, fim + 135, largura);
+  ctx.font = `italic 42px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.62)';
+  ctx.fillText(c.referencia, m, fim + 100);
+  ctx.font = `italic 33px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.45)';
+  ctx.fillText(`${c.data} · ${c.celebracao}`, m, fim + 152, largura);
 
-  ctx.font = `400 22px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.5)'; ctx.textAlign = 'right';
-  ctx.fillText(SITE, W - 90, H - 70);
-  ctx.textAlign = 'left'; ctx.font = `600 22px ${LEITURA}`;
-  ctx.fillText('LITURGIA DIÁRIA', m, H - 70);
+  ctx.font = `400 26px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.5)'; ctx.textAlign = 'right';
+  ctx.fillText(SITE, W - 90, H - 66);
+  ctx.textAlign = 'left'; ctx.font = `600 26px ${LEITURA}`;
+  ctx.fillText('LITURGIA DIÁRIA', m, H - 66);
 }
 
 /** Linha justificada: distribui a sobra entre os espaços (a última linha fica alinhada à esquerda). */
@@ -255,30 +256,31 @@ function justificar(ctx, linha, x, y, largura, ultima) {
  *  rodapé em duas colunas (rótulos à esquerda, valores à direita), com o L no canto. */
 function editorial(ctx, W, H, c) {
   const alto = H > 1600;   // stories; senão, feed
-  const corte = Math.round(H * (alto ? 0.5 : 0.42));
-  const yTitulo = corte + (alto ? 270 : 165);
-  const yRodape = H - (alto ? 210 : 175);
+  const corte = Math.round(H * (alto ? 0.48 : 0.38));
+  const yTitulo = corte + (alto ? 250 : 150);
+  const yRodape = H - (alto ? 250 : 200);   // 1ª das três linhas do rodapé
+  const LINHA_RODAPE = 50;
   arte(ctx, 0, 0, W, corte, c.cor);
   papel(ctx, 0, corte, W, H - corte, '#ece6da');
   const m = 110, tinta = '#2a2620';
 
-  logo(ctx, W - m - 88, corte + (alto ? 70 : 40), alto ? 100 : 84, tinta);
+  logo(ctx, W - m - 92, corte + (alto ? 60 : 30), alto ? 108 : 92, tinta);
 
   // título da leitura e, ao lado, a passagem (a fonte encolhe se a referência for longa)
   ctx.fillStyle = tinta;
   const titulo = c.rotulo.toUpperCase();
   const passagem = `·  ${c.referencia.toUpperCase()}`;
-  let corpo = 30;
+  let corpo = 36;
   const largura = () => larguraEspacada(ctx, titulo, 7) + 14 + larguraEspacada(ctx, passagem, 5);
-  do { ctx.font = `400 ${corpo}px ${LEITURA}`; } while (largura() > W - 2 * m && --corpo > 18);
+  do { ctx.font = `400 ${corpo}px ${LEITURA}`; } while (largura() > W - 2 * m && --corpo > 22);
   espacadoEsq(ctx, titulo, m, yTitulo, 7);
   ctx.globalAlpha = 0.55;
   espacadoEsq(ctx, passagem, m + larguraEspacada(ctx, titulo, 7) + 14, yTitulo, 5);
   ctx.globalAlpha = 1;
 
-  const topo = yTitulo + 50;
+  const topo = yTitulo + 56;
   const caixa = encaixar(ctx, c.trecho, {
-    fonte: t => `400 ${t}px ${LEITURA}`, largura: W - 2 * m, altura: yRodape - 90 - topo, max: alto ? 50 : 44, min: 28, entrelinha: alto ? 1.7 : 1.6,
+    fonte: t => `400 ${t}px ${LEITURA}`, largura: W - 2 * m, altura: yRodape - 100 - topo, max: alto ? 64 : 56, min: 34, entrelinha: alto ? 1.6 : 1.5,
   });
   ctx.fillStyle = tinta;
   caixa.linhas.forEach((l, i) => justificar(ctx, l, m, topo + caixa.t + i * caixa.lh, W - 2 * m, i === caixa.linhas.length - 1));
@@ -286,13 +288,13 @@ function editorial(ctx, W, H, c) {
   const rotulos = ['CELEBRAÇÃO', 'DIA', 'LEIA MAIS'];
   const valores = [c.celebracao.toUpperCase(), c.data.toUpperCase(), 'SANTADOUTRINA.CLOUD'];
   rotulos.forEach((r, i) => {
-    const y = yRodape + i * 44;
-    ctx.font = `400 26px ${LEITURA}`;
+    const y = yRodape + i * LINHA_RODAPE;
+    ctx.font = `400 30px ${LEITURA}`;
     espacadoEsq(ctx, r, m, y, 5);
     // valor longo (nome de festa comprido) encolhe para não encostar no rótulo
     const livre = W - 2 * m - larguraEspacada(ctx, r, 5) - 40;
-    let corpo = 26;
-    while (larguraEspacada(ctx, valores[i], 5) > livre && --corpo > 16) ctx.font = `400 ${corpo}px ${LEITURA}`;
+    let corpo = 30;
+    while (larguraEspacada(ctx, valores[i], 5) > livre && --corpo > 18) ctx.font = `400 ${corpo}px ${LEITURA}`;
     espacadoDir(ctx, valores[i], W - m, y, 5);
   });
 }
@@ -325,9 +327,14 @@ const ICONE = {
 };
 
 // ── Janela ───────────────────────────────────────────────────────────────────
+// Os cards são desenhados em canvas de tamanho real fora da tela (é deles que sai o arquivo);
+// na janela aparece só uma imagem reduzida de cada um, leve de arrastar no celular.
 let dlg = null;
 let atual = 0;
 let conteudo = null;
+const telas = LAYOUTS.map(l => Object.assign(document.createElement('canvas'), { width: l.w, height: l.h }));
+const TOQUE = matchMedia('(pointer: coarse)');
+const REDUZIDO = matchMedia('(prefers-reduced-motion: reduce)');
 
 function montarJanela() {
   dlg = document.createElement('dialog');
@@ -338,15 +345,16 @@ function montarJanela() {
     <div class="lp-card-caixa">
       <header class="lp-card-topo">
         <p class="lp-card-titulo">Compartilhar trecho</p>
-        <button class="lp-card-fechar" type="button" aria-label="Fechar">×</button>
+        <span class="lp-card-topo-vao"></span>
+        <button class="lp-card-fechar" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
       </header>
       <nav class="lp-card-abas" aria-label="Layout">${LAYOUTS.map((l, i) => `<button type="button" data-i="${i}">${l.nome}</button>`).join('')}</nav>
       <div class="lp-card-palco">
-        <button class="lp-card-seta lp-card-ant" type="button" aria-label="Layout anterior">‹</button>
+        <button class="lp-card-seta lp-card-ant" type="button" aria-label="Layout anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg></button>
         <div class="lp-card-trilho">${LAYOUTS.map((l, i) => `
-          <figure class="lp-card-slide" data-i="${i}"><canvas width="${l.w}" height="${l.h}" aria-label="${l.nome}"></canvas></figure>`).join('')}
+          <figure class="lp-card-slide" data-i="${i}"><img alt="Card ${l.nome}" width="${l.w}" height="${l.h}" decoding="async"></figure>`).join('')}
         </div>
-        <button class="lp-card-seta lp-card-prox" type="button" aria-label="Próximo layout">›</button>
+        <button class="lp-card-seta lp-card-prox" type="button" aria-label="Próximo layout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></button>
       </div>
       <div class="lp-card-fotos" aria-label="Pintura do card"></div>
       <div class="lp-card-acoes">
@@ -357,12 +365,32 @@ function montarJanela() {
       <p class="lp-card-aviso" role="status"></p>
     </div>`;
   document.body.append(dlg);
+  dlg.querySelector('.lp-card-fechar').before(som.botaoDeSom('lp-card-som'));
 
   const trilho = dlg.querySelector('.lp-card-trilho');
+  const passo = () => trilho.children[1].offsetLeft - trilho.children[0].offsetLeft;
+
+  // Toque na aba ou na seta: rolagem própria, curta (~260ms), em vez da "smooth" do navegador.
+  let animacao = 0;
+  let animando = false;   // enquanto a rolagem é nossa, o detector de arrasto não mexe na aba
   const ir = i => {
+    const antes = atual;
     atual = (i + LAYOUTS.length) % LAYOUTS.length;
-    trilho.scrollTo({ left: atual * passo(), behavior: 'smooth' });
     marcar();
+    if (atual !== antes) som.tocar('deslizar');
+    const de = trilho.scrollLeft, para = atual * passo();
+    cancelAnimationFrame(animacao);
+    if (REDUZIDO.matches || de === para) { trilho.scrollLeft = para; return; }
+    animando = true;
+    trilho.style.scrollSnapType = 'none';
+    const t0 = performance.now(), dur = 260;
+    const quadro = t => {
+      const p = Math.min(1, (t - t0) / dur), q = 1 - (1 - p) ** 3;
+      trilho.scrollLeft = de + (para - de) * q;
+      if (p < 1) animacao = requestAnimationFrame(quadro);
+      else { trilho.style.scrollSnapType = ''; animando = false; }
+    };
+    animacao = requestAnimationFrame(quadro);
   };
   dlg.querySelector('.lp-card-fechar').addEventListener('click', () => dlg.close());
   // tocar num card vizinho (a borda que aparece do lado) leva a ele
@@ -377,15 +405,19 @@ function montarJanela() {
     if (e.key === 'ArrowLeft') ir(atual - 1);
     if (e.key === 'ArrowRight') ir(atual + 1);
   });
-  // arrastar no celular: o slide em que a rolagem parou vira o atual
-  const passo = () => trilho.children[1].offsetLeft - trilho.children[0].offsetLeft;
-  const assentar = () => { atual = Math.round(trilho.scrollLeft / passo()); marcar(); };
-  let espera;
-  trilho.addEventListener('scroll', () => { clearTimeout(espera); espera = setTimeout(assentar, 150); }, { passive: true });
-  trilho.addEventListener('scrollend', () => { clearTimeout(espera); assentar(); });
+  // Arrastar no celular: a aba acompanha já durante o arrasto (o card mais perto do centro).
+  let quadroRolagem = 0;
+  trilho.addEventListener('scroll', () => {
+    if (animando) return;
+    cancelAnimationFrame(quadroRolagem);
+    quadroRolagem = requestAnimationFrame(() => {
+      const i = Math.max(0, Math.min(LAYOUTS.length - 1, Math.round(trilho.scrollLeft / passo())));
+      if (i !== atual) { atual = i; marcar(); som.tocar('deslizar'); }
+    });
+  }, { passive: true });
   dlg.querySelector('.lp-card-fotos').addEventListener('click', e => {
     const b = e.target.closest('[data-foto]');
-    if (b) trocarFoto(+b.dataset.foto);
+    if (b) { som.tocar('toque'); trocarFoto(+b.dataset.foto); }
   });
   dlg.querySelector('.lp-card-acoes').addEventListener('click', e => {
     const destino = e.target.closest('[data-destino]')?.dataset.destino;
@@ -400,36 +432,77 @@ function marcar() {
 }
 
 const nomeArquivo = () => `liturgia-${conteudo.dt}-${LAYOUTS[atual].id}.png`;
+const blobDoCard = () => new Promise(r => telas[atual].toBlob(r, 'image/png'));
 
-// O navegador não abre o WhatsApp ou o Instagram já com uma imagem anexada: no celular, os dois
-// botões chamam o compartilhamento do sistema com o card (a pessoa escolhe o app na lista);
-// sem ele (desktop), o WhatsApp recebe o texto com o link e o Instagram fica com a imagem salva.
-async function enviar(destino) {
-  const canvas = dlg.querySelectorAll('canvas')[atual];
-  const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
-  if (!blob) return;
-  const arquivo = new File([blob], nomeArquivo(), { type: 'image/png' });
-  const link = `https://${SITE}/${conteudo.dt}/`;
-  const texto = `“${conteudo.trecho}” (${conteudo.referencia})\n${link}`;
-  const podeArquivo = navigator.canShare?.({ files: [arquivo] });
-
-  if (destino !== 'salvar' && podeArquivo) {
-    try {
-      // o Instagram descarta o texto; só a imagem vai
-      await navigator.share(destino === 'whatsapp' ? { files: [arquivo], text: texto } : { files: [arquivo] });
-    } catch { /* cancelou */ }
-    return;
-  }
-  if (destino === 'whatsapp') {
-    open(`https://wa.me/?text=${encodeURIComponent(texto)}`, '_blank', 'noopener');
-    return;
-  }
+function baixar(blob) {
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = arquivo.name;
+  a.download = nomeArquivo();
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-  avisar(destino === 'instagram' ? 'Imagem salva. Publique pelo app do Instagram.' : 'Imagem salva.');
+}
+
+/** Abre um app pelo esquema dele; se a página continuar à vista (app não instalado), cai no plano B. */
+function abrirApp(url, planoB) {
+  let saiu = false;
+  const marca = () => { saiu = true; };
+  document.addEventListener('visibilitychange', marca, { once: true });
+  location.href = url;
+  setTimeout(() => {
+    document.removeEventListener('visibilitychange', marca);
+    if (!saiu && !document.hidden) planoB?.();
+  }, 1400);
+}
+
+// Uma página web não consegue entregar a imagem direto ao WhatsApp ou ao Instagram:
+// · WhatsApp: abre o app com o trecho e o link (a prévia do link mostra a imagem do dia);
+// · Instagram: copia o card e abre a câmera do stories, onde ele pode ser colado;
+// · Salvar: no celular, a folha do sistema (é o único caminho até a galeria de fotos).
+async function enviar(destino) {
+  const link = `https://${SITE}/${conteudo.dt}/`;
+  const texto = `“${conteudo.trecho}” (${conteudo.referencia})\n${link}`;
+
+  if (destino === 'whatsapp') {
+    som.tocar('confirmar');
+    const web = `https://wa.me/?text=${encodeURIComponent(texto)}`;
+    if (TOQUE.matches) abrirApp(`whatsapp://send?text=${encodeURIComponent(texto)}`, () => { location.href = web; });
+    else open(web, '_blank', 'noopener');
+    return;
+  }
+
+  if (destino === 'instagram') {
+    if (TOQUE.matches && navigator.clipboard?.write && window.ClipboardItem) {
+      try {
+        // o Safari exige que a escrita comece no próprio toque: vai a promessa do blob, não o blob
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blobDoCard() })]);
+        som.tocar('confirmar');
+        avisar('Card copiado. No stories, toque em “Adicionar” ou cole.');
+        setTimeout(() => abrirApp('instagram://story-camera', () => compartilharArquivo()), 700);
+        return;
+      } catch { /* sem permissão: segue para a folha do sistema */ }
+    }
+    if (TOQUE.matches && await compartilharArquivo()) return;
+    baixar(await blobDoCard());
+    som.tocar('confirmar');
+    avisar('Imagem salva. Publique pelo app do Instagram.');
+    return;
+  }
+
+  // salvar
+  if (TOQUE.matches) {
+    avisar('Toque em “Salvar imagem”.');
+    if (await compartilharArquivo()) return;
+  }
+  baixar(await blobDoCard());
+  som.tocar('confirmar');
+  avisar('Imagem salva.');
+}
+
+async function compartilharArquivo() {
+  const arquivo = new File([await blobDoCard()], nomeArquivo(), { type: 'image/png' });
+  if (!navigator.canShare?.({ files: [arquivo] })) return false;
+  try { await navigator.share({ files: [arquivo] }); som.tocar('confirmar'); } catch { /* cancelou */ }
+  return true;
 }
 
 let esperaAviso;
@@ -438,7 +511,7 @@ function avisar(msg) {
   el.textContent = msg;
   el.classList.add('visivel');
   clearTimeout(esperaAviso);
-  esperaAviso = setTimeout(() => el.classList.remove('visivel'), 3500);
+  esperaAviso = setTimeout(() => el.classList.remove('visivel'), 4000);
 }
 
 // ── Pinturas (data/cards-imagens.json) ───────────────────────────────────────
@@ -446,11 +519,13 @@ const CARDS = '/assets/img/cards';
 const diaDoAno = dt => Math.round(Date.parse(`${dt}T00:00:00Z`) / 86400000);
 
 /** Pinturas oferecidas para o dia: a escolhida para a leitura (se houver) e depois as que batem
- *  o tempo litúrgico (+2) e a cor (+1). Dentro do grupo de maior nota, a primeira gira com a data,
+ *  o tempo litúrgico (+2) e a cor (+1), e por fim as neutras. Dentro do grupo de maior nota, a primeira gira com a data,
  *  para o card de cada dia não abrir sempre com a mesma. */
 export function escolherFotos(catalogo, { tempo, cor, dt, preferida }, max = 6) {
   const lista = catalogo?.imagens || [];
-  const nota = im => (im.tempos.includes(tempo) ? 2 : 0) + (im.cores.includes(cor) ? 1 : 0);
+  // tempo do dia vale 2, cor 1; as neutras ("todos") entram por último, em qualquer dia
+  const nota = im => (im.tempos.includes(tempo) ? 2 : 0) + (im.cores.includes(cor) ? 1 : 0)
+    + (im.tempos.includes('todos') ? 0.5 : 0);
   const boas = lista.filter(im => nota(im) > 0).sort((a, b) => nota(b) - nota(a));
   const topo = boas.filter(im => nota(im) === nota(boas[0]));
   const giro = topo.length ? diaDoAno(dt) % topo.length : 0;
@@ -467,11 +542,23 @@ const carregarArte = src => new Promise(ok => {
   img.src = src;
 });
 
+// Desenha cada card no tamanho real e põe na janela uma cópia reduzida (larga o bastante para
+// telas de alta densidade, mas bem mais leve de mover que o canvas cheio).
+const PREVIA_L = 640;
 function desenharTodos() {
-  dlg.querySelectorAll('canvas').forEach((cv, i) => {
+  const imgs = dlg.querySelectorAll('.lp-card-slide img');
+  telas.forEach((cv, i) => {
     const ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, cv.width, cv.height);
     LAYOUTS[i].desenhar(ctx, cv.width, cv.height, conteudo);
+    const previa = Object.assign(document.createElement('canvas'), { width: PREVIA_L, height: Math.round(PREVIA_L * cv.height / cv.width) });
+    previa.getContext('2d').drawImage(cv, 0, 0, previa.width, previa.height);
+    previa.toBlob(b => {
+      if (!b) return;
+      const antigo = imgs[i].src;
+      imgs[i].src = URL.createObjectURL(b);
+      if (antigo.startsWith('blob:')) URL.revokeObjectURL(antigo);
+    }, 'image/jpeg', 0.9);
   });
 }
 

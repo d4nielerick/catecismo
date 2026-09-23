@@ -908,9 +908,14 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 html:has(.lp-modal[open]) { overflow: hidden; }
 .lp-modal-caixa { position: relative; overflow-y: auto; padding: 2rem 2.25rem 1.75rem; font-family: var(--font-leitura); }
 .lp-modal-fechar {
-  position: absolute; top: 0.75rem; right: 0.75rem;
-  width: 34px; height: 34px; border: 0; border-radius: 50%;
-  background: transparent; color: var(--lp-suave); font-size: 1.5rem; line-height: 1; cursor: pointer;
+  position: absolute; top: 0.6rem; right: 0.6rem;
+  width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%;
+  display: grid; place-items: center;
+  background: transparent; color: var(--lp-suave); cursor: pointer; transition: background 0.2s, color 0.2s;
+}
+/* o X é desenhado (dois traços), não um caractere da fonte: fica no centro exato do círculo */
+.lp-modal-fechar svg, .lp-card-fechar svg {
+  width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round;
 }
 .lp-modal-fechar:hover { background: rgba(0, 0, 0, 0.06); color: var(--lp-tinta); }
 .lp-modal-sobre {
@@ -983,14 +988,16 @@ html:has(.lp-card[open]) { overflow: hidden; }
   padding: max(0.75rem, env(safe-area-inset-top)) 0 max(1rem, env(safe-area-inset-bottom));
   font-family: var(--font-leitura);
 }
-.lp-card-topo { display: flex; align-items: center; justify-content: space-between; padding: 0 1rem 0 1.25rem; }
+.lp-card-topo { display: flex; align-items: center; gap: 0.25rem; padding: 0 0.75rem 0 1.25rem; }
+.lp-card-topo-vao { flex: 1; }
 .lp-card-titulo {
   margin: 0; font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600;
   letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242, 234, 216, 0.6);
 }
 .lp-card-fechar {
-  width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.08);
-  color: #f2ead8; font-size: 1.5rem; line-height: 1; cursor: pointer;
+  width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(255, 255, 255, 0.08); color: #f2ead8; cursor: pointer; transition: background 0.2s;
 }
 .lp-card-fechar:hover { background: rgba(255, 255, 255, 0.16); }
 
@@ -1012,20 +1019,29 @@ html:has(.lp-card[open]) { overflow: hidden; }
 .lp-card-slide {
   flex: 0 0 78vw; margin: 0; min-height: 0; scroll-snap-align: center;
   display: flex; justify-content: center; align-items: center;
-  opacity: 0.35; transform: scale(0.94); transition: opacity 0.3s, transform 0.3s; cursor: pointer;
+  opacity: 0.35; transform: scale(0.94); transition: opacity 0.2s, transform 0.2s; cursor: pointer;
 }
 .lp-card-slide.atual { opacity: 1; transform: none; cursor: default; }
-.lp-card-slide canvas {
+.lp-card-slide img {
   display: block; max-width: 100%; max-height: 100%; width: auto; height: auto;
-  border-radius: 16px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 16px; background: #26211a;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);   /* sombra curta: barata de redesenhar no arrasto */
 }
 .lp-card-seta {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;
-  width: 48px; height: 48px; border-radius: 50%; border: 0;
-  background: rgba(255, 255, 255, 0.12); color: #fff; font-size: 1.8rem; line-height: 1; cursor: pointer;
-  backdrop-filter: blur(6px);
+  width: 48px; height: 48px; padding: 0; border-radius: 50%; border: 1px solid rgba(242, 234, 216, 0.22);
+  display: grid; place-items: center;
+  background: rgba(23, 20, 15, 0.55); color: #f2ead8; cursor: pointer;
+  backdrop-filter: blur(6px); transition: background 0.2s, border-color 0.2s;
 }
-.lp-card-seta:hover { background: rgba(255, 255, 255, 0.22); }
+.lp-card-seta svg, .lp-card-som svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.lp-card-som {
+  width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; display: grid; place-items: center;
+  background: transparent; color: rgba(242, 234, 216, 0.55); cursor: pointer; transition: color 0.2s, background 0.2s;
+}
+.lp-card-som:hover { background: rgba(255, 255, 255, 0.08); color: #f2ead8; }
+.lp-card-som[aria-pressed="true"] { color: #f2ead8; }
+.lp-card-seta:hover { background: rgba(23, 20, 15, 0.8); border-color: rgba(242, 234, 216, 0.5); }
 .lp-card-ant { left: 1.25rem; }
 .lp-card-prox { right: 1.25rem; }
 
@@ -1076,3 +1092,44 @@ html:has(.lp-card[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .lp-card[open], .lp-card-slide { animation: none; transition: none; }
 }
+
+/* ── Arrastar para trocar de mês e de dia (liturgiadiaria.js) ─────────────── */
+/* O vertical fica com o navegador (rolagem); o horizontal é nosso. */
+.cal-grid { touch-action: pan-y pinch-zoom; }
+@media (max-width: 760px) {
+  #conteudo { touch-action: pan-y pinch-zoom; will-change: transform; }
+}
+.cal-btn:disabled { opacity: 0.25; cursor: default; background: none; }
+
+.cal-som {
+  position: absolute; right: -0.35rem; top: 50%; transform: translateY(-50%);
+  width: 32px; height: 32px; padding: 0; border: 0; border-radius: 50%; display: grid; place-items: center;
+  background: transparent; color: var(--lp-suave); cursor: pointer; transition: color 0.2s, background 0.2s;
+}
+.cal-som:hover { background: rgba(0, 0, 0, 0.05); color: var(--lp-tinta); }
+.cal-som[aria-pressed="true"] { color: var(--lp-cor-dia, var(--lp-tinta)); }
+.cal-som svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Marcador da troca de dia: sai da borda para onde a pessoa puxa */
+.lp-arrasto {
+  --p: 0;
+  position: fixed; top: 50%; z-index: 60; pointer-events: none;
+  display: flex; flex-direction: column; gap: 0.15rem;
+  padding: 0.7rem 1rem; border-radius: 14px;
+  background: rgba(252, 250, 247, 0.96); color: var(--lp-tinta);
+  border: 1px solid var(--lp-linha); box-shadow: 0 8px 24px rgba(20, 16, 10, 0.14);
+  font-family: var(--font-leitura); opacity: 0;
+  transition: opacity 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
+}
+.lp-arrasto[data-lado="prox"] { right: 0; text-align: right; border-right: 0; border-radius: 14px 0 0 14px;
+  transform: translate(calc(100% - var(--p) * 100%), -50%); }
+.lp-arrasto[data-lado="ant"] { left: 0; border-left: 0; border-radius: 0 14px 14px 0;
+  transform: translate(calc(var(--p) * 100% - 100%), -50%); }
+.lp-arrasto.visivel { opacity: calc(0.35 + var(--p) * 0.65); }
+.lp-arrasto span { font-family: var(--font-sans); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-suave); }
+.lp-arrasto strong { font-weight: 400; font-style: italic; font-size: 1.05rem; white-space: nowrap; }
+.lp-arrasto.pronto { background: var(--lp-cor-dia, var(--lp-vermelho)); border-color: transparent; color: #fff; opacity: 1; }
+.lp-arrasto.pronto span { color: rgba(255, 255, 255, 0.8); }
+.lp-arrasto.bloqueado strong { display: none; }
+.lp-arrasto.dica { transition: opacity 0.4s, transform 0.6s cubic-bezier(0.2, 0.8, 0.3, 1); }
+@media (prefers-reduced-motion: reduce) { .lp-arrasto { transition: opacity 0.15s; } }

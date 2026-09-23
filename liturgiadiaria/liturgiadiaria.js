@@ -9,8 +9,9 @@
 
 import {
   esc, pad, hojeLocal, abasHtml, cabecalhoDoDia, conteudoDoDia, diasHtml, itensDasAbas, urlDoDia, NOME_COR,
-  referenciasDoDia,
+  referenciasDoDia, somarDias,
 } from '/liturgiadiaria/render.mjs';
+import * as som from '/liturgiadiaria/som.mjs';
 
 // O que a página está mostrando; trocar de dia acontece aqui mesmo, sem recarregar.
 const estado = { dt: null, hoje: null, indice: null, santos: null, destaques: new Map() };
@@ -74,6 +75,12 @@ function construirNav(blocos) {
 const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
   'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
+// Troca de mês: pelas setas ou arrastando a grade para o lado (no toque). Só anda dentro do
+// intervalo que tem leituras; na ponta, a grade dá um "elástico" e volta.
+let calNav = null;
+let botaoSomCal = null;
+const mesDe = d => { const [a, m] = d.split('-').map(Number); return a * 12 + (m - 1); };
+
 function construirCalendario(dtAtual, hoje, indice) {
   const wrap = document.getElementById('cal-wrap');
   if (!wrap) return;
@@ -81,17 +88,21 @@ function construirCalendario(dtAtual, hoje, indice) {
   const sel = new Date(`${dtAtual}T12:00:00`);
   let ano = sel.getFullYear();
   let mes = sel.getMonth();
+  const real = indice && indice.inicio > '0000-00-00' && indice.fim < '9999';
+  const minimo = real ? mesDe(indice.inicio) : -Infinity;
+  const maximo = real ? mesDe(indice.fim) : Infinity;
 
-  function render() {
+  function render(direcao = 0) {
     const primeiroDia = new Date(ano, mes, 1).getDay();
     const ultimoDia = new Date(ano, mes + 1, 0).getDate();
+    const aqui = ano * 12 + mes;
 
     let html = `
       <div class="cal-header">
         ${dtAtual !== hoje ? '<button class="cal-hoje" type="button" id="cal-hoje">Hoje</button>' : ''}
-        <button class="cal-btn" id="cal-prev" aria-label="Mês anterior">‹</button>
+        <button class="cal-btn" id="cal-prev" aria-label="Mês anterior"${aqui <= minimo ? ' disabled' : ''}>‹</button>
         <span class="cal-mes">${MESES[mes]} ${ano}</span>
-        <button class="cal-btn" id="cal-next" aria-label="Próximo mês">›</button>
+        <button class="cal-btn" id="cal-next" aria-label="Próximo mês"${aqui >= maximo ? ' disabled' : ''}>›</button>
       </div>
       <div class="cal-grid">
         ${['D', 'S', 'T', 'Q', 'Q', 'S', 'S'].map(d => `<div class="cal-dow">${d}</div>`).join('')}
@@ -115,20 +126,210 @@ function construirCalendario(dtAtual, hoje, indice) {
     html += '</div>';
     esconderDica();
     wrap.innerHTML = html;
+    botaoSomCal ??= som.botaoDeSom('cal-som');
+    wrap.querySelector('.cal-header').append(botaoSomCal);
 
-    document.getElementById('cal-prev')?.addEventListener('click', () => {
-      mes--; if (mes < 0) { mes = 11; ano--; } render();
-    });
-    document.getElementById('cal-next')?.addEventListener('click', () => {
-      mes++; if (mes > 11) { mes = 0; ano++; } render();
-    });
+    // o mês novo entra do lado para onde se foi
+    const grade = wrap.querySelector('.cal-grid');
+    if (direcao && grade.animate && !REDUZIDO.matches) {
+      grade.animate(
+        [{ transform: `translateX(${direcao * 36}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }],
+        { duration: 280, easing: SUAVE },
+      );
+    }
+
+    document.getElementById('cal-prev')?.addEventListener('click', () => ir(-1));
+    document.getElementById('cal-next')?.addEventListener('click', () => ir(1));
     document.getElementById('cal-hoje')?.addEventListener('click', () => {
       if (estado.indice) irParaDia(hoje);
       else location.href = '/liturgiadiaria/';
     });
   }
 
+  /** Anda delta meses; devolve false na ponta do intervalo (quem chamou faz o elástico). */
+  function ir(delta) {
+    const alvo = ano * 12 + mes + delta;
+    if (alvo < minimo || alvo > maximo) return false;
+    ano = Math.floor(alvo / 12);
+    mes = alvo % 12;
+    render(delta);
+    som.tocar('deslizar');
+    return true;
+  }
+
+  calNav = { ir };
   render();
+}
+
+function configurarArrastoCalendario() {
+  const wrap = document.getElementById('cal-wrap');
+  if (!wrap) return;
+  let g = null;           // gesto em andamento
+  let bloquearClique = false;
+
+  wrap.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'touch' || !e.target.closest('.cal-grid')) return;
+    g = { x: e.clientX, y: e.clientY, t: performance.now(), modo: null, grade: wrap.querySelector('.cal-grid') };
+  });
+  wrap.addEventListener('pointermove', e => {
+    if (!g) return;
+    const dx = e.clientX - g.x, dy = e.clientY - g.y;
+    if (!g.modo && Math.hypot(dx, dy) > 10) g.modo = Math.abs(dx) > Math.abs(dy) * 1.2 ? 'h' : 'v';
+    if (g.modo === 'h') g.grade.style.transform = `translateX(${dx * 0.5}px)`;
+  });
+  const soltar = e => {
+    if (!g) return;
+    const { modo, grade } = g;
+    const dx = e.clientX - g.x;
+    const rapido = Math.abs(dx) / (performance.now() - g.t) > 0.45;
+    g = null;
+    if (modo !== 'h') return;
+    bloquearClique = true;
+    setTimeout(() => { bloquearClique = false; }, 350);
+    const vai = e.type === 'pointerup' && (Math.abs(dx) > 50 || (Math.abs(dx) > 24 && rapido));
+    if (vai && calNav?.ir(dx < 0 ? 1 : -1)) return;   // redesenhou: a grade nova já entra animada
+    // não passou (ou é a ponta do intervalo): volta ao lugar
+    grade.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.3, 1)';
+    grade.style.transform = '';
+    grade.addEventListener('transitionend', () => { grade.style.transition = ''; }, { once: true });
+  };
+  wrap.addEventListener('pointerup', soltar);
+  wrap.addEventListener('pointercancel', soltar);
+  // o toque que arrastou não pode abrir o dia em que começou
+  wrap.addEventListener('click', e => { if (bloquearClique) { e.preventDefault(); e.stopPropagation(); } }, true);
+}
+
+// ── Troca de dia arrastando a leitura (celular) ──────────────────────────────
+// Várias travas contra troca acidental: só conta movimento claramente horizontal, precisa
+// percorrer ~38% da tela e só confirma ao soltar (voltar o dedo desiste). Bordas da tela ficam
+// livres (no iPhone, arrastar da borda é o "voltar" do Safari). Um marcador na borda mostra
+// o dia de destino e muda de estado quando, solto ali, a troca acontece.
+const BORDA_LIVRE = 24;
+const FRACAO = 0.38;
+
+function configurarArrastoDias() {
+  const main = document.querySelector('.lp-main');
+  const conteudo = document.getElementById('conteudo');
+  if (!main || !conteudo) return;
+  const marca = document.createElement('div');
+  marca.className = 'lp-arrasto';
+  marca.setAttribute('aria-hidden', 'true');
+  document.body.append(marca);
+  let g = null;
+
+  const destinoDe = dx => {
+    const alvo = somarDias(estado.dt, dx < 0 ? 1 : -1);
+    const ok = estado.indice && alvo >= estado.indice.inicio && alvo <= estado.indice.fim;
+    return { alvo, ok };
+  };
+  const rotulo = d => {
+    const [, m, dd] = d.split('-').map(Number);
+    const sem = new Date(`${d}T12:00:00`).toLocaleDateString('pt-BR', { weekday: 'long' }).split('-')[0];
+    return `${dd}/${['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'][m - 1]} · ${sem[0].toUpperCase()}${sem.slice(1)}`;
+  };
+
+  main.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'touch' || !TELA_ESTREITA.matches || !estado.indice) return;
+    if (e.clientX < BORDA_LIVRE || e.clientX > innerWidth - BORDA_LIVRE) return;
+    if (e.target.closest('.lp-tabs, .lp-resumo, #lp-compacto, a, button, summary, .lp-dias')) return;
+    if (document.querySelector('dialog[open]') || getSelection()?.isCollapsed === false) return;
+    g = { x: e.clientX, y: e.clientY, modo: null, pronto: false, lado: 0 };
+  });
+
+  main.addEventListener('pointermove', e => {
+    if (!g) return;
+    const dx = e.clientX - g.x, dy = e.clientY - g.y;
+    if (!g.modo && Math.hypot(dx, dy) > 12) g.modo = Math.abs(dx) > Math.abs(dy) * 2 ? 'h' : 'v';
+    if (g.modo !== 'h') return;
+    if (getSelection()?.isCollapsed === false) { cancelar(); return; }
+    const { alvo, ok } = destinoDe(dx);
+    const lado = dx < 0 ? 1 : -1;
+    if (lado !== g.lado) {
+      g.lado = lado;
+      marca.dataset.lado = lado > 0 ? 'prox' : 'ant';
+      marca.dataset.alvo = alvo;
+    }
+    const p = Math.min(1.15, Math.abs(dx) / (innerWidth * FRACAO));
+    const pronto = ok && p >= 1;
+    if (pronto !== g.pronto) {
+      g.pronto = pronto;
+      if (pronto) som.tocar('limiar');
+    }
+    marca.classList.toggle('pronto', pronto);
+    marca.classList.toggle('bloqueado', !ok);
+    marca.innerHTML = !ok
+      ? '<span>Sem leituras</span>'
+      : lado > 0
+        ? `<span>${pronto ? 'Solte para abrir' : 'Próximo dia'}</span><strong>${rotulo(alvo)} ›</strong>`
+        : `<span>${pronto ? 'Solte para abrir' : 'Dia anterior'}</span><strong>‹ ${rotulo(alvo)}</strong>`;
+    marca.style.setProperty('--p', Math.min(1, p).toFixed(3));
+    marca.classList.add('visivel');
+    // a leitura acompanha o dedo, "presa" (e trava mais onde não há dia para abrir)
+    conteudo.style.transform = `translateX(${dx * (ok ? 0.28 : 0.1)}px)`;
+  });
+
+  function voltar() {
+    marca.classList.remove('visivel', 'pronto', 'bloqueado');
+    conteudo.style.transition = 'transform 0.35s cubic-bezier(0.2, 0.8, 0.3, 1)';
+    conteudo.style.transform = '';
+    conteudo.addEventListener('transitionend', () => { conteudo.style.transition = ''; }, { once: true });
+  }
+  function cancelar() { g = null; voltar(); }
+
+  const soltar = e => {
+    if (!g) return;
+    const { modo, pronto } = g;
+    const dx = e.clientX - g.x;
+    g = null;
+    if (modo !== 'h') return;
+    if (e.type === 'pointerup' && pronto) {
+      const { alvo } = destinoDe(dx);
+      marca.classList.remove('visivel', 'pronto');
+      // a leitura sai para o lado do arrasto; a do outro dia entra redesenhada
+      conteudo.style.transition = 'transform 0.22s ease-in, opacity 0.22s ease-in';
+      conteudo.style.transform = `translateX(${dx < 0 ? -40 : 40}px)`;
+      conteudo.style.opacity = '0';
+      som.tocar('pagina');
+      setTimeout(() => {
+        conteudo.style.transition = 'none';
+        conteudo.style.transform = `translateX(${dx < 0 ? 40 : -40}px)`;
+        irParaDia(alvo).then(() => {
+          requestAnimationFrame(() => {
+            conteudo.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.3, 1), opacity 0.3s';
+            conteudo.style.transform = '';
+            conteudo.style.opacity = '';
+          });
+        });
+      }, 220);
+      return;
+    }
+    voltar();
+  };
+  main.addEventListener('pointerup', soltar);
+  main.addEventListener('pointercancel', soltar);
+  addEventListener('scroll', () => { if (g && g.modo !== 'h') g = null; }, { passive: true });
+
+  mostrarDicaDoArrasto(marca, conteudo);
+}
+
+/** Primeira visita no celular: a leitura "balança" e o marcador espia da borda, uma vez só. */
+function mostrarDicaDoArrasto(marca, conteudo) {
+  const CHAVE = 'lp-dica-arrasto';
+  try { if (localStorage.getItem(CHAVE)) return; } catch { return; }
+  if (!TELA_ESTREITA.matches || !matchMedia('(pointer: coarse)').matches || REDUZIDO.matches) return;
+  setTimeout(() => {
+    if (document.querySelector('dialog[open]') || !estado.dt) return;
+    try { localStorage.setItem(CHAVE, '1'); } catch { /* ignora */ }
+    marca.dataset.lado = 'prox';
+    marca.innerHTML = '<span>Arraste para o lado</span><strong>para mudar de dia</strong>';
+    marca.style.setProperty('--p', '0.55');
+    marca.classList.add('visivel', 'dica');
+    conteudo.animate?.(
+      [{ transform: 'none' }, { transform: 'translateX(-22px)' }, { transform: 'none' }],
+      { duration: 900, easing: 'ease-in-out' },
+    );
+    setTimeout(() => marca.classList.remove('visivel', 'dica'), 2600);
+  }, 3500);
 }
 
 // ── Entrada do texto, linha a linha ──────────────────────────────────────────
@@ -516,12 +717,16 @@ TABLET.addEventListener('change', organizarColunas);
 
 // ── Troca de dia (sem recarregar) ────────────────────────────────────────────
 // Só a data sai pela esquerda e a nova sobe de baixo; "Liturgia Diária" não entra de novo.
-function trocarData(aplicar) {
+function trocarData(aplicarDeFato) {
+  // devolve uma promessa que se cumpre quando o dia novo já está desenhado
+  let pronto;
+  const feito = new Promise(ok => { pronto = ok; });
+  const aplicar = () => { aplicarDeFato(); pronto(); };
   const alvos = [
     document.getElementById('lp-titulo-data'),
     ...['.lp-lateral .lp-data', '.lp-lateral .tempo-wrap', '.lp-lateral .nome-dia'].map(sel => document.querySelector(sel)),
   ].filter(Boolean);
-  if (REDUZIDO.matches || !alvos[0]?.animate) { aplicar(); return; }
+  if (REDUZIDO.matches || !alvos[0]?.animate) { aplicar(); return feito; }
   const saidas = alvos.map((el, i) => el.animate(
     [{ opacity: 1, transform: 'none', filter: 'blur(0)' }, { opacity: 0, transform: 'translateX(-24px)', filter: 'blur(4px)' }],
     { duration: 340, delay: i * 45, easing: SAI, fill: 'forwards' },
@@ -532,6 +737,7 @@ function trocarData(aplicar) {
     entrar(alvos[0], 0, { duracao: 800, y: '0.55em', desfoque: 6 });
     alvos.slice(1).forEach((el, i) => entrar(el, 140 + i * 80, { duracao: 640, y: '0.5em', desfoque: 3 }));
   }, aplicar);
+  return feito;
 }
 
 function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
@@ -606,7 +812,7 @@ async function irParaDia(dt) {
   // O endereço volta a ser o da página de hoje: recarregar sempre abre o dia atual.
   if (location.pathname !== '/liturgiadiaria/' || location.search) history.replaceState(null, '', '/liturgiadiaria/');
   if (scrollY > 40) rolarPara(0);
-  trocarData(() => aplicarDia(dt, dia, resumo, trechos));
+  await trocarData(() => aplicarDia(dt, dia, resumo, trechos));
 }
 
 const LINK_DE_DIA = /^\/liturgiadiaria\/(\d{4}-\d{2}-\d{2})\/$/;
@@ -764,6 +970,8 @@ async function init() {
   configurarNavegacao();
   configurarRolagem();
   configurarModal();
+  configurarArrastoCalendario();
+  configurarArrastoDias();
   iniciarLenis();
 
   const [indice, dia, santos, resumo, trechos] = await Promise.all([
