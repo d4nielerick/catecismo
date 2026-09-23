@@ -1177,6 +1177,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
   .lp-tabs .lp-tabs-dia {
     display: grid; place-items: center; flex: 0 0 auto;
     width: 46px; height: 46px; border-radius: 50%;
+    border: 0; margin: 0; padding: 0;   /* herdavam a borda de baixo das abas do desktop: fazia uma "lua" sob a bolinha */
     color: var(--lp-tinta); text-decoration: none;
     transition: background 0.2s ease, transform 0.15s ease;
     -webkit-tap-highlight-color: transparent;
