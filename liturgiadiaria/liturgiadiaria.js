@@ -83,6 +83,7 @@ function construirNav(blocos) {
     a.setAttribute('aria-label', nome);
     a.innerHTML = `${icone(...iconeDaLeitura(itens[i].leitura))}<span class="lp-aba-nome">${esc(nome)}</span>`;
   });
+  tabsEl.classList.toggle('lp-tabs-muitas', links.length > 3);   // em tela estreita, a ativa fica só com o ícone
 
   const cards = itens.map(({ id }) => document.getElementById(id)).filter(Boolean);
   const obs = observadorAbas = new IntersectionObserver(entries => {
