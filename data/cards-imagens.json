@@ -1,0 +1,23 @@
+{
+  "_sobre": "Acervo de pinturas dos cards de compartilhar (liturgiadiaria/compartilhar.mjs). Arquivos em /assets/img/cards/<id>.webp e a miniatura em /assets/img/cards/mini/<id>.webp. 'tempos' usa os nomes de data/liturgia/*.json › tempo; 'cores' as cores litúrgicas. O card mostra primeiro as que batem o tempo do dia, depois as que batem a cor. Todas geradas por IA no estilo óleo com impasto; as 'recriacao' seguem uma obra clássica.",
+  "imagens": [
+    { "id": "trigo-colina", "titulo": "Colina de trigo", "tempos": ["Tempo Comum"], "cores": ["verde", "branco"] },
+    { "id": "trigo-cruz", "titulo": "Cruz no trigal", "tempos": ["Tempo Comum"], "cores": ["verde"] },
+    { "id": "montanhas", "titulo": "Montanhas ao amanhecer", "tempos": ["Tempo Comum", "Tempo do Advento"], "cores": ["verde", "branco"] },
+    { "id": "oliveiras", "titulo": "Oliveiras", "tempos": ["Tempo Comum", "Semana Santa"], "cores": ["verde", "roxo"] },
+    { "id": "mar-galileia", "titulo": "Barco no mar da Galileia", "tempos": ["Tempo Comum", "Tempo da Páscoa"], "cores": ["verde", "branco"] },
+    { "id": "videira", "titulo": "Videira", "tempos": ["Tempo Comum", "Tempo da Páscoa"], "cores": ["verde", "branco"] },
+    { "id": "angelus", "titulo": "O Ângelus", "recriacao": "Jean-François Millet, O Ângelus (1857)", "tempos": ["Tempo Comum"], "cores": ["verde", "branco"] },
+    { "id": "semeador", "titulo": "O Semeador", "recriacao": "Jean-François Millet, O Semeador (1850)", "tempos": ["Tempo Comum"], "cores": ["verde"] },
+    { "id": "bom-pastor", "titulo": "O Bom Pastor", "recriacao": "tradição de Bernhard Plockhorst", "tempos": ["Tempo da Páscoa", "Tempo Comum"], "cores": ["branco"] },
+    { "id": "emaus", "titulo": "A Ceia de Emaús", "recriacao": "tradição de Rembrandt", "tempos": ["Tempo da Páscoa"], "cores": ["branco"] },
+    { "id": "advento-aurora", "titulo": "Estrada na aurora", "tempos": ["Tempo do Advento"], "cores": ["roxo", "rosa"] },
+    { "id": "advento-coroa", "titulo": "Coroa do Advento", "tempos": ["Tempo do Advento"], "cores": ["roxo", "rosa"] },
+    { "id": "natal-belem", "titulo": "Estrela sobre Belém", "tempos": ["Tempo do Natal", "Tempo do Advento"], "cores": ["branco"] },
+    { "id": "quaresma-deserto", "titulo": "Deserto", "tempos": ["Tempo da Quaresma"], "cores": ["roxo", "rosa"] },
+    { "id": "quaresma-espinhos", "titulo": "Coroa de espinhos", "tempos": ["Tempo da Quaresma", "Semana Santa"], "cores": ["roxo", "vermelho"] },
+    { "id": "pascoa-tumulo", "titulo": "O túmulo vazio", "tempos": ["Tempo da Páscoa"], "cores": ["branco"] },
+    { "id": "lirios", "titulo": "Lírios", "tempos": ["Tempo da Páscoa", "Tempo do Natal"], "cores": ["branco"] },
+    { "id": "pentecostes", "titulo": "O Espírito Santo", "tempos": ["Tempo da Páscoa"], "cores": ["vermelho"] }
+  ]
+}

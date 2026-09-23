@@ -121,6 +121,14 @@ function papel(ctx, x, y, w, h, cor) {
 
 /** Imagem provisória: luz dourada atrás de uma cruz. Sai quando o acervo de imagens existir. */
 function arte(ctx, x, y, w, h, cor) {
+  // pintura do acervo, recortada para cobrir a área (como object-fit: cover)
+  const img = imagens.arte;
+  if (img) {
+    const e = Math.max(w / img.width, h / img.height);
+    const sw = w / e, sh = h / e;
+    ctx.drawImage(img, (img.width - sw) / 2, (img.height - sh) * 0.4, sw, sh, x, y, w, h);
+    return;
+  }
   const [escuro, medio, luz] = TONS[cor] || TONS.branco;
   ctx.save();
   ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
@@ -340,6 +348,7 @@ function montarJanela() {
         </div>
         <button class="lp-card-seta lp-card-prox" type="button" aria-label="Próximo layout">›</button>
       </div>
+      <div class="lp-card-fotos" aria-label="Pintura do card"></div>
       <div class="lp-card-acoes">
         <button type="button" data-destino="whatsapp"><span class="lp-card-icone">${ICONE.whatsapp}</span>WhatsApp</button>
         <button type="button" data-destino="instagram"><span class="lp-card-icone">${ICONE.instagram}</span>Instagram</button>
@@ -374,6 +383,10 @@ function montarJanela() {
   let espera;
   trilho.addEventListener('scroll', () => { clearTimeout(espera); espera = setTimeout(assentar, 150); }, { passive: true });
   trilho.addEventListener('scrollend', () => { clearTimeout(espera); assentar(); });
+  dlg.querySelector('.lp-card-fotos').addEventListener('click', e => {
+    const b = e.target.closest('[data-foto]');
+    if (b) trocarFoto(+b.dataset.foto);
+  });
   dlg.querySelector('.lp-card-acoes').addEventListener('click', e => {
     const destino = e.target.closest('[data-destino]')?.dataset.destino;
     if (destino) enviar(destino);
@@ -383,6 +396,7 @@ function montarJanela() {
 function marcar() {
   dlg.querySelectorAll('.lp-card-abas button').forEach((b, i) => b.setAttribute('aria-current', i === atual));
   dlg.querySelectorAll('.lp-card-slide').forEach((f, i) => f.classList.toggle('atual', i === atual));
+  dlg.querySelector('.lp-card-fotos').classList.toggle('inativa', LAYOUTS[atual].id === 'texto');
 }
 
 const nomeArquivo = () => `liturgia-${conteudo.dt}-${LAYOUTS[atual].id}.png`;
@@ -427,19 +441,67 @@ function avisar(msg) {
   esperaAviso = setTimeout(() => el.classList.remove('visivel'), 3500);
 }
 
-/** c: { dt, trecho, referencia, rotulo, celebracao, data, cor } */
-export async function abrirCard(c, { aoFechar } = {}) {
-  if (!dlg) montarJanela();
-  conteudo = { ...c, trecho: maiuscula(c.trecho) };
-  dlg.onclose = () => aoFechar?.();
-  dlg.showModal();
-  atual = 0;
-  dlg.querySelector('.lp-card-trilho').scrollLeft = 0;
-  marcar();
-  await Promise.all([carregarFontes(), carregarImagens()]);
+// ── Pinturas (data/cards-imagens.json) ───────────────────────────────────────
+const CARDS = '/assets/img/cards';
+const diaDoAno = dt => Math.round(Date.parse(`${dt}T00:00:00Z`) / 86400000);
+
+/** Pinturas oferecidas para o dia: a escolhida para a leitura (se houver) e depois as que batem
+ *  o tempo litúrgico (+2) e a cor (+1). Dentro do grupo de maior nota, a primeira gira com a data,
+ *  para o card de cada dia não abrir sempre com a mesma. */
+export function escolherFotos(catalogo, { tempo, cor, dt, preferida }, max = 6) {
+  const lista = catalogo?.imagens || [];
+  const nota = im => (im.tempos.includes(tempo) ? 2 : 0) + (im.cores.includes(cor) ? 1 : 0);
+  const boas = lista.filter(im => nota(im) > 0).sort((a, b) => nota(b) - nota(a));
+  const topo = boas.filter(im => nota(im) === nota(boas[0]));
+  const giro = topo.length ? diaDoAno(dt) % topo.length : 0;
+  const ordem = [...topo.slice(giro), ...topo.slice(0, giro), ...boas.slice(topo.length)];
+  const pref = preferida && lista.find(im => im.id === preferida);
+  const fotos = pref ? [pref, ...ordem.filter(im => im !== pref)] : ordem;
+  return fotos.slice(0, max).map(im => ({ ...im, src: `${CARDS}/${im.id}.webp`, mini: `${CARDS}/mini/${im.id}.webp` }));
+}
+
+const carregarArte = src => new Promise(ok => {
+  const img = new Image();
+  img.onload = () => ok(img);
+  img.onerror = () => ok(null);
+  img.src = src;
+});
+
+function desenharTodos() {
   dlg.querySelectorAll('canvas').forEach((cv, i) => {
     const ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, cv.width, cv.height);
     LAYOUTS[i].desenhar(ctx, cv.width, cv.height, conteudo);
   });
+}
+
+let pedidoFoto = 0;
+async function trocarFoto(i) {
+  const foto = conteudo.fotos?.[i];
+  dlg.querySelectorAll('.lp-card-fotos button').forEach((b, k) => b.setAttribute('aria-pressed', k === i));
+  const vez = ++pedidoFoto;
+  const img = foto ? await carregarArte(foto.src) : null;
+  if (vez !== pedidoFoto) return;
+  if (img) imagens.arte = img; else delete imagens.arte;
+  desenharTodos();
+}
+
+/** c: { dt, trecho, referencia, rotulo, celebracao, data, cor, fotos? } (fotos: de escolherFotos) */
+export async function abrirCard(c, { aoFechar } = {}) {
+  if (!dlg) montarJanela();
+  conteudo = { ...c, trecho: maiuscula(c.trecho) };
+  dlg.onclose = () => aoFechar?.();
+  const fila = dlg.querySelector('.lp-card-fotos');
+  fila.innerHTML = (c.fotos || []).map((f, i) => `
+    <button type="button" data-foto="${i}" aria-pressed="${i === 0}" title="${f.titulo}">
+      <img src="${f.mini}" alt="${f.titulo}" width="56" height="56">
+    </button>`).join('');
+  fila.hidden = !(c.fotos?.length > 1);
+  dlg.showModal();
+  atual = 0;
+  dlg.querySelector('.lp-card-trilho').scrollLeft = 0;
+  marcar();
+  delete imagens.arte;
+  await Promise.all([carregarFontes(), carregarImagens()]);
+  await trocarFoto(0);
 }

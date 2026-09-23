@@ -561,6 +561,7 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
 // ── Compartilhar trecho (data/liturgia-trechos/) ─────────────────────────────
 // Só aparece o botão nas leituras que têm trecho escolhido, e só se as leituras do dia
 // ainda são as que o arquivo cobre.
+let catalogoDeCards = null;
 function botoesDeCompartilhar(dt, dia, blocos, trechos) {
   if (!trechos?.trechos || trechos.leituras !== referenciasDoDia(dia)) return;
   const cab = cabecalhoDoDia(dt, dia);
@@ -575,11 +576,17 @@ function botoesDeCompartilhar(dt, dia, blocos, trechos) {
     botao.title = 'Compartilhar trecho';
     botao.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
     botao.addEventListener('click', async () => {
-      const { abrirCard } = await import('/liturgiadiaria/compartilhar.mjs');
+      const [{ abrirCard, escolherFotos }, catalogo] = await Promise.all([
+        import('/liturgiadiaria/compartilhar.mjs'),
+        catalogoDeCards ??= buscarJson('/data/cards-imagens.json'),
+      ]);
+      const fotos = escolherFotos(catalogo, {
+        tempo: dia.tempo, cor: dia.cor, dt, preferida: trechos.imagens?.[leitura.referencia],
+      });
       lenis?.stop();
       abrirCard({
         dt, trecho, referencia: leitura.referencia.replace(/\s*\(R\..*\)$/, ''), rotulo: leitura.rotulo,
-        celebracao: dia.celebracao, data: cab.dataLonga, cor: dia.cor,
+        celebracao: dia.celebracao, data: cab.dataLonga, cor: dia.cor, fotos,
       }, { aoFechar: () => lenis?.start() });
     });
     card.append(botao);

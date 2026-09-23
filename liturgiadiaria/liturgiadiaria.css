@@ -1029,6 +1029,20 @@ html:has(.lp-card[open]) { overflow: hidden; }
 .lp-card-ant { left: 1.25rem; }
 .lp-card-prox { right: 1.25rem; }
 
+.lp-card-fotos {
+  display: flex; gap: 0.55rem; justify-content: center; padding: 0.25rem 1rem 0.9rem;
+  overflow-x: auto; scrollbar-width: none; transition: opacity 0.2s;
+}
+.lp-card-fotos::-webkit-scrollbar { display: none; }
+.lp-card-fotos.inativa { opacity: 0.25; pointer-events: none; }
+.lp-card-fotos button {
+  flex: 0 0 auto; width: 44px; height: 44px; padding: 0; border-radius: 50%; overflow: hidden; cursor: pointer;
+  border: 1px solid rgba(242, 234, 216, 0.2); background: none; opacity: 0.6;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+.lp-card-fotos button:hover { opacity: 0.9; }
+.lp-card-fotos button[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 2px #17140f, 0 0 0 3px #f2ead8; }
+.lp-card-fotos img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .lp-card-acoes { display: flex; gap: 2.25rem; justify-content: center; padding: 0.5rem 1rem 0; }
 .lp-card-acoes button {
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
