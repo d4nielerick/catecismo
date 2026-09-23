@@ -81,7 +81,7 @@ function construirNav(blocos) {
   links.forEach((a, i) => {
     const nome = a.textContent;
     a.setAttribute('aria-label', nome);
-    a.innerHTML = `${icone(iconeDaLeitura(itens[i].leitura))}<span class="lp-aba-nome">${esc(nome)}</span>`;
+    a.innerHTML = `${icone(...iconeDaLeitura(itens[i].leitura))}<span class="lp-aba-nome">${esc(nome)}</span>`;
   });
 
   const cards = itens.map(({ id }) => document.getElementById(id)).filter(Boolean);

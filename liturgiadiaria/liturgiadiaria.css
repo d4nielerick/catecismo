@@ -1150,6 +1150,8 @@ html:has(.lp-card[open]) { overflow: hidden; }
     display: block; width: 23px; height: 23px; flex: 0 0 auto;
     fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round;
   }
+  /* o número romano dentro do pergaminho: letra cheia, sem o traço do desenho */
+  .lp-tabs .lp-aba-numeral { fill: currentColor; stroke: none; font-family: var(--font-titulo); font-weight: 700; letter-spacing: -0.02em; }
   .lp-aba-nome { display: none; white-space: nowrap; }
   .lp-tabs-leituras a.ativa .lp-aba-nome { display: inline; animation: lp-aba-nome 0.35s ease both; }
   @keyframes lp-aba-nome { from { opacity: 0; transform: translateX(-4px); } to { opacity: 1; transform: none; } }
