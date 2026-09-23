@@ -100,8 +100,19 @@ function construirNav(blocos) {
 /** A luz de vidro da barra de baixo vai até a aba ativa (com um leve passar do ponto: é líquida). */
 let abasTravadasAte = 0;   // depois de um toque, a rolagem até a leitura não mexe na aba ativa
 
+/** Se o nome da aba ativa não cabe na barra (fonte do aparelho, tela estreita, 4 leituras),
+ *  a barra mostra só os ícones; a pílula já indica qual é a ativa. */
+function caberNome() {
+  const tabsEl = document.getElementById('lp-tabs');
+  const L = tabsEl?.querySelector('.lp-tabs-leituras');
+  if (!L) return;
+  tabsEl.classList.remove('lp-tabs-sem-nome');
+  if (L.scrollWidth > L.clientWidth + 1) tabsEl.classList.add('lp-tabs-sem-nome');
+}
+
 function moverLuz(sem = false) {
   if (performance.now() < abasTravadasAte) return;
+  caberNome();
   const tabsEl = document.getElementById('lp-tabs');
   const luz = tabsEl?.querySelector('.lp-tabs-luz');
   const ativa = tabsEl?.querySelector('.lp-tabs-leituras a.ativa') || tabsEl?.querySelector('.lp-tabs-leituras a');
@@ -117,7 +128,7 @@ function moverLuz(sem = false) {
 function luzAoToque(alvo) {
   const tabsEl = document.getElementById('lp-tabs');
   tabsEl?.querySelectorAll('.lp-tabs-leituras a').forEach(a => a.classList.toggle('ativa', a === alvo));
-  abasTravadasAte = 0;
+  abasTravadasAte = 0;   // moverLuz confere se o nome cabe
   moverLuz();
   abasTravadasAte = performance.now() + 1400;
 }

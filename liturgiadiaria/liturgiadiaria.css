@@ -1167,6 +1167,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
   /* 4 leituras (domingos, festas) em tela estreita: a ativa fica só com o ícone, a pílula já a indica */
   @media (max-width: 400px) { .lp-tabs-muitas .lp-tabs-leituras a.ativa .lp-aba-nome { display: none; } }
   @media (max-width: 350px) { .lp-tabs-leituras a.ativa .lp-aba-nome { display: none; } }   /* celulares bem estreitos */
+  .lp-main .lp-tabs.lp-tabs-sem-nome .lp-tabs-leituras a.ativa .lp-aba-nome { display: none; }   /* o nome não coube (liturgiadiaria.js › caberNome) */
   @keyframes lp-aba-nome { from { opacity: 0; transform: translateX(-4px); } to { opacity: 1; transform: none; } }
 
   /* a luz da aba ativa: uma pílula discreta que desliza até ela */
@@ -1203,4 +1204,11 @@ html:has(.lp-card[open]) { overflow: hidden; }
 }
 @media (max-width: 760px) and (prefers-reduced-motion: reduce) {
   .lp-tabs-luz { transition: none; }
+}
+
+/* complemento do rótulo ("mais longa", "mais breve"): pequeno, embaixo do título grande */
+.leitura-variante {
+  display: block; margin: 0.35rem 0 0.15rem;
+  font-family: var(--font-sans); font-style: normal; font-size: 0.66rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.2; color: var(--lp-suave);
 }

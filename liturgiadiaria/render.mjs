@@ -141,7 +141,7 @@ export function renderBloco({ leitura: s, id, alternativas }) {
       </details>`).join('');
   return `
     <article class="leitura-card${s.tipo === 'evangelho' ? ' card-evangelho' : ''}${['aclamacao', 'sequencia'].includes(s.tipo) ? ' secao-menor' : ''}" id="${id}">
-      <div class="leitura-label">${esc(rotuloCompleto(s))}</div>
+      <div class="leitura-label">${esc(s.rotulo)}${s.variante ? `<span class="leitura-variante">${esc(s.variante)}</span>` : ''}</div>
       ${s.referencia ? `<div class="leitura-ref">${esc(s.referencia)}</div>` : ''}
       ${corpoLeitura(s)}
       ${alts}
