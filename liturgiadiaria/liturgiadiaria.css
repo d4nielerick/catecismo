@@ -1738,7 +1738,8 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .cal-hoje:hover { background: rgba(0, 0, 0, 0.1); }
 .t-cal-sel { background: rgba(0, 0, 0, 0.08); }
 @media (max-width: 760px) {
-  .lp-data { font-size: 0.92rem; }
+  /* numa linha só: "Quinta-feira da 25ª Semana do Tempo Comum" encolhe com a largura da tela */
+  .lp-data { font-size: min(0.92rem, 3.25vw); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .cal-mes { font-size: clamp(0.84rem, 4.6cqi, 1.1rem); }
   .cal-dow { font-size: clamp(0.64rem, 3.4cqi, 0.86rem); }
   .cal-dia { font-size: clamp(0.82rem, 4.6cqi, 1.08rem); }
