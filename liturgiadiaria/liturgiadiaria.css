@@ -1817,7 +1817,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
    dos ícones da barra de baixo (traço 2.1 arredondado, cinza #8c867e), vermelhos no toque */
 .lp-leitura-cabeca { display: flex; align-items: center; gap: 0.9rem; }
 .lp-leitura-cabeca .leitura-label { min-width: 0; white-space: nowrap; }
-.lp-leitura-acoes { display: flex; flex: none; gap: 0.15rem; margin-left: auto; }
+.lp-leitura-acoes { display: flex; flex: none; gap: 0.75rem; margin-left: auto; }
 .lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar {
   display: grid; place-items: center; width: 38px; height: 38px; margin: 0; padding: 0;
   border: 0; border-radius: 50%; background: transparent; color: #8c867e;
@@ -1830,6 +1830,6 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   /* o título encolhe um pouco para caber com os dois ícones na mesma linha */
   .lp-leitura-cabeca { gap: 0.6rem; }
   .lp-leitura-cabeca .leitura-label { font-size: min(48px, 11vw); }
-  .lp-leitura-acoes { gap: 0; }
+  .lp-leitura-acoes { gap: 0.5rem; }
   .lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar { width: 36px; height: 36px; }
 }
