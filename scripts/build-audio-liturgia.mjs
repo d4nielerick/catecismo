@@ -30,7 +30,7 @@ import { fileURLToPath } from 'node:url';
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const GEMINI = process.argv.includes('--gemini');
 const VOZ = GEMINI
-  ? { modelo: 'gemini-3.8-flash-tts', id: 'Algenib', nome: 'Algenib (Gemini 3.8 Flash TTS)' }
+  ? { modelo: process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts', id: 'Algenib', nome: 'Algenib (Gemini 3.8 Flash TTS)' }
   : { id: 'nPczCjzI2devNBz1zQrb', nome: 'Brian (ElevenLabs, multilíngue v2)' };
 const ENSAIO = process.argv.includes('--ensaio');   // só mostra o texto que seria lido, sem gerar
 const [dt, pedido = 'evangelho', audioArq, temposArq] = process.argv.slice(2).filter(a => !a.startsWith('--'));
@@ -142,7 +142,7 @@ function gerarGemini(unidades, falado) {
   execFileSync('curl', ['-s', '--max-time', '900', '-o', resp, '-H', 'Content-Type: application/json', '-H', `x-goog-api-key: ${chave}`,
     '-d', `@${path.join(tmp, 'pedido.json')}`, `https://generativelanguage.googleapis.com/v1beta/models/${VOZ.modelo}:generateContent`]);
   const j = JSON.parse(fs.readFileSync(resp, 'utf8'));
-  if (j.error?.code === 429) { console.log(`${dt}: cota do Gemini esgotada por hoje — pare e tente amanhã`); process.exit(0); }
+  if (j.error?.code === 429 || j.error?.code === 503) { console.log(`${dt}: Gemini indisponível agora (${j.error.code}: cota do dia ou demanda alta) — tente mais tarde`); process.exit(0); }
   const dados = j.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
   if (!dados) throw new Error(`Gemini: ${JSON.stringify(j.error || j).slice(0, 200)}`);
   fs.writeFileSync(path.join(tmp, 'voz.wav'), Buffer.from(dados, 'base64'));
@@ -150,7 +150,14 @@ function gerarGemini(unidades, falado) {
   execFileSync('whisper', [path.join(tmp, 'voz.wav'), '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
     '--output_format', 'json', '--output_dir', tmp, '--fp16', 'False'], { stdio: 'ignore' });
   const ouvidas = JSON.parse(fs.readFileSync(path.join(tmp, 'voz.json'), 'utf8')).segments.flatMap(sg => sg.words || []);
-  return { audio: fs.readFileSync(path.join(tmp, 'voz.mp3')), tempos: tempoPorCaractere(falado, ouvidas) };
+  const tempos = tempoPorCaractere(falado, ouvidas);
+  // às vezes o Gemini lê a instrução em voz alta antes do texto: corta tudo antes da 1ª palavra da leitura
+  const corte = Math.max(0, tempos.character_start_times_seconds[0] - 0.35);
+  if (corte > 0.8) {
+    execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-ss', String(corte), '-i', path.join(tmp, 'voz.wav'), '-b:a', '96k', path.join(tmp, 'voz.mp3')]);
+    for (const k of ['character_start_times_seconds', 'character_end_times_seconds']) tempos[k] = tempos[k].map(t => Math.max(0, t - corte));
+  }
+  return { audio: fs.readFileSync(path.join(tmp, 'voz.mp3')), tempos };
 }
 
 /** Casa as palavras do texto com as ouvidas pelo Whisper (maior subsequência comum) e espalha os
