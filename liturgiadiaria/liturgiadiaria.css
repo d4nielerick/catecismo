@@ -1167,7 +1167,8 @@ html:has(.lp-card[open]) { overflow: hidden; }
     fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round;
   }
   /* o número romano dentro do pergaminho: letra cheia, sem o traço do desenho */
-  .lp-tabs .lp-aba-numeral { fill: currentColor; stroke: none; font-family: var(--font-titulo); font-weight: 700; letter-spacing: -0.02em; }
+  /* engrossado com um contorno da mesma cor: no tamanho da barra, o serifado puro ficava fino */
+  .lp-tabs .lp-aba-numeral { fill: currentColor; stroke: currentColor; stroke-width: 0.75; stroke-linejoin: round; paint-order: stroke; font-family: var(--font-titulo); font-weight: 700; letter-spacing: 0.02em; }
   .lp-aba-nome { display: none; }   /* no celular a barra é só de ícones; o nome fica no aria-label */
 
   /* a luz da aba ativa: uma pílula discreta que desliza até ela */
