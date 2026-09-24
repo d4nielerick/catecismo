@@ -1333,3 +1333,19 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   background: transparent; color: #fff; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600;
 }
 .lp-ouvir-aviso-botoes button.principal { background: #fff; color: #0d0a07; border-color: #fff; }
+
+/* botão de tocar sempre redondo; foco discreto só no teclado */
+.lp-ouvir-botoes button { flex: 0 0 auto; aspect-ratio: 1; outline: none; }
+.lp-ouvir-botoes button:focus-visible, .lp-ouvir-fechar:focus-visible { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35); }
+.lp-ouvir-botoes .lp-ouvir-tocar svg { margin-left: 3px; }   /* o triângulo parece centrado com um leve deslocamento */
+
+/* hierarquia do texto que está sendo lido */
+.lp-ouvir-texto p.rubrica {
+  font-family: var(--font-sans); font-weight: 600; font-size: clamp(0.78rem, 3.4vw, 0.95rem);
+  letter-spacing: 0.14em; text-transform: uppercase; line-height: 1.5; margin: 0.4em 0 1.4em;
+  filter: none;
+}
+.lp-ouvir-texto p.rubrica:last-child { margin-top: 1.6em; }
+.lp-ouvir-texto p.rubrica.atual { color: rgba(255, 255, 255, 0.92); }
+.lp-ouvir-texto p.refrao { font-style: italic; font-weight: 400; margin-block: 0.3em 1em; }
+.lp-ouvir-texto p.refrao.atual { color: #f1d38b; }

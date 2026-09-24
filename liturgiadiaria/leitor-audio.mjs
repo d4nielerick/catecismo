@@ -228,10 +228,15 @@ async function carregar(k, { tocarDepois = true } = {}) {
   const base = `/data/liturgia-audio/${diaAtual}/${qual}`;
   dados = await fetch(`${base}.json`).then(r => r.json());
   dlg.querySelector('.lp-ouvir-rotulo').textContent = fila.length > 1 ? `${rotulo} · ${k + 1} de ${fila.length}` : rotulo;
-  dlg.querySelector('.lp-ouvir-ref').textContent = dados.referencia;
+  dlg.querySelector('.lp-ouvir-ref').textContent = dados.referencia.replace(/\s*\(R\..*\)$/, '');   // sem a nota do refrão
   const caixa = dlg.querySelector('.lp-ouvir-texto');
+  // hierarquia: abertura e fecho litúrgicos como rubrica; refrão do salmo em destaque próprio
+  const ultima = dados.linhas.length - 1;
+  const refrao = qual === 'salmo' ? dados.linhas[1]?.texto : null;
+  const tipo = (l, i) => (i === 0 || (i === ultima && /^Palavra d[ao] /.test(l.texto)) ? 'rubrica'
+    : refrao && l.texto === refrao ? 'refrao' : '');
   caixa.innerHTML = dados.linhas
-    .map((l, i) => `<p data-i="${i}">${l.texto.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</p>`).join('');
+    .map((l, i) => `<p data-i="${i}" class="${tipo(l, i)}">${l.texto.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</p>`).join('');
   caixa.scrollTop = 0;
   atual = -1;
 
