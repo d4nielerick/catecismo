@@ -25,59 +25,17 @@
       "fonte": "poema \"Nada te turbe\", encontrado em seu breviário",
       "imagem": "teresa-avila"
     },
-    "Santo Inácio de Antioquia, bispo e mártir": {
-      "nome": "Santo Inácio de Antioquia",
-      "frase": "Sou trigo de Deus, e serei moído pelos dentes das feras para me tornar pão puro de Cristo.",
-      "fonte": "Carta aos Romanos, 4",
-      "imagem": "santo-inacio-antioquia"
-    },
-    "São Simão e São Judas, apóstolos": {
-      "nome": "São Simão e São Judas",
-      "frase": "Conservai-vos no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo, para a vida eterna.",
-      "fonte": "Carta de São Judas, 21",
-      "imagem": "sao-simao-judas"
-    },
-    "São Leão Magno, papa": {
-      "nome": "São Leão Magno",
-      "frase": "Reconhece, ó cristão, a tua dignidade: tornado participante da natureza divina, não voltes à antiga baixeza.",
-      "fonte": "Sermão 1 sobre o Natal do Senhor",
-      "imagem": "sao-leao-magno"
-    },
-    "São Martinho de Tours": {
-      "nome": "São Martinho de Tours",
-      "frase": "Senhor, se ainda sou necessário ao teu povo, não recuso o trabalho: seja feita a tua vontade.",
-      "fonte": "Sulpício Severo, Carta 3",
-      "imagem": "sao-martinho"
-    },
     "Santo André, apóstolo": {
       "nome": "Santo André",
       "frase": "Ó cruz boa, tanto tempo desejada, recebe-me e entrega-me ao meu Mestre.",
       "fonte": "tradicionalmente atribuída, Paixão de Santo André",
       "imagem": "santo-andre"
     },
-    "São Francisco Xavier": {
-      "nome": "São Francisco Xavier",
-      "frase": "Muitos deixam de se tornar cristãos por não haver quem se ocupe em fazê-los cristãos.",
-      "fonte": "Carta a Santo Inácio, 1544",
-      "imagem": "sao-francisco-xavier"
-    },
-    "Santo Ambrósio": {
-      "nome": "Santo Ambrósio",
-      "frase": "Cristo é tudo para nós.",
-      "fonte": "Sobre a virgindade, 16,99",
-      "imagem": "santo-ambrosio"
-    },
     "São João da Cruz": {
       "nome": "São João da Cruz",
       "frase": "No entardecer desta vida, seremos examinados no amor.",
       "fonte": "Ditos de luz e amor, 59",
       "imagem": "sao-joao-da-cruz"
-    },
-    "Santo Estêvão, primeiro mártir": {
-      "nome": "Santo Estêvão",
-      "frase": "Senhor Jesus, acolhe o meu espírito.",
-      "fonte": "Atos dos Apóstolos 7,59 (leitura do dia)",
-      "imagem": "santo-estevao"
     }
   },
   "porData": {
@@ -98,12 +56,6 @@
       "frase": "Jesus, eu confio em Vós.",
       "fonte": "Diário, a inscrição pedida para a imagem da Misericórdia",
       "imagem": "santa-faustina"
-    },
-    "10-19": {
-      "nome": "São Paulo da Cruz",
-      "frase": "A Paixão de Jesus é a obra mais estupenda do amor divino.",
-      "fonte": "ensinamento tradicionalmente atribuído, cartas",
-      "imagem": "sao-paulo-da-cruz"
     },
     "10-22": {
       "nome": "São João Paulo II",
