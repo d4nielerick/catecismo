@@ -1495,7 +1495,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 @keyframes k-card { 0% { transform: scale(0.8) rotate(-4deg); opacity: 0; } 20%, 70% { transform: none; opacity: 1; } 85%, 100% { transform: translate(40px, -30px) scale(0.4); opacity: 0; } }
 @keyframes k-envia { 0%, 45% { transform: scale(0.6); opacity: 0; } 55%, 72% { transform: scale(1); opacity: 1; } 78% { transform: scale(1.2); } 90%, 100% { transform: scale(0.6); opacity: 0; } }
 .s-halo { fill: none; stroke: #c9a24a; stroke-width: 2; opacity: 0.6; animation: s-halo 3s ease-in-out infinite; }
-.s-rosto { fill: #e8d9bf; stroke: #c9a24a; stroke-width: 1.5; }
+.s-rosto { fill: none; stroke: #c9a24a; stroke-width: 1.5; }
 .s-aspas { font: italic 22px var(--font-leitura); fill: var(--lp-vermelho); text-anchor: middle; animation: s-aspas 3s ease-in-out infinite; }
 @keyframes s-halo { 50% { transform: scale(1.15); opacity: 0.2; } }
 @keyframes s-aspas { 0%, 20% { opacity: 0; transform: translateY(6px); } 40%, 90% { opacity: 1; transform: none; } 100% { opacity: 0; } }

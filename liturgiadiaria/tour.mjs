@@ -50,6 +50,8 @@ const PASSOS = [
     texto: 'Nos dias de santo, o nome dele aparece embaixo da data, com uma frase dele para compartilhar.',
     cena: `<svg viewBox="0 0 200 120" class="lp-tour-santo" aria-hidden="true">
       <circle cx="100" cy="46" r="30" class="s-halo"/>
+      <clipPath id="lp-tour-rosto"><circle cx="100" cy="46" r="22"/></clipPath>
+      <image href="/assets/img/cards/mini/sao-pio.webp" x="70" y="24" width="60" height="45" clip-path="url(#lp-tour-rosto)" preserveAspectRatio="xMidYMid slice"/>
       <circle cx="100" cy="46" r="22" class="s-rosto"/>
       <text x="100" y="100" class="s-aspas">“ … ”</text>
     </svg>`,
@@ -125,5 +127,4 @@ export function abrirTour() {
   if (!dlg) montar();
   mostrar(0);
   dlg.showModal();
-  dlg.querySelector('.lp-tour-prox').focus({ preventScroll: true });
 }
