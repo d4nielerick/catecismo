@@ -391,6 +391,22 @@
         "festa"
       ],
       "cores": []
+    },
+    {
+      "id": "santa-teresinha",
+      "titulo": "Santa Teresinha do Menino Jesus",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "santa-teresa-de-jesus",
+      "titulo": "Santa Teresa de Jesus",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
     }
   ]
 }
