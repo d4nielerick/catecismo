@@ -1359,3 +1359,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); animation: lp-ouvir-aviso 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2);
 }
 .lp-ouvir-pular[hidden] { display: none; }
+
+/* sem o indicador de rolagem na tela de ouvir (no iPhone aparecia como uma linha magenta) */
+.lp-ouvir-texto { scrollbar-color: transparent transparent; }
+.lp-ouvir-texto::-webkit-scrollbar { width: 0; height: 0; display: none; }

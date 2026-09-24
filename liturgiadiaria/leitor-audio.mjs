@@ -265,10 +265,16 @@ async function carregar(k, { tocarDepois = true } = {}) {
   maoAte = 0;
   dlg.querySelector('.lp-ouvir-pular').hidden = true;
 
-  voz?.pause();
-  voz = new Audio(`${base}.mp3`);
-  voz.preload = 'auto';
-  voz.addEventListener('ended', terminou);
+  // um tocador só, reaproveitado: o iPhone só deixa tocar sem toque um tocador que já foi
+  // iniciado por um toque da pessoa (criar outro para a próxima leitura era bloqueado)
+  if (!voz) {
+    voz = new Audio();
+    voz.preload = 'auto';
+    voz.addEventListener('ended', terminou);
+  }
+  voz.pause();
+  voz.src = `${base}.mp3`;
+  voz.load();
   if ('mediaSession' in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: `${rotulo} — ${dados.referencia}`, artist: 'Liturgia Diária',
