@@ -734,7 +734,7 @@ async function botaoOuvir(dt, dia) {
     b.addEventListener('click', async () => {
       const { ouvir } = await import('/liturgiadiaria/leitor-audio.mjs');
       lenis?.stop();
-      await ouvir({ dt, fila, inicio, cor: cabecalhoDoDia(dt, dia).corDia || '#3a2a1a' });
+      await ouvir({ dt, fila, inicio, cor: cabecalhoDoDia(dt, dia).corDia || '#3a2a1a', origem: b });
       document.querySelector('dialog.lp-ouvir')?.addEventListener('close', () => lenis?.start(), { once: true });
     });
     card.querySelector('.leitura-label').after(b);
