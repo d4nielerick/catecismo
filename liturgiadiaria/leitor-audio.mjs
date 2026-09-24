@@ -128,7 +128,7 @@ function fade(el, alvo, ms, depois) {
   const de = el.volume, t0 = performance.now();
   const passo = t => {
     const p = Math.min(1, (t - t0) / ms);
-    el.volume = de + (alvo - de) * p;
+    el.volume = Math.min(1, Math.max(0, de + (alvo - de) * p)); // arredondamento dava -5e-13 e o navegador rejeitava
     if (p < 1) requestAnimationFrame(passo); else depois?.();
   };
   requestAnimationFrame(passo);
