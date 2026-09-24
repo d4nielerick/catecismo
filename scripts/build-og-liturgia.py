@@ -103,6 +103,13 @@ def carregar_faixa():
     return coluna
 
 
+def trecho_do_evangelho(dt, referencia):
+    arq = RAIZ / 'data' / 'liturgia-trechos' / f'{dt}.json'
+    if not arq.exists():
+        return None
+    return json.loads(arq.read_text()).get('trechos', {}).get(referencia)
+
+
 def desenhar(dt, dia, faixa):
     img = base(faixa)
     d = ImageDraw.Draw(img)
@@ -133,8 +140,21 @@ def desenhar(dt, dia, faixa):
             d.text((X0, 318 + i * 72), linha, font=celebra, fill=TINTA)
         evangelho = next((l for l in dia['missas'][0]['leituras'] if l['tipo'] == 'evangelho' and not l.get('alternativa')), None)
         if evangelho and evangelho.get('referencia'):
-            d.rectangle([X0, 520, X0 + 36, 522], fill=VERMELHO)
-            d.text((X0 + 52, 503), f'Evangelho · {evangelho["referencia"]}', font=rodape, fill=TINTA)
+            # com trecho escolhido para o Evangelho (data/liturgia-trechos), ele aparece entre aspas
+            # acima da referência: é o que dá vontade de abrir o link
+            trecho = trecho_do_evangelho(dt, evangelho['referencia'])
+            y_ref = 520
+            if trecho:
+                citacao = fonte(FONTES / 'Georgia Italic.ttf', 31)
+                topo = 318 + len(linhas) * 72 + 22
+                cabem = max(1, min(2, (y_ref - 20 - topo) // 42))
+                linhas_c = quebrar(d, f'“{trecho}”', citacao, LARGURA_TEXTO, 9)
+                if len(linhas_c) <= cabem:   # frase inteira ou nada: cortada no meio não serve
+                    for i, linha in enumerate(linhas_c):
+                        d.text((X0, topo + i * 42), linha, font=citacao, fill=(60, 56, 52))
+                    y_ref = max(y_ref, topo + len(linhas_c) * 42 + 18)
+            d.rectangle([X0, y_ref, X0 + 36, y_ref + 2], fill=VERMELHO)
+            d.text((X0 + 52, y_ref - 17), f'Evangelho · {evangelho["referencia"]}', font=rodape, fill=TINTA)
 
     d.text((L - 60, A - 48), 'santadoutrina.cloud', font=site, fill=SUAVE, anchor='ra')
     return img

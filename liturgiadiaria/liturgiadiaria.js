@@ -688,7 +688,11 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
   preencherCabecalho(dt, dia, estado.santos);
   construirCalendario(dt, estado.hoje, estado.indice);
   document.getElementById('lp-dias').innerHTML = diasHtml(dt, estado.indice);
-  if (!primeira && dia) document.title = `Liturgia Diária ${dt.split('-').reverse().join('/')}: ${dia.celebracao}`;
+  // o mesmo título das páginas geradas (scripts/build-paginas-liturgia.mjs)
+  if (!primeira && dia) {
+    const quando = new Date(`${dt}T12:00:00Z`).toLocaleDateString('pt-BR', { timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' });
+    document.title = `Liturgia Diária ${quando} · ${dia.celebracao}`;
+  }
 
   const conteudo = document.getElementById('conteudo');
   if (!dia) {

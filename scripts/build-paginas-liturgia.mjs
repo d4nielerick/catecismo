@@ -25,6 +25,7 @@ const DADOS = path.join(RAIZ, 'data', 'liturgia');
 const PASTA = path.join(RAIZ, 'liturgiadiaria');
 const SITEMAP = path.join(RAIZ, 'sitemap-liturgia.xml');
 const DESCRICAO_MAX = 158;
+const DESCRICAO_MAX_RESUMO = 220;   // o resumo corta pior; o WhatsApp mostra umas 3 linhas
 
 export const lerModelo = () => fs.readFileSync(MODELO, 'utf8');
 export const lerIndice = () => JSON.parse(fs.readFileSync(path.join(DADOS, 'indice.json'), 'utf8'));
@@ -37,7 +38,6 @@ export const lerResumo = dt => {
 };
 
 const formatar = (dt, opcoes) => new Date(`${dt}T12:00:00Z`).toLocaleDateString('pt-BR', { timeZone: 'UTC', ...opcoes });
-const numerica = dt => dt.split('-').reverse().join('/');
 
 function cortar(texto, max) {
   if (texto.length <= max) return texto;
@@ -45,7 +45,22 @@ function cortar(texto, max) {
   return `${corte.slice(0, corte.lastIndexOf(' ')).replace(/[\s,;:.]+$/, '')}…`;
 }
 
-export function descricaoDoDia(dt, dia) {
+const FRASES = path.join(RAIZ, 'data', 'santos-frases.json');
+let frases = null;
+/** Santo lembrado num dia comum (data/santos-frases.json › porData), para ir no título. */
+function santoDoDia(dt, dia) {
+  frases ??= fs.existsSync(FRASES) ? JSON.parse(fs.readFileSync(FRASES, 'utf8')) : {};
+  if (frases.frases?.[dia.celebracao]) return null;   // já é a celebração do dia
+  return frases.porData?.[dt.slice(5)]?.nome || null;
+}
+
+/** Com resumo do dia, a descrição é ele (convida a abrir); sem, as referências e o início do Evangelho. */
+export function descricaoDoDia(dt, dia, resumo = null) {
+  if (resumo?.texto) return cortar(resumo.texto.charAt(0).toUpperCase() + resumo.texto.slice(1), DESCRICAO_MAX_RESUMO);
+  return descricaoPorReferencias(dt, dia);
+}
+
+function descricaoPorReferencias(dt, dia) {
   const leituras = dia.missas[0].leituras
     .filter(l => !l.alternativa && l.referencia && ['leitura', 'salmo', 'evangelho'].includes(l.tipo));
   const refs = leituras.map(l => (l.tipo === 'evangelho' ? `Evangelho ${l.referencia}` : l.referencia)).join('; ');
@@ -72,9 +87,12 @@ export function paginaDoDia(modelo, dt, dia, indice, resumo = lerResumo(dt)) {
   const { html: leituras, blocos } = conteudoDoDia(dia, resumo);
   const url = `${SITE}${urlDoDia(dt)}`;
   const imagem = `${SITE}/liturgiadiaria/og/${dt}.jpg`;
-  const titulo = `Liturgia Diária ${numerica(dt)}: ${dia.celebracao}`;
-  const descricao = descricaoDoDia(dt, dia);
   const quando = formatar(dt, { day: 'numeric', month: 'long', year: 'numeric' });
+  // "Liturgia Diária 4 de outubro de 2026 · 27º Domingo do Tempo Comum" — a data por extenso é como
+  // se busca ("liturgia diária 4 de outubro") e é o que o WhatsApp mostra em negrito
+  const santo = santoDoDia(dt, dia);
+  const titulo = `Liturgia Diária ${quando} · ${dia.celebracao}${santo ? ` · ${santo}` : ''}`;
+  const descricao = descricaoDoDia(dt, dia, resumo);
 
   const dados = {
     '@context': 'https://schema.org',
@@ -107,6 +125,7 @@ export function paginaDoDia(modelo, dt, dia, indice, resumo = lerResumo(dt)) {
   h = meta(h, 'property', 'og:type', 'article');
   h = meta(h, 'property', 'og:url', url);
   h = meta(h, 'property', 'og:image', imagem);
+  h = meta(h, 'property', 'og:image:alt', `Liturgia Diária de ${quando}: ${dia.celebracao}`);
   h = meta(h, 'name', 'twitter:title', titulo);
   h = meta(h, 'name', 'twitter:description', descricao);
   h = meta(h, 'name', 'twitter:image', imagem);
