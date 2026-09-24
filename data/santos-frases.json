@@ -32,7 +32,7 @@
       "imagem": "martires"
     },
     "São Simão e São Judas, apóstolos": {
-      "nome": "São Judas Tadeu",
+      "nome": "São Simão e São Judas",
       "frase": "Conservai-vos no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo, para a vida eterna.",
       "fonte": "Carta de São Judas, 21",
       "imagem": "mar-galileia"
@@ -75,8 +75,8 @@
     },
     "Santo Estêvão, primeiro mártir": {
       "nome": "Santo Estêvão",
-      "frase": "Senhor Jesus, recebe o meu espírito. Senhor, não lhes leves em conta este pecado.",
-      "fonte": "Atos dos Apóstolos 7,59-60",
+      "frase": "Senhor Jesus, acolhe o meu espírito.",
+      "fonte": "Atos dos Apóstolos 7,59 (leitura do dia)",
       "imagem": "martires"
     }
   },
