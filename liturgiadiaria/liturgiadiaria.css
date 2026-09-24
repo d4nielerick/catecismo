@@ -1745,3 +1745,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   .cal-dia { font-size: clamp(0.82rem, 4.6cqi, 1.08rem); }
   .lp-aviso-texto { font-size: 0.84rem; }
 }
+/* Arrastar o calendário para o lado troca o mês: o gesto horizontal fica com a página (JS), a
+   rolagem vertical continua com o navegador; os dias (links) não viram "arrastar link" no iPhone */
+.cal-grid { touch-action: pan-y; }
+.cal-grid a { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }

@@ -257,7 +257,9 @@ function configurarArrastoCalendario() {
     if (modo !== 'h') return;
     bloquearClique = true;
     setTimeout(() => { bloquearClique = false; }, 350);
-    const vai = e.type === 'pointerup' && (Math.abs(dx) > 50 || (Math.abs(dx) > 24 && rapido));
+    // pointercancel também conta: o navegador às vezes toma o gesto no meio (rolagem), e o que a
+    // pessoa já arrastou para o lado continua valendo
+    const vai = Math.abs(dx) > 50 || (e.type === 'pointerup' && Math.abs(dx) > 24 && rapido);
     if (vai && calNav?.ir(dx < 0 ? 1 : -1)) return;   // redesenhou: a grade nova já entra animada
     // não passou (ou é a ponta do intervalo): volta ao lugar
     grade.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.3, 1)';
