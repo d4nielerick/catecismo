@@ -439,7 +439,8 @@ function marcar() {
   dlg.querySelectorAll('.lp-card-slide').forEach((f, i) => f.classList.toggle('atual', i === atual));
   if (trecho) dlg.querySelector('.lp-card-fotos').classList.toggle('inativa', LAYOUTS[atual].id === 'texto');
   dlg.classList.toggle('lp-card-paginas', !trecho);
-  dlg.classList.toggle('lp-card-uma', dlg.querySelector('.lp-card-trilho').children.length < 2);   // sem setas
+  // sem setas com uma página só e em "Esta leitura" (as páginas passam arrastando)
+  dlg.classList.toggle('lp-card-uma', modo === 'leitura' || dlg.querySelector('.lp-card-trilho').children.length < 2);
 }
 
 /** Slides do trilho: um por layout (trecho) ou um por página (leitura/todas). */
