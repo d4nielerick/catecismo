@@ -52,7 +52,7 @@ const carregarPintura = () => (pinturaImg ??= new Promise(ok => {
   img.src = '/assets/img/cards/trigo-colina.webp';
 }));
 
-/** Pintura no espaço livre (de y0 a y1), cortada por baixo e esfumada no alto para dentro do papel. */
+/** Pintura no espaço livre (de y0 a y1), cortada por baixo, cantos arredondados. */
 function pinturaNoPe(c, img, y0, y1) {
   const x = M, w = W - MD - M, h = y1 - y0;
   const esc = Math.max(w / img.width, h / img.height);
@@ -60,9 +60,6 @@ function pinturaNoPe(c, img, y0, y1) {
   c.save();
   c.beginPath(); c.roundRect(x, y0, w, h, 18); c.clip();
   c.drawImage(img, (img.width - sw) / 2, img.height - sh, sw, sh, x, y0, w, h);
-  const g = c.createLinearGradient(0, y0, 0, y0 + Math.min(h * 0.45, 260));
-  g.addColorStop(0, FUNDO); g.addColorStop(1, 'rgba(251, 248, 242, 0)');
-  c.fillStyle = g; c.fillRect(x, y0, w, h);
   c.restore();
 }
 
