@@ -39,7 +39,7 @@ const PASSOS = [
     cena: `<div class="t-res">
       <div class="t-res-caixa">
         <div class="t-res-topo"><span>Resumo das leituras</span><b><em>Mostrar</em><em>Ocultar</em></b></div>
-        <p>Hoje, a primeira leitura canta a vinha cuidada com esmero que só deu uvas selvagens; o Salmo repete que a vinha do Senhor é a casa de Israel; e o Evangelho conta a parábola dos vinhateiros.</p>
+        <p>Hoje, a primeira leitura (Is 5,1-7) canta a vinha cuidada com esmero que só deu uvas selvagens; o Salmo (Sl 79) repete que a vinha do Senhor é a casa de Israel; e o Evangelho (Mt 21,33-43) traz a parábola dos vinhateiros.</p>
       </div>
       ${dedo('t-res-dedo')}
     </div>`,

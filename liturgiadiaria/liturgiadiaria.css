@@ -1509,17 +1509,17 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 /* 2 · resumo */
 .t-res { display: flex; align-items: flex-start; justify-content: center; padding-top: 14px; }
 .t-res-caixa {
-  width: 100%; border-radius: 10px; background: #fff; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), 0 6px 18px rgba(30, 24, 16, 0.08);
+  width: 100%; border-radius: 6px; background: color-mix(in srgb, var(--lp-cor-titulo, #000) 6%, transparent);   /* como .lp-resumo */
   overflow: hidden; animation: t-res-caixa var(--t) var(--ease) infinite;
 }
 .t-res-topo { display: flex; justify-content: space-between; align-items: center; height: 34px; padding: 0 12px; }
-.t-res-topo span { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
-.t-res-topo b { display: grid; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-vermelho); }
+.t-res-topo span { font-size: 0.56rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-suave, #888); }
+.t-res-topo b { display: grid; font-size: 0.56rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-tinta); }
 .t-res-topo em { grid-area: 1 / 1; font-style: normal; text-align: right; }
 .t-res-topo em:first-child { animation: t-res-mostrar var(--t) linear infinite; }
 .t-res-topo em:last-child { animation: t-res-ocultar var(--t) linear infinite; }
-.t-res p { margin: 0; padding: 0 12px 12px; font: italic 0.8rem/1.45 var(--font-leitura); color: #333; animation: t-res-texto var(--t) var(--ease) infinite; }
-@keyframes t-res-caixa { 0%, 26% { height: 34px; } 36%, 74% { height: 134px; } 84%, 100% { height: 34px; } }
+.t-res p { margin: 0; padding: 0 12px 12px; font: 0.76rem/1.55 var(--font-leitura); color: var(--lp-texto, #222); animation: t-res-texto var(--t) var(--ease) infinite; }
+@keyframes t-res-caixa { 0%, 26% { height: 34px; } 36%, 74% { height: 140px; } 84%, 100% { height: 34px; } }
 @keyframes t-res-texto { 0%, 30% { opacity: 0; transform: translateY(6px); } 40%, 72% { opacity: 1; transform: none; } 78%, 100% { opacity: 0; } }
 @keyframes t-res-mostrar { 0%, 27% { opacity: 1; } 28%, 76% { opacity: 0; } 77%, 100% { opacity: 1; } }
 @keyframes t-res-ocultar { 0%, 27% { opacity: 0; } 28%, 76% { opacity: 1; } 77%, 100% { opacity: 0; } }
@@ -1530,7 +1530,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   14% { transform: translate(248px, 100px); opacity: 1; }
   24% { transform: translate(240px, 31px) scale(1); }
   28% { transform: translate(240px, 31px) scale(0.78); } 32% { transform: translate(240px, 31px) scale(1); }
-  50% { transform: translate(236px, 154px) scale(1); }
+  50% { transform: translate(262px, 168px) scale(1); }
   70% { transform: translate(240px, 31px) scale(1); }
   74% { transform: translate(240px, 31px) scale(0.78); } 78% { transform: translate(240px, 31px) scale(1); opacity: 1; }
   92%, 100% { transform: translate(260px, 170px); opacity: 0; }
