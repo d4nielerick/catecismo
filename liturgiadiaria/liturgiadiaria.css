@@ -1229,3 +1229,16 @@ html:has(.lp-card[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .lp-tabs a.lp-tabs-dia.lp-dia-toque, .lp-tabs a.lp-tabs-dia.lp-dia-toque svg { animation: none; }
 }
+
+/* Santo do dia: botão de compartilhar ao lado do nome da celebração, e o selo na janela */
+.nome-dia-compartilhar {
+  display: inline-grid; place-items: center; vertical-align: 0.05em;
+  width: 30px; height: 30px; margin-left: 0.35rem; padding: 0; border-radius: 50%;
+  border: 1px solid rgba(203, 46, 46, 0.35); background: transparent; color: var(--lp-vermelho); cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.nome-dia-compartilhar:hover { background: rgba(203, 46, 46, 0.06); border-color: var(--lp-vermelho); }
+.nome-dia-compartilhar svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.lp-card-titulo.lp-card-selo {
+  padding: 0.35rem 0.8rem; border-radius: 999px; background: #cb2e2e; color: #fff;
+}

@@ -50,6 +50,18 @@ function preencherCabecalho(dt, dia, santos) {
     mais.addEventListener('click', () => abrirSobre(slug, dia.celebracao));
     el.append(mais);
   }
+  // santo do dia: um botão para compartilhar uma frase dele, com a pintura dele (data/santos-frases.json)
+  const santo = estado.santosFrases?.frases?.[dia.celebracao];
+  if (santo) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'nome-dia-compartilhar';
+    b.setAttribute('aria-label', `Compartilhar uma frase de ${dia.celebracao}`);
+    b.title = 'Compartilhar uma frase do santo do dia';
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
+    b.addEventListener('click', () => compartilharSanto(dt, dia, santo));
+    el.append(b);
+  }
   mostrarSobre(slug ? { slug, celebracao: dia.celebracao } : null);
 }
 
@@ -692,6 +704,21 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
 // Só aparece o botão nas leituras que têm trecho escolhido, e só se as leituras do dia
 // ainda são as que o arquivo cobre.
 let catalogoDeCards = null;
+
+async function compartilharSanto(dt, dia, santo) {
+  const [{ abrirCard, escolherFotos }, catalogo] = await Promise.all([
+    import('/liturgiadiaria/compartilhar.mjs'),
+    catalogoDeCards ??= buscarJson('/data/cards-imagens.json'),
+  ]);
+  const cab = cabecalhoDoDia(dt, dia);
+  lenis?.stop();
+  abrirCard({
+    dt, trecho: santo.frase, referencia: santo.nome || dia.celebracao, rotulo: 'Santo do dia',
+    celebracao: dia.celebracao, data: cab.dataLonga, dataCurta: cab.dataCurta, cor: dia.cor,
+    fotos: escolherFotos(catalogo, { tempo: dia.tempo, cor: dia.cor, dt, preferida: santo.imagem }),
+    selo: 'Santo do dia', aspas: true,
+  }, { aoFechar: () => lenis?.start() });
+}
 function botoesDeCompartilhar(dt, dia, blocos, trechos) {
   if (!trechos?.trechos || trechos.leituras !== referenciasDoDia(dia)) return;
   const cab = cabecalhoDoDia(dt, dia);
@@ -929,15 +956,17 @@ async function init() {
   configurarArrastoCalendario();
   iniciarLenis();
 
-  const [indice, dia, santos, resumo, trechos] = await Promise.all([
+  const [indice, dia, santos, resumo, trechos, santosFrases] = await Promise.all([
     buscarJson('/data/liturgia/indice.json'),
     buscarJson(`/data/liturgia/${dt}.json`),
     buscarJson('/data/santos/indice.json'),
     buscarJson(`/data/liturgia-resumos/${dt}.json`),
     buscarJson(`/data/liturgia-trechos/${dt}.json`),
+    buscarJson('/data/santos-frases.json'),
   ]);
   estado.indice = indice;
   estado.santos = santos;
+  estado.santosFrases = santosFrases;
   estado.destaques = new Map((indice?.destaques || []).map(d => [d.data, d]));
 
   montarAvisos(indice, hoje);

@@ -169,6 +169,22 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
   }
 }
 
+// Frases dos santos do dia (data/santos-frases.json): toda frase tem fonte, a pintura existe no acervo
+// e a celebração existe em algum dia do calendário.
+{
+  const arq = path.join(SAIDA, '..', 'santos-frases.json');
+  if (fs.existsSync(arq)) {
+    const { frases } = JSON.parse(fs.readFileSync(arq, 'utf8'));
+    const ids = new Set(ACERVO.map(im => im.id));
+    const celebracoes = new Set(datas.map(d => JSON.parse(fs.readFileSync(path.join(SAIDA, `${d}.json`), 'utf8')).celebracao));
+    for (const [cel, f] of Object.entries(frases)) {
+      if (!f.frase?.trim() || !f.fonte?.trim()) erros.push(`santos-frases "${cel}": sem frase ou sem fonte`);
+      if (f.imagem && !ids.has(f.imagem)) erros.push(`santos-frases "${cel}": pintura "${f.imagem}" não existe no acervo`);
+      if (!celebracoes.has(cel)) erros.push(`santos-frases "${cel}": nenhuma celebração com esse nome no calendário`);
+    }
+  }
+}
+
 if (erros.length) {
   console.error(`✗ liturgia: ${erros.length} problema(s)`);
   console.error(erros.slice(0, 40).map(e => `  ${e}`).join('\n'));

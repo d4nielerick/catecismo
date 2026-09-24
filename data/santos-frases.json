@@ -1,0 +1,11 @@
+{
+  "_sobre": "Frases dos santos do dia para o card de compartilhar (liturgiadiaria.js › compartilharSanto). Chave: o nome da celebração exatamente como em data/liturgia/*.json. Cada frase leva a fonte (obra, carta, sermão; ou 'tradicionalmente atribuída' quando não há documento identificado) e a pintura do acervo (data/cards-imagens.json). Escolhidas fora do site e revisadas.",
+  "frases": {
+    "São Pio de Pietrelcina": {
+      "nome": "São Pio de Pietrelcina",
+      "frase": "Reze, espere e não se preocupe. A preocupação é inútil. Nosso Senhor, que é misericordioso, ouvirá a sua oração.",
+      "fonte": "ensinamento tradicionalmente atribuído, coletâneas (em italiano: \"Prega, spera e non preoccuparti…\")",
+      "imagem": "sao-pio"
+    }
+  }
+}

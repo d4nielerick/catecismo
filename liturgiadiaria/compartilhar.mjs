@@ -287,7 +287,7 @@ function editorial(ctx, W, H, c) {
   ctx.globalAlpha = 1;
 
   const topo = yTitulo + 56;
-  const caixa = encaixar(ctx, c.trecho, {
+  const caixa = encaixar(ctx, c.aspas ? `“${c.trecho}”` : c.trecho, {
     fonte: t => `400 ${t}px ${LEITURA}`, largura: W - 2 * m, altura: yRodape - 110 - topo, max: alto ? 64 : 56, min: 34, entrelinha: alto ? 1.6 : 1.5,
   });
   ctx.fillStyle = tinta;
@@ -565,6 +565,10 @@ async function trocarFoto(i) {
 export async function abrirCard(c, { aoFechar } = {}) {
   if (!dlg) montarJanela();
   conteudo = { ...c, trecho: maiuscula(c.trecho) };
+  // selo no alto da janela: "Santo do dia" quando o card é de uma frase do santo
+  const titulo = dlg.querySelector('.lp-card-titulo');
+  titulo.textContent = c.selo || 'Compartilhar trecho';
+  titulo.classList.toggle('lp-card-selo', !!c.selo);
   dlg.onclose = () => aoFechar?.();
   const fila = dlg.querySelector('.lp-card-fotos');
   fila.innerHTML = (c.fotos || []).map((f, i) => `
