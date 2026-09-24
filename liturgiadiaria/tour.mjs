@@ -11,6 +11,9 @@ import { icone } from '/liturgiadiaria/icones-leituras.mjs';
 const CHAVE = 'lp-tour-visto';
 const CELULAR = matchMedia('(max-width: 760px)');
 const dedo = cls => `<i class="t-dedo ${cls}" aria-hidden="true"></i>`;
+const TRACO = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"';
+const ZAP = `<svg ${TRACO}><path d="M3.6 20.4l1.2-4.1A8.4 8.4 0 1 1 8 19.5z"/><path d="M9.2 8.1c.3-.4.8-.4 1 0l.8 1.7c.1.3 0 .6-.2.8l-.5.5c.6 1.2 1.5 2.1 2.7 2.7l.5-.5c.2-.2.5-.3.8-.2l1.7.8c.4.2.4.7 0 1-.9.9-2 1.1-3.3.4a8.6 8.6 0 0 1-3.9-3.9c-.7-1.3-.5-2.4.4-3.3z"/></svg>`;
+const INSTA = `<svg ${TRACO}><rect x="3.5" y="3.5" width="17" height="17" rx="4.8"/><circle cx="12" cy="12" r="3.9"/><circle cx="17.2" cy="6.8" r="0.5" fill="currentColor"/></svg>`;
 const COMPARTILHAR = '<svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
 
 // outubro de 2026 começa numa quinta: 4 casas vazias antes do dia 1
@@ -99,6 +102,7 @@ const PASSOS = [
           <footer><em>1/out</em><span>liturgia.santadoutrina.cloud</span></footer>
         </div>
       </div>
+      <div class="t-san-apps"><span class="t-app-zap">${ZAP}</span><span class="t-app-insta">${INSTA}</span></div>
       ${dedo('t-san-dedo')}
     </div>`,
   },
