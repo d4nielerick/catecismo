@@ -14,8 +14,8 @@ const PASSOS = [
       <rect x="30" y="10" width="140" height="100" rx="10" class="c-fundo"/>
       ${[0, 1, 2, 3].map(l => [0, 1, 2, 3, 4, 5, 6].map(c =>
         `<rect x="${42 + c * 18}" y="${24 + l * 20}" width="12" height="10" rx="3" class="c-dia"/>`).join('')).join('')}
-      <circle cx="${48 + 4 * 18}" cy="${44 + 1 * 20}" r="2" class="c-ponto"/>
-      <circle cx="${48 + 2 * 18}" cy="${44 + 3 * 20}" r="2" class="c-ponto"/>
+      <circle cx="${48 + 4 * 18}" cy="${24 + 1 * 20 + 14}" r="1.8" class="c-ponto"/>
+      <circle cx="${48 + 2 * 18}" cy="${24 + 3 * 20 + 14}" r="1.8" class="c-ponto"/>
       <rect x="0" y="0" width="16" height="14" rx="4" class="c-sel"/>
       <circle r="7" class="c-dedo"/>
     </svg>`,
