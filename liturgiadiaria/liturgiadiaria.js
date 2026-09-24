@@ -1037,5 +1037,7 @@ async function init() {
   await esconderPreloader();
   abrirCabecalho();
   aplicarDia(dt, dia, resumo, trechos, { primeira: true });
+  // boas-vindas na 1ª visita, depois que a entrada assentou
+  import('/liturgiadiaria/tour.mjs').then(t => { if (t.deveMostrar()) setTimeout(t.abrirTour, 1400); }).catch(() => {});
 }
 init();
