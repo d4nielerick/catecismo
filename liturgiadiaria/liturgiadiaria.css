@@ -1242,3 +1242,76 @@ html:has(.lp-card[open]) { overflow: hidden; }
 .lp-card-titulo.lp-card-selo {
   padding: 0.35rem 0.8rem; border-radius: 999px; background: #cb2e2e; color: #fff;
 }
+
+/* ── Ouvir a leitura (leitor-audio.mjs) ─────────────────────────────────── */
+.lp-ouvir-botao {
+  display: inline-flex; align-items: center; gap: 0.4rem; margin: 0.2rem 0 0.9rem;
+  padding: 0.42rem 0.95rem 0.42rem 0.7rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid rgba(203, 46, 46, 0.35); background: transparent; color: var(--lp-vermelho);
+  font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s;
+}
+.lp-ouvir-botao:hover { background: rgba(203, 46, 46, 0.06); border-color: var(--lp-vermelho); }
+.lp-ouvir-botao svg { width: 14px; height: 14px; fill: currentColor; }
+
+.lp-ouvir {
+  --lp-ouvir-cor: #3a2a1a;
+  width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; inset: 0; padding: 0; border: 0;
+  color: #fff;
+  background:
+    radial-gradient(120% 80% at 20% 0%, color-mix(in srgb, var(--lp-ouvir-cor) 70%, #000) 0%, transparent 70%),
+    linear-gradient(170deg, color-mix(in srgb, var(--lp-ouvir-cor) 45%, #120e0a), #0d0a07 75%);
+}
+.lp-ouvir[open] { display: flex; flex-direction: column; animation: lp-ouvir-abre 0.45s ease-out; }
+.lp-ouvir::backdrop { background: #0d0a07; }
+@keyframes lp-ouvir-abre { from { opacity: 0; } to { opacity: 1; } }
+html:has(.lp-ouvir[open]) { overflow: hidden; }
+
+.lp-ouvir-topo {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: max(1rem, env(safe-area-inset-top)) 1rem 0.5rem 1.4rem; transition: opacity 0.5s;
+}
+.lp-ouvir-titulo { margin: 0; display: flex; flex-direction: column; gap: 0.1rem; }
+.lp-ouvir-rotulo { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255, 255, 255, 0.55); }
+.lp-ouvir-ref { font-family: var(--font-leitura); font-style: italic; font-size: 1rem; color: rgba(255, 255, 255, 0.85); }
+.lp-ouvir-fechar, .lp-ouvir-botoes button {
+  display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; cursor: pointer;
+  background: rgba(255, 255, 255, 0.1); color: #fff;
+}
+.lp-ouvir-fechar { width: 44px; height: 44px; }
+.lp-ouvir svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* o texto: letra grande, só a linha atual acesa */
+.lp-ouvir-texto {
+  flex: 1; overflow-y: auto; scrollbar-width: none;
+  padding: 30vh 1.5rem 45vh;
+  -webkit-mask-image: linear-gradient(transparent, #000 18%, #000 72%, transparent);
+  mask-image: linear-gradient(transparent, #000 18%, #000 72%, transparent);
+}
+.lp-ouvir-texto::-webkit-scrollbar { display: none; }
+.lp-ouvir-texto p {
+  margin: 0 0 0.55em; max-width: 34rem;
+  font-family: var(--font-leitura); font-weight: 700; font-size: clamp(1.55rem, 7vw, 2.4rem); line-height: 1.22;
+  color: rgba(255, 255, 255, 0.28); cursor: pointer;
+  transform-origin: left center; transform: scale(0.96);
+  transition: color 0.45s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.45s ease;
+  filter: blur(0.6px);
+}
+.lp-ouvir-texto p.lida { color: rgba(255, 255, 255, 0.4); }
+.lp-ouvir-texto p.atual { color: #fff; transform: none; filter: none; }
+@media (min-width: 761px) { .lp-ouvir-texto { padding-inline: max(1.5rem, calc(50vw - 17rem)); } }
+
+/* controles: somem enquanto toca, voltam a um toque */
+.lp-ouvir-controles { padding: 0.5rem 1.4rem max(1.4rem, env(safe-area-inset-bottom)); transition: opacity 0.5s; }
+.lp-ouvir-quieto .lp-ouvir-controles, .lp-ouvir-quieto .lp-ouvir-topo { opacity: 0; }
+.lp-ouvir-progresso { height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.18); overflow: hidden; cursor: pointer; margin-bottom: 1.1rem; }
+.lp-ouvir-progresso span { display: block; height: 100%; background: rgba(255, 255, 255, 0.85); transform-origin: left; transform: scaleX(0); }
+.lp-ouvir-botoes { display: flex; align-items: center; justify-content: center; gap: 1.6rem; }
+.lp-ouvir-botoes button { width: 52px; height: 52px; background: transparent; }
+.lp-ouvir-botoes .lp-ouvir-tocar { width: 68px; height: 68px; background: #fff; color: #0d0a07; }
+.lp-ouvir-botoes .lp-ouvir-tocar svg { width: 28px; height: 28px; }
+.lp-ouvir-botoes .lp-ouvir-musica.desligada { opacity: 0.35; }
+.lp-ouvir-vao { width: 52px; }
+@media (prefers-reduced-motion: reduce) {
+  .lp-ouvir-texto p { transition: color 0.2s; transform: none; filter: none; }
+}

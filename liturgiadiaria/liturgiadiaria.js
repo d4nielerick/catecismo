@@ -696,6 +696,7 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
   posicionarResumo();
   construirNav(blocos);
   botoesDeCompartilhar(dt, dia, blocos, trechos);
+  botaoOuvir(dt, dia);
   verEntradaDaBarra();
   animarEntrada();
 }
@@ -703,6 +704,32 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
 // ── Compartilhar trecho (data/liturgia-trechos/) ─────────────────────────────
 // Só aparece o botão nas leituras que têm trecho escolhido, e só se as leituras do dia
 // ainda são as que o arquivo cobre.
+// ── Ouvir a leitura (data/liturgia-audio/) ───────────────────────────────────
+// Só aparece se a voz daquele dia já foi gerada (scripts/build-audio-liturgia.mjs).
+async function botaoOuvir(dt, dia) {
+  const card = document.querySelector('#conteudo .card-evangelho');
+  if (!card) return;
+  const tem = await fetch(`/data/liturgia-audio/${dt}/evangelho.json`, { method: 'HEAD' }).then(r => r.ok).catch(() => false);
+  if (!tem || estado.dt !== dt || card.querySelector('.lp-ouvir-botao')) return;
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'lp-ouvir-botao';
+  b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><span>Ouvir</span>';
+  b.setAttribute('aria-label', 'Ouvir o Evangelho');
+  b.addEventListener('click', async () => {
+    const { ouvir } = await import('/liturgiadiaria/leitor-audio.mjs');
+    lenis?.stop();
+    const dlg = document.querySelector('dialog.lp-ouvir');
+    ouvir({ dt, qual: 'evangelho', rotulo: 'Evangelho', cor: cabecalhoDoDia(dt, dia).corDia || '#3a2a1a' });
+    const aberto = document.querySelector('dialog.lp-ouvir');
+    aberto?.addEventListener('close', () => lenis?.start(), { once: true });
+    void dlg;
+  });
+  // antes do botão de compartilhar, no fim da leitura
+  const label = card.querySelector('.leitura-label');
+  label.after(b);
+}
+
 let catalogoDeCards = null;
 
 async function compartilharSanto(dt, dia, santo) {
