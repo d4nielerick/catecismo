@@ -1830,3 +1830,19 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   .lp-leitura-acoes { gap: 0.4rem; }
   .lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar { width: 36px; height: 36px; }
 }
+/* Os dois ícones: ouvir é o principal (círculo cheio, play arredondado); compartilhar, o
+   secundário (círculo só tingido). Sem contorno: mais leve ao lado do título grande */
+.lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar {
+  width: 38px; height: 38px; border: 0; border-radius: 50%;
+  transition: background 0.2s, transform 0.15s;
+}
+.lp-leitura-acoes .lp-ouvir-botao { background: var(--lp-vermelho); color: #fff; }
+.lp-leitura-acoes .lp-ouvir-botao:hover { background: #b32626; }
+.lp-leitura-acoes .lp-ouvir-botao svg { width: 15px; height: 15px; margin-left: 2px; fill: currentColor; }
+.lp-leitura-acoes .lp-compartilhar { background: rgba(203, 46, 46, 0.09); color: var(--lp-vermelho); }
+.lp-leitura-acoes .lp-compartilhar:hover { background: rgba(203, 46, 46, 0.16); }
+.lp-leitura-acoes .lp-compartilhar svg { width: 19px; height: 19px; stroke-width: 1.7; margin-top: -1px; }
+.lp-leitura-acoes button:active { transform: scale(0.92); }
+@media (max-width: 760px) {
+  .lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar { width: 36px; height: 36px; }
+}
