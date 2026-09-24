@@ -6,6 +6,7 @@
  *   … --ensaio                                                            # só mostra o texto que seria lido
  *   (leituras: primeira-leitura, salmo, segunda-leitura, evangelho — os ids dos cards na página)
  *   node scripts/build-audio-liturgia.mjs AAAA-MM-DD evangelho audio.mp3 tempos.json   # só monta, sem gerar
+ *   … --gemini                                                            # voz do Gemini (grátis, devagar)
  *
  * Gera a voz com antecedência (fora do site, nada de IA em tempo de execução): o texto falado é o
  * texto oficial da leitura, sem números de versículo, com a abertura e o fecho litúrgicos. O
@@ -15,6 +16,11 @@
  * Saída: data/liturgia-audio/AAAA-MM-DD/<leitura>.mp3 e <leitura>.json
  *   { referencia, voz, duracao, linhas: [{ t0, t1, texto }] }
  * A chave do ElevenLabs vem do Porta-chaves do macOS (item "elevenlabs-api-key") ou de ELEVENLABS_API_KEY.
+ *
+ * Com --gemini a voz é do Gemini TTS (item "gemini-api-key"), que não devolve tempos: o Whisper
+ * (instalado no Mac, modelo large-v3-turbo) marca o tempo de cada palavra ouvida, e as palavras
+ * ouvidas são casadas com as do texto oficial (as que não casam ficam entre as vizinhas). Pula
+ * leituras que já têm áudio do Gemini; na cota gratuita esgotada (429), para sem erro.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,9 +28,12 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const VOZ = { id: 'nPczCjzI2devNBz1zQrb', nome: 'Brian (ElevenLabs, multilíngue v2)' };
+const GEMINI = process.argv.includes('--gemini');
+const VOZ = GEMINI
+  ? { modelo: 'gemini-3.8-flash-tts', id: 'Algenib', nome: 'Algenib (Gemini 3.8 Flash TTS)' }
+  : { id: 'nPczCjzI2devNBz1zQrb', nome: 'Brian (ElevenLabs, multilíngue v2)' };
 const ENSAIO = process.argv.includes('--ensaio');   // só mostra o texto que seria lido, sem gerar
-const [dt, pedido = 'evangelho', audioArq, temposArq] = process.argv.slice(2).filter(a => a !== '--ensaio');
+const [dt, pedido = 'evangelho', audioArq, temposArq] = process.argv.slice(2).filter(a => !a.startsWith('--'));
 
 const dia = JSON.parse(fs.readFileSync(path.join(RAIZ, 'data', 'liturgia', `${dt}.json`), 'utf8'));
 const principais = dia.missas[0].leituras.filter(l => !l.alternativa);
@@ -92,11 +101,14 @@ async function gerarLeitura(qual) {
   const leitura = principais.find(ACHAR[qual]);
   if (!leitura) { console.log(`${dt}: sem ${qual}`); return; }
   const unidades = unidadesDe(leitura);
+  const jaFeito = path.join(RAIZ, 'data', 'liturgia-audio', dt, `${qual}.json`);
+  if (GEMINI && !ENSAIO && fs.existsSync(jaFeito) && JSON.parse(fs.readFileSync(jaFeito, 'utf8')).voz === VOZ.nome) return;
   const falado = unidades.join(' ').replace(/\s+/g, ' ').trim();
   if (ENSAIO) { console.log(`\n── ${qual} (${falado.length} caracteres)\n${unidades.join('\n')}`); return; }
   const { audio, tempos } = audioArq
     ? { audio: fs.readFileSync(audioArq), tempos: JSON.parse(fs.readFileSync(temposArq, 'utf8')) }
-    : await gerar(falado);
+    : GEMINI ? gerarGemini(unidades, falado) : await gerar(falado);
+  if (!audio) return;
   montar(qual, leitura, unidades, falado, audio, tempos);
 }
 
@@ -114,6 +126,61 @@ async function gerar(falado) {
   if (!r.ok) throw new Error(`ElevenLabs ${r.status}: ${(await r.text()).slice(0, 200)}`);
   const j = await r.json();
   return { audio: Buffer.from(j.audio_base64, 'base64'), tempos: j.alignment };
+}
+
+/** Gemini TTS + Whisper: devolve o áudio (mp3) e tempos por caractere no formato do ElevenLabs. */
+function gerarGemini(unidades, falado) {
+  const tmp = fs.mkdtempSync(path.join(process.env.TMPDIR || '/tmp', 'voz-'));
+  const chave = execFileSync('security', ['find-generic-password', '-a', process.env.USER, '-s', 'gemini-api-key', '-w']).toString().trim();
+  const instrucao = 'Leia em português do Brasil, com sotaque brasileiro neutro (T e R como no Brasil), como um leitor da Palavra '
+    + 'na missa: voz calma, sóbria e reverente, em ritmo um pouco mais ágil, sem dramatizar. Pausa breve ao fim de cada linha.';
+  fs.writeFileSync(path.join(tmp, 'pedido.json'), JSON.stringify({
+    contents: [{ parts: [{ text: `${instrucao}\n\n${unidades.join('\n')}` }] }],
+    generationConfig: { responseModalities: ['AUDIO'], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: VOZ.id } } } },
+  }));
+  const resp = path.join(tmp, 'resp.json');
+  execFileSync('curl', ['-s', '--max-time', '900', '-o', resp, '-H', 'Content-Type: application/json', '-H', `x-goog-api-key: ${chave}`,
+    '-d', `@${path.join(tmp, 'pedido.json')}`, `https://generativelanguage.googleapis.com/v1beta/models/${VOZ.modelo}:generateContent`]);
+  const j = JSON.parse(fs.readFileSync(resp, 'utf8'));
+  if (j.error?.code === 429) { console.log(`${dt}: cota do Gemini esgotada por hoje — pare e tente amanhã`); process.exit(0); }
+  const dados = j.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
+  if (!dados) throw new Error(`Gemini: ${JSON.stringify(j.error || j).slice(0, 200)}`);
+  fs.writeFileSync(path.join(tmp, 'voz.wav'), Buffer.from(dados, 'base64'));
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', path.join(tmp, 'voz.wav'), '-b:a', '96k', path.join(tmp, 'voz.mp3')]);
+  execFileSync('whisper', [path.join(tmp, 'voz.wav'), '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
+    '--output_format', 'json', '--output_dir', tmp, '--fp16', 'False'], { stdio: 'ignore' });
+  const ouvidas = JSON.parse(fs.readFileSync(path.join(tmp, 'voz.json'), 'utf8')).segments.flatMap(sg => sg.words || []);
+  return { audio: fs.readFileSync(path.join(tmp, 'voz.mp3')), tempos: tempoPorCaractere(falado, ouvidas) };
+}
+
+/** Casa as palavras do texto com as ouvidas pelo Whisper (maior subsequência comum) e espalha os
+ *  tempos por caractere; palavra sem par fica entre as vizinhas que casaram. */
+function tempoPorCaractere(falado, ouvidas) {
+  const norm = w => w.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const palavras = [...falado.matchAll(/\S+/g)].map(m => ({ i: m.index, fim: m.index + m[0].length, n: norm(m[0]) }));
+  const a = palavras.map(p => p.n), b = ouvidas.map(w => norm(w.word));
+  const L = Array.from({ length: a.length + 1 }, () => new Uint16Array(b.length + 1));
+  for (let x = a.length - 1; x >= 0; x--) for (let y = b.length - 1; y >= 0; y--) {
+    L[x][y] = a[x] && a[x] === b[y] ? L[x + 1][y + 1] + 1 : Math.max(L[x + 1][y], L[x][y + 1]);
+  }
+  for (let x = 0, y = 0; x < a.length && y < b.length;) {
+    if (a[x] && a[x] === b[y]) { palavras[x].t0 = ouvidas[y].start; palavras[x].t1 = ouvidas[y].end; x++; y++; }
+    else if (L[x + 1][y] >= L[x][y + 1]) x++; else y++;
+  }
+  const casadas = palavras.filter(p => p.t0 != null).length;
+  if (casadas < palavras.length * 0.8) throw new Error(`o Whisper só reconheceu ${casadas}/${palavras.length} palavras (gere de novo)`);
+  // sem par: entre o fim da anterior casada e o início da próxima
+  for (let k = 0; k < palavras.length; k++) if (palavras[k].t0 == null) {
+    const ant = palavras.slice(0, k).reverse().find(p => p.t0 != null), prox = palavras.slice(k + 1).find(p => p.t0 != null);
+    palavras[k].t0 = ant ? ant.t1 : 0; palavras[k].t1 = prox ? prox.t0 : (ant ? ant.t1 + 0.4 : 0.4);
+  }
+  const ini = new Array(falado.length), fim = new Array(falado.length);
+  let k = 0;
+  for (let c = 0; c < falado.length; c++) {
+    while (k < palavras.length - 1 && c >= palavras[k].fim) k++;
+    ini[c] = palavras[k].t0; fim[c] = palavras[k].t1;
+  }
+  return { characters: [...falado], character_start_times_seconds: ini, character_end_times_seconds: fim };
 }
 
 function montar(qual, leitura, unidades, falado, audio, tempos) {

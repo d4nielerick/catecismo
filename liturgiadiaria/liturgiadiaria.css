@@ -1385,3 +1385,8 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   animation: lp-gira 0.7s linear infinite;
 }
 @keyframes lp-gira { to { transform: rotate(360deg); } }
+/* Linha colorida no iPhone: é o anel de foco do sistema (na cor de destaque do aparelho) que o
+   Safari desenha no diálogo e na área do texto quando a tela abre. Aqui o foco não precisa
+   aparecer, exceto no teclado (os botões já têm o próprio :focus-visible). */
+.lp-ouvir, .lp-ouvir *, .lp-ouvir:focus, .lp-ouvir *:focus { outline: none; -webkit-tap-highlight-color: transparent; }
+.lp-ouvir { border: 0; }
