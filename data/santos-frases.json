@@ -11,7 +11,7 @@
       "nome": "São Jerônimo",
       "frase": "Ignorar as Escrituras é ignorar Cristo.",
       "fonte": "Comentário ao profeta Isaías, prólogo",
-      "imagem": "vela-livro"
+      "imagem": "sao-jeronimo"
     },
     "Santa Teresinha do Menino Jesus": {
       "nome": "Santa Teresinha do Menino Jesus",
@@ -29,55 +29,55 @@
       "nome": "Santo Inácio de Antioquia",
       "frase": "Sou trigo de Deus, e serei moído pelos dentes das feras para me tornar pão puro de Cristo.",
       "fonte": "Carta aos Romanos, 4",
-      "imagem": "martires"
+      "imagem": "santo-inacio-antioquia"
     },
     "São Simão e São Judas, apóstolos": {
       "nome": "São Simão e São Judas",
       "frase": "Conservai-vos no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo, para a vida eterna.",
       "fonte": "Carta de São Judas, 21",
-      "imagem": "mar-galileia"
+      "imagem": "sao-simao-judas"
     },
     "São Leão Magno, papa": {
       "nome": "São Leão Magno",
       "frase": "Reconhece, ó cristão, a tua dignidade: tornado participante da natureza divina, não voltes à antiga baixeza.",
       "fonte": "Sermão 1 sobre o Natal do Senhor",
-      "imagem": "claustro"
+      "imagem": "sao-leao-magno"
     },
     "São Martinho de Tours": {
       "nome": "São Martinho de Tours",
       "frase": "Senhor, se ainda sou necessário ao teu povo, não recuso o trabalho: seja feita a tua vontade.",
       "fonte": "Sulpício Severo, Carta 3",
-      "imagem": "capela"
+      "imagem": "sao-martinho"
     },
     "Santo André, apóstolo": {
       "nome": "Santo André",
       "frase": "Ó cruz boa, tanto tempo desejada, recebe-me e entrega-me ao meu Mestre.",
       "fonte": "tradicionalmente atribuída, Paixão de Santo André",
-      "imagem": "mar-galileia"
+      "imagem": "santo-andre"
     },
     "São Francisco Xavier": {
       "nome": "São Francisco Xavier",
       "frase": "Muitos deixam de se tornar cristãos por não haver quem se ocupe em fazê-los cristãos.",
       "fonte": "Carta a Santo Inácio, 1544",
-      "imagem": "mar-aurora"
+      "imagem": "sao-francisco-xavier"
     },
     "Santo Ambrósio": {
       "nome": "Santo Ambrósio",
       "frase": "Cristo é tudo para nós.",
       "fonte": "Sobre a virgindade, 16,99",
-      "imagem": "vela-livro"
+      "imagem": "santo-ambrosio"
     },
     "São João da Cruz": {
       "nome": "São João da Cruz",
       "frase": "No entardecer desta vida, seremos examinados no amor.",
       "fonte": "Ditos de luz e amor, 59",
-      "imagem": "montanhas"
+      "imagem": "sao-joao-da-cruz"
     },
     "Santo Estêvão, primeiro mártir": {
       "nome": "Santo Estêvão",
       "frase": "Senhor Jesus, acolhe o meu espírito.",
       "fonte": "Atos dos Apóstolos 7,59 (leitura do dia)",
-      "imagem": "martires"
+      "imagem": "santo-estevao"
     }
   },
   "porData": {
@@ -85,31 +85,31 @@
       "nome": "São Vicente de Paulo",
       "frase": "Os pobres são os nossos senhores e mestres.",
       "fonte": "ensinamento tradicionalmente atribuído, conferências às Filhas da Caridade",
-      "imagem": "pao-vinho"
+      "imagem": "sao-vicente-de-paulo"
     },
     "10-04": {
       "nome": "São Francisco de Assis",
       "frase": "Louvado sejas, meu Senhor, com todas as tuas criaturas, especialmente o senhor irmão Sol.",
       "fonte": "Cântico das Criaturas",
-      "imagem": "flores-campo"
+      "imagem": "sao-francisco-de-assis"
     },
     "10-05": {
       "nome": "Santa Faustina Kowalska",
       "frase": "Jesus, eu confio em Vós.",
       "fonte": "Diário, a inscrição pedida para a imagem da Misericórdia",
-      "imagem": "lirios"
+      "imagem": "santa-faustina"
     },
     "10-19": {
       "nome": "São Paulo da Cruz",
       "frase": "A Paixão de Jesus é a obra mais estupenda do amor divino.",
       "fonte": "ensinamento tradicionalmente atribuído, cartas",
-      "imagem": "quaresma-espinhos"
+      "imagem": "sao-paulo-da-cruz"
     },
     "10-22": {
       "nome": "São João Paulo II",
       "frase": "Não tenhais medo! Abri, ou melhor, escancarai as portas a Cristo!",
       "fonte": "homilia do início do pontificado, 22 de outubro de 1978",
-      "imagem": "trigo-cruz"
+      "imagem": "sao-joao-paulo-ii"
     }
   }
 }
