@@ -19,6 +19,9 @@ let musica = null;
 let dados = null;
 let fila = [];      // as leituras do dia com voz, na ordem da missa
 let posFila = 0;
+let inicioFila = 0;     // a leitura por onde a pessoa começou
+let seguirSozinho = true;  // começou do início (ou já aceitou continuar): passa à próxima com contagem
+let contagem = 0;
 let diaAtual = '';
 let atual = -1;
 let quadro = 0;
@@ -46,6 +49,10 @@ function montar() {
       <button type="button" class="lp-ouvir-fechar" aria-label="Fechar">${ICONE.fechar}</button>
     </header>
     <div class="lp-ouvir-texto" aria-live="off"></div>
+    <div class="lp-ouvir-aviso" role="status" hidden>
+      <p class="lp-ouvir-aviso-texto"></p>
+      <div class="lp-ouvir-aviso-botoes"></div>
+    </div>
     <footer class="lp-ouvir-controles">
       <div class="lp-ouvir-progresso"><span></span></div>
       <div class="lp-ouvir-botoes">
@@ -59,6 +66,10 @@ function montar() {
   document.body.append(dlg);
 
   dlg.querySelector('.lp-ouvir-fechar').addEventListener('click', () => dlg.close());
+  dlg.querySelector('.lp-ouvir-aviso-botoes').addEventListener('click', e => {
+    const acao = e.target.closest('[data-fim]')?.dataset.fim;
+    if (acao) escolher(acao);
+  });
   dlg.addEventListener('close', parar);
   dlg.querySelector('.lp-ouvir-botoes').addEventListener('click', e => {
     const acao = e.target.closest('[data-acao]')?.dataset.acao;
@@ -125,7 +136,62 @@ function alternarMusica() {
   else if (!musica.paused) fade(musica, 0, 500, () => musica.pause());
 }
 
+// ── Fim de cada leitura ─────────────────────────────────────────────────────
+// Começou do início: aviso "A seguir: Salmo, em 3" e segue sozinho (dá para começar já ou parar).
+// Começou por uma do meio: pergunta se continua, ouve de novo ou sai. Na última: de novo ou sair.
+function terminou() {
+  const tocarIcone = dlg.querySelector('.lp-ouvir-tocar');
+  tocarIcone.innerHTML = ICONE.tocar;
+  tocarIcone.setAttribute('aria-label', 'Tocar');
+  const proxima = fila[posFila + 1];
+  if (!proxima) {
+    avisar('Fim das leituras.', [['novamente', 'Ouvir novamente'], ['sair', 'Sair']]);
+  } else if (!seguirSozinho) {
+    avisar(`Continuar com ${artigo(proxima.rotulo)}?`, [['continuar', 'Continuar ouvindo'], ['novamente', 'Ouvir novamente'], ['sair', 'Sair']]);
+  } else {
+    let n = 3;
+    const texto = () => `A seguir: ${proxima.rotulo}, em ${n}`;
+    avisar(texto(), [['continuar', 'Começar já'], ['parar', 'Parar']]);
+    clearInterval(contagem);
+    contagem = setInterval(() => {
+      n--;
+      if (n <= 0) { escolher('continuar'); return; }
+      dlg.querySelector('.lp-ouvir-aviso-texto').textContent = texto();
+    }, 1000);
+  }
+}
+
+const artigo = rotulo => (rotulo === 'Salmo' || rotulo === 'Evangelho' ? `o ${rotulo}` : `a ${rotulo}`);
+
+function avisar(texto, botoes) {
+  const aviso = dlg.querySelector('.lp-ouvir-aviso');
+  aviso.querySelector('.lp-ouvir-aviso-texto').textContent = texto;
+  aviso.querySelector('.lp-ouvir-aviso-botoes').innerHTML = botoes
+    .map(([acao, rotulo], i) => `<button type="button" data-fim="${acao}"${i === 0 ? ' class="principal"' : ''}>${rotulo}</button>`).join('');
+  aviso.hidden = false;
+  dlg.classList.remove('lp-ouvir-quieto');
+  clearTimeout(esperaControles);
+}
+
+function fecharAviso() {
+  clearInterval(contagem);
+  dlg.querySelector('.lp-ouvir-aviso').hidden = true;
+}
+
+function escolher(acao) {
+  fecharAviso();
+  if (acao === 'sair') { dlg.close(); return; }
+  if (acao === 'parar') { pausar(); if (musica) fade(musica, 0, 800, () => musica.pause()); return; }
+  if (acao === 'continuar') { seguirSozinho = true; carregar(posFila + 1); return; }
+  if (acao === 'novamente') {
+    // na última, volta ao começo do que a pessoa ouviu; no meio, repete a que acabou
+    const k = fila[posFila + 1] ? posFila : inicioFila;
+    carregar(k).then(() => { if (musicaLigada && musica?.paused) tocar(); });
+  }
+}
+
 function parar() {
+  fecharAviso();
   cancelAnimationFrame(quadro);
   voz?.pause();
   if (musica) { musica.pause(); musica.currentTime = 0; }
@@ -172,12 +238,7 @@ async function carregar(k, { tocarDepois = true } = {}) {
   voz?.pause();
   voz = new Audio(`${base}.mp3`);
   voz.preload = 'auto';
-  voz.addEventListener('ended', () => {
-    // acabou esta leitura: segue para a próxima; na última, a música sai devagar
-    if (posFila < fila.length - 1) { carregar(posFila + 1); return; }
-    pausar();
-    if (musica) fade(musica, 0, 2500, () => musica.pause());
-  });
+  voz.addEventListener('ended', terminou);
   if ('mediaSession' in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: `${rotulo} — ${dados.referencia}`, artist: 'Liturgia Diária',
@@ -186,7 +247,12 @@ async function carregar(k, { tocarDepois = true } = {}) {
     navigator.mediaSession.setActionHandler('nexttrack', posFila < fila.length - 1 ? () => carregar(posFila + 1) : null);
     navigator.mediaSession.setActionHandler('previoustrack', posFila > 0 ? () => carregar(posFila - 1) : null);
   }
-  if (tocarDepois) { voz.play().catch(() => {}); }
+  if (tocarDepois) {
+    voz.play().catch(() => {});
+    const bt = dlg.querySelector('.lp-ouvir-tocar');
+    bt.innerHTML = ICONE.pausar;
+    bt.setAttribute('aria-label', 'Pausar');
+  }
 }
 
 /** d: { dt, fila: [{ qual, rotulo }], inicio, cor } — fila: as leituras com voz; inicio: a tocada. */
@@ -194,6 +260,8 @@ export async function ouvir({ dt, fila: leituras, inicio = 0, cor = '#3a2a1a' })
   if (!dlg) montar();
   diaAtual = dt;
   fila = leituras;
+  inicioFila = inicio;
+  seguirSozinho = inicio === 0;
   dlg.style.setProperty('--lp-ouvir-cor', cor);
   dlg.querySelector('.lp-ouvir-musica').classList.toggle('desligada', !musicaLigada);
   if (!musica) { musica = new Audio(MUSICA); musica.loop = true; musica.preload = 'auto'; }
