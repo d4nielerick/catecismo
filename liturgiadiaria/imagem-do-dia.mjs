@@ -160,13 +160,15 @@ function itensDaLeitura(ctx, l) {
     } });
     for (let i = n; i < linhas.length; i++) itens.push(linha(linhas[i], { largura: LARG, ultima: i === ult }));
   }
-  // a última linha desce junto com o "Palavra do Senhor" (que nunca abre página sozinho)
-  if (l.tipo !== 'salmo') itens.at(-1).junto = 2;
   const fecho = l.tipo === 'evangelho' ? 'Palavra da Salvação.' : l.tipo === 'salmo' ? '' : 'Palavra do Senhor.';
   if (fecho) {
     itens.push(espaco(22));
     itens.push(linha(fecho, { fonte: `italic 400 ${CORPO - 3}px ${LEITURA}`, cor: SUAVE }));
   }
+  // as 3 últimas linhas (e o "Palavra do Senhor") passam de página juntas: nada de uma linha
+  // sozinha numa página nova
+  const k = Math.max(0, itens.length - (fecho ? 2 : 0) - 3);
+  if (!itens[k].junto) itens[k].junto = itens.length - 1 - k;
   return itens;
 }
 
@@ -264,13 +266,13 @@ function paginar(itens, topo0) {
   return paginas.filter(p => p.length);
 }
 
-function montar(medir, cab, leituras) {
-  const itens = cabecalhoGrande(medir, cab);   // a 1ª página abre sempre com o cabeçalho grande
+function montar(medir, cab, leituras, grande) {
+  const itens = grande ? cabecalhoGrande(medir, cab) : [];
   leituras.forEach((l, i) => {
     if (i) itens.push({ h: 150, espaco: true, draw: (c, y) => divisor(c, y + 75) });
     itens.push(...itensDaLeitura(medir, l));
   });
-  return paginar(itens, 110);
+  return paginar(itens, grande ? 110 : TOPO_PAG);
 }
 
 export async function paginas(dia, cab, { referencia = null } = {}) {
@@ -279,12 +281,14 @@ export async function paginas(dia, cab, { referencia = null } = {}) {
   const leituras = dia.missas[0].leituras
     .filter(l => !l.alternativa && ['leitura', 'salmo', 'evangelho'].includes(l.tipo))
     .filter(l => !referencia || l.referencia === referencia);
-  // corpo 33; se apertar até 29 poupa uma página (a última quase vazia), aperta — o maior corpo
-  // entre os que dão o menor número de páginas
-  const tentar = corpo => { CORPO = corpo; LH = corpo * 1.56; return montar(medir, cab, leituras); };
-  const menor = Math.min(...[33, 31, 29].map(c => tentar(c).length));
-  let pags;
-  for (const corpo of [33, 31, 29]) { pags = tentar(corpo); if (pags.length === menor) break; }
+  // a 1ª página abre com o cabeçalho grande, corpo 33. Se apertar a letra até 29 poupa uma página,
+  // aperta; se nem assim, troca o cabeçalho grande pelo pequeno — o que der menos páginas, na
+  // ordem de preferência abaixo (uma linha solta numa página nova não pode acontecer)
+  const opcoes = [true, false].flatMap(g => [33, 31, 29].map(corpo => [g, corpo]));
+  const tentar = ([g, corpo]) => { CORPO = corpo; LH = corpo * 1.56; return montar(medir, cab, leituras, g); };
+  const menor = Math.min(...opcoes.map(o => tentar(o).length));
+  let pags, grande;
+  for (const o of opcoes) { pags = tentar(o); grande = o[0]; if (pags.length === menor) break; }
   const orn = ornamento(null, faixa, PH);
   return pags.map((pag, i) => {
     // uma página só e texto curto (um salmo): a imagem encolhe até o texto, sem ficar menor que
@@ -295,7 +299,7 @@ export async function paginas(dia, cab, { referencia = null } = {}) {
     const c = cv.getContext('2d');
     c.fillStyle = FUNDO; c.fillRect(0, 0, W, H);
     if (orn) c.drawImage(orn, 24, 0);
-    if (i) cabecalhoPequeno(c, cab);
+    if (i || !grande) cabecalhoPequeno(c, cab);
     for (const { it, y } of pag) it.draw(c, y);
     rodapePagina(c, cab, i, pags.length, H);
     return cv;
