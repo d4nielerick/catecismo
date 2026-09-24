@@ -6,6 +6,36 @@
       "frase": "Reze, espere e não se preocupe. A preocupação é inútil. Nosso Senhor, que é misericordioso, ouvirá a sua oração.",
       "fonte": "ensinamento tradicionalmente atribuído, coletâneas (em italiano: \"Prega, spera e non preoccuparti…\")",
       "imagem": "sao-pio"
+    },
+    "São Jerônimo": {
+      "nome": "São Jerônimo",
+      "frase": "Ignorar as Escrituras é ignorar Cristo.",
+      "fonte": "Comentário ao profeta Isaías, prólogo",
+      "imagem": "vela-livro"
+    },
+    "Santa Teresinha do Menino Jesus": {
+      "nome": "Santa Teresinha do Menino Jesus",
+      "frase": "No coração da Igreja, minha Mãe, eu serei o Amor.",
+      "fonte": "História de uma alma, Manuscrito B",
+      "imagem": "teresinha"
+    },
+    "Santa Teresa de Jesus": {
+      "nome": "Santa Teresa de Jesus",
+      "frase": "Nada te perturbe, nada te espante; tudo passa, Deus não muda. A paciência tudo alcança; quem a Deus tem, nada lhe falta: só Deus basta.",
+      "fonte": "poema \"Nada te turbe\", encontrado em seu breviário",
+      "imagem": "teresa-avila"
+    },
+    "Santo Inácio de Antioquia, bispo e mártir": {
+      "nome": "Santo Inácio de Antioquia",
+      "frase": "Sou trigo de Deus, e serei moído pelos dentes das feras para me tornar pão puro de Cristo.",
+      "fonte": "Carta aos Romanos, 4",
+      "imagem": "martires"
+    },
+    "São Simão e São Judas, apóstolos": {
+      "nome": "São Judas Tadeu",
+      "frase": "Conservai-vos no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo, para a vida eterna.",
+      "fonte": "Carta de São Judas, 21",
+      "imagem": "mar-galileia"
     }
   }
 }
