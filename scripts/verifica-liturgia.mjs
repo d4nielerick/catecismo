@@ -174,13 +174,19 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
 {
   const arq = path.join(SAIDA, '..', 'santos-frases.json');
   if (fs.existsSync(arq)) {
-    const { frases } = JSON.parse(fs.readFileSync(arq, 'utf8'));
+    const { frases, porData = {} } = JSON.parse(fs.readFileSync(arq, 'utf8'));
     const ids = new Set(ACERVO.map(im => im.id));
     const celebracoes = new Set(datas.map(d => JSON.parse(fs.readFileSync(path.join(SAIDA, `${d}.json`), 'utf8')).celebracao));
     for (const [cel, f] of Object.entries(frases)) {
       if (!f.frase?.trim() || !f.fonte?.trim()) erros.push(`santos-frases "${cel}": sem frase ou sem fonte`);
       if (f.imagem && !ids.has(f.imagem)) erros.push(`santos-frases "${cel}": pintura "${f.imagem}" não existe no acervo`);
       if (!celebracoes.has(cel)) erros.push(`santos-frases "${cel}": nenhuma celebração com esse nome no calendário`);
+    }
+    // santos lembrados em dia comum: chave "MM-DD"
+    for (const [md, f] of Object.entries(porData)) {
+      if (!/^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(md)) erros.push(`santos-frases porData "${md}": data não é MM-DD`);
+      if (!f.nome?.trim() || !f.frase?.trim() || !f.fonte?.trim()) erros.push(`santos-frases porData "${md}": sem nome, frase ou fonte`);
+      if (f.imagem && !ids.has(f.imagem)) erros.push(`santos-frases porData "${md}": pintura "${f.imagem}" não existe no acervo`);
     }
   }
 }

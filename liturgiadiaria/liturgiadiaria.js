@@ -51,12 +51,20 @@ function preencherCabecalho(dt, dia, santos) {
     el.append(mais);
   }
   // santo do dia: um botão para compartilhar uma frase dele, com a pintura dele (data/santos-frases.json)
-  const santo = estado.santosFrases?.frases?.[dia.celebracao];
+  // (em dia comum ou domingo, o santo lembrado na data vem de "porData", com o nome dele ao lado)
+  const doDia = estado.santosFrases?.frases?.[dia.celebracao];
+  const santo = doDia || estado.santosFrases?.porData?.[dt.slice(5)];
+  if (santo && !doDia) {
+    const nome = document.createElement('span');
+    nome.className = 'nome-dia-santo';
+    nome.textContent = santo.nome;
+    el.append(nome);
+  }
   if (santo) {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'nome-dia-compartilhar';
-    b.setAttribute('aria-label', `Compartilhar uma frase de ${dia.celebracao}`);
+    b.setAttribute('aria-label', `Compartilhar uma frase de ${santo.nome}`);
     b.title = 'Compartilhar uma frase do santo do dia';
     b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
     b.addEventListener('click', () => compartilharSanto(dt, dia, santo));

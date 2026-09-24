@@ -1,5 +1,5 @@
 {
-  "_sobre": "Frases dos santos do dia para o card de compartilhar (liturgiadiaria.js › compartilharSanto). Chave: o nome da celebração exatamente como em data/liturgia/*.json. Cada frase leva a fonte (obra, carta, sermão; ou 'tradicionalmente atribuída' quando não há documento identificado) e a pintura do acervo (data/cards-imagens.json). Escolhidas fora do site e revisadas.",
+  "_sobre": "Frases dos santos do dia para o card de compartilhar (liturgiadiaria.js › compartilharSanto). Chave: o nome da celebração exatamente como em data/liturgia/*.json. Cada frase leva a fonte (obra, carta, sermão; ou 'tradicionalmente atribuída' quando não há documento identificado) e a pintura do acervo (data/cards-imagens.json). Escolhidas fora do site e revisadas. \"porData\" (chave MM-DD): santos lembrados em dia comum ou domingo, que não são a celebração do dia; a página mostra o nome deles abaixo do dia.",
   "frases": {
     "São Pio de Pietrelcina": {
       "nome": "São Pio de Pietrelcina",
@@ -36,6 +36,38 @@
       "frase": "Conservai-vos no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo, para a vida eterna.",
       "fonte": "Carta de São Judas, 21",
       "imagem": "mar-galileia"
+    }
+  },
+  "porData": {
+    "09-27": {
+      "nome": "São Vicente de Paulo",
+      "frase": "Os pobres são os nossos senhores e mestres.",
+      "fonte": "ensinamento tradicionalmente atribuído, conferências às Filhas da Caridade",
+      "imagem": "pao-vinho"
+    },
+    "10-04": {
+      "nome": "São Francisco de Assis",
+      "frase": "Louvado sejas, meu Senhor, com todas as tuas criaturas, especialmente o senhor irmão Sol.",
+      "fonte": "Cântico das Criaturas",
+      "imagem": "flores-campo"
+    },
+    "10-05": {
+      "nome": "Santa Faustina Kowalska",
+      "frase": "Jesus, eu confio em Vós.",
+      "fonte": "Diário, a inscrição pedida para a imagem da Misericórdia",
+      "imagem": "lirios"
+    },
+    "10-19": {
+      "nome": "São Paulo da Cruz",
+      "frase": "A Paixão de Jesus é a obra mais estupenda do amor divino.",
+      "fonte": "ensinamento tradicionalmente atribuído, cartas",
+      "imagem": "quaresma-espinhos"
+    },
+    "10-22": {
+      "nome": "São João Paulo II",
+      "frase": "Não tenhais medo! Abri, ou melhor, escancarai as portas a Cristo!",
+      "fonte": "homilia do início do pontificado, 22 de outubro de 1978",
+      "imagem": "trigo-cruz"
     }
   }
 }

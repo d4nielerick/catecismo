@@ -1365,3 +1365,6 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-ouvir-texto::-webkit-scrollbar { width: 0; height: 0; display: none; }
 /* cinco colunas iguais (música · −15 · play · +15 · vão): o play fica exatamente no centro da tela */
 .lp-ouvir-botoes { display: grid; grid-template-columns: repeat(5, 1fr); justify-items: center; gap: 0; max-width: 420px; margin: 0 auto; }
+/* santo lembrado num dia comum: o nome dele na linha de baixo, com o botão de compartilhar ao lado */
+.nome-dia-santo { color: var(--lp-tinta-suave, inherit); opacity: 0.85; }
+.nome-dia-santo::before { content: "\A"; white-space: pre; }
