@@ -535,30 +535,37 @@ const carregarArte = src => new Promise(ok => {
 const PREVIA_L = 640;
 function desenharTodos() {
   const imgs = dlg.querySelectorAll('.lp-card-slide img');
-  telas.forEach((cv, i) => {
+  return Promise.all(telas.map((cv, i) => new Promise(pronto => {
     const ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, cv.width, cv.height);
     LAYOUTS[i].desenhar(ctx, cv.width, cv.height, conteudo);
     const previa = Object.assign(document.createElement('canvas'), { width: PREVIA_L, height: Math.round(PREVIA_L * cv.height / cv.width) });
     previa.getContext('2d').drawImage(cv, 0, 0, previa.width, previa.height);
     previa.toBlob(b => {
-      if (!b) return;
+      if (!b) { pronto(); return; }
       const antigo = imgs[i].src;
+      imgs[i].onload = imgs[i].onerror = () => pronto();
       imgs[i].src = URL.createObjectURL(b);
       if (antigo.startsWith('blob:')) URL.revokeObjectURL(antigo);
     }, 'image/jpeg', 0.9);
-  });
+  })));
 }
+
+// Enquanto os cards são desenhados (fontes, pintura), cada slide mostra um brilho que corre
+// no lugar da imagem, em vez de ficar vazio ou com o card anterior.
+function carregando(sim) { dlg.classList.toggle('lp-card-carregando', sim); }
 
 let pedidoFoto = 0;
 async function trocarFoto(i) {
   const foto = conteudo.fotos?.[i];
   dlg.querySelectorAll('.lp-card-fotos button').forEach((b, k) => b.setAttribute('aria-pressed', k === i));
   const vez = ++pedidoFoto;
+  carregando(true);
   const img = foto ? await carregarArte(foto.src) : null;
   if (vez !== pedidoFoto) return;
   if (img) imagens.arte = img; else delete imagens.arte;
-  desenharTodos();
+  await desenharTodos();
+  if (vez === pedidoFoto) carregando(false);
 }
 
 /** c: { dt, trecho, referencia, rotulo, celebracao, data, dataCurta, cor, fotos? } (fotos: de escolherFotos) */
@@ -576,6 +583,8 @@ export async function abrirCard(c, { aoFechar } = {}) {
       <img src="${f.mini}" alt="${f.titulo}" width="56" height="56">
     </button>`).join('');
   fila.hidden = !(c.fotos?.length > 1);
+  carregando(true);
+  dlg.querySelectorAll('.lp-card-slide img').forEach(im => im.removeAttribute('src'));   // nada do card anterior
   dlg.showModal();
   atual = 0;
   dlg.querySelector('.lp-card-trilho').scrollLeft = 0;

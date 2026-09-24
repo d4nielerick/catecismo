@@ -67,7 +67,7 @@ function preencherCabecalho(dt, dia, santos) {
     b.setAttribute('aria-label', `Compartilhar uma frase de ${santo.nome}`);
     b.title = 'Compartilhar uma frase do santo do dia';
     b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
-    b.addEventListener('click', () => compartilharSanto(dt, dia, santo));
+    b.addEventListener('click', () => compartilharSanto(dt, dia, santo, b));
     el.append(b);
   }
   mostrarSobre(slug ? { slug, celebracao: dia.celebracao } : null);
@@ -743,11 +743,17 @@ async function botaoOuvir(dt, dia) {
 
 let catalogoDeCards = null;
 
-async function compartilharSanto(dt, dia, santo) {
-  const [{ abrirCard, escolherFotos }, catalogo] = await Promise.all([
+/** Botão girando enquanto o módulo dos cards e o acervo chegam (na 1ª vez, pela rede). */
+async function comEspera(botao, promessa) {
+  const t = setTimeout(() => { botao.classList.add('lp-ocupado'); botao.setAttribute('aria-busy', 'true'); }, 120);
+  try { return await promessa; } finally { clearTimeout(t); botao.classList.remove('lp-ocupado'); botao.removeAttribute('aria-busy'); }
+}
+
+async function compartilharSanto(dt, dia, santo, botao) {
+  const [{ abrirCard, escolherFotos }, catalogo] = await comEspera(botao, Promise.all([
     import('/liturgiadiaria/compartilhar.mjs'),
     catalogoDeCards ??= buscarJson('/data/cards-imagens.json'),
-  ]);
+  ]));
   const cab = cabecalhoDoDia(dt, dia);
   lenis?.stop();
   abrirCard({
@@ -771,10 +777,10 @@ function botoesDeCompartilhar(dt, dia, blocos, trechos) {
     botao.title = 'Compartilhar trecho';
     botao.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
     botao.addEventListener('click', async () => {
-      const [{ abrirCard, escolherFotos }, catalogo] = await Promise.all([
+      const [{ abrirCard, escolherFotos }, catalogo] = await comEspera(botao, Promise.all([
         import('/liturgiadiaria/compartilhar.mjs'),
         catalogoDeCards ??= buscarJson('/data/cards-imagens.json'),
-      ]);
+      ]));
       const fotos = escolherFotos(catalogo, {
         tempo: dia.tempo, cor: dia.cor, dt, preferida: trechos.imagens?.[leitura.referencia],
       });

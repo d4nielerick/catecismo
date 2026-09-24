@@ -36,6 +36,48 @@
       "frase": "Conservai-vos no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo, para a vida eterna.",
       "fonte": "Carta de São Judas, 21",
       "imagem": "mar-galileia"
+    },
+    "São Leão Magno, papa": {
+      "nome": "São Leão Magno",
+      "frase": "Reconhece, ó cristão, a tua dignidade: tornado participante da natureza divina, não voltes à antiga baixeza.",
+      "fonte": "Sermão 1 sobre o Natal do Senhor",
+      "imagem": "claustro"
+    },
+    "São Martinho de Tours": {
+      "nome": "São Martinho de Tours",
+      "frase": "Senhor, se ainda sou necessário ao teu povo, não recuso o trabalho: seja feita a tua vontade.",
+      "fonte": "Sulpício Severo, Carta 3",
+      "imagem": "capela"
+    },
+    "Santo André, apóstolo": {
+      "nome": "Santo André",
+      "frase": "Ó cruz boa, tanto tempo desejada, recebe-me e entrega-me ao meu Mestre.",
+      "fonte": "tradicionalmente atribuída, Paixão de Santo André",
+      "imagem": "mar-galileia"
+    },
+    "São Francisco Xavier": {
+      "nome": "São Francisco Xavier",
+      "frase": "Muitos deixam de se tornar cristãos por não haver quem se ocupe em fazê-los cristãos.",
+      "fonte": "Carta a Santo Inácio, 1544",
+      "imagem": "mar-aurora"
+    },
+    "Santo Ambrósio": {
+      "nome": "Santo Ambrósio",
+      "frase": "Cristo é tudo para nós.",
+      "fonte": "Sobre a virgindade, 16,99",
+      "imagem": "vela-livro"
+    },
+    "São João da Cruz": {
+      "nome": "São João da Cruz",
+      "frase": "No entardecer desta vida, seremos examinados no amor.",
+      "fonte": "Ditos de luz e amor, 59",
+      "imagem": "montanhas"
+    },
+    "Santo Estêvão, primeiro mártir": {
+      "nome": "Santo Estêvão",
+      "frase": "Senhor Jesus, recebe o meu espírito. Senhor, não lhes leves em conta este pecado.",
+      "fonte": "Atos dos Apóstolos 7,59-60",
+      "imagem": "martires"
     }
   },
   "porData": {

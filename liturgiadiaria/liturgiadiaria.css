@@ -1368,3 +1368,20 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 /* santo lembrado num dia comum: o nome dele na linha de baixo, com o botão de compartilhar ao lado */
 .nome-dia-santo { color: var(--lp-tinta-suave, inherit); opacity: 0.85; }
 .nome-dia-santo::before { content: "\A"; white-space: pre; }
+/* Card sendo desenhado: o lugar da imagem pulsa com um brilho que corre (lp-card-carregando, em compartilhar.mjs) */
+.lp-card-carregando .lp-card-slide img {
+  background: linear-gradient(100deg, #26211a 30%, #3a3228 50%, #26211a 70%) 0 0 / 250% 100%;
+  animation: lp-card-brilho 1.2s linear infinite, lp-card-pulso 0.9s ease-in-out infinite alternate;
+}
+@keyframes lp-card-brilho { to { background-position: -150% 0; } }
+@keyframes lp-card-pulso { to { opacity: 0.6; } }
+@media (prefers-reduced-motion: reduce) { .lp-card-carregando .lp-card-slide img { animation: none; opacity: 0.6; } }
+/* botão de compartilhar esperando o card: o ícone dá lugar a um anel girando */
+.lp-ocupado { position: relative; pointer-events: none; }
+.lp-ocupado svg { opacity: 0; }
+.lp-ocupado::after {
+  content: ""; position: absolute; inset: 0; margin: auto; width: 14px; height: 14px;
+  border: 1.8px solid currentColor; border-right-color: transparent; border-radius: 50%;
+  animation: lp-gira 0.7s linear infinite;
+}
+@keyframes lp-gira { to { transform: rotate(360deg); } }
