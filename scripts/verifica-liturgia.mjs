@@ -14,6 +14,7 @@ import path from 'node:path';
 import { buildDia, listarFonte, lerFonte, indiceDe, SAIDA, RE, cabecalho } from './build-liturgia.mjs';
 import { lerModelo, lerIndice, listarDias, lerDia, paginaDoDia, sitemapLiturgia } from './build-paginas-liturgia.mjs';
 import { referenciasDoDia } from '../liturgiadiaria/render.mjs';
+import { conferirTrechos } from './lib-trechos.mjs';
 
 const semEspaco = s => (s || '').replace(/\s+/g, '');
 const tem = (dia, tipo, ...trechos) => dia.missas
@@ -148,7 +149,6 @@ for (const [celebracao, s] of Object.entries(santos)) {
 // Trechos dos cards de compartilhar (data/liturgia-trechos/): cobrem as leituras atuais do dia,
 // cada um existe palavra por palavra na sua leitura (só o que está no texto) e cabe no card.
 // A pintura imposta a uma leitura precisa existir no acervo (data/cards-imagens.json).
-const TRECHO_MAX_PALAVRAS = 35;
 const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.json'), 'utf8')).imagens;
 {
   const IMG = path.join(SAIDA, '..', '..', 'assets', 'img', 'cards');
@@ -159,29 +159,13 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
     if (!im.titulo || !im.tempos?.length) erros.push(`acervo ${im.id}: sem título ou sem tempos`);
   }
   const TRECHOS = path.join(SAIDA, '..', 'liturgia-trechos');
-  // o texto como a página mostra: sem números de versículo, sem marcas do salmo, espaços únicos
-  const plano = t => t.split('\n').filter(l => !/^(\d+[a-z]?|\d+,\d+[a-z]?|[a-z]|R\.?|V\.)$/.test(l.trim()))
-    .join(' ').replace(/[*†]/g, '').replace(/\s+/g, ' ').toLowerCase();
   const ids = new Set(ACERVO.map(im => im.id));
   for (const arq of fs.existsSync(TRECHOS) ? fs.readdirSync(TRECHOS).filter(f => f.endsWith('.json')) : []) {
     const t = JSON.parse(fs.readFileSync(path.join(TRECHOS, arq), 'utf8'));
     const destino = path.join(SAIDA, `${t.data}.json`);
     if (!fs.existsSync(destino)) { erros.push(`trechos ${t.data}: dia sem leituras`); continue; }
     const dia = JSON.parse(fs.readFileSync(destino, 'utf8'));
-    if (t.leituras !== referenciasDoDia(dia)) erros.push(`trechos ${t.data}: as leituras do dia mudaram (refaça os trechos)`);
-    const porRef = new Map(dia.missas[0].leituras.map(l => [l.referencia, l]));
-    for (const [ref, trecho] of Object.entries(t.trechos || {})) {
-      const leitura = porRef.get(ref);
-      if (!leitura) { erros.push(`trechos ${t.data}: "${ref}" não é leitura do dia`); continue; }
-      const n = trecho.split(/\s+/).length;
-      if (n > TRECHO_MAX_PALAVRAS) erros.push(`trechos ${t.data} ${ref}: ${n} palavras (máx. ${TRECHO_MAX_PALAVRAS})`);
-      if (!plano(leitura.texto).includes(trecho.replace(/\s+/g, ' ').toLowerCase())) {
-        erros.push(`trechos ${t.data} ${ref}: o trecho não está, palavra por palavra, na leitura`);
-      }
-    }
-    for (const [ref, id] of Object.entries(t.imagens || {})) {
-      if (!ids.has(id)) erros.push(`trechos ${t.data} ${ref}: pintura "${id}" não existe no acervo`);
-    }
+    for (const e of conferirTrechos(t, dia, ids)) erros.push(`trechos ${t.data} ${e}`);
   }
 }
 
