@@ -1,65 +1,108 @@
 /**
- * liturgiadiaria/tour.mjs — boas-vindas na primeira visita: quatro telas curtas, cada uma com uma
- * pequena animação (SVG + CSS, sem vídeo), mostrando o que a página faz. Aparece uma vez só
- * (localStorage "lp-tour-visto"); ?tour=1 na URL mostra de novo. Pulável a qualquer momento.
+ * liturgiadiaria/tour.mjs — boas-vindas na primeira visita: seis telas curtas, cada uma com uma
+ * cena animada (HTML + CSS, sem vídeo) feita com as mesmas peças da página — os ícones reais da
+ * barra, as pinturas do acervo, os textos de verdade. Aparece uma vez só (localStorage
+ * "lp-tour-visto"); ?tour=1 na URL mostra de novo. Pulável a qualquer momento.
+ *
+ * Cada cena é um laço de 6 s com um "dedo" que toca onde a pessoa tocaria.
  */
+import { icone } from '/liturgiadiaria/icones-leituras.mjs';
 
 const CHAVE = 'lp-tour-visto';
+const CELULAR = matchMedia('(max-width: 760px)');
+const dedo = cls => `<i class="t-dedo ${cls}" aria-hidden="true"></i>`;
+const COMPARTILHAR = '<svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
+
+// outubro de 2026 começa numa quinta: 4 casas vazias antes do dia 1
+const DESTAQUES = { 1: 'santo', 4: 'santo', 7: 'maria', 12: 'maria', 15: 'santo', 22: 'santo' };
+const MES = Array.from({ length: 4 }, () => '<span></span>').join('')
+  + Array.from({ length: 31 }, (_, i) => `<span class="${DESTAQUES[i + 1] ? `d-${DESTAQUES[i + 1]}` : ''}">${i + 1}</span>`).join('');
 
 const PASSOS = [
   {
     titulo: 'As leituras de cada dia',
-    texto: 'Toque numa data do calendário ou use as setas para ir a outro dia. Os pontinhos marcam santos e festas de Nossa Senhora.',
-    cena: `<svg viewBox="0 0 200 120" class="lp-tour-cal" aria-hidden="true">
-      <rect x="30" y="10" width="140" height="100" rx="10" class="c-fundo"/>
-      ${[0, 1, 2, 3].map(l => [0, 1, 2, 3, 4, 5, 6].map(c =>
-        `<rect x="${42 + c * 18}" y="${24 + l * 20}" width="12" height="10" rx="3" class="c-dia"/>`).join('')).join('')}
-      <circle cx="${48 + 4 * 18}" cy="${24 + 1 * 20 + 14}" r="1.8" class="c-ponto"/>
-      <circle cx="${48 + 2 * 18}" cy="${24 + 3 * 20 + 14}" r="1.8" class="c-ponto"/>
-      <rect x="0" y="0" width="16" height="14" rx="4" class="c-sel"/>
-      <circle r="7" class="c-dedo"/>
-    </svg>`,
+    texto: 'Toque numa data do calendário para abrir as leituras daquele dia. Os pontinhos marcam santos (dourado) e festas de Nossa Senhora (azul).',
+    cena: `<div class="t-cal">
+      <div class="t-cal-mes"><b>‹</b><span>Outubro 2026</span><b>›</b></div>
+      <div class="t-cal-sem">${'DSTQQSS'.split('').map(l => `<span>${l}</span>`).join('')}</div>
+      <div class="t-cal-grade"><i class="t-cal-sel"></i>${MES}</div>
+      ${dedo('t-cal-dedo')}
+    </div>`,
+  },
+  {
+    titulo: 'O resumo, antes de ler',
+    texto: 'No alto do dia, o "Resumo das leituras" conta em poucas linhas do que falam as leituras. Toque em "Mostrar" para abrir.',
+    cena: `<div class="t-res">
+      <div class="t-res-caixa">
+        <div class="t-res-topo"><span>Resumo das leituras</span><b><em>Mostrar</em><em>Ocultar</em></b></div>
+        <p>Hoje, a primeira leitura canta a vinha cuidada com esmero que só deu uvas selvagens; o Salmo repete que a vinha do Senhor é a casa de Israel; e o Evangelho conta a parábola dos vinhateiros.</p>
+      </div>
+      ${dedo('t-res-dedo')}
+    </div>`,
+  },
+  {
+    titulo: 'A barra de baixo',
+    texto: 'Os ícones levam direto a cada leitura: I e II são a 1ª e a 2ª leitura, a nota musical é o Salmo e o livro com a cruz, o Evangelho. As setas das pontas passam para o dia anterior ou o seguinte.',
+    soCelular: true,
+    cena: `<div class="t-nav">
+      <div class="t-nav-pagina">
+        <small class="t-nav-data"><span>Domingo, 4 de outubro</span><span>Segunda, 5 de outubro</span></small>
+        <div class="t-nav-rolo">
+          ${['1ª Leitura', 'Salmo', '2ª Leitura', 'Evangelho'].map(t => `<div><b>${t}</b><i></i><i></i><i></i></div>`).join('')}
+        </div>
+      </div>
+      <div class="t-nav-barra">
+        <span class="t-nav-seta">‹</span>
+        <span class="t-nav-abas"><i class="t-nav-luz"></i>${icone('leitura', 1)}${icone('salmo')}${icone('leitura', 2)}${icone('evangelho')}</span>
+        <span class="t-nav-seta t-nav-prox">›</span>
+      </div>
+      ${dedo('t-nav-dedo')}
+    </div>`,
   },
   {
     titulo: 'Ouça enquanto lê',
-    texto: 'Em cada leitura, toque em "Ouvir": a voz lê o texto e a linha lida acende na tela, com uma música suave ao fundo.',
-    cena: `<svg viewBox="0 0 200 120" class="lp-tour-ouvir" aria-hidden="true">
-      <rect x="30" y="8" width="140" height="104" rx="12" class="o-fundo"/>
-      ${[0, 1, 2, 3].map(i => `<rect x="46" y="${22 + i * 14}" width="${[96, 80, 104, 70][i]}" height="6" rx="3" class="o-linha o-l${i}"/>`).join('')}
-      <circle cx="100" cy="92" r="11" class="o-play"/>
-      <path d="M97 87v10l8-5z" class="o-tri"/>
-    </svg>`,
+    texto: 'Toque em "Ouvir" numa leitura: a voz lê o texto e a linha lida acende. No fim, a próxima leitura começa sozinha.',
+    cena: `<div class="t-ouv">
+      <div class="t-ouv-leitura"><b>Evangelho</b><span class="t-ouv-botao">▶ Ouvir</span><i></i><i></i><i></i></div>
+      <div class="t-ouv-tela">
+        <small>EVANGELHO · Mt 21,33-43</small>
+        <p>Naquele tempo,</p><p>Jesus disse aos sumos sacerdotes:</p><p>"Escutai esta outra parábola:</p><p>Certo proprietário plantou uma vinha…</p>
+        <div class="t-ouv-barra"><i></i></div>
+      </div>
+      ${dedo('t-ouv-dedo')}
+    </div>`,
   },
   {
     titulo: 'Compartilhe um trecho',
-    texto: 'O botão de compartilhar em cada leitura cria uma imagem com um trecho e uma pintura, pronta para o WhatsApp ou o Instagram.',
-    cena: `<svg viewBox="0 0 200 120" class="lp-tour-card" aria-hidden="true">
-      <g class="k-card">
-        <rect x="62" y="10" width="76" height="96" rx="8" class="k-papel"/>
-        <rect x="62" y="10" width="76" height="40" rx="8" class="k-pintura"/>
-        <rect x="62" y="40" width="76" height="10" class="k-pintura"/>
-        <rect x="72" y="60" width="56" height="5" rx="2.5" class="k-linha"/>
-        <rect x="72" y="70" width="46" height="5" rx="2.5" class="k-linha"/>
-        <rect x="72" y="80" width="52" height="5" rx="2.5" class="k-linha"/>
-      </g>
-      <g class="k-envia"><circle cx="160" cy="30" r="12" class="k-bola"/><path d="M160 36V24M155 29l5-5 5 5" class="k-seta"/></g>
-    </svg>`,
+    texto: 'O botão ao lado de cada leitura cria uma imagem com um trecho e uma pintura, pronta para mandar no WhatsApp ou postar no Instagram.',
+    cena: `<div class="t-com">
+      <div class="t-com-leitura"><b>Salmo</b><span class="t-com-botao">${COMPARTILHAR}</span><i></i><i></i><i></i></div>
+      <div class="t-com-card">
+        <img src="/assets/img/cards/mini/videira.webp" alt="">
+        <p>"A vinha do Senhor é a casa de Israel."</p>
+        <small>4/out</small>
+      </div>
+      <span class="t-com-zap">WhatsApp</span>
+      ${dedo('t-com-dedo')}
+    </div>`,
   },
   {
     titulo: 'O santo do dia',
-    texto: 'Nos dias de santo, o nome dele aparece embaixo da data, com uma frase dele para compartilhar.',
-    cena: `<svg viewBox="0 0 200 120" class="lp-tour-santo" aria-hidden="true">
-      <circle cx="100" cy="46" r="30" class="s-halo"/>
-      <clipPath id="lp-tour-rosto"><circle cx="100" cy="46" r="22"/></clipPath>
-      <image href="/assets/img/cards/mini/sao-pio.webp" x="70" y="24" width="60" height="45" clip-path="url(#lp-tour-rosto)" preserveAspectRatio="xMidYMid slice"/>
-      <circle cx="100" cy="46" r="22" class="s-rosto"/>
-      <text x="100" y="100" class="s-aspas">“ … ”</text>
-    </svg>`,
+    texto: 'Quando o dia lembra um santo, o nome dele aparece embaixo da data, com um botão para compartilhar uma frase dele com a sua pintura.',
+    cena: `<div class="t-san">
+      <div class="t-san-dia"><b>1/out</b><span>Santa Teresinha do Menino Jesus</span><i class="t-san-botao">${COMPARTILHAR}</i></div>
+      <div class="t-san-card">
+        <img src="/assets/img/cards/mini/santa-teresinha.webp" alt="">
+        <p>"No coração da Igreja, minha Mãe, eu serei o Amor."</p>
+      </div>
+      ${dedo('t-san-dedo')}
+    </div>`,
   },
 ];
 
 let dlg = null;
 let passo = 0;
+let passos = PASSOS;
 
 export function deveMostrar() {
   if (new URLSearchParams(location.search).has('tour')) return true;
@@ -81,13 +124,13 @@ function montar() {
       <h2 class="lp-tour-titulo"></h2>
       <p class="lp-tour-texto"></p>
       <div class="lp-tour-rodape">
-        <div class="lp-tour-pontos">${PASSOS.map(() => '<span></span>').join('')}</div>
+        <div class="lp-tour-pontos"></div>
         <button type="button" class="lp-tour-prox"></button>
       </div>
     </div>`;
   document.body.append(dlg);
   dlg.querySelector('.lp-tour-pular').addEventListener('click', fechar);
-  dlg.querySelector('.lp-tour-prox').addEventListener('click', () => (passo < PASSOS.length - 1 ? mostrar(passo + 1) : fechar()));
+  dlg.querySelector('.lp-tour-prox').addEventListener('click', () => (passo < passos.length - 1 ? mostrar(passo + 1) : fechar()));
   dlg.addEventListener('cancel', e => { e.preventDefault(); fechar(); });
   dlg.addEventListener('click', e => { if (e.target === dlg) fechar(); });   // toque fora da caixa
   // arrastar para o lado troca de tela
@@ -97,22 +140,24 @@ function montar() {
     if (x0 == null) return;
     const dx = e.clientX - x0; x0 = null;
     if (Math.abs(dx) < 50) return;
-    if (dx < 0 && passo < PASSOS.length - 1) mostrar(passo + 1);
+    if (dx < 0 && passo < passos.length - 1) mostrar(passo + 1);
     if (dx > 0 && passo > 0) mostrar(passo - 1);
   });
 }
 
 function mostrar(i) {
+  const volta = i < passo;
   passo = i;
-  const p = PASSOS[i];
+  const p = passos[i];
   const caixa = dlg.querySelector('.lp-tour-caixa');
-  caixa.classList.remove('entra');
+  caixa.classList.remove('entra', 'volta');
   void caixa.offsetWidth;   // reinicia a animação de entrada do conteúdo
   caixa.classList.add('entra');
-  dlg.querySelector('.lp-tour-cena').innerHTML = p.cena;
+  caixa.classList.toggle('volta', volta);
+  dlg.querySelector('.lp-tour-cena').innerHTML = p.cena;   // HTML novo: a cena recomeça do início
   dlg.querySelector('.lp-tour-titulo').textContent = p.titulo;
   dlg.querySelector('.lp-tour-texto').textContent = p.texto;
-  dlg.querySelector('.lp-tour-prox').textContent = i < PASSOS.length - 1 ? 'Próximo' : 'Começar';
+  dlg.querySelector('.lp-tour-prox').textContent = i < passos.length - 1 ? 'Próximo' : 'Começar';
   dlg.querySelectorAll('.lp-tour-pontos span').forEach((s, k) => s.classList.toggle('atual', k === i));
 }
 
@@ -125,6 +170,9 @@ function fechar() {
 
 export function abrirTour() {
   if (!dlg) montar();
+  passos = PASSOS.filter(p => !p.soCelular || CELULAR.matches);   // no computador não há a barra de baixo
+  dlg.querySelector('.lp-tour-pontos').innerHTML = passos.map(() => '<span></span>').join('');
+  passo = 0;
   mostrar(0);
   dlg.showModal();
 }
