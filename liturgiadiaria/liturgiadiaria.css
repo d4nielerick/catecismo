@@ -1410,3 +1410,11 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .lp-ouvir[open], .lp-ouvir[open] .lp-ouvir-texto, .lp-ouvir[open] .lp-ouvir-topo, .lp-ouvir[open] .lp-ouvir-controles { animation: none; }
 }
+/* tela de ouvir: enquanto a voz carrega, um anel gira em volta do botão de tocar */
+.lp-ouvir-botoes .lp-ouvir-tocar { position: relative; }
+.lp-ouvir-esperando .lp-ouvir-tocar::after {
+  content: ""; position: absolute; inset: -6px; border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.85); border-right-color: transparent; border-bottom-color: transparent;
+  animation: lp-gira 0.8s linear infinite;
+}
+.lp-ouvir-esperando .lp-ouvir-texto { opacity: 0.6; transition: opacity 0.3s; }

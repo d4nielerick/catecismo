@@ -246,8 +246,11 @@ function acompanhar() {
 }
 
 /** Carrega a leitura k da fila (texto, voz, tela de bloqueio) sem mexer na música. */
+function esperando(sim) { dlg?.classList.toggle('lp-ouvir-esperando', sim); }
+
 async function carregar(k, { tocarDepois = true } = {}) {
   posFila = k;
+  esperando(true);
   const { qual, rotulo } = fila[k];
   const base = `/data/liturgia-audio/${diaAtual}/${qual}`;
   dados = await fetch(`${base}.json`).then(r => r.json());
@@ -272,6 +275,9 @@ async function carregar(k, { tocarDepois = true } = {}) {
     voz = new Audio();
     voz.preload = 'auto';
     voz.addEventListener('ended', terminou);
+    // anel girando no botão de tocar enquanto a voz carrega ou trava esperando rede
+    for (const ev of ['loadstart', 'waiting', 'stalled']) voz.addEventListener(ev, () => esperando(!voz.paused || ev === 'loadstart'));
+    for (const ev of ['canplay', 'playing', 'pause', 'error']) voz.addEventListener(ev, () => esperando(false));
   }
   voz.pause();
   voz.src = `${base}.mp3`;

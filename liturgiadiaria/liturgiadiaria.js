@@ -732,7 +732,7 @@ async function botaoOuvir(dt, dia) {
     b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><span>Ouvir</span>';
     b.setAttribute('aria-label', `Ouvir: ${rotulo}`);
     b.addEventListener('click', async () => {
-      const { ouvir } = await import('/liturgiadiaria/leitor-audio.mjs');
+      const { ouvir } = await comEspera(b, import('/liturgiadiaria/leitor-audio.mjs'));
       lenis?.stop();
       await ouvir({ dt, fila, inicio, cor: cabecalhoDoDia(dt, dia).corDia || '#3a2a1a' });
       document.querySelector('dialog.lp-ouvir')?.addEventListener('close', () => lenis?.start(), { once: true });
