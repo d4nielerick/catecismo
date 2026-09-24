@@ -1,5 +1,5 @@
 {
-  "_sobre": "Acervo de pinturas dos cards de compartilhar (liturgiadiaria/compartilhar.mjs). Arquivos em /assets/img/cards/<id>.webp e a miniatura em /assets/img/cards/mini/<id>.webp. 'tempos' usa os nomes de data/liturgia/*.json › tempo; 'cores' as cores litúrgicas. O card mostra até 6 que batem o tempo do dia (depois a cor) e sempre até 4 neutras (tempos: [\"todos\"]), que servem em qualquer dia. Todas geradas por IA no estilo óleo com impasto; as 'recriacao' seguem uma obra clássica.",
+  "_sobre": "Acervo de pinturas dos cards de compartilhar (liturgiadiaria/compartilhar.mjs). Arquivos em /assets/img/cards/<id>.webp e a miniatura em /assets/img/cards/mini/<id>.webp. 'tempos' usa os nomes de data/liturgia/*.json › tempo; 'cores' as cores litúrgicas. O card mostra até 6 que batem o tempo do dia (depois a cor) e sempre até 4 neutras (tempos: [\"todos\"]), que servem em qualquer dia. As de festa (tempos: [\"festa\"]) só aparecem quando um dia as indica em data/liturgia-trechos (campo imagens), ou pela cor, se tiverem. Todas geradas por IA no estilo óleo com impasto; as 'recriacao' seguem uma obra clássica.",
   "imagens": [
     {
       "id": "trigo-colina",
@@ -264,6 +264,56 @@
       "titulo": "Bíblia e terço",
       "tempos": [
         "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "anjo",
+      "titulo": "Anjo",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "teresinha",
+      "titulo": "Chuva de rosas",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "rosario",
+      "titulo": "O Rosário",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "teresa-avila",
+      "titulo": "Pena, livro e vela",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "martires",
+      "titulo": "A palma do martírio",
+      "tempos": [
+        "festa"
+      ],
+      "cores": [
+        "vermelho"
+      ]
+    },
+    {
+      "id": "aparecida",
+      "titulo": "Nossa Senhora Aparecida",
+      "tempos": [
+        "festa"
       ],
       "cores": []
     }
