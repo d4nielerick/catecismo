@@ -1418,3 +1418,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   animation: lp-gira 0.8s linear infinite;
 }
 .lp-ouvir-esperando .lp-ouvir-texto { opacity: 0.6; transition: opacity 0.3s; }
+
+/* a dica do dia especial é clicável (abre o dia) */
+.lp-dica.visivel { pointer-events: auto; cursor: pointer; }
+.lp-dica.visivel:hover .lp-dica-nome { text-decoration: underline; text-underline-offset: 2px; }

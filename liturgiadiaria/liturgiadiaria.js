@@ -852,7 +852,7 @@ function mostrarDica(el) {
   dicaAlvo = el;
   dica.innerHTML = `<span class="lp-dica-tipo lp-dica-${el.dataset.tipo}">${TIPO_DE_DESTAQUE[el.dataset.tipo] || ''}</span>`
     + `<span class="lp-dica-nome">${esc(el.dataset.dica)}</span>`
-    + (PODE_PAIRAR.matches ? '' : '<span class="lp-dica-toque">toque de novo para abrir</span>');
+    + '<span class="lp-dica-toque">toque para abrir o dia</span>';
   const r = el.getBoundingClientRect();
   dica.style.left = '0px';
   dica.style.top = '0px';
@@ -866,9 +866,14 @@ function mostrarDica(el) {
   dica.style.setProperty('--seta-x', `${Math.round(r.left + r.width / 2 - x)}px`);
   dica.classList.toggle('abaixo', !acima);
   dica.classList.add('visivel');
+  // no celular a dica cobre as datas de trás: some sozinha depois de um tempo
+  clearTimeout(dicaTempo);
+  if (!PODE_PAIRAR.matches) dicaTempo = setTimeout(esconderDica, 3500);
 }
+let dicaTempo = 0;
 
 function esconderDica() {
+  clearTimeout(dicaTempo);
   dicaAlvo = null;
   dica?.classList.remove('visivel');
 }
@@ -878,14 +883,28 @@ function configurarDicas() {
   dica.className = 'lp-dica';
   dica.setAttribute('role', 'tooltip');
   document.body.append(dica);
+  // a dica também é um atalho: tocar nela abre o dia a que se refere
+  dica.addEventListener('click', () => {
+    const dia = dicaAlvo?.getAttribute('href')?.match(LINK_DE_DIA)?.[1];
+    esconderDica();
+    if (dia) irParaDia(dia);
+  });
+  // no computador, sair do dia para a dica não a fecha
+  dica.addEventListener('pointerleave', e => { if (PODE_PAIRAR.matches && !e.relatedTarget?.closest?.('.cal-dia[data-dica]')) esconderDica(); });
   const cal = document.getElementById('cal-wrap');
   const diaDe = e => e.target.closest?.('.cal-dia[data-dica]');
   cal.addEventListener('pointerover', e => { if (PODE_PAIRAR.matches && diaDe(e)) mostrarDica(diaDe(e)); });
-  cal.addEventListener('pointerout', e => { if (PODE_PAIRAR.matches && diaDe(e) && !diaDe(e).contains(e.relatedTarget)) esconderDica(); });
+  cal.addEventListener('pointerout', e => {
+    // um instante de folga para o mouse atravessar o vão até a dica
+    if (PODE_PAIRAR.matches && diaDe(e) && !diaDe(e).contains(e.relatedTarget) && !dica.contains(e.relatedTarget)) {
+      clearTimeout(dicaTempo); dicaTempo = setTimeout(esconderDica, 250);
+    }
+  });
+  dica.addEventListener('pointerenter', () => clearTimeout(dicaTempo));
   // Teclado (Tab) também mostra a dica; o foco que vem de um toque, não (senão o 1º toque já abriria o dia).
   cal.addEventListener('focusin', e => { if (diaDe(e)?.matches(':focus-visible')) mostrarDica(diaDe(e)); });
-  cal.addEventListener('focusout', esconderDica);
-  document.addEventListener('pointerdown', e => { if (dicaAlvo && !e.target.closest('.cal-dia[data-dica]')) esconderDica(); });
+  cal.addEventListener('focusout', e => { if (!dica.contains(e.relatedTarget)) esconderDica(); });
+  document.addEventListener('pointerdown', e => { if (dicaAlvo && !e.target.closest('.cal-dia[data-dica], .lp-dica')) esconderDica(); });
   addEventListener('scroll', () => { if (dicaAlvo) esconderDica(); }, { passive: true });
 }
 
