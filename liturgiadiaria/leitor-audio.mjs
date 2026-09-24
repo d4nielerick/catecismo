@@ -293,18 +293,10 @@ async function carregar(k, { tocarDepois = true } = {}) {
 }
 
 /** d: { dt, fila: [{ qual, rotulo }], inicio, cor } — fila: as leituras com voz; inicio: a tocada. */
-/** A tela de ouvir nasce do botão "Ouvir" que a abriu (um círculo que se abre dali até cobrir a
- *  tela) e volta para ele ao fechar. Sem o botão, abre do centro. */
-function marcarOrigem(origem) {
-  const r = origem?.getBoundingClientRect();
-  dlg.style.setProperty('--lp-ox', r ? `${r.left + r.width / 2}px` : '50%');
-  dlg.style.setProperty('--lp-oy', r ? `${r.top + r.height / 2}px` : '50%');
-}
-let origemAtual = null;
+/** Fecha descendo a tela (a animação lp-ouvir-recolhe) antes de fechar o diálogo de fato. */
 function fecharComTransicao() {
   if (!dlg.open) return;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) { dlg.close(); return; }
-  if (origemAtual?.isConnected) marcarOrigem(origemAtual);
   dlg.classList.add('lp-ouvir-saindo');
   const fim = () => { dlg.removeEventListener('animationend', aoTerminar); dlg.classList.remove('lp-ouvir-saindo'); dlg.close(); };
   const aoTerminar = e => { if (e.target === dlg) fim(); };
@@ -312,7 +304,7 @@ function fecharComTransicao() {
   setTimeout(() => dlg.classList.contains('lp-ouvir-saindo') && fim(), 700);
 }
 
-export async function ouvir({ dt, fila: leituras, inicio = 0, cor = '#3a2a1a', origem = null }) {
+export async function ouvir({ dt, fila: leituras, inicio = 0, cor = '#3a2a1a' }) {
   if (!dlg) montar();
   diaAtual = dt;
   fila = leituras;
@@ -328,8 +320,6 @@ export async function ouvir({ dt, fila: leituras, inicio = 0, cor = '#3a2a1a', o
     navigator.mediaSession.setActionHandler('seekbackward', () => { voz.currentTime = Math.max(0, voz.currentTime - 15); });
     navigator.mediaSession.setActionHandler('seekforward', () => { voz.currentTime += 15; });
   }
-  origemAtual = origem;
-  marcarOrigem(origem);
   dlg.showModal();
   await carregar(inicio, { tocarDepois: false });
   cancelAnimationFrame(quadro);
