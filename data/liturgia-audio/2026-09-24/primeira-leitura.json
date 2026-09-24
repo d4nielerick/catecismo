@@ -1,176 +1,176 @@
 {
   "referencia": "Ecl 1,2-11",
-  "voz": "Captivating Storyteller (MiniMax speech-2.8-hd)",
-  "duracao": 90.92,
+  "voz": "Brian (ElevenLabs, multilíngue v2)",
+  "duracao": 77.37,
   "linhas": [
     {
       "t0": 0,
-      "t1": 2.86,
+      "t1": 1.88,
       "texto": "Leitura do Livro do Eclesiastes."
     },
     {
-      "t0": 3.02,
-      "t1": 6.83,
+      "t0": 2.16,
+      "t1": 4.99,
       "texto": "\"Vaidade das vaidades, diz o Eclesiastes,"
     },
     {
-      "t0": 6.98,
-      "t1": 9.03,
+      "t0": 5.38,
+      "t1": 7.06,
       "texto": "vaidade das vaidades!"
     },
     {
-      "t0": 9.18,
-      "t1": 10.74,
+      "t0": 7.34,
+      "t1": 8.39,
       "texto": "Tudo é vaidade\"."
     },
     {
-      "t0": 10.91,
-      "t1": 14.35,
+      "t0": 8.84,
+      "t1": 11.27,
       "texto": "Que proveito tira o homem de todo o trabalho"
     },
     {
-      "t0": 14.51,
-      "t1": 16.96,
+      "t0": 11.32,
+      "t1": 13.6,
       "texto": "com o qual se afadiga debaixo do sol?"
     },
     {
-      "t0": 17.1,
-      "t1": 20.27,
+      "t0": 14.11,
+      "t1": 17.28,
       "texto": "Uma geração passa, outra lhe sucede,"
     },
     {
-      "t0": 20.41,
-      "t1": 23.4,
+      "t0": 17.52,
+      "t1": 20.17,
       "texto": "enquanto a terra permanece sempre a mesma."
     },
     {
-      "t0": 23.54,
-      "t1": 27.17,
+      "t0": 20.61,
+      "t1": 23.13,
       "texto": "O sol se levanta, o sol se deita,"
     },
     {
-      "t0": 27.32,
-      "t1": 30.09,
+      "t0": 23.41,
+      "t1": 25.69,
       "texto": "apressando-se para voltar ao seu lugar,"
     },
     {
-      "t0": 30.24,
-      "t1": 32.96,
+      "t0": 25.94,
+      "t1": 28.42,
       "texto": "donde novamente torna a levantar-se."
     },
     {
-      "t0": 33.12,
-      "t1": 36.61,
+      "t0": 28.86,
+      "t1": 31.94,
       "texto": "Dirigindo-se para o sul e voltando para o norte,"
     },
     {
-      "t0": 36.76,
-      "t1": 38.85,
+      "t0": 32.15,
+      "t1": 34.34,
       "texto": "ora para cá, ora para lá,"
     },
     {
-      "t0": 38.99,
-      "t1": 40.63,
+      "t0": 34.62,
+      "t1": 35.97,
       "texto": "vai soprando o vento,"
     },
     {
-      "t0": 40.79,
-      "t1": 43.34,
+      "t0": 36.29,
+      "t1": 38.49,
       "texto": "para retomar novamente o seu curso."
     },
     {
-      "t0": 43.49,
-      "t1": 45.9,
+      "t0": 39,
+      "t1": 40.89,
       "texto": "Todos os rios correm para o mar,"
     },
     {
-      "t0": 46.04,
-      "t1": 49.48,
+      "t0": 41.13,
+      "t1": 43.12,
       "texto": "e contudo o mar não transborda;"
     },
     {
-      "t0": 49.64,
-      "t1": 52.32,
+      "t0": 43.56,
+      "t1": 45.5,
       "texto": "voltam ao lugar de onde saíram"
     },
     {
-      "t0": 52.49,
-      "t1": 54.13,
+      "t0": 45.55,
+      "t1": 46.89,
       "texto": "para tornarem a correr."
     },
     {
-      "t0": 54.29,
-      "t1": 55.9,
+      "t0": 47.4,
+      "t1": 48.49,
       "texto": "Tudo é penoso,"
     },
     {
-      "t0": 56.05,
-      "t1": 58.46,
+      "t0": 48.53,
+      "t1": 50.17,
       "texto": "difícil para o homem explicar."
     },
     {
-      "t0": 58.61,
-      "t1": 60.97,
+      "t0": 50.61,
+      "t1": 52.42,
       "texto": "A vista não se cansa de ver,"
     },
     {
-      "t0": 61.13,
-      "t1": 64.03,
+      "t0": 52.59,
+      "t1": 54.47,
       "texto": "nem o ouvido se farta de ouvir."
     },
     {
-      "t0": 64.19,
-      "t1": 65.8,
+      "t0": 54.8,
+      "t1": 56.01,
       "texto": "O que foi, será;"
     },
     {
-      "t0": 65.95,
-      "t1": 68.19,
+      "t0": 56.18,
+      "t1": 57.88,
       "texto": "o que aconteceu, acontecerá:"
     },
     {
-      "t0": 68.33,
-      "t1": 70.83,
+      "t0": 58.15,
+      "t1": 60.2,
       "texto": "não há nada de novo debaixo do sol."
     },
     {
-      "t0": 70.99,
-      "t1": 72.91,
+      "t0": 60.52,
+      "t1": 62.26,
       "texto": "Uma coisa da qual se diz:"
     },
     {
-      "t0": 73.08,
-      "t1": 75.03,
+      "t0": 62.47,
+      "t1": 64.33,
       "texto": "\"Eis aqui algo de novo\","
     },
     {
-      "t0": 75.2,
-      "t1": 77.39,
+      "t0": 64.58,
+      "t1": 66.18,
       "texto": "também esta já existiu"
     },
     {
-      "t0": 77.54,
-      "t1": 79.59,
+      "t0": 66.23,
+      "t1": 67.93,
       "texto": "nos séculos que nos precederam."
     },
     {
-      "t0": 79.74,
-      "t1": 83.05,
+      "t0": 68.37,
+      "t1": 70.69,
       "texto": "Não há memória do que aconteceu no passado,"
     },
     {
-      "t0": 83.2,
-      "t1": 86.32,
+      "t0": 71.02,
+      "t1": 73.34,
       "texto": "nem também haverá lembrança do que acontecer,"
     },
     {
-      "t0": 86.47,
-      "t1": 88.75,
+      "t0": 73.67,
+      "t1": 75.67,
       "texto": "entre aqueles que viverão depois."
     },
     {
-      "t0": 88.92,
-      "t1": 90.92,
+      "t0": 76.11,
+      "t1": 77.37,
       "texto": "Palavra do Senhor."
     }
   ]

@@ -1363,3 +1363,5 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 /* sem o indicador de rolagem na tela de ouvir (no iPhone aparecia como uma linha magenta) */
 .lp-ouvir-texto { scrollbar-color: transparent transparent; }
 .lp-ouvir-texto::-webkit-scrollbar { width: 0; height: 0; display: none; }
+/* cinco colunas iguais (música · −15 · play · +15 · vão): o play fica exatamente no centro da tela */
+.lp-ouvir-botoes { display: grid; grid-template-columns: repeat(5, 1fr); justify-items: center; gap: 0; max-width: 420px; margin: 0 auto; }

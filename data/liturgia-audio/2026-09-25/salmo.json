@@ -1,0 +1,72 @@
+{
+  "referencia": "Sl 143(144),1a e 2abc.3-4 (R. 1a)",
+  "voz": "Brian (ElevenLabs, multilíngue v2)",
+  "duracao": 31.35,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 1.5,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 1.94,
+      "t1": 3.98,
+      "texto": "Bendito seja o Senhor, meu rochedo!"
+    },
+    {
+      "t0": 4.42,
+      "t1": 6.43,
+      "texto": "Bendito seja o Senhor, meu rochedo."
+    },
+    {
+      "t0": 6.87,
+      "t1": 9.03,
+      "texto": "Ele é meu amor, meu refúgio,"
+    },
+    {
+      "t0": 9.21,
+      "t1": 11.64,
+      "texto": "libertador, fortaleza e abrigo;"
+    },
+    {
+      "t0": 12.03,
+      "t1": 14.42,
+      "texto": "É meu escudo: é nele que espero,"
+    },
+    {
+      "t0": 14.74,
+      "t1": 17.37,
+      "texto": "Bendito seja o Senhor, meu rochedo!"
+    },
+    {
+      "t0": 17.81,
+      "t1": 19.66,
+      "texto": "Que é o homem, Senhor, para vós?"
+    },
+    {
+      "t0": 20.1,
+      "t1": 21.95,
+      "texto": "Por que dele cuidais tanto assim,"
+    },
+    {
+      "t0": 22.13,
+      "t1": 24,
+      "texto": "e no filho do homem pensais?"
+    },
+    {
+      "t0": 24.44,
+      "t1": 26.46,
+      "texto": "Como o sopro de vento é o homem,"
+    },
+    {
+      "t0": 26.63,
+      "t1": 28.58,
+      "texto": "os seus dias são sombra que passa."
+    },
+    {
+      "t0": 29.02,
+      "t1": 31.35,
+      "texto": "Bendito seja o Senhor, meu rochedo!"
+    }
+  ]
+}
