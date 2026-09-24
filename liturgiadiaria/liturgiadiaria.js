@@ -742,6 +742,7 @@ async function irParaDia(dt) {
 const LINK_DE_DIA = /^\/liturgiadiaria\/(\d{4}-\d{2}-\d{2})\/$/;
 
 function configurarNavegacao() {
+  document.addEventListener('touchstart', () => {}, { passive: true });   // faz o :active funcionar no iPhone
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const a = e.target.closest('a[href]');
@@ -752,6 +753,13 @@ function configurarNavegacao() {
       const card = document.getElementById(href.slice(1));
       if (card) { e.preventDefault(); luzAoToque(a); rolarPara(card); }
       return;
+    }
+    // setas de dia da barra: a bolinha "afunda" e a seta dá um passo para o lado (sinal de acionado)
+    if (a.classList.contains('lp-tabs-dia')) {
+      a.classList.remove('lp-dia-toque');
+      void a.offsetWidth;   // reinicia a animação num toque repetido
+      a.classList.add('lp-dia-toque');
+      a.addEventListener('animationend', () => a.classList.remove('lp-dia-toque'), { once: true });
     }
     const dia = href.match(LINK_DE_DIA)?.[1] || (href === '/liturgiadiaria/' ? estado.hoje : null);
     if (!dia || !estado.indice) return;
