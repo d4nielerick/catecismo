@@ -9,7 +9,8 @@
 
 import { COR_FUNDO, COR_CALENDARIO } from '/liturgiadiaria/render.mjs';
 
-const SITE = 'santadoutrina.cloud/liturgiadiaria';
+const SITE = 'santadoutrina.cloud/liturgiadiaria';   // do link compartilhado
+const SITE_CARD = 'liturgia.santadoutrina.cloud';      // o que aparece escrito no card (redireciona para a Liturgia)
 const TITULO = "'Times New Roman', Times, Georgia, serif";
 const LEITURA = "'Inria Card', Georgia, serif";
 const VERMELHO = '#cb2e2e';
@@ -231,13 +232,19 @@ function soTexto(ctx, W, H, c) {
 
   ctx.font = `italic 42px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.62)';
   ctx.fillText(c.referencia, m, fim + 100);
-  ctx.font = `italic 33px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.45)';
-  ctx.fillText(`${c.data} · ${c.celebracao}`, m, fim + 152, largura);
 
-  ctx.font = `400 26px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.5)'; ctx.textAlign = 'right';
-  ctx.fillText(SITE, W - 90, H - 66);
-  ctx.textAlign = 'left'; ctx.font = `600 26px ${LEITURA}`;
-  ctx.fillText('LITURGIA DIÁRIA', m, H - 66);
+  rodape(ctx, W, H - 80, m, c, '#1c1812');
+}
+
+/** Rodapé dos cards: a data curta ("23/set") em vermelho no canto de baixo à esquerda e o endereço
+ *  no outro canto, na mesma linha de base. (O nome da celebração fica fora do card por enquanto.) */
+function rodape(ctx, W, y, m, c, tinta) {
+  ctx.textAlign = 'left';
+  ctx.fillStyle = VERMELHO; ctx.font = `italic 400 50px ${TITULO}`;
+  ctx.fillText(c.dataCurta, m, y);
+  ctx.fillStyle = tinta; ctx.globalAlpha = 0.72; ctx.font = `400 27px ${LEITURA}`;
+  espacadoDir(ctx, SITE_CARD, W - m, y, 1.5);
+  ctx.globalAlpha = 1;
 }
 
 /** Linha justificada: distribui a sobra entre os espaços (a última linha fica alinhada à esquerda). */
@@ -257,8 +264,7 @@ function editorial(ctx, W, H, c) {
   const alto = H > 1600;   // stories; senão, feed
   const corte = Math.round(H * (alto ? 0.48 : 0.38));
   const yTitulo = corte + (alto ? 250 : 150);
-  const yRodape = H - (alto ? 250 : 200);   // 1ª das três linhas do rodapé
-  const LINHA_RODAPE = 50;
+  const yRodape = H - (alto ? 130 : 105);   // linha de base do rodapé (data e endereço)
   arte(ctx, 0, 0, W, corte, c.cor);
   papel(ctx, 0, corte, W, H - corte, '#ece6da');
   const m = 110, tinta = '#2a2620';
@@ -279,23 +285,12 @@ function editorial(ctx, W, H, c) {
 
   const topo = yTitulo + 56;
   const caixa = encaixar(ctx, c.trecho, {
-    fonte: t => `400 ${t}px ${LEITURA}`, largura: W - 2 * m, altura: yRodape - 100 - topo, max: alto ? 64 : 56, min: 34, entrelinha: alto ? 1.6 : 1.5,
+    fonte: t => `400 ${t}px ${LEITURA}`, largura: W - 2 * m, altura: yRodape - 110 - topo, max: alto ? 64 : 56, min: 34, entrelinha: alto ? 1.6 : 1.5,
   });
   ctx.fillStyle = tinta;
   caixa.linhas.forEach((l, i) => justificar(ctx, l, m, topo + caixa.t + i * caixa.lh, W - 2 * m, i === caixa.linhas.length - 1));
 
-  const rotulos = ['CELEBRAÇÃO', 'DIA', 'LEIA MAIS'];
-  const valores = [c.celebracao.toUpperCase(), c.data.toUpperCase(), 'SANTADOUTRINA.CLOUD'];
-  rotulos.forEach((r, i) => {
-    const y = yRodape + i * LINHA_RODAPE;
-    ctx.font = `400 30px ${LEITURA}`;
-    espacadoEsq(ctx, r, m, y, 5);
-    // valor longo (nome de festa comprido) encolhe para não encostar no rótulo
-    const livre = W - 2 * m - larguraEspacada(ctx, r, 5) - 40;
-    let corpo = 30;
-    while (larguraEspacada(ctx, valores[i], 5) > livre && --corpo > 18) ctx.font = `400 ${corpo}px ${LEITURA}`;
-    espacadoDir(ctx, valores[i], W - m, y, 5);
-  });
+  rodape(ctx, W, yRodape, m, c, tinta);
 }
 
 function espacadoEsq(ctx, texto, x, y, espaco) {
@@ -563,7 +558,7 @@ async function trocarFoto(i) {
   desenharTodos();
 }
 
-/** c: { dt, trecho, referencia, rotulo, celebracao, data, cor, fotos? } (fotos: de escolherFotos) */
+/** c: { dt, trecho, referencia, rotulo, celebracao, data, dataCurta, cor, fotos? } (fotos: de escolherFotos) */
 export async function abrirCard(c, { aoFechar } = {}) {
   if (!dlg) montarJanela();
   conteudo = { ...c, trecho: maiuscula(c.trecho) };

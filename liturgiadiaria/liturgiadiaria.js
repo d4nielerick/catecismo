@@ -716,7 +716,7 @@ function botoesDeCompartilhar(dt, dia, blocos, trechos) {
       lenis?.stop();
       abrirCard({
         dt, trecho, referencia: leitura.referencia.replace(/\s*\(R\..*\)$/, ''), rotulo: leitura.rotulo,
-        celebracao: dia.celebracao, data: cab.dataLonga, cor: dia.cor, fotos,
+        celebracao: dia.celebracao, data: cab.dataLonga, dataCurta: cab.dataCurta, cor: dia.cor, fotos,
       }, { aoFechar: () => lenis?.start() });
     });
     card.append(botao);
