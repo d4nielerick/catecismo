@@ -55,6 +55,9 @@ function carregarImagens() {
   return imagensProntas;
 }
 
+/** O L com a ponta direita do traço exatamente em xDireita (o desenho vai de ~15 a ~86,5 na caixa). */
+const logoPelaDireita = (ctx, xDireita, y, tamanho, cor) => logo(ctx, xDireita - tamanho * 0.865, y, tamanho, cor);
+
 /** O L do ícone, vetorizado (o mesmo traço do preloader, lido do próprio HTML), na cor pedida. */
 let caminhoL;
 function logo(ctx, x, y, tamanho, cor) {
@@ -184,7 +187,7 @@ function soTexto(ctx, W, H, c) {
   papel(ctx, 0, 0, W, H, COR_FUNDO[c.cor] || '#faf7ee');
   const fw = 110;
   faixa(ctx, 0, 0, fw, H);
-  logo(ctx, W - 70 - 110, 50, 110, VERMELHO);
+  logoPelaDireita(ctx, W - 90, 50, 110, VERMELHO);   // alinhado com o endereço do rodapé
 
   const m = fw + 90, largura = W - m - 90;
   const letra = c.trecho.charAt(0);
@@ -233,17 +236,17 @@ function soTexto(ctx, W, H, c) {
   ctx.font = `italic 42px ${LEITURA}`; ctx.fillStyle = 'rgba(0,0,0,0.62)';
   ctx.fillText(c.referencia, m, fim + 100);
 
-  rodape(ctx, W, H - 80, m, c, '#1c1812');
+  rodape(ctx, W, H - 80, m, c, '#1c1812', 90);
 }
 
 /** Rodapé dos cards: a data curta ("23/set") em vermelho no canto de baixo à esquerda e o endereço
  *  no outro canto, na mesma linha de base. (O nome da celebração fica fora do card por enquanto.) */
-function rodape(ctx, W, y, m, c, tinta) {
+function rodape(ctx, W, y, m, c, tinta, mDir = m) {
   ctx.textAlign = 'left';
   ctx.fillStyle = VERMELHO; ctx.font = `italic 400 50px ${TITULO}`;
   ctx.fillText(c.dataCurta, m, y);
   ctx.fillStyle = tinta; ctx.globalAlpha = 0.72; ctx.font = `400 27px ${LEITURA}`;
-  espacadoDir(ctx, SITE_CARD, W - m, y, 1.5);
+  espacadoDir(ctx, SITE_CARD, W - mDir, y, 1.5);
   ctx.globalAlpha = 1;
 }
 
@@ -269,7 +272,7 @@ function editorial(ctx, W, H, c) {
   papel(ctx, 0, corte, W, H - corte, '#ece6da');
   const m = 110, tinta = '#2a2620';
 
-  logo(ctx, W - m - 92, corte + (alto ? 60 : 30), alto ? 108 : 92, tinta);
+  logoPelaDireita(ctx, W - m, corte + (alto ? 60 : 30), alto ? 108 : 92, tinta);
 
   // título da leitura e, ao lado, a passagem (a fonte encolhe se a referência for longa)
   ctx.fillStyle = tinta;
