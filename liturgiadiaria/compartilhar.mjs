@@ -450,8 +450,12 @@ function montarJanela() {
       if (!gesto) return;
       gesto.arrastando = true;
       lista.classList.add('lp-arrastando');
-      navigator.vibrate?.(8);
+      tique();
       marcarFaixa(gesto.i, gesto.i);
+      // o versículo pego pisca, e a dica troca: a pessoa sabe que a seleção começou
+      const v = lista.querySelector(`[data-u="${gesto.i}"]`);
+      v.classList.remove('lp-verso-pego'); void v.offsetWidth; v.classList.add('lp-verso-pego');
+      dlg.querySelector('.lp-card-versos-dica').textContent = 'Arraste até o último versículo';
     };
     if (e.pointerType === 'mouse') { gesto.mouse = comecar; lista.setPointerCapture(e.pointerId); }
     else gesto.espera = setTimeout(comecar, 260);
@@ -464,7 +468,7 @@ function montarJanela() {
       if (gesto.mouse) gesto.mouse(); else { soltar(); return; }   // mexeu antes de segurar: é rolagem
     }
     const b = versoEm(e.clientX, e.clientY);
-    if (b && +b.dataset.u !== gesto.fim) { gesto.fim = +b.dataset.u; marcarFaixa(gesto.i, gesto.fim); }
+    if (b && +b.dataset.u !== gesto.fim) { gesto.fim = +b.dataset.u; marcarFaixa(gesto.i, gesto.fim); tique(); }
   });
   // enquanto arrasta, o dedo não rola a lista
   lista.addEventListener('touchmove', e => { if (gesto?.arrastando) e.preventDefault(); }, { passive: false });
@@ -822,6 +826,21 @@ function abrirVersos(sim) {
     pintarVersos();
     dlg.querySelector(`.lp-verso[data-u="${Math.max(0, selA)}"]`)?.scrollIntoView({ block: 'center' });
   }
+}
+
+// Toque tátil: vibrate onde existe (Android); no iPhone, que não tem vibrate, alternar um
+// <input switch> escondido faz o aparelho dar o "tique" do sistema (iOS 18+)
+let chave = null;
+function tique() {
+  if (navigator.vibrate) { navigator.vibrate(10); return; }
+  if (!chave) {
+    chave = document.createElement('label');
+    chave.setAttribute('aria-hidden', 'true');
+    chave.style.cssText = 'position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden';
+    chave.innerHTML = '<input type="checkbox" switch tabindex="-1">';
+    dlg.append(chave);
+  }
+  chave.click();
 }
 
 /** Durante o arrasto: só acende a faixa (o card se refaz ao soltar). */

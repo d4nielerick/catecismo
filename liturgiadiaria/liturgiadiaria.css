@@ -1809,3 +1809,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 @media (min-width: 761px) { .lp-card-versos { width: min(640px, calc(100% - 2rem)); margin-inline: auto; align-self: center; } }
 .lp-card-versos-lista { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 .lp-arrastando .lp-verso { transition: none; }
+/* o versículo pego ao segurar pisca mais forte e assenta no marca-texto */
+.lp-verso.lp-verso-pego { animation: lp-verso-pego 0.45s ease-out; }
+@keyframes lp-verso-pego { 0% { background: rgba(203, 46, 46, 0.75); } 100% { background: rgba(203, 46, 46, 0.3); } }
+.lp-arrastando .lp-verso.sel { background: rgba(203, 46, 46, 0.42); }
