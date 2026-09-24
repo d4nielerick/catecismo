@@ -1,0 +1,102 @@
+{
+  "referencia": "Jó 19,21-27",
+  "voz": "Algenib (Gemini 3.8 Flash TTS)",
+  "duracao": 48.57,
+  "linhas": [
+    {
+      "t0": 0.35,
+      "t1": 1.73,
+      "texto": "Leitura do Livro de Jó."
+    },
+    {
+      "t0": 2.53,
+      "t1": 3.45,
+      "texto": "Disse Jó:"
+    },
+    {
+      "t0": 3.79,
+      "t1": 6.79,
+      "texto": "\"Piedade, piedade de mim, meus amigos,"
+    },
+    {
+      "t0": 7.11,
+      "t1": 8.89,
+      "texto": "pois a mão de Deus me feriu!"
+    },
+    {
+      "t0": 9.41,
+      "t1": 11.33,
+      "texto": "Por que me perseguis como Deus,"
+    },
+    {
+      "t0": 11.53,
+      "t1": 13.71,
+      "texto": "e não vos cansais de me torturar?"
+    },
+    {
+      "t0": 14.81,
+      "t1": 17.35,
+      "texto": "Gostaria que minhas palavras fossem escritas"
+    },
+    {
+      "t0": 17.35,
+      "t1": 19.03,
+      "texto": "e gravadas numa inscrição"
+    },
+    {
+      "t0": 19.29,
+      "t1": 21.65,
+      "texto": "com ponteiro de ferro e com chumbo,"
+    },
+    {
+      "t0": 21.65,
+      "t1": 23.97,
+      "texto": "cravadas na rocha para sempre!"
+    },
+    {
+      "t0": 24.77,
+      "t1": 27.09,
+      "texto": "Eu sei que o meu redentor está vivo"
+    },
+    {
+      "t0": 27.13,
+      "t1": 30.19,
+      "texto": "e que, por último, se levantará sobre o pó;"
+    },
+    {
+      "t0": 30.93,
+      "t1": 33.55,
+      "texto": "e depois que tiverem destruído esta minha pele,"
+    },
+    {
+      "t0": 34.11,
+      "t1": 36.05,
+      "texto": "na minha carne, verei a Deus."
+    },
+    {
+      "t0": 36.83,
+      "t1": 38.41,
+      "texto": "Eu mesmo o verei,"
+    },
+    {
+      "t0": 38.93,
+      "t1": 40.71,
+      "texto": "meus olhos o contemplarão,"
+    },
+    {
+      "t0": 41.05,
+      "t1": 42.73,
+      "texto": "e não os olhos de outros."
+    },
+    {
+      "t0": 43.79,
+      "t1": 46.59,
+      "texto": "Dentro de mim consomem-se os meus rins\"."
+    },
+    {
+      "t0": 47.73,
+      "t1": 48.57,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}
