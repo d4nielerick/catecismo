@@ -43,6 +43,29 @@ const carregarFaixa = () => (faixaImg ??= new Promise(ok => {
   img.src = '/assets/img/liturgia-faixa.webp';
 }));
 
+// a pintura que ocupa o pé da última página quando sobra muito espaço
+let pinturaImg = null;
+const carregarPintura = () => (pinturaImg ??= new Promise(ok => {
+  const img = new Image();
+  img.onload = () => ok(img);
+  img.onerror = () => ok(null);
+  img.src = '/assets/img/cards/trigo-colina.webp';
+}));
+
+/** Pintura no espaço livre (de y0 a y1), cortada por baixo e esfumada no alto para dentro do papel. */
+function pinturaNoPe(c, img, y0, y1) {
+  const x = M, w = W - MD - M, h = y1 - y0;
+  const esc = Math.max(w / img.width, h / img.height);
+  const sw = w / esc, sh = h / esc;
+  c.save();
+  c.beginPath(); c.roundRect(x, y0, w, h, 18); c.clip();
+  c.drawImage(img, (img.width - sw) / 2, img.height - sh, sw, sh, x, y0, w, h);
+  const g = c.createLinearGradient(0, y0, 0, y0 + Math.min(h * 0.45, 260));
+  g.addColorStop(0, FUNDO); g.addColorStop(1, 'rgba(251, 248, 242, 0)');
+  c.fillStyle = g; c.fillRect(x, y0, w, h);
+  c.restore();
+}
+
 // ── Texto das leituras ───────────────────────────────────────────────────────
 const limpar = l => l.replace(/[*†+]/g, '').replace(/\s+/g, ' ').trim();
 
@@ -276,7 +299,7 @@ function montar(medir, cab, leituras, grande) {
 }
 
 export async function paginas(dia, cab, { referencia = null } = {}) {
-  const [, faixa] = await Promise.all([carregarFontes(), carregarFaixa()]);
+  const [, faixa, pintura] = await Promise.all([carregarFontes(), carregarFaixa(), carregarPintura()]);
   const medir = document.createElement('canvas').getContext('2d');
   const leituras = dia.missas[0].leituras
     .filter(l => !l.alternativa && ['leitura', 'salmo', 'evangelho'].includes(l.tipo))
@@ -301,6 +324,9 @@ export async function paginas(dia, cab, { referencia = null } = {}) {
     if (orn) c.drawImage(orn, 24, 0);
     if (i || !grande) cabecalhoPequeno(c, cab);
     for (const { it, y } of pag) it.draw(c, y);
+    // sobrou muito papel embaixo (a última página, um salmo curto): uma pintura ocupa o pé
+    const livre0 = fim + 50, livre1 = H - 150;
+    if (pintura && livre1 - livre0 >= 260) pinturaNoPe(c, pintura, livre0, livre1);
     rodapePagina(c, cab, i, pags.length, H);
     return cv;
   });
