@@ -20,7 +20,7 @@ const SITE = 'liturgia.santadoutrina.cloud';
 
 const M = 150, MD = 96;                 // margens (a da esquerda tem o ornamento)
 const LARG = W - M - MD;
-let CORPO = 33, LH = CORPO * 1.56;      // texto das leituras (paginas() pode apertar um pouco)
+let CORPO = 36, LH = CORPO * 1.56;      // texto das leituras (paginas() pode apertar um pouco)
 const CAP_LINHAS = 3;
 const ALTURA_MAIUSC = 0.662;            // Times: altura da maiúscula / corpo
 const MAIUSC_TEXTO = 0.68;              // Inria: idem
@@ -209,21 +209,21 @@ const dataSemRepetir = cab => (DIA_DA_SEMANA.test(cab.celebracao) ? cab.dataLong
 
 /** Cabeçalho grande (1ª página, numa leitura só ou no dia inteiro): "Liturgia Diária", a data, o dia e a celebração. */
 function cabecalhoGrande(ctx, cab) {
-  const itens = [{ h: 34 + 150 + 62, draw: (c, y) => {
+  const itens = [{ h: 34 + 118 + 54, draw: (c, y) => {
     c.fillStyle = VERMELHO; c.font = `italic 400 34px ${TITULO}`;
     c.fillText('Liturgia Diária', M, y + 34);
-    c.fillStyle = TINTA; c.font = `italic 400 150px ${TITULO}`;
-    c.fillText(cab.dataCurta, M - 6, y + 34 + 150);
+    c.fillStyle = TINTA; c.font = `italic 400 118px ${TITULO}`;
+    c.fillText(cab.dataCurta, M - 6, y + 34 + 118);
     c.fillStyle = SUAVE; c.font = `400 30px ${LEITURA}`;
-    c.fillText(dataSemRepetir(cab), M, y + 34 + 150 + 62);
+    c.fillText(dataSemRepetir(cab), M, y + 34 + 118 + 54);
   } }];
   if (cab.celebracao) {
-    ctx.font = `italic 400 44px ${LEITURA}`;
-    quebrar(ctx, cab.celebracao, LARG).forEach((t, i) => itens.push({ h: i ? 56 : 70, draw: (c, y) => {
-      c.fillStyle = TINTA; c.font = `italic 400 44px ${LEITURA}`; c.fillText(t, M, y + (i ? 56 : 70));
+    ctx.font = `italic 400 38px ${LEITURA}`;
+    quebrar(ctx, cab.celebracao, LARG).forEach((t, i) => itens.push({ h: i ? 50 : 62, draw: (c, y) => {
+      c.fillStyle = TINTA; c.font = `italic 400 38px ${LEITURA}`; c.fillText(t, M, y + (i ? 50 : 62));
     } }));
   }
-  itens.push({ h: 110, draw: () => {} });
+  itens.push({ h: 90, draw: () => {} });
   return itens;
 }
 
@@ -304,10 +304,10 @@ export async function paginas(dia, cab, { referencia = null } = {}) {
   const leituras = dia.missas[0].leituras
     .filter(l => !l.alternativa && ['leitura', 'salmo', 'evangelho'].includes(l.tipo))
     .filter(l => !referencia || l.referencia === referencia);
-  // a 1ª página abre com o cabeçalho grande, corpo 33. Se apertar a letra até 29 poupa uma página,
+  // a 1ª página abre com o cabeçalho grande, corpo 36. Se apertar a letra até 32 poupa uma página,
   // aperta; se nem assim, troca o cabeçalho grande pelo pequeno — o que der menos páginas, na
   // ordem de preferência abaixo (uma linha solta numa página nova não pode acontecer)
-  const opcoes = [true, false].flatMap(g => [33, 31, 29].map(corpo => [g, corpo]));
+  const opcoes = [true, false].flatMap(g => [36, 34, 32].map(corpo => [g, corpo]));
   const tentar = ([g, corpo]) => { CORPO = corpo; LH = corpo * 1.56; return montar(medir, cab, leituras, g); };
   const menor = Math.min(...opcoes.map(o => tentar(o).length));
   let pags, grande;
