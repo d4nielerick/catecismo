@@ -268,6 +268,15 @@
       "cores": []
     },
     {
+      "id": "arcanjos",
+      "titulo": "Os três arcanjos",
+      "recriacao": "Francesco Botticini, Os Três Arcanjos e Tobias (c. 1470)",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
       "id": "anjo",
       "titulo": "Anjo",
       "tempos": [
@@ -285,11 +294,12 @@
     },
     {
       "id": "rosario",
-      "titulo": "O Rosário",
+      "titulo": "Nossa Senhora do Rosário",
       "tempos": [
         "festa"
       ],
-      "cores": []
+      "cores": [],
+      "recriacao": "Bartolomé Esteban Murillo, A Virgem do Rosário (c. 1650)"
     },
     {
       "id": "teresa-avila",
