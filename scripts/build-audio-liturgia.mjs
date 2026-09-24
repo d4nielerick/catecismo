@@ -30,7 +30,7 @@ import { fileURLToPath } from 'node:url';
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const GEMINI = process.argv.includes('--gemini');
 const VOZ = GEMINI
-  ? { modelo: process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts', id: 'Algenib', nome: 'Algenib (Gemini 3.8 Flash TTS)' }
+  ? { modelo: process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts', id: 'Algenib', nome: `Algenib (${process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts'})` }
   : { id: 'nPczCjzI2devNBz1zQrb', nome: 'Brian (ElevenLabs, multilíngue v2)' };
 const ENSAIO = process.argv.includes('--ensaio');   // só mostra o texto que seria lido, sem gerar
 const [dt, pedido = 'evangelho', audioArq, temposArq] = process.argv.slice(2).filter(a => !a.startsWith('--'));
@@ -128,14 +128,19 @@ async function gerar(falado) {
   return { audio: Buffer.from(j.audio_base64, 'base64'), tempos: j.alignment };
 }
 
-/** Gemini TTS + Whisper: devolve o áudio (mp3) e tempos por caractere no formato do ElevenLabs. */
+/** Gemini TTS + Whisper: devolve o áudio (mp3) e tempos por caractere no formato do ElevenLabs.
+ *  O refrão repetido do salmo faz o filtro de direitos autorais do Gemini recusar o texto (parece
+ *  letra de música): por isso cada linha vai uma vez só, e as repetições reusam o mesmo trecho de áudio. */
 function gerarGemini(unidades, falado) {
   const tmp = fs.mkdtempSync(path.join(process.env.TMPDIR || '/tmp', 'voz-'));
+  const wav = path.join(tmp, 'voz.wav'), mp3 = path.join(tmp, 'voz.mp3');
+  const unicas = [...new Set(unidades)];
+  const faladoU = unicas.join(' ').replace(/\s+/g, ' ').trim();
   const chave = execFileSync('security', ['find-generic-password', '-a', process.env.USER, '-s', 'gemini-api-key', '-w']).toString().trim();
   const instrucao = 'Leia em português do Brasil, com sotaque brasileiro neutro (T e R como no Brasil), como um leitor da Palavra '
     + 'na missa: voz calma, sóbria e reverente, em ritmo um pouco mais ágil, sem dramatizar. Pausa breve ao fim de cada linha.';
   fs.writeFileSync(path.join(tmp, 'pedido.json'), JSON.stringify({
-    contents: [{ parts: [{ text: `${instrucao}\n\n${unidades.join('\n')}` }] }],
+    contents: [{ parts: [{ text: `${instrucao}\n\n${unicas.join('\n')}` }] }],
     generationConfig: { responseModalities: ['AUDIO'], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: VOZ.id } } } },
   }));
   const resp = path.join(tmp, 'resp.json');
@@ -145,19 +150,42 @@ function gerarGemini(unidades, falado) {
   if (j.error?.code === 429 || j.error?.code === 503) { console.log(`${dt}: Gemini indisponível agora (${j.error.code}: cota do dia ou demanda alta) — tente mais tarde`); process.exit(0); }
   const dados = j.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
   if (!dados) throw new Error(`Gemini: ${JSON.stringify(j.error || j).slice(0, 200)}`);
-  fs.writeFileSync(path.join(tmp, 'voz.wav'), Buffer.from(dados, 'base64'));
-  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', path.join(tmp, 'voz.wav'), '-b:a', '96k', path.join(tmp, 'voz.mp3')]);
-  execFileSync('whisper', [path.join(tmp, 'voz.wav'), '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
+  fs.writeFileSync(wav, Buffer.from(dados, 'base64'));
+  execFileSync('whisper', [wav, '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
     '--output_format', 'json', '--output_dir', tmp, '--fp16', 'False'], { stdio: 'ignore' });
   const ouvidas = JSON.parse(fs.readFileSync(path.join(tmp, 'voz.json'), 'utf8')).segments.flatMap(sg => sg.words || []);
-  const tempos = tempoPorCaractere(falado, ouvidas);
-  // às vezes o Gemini lê a instrução em voz alta antes do texto: corta tudo antes da 1ª palavra da leitura
-  const corte = Math.max(0, tempos.character_start_times_seconds[0] - 0.35);
-  if (corte > 0.8) {
-    execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-ss', String(corte), '-i', path.join(tmp, 'voz.wav'), '-b:a', '96k', path.join(tmp, 'voz.mp3')]);
-    for (const k of ['character_start_times_seconds', 'character_end_times_seconds']) tempos[k] = tempos[k].map(t => Math.max(0, t - corte));
-  }
-  return { audio: fs.readFileSync(path.join(tmp, 'voz.mp3')), tempos };
+  const tu = tempoPorCaractere(faladoU, ouvidas);
+  const duracaoWav = +execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav]).toString();
+
+  // trecho de áudio de cada linha única: de pouco antes da 1ª palavra até pouco antes da linha seguinte
+  // (o que vem antes da 1ª linha — às vezes a instrução lida em voz alta — fica de fora)
+  let pos = 0;
+  const trechos = unicas.map(u => {
+    const t = u.replace(/\s+/g, ' ').trim(), a = faladoU.indexOf(t, pos); pos = a + t.length;
+    return { a, b: a + t.length, ini: tu.character_start_times_seconds[a] };
+  });
+  trechos.forEach((x, k) => {
+    x.de = Math.max(0, x.ini - 0.2, k ? trechos[k - 1].fim ?? 0 : 0);
+    x.ate = k < trechos.length - 1 ? Math.max(x.de, trechos[k + 1].ini - 0.2) : duracaoWav;
+    x.fim = x.ate;
+  });
+  // monta na ordem do lecionário (repetindo o refrão) e recalcula os tempos de cada caractere
+  const ordem = unidades.map(u => unicas.indexOf(u));
+  const filtro = ordem.map((k, i) => `[0:a]atrim=${trechos[k].de}:${trechos[k].ate},asetpts=PTS-STARTPTS[s${i}]`).join(';')
+    + `;${ordem.map((_, i) => `[s${i}]`).join('')}concat=n=${ordem.length}:v=0:a=1[out]`;
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', wav, '-filter_complex', filtro, '-map', '[out]', '-b:a', '96k', mp3]);
+  const ini = [], fim = [];
+  let desloc = 0, p = 0;
+  ordem.forEach((k, i) => {
+    const x = trechos[k], t = unidades[i].replace(/\s+/g, ' ').trim(), a = falado.indexOf(t, p);
+    for (; p < a; p++) { ini[p] = fim[p] = ini[p - 1] ?? 0; }             // espaço entre linhas
+    for (let c = 0; c < t.length; c++, p++) {
+      ini[p] = tu.character_start_times_seconds[x.a + c] - x.de + desloc;
+      fim[p] = tu.character_end_times_seconds[x.a + c] - x.de + desloc;
+    }
+    desloc += x.ate - x.de;
+  });
+  return { audio: fs.readFileSync(mp3), tempos: { characters: [...falado], character_start_times_seconds: ini, character_end_times_seconds: fim } };
 }
 
 /** Casa as palavras do texto com as ouvidas pelo Whisper (maior subsequência comum) e espalha os
