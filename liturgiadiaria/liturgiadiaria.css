@@ -1749,3 +1749,19 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
    rolagem vertical continua com o navegador; os dias (links) não viram "arrastar link" no iPhone */
 .cal-grid { touch-action: pan-y; }
 .cal-grid a { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+/* Janela de compartilhar: o que mandar (Esta leitura · Todas as leituras · Trecho), num seletor
+   segmentado; embaixo, só no Trecho, os layouts (Feed · Stories · Só texto) e as pinturas */
+.lp-card-modos {
+  display: flex; align-self: center; margin: 0.4rem auto 0; padding: 3px; gap: 2px;
+  border-radius: 999px; background: rgba(242, 234, 216, 0.1);
+}
+.lp-card-modos button {
+  border: 0; background: transparent; color: rgba(242, 234, 216, 0.62); cursor: pointer;
+  font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; padding: 0.5rem 0.9rem; border-radius: 999px;
+  transition: background 0.2s, color 0.2s; white-space: nowrap;
+}
+.lp-card-modos button[aria-current="true"] { background: #f2ead8; color: #1c1812; }
+.lp-card-modos[hidden], .lp-card-modos button[hidden], .lp-card-abas[hidden], .lp-card-fotos[hidden] { display: none; }
+.lp-card-modos + .lp-card-abas { margin-top: 0.35rem; }
+.lp-card-modos + .lp-card-abas button { font-size: 0.72rem; padding: 0.35rem 0.8rem; }
+@media (max-width: 380px) { .lp-card-modos button { font-size: 0.72rem; padding: 0.45rem 0.65rem; } }

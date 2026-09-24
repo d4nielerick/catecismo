@@ -770,17 +770,20 @@ async function compartilharSanto(dt, dia, santo, botao) {
   }, { aoFechar: () => lenis?.start() });
 }
 function botoesDeCompartilhar(dt, dia, blocos, trechos) {
-  if (!trechos?.trechos || trechos.leituras !== referenciasDoDia(dia)) return;
+  // todo o texto de cada leitura pode ser compartilhado; o trecho (card com pintura) só onde há
+  // trecho escolhido para o dia (data/liturgia-trechos) e as leituras não mudaram desde então
+  const trechosValem = trechos?.trechos && trechos.leituras === referenciasDoDia(dia);
   const cab = cabecalhoDoDia(dt, dia);
   for (const { leitura, id } of blocos) {
-    const trecho = trechos.trechos[leitura.referencia];
+    if (leitura.alternativa || !['leitura', 'salmo', 'evangelho'].includes(leitura.tipo)) continue;
+    const trecho = trechosValem ? trechos.trechos[leitura.referencia] : null;
     const card = document.getElementById(id);
-    if (!trecho || !card) continue;
+    if (!card) continue;
     const botao = document.createElement('button');
     botao.type = 'button';
     botao.className = 'lp-compartilhar';
-    botao.setAttribute('aria-label', `Compartilhar trecho: ${leitura.rotulo}`);
-    botao.title = 'Compartilhar trecho';
+    botao.setAttribute('aria-label', `Compartilhar: ${leitura.rotulo}`);
+    botao.title = 'Compartilhar';
     botao.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
     botao.addEventListener('click', async () => {
       const [{ abrirCard, escolherFotos }, catalogo] = await comEspera(botao, Promise.all([
@@ -788,12 +791,13 @@ function botoesDeCompartilhar(dt, dia, blocos, trechos) {
         catalogoDeCards ??= buscarJson('/data/cards-imagens.json'),
       ]));
       const fotos = escolherFotos(catalogo, {
-        tempo: dia.tempo, cor: dia.cor, dt, preferida: trechos.imagens?.[leitura.referencia],
+        tempo: dia.tempo, cor: dia.cor, dt, preferida: trechosValem ? trechos.imagens?.[leitura.referencia] : null,
       });
       lenis?.stop();
       abrirCard({
         dt, trecho, referencia: leitura.referencia.replace(/\s*\(R\..*\)$/, ''), rotulo: leitura.rotulo,
         celebracao: dia.celebracao, data: cab.dataLonga, dataCurta: cab.dataCurta, cor: dia.cor, fotos,
+        dia, referenciaCompleta: leitura.referencia,
       }, { aoFechar: () => lenis?.start() });
     });
     card.append(botao);

@@ -77,8 +77,8 @@ const PASSOS = [
     </div>`,
   },
   {
-    titulo: 'Compartilhe um trecho',
-    texto: 'O botão ao lado de cada leitura cria uma imagem com um trecho e uma pintura, pronta para mandar no WhatsApp ou postar no Instagram.',
+    titulo: 'Compartilhe as leituras',
+    texto: 'O botão ao lado de cada leitura manda a leitura inteira, todas as leituras do dia ou um trecho com uma pintura, pronto para o WhatsApp ou o Instagram.',
     cena: `<div class="t-com">
       <div class="t-com-leitura"><b>Salmo</b><span class="t-com-botao">${COMPARTILHAR}</span><i></i><i></i><i></i></div>
       <div class="t-com-card">

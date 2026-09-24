@@ -1,5 +1,8 @@
 /**
- * compartilhar.mjs — card de um trecho da leitura, para WhatsApp e Instagram.
+ * compartilhar.mjs — janela de compartilhar de uma leitura, com três modos (abas no alto):
+ *   · Esta leitura — a leitura inteira em página(s) 1080×1920 (imagem-do-dia.mjs);
+ *   · Todas as leituras — o dia inteiro, com a data e a celebração na 1ª página;
+ *   · Trecho — o card de um trecho, com as pinturas (os layouts abaixo).
  *
  * O trecho vem pronto de data/liturgia-trechos/AAAA-MM-DD.json (escolhido fora do site, como o
  * resumo); aqui só se desenha, num <canvas>, em alguns layouts fixos. No celular troca-se o
@@ -7,7 +10,8 @@
  * pessoa mesma compartilha.
  */
 
-import { COR_FUNDO, COR_CALENDARIO } from '/liturgiadiaria/render.mjs';
+import { COR_FUNDO, COR_CALENDARIO, cabecalhoDoDia } from '/liturgiadiaria/render.mjs';
+import { paginas } from '/liturgiadiaria/imagem-do-dia.mjs';
 
 const SITE = 'santadoutrina.cloud/liturgiadiaria';   // do link compartilhado
 const SITE_CARD = 'liturgia.santadoutrina.cloud';      // o que aparece escrito no card (redireciona para a Liturgia)
@@ -329,6 +333,10 @@ const ICONE = {
 let dlg = null;
 let atual = 0;
 let conteudo = null;
+let modo = 'trecho';               // 'leitura' | 'todas' | 'trecho'
+let paginasDoModo = [];            // canvases das páginas no modo leitura/todas
+const cachePaginas = {};
+const MODOS = [['leitura', 'Esta leitura'], ['todas', 'Todas as leituras'], ['trecho', 'Trecho']];
 const telas = LAYOUTS.map(l => Object.assign(document.createElement('canvas'), { width: l.w, height: l.h }));
 const TOQUE = matchMedia('(pointer: coarse)');
 const REDUZIDO = matchMedia('(prefers-reduced-motion: reduce)');
@@ -344,12 +352,11 @@ function montarJanela() {
         <p class="lp-card-titulo">Compartilhar trecho</p>
         <button class="lp-card-fechar" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
       </header>
+      <nav class="lp-card-modos" aria-label="O que compartilhar">${MODOS.map(([id, nome]) => `<button type="button" data-modo="${id}">${nome}</button>`).join('')}</nav>
       <nav class="lp-card-abas" aria-label="Layout">${LAYOUTS.map((l, i) => `<button type="button" data-i="${i}">${l.nome}</button>`).join('')}</nav>
       <div class="lp-card-palco">
         <button class="lp-card-seta lp-card-ant" type="button" aria-label="Layout anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg></button>
-        <div class="lp-card-trilho">${LAYOUTS.map((l, i) => `
-          <figure class="lp-card-slide" data-i="${i}"><img src="${vazia(l.w, l.h)}" alt="Card ${l.nome}" width="${l.w}" height="${l.h}" decoding="async"></figure>`).join('')}
-        </div>
+        <div class="lp-card-trilho"></div>
         <button class="lp-card-seta lp-card-prox" type="button" aria-label="Próximo layout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></button>
       </div>
       <div class="lp-card-fotos" aria-label="Pintura do card"></div>
@@ -369,7 +376,8 @@ function montarJanela() {
   let animacao = 0;
   let animando = false;   // enquanto a rolagem é nossa, o detector de arrasto não mexe na aba
   const ir = i => {
-    atual = (i + LAYOUTS.length) % LAYOUTS.length;
+    const n = trilho.children.length;
+    atual = (i + n) % n;
     marcar();
     const de = trilho.scrollLeft, para = atual * passo();
     cancelAnimationFrame(animacao);
@@ -404,10 +412,14 @@ function montarJanela() {
     if (animando) return;
     cancelAnimationFrame(quadroRolagem);
     quadroRolagem = requestAnimationFrame(() => {
-      const i = Math.max(0, Math.min(LAYOUTS.length - 1, Math.round(trilho.scrollLeft / passo())));
+      const i = Math.max(0, Math.min(trilho.children.length - 1, Math.round(trilho.scrollLeft / passo())));
       if (i !== atual) { atual = i; marcar(); }
     });
   }, { passive: true });
+  dlg.querySelector('.lp-card-modos').addEventListener('click', e => {
+    const m = e.target.closest('[data-modo]')?.dataset.modo;
+    if (m && m !== modo) trocarModo(m);
+  });
   dlg.querySelector('.lp-card-fotos').addEventListener('click', e => {
     const b = e.target.closest('[data-foto]');
     if (b) trocarFoto(+b.dataset.foto);
@@ -419,18 +431,33 @@ function montarJanela() {
 }
 
 function marcar() {
+  const trecho = modo === 'trecho';
+  dlg.querySelectorAll('.lp-card-modos button').forEach(b => b.setAttribute('aria-current', b.dataset.modo === modo));
+  dlg.querySelector('.lp-card-abas').hidden = !trecho;
+  dlg.querySelector('.lp-card-fotos').hidden = !trecho || !(conteudo.fotos?.length > 1);
   dlg.querySelectorAll('.lp-card-abas button').forEach((b, i) => b.setAttribute('aria-current', i === atual));
   dlg.querySelectorAll('.lp-card-slide').forEach((f, i) => f.classList.toggle('atual', i === atual));
-  dlg.querySelector('.lp-card-fotos').classList.toggle('inativa', LAYOUTS[atual].id === 'texto');
+  if (trecho) dlg.querySelector('.lp-card-fotos').classList.toggle('inativa', LAYOUTS[atual].id === 'texto');
+  dlg.classList.toggle('lp-card-paginas', !trecho);
 }
 
-const nomeArquivo = () => `liturgia-${conteudo.dt}-${LAYOUTS[atual].id}.png`;
-const blobDoCard = () => new Promise(r => telas[atual].toBlob(r, 'image/png'));
+/** Slides do trilho: um por layout (trecho) ou um por página (leitura/todas). */
+function montarSlides(lista) {
+  dlg.querySelector('.lp-card-trilho').innerHTML = lista.map((l, i) => `
+    <figure class="lp-card-slide" data-i="${i}"><img src="${vazia(l.w, l.h)}" alt="${l.alt}" width="${l.w}" height="${l.h}" decoding="async"></figure>`).join('');
+}
 
-function baixar(blob) {
+const telaAtual = () => (modo === 'trecho' ? telas[atual] : paginasDoModo[atual]);
+const nomeArquivo = (i = atual) => (modo === 'trecho'
+  ? `liturgia-${conteudo.dt}-${LAYOUTS[i].id}.png`
+  : `liturgia-${conteudo.dt}-${modo === 'todas' ? 'leituras' : 'leitura'}-${i + 1}.jpg`);
+const blobDoCard = () => new Promise(r => telaAtual().toBlob(r, 'image/png'));
+const blobsDasPaginas = () => Promise.all(paginasDoModo.map(cv => new Promise(r => cv.toBlob(r, 'image/jpeg', 0.9))));
+
+function baixar(blob, nome = nomeArquivo()) {
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = nomeArquivo();
+  a.download = nome;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
@@ -452,6 +479,7 @@ function abrirApp(url, planoB) {
 // · Instagram: copia o card e abre a câmera do stories, onde ele pode ser colado;
 // · Salvar: no celular, a folha do sistema (é o único caminho até a galeria de fotos).
 async function enviar(destino) {
+  if (modo !== 'trecho') { await enviarPaginas(destino); return; }
   const link = `https://${SITE}/${conteudo.dt}/`;
   const texto = `“${conteudo.trecho}” (${conteudo.referencia})\n${link}`;
 
@@ -485,6 +513,20 @@ async function enviar(destino) {
   }
   baixar(await blobDoCard());
   avisar('Imagem salva.');
+}
+
+// Páginas (leitura inteira ou o dia): vão todas juntas pela folha do sistema — no WhatsApp chegam
+// como álbum, uma foto por página. Sem a folha (computador), baixam uma a uma.
+async function enviarPaginas(destino) {
+  const blobs = await blobsDasPaginas();
+  const arquivos = blobs.map((b, i) => new File([b], nomeArquivo(i), { type: 'image/jpeg' }));
+  if (TOQUE.matches && navigator.canShare?.({ files: arquivos })) {
+    avisar(destino === 'salvar' ? 'Toque em “Salvar imagens”.' : destino === 'instagram' ? 'Escolha o Instagram na lista.' : 'Escolha o WhatsApp na lista.');
+    try { await navigator.share({ files: arquivos }); } catch { /* cancelou */ }
+    return;
+  }
+  blobs.forEach((b, i) => setTimeout(() => baixar(b, nomeArquivo(i)), i * 250));
+  avisar(blobs.length > 1 ? `${blobs.length} imagens salvas.` : 'Imagem salva.');
 }
 
 async function compartilharArquivo() {
@@ -571,13 +613,55 @@ async function trocarFoto(i) {
   if (vez === pedidoFoto) carregando(false);
 }
 
-/** c: { dt, trecho, referencia, rotulo, celebracao, data, dataCurta, cor, fotos? } (fotos: de escolherFotos) */
+let pedidoModo = 0;
+async function trocarModo(m) {
+  modo = m;
+  atual = 0;
+  const vez = ++pedidoModo;
+  const trilho = dlg.querySelector('.lp-card-trilho');
+  trilho.scrollLeft = 0;
+  carregando(true);
+  if (m === 'trecho') {
+    montarSlides(LAYOUTS.map(l => ({ w: l.w, h: l.h, alt: `Card ${l.nome}` })));
+    marcar();
+    await Promise.all([carregarFontes(), carregarImagens()]);
+    await desenharTodos();
+    if (vez === pedidoModo) carregando(false);
+    return;
+  }
+  // um slide provisório enquanto as páginas são compostas
+  montarSlides([{ w: 1080, h: 1920, alt: 'Página' }]);
+  marcar();
+  const chave = `${conteudo.dt}|${m}|${m === 'leitura' ? conteudo.referenciaCompleta : ''}`;
+  cachePaginas[chave] ??= paginas(conteudo.dia, cabecalhoDoDia(conteudo.dt, conteudo.dia),
+    m === 'leitura' ? { referencia: conteudo.referenciaCompleta } : {});
+  const lista = await cachePaginas[chave];
+  if (vez !== pedidoModo) return;
+  paginasDoModo = lista;
+  montarSlides(lista.map((_, i) => ({ w: 1080, h: 1920, alt: `Página ${i + 1} de ${lista.length}` })));
+  marcar();
+  const imgs = dlg.querySelectorAll('.lp-card-slide img');
+  await Promise.all(lista.map((cv, i) => new Promise(pronto => {
+    const previa = Object.assign(document.createElement('canvas'), { width: PREVIA_L, height: Math.round(PREVIA_L * cv.height / cv.width) });
+    previa.getContext('2d').drawImage(cv, 0, 0, previa.width, previa.height);
+    previa.toBlob(b => {
+      if (!b) { pronto(); return; }
+      imgs[i].onload = imgs[i].onerror = () => pronto();
+      imgs[i].src = URL.createObjectURL(b);
+    }, 'image/jpeg', 0.9);
+  })));
+  if (vez === pedidoModo) carregando(false);
+}
+
+/** c: { dt, trecho?, referencia, rotulo, celebracao, data, dataCurta, cor, fotos?, dia?, referenciaCompleta? }
+ *  Com dia e referenciaCompleta, abre em "Esta leitura" (e há "Todas as leituras"); sem trecho,
+ *  a aba "Trecho" some. O card do santo (selo) é só trecho. */
 export async function abrirCard(c, { aoFechar } = {}) {
   if (!dlg) montarJanela();
-  conteudo = { ...c, trecho: maiuscula(c.trecho) };
+  conteudo = { ...c, trecho: c.trecho ? maiuscula(c.trecho) : '' };
   // selo no alto da janela: "Santo do dia" quando o card é de uma frase do santo
   const titulo = dlg.querySelector('.lp-card-titulo');
-  titulo.textContent = c.selo || 'Compartilhar trecho';
+  titulo.textContent = c.selo || 'Compartilhar';
   titulo.classList.toggle('lp-card-selo', !!c.selo);
   dlg.onclose = () => aoFechar?.();
   const fila = dlg.querySelector('.lp-card-fotos');
@@ -585,14 +669,24 @@ export async function abrirCard(c, { aoFechar } = {}) {
     <button type="button" data-foto="${i}" aria-pressed="${i === 0}" title="${f.titulo}">
       <img src="${f.mini}" alt="${f.titulo}" width="56" height="56">
     </button>`).join('');
-  fila.hidden = !(c.fotos?.length > 1);
-  carregando(true);
-  dlg.querySelectorAll('.lp-card-slide img').forEach((im, i) => { im.src = vazia(LAYOUTS[i].w, LAYOUTS[i].h); });   // nada do card anterior
+  const comPaginas = !!(c.dia && c.referenciaCompleta);
+  const modos = dlg.querySelector('.lp-card-modos');
+  modos.hidden = !comPaginas;
+  modos.querySelector('[data-modo="trecho"]').hidden = !conteudo.trecho;
   dlg.showModal();
+  delete imagens.arte;
+  if (comPaginas) {
+    await trocarModo('leitura');
+    // a pintura do trecho já vem carregada para quando a pessoa for à aba "Trecho"
+    if (conteudo.trecho) { const f = c.fotos?.[0]; if (f) { const img = await carregarArte(f.src); if (img) imagens.arte = img; } }
+    return;
+  }
+  modo = 'trecho';
   atual = 0;
+  carregando(true);
+  montarSlides(LAYOUTS.map(l => ({ w: l.w, h: l.h, alt: `Card ${l.nome}` })));
   dlg.querySelector('.lp-card-trilho').scrollLeft = 0;
   marcar();
-  delete imagens.arte;
   await Promise.all([carregarFontes(), carregarImagens()]);
   await trocarFoto(0);
 }
