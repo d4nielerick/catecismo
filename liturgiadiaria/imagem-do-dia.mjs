@@ -136,7 +136,9 @@ function itensDaLeitura(ctx, l) {
     });
   } else {
     const texto = prosa(l.texto);
-    const letra = texto.charAt(0), resto = texto.slice(1).replace(/^\s/, '');
+    // texto que abre com aspas: a capitular é a letra; as aspas ficam penduradas na margem
+    const [, aspas, letra, depois] = texto.match(/^([“"«‘']?)\s*(.)(.*)$/s);
+    const resto = depois.replace(/^\s/, '');
     const F = ((CAP_LINHAS - 1) * LH + MAIUSC_TEXTO * CORPO) / ALTURA_MAIUSC;
     ctx.font = `400 ${F}px ${TITULO}`;
     const recuo = ctx.measureText(letra).width + CORPO * 0.4;
@@ -148,6 +150,11 @@ function itensDaLeitura(ctx, l) {
     itens.push({ h: CAP_LINHAS * LH, draw: (c, y) => {
       c.fillStyle = VERMELHO; c.font = `400 ${F}px ${TITULO}`;
       c.fillText(letra, M - F * 0.02, y + CORPO + (CAP_LINHAS - 1) * LH);
+      if (aspas) {
+        c.font = `400 ${F * 0.45}px ${TITULO}`; c.textAlign = 'right';
+        c.fillText(aspas === '"' ? '“' : aspas, M - F * 0.04, y + CORPO + F * 0.12);
+        c.textAlign = 'left';
+      }
       c.fillStyle = TINTA; c.font = `400 ${CORPO}px ${LEITURA}`;
       for (let i = 0; i < n; i++) justificar(c, linhas[i], M + recuo, y + CORPO + i * LH, LARG - recuo, i === ult);
     } });
@@ -172,7 +179,10 @@ function divisor(c, y) {
   c.fillRect(cx - 9, y - 6, 18, 3);
 }
 
-/** Cabeçalho grande (1ª página do dia inteiro): "Liturgia Diária", a data, o dia e a celebração. */
+// "Quarta-feira da 4ª Semana da Quaresma" já diz o dia da semana: a data vai sem ele
+const dataSemRepetir = cab => (DIA_DA_SEMANA.test(cab.celebracao) ? cab.dataLonga : cab.dataExtenso);
+
+/** Cabeçalho grande (1ª página, numa leitura só ou no dia inteiro): "Liturgia Diária", a data, o dia e a celebração. */
 function cabecalhoGrande(ctx, cab) {
   const itens = [{ h: 34 + 150 + 62, draw: (c, y) => {
     c.fillStyle = VERMELHO; c.font = `italic 400 34px ${TITULO}`;
@@ -180,7 +190,7 @@ function cabecalhoGrande(ctx, cab) {
     c.fillStyle = TINTA; c.font = `italic 400 150px ${TITULO}`;
     c.fillText(cab.dataCurta, M - 6, y + 34 + 150);
     c.fillStyle = SUAVE; c.font = `400 30px ${LEITURA}`;
-    c.fillText(cab.dataExtenso, M, y + 34 + 150 + 62);
+    c.fillText(dataSemRepetir(cab), M, y + 34 + 150 + 62);
   } }];
   if (cab.celebracao) {
     ctx.font = `italic 400 44px ${LEITURA}`;
@@ -192,14 +202,12 @@ function cabecalhoGrande(ctx, cab) {
   return itens;
 }
 
-/** Topo das páginas seguintes (e das de uma leitura só): uma linha discreta com o dia. */
+/** Topo das páginas seguintes: uma linha discreta com o dia. */
 function cabecalhoPequeno(c, cab) {
   c.fillStyle = VERMELHO; c.font = `italic 400 32px ${TITULO}`;
   c.fillText('Liturgia Diária', M, 110);
   c.fillStyle = SUAVE; c.font = `400 24px ${LEITURA}`;
-  // "Quarta-feira da 4ª Semana da Quaresma" já diz o dia da semana: a data vai sem ele
-  const data = DIA_DA_SEMANA.test(cab.celebracao) ? cab.dataLonga : cab.dataExtenso;
-  const linha = [data, cab.celebracao].filter(Boolean).join(' · ');
+  const linha = [dataSemRepetir(cab), cab.celebracao].filter(Boolean).join(' · ');
   const [primeira] = quebrar(c, linha, LARG);
   c.fillText(primeira === linha ? linha : `${primeira.replace(/[\s,·]+$/, '')}…`, M, 150);
 }
@@ -256,13 +264,13 @@ function paginar(itens, topo0) {
   return paginas.filter(p => p.length);
 }
 
-function montar(medir, cab, leituras, grandes) {
-  const itens = grandes ? cabecalhoGrande(medir, cab) : [];
+function montar(medir, cab, leituras) {
+  const itens = cabecalhoGrande(medir, cab);   // a 1ª página abre sempre com o cabeçalho grande
   leituras.forEach((l, i) => {
     if (i) itens.push({ h: 150, espaco: true, draw: (c, y) => divisor(c, y + 75) });
     itens.push(...itensDaLeitura(medir, l));
   });
-  return paginar(itens, grandes ? 110 : TOPO_PAG);
+  return paginar(itens, 110);
 }
 
 export async function paginas(dia, cab, { referencia = null } = {}) {
@@ -271,10 +279,9 @@ export async function paginas(dia, cab, { referencia = null } = {}) {
   const leituras = dia.missas[0].leituras
     .filter(l => !l.alternativa && ['leitura', 'salmo', 'evangelho'].includes(l.tipo))
     .filter(l => !referencia || l.referencia === referencia);
-  const grandes = !referencia;
   // corpo 33; se apertar até 29 poupa uma página (a última quase vazia), aperta — o maior corpo
   // entre os que dão o menor número de páginas
-  const tentar = corpo => { CORPO = corpo; LH = corpo * 1.56; return montar(medir, cab, leituras, grandes); };
+  const tentar = corpo => { CORPO = corpo; LH = corpo * 1.56; return montar(medir, cab, leituras); };
   const menor = Math.min(...[33, 31, 29].map(c => tentar(c).length));
   let pags;
   for (const corpo of [33, 31, 29]) { pags = tentar(corpo); if (pags.length === menor) break; }
@@ -288,7 +295,7 @@ export async function paginas(dia, cab, { referencia = null } = {}) {
     const c = cv.getContext('2d');
     c.fillStyle = FUNDO; c.fillRect(0, 0, W, H);
     if (orn) c.drawImage(orn, 24, 0);
-    if (!(grandes && i === 0)) cabecalhoPequeno(c, cab);
+    if (i) cabecalhoPequeno(c, cab);
     for (const { it, y } of pag) it.draw(c, y);
     rodapePagina(c, cab, i, pags.length, H);
     return cv;
