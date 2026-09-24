@@ -348,7 +348,7 @@ function montarJanela() {
       <div class="lp-card-palco">
         <button class="lp-card-seta lp-card-ant" type="button" aria-label="Layout anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg></button>
         <div class="lp-card-trilho">${LAYOUTS.map((l, i) => `
-          <figure class="lp-card-slide" data-i="${i}"><img alt="Card ${l.nome}" width="${l.w}" height="${l.h}" decoding="async"></figure>`).join('')}
+          <figure class="lp-card-slide" data-i="${i}"><img src="${vazia(l.w, l.h)}" alt="Card ${l.nome}" width="${l.w}" height="${l.h}" decoding="async"></figure>`).join('')}
         </div>
         <button class="lp-card-seta lp-card-prox" type="button" aria-label="Próximo layout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></button>
       </div>
@@ -533,6 +533,9 @@ const carregarArte = src => new Promise(ok => {
 // Desenha cada card no tamanho real e põe na janela uma cópia reduzida (larga o bastante para
 // telas de alta densidade, mas bem mais leve de mover que o canvas cheio).
 const PREVIA_L = 640;
+// imagem transparente do tamanho do card: enquanto ele não está desenhado, o <img> ocupa o mesmo
+// espaço e mostra o brilho de carregamento (fundo), em vez do ícone de imagem quebrada do Safari
+const vazia = (w, h) => `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'/%3E`;
 function desenharTodos() {
   const imgs = dlg.querySelectorAll('.lp-card-slide img');
   return Promise.all(telas.map((cv, i) => new Promise(pronto => {
@@ -584,7 +587,7 @@ export async function abrirCard(c, { aoFechar } = {}) {
     </button>`).join('');
   fila.hidden = !(c.fotos?.length > 1);
   carregando(true);
-  dlg.querySelectorAll('.lp-card-slide img').forEach(im => im.removeAttribute('src'));   // nada do card anterior
+  dlg.querySelectorAll('.lp-card-slide img').forEach((im, i) => { im.src = vazia(LAYOUTS[i].w, LAYOUTS[i].h); });   // nada do card anterior
   dlg.showModal();
   atual = 0;
   dlg.querySelector('.lp-card-trilho').scrollLeft = 0;
