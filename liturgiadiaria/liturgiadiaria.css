@@ -1813,3 +1813,20 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-verso.lp-verso-pego { animation: lp-verso-pego 0.45s ease-out; }
 @keyframes lp-verso-pego { 0% { background: rgba(203, 46, 46, 0.75); } 100% { background: rgba(203, 46, 46, 0.3); } }
 .lp-arrastando .lp-verso.sel { background: rgba(203, 46, 46, 0.42); }
+/* Título da leitura com os ícones ao lado: ouvir e compartilhar, dois círculos iguais */
+.lp-leitura-cabeca { display: flex; align-items: center; gap: 0.9rem; }
+.lp-leitura-cabeca .leitura-label { min-width: 0; }
+.lp-leitura-acoes { display: flex; gap: 0.5rem; flex: none; }
+.lp-leitura-acoes .lp-compartilhar { margin-top: 0; }
+.lp-leitura-acoes .lp-ouvir-botao {
+  width: 40px; height: 40px; margin: 0; padding: 0; justify-content: center; gap: 0;
+}
+.lp-leitura-acoes .lp-ouvir-botao svg { width: 16px; height: 16px; margin-left: 2px; }
+.lp-leitura-cabeca .leitura-label { white-space: nowrap; }
+@media (max-width: 760px) {
+  /* o título encolhe um pouco para caber com os dois ícones na mesma linha */
+  .lp-leitura-cabeca { gap: 0.6rem; }
+  .lp-leitura-cabeca .leitura-label { font-size: min(48px, 10.2vw); }
+  .lp-leitura-acoes { gap: 0.4rem; }
+  .lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar { width: 36px; height: 36px; }
+}

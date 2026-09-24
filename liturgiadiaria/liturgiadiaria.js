@@ -735,16 +735,32 @@ async function botaoOuvir(dt, dia) {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'lp-ouvir-botao';
-    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><span>Ouvir</span>';
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 6v12l10-6z"/></svg>';
     b.setAttribute('aria-label', `Ouvir: ${rotulo}`);
+    b.title = 'Ouvir';
     b.addEventListener('click', async () => {
       const { ouvir } = await comEspera(b, import('/liturgiadiaria/leitor-audio.mjs'));
       lenis?.stop();
       await ouvir({ dt, fila, inicio, cor: cabecalhoDoDia(dt, dia).corDia || '#3a2a1a' });
       document.querySelector('dialog.lp-ouvir')?.addEventListener('close', () => lenis?.start(), { once: true });
     });
-    card.querySelector('.leitura-label').after(b);
+    acoesDaLeitura(card)?.prepend(b);   // ouvir vem antes de compartilhar
   });
+}
+
+/** Ícones da leitura (ouvir, compartilhar) numa linha ao lado do título ("1ª Leitura"). */
+function acoesDaLeitura(card) {
+  const existente = card.querySelector('.lp-leitura-acoes');
+  if (existente) return existente;
+  const titulo = card.querySelector('.leitura-label');
+  if (!titulo) return null;
+  const linha = document.createElement('div');
+  linha.className = 'lp-leitura-cabeca';
+  const acoes = document.createElement('div');
+  acoes.className = 'lp-leitura-acoes';
+  titulo.before(linha);
+  linha.append(titulo, acoes);
+  return acoes;
 }
 
 let catalogoDeCards = null;
@@ -800,7 +816,7 @@ function botoesDeCompartilhar(dt, dia, blocos, trechos) {
         dia, referenciaCompleta: leitura.referencia,
       }, { aoFechar: () => lenis?.start() });
     });
-    card.append(botao);
+    acoesDaLeitura(card)?.append(botao);
   }
 }
 
