@@ -436,13 +436,49 @@ function montarJanela() {
   dlg.querySelector('.lp-card-escolher').addEventListener('click', () => abrirVersos(true));
   dlg.querySelector('.lp-card-pronto').addEventListener('click', () => abrirVersos(false));
   const lista = dlg.querySelector('.lp-card-versos-lista');
-  lista.addEventListener('click', e => {
+  // Tocar escolhe um versículo; segurar e arrastar escolhe vários (no toque, o segurar ~¼ s separa
+  // o arrasto da rolagem da lista; com o mouse, arrasta direto).
+  const versoEm = (x, y) => document.elementFromPoint(x, y)?.closest?.('.lp-verso');
+  let gesto = null;
+  const soltar = () => { clearTimeout(gesto?.espera); gesto = null; lista.classList.remove('lp-arrastando'); };
+  lista.addEventListener('pointerdown', e => {
     const b = e.target.closest('[data-u]');
-    if (b) tocarVerso(+b.dataset.u);
+    if (!b || e.button > 0) return;
+    const i = +b.dataset.u;
+    gesto = { i, x: e.clientX, y: e.clientY, arrastando: false, fim: i };
+    const comecar = () => {
+      if (!gesto) return;
+      gesto.arrastando = true;
+      lista.classList.add('lp-arrastando');
+      navigator.vibrate?.(8);
+      marcarFaixa(gesto.i, gesto.i);
+    };
+    if (e.pointerType === 'mouse') { gesto.mouse = comecar; lista.setPointerCapture(e.pointerId); }
+    else gesto.espera = setTimeout(comecar, 260);
   });
+  lista.addEventListener('pointermove', e => {
+    if (!gesto) return;
+    const longe = Math.hypot(e.clientX - gesto.x, e.clientY - gesto.y) > 8;
+    if (!gesto.arrastando) {
+      if (!longe) return;
+      if (gesto.mouse) gesto.mouse(); else { soltar(); return; }   // mexeu antes de segurar: é rolagem
+    }
+    const b = versoEm(e.clientX, e.clientY);
+    if (b && +b.dataset.u !== gesto.fim) { gesto.fim = +b.dataset.u; marcarFaixa(gesto.i, gesto.fim); }
+  });
+  // enquanto arrasta, o dedo não rola a lista
+  lista.addEventListener('touchmove', e => { if (gesto?.arrastando) e.preventDefault(); }, { passive: false });
+  lista.addEventListener('pointerup', () => {
+    if (!gesto) return;
+    const { i, fim } = gesto;
+    soltar();
+    escolherVersos(Math.min(i, fim), Math.max(i, fim));
+  });
+  lista.addEventListener('pointercancel', soltar);
+  lista.addEventListener('contextmenu', e => e.preventDefault());
   lista.addEventListener('keydown', e => {
     const b = e.target.closest('[data-u]');
-    if (b && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); tocarVerso(+b.dataset.u); }
+    if (b && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); escolherVersos(+b.dataset.u, +b.dataset.u); }
   });
   dlg.querySelector('.lp-card-acoes').addEventListener('click', e => {
     const destino = e.target.closest('[data-destino]')?.dataset.destino;
@@ -679,7 +715,7 @@ async function trocarModo(m) {
 
 // ── Escolher o trecho ────────────────────────────────────────────────────────
 // A leitura vira uma lista de versículos (o lecionário traz os números); a pessoa toca neles
-// (ver tocarVerso) e o card se refaz. A referência passa a ser a dos versículos ("Ecl 1,7-8").
+// (ver os gestos em montarJanela) e o card se refaz. A referência passa a ser a dos versículos ("Ecl 1,7-8").
 // Versículo que termina no meio da frase (vírgula, dois-pontos…) puxa o seguinte; o que começa em
 // minúscula puxa o anterior: o card nunca sai com uma frase pela metade.
 const MAX_TRECHO = 280;
@@ -788,18 +824,15 @@ function abrirVersos(sim) {
   }
 }
 
-// Tocar num versículo longe do trecho troca o trecho por ele; no versículo logo antes ou logo
-// depois, junta; na ponta do trecho, tira. (Trocar é o gesto mais comum, então é o de um toque só.)
-function tocarVerso(i) {
-  const refrao = k => unidades[k]?.n === 'R.';
-  let estende = true;
-  if (selA < 0 || refrao(i) || refrao(selA)) selA = selB = i;
-  else if (i === selA - 1) selA = i;
-  else if (i === selB + 1) selB = i;
-  else if (selA < selB && i === selA) { selA++; estende = false; }
-  else if (selA < selB && i === selB) { selB--; estende = false; }
-  else selA = selB = i;
-  if (estende) [selA, selB] = efetivo(selA, selB);
+/** Durante o arrasto: só acende a faixa (o card se refaz ao soltar). */
+function marcarFaixa(a, b) {
+  const [x, y] = [Math.min(a, b), Math.max(a, b)];
+  dlg.querySelectorAll('.lp-verso').forEach((v, k) => v.classList.toggle('sel', k >= x && k <= y));
+}
+
+function escolherVersos(a, b) {
+  if (unidades[a].n === 'R.') b = a;   // o refrão (sempre o 1º) vai sozinho
+  [selA, selB] = efetivo(a, b);
   const texto = textoDe(selA, selB);
   pintarVersos(texto);
   if (texto.length > MAX_TRECHO) return;   // longo demais: o card fica com o último trecho que cabia
@@ -812,7 +845,7 @@ function pintarVersos(texto = selA >= 0 ? textoDe(selA, selB) : '') {
   dlg.querySelectorAll('.lp-verso').forEach((b, i) => {
     b.classList.toggle('sel', i >= selA && i <= selB);
   });
-  dlg.querySelector('.lp-card-versos-dica').textContent = 'Toque num versículo para trocar; no vizinho, para juntar';
+  dlg.querySelector('.lp-card-versos-dica').textContent = 'Toque num versículo; para pegar vários, segure e arraste';
   const conta = dlg.querySelector('.lp-card-versos-conta');
   const longo = texto.length > MAX_TRECHO;
   conta.classList.toggle('longo', longo);

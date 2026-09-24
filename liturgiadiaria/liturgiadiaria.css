@@ -1807,3 +1807,5 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-card-versos-conta { margin: 0; padding: 0.45rem 1.1rem 0.75rem; font-family: var(--font-sans); font-size: 0.72rem; color: rgba(242, 234, 216, 0.5); }
 .lp-card-versos-conta.longo { color: #f09595; }
 @media (min-width: 761px) { .lp-card-versos { width: min(640px, calc(100% - 2rem)); margin-inline: auto; align-self: center; } }
+.lp-card-versos-lista { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.lp-arrastando .lp-verso { transition: none; }
