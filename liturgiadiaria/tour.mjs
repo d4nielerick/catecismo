@@ -90,10 +90,14 @@ const PASSOS = [
     titulo: 'O santo do dia',
     texto: 'Quando o dia lembra um santo, o nome dele aparece embaixo da data, com um botão para compartilhar uma frase dele com a sua pintura.',
     cena: `<div class="t-san">
-      <div class="t-san-dia"><b>1/out</b><span>Santa Teresinha do Menino Jesus</span><i class="t-san-botao">${COMPARTILHAR}</i></div>
+      <div class="t-san-dia"><b>1/out</b><div class="t-san-nome"><span>Santa Teresinha do Menino Jesus</span><i class="t-san-botao">${COMPARTILHAR}</i></div></div>
       <div class="t-san-card">
         <img src="/assets/img/cards/mini/santa-teresinha.webp" alt="">
-        <p>"No coração da Igreja, minha Mãe, eu serei o Amor."</p>
+        <div class="t-san-corpo">
+          <small>SANTO DO DIA · SANTA TERESINHA</small>
+          <p>"No coração da Igreja, minha Mãe, eu serei o Amor."</p>
+          <footer><em>1/out</em><span>liturgia.santadoutrina.cloud</span></footer>
+        </div>
       </div>
       ${dedo('t-san-dedo')}
     </div>`,
