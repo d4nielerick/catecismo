@@ -25,7 +25,7 @@
   --lp-fundo: #fcfaf7;
   --lp-tinta: #000;
   --lp-texto: rgba(0, 0, 0, 0.67);
-  --lp-suave: rgba(0, 0, 0, 0.45);
+  --lp-suave: rgba(0, 0, 0, 0.6);   /* era 0.45: claro demais no celular (feedback de 24/09/2026) */
   --lp-linha: rgba(0, 0, 0, 0.08);
   --lp-vermelho: #cb2e2e; /* o mesmo da cruz do divisor */
   --lp-faixa-w: 120px;
@@ -1720,3 +1720,27 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .t-app-zap { background: #25d366; }
 .t-app-insta { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%); animation-delay: 0.08s !important; }
 @keyframes t-san-app { 0%, 34% { opacity: 0; transform: translateY(8px) scale(0.8); } 42%, 84% { opacity: 1; transform: none; } 92%, 100% { opacity: 0; transform: translateY(4px); } }
+
+/* ── Legibilidade (feedback de 24/09/2026): calendário e cabeçalho maiores e mais escuros; o dia
+   marcado no calendário em tom neutro — a cor litúrgica mudando a cada dia parecia aleatória
+   (ela continua na fitinha e no ponto ao lado do tempo litúrgico) ── */
+.lp-data { font-size: 0.95rem; }
+.tempo-badge { font-size: 0.7rem; }
+.cal-mes { font-size: 0.8rem; }
+.cal-dow { font-size: 0.62rem; }
+.cal-dia { font-size: 0.76rem; color: #3a3632; }
+.lp-aviso-texto { font-size: 0.84rem; }
+.lp-aviso-rotulo { font-size: 0.6rem; }
+.cal-dia.hoje { background: #26211b; color: #fff; }
+.cal-dia.selecionado { background: rgba(0, 0, 0, 0.08); color: var(--lp-tinta); }
+.cal-dia:hover { background: rgba(0, 0, 0, 0.06); }
+.cal-hoje { color: var(--lp-tinta); background: rgba(0, 0, 0, 0.06); }
+.cal-hoje:hover { background: rgba(0, 0, 0, 0.1); }
+.t-cal-sel { background: rgba(0, 0, 0, 0.08); }
+@media (max-width: 760px) {
+  .lp-data { font-size: 0.92rem; }
+  .cal-mes { font-size: clamp(0.84rem, 4.6cqi, 1.1rem); }
+  .cal-dow { font-size: clamp(0.64rem, 3.4cqi, 0.86rem); }
+  .cal-dia { font-size: clamp(0.82rem, 4.6cqi, 1.08rem); }
+  .lp-aviso-texto { font-size: 0.84rem; }
+}

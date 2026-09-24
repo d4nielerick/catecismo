@@ -847,7 +847,7 @@ function configurarNavegacao() {
 }
 
 // ── Dica dos dias especiais no calendário ────────────────────────────────────
-const TIPO_DE_DESTAQUE = { mariana: 'Festa de Nossa Senhora', santo: 'Santo de devoção' };
+const TIPO_DE_DESTAQUE = { mariana: 'Festa de Nossa Senhora', santo: 'Santo do dia' };
 let dica = null;
 let dicaAlvo = null;
 
