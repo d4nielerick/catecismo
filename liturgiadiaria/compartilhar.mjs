@@ -678,19 +678,19 @@ async function trocarModo(m) {
 }
 
 // ── Escolher o trecho ────────────────────────────────────────────────────────
-// A leitura vira uma lista de versículos (o lecionário traz os números); a pessoa toca no primeiro
-// e no último e o card se refaz. A referência passa a ser a dos versículos ("Ecl 1,7-8").
+// A leitura vira uma lista de versículos (o lecionário traz os números); a pessoa toca neles
+// (ver tocarVerso) e o card se refaz. A referência passa a ser a dos versículos ("Ecl 1,7-8").
 // Versículo que termina no meio da frase (vírgula, dois-pontos…) puxa o seguinte; o que começa em
 // minúscula puxa o anterior: o card nunca sai com uma frase pela metade.
 const MAX_TRECHO = 280;
 let unidades = [];          // [{ n, cap, texto }] — n "R." é o refrão do salmo
 let livro = '';             // "Ecl ", "Sl "
-let selA = -1, selB = -1, esperando = false, escolhendo = false;
+let selA = -1, selB = -1, escolhendo = false;
 
 const limparVerso = l => l.replace(/[*†+]/g, '').replace(/\s+/g, ' ').trim();
 
 function prepararVersos(c) {
-  unidades = []; selA = selB = -1; esperando = false;
+  unidades = []; selA = selB = -1;
   if (escolhendo) abrirVersos(false);
   dlg.querySelector('.lp-card-versos-lista').innerHTML = '';
   const leitura = c.dia?.missas?.[0]?.leituras?.find(l => l.referencia === c.referenciaCompleta);
@@ -783,16 +783,23 @@ function abrirVersos(sim) {
   dlg.classList.toggle('lp-card-escolhendo', sim);
   dlg.querySelector('.lp-card-escolher').hidden = sim || modo !== 'trecho' || !unidades.length;
   if (sim) {
-    esperando = false;
     pintarVersos();
     dlg.querySelector(`.lp-verso[data-u="${Math.max(0, selA)}"]`)?.scrollIntoView({ block: 'center' });
   }
 }
 
+// Tocar num versículo longe do trecho troca o trecho por ele; no versículo logo antes ou logo
+// depois, junta; na ponta do trecho, tira. (Trocar é o gesto mais comum, então é o de um toque só.)
 function tocarVerso(i) {
-  if (!esperando || unidades[i].n === 'R.' || unidades[selA]?.n === 'R.') { selA = selB = i; esperando = unidades[i].n !== 'R.'; }
-  else { selB = Math.max(selA, i); selA = Math.min(selA, i); esperando = false; }
-  [selA, selB] = efetivo(selA, selB);
+  const refrao = k => unidades[k]?.n === 'R.';
+  let estende = true;
+  if (selA < 0 || refrao(i) || refrao(selA)) selA = selB = i;
+  else if (i === selA - 1) selA = i;
+  else if (i === selB + 1) selB = i;
+  else if (selA < selB && i === selA) { selA++; estende = false; }
+  else if (selA < selB && i === selB) { selB--; estende = false; }
+  else selA = selB = i;
+  if (estende) [selA, selB] = efetivo(selA, selB);
   const texto = textoDe(selA, selB);
   pintarVersos(texto);
   if (texto.length > MAX_TRECHO) return;   // longo demais: o card fica com o último trecho que cabia
@@ -805,9 +812,7 @@ function pintarVersos(texto = selA >= 0 ? textoDe(selA, selB) : '') {
   dlg.querySelectorAll('.lp-verso').forEach((b, i) => {
     b.classList.toggle('sel', i >= selA && i <= selB);
   });
-  dlg.querySelector('.lp-card-versos-dica').textContent = esperando
-    ? 'Agora toque no último versículo'
-    : 'Toque no primeiro e no último versículo';
+  dlg.querySelector('.lp-card-versos-dica').textContent = 'Toque num versículo para trocar; no vizinho, para juntar';
   const conta = dlg.querySelector('.lp-card-versos-conta');
   const longo = texto.length > MAX_TRECHO;
   conta.classList.toggle('longo', longo);
