@@ -1813,35 +1813,23 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-verso.lp-verso-pego { animation: lp-verso-pego 0.45s ease-out; }
 @keyframes lp-verso-pego { 0% { background: rgba(203, 46, 46, 0.75); } 100% { background: rgba(203, 46, 46, 0.3); } }
 .lp-arrastando .lp-verso.sel { background: rgba(203, 46, 46, 0.42); }
-/* Título da leitura com os ícones ao lado: ouvir e compartilhar, dois círculos iguais */
+/* Título da leitura e, no fim da linha, os ícones de ouvir e compartilhar — no mesmo desenho
+   dos ícones da barra de baixo (traço 2.1 arredondado, cinza #8c867e), vermelhos no toque */
 .lp-leitura-cabeca { display: flex; align-items: center; gap: 0.9rem; }
-.lp-leitura-cabeca .leitura-label { min-width: 0; }
-.lp-leitura-acoes { display: flex; gap: 0.5rem; flex: none; }
-.lp-leitura-acoes .lp-compartilhar { margin-top: 0; }
-.lp-leitura-acoes .lp-ouvir-botao {
-  width: 40px; height: 40px; margin: 0; padding: 0; justify-content: center; gap: 0;
+.lp-leitura-cabeca .leitura-label { min-width: 0; white-space: nowrap; }
+.lp-leitura-acoes { display: flex; flex: none; gap: 0.15rem; margin-left: auto; }
+.lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar {
+  display: grid; place-items: center; width: 38px; height: 38px; margin: 0; padding: 0;
+  border: 0; border-radius: 50%; background: transparent; color: #8c867e;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
 }
-.lp-leitura-acoes .lp-ouvir-botao svg { width: 16px; height: 16px; margin-left: 2px; }
-.lp-leitura-cabeca .leitura-label { white-space: nowrap; }
+.lp-leitura-acoes .lp-ouvir-botao:hover, .lp-leitura-acoes .lp-compartilhar:hover { color: var(--lp-vermelho); background: rgba(203, 46, 46, 0.07); }
+.lp-leitura-acoes button:active { transform: scale(0.9); color: var(--lp-vermelho); }
+.lp-leitura-acoes svg { width: 24px; height: 24px; margin: 0; fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
 @media (max-width: 760px) {
   /* o título encolhe um pouco para caber com os dois ícones na mesma linha */
   .lp-leitura-cabeca { gap: 0.6rem; }
-  .lp-leitura-cabeca .leitura-label { font-size: min(48px, 10.2vw); }
-  .lp-leitura-acoes { gap: 0.4rem; }
-  .lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar { width: 36px; height: 36px; }
-}
-/* Os dois ícones no fim da linha do título: pequenos, só o traço, sem círculo; um fundo leve
-   aparece no toque/hover. Área de toque de 34px, desenho de ~18px */
-.lp-leitura-acoes { margin-left: auto; gap: 0.15rem; }
-.lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar {
-  width: 34px; height: 34px; border: 0; border-radius: 50%; background: transparent;
-  color: var(--lp-vermelho); transition: background 0.2s, transform 0.15s;
-}
-.lp-leitura-acoes .lp-ouvir-botao:hover, .lp-leitura-acoes .lp-compartilhar:hover { background: rgba(203, 46, 46, 0.08); }
-.lp-leitura-acoes button:active { transform: scale(0.9); background: rgba(203, 46, 46, 0.12); }
-.lp-leitura-acoes svg { width: 19px; height: 19px; margin: 0; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-@media (max-width: 760px) {
   .lp-leitura-cabeca .leitura-label { font-size: min(48px, 11vw); }
   .lp-leitura-acoes { gap: 0; }
-  .lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar { width: 34px; height: 34px; }
+  .lp-leitura-acoes .lp-ouvir-botao, .lp-leitura-acoes .lp-compartilhar { width: 36px; height: 36px; }
 }

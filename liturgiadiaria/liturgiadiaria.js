@@ -735,7 +735,7 @@ async function botaoOuvir(dt, dia) {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'lp-ouvir-botao';
-    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14.5a1.5 1.5 0 0 1 1.5-1.5H7a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5.5A1.5 1.5 0 0 1 4 18.5zM20 14.5a1.5 1.5 0 0 0-1.5-1.5H17a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h1.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg>';
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 16.5V12a8.5 8.5 0 0 1 17 0v4.5"/><path d="M3.5 15a2 2 0 0 1 2-2H6a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5a2 2 0 0 1-2-2zM20.5 15a2 2 0 0 0-2-2H18a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h.5a2 2 0 0 0 2-2z"/></svg>';
     b.setAttribute('aria-label', `Ouvir: ${rotulo}`);
     b.title = 'Ouvir';
     b.addEventListener('click', async () => {
@@ -800,7 +800,7 @@ function botoesDeCompartilhar(dt, dia, blocos, trechos) {
     botao.className = 'lp-compartilhar';
     botao.setAttribute('aria-label', `Compartilhar: ${leitura.rotulo}`);
     botao.title = 'Compartilhar';
-    botao.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14.5V3.8M8.4 7.2 12 3.6l3.6 3.6M8.5 10.5H7a1.8 1.8 0 0 0-1.8 1.8v6.9A1.8 1.8 0 0 0 7 21h10a1.8 1.8 0 0 0 1.8-1.8v-6.9a1.8 1.8 0 0 0-1.8-1.8h-1.5"/></svg>';
+    botao.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14V3.5M8 7.5l4-4 4 4"/><path d="M8.5 10.5H7a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6.5a2 2 0 0 0-2-2h-1.5"/></svg>';
     botao.addEventListener('click', async () => {
       const [{ abrirCard, escolherFotos }, catalogo] = await comEspera(botao, Promise.all([
         import('/liturgiadiaria/compartilhar.mjs'),
