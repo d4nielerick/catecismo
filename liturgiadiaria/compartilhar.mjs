@@ -10,7 +10,7 @@
  * pessoa mesma compartilha.
  */
 
-import { COR_FUNDO, COR_CALENDARIO, cabecalhoDoDia } from '/liturgiadiaria/render.mjs';
+import { COR_FUNDO, COR_CALENDARIO, cabecalhoDoDia, VERSO } from '/liturgiadiaria/render.mjs';
 import { paginas } from '/liturgiadiaria/imagem-do-dia.mjs';
 
 const SITE = 'santadoutrina.cloud/liturgiadiaria';   // do link compartilhado
@@ -360,6 +360,15 @@ function montarJanela() {
         <button class="lp-card-seta lp-card-prox" type="button" aria-label="Próximo layout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></button>
       </div>
       <div class="lp-card-fotos" aria-label="Pintura do card"></div>
+      <button type="button" class="lp-card-escolher" hidden>Escolher outro trecho</button>
+      <section class="lp-card-versos" aria-label="Escolher o trecho" hidden>
+        <header>
+          <div><p class="lp-card-versos-titulo">Escolha o trecho</p><p class="lp-card-versos-dica"></p></div>
+          <button type="button" class="lp-card-pronto">Pronto</button>
+        </header>
+        <div class="lp-card-versos-lista"></div>
+        <p class="lp-card-versos-conta"></p>
+      </section>
       <div class="lp-card-acoes">
         <button type="button" data-destino="whatsapp"><span class="lp-card-icone">${ICONE.whatsapp}</span>WhatsApp</button>
         <button type="button" data-destino="instagram"><span class="lp-card-icone">${ICONE.instagram}</span>Instagram</button>
@@ -370,7 +379,7 @@ function montarJanela() {
   document.body.append(dlg);
 
   const trilho = dlg.querySelector('.lp-card-trilho');
-  const passo = () => trilho.children[1].offsetLeft - trilho.children[0].offsetLeft;
+  const passo = () => (trilho.children.length > 1 ? trilho.children[1].offsetLeft - trilho.children[0].offsetLeft : 1);
 
   // Toque na aba ou na seta: rolagem própria, curta (~260ms), em vez da "smooth" do navegador.
   let animacao = 0;
@@ -424,6 +433,17 @@ function montarJanela() {
     const b = e.target.closest('[data-foto]');
     if (b) trocarFoto(+b.dataset.foto);
   });
+  dlg.querySelector('.lp-card-escolher').addEventListener('click', () => abrirVersos(true));
+  dlg.querySelector('.lp-card-pronto').addEventListener('click', () => abrirVersos(false));
+  const lista = dlg.querySelector('.lp-card-versos-lista');
+  lista.addEventListener('click', e => {
+    const b = e.target.closest('[data-u]');
+    if (b) tocarVerso(+b.dataset.u);
+  });
+  lista.addEventListener('keydown', e => {
+    const b = e.target.closest('[data-u]');
+    if (b && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); tocarVerso(+b.dataset.u); }
+  });
   dlg.querySelector('.lp-card-acoes').addEventListener('click', e => {
     const destino = e.target.closest('[data-destino]')?.dataset.destino;
     if (destino) enviar(destino);
@@ -438,6 +458,8 @@ function marcar() {
   dlg.querySelectorAll('.lp-card-abas button').forEach((b, i) => b.setAttribute('aria-current', i === atual));
   dlg.querySelectorAll('.lp-card-slide').forEach((f, i) => f.classList.toggle('atual', i === atual));
   if (trecho) dlg.querySelector('.lp-card-fotos').classList.toggle('inativa', LAYOUTS[atual].id === 'texto');
+  dlg.querySelector('.lp-card-escolher').hidden = !trecho || !unidades.length || escolhendo;
+  if (!trecho && escolhendo) abrirVersos(false);
   dlg.classList.toggle('lp-card-paginas', !trecho);
   // sem setas com uma página só e em "Esta leitura" (as páginas passam arrastando)
   dlg.classList.toggle('lp-card-uma', modo === 'leitura' || dlg.querySelector('.lp-card-trilho').children.length < 2);
@@ -655,12 +677,152 @@ async function trocarModo(m) {
   if (vez === pedidoModo) carregando(false);
 }
 
+// ── Escolher o trecho ────────────────────────────────────────────────────────
+// A leitura vira uma lista de versículos (o lecionário traz os números); a pessoa toca no primeiro
+// e no último e o card se refaz. A referência passa a ser a dos versículos ("Ecl 1,7-8").
+// Versículo que termina no meio da frase (vírgula, dois-pontos…) puxa o seguinte; o que começa em
+// minúscula puxa o anterior: o card nunca sai com uma frase pela metade.
+const MAX_TRECHO = 280;
+let unidades = [];          // [{ n, cap, texto }] — n "R." é o refrão do salmo
+let livro = '';             // "Ecl ", "Sl "
+let selA = -1, selB = -1, esperando = false, escolhendo = false;
+
+const limparVerso = l => l.replace(/[*†+]/g, '').replace(/\s+/g, ' ').trim();
+
+function prepararVersos(c) {
+  unidades = []; selA = selB = -1; esperando = false;
+  if (escolhendo) abrirVersos(false);
+  dlg.querySelector('.lp-card-versos-lista').innerHTML = '';
+  const leitura = c.dia?.missas?.[0]?.leituras?.find(l => l.referencia === c.referenciaCompleta);
+  if (!leitura) return;
+  const ref = c.referencia;
+  const m = ref.match(/^(.*?)(\d+(?:\(\d+\))?),/);
+  if (!m) return;
+  livro = m[1];
+  const caps = [...ref.slice(m[1].length).matchAll(/(\d+(?:\(\d+\))?),/g)].map(x => x[1]);
+  let ci = 0, antes = 0, atualU = null, noRefrao = false;
+  const refrao = [];
+  for (const cru of leitura.texto.split('\n')) {
+    const l = cru.trim();
+    if (!l) continue;
+    if (/^R\.?$/.test(l)) { noRefrao = !unidades.length && !refrao.length; atualU = null; continue; }
+    if (/^(V\.?|Ou:?)$/i.test(l)) continue;
+    if (VERSO.test(l) && !/^[a-z]$/.test(l)) {
+      noRefrao = false;
+      let n = l, cap = caps[ci];
+      if (l.includes(',')) { [cap, n] = l.split(','); ci = Math.max(0, caps.indexOf(cap)); }
+      else {
+        const num = parseInt(l, 10);
+        if (num < antes && ci < caps.length - 1) cap = caps[++ci];
+        antes = num;
+      }
+      atualU = { n, cap, linhas: [] };
+      unidades.push(atualU);
+      continue;
+    }
+    if (noRefrao) refrao.push(l);
+    else if (atualU) atualU.linhas.push(l);
+  }
+  unidades = unidades.filter(u => u.linhas.length).map(u => ({ n: u.n, cap: u.cap, texto: limparVerso(u.linhas.join(' ')) }));
+  if (refrao.length && leitura.tipo === 'salmo') {
+    const r = c.referenciaCompleta.match(/\(R\.\s*([^)]*)\)/)?.[1]?.trim() || '';
+    const refR = /[A-Za-z]/.test(r) ? r : r ? `${livro}${caps[0]},${r}` : ref;
+    unidades.unshift({ n: 'R.', cap: '', texto: limparVerso(refrao.join(' ')), ref: refR });
+  }
+  if (!unidades.length) return;
+  // os versículos que contêm o trecho escolhido para o dia ficam marcados
+  const norm = t => t.normalize('NFD').replace(/[^a-zA-Z]/g, '').toLowerCase();
+  if (conteudo.trecho) {
+    const t = norm(conteudo.trecho);
+    const achar = pedaco => unidades.findIndex(u => norm(u.texto).includes(pedaco));
+    const a = achar(t.slice(0, 24)), b = achar(t.slice(-24));
+    if (a >= 0 && b >= a) { selA = a; selB = b; }
+  } else {
+    // dia sem trecho escolhido: começa pelo 1º versículo (no salmo, o refrão)
+    const [a, b] = efetivo(0, 0);
+    selA = a; selB = b;
+    conteudo.trecho = textoDe(a, b);
+    conteudo.referencia = refDe(a, b);
+  }
+  const lista = dlg.querySelector('.lp-card-versos-lista');
+  // o texto corrido, como na página: cada versículo é um pedaço tocável do parágrafo; o refrão
+  // do salmo vem num parágrafo próprio
+  // (o espaço entre um versículo e o outro fica dentro do pedaço: o marca-texto segue sem falha)
+  const verso = (u, i) => `<span class="lp-verso" role="button" tabindex="0" data-u="${i}"><sup>${u.n}</sup>${u.texto}${i < unidades.length - 1 ? ' ' : ''}</span>`;
+  const abre = unidades[0].n === 'R.' ? `<p class="lp-versos-refrao">${verso(unidades[0], 0)}</p>` : '';
+  lista.innerHTML = `${abre}<p>${unidades.map((u, i) => (u.n === 'R.' ? '' : verso(u, i))).join('')}</p>`;
+  pintarVersos();
+}
+
+/** Estende a faixa até frases inteiras. O refrão fica sempre sozinho. */
+function efetivo(a, b) {
+  if (unidades[a].n === 'R.' || unidades[b].n === 'R.') return [a, a];
+  const primeiro = unidades[0].n === 'R.' ? 1 : 0;
+  while (b < unidades.length - 1 && !/[.!?…]["”']?$/.test(unidades[b].texto)) b++;
+  while (a > primeiro && /^["“']?[a-zà-ú]/.test(unidades[a].texto)) a--;
+  return [a, b];
+}
+
+function textoDe(a, b) {
+  let t = unidades.slice(a, b + 1).map(u => u.texto).join(' ');
+  if ((t.match(/"/g) || []).length % 2) t = t.replace(/"/g, '');   // aspas que abrem ou fecham fora do trecho
+  t = t.replace(/[,;:]$/, '.');
+  return maiuscula(t);
+}
+
+function refDe(a, b) {
+  const ua = unidades[a], ub = unidades[b];
+  if (ua.n === 'R.') return ua.ref;
+  if (ua.cap === ub.cap) return `${livro}${ua.cap},${ua.n}${a === b ? '' : `-${ub.n}`}`;
+  return `${livro}${ua.cap},${ua.n}–${ub.cap},${ub.n}`;
+}
+
+function abrirVersos(sim) {
+  escolhendo = sim;
+  dlg.querySelector('.lp-card-versos').hidden = !sim;
+  dlg.classList.toggle('lp-card-escolhendo', sim);
+  dlg.querySelector('.lp-card-escolher').hidden = sim || modo !== 'trecho' || !unidades.length;
+  if (sim) {
+    esperando = false;
+    pintarVersos();
+    dlg.querySelector(`.lp-verso[data-u="${Math.max(0, selA)}"]`)?.scrollIntoView({ block: 'center' });
+  }
+}
+
+function tocarVerso(i) {
+  if (!esperando || unidades[i].n === 'R.' || unidades[selA]?.n === 'R.') { selA = selB = i; esperando = unidades[i].n !== 'R.'; }
+  else { selB = Math.max(selA, i); selA = Math.min(selA, i); esperando = false; }
+  [selA, selB] = efetivo(selA, selB);
+  const texto = textoDe(selA, selB);
+  pintarVersos(texto);
+  if (texto.length > MAX_TRECHO) return;   // longo demais: o card fica com o último trecho que cabia
+  conteudo.trecho = texto;
+  conteudo.referencia = refDe(selA, selB);
+  desenharTodos();
+}
+
+function pintarVersos(texto = selA >= 0 ? textoDe(selA, selB) : '') {
+  dlg.querySelectorAll('.lp-verso').forEach((b, i) => {
+    b.classList.toggle('sel', i >= selA && i <= selB);
+  });
+  dlg.querySelector('.lp-card-versos-dica').textContent = esperando
+    ? 'Agora toque no último versículo'
+    : 'Toque no primeiro e no último versículo';
+  const conta = dlg.querySelector('.lp-card-versos-conta');
+  const longo = texto.length > MAX_TRECHO;
+  conta.classList.toggle('longo', longo);
+  conta.textContent = longo
+    ? `Longo demais para o card: ${texto.length}/${MAX_TRECHO} letras`
+    : texto ? `${texto.length}/${MAX_TRECHO} letras` : '';
+}
+
 /** c: { dt, trecho?, referencia, rotulo, celebracao, data, dataCurta, cor, fotos?, dia?, referenciaCompleta? }
  *  Com dia e referenciaCompleta, abre em "Esta leitura" (e há "Todas as leituras"); sem trecho,
  *  a aba "Trecho" some. O card do santo (selo) é só trecho. */
 export async function abrirCard(c, { aoFechar } = {}) {
   if (!dlg) montarJanela();
   conteudo = { ...c, trecho: c.trecho ? maiuscula(c.trecho) : '' };
+  prepararVersos(c);
   // selo no alto da janela: "Santo do dia" quando o card é de uma frase do santo
   const titulo = dlg.querySelector('.lp-card-titulo');
   titulo.textContent = c.selo || 'Compartilhar';
@@ -674,7 +836,7 @@ export async function abrirCard(c, { aoFechar } = {}) {
   const comPaginas = !!(c.dia && c.referenciaCompleta);
   const modos = dlg.querySelector('.lp-card-modos');
   modos.hidden = !comPaginas;
-  modos.querySelector('[data-modo="trecho"]').hidden = !conteudo.trecho;
+  modos.querySelector('[data-modo="trecho"]').hidden = !conteudo.trecho;   // sem trecho do dia, vem o 1º versículo (prepararVersos)
   dlg.showModal();
   delete imagens.arte;
   if (comPaginas) {

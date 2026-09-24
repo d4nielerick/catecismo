@@ -1766,3 +1766,44 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-card-modos + .lp-card-abas button { font-size: 0.72rem; padding: 0.35rem 0.8rem; }
 @media (max-width: 380px) { .lp-card-modos button { font-size: 0.72rem; padding: 0.45rem 0.65rem; } }
 .lp-card-uma .lp-card-seta { display: none; }
+/* Escolher o trecho: a leitura em versículos, numa gaveta embaixo do card (que encolhe e segue
+   visível, refazendo-se a cada toque) */
+.lp-card-escolher {
+  align-self: center; margin: 0.6rem auto 0; padding: 0.5rem 1.05rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid rgba(242, 234, 216, 0.28); background: transparent; color: #f2ead8;
+  font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600; transition: background 0.2s;
+}
+.lp-card-escolher:hover { background: rgba(242, 234, 216, 0.08); }
+.lp-card-escolher[hidden], .lp-card-versos[hidden] { display: none; }
+.lp-card-escolhendo .lp-card-fotos, .lp-card-escolhendo .lp-card-acoes, .lp-card-escolhendo .lp-card-aviso { display: none; }
+.lp-card-versos {
+  flex: 0 0 48dvh; min-height: 0; display: flex; flex-direction: column;
+  margin: 0.5rem 0.75rem 0; border-radius: 18px; overflow: hidden; background: #221e18;
+  animation: lp-versos-sobe 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes lp-versos-sobe { from { transform: translateY(40%); opacity: 0; } to { transform: none; opacity: 1; } }
+.lp-card-versos header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 1rem 0.55rem 1.1rem; }
+.lp-card-versos-titulo { margin: 0; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; color: #f2ead8; }
+.lp-card-versos-dica { margin: 0.15rem 0 0; font-family: var(--font-sans); font-size: 0.74rem; color: rgba(242, 234, 216, 0.6); }
+.lp-card-pronto {
+  flex: none; border: 0; border-radius: 999px; padding: 0.5rem 1.1rem; cursor: pointer;
+  background: #f2ead8; color: #1c1812; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600;
+}
+.lp-card-versos-lista { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0.2rem 1.1rem 0.5rem; }
+.lp-card-versos-lista p {
+  margin: 0; font-family: var(--font-leitura); font-size: 1.02rem; line-height: 1.75; color: rgba(242, 234, 216, 0.5);
+}
+.lp-card-versos-lista .lp-versos-refrao { margin-bottom: 0.7rem; font-style: italic; }
+/* o trecho escolhido acende como marca-texto, contínuo de um versículo ao outro */
+.lp-verso {
+  cursor: pointer; border-radius: 3px; padding: 0.12em 0; transition: background 0.15s, color 0.15s;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone; -webkit-tap-highlight-color: transparent;
+}
+.lp-verso sup { font-family: var(--font-sans); font-size: 0.62rem; font-weight: 600; color: #cb2e2e; margin-right: 0.2em; font-style: normal; }
+.lp-verso.sel { color: #fff; background: rgba(203, 46, 46, 0.3); }
+.lp-verso.sel sup { color: #f5b3a8; }
+.lp-verso:focus-visible { outline: 1px solid rgba(242, 234, 216, 0.6); outline-offset: 2px; }
+@media (hover: hover) { .lp-verso:not(.sel):hover { color: rgba(242, 234, 216, 0.85); } }
+.lp-card-versos-conta { margin: 0; padding: 0.45rem 1.1rem 0.75rem; font-family: var(--font-sans); font-size: 0.72rem; color: rgba(242, 234, 216, 0.5); }
+.lp-card-versos-conta.longo { color: #f09595; }
+@media (min-width: 761px) { .lp-card-versos { width: min(640px, calc(100% - 2rem)); margin-inline: auto; align-self: center; } }
