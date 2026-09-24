@@ -2,6 +2,9 @@
  * scripts/build-audio-liturgia.mjs — leitura em voz alta de uma leitura do dia (piloto).
  *
  *   node scripts/build-audio-liturgia.mjs AAAA-MM-DD evangelho            # gera (ElevenLabs) e grava
+ *   node scripts/build-audio-liturgia.mjs AAAA-MM-DD todas                # todas as leituras do dia
+ *   … --ensaio                                                            # só mostra o texto que seria lido
+ *   (leituras: primeira-leitura, salmo, segunda-leitura, evangelho — os ids dos cards na página)
  *   node scripts/build-audio-liturgia.mjs AAAA-MM-DD evangelho audio.mp3 tempos.json   # só monta, sem gerar
  *
  * Gera a voz com antecedência (fora do site, nada de IA em tempo de execução): o texto falado é o
@@ -20,22 +23,84 @@ import { fileURLToPath } from 'node:url';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const VOZ = { id: 'nPczCjzI2devNBz1zQrb', nome: 'Brian (ElevenLabs, multilíngue v2)' };
-const [dt, qual = 'evangelho', audioArq, temposArq] = process.argv.slice(2);
+const ENSAIO = process.argv.includes('--ensaio');   // só mostra o texto que seria lido, sem gerar
+const [dt, pedido = 'evangelho', audioArq, temposArq] = process.argv.slice(2).filter(a => a !== '--ensaio');
 
 const dia = JSON.parse(fs.readFileSync(path.join(RAIZ, 'data', 'liturgia', `${dt}.json`), 'utf8'));
-const leitura = dia.missas[0].leituras.find(l => (qual === 'evangelho' ? l.tipo === 'evangelho' : false));
-if (!leitura) throw new Error(`${dt}: leitura "${qual}" não encontrada`);
+const principais = dia.missas[0].leituras.filter(l => !l.alternativa);
+const ACHAR = {
+  'primeira-leitura': l => l.tipo === 'leitura' && /^1ª/.test(l.rotulo),
+  'segunda-leitura': l => l.tipo === 'leitura' && /^2ª|Epístola/.test(l.rotulo),
+  salmo: l => l.tipo === 'salmo',
+  evangelho: l => l.tipo === 'evangelho',
+};
 
-const LIVRO = { Mt: 'Mateus', Mc: 'Marcos', Lc: 'Lucas', Jo: 'João' };
-const livro = LIVRO[leitura.referencia.split(' ')[0]] || '';
-const abertura = `Evangelho de Nosso Senhor Jesus Cristo segundo ${livro}.`;
-const fecho = 'Palavra da Salvação.';
-const linhasFonte = leitura.texto.split('\n').map(l => l.trim())
-  .filter(l => l && !/^(\d+[a-z]?|\d+,\d+[a-z]?|[a-z])$/.test(l));
-const unidades = [abertura, ...linhasFonte, fecho];
-const falado = unidades.join(' ').replace(/\s+/g, ' ').trim();
+// "Leitura do Livro dos Provérbios", "Leitura da Carta de São Paulo aos Filipenses"…
+const LIVROS = {
+  Gn: 'do Livro do Gênesis', Ex: 'do Livro do Êxodo', Lv: 'do Livro do Levítico', Nm: 'do Livro dos Números', Dt: 'do Livro do Deuteronômio',
+  Js: 'do Livro de Josué', Jz: 'do Livro dos Juízes', Rt: 'do Livro de Rute', '1Sm': 'do Primeiro Livro de Samuel', '2Sm': 'do Segundo Livro de Samuel',
+  '1Rs': 'do Primeiro Livro dos Reis', '2Rs': 'do Segundo Livro dos Reis', '1Cr': 'do Primeiro Livro das Crônicas', '2Cr': 'do Segundo Livro das Crônicas',
+  Esd: 'do Livro de Esdras', Ne: 'do Livro de Neemias', Tb: 'do Livro de Tobias', Jt: 'do Livro de Judite', Est: 'do Livro de Ester',
+  '1Mc': 'do Primeiro Livro dos Macabeus', '2Mc': 'do Segundo Livro dos Macabeus', 'Jó': 'do Livro de Jó', Pr: 'do Livro dos Provérbios',
+  Ecl: 'do Livro do Eclesiastes', Ct: 'do Livro do Cântico dos Cânticos', Sb: 'do Livro da Sabedoria', Eclo: 'do Livro do Eclesiástico',
+  Is: 'do Livro do Profeta Isaías', Jr: 'do Livro do Profeta Jeremias', Lm: 'do Livro das Lamentações', Br: 'do Livro do Profeta Baruc',
+  Ez: 'da Profecia de Ezequiel', Dn: 'da Profecia de Daniel', Os: 'da Profecia de Oseias', Jl: 'da Profecia de Joel', Am: 'da Profecia de Amós',
+  Ab: 'da Profecia de Abdias', Jn: 'da Profecia de Jonas', Mq: 'da Profecia de Miqueias', Na: 'da Profecia de Naum', Hab: 'da Profecia de Habacuc',
+  Sf: 'da Profecia de Sofonias', Ag: 'da Profecia de Ageu', Zc: 'da Profecia de Zacarias', Ml: 'da Profecia de Malaquias',
+  At: 'dos Atos dos Apóstolos', Rm: 'da Carta de São Paulo aos Romanos', '1Cor': 'da Primeira Carta de São Paulo aos Coríntios',
+  '2Cor': 'da Segunda Carta de São Paulo aos Coríntios', Gl: 'da Carta de São Paulo aos Gálatas', Ef: 'da Carta de São Paulo aos Efésios',
+  Fl: 'da Carta de São Paulo aos Filipenses', Cl: 'da Carta de São Paulo aos Colossenses', '1Ts': 'da Primeira Carta de São Paulo aos Tessalonicenses',
+  '2Ts': 'da Segunda Carta de São Paulo aos Tessalonicenses', '1Tm': 'da Primeira Carta de São Paulo a Timóteo', '2Tm': 'da Segunda Carta de São Paulo a Timóteo',
+  Tt: 'da Carta de São Paulo a Tito', Fm: 'da Carta de São Paulo a Filêmon', Hb: 'da Carta aos Hebreus', Tg: 'da Carta de São Tiago',
+  '1Pd': 'da Primeira Carta de São Pedro', '2Pd': 'da Segunda Carta de São Pedro', '1Jo': 'da Primeira Carta de São João',
+  '2Jo': 'da Segunda Carta de São João', '3Jo': 'da Terceira Carta de São João', Jd: 'da Carta de São Judas', Ap: 'do Livro do Apocalipse de São João',
+};
+const EVANGELISTA = { Mt: 'Mateus', Mc: 'Marcos', Lc: 'Lucas', Jo: 'João' };
+const VERSO = /^(\d+[a-z]?|\d+,\d+[a-z]?|[a-z])$/;
 
-async function gerar() {
+/** Texto falado de uma leitura, em unidades (linhas do lecionário) na ordem em que são lidas. */
+function unidadesDe(l) {
+  const livro = l.referencia.split(' ')[0];
+  const linhas = l.texto.split('\n').map(x => x.replace(/[*†]/g, '').trim()).filter(x => x && !VERSO.test(x));
+  if (l.tipo === 'evangelho') {
+    return [`Evangelho de Nosso Senhor Jesus Cristo segundo ${EVANGELISTA[livro] || ''}.`, ...linhas, 'Palavra da Salvação.'];
+  }
+  if (l.tipo === 'salmo') {
+    // o refrão vem depois do primeiro "R." e termina no primeiro versículo (número ou linha com "*"),
+    // a mesma regra de render.mjs; cada "R." sozinho depois repete o refrão
+    const cruas = l.texto.split('\n').map(x => x.trim()).filter(Boolean);
+    const refrao = [];
+    let i = 0;
+    if (/^R\.?$/.test(cruas[0])) {
+      for (i = 1; i < cruas.length && !VERSO.test(cruas[i]) && !cruas[i].includes('*') && !/^R\.?$/.test(cruas[i]); i++) {
+        if (!/^Ou:?$/i.test(cruas[i])) refrao.push(cruas[i]);
+      }
+    }
+    const saida = ['Salmo responsorial.', ...refrao];
+    for (; i < cruas.length; i++) {
+      const x = cruas[i].replace(/[*†]/g, '').trim();
+      if (!x || VERSO.test(x)) continue;
+      saida.push(...(/^R\.?$/.test(x) ? refrao : [x]));
+    }
+    return saida;
+  }
+  const abertura = LIVROS[livro] ? `Leitura ${LIVROS[livro]}.` : `${l.rotulo}.`;
+  return [abertura, ...linhas, 'Palavra do Senhor.'];
+}
+
+async function gerarLeitura(qual) {
+  const leitura = principais.find(ACHAR[qual]);
+  if (!leitura) { console.log(`${dt}: sem ${qual}`); return; }
+  const unidades = unidadesDe(leitura);
+  const falado = unidades.join(' ').replace(/\s+/g, ' ').trim();
+  if (ENSAIO) { console.log(`\n── ${qual} (${falado.length} caracteres)\n${unidades.join('\n')}`); return; }
+  const { audio, tempos } = audioArq
+    ? { audio: fs.readFileSync(audioArq), tempos: JSON.parse(fs.readFileSync(temposArq, 'utf8')) }
+    : await gerar(falado);
+  montar(qual, leitura, unidades, falado, audio, tempos);
+}
+
+async function gerar(falado) {
   let chave = process.env.ELEVENLABS_API_KEY;
   if (!chave) chave = execFileSync('security', ['find-generic-password', '-a', process.env.USER, '-s', 'elevenlabs-api-key', '-w']).toString().trim();
   const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOZ.id}/with-timestamps?output_format=mp3_44100_96`, {
@@ -51,10 +116,7 @@ async function gerar() {
   return { audio: Buffer.from(j.audio_base64, 'base64'), tempos: j.alignment };
 }
 
-const { audio, tempos } = audioArq
-  ? { audio: fs.readFileSync(audioArq), tempos: JSON.parse(fs.readFileSync(temposArq, 'utf8')) }
-  : await gerar();
-
+function montar(qual, leitura, unidades, falado, audio, tempos) {
 const letras = tempos.characters.join('');
 if (letras !== falado) throw new Error('o áudio não corresponde ao texto desta leitura (gere de novo)');
 const ini = tempos.character_start_times_seconds, fim = tempos.character_end_times_seconds;
@@ -77,3 +139,6 @@ fs.writeFileSync(path.join(dir, `${qual}.mp3`), audio);
 const saida = { referencia: leitura.referencia, voz: VOZ.nome, duracao: +fim.at(-1).toFixed(2), linhas };
 fs.writeFileSync(path.join(dir, `${qual}.json`), `${JSON.stringify(saida, null, 2)}\n`);
 console.log(`data/liturgia-audio/${dt}/${qual}: ${linhas.length} linhas, ${saida.duracao}s`);
+}
+
+for (const qual of pedido === 'todas' ? Object.keys(ACHAR) : [pedido]) await gerarLeitura(qual);

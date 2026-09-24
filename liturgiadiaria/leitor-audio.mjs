@@ -10,13 +10,16 @@
  */
 
 const MUSICA = '/assets/audio/fundo-leitura.mp3';
-const VOLUME_MUSICA = 0.14;
+const VOLUME_MUSICA = 0.07;   // bem por baixo da voz
 const REDUZIDO = matchMedia('(prefers-reduced-motion: reduce)');
 
 let dlg = null;
 let voz = null;
 let musica = null;
 let dados = null;
+let fila = [];      // as leituras do dia com voz, na ordem da missa
+let posFila = 0;
+let diaAtual = '';
 let atual = -1;
 let quadro = 0;
 let esperaControles = 0;
@@ -152,39 +155,57 @@ function acompanhar() {
   quadro = requestAnimationFrame(acompanhar);
 }
 
-/** d: { dt, qual, rotulo, cor } — cor: a cor do dia (para o fundo). */
-export async function ouvir({ dt, qual = 'evangelho', rotulo = 'Evangelho', cor = '#3a2a1a' }) {
-  if (!dlg) montar();
-  const base = `/data/liturgia-audio/${dt}/${qual}`;
+/** Carrega a leitura k da fila (texto, voz, tela de bloqueio) sem mexer na música. */
+async function carregar(k, { tocarDepois = true } = {}) {
+  posFila = k;
+  const { qual, rotulo } = fila[k];
+  const base = `/data/liturgia-audio/${diaAtual}/${qual}`;
   dados = await fetch(`${base}.json`).then(r => r.json());
-  dlg.style.setProperty('--lp-ouvir-cor', cor);
-  dlg.querySelector('.lp-ouvir-rotulo').textContent = rotulo;
+  dlg.querySelector('.lp-ouvir-rotulo').textContent = fila.length > 1 ? `${rotulo} · ${k + 1} de ${fila.length}` : rotulo;
   dlg.querySelector('.lp-ouvir-ref').textContent = dados.referencia;
-  dlg.querySelector('.lp-ouvir-texto').innerHTML = dados.linhas
+  const caixa = dlg.querySelector('.lp-ouvir-texto');
+  caixa.innerHTML = dados.linhas
     .map((l, i) => `<p data-i="${i}">${l.texto.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</p>`).join('');
-  dlg.querySelector('.lp-ouvir-musica').classList.toggle('desligada', !musicaLigada);
+  caixa.scrollTop = 0;
   atual = -1;
 
   voz?.pause();
   voz = new Audio(`${base}.mp3`);
   voz.preload = 'auto';
-  voz.addEventListener('ended', () => { pausar(); if (musica) fade(musica, 0, 2500, () => musica.pause()); });
-  if (!musica) { musica = new Audio(MUSICA); musica.loop = true; musica.preload = 'auto'; }
-  musica.volume = 0;
-
+  voz.addEventListener('ended', () => {
+    // acabou esta leitura: segue para a próxima; na última, a música sai devagar
+    if (posFila < fila.length - 1) { carregar(posFila + 1); return; }
+    pausar();
+    if (musica) fade(musica, 0, 2500, () => musica.pause());
+  });
   if ('mediaSession' in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: `${rotulo} — ${dados.referencia}`, artist: 'Liturgia Diária',
       artwork: [{ src: '/assets/img/liturgia-icone-512.png?v=3', sizes: '512x512', type: 'image/png' }],
     });
+    navigator.mediaSession.setActionHandler('nexttrack', posFila < fila.length - 1 ? () => carregar(posFila + 1) : null);
+    navigator.mediaSession.setActionHandler('previoustrack', posFila > 0 ? () => carregar(posFila - 1) : null);
+  }
+  if (tocarDepois) { voz.play().catch(() => {}); }
+}
+
+/** d: { dt, fila: [{ qual, rotulo }], inicio, cor } — fila: as leituras com voz; inicio: a tocada. */
+export async function ouvir({ dt, fila: leituras, inicio = 0, cor = '#3a2a1a' }) {
+  if (!dlg) montar();
+  diaAtual = dt;
+  fila = leituras;
+  dlg.style.setProperty('--lp-ouvir-cor', cor);
+  dlg.querySelector('.lp-ouvir-musica').classList.toggle('desligada', !musicaLigada);
+  if (!musica) { musica = new Audio(MUSICA); musica.loop = true; musica.preload = 'auto'; }
+  musica.volume = 0;
+  if ('mediaSession' in navigator) {
     navigator.mediaSession.setActionHandler('play', tocar);
     navigator.mediaSession.setActionHandler('pause', pausar);
     navigator.mediaSession.setActionHandler('seekbackward', () => { voz.currentTime = Math.max(0, voz.currentTime - 15); });
     navigator.mediaSession.setActionHandler('seekforward', () => { voz.currentTime += 15; });
   }
-
   dlg.showModal();
-  dlg.querySelector('.lp-ouvir-texto').scrollTop = 0;
+  await carregar(inicio, { tocarDepois: false });
   cancelAnimationFrame(quadro);
   quadro = requestAnimationFrame(acompanhar);
   tocar();
