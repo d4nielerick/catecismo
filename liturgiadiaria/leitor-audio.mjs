@@ -22,6 +22,7 @@ let posFila = 0;
 let inicioFila = 0;     // a leitura por onde a pessoa começou
 let seguirSozinho = true;  // começou do início (ou já aceitou continuar): passa à próxima com contagem
 let contagem = 0;
+let maoAte = 0;   // até quando a rolagem é da pessoa (a tela não puxa o texto de volta)
 let diaAtual = '';
 let atual = -1;
 let quadro = 0;
@@ -49,6 +50,7 @@ function montar() {
       <button type="button" class="lp-ouvir-fechar" aria-label="Fechar">${ICONE.fechar}</button>
     </header>
     <div class="lp-ouvir-texto" aria-live="off"></div>
+    <button type="button" class="lp-ouvir-pular" hidden></button>
     <div class="lp-ouvir-aviso" role="status" hidden>
       <p class="lp-ouvir-aviso-texto"></p>
       <div class="lp-ouvir-aviso-botoes"></div>
@@ -84,6 +86,26 @@ function montar() {
     const p = e.target.closest('[data-i]');
     if (p) { voz.currentTime = dados.linhas[+p.dataset.i].t0 + 0.01; if (voz.paused) tocar(); }
     mostrarControles();
+  });
+  // rolar com a mão: a tela deixa de acompanhar a voz por uns segundos; no fim do texto,
+  // aparece o atalho para a próxima leitura
+  const caixaTexto = dlg.querySelector('.lp-ouvir-texto');
+  const mao = () => { maoAte = performance.now() + 4000; };
+  caixaTexto.addEventListener('wheel', mao, { passive: true });
+  caixaTexto.addEventListener('touchmove', mao, { passive: true });
+  caixaTexto.addEventListener('scroll', () => {
+    if (performance.now() > maoAte) return;
+    const fim = caixaTexto.scrollTop + caixaTexto.clientHeight >= caixaTexto.scrollHeight - caixaTexto.clientHeight * 0.55;
+    const proxima = fila[posFila + 1];
+    const pular = dlg.querySelector('.lp-ouvir-pular');
+    pular.hidden = !(fim && proxima);
+    if (!pular.hidden) pular.textContent = `Pular para ${proxima.rotulo === 'Salmo' || proxima.rotulo === 'Evangelho' ? 'o' : 'a'} ${proxima.rotulo} ›`;
+  }, { passive: true });
+  dlg.querySelector('.lp-ouvir-pular').addEventListener('click', () => {
+    dlg.querySelector('.lp-ouvir-pular').hidden = true;
+    fecharAviso();
+    seguirSozinho = true;
+    carregar(posFila + 1).then(() => { if (musicaLigada && musica?.paused) tocar(); });
   });
   dlg.querySelector('.lp-ouvir-progresso').addEventListener('click', e => {
     const r = e.currentTarget.getBoundingClientRect();
@@ -214,6 +236,7 @@ function acompanhar() {
     });
     const caixa = dlg.querySelector('.lp-ouvir-texto');
     const alvo = ps[i];
+    if (performance.now() < maoAte) { quadro = requestAnimationFrame(acompanhar); return; }
     caixa.scrollTo({ top: alvo.offsetTop - caixa.clientHeight * 0.38 + alvo.offsetHeight / 2, behavior: REDUZIDO.matches ? 'auto' : 'smooth' });
   }
   const dur = voz.duration || dados.duracao;
@@ -239,6 +262,8 @@ async function carregar(k, { tocarDepois = true } = {}) {
     .map((l, i) => `<p data-i="${i}" class="${tipo(l, i)}">${l.texto.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</p>`).join('');
   caixa.scrollTop = 0;
   atual = -1;
+  maoAte = 0;
+  dlg.querySelector('.lp-ouvir-pular').hidden = true;
 
   voz?.pause();
   voz = new Audio(`${base}.mp3`);

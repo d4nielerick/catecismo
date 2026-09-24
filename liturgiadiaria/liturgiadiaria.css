@@ -1349,3 +1349,12 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-ouvir-texto p.rubrica.atual { color: rgba(255, 255, 255, 0.92); }
 .lp-ouvir-texto p.refrao { font-style: italic; font-weight: 400; margin-block: 0.3em 1em; }
 .lp-ouvir-texto p.refrao.atual { color: #f1d38b; }
+
+/* atalho para a próxima leitura, quando a pessoa rola o texto até o fim */
+.lp-ouvir-pular {
+  position: absolute; left: 50%; bottom: calc(10.5rem + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  padding: 0.75rem 1.3rem; border-radius: 999px; border: 0; cursor: pointer;
+  background: #fff; color: #0d0a07; font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); animation: lp-ouvir-aviso 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+.lp-ouvir-pular[hidden] { display: none; }
