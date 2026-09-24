@@ -1716,6 +1716,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   box-shadow: 0 6px 14px rgba(20, 14, 8, 0.22); opacity: 0; animation: t-san-app var(--t) var(--ease) infinite;
 }
 .t-san-apps svg { width: 19px; height: 19px; }
+.t-app-zap svg { width: 22px; height: 22px; }
 .t-app-zap { background: #25d366; }
 .t-app-insta { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%); animation-delay: 0.08s !important; }
 @keyframes t-san-app { 0%, 34% { opacity: 0; transform: translateY(8px) scale(0.8); } 42%, 84% { opacity: 1; transform: none; } 92%, 100% { opacity: 0; transform: translateY(4px); } }
