@@ -439,6 +439,7 @@ function marcar() {
   dlg.querySelectorAll('.lp-card-slide').forEach((f, i) => f.classList.toggle('atual', i === atual));
   if (trecho) dlg.querySelector('.lp-card-fotos').classList.toggle('inativa', LAYOUTS[atual].id === 'texto');
   dlg.classList.toggle('lp-card-paginas', !trecho);
+  dlg.classList.toggle('lp-card-uma', dlg.querySelector('.lp-card-trilho').children.length < 2);   // sem setas
 }
 
 /** Slides do trilho: um por layout (trecho) ou um por página (leitura/todas). */
@@ -638,7 +639,7 @@ async function trocarModo(m) {
   const lista = await cachePaginas[chave];
   if (vez !== pedidoModo) return;
   paginasDoModo = lista;
-  montarSlides(lista.map((_, i) => ({ w: 1080, h: 1920, alt: `Página ${i + 1} de ${lista.length}` })));
+  montarSlides(lista.map((cv, i) => ({ w: cv.width, h: cv.height, alt: `Página ${i + 1} de ${lista.length}` })));
   marcar();
   const imgs = dlg.querySelectorAll('.lp-card-slide img');
   await Promise.all(lista.map((cv, i) => new Promise(pronto => {

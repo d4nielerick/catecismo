@@ -7,7 +7,7 @@
  * paginas(dia, cab, { referencia }) → [<canvas>] — com referencia, só aquela leitura; sem, o dia
  * inteiro (a 1ª página abre com a data grande e a celebração).
  */
-import { VERSO } from '/liturgiadiaria/render.mjs';
+import { VERSO, DIA_DA_SEMANA } from '/liturgiadiaria/render.mjs';
 
 const W = 1080;
 const TITULO = "'Times New Roman', Times, Georgia, serif";
@@ -197,13 +197,15 @@ function cabecalhoPequeno(c, cab) {
   c.fillStyle = VERMELHO; c.font = `italic 400 32px ${TITULO}`;
   c.fillText('Liturgia Diária', M, 110);
   c.fillStyle = SUAVE; c.font = `400 24px ${LEITURA}`;
-  const linha = [cab.dataExtenso, cab.celebracao].filter(Boolean).join(' · ');
+  // "Quarta-feira da 4ª Semana da Quaresma" já diz o dia da semana: a data vai sem ele
+  const data = DIA_DA_SEMANA.test(cab.celebracao) ? cab.dataLonga : cab.dataExtenso;
+  const linha = [data, cab.celebracao].filter(Boolean).join(' · ');
   const [primeira] = quebrar(c, linha, LARG);
   c.fillText(primeira === linha ? linha : `${primeira.replace(/[\s,·]+$/, '')}…`, M, 150);
 }
 
-function rodapePagina(c, cab, i, n) {
-  const y = PH - 92;
+function rodapePagina(c, cab, i, n, H) {
+  const y = H - 92;
   c.fillStyle = VERMELHO; c.font = `italic 400 44px ${TITULO}`;
   c.fillText(cab.dataCurta, M, y);
   if (n > 1) {
@@ -278,13 +280,17 @@ export async function paginas(dia, cab, { referencia = null } = {}) {
   for (const corpo of [33, 31, 29]) { pags = tentar(corpo); if (pags.length === menor) break; }
   const orn = ornamento(null, faixa, PH);
   return pags.map((pag, i) => {
-    const cv = Object.assign(document.createElement('canvas'), { width: W, height: PH });
+    // uma página só e texto curto (um salmo): a imagem encolhe até o texto, sem ficar menor que
+    // o formato do feed (1080×1350) — nada de meia página vazia
+    const fim = Math.max(...pag.map(({ it, y }) => y + it.h));
+    const H = pags.length === 1 ? Math.min(PH, Math.max(1350, Math.ceil(fim + 230))) : PH;
+    const cv = Object.assign(document.createElement('canvas'), { width: W, height: H });
     const c = cv.getContext('2d');
-    c.fillStyle = FUNDO; c.fillRect(0, 0, W, PH);
+    c.fillStyle = FUNDO; c.fillRect(0, 0, W, H);
     if (orn) c.drawImage(orn, 24, 0);
     if (!(grandes && i === 0)) cabecalhoPequeno(c, cab);
     for (const { it, y } of pag) it.draw(c, y);
-    rodapePagina(c, cab, i, pags.length);
+    rodapePagina(c, cab, i, pags.length, H);
     return cv;
   });
 }

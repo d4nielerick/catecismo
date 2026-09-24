@@ -1765,3 +1765,4 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-card-modos + .lp-card-abas { margin-top: 0.35rem; }
 .lp-card-modos + .lp-card-abas button { font-size: 0.72rem; padding: 0.35rem 0.8rem; }
 @media (max-width: 380px) { .lp-card-modos button { font-size: 0.72rem; padding: 0.45rem 0.65rem; } }
+.lp-card-uma .lp-card-seta { display: none; }
