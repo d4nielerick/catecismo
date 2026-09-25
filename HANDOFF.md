@@ -219,10 +219,199 @@ Vaticano (português europeu → pt-BR), **não** é a tradução oficial da CNB
   ~1.060 citam Padres/Denzinger/papas/liturgia/Direito Canônico (link externo, por direitos);
   52 são referências bíblicas que o parser não lê por OCR ("Lc 24. 25-27", "Lc 1 , 3 1 .") —
   24 delas de Evangelho; 33 citam só capítulo ("Cf. Lc 15"); 7 são "Ibid.".
+- **Jev (TypeSafe AI) no seletor do hub — só se o volume crescer:** modelo "System One"
+  lançado em 15/09/2026, não gera texto — recebe um estado e N perguntas tipadas, responde
+  todas em paralelo com score de confiança calibrado (sem string para parsear). A etapa 3 de
+  `api/pergunta.js` (ler até 48 candidatos e escolher até 8) é exatamente esse formato: 48
+  decisões booleanas sobre o mesmo estado, e o score daria um ranking em vez do corte binário
+  de hoje. **Não fazer agora:** com `TETO_DIARIO = 100` não há volume que justifique (o
+  argumento do Jev é custo/latência em escala), está em early access, e acrescentaria mais um
+  fornecedor e mais uma chave a um projeto cuja premissa é não ter dependência externa. Os
+  "200x mais rápido / 400x mais barato" são número da própria empresa, sem verificação de
+  terceiros. Reavaliar quando o hub sair da fase silenciosa e o teto diário cair; a busca
+  determinística no meio do pipeline permite medir contra o seletor atual.
 - Ideias de maior prazo (ver `FUNCIONALIDADES.txt`, gerado março/2026 — trata a Vercel
   como produção, desatualizado nesse ponto mas as ideias continuam válidas): links
   compartilháveis de trechos, PWA, planos de estudo
   guiados, parcerias institucionais.
+
+### Liturgia Diária — planos futuros
+
+(Projeto próprio no mesmo repo; não misturar com os planos do catecismo acima.)
+
+- **Leitura em voz alta — tela sem distração, estilo "Letras" do Apple Music** (plano):
+  - *Voz:* áudio gerado **fora do site, com antecedência** (TTS de voz natural: ElevenLabs,
+    MiniMax ou Magnific), um arquivo por leitura por dia, com a **marcação de tempo de cada
+    trecho** (a própria ferramenta de voz dá o alinhamento; se não der, Whisper local sobre o
+    áudio gerado). Nada de IA em tempo de execução: a voz lê o texto oficial, não escreve nada.
+    Alternativa grátis e sem arquivos: a voz do próprio aparelho (Web Speech API), mas soa
+    robótica em português e a sincronia palavra a palavra falha no iPhone — só como reserva.
+  - *Texto falado:* sem números de versículo; abreviações por extenso ("Sl" → "Salmo"); no
+    salmo, o refrão lido como refrão; cabeçalho curto ("Primeira leitura, do livro dos
+    Provérbios").
+  - *Pipeline:* `scripts/build-audio-liturgia.mjs` → `data/liturgia-audio/AAAA-MM-DD/<leitura>.m4a`
+    (voz mono ~48 kbps, ~1 MB por leitura) + `.json` com [início, fim, trecho]. Janela móvel
+    (próximos 30–60 dias) para controlar custo e espaço. O `verifica-liturgia.mjs` passa a exigir:
+    todo trecho do texto exibido tem tempo, áudio existe, duração plausível, e o áudio some se as
+    leituras do dia mudarem (como o resumo).
+  - *Tela:* botão "Ouvir" em cada leitura (e "Ouvir todas" no topo). Abre em tela cheia, fundo
+    na cor litúrgica do dia (ou a pintura do card, bem escurecida e desfocada); só o texto em letra
+    grande: o trecho atual em destaque, os já lidos esmaecendo, os próximos mais apagados;
+    rolagem automática suave que mantém o trecho atual no centro; tocar num trecho pula o áudio
+    para ele. Controles mínimos embaixo (tocar/pausar, voltar/avançar 15s, velocidade, progresso),
+    que somem depois de alguns segundos. Continua tocando com a tela bloqueada, com os controles
+    na tela de bloqueio (Media Session: "Evangelho — Lc 9,1-6", ícone da Liturgia). Com "reduzir
+    movimento", sem desfoque nem escala.
+  - *Etapas:* (1) protótipo de um dia com 2–3 vozes para escolher; (2) a tela; (3) pipeline de
+    30 dias + verificador; (4) no ar. Mesma pendência de licença dos textos (áudio é obra
+    derivada do texto das Edições CNBB).
+- **Trechos dos cards de compartilhar para os próximos dias** (plano): hoje só 23/09/2026 tem.
+  - *Quem escolhe:* o Claude propõe em lote, **fora do site** (como os resumos), e o Daniel revisa
+    numa página de conferência antes de gravar. Nenhuma IA em tempo de execução.
+  - *Critérios:* um por leitura (1ª, salmo, 2ª quando houver, evangelho); até 35 palavras;
+    palavra por palavra do texto; que se sustente sozinho (sem começar com "ele", "isso", "e");
+    no evangelho, de preferência palavras de Jesus; no salmo, normalmente o refrão; o centro da
+    leitura, não o detalhe.
+  - *Ferramentas:* `scripts/grava-trechos.mjs lote.json` (irmão do `grava-resumos.mjs`): calcula a
+    assinatura das leituras de cada dia, grava `data/liturgia-trechos/AAAA-MM-DD.json` e já confere
+    o que o verificador exige; campo opcional `imagens` para festas (pintura específica). O
+    verificador ganha um **aviso** (não erro) listando os dias dos próximos 30 sem trechos.
+  - *Ritmo:* um mês por lote (~100–130 trechos). Começar pelo resto de setembro e outubro–dezembro
+    de 2026 (~350 trechos).
+- **Roteiro de boas-vindas para quem chega** (plano, 24/09/2026): um tour curto na 1ª visita
+  mostrando o que a página faz — navegar pelos dias, ouvir as leituras, compartilhar trechos e a
+  frase do santo. Discreto, pulável, e só uma vez (guardar em localStorage que já viu).
+- **Pedido de doação depois de um tempo de uso** (plano, 24/09/2026): não na chegada; só depois de
+  alguma interação real (ex.: ouviu uma leitura inteira, compartilhou, ou voltou em dias diferentes).
+  Convite gentil com PIX (o Catecismo já tem doação via PIX — reaproveitar), fácil de fechar e sem
+  repetir com frequência.
+- **Aumento de fonte:** controle de tamanho do texto das leituras (A− / A+), guardado no
+  aparelho; a capitular e a entrelinha acompanham.
+- **App na App Store (Capacitor) — depende antes da licença dos textos:** as leituras são a
+  tradução oficial do Lecionário, de propriedade das Edições CNBB (uso sem autorização é
+  proibido, diz o site da CNBB). Os apps que existem têm acordo: o app da própria CNBB, o
+  "Igreja em Oração" (Edições CNBB + Minha Paróquia) e o iLiturgia (coedição com as Edições
+  CNBB). Plano: (1) pedir autorização/parceria às Edições CNBB — vale também para o site, que
+  hoje já publica esses textos; (2) com a licença, empacotar com Capacitor, com as páginas e as
+  leituras dentro do app (funciona sem internet) e o que a Apple exige além de um "site
+  embrulhado" (regra 4.2): notificação diária, widget com a leitura do dia, leitura em voz
+  alta; (3) conta Apple Developer (US$ 99/ano; D-U-N-S se for organização), Xcode, ficha no
+  App Store Connect (ícone 1024px, capturas, política de privacidade, rótulo de privacidade
+  com o Umami), TestFlight e revisão. Enquanto isso, a página já instala como app pelo
+  Safari ("Adicionar à Tela de Início").
+- Pendências já conhecidas: link curto para medir os compartilhamentos (aguarda o domínio);
+  trechos dos cards só existem para 23/09/2026; faltam pinturas específicas (santos, Maria,
+  Pantocrator) no acervo `data/cards-imagens.json`.
+
+### Liturgia Diária — PLANO: "Evangelho comentado" (Catena Aurea + Catecismo)
+
+(Escrito em 24/09/2026 para ser executado numa sessão própria. Regra de ouro, herdada da
+decisão de tirar a homilia por IA: **nenhum texto explicativo gerado em tempo de execução, nem
+gerado e publicado sem passar por revisão**. O bloco é feito só de citações reais, com fonte.)
+
+**O que a pessoa vê**, abaixo do Evangelho de cada dia:
+
+1. *"Os Padres sobre este Evangelho"* — 2 a 4 trechos curtos da Catena Aurea de São Tomás,
+   cada um com o autor ("São João Crisóstomo", "Santo Agostinho", "Beda") e o versículo a que se
+   refere; botão "Ler o comentário inteiro" abre a perícope completa num modal (mesmo estilo do
+   "Saiba mais" do santo). Ao lado de cada trecho, um "latim" discreto que mostra o original.
+2. *"No Catecismo"* — os §§ do Catecismo que citam esse trecho do Evangelho, com a 1ª linha de
+   cada um e link para `/#§N` (o Catecismo já está no mesmo site). Sem citação direta, o bloco
+   não aparece.
+3. Nada de parágrafo de ligação. Se um dia se quiser uma frase de abertura, ela é escrita fora
+   do site e gravada como os resumos (`data/liturgia-resumos/`), com o verificador exigindo que
+   todo nome próprio esteja no texto.
+
+**Fontes e direitos**
+
+- Catena Aurea: original latino em domínio público. Usar o texto estruturado do Corpus
+  Thomisticum (catena in Mt/Mc/Lc/Jo, organizada por capítulo e *lectio*, cada lectio com o
+  intervalo de versículos); confirmar as URLs e o formato no início da sessão, e guardar o HTML
+  cru em `data/catena-fonte/` (intocado, como `data/liturgia-fonte/`). **Não usar** a tradução
+  brasileira publicada (Ecclesiae): é protegida. A tradução é nossa, feita do latim.
+- Catecismo: já em `data/catecismo.json` + `data/notas.json` (1.853 §§ com notas). O parser de
+  referências bíblicas das notas é `assets/js/biblia-refs.js` (`extrairReferencias`,
+  `expandirVersos`, `normalizarLivro`, `salmoParaVulgata`) — reaproveitar, não reescrever.
+- Leituras: continuam sendo o ponto sensível (Edições CNBB). Este bloco aumenta a visibilidade
+  da página; o pedido de licença deve andar junto.
+
+**Pipeline (tudo offline, determinístico onde der, com verificador)**
+
+1. `scripts/scrape-catena.mjs` → `data/catena-fonte/<Ev>/<cap>.html` (cru) e
+   `data/catena/<Ev>/<cap>.json` = `[{ lectio, versos: [a, b], itens: [{ autor, obra?, latim }] }]`.
+   Normalizar os nomes dos autores para uma tabela (`data/catena-autores.json`: "Chrysostomus" →
+   "São João Crisóstomo", com século e uma linha de quem foi, para o tooltip). Falhar em lectio
+   sem intervalo de versículos reconhecível.
+2. `scripts/liga-evangelho.mjs` → `data/liturgia-comentario/AAAA-MM-DD.json`:
+   - lê a referência do Evangelho do dia (`missas[0].leituras[].tipo === 'evangelho'`; nos dias
+     com alternativas, só a principal), expande os versículos com `expandirVersos`;
+   - **Catena:** todas as lectiones cujo intervalo cruza o do dia;
+   - **Catecismo:** todos os §§ cujas notas citam o mesmo livro/capítulo com pelo menos um
+     versículo em comum (usar `extrairReferencias` sobre `notas.json`); ordenar por número de
+     versículos em comum, depois por §; limitar a 8, o resto fica em "ver mais";
+   - grava a **assinatura das leituras** do dia (como os resumos), para o arquivo cair se as
+     leituras mudarem.
+3. **Tradução** (único passo com IA, offline): `scripts/traduz-catena.mjs` traduz os itens
+   latinos das lectiones que o passo 2 precisa, num lote por janela (próximos 30 dias, depois 60),
+   e grava `pt` ao lado de `latim` em `data/catena/`. Regras do prompt: tradução literal e sóbria,
+   sem acrescentar nem resumir; nomes dos livros bíblicos na abreviação da CNBB; citações
+   bíblicas dentro do comentário ficam como o Padre cita, não como a Bíblia Ave-Maria. Guardar
+   modelo e data em cada item. Cache: item já traduzido não volta ao modelo.
+4. **Escolha dos 2–4 trechos do dia** (curadoria): `scripts/escolhe-catena.mjs` propõe, por dia,
+   os trechos (critérios: 30–90 palavras; que se sustentem sozinhos; autores variados; de
+   preferência o que explica a frase central da perícope), grava em
+   `data/liturgia-comentario/AAAA-MM-DD.json` como `destaques: [{ ev, cap, lectio, i }]`
+   (ponteiros, nunca texto copiado), e o Daniel revisa numa página de conferência local
+   (`scratchpad`, não no site) antes de commitar — mesmo fluxo dos trechos dos cards.
+5. **Verificador** — acrescentar a `scripts/verifica-liturgia.mjs`: todo `destaque` aponta para
+   um item existente com `pt` e `latim`; assinatura das leituras bate; todo § listado existe e
+   sua nota cita mesmo aquele livro/capítulo; aviso (não erro) para os dias dos próximos 30 sem
+   comentário. CI prova reprodutibilidade dos passos 1 e 2 (rodar de novo dá igual).
+6. **Página**: bloco novo em `liturgiadiaria/render.mjs` (para o HTML pronto e o JS ficarem
+   idênticos, como as leituras) + estilos; modal da perícope inteira; o "latim" abre inline. No
+   HTML pronto por dia (`build-paginas-liturgia.mjs`) o bloco entra também — é conteúdo único e
+   bom para o Google ("comentário dos Padres sobre Lc 9,7-9"). Título/descrição da página passam
+   a mencionar "com comentário dos Padres da Igreja e do Catecismo".
+7. **Tour**: a cena 2 ("O resumo, antes de ler") ganha uma frase sobre o comentário, ou uma cena
+   nova; atualizar também as cenas de Ouvir/Compartilhar, que ainda mostram os botões antigos.
+
+**Ordem de execução sugerida** (cada etapa fecha com commit; deploy só a partir da 6):
+(1) scraper + JSON da Catena para Lc (o ano C começa no Advento de 2027, mas Lc cobre muitos
+dias de semana) → (2) ligador para os próximos 30 dias, mostrar ao Daniel o resultado de hoje
+(Lc 9,7-9: quais lectiones e quais §§) **antes de traduzir** → (3) traduzir esses 30 dias →
+(4) curadoria dos destaques → (5) verificador → (6) página e HTML pronto → (7) tour. Depois,
+janela contínua: o mesmo comando que gera áudio/trechos passa a puxar a Catena.
+
+**Custos**: tradução de ~30 dias ≈ 30 perícopes × ~1.500 palavras latinas ≈ 45 mil palavras
+de entrada; centavos a poucos dólares por lote com Sonnet/Opus. Zero custo em runtime.
+
+**Fora do escopo desta etapa**: comentário das outras leituras (a Catena só cobre os
+Evangelhos; para 1ª leitura/salmo o Catecismo sozinho já serve); qualquer texto "de ligação"
+gerado; app.
+
+### Liturgia Diária — modelo de negócio (direção, 24/09/2026)
+
+Três camadas, da mais segura para a mais ambiciosa. Premissa que amarra as três: **pedir a
+licença às Edições CNBB** (ver o plano do app acima) — sem ela, qualquer cobrança fica em cima
+de texto que não é nosso; com ela, a CNBB vira parceira em vez de risco.
+
+1. **Para as pessoas, sempre grátis.** As leituras são texto da CNBB; cobrar por elas é o pior
+   cenário jurídico e mata o SEO e o compartilhamento, que são o motor de crescimento. Receita
+   aqui é só a doação por PIX depois de uso real (plano acima), com opção de apoio recorrente
+   ("apoie com R$ 10/mês"), **sem trancar nenhuma funcionalidade**.
+2. **Paróquias como clientes (prioridade).** Dor real: o pároco quer falar com o povo todo dia e
+   faz isso à mão no WhatsApp. Produto: "Liturgia da Paróquia" — página com a cara da paróquia
+   (`paroquia.santadoutrina.cloud/<nome>` ou domínio próprio), horários de missa, avisos, e um
+   **envio diário automático** das leituras + comentário no grupo/canal do WhatsApp da paróquia.
+   Cobrança mensal por paróquia, plano por diocese. A infraestrutura (páginas por dia, OG,
+   áudio, comentário) já existe; falta o painel da paróquia e o envio. Uma paróquia pagando vale
+   mais que centenas de doações e ainda traz o público dela para o site.
+3. **Parcerias de conteúdo.** O bloco da Catena e do Catecismo abre espaço natural para "leia a
+   obra completa" com editoras católicas (Ecclesiae, Paulus, Cultor de Livros), por afiliado ou
+   patrocínio fixo. Receita pequena, mas alinhada com o site e sem cara de anúncio.
+
+Ordem: licença CNBB em paralelo com tudo → doação (já planejada) → piloto com 2–3 paróquias
+conhecidas antes de construir painel genérico → parcerias quando o comentário estiver no ar.
 
 ---
 
