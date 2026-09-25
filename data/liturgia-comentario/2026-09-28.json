@@ -14,6 +14,19 @@
     }
   ],
   "catecismo": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A disputa pelo primeiro lugar e o nome de Cristo",
+  "destaques": [
+    {
+      "lectio": 10,
+      "i": 0
+    },
+    {
+      "lectio": 10,
+      "i": 5
+    },
+    {
+      "lectio": 10,
+      "i": 13
+    }
+  ]
 }

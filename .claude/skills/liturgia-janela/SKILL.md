@@ -52,55 +52,54 @@ Cruza a referência do Evangelho com a Catena (ponteiros para as lectiones) e co
 Catecismo (§§ que citam o versículo, com a frase exata da citação). Preserva `tema` e `destaques`
 já gravados. Rode sempre depois dos passos 1 e 2.
 
-## 4. Traduzir a Catena
+## 4. Traduzir a Catena (subagentes Sonnet, esforço baixo)
 
 ```bash
 node scripts/catena-traducao.mjs pendentes 2026-09-24 +30 > "$SCRATCH/pendentes.json"
 ```
 
-Traduza **na sessão** cada item de `pendentes.json` e grave em `$SCRATCH/traducoes.json` como
-`{ "por": "claude-<modelo> (sessão)", "itens": [{ ev, cap, lectio, i, latim, pt }] }` — copie `latim`
-exatamente como veio (o script confere). Regras da tradução:
+**Não traduza na sessão principal**: cada mensagem reenvia todo o contexto, e 200 comentários em
+latim no histórico multiplicam o gasto. Divida `pendentes.json` em lotes de ~15 itens
+(`$SCRATCH/lote-1.json`, `lote-2.json`…) e dispare **um subagente por lote** (Agent tool,
+`model: "sonnet"`, esforço baixo, vários em paralelo), com este prompt:
 
-- Literal e sóbria, em português do Brasil corrente, sem acrescentar, resumir nem explicar.
-- Frase por frase; mantenha a ordem dos argumentos do Padre.
-- As palavras do Evangelho que o Padre cita (o lema: "unde dicitur…", "sequitur…") vão **entre
-  aspas duplas**, traduzidas de modo a bater com a leitura do dia em português quando possível
-  (a página põe em itálico o que está entre aspas). O resto do texto sem aspas.
-- Nomes bíblicos como na CNBB (João Batista, Elias, Herodes); "dominus" → "o Senhor"; "Christus" → "Cristo".
-- Citações de outros livros dentro do comentário: traduza como o Padre cita, sem trocar pela Bíblia da CNBB.
-- Não invente o que o latim não diz; se um trecho for obscuro, traduza o mais próximo possível e
-  siga (a tradução fica marcada `revisado: false`).
+> Traduza do latim para o português do Brasil cada item do arquivo `<caminho do lote>` (campos
+> `latim`, `autor`, `obra`). Grave `<caminho>/traducoes-N.json` no formato
+> `{ "por": "claude-sonnet (subagente)", "itens": [{ ev, cap, lectio, i, latim, pt }] }`, copiando
+> `latim` exatamente como está. Depois rode `node scripts/catena-traducao.mjs grava <arquivo>` na
+> pasta do projeto e responda só com a saída do comando. Regras: tradução literal e sóbria, sem
+> acrescentar, resumir nem explicar; frase por frase, na ordem do original; as palavras do
+> Evangelho que o Padre cita (depois de "unde dicitur", "sequitur", "unde subditur") vão entre
+> aspas duplas; nomes bíblicos como na CNBB (João Batista, Elias, Herodes); "dominus" → "o Senhor",
+> "Christus" → "Cristo"; citações de outros livros traduzidas como o Padre cita; se um trecho for
+> obscuro, traduza o mais próximo possível e siga. Não edite nenhum outro arquivo.
 
-Lotes grandes: traduza em partes de ~15 itens e grave cada parte (o script aceita vários arquivos,
-um por chamada):
+O script `grava` recusa tradução fora do lugar (latim diferente) ou curta demais; se um subagente
+falhar, reenvie só aquele lote. A sessão principal só recebe "gravado, N itens".
 
-```bash
-node scripts/catena-traducao.mjs grava "$SCRATCH/traducoes.json"
-```
+## 5. Curadoria: tema e destaques por dia (subagente Opus, esforço normal)
 
-## 5. Curadoria: tema e destaques por dia
+Para os dias em "sem tema/destaques", dispare **um subagente** (`model: "opus"`) por bloco de até
+7 dias, com este prompt:
 
-Para cada dia em "sem tema/destaques": leia o Evangelho do dia (`data/liturgia/<dia>.json`) e os
-itens traduzidos das lectiones do dia (`data/liturgia-comentario/<dia>.json` → `catena` → lectio em
-`data/catena/<Ev>/<cap>.json`). Escolha:
+> Para cada dia da lista `<dias>`: leia o Evangelho em `data/liturgia/<dia>.json` e, em
+> `data/liturgia-comentario/<dia>.json`, o campo `catena` (lectiones); leia os itens dessas lectiones
+> em `data/catena/<Ev>/<cap>.json` (só os que têm `pt`). Escolha 2 a 4 destaques `{ lectio, i }`:
+> 30–120 palavras cada; que se sustentem sozinhos (nada que dependa do item anterior); autores
+> variados quando der; de preferência o que explica a frase central da perícope (as palavras de
+> Jesus); evite itens de harmonia entre evangelistas (Agostinho, *De consensu*) e de crítica textual.
+> Escreva um tema de 4–12 palavras, sem ponto final, como o título da leitura patrística no Ofício
+> das Leituras: nomeia o assunto dos destaques, não interpreta (ex.: "O medo do pecador e a pergunta
+> de Herodes"). Grave `<caminho>/curadoria.json` = `[{ data, tema, destaques }]` e responda com uma
+> tabela dia · Evangelho · tema · autores dos destaques. Não grave nada em `data/`.
 
-- **2 a 4 destaques** (`{ lectio, i }`): 30–120 palavras cada; que se sustentem sozinhos (nada que
-  comece com "Por isso…" dependendo do item anterior); autores variados quando der; de preferência
-  o que explica a frase central da perícope (no Evangelho, as palavras de Jesus). Evite os itens só
-  de harmonia entre evangelistas (Agostinho, *De consensu*) e os de pura crítica textual.
-- **um tema** de 4–12 palavras, sem ponto final, em itálico na página, como o título da leitura
-  patrística no Ofício das Leituras: nomeia o assunto dos destaques, não interpreta ("O medo do
-  pecador e a pergunta de Herodes").
-
-Grave `$SCRATCH/curadoria.json` = `[{ "data", "tema", "destaques": [{ "lectio", "i" }] }]` e:
+**Mostre a tabela ao Daniel e pergunte se aprova**; ele pode pedir troca. Só então:
 
 ```bash
 node scripts/grava-curadoria.mjs "$SCRATCH/curadoria.json"
 ```
 
-**Antes de gravar, mostre ao Daniel** uma tabela dia → tema → autores dos destaques, e pergunte se
-aprova. Ele pode pedir troca; regrave.
+O script recusa ponteiro para item inexistente, fora da perícope do dia, ou sem tradução.
 
 ## 6. Áudio (Gemini, grátis e devagar)
 

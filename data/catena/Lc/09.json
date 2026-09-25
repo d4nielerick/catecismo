@@ -385,67 +385,158 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Sequestratus a populis dominus et seorsum positus vacabat orationibus; unde dicitur et factum est cum solus esset orans, erant cum illo et discipuli. Formam enim in hoc seipsum constituebat, docens discipulos artem facilem doctrinalium dogmatum: reor enim oportere populorum antistites etiam meritis praeesse subditis suis, in rebus necessariis iugiter conversantes, et illa tractantes quibus Deus placatur"
+        "latim": "Sequestratus a populis dominus et seorsum positus vacabat orationibus; unde dicitur et factum est cum solus esset orans, erant cum illo et discipuli. Formam enim in hoc seipsum constituebat, docens discipulos artem facilem doctrinalium dogmatum: reor enim oportere populorum antistites etiam meritis praeesse subditis suis, in rebus necessariis iugiter conversantes, et illa tractantes quibus Deus placatur",
+        "pt": "Separado das multidões, o Senhor, posto à parte, dedicava-se às orações; por isso se diz: \"E aconteceu que, estando ele sozinho orando, estavam com ele também os discípulos.\" Pois nisto ele mesmo se estabelecia como modelo, ensinando aos discípulos a arte fácil dos dogmas doutrinais: penso, com efeito, que convém que os prelados dos povos também presidam pelos méritos aos seus súditos, ocupando-se continuamente nas coisas necessárias, e tratando daquelas coisas pelas quais Deus é aplacado.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Aderant autem discipuli domino; sed ipse patrem solus oravit: quia possunt sancti domino fidei amorisque societate coniungi. Ubique solus obsecrat, quia Dei consilium humana vota non capiunt, nec quisquam potest interiorum particeps esse cum Christo"
+        "latim": "Aderant autem discipuli domino; sed ipse patrem solus oravit: quia possunt sancti domino fidei amorisque societate coniungi. Ubique solus obsecrat, quia Dei consilium humana vota non capiunt, nec quisquam potest interiorum particeps esse cum Christo",
+        "pt": "Os discípulos, pois, estavam presentes ao Senhor; mas ele mesmo orou ao Pai sozinho: porque os santos podem unir-se ao Senhor pela sociedade da fé e do amor. Em toda parte ele suplica sozinho, porque os votos humanos não compreendem o desígnio de Deus, nem alguém pode ser partícipe das coisas íntimas com Cristo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Poterat autem orationis negotium turbare discipulos: videbant enim humanitus orare quem olim viderant auctoritate divina peragentem miracula. Ut igitur huiusmodi propelleret turbationem, eos interrogat, non quia nesciret ab exterioribus sibi collata praeconia, sed ut eos a plurium opinione auferret, et rectam fidem eis insereret; unde sequitur et interrogavit illos dicens: quem me dicunt esse turbae?"
+        "latim": "Poterat autem orationis negotium turbare discipulos: videbant enim humanitus orare quem olim viderant auctoritate divina peragentem miracula. Ut igitur huiusmodi propelleret turbationem, eos interrogat, non quia nesciret ab exterioribus sibi collata praeconia, sed ut eos a plurium opinione auferret, et rectam fidem eis insereret; unde sequitur et interrogavit illos dicens: quem me dicunt esse turbae?",
+        "pt": "Ora, o negócio da oração podia perturbar os discípulos: pois viam orar humanamente aquele que outrora tinham visto realizar milagres com autoridade divina. Para afastar, pois, tal perturbação, ele os interroga, não porque ignorasse os louvores que lhe eram atribuídos pelos de fora, mas para afastá-los da opinião da maioria, e neles inserir a fé reta; por isso segue-se: \"E ele os interrogou, dizendo: quem dizem as multidões que eu sou?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Pulchre dominus fidem discipulorum exploraturus, prius turbarum sententiam interrogat, ne illorum confessio, non veritatis agnitione probata, sed vulgi videatur opinione formata; nec comperta credere, sed instar Herodis de auditis haesitare putentur"
+        "latim": "Pulchre dominus fidem discipulorum exploraturus, prius turbarum sententiam interrogat, ne illorum confessio, non veritatis agnitione probata, sed vulgi videatur opinione formata; nec comperta credere, sed instar Herodis de auditis haesitare putentur",
+        "pt": "Belamente o Senhor, ao querer sondar a fé dos discípulos, primeiro pergunta a opinião das multidões, para que a confissão deles não parecesse formada pela opinião do vulgo, e não provada pelo conhecimento da verdade; e para que não parecessem crer no que conheceram, mas, à semelhança de Herodes, hesitar sobre o que ouviram.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de Cons. Evang",
-        "latim": "Potest autem illud movere quod Lucas dominum interrogasse discipulos suos, quem illum dicerent homines, tunc dixit cum esset solus orans, et adessent etiam ipsi: porro autem Marcus in via dicit illos hoc ab eodem interrogatos. Sed hoc eum movet, quia nunquam oravit in via"
+        "latim": "Potest autem illud movere quod Lucas dominum interrogasse discipulos suos, quem illum dicerent homines, tunc dixit cum esset solus orans, et adessent etiam ipsi: porro autem Marcus in via dicit illos hoc ab eodem interrogatos. Sed hoc eum movet, quia nunquam oravit in via",
+        "pt": "Pode, porém, causar dificuldade o fato de Lucas dizer que o Senhor interrogou seus discípulos sobre quem os homens diziam que ele era, quando ele estava orando sozinho, e eles também estavam presentes; enquanto Marcos, por sua vez, diz que eles foram interrogados sobre isso por ele no caminho. Mas isso o perturba, porque ele nunca orou no caminho.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Non est autem otiosa turbae opinio quam discipuli respondent, cum subditur at illi responderunt, et dixerunt: alii Ioannem Baptistam, quem decollatum sciebant; alii autem Eliam, quem venturum putabant; alii autem, quia propheta unus de prioribus surrexit. Sed hoc quaerere alterius prudentiae est: nam si Paulo apostolo satis est nihil scire nisi Christum Iesum, et hunc crucifixum, quid amplius mihi desiderandum est scire quam Christum?"
+        "latim": "Non est autem otiosa turbae opinio quam discipuli respondent, cum subditur at illi responderunt, et dixerunt: alii Ioannem Baptistam, quem decollatum sciebant; alii autem Eliam, quem venturum putabant; alii autem, quia propheta unus de prioribus surrexit. Sed hoc quaerere alterius prudentiae est: nam si Paulo apostolo satis est nihil scire nisi Christum Iesum, et hunc crucifixum, quid amplius mihi desiderandum est scire quam Christum?",
+        "pt": "Não é, porém, ociosa a opinião das multidões que os discípulos relatam, quando se acrescenta: \"Mas eles responderam e disseram: uns, João Batista, que sabiam ter sido decapitado; outros, porém, Elias, que julgavam que havia de vir; outros ainda, que um dos antigos profetas ressuscitou.\" Mas indagar isso é próprio de outra prudência: pois se ao apóstolo Paulo basta não saber nada além de Jesus Cristo, e este crucificado, que mais devo eu desejar saber além de Cristo?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Vide autem in interrogationibus elegantiam. Dirigit enim prius eos ad extrinsecas laudes, ut eis evulsis veram opinionem generet. Unde cum dixissent discipuli plebis opinionem, eorum sententiam interrogat, cum subditur dicit autem illis: vos autem quem me esse dicitis? O quam praecipuum illud vos. Excipit eos ab aliis, ut eorum vitent opiniones; quasi dicat: vos, qui censura mea vocati estis ad apostolatum, testes miraculorum meorum, quem me esse dicitis? Praevenit autem Petrus ceteros, fitque os totius collegii, eructatque divini amoris eloquia, profertque fidei confessionem, cum dicitur respondens autem Petrus dixit: Christum Dei. Non ait simpliciter eum esse Christum Dei, sed magis cum articulo Christum illum Dei: unde in Graeco habetur ton christon. Nam plures divinitus uncti, diversimode vocati sunt Christi. Quidam enim uncti fuerunt in reges, quidam in prophetas; nos autem per Christum sancto peruncti spiritu, nomen obtinuimus Christi; sed unus solus est qui est Christus Dei et patris, quasi ipso solo proprium habente patrem, qui in caelis est: et sic Lucas concordat quidem in sententiis cum Matthaeo, qui narravit Petrum dixisse: tu es Christus filius Dei vivi; sed utens breviloquio, ait eum dixisse Christum Dei"
+        "latim": "Vide autem in interrogationibus elegantiam. Dirigit enim prius eos ad extrinsecas laudes, ut eis evulsis veram opinionem generet. Unde cum dixissent discipuli plebis opinionem, eorum sententiam interrogat, cum subditur dicit autem illis: vos autem quem me esse dicitis? O quam praecipuum illud vos. Excipit eos ab aliis, ut eorum vitent opiniones; quasi dicat: vos, qui censura mea vocati estis ad apostolatum, testes miraculorum meorum, quem me esse dicitis? Praevenit autem Petrus ceteros, fitque os totius collegii, eructatque divini amoris eloquia, profertque fidei confessionem, cum dicitur respondens autem Petrus dixit: Christum Dei. Non ait simpliciter eum esse Christum Dei, sed magis cum articulo Christum illum Dei: unde in Graeco habetur ton christon. Nam plures divinitus uncti, diversimode vocati sunt Christi. Quidam enim uncti fuerunt in reges, quidam in prophetas; nos autem per Christum sancto peruncti spiritu, nomen obtinuimus Christi; sed unus solus est qui est Christus Dei et patris, quasi ipso solo proprium habente patrem, qui in caelis est: et sic Lucas concordat quidem in sententiis cum Matthaeo, qui narravit Petrum dixisse: tu es Christus filius Dei vivi; sed utens breviloquio, ait eum dixisse Christum Dei",
+        "pt": "Vê, porém, a elegância nas interrogações. Pois primeiro os dirige aos louvores externos, para que, afastados estes, gere neles a verdadeira opinião. Por isso, tendo os discípulos dito a opinião do povo, ele pergunta a opinião deles, quando se acrescenta: \"Disse-lhes então: mas vós, quem dizeis que eu sou?\" Ó quão notável aquele \"vós\"! Distingue-os dos demais, para que evitem as opiniões deles; como se dissesse: vós, que fostes chamados ao apostolado por meu julgamento, testemunhas dos meus milagres, quem dizeis que eu sou? Pedro, porém, se antecipa aos demais, e se torna a boca de todo o colégio, e profere as palavras do amor divino, e apresenta a confissão da fé, quando se diz: \"Respondendo, Pedro disse: o Cristo de Deus.\" Não diz simplesmente que ele é Cristo de Deus, mas antes, com o artigo, aquele Cristo de Deus: por isso no grego se tem \"ton christon\". Pois muitos foram ungidos divinamente, e de diversos modos foram chamados cristos. Alguns, com efeito, foram ungidos como reis, outros como profetas; nós, porém, ungidos por Cristo com o Espírito Santo, obtivemos o nome de cristãos; mas um só é aquele que é o Cristo de Deus e do Pai, como se só ele tivesse por próprio o Pai, que está nos céus: e assim Lucas concorda, quanto ao sentido, com Mateus, que narrou ter Pedro dito: tu és o Cristo, Filho do Deus vivo; mas, usando de brevidade, diz que ele disse \"o Cristo de Deus\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "In uno enim hoc nomine et divinitatis et incarnationis expressio, et fides est passionis. Complexus est itaque omnia qui et naturam et nomen expressit, in quo summa virtutum est"
+        "latim": "In uno enim hoc nomine et divinitatis et incarnationis expressio, et fides est passionis. Complexus est itaque omnia qui et naturam et nomen expressit, in quo summa virtutum est",
+        "pt": "Pois neste único nome há a expressão tanto da divindade quanto da encarnação, e a fé da paixão. Abraçou, portanto, tudo aquele que exprimiu tanto a natureza quanto o nome, no qual está a suma das virtudes.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Sed notandum, quod unum confessus est esse Christum prudentissimus Petrus contra praesumentes Emmanuelem in duos christos dividere. Neque enim sciscitatus est eos, dicens quem dicunt homines esse divinum verbum, sed filium hominis? Quem Petrus confessus est esse filium Dei. In hoc ergo admirandus est, et dignus factus tam praecipuis honoribus, quia quem admiratus est in forma nostra, hunc credidit esse Christum patris, scilicet hominem factum verbum, quod processit de patris substantia"
+        "latim": "Sed notandum, quod unum confessus est esse Christum prudentissimus Petrus contra praesumentes Emmanuelem in duos christos dividere. Neque enim sciscitatus est eos, dicens quem dicunt homines esse divinum verbum, sed filium hominis? Quem Petrus confessus est esse filium Dei. In hoc ergo admirandus est, et dignus factus tam praecipuis honoribus, quia quem admiratus est in forma nostra, hunc credidit esse Christum patris, scilicet hominem factum verbum, quod processit de patris substantia",
+        "pt": "Mas deve-se notar que o prudentíssimo Pedro confessou ser um só o Cristo, contra os que presumem dividir o Emanuel em dois cristos. Pois ele não os interrogou dizendo quem os homens dizem ser o Verbo divino, mas o Filho do homem? A quem Pedro confessou ser o Filho de Deus. Nisto, pois, é admirável, e feito digno de tão notáveis honras, porque aquele que admirou em nossa forma, este creu ser o Cristo do Pai, isto é, o Verbo feito homem, que procedeu da substância do Pai.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Dominus autem Iesus Christus praedicari se primo noluit, ne ullus strepitus nasceretur; unde sequitur at ille increpans eos, praecepit ne cui dicerent. Multis ex causis iubet tacere discipulos: ut fallat principem mundi, ut declinet iactantiam, doceat humilitatem. Ergo Christus noluit gloriari; et tu, qui ignobilis natus es, gloriaris? Simul ne rudes et imperfecti adhuc discipuli maximae praedicationis molibus opprimantur. Prohibentur ergo evangelizare eum Dei filium, ut evangelizarent postea crucifixum"
+        "latim": "Dominus autem Iesus Christus praedicari se primo noluit, ne ullus strepitus nasceretur; unde sequitur at ille increpans eos, praecepit ne cui dicerent. Multis ex causis iubet tacere discipulos: ut fallat principem mundi, ut declinet iactantiam, doceat humilitatem. Ergo Christus noluit gloriari; et tu, qui ignobilis natus es, gloriaris? Simul ne rudes et imperfecti adhuc discipuli maximae praedicationis molibus opprimantur. Prohibentur ergo evangelizare eum Dei filium, ut evangelizarent postea crucifixum",
+        "pt": "O Senhor Jesus Cristo não quis, a princípio, ser pregado, para que não nascesse nenhum alvoroço; por isso segue-se: \"Mas ele, repreendendo-os, ordenou que a ninguém o dissessem.\" Por muitas razões ordena que os discípulos se calem: para enganar o príncipe deste mundo, para evitar a jactância, para ensinar a humildade. Cristo, pois, não quis gloriar-se; e tu, que nasceste ignóbil, te glorias? Ao mesmo tempo, para que os discípulos, ainda rudes e imperfeitos, não fossem oprimidos pelo peso de uma pregação tão grande. Proíbe-se, pois, que evangelizassem que ele era o Filho de Deus, para que depois evangelizassem o crucificado.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Matthaeum",
-        "latim": "Opportune etiam dominus tunc vetuit nulli dicere quod ipse esset Christus, quatenus sublatis de medio scandalis, et crucis consummato patibulo, habitualiter imprimeretur audientium menti conveniens de eo opinio; nam radicatum semel, et postmodum evulsum, vix unquam denuo insitum retinebitur; quod autem semel insitum perseverat immobile, de facili concrescit. Nam si Petrus ex solo auditu scandalizatus est, quid quamplures paterentur, cum audissent filium Dei esse, viderent autem crucifixum et consputum?"
+        "latim": "Opportune etiam dominus tunc vetuit nulli dicere quod ipse esset Christus, quatenus sublatis de medio scandalis, et crucis consummato patibulo, habitualiter imprimeretur audientium menti conveniens de eo opinio; nam radicatum semel, et postmodum evulsum, vix unquam denuo insitum retinebitur; quod autem semel insitum perseverat immobile, de facili concrescit. Nam si Petrus ex solo auditu scandalizatus est, quid quamplures paterentur, cum audissent filium Dei esse, viderent autem crucifixum et consputum?",
+        "pt": "Oportunamente também o Senhor então proibiu que ninguém dissesse que ele era o Cristo, a fim de que, removidos do meio os escândalos, e consumado o patíbulo da cruz, se imprimisse habitualmente na mente dos ouvintes a opinião conveniente a respeito dele; pois o que uma vez se enraíza, e depois é arrancado, dificilmente será de novo implantado; mas o que, uma vez implantado, permanece imóvel, facilmente cresce. Pois se Pedro se escandalizou só de ouvir, que sofreriam tantos outros, ao ouvirem que ele era o Filho de Deus, e o vissem, porém, crucificado e cuspido?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Oportebat ergo discipulos eum ubique terrarum praedicare (hoc enim erat opus electorum ab eo ad apostolatus officium): sed, ut sacra Scriptura testatur, tempus est unicuique rei. Decebat enim ut crux et resurrectio impleretur, et sic sequeretur apostolorum praedicatio; unde sequitur dicens, quia oportet filium hominis multa pati, et reprobari a senioribus, et principibus sacerdotum et Scribis, et occidi, et tertia die resurgere"
+        "latim": "Oportebat ergo discipulos eum ubique terrarum praedicare (hoc enim erat opus electorum ab eo ad apostolatus officium): sed, ut sacra Scriptura testatur, tempus est unicuique rei. Decebat enim ut crux et resurrectio impleretur, et sic sequeretur apostolorum praedicatio; unde sequitur dicens, quia oportet filium hominis multa pati, et reprobari a senioribus, et principibus sacerdotum et Scribis, et occidi, et tertia die resurgere",
+        "pt": "Convinha, pois, que os discípulos o pregassem por toda a terra (pois esta era a obra dos escolhidos por ele para o ofício do apostolado): mas, como testifica a sagrada Escritura, há tempo para cada coisa. Convinha, com efeito, que a cruz e a ressurreição se cumprissem, e só então seguisse a pregação dos apóstolos; por isso segue-se, dizendo: \"que era necessário que o Filho do homem padecesse muitas coisas, e fosse rejeitado pelos anciãos, e pelos príncipes dos sacerdotes e escribas, e fosse morto, e ao terceiro dia ressuscitasse.\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Fortasse, quia sciebat dominus difficile passionis et resurrectionis mysterium etiam discipulos credituros, ipse voluit esse suae passionis et resurrectionis assertor"
+        "latim": "Fortasse, quia sciebat dominus difficile passionis et resurrectionis mysterium etiam discipulos credituros, ipse voluit esse suae passionis et resurrectionis assertor",
+        "pt": "Talvez, porque o Senhor sabia que também os discípulos criam com dificuldade o mistério da paixão e da ressurreição, ele mesmo quis ser o afirmador de sua própria paixão e ressurreição.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       }
     ]
   },
@@ -875,37 +966,86 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Omnia quaecumque operabatur Iesus, admiratione digna penes omnes erant: irradiabat enim quiddam praecipuum et divinum in qualibet operatione ipsius, secundum illud: gloriam et decorem superpones ei. Et si omnes quidem mirarentur in his quae faciebat, ipse tamen haec quae sequuntur, non omnibus, sed discipulis retulit; unde dicitur omnibusque mirantibus in omnibus quae faciebat, dixit ad discipulos suos: ponite vos in cordibus vestris sermones istos. Ostenderat in monte discipulos gloriam suam, et post hoc liberaverat quemdam a spiritu nequam; sed oportebat eum sustinere passionem pro nobis. Poterant autem discipuli conturbari dicentes: numquid decepti sumus dum Deum esse eum arbitraremur? Ut ergo scirent quid circa ipsum futurum erat, velut quoddam depositum iubet eos in mente habere passionis mysterium, dicens ponite vos in cordibus vestris. Quod dicit vos, distinguit eos ab aliis: neque enim oportebat vulgares scire quoniam passurus esset; sed erant potius certificandi quoniam mortuus resurgeret, destruens mortem, ne scandalizarentur"
+        "latim": "Omnia quaecumque operabatur Iesus, admiratione digna penes omnes erant: irradiabat enim quiddam praecipuum et divinum in qualibet operatione ipsius, secundum illud: gloriam et decorem superpones ei. Et si omnes quidem mirarentur in his quae faciebat, ipse tamen haec quae sequuntur, non omnibus, sed discipulis retulit; unde dicitur omnibusque mirantibus in omnibus quae faciebat, dixit ad discipulos suos: ponite vos in cordibus vestris sermones istos. Ostenderat in monte discipulos gloriam suam, et post hoc liberaverat quemdam a spiritu nequam; sed oportebat eum sustinere passionem pro nobis. Poterant autem discipuli conturbari dicentes: numquid decepti sumus dum Deum esse eum arbitraremur? Ut ergo scirent quid circa ipsum futurum erat, velut quoddam depositum iubet eos in mente habere passionis mysterium, dicens ponite vos in cordibus vestris. Quod dicit vos, distinguit eos ab aliis: neque enim oportebat vulgares scire quoniam passurus esset; sed erant potius certificandi quoniam mortuus resurgeret, destruens mortem, ne scandalizarentur",
+        "pt": "Todas as coisas que Jesus realizava eram dignas de admiração para todos: pois irradiava algo notável e divino em cada uma das suas obras, segundo aquilo: porás sobre ele glória e formosura. E, embora todos se admirassem das coisas que fazia, ele, contudo, relatou o que se segue não a todos, mas aos discípulos; por isso se diz: \"E, admirando-se todos de tudo o que fazia, disse a seus discípulos: ponde em vossos corações estas palavras.\" Tinha mostrado no monte aos discípulos a sua glória, e depois disso libertara alguém do espírito maligno; mas era necessário que ele suportasse a paixão por nós. Podiam, porém, os discípulos perturbar-se, dizendo: acaso fomos enganados ao julgar que ele era Deus? Para que soubessem, pois, o que estava por vir a seu respeito, ele lhes ordena que tenham na mente, como um depósito, o mistério da paixão, dizendo \"ponde em vossos corações\". O que diz \"vós\" os distingue dos demais: pois não convinha que a gente comum soubesse que ele haveria de padecer; mas eles deviam antes ser certificados de que, morto, ressuscitaria, destruindo a morte, para que não se escandalizassem.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Titus",
         "obra": "",
-        "latim": "Cunctis igitur admirantibus signa, ipse praenuntiat passionem: non enim signa salvant, sed crux beneficia praestat; unde subditur filius enim hominis futurum est ut tradatur in manus hominum"
+        "latim": "Cunctis igitur admirantibus signa, ipse praenuntiat passionem: non enim signa salvant, sed crux beneficia praestat; unde subditur filius enim hominis futurum est ut tradatur in manus hominum",
+        "pt": "Admirando-se, pois, todos dos sinais, ele mesmo anuncia de antemão a paixão: pois não são os sinais que salvam, mas a cruz que proporciona os benefícios; por isso se acrescenta: \"Pois o Filho do homem há de ser entregue nas mãos dos homens.\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "in Matthaeum",
-        "latim": "Non autem exprimit manifeste a quo tradendus sit: aliquis enim dicit eum tradendum a Iuda, aliquis a populo. Paulus autem dicit quod Deus pater pro nobis omnibus tradidit eum; sed Iudas tamquam pro pecunia tradens eum hostiliter prodidit; sed pater beneficii causa"
+        "latim": "Non autem exprimit manifeste a quo tradendus sit: aliquis enim dicit eum tradendum a Iuda, aliquis a populo. Paulus autem dicit quod Deus pater pro nobis omnibus tradidit eum; sed Iudas tamquam pro pecunia tradens eum hostiliter prodidit; sed pater beneficii causa",
+        "pt": "Mas não diz claramente por quem ele havia de ser entregue: pois alguns dizem que ele seria entregue por Judas, outros pelo povo. Paulo, porém, diz que Deus Pai o entregou por todos nós; mas Judas, entregando-o por dinheiro, traiu-o hostilmente; o Pai, porém, por causa do benefício",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Eorum autem infirmitati dominus condescendens et eos disciplina quadam gubernans, quod de cruce dictum est, intelligere non permisit; unde sequitur at illi ignorabant verbum istud, et erat velatum ante eos ut non sentirent illud"
+        "latim": "Eorum autem infirmitati dominus condescendens et eos disciplina quadam gubernans, quod de cruce dictum est, intelligere non permisit; unde sequitur at illi ignorabant verbum istud, et erat velatum ante eos ut non sentirent illud",
+        "pt": "O Senhor, condescendendo com a fraqueza deles e governando-os com certa disciplina, não permitiu que entendessem o que fora dito sobre a cruz; donde se segue: \"Mas eles não entendiam essa palavra, e ela lhes estava velada, para que não a percebessem\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Haec ignorantia discipulorum non tam de tarditate quam de amore nascitur; qui carnales adhuc, et mysterii crucis ignari, quem Deum verum crediderunt, moriturum credere nequiverunt: et quia per figuras eum saepe loquentem audire solebant, etiam quae de sua traditione loquebatur, figurative eum illud significare putabant"
+        "latim": "Haec ignorantia discipulorum non tam de tarditate quam de amore nascitur; qui carnales adhuc, et mysterii crucis ignari, quem Deum verum crediderunt, moriturum credere nequiverunt: et quia per figuras eum saepe loquentem audire solebant, etiam quae de sua traditione loquebatur, figurative eum illud significare putabant",
+        "pt": "Essa ignorância dos discípulos nasce não tanto da lentidão quanto do amor; pois, sendo ainda carnais e ignorantes do mistério da cruz, não podiam crer que havia de morrer aquele que criam ser o verdadeiro Deus; e, como costumavam ouvi-lo falar muitas vezes por figuras, pensavam que também aquilo que dizia sobre sua entrega ele o significava figurativamente",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Dicet autem aliquis forsan: qualiter ignoraverunt discipuli crucis Christi mysterium, cum per umbram legis in pluribus locis tangeretur? Sed, ut Paulus commemorat, usque ad hodiernum diem, quando legitur Moyses, velamen adiacet cordi eorum. Expedit ergo accedentes ad Christum dicere: detege oculos meos, et contemplabor mirabilia de lege tua"
+        "latim": "Dicet autem aliquis forsan: qualiter ignoraverunt discipuli crucis Christi mysterium, cum per umbram legis in pluribus locis tangeretur? Sed, ut Paulus commemorat, usque ad hodiernum diem, quando legitur Moyses, velamen adiacet cordi eorum. Expedit ergo accedentes ad Christum dicere: detege oculos meos, et contemplabor mirabilia de lege tua",
+        "pt": "Dirá, porém, alguém talvez: como ignoraram os discípulos o mistério da cruz de Cristo, se ele era tocado em muitos lugares pela sombra da lei? Mas, como Paulo lembra, até o dia de hoje, quando se lê Moisés, um véu está posto sobre o coração deles. Convém, pois, que os que se acercam de Cristo digam: \"Descobre os meus olhos, e contemplarei as maravilhas da tua lei\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Vide etiam discipulorum reverentiam in hoc quod sequitur et timebat interrogare eum de hoc verbo: nam timor gradus est reverentiae"
+        "latim": "Vide etiam discipulorum reverentiam in hoc quod sequitur et timebat interrogare eum de hoc verbo: nam timor gradus est reverentiae",
+        "pt": "Vê também a reverência dos discípulos nisto que se segue: \"E temiam interrogá-lo sobre essa palavra\": pois o temor é grau da reverência",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       }
     ]
   },
@@ -919,82 +1059,194 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Insidiatur Diabolus multimode diligentibus optimam vitam; et si quidem per carnales illecebras obsidere valet alicuius mentem, affectus voluptatem exacuit: si quis hos effugerit laqueos cupidinis, gloriae suscitat passionem, quae quidem passio vanae gloriae invasit quemdam apostolorum suorum; unde dicitur intravit autem cogitatio in eos, quis eorum esset maior: hoc enim cogitare est cupientis ceteris superesse. Improbabile autem puto omnes discipulos hanc aegritudinem incurrisse: et ideo ne crimen aliquod contra aliquem discipulorum Evangelista machinari videretur, exprimit indeterminate dicens, quod intravit in eos cogitatio"
+        "latim": "Insidiatur Diabolus multimode diligentibus optimam vitam; et si quidem per carnales illecebras obsidere valet alicuius mentem, affectus voluptatem exacuit: si quis hos effugerit laqueos cupidinis, gloriae suscitat passionem, quae quidem passio vanae gloriae invasit quemdam apostolorum suorum; unde dicitur intravit autem cogitatio in eos, quis eorum esset maior: hoc enim cogitare est cupientis ceteris superesse. Improbabile autem puto omnes discipulos hanc aegritudinem incurrisse: et ideo ne crimen aliquod contra aliquem discipulorum Evangelista machinari videretur, exprimit indeterminate dicens, quod intravit in eos cogitatio",
+        "pt": "O Diabo arma ciladas de muitos modos aos que amam a vida ótima; e se pode cercar a mente de alguém por meio das seduções carnais, aguça o afeto do prazer; se alguém escapar desses laços da cobiça, suscita a paixão da glória, paixão de vaga glória que invadiu um de seus apóstolos; por isso se diz: \"entrou, porém, neles o pensamento de qual deles seria o maior\": pois pensar isto é próprio de quem deseja sobressair aos demais. Julgo, porém, improvável que todos os discípulos tenham incorrido nessa enfermidade; e por isso, para que não parecesse que o Evangelista forjava alguma acusação contra algum dos discípulos, exprime-se de modo indeterminado, dizendo que o pensamento entrou neles.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Videtur autem hanc passionem ex hoc ortam fuisse quod daemoniacum curare non valuerunt, eis de hoc altercantibus; uno dicente quod non propter meam impotentiam, sed alterius curari non valuit, ut ex hoc accensa contentio fuerit quis eorum maior esset"
+        "latim": "Videtur autem hanc passionem ex hoc ortam fuisse quod daemoniacum curare non valuerunt, eis de hoc altercantibus; uno dicente quod non propter meam impotentiam, sed alterius curari non valuit, ut ex hoc accensa contentio fuerit quis eorum maior esset",
+        "pt": "Parece, porém, que essa paixão nasceu disto: de não terem conseguido curar o endemoninhado, discutindo eles sobre isso; dizendo um que não foi por sua impotência, mas de outro, que ele não pôde ser curado, de modo que daí se acendeu a contenda sobre qual deles seria o maior.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Vel quia viderant Petrum, Iacobum et Ioannem seorsum ductos in montem, et Petro claves regni caelorum promissas fuisse, irati sunt, vel ipsos tres ceteris, vel Petrum omnibus esse praelatum: vel quia tributi solutione Petrum ipsi domino parificatum viderant, ipsum prae ceteris arbitrabantur praeferendum. Sed diligens lector hanc intra eos quaestionem etiam ante didrachma redditum inveniet fuisse versatam. Denique Matthaeus hoc in Capharnaum memorat esse gestum. Dicit autem Marcus: et venerunt Capharnaum. Qui cum in domo essent, interrogabat eos: quid in via tractabatis? At illi tacebant: siquidem inter se in via disputaverant quis illorum esset maior"
+        "latim": "Vel quia viderant Petrum, Iacobum et Ioannem seorsum ductos in montem, et Petro claves regni caelorum promissas fuisse, irati sunt, vel ipsos tres ceteris, vel Petrum omnibus esse praelatum: vel quia tributi solutione Petrum ipsi domino parificatum viderant, ipsum prae ceteris arbitrabantur praeferendum. Sed diligens lector hanc intra eos quaestionem etiam ante didrachma redditum inveniet fuisse versatam. Denique Matthaeus hoc in Capharnaum memorat esse gestum. Dicit autem Marcus: et venerunt Capharnaum. Qui cum in domo essent, interrogabat eos: quid in via tractabatis? At illi tacebant: siquidem inter se in via disputaverant quis illorum esset maior",
+        "pt": "Ou porque tinham visto Pedro, Tiago e João levados à parte ao monte, e que a Pedro tinham sido prometidas as chaves do reino dos céus, indignaram-se, seja por esses três terem sido preferidos aos demais, seja por Pedro ter sido preferido a todos; ou porque, pelo pagamento do tributo, tinham visto Pedro igualado ao próprio Senhor, julgavam que ele devia ser preferido aos demais. Mas o leitor atento encontrará que essa questão já se agitava entre eles até antes do pagamento do dídracma. Enfim, Mateus relata que isso se passou em Cafarnaum. Diz, porém, Marcos: \"e vieram a Cafarnaum. E estando eles em casa, perguntava-lhes: que tratáveis pelo caminho?\" Mas eles calavam-se, pois tinham discutido entre si pelo caminho qual deles seria o maior.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Dominus autem, qui novit salvos facere, videns in mente discipulorum super hoc cogitationem exortam, velut quamdam amaritudinis radicem, priusquam augmentum susciperet, radicitus eam evellit: cum enim inchoant passiones in nobis, facile devincuntur; sed auctae difficile sunt mobiles; unde sequitur at Iesus videns cogitationes cordis eorum, apprehendit puerum et statuit illum penes se. Discat qui nudum hominem putat esse Iesum, se errasse; quamvis enim verbum caro factum sit, mansit tamen Deus: nam solius Dei est posse rimari corda et renes. Quod autem puerum assumpsit, et ponebat penes se, agebatur causa apostolorum utilitatis et nostrae. Depascitur enim inanis gloriae morbus ut plurimum eos, qui praeeminent in hominibus aliis. Puer autem sinceram gerit mentem, immaculatum cor, et manet in simplicitate cogitationum: non ambit honores, nec novit cuiusvis praerogativae modum, nec refugit videri minus se habere, non multam gerit severitatem in mente et corde. Tales autem dominus amplexatur, et diligit, et prope se dignatur habere, quasi qui elegerunt quae sua sunt sapere. Ait enim: discite a me, quia mitis sum et humilis corde; unde sequitur et ait: quicumque susceperit puerum istum in nomine meo, me recipit; quasi dicat: quando una et eadem est merces honorantibus sanctos, sive forsan minimus sit, sive praeclarus honore et gloria, quia in eo Christus suscipitur; quomodo non vanum est petere invicem fungi praerogativa?"
+        "latim": "Dominus autem, qui novit salvos facere, videns in mente discipulorum super hoc cogitationem exortam, velut quamdam amaritudinis radicem, priusquam augmentum susciperet, radicitus eam evellit: cum enim inchoant passiones in nobis, facile devincuntur; sed auctae difficile sunt mobiles; unde sequitur at Iesus videns cogitationes cordis eorum, apprehendit puerum et statuit illum penes se. Discat qui nudum hominem putat esse Iesum, se errasse; quamvis enim verbum caro factum sit, mansit tamen Deus: nam solius Dei est posse rimari corda et renes. Quod autem puerum assumpsit, et ponebat penes se, agebatur causa apostolorum utilitatis et nostrae. Depascitur enim inanis gloriae morbus ut plurimum eos, qui praeeminent in hominibus aliis. Puer autem sinceram gerit mentem, immaculatum cor, et manet in simplicitate cogitationum: non ambit honores, nec novit cuiusvis praerogativae modum, nec refugit videri minus se habere, non multam gerit severitatem in mente et corde. Tales autem dominus amplexatur, et diligit, et prope se dignatur habere, quasi qui elegerunt quae sua sunt sapere. Ait enim: discite a me, quia mitis sum et humilis corde; unde sequitur et ait: quicumque susceperit puerum istum in nomine meo, me recipit; quasi dicat: quando una et eadem est merces honorantibus sanctos, sive forsan minimus sit, sive praeclarus honore et gloria, quia in eo Christus suscipitur; quomodo non vanum est petere invicem fungi praerogativa?",
+        "pt": "O Senhor, porém, que sabe salvar, vendo que na mente dos discípulos tinha surgido esse pensamento, como certa raiz de amargura, antes que recebesse aumento, arrancou-a pela raiz: pois quando as paixões começam em nós, são facilmente vencidas; mas, uma vez crescidas, são dificilmente removidas; por isso segue-se: \"mas Jesus, vendo os pensamentos de seu coração, tomou um menino e o pôs junto de si\". Aprenda quem pensa que Jesus é um homem nu que se enganou; pois, embora o Verbo se tenha feito carne, permaneceu, contudo, Deus: pois só a Deus pertence poder perscrutar os corações e os rins. E o fato de ter tomado um menino e o ter posto junto de si, fazia-se por utilidade dos apóstolos e nossa. Pois a doença da vanglória devora sobretudo aqueles que se destacam entre os outros homens. O menino, porém, tem mente sincera, coração imaculado, e permanece na simplicidade dos pensamentos: não ambiciona honras, nem conhece o modo de qualquer prerrogativa, nem foge de parecer ter menos, nem tem muita severidade na mente e no coração. Tais o Senhor abraça, e ama, e digna-se ter perto de si, como aqueles que escolheram saborear o que é seu. Pois diz: \"aprendei de mim, que sou manso e humilde de coração\"; por isso segue-se: \"e disse: quem receber este menino em meu nome, a mim recebe\"; como se dissesse: já que é uma e a mesma a recompensa para os que honram os santos, seja ele talvez o menor, seja ilustre em honra e glória, porque nele Cristo é recebido; como não é vão pedir para exercer alternadamente a prerrogativa?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "In hoc autem vel simpliciter pauperes Christi ab his qui velint esse maiores, pro eius docet honore suscipiendos; vel malitia parvulos istos esse suadet; unde cum diceret quicumque susceperit puerum istum, addit in nomine meo; ut scilicet formam virtutis, quam natura duce puer observat, ipsi pro nomine Christi rationis industria sequantur. Sed quia et se in puero suscipi docet, et ipse puer natus est nobis, ne putaretur hoc esse solum quod videbatur, subiunxit et quicumque me recipit, recipit illum qui misit me: talem se utique ac tantum credi volens, qualis et quantus est pater"
+        "latim": "In hoc autem vel simpliciter pauperes Christi ab his qui velint esse maiores, pro eius docet honore suscipiendos; vel malitia parvulos istos esse suadet; unde cum diceret quicumque susceperit puerum istum, addit in nomine meo; ut scilicet formam virtutis, quam natura duce puer observat, ipsi pro nomine Christi rationis industria sequantur. Sed quia et se in puero suscipi docet, et ipse puer natus est nobis, ne putaretur hoc esse solum quod videbatur, subiunxit et quicumque me recipit, recipit illum qui misit me: talem se utique ac tantum credi volens, qualis et quantus est pater",
+        "pt": "Nisto, porém, ensina que os pobres de Cristo devem ser recebidos, por sua honra, simplesmente pelos que queiram ser maiores; ou persuade que esses são pequeninos pela malícia; por isso, tendo dito \"quem receber este menino\", acrescenta \"em meu nome\"; para que, a saber, eles sigam pela indústria da razão, em nome de Cristo, a forma de virtude que o menino observa sob a condução da natureza. Mas, porque ensina que ele mesmo é recebido no menino, e ele mesmo, menino, nasceu para nós, para que não se pensasse que isto era apenas o que parecia, acrescentou: \"e quem me recebe, recebe aquele que me enviou\"; querendo, sem dúvida, ser crido tal e tão grande quanto é o Pai.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Qui enim imitatorem Christi recipit, Christum recipit; et qui imaginem Dei recipit, Deum recipit. Sed quia imaginem Dei non poteramus videre, facta est nobis per incarnationem verbi praesens, ut reconciliaretur nobis quae supra nos est, divinitas"
+        "latim": "Qui enim imitatorem Christi recipit, Christum recipit; et qui imaginem Dei recipit, Deum recipit. Sed quia imaginem Dei non poteramus videre, facta est nobis per incarnationem verbi praesens, ut reconciliaretur nobis quae supra nos est, divinitas",
+        "pt": "Pois quem recebe um imitador de Cristo, recebe Cristo; e quem recebe a imagem de Deus, recebe Deus. Mas, porque não podíamos ver a imagem de Deus, ela se fez presente a nós pela encarnação do Verbo, para que se reconciliasse conosco a divindade, que está acima de nós.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Adhuc autem magis insinuat praemissi verbi intentionem, dicens nam qui minor est inter vos omnes, hic maior est. Quod de modesto dicit, qui nihil de se sublime putat propter honestatem"
+        "latim": "Adhuc autem magis insinuat praemissi verbi intentionem, dicens nam qui minor est inter vos omnes, hic maior est. Quod de modesto dicit, qui nihil de se sublime putat propter honestatem",
+        "pt": "Insinua ainda mais a intenção da palavra antes dita, dizendo: \"pois quem é o menor entre vós todos, esse é o maior\". O que diz do modesto, que nada julga de si mesmo com altivez por causa da honestidade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quia dominus dixerat qui minor est inter vos omnes, hic maior est, timuit Ioannes ne forte malum aliquod fecerint, propria potestate quemdam hominem prohibentes; nam prohibitio non minorem prohibentem ostendit, sed maius aliquid sapientem; unde subditur respondens autem Ioannes dixit: praeceptor, vidimus quemdam in nomine tuo eicientem Daemonia, et prohibuimus eum: non quidem invidentes, sed operationem miraculorum diiudicantes: non enim cum eis miraculorum potestatem acceperat, neque eum dominus miserat sicut illos, neque Iesum in omnibus sequebatur; unde subdit qui non sequitur te nobiscum"
+        "latim": "Quia dominus dixerat qui minor est inter vos omnes, hic maior est, timuit Ioannes ne forte malum aliquod fecerint, propria potestate quemdam hominem prohibentes; nam prohibitio non minorem prohibentem ostendit, sed maius aliquid sapientem; unde subditur respondens autem Ioannes dixit: praeceptor, vidimus quemdam in nomine tuo eicientem Daemonia, et prohibuimus eum: non quidem invidentes, sed operationem miraculorum diiudicantes: non enim cum eis miraculorum potestatem acceperat, neque eum dominus miserat sicut illos, neque Iesum in omnibus sequebatur; unde subdit qui non sequitur te nobiscum",
+        "pt": "Porque o Senhor tinha dito \"quem é o menor entre vós todos, esse é o maior\", temeu João que talvez tivessem feito algum mal, proibindo por autoridade própria certo homem; pois a proibição não mostra o que proíbe como menor, mas como sabendo algo maior; por isso se acrescenta: \"respondendo, porém, João, disse: mestre, vimos alguém expulsando demônios em teu nome, e o proibimos\": não por inveja, é certo, mas julgando a operação dos milagres; pois ele não tinha recebido com eles o poder dos milagres, nem o Senhor o tinha enviado como a eles, nem seguia Jesus em tudo; por isso acrescenta: \"que não te segue conosco\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Ioannes enim plurimum diligens, et ideo redamatus plurimum, excludendum putat beneficio eum qui non utatur obsequio"
+        "latim": "Ioannes enim plurimum diligens, et ideo redamatus plurimum, excludendum putat beneficio eum qui non utatur obsequio",
+        "pt": "Pois João, amando muitíssimo, e por isso muitíssimo reamado, julga que deve ser excluído do benefício aquele que não presta obséquio.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Sed oportebat magis pensare non hunc ipsum esse miraculorum auctorem, sed gratiam quae est in eo qui in virtute Christi miracula perficit. Quid autem si non connumerentur apostolis qui Christi gratia coronantur? Multae sunt differentiae Christi donorum; sed quia tradidit salvator potestatem apostolis ut spiritus immundos eicerent, putaverunt nulli aliorum quam sibi solis licere concessam gerere dignitatem; et ideo accedunt sciscitantes si liceat et aliis hoc agere"
+        "latim": "Sed oportebat magis pensare non hunc ipsum esse miraculorum auctorem, sed gratiam quae est in eo qui in virtute Christi miracula perficit. Quid autem si non connumerentur apostolis qui Christi gratia coronantur? Multae sunt differentiae Christi donorum; sed quia tradidit salvator potestatem apostolis ut spiritus immundos eicerent, putaverunt nulli aliorum quam sibi solis licere concessam gerere dignitatem; et ideo accedunt sciscitantes si liceat et aliis hoc agere",
+        "pt": "Mas era preciso antes pensar que não é este mesmo o autor dos milagres, mas a graça que está naquele que realiza milagres pela virtude de Cristo. E que importa se não são contados entre os apóstolos os que são coroados pela graça de Cristo? Muitas são as diferenças dos dons de Cristo; mas, porque o Salvador entregou aos apóstolos o poder de expulsar os espíritos imundos, pensaram que a nenhum outro além deles somente era lícito exercer a dignidade concedida; e por isso vêm perguntar se também é lícito a outros fazer isso",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Non reprehenditur autem Ioannes, quia amore faciebat, sed docetur, ut noverit infirmorum esse firmorumque distantiam. Et ideo dominus etsi fortiores remunerat, tamen non excludit infirmos; unde sequitur et ait ad illos Iesus: nolite prohibere: qui enim non est adversum vos, pro vobis est. Bene, domine: nam et Ioseph et Nicodemus, occulti discipuli propter metum, in tempore tamen suum tibi officium non negaverunt. Sed tamen, quia alibi dixisti: qui non est mecum, adversum me est, et qui mecum non colligit, dispergit, aperi nobis, ne videatur esse contrarium. Et puto, quia si quis mentium consideret scrutatorem, non debeat dubitare uniuscuiusque factum mente discerni"
+        "latim": "Non reprehenditur autem Ioannes, quia amore faciebat, sed docetur, ut noverit infirmorum esse firmorumque distantiam. Et ideo dominus etsi fortiores remunerat, tamen non excludit infirmos; unde sequitur et ait ad illos Iesus: nolite prohibere: qui enim non est adversum vos, pro vobis est. Bene, domine: nam et Ioseph et Nicodemus, occulti discipuli propter metum, in tempore tamen suum tibi officium non negaverunt. Sed tamen, quia alibi dixisti: qui non est mecum, adversum me est, et qui mecum non colligit, dispergit, aperi nobis, ne videatur esse contrarium. Et puto, quia si quis mentium consideret scrutatorem, non debeat dubitare uniuscuiusque factum mente discerni",
+        "pt": "Ora, João não é repreendido, porque agia por amor, mas é instruído, para que conheça a distância entre os fracos e os fortes. E por isso o Senhor, ainda que recompense os mais fortes, contudo não exclui os fracos; donde segue-se \"e Jesus lhes disse: não proibais: quem não é contra vós é por vós\". Bem, Senhor: pois também José e Nicodemos, discípulos ocultos por medo, contudo no seu tempo não negaram a ti o seu dever. Mas, contudo, porque noutro lugar disseste: \"quem não é comigo é contra mim, e quem não recolhe comigo, dispersa\", explica-nos, para que não pareça ser contrário. E penso que, se alguém considerar o escrutador das mentes, não deve duvidar que o ato de cada um se discirna pela mente",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Illic enim cum dixit: qui non est mecum, adversum me est, ostendit Diabolum et Iudaeos sibi esse contrarios; hic autem ostendit eum qui in nomine Christi Daemones eiciebat, in parte cum eis existere"
+        "latim": "Illic enim cum dixit: qui non est mecum, adversum me est, ostendit Diabolum et Iudaeos sibi esse contrarios; hic autem ostendit eum qui in nomine Christi Daemones eiciebat, in parte cum eis existere",
+        "pt": "Pois ali, quando disse: \"quem não é comigo é contra mim\", mostrou que o Diabo e os judeus lhe eram contrários; aqui, porém, mostra que aquele que expulsava os demônios em nome de Cristo estava em parte com eles",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Quasi dicat: pro vobis, qui Christum diligitis, sunt qui prosequi volunt quae ad ipsius gloriam spectant, eiusdem gratia coronati"
+        "latim": "Quasi dicat: pro vobis, qui Christum diligitis, sunt qui prosequi volunt quae ad ipsius gloriam spectant, eiusdem gratia coronati",
+        "pt": "Como se dissesse: são a favor de vós, que amais a Cristo, os que querem promover o que diz respeito à glória dele, coroados pela graça do mesmo",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Mirare autem Christi virtutem, qualiter per indignos et non discipulos eius gratia operatur; sicut et per sacerdotes sanctificantur homines, quamvis sacerdotes sancti non fuerint"
+        "latim": "Mirare autem Christi virtutem, qualiter per indignos et non discipulos eius gratia operatur; sicut et per sacerdotes sanctificantur homines, quamvis sacerdotes sancti non fuerint",
+        "pt": "Admira, porém, o poder de Cristo, como a graça opera por meio de indignos e que não são discípulos seus; assim como também pelos sacerdotes os homens são santificados, ainda que os sacerdotes não tenham sido santos",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Cur autem hic eos qui possunt per manus impositionem immundis imperare spiritibus in nomine Iesu, negat esse prohibendos? Secundum Matthaeum dicit his: non novi vos. Sed advertere debemus, non esse sententiarum discordiam; sed illud censeri, quod non solum officii in clericos, sed etiam virtutis opera requirantur; tantumque esse Christi nomen, ut etiam parum sanctis opituletur ad praesidium, etsi non opituletur ad gratiam: unde nemo purgati hominis sibi gratiam vindicet, in quo aeterni nominis virtus operata sit: non enim merito suo Diabolus, sed odio sui vincitur"
+        "latim": "Cur autem hic eos qui possunt per manus impositionem immundis imperare spiritibus in nomine Iesu, negat esse prohibendos? Secundum Matthaeum dicit his: non novi vos. Sed advertere debemus, non esse sententiarum discordiam; sed illud censeri, quod non solum officii in clericos, sed etiam virtutis opera requirantur; tantumque esse Christi nomen, ut etiam parum sanctis opituletur ad praesidium, etsi non opituletur ad gratiam: unde nemo purgati hominis sibi gratiam vindicet, in quo aeterni nominis virtus operata sit: non enim merito suo Diabolus, sed odio sui vincitur",
+        "pt": "Mas por que aqui nega que devam ser proibidos aqueles que podem, pela imposição das mãos, ordenar aos espíritos imundos em nome de Jesus? Segundo Mateus, diz a estes: \"não vos conheço\". Mas devemos observar que não há discordância de sentenças; mas se deve julgar que não só se requer o ofício nos clérigos, mas também as obras da virtude; e que o nome de Cristo é tão grande, que socorre em auxílio até aos pouco santos, ainda que não socorra para a graça: donde ninguém que não esteja purificado reivindique para si a graça, na qual operou a virtude do nome eterno: pois não é vencido o Diabo por mérito do homem, mas pelo ódio contra si mesmo",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Itaque in haereticis et malis Catholicis non sacramenta communia in quibus nobiscum sunt et adversum nos non sunt, sed divisionem paci veritatique contrariam, qua adversum nos sunt, et dominum non sequuntur nobiscum, detestari et prohibere debemus"
+        "latim": "Itaque in haereticis et malis Catholicis non sacramenta communia in quibus nobiscum sunt et adversum nos non sunt, sed divisionem paci veritatique contrariam, qua adversum nos sunt, et dominum non sequuntur nobiscum, detestari et prohibere debemus",
+        "pt": "Portanto, nos hereges e nos maus católicos, não devemos detestar e proibir os sacramentos comuns, nos quais estão conosco e não são contrários a nós, mas a divisão contrária à paz e à verdade, pela qual são contrários a nós e não seguem o Senhor conosco",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       }
     ]
   },
@@ -1087,112 +1339,266 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Etsi munificus sit omnium dominus, non simpliciter et improvide singulis dat superna et divina dona, sed illis qui digni sunt recipere, qui scilicet animam suam alienant a maculis pravitatum; et hoc nos docet evangelicorum verborum virtus, cum dicitur factum est autem ambulantibus illis in via, dixit quidam ad illum: sequar te quocumque ieris. Primo quidem plurima continetur in accessu inertia; consequenter ostenditur quod plenus impudentia nimia: neque enim simpliciter Christum sequi petebat, sicut alii plures de populo; sed magis insiliebat ad apostolicas dignitates, cum Paulus dicat: non assumat quisquam sibi honorem, sed a Deo vocatus"
+        "latim": "Etsi munificus sit omnium dominus, non simpliciter et improvide singulis dat superna et divina dona, sed illis qui digni sunt recipere, qui scilicet animam suam alienant a maculis pravitatum; et hoc nos docet evangelicorum verborum virtus, cum dicitur factum est autem ambulantibus illis in via, dixit quidam ad illum: sequar te quocumque ieris. Primo quidem plurima continetur in accessu inertia; consequenter ostenditur quod plenus impudentia nimia: neque enim simpliciter Christum sequi petebat, sicut alii plures de populo; sed magis insiliebat ad apostolicas dignitates, cum Paulus dicat: non assumat quisquam sibi honorem, sed a Deo vocatus",
+        "pt": "Ainda que o Senhor de todos seja generoso, não dá simplesmente e sem discernimento os dons celestiais e divinos a cada um, mas àqueles que são dignos de recebê-los, isto é, aos que afastam sua alma das manchas das perversidades; e isto nos ensina a força das palavras evangélicas, quando se diz \"e aconteceu que, indo eles pelo caminho, alguém lhe disse: seguir-te-ei para onde quer que fores\". Em primeiro lugar, contém-se nesta abordagem muita inércia; em seguida, mostra-se que está cheio de excessiva impudência: pois não pedia simplesmente seguir a Cristo, como muitos outros do povo; mas antes se lançava sobre as dignidades apostólicas, quando Paulo diz: \"ninguém tome para si esta honra, senão o chamado por Deus\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Athanasius",
         "obra": "",
-        "latim": "Ausus etiam fuit comparare se incomprehensibili salvatoris potestati, dicens sequar te quocumque ieris: eo quod sequi salvatorem simpliciter ad eius audiendam doctrinam possibile est humanae naturae proprietate, qua fungitur erga homines; non est autem possibile secum concurrere ubilibet existenti: ipse namque incomprehensibilis est, et non circumscribitur loco"
+        "latim": "Ausus etiam fuit comparare se incomprehensibili salvatoris potestati, dicens sequar te quocumque ieris: eo quod sequi salvatorem simpliciter ad eius audiendam doctrinam possibile est humanae naturae proprietate, qua fungitur erga homines; non est autem possibile secum concurrere ubilibet existenti: ipse namque incomprehensibilis est, et non circumscribitur loco",
+        "pt": "Ousou também comparar-se ao poder incompreensível do Salvador, dizendo \"seguir-te-ei para onde quer que fores\": porque seguir simplesmente o Salvador para ouvir a sua doutrina é possível pela propriedade da natureza humana, com que ele se comporta para com os homens; mas não é possível acompanhá-lo em qualquer lugar em que esteja: pois ele mesmo é incompreensível, e não é circunscrito por lugar",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Alio quoque modo non immerito recusabilem facit eum; decebat enim ipsum crucem suam accipere ad sequendum dominum, et abrenuntiare praesentis vitae affectibus: et hoc dominus in eo reprehendit, non vituperans, sed corrigens. Sequitur et ait Iesus: vulpes foveas habent et volucres caeli nidos; filius autem hominis non habet ubi caput suum reclinet"
+        "latim": "Alio quoque modo non immerito recusabilem facit eum; decebat enim ipsum crucem suam accipere ad sequendum dominum, et abrenuntiare praesentis vitae affectibus: et hoc dominus in eo reprehendit, non vituperans, sed corrigens. Sequitur et ait Iesus: vulpes foveas habent et volucres caeli nidos; filius autem hominis non habet ubi caput suum reclinet",
+        "pt": "De outro modo também, não sem razão, o torna recusável; pois convinha que ele tomasse a sua cruz para seguir o Senhor, e renunciasse aos afetos da vida presente: e isto o Senhor repreende nele, não censurando, mas corrigindo. Segue-se: \"e disse Jesus: as raposas têm covis e as aves do céu ninhos; mas o Filho do homem não tem onde reclinar a cabeça\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quia enim viderat dominum multum populum adducentem, putavit quod ab eis haberet pretium, et quod si ipse dominum sequeretur, posset pecuniam congregare"
+        "latim": "Quia enim viderat dominum multum populum adducentem, putavit quod ab eis haberet pretium, et quod si ipse dominum sequeretur, posset pecuniam congregare",
+        "pt": "Pois, como tinha visto que o Senhor atraía muito povo, pensou que dele obteria proveito, e que, se seguisse o Senhor, poderia juntar dinheiro",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Unde dicitur ei: quid me propter divitias et lucra huius saeculi cupis sequi, cum tantae sim paupertatis ut nec hospitiolum quidem habeam, et non meo utar tecto?"
+        "latim": "Unde dicitur ei: quid me propter divitias et lucra huius saeculi cupis sequi, cum tantae sim paupertatis ut nec hospitiolum quidem habeam, et non meo utar tecto?",
+        "pt": "Por isso lhe é dito: por que desejas seguir-me por causa das riquezas e dos lucros deste século, se sou de tal pobreza que nem sequer tenho uma pequena morada, e não uso teto próprio?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Aspice qualiter paupertatem quam dominus docuerat, per opera demonstrat. Non erat ei mensa, non candelabrum, non domus, nec quicquam aliud talium"
+        "latim": "Aspice qualiter paupertatem quam dominus docuerat, per opera demonstrat. Non erat ei mensa, non candelabrum, non domus, nec quicquam aliud talium",
+        "pt": "Vê como demonstra pelas obras a pobreza que o Senhor tinha ensinado. Não tinha ele mesa, nem candelabro, nem casa, nem qualquer outra coisa semelhante",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Mystica autem significatione vulpes et volatilia caeli malignas et astutas potestates Daemonum vocat: quasi dicat: quando vulpes et volatilia in te mansionem habent, qualiter Christus in te requiescet? Quid commune est luci et tenebris?"
+        "latim": "Mystica autem significatione vulpes et volatilia caeli malignas et astutas potestates Daemonum vocat: quasi dicat: quando vulpes et volatilia in te mansionem habent, qualiter Christus in te requiescet? Quid commune est luci et tenebris?",
+        "pt": "Por significação mística, porém, chama de raposas e aves do céu os poderes malignos e astutos dos Demônios: como se dissesse: quando as raposas e as aves têm morada em ti, como repousará Cristo em ti? Que há em comum entre a luz e as trevas?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Athanasius",
         "obra": "",
-        "latim": "Vel in hoc dominus magnitudinem sui muneris docet; quasi dicat: omnia generabilia circumscribi possunt; verbum vero Dei incomprehensibilis potestatis est: et ideo ne dicas sequar te quocumque ieris. Ceterum si velis discipulus fieri, abdices irrationabilia: eo quod impossibile est eum qui moratur in irrationabilitate, verbi discipulum fieri"
+        "latim": "Vel in hoc dominus magnitudinem sui muneris docet; quasi dicat: omnia generabilia circumscribi possunt; verbum vero Dei incomprehensibilis potestatis est: et ideo ne dicas sequar te quocumque ieris. Ceterum si velis discipulus fieri, abdices irrationabilia: eo quod impossibile est eum qui moratur in irrationabilitate, verbi discipulum fieri",
+        "pt": "Ou nisto o Senhor ensina a grandeza do seu dom; como se dissesse: todas as coisas geráveis podem ser circunscritas; mas o Verbo de Deus é de poder incompreensível: e por isso não digas \"seguir-te-ei para onde quer que fores\". De resto, se quiseres tornar-te discípulo, renuncia às coisas irracionais: porque é impossível que aquele que permanece na irracionalidade se torne discípulo do Verbo",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Vel vulpes haereticis comparat: fallax quippe animal et insidiis semper intentum, rapinam fraudis exercet: nihil tutum, nihil otiosum, nihil patitur esse securum, eo quod intra ipsa hospitia hominum praedam requirit. Ita sunt haeretici, qui domum sibi parare non norunt, sed circumscriptionibus suis alios decipere conantur. Hoc animal neque mansuescit unquam; unde apostolus ait: haereticum hominem post unam correctionem devita. Volucres vero caeli frequenter ad nequitiae spiritualis similitudinem derivantur; et veluti nidos quosdam struunt in pectoribus improborum: et ideo dominante versutia in affectibus singulorum, nulla potest divinitatis esse possessio; ubi autem mentem probaverit innoxiam, supra ipsum quodammodo vim suae maiestatis reclinat, quia profusiore quadam gratia honorum pectoribus inseritur. Sic igitur non videtur convenire rationi ut simplicem fidelemque ipsum arbitremur qui domini dignatione respuitur, cum indefessi famulatus obsequium spopondisset. Sed dominus non obsequiorum speciem, sed puritatem quaerit affectus; nec obsequium eius admittitur cuius non probatur officium: circumspectum etenim fidei debet esse hospitium: ne dum infidelibus nostrae domus interna reseramus, in alienam perfidiam improvida credulitate labamur. Itaque ut advertas Deum non cultus aspernantem esse, sed fraudis; qui repudiavit fraudulentum, elegit innocentem; sequitur enim ait autem ad alterum: sequere me. Sed hoc dicit ei cuius patrem iam sciebat mortuum; unde sequitur ille autem dixit: domine, permitte mihi primum ire et sepelire patrem meum"
+        "latim": "Vel vulpes haereticis comparat: fallax quippe animal et insidiis semper intentum, rapinam fraudis exercet: nihil tutum, nihil otiosum, nihil patitur esse securum, eo quod intra ipsa hospitia hominum praedam requirit. Ita sunt haeretici, qui domum sibi parare non norunt, sed circumscriptionibus suis alios decipere conantur. Hoc animal neque mansuescit unquam; unde apostolus ait: haereticum hominem post unam correctionem devita. Volucres vero caeli frequenter ad nequitiae spiritualis similitudinem derivantur; et veluti nidos quosdam struunt in pectoribus improborum: et ideo dominante versutia in affectibus singulorum, nulla potest divinitatis esse possessio; ubi autem mentem probaverit innoxiam, supra ipsum quodammodo vim suae maiestatis reclinat, quia profusiore quadam gratia honorum pectoribus inseritur. Sic igitur non videtur convenire rationi ut simplicem fidelemque ipsum arbitremur qui domini dignatione respuitur, cum indefessi famulatus obsequium spopondisset. Sed dominus non obsequiorum speciem, sed puritatem quaerit affectus; nec obsequium eius admittitur cuius non probatur officium: circumspectum etenim fidei debet esse hospitium: ne dum infidelibus nostrae domus interna reseramus, in alienam perfidiam improvida credulitate labamur. Itaque ut advertas Deum non cultus aspernantem esse, sed fraudis; qui repudiavit fraudulentum, elegit innocentem; sequitur enim ait autem ad alterum: sequere me. Sed hoc dicit ei cuius patrem iam sciebat mortuum; unde sequitur ille autem dixit: domine, permitte mihi primum ire et sepelire patrem meum",
+        "pt": "Ou compara as raposas aos hereges: pois é um animal enganoso e sempre atento a ciladas, que exerce a rapina da fraude: nada permite que seja seguro, nada tranquilo, nada deixa estar em segurança, porque busca a presa dentro das próprias moradas dos homens. Assim são os hereges, que não sabem preparar para si uma casa, mas tentam enganar os outros com as suas artimanhas. Este animal nunca se amansa; por isso o Apóstolo diz: \"evita o homem herege depois de uma admoestação\". As aves do céu, por sua vez, são frequentemente trazidas para a semelhança da malícia espiritual; e constroem, por assim dizer, alguns ninhos nos peitos dos ímprobos: e por isso, dominando a astúcia nos afetos de cada um, não pode haver posse alguma da divindade; mas onde ela tiver comprovado a mente inocente, apoia sobre ela, de certo modo, a força de sua majestade, porque se insere nos peitos honrados com uma graça mais abundante. Assim, portanto, não parece condizer com a razão julgá-lo simples e fiel, a quem a dignação do Senhor rejeita, embora tivesse prometido o obséquio de um serviço incansável. Mas o Senhor não busca a aparência dos obséquios, mas a pureza do afeto; nem se admite o seu obséquio, cujo dever não se comprova: pois a hospedagem da fé deve ser circunspecta: para que, ao abrirmos aos infiéis o interior de nossa casa, não caiamos, por incauta credulidade, em perfídia alheia. Assim, pois, para que percebas que Deus não repudia o culto, mas a fraude; ele, que repudiou o fraudulento, escolheu o inocente; segue-se, com efeito: \"e disse a outro: segue-me\". Mas isto disse a alguém de quem já sabia que o pai estava morto; por isso segue-se: \"ele, porém, disse: Senhor, permite-me primeiro ir sepultar meu pai\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Non discipulatum respuit; sed expleta primum paterni funeris pietate, liberior assequi desiderat"
+        "latim": "Non discipulatum respuit; sed expleta primum paterni funeris pietate, liberior assequi desiderat",
+        "pt": "Não rejeita o discipulado; mas, cumprido primeiro o dever piedoso do funeral paterno, deseja segui-lo mais livremente",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Sed dominus quos miseretur advocat; unde sequitur dixitque Iesus: sine ut mortui sepeliant mortuos suos; tu autem vade, et annuntia regnum Dei. Cum religiosum humani corporis sepeliendi acceperimus officium, quomodo paterni quoque funeris sepultura prohibetur, nisi ut intelligas humana posthabenda divinis? Bonum studium, sed maius impedimentum; nam qui partitur studium, derivat affectum; qui dividit curam, differt profectum; ergo prius sunt obeunda quae maxima: nam et apostoli ne occuparentur studio dispensandi, ministros pauperibus ordinaverunt"
+        "latim": "Sed dominus quos miseretur advocat; unde sequitur dixitque Iesus: sine ut mortui sepeliant mortuos suos; tu autem vade, et annuntia regnum Dei. Cum religiosum humani corporis sepeliendi acceperimus officium, quomodo paterni quoque funeris sepultura prohibetur, nisi ut intelligas humana posthabenda divinis? Bonum studium, sed maius impedimentum; nam qui partitur studium, derivat affectum; qui dividit curam, differt profectum; ergo prius sunt obeunda quae maxima: nam et apostoli ne occuparentur studio dispensandi, ministros pauperibus ordinaverunt",
+        "pt": "Mas o Senhor chama aqueles de quem se compadece; por isso segue-se: \"e disse Jesus: deixa que os mortos sepultem os seus mortos; tu, porém, vai e anuncia o reino de Deus\". Sendo que recebemos o ofício religioso de sepultar o corpo humano, como é proibida também a sepultura do funeral paterno, senão para que entendas que as coisas humanas devem ser postas depois das divinas? É bom empenho, mas maior impedimento; pois quem reparte o empenho, desvia o afeto; quem divide o cuidado, adia o proveito; portanto, devem-se cumprir primeiro as coisas maiores: pois também os apóstolos, para não se ocuparem no empenho de distribuir, ordenaram ministros para os pobres",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Matthaeum",
-        "latim": "Quid autem magis necessarium paternis exequiis; quid facilius, cum non esset multum temporis dandum? Per hoc docemur quod minime tempus frustra ducere decet, etsi mille cogentia sint; immo praeferre spiritualia cunctis admodum necessariis. Diabolus enim insistit attentius, volens aliquem aditum invenire; et si modicam sumat negligentiam, magnam operatur pusillanimitatem"
+        "latim": "Quid autem magis necessarium paternis exequiis; quid facilius, cum non esset multum temporis dandum? Per hoc docemur quod minime tempus frustra ducere decet, etsi mille cogentia sint; immo praeferre spiritualia cunctis admodum necessariis. Diabolus enim insistit attentius, volens aliquem aditum invenire; et si modicam sumat negligentiam, magnam operatur pusillanimitatem",
+        "pt": "E que coisa é mais necessária do que as exéquias paternas; que coisa é mais fácil, visto que não seria preciso dar muito tempo? Por isto somos ensinados que não convém de modo algum passar o tempo em vão, ainda que haja mil coisas que constranjam; antes, é preciso preferir as coisas espirituais a todas as coisas por mais necessárias que sejam. Pois o diabo insiste com mais atenção, querendo encontrar alguma entrada; e, se toma uma pequena negligência, opera uma grande pusilanimidade",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Non ergo paterni funeris sepultura prohibetur: sed necessitudini generis divinae religionis pietas antefertur. Illud consortibus relinquitur, hoc mandatur relictis. Quomodo autem mortui sepelire mortuos possunt, nisi geminam hic intelligas mortem, unam naturae, alteram culpae? Est etiam mors tertia, in qua peccato morimur, Deo vivimus"
+        "latim": "Non ergo paterni funeris sepultura prohibetur: sed necessitudini generis divinae religionis pietas antefertur. Illud consortibus relinquitur, hoc mandatur relictis. Quomodo autem mortui sepelire mortuos possunt, nisi geminam hic intelligas mortem, unam naturae, alteram culpae? Est etiam mors tertia, in qua peccato morimur, Deo vivimus",
+        "pt": "Não se proíbe, pois, a sepultura do funeral paterno: mas a piedade da religião divina é preferida à necessidade do parentesco. Aquilo se deixa aos parentes, isto se manda aos que ficam. Mas como podem os mortos sepultar os mortos, senão porque aqui deves entender uma dupla morte, uma da natureza, outra da culpa? Há também uma terceira morte, na qual morremos para o pecado e vivemos para Deus",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Matthaeum",
-        "latim": "Cum ergo dixisset mortuos suos, ostendit hunc non esse mortuum eius; puto enim de numero infidelium fuisse defunctum"
+        "latim": "Cum ergo dixisset mortuos suos, ostendit hunc non esse mortuum eius; puto enim de numero infidelium fuisse defunctum",
+        "pt": "Quando, portanto, disse \"seus mortos\", mostrou que este não era um morto dele; penso, com efeito, que o defunto era do número dos infiéis",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Aut quia sepulchrum patens est guttur impiorum, memoria eorum abolenda praescribitur quorum simul cum corpore meritum occidit; nec revocatur ab officio patris filius, sed fidelis a perfido communione secernitur; non interdictum est muneris, sed religionis mysterium, communionem nobis cum gentibus mortuis non futuram"
+        "latim": "Aut quia sepulchrum patens est guttur impiorum, memoria eorum abolenda praescribitur quorum simul cum corpore meritum occidit; nec revocatur ab officio patris filius, sed fidelis a perfido communione secernitur; non interdictum est muneris, sed religionis mysterium, communionem nobis cum gentibus mortuis non futuram",
+        "pt": "Ou porque o sepulcro aberto é a garganta dos ímpios, prescreve-se que se apague a memória daqueles cujo mérito perece junto com o corpo; nem o filho é afastado do dever para com o pai, mas o fiel é separado do pérfido quanto à comunhão; não se proíbe o dever, mas o mistério da religião, que não haverá comunhão nossa com os gentios mortos",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Vel aliter. Erat enim pater senectute gravatus. Putat autem honestum aliquid agere, dum proponeret observare ei debitam pietatem, secundum illud: honora patrem tuum et matrem tuam. Unde ubi vocatus est ad evangelicum ministerium, dicente domino sequere me, quaerebat inducias quae sufficere possent ad decrepiti patris sustentationem dicens permitte mihi primum ire, et sepelire patrem meum: non quod defunctum patrem sepelire rogaret; neque enim Christus hoc agere volentem impedivisset; sed dixit sepelire, idest sustentare in senectute usque ad mortem. Sed dominus ad eum dixit sine mortuos sepelire mortuos suos: erant enim et alii curatores linea parentelae astricti, sed, ut aestimo, mortui, eo quod nondum Christo crediderant. Hinc percipe quod praeferenda sit pietas qua Deo tenemur, amori parentum; quibus reverentiam exhibemus, quia per eos geniti sumus; sed omnium Deus, cum non essemus, ad esse nos conduxit; parentes autem facti sunt ministri introitus ad esse"
+        "latim": "Vel aliter. Erat enim pater senectute gravatus. Putat autem honestum aliquid agere, dum proponeret observare ei debitam pietatem, secundum illud: honora patrem tuum et matrem tuam. Unde ubi vocatus est ad evangelicum ministerium, dicente domino sequere me, quaerebat inducias quae sufficere possent ad decrepiti patris sustentationem dicens permitte mihi primum ire, et sepelire patrem meum: non quod defunctum patrem sepelire rogaret; neque enim Christus hoc agere volentem impedivisset; sed dixit sepelire, idest sustentare in senectute usque ad mortem. Sed dominus ad eum dixit sine mortuos sepelire mortuos suos: erant enim et alii curatores linea parentelae astricti, sed, ut aestimo, mortui, eo quod nondum Christo crediderant. Hinc percipe quod praeferenda sit pietas qua Deo tenemur, amori parentum; quibus reverentiam exhibemus, quia per eos geniti sumus; sed omnium Deus, cum non essemus, ad esse nos conduxit; parentes autem facti sunt ministri introitus ad esse",
+        "pt": "Ou de outro modo. Pois o pai estava carregado pela velhice. Ora, ele pensa fazer algo honesto ao propor observar-lhe a piedade devida, segundo aquilo: \"honra teu pai e tua mãe\". Por isso, quando foi chamado ao ministério evangélico, dizendo o Senhor \"segue-me\", ele buscava um prazo que pudesse bastar para o sustento do pai decrépito, dizendo: \"permite-me primeiro ir e sepultar meu pai\": não que pedisse para sepultar o pai já morto — pois Cristo não teria impedido quem quisesse fazer isso — mas disse \"sepultar\", isto é, sustentar na velhice até a morte. Mas o Senhor lhe disse: \"Deixa os mortos sepultarem os seus mortos\": pois havia também outros cuidadores ligados pela linha de parentesco, mas, como julgo, mortos, porque ainda não haviam crido em Cristo. Daí percebe que se deve preferir a piedade pela qual estamos ligados a Deus ao amor dos pais; aos quais mostramos reverência, porque por eles fomos gerados; mas Deus é de todos, e, quando não éramos, conduziu-nos à existência; os pais, porém, tornaram-se ministros da entrada para a existência",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de Cons. Evang",
-        "latim": "Hoc ergo dicebat dominus illi cui dixerat sequere me. Alius vero discipulus misit se in medio, cui nemo aliquid dixerat; unde sequitur et alter ait: sequar te, domine, sed primum permitte mihi ire, et renuntiare his qui domi sunt, ne forte, quomodo fieri solet, quaerant me"
+        "latim": "Hoc ergo dicebat dominus illi cui dixerat sequere me. Alius vero discipulus misit se in medio, cui nemo aliquid dixerat; unde sequitur et alter ait: sequar te, domine, sed primum permitte mihi ire, et renuntiare his qui domi sunt, ne forte, quomodo fieri solet, quaerant me",
+        "pt": "Isto, pois, dizia o Senhor àquele a quem tinha dito \"segue-me\". Já outro discípulo se meteu no meio, a quem ninguém tinha dito nada; por isso segue-se: \"E outro disse: Eu te seguirei, Senhor, mas primeiro permite-me ir despedir-me dos que estão em casa, para que não aconteça, como costuma acontecer, que me procurem\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Imitanda autem huiusmodi promissio, et omni laude plena; sed quaerere renuntiare his qui domi sunt, licentiando se ab eis, ostendit quod utcumque divisus sit a domino, dum hoc non perfecte adire proposuerit mente: nam velle consulere proximos non consensuros huic proposito, indicat se utcumque, labentem: propter quod dominus hoc improbat. Sequitur ait ad illum Iesus: nemo mittens manum suam ad aratrum, et respiciens retro, aptus est regno Dei. Apposuit manum aratro qui affectuosus est ad sequendum; tamen respicit retro qui dilationem petit, occasione redeundi ad domum et cum propinquis conferendi"
+        "latim": "Imitanda autem huiusmodi promissio, et omni laude plena; sed quaerere renuntiare his qui domi sunt, licentiando se ab eis, ostendit quod utcumque divisus sit a domino, dum hoc non perfecte adire proposuerit mente: nam velle consulere proximos non consensuros huic proposito, indicat se utcumque, labentem: propter quod dominus hoc improbat. Sequitur ait ad illum Iesus: nemo mittens manum suam ad aratrum, et respiciens retro, aptus est regno Dei. Apposuit manum aratro qui affectuosus est ad sequendum; tamen respicit retro qui dilationem petit, occasione redeundi ad domum et cum propinquis conferendi",
+        "pt": "Ora, uma promessa dessa espécie deve ser imitada, e é digna de todo louvor; mas buscar despedir-se dos que estão em casa, licenciando-se deles, mostra que ele estava de algum modo dividido em relação ao Senhor, visto que não se propusera abraçar isto com a mente de modo perfeito: pois querer consultar os parentes, que não haveriam de consentir com este propósito, indica que ele estava de algum modo vacilante; por isso o Senhor reprova isto. Segue-se: \"Disse-lhe Jesus: Ninguém que põe a mão no arado e olha para trás é apto para o reino de Deus\". Põe a mão no arado quem está afeiçoado a seguir; contudo, olha para trás quem pede uma delonga, sob a ocasião de voltar para casa e conversar com os parentes",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de Verb. Dom",
-        "latim": "Quasi dicat ei: vocat te oriens, et tu attendis occidentem"
+        "latim": "Quasi dicat ei: vocat te oriens, et tu attendis occidentem",
+        "pt": "Como se lhe dissesse: o oriente te chama, e tu atentas para o ocidente",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Manum etiam cuilibet in aratrum mittere, est quasi quodam compunctionis instrumento, ligno et ferro dominicae passionis duritiem sui cordis atterere, atque ad serendos bonorum operum fructus aperire; quam si quis excolere incipiens cum uxore Lot ad ea quae reliquerat, respicere delectatur, futuri iam regni munere privatur"
+        "latim": "Manum etiam cuilibet in aratrum mittere, est quasi quodam compunctionis instrumento, ligno et ferro dominicae passionis duritiem sui cordis atterere, atque ad serendos bonorum operum fructus aperire; quam si quis excolere incipiens cum uxore Lot ad ea quae reliquerat, respicere delectatur, futuri iam regni munere privatur",
+        "pt": "Pôr a mão no arado, para qualquer um, é como, por um certo instrumento de compunção, com o madeiro e o ferro da paixão do Senhor, desgastar a dureza do próprio coração, e abri-lo para semear os frutos das boas obras; e se alguém, começando a cultivá-lo, se deleita em olhar para trás, como a mulher de Ló, para aquilo que deixou, é privado já do dom do reino futuro",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Graecus",
         "obra": "",
-        "latim": "Crebri namque intuitus eorum quae deseruimus, propter consuetudinem trahunt ad retro acta: violentum enim quid usus est ad retinendum sibi. Nonne habitus ex usu, ex habitu vero natura innascitur? Naturam vero amovere vel alterare difficile: nam et si paulisper declinet coacta, redit ad seipsam velociter"
+        "latim": "Crebri namque intuitus eorum quae deseruimus, propter consuetudinem trahunt ad retro acta: violentum enim quid usus est ad retinendum sibi. Nonne habitus ex usu, ex habitu vero natura innascitur? Naturam vero amovere vel alterare difficile: nam et si paulisper declinet coacta, redit ad seipsam velociter",
+        "pt": "Pois os olhares repetidos para as coisas que deixamos, por causa do costume, arrastam-nos de volta ao que ficou para trás: com efeito, o hábito é algo violento para reter-nos a si. Acaso não nasce o costume do uso, e a natureza, verdadeiramente, do costume? Ora, é difícil remover ou alterar a natureza: pois, ainda que por um pouco se desvie forçada, volta a si mesma rapidamente",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Si autem secuturus dominum discipulus, quia vel domi renuntiare velit arguitur, quid fiet illis qui nulla utilitatis gratia saepe visitant domos illorum quos in mundo reliquerunt?"
+        "latim": "Si autem secuturus dominum discipulus, quia vel domi renuntiare velit arguitur, quid fiet illis qui nulla utilitatis gratia saepe visitant domos illorum quos in mundo reliquerunt?",
+        "pt": "Se, porém, o discípulo que há de seguir o Senhor é repreendido por querer ao menos despedir-se em casa, que será daqueles que, sem nenhuma utilidade, visitam com frequência as casas daqueles que deixaram no mundo?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-25",
+          "revisado": false
+        }
       }
     ]
   }

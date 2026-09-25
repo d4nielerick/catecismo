@@ -2,8 +2,31 @@
   "data": "2026-09-29",
   "evangelho": "Jo 1,47-51",
   "leituras": "Dn 7,9-10.13-14 | Sl 137(138),1-2a.2bc-3.4-5 (R. 1c) | Jo 1,47-51",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Jo",
+      "cap": 1,
+      "lectio": 27,
+      "versos": [
+        46,
+        51
+      ]
+    }
+  ],
   "catecismo": [],
-  "tema": "",
-  "destaques": []
+  "tema": "O israelita sem falsidade e a figueira de Natanael",
+  "destaques": [
+    {
+      "lectio": 27,
+      "i": 0
+    },
+    {
+      "lectio": 27,
+      "i": 4
+    },
+    {
+      "lectio": 27,
+      "i": 6
+    }
+  ]
 }

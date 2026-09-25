@@ -23,6 +23,19 @@
       "frase": "Pedro rejeita este anúncio e os outros também não o entendem."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "O anúncio da paixão e o véu sobre os discípulos",
+  "destaques": [
+    {
+      "lectio": 9,
+      "i": 1
+    },
+    {
+      "lectio": 9,
+      "i": 4
+    },
+    {
+      "lectio": 9,
+      "i": 5
+    }
+  ]
 }

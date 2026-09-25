@@ -21,7 +21,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SIGLA = { Mt: 'cmt', Mc: 'cmc', Lc: 'clc', Jo: 'cio' };   // nomes dos arquivos no Corpus Thomisticum
+const SIGLA = { Mt: 'cmt', Mc: 'cmc', Lc: 'clc', Jo: 'cjo' };   // nomes dos arquivos no Corpus Thomisticum (cio é Super Iob!)
 
 const [ev, capArg, ...flags] = process.argv.slice(2);
 if (!SIGLA[ev] || !/^\d+$/.test(capArg || '')) {

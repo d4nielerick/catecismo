@@ -2,7 +2,17 @@
   "data": "2026-09-27",
   "evangelho": "Mt 21,28-32",
   "leituras": "Ez 18,25-28 | Sl 24,4bc-5.6-7.8-9 (R. 6a) | Fl 2,1-11 | Mt 21,28-32",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 21,
+      "lectio": 5,
+      "versos": [
+        28,
+        32
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 546,
@@ -17,6 +27,19 @@
       "frase": "As palavras não bastam, exigem-se atos."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "Os dois filhos e os publicanos que precedem no Reino",
+  "destaques": [
+    {
+      "lectio": 5,
+      "i": 0
+    },
+    {
+      "lectio": 5,
+      "i": 6
+    },
+    {
+      "lectio": 5,
+      "i": 8
+    }
+  ]
 }
