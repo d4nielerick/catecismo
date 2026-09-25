@@ -9,6 +9,7 @@
 
 import {
   esc, pad, hojeLocal, abasHtml, cabecalhoDoDia, conteudoDoDia, diasHtml, itensDasAbas, urlDoDia, NOME_COR,
+  comentarioHtml, lectioHtml, referenciasDoDia as assinaturaDoDia,
   referenciasDoDia, somarDias,
 } from '/liturgiadiaria/render.mjs';
 import { icone, iconeDaLeitura } from '/liturgiadiaria/icones-leituras.mjs';
@@ -711,8 +712,49 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
   construirNav(blocos);
   botoesDeCompartilhar(dt, dia, blocos, trechos);
   botaoOuvir(dt, dia);
+  comentarioDoEvangelho(dt, dia);
   verEntradaDaBarra();
   animarEntrada();
+}
+
+// ── Evangelho comentado (data/liturgia-comentario/) ──────────────────────────
+// Trechos da Catena Aurea e §§ do Catecismo ligados ao Evangelho do dia, embaixo dele. Só
+// citações: nada é escrito na hora. O capítulo da Catena e a tabela de autores ficam em cache.
+const cacheCatena = new Map();
+let autoresCatena = null;
+async function comentarioDoEvangelho(dt, dia) {
+  const comentario = await buscarJson(`/data/liturgia-comentario/${dt}.json`);
+  if (!comentario || estado.dt !== dt) return;
+  const card = document.querySelector('.card-evangelho');
+  if (!card || card.querySelector('.lp-comentario')) return;
+  const ref = comentario.catena?.[0];
+  const chave = ref ? `${ref.ev}/${String(ref.cap).padStart(2, '0')}` : null;
+  const [capitulo, autores] = await Promise.all([
+    chave ? (cacheCatena.get(chave) ?? cacheCatena.set(chave, buscarJson(`/data/catena/${chave}.json`)).get(chave)) : null,
+    autoresCatena ??= buscarJson('/data/catena-autores.json'),
+  ]);
+  if (estado.dt !== dt) return;
+  const html = comentarioHtml(comentario, capitulo, autores, { referenciasDia: assinaturaDoDia(dia) });
+  if (!html) return;
+  card.insertAdjacentHTML('beforeend', html);
+  card.querySelector('.lp-coment-inteiro')?.addEventListener('click', () => {
+    const dlg = document.getElementById('lp-santo');
+    if (!dlg?.showModal) return;
+    dlg.classList.add('lp-modal-catena');
+    dlg.querySelector('.lp-modal-sobre').textContent = 'Catena Aurea · os Padres sobre';
+    document.getElementById('lp-santo-titulo').textContent = comentario.evangelho;
+    document.getElementById('lp-santo-corpo').innerHTML = comentario.catena
+      .map(c => capitulo.find(l => l.lectio === c.lectio)).filter(Boolean)
+      .map(l => lectioHtml(l, autores)).join('');
+    dlg.querySelector('.lp-modal-credito').innerHTML = 'Catena Aurea de São Tomás de Aquino (séc. XIII), traduzida do latim a partir do texto do <a href="https://www.corpusthomisticum.org/" target="_blank" rel="noopener">Corpus Thomisticum</a>. Tradução em revisão.';
+    dlg.showModal();
+    lenis?.stop();
+    dlg.addEventListener('close', () => {
+      dlg.classList.remove('lp-modal-catena');
+      dlg.querySelector('.lp-modal-sobre').textContent = 'Sobre a celebração';
+      dlg.querySelector('.lp-modal-credito').innerHTML = 'Texto da <a href="https://pt.wikipedia.org/" target="_blank" rel="noopener">Wikipédia</a>, a enciclopédia livre, sob a licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR" target="_blank" rel="noopener">CC BY-SA 4.0</a>.';
+    }, { once: true });
+  });
 }
 
 // ── Compartilhar trecho (data/liturgia-trechos/) ─────────────────────────────

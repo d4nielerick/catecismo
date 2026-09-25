@@ -256,3 +256,58 @@ export function diasHtml(dt, indice) {
     existe(prox) ? `<a class="lp-dia-prox" href="${urlDoDia(prox)}" rel="next">${rotulo(prox)} →</a>` : '<span></span>',
   ].join('');
 }
+
+// ── Evangelho comentado (data/liturgia-comentario/ + data/catena/) ───────────
+// Só citações, com fonte: trechos da Catena Aurea (Padres da Igreja, traduzidos do latim) e os
+// §§ do Catecismo que citam o trecho. Nenhum texto de ligação. `comentario` é o JSON do dia;
+// `capitulo` é o JSON do capítulo da Catena; `autores` a tabela data/catena-autores.json.
+const OBRAS = { 'in Matthaeum': 'Homilias sobre Mateus', 'de Cons. Evang': 'Da concordância dos Evangelistas', 'in Lucam': 'Homilias sobre Lucas', 'in Ioannem': 'Homilias sobre João' };
+export function autorHtml(item, autores) {
+  const a = autores?.[item.autor];
+  const nome = a?.nome || item.autor;
+  const obra = OBRAS[item.obra] || item.obra;
+  return `<cite class="lp-padre" title="${esc(a ? `${a.nome}, ${a.quando}: ${a.quem}` : item.autor)}">${esc(nome)}${obra ? `<span class="lp-padre-obra">, ${esc(obra)}</span>` : ''}</cite>`;
+}
+
+/** As palavras do Evangelho dentro do comentário (entre aspas) ficam em itálico, como na glosa. */
+const comLema = pt => esc(pt).replace(/&quot;([^&]{3,}?)&quot;/g, '<i class="lp-lema">$1</i>');
+
+/** Formato da leitura patrística do Ofício das Leituras: rubrica vermelha, fonte em itálico, um
+ *  título de tema em itálico (curado, uma linha) e o texto em corpo menor, com o nome do Padre em
+ *  versalete no início de cada parágrafo. */
+export function comentarioHtml(comentario, capitulo, autores, { referenciasDia } = {}) {
+  if (!comentario || (referenciasDia && comentario.leituras !== referenciasDia)) return '';
+  const lectiones = new Map((capitulo || []).map(l => [l.lectio, l]));
+  const destaques = (comentario.destaques || [])
+    .map(d => ({ ...d, item: lectiones.get(d.lectio)?.itens?.[d.i] }))
+    .filter(d => d.item?.pt);
+  const temCatena = comentario.catena?.some(c => lectiones.get(c.lectio)?.itens?.some(i => i.pt));
+  const padres = destaques.length ? `
+    <section class="lp-padres" aria-label="Os Padres sobre o Evangelho">
+      <p class="lp-coment-rotulo">Os Padres sobre o Evangelho</p>
+      <p class="lp-coment-fonte">Da <i>Catena Aurea</i> de São Tomás de Aquino sobre ${esc(comentario.evangelho)}</p>
+      ${comentario.tema ? `<p class="lp-coment-tema">${esc(comentario.tema)}</p>` : ''}
+      <div class="lp-padres-texto">${destaques.map(d => `
+        <p><span class="lp-padre-nome">${esc(autores?.[d.item.autor]?.nome || d.item.autor)}.</span> ${comLema(d.item.pt)}</p>`).join('')}
+      </div>
+      ${temCatena ? `<p class="lp-coment-mais"><button type="button" class="lp-coment-inteiro">Ler o comentário inteiro</button></p>` : ''}
+    </section>` : '';
+  const cic = comentario.catecismo?.length ? `
+    <section class="lp-cic" aria-label="No Catecismo">
+      <p class="lp-coment-rotulo">No Catecismo</p>
+      ${comentario.catecismo.slice(0, 6).map(p => `
+      <p class="lp-cic-item"><a href="/#paragrafo-${p.numero}"><span class="lp-cic-num">§ ${p.numero}</span> ${esc(p.frase)}</a></p>`).join('')}
+    </section>` : '';
+  if (!padres && !cic) return '';
+  return `<div class="lp-comentario">${padres}${cic}</div>`;
+}
+
+/** O comentário inteiro de uma perícope (para o modal): todos os itens traduzidos, com o latim. */
+export function lectioHtml(l, autores) {
+  return l.itens.map(item => `
+    <div class="lp-lectio-item">
+      ${autorHtml(item, autores)}
+      <p>${esc(item.pt || '')}${item.pt ? '' : '<em>(tradução pendente)</em>'}</p>
+      <details class="lp-latim"><summary>latim</summary><p lang="la">${esc(item.latim)}</p></details>
+    </div>`).join('');
+}

@@ -1,0 +1,30 @@
+{
+  "data": "2026-09-25",
+  "evangelho": "Lc 9,18-22",
+  "leituras": "Ecl 3,1-11 | Sl 143(144),1a e 2abc.3-4 (R. 1a) | Lc 9,18-22",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 9,
+      "lectio": 4,
+      "versos": [
+        18,
+        22
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 2600,
+      "comum": [
+        18,
+        19,
+        20
+      ],
+      "direto": false,
+      "frase": "Reza também antes dos momentos decisivos que vão decidir a missão dos seus Apóstolos: antes de escolher e chamar os Doze, antes de Pedro O confessar como o «Cristo de Deus» e para que a fé do chefe dos Apóstolos não desfaleça na tentação."
+    }
+  ],
+  "tema": "",
+  "destaques": []
+}
