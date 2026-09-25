@@ -1,0 +1,28 @@
+{
+  "data": "2026-09-30",
+  "evangelho": "Lc 9,57-62",
+  "leituras": "Jó 9,1-12.14-16 | Sl 87,10bc-11. 12-13. 14-15 (R. 3a) | Lc 9,57-62",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 9,
+      "lectio": 12,
+      "versos": [
+        57,
+        62
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 544,
+      "comum": [
+        58
+      ],
+      "direto": false,
+      "frase": "Jesus partilha a vida dos pobres, desde o presépio até à cruz: sabe o que é sofrer a fome, a sede e a indigência."
+    }
+  ],
+  "tema": "",
+  "destaques": []
+}

@@ -1,0 +1,27 @@
+{
+  "data": "2026-10-09",
+  "evangelho": "Lc 11,15-26",
+  "leituras": "Gl 3,7-14 | Sl 110(111),1-2.3-4.5-6 (R. 5b) | Lc 11,15-26",
+  "catena": [],
+  "catecismo": [
+    {
+      "numero": 385,
+      "comum": [
+        21,
+        22
+      ],
+      "direto": false,
+      "frase": "Devemos, portanto, abordar a questão da origem do mal, fixando o olhar da nossa fé n'Aquele que é o seu único vencedor."
+    },
+    {
+      "numero": 700,
+      "comum": [
+        20
+      ],
+      "direto": false,
+      "frase": "«É pelo dedo de Deus que Jesus expulsa os demônios»."
+    }
+  ],
+  "tema": "",
+  "destaques": []
+}

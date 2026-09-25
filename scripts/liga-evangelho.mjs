@@ -21,6 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extrairReferencias } from '../assets/js/biblia-refs.js';
+import { refDe, lectionesDoDia, arquivoDaCatena, diasDesde } from './lib-catena.mjs';
 
 const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DADOS = path.join(RAIZ, 'data');
@@ -29,12 +30,7 @@ const ler = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 
 const args = process.argv.slice(2);
 if (!args.length) { console.error('uso: node scripts/liga-evangelho.mjs AAAA-MM-DD [AAAA-MM-DD…] | AAAA-MM-DD +N'); process.exit(2); }
-const dias = [];
-if (args[1]?.startsWith('+')) {
-  const n = parseInt(args[1].slice(1), 10);
-  const d0 = new Date(`${args[0]}T12:00:00Z`);
-  for (let k = 0; k < n; k++) { const d = new Date(d0); d.setUTCDate(d0.getUTCDate() + k); dias.push(d.toISOString().slice(0, 10)); }
-} else dias.push(...args);
+const dias = args[1]?.startsWith('+') ? diasDesde(args[0], parseInt(args[1].slice(1), 10)) : args;
 
 // índice das citações bíblicas das notas do Catecismo: livro → cap → [{ numero, versos }]
 const notas = ler(path.join(DADOS, 'notas.json'));
@@ -66,39 +62,19 @@ const referenciasDoDia = dia => dia.missas[0].leituras
   .filter(l => !l.alternativa && ['leitura', 'salmo', 'evangelho'].includes(l.tipo))
   .map(l => l.referencia).join(' | ');
 
-/** "Lc 9,43b-45" → { ev: 'Lc', cap: '9', versos: [43,44,45] }; "Mt 18,1-5.10" → 1..5 e 10. */
-function versosDe(ref) {
-  const m = ref.match(/^(\w+)\s+(\d+),([\d\w.\-]+)/);
-  if (!m) return null;
-  const versos = [];
-  for (const parte of m[3].split('.')) {
-    const q = parte.match(/^(\d+)[a-z]?(?:-(\d+)[a-z]?)?$/);
-    if (!q) continue;
-    const a = +q[1], b = q[2] ? +q[2] : a;
-    for (let v = a; v <= b; v++) versos.push(v);
-  }
-  return { ev: m[1], cap: m[2], versos };
-}
-
 fs.mkdirSync(SAIDA, { recursive: true });
 for (const dt of dias) {
   const arqDia = path.join(DADOS, 'liturgia', `${dt}.json`);
   if (!fs.existsSync(arqDia)) { console.log(`${dt}: sem leituras`); continue; }
   const dia = ler(arqDia);
   const evangelho = dia.missas[0].leituras.find(l => l.tipo === 'evangelho' && !l.alternativa);
-  const alvo = evangelho && versosDe(evangelho.referencia);
+  const alvo = evangelho && refDe(evangelho.referencia);
   if (!alvo) { console.log(`${dt}: referência do Evangelho não reconhecida (${evangelho?.referencia})`); continue; }
 
-  // Catena: lectiones do capítulo cujo intervalo cruza o do dia
-  const catena = [];
-  const arqCat = path.join(DADOS, 'catena', alvo.ev, `${alvo.cap.padStart(2, '0')}.json`);
-  if (fs.existsSync(arqCat)) {
-    for (const l of ler(arqCat)) {
-      if (!l.versos) continue;
-      const [a, b] = l.versos;
-      if (alvo.versos.some(v => v >= a && v <= b)) catena.push({ ev: alvo.ev, cap: +alvo.cap, lectio: l.lectio, versos: l.versos });
-    }
-  }
+  // Catena: lectiones do capítulo que cobrem a perícope do dia
+  const arqCat = arquivoDaCatena(DADOS, alvo);
+  const catena = (fs.existsSync(arqCat) ? lectionesDoDia(ler(arqCat), alvo) : [])
+    .map(l => ({ ev: alvo.ev, cap: +alvo.cap, lectio: l.lectio, versos: l.versos }));
 
   // Catecismo: §§ cujas notas citam versículos do trecho
   const porParagrafo = new Map();

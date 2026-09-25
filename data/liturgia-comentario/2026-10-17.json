@@ -1,0 +1,27 @@
+{
+  "data": "2026-10-17",
+  "evangelho": "Lc 12,8-12",
+  "leituras": "Ef 1,15-23 | Sl 8,2-3a.4-5.6-7 (R. cf. 7) | Lc 12,8-12",
+  "catena": [],
+  "catecismo": [
+    {
+      "numero": 333,
+      "comum": [
+        8,
+        9
+      ],
+      "direto": false,
+      "frase": "E estarão presentes aquando da segunda vinda de Cristo, que anunciam, ao serviço do seu juízo."
+    },
+    {
+      "numero": 1864,
+      "comum": [
+        10
+      ],
+      "direto": false,
+      "frase": "«Todo o pecado ou blasfêmia será perdoado aos homens, mas a blasfêmia contra o Espírito não lhes será perdoada» (Mt 12, 31)."
+    }
+  ],
+  "tema": "",
+  "destaques": []
+}

@@ -1,0 +1,40 @@
+{
+  "data": "2026-10-04",
+  "evangelho": "Mt 21,33-43",
+  "leituras": "Is 5,1-7 | Sl 79(80),9.12.13-14.15-16.19-20 (R. Is 5,7a) | Fl 4,6-9 | Mt 21,33-43",
+  "catena": [],
+  "catecismo": [
+    {
+      "numero": 755,
+      "comum": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "direto": false,
+      "frase": "Ela foi plantada pelo celeste Agricultor como uma vinha eleita."
+    },
+    {
+      "numero": 443,
+      "comum": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "direto": false,
+      "frase": "Já muito antes, Ele Se designara como «o Filho» que conhece o Pai, diferente dos «servos» que Deus anteriormente enviara ao seu povo, superior aos próprios anjos."
+    }
+  ],
+  "tema": "",
+  "destaques": []
+}

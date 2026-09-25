@@ -2,7 +2,17 @@
   "data": "2026-09-26",
   "evangelho": "Lc 9,43b-45",
   "leituras": "Ecl 11,9-12,8 | Sl 89(90),3-4.5-6.12-13.14 e 17 (R. 1) | Lc 9,43b-45",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 9,
+      "lectio": 9,
+      "versos": [
+        43,
+        45
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 554,

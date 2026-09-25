@@ -570,7 +570,10 @@
   },
   {
     "lectio": 6,
-    "versos": null,
+    "versos": [
+      28,
+      31
+    ],
     "itens": [
       {
         "autor": "Eusebius",
@@ -656,7 +659,10 @@
   },
   {
     "lectio": 7,
-    "versos": null,
+    "versos": [
+      32,
+      36
+    ],
     "itens": [
       {
         "autor": "Theophylactus",
@@ -787,7 +793,10 @@
   },
   {
     "lectio": 8,
-    "versos": null,
+    "versos": [
+      37,
+      43
+    ],
     "itens": [
       {
         "autor": "Beda",
@@ -858,7 +867,10 @@
   },
   {
     "lectio": 9,
-    "versos": null,
+    "versos": [
+      43,
+      45
+    ],
     "itens": [
       {
         "autor": "Cyrillus",
@@ -899,7 +911,10 @@
   },
   {
     "lectio": 10,
-    "versos": null,
+    "versos": [
+      46,
+      50
+    ],
     "itens": [
       {
         "autor": "Cyrillus",
@@ -985,7 +1000,10 @@
   },
   {
     "lectio": 11,
-    "versos": null,
+    "versos": [
+      51,
+      56
+    ],
     "itens": [
       {
         "autor": "Cyrillus",
@@ -1061,7 +1079,10 @@
   },
   {
     "lectio": 12,
-    "versos": null,
+    "versos": [
+      57,
+      62
+    ],
     "itens": [
       {
         "autor": "Cyrillus",

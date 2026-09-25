@@ -1,0 +1,35 @@
+{
+  "data": "2026-10-01",
+  "evangelho": "Lc 10,1-12",
+  "leituras": "Jó 19,21-27 | Sl 26(27),7-8a.8b-9abc.13-14 (R. 13) | Lc 10,1-12",
+  "catena": [],
+  "catecismo": [
+    {
+      "numero": 765,
+      "comum": [
+        1,
+        2
+      ],
+      "direto": false,
+      "frase": "Os Doze e os outros discípulos participam da missão de Cristo, do seu poder, mas também da sua sorte."
+    },
+    {
+      "numero": 2122,
+      "comum": [
+        7
+      ],
+      "direto": false,
+      "frase": "«O trabalhador merece o seu sustento» (Mt 10, 10)."
+    },
+    {
+      "numero": 2611,
+      "comum": [
+        2
+      ],
+      "direto": false,
+      "frase": "Jesus exorta os seus discípulos a levar para a oração esta solicitude em cooperar com o desígnio de Deus."
+    }
+  ],
+  "tema": "",
+  "destaques": []
+}

@@ -191,6 +191,52 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
   }
 }
 
+// Evangelho comentado (data/liturgia-comentario/ + data/catena/): cada dia cobre as leituras atuais,
+// os destaques apontam para itens traduzidos das lectiones da perícope, os §§ do Catecismo existem,
+// e a Catena estruturada é reprodutível a partir da fonte crua (scrape-catena --local).
+{
+  const COMENT = path.join(SAIDA, '..', 'liturgia-comentario');
+  const CATENA = path.join(SAIDA, '..', 'catena');
+  const numeros = new Set(JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'catecismo.json'), 'utf8')).paragrafos.map(p => p.numero));
+  const capitulos = new Map();
+  const cap = (ev, c) => {
+    const k = `${ev}/${String(c).padStart(2, '0')}`;
+    if (!capitulos.has(k)) { const p = path.join(CATENA, `${k}.json`); capitulos.set(k, fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null); }
+    return capitulos.get(k);
+  };
+  for (const arq of fs.existsSync(COMENT) ? fs.readdirSync(COMENT).filter(f => f.endsWith('.json')) : []) {
+    const c = JSON.parse(fs.readFileSync(path.join(COMENT, arq), 'utf8'));
+    const destino = path.join(SAIDA, `${c.data}.json`);
+    if (!fs.existsSync(destino)) { erros.push(`comentário ${c.data}: dia sem leituras`); continue; }
+    const dia = JSON.parse(fs.readFileSync(destino, 'utf8'));
+    if (c.leituras !== referenciasDoDia(dia)) erros.push(`comentário ${c.data}: as leituras do dia mudaram (rode node scripts/liga-evangelho.mjs ${c.data})`);
+    for (const p of c.catecismo || []) {
+      if (!numeros.has(p.numero)) erros.push(`comentário ${c.data}: § ${p.numero} não existe`);
+      if (!p.frase?.trim()) erros.push(`comentário ${c.data}: § ${p.numero} sem frase`);
+    }
+    const lectiones = new Set((c.catena || []).map(x => x.lectio));
+    for (const d of c.destaques || []) {
+      const ref = c.catena?.[0];
+      const item = ref && cap(ref.ev, ref.cap)?.find(l => l.lectio === d.lectio)?.itens?.[d.i];
+      if (!lectiones.has(d.lectio) || !item) erros.push(`comentário ${c.data}: destaque l.${d.lectio} #${d.i} não existe na perícope`);
+      else if (!item.pt) erros.push(`comentário ${c.data}: destaque l.${d.lectio} #${d.i} sem tradução`);
+    }
+    if (c.destaques?.length && !c.tema?.trim()) erros.push(`comentário ${c.data}: destaques sem tema`);
+  }
+  // cada capítulo estruturado tem a fonte crua ao lado e todo item traduzido guarda a marca da tradução
+  for (const ev of fs.existsSync(CATENA) ? fs.readdirSync(CATENA) : []) {
+    for (const f of fs.readdirSync(path.join(CATENA, ev)).filter(f => f.endsWith('.json'))) {
+      if (!fs.existsSync(path.join(SAIDA, '..', 'catena-fonte', ev, f.replace('.json', '.html')))) erros.push(`catena ${ev}/${f}: sem a fonte crua em data/catena-fonte/`);
+      for (const l of JSON.parse(fs.readFileSync(path.join(CATENA, ev, f), 'utf8'))) {
+        for (const [i, it] of l.itens.entries()) {
+          if (!it.latim?.trim() || !it.autor) erros.push(`catena ${ev}/${f} l.${l.lectio} #${i}: sem latim ou sem autor`);
+          if (it.pt && !it.traducao?.por) erros.push(`catena ${ev}/${f} l.${l.lectio} #${i}: tradução sem a marca de origem`);
+        }
+      }
+    }
+  }
+}
+
 if (erros.length) {
   console.error(`✗ liturgia: ${erros.length} problema(s)`);
   console.error(erros.slice(0, 40).map(e => `  ${e}`).join('\n'));
