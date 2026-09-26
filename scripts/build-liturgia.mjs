@@ -21,7 +21,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { diaLiturgico } from './lib-calendario-liturgico.mjs';
+import { diaLiturgico, corDoDia } from './lib-calendario-liturgico.mjs';
 
 export const FONTE = 'data/liturgia-fonte';
 export const SAIDA = 'data/liturgia';
@@ -436,7 +436,8 @@ export function buildDia(raw) {
   const dia = {
     data: raw.data,
     tempo: raw.titulo || cal.tempo,
-    cor: raw.cor_liturgica || null,
+    // Cor pelo nosso calendário; a da fonte só entra quando o cálculo não sabe.
+    cor: corDoDia(raw.data) || raw.cor_liturgica || null,
     celebracao: cal.celebracao,
     ...(cal.complemento && { complemento: cal.complemento }),
     missas: grupos.map((g, k) => ({
@@ -556,13 +557,17 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === fs.realpathSync(proces
   fs.mkdirSync(SAIDA, { recursive: true });
   for (const f of fs.readdirSync(SAIDA)) if (f.endsWith('.json')) fs.unlinkSync(path.join(SAIDA, f));
   const arquivos = listarFonte();
-  let perdidas = 0;
+  let perdidas = 0, divergiu = 0, reserva = 0;
   for (const f of arquivos) {
-    const { dia, perdidas: p } = buildDia(lerFonte(f));
+    const raw = lerFonte(f);
+    const { dia, perdidas: p } = buildDia(raw);
+    if (!corDoDia(dia.data)) { reserva++; console.warn(`! ${dia.data}: cor não calculada, usei a da fonte (${raw.cor_liturgica})`); }
+    else if (raw.cor_liturgica && raw.cor_liturgica !== dia.cor) divergiu++;
     if (p.length) { perdidas += p.length; console.warn(`! ${dia.data}: ${p.length} linha(s) sem destino — ${p[0].slice(0, 60)}`); }
     fs.writeFileSync(path.join(SAIDA, `${dia.data}.json`), JSON.stringify(dia));
   }
   const datas = arquivos.map(f => f.slice(0, 10));
   fs.writeFileSync(path.join(SAIDA, 'indice.json'), JSON.stringify(indiceDe(datas)));
   console.log(`data/liturgia: ${arquivos.length} dias (${datas[0]} a ${datas.at(-1)}), ${perdidas} linha(s) sem destino`);
+  console.log(`cor divergiu da API em ${divergiu} dias; ${reserva} dia(s) com a cor da API por reserva`);
 }

@@ -11,6 +11,10 @@
  *  - Nossa Senhora Aparecida (12/out) é solenidade; a Imaculada Conceição permanece no 8/dez
  *    mesmo em domingo do Advento (é o que as leituras de 2024 trazem).
  *
+ * Próprio do Brasil também: Anchieta (9/6), Inácio de Azevedo (17/7), Dulce dos Pobres (13/8),
+ *    mártires de Cunhaú e Uruaçu (3/10), São Benedito (5/10, no lugar de Santa Faustina), Pedro de
+ *    Alcântara (19/10), Roque González (19/11); Agostinho Zhao Rong vai para 8/7 (Santa Paulina no 9).
+ *
  * Retorna { tempo, celebracao, complemento }: `tempo` no mesmo vocabulário da fonte
  * ("Tempo Comum", "Tempo da Páscoa"…); `complemento` é o dia de semana quando a celebração é memória.
  */
@@ -119,6 +123,7 @@ function tempoComum(w, ds) {
 
 // ── Santoral e solenidades móveis ────────────────────────────────────────────
 // grau: 'S' solenidade | 'FS' festa do Senhor (vence domingo comum) | 'F' festa | 'M' memória
+// 3º campo (opcional): cor, quando a regra de corDoProprio() não acerta sozinha.
 const FIXAS = {
   '01-25': ['F', 'Conversão de São Paulo'],
   '02-02': ['FS', 'Apresentação do Senhor'],
@@ -135,19 +140,19 @@ const FIXAS = {
   '08-10': ['F', 'São Lourenço, diácono e mártir'],
   '08-24': ['F', 'São Bartolomeu, apóstolo'],
   '09-08': ['F', 'Natividade de Nossa Senhora'],
-  '09-14': ['FS', 'Exaltação da Santa Cruz'],
+  '09-14': ['FS', 'Exaltação da Santa Cruz', 'vermelho'],
   '09-21': ['F', 'São Mateus, apóstolo e evangelista'],
   '09-29': ['F', 'São Miguel, São Gabriel e São Rafael, arcanjos'],
   '10-12': ['S', 'Nossa Senhora da Conceição Aparecida'],
   '10-18': ['F', 'São Lucas, evangelista'],
   '10-28': ['F', 'São Simão e São Judas, apóstolos'],
-  '11-02': ['S', 'Comemoração de todos os fiéis defuntos'],
+  '11-02': ['S', 'Comemoração de todos os fiéis defuntos', 'roxo'],
   '11-09': ['FS', 'Dedicação da Basílica do Latrão'],
   '11-30': ['F', 'Santo André, apóstolo'],
   '12-08': ['S', 'Imaculada Conceição de Nossa Senhora'],
   '12-12': ['F', 'Nossa Senhora de Guadalupe'],
   '12-26': ['F', 'Santo Estêvão, primeiro mártir'],
-  '12-27': ['F', 'São João, apóstolo e evangelista'],
+  '12-27': ['F', 'São João, apóstolo e evangelista', 'branco'],
   '12-28': ['F', 'Santos Inocentes, mártires'],
 
   '01-02': ['M', 'São Basílio Magno e São Gregório Nazianzeno'],
@@ -161,25 +166,32 @@ const FIXAS = {
   '02-06': ['M', 'São Paulo Miki e companheiros, mártires'],
   '02-10': ['M', 'Santa Escolástica, virgem'],
   '02-23': ['M', 'São Policarpo, bispo e mártir'],
+  '03-07': ['M', 'Santas Perpétua e Felicidade, mártires'],
+  '04-07': ['M', 'São João Batista de la Salle'],
+  '04-11': ['M', 'Santo Estanislau, bispo e mártir'],
   '04-29': ['M', 'Santa Catarina de Sena'],
   '05-02': ['M', 'Santo Atanásio'],
   '05-26': ['M', 'São Filipe Néri'],
   '06-01': ['M', 'São Justino, mártir'],
   '06-03': ['M', 'São Carlos Lwanga e companheiros, mártires'],
   '06-05': ['M', 'São Bonifácio, bispo e mártir'],
+  '06-09': ['M', 'São José de Anchieta, presbítero'],
   '06-11': ['M', 'São Barnabé, apóstolo'],
   '06-13': ['M', 'Santo Antônio de Pádua'],
   '06-21': ['M', 'São Luís Gonzaga'],
   '06-28': ['M', 'Santo Irineu, bispo e mártir'],
+  '07-08': ['M', 'Santo Agostinho Zhao Rong e companheiros, mártires'],
   '07-09': ['M', 'Santa Paulina do Coração Agonizante de Jesus'],
   '07-11': ['M', 'São Bento, abade'],
   '07-15': ['M', 'São Boaventura'],
+  '07-17': ['M', 'Bem-aventurado Inácio de Azevedo e companheiros, mártires'],
   '07-29': ['M', 'Santa Marta, Santa Maria e São Lázaro'],
   '07-31': ['M', 'Santo Inácio de Loyola'],
   '08-01': ['M', 'Santo Afonso Maria de Ligório'],
   '08-04': ['M', 'São João Maria Vianney'],
   '08-08': ['M', 'São Domingos'],
   '08-11': ['M', 'Santa Clara, virgem'],
+  '08-13': ['M', 'Santa Dulce dos Pobres, virgem'],
   '08-14': ['M', 'São Maximiliano Maria Kolbe, mártir'],
   '08-20': ['M', 'São Bernardo'],
   '08-21': ['M', 'São Pio X, papa'],
@@ -197,15 +209,20 @@ const FIXAS = {
   '09-30': ['M', 'São Jerônimo'],
   '10-01': ['M', 'Santa Teresinha do Menino Jesus'],
   '10-02': ['M', 'Santos Anjos da Guarda'],
+  '10-03': ['M', 'Santos André de Soveral, Ambrósio Francisco Ferro, Mateus Moreira e companheiros, mártires'],
   '10-04': ['M', 'São Francisco de Assis'],
+  '10-05': ['M', 'São Benedito, o Negro, religioso'],
   '10-07': ['M', 'Nossa Senhora do Rosário'],
   '10-15': ['M', 'Santa Teresa de Jesus'],
   '10-17': ['M', 'Santo Inácio de Antioquia, bispo e mártir'],
+  '10-19': ['M', 'São Pedro de Alcântara, presbítero'],
   '10-25': ['M', 'Santo Antônio de Sant’Ana Galvão'],
   '11-04': ['M', 'São Carlos Borromeu'],
   '11-10': ['M', 'São Leão Magno, papa'],
   '11-11': ['M', 'São Martinho de Tours'],
   '11-12': ['M', 'São Josafá, bispo e mártir'],
+  '11-17': ['M', 'Santa Isabel da Hungria, religiosa'],
+  '11-19': ['M', 'Santos Roque González, Afonso Rodríguez e João del Castillo, presbíteros e mártires'],
   '11-21': ['M', 'Apresentação de Nossa Senhora'],
   '11-22': ['M', 'Santa Cecília, virgem e mártir'],
   '11-24': ['M', 'Santo André Dung-Lac e companheiros, mártires'],
@@ -219,12 +236,13 @@ const mmdd = ms => new Date(ms).toISOString().slice(5, 10);
 
 function proprios(ano, M) {
   const mapa = new Map();
-  const por = (ms, grau, nome) => { if (!mapa.has(ms)) mapa.set(ms, { grau, nome }); };
+  const por = (ms, grau, nome, cor) => { if (!mapa.has(ms)) mapa.set(ms, { grau, nome, cor }); };
 
   // Móveis e transferências vêm antes: ocupam o dia e deslocam o fixo, se houver.
   por(M.P + 56 * DIA, 'S', 'Santíssima Trindade');
   por(M.P + 60 * DIA, 'S', 'Santíssimo Corpo e Sangue de Cristo');
   por(M.P + 68 * DIA, 'S', 'Sagrado Coração de Jesus');
+  por(M.P + 53 * DIA, 'F', 'Jesus Cristo, Sumo e Eterno Sacerdote');
   por(M.P + 50 * DIA, 'M', 'Bem-aventurada Virgem Maria, Mãe da Igreja');
   por(M.P + 69 * DIA, 'M', 'Imaculado Coração de Maria');
 
@@ -246,11 +264,11 @@ function proprios(ano, M) {
   const finadosNoDomingo = diaSemana(utc(ano, 11, 2)) === 0;
   por(finadosNoDomingo ? utc(ano, 11, 1) : domingoEmOuApos(utc(ano, 11, 1)), 'S', 'Todos os Santos');
 
-  for (const [md, [grau, nome]] of Object.entries(FIXAS)) {
+  for (const [md, [grau, nome, cor]] of Object.entries(FIXAS)) {
     const [m, d] = md.split('-').map(Number);
     const ms = utc(ano, m, d);
     if (md === '06-24' && ms === M.P + 68 * DIA) continue;
-    por(ms, grau, nome);
+    por(ms, grau, nome, cor);
   }
   return mapa;
 }
@@ -265,14 +283,50 @@ function vence(prop, tmp, ms) {
   return true; // ferial
 }
 
-/** @param {string} iso AAAA-MM-DD */
-export function diaLiturgico(iso) {
+// ── Cor litúrgica ────────────────────────────────────────────────────────────
+// Santoral: vermelho para mártires, apóstolos e evangelistas (São João, 27/12, é exceção na tabela);
+// o resto (Senhor, Maria, santos não mártires) é branco. Exceções explícitas vêm do 3º campo de FIXAS.
+function corDoProprio(prop) {
+  if (prop.cor) return prop.cor;
+  return /mártir|martírio|apóstol|evangelista/i.test(prop.nome) ? 'vermelho' : 'branco';
+}
+
+// Temporal: Gaudete e Laetare em rosa; Ramos e Sexta-feira da Paixão em vermelho; Quinta e Sábado
+// Santos em branco (missa vespertina da Ceia e Vigília Pascal, como a fonte); Pentecostes vermelho.
+function corDoTemporal(tmp) {
+  const { tempo, nome } = tmp;
+  if (tempo === 'Tempo do Natal' || tempo === 'Tempo da Páscoa') return nome === 'Domingo de Pentecostes' ? 'vermelho' : 'branco';
+  if (tempo === 'Tempo do Advento') return nome === '3º Domingo do Advento' ? 'rosa' : 'roxo';
+  if (tempo === 'Tempo da Quaresma') return nome === '4º Domingo da Quaresma' ? 'rosa' : 'roxo';
+  if (tempo === 'Semana Santa') {
+    if (/^(Domingo de Ramos|Sexta-feira da Paixão)/.test(nome)) return 'vermelho';
+    if (nome === 'Quinta-feira Santa' || nome === 'Sábado Santo') return 'branco';
+    return 'roxo';
+  }
+  if (tempo === 'Tempo Comum') return tmp.grau === 'S' ? 'branco' : 'verde';
+  return null;
+}
+
+function calcular(iso) {
   const [ano, m, d] = iso.split('-').map(Number);
   const ms = utc(ano, m, d);
   const M = marcos(ano);
   const tmp = temporal(ms, M);
   const prop = proprios(ano, M).get(ms);
-  if (!prop || !vence(prop, tmp, ms)) return { tempo: tmp.tempo, celebracao: tmp.nome, complemento: null };
+  const venceu = !!prop && vence(prop, tmp, ms);
+  return { tmp, prop: venceu ? prop : null };
+}
+
+/** Cor do dia pelo nosso calendário; null quando não sabe (quem chama cai na cor da fonte). */
+export function corDoDia(iso) {
+  const { tmp, prop } = calcular(iso);
+  return prop ? corDoProprio(prop) : corDoTemporal(tmp);
+}
+
+/** @param {string} iso AAAA-MM-DD */
+export function diaLiturgico(iso) {
+  const { tmp, prop } = calcular(iso);
+  if (!prop) return { tempo: tmp.tempo, celebracao: tmp.nome, complemento: null };
   return {
     tempo: tmp.tempo,
     celebracao: prop.nome,

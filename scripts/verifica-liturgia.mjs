@@ -38,6 +38,13 @@ const CONFERE = [
   [/Domingo do Tempo Comum$/, d => d.cor === 'verde', 'cor verde'],
   [/Domingo (do Advento|da Quaresma)$/, d => ['roxo', 'rosa'].includes(d.cor), 'cor roxa ou rósea'],
   [/^(Sagrada Família|Santíssima Trindade|Nosso Senhor Jesus Cristo, Rei)/, d => d.cor === 'branco', 'cor branca'],
+  // Coerência nome × cor (a cor é calculada por corDoDia; isto pega regressão na tabela ou na regra).
+  [/Semana do Tempo Comum$/, d => d.cor === 'verde', 'cor verde'],
+  [/^Quarta-feira de Cinzas$|da Quaresma$|depois das Cinzas$/, d => d.cor === (d.celebracao === '4º Domingo da Quaresma' ? 'rosa' : 'roxo'), 'cor roxa (Laetare rósea)'],
+  [/do Advento$/, d => d.cor === (d.celebracao === '3º Domingo do Advento' ? 'rosa' : 'roxo'), 'cor roxa (Gaudete rósea)'],
+  [/mártir/i, d => d.cor === 'vermelho', 'cor vermelha'],
+  [/fiéis defuntos/i, d => ['roxo', 'preto'].includes(d.cor), 'cor roxa ou preta'],
+  [/Oitava do Natal$/, d => d.cor === 'branco', 'cor branca'],
 ];
 
 const erros = [];
