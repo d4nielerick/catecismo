@@ -1589,14 +1589,16 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .t-ouv { overflow: hidden; border-radius: 12px; }
 .t-ouv-leitura { padding: 8px 10px; }
 .t-ouv-leitura b, .t-com-leitura b { display: block; font: italic 1.3rem/1.2 var(--font-leitura); color: #111; }
+/* a linha do título com os dois ícones, como na página: o ativo pisca ao toque */
+.t-leitura-cabeca { display: flex; align-items: center; justify-content: space-between; }
+.t-acoes { display: flex; gap: 6px; }
+.t-acao { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; color: #8c867e; }
+.t-acao svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+.t-acao-ativa { animation: t-acao var(--t) var(--ease) infinite; }
+@keyframes t-acao { 0%, 16% { transform: none; color: #8c867e; } 18% { transform: scale(0.85); color: var(--lp-vermelho); background: rgba(203, 46, 46, 0.1); } 22%, 40% { transform: none; color: var(--lp-vermelho); } 46%, 100% { color: #8c867e; } }
 .t-ouv-leitura i, .t-com-leitura i { display: block; height: 6px; margin-top: 9px; border-radius: 3px; background: rgba(0, 0, 0, 0.1); }
 .t-ouv-leitura i:nth-of-type(2), .t-com-leitura i:nth-of-type(2) { width: 85%; }
 .t-ouv-leitura i:nth-of-type(3), .t-com-leitura i:nth-of-type(3) { width: 65%; }
-.t-ouv-botao {
-  display: inline-block; margin-top: 6px; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(203, 46, 46, 0.35);
-  font-size: 0.62rem; font-weight: 600; color: var(--lp-vermelho); animation: t-ouv-botao var(--t) var(--ease) infinite;
-}
-@keyframes t-ouv-botao { 0%, 16% { transform: none; } 18% { transform: scale(0.9); background: rgba(203, 46, 46, 0.1); } 22%, 100% { transform: none; } }
 .t-ouv-tela {
   position: absolute; inset: 0; padding: 10px 14px; border-radius: 12px; color: rgba(255, 255, 255, 0.35);
   background: linear-gradient(170deg, #4a3a14, #0d0a07 80%); animation: t-ouv-tela var(--t) var(--ease) infinite;
@@ -1618,21 +1620,15 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .t-ouv-dedo { animation: t-ouv-dedo var(--t) var(--ease) infinite; }
 @keyframes t-ouv-dedo {
   0% { transform: translate(140px, 150px); opacity: 0; }
-  10% { transform: translate(60px, 72px) scale(1); opacity: 1; }
-  16% { transform: translate(40px, 49px) scale(1); }
-  18% { transform: translate(40px, 49px) scale(0.78); } 22% { transform: translate(40px, 49px) scale(1); opacity: 1; }
-  28%, 100% { transform: translate(60px, 120px); opacity: 0; }
+  10% { transform: translate(200px, 70px) scale(1); opacity: 1; }
+  16% { transform: translate(236px, 24px) scale(1); }
+  18% { transform: translate(236px, 24px) scale(0.78); } 22% { transform: translate(236px, 24px) scale(1); opacity: 1; }
+  28%, 100% { transform: translate(200px, 120px); opacity: 0; }
 }
 
 /* 5 · compartilhar */
 .t-com-leitura { padding: 8px 10px; }
-.t-com-leitura b { display: flex; align-items: center; }
-.t-com-botao {
-  position: absolute; right: 12px; top: 10px; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
-  border: 1px solid rgba(203, 46, 46, 0.35); color: var(--lp-vermelho); animation: t-com-botao var(--t) var(--ease) infinite;
-}
-.t-com-botao svg, .t-san-botao svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-@keyframes t-com-botao { 0%, 16% { transform: none; } 18% { transform: scale(0.88); background: rgba(203, 46, 46, 0.1); } 22%, 100% { transform: none; } }
+.t-san-botao svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .t-com-card, .t-san-card {
   position: absolute; left: 50%; top: 6px; width: 7.2rem; margin-left: -3.6rem; border-radius: 8px; overflow: hidden;
   background: #f3ede3; box-shadow: 0 10px 26px rgba(20, 14, 8, 0.28);
@@ -1657,8 +1653,8 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 @keyframes t-com-dedo {
   0% { transform: translate(200px, 140px); opacity: 0; }
   10% { transform: translate(250px, 60px) scale(1); opacity: 1; }
-  16% { transform: translate(254px, 24px) scale(1); }
-  18% { transform: translate(254px, 24px) scale(0.78); } 22% { transform: translate(254px, 24px) scale(1); }
+  16% { transform: translate(267px, 24px) scale(1); }
+  18% { transform: translate(267px, 24px) scale(0.78); } 22% { transform: translate(267px, 24px) scale(1); }
   40% { transform: translate(200px, 120px) scale(1); }
   56% { transform: translate(140px, 153px) scale(1); }
   60% { transform: translate(140px, 153px) scale(0.78); } 64% { transform: translate(140px, 153px) scale(1); opacity: 1; }
@@ -1873,3 +1869,16 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-lectio-item p { margin: 0 0 0.35rem; }
 .lp-latim summary { font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lp-suave); cursor: pointer; }
 .lp-latim p { margin: 0.4rem 0 0; font-size: 13.5px; font-style: italic; color: var(--lp-suave); }
+
+/* 6 · os Padres e o Catecismo: a folha sobe devagar mostrando o bloco embaixo do Evangelho */
+.t-pad { overflow: hidden; border-radius: 12px; background: #fbf8f2; }
+.t-pad-folha { padding: 10px 14px; animation: t-pad-sobe var(--t) var(--ease) infinite; }
+.t-pad-folha p { margin: 0; }
+.t-pad-evangelho { font: 0.78rem/1.45 var(--font-leitura); color: #222; }
+.t-pad-fim { margin-top: 4px !important; font: italic 0.66rem var(--font-leitura); color: #8a8378; }
+.t-pad-cruz { margin: 10px 0 8px; text-align: center; font-size: 0.7rem; color: var(--lp-vermelho); }
+.t-pad-rotulo { margin-top: 8px !important; font-size: 0.52rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lp-vermelho); }
+.t-pad-tema { margin: 2px 0 4px !important; font: italic 0.92rem/1.2 var(--font-titulo); color: #111; }
+.t-pad-texto { font: 0.7rem/1.45 var(--font-leitura); color: #333; }
+.t-pad-texto span { font-variant: small-caps; font-weight: 700; color: var(--lp-vermelho); letter-spacing: 0.04em; }
+@keyframes t-pad-sobe { 0%, 18% { transform: none; } 45%, 100% { transform: translateY(-86px); } }
