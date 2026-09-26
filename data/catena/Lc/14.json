@@ -1,0 +1,577 @@
+[
+  {
+    "lectio": 1,
+    "versos": [
+      1,
+      6
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quamvis dominus malitiam Pharisaeorum cognosceret, tamen eorum fiebat conviva, ut prodesset praesentibus per verba et miracula; unde subditur et factum est cum introisset Iesus in domum cuiusdam principis Pharisaeorum sabbato manducare panem, et ipsi observabant eum: si scilicet reverentiam legis contemneret, et an quicquam prohibitorum faceret in die sabbati. Itaque hydropico veniente in medium, interrogatione reprehendit insolentiam Pharisaeorum, eum arguere volentium; unde dicitur et ecce homo quidam hydropicus erat ante illum. Et respondens Iesus dixit ad legisperitos et Pharisaeos, si licet sabbato curare",
+        "pt": "Embora o Senhor conhecesse a malícia dos fariseus, tornava-se, contudo, seu convidado, para aproveitar aos presentes por meio de palavras e milagres; por isso se acrescenta: \"E aconteceu que, tendo Jesus entrado na casa de um dos príncipes dos fariseus, num sábado, para comer pão, eles o observavam\", a saber, se desprezaria a reverência à lei e se faria algo proibido no dia de sábado. Assim, vindo ao meio um hidrópico, repreende com uma pergunta a insolência dos fariseus, que queriam acusá-lo; por isso se diz: \"e eis que havia diante dele um homem hidrópico\". E, respondendo, Jesus disse aos doutores da lei e aos fariseus: \"É lícito curar no sábado?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quod dicitur respondisse Iesus, ad hoc respicit quod praemissum est: et ipsi observabant eum: dominus enim novit cogitationes hominum"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "In sua autem interrogatione deridet eos, sicut amentes: Deo enim benedicente sabbatum, ipsi prohibent operari bona in eo; dies autem quae bonorum operam non admittit, maledicta est"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Sed merito interrogati tacent, quia contra se dictum, quicquid dixerit, vident. Nam si licet sabbato curare, quare salvatorem an curet observant? Si non licet, quare ipsi sabbato pecora curant? Unde sequitur at illi tacuerunt"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Neglectis igitur Iudaeorum insidiis, liberat a morbo hydropicum: qui metu Pharisaeorum remedia non postulabat propter sabbatum, sed solum astabat, ut ex aspectu misertus eius salvaret eum: quod dominus cognoscens, non postulat ab eo si vellet salvus fieri; sed protinus eum sanavit; unde sequitur ipse vero apprehensum sanavit eum ac dimisit"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "In quo non hoc prospexit dominus, ne scandalizaret Pharisaeos; sed ut benefaciat egenti remediis: decet enim nos, cum magna resultat utilitas, non curare si stulti scandalizentur"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Sed quia Pharisaei inepte tacuerunt, solvit Christus inflexibilem eorum impudentiam, considerationibus seriis ad hoc utens; unde sequitur et respondens ad illos dixit: cuius vestrum asinus aut bos in puteum cadet, et non continuo extrahet illum die sabbati?"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quasi dicat: si prohibuit lex misereri in sabbato, ne curam habeas filii tui periclitantis in sabbato; sed quid dico, filii, quando nec bovem praeteris, si periclitantem videris?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "In quo sic observatores suos Pharisaeos convincit, ut eosdem etiam avaritiae condemnet, qui in liberatione animalis suae avaritiae consulebant. Quanto ergo magis Christus hominem, qui multo melior est pecore, debuit liberare?"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Congruenter autem hydropicum animali quod cecidit in puteum comparavit, humore enim laborabat; sicut illam mulierem quam alligatam dixerat, et ipse solvebat, comparavit iumento, quod solvitur ut ad aquam ducatur"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Competenti ergo exemplo solvit quaestionem, ut ostendat eos violare sabbatum in opere cupiditatis qui eum violare arguerunt in opere caritatis; unde sequitur et non poterant ad haec respondere illi. Mystice autem hydropicus comparatur ei quem fluxus carnalium voluptatum exuberans aggravat: hydropicus enim morbus ab aquoso humore vocabulum trahit",
+        "pt": "Resolve, pois, a questão com um exemplo adequado, para mostrar que violam o sábado com a obra da cupidez aqueles que o acusavam de violá-lo com a obra da caridade; por isso se segue: \"e não podiam responder a isso\". Misticamente, porém, o hidrópico é comparado àquele que é sobrecarregado pelo fluxo exuberante dos prazeres carnais; pois a doença hidrópica tira seu nome do humor aquoso.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Vel hydropicum recte comparamus diviti avaro: sicut enim ille quanto magis abundat humore inordinato, tanto amplius sitit; sic et iste quanto est copiosior divitiis, quibus non bene utitur, tanto ardentius talia concupiscit",
+        "pt": "Ou então comparamos com razão o hidrópico ao rico avarento: pois assim como aquele, quanto mais abunda em humor desordenado, tanto mais sede tem; assim também este, quanto mais copioso é em riquezas de que não usa bem, tanto mais ardentemente as cobiça.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Recte ergo hydropicus ante Pharisaeum curatur: quia per alterius aegritudinem corporis, in altero exprimitur languor, seu aegritudo cordis et mentis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Bene autem in exemplo bovem et asinum nominat, ut vel sapientes et hebetes, vel utrumque populum significet, scilicet Iudaeum iugo legis pressum, et gentilem nulla ratione domitum: omnes enim a puteo concupiscentiae demersos dominus extrahit"
+      }
+    ]
+  },
+  {
+    "lectio": 2,
+    "versos": [
+      7,
+      11
+    ],
+    "itens": [
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Prius curatus est hydropicus, in quo fluxus carnis exuberans, animae gravabat officia, spiritus extinguebat ardorem: deinde docetur humilitas, dum in convivio nuptiali appetentia loci superioris arcetur; unde dicitur dicebat autem ad invitatos parabolam, intendens quomodo primos accubitus eligerent, dicens ad illos: cum invitatus fueris ad nuptias, non discumbas in primo loco"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Prosilire enim prompte ad honores qui nobis non conveniunt, indicat nos temerarios esse, et nostra facta vituperio replet; unde sequitur ne forte honoratio te sit invitatus ab illo, et veniens is qui te et illum vocavit, dicat tibi: da huic locum; et tunc incipias cum rubore novissimum locum tenere"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Et sic quod concupivit, nequaquam obtinuit ambitiosus honoris, sed passus est repulsam; et satagens qualiter abundet honoribus, non honoratur. Et quia nihil est aequipollens modestiae, auditorem ad oppositum ducit. Non solum prohibet ambire primatum, sed et venari iubet ultima; unde sequitur sed cum vocatus fueris, vade, recumbe in novissimo loco",
+        "pt": "E assim, o que cobiçou, de modo algum o obteve o ambicioso de honra, mas sofreu repulsa; e, esforçando-se por abundar em honras, não é honrado. E, porque nada se iguala à modéstia, conduz o ouvinte ao oposto. Não somente proíbe ambicionar o primeiro lugar, mas também manda buscar os últimos; por isso se segue: \"mas, quando fores convidado, vai e reclina-te no último lugar\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Si enim aliquis non vult aliis praelocari, nanciscitur hoc ex divina sententia; unde sequitur ut cum venerit qui te invitavit, dicat tibi: amice, ascende superius. Haec dicens, non graviter obiurgat, sed leniter iniungit: sufficit enim monitio apud discretos; et sic pro humilitate aliquis coronatur honore; unde sequitur tunc erit tibi gloria coram simul discumbentibus"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Occupare igitur locum ultimum in conviviis, iuxta mandatum dominicum, conveniens est, sed rursum in hunc contentiose irruere reprobatum tamquam interemptorium ordinis et causativum tumultus: et de eo mota contentio aequiparabit vos litigantibus de primatu. Quapropter, sicut hic dominus dicit, expedit convivium facienti committere accubitus ordinem. Sic et in patientia nos mutuo sustinebimus honeste, et secundum ordinem omnia prosequentes, non ad apparentiam plurium; nec videbimur humilitatem pertractare per vehementem contradictionem; magis autem humilitatem per patientiam obtineremus: maius est enim ex repugnantia superbiae indicium quam ex primo accubitu, quando eum cum imperio obtinemus",
+        "pt": "Ocupar, portanto, o último lugar nos banquetes, segundo o mandamento do Senhor, é conveniente; mas, por outro lado, precipitar-se nele com disputa é reprovável, como destruidor da ordem e causador de tumulto; e a contenda daí surgida vos igualará aos que disputam pelo primeiro lugar. Por isso, como diz aqui o Senhor, convém confiar a ordem dos lugares a quem organiza o banquete. Assim também, na paciência, nos suportaremos mutuamente com honestidade, seguindo tudo segundo a ordem, e não para aparecer diante de muitos; nem pareceremos exercitar a humildade por meio de veemente contradição; antes, obteremos a humildade pela paciência: pois é maior indício de rejeição da soberba suportar do que ocupar o primeiro lugar quando o obtemos com autoridade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Nemo autem putet praemissam Christi doctrinam modicam esse, et indignam culminis Dei verbi; non enim pium dices esse medicum pollicitum sanare podagram, ictum vero digiti vel dentis dolorem nolentem curare. Porro quomodo parva passio vanae gloriae, quae versabat primos perquirentes accubitus? Decebat igitur humilitatis magistrum omnem ramum pravae radicis amputare. Sed et illud considera, quia praesto coena, et passione primatus coram salvatore vexante miseros, opportunitatem habebat monitio"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Ostenso igitur tam modico exemplo ambitiosorum contemptu, et non ambitiosorum exaltatione adicit magnum parvo, generalem sententiam proferens, cum subditur quia omnis qui se exaltat, humiliabitur; et qui se humiliat, exaltabitur: quod dicitur secundum divinum iudicium, non secundum humanam consuetudinem, secundum quam plures concupiscentes honorem consequuntur, alii vero se humiliantes inglorii remanent",
+        "pt": "Mostrado, pois, por um exemplo tão modesto o desprezo dos ambiciosos e a exaltação dos não ambiciosos, acrescenta o grande ao pequeno, proferindo uma sentença geral, ao se dizer: \"porque todo o que se exalta será humilhado, e o que se humilha será exaltado\"; o que se diz segundo o juízo divino, não segundo o costume humano, segundo o qual muitos que cobiçam a honra a alcançam, enquanto outros que se humilham permanecem sem glória.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Porro non finaliter nec omnibus hominibus est reverendus qui se honoribus ingerit; sed dum a quibusdam honoratur, alii detrahunt ei, et quandoque etiam ipsi honorantes"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Sed quoniam hanc admonitionem Evangelista parabolam vocat, breviter intuendum quid mystice significet. Quisquis nuptias Christi et Ecclesiae invitatus adierit, membris Ecclesiae per fidem coniunctus, non se extollat, quasi sublimior ceteris, de meritis gloriando: dabit enim locum honoratiori post invitato, cum illorum qui se in Christo secuti sunt agilitate praeitur, et cum rubore novissimum locum tenet, quando de aliis meliora cognoscens, quicquid de sua operatione celsum sentiebat humiliat. Sed recumbit aliquis in novissimo loco, secundum illud: quanto magnus es, humilia te in omnibus. Veniens autem dominus, quem humilem invenerit, amici nomine beatificans, ascendere superius praecipiet: quicumque enim humiliaverit se sicut parvulus, hic est maior in regno caelorum. Pulchre autem dicitur tunc erit tibi gloria, ne nunc quaerere incipias quod tibi servatur in fine. Potest etiam et hoc in hac vita intelligi; quia quotidie dominus suas nuptias intrat, superbos despiciens, et humilibus saepe tanta sui spiritus dona praestans, ut discumbentium, idest fidelium, coetus, eos admirando glorificet. Ex conclusione vero generali, quae subditur, manifeste claret praecedentem domini sermonem typice intelligendum. Neque enim omnis qui se coram hominibus exaltat, humiliatur; aut qui se in conspectu hominum humiliat, exaltatur ab eis: sed qui se de meritis elevat, humiliabitur a domino; et qui se de beneficiis humiliat, exaltabitur ab eo"
+      }
+    ]
+  },
+  {
+    "lectio": 3,
+    "versos": [
+      12,
+      14
+    ],
+    "itens": [
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Ex duabus partibus coena composita, scilicet ex vocantibus et vocatis, partem vocatorum ad humilitatem iam monuerat; consequenter vocantem monendo remunerat, retrahens eum ne gratia hominum convivaret; unde dicitur dicebat autem ei qui se invitaverat: cum facis prandium aut coenam, noli vocare amicos tuos neque fratres neque cognatos neque vicinos neque divites"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Multae causae sunt quibus amicitiae foedus contrahitur; et illicitas quidem praetermittimus, proponemus autem naturales et morales: naturales quidem, puta patris ad filium, fratris ad fratrem, et aliorum huiusmodi; quod significat dicens neque fratres neque cognatos; morales autem: puta conviva factus est, aut convicinus est; et quantum ad hos dicit neque vicinos"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Fratres igitur et amicos et divites alterutrum convivia celebrare non quasi scelus interdicit; sed, sicut cetera necessitatis humanae commercia, ad promerenda vitae caelestis praemia, nil valere ostendit; unde subdit ne forte et ipsi te reinvitent, et fiat tibi retributio. Non ait: et fiet tibi peccatum. Cui simile est id quod alibi dicit: et si bene feceritis his qui vobis bene faciunt, quae vobis est gratia? Sunt tamen quaedam mutua fratrum vicinorumque convivia, quae non solum in praesenti retributionem, sed et damnationem percipiunt in futuro; quae aut collatione omnium celebrantur; aut vicibus solent a contubernalibus exhiberi: in quibus ad hoc convenitur ut foeda gerantur, et ex copia incitetur libidinis diversa voluptas"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Non igitur hac spe aliis beneficia conferamus ut nobis retribuant; haec enim frigida est intentio: unde talis amicitia celerius evanescit. Si vero pauperem vocaveris, Deum numquam obliviscentem habebis debitorem; unde sequitur sed cum facis convivium, voca pauperes, debiles, claudos et caecos. Quanto enim minor est frater, tanto magis per eum Christus accedit et visitat. Nam qui magnum suscipit, saepe propter vanam gloriam facit: sed et utilitas pluries quaeritur, ut promoveatur per illum. Possem quidem plures proponere ob hoc celeberrimos senatorum colentes, ut illis mediantibus ampliorem gratiam obtineant principum. Non igitur illos quaeramus qui nobis retribuere possunt; sequitur enim et beatus eris, quia non habent retribuere tibi. Non ergo turbemur cum non recipimus beneficii recompensationem, sed cum receperimus: quoniam si receperimus, non amplius recipiemus illic; sed si minime retribuat homo, tunc ibi Deus retribuet; unde sequitur retribuetur enim in resurrectione iustorum"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Et si omnes resurgunt, iustorum tamen resurrectio dicitur, quia in hac resurrectione beatos se esse non dubitant; ergo qui pauperes ad convivium vocant, in futuro praemia recipient; qui autem amicos, fratres et divites vocat, recepit mercedem suam. Sed si hoc propter Deum facit in exemplum filiorum Iob, sicut cetera fraternae dilectionis officia, ipse qui iussit remunerat"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Sed dicitis: immundus est pauper et sordidus. Lava eum, et fac tecum in mensa sedere. Si vestes sordidas habet, mundum indumentum exhibeas. Christus accedit per eum, et tu frivola loqueris?"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Non ergo negligas iacentes, quasi nullo sint digni; cogita qui sint, et pretiositatem eorum invenies. Salvatoris induerunt imaginem, futurorum bonorum heredes, regni clavigeri, accusatores et excusatores idonei, non loquentes, sed inspecti a iudice"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Decet ergo eos sursum in solario suscipere; si non placet, saltem deorsum, ubi sunt subiugalia et famuli, Christum suscipias: fiat saltem pauper aedituus: ubi enim est eleemosyna, non audet intrare Diabolus: et si non secum consedeas, mitte saltem eis de mensa fercula"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Mystice vero qui vanam gloriam vitat, vocat ad spirituale convivium pauperes, idest imperitos, ut ditet; debiles, hoc est laesam conscientiam habentes, ut sanet; claudos, idest declinantes a ratione, ut rectas semitas faciant; caecos, idest qui carent contemplatione veritatis, ut veram lucem videant. Quod autem dicitur non possunt retribuere tibi, idest non noverunt responsum proferre"
+      }
+    ]
+  },
+  {
+    "lectio": 4,
+    "versos": [
+      15,
+      24
+    ],
+    "itens": [
+      {
+        "autor": "Eusebius",
+        "obra": "",
+        "latim": "Docuerat supra dominus praeparare convivium rependere nequeuntibus, cum sit recompensandum in resurrectione iustorum: et ideo quidam intelligens unum et idem esse resurrectionem iustorum et regnum Dei, recompensationem praedictam commendat; sequitur enim haec cum audisset quidam de simul discumbentibus, dixit illi: beatus qui manducabit panem in regno Dei"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Homo iste animalis erat, non diligenter percipiens ea quae Christus protulerat: putavit enim corporeas esse remunerationes sanctorum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Vel quia in longinqua iste suspirabat, et panis iste quem desiderabat, ante illum discumbebat. Quis enim est panis regni Dei, nisi qui dicit: ego sum panis vivus, qui de caelo descendi? Nolite parare fauces, sed cor"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Sed quia nonnulli hunc panem fidetenus odorando percipiunt, dulcedinem vero eius attingere veraciter gustando fastidiunt; subiecta parabola dominus talium torporem caelestibus epulis dignum non esse redarguit; sequitur enim at ille dixit ei: homo quidam fecit coenam magnam, et vocavit multos"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Homo iste Deus pater est, secundum quod imagines ad similitudinem veritatis figurantur"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Quoties enim punitivam suam virtutem indicare vult Deus, ursa, pardus, leo et huiusmodi nuncupatur, quando vero misericordiam exprimere vult, dicitur homo"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Hic ergo conditor omnium, atque gloriae pater, paravit coenam magnam in Christo peractam. In novissimis enim temporibus, et quasi in occasu nostri saeculi, illuxit nobis Dei filius; et mortem pro nobis sustinens, dedit nobis proprium corpus comedere: unde et agnus in vespere immolabatur iuxta legem Mosaicam. Merito igitur in coena dictum est paratum in Christo convivium"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Vel fecit coenam magnam, quia satietatem nobis dulcedinis aeternae praeparavit: qui vocavit multos, sed pauci veniunt: quia nonnunquam ipsi qui ei per fidem subiecti sunt, aeterno eius convivio vivendo contradicunt. Hoc autem distare inter delicias corporis et cordis solet, quod corporales deliciae cum non habentur, grave in se desiderium accedunt; cum vero habitae eduntur, comedentem protinus in fastidium per satietatem vertunt; at contra, spiritales deliciae cum non habentur, in fastidio sunt; cum vero habentur, in desiderio. Sed superna pietas contemptas illas delicias ad memoriae nostrae oculos revocat, atque ut fastidium nostrum repellere debeamus invitat: unde sequitur et misit servum suum hora coenae dicere invitatis ut venirent"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Iste servus qui missus est, ipse Christus est, qui cum esset naturaliter Deus, et verus Dei filius, exinanivit seipsum formam servi accipiens. Missus est autem hora coenae: non enim a principio verbum patris nostram naturam suscepit, sed in novissimo tempore. Subdit autem quia parata sunt omnia; paravit enim pater in Christo bona collata mundo per ipsum, peccatorum amotionem, spiritus sancti participationem, adoptionis splendorem; ad hoc vocavit Christus per evangelica documenta"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Vel aliter. Homo iste mediator est Dei et hominis Christus Iesus. Misit ut venirent invitati, idest per missos vocati prophetas. Qui olim invitabant ad coenam Christi, saepe missi sunt ad populum Israel, saepe vocaverunt ut ad horam coenae venirent: illi invitantes acceperunt, coenam repudiarunt; prophetas legerunt, et Christum occiderunt; et tunc nobis coenam nescientes paraverunt. Parata iam coena, idest immolato Christo, missi sunt apostoli ad quos missi fuerant ante prophetae"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Per hunc ergo servum qui a patrefamilias ad invitandum mittitur, praedicatorum ordo significatur. Saepe autem solet evenire ut persona potens famulum habeat despectum; cumque per eum dominus aliquid mandat, non despicitur persona loquentis servi, quia servatur in corde mittentis reverentia domini. Offert ergo Deus quod rogari debuit, non rogare: dare vult quod vix sperari poterat; et tamen simul omnes excusant; sequitur enim et coeperunt omnes simul excusare. Ecce homo dives invitat, et pauperes occurrere festinant; ad Dei invitamur convivium, et nos excusamus"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Tres autem fuerunt excusationes, de quibus subditur primus dixit ei: villam emi, et necesse habeo exire, et videre illam. Rogo te, habe me excusatum. In villa empta dominatio notatur: ergo superbia castigatur vitium primum: primus enim homo dominari voluit, qui dominium habere noluit"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Vel per villam terrena substantia designatur. Exit ergo videre illam qui sola exteriora cogitat propter substantiam"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Sic igitur emeritae militiae viro contemnendarum stipendium praescribitur facultatum, quod neque ille qui studiis intentus inferioribus possessiones sibi terrenas coemit, regnum caeli possit adipisci, cum dominus dicat: vende omnia tua, et sequere me. Sequitur et alter dixit: iuga boum emi quinque, et eo probare illa"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Quinque iuga boum sensus carnis huius quinque numerantur. In oculis visus est, in auribus auditus, in naribus odoratus, in faucibus gustus, in omnibus membris tactus. Sed quia iuga sunt, in tribus prioribus sensibus facilius apparet: duo sunt oculi, duae aures, geminae nares: ecce tria iuga: et in faucibus, idest sensu gustandi, geminatio quaedam invenitur, quia nihil gustando sapit nisi lingua et palato tangatur: voluptas carnis, quae ad tactum pertinet, occulte geminatur: est et forinsecus et intrinsecus. Dicuntur autem iuga boum, quia per sensus istos carnis terrena requiruntur: boves enim terram versant; homines autem remoti a fide, terrenis dediti, nolunt credere aliquid nisi ad quod sensu corporis perveniunt quinquepartito. Non, inquit, ego credo, nisi quod video. Si talia cogitaremus, quinque illis iugis boum a coena impediremur. Ut noveritis autem istorum quinque sensuum, non delectationem quae mulcet et ingerit voluptatem, sed curiositatem quamdam notatam fuisse, non ait quinque iuga boum emi, eo pascere illa, sed eo probare illa"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Corporales etiam sensus, quia interna comprehendere nequeunt, sed sola exteriora agnoscunt, recte per eos curiositas designatur; quae dum alienam quaerit vitam discutere, semper sua intima nesciens studet exteriora cogitare. Sed notandum, quod is qui propter villam, et is qui propter probanda iuga boum a coena sui invitatoris se excusat, humilitatis verba permiscet; dum enim dicit rogo, et venire contemnit, humilitas sonat in voce, superbia in actione. Sequitur alius dixit: uxorem duxi, et ideo non possum venire"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Ista est voluptas carnis, quae multos impedit: utinam foris, et non intus. Qui enim dixit uxorem duxi, carnem amplexatur, carnis voluptatibus iucundatur, a coena excusatur: observet ne fame interna moriatur"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Dicit autem non possum venire, eo quod intellectus humanus vergens ad mundanas illecebras debilis est ad agendum"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Quamvis autem bonum sit coniugium, atque ad propagandam sobolem divina providentia constitutum, nonnulli tamen per hoc non fecunditatem prolis, sed desideria expetunt voluptatis: et idcirco per rem iustam significari potest non incongrue iniusta"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vel coniugium non reprehenditur, sed ad maiorem honorem vocatur integritas: quoniam mulier innupta cogitat quae sunt domini, ut sit sancta corpore et spiritu: quae autem nupta est, cogitat quae sunt mundi"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Ioannes autem dicens: omne quod est in mundo, concupiscentia carnis est, et concupiscentia oculorum, et ambitio saeculi, inde coepit ubi Evangelium terminum posuit. Concupiscentia carnis, uxorem duxi; concupiscentia oculorum, quinque iuga boum emi; ambitio saeculi, villam emi. A parte autem in totum commemorati sunt quinque sensus per solos oculos, quorum est in quinque sensibus principatus: propterea cum proprie ad oculos pertineat visus, ipsum videre per omnes quinque sensus solemus appellare"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quos autem intelligemus fuisse eos qui renuerunt praedictorum causa venire, nisi praesides Iudaeorum, quos per totam sacram paginam de his redargutos esse videmus?"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Vel aliter. Hi qui villam emerunt, et refutant coenam sunt qui receperunt alia dogmata divinitatis, nec experti sunt verbum quod possidebant. Is autem qui quinque paria boum emit, est qui naturam intellectualem contemnit, et sensibilia sequitur: unde incorpoream naturam comprehendere non potest. Qui autem uxorem duxit, est qui coniunctus est carni, voluptatum magis amator quam Dei"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vel tria genera hominum a consortio istius coenae aestimemus excludi, gentilium, Iudaeorum et haereticorum. Iudaei corporali ministerio iuga sibi legis imponunt. Quinque autem iuga sunt verborum decem, vel quinque libri veteris legis. At vero haeresis velut Eva femineo rigore fidei tentat affectum. Et apostolus dicit avaritiam esse fugiendam, ne impediti more gentili ad regnum Christi pervenire nequeamus. Ergo et ille qui villam emit, alienus a regno est, et ille qui iugum potius legis quam gratiae munus elegit, et ille qui se propter ducendam excusat uxorem. Sequitur et reversus servus nuntiavit haec domino suo"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "super Gen",
+        "latim": "Non propter inferiorum scientiam Deus nuntiis indiget, quasi per eos fiat scientior; sed novit omnia stabiliter atque incommutabiliter. Habet autem nuntios propter nos, et propter ipsos; quia illo modo Deo parere et assistere, ut eum de inferioribus consulant, eiusque supernis iussis obtemperent, bonum est eis in ordine propriae naturae"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Iudaeorum autem primatibus vocationem renuentibus, sicut ipsi dicebant: numquid aliquis principum credidit in eum? Indignatus est paterfamilias, quasi eis dignis indignatione et ira; unde sequitur tunc iratus paterfamilias"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Non quod irae passio divinae substantiae accidat; sed talis operatio, quae in nobis ab ira fit, Dei ira et indignatio dicitur"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Sic ergo indignatus dicitur paterfamilias in principes Iudaeorum, et vocati sunt loco eorum, qui erant de multitudine Iudaeorum, fragilem et impotentem mentem habentes. Loquente enim Petro, primo quidem tria millia, deinde quinque millia crediderunt, et postmodum plurimus populus; unde dicitur dixit servo suo: exi cito in plateas et vicos civitatis, et pauperes ac debiles, caecos et claudos introduc huc"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Invitat autem pauperes, debiles et caecos, ut ostendatur quod nullum debilitas corporis excludit a regno, rariusque delinquat cui desit illecebra peccandi; vel quod infirmitas peccatorum per misericordiam domini remittatur; unde mittit ad plateas, ut de latioribus vicis ad angustam venirent viam"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Quia ergo venire superbi renuunt, pauperes eliguntur: dicuntur enim debiles et pauperes qui iudicio suo apud semetipsos infirmi sunt: nam pauperes et quasi fortes sunt qui positi in paupertate superbiunt; caeci sunt qui nullius ingenii lumen habent; claudi sunt qui rectos gressus in operatione non habent. Sed dum horum vitia in membrorum debilitate significantur, sicut illi peccatores fuerunt qui vocati venire noluerunt, ita hi quoque qui invitantur et veniunt; sed peccatores superbi respuuntur, humiles eliguntur. Hos itaque elegit Deus quos despicit mundus: quia plerumque ipsa despectio hominem revocat ad semetipsum; et tanto celerius vocem Dei aliqui audiunt, quanto in hoc mundo non habent unde delectentur. Cum ergo de vicis et plateis ad coenam quosdam dominus vocat, illum populum designat qui tenere legis urbanam conversationem noverat. Sed multitudo quae ex Israel populo credidit, locum superni convivii non implevit; unde sequitur et ait servus: domine, factum est ut imperasti, et adhuc locus est. Intravit enim iam frequentia Iudaeorum; sed adhuc locus vacat in regno, ubi suscipi debeat numerositas gentium; unde subditur et ait dominus servo: exi in vias et sepes, et compelle intrare, ut impleatur domus mea. Cum convivas suos colligi ex viis et sepibus praecipit, agrestem populum, idest gentilem, quaerit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vel mittit ad vias et circa sepes, quia hi apti sunt regno caelorum qui nullis praesentium cupiditatibus occupati ad futura festinant, in quodam bono voluntatis tramite constituti; et qui modo sepis, quae ab incultis culta secernat, et incursus arceat bestiarum, norit bona malaque distinguere, et adversus tentamenta nequitiae spiritualis, fidei munimen praetendere"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Venerunt de plateis et vicis gentes, veniunt de sepibus haeretici: nam sepes qui construunt, divisiones quaerunt. Abstrahantur a sepibus, evellantur a spinis. Sed cogi nolunt: voluntate, inquiunt, nostra intremus. Non hoc dominus imperavit: coge, inquit, intrare. Foris inveniatur necessitas, nascitur inde voluntas"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Qui ergo huius mundi adversitatibus fracti ad Dei amorem redeunt, compelluntur intrare. Sed valde tremenda est sententia quae subinfertur dico autem vobis, quod nemo virorum illorum qui vocati sunt, gustabit coenam meam. Nemo ergo contemnat; ne dum vocatus excusat, cum voluntatem habuerit, intrare non valeat"
+      }
+    ]
+  },
+  {
+    "lectio": 5,
+    "versos": [
+      25,
+      27
+    ],
+    "itens": [
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Ad audita caelestia praemia inardescit animus, iamque illic cupit assistere ubi se sperat sine fine gaudere. Sed ad magna praemia perveniri non potest nisi per magnos labores; unde dicitur ibant autem turbae multae cum eo, et conversus dixit ad illos: si quis venit ad me, et non odit patrem suum et matrem et uxorem et filios et fratres et sorores, adhuc autem et animam suam, non potest esse meus discipulus"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quia enim multi comitantium ipsum non ex toto affectu, sed tepide sequebantur, ostendit qualem deceat esse suum discipulum"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Sed percunctari libet: quomodo parentes et carnaliter propinquos praecipimur odisse, qui iubemur et inimicos diligere? Sed si vim praecepti perpendimus, utrumque agere per discretionem valemus: ut eos qui nobis carnis cognatione coniuncti sunt, et quos proximos novimus, diligamus; et quos adversarios in via Dei patimur, odiendo et fugiendo nesciamus. Quasi enim per odium diligitur qui carnaliter sapiens, dum prava nobis ingerit, non auditur"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Etenim si propter te dominus suae renuntiat matri, dicens: quae est mater mea et qui fratres mei? Cur tu domino tuo cupias anteferri? Sed neque ignorare naturam, neque saevire dominus iubet; sed ita indulgere naturae ut venereris auctorem, nec a Deo parentum amore desistas"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Ut autem dominus demonstraret hoc erga proximos odium non de affectione procedere, sed de caritate, addidit dicens adhuc autem et animam suam. Constat ergo quia amando debet odisse proximum qui sic eum odit sicut seipsum: seipsum: enim bene animam nostram odimus, cum eius carnalibus desideriis non acquiescimus, cum eius appetitum frangimus, eius voluptatibus reluctamur. Quae ergo contempta ad melius ducitur, quasi per odium amatur"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Non est autem fugienda vita qua in corpore vivitur, sed servanda, sicut et Paulus servavit, ut Christum adhuc vivens in corpore praedicaret; sed ubi oportebat vitam contemnere ut cursum consummaret, nec animam pretiosam sibi esse fatetur"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Hoc autem animae odium qualiter exhiberi debeat, manifestat subdens qui non baiulat crucem suam et venit post me, non potest meus esse discipulus"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Non autem hoc dicit ut trabem super humeros apponamus, sed ut semper mortem prae oculis nostris habeamus; sicut et Paulus moriebatur quotidie, et mortem contemnebat"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Crucem etiam tollens, mortem domini annuntiabat, dicens: mihi mundus crucifixus est, et ego mundo; quod etiam nos in ipso Baptismate anticipamus, ubi vetus homo noster crucifixus est, ut destruatur corpus peccati"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Vel quia crux a cruciatu dicitur, duobus modis crucem domini baiulamus; cum aut per abstinentiam carnem affligimus, aut per compassionem proximi, necessitatem illius nostram putamus. Sed quia nonnulli carnis abstinentiam non pro Deo, sed pro inani gloria exhibent, et compassionem non spiritualiter sed carnaliter impendunt, recte additur et venit post me. Baiulare enim crucem, et post dominum ire est vel carnis abstinentiam, vel compassionem proximorum pro studio aeternae intentionis exhibere"
+      }
+    ]
+  },
+  {
+    "lectio": 6,
+    "versos": [
+      28,
+      33
+    ],
+    "itens": [
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Quia sublimia praecepta data sunt, protinus comparatio aedificandae sublimitatis adiungitur cum dicitur quis enim ex vobis volens turrim aedificare, nonne prius sedens computat sumptus qui necessarii sunt, si habeat ad perficiendum? Omne enim quod agimus, praevenire per studium considerationis debemus. Si igitur humilitatis turrim construere cupimus, prius nos praeparare ad adversa huius saeculi debemus"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Vel turris est alta speculatio ad custodiam civitatis et perceptionem hostilium occursuum apta: ad huius instar nobis datus est intellectus conservativus bonorum, praemeditativus contrariorum; ad huius aedificationem praecipit dominus sedentes ponere calculum, si suppetat facultas ad finem"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Insistendum est enim ut cuiuslibet ardui propositi terminus attingatur variis augmentis mandatorum Dei, consummando opus divinum; nam neque lapis unus est tota turris fabrica, neque unicum mandatum ducit ad animae perfectionem; sed fundamentum oportet subsistere, et secundum apostolum insuper apparatus est auri, et argenti, et pretiosorum lapidum apponendus; unde subditur ne posteaquam posuerit fundamentum, et non potuerit perficere, omnes qui viderint, incipiant illudere ei dicentes, quia hic homo coepit aedificare, et non potuit consummare"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Non enim debemus ponere fundamentum, idest sequi Christi initium, et finem non imponere, sicut illi de quibus Ioannes dicit quod multi ex discipulis eius abierunt retrorsum. Vel fundamentum intellige doctrinalem sermonem, puta de abstinentia. Opus est igitur praedicto fundamento operationis aedificium, ut perficiatur nobis turris fortitudinis a facie inimici. Alioquin deridetur homo a videntibus eum, tam hominibus quam Daemonibus"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "In bonis enim operationibus intenti, nisi contra malignos spiritus sollicite vigilemus, ipsos irrisores patimur, quos ad malum persuasores habemus. Sed ex minori ad maius similitudo subditur, ut ex rebus minimis maiora pensentur; nam sequitur aut quis rex iturus committere bellum adversus alium regem, nonne prius sedens cogitat si possit cum decem millibus occurrere ei qui cum viginti millibus venit ad se?"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Incumbit enim nobis praelium contra spiritalia nequitiae in caelestibus; urget autem nos et aliorum hostium multitudo, carnale flagitium, lex saeviens in membris nostris, et variae passiones, hoc est dira hostium multitudo"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Vel decem millia praeliaturi cum rege qui habet viginti millia, significant simplicitatem Christiani hominis, dimicaturi cum duplicitate Diaboli"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Est autem rex peccatum regnans in nostro mortali corpore; sed et noster intellectus creatus est rex. Ergo si repugnare velit peccato, toto animo cogitet secum: nam Daemones sunt peccati satellites, qui videntur viginti millium numero praecellere decem millia nostra: quia cum incorporei sint, nobis comparati corporeis, multo maiorem fortitudinem habere censentur"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Sicut autem de turri non perfecta per opprobrium deterruit dicentium quia hic homo coepit aedificare, et non potuit consummare; sic in rege cum quo dimicandum est, ipsam pacem accusavit, cum subdit alioquin, adhuc illo longe agente, legationem mittens, rogat ea quae pacis sunt: significans etiam minas imminentium tentationum a Diabolo non sustinere eos qui non renuntiant omnibus quae possident, et pacem cum eo facere, consentiendo illi ad committendum peccata"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Vel aliter. In illo tremendo examine cum rege nostro ex aequo ad iudicium non venimus; decem millia quippe ad viginti millia, simplum ad duplum sunt. Cum duplo ergo exercitu contra simplum venit, quia nos vix in solo opere praeparatos simul de opere et cogitatione discutit. Dum ergo adhuc longe est, quia adhuc praesens per iudicium non videtur, mittamus ad eum legationem lacrymas nostras, misericordiae opera, hostias placationis; haec est nostra legatio, quae regem venientem placat"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "ad Laetam",
+        "latim": "Quomodo autem pertineant istae similitudines, ipsa conclusione satis aperuit, dicens sic ergo omnis ex vobis qui non renuntiat omnibus quae possidet, non potest meus esse discipulus. Itaque sumptus ad turrim aedificandam, et valentia decem millium adversus regem qui viginti millia habet, nihil aliud est, quam ut renuntiet unusquisque omnibus quae sunt eius. Praelocutio autem superior cum extrema locutione concordat: in eo enim quod aliquis renuntiat omnibus quae sunt eius, etiam illud continetur ut oderit patrem suum, et matrem, et uxorem, et filios, et fratres, et sorores, adhuc et animam suam. Omnia enim haec propria alicuius sunt, quae plerumque implicant et impediunt ab obtinenda non ista propria temporaliter transitura, sed in aeternum mansura communia"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Est autem intentio domini per exempla praedicta non utique praebere potestatem eius discipulum fieri vel non fieri, sicut licet vel non inchoare fundamentum vel tractare pacem; sed ostendere impossibilitatem divini beneplaciti observandi inter distrahentia animam, inter quae periclitatur facta venalis ab astutiis Daemonis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Distat autem inter renuntiare omnibus et relinquere omnia: paucorum enim perfectorum est relinquere omnia, hoc est curas mundi postponere; cunctorum autem fidelium est renuntiare omnibus, hoc est sic tenere quae mundi sunt, ut tamen per ea non teneantur in mundo"
+      }
+    ]
+  },
+  {
+    "lectio": 7,
+    "versos": [
+      34,
+      35
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Dixerat superius turrim virtutum non solum inchoandam, sed etiam consummandam: ad quod pertinet quod dicitur bonum est sal. Bonum est sal sapientiae spiritualis cordis arcana condire, immo cum apostolis sal terrae fieri"
+      },
+      {
+        "autor": "Eusebius",
+        "obra": "",
+        "latim": "Sal enim secundum substantiam quidem ex aqua constat et spiritu, modicum quid terrestreitatis participans. Desiccat autem fluidam naturam corruptorum corporum, ut mortua corpora conservet. Merito igitur discipulos suos comparat sali, eo quod ipsi regenerati sunt per aquam et spiritum. Cumque toti spiritualiter viverent, et non secundum carnem, ad modum salis corruptam vitam hominum in terra degentium convertebant, et virtuosa vita suos sequaces oblectando condiebant"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Non solum autem eos qui donati sunt magistrali gratia, sed etiam idiotas exposcit ad modum salis fieri utiles proximis. Si vero qui futurus est utilis aliis, fiat reprobus, iuvari non poterit; unde sequitur si autem sal evanuerit, in quo condietur?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quasi dicat: si quis semel condimento veritatis illuminatus ad apostasiam redierit, quo alio doctore corrigetur? Qui scilicet eam quam ipse gustavit sapientiae dulcedinem, vel adversis saeculi perterritus, vel illecebris illectus abiecit; unde sequitur neque in terram, neque in sterquilinium utile est; sed foras mittetur. Sal enim cum ad condiendos cibos carnesque siccandas valere desierit, nulli iam usui aptum erit: neque enim in terram utile est, cuius iniectu germinare prohibetur, neque in sterquilinium agriculturae profuturum: sic qui post agnitionem veritatis retrocedit, neque ipse fructum boni operis ferre, nec alios excolere valet; sed foras mittendus est, hoc est ab Ecclesiae unitate secernendus"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Verum, quia sermo parabolicus et obscurus erat, excitans dominus auditores, ne qualitercumque acciperent quod dictum est de sale, subdit qui habet aures audiendi, audiat; hoc est, si cui sapientia inest, intelligat: aures enim hic cognoscitivam vim animae et aptitudinem intelligendi accipere debemus"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Audiat etiam non contemnendo, sed obediendo, et faciendo quae dicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "data": "2026-10-26",
+  "evangelho": "Lc 13,10-17",
+  "leituras": "Ef 4,32-5,8 | Sl 1,1-2.3.4.6 (R. cf. Ef 5,1) | Lc 13,10-17",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 13,
+      "lectio": 3,
+      "versos": [
+        10,
+        17
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 582,
+      "comum": [
+        15,
+        16
+      ],
+      "direto": false,
+      "frase": "Isto vale sobretudo para a questão do sábado: Jesus lembra, e muitas vezes com argumentos rabínicos, que o repouso sabático não é violado pelo serviço de Deus ou do próximo que as suas curas realizam."
+    }
+  ],
+  "tema": "A mulher encurvada e a cura em dia de sábado",
+  "destaques": [
+    {
+      "lectio": 3,
+      "i": 7
+    },
+    {
+      "lectio": 3,
+      "i": 13
+    },
+    {
+      "lectio": 3,
+      "i": 15
+    }
+  ]
+}

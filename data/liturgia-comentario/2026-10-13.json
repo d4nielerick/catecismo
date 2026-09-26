@@ -2,7 +2,17 @@
   "data": "2026-10-13",
   "evangelho": "Lc 11,37-41",
   "leituras": "Gl 5,1-6 | 44.45.47.48 (R. 41a) | Lc 11,37-41",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 11,
+      "versos": [
+        37,
+        44
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 579,
@@ -21,6 +31,19 @@
       "frase": "Jesus escandalizou os fariseus por comer com os publicanos e os pecadores tão familiarmente como com eles."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "O interior do cálice e a esmola que purifica",
+  "destaques": [
+    {
+      "lectio": 11,
+      "i": 6
+    },
+    {
+      "lectio": 11,
+      "i": 10
+    },
+    {
+      "lectio": 11,
+      "i": 12
+    }
+  ]
 }

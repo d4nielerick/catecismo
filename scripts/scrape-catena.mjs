@@ -30,20 +30,41 @@ if (!SIGLA[ev] || !/^\d+$/.test(capArg || '')) {
 }
 const cap = String(parseInt(capArg, 10));
 const cap2 = cap.padStart(2, '0');
-const url = `https://www.corpusthomisticum.org/${SIGLA[ev]}${cap2}.html`;
 const fonte = path.join(RAIZ, 'data', 'catena-fonte', ev, `${cap2}.html`);
 const saida = path.join(RAIZ, 'data', 'catena', ev, `${cap2}.json`);
 const mapaArq = path.join(RAIZ, 'data', 'catena-mapa', `${ev}.json`);
 
-let html;
+// No Corpus Thomisticum um arquivo traz vários capítulos (clc09.html = Lc 9–13; cmt17 = Mt 17–20);
+// o nome é o do primeiro capítulo. Sem índice confiável, tenta o arquivo do capítulo pedido e
+// desce até achar um que exista e contenha "Caput N". Lc 1–2 estão em clc012 (clc011 é só o cap. 1).
+const ARQUIVOS_ESPECIAIS = { Lc: { 1: 'clc012', 2: 'clc012' } };
+async function baixarCapitulo() {
+  const tentativas = [];
+  if (ARQUIVOS_ESPECIAIS[ev]?.[+cap]) tentativas.push(ARQUIVOS_ESPECIAIS[ev][+cap]);
+  for (let c = +cap; c >= 1; c--) tentativas.push(`${SIGLA[ev]}${String(c).padStart(2, '0')}`);
+  for (const nome of tentativas) {
+    const u = `https://www.corpusthomisticum.org/${nome}.html`;
+    const r = await fetch(u);
+    if (!r.ok) continue;
+    const t = await r.text();
+    if (t.includes(`<DIV CLASS="C">Caput ${cap}</DIV>`)) return { url: u, html: t };
+  }
+  return null;
+}
+
+let html, url = `https://www.corpusthomisticum.org/${SIGLA[ev]}${cap2}.html`;
 if (flags.includes('--local') && fs.existsSync(fonte)) {
   html = fs.readFileSync(fonte, 'utf8');
 } else {
-  const r = await fetch(url);
-  if (!r.ok) { console.error(`${url}: HTTP ${r.status}`); process.exit(1); }
-  html = await r.text();
+  const achado = await baixarCapitulo();
+  if (!achado) { console.error(`${ev} ${cap}: nenhum arquivo do Corpus Thomisticum com esse capítulo`); process.exit(1); }
+  ({ url, html } = achado);
+  // guarda só o capítulo pedido, intocado (o arquivo da fonte traz vários)
+  const ini = html.indexOf(`<DIV CLASS="C">Caput ${cap}</DIV>`);
+  const fim = html.indexOf('<DIV CLASS="C">Caput ', ini + 10);
+  html = html.slice(ini, fim < 0 ? undefined : fim);
   fs.mkdirSync(path.dirname(fonte), { recursive: true });
-  fs.writeFileSync(fonte, html);
+  fs.writeFileSync(fonte, `<!-- ${url} -->\n${html}`);
 }
 
 // ── Estrutura ────────────────────────────────────────────────────────────────
@@ -67,7 +88,8 @@ while ((m = RE_LECTIO.exec(corpo)) !== null) {
   const RE_ITEM = /([^<>]*?)<I>([\s\S]*?)<\/I>/g;
   let it;
   while ((it = RE_ITEM.exec(p)) !== null) {
-    const rotulo = limpar(it[1]).replace(/^[.\s]+/, '').replace(/\.$/, '');
+    // o rótulo é só o que vem depois do último "et cetera." (resto de lema fora do itálico)
+    const rotulo = limpar(it[1]).replace(/^.*et cetera\.?\s*/, '').replace(/^[.,;:\s]+/, '').replace(/[.:]$/, '');
     const latim = limpar(it[2]);
     if (!latim) continue;
     // "Chrysostomus in Matthaeum" → autor "Chrysostomus", obra "in Matthaeum"

@@ -1,0 +1,58 @@
+{
+  "data": "2026-10-30",
+  "evangelho": "Lc 14,1-6",
+  "leituras": "Fl 1,1-11 | Sl 110 (111),1-2.3-4.5-6 (R. 2a) | Lc 14,1-6",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 14,
+      "lectio": 1,
+      "versos": [
+        1,
+        6
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 582,
+      "comum": [
+        3,
+        4
+      ],
+      "direto": false,
+      "frase": "Isto vale sobretudo para a questão do sábado: Jesus lembra, e muitas vezes com argumentos rabínicos, que o repouso sabático não é violado pelo serviço de Deus ou do próximo que as suas curas realizam."
+    },
+    {
+      "numero": 575,
+      "comum": [
+        1
+      ],
+      "direto": false,
+      "frase": "Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus."
+    },
+    {
+      "numero": 588,
+      "comum": [
+        1
+      ],
+      "direto": false,
+      "frase": "Jesus escandalizou os fariseus por comer com os publicanos e os pecadores tão familiarmente como com eles."
+    }
+  ],
+  "tema": "O hidrópico curado em dia de sábado",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 0
+    },
+    {
+      "lectio": 1,
+      "i": 10
+    },
+    {
+      "lectio": 1,
+      "i": 11
+    }
+  ]
+}

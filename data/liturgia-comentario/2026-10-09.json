@@ -2,7 +2,44 @@
   "data": "2026-10-09",
   "evangelho": "Lc 11,15-26",
   "leituras": "Gl 3,7-14 | Sl 110(111),1-2.3-4.5-6 (R. 5b) | Lc 11,15-26",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 4,
+      "versos": [
+        14,
+        16
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 5,
+      "versos": [
+        17,
+        20
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 6,
+      "versos": [
+        21,
+        23
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 7,
+      "versos": [
+        24,
+        26
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 385,
@@ -22,6 +59,23 @@
       "frase": "«É pelo dedo de Deus que Jesus expulsa os demônios»."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "O reino dividido, o dedo de Deus e o homem mais forte",
+  "destaques": [
+    {
+      "lectio": 5,
+      "i": 3
+    },
+    {
+      "lectio": 5,
+      "i": 12
+    },
+    {
+      "lectio": 6,
+      "i": 4
+    },
+    {
+      "lectio": 7,
+      "i": 7
+    }
+  ]
 }

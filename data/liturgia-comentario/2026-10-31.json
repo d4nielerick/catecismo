@@ -1,0 +1,58 @@
+{
+  "data": "2026-10-31",
+  "evangelho": "Lc 14,1.7-11",
+  "leituras": "Fl 1,18b-26 | Sl 41(42),2.3.5bcd (R. 3a) | Lc 14,1.7-11",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 14,
+      "lectio": 1,
+      "versos": [
+        1,
+        6
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 14,
+      "lectio": 2,
+      "versos": [
+        7,
+        11
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 575,
+      "comum": [
+        1
+      ],
+      "direto": false,
+      "frase": "Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus."
+    },
+    {
+      "numero": 588,
+      "comum": [
+        1
+      ],
+      "direto": false,
+      "frase": "Jesus escandalizou os fariseus por comer com os publicanos e os pecadores tão familiarmente como com eles."
+    }
+  ],
+  "tema": "O último lugar no banquete e a exaltação dos humildes",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 2
+    },
+    {
+      "lectio": 2,
+      "i": 4
+    },
+    {
+      "lectio": 2,
+      "i": 6
+    }
+  ]
+}

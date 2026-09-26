@@ -1,27 +1,158 @@
 {
   "_": "Nome como aparece no Corpus Thomisticum → nome em português, século e uma linha. Chave sem a obra (\"Chrysostomus in Matthaeum\" → \"Chrysostomus\").",
-  "Chrysostomus": { "nome": "São João Crisóstomo", "quando": "séc. IV", "quem": "bispo de Constantinopla, Padre e Doutor da Igreja" },
-  "Theophylactus": { "nome": "Teofilacto", "quando": "séc. XI", "quem": "arcebispo de Ócrida, comentador dos Evangelhos" },
-  "Augustinus": { "nome": "Santo Agostinho", "quando": "séc. IV–V", "quem": "bispo de Hipona, Padre e Doutor da Igreja" },
-  "Beda": { "nome": "São Beda, o Venerável", "quando": "séc. VII–VIII", "quem": "monge inglês, Doutor da Igreja" },
-  "Cyrillus": { "nome": "São Cirilo de Alexandria", "quando": "séc. V", "quem": "patriarca de Alexandria, Doutor da Igreja" },
-  "Ambrosius": { "nome": "Santo Ambrósio", "quando": "séc. IV", "quem": "bispo de Milão, Padre e Doutor da Igreja" },
-  "Gregorius": { "nome": "São Gregório Magno", "quando": "séc. VI", "quem": "papa, Padre e Doutor da Igreja" },
-  "Basilius": { "nome": "São Basílio Magno", "quando": "séc. IV", "quem": "bispo de Cesareia, Padre e Doutor da Igreja" },
-  "Origenes": { "nome": "Orígenes", "quando": "séc. III", "quem": "teólogo de Alexandria" },
-  "Eusebius": { "nome": "Eusébio de Cesareia", "quando": "séc. IV", "quem": "bispo e historiador" },
-  "Isidorus": { "nome": "Santo Isidoro", "quando": "séc. V", "quem": "Isidoro de Pelúsio, monge e escritor" },
-  "Hieronymus": { "nome": "São Jerônimo", "quando": "séc. IV–V", "quem": "tradutor da Bíblia, Padre e Doutor da Igreja" },
-  "Titus": { "nome": "Tito de Bostra", "quando": "séc. IV", "quem": "bispo e comentador de Lucas" },
-  "Athanasius": { "nome": "Santo Atanásio", "quando": "séc. IV", "quem": "bispo de Alexandria, Padre e Doutor da Igreja" },
-  "Gregorius Nyssenus": { "nome": "São Gregório de Nissa", "quando": "séc. IV", "quem": "bispo e Padre da Igreja" },
-  "Damascenus": { "nome": "São João Damasceno", "quando": "séc. VIII", "quem": "monge e Doutor da Igreja" },
-  "Hilarius": { "nome": "Santo Hilário", "quando": "séc. IV", "quem": "bispo de Poitiers, Doutor da Igreja" },
-  "Maximus": { "nome": "São Máximo", "quando": "séc. V", "quem": "bispo de Turim" },
-  "Glossa": { "nome": "Glosa", "quando": "séc. XII", "quem": "a Glosa ordinária, comentário medieval da Bíblia" },
-  "Graecus": { "nome": "Um autor grego", "quando": "", "quem": "comentador grego não identificado na Catena" },
-  "Rabanus": { "nome": "Rábano Mauro", "quando": "séc. IX", "quem": "abade de Fulda e arcebispo de Mogúncia" },
-  "Remigius": { "nome": "Remígio de Auxerre", "quando": "séc. IX", "quem": "monge e mestre" },
-  "Severus": { "nome": "Severo", "quando": "séc. VI", "quem": "Severo de Antioquia" },
-  "Victor Antiochenus": { "nome": "Vítor de Antioquia", "quando": "séc. V", "quem": "comentador de Marcos" }
+  "Chrysostomus": {
+    "nome": "São João Crisóstomo",
+    "quando": "séc. IV",
+    "quem": "bispo de Constantinopla, Padre e Doutor da Igreja"
+  },
+  "Theophylactus": {
+    "nome": "Teofilacto",
+    "quando": "séc. XI",
+    "quem": "arcebispo de Ócrida, comentador dos Evangelhos"
+  },
+  "Augustinus": {
+    "nome": "Santo Agostinho",
+    "quando": "séc. IV–V",
+    "quem": "bispo de Hipona, Padre e Doutor da Igreja"
+  },
+  "Beda": {
+    "nome": "São Beda, o Venerável",
+    "quando": "séc. VII–VIII",
+    "quem": "monge inglês, Doutor da Igreja"
+  },
+  "Cyrillus": {
+    "nome": "São Cirilo de Alexandria",
+    "quando": "séc. V",
+    "quem": "patriarca de Alexandria, Doutor da Igreja"
+  },
+  "Ambrosius": {
+    "nome": "Santo Ambrósio",
+    "quando": "séc. IV",
+    "quem": "bispo de Milão, Padre e Doutor da Igreja"
+  },
+  "Gregorius": {
+    "nome": "São Gregório Magno",
+    "quando": "séc. VI",
+    "quem": "papa, Padre e Doutor da Igreja"
+  },
+  "Basilius": {
+    "nome": "São Basílio Magno",
+    "quando": "séc. IV",
+    "quem": "bispo de Cesareia, Padre e Doutor da Igreja"
+  },
+  "Origenes": {
+    "nome": "Orígenes",
+    "quando": "séc. III",
+    "quem": "teólogo de Alexandria"
+  },
+  "Eusebius": {
+    "nome": "Eusébio de Cesareia",
+    "quando": "séc. IV",
+    "quem": "bispo e historiador"
+  },
+  "Isidorus": {
+    "nome": "Santo Isidoro",
+    "quando": "séc. V",
+    "quem": "Isidoro de Pelúsio, monge e escritor"
+  },
+  "Hieronymus": {
+    "nome": "São Jerônimo",
+    "quando": "séc. IV–V",
+    "quem": "tradutor da Bíblia, Padre e Doutor da Igreja"
+  },
+  "Titus": {
+    "nome": "Tito de Bostra",
+    "quando": "séc. IV",
+    "quem": "bispo e comentador de Lucas"
+  },
+  "Athanasius": {
+    "nome": "Santo Atanásio",
+    "quando": "séc. IV",
+    "quem": "bispo de Alexandria, Padre e Doutor da Igreja"
+  },
+  "Gregorius Nyssenus": {
+    "nome": "São Gregório de Nissa",
+    "quando": "séc. IV",
+    "quem": "bispo e Padre da Igreja"
+  },
+  "Damascenus": {
+    "nome": "São João Damasceno",
+    "quando": "séc. VIII",
+    "quem": "monge e Doutor da Igreja"
+  },
+  "Hilarius": {
+    "nome": "Santo Hilário",
+    "quando": "séc. IV",
+    "quem": "bispo de Poitiers, Doutor da Igreja"
+  },
+  "Maximus": {
+    "nome": "São Máximo",
+    "quando": "séc. V",
+    "quem": "bispo de Turim"
+  },
+  "Glossa": {
+    "nome": "Glosa",
+    "quando": "séc. XII",
+    "quem": "a Glosa ordinária, comentário medieval da Bíblia"
+  },
+  "Graecus": {
+    "nome": "Um autor grego",
+    "quando": "",
+    "quem": "comentador grego não identificado na Catena"
+  },
+  "Rabanus": {
+    "nome": "Rábano Mauro",
+    "quando": "séc. IX",
+    "quem": "abade de Fulda e arcebispo de Mogúncia"
+  },
+  "Remigius": {
+    "nome": "Remígio de Auxerre",
+    "quando": "séc. IX",
+    "quem": "monge e mestre"
+  },
+  "Severus": {
+    "nome": "Severo",
+    "quando": "séc. VI",
+    "quem": "Severo de Antioquia"
+  },
+  "Victor Antiochenus": {
+    "nome": "Vítor de Antioquia",
+    "quando": "séc. V",
+    "quem": "comentador de Marcos"
+  },
+  "Gregorius Moralium": {
+    "nome": "São Gregório Magno",
+    "quando": "séc. VI",
+    "quem": "papa, Padre e Doutor da Igreja (nos Moralia sobre Jó)"
+  },
+  "Dionysius": {
+    "nome": "Dionísio Areopagita",
+    "quando": "séc. V–VI",
+    "quem": "autor dos escritos atribuídos a Dionísio, o Areopagita"
+  },
+  "Gregorius Nazianzenus": {
+    "nome": "São Gregório Nazianzeno",
+    "quando": "séc. IV",
+    "quem": "bispo e Doutor da Igreja"
+  },
+  "Alcuinus": {
+    "nome": "Alcuíno",
+    "quando": "séc. VIII",
+    "quem": "monge e mestre da corte de Carlos Magno"
+  },
+  "Epiphanius": {
+    "nome": "Santo Epifânio",
+    "quando": "séc. IV",
+    "quem": "bispo de Salamina"
+  },
+  "Euthymius": {
+    "nome": "Eutímio",
+    "quando": "séc. XII",
+    "quem": "Eutímio Zigabeno, monge e comentador"
+  },
+  "Theodoretus": {
+    "nome": "Teodoreto",
+    "quando": "séc. V",
+    "quem": "bispo de Ciro"
+  }
 }

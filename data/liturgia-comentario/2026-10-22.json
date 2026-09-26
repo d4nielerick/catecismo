@@ -2,7 +2,17 @@
   "data": "2026-10-22",
   "evangelho": "Lc 12,49-53",
   "leituras": "Ef 3,14-21 | Sl 32(33),1-2.4-5.11-12.18-19 (R. 5b) | Lc 12,49-53",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 12,
+      "lectio": 13,
+      "versos": [
+        49,
+        53
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 536,
@@ -37,6 +47,19 @@
       "frase": "Em cada um dos três pedidos, nós não «nos» nomeamos, mas o que nos move é o «desejo ardente», é mesmo «a ânsia» do Filho bem-amado pela glória de seu Pai: «Santificado seja [...]."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "O fogo que Cristo veio trazer e a divisão na casa",
+  "destaques": [
+    {
+      "lectio": 13,
+      "i": 1
+    },
+    {
+      "lectio": 13,
+      "i": 5
+    },
+    {
+      "lectio": 13,
+      "i": 11
+    }
+  ]
 }

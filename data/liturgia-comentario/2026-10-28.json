@@ -1,0 +1,78 @@
+{
+  "data": "2026-10-28",
+  "evangelho": "Lc 6,12-19",
+  "leituras": "Ef 2,19-22 | Sl 18(19A),2-3.4-5 (R. 5a) | Lc 6,12-19",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 6,
+      "lectio": 3,
+      "versos": [
+        12,
+        16
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 6,
+      "lectio": 4,
+      "versos": [
+        17,
+        19
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 1577,
+      "comum": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "direto": false,
+      "frase": "O Senhor Jesus escolheu homens (viri) para formar o colégio dos Doze Apóstolos, e o mesmo fizeram os Apóstolos quando escolheram os seus colaboradores para lhes sucederem no desempenho do seu ministério."
+    },
+    {
+      "numero": 695,
+      "comum": [
+        19
+      ],
+      "direto": false,
+      "frase": "É Ele que enche Cristo e cujo poder emana de Cristo nos seus atos de cura e salvamento."
+    },
+    {
+      "numero": 1116,
+      "comum": [
+        19
+      ],
+      "direto": false,
+      "frase": "«Forças que saem» do corpo de Cristo, sempre vivo e vivificante: ações do Espírito Santo que opera no seu corpo que é a Igreja, os sacramentos são «as obras-primas de Deus», na nova e eterna Aliança."
+    },
+    {
+      "numero": 2600,
+      "comum": [
+        12
+      ],
+      "direto": false,
+      "frase": "Reza também antes dos momentos decisivos que vão decidir a missão dos seus Apóstolos: antes de escolher e chamar os Doze, antes de Pedro O confessar como o «Cristo de Deus» e para que a fé do chefe dos Apóstolos não desfaleça na tentação."
+    }
+  ],
+  "tema": "A noite em oração e a escolha dos Doze",
+  "destaques": [
+    {
+      "lectio": 3,
+      "i": 2
+    },
+    {
+      "lectio": 3,
+      "i": 5
+    },
+    {
+      "lectio": 4,
+      "i": 5
+    }
+  ]
+}

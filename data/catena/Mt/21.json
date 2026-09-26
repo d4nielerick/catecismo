@@ -27,8 +27,8 @@
         "latim": "Neque parvum enim existimes quod factum est. Quis enim suasit dominis iumentorum non velle contradicere, volentes silere, et concedere? Et in hoc discipulos erudit quoniam poterat et Iudaeos prohibere, sed noluit; sed et docet ut quodcumque petitum fuerit darent. Si enim qui ignorabant Christum, ita concesserunt, multo magis discipulos convenit omnibus dare. Quod autem dicitur et confestim dimittet eos"
       },
       {
-        "autor": ", Chrysostomus super Matth.:",
-        "obra": "",
+        "autor": "Chrysostomus",
+        "obra": "super Matth.",
         "latim": "intelligendum est, quod animal postquam ingressum est in Ierusalem, ad dominum suum remissum est a Christo"
       },
       {
@@ -301,8 +301,8 @@
         "latim": "Sed Christi responsio moderata fuit. Non dixit quod Scribae audire cupiebant: bene faciunt pueri, ut mihi testimonium perhibeant: nec rursum: errant, pueri sunt, debetis aetati ignoscere: sed profert exemplum de octavo Psalmo, ut, tacente domino, testimonium Scripturarum puerorum dicta firmaret: unde sequitur Iesus autem dicit eis: utique. Nunquam legistis"
       },
       {
-        "autor": ", et cetera. Chrysostomus super Matth",
-        "obra": "",
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
         "latim": "Tamquam si dicat: esto, mea culpa est, quia isti clamant. Numquid mea culpa est, quia ante tot millia annorum hoc futurum propheta praedixit? Infantes autem et lactentes nec intelligere aliquem nec laudare possunt. Dicuntur ergo infantes non aetate, sed simplicitate cordis: lactentes autem, quoniam quasi lactis suavitate, ita mirabilium delectatione excitati clamabant. Lac enim dicitur opus miraculorum: quia miracula nullum laborem videntibus ponunt, sed videntes admiratione delectant, et ad fidem molliter invitant. Panis autem est doctrina perfectae iustitiae; quam accipere non possunt nisi exercitati sensus circa res spirituales"
       },
       {
@@ -821,7 +821,14 @@
       {
         "autor": "Chrysostomus",
         "obra": "super Matth",
-        "latim": "Per singulos autem gradus malitiae, Dei misericordia addebatur; et per singulos gradus divinae misericordiae malitia Iudaeorum crescebat; et sic contra Dei clementiam malignitas humana certabat: unde sequitur iterum misit alios servos plures prioribus, et fecerunt illis similiter"
+        "latim": "Per singulos autem gradus malitiae, Dei misericordia addebatur; et per singulos gradus divinae misericordiae malitia Iudaeorum crescebat; et sic contra Dei clementiam malignitas humana certabat: unde sequitur iterum misit alios servos plures prioribus, et fecerunt illis similiter",
+        "pt": "Ora, a cada grau de malícia, a misericórdia de Deus se acrescentava; e a cada grau da misericórdia divina, crescia a malícia dos judeus; e assim a malignidade humana combatia contra a clemência de Deus: por isso segue-se: \"de novo enviou outros servos, em maior número que os primeiros, e fizeram-lhes o mesmo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
       },
       {
         "autor": "Hilarius",
@@ -876,7 +883,14 @@
       {
         "autor": "Hieronymus",
         "obra": "",
-        "latim": "Post hoc autem quod dicunt hic est heres, manifeste dominus probat Iudaeorum principes non per ignorantiam, sed per invidiam Dei filium crucifixisse. Intellexerunt enim eum esse illum cui pater per prophetam dicit: postula a me, et dabo tibi gentes haereditatem tuam. Hereditas quippe filio sancta Ecclesia data est: quam non moriens pater illi reliquit; sed ipse sua morte mirabiliter acquisivit"
+        "latim": "Post hoc autem quod dicunt hic est heres, manifeste dominus probat Iudaeorum principes non per ignorantiam, sed per invidiam Dei filium crucifixisse. Intellexerunt enim eum esse illum cui pater per prophetam dicit: postula a me, et dabo tibi gentes haereditatem tuam. Hereditas quippe filio sancta Ecclesia data est: quam non moriens pater illi reliquit; sed ipse sua morte mirabiliter acquisivit",
+        "pt": "Depois disto, quanto ao que dizem \"este é o herdeiro\", o Senhor prova claramente que os príncipes dos judeus crucificaram o Filho de Deus não por ignorância, mas por inveja. Pois compreenderam que ele era aquele a quem o Pai diz pelo profeta: \"pede-me, e dar-te-ei as nações por herança\". Com efeito, ao Filho foi dada como herança a santa Igreja: a qual não lhe deixou o Pai ao morrer; mas ele mesmo, por sua própria morte, admiravelmente a adquiriu.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
@@ -986,7 +1000,14 @@
       {
         "autor": "Origenes",
         "obra": "in Matth",
-        "latim": "Regnum Dei dicit mysteria regni Dei, idest divinas Scripturas, quas tradidit dominus primo quidem populo illi priori cui credita sunt eloquia Dei, secundo autem gentibus facientibus fructum: nemini enim datur verbum Dei nisi facienti fructum de eo; et nemini in quo peccatum regnat, datur regnum Dei; quomodo ergo illi datum est a quo et ablatum est? Sed considera quomodo quod datur, intelligitur gratis datum. Quibus ergo locavit, non omnino quasi electis et fidelibus dedit; quibus autem donavit, cum iudicio electionis donavit"
+        "latim": "Regnum Dei dicit mysteria regni Dei, idest divinas Scripturas, quas tradidit dominus primo quidem populo illi priori cui credita sunt eloquia Dei, secundo autem gentibus facientibus fructum: nemini enim datur verbum Dei nisi facienti fructum de eo; et nemini in quo peccatum regnat, datur regnum Dei; quomodo ergo illi datum est a quo et ablatum est? Sed considera quomodo quod datur, intelligitur gratis datum. Quibus ergo locavit, non omnino quasi electis et fidelibus dedit; quibus autem donavit, cum iudicio electionis donavit",
+        "pt": "Chama de reino de Deus os mistérios do reino de Deus, isto é, as divinas Escrituras, que o Senhor entregou primeiramente àquele povo anterior, ao qual foram confiados os oráculos de Deus, e em segundo lugar aos gentios que produzem fruto: pois a ninguém é dada a palavra de Deus senão a quem produz fruto dela; e a ninguém em quem reina o pecado é dado o reino de Deus; como, então, foi dado àquele de quem também foi tirado? Mas considera como aquilo que é dado se entende como dado gratuitamente. Àqueles, pois, a quem arrendou, não deu de todo como a eleitos e fiéis; mas àqueles a quem doou, doou com juízo de eleição.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
@@ -994,7 +1015,7 @@
         "latim": "Lapis autem dicitur Christus non solum propter firmitatem, sed etiam quia est inimicorum magna confractio: unde sequitur et qui ceciderit super lapidem istum"
       },
       {
-        "autor": ", et cetera. Hieronymus",
+        "autor": "Hieronymus",
         "obra": "",
         "latim": "Qui peccator est, et tamen in illum credit, cadit quidem super lapidem et confringitur, sed non omnino conteritur; reservatur enim per patientiam ad salutem; super quem vero ille ceciderit, hoc est cui lapis ille irruerit, et qui Christum penitus negaverit, sic conteret eum ut nec testa quidem remaneat, in qua hauriatur aquae pusillum"
       },

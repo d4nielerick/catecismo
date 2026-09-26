@@ -1,0 +1,49 @@
+{
+  "data": "2026-10-25",
+  "evangelho": "Mt 22,34-40",
+  "leituras": "Ex 22,20-26 | Sl 17(18),2-3a.3bc-4. 47.51ab (R. 2) | 1Ts 1,5c-10 | Mt 22,34-40",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 22,
+      "lectio": 4,
+      "versos": [
+        34,
+        40
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 575,
+      "comum": [
+        34
+      ],
+      "direto": false,
+      "frase": "Jesus confirma doutrinas partilhadas por esta elite religiosa do povo de Deus: a ressurreição dos mortos formas de piedade (esmola, jejum e oração) e o hábito de se dirigir a Deus como Pai, o caráter central do mandamento do amor de Deus e do próximo."
+    },
+    {
+      "numero": 1824,
+      "comum": [
+        40
+      ],
+      "direto": false,
+      "frase": "Se guardardes os meus mandamentos, permanecereis no meu amor» (Jo 15, 9-10)."
+    }
+  ],
+  "tema": "O maior mandamento e o amor a Deus e ao próximo",
+  "destaques": [
+    {
+      "lectio": 4,
+      "i": 6
+    },
+    {
+      "lectio": 4,
+      "i": 16
+    },
+    {
+      "lectio": 4,
+      "i": 21
+    }
+  ]
+}

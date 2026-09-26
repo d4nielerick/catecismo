@@ -2,8 +2,31 @@
   "data": "2026-10-18",
   "evangelho": "Mt 22,15-21",
   "leituras": "Is 45,1.4-6 | Sl 95(96),1.2a.3.4-5.7-8.9-10a.c (R. 7ab) | 1Ts 1,1-5b | Mt 22,15-21",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 22,
+      "lectio": 2,
+      "versos": [
+        15,
+        22
+      ]
+    }
+  ],
   "catecismo": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A moeda de César e a imagem de Deus no homem",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 16
+    },
+    {
+      "lectio": 2,
+      "i": 14
+    },
+    {
+      "lectio": 2,
+      "i": 11
+    }
+  ]
 }

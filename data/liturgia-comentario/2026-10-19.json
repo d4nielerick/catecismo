@@ -2,7 +2,26 @@
   "data": "2026-10-19",
   "evangelho": "Lc 12,13-21",
   "leituras": "Ef 2,1-10 | Sl 99(100),2.3.4.5 (R. 3b) | Lc 12,13-21",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 12,
+      "lectio": 4,
+      "versos": [
+        13,
+        15
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 12,
+      "lectio": 5,
+      "versos": [
+        16,
+        21
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 549,
@@ -14,6 +33,23 @@
       "frase": "Ao libertar certos homens dos males terrenos da fome, da injustiça da doença e da morte – Jesus realizou sinais messiânicos; no entanto, Ele não veio para abolir todos os males deste mundo, mas para libertar os homens da mais grave das escravidões, a do pecado, que os impede de realizar a sua vocação de filhos de Deus e é causa de todas as servidões humanas."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "A avareza e o rico insensato",
+  "destaques": [
+    {
+      "lectio": 4,
+      "i": 4
+    },
+    {
+      "lectio": 5,
+      "i": 5
+    },
+    {
+      "lectio": 5,
+      "i": 15
+    },
+    {
+      "lectio": 5,
+      "i": 17
+    }
+  ]
 }

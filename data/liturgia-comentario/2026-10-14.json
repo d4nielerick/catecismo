@@ -2,8 +2,40 @@
   "data": "2026-10-14",
   "evangelho": "Lc 11,42-46",
   "leituras": "Gl 5,18-25 | Sl 1,1-2.3.4.6 (R. cf. Jo 8,12) | Lc 11,42-46",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 11,
+      "versos": [
+        37,
+        44
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 12,
+      "versos": [
+        45,
+        54
+      ]
+    }
+  ],
   "catecismo": [],
-  "tema": "",
-  "destaques": []
+  "tema": "O juízo, o amor de Deus e os fardos dos legistas",
+  "destaques": [
+    {
+      "lectio": 11,
+      "i": 19
+    },
+    {
+      "lectio": 11,
+      "i": 22
+    },
+    {
+      "lectio": 12,
+      "i": 4
+    }
+  ]
 }

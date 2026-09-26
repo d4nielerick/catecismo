@@ -1,0 +1,49 @@
+{
+  "data": "2026-10-29",
+  "evangelho": "Lc 13,31-35",
+  "leituras": "Ef 6,10-20 | Sl 143(144),1.2.9-10 (R. 1a) | Lc 13,31-35",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 13,
+      "lectio": 6,
+      "versos": [
+        31,
+        35
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 575,
+      "comum": [
+        31
+      ],
+      "direto": false,
+      "frase": "Sem dúvida que as suas relações com os fariseus não foram unicamente polêmicas: são fariseus que O previnem do perigo que corre."
+    },
+    {
+      "numero": 585,
+      "comum": [
+        35
+      ],
+      "direto": false,
+      "frase": "Há aqui o anúncio dum sinal dos últimos tempos, que vão iniciar-se com a sua própria Páscoa."
+    }
+  ],
+  "tema": "Herodes, a raposa, e a ave que reúne os filhotes",
+  "destaques": [
+    {
+      "lectio": 6,
+      "i": 1
+    },
+    {
+      "lectio": 6,
+      "i": 9
+    },
+    {
+      "lectio": 6,
+      "i": 18
+    }
+  ]
+}

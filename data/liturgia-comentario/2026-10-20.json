@@ -2,7 +2,17 @@
   "data": "2026-10-20",
   "evangelho": "Lc 12,35-38",
   "leituras": "Ef 2,12-22 | Sl 84(85),9ab-10.11-12.13-14 (R. cf. 9) | Lc 12,35-38",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 12,
+      "lectio": 10,
+      "versos": [
+        35,
+        40
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 2849,
@@ -16,6 +26,19 @@
       "frase": "A vigilância do coração é lembrada com insistência em comunhão com a sua."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "Os rins cingidos, as lâmpadas acesas e o Senhor que serve",
+  "destaques": [
+    {
+      "lectio": 10,
+      "i": 10
+    },
+    {
+      "lectio": 10,
+      "i": 9
+    },
+    {
+      "lectio": 10,
+      "i": 16
+    }
+  ]
 }

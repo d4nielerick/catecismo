@@ -2,7 +2,26 @@
   "data": "2026-10-12",
   "evangelho": "Jo 2,1-11",
   "leituras": "Est 5,1b-2;7,2b-3 | Sl 44(45),11-12a.12b-13.14-15a.15b-16 (R. 11.12a) | Ap 12,1.5.13a.15-16a | Jo 2,1-11",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Jo",
+      "cap": 2,
+      "lectio": 1,
+      "versos": [
+        1,
+        4
+      ]
+    },
+    {
+      "ev": "Jo",
+      "cap": 2,
+      "lectio": 2,
+      "versos": [
+        5,
+        11
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 1613,
@@ -80,6 +99,23 @@
       "frase": "O sinal da água transformada em vinho em Caná já anuncia a «Hora» da glorificação de Jesus."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "As bodas de Caná e a água feita vinho",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 4
+    },
+    {
+      "lectio": 1,
+      "i": 12
+    },
+    {
+      "lectio": 2,
+      "i": 8
+    },
+    {
+      "lectio": 2,
+      "i": 10
+    }
+  ]
 }

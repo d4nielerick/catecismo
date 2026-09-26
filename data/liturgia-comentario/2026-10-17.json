@@ -2,7 +2,17 @@
   "data": "2026-10-17",
   "evangelho": "Lc 12,8-12",
   "leituras": "Ef 1,15-23 | Sl 8,2-3a.4-5.6-7 (R. cf. 7) | Lc 12,8-12",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 12,
+      "lectio": 3,
+      "versos": [
+        8,
+        12
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 333,
@@ -22,6 +32,23 @@
       "frase": "«Todo o pecado ou blasfêmia será perdoado aos homens, mas a blasfêmia contra o Espírito não lhes será perdoada» (Mt 12, 31)."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "Confessar a Cristo e a blasfêmia contra o Espírito Santo",
+  "destaques": [
+    {
+      "lectio": 3,
+      "i": 8
+    },
+    {
+      "lectio": 3,
+      "i": 4
+    },
+    {
+      "lectio": 3,
+      "i": 17
+    },
+    {
+      "lectio": 3,
+      "i": 20
+    }
+  ]
 }

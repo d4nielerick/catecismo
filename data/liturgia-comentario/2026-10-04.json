@@ -2,7 +2,17 @@
   "data": "2026-10-04",
   "evangelho": "Mt 21,33-43",
   "leituras": "Is 5,1-7 | Sl 79(80),9.12.13-14.15-16.19-20 (R. Is 5,7a) | Fl 4,6-9 | Mt 21,33-43",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 21,
+      "lectio": 6,
+      "versos": [
+        33,
+        44
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 755,
@@ -35,6 +45,19 @@
       "frase": "Já muito antes, Ele Se designara como «o Filho» que conhece o Pai, diferente dos «servos» que Deus anteriormente enviara ao seu povo, superior aos próprios anjos."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "A vinha, o filho morto e o Reino dado a outros",
+  "destaques": [
+    {
+      "lectio": 6,
+      "i": 18
+    },
+    {
+      "lectio": 6,
+      "i": 29
+    },
+    {
+      "lectio": 6,
+      "i": 51
+    }
+  ]
 }

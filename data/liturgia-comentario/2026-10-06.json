@@ -2,8 +2,31 @@
   "data": "2026-10-06",
   "evangelho": "Lc 10,38-42",
   "leituras": "Gl 1,13-24 | Sl 138(139),1-3.13-14ab.14c-15 (R. 24b) | Lc 10,38-42",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 10,
+      "lectio": 10,
+      "versos": [
+        38,
+        42
+      ]
+    }
+  ],
   "catecismo": [],
-  "tema": "",
-  "destaques": []
+  "tema": "Marta e Maria: o serviço e a melhor parte",
+  "destaques": [
+    {
+      "lectio": 10,
+      "i": 11
+    },
+    {
+      "lectio": 10,
+      "i": 12
+    },
+    {
+      "lectio": 10,
+      "i": 15
+    }
+  ]
 }

@@ -62,9 +62,13 @@ for (const dt of dias) {
       } else {
         const pend = cobre.flatMap(l => l.itens.map((it, i) => (it.pt ? null : { ev: alvo.ev, cap: +alvo.cap, lectio: l.lectio, i, autor: it.autor, obra: it.obra, latim: it.latim })).filter(Boolean));
         pend.forEach(p => { if (!relatorio.traducoesPendentes.some(q => q.ev === p.ev && q.cap === p.cap && q.lectio === p.lectio && q.i === p.i)) relatorio.traducoesPendentes.push(p); });
-        const curado = com && com.destaques?.length && com.tema;
-        linha.catena = pend.length ? `${pend.length} sem tradução` : curado ? 'ok' : 'sem curadoria';
-        if (!pend.length && !curado) relatorio.curadoriaPendente.push({ dt, evangelho: ev.referencia, lectiones: cobre.map(l => l.lectio), temComentario: !!com });
+        // curado = tema + destaques todos traduzidos (o bloco da página está completo); o resto da
+        // lectio sem tradução só afeta o "Ler o comentário inteiro" e fica como pendência de fundo
+        const itemDe = d => cobre.find(l => l.lectio === d.lectio)?.itens?.[d.i];
+        const curado = com?.tema && com.destaques?.length && com.destaques.every(d => itemDe(d)?.pt);
+        linha.catena = curado ? (pend.length ? `ok (${pend.length} do inteiro s/ trad.)` : 'ok') : pend.length ? `${pend.length} sem tradução` : 'sem curadoria';
+        if (!curado && !pend.length) relatorio.curadoriaPendente.push({ dt, evangelho: ev.referencia, lectiones: cobre.map(l => l.lectio), temComentario: !!com });
+        if (!curado && pend.length && com) relatorio.curadoriaPendente.push({ dt, evangelho: ev.referencia, lectiones: cobre.map(l => l.lectio), temComentario: true, doLatim: true });
         if (!com) linha.catena += ' (rode liga-evangelho)';
       }
     }
@@ -87,10 +91,10 @@ relatorio.lectionesSemMapa = Object.fromEntries(relatorio.lectionesSemMapa);
 if (JSON_OUT) { console.log(JSON.stringify(relatorio, null, 2)); process.exit(0); }
 
 console.log(`Janela: ${de} + ${nDias} dias\n`);
-console.log('dia         evangelho        comentário            §§  áudio  resumo trechos');
+console.log('dia         evangelho        comentário                     §§  áudio  resumo trechos');
 for (const l of relatorio.porDia) {
   if (l.semLeituras) { console.log(`${l.dt}  (sem leituras)`); continue; }
-  console.log(`${l.dt}  ${(l.evangelho || '').padEnd(16)} ${l.catena.padEnd(21)} ${String(l.catecismo).padStart(2)}  ${l.audio.padEnd(6)} ${l.resumo ? 'ok' : '—'}     ${l.trechos ? 'ok' : '—'}`);
+  console.log(`${l.dt}  ${(l.evangelho || '').padEnd(16)} ${l.catena.padEnd(30)} ${String(l.catecismo).padStart(2)}  ${l.audio.padEnd(6)} ${l.resumo ? 'ok' : '—'}     ${l.trechos ? 'ok' : '—'}`);
 }
 console.log('\nPendências:');
 if (relatorio.capitulosFaltando.length) console.log(`  · capítulos da Catena a baixar: ${relatorio.capitulosFaltando.join(', ')}   → node scripts/scrape-catena.mjs <Ev> <cap>`);
@@ -98,7 +102,7 @@ for (const [chave, ls] of Object.entries(relatorio.lectionesSemMapa)) {
   console.log(`  · ${chave}: lectiones sem intervalo de versículos: ${ls.map(l => l.lectio).join(', ')}   → node scripts/catena-mapa.mjs ${chave.replace('/', ' ')} <lectio>=<a>-<b> …`);
   if (LEMAS) ls.forEach(l => console.log(`      lectio ${l.lectio}: ${l.inicio}…`));
 }
-if (relatorio.traducoesPendentes.length) console.log(`  · ${relatorio.traducoesPendentes.length} comentário(s) da Catena sem tradução   → node scripts/catena-traducao.mjs pendentes ${de} +${nDias}`);
+if (relatorio.traducoesPendentes.length) console.log(`  · ${relatorio.traducoesPendentes.length} comentário(s) da Catena sem tradução (curar do latim e traduzir só os destaques; o inteiro fica de fundo)   → node scripts/catena-traducao.mjs pendentes ${de} +${nDias}`);
 if (relatorio.curadoriaPendente.length) console.log(`  · ${relatorio.curadoriaPendente.length} dia(s) sem tema/destaques: ${relatorio.curadoriaPendente.map(c => c.dt).join(', ')}   → node scripts/grava-curadoria.mjs <arquivo>`);
 if (relatorio.audioFaltando.length) console.log(`  · ${relatorio.audioFaltando.length} dia(s) sem áudio completo: ${relatorio.audioFaltando.slice(0, 8).join(', ')}${relatorio.audioFaltando.length > 8 ? '…' : ''}   → node scripts/build-audio-liturgia.mjs <dia> todas --gemini`);
 if (relatorio.resumoFaltando.length) console.log(`  · ${relatorio.resumoFaltando.length} dia(s) sem resumo: ${relatorio.resumoFaltando.slice(0, 8).join(', ')}${relatorio.resumoFaltando.length > 8 ? '…' : ''}`);

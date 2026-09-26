@@ -1089,8 +1089,10 @@ html:has(.lp-card[open]) { overflow: hidden; }
 
 /* Desktop: vizinhos mais estreitos e setas; no toque, troca-se arrastando */
 @media (min-width: 761px) {
-  .lp-card-trilho { padding: 1.25rem 30vw; scroll-padding: 0 30vw; }
-  .lp-card-slide { flex-basis: 40vw; }
+  /* no computador os slides têm a largura da própria imagem (a altura manda), lado a lado */
+  .lp-card-trilho { padding: 1.25rem 30vw; scroll-padding: 0 30vw; gap: 1.5rem; }
+  .lp-card-slide { flex-basis: auto; width: auto; }
+  .lp-card-slide img { height: 100%; width: auto; max-width: 40vw; }
 }
 @media (hover: none), (pointer: coarse) {
   .lp-card-seta { display: none; }

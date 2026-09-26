@@ -2,8 +2,35 @@
   "data": "2026-10-15",
   "evangelho": "Lc 11,47-54",
   "leituras": "Ef 1,1-10 | Sl 97(98),1.2-3ab.3cd-4.5-6 (R. 2a) | Lc 11,47-54",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 12,
+      "versos": [
+        45,
+        54
+      ]
+    }
+  ],
   "catecismo": [],
-  "tema": "",
-  "destaques": []
+  "tema": "Os sepulcros dos profetas e a chave da ciência",
+  "destaques": [
+    {
+      "lectio": 12,
+      "i": 8
+    },
+    {
+      "lectio": 12,
+      "i": 12
+    },
+    {
+      "lectio": 12,
+      "i": 21
+    },
+    {
+      "lectio": 12,
+      "i": 25
+    }
+  ]
 }

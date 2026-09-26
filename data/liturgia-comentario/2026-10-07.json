@@ -2,7 +2,53 @@
   "data": "2026-10-07",
   "evangelho": "Lc 1,26-38",
   "leituras": "At 1,12-14 | Lc 1,46-47.48-49.50-51.52-53.54-55 (R. 49 ou:) | Lc 1,26-38",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 8,
+      "versos": [
+        26,
+        27
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 9,
+      "versos": [
+        28,
+        29
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 10,
+      "versos": [
+        30,
+        33
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 11,
+      "versos": [
+        34,
+        35
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 12,
+      "versos": [
+        36,
+        38
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 497,
@@ -199,6 +245,23 @@
       "frase": "«Depois, acabada a oração, dizes: Ámen, subscrevendo com esta palavra, que significa «Assim seja», o conteúdo desta oração que Deus nos ensinou»."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "A cheia de graça, a sombra do Altíssimo e a serva do Senhor",
+  "destaques": [
+    {
+      "lectio": 8,
+      "i": 4
+    },
+    {
+      "lectio": 9,
+      "i": 2
+    },
+    {
+      "lectio": 11,
+      "i": 8
+    },
+    {
+      "lectio": 12,
+      "i": 5
+    }
+  ]
 }

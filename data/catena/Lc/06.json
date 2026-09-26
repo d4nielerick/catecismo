@@ -1,0 +1,936 @@
+[
+  {
+    "lectio": 1,
+    "versos": [
+      1,
+      5
+    ],
+    "itens": [
+      {
+        "autor": "Ambrosius",
+        "obra": "in Lucam",
+        "latim": "Non solum comprehensione verborum, sed etiam ipso usu specieque gestorum incipit hominem dominus veteris observatione legis exuere; unde dicitur factum est autem in sabbato secundo primo, cum transiret per sata, vellebant discipuli eius spicas et manducabant, confricantes eas manibus suis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non habentes enim discipuli spatium manducandi propter importunitatem turbarum, esuriebant ut homines; sed vellentes spicas inediam consolabantur: quod est indicium austerioris vitae, non praeparatas escas, sed simplices quaerere cibos"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Dicit autem in sabbato secundo primo: quia Iudaei omnem festivitatem sabbatum nuncupabant: requies enim dicitur sabbatum: multoties ergo contingebat in parasceve festivitas, et vocabant parascevem sabbatum propter festum; deinde principale sabbatum secundum primum dicebant, quasi secundum existens a praecedentis diei festivitate"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Duplex enim erat festum; et principalis festi et alterius solemnitatis sabbati"
+      },
+      {
+        "autor": "Isidorus",
+        "obra": "",
+        "latim": "Vel dicit secundo primo quia secundum erat Pascha, primum autem azymorum; cum immolarent enim Pascha in sero, sequenti die festum azymorum celebrabant. Quod autem ita sit, patet ex hoc quod apostoli vellebant spicas, et manducabant: in illo namque tempore spicae flectuntur a fructu"
+      },
+      {
+        "autor": "Epiphanius",
+        "obra": "contra Haer",
+        "latim": "Die igitur sabbati visi sunt transeuntes per segetes, et spicas edebant, ostendentes quoniam dissolutum est vinculum sabbati, ubi magnum advenit sabbatum, hoc est Christus, qui fecit nos quiescere ab opere delictorum nostrorum"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Pharisaei autem et Scribae ignari sacrarum Scripturarum, in unum conspiraverant, ad reprehendendum Christi discipulos; unde sequitur quidam autem Pharisaeorum dicebant illis: quid facitis quod non licet in sabbatis? Dic mihi tu: cum in sabbato tibi mensa proponitur, nonne frangis panem? Quid igitur alios reprehendis?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Alii vero dicunt, ipsi domino haec fuisse obiecta; sed a diversis et ipsi domino et discipulis potuerunt obici; et cuicumque obiectum, ad ipsum maxime respicit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Dominus autem defensores legis arguit nescire quae legis sunt, exemplum inducens David; unde sequitur et respondens Iesus ad eos, dixit: nec hoc legistis quod fecit David, cum esurisset ipse et qui cum eo erant?"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quasi dicat: cum expresse dicat lex Moysi: iudicate iustum iudicium, nec considerabitis personam in iudicio; qualiter increpatis discipulos, qui usque in hodiernum diem extollitis David ut sanctum et prophetam, cum Moysi praeceptum non servaverit?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Et attende, quod quandocumque domino sit sermo pro servis, idest discipulis, servos ducit in medium, scilicet David et sacerdotes; quando vero pro se, introducit patrem, sicut ibi: pater meus usque modo operatur, et ego operor"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Aliter autem eos reprimit cum subditur et dicebat illis, quia dominus est filius hominis etiam sabbati; quasi dicat: ego sum dominus sabbati tamquam dispositor, et sicut legislator potestatem habeo solvere sabbatum: filius enim hominis vocatus est Christus, qui Dei existens filius, miraculose dignatus est filius hominis propter homines fieri et vocari"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Marcus autem de communi natura hoc ipsum protulisse fatetur: dicebat enim: propter homines sabbatum factum est, non homo propter sabbatum. Expedit igitur potius sabbatum homini subici, quam hunc colla subicere sabbato"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Non mediocre autem mysterium hoc est. Ager enim est hic mundus; agri seges in satione humani generis fecunditas numerosa sanctorum; spicae agri fructus Ecclesiae, quos operibus discutientes suis apostoli pascebantur, nostro se alentes profectu, et tamquam folliculis corporum, mentium fructus ad fidei lucem praeclaris operum suorum miraculis eruebant"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Spicas enim confricant: quia in illis quos in corpus Christi volunt traicere, mortificant veterem hominem cum actibus suis, a terrena intentione extrahendo"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Sed hoc putabant Iudaei sabbato non licere; Christus autem novae gratiae munere designabat otium legis opus gratiae: mire tamen secundo primum, non primo secundum sabbatum dixit: quia sabbatum illud ex lege solutum est quod erat primum; et hoc primum factum est quod secundo constitutum est. Sabbatum igitur dicitur secundum iuxta numerum, primum iuxta operationis gratiam: melius est enim sabbatum quo impunitas datur, quam quo poena praescribitur. Aut hoc forte primum est in praedestinatione consilii, et secundum in sanctione decreti. Deinde quod David cum sociis fugit, hic praefiguratus in lege Christus est, qui cum apostolis principem mundi lateret. Quomodo autem ille observator legis atque defensor panes et ipse manducavit, et dedit his qui secum erant, quos non licebat manducare nisi sacerdotibus; nisi ut per illam demonstraret figuram, sacerdotalem cibum ad usum transire populorum; sive quod omnes vitam sacerdotalem debemus imitari; sive quod omnes filii Ecclesiae sacerdotes sunt? Ungimur enim in sacerdotium sanctum, offerentes nosmetipsos Deo hostias spirituales. Si autem sabbatum propter homines factum est; utilitas autem hominum postulabat esurientem hominem, qui diu fuerit terrae fructibus abdicatus, veteris famis vitare ieiunia: non utique lex solvitur, sed impletur"
+      }
+    ]
+  },
+  {
+    "lectio": 2,
+    "versos": [
+      6,
+      11
+    ],
+    "itens": [
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Hic ad alia progreditur dominus; nam qui totum hominem salvum facere disposuerat, per singula membra curabat; unde dicitur factum est autem in alio sabbato ut intraret in synagogam, et doceret"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Sabbatis maxime curat et docet, non solum propter insinuandum spirituale sabbatum, sed etiam propter celebriorem populi conventum"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Docebat autem revera transcendentia intellectum, et quae salutis futurae per eum reserabant audientibus semitam; deinde, praecedente doctrina, subito divinam ostendebat virtutem; unde sequitur et erat ibi homo, et manus eius dextera arida"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quia vero destructionem sabbati quam in discipulis arguebant, probabili magister excusaverat exemplo, nunc ipsum observando magistrum calumniari volunt; unde sequitur observabant autem Scribae et Pharisaei si in sabbato curaret; ut scilicet si non curet, crudelitatis vel imbecillitatis; si curet, transgressionis vitio arguant; unde sequitur ut invenirent unde accusarent eum"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Hic enim est mos adversarii: pascit in se doloris morbum aliorum praeconiis. Sed dominus novit omnia, et corda rimatur; unde sequitur ipse autem sciebat cogitationes eorum et ait homini qui habebat manum aridam: surge et sta in medio. Et surgens stetit; ut forsan incitaret ad pietatem crudelem Pharisaeum, et ipsa passio flammas mitigaret livoris"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Praeveniens autem dominus calumniam quam sibi praeparabant, arguit eos qui praecepta legis male interpretando etiam a bonis operibus sabbato aestimabant feriandum, cum lex a servili opere, idest a malis, abstinere praecipiat in sabbato; unde sequitur ait autem ad illos Iesus: interrogo vos, si licet sabbato bene facere an male?"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Nimis est idonea quaestio: nam si licet in sabbato bene facere, nec aliquid obstat ut laborantes a Deo misericordiam consequantur, desinas colligere adversus Christum calumniam: si autem non licet in sabbato benefacere, et lex prohibet animarum salutem, factus es legis accusator. Ipsam quoque sabbati sanctionem si velimus discutere, ad opus pietatis introductum fuisse reperiemus. Iussit enim in sabbato feriari: ut quiescat puer tuus et ancilla tua, bos tuus et quodlibet pecus tuum. Qui vero bovis miseretur et ceterorum pecorum, quomodo non miserebitur hominis gravi morbo perplexi?"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Lex autem in praesentibus formam praefiguravit futurorum; in quibus utique malorum feriae sunt, non bonorum: nam licet saecularia opera conquiescant, non otiosus tamen boni operis actus est, in Dei laudes requiescere"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Cum autem dominus corpus curaverit, sic interrogavit: animam salvam facere, an perdere? Vel quia illa miracula propter fidem faciebat, ubi salus est animae; vel quia ipsa sanatio manus dexterae salutem animae significabat, quae a bonis operibus cessans, aridam quodammodo dexteram habere videbatur; vel animam pro homine posuit, sicut dici solet: tot animae ibi fuerunt"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Sed potest movere quomodo Matthaeus dixerit quod ipsi interrogaverunt dominum, si licet curare sabbato; cum Lucas hic illos potius a domino interrogatos esse perhibeat. Itaque intelligendum est, quod illi prius interrogaverunt dominum, si licet sabbato curare. Deinde intelligens cogitationes eorum, aditum accusandi quaerentium, constituit in medio eum quem fuerat sanaturus, et interrogavit quae Marcus et Lucas eum interrogasse commemorant. Sequitur et circumspectis omnibus"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Quasi collectis omnium oculis, quin etiam incitata mente eorum ad considerationem negotii, dixit homini: extende manum tuam: ego tibi mando qui creavi hominem. Audit autem qui laesam habebat manum, et sanus fit; unde sequitur et extendit, et restituta est sanitati manus eius. Quos autem oportebat in miraculo stupere, augent malitiam; unde sequitur ipsi autem repleti sunt insipientia, et colloquebantur ad invicem, quidnam facerent de Iesu"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Et, ut narrat Matthaeus, exeunt et consiliantur, ut occidant eum"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Cernis, o Pharisaee, operantem divina, ac superna maiestate liberantem languentes, et mortem portas ex livore"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Homo autem iste humanum genus significat infecunditate boni operis arefactum pro manu in primo parente ad pomum extensa, quam sanavit innocens manus in cruce extensa. Et bene manus in synagoga erat arida; quia ubi maius donum scientiae, ibi transgressor maiori subiacet culpae"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Audisti igitur verba dicentis extende manum tuam. Communis ista generalisque medicina est: et tu qui putas manum habere te sanam, cave ne avaritia vel sacrilegio contrahatur. Extende saepius eam, ut proximum iuves, ut viduae praesidium feras, eripias iniuriae quem vides iniuste contumeliae subiacere; extende ad pauperem, qui te obsecrat; extende ad dominum pro peccatis tuis: sic manus extenditur, sic manus sanatur"
+      }
+    ]
+  },
+  {
+    "lectio": 3,
+    "versos": [
+      12,
+      16
+    ],
+    "itens": [
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Insurgentibus adversarii contra Christi miracula et doctrinam, apostolos elegit quasi defensores veritatis et testes: quorum electioni orationem praemittit; unde dicitur factum est autem in illis diebus, exiit in montem orare"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Noli insidiatrices aperire aures, ut putes filium Dei quasi infirmum rogare, ut impetret quod implere non possit: potestatis enim auctor, obedientiae magister, ad praecepta virtutis suo nos informat exemplo"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Scrutemur igitur in his quae Christus egit, qualiter nos doceat orationibus divinis insistere, semotim scilicet et secreto, nemine vidente, amota quoque mundana sollicitudine, ut sursum ad divinae speculationis intuitum erigatur intentio: quod designatur in hoc quod semotim orabat Iesus in montem",
+        "pt": "Examinemos, pois, naquilo que Cristo fez, como nos ensina a insistir nas orações divinas, isto é, à parte e em segredo, sem que ninguém veja, afastada também a preocupação mundana, para que a intenção se eleve para cima, ao olhar da especulação divina: o que se designa nisto, que Jesus orava à parte no monte.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Ubique etiam solus obsecrat: Dei enim consilium humana vota non capiunt; nec quisquam interiorum potest esse particeps Christi. Non autem omnis qui orat, ascendit in montem, sed qui orat a terrenis ad superiora progrediens; sed non ille qui de saeculi divitiis aut de honore sollicitus est. Omnes sublimes in montem ascendunt: quare in Evangelio invenies solos in montem cum domino ascendisse discipulos. Species autem tibi, Christiane, datur; forma praescribitur quam debeas aemulari, cum sequitur et erat pernoctans in oratione Dei. Quid enim te pro salute tua facere oportet, quando pro te Christus in oratione pernoctat?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Exurge igitur et tu tempore noctis. Purior est enim tunc temporis anima; ipsae tenebrae, silentium nimium possunt sufficienter ad compunctionem perducere. Ceterum si ipsum quoque caelum inspicias punctatum stellis, quasi infinitis luminibus; si consideres quod qui per diem saltant iniurianturque, hi tunc nihil, a mortuis discrepant; detestaberis quemlibet ausum humanum. Haec omnia sufficiunt ad animam erigendam: tunc non vexat inanis gloria, non acedia, non concitatio occupat; non sic ignis ferri sequestrat rubiginem, velut nocturna oratio aeruginem peccatorum. Quem de die solis aestus perussit, nocte refrigeratur. Quemlibet rorem superant nocturnae lacrymae; et contra concupiscentiam valent, et quemlibet timorem. Si vero praedicto rore non foveatur, homo arescit sub die. Quapropter licet non multum ores, semel ora vigilando, et sufficit: ostende quod non solum ad corpus nox pertinet, sed etiam ad animam"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Quid autem te facere convenit cum vis aliquod officium pietatis adoriri, quando Christus missurus apostolos prius oravit? Sequitur enim et cum dies factus esset, vocavit discipulos suos, et elegit duodecim ex ipsis, quos et apostolos nominavit; quos scilicet ad propagandum auxilium salutis humanae per terrarum orbem satores fidei destinavit. Simul adverte caeleste consilium: non sapientes aliquos, non divites, non nobiles, sed piscatores et publicanos, quos dirigeret, elegit; ne divitiis aut potentiae nobilitatisque auctoritate traxisse aliquos ad suam gratiam videretur; ut veritatis ratio, non disputationis gratia praevaleret",
+        "pt": "Ora, que te convém fazer quando queres empreender algum ofício de piedade, se Cristo, indo enviar os apóstolos, orou primeiro? Segue-se, com efeito: \"E quando se fez dia, chamou os seus discípulos, e escolheu doze dentre eles, aos quais também chamou apóstolos\"; os quais, para propagar o auxílio da salvação humana por todo o orbe da terra, destinou como semeadores da fé. Observa ao mesmo tempo o desígnio celestial: não escolheu alguns sábios, nem ricos, nem nobres, mas pescadores e publicanos para dirigir; para que não parecesse ter atraído alguns à sua graça pelas riquezas, ou pela autoridade do poder e da nobreza; para que prevalecesse a razão da verdade, e não o favor da disputa.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Attende autem maximam Evangelistae sedulitatem; non solum dicit electos fuisse sacros apostolos, immo nominatim eos enumerat, ne quisquam audeat alios inscribere apostolorum catalogo. Simonem quem cognominavit Petrum, et Andream fratrem eius"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non modo primum eum cognominavit, sed longe prius; cum ab Andrea adducto dicitur: tu vocaberis Cephas, quod interpretatur Petrus. Sed volens Lucas nomina apostolorum enumerare, cum necesse haberet Petrum dicere, breviter voluit innuere quod non hoc antea cognominaretur, sed ita dominus cognominaverit"
+      },
+      {
+        "autor": "Eusebius",
+        "obra": "",
+        "latim": "Secunda autem combinatio est Iacobi et Ioannis; unde sequitur Iacobum et Ioannem; ambos scilicet filios Zebedaei, qui etiam piscatores fuerunt. Post hos autem dicit Philippum et Bartholomaeum. Philippum dicit Ioannes fuisse de Bethsaida, concivem Andreae et Petri; ipse quoque Bartholomaeus, vir simplex et expers scientiae mundanae et amaritudinis. Matthaeus vero ex his qui prius census exigebant vocatus est, de quo subdit Matthaeum et Thomam"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Matthaeus compari suo Thomae in ordine, humilitatis causa se supponit, cum a ceteris Evangelistis praelatus sit. Sequitur Iacobum Alphaei et Simonem, qui vocatur Zelotes"
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Quia scilicet fuit de Cana Galilaeae, qui interpretatur zelus, quod additur ad differentiam Simonis Petri. Sequitur Iudam Iacobi, et Iudam Iscariotem qui fuit proditor"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "In nomine Iudae Iacobi Lucas videtur discrepare a Matthaeo, qui eum Thaddaeum appellat. Sed quis unquam prohibuit duobus vel tribus nominibus unum hominem vocari? Eligitur autem Iudas proditor, non per imprudentiam, sed per providentiam: susceperat quidem hominis fragilitatem, et ideo nec has partes recusavit infirmitatis humanae: voluit ab apostolo suo tradi, ut tu a socio proditus moderate feras, tuum errasse iudicium, periisse beneficium"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Mystice autem mons in quo apostolos elegit, altitudinem designat iustitiae, qua instituendi erant, et eam praedicaturi: sic et lex in monte data fuit"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quod si libet interpretationem apostolicorum nominum scire, scito quia Petrus dicitur dissolvens vel agnoscens; Andreas decora potentia vel respondens; Iacobus autem supplantator doloris; Ioannes domini gratia; Matthaeus donatus; Philippus os magnum vel orificium lampadis; Bartholomaeus filius aquas suspendentis; Thomas abyssus, vel geminus; Iacobus Alphaei supplantator gressus vitae; Iudas confessio, et Simon obedientia"
+      }
+    ]
+  },
+  {
+    "lectio": 4,
+    "versos": [
+      17,
+      19
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Celebrata ordinatione apostolorum, pluribus congregatis et de regione Iudaeorum, nec non a maritima Tyri et Sidonis, qui erant idololatrae, constituit eos totius orbis doctores, utpote qui evocarent Iudaeos a legis servitute cultores autem Daemonum ab errore gentili ad veritatis cognitionem; unde dicitur et descendens de monte cum illis, stetit in loco campestri, et turba discipulorum eius, et multitudo copiosa plebis ab omni Iudaea et Ierusalem et maritima"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non a proximo mari Galilaeae maritima dicit, quia hoc non miraculi loco poneretur; sed a mari magno cognominatur, in quo etiam Tyrus et Sidon comprehendi poterant; de quibus sequitur et Tyri et Sidonis; quae quia civitates gentium sunt, consulto nominatim ponuntur, ut quanta sit fama virtusque salvatoris intimetur, quae exteras etiam ad sanitatem doctrinamque capessendam civitates accersierat; unde sequitur qui venerant ut audirent eum"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Hoc est ad animarum medelam; et sanarentur a languoribus suis, hoc est ad medelam eorum corporum"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Postquam autem sacros publicavit apostolos, plurima et ardua fecit miracula: ut qui convenerant Iudaei et gentiles, scirent eos decoratos esse a Christo dignitate apostolatus; et quod ipse non erat sicut unus aliorum hominum, magis autem Deus, ut verbum incarnatum; unde sequitur et omnis turba quaerebat eum tangere, quia virtus de illo exibat et sanabat omnes. Neque enim alienam virtutem accipiebat Christus: sed cum naturaliter esset Deus, propriam virtutem super infirmos emittens sanabat omnes"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Adverte autem omnia diligenter, quomodo et cum apostolis ascendat, ac descendat ad turbas; quomodo eum turba non sequitur ad excelsa; denique ubi descendit, invenit infirmos: in excelsis enim infirmi esse non possunt"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Raro hoc quoque uspiam vel turbas dominum ad altiora sequi, vel quempiam debilem invenies in monte curari; sed extincta febre libidinum, accensaque scientiae luce, pedetentim quemquam ad culmen subire virtutum. Turba autem quae dominum tangere potuit, spiritus illius virtute sanatur ut supra leprosus domino tangente mundatur. Tactus ergo salvatoris opus est salutis, quem tangere est fideliter in eum credere a quo tangi est eius munere sanari",
+        "pt": "Também raramente se encontra em algum lugar que as multidões sigam o Senhor às alturas, ou que algum enfermo seja curado no monte; mas, extinta a febre das paixões e acesa a luz da ciência, alguém sobe pouco a pouco ao cume das virtudes. Ora, a multidão que pôde tocar o Senhor é curada pela virtude do seu espírito, assim como acima o leproso é purificado pelo toque do Senhor. O toque, portanto, é obra da salvação do Salvador; tocá-lo é crer nele fielmente, e ser tocado por ele é ser curado por seu dom.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 5,
+    "versos": [
+      20,
+      23
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Post apostolorum ordinationem, ad evangelicae vitae novitatem salvator suos discipulos rectificavit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Divinitatis autem prompturus oracula, incipit esse sublimior; etsi in humili stabat, tamen oculos elevavit; unde dicitur et ipse elevatis oculis. Quid est levare oculos nisi interius lumen aperire?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Et quamvis generaliter omnibus loquatur, specialius tamen oculos in discipulos levat; sequitur enim in discipulos suos: ut his qui verbum intenta cordis aure percipiunt, latius saporis intimi lumen aperiat"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Quatuor autem tantum beatitudines Lucas posuit, octo vero Matthaeus; sed in istis octo illae sunt quatuor, et in istis quatuor illae octo. Hic enim quatuor velut virtutes amplexus est cardinales; ille in illis octo mysticum ordinem reseravit: sicut enim spei nostrae octava perfectio est, ita octava summa virtutum est. Primam autem beatitudinem paupertatis uterque Evangelista posuit: ordine enim prima est, et parens quaedam virtutum: quia qui contempserit saecularia, ipse merebitur sempiterna: nec potest quisquam meritum regni caelestis adipisci qui a mundi cupiditate pressus emergendi non habet facultatem; unde sequitur dicebat: beati pauperes"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "In Evangelio quidem quod est secundum Matthaeum, beatos fieri dixit pauperes spiritu, ut intelligamus esse pauperem spiritu, habentem intellectum modestum, et quodammodo remissum: unde dicit salvator: discite a me, quia mitis sum et humilis corde. Hic autem beatos asserit pauperes, non addito spiritu, pauperes appellans divitias contemnentes: decebat enim ut cum praenuntiaturi essent salutiferi Evangelii dogma, mentem non gererent cupidam, sed promptum affectum haberent erga maiora"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Non autem omnis quem paupertas premit, beatus est, sed qui Christi praeceptum mundanis praetulerit opibus. Plures enim pauperes sunt in substantia, avarissimi tamen secundum affectum; quos non salvat paupertas, sed affectus damnat. Nihil enim involuntarium beatificabile est, eo quod omnis virtus libero designatur arbitrio. Beatus ergo pauper, quasi Christi discipulus, qui pro nobis paupertatem sustinuit: nam ipse dominus quodlibet opus implevit quod ad beatitudinem ducit, se praebens exemplar discentibus"
+      },
+      {
+        "autor": "Eusebius",
+        "obra": "",
+        "latim": "Sed cum caeleste regnum in multis gradibus bonorum consideretur, primus gradus scandentium est eorum qui divino intuitu colunt paupertatem; tales autem fecit eos qui primo facti sunt eius discipuli: ob hoc in eorum persona dicit quia vestrum est regnum Dei; quasi demonstrative hoc proferens ad praesentes, ad quos etiam oculos elevavit"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Postquam igitur mandavit paupertatem colere, ea quae consequuntur inopiam coronat honoribus. Contingit autem paupertatem colentes, necessariorum incurrere defectum, et vix acquirere victum; idcirco non sinit discipulos pusillanimes super hoc fieri, dicens beati qui nunc esuritis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Idest, beati qui castigatis corpus vestrum et servituti subicitis, qui in fame et siti verbo operam datis: quia caelestium tunc gaudiorum habebitis ubertate perfrui"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Altius autem, sicut secundum sensibilem escam diversificatur participantium appetitus ad comestibilium species, sic et in cibo animae, ab his quidem opinabile, ab his autem appetitur quod naturaliter est bonum: unde hic secundum Matthaeum beatificantur qui iustitiam loco cibi et potus reputant; non, inquam, particularem, sed universalem virtutem, quam qui esurit beatificandum dicit"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Apertissime nos instruens nunquam nos satis iustos aestimare debere, sed quotidianum iustitiae semper amare profectum; ad cuius perfectam saturitatem non in hoc saeculo, sed in futuro possumus pervenire, ut Psalmista ostendit dicens: satiabor cum manifestabitur gloria tua; unde sequitur quia saturabimini"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Avidis enim iustitiae, desideratorum copiam spondet. Nihil enim eorum quae secundum voluptatem in vita quaeruntur satiat inquirentes; solum autem virtutis studium subsequitur praemium quod indeficiens gaudium inserit animae"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Consequitur autem inopiam non solum defectus rerum ad delectationes facientium, sed etiam depressus vultus propter moestitiam; unde sequitur beati qui nunc fletis. Beatificat flentes, non eos qui simpliciter ab oculis lacrymas emittunt: commune enim est hoc tam fidelibus quam infidelibus, si quid tristium accidat. Magis autem illos beatos asserit qui levem vitam et implicitam carnalibus voluptatibus deditam vitant, refutantes delicias, et pene lacrymantes propter odium mundanorum"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Magnum quid vero secundum Deum tristitia est, et impetrat poenitentiam in salutem; unde Paulus, cum non haberet suos defectus flere, pro alienis lugebat. Talis luctus est alacritatis materia: unde sequitur quia ridebitis. Etenim si nihil prosumus his pro quibus flemus, tamen proficimus nobismetipsis: nam qui sic aliena deflet, multo magis non praeteribit inflebiliter sua delicta; magis autem nec facile labetur in scelus. Non dissolvamur in hac brevi vita, ne suspiremus in infinita: non quaeramus delicias, a quibus manat luctus et dolor nimius; sed tristemur tristitia, quae germinat veniam. Est etiam dominum saepius reperire lugentem, ridentem nequaquam"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Promittit autem flentibus risum, non quidem emissum per mandibulas sonum, sed meram et impermixtam cuilibet tristitiae alacritatem"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Qui ergo propter divitias hereditatis Christi, propter panem vitae aeternae, propter spem caelestium gaudiorum, fletus, esuriem, paupertatemque pati desiderat, beatus est; multo autem beatior qui has virtutes inter adversa servare non trepidat; unde sequitur beati eritis cum vos oderint homines: licet enim homines odiant corde nefando dilectum cor Christo laedere nequeunt. Sequitur et cum separaverint vos. Separent, et a synagoga expellant: Christus invenit et confirmat. Sequitur et exprobraverint. Exprobrent nomen crucifixi: ipse commortuos sibi conresuscitat, et consedere facit in caelestibus. Sequitur et eiecerint nomen vestrum tamquam malum: ubi nomen Christianorum significat, quod a gentilibus Iudaeisque saepissime quantum ad ipsos memoriae abrasum, et ab hominibus est abiectum, nulla existente causa odii, nisi propter filium hominis; qui scilicet credentes nomen Christi, suum cognomen facere voluerunt. Docet ergo eos ab hominibus insectandos, sed ultra homines esse beandos; unde sequitur gaudete in illa die, et exultate: ecce enim merces vestra multa est in caelo"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Multum et paucum mensuratur dignitate proferentis. Quaeramus igitur: quis multam promisit mercedem? Si quidem propheta vel apostolus, velut homo paucum esse multum existimavit; nunc autem dominus, qui possidet perennes thesauros, et opes quae quemlibet intellectum transcendunt, multam pollicitus est mercedem"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Rursus, magnum aliquando absolutam habet intentionem; sicut magnum est caelum, et magna est terra; aliquando vero ad aliquid habet relationem: ut magnus equus et bos in comparatione similium. Sic arbitror multam fore mercedem repositam patientibus opprobria propter Christum, non tamquam comparatam ad ea quae penes nos sunt, sed in se multam existentem, et tamquam a Deo donatam"
+      },
+      {
+        "autor": "Damascenus",
+        "obra": "",
+        "latim": "Illa etiam quae mensurari vel numerari possunt, determinate ingeruntur; quod autem ex quadam excellentia omnem transcendit mensuram et numerum, indeterminate dicitur magnum et multum: puta quando dicimus multam esse Dei misericordiam"
+      },
+      {
+        "autor": "Eusebius",
+        "obra": "",
+        "latim": "Deinde muniens discipulos ad pugnam adversariorum, quam passuri erant per totum orbem praedicantes, subdit secundum haec enim faciebant prophetis patres eorum"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Quia prophetas Iudaei usque ad mortem corporis persecuti sunt"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quia vera dicentes solent persecutionem pati; nec tamen ideo prophetae antiqui timore persecutionis a veritatis praedicatione defecerunt"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "In hoc ergo quod dicit beati pauperes, habes temperantiam, quae a peccato abstinet, saeculum calcat, illecebrosa non quaerit. Beati qui esuritis: habes iustitiam: qui enim esurienti compatitur, compatiendo largitur, largiendo fit iustus, quia iustitia eius manet in aeternum. Beati qui nunc fletis; habes prudentiam, cuius est flere quotidiana, et ea quae aeterna sunt quaerere. Beati eritis cum vos oderint homines: habes fortitudinem; sed eam quae non odium meretur ex crimine, sed persecutionem patiatur ex fide. Sic enim ad passionis pervenitur coronam, si gratiam hominum negligas, divinam sequaris. Ergo temperantia cordis habet munditiam, iustitia misericordiam, pacem prudentia, mansuetudinem fortitudo. Connexae sibi sunt et concatenatae virtutes, ut qui unam habet, plures habere videatur: et sanctis una competit virtus; sed eius quae fuerit uberior, uberius est praemium. Quanta hospitalitas in Abraham, quanta humilitas? Sed quia fide praestitit, fidei prae ceteris meruit principatum. Ergo unicuique plura praemia, quia plurima incentiva virtutum; sed quod in aliquo merito copiosius, hoc etiam in praemio redundantius"
+      }
+    ]
+  },
+  {
+    "lectio": 6,
+    "versos": [
+      24,
+      26
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Praedicto, quod paupertas propter Deum causa sit cuiuslibet boni, et quod esurire et flere non vacabit mercede sanctorum, transfert sermonem ad apposita, et innuit ipsa damnationis et supplicii fore materiam; unde dicitur verumtamen vae vobis divitibus, qui habetis consolationem vestram"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Haec enim dictio vae semper in Scripturis dicitur his qui non possunt evadere a futuro supplicio"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Licet autem in pecuniariis copiis multa sint lenocinia delictorum, pleraque tamen sunt incentiva virtutum; quamquam virtus subsidia non requirat, et commendatior sit collatio pauperis, quam divitis liberalitas; tamen non eos qui habent divitias, sed eos qui uti his nesciant, sententiae caelestis auctoritate condemnat. Nam ut ille pauper laudabilior est qui prompto largitur affectu, ita criminosior dives est qui de eo referre gratiam Deo debuit quod accepit, nec censum ad communem usum datum sine usu abscondere. Non census igitur, sed affectus in crimine est. Et quamquam nulla poena gravior sit quam successorum profutura compendiis anxio timore servare, tamen quoniam avaritiae desideria congerendi quadam voluptate pascuntur, qui consolationem vitae praesentis habuerunt, remunerationem perpetuam perdiderunt. Possumus tamen hic divitem intelligere populum Iudaeorum, vel haereticos, vel certe Pharisaeos, qui ubertate verborum, et quodam ambitiosae facundiae patrimonio delectati, simplicitatem verae fidei supergressi, thesauros inutiles condiderunt. Sequitur vae vobis qui saturati estis, quia esurietis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Dives ille purpuratus saturabatur, epulans quotidie splendide; sed dirum vae sustinebat esuriens, quando de Lazari, quem despexerat, digito guttam aquae quaerebat"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Quod autem necessaria sit abstinentiae ratio, palam est ex eo quod apostolus eam inter fructus spiritus enumeravit. Subiectio enim corporis per nihil aliud sic obtinetur, sicut per abstinentiam; qua sicut quodam freno decet compescere iuventutis fervorem. Est igitur abstinentia interemptio criminis, amotio passionum, vitae spiritualis initium, obtundens in se illecebrarum aculeum. Ne autem coincidentia fiat cum inimicis Dei, decet accipi quodlibet cum exigit tempus, ad ostendendum quod mundis omnia munda; procedendo quidem ad necessaria vitae, abstinendo autem omnino ab his quae faciunt ad voluptatem. Attamen nec eamdem horam sibi cunctos sancire possibile, nec modum, nec mensuram. Sit autem communis intentio non expectare repletionem; replere namque ventrem, ipsum quoque corpus inutile facit erga proprias operationes, somnolentum, et ad nocumenta dispositum"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Aliter. Si beati sunt illi qui iustitiae semper esuriunt opera, infelices e contra aestimandi sunt qui sibi in desideriis placentes, nullam veri boni famem patiuntur. Sequitur vae vobis qui ridetis nunc, quia lugebitis et flebitis"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Cum dominus ridentes nunc arguat, palam est quod numquam erit fideli tempus risus; et praecipue in tanta multitudine eorum qui in peccato moriuntur, pro quibus oportet lugere. Superfluus autem risus est immoderantiae signum, et effrenis animae motus; sed usque ad vultus iucunditatem exprimere passionem animae non dedecet"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Dic autem mihi cur concuteris et defluis qui debes assistere terribili iudicio, et ponere rationem de omnibus hic operatis?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quia vero ipsa peccati nutrix adulatio, sicut oleum flammis, sic in culpa ardentibus solita est ministrare fomentum, subdit vae cum benedixerint vobis omnes homines"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Non autem contrarium est quod hic dicitur ei quod alibi dominus dicit: luceat lux vestra coram hominibus, ut scilicet manifestemus bene agere ad gloriam Dei, non ad propriam. Perniciosum enim quid est inanis gloria: et inde sumit ortum iniquitas atque desperatio, et mater malorum avaritia. Quod si viam quaeris divertendi ab hoc, dirigas aspectum semper ad Deum, et esto contentus ea quae apud eum est gloria: nam si in qualibet facultate doctiores eligere oportet in arbitros, quomodo virtutis experimentum pluribus credis, non autem illi qui prae omnibus eam novit, et dare et coronare potest? A quo si gloriam cupis, vita laudem humanam: de nullo enim alio magis consuevimus admirari quam de respuente gloriam. Quod si nos, multo magis dominus omnium. Deinde illud consideres, quod hominum gloria celeriter deficit, quia per cursum temporis oblivioni traditur. Sequitur secundum haec enim faciebant pseudoprophetis patres eorum"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Pseudoprophetae significantur, eo quod ad captandum vulgi favorem futura praeloqui conentur. Itaque dominus in monte beatitudines solummodo proborum, in campo vero etiam vae describit reproborum: quia rudes adhuc auditores necesse est terroribus ad bona compelli, perfectos autem satis est praemiis invitari"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Et attende quod Matthaeus, praemiis ad virtutem et fidem populos provocavit; hic autem etiam a criminibus atque peccatis futurorum suppliciorum denuntiatione deterruit"
+      }
+    ]
+  },
+  {
+    "lectio": 7,
+    "versos": [
+      27,
+      31
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quia dixerat supra quid ab inimicis pati possent, nunc qualiter cum eisdem inimicis agere debeant ostendit, dicens sed vobis dico qui auditis"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Non otiose plurimorum factorum caelestium enumeratione progressus ad hunc locum serius venit, ut populus divinis miraculis roboratus ultra legis tramitem virtutum vestigiis progredi edoceretur. Denique inter tria maxima, spem, fidem et caritatem, maior est caritas, quae ordinatur cum dicitur diligite inimicos vestros"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Inimici quidem proprium est obesse et insidiari. Omnis igitur qui qualitercumque nocet alicui, dicitur inimicus"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Conveniens autem erat huiusmodi conversatio doctoribus sanctis, qui praedicaturi erant ubique terrarum salutarem sermonem; quos si contingeret velle recipere de persequentibus vindictam, omisissent eos ad cognitionem veritatis vocare"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Non autem dicit: ne odio habeas; sed: diligas; neque simpliciter mandavit diligere, sed etiam benefacere; unde sequitur benefacite his qui oderunt vos"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Verum quia homo ex corpore consistit et anima, secundum animam quidem benefaciemus, huiusmodi arguentes et commonentes eos, et omnino ad conversionem manuducentes; secundum corpus autem benefacientes eis in necessariis victui. Sequitur benedicite maledicentibus vobis. Qui enim percutiunt proprias animas, digni sunt lacrymis et fletibus, non maledictionibus. Nihil enim detestabilius est anima maledica, nec immundius lingua quae maledictiones effert. Homo es; aspidum venena non evomas, nec vertaris in belluam. Est tibi datum os, non ut mordeas, sed ut aliorum vulnera sanes. Inimicos autem mandavit nobis annumerare gradui amicorum, non quorumcumque, sed praecipuorum, pro quibus orare solemus; unde sequitur orate pro persequentibus vos. Plerique autem e contra procumbentes, et fronte super terram percutientes, et manus expandentes, non pro suis criminibus orant Deum, sed adversus inimicos; quod nihil aliud est quam seipsum transfodere. Cum eum qui prohibuit contra inimicos orare, precaris ut te maledicentem inimicis exaudiat, quomodo possibile est audiri, quando provocas exauditurum, verberando inimicum coram rege, etsi non manibus, verbis tamen? Quid facis, homo? Stas ut veniam impetres peccatorum, et imples os amaritudine. Mitigationum est tempus, orationis et gemitus, non furoris"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Sed merito movetur quaestio, quomodo in prophetis inveniuntur multae imprecationes adversus inimicos. Ubi videndum est, quia prophetae per imprecationem quid esset futurum cecinerunt, non optantis voto, sed spiritu praevidentis"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Vetus autem lex mandabat non offendere alios; vel si prius fuerimus laesi, non ultra proportiones laedentium iras protendere; sed perfectio legis in Christo est, et in suis mandatis; unde sequitur et qui te percutit in maxillam, praebe ei et alteram"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Nam et medici cum calce feriuntur ab insanis, tunc maxime miserentur eis, et accingunt se ad eorum remedia. Tu quoque similem habeas coniecturam erga persequentes: ipsi namque sunt qui praecipue infirmantur; nec prius desistamus quam totam amaritudinem evomuerint; tunc uberes gratias agent tibi, et ipse Deus te coronabit, eo quod fratrem tuum in pessima aegritudine liberasti"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Fere autem cuncti contra hoc mandatum procedimus; et praesertim potentes vel principes, non solum si passi fuerint contumelias, sed et si praestita eis non sit reverentia, adversarios reputantes quicumque eos minus reveriti sunt quam se reputaverunt dignos. Est autem magna infamia principis esse promptum ad vindictam: nam et qualiter alium docebit nil mali pro malo rependere, qui nocenti retribuere satagit?"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Vult autem dominus insuper esse contemptorem rerum; unde sequitur et ab eo qui aufert tibi vestimentum, etiam tunicam noli prohibere: haec est enim virtus animae quae omnino aversa est a passione cupiditatis divitiarum. Decet enim eum qui pius est et oblivisci malorum, ut et ea quibus caros amicos iuvamus, persequentibus conferamus"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Non autem dixit: fer humiliter iniuriantis impetum; sed: procedas per sapientiam, et ulterius te disponas ad patiendum quae ille cupiat facere, superans insolentiam eius ubertate prudentiae, ut habito pudore in excellenti patientia tua discedat. Sed dicet aliquis: quomodo potest hoc fieri? Cum videris Deum factum hominem, tot passum pro te, adhuc quaeris et dubitas quomodo possibile sit nequitiis ignoscere conservorum? Quis tale passus est quale dominus tuus dum ligaretur, flagellaretur, sputa perferens, mortem patiens? Unde sequitur omni autem petenti te tribue"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Non dicit: omnia petenti; sed ut id des quod iuste et honeste potes, idest quod nec tibi, nec alteri noceat, quantum sciri aut credi ab homine potest; et cui iuste negaveris quod petit, indicanda est iustitia; et aliquando melius aliquid tribues, cum petentem iniusta correxeris"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "In hoc tamen peccamus non modicum, non solum non dando petentibus, sed et eos increpando. Cur, inquis, non laborat? Cur otiosus alitur? Dic mihi: et tu laborando possides? Sed et si laboras, ad hoc laboras ut vituperes alium? Propter unicum panem et tunicam appellas cupidum. Nihil tribuis? Nec convicieris. Cur nec tu misereris, et volentibus dissuades? Si cunctis indifferenter erogaverimus, semper miserebimur. Quia enim Abraham cunctos recipiebat, recepit et Angelos. Nam etsi homicida sit et praedo, nonne tibi dignus videtur panis habendi? Non igitur simus severi aliorum censores, ne nos quoque exquisite iudicemur. Sequitur et qui aufert quae tua sunt, ne repetas"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "A Deo percipimus omnia; quod autem dicimus meum et tuum, nuda tantum sunt verba: si namque domum tuam asseris, emisisti verbum carens subsistentia rei: nam et aer et solum et caementum creatoris sunt, tu etiam ipse qui domum construxisti: sed et si tuus sit usus dubitatur, non solum propter mortem, sed etiam propter rerum eventus. Anima tua non possidetur a te, et quo pacto tuae reputabuntur opes? Vult autem Deus tua fore quae tibi pro fratribus credita sunt; fient autem tua, si pro aliis dispensaveris; si vero tibi affluenter expenderis, quae sunt tua iam facta sunt aliena. Sed propter nefandam opum cupidinem homines in curiis conrixantur; contra quod Christus ait et qui aufert quae tua sunt, ne repetas"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Quod de veste, domo, fundo, iumento, et generaliter omni pecunia dicit. Non autem Christianum oportet sic possidere servum quomodo equum aut argentum. Servus si honestius a te regeretur quam ab illo qui eum tibi cupit auferre; nescio utrum quisquam dicere audeat eum debere contemni"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Est autem nobis insita lex naturalis, per quam dignoscimus quid sit virtus et vitium; unde sequitur et prout vultis ut faciant vobis homines, et vos facite illis similiter. Non ait: quaecumque non vultis ut faciant, nec vos faciatis: cum enim duae sint viae quae ducunt ad virtutem, scilicet abstinentia mali, et operatio boni, hanc ponit, per istam et illam significans. Et si quidem dixisset: ut sitis homines, diligite bestias, esset mandatum difficile; si vero homines diligere iussit, ad quod naturalis monitio est, quam difficultatem res continet, quam leones et lupi servant, in quibus naturalis cognatio amicitiam cogit? Ostenditur igitur quod Christus nihil statuit nostram transcendens naturam; sed quod dudum inseruit conscientiae nostrae, docet; ut propria voluntas pro lege sit tibi; ut si vis bene tibi, bene facias alii; si vis ut alius tui misereatur, proximi miserearis"
+      }
+    ]
+  },
+  {
+    "lectio": 8,
+    "versos": [
+      32,
+      36
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Dixerat dominus diligendos esse inimicos. Ne autem putares hyperbolice esse dictum, aestimans solum ad terrorem eis dici, adicit rationem, dicens et si diligitis eos qui vos diligunt, quae vobis est gratia? Plures quidem causae sunt quae dilectiones constituunt; dilectio vero spiritualis universas praecellit; nihil enim terrenum eam parit; non utilitas, non beneficium, non natura, non tempus, sed de caelo descendit. Quid autem miraris si non indiget beneficio ut consistat, quando nec ex casu malorum pervertitur? Pater quidem passus iniurias, rumpit foedus amoris; coniux post iurgia virum relinquit; filius si longaevum videat patrem, gravatur: at Paulus ibat ad lapidantes, benefacturus eis; Moyses lapidatur a Iudaeis, et orat pro eis. Veneremur itaque spirituales amicitias, quia sunt insolubiles. Unde arguens volentes pigrescere, subdit, nam et peccatores diligentes se diligunt; quasi dicat: quia volo vos his amplius aliquid possidere, non moneo solum amicos diligere, sed etiam inimicos. Benefacientibus etiam benefacere commune est omnibus. Ostendit autem se parum plus petere quam sit moris peccatorum, qui benefaciunt amicis; unde sequitur et si benefacitis his qui vobis benefaciunt, quae vobis est gratia? Siquidem et peccatores hoc faciunt"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non solum autem dilectionem vel beneficium peccatorum, quasi infructuosa redarguit, sed etiam mutuum; unde sequitur et si mutuum dederitis his a quibus speratis recipere, quae gratia est vobis? Nam et peccatores peccatoribus fenerantur, idest mutuantur, ut recipiant aequalia"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "In tres autem partes philosophia sibi videtur divisisse iustitiam: unam in Deum, quae pietas vocatur; alteram in parentes vel reliquum genus humanum; tertiam in mortuos, ut his exequiarum iura solvantur. At dominus, legis oraculum ac prophetiae fastigium supergressus, in eos quoque qui laeserunt, pietatis correxit officium, cum subdit verumtamen diligite inimicos vestros"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Genesim",
+        "latim": "In quo plus tibi quam illi conferes: ille enim diligitur a conservo, tu vero efficieris similis Deo. Est autem maximae virtutis quando nocere volentes beneficiis complectimur; unde subditur et benefacite. Sicut enim fornacem succensam aqua proiecta extinguit, sic iram ratio cum lenitate: quod enim est aqua igni, hoc est irae humilitas et mansuetudo. Et sicut non extinguitur ignis per ignem, sic nec ira per iram mitigatur"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Debet autem homo vitare damnosam sollicitudinem, ne quaerat ab inope divitiarum augmenta, aeris et auri metallorum sterilium exigens fructum; unde subdit et mutuum date, nihil inde sperantes. Malignam fenorum excogitationem si quis appellet furtum et homicidium, non peccabit: nam quid refert suffosso pariete quemquam erepta possidere, ac fenorum necessitate possidere illicita?"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Talis autem avaritiae species, Graece tocos idest partus, Latine fenus, quasi fetus propter mali fecunditatem, ut arbitror, appellatur. Aut fortasse partus dicitur propter partus dolores, quos animis eorum qui mutuo ad usuram acceperunt, inducere solet. Animalia temporis progressu nascuntur, adolescunt et pariunt; at fenus statim cum oritur parere incipit. Animalia quae citius pariunt, citius parere cessant: sed avarorum pecunia simul cum omni tempore adaugetur. Animalia ubi pariendi vim ad sobolem suam transtulerunt, ipsa parere cessant; at feneratorum pecuniae et novas pariunt, et veteres renovant. Nullus itaque mortiferam hanc bestiam attendet. Sed magna, inquis, o pauper, necessitas, et utilitas est ut mutuum sumam. Et quaenam haec est utilitas? Rursum veniet tibi paupertas, et eadem cum accessione necessitas. Meditare iam unde restituas. Unde tibi pecuniae intantum multiplicabuntur ut et sufficiant ad usus necessitatem, et ad restitutionem? Verum ais: quomodo igitur me enutriam nisi fenus accipiam? Mille sunt victus parandi solertiae. Manus habes, labora, servi, tandem mendica: omnia tibi tolerabiliora sunt quam pecuniam ad usuram sumere. Ceterum dives ait: quale illud est mutuum cui nulla retributionis spes adiuncta est? Considera vim dicti, et legislatoris admiraberis humanitatem. Cum pauperi dare voles propter dominum, idem et donum est et mutuum: donum quidem, quia non speras receptionem; mutuum vero, propter domini magnificentiam, qui paucis per pauperem acceptis, magna pro ipsis reddet; unde sequitur et erit merces vestra multa. Non vis universorum dominum obnoxium tibi ipsi habere ad persolvendum? Aut si quis in urbe dives promittat se tibi pro alio exsoluturum, fideiussionem ipsius accipies, Deum autem pro pauperibus persolutorem non admittes?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Attende mutui naturam mirabilem: alius recipit, et alius obligat se pro debitis, centuplum in praesenti reddens, in futuro vero vitam aeternam"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Quanta misericordiae merces qui filiis divinae misericordiae asciscitur? Sequitur enim et eritis filii altissimi. Sequere igitur misericordiam, ut merearis gratiam. Late patet benignitas Dei: super ingratos pluit, malis fecunda non negat terra proventus. Sequitur quia ipse benignus est super ingratos et malos"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vel temporalia bona largiendo, vel caelestia dona singulari gratia inspirando"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Magnum est ergo praeconium pietatis: reddit enim haec virtus nos Deo conformes, et quasi quaedam signa sublimis naturae nostris imprimit animabus; unde sequitur estote ergo misericordes sicut et pater vester misericors est"
+      },
+      {
+        "autor": "Athanasius",
+        "obra": "",
+        "latim": "Ut scilicet aspicientes beneficia eius, bona quae facimus, non hominum, sed eius intuitu faciamus; quatenus a Deo, non ab hominibus praemia consequamur"
+      }
+    ]
+  },
+  {
+    "lectio": 9,
+    "versos": [
+      37,
+      38
+    ],
+    "itens": [
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Addidit dominus non temere iudicandum, ne tui conscius ipse delicti in alterum cogaris ferre sententiam: unde dicit nolite iudicare"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Non iudices praecedentes te, idest qui discipulus es magistrum, peccator innocentem; quos non oportet increpare, sed monere, et caritative corrigere: nec etiam iudicandum est in incertis et qualibuscumque, quae nec similitudinem habent peccati, aut quae non sunt gravia, sive prohibita"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Sedat ergo hic pessimam passionem nostrarum conscientiarum, contemptus principium: quamvis enim deceat aliquos se circumspicere, et secundum Deum conversari; hoc non faciunt, sed examinant aliena. Et si videant aliquos infirmari, tamquam propriarum passionum obliti, faciunt hoc detractionis materiam"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Nec facile reperies quemquam neque patremfamilias, neque claustralem expertem huius erroris. Sunt autem et hae diabolicae tentationis insidiae: nam qui severe discutit aliena, nunquam propriorum reatuum merebitur veniam; unde sequitur et non iudicabimini; sicut enim pius et mitis reprimit peccatorum timorem; sic severus et dirus adjicit criminibus propriis"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Non igitur cum acrimonia praecipitetis in servos sententiam, ne similia patiamini: vocat enim iudicium asperiorem damnationem; unde sequitur nolite condemnare, et non condemnabimini: non enim iudicium cum venia prohibet"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Brevi autem sententia cuncta quae de conversando cum inimicis mandaverat, comprehendendo concludit, dicens dimittite et dimittetur vobis, date et dabitur vobis: ubi dimittere nos iniurias et dare beneficia iubet, ut et nobis peccata dimittantur, et vita detur aeterna"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quod autem ampliori manu recompensationem accipiemus a Deo, qui largiflue donat diligentibus eum, ostendit subdens mensuram bonam, et confertam, et coagitatam et supereffluentem dabunt in sinum vestrum"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quasi dicat: sicut si farinam sine parcitate mensurare velles, conferres eam, coagitares et supereffunderes abunde; sic dominus mensuram magnam et supereffluentem dabit in sinum vestrum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Dicit autem dabunt, quia per illorum merita quibus vel calicem aquae frigidae in nomine discipuli dederunt, mercedem caelestem recipere merebuntur. Sequitur eadem quippe mensura qua mensi fueritis, remetietur vobis"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Qua enim mensura unusquisque vestrum mensurat in bene operando aut peccando, eadem vel praemia vel poenas feret"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Interrogabit autem fortassis aliquis subtilius: si enim supereffluenter redditur, quo modo eadem est mensura? Ad quod dicimus, quod non dixit: in tanta mensura remetietur vobis, sed in eadem. Qui enim benefecit, bene fiet ei: quod est remetiri eadem mensura. Sed supereffluentem mensuram dicit, quia millies benefiet ei: sic et in iudicando: qui enim iudicat et deinde iudicatur, accipit eamdem mensuram; secundum vero quod ad plus diiudicabitur, quia sibi similem iudicavit, secundum hoc supereffluens est mensura"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Hoc autem solvit apostolus dicens: qui parce seminat, hoc est modice et manu tenaci, parce et metet, hoc est non copiose; et qui seminat in benedictionibus, in benedictionibus et metet, hoc est, copiose. Si quis autem non habet, si non faciat, non delinquit: in eo enim quod habet acceptatur, non in eo quo caret"
+      }
+    ]
+  },
+  {
+    "lectio": 10,
+    "versos": [
+      39,
+      42
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Addidit dominus praedictis parabolam valde necessariam; unde dicitur dicebat autem illis et similitudinem. Erant enim eius discipuli futuri mundi doctores; unde decebat eos scire viam conversationis honestae, quasi illustratam mentem habentes divino fulgore ne caeci caecos ducerent; et ideo subdit numquid potest caecus caecum ducere? Nonne ambo in foveam cadunt? Et si contingat aliquos hoc attingere ut aequalem virtutem docentium virtuti possideant, sistant in mensura docentium, et illorum sequantur vestigia; unde sequitur non est discipulus supra magistrum; perfectus autem omnis erit, scilicet discipulus, si sit sicut magister eius; unde et Paulus dicit: imitatores mei estote, sicut et ego Christi. Christo ergo non iudicante, cur tu iudicas? Neque enim venit iudicare mundum, sed misereri"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Vel aliter. Si tu alium iudicas, et ipse in eisdem peccas, nonne assimilaris caeco caecum ducenti? Quomodo enim ille a te ducetur ad bonum, cum et tu pecces? Non est enim discipulus supra magistrum. Si igitur tu peccas, qui te magistrum et ductorem putas, ubi erit qui a te disciplinatur et ducitur? Perfectus enim erit discipulus, si sit sicut magister eius"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vel sensus huius sententiae pendet ex superioribus, ubi danda eleemosyna et iniuria dimittenda praecipitur. Si te, inquit, ira contra violentum, et contra petentem avaritia caecaverit, numquid tu mente vitiata vitium eius curare poteris? Si etiam magister Christus, qui quasi Deus potuit suas ulcisci iniurias, maluit persecutores patiendo reddere mitiores, eamdem necesse est quod discipuli, qui puri homines sunt, regulam perfectionis sequantur"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Vel quod dicit numquid potest caecus caecum ducere? Ideo subiunxit, ut non sperarent a Levitis se accepturos mensuram illam de qua dixit dabunt in sinum vestrum, quoniam decimas dabant eis quos caecos dixit, quia Evangelium non tenerent; ut illam remunerationem per discipulos domini potius plebs inciperet iam sperare; quos imitatores suos volens ostendere, addit non est discipulus supra magistrum"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Inducit autem dominus et aliam parabolam de eodem, subdens quid autem vides festucam, idest modicum criminis, in oculo fratris tui, trabem autem quae in oculo tuo est, idest peccatum tuum maximum, non consideras?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Hoc autem ad superiorem sensum respicit, ubi caecum a caeco duci, idest peccantem a peccatore castigari non posse praemonuit; unde dicitur aut quomodo potes dicere fratri tuo: frater, sine eiciam festucam de oculo tuo, ipse in oculo tuo trabem non videns?"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quasi dicat: qui gravibus obnoxius est peccatis, quae trabem vocat, qualiter damnat eum qui pauca vel quandoque nil mali commisit? Hoc enim festuca significat"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Convenit autem hoc omnibus, et maxime doctoribus, qui subditorum cum minima peccata puniant, propria impunita relinquunt. Propter hoc eos dominus hypocritas vocat, qui ex hoc aliorum peccata iudicant ut iusti videantur; unde sequitur hypocrita, eice primum trabem de oculo tuo, et tunc perspicies ut educas festucam de oculo fratris tui"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Videlicet teipsum primum mundum ostendas a magnis peccatis; consequenter consules proximo modica committenti"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Videtur enim revera cognitio sui ipsius gravissimum omnium: neque enim solus oculus exteriora videns super se visu non utitur; sed et ipse noster intellectus, cum alienum velociter coniectat peccatum, lentus est erga propriorum perceptionem defectuum"
+      }
+    ]
+  },
+  {
+    "lectio": 11,
+    "versos": [
+      43,
+      45
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Contra hypocritam quae coeperat dominus exequitur dicens non est enim arbor bona quae facit fructus malos, neque arbor mala faciens fructum bonum: quasi dicat: si veram et non fictam vis habere iustitiam, quae verbis ostentas, etiam facto compensa: quia etsi se bonum fingat hypocrita, non est bonus qui facit opera mala; et si reprehendat insontem, non ideo malus est qui facit opera bona"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Hoc autem audiens, non sumas inde tibi favorem inertiae: naturaliter enim arbor movetur, tu vero libero arbitrio fungeris; et omnis arbor sterilis ad aliquid ordinata est, tu vero factus es ad opera virtutum"
+      },
+      {
+        "autor": "Isidorus",
+        "obra": "abbas",
+        "latim": "Non ergo poenitentiam, sed pertinaciam mali excludit: cum enim mala sit, non potest fructus bonos producere; in virtutem vero conversa fructificat. Quod autem est arboribus natura, hoc est nobis affectio. Etsi ergo arbor mala non potest fructum bonum producere, poterit tamen"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Quamvis autem fructus causetur ex arbore, facit tamen notitiam arboris, eo quod arboris distinctio per fructum apparet; unde sequitur unaquaeque enim arbor de fructu suo cognoscitur"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Sed et vita morum uniuscuiusque erit significativa: neque enim extrinsecis ornamentis et fictis humilitatibus, vere felicitatis apprehenditur decor, sed et ex his quae aliquis operatur: cuius rei exemplum ponens subdit neque enim de spinis colligunt ficus"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "In spinis istius mundi ficus illa reperiri non potest; quae quia fecundis fructibus melior est, bene species ei resurrectionis aptatur: vel quia, ut legisti: ficus dederunt grossos suos; quod immaturus et caducus et inutilis in synagoga fructus ante praecessit: vel quia immatura nostra vita est in corpore, matura in resurrectione: et ideo procul a nobis debemus saeculares sollicitudines abdicare, quae mordent animum, mentemque adurunt, ut maturos fructus culturae diligentis possimus adipisci. Hoc ergo ad mundum et resurrectionem; alterum ad animam et corpus refertur, cum subditur neque de rubo vindemiant uvam; vel quia nemo peccatis fructum acquirit animae suae, quae sicut uva, proxima terris corrumpitur, in superioribus maturatur; vel quia nemo potest damnationem carnis evadere, nisi quem Christus redemerit, qui sicut uva pependit in ligno"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vel spinas et rubum, saeculi curas et punctiones puto esse vitiorum; ficus vero et uvam, dulcedinem novae conversationis et fervorem dilectionis. Non autem de spinis ficus, neque uva de rubo colligitur: quia mens adhuc veteris hominis consuetudine depressa similare potest, sed fructus novi hominis ferre non potest. Sed sciendum, quod sicut ferax palmes sepi involutus recumbit, portansque fructum spina non suum usibus servat humanis; sic dicta vel acta malorum si quando prosunt bonis, non hoc ipsi faciunt mali, sed fit de illis Dei consilio"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Postquam autem ostendit quod ex operibus potest discerni homo bonus et malus, sicut ex fructibus arbor; nunc idem ostendit per aliud signum, dicens bonus homo de bono thesauro cordis sui profert bonum; et malus homo de malo thesauro profert malum"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Idem est thesaurus cordis quod radix est arboris. Qui ergo in corde thesaurum patientiae perfectique habet amoris, optimos fructus effundens diligit inimicum, et cetera facit quae supra edocuit; at qui thesaurum nequam corde servat, contraria facit"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Verbi etiam conditio cor a quo processit manifestat, evidenter ostendens dispositionem praecordiorum nostrorum; unde sequitur ex abundantia enim cordis os loquitur"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Naturalis enim consequentia est ut cum intus abundet nequitia, effluant oretenus verba nequam: unde cum audiveris hominem inhonesta proferentem, non tantam in eo putes latere malitiam quanta verbis exprimitur; sed coniecta fontem rivo esse uberiorem"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Per oris etiam locutionem dominus universa quae dicto, vel facto, vel cogitatu de corde proferimus, insinuat; moris enim est Scripturarum, verba pro rebus ponere"
+      }
+    ]
+  },
+  {
+    "lectio": 12,
+    "versos": [
+      46,
+      49
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Ne aliquis sibi frustra blandiretur ex eo quod dictum est ex abundantia cordis os loquitur, quasi verba solum et non magis opera veri Christiani quaerantur, consequenter dominus adiungit quid autem vocatis me: domine, domine, et non facitis quae dico? Quasi dicat: quid folia rectae confessionis vos germinare iactatis, qui nullos operis boni fructus ostenditis?"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Convenit autem soli supremae omnium naturae, dominationis et nomen et res"
+      },
+      {
+        "autor": "Athanasius",
+        "obra": "",
+        "latim": "Non est ergo hoc verbum hominis, sed Dei ostendentis proprium ortum a patre: dominus enim est qui natus est a solo domino. Non timeas autem dualitatem: non enim secundum naturam separantur"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quae autem sit utilitas in mandatorum observatione, quodve damnum accidere possit ex inobedientia, ostendit subdens omnis qui venit ad me, et audit sermones meos, et facit eos, ostendam vobis cui similis sit. Similis est homini aedificanti domum, qui fodit in altum, et posuit fundamentum supra petram"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Petra erat Christus, qui fodit in altum, qui praeceptis humilitatis terrena omnia de cordibus fidelium eruit, ne propter commodum temporale serviant Deo"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Ponere autem fundamentum supra petram, hoc est inniti fidei Christi, ut immobilis perseveret in adversis, sive humanitus, sive divinitus accidant"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vel fundamentum domus, ipsa est intentio bonae conversationis, quod perfectus verbi auditor in adimplendis Christi mandatis firmiter inserit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vel omnium fundamentum docet esse virtutum obedientiam caelestium praeceptorum, per quam domus haec nostra, non profluvio voluptatum, non nequitiae spiritualis incursu, non imbre mundano, non haereticorum possit nebulosis disputationibus commoveri; unde sequitur inundatione autem facta, illisum est flumen domui illi, et non potuit eam movere"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Inundatio tribus modis fit: vel immundorum spirituum, vel improborum hominum, vel ipsa mentis aut carnis inquietudine; et quantum propriis viribus homines fidunt, inclinantur; quantum vero invictissimae illi petrae adhaerent, etiam labefactari nequeunt"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Ostendit etiam nobis dominus quod nullam parit fides utilitatem, si foeda sit conversatio; unde sequitur qui autem audit et non facit, similis est homini aedificanti domum suam supra terram sine fundamento"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Domus Diaboli mundus, qui in maligno positus est: quam super terram aedificat, quia obsequentes sibi de caelis ad terrena detrahit; sine fundamento fundamentum non habet, quia non ex propria natura subsistit; malum quippe aedificat, quia omne peccatum sine substantia est, quod tamen, quodcumque sit, in boni natura convalescit. Quia vero a fundo dicitur fundamentum, possumus etiam fundamentum pro fundo positum non inconvenienter accipere: sicut qui in puteo mergitur, putei fundo retinetur; sic anima corruens, quasi in quodam fundi loco consistit, si se in aliqua peccati mensura continet. Sed cum peccato in quod labitur non potest esse contenta, dum quotidie ad deteriora deicitur, quasi in puteo in quem cecidit, fundum non invenit quo figatur. Ingruente autem qualibet tentatione, et vere mali et ficte boni peiores fiunt, donec ad extremum perpetuam labantur in poenam; unde sequitur in quam illisus est fluvius, et continuo cecidit, et facta est ruina domus illius magna. Potest etiam per impetum fluminis, extremi iudicii discrimen intelligi, quando utraque domo consummata, ibunt impii in supplicium aeternum, iusti autem in vitam aeternam"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Vel super terram sine fundamento aedificat qui super arenam dubietatis, quae secundum opinionem est, ponit fundamentum spiritualis fabricae, quos paucae stillae tentationum dissiparunt"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Hunc autem sermonem domini prolixum sic exorsus est Lucas, sicut et Matthaeus: uterque enim dixit beati pauperes; deinde multa quae sequuntur in utriusque narratione similia sunt; et ad extremum sermonis ipsa conclusio prorsus eadem reperitur, scilicet de homine qui aedificat supra petram, et super arenam. Posset ergo facillime credi eumdem Lucas domini interposuisse sermonem, aliquas tamen praetermisisse sententias quas Matthaeus posuit, item alias posuisse quas Matthaeus non dixit; nisi moveret quod Matthaeus in monte dicit habitum sermonem a domino sedente, Lucas autem in loco campestri a domino stante. Non tamen istos duos sermones longa temporis distantia separari hinc probabiliter creditur, quod et ante et postea quaedam similia vel eadem ambo narrarunt. Quamquam illud possit occurrere, in aliqua excelsiori parte montis primo cum solis discipulis fuisse dominum, quando ex eis illos duodecim elegit; deinde cum eis descendisse de monte, scilicet de ipsa montis celsitudine, in campestrem locum, idest in aliquam aequalitatem quae in latere montis erat, et multas turbas capere poterat, atque ibi stetisse, donec ad eum turbae congregarentur; ac postea cum sedisset, accessisse propinquius discipulos suos, atque illis ceterisque turbis praesentibus unum habuisse sermonem"
+      }
+    ]
+  }
+]

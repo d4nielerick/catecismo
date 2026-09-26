@@ -2,7 +2,35 @@
   "data": "2026-10-21",
   "evangelho": "Lc 12,39-48",
   "leituras": "Ef 3,2-12 | Is 12,2-3.4bcd.5-6 (R. cf. 3) | Lc 12,39-48",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 12,
+      "lectio": 10,
+      "versos": [
+        35,
+        40
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 12,
+      "lectio": 11,
+      "versos": [
+        41,
+        46
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 12,
+      "lectio": 12,
+      "versos": [
+        47,
+        48
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 2849,
@@ -14,6 +42,19 @@
       "frase": "A vigilância do coração é lembrada com insistência em comunhão com a sua."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "A hora incerta do Senhor e o administrador fiel",
+  "destaques": [
+    {
+      "lectio": 10,
+      "i": 26
+    },
+    {
+      "lectio": 11,
+      "i": 4
+    },
+    {
+      "lectio": 12,
+      "i": 6
+    }
+  ]
 }

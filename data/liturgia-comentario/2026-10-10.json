@@ -2,8 +2,27 @@
   "data": "2026-10-10",
   "evangelho": "Lc 11,27-28",
   "leituras": "Gl 3,22-29 | Sl 104(105),2-3.4-5.6-7 (R. 8a) | Lc 11,27-28",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 8,
+      "versos": [
+        27,
+        28
+      ]
+    }
+  ],
   "catecismo": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A bem-aventurança da Mãe e dos que guardam a palavra",
+  "destaques": [
+    {
+      "lectio": 8,
+      "i": 1
+    },
+    {
+      "lectio": 8,
+      "i": 2
+    }
+  ]
 }

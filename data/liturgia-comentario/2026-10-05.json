@@ -2,7 +2,26 @@
   "data": "2026-10-05",
   "evangelho": "Lc 10,25-37",
   "leituras": "Gl 1,6-12 | Sl 110(111),1-2.7-8.9 e 10c (R. 5b) | Lc 10,25-37",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 10,
+      "lectio": 8,
+      "versos": [
+        25,
+        28
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 10,
+      "lectio": 9,
+      "versos": [
+        29,
+        37
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 2822,
@@ -59,6 +78,19 @@
       "frase": "Jesus resumiu os deveres do homem para com Deus nestas palavras: «Amarás o Senhor teu Deus com todo o teu coração, com toda a tua alma, com toda a tua mente» (Mt 22, 37)."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "O amor de Deus e do próximo e o bom Samaritano",
+  "destaques": [
+    {
+      "lectio": 8,
+      "i": 3
+    },
+    {
+      "lectio": 9,
+      "i": 31
+    },
+    {
+      "lectio": 9,
+      "i": 40
+    }
+  ]
 }

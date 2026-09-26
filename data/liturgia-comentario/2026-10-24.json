@@ -1,0 +1,45 @@
+{
+  "data": "2026-10-24",
+  "evangelho": "Lc 13,1-9",
+  "leituras": "Ef 4,7-16 | Sl 121(122),1-2.3-4a.4b-5 (R. cf. 1) | Lc 13,1-9",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 13,
+      "lectio": 1,
+      "versos": [
+        1,
+        5
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 13,
+      "lectio": 2,
+      "versos": [
+        6,
+        9
+      ]
+    }
+  ],
+  "catecismo": [],
+  "tema": "A penitência e a figueira estéril",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 2
+    },
+    {
+      "lectio": 2,
+      "i": 9
+    },
+    {
+      "lectio": 2,
+      "i": 10
+    },
+    {
+      "lectio": 2,
+      "i": 14
+    }
+  ]
+}

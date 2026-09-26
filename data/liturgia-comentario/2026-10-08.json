@@ -2,7 +2,26 @@
   "data": "2026-10-08",
   "evangelho": "Lc 11,5-13",
   "leituras": "Gl 3,1-5 | Lc 1,69-70.71-72.73 e 75 (R. cf. 68) | Lc 11,5-13",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 2,
+      "versos": [
+        5,
+        8
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 11,
+      "lectio": 3,
+      "versos": [
+        9,
+        13
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 2613,
@@ -37,6 +56,19 @@
       "frase": "A forma tradicional de pedir o Espírito é invocar o Pai, por Cristo, nosso Senhor, para que nos dê o Espírito Consolador."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "A insistência na oração e o dom do Espírito Santo",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 0
+    },
+    {
+      "lectio": 3,
+      "i": 2
+    },
+    {
+      "lectio": 3,
+      "i": 14
+    }
+  ]
 }

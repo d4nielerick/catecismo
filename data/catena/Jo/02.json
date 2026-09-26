@@ -1,0 +1,559 @@
+[
+  {
+    "lectio": 1,
+    "versos": [
+      1,
+      4
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Quoniam in Galilaea notus erat dominus, vocant eum ad nuptias; unde sequitur et die tertia nuptiae factae sunt in Cana Galilaeae"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Galilaea est provincia, in qua est Cana viculus"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Vocant autem ad nuptias dominum, non tamquam magnificum aliquem, sed simpliciter tamquam notum, et unum multorum: unde hoc Evangelista declarans ait et erat mater Iesu ibi: sicut enim matrem vocaverant, ita et filium; unde sequitur vocatus est autem Iesus et discipuli eius ad nuptias: et accedit; neque enim ad dignitatem respiciebat suam, sed ad beneficium nostrum. Qui enim non dedignatus est formam servi accipere, neque dedignatus est ad nuptias venire servorum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Erubescat igitur homo esse superbus, quoniam factus est humilis Deus. Ecce inter cetera filius virginis venit ad nuptias, qui cum apud patrem esset, instituit nuptias"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quod etiam ad nuptias venire dignatus est, iuxta litteram, fidem recte credentium confirmat. Porro Tatiani et Marcionis, ceterorumque qui nuptiis detrahunt, perfidia quam sit damnabilis insinuat. Si enim toro immaculato et nuptiis debita castitate celebratis culpa inesset, nequaquam dominus ad has venire voluisset. Nunc autem quia bona est castitas coniugalis, melior continentia vidualis, optima perfectio virginalis, ad probandam omnium electionem graduum, discernendum tamen meritum singulorum, ex intemerato Mariae virginis utero nasci dignatus est; e prophetico viduae Annae ore mox natus benedicitur; a nuptiarum celebratoribus iam iuvenis invitatus, has praesentia suae virtutis honorat",
+        "pt": "O fato de ter se dignado a vir também às núpcias confirma, segundo a letra, a fé dos que creem retamente. Além disso, insinua quão condenável é a perfídia de Taciano e de Marcião, e dos demais que denigrem as núpcias. Pois se houvesse culpa no leito imaculado e nas núpcias celebradas com a devida castidade, de modo algum o Senhor teria querido vir a elas. Ora, porque é boa a castidade conjugal, melhor a continência da viúva, ótima a perfeição virginal, para provar a eleição de todos os graus, discernindo-se contudo o mérito de cada um, dignou-se nascer do ventre intemerato da virgem Maria; logo após nascido, é abençoado pela boca profética da viúva Ana; convidado já jovem pelos que celebravam núpcias, honra-as com a presença de sua virtude",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Quid autem mirum, si in illam domum ad nuptias venit qui in hunc mundum ad nuptias venit? Habet enim hic sponsam, quam redemit sanguine suo, et cui pignus dedit spiritum sanctum, quam sibi coniunxerat in utero virginis. Verbum enim est sponsus, et sponsa caro humana; et utrumque unus filius Dei, et idem filius hominis. Ille uterus virginis Mariae thalamus eius est, unde processit tamquam sponsus de thalamo suo"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Nec vacat a mysterio quod die tertia nuptiae factae referuntur. Primum quidem saeculi tempus ante legem, patriarcharum exemplo; secundum sub lege, prophetarum scriptis; tertium sub gratia, praeconiis Evangelistarum, quasi tertiae diei luce, mundo refulsit, in quo dominus in carne natus apparuit. Sed et hoc quod in Cana Galilaeae, idest in zelo transmigrationis, eaedem nuptiae factae perhibentur, typice denuntiat, eos maxime gratia Christi dignos existere qui zelo fervere piae devotionis, ac de vitiis ad virtutes, de terrenis ad aeterna norunt transmigrare. Discumbente autem ad nuptias domino, vinum defecit, ut vino meliore per ipsum facto manifestaretur gloria latentis in homine Dei; unde sequitur et deficiente vino, dicit mater Iesu ad eum: vinum non habent"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Dignum autem est quaerere, unde venit in mentem matri magnum quid imaginari de filio: neque enim ante miraculum fecerat; sequitur enim hoc fecit initium signorum Iesus. Sed revelari incipiebat et a Ioanne, et ab his quae ad discipulos dixerat; sed ante haec omnia ipsa conceptio, et ea quae post nativitatem facta sunt maximam ei de puero imposuerunt aestimationem; unde Lucas dicit: Maria conservabat omnia verba haec, conferens in corde suo. Cuius igitur gratia non ante ad miraculum eum incitavit? Nam antea ut unus multorum ita conversabatur; unde non praesumebat ei mater tale quid dicere; quia vero audivit quod Ioannes ei testificatus est, et quod discipulos iam haberet, de reliquo confidenter rogat"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Significat etiam in hoc loco synagogam quae Christum provocat ad faciendum miraculum: familiare enim est Iudaeis miracula inquirere. Sequitur et dicit ei Iesus: quid mihi et tibi, mulier?"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Quidam derogantes Evangelio, et dicentes quod Iesus non fuit natus de Maria virgine, hinc argumentum sumere conantur erroris sui, ut dicant: quomodo erat mater eius cui dixit quid mihi et tibi, mulier? Sed quis hoc narravit, ut credamus quia hoc dominus dixit? Nempe Ioannes Evangelista. At ipse dixit et erat ibi mater Iesu. Quare hoc, nisi quia utrumque verum est? Sed numquid ideo venit ad nuptias, ut doceret matres contemni?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Sed quod valde venerabatur matrem, audi Lucam enarrantem, qualiter subditus parentibus erat. Nam ubi quidem parentes nihil impediunt eorum quae sunt secundum Deum, debitum est subici eis; quando autem non tempore debito aliquid quaerunt, et abscindunt nos a spiritualibus, non ex hoc fallaris"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de symbolo",
+        "latim": "Ut ergo distingueret inter Deum et hominem, quia secundum hominem minor et subditus erat, secundum autem Deum supra omnes erat, dixit quid mihi et tibi est, mulier?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Sed et propter aliam causam, ut non suspecta essent miracula quae fiebant (ab his enim qui indigebant, rogari oportuerat, non a matre), voluit ostendere quoniam omnia decenti tempore operatur, non simul omnia faciens: quia confusio quaedam esset; et ideo sequitur nondum venit hora mea; idest, nondum cognitus sum his qui adsunt. Sed neque sciunt quoniam defecit vinum: sine eos primum hoc sentire: qui enim necessitatem non praesentit, neque beneficii grandem suscipiet sensum",
+        "pt": "Mas também por outro motivo, para que não fossem suspeitos os milagres que se faziam (pois convinha ser rogado por aqueles que estavam em necessidade, não pela mãe), quis mostrar que faz tudo em tempo conveniente, não fazendo tudo ao mesmo tempo, pois haveria certa confusão; e por isso se segue: \"ainda não chegou a minha hora\", isto é, ainda não sou conhecido pelos que estão presentes. Mas eles nem sabem que faltou o vinho: deixa-os primeiro sentir isso; pois quem não pressente a necessidade, também não receberá grande senso do benefício",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Vel ideo quia dominus noster, secundum quod Deus erat, matrem non habebat; secundum quod homo erat, habebat matrem. Miraculum autem quod facturus erat, secundum divinitatem facturus erat, non secundum infirmitatem humanam. Miraculum tamen exigebat mater; at ille tamquam non agnoscens viscera humana, operaturus facta divina, dixit quid mihi et tibi est, mulier? Tamquam dicat: quod in me facit miraculum, non tu genuisti, deitatem meam. Dicitur autem mulier secundum femineum sexum, non secundum corruptionem integritatis. Sed quia genuisti infirmitatem meam, tunc te cognoscam cum ipsa infirmitas pendebit in cruce; unde subdit nondum venit hora mea; quasi dicat: ibi te agnoscam cum pendere in cruce infirmitas coeperit, cuius et mater es. Commendavit enim matrem discipulo, prius matre moriturus, et ante mortem matris resurrecturus. Videte autem ne forte quomodo invenerunt Manichaei occasionem perfidiae suae, quia dixit dominus quid mihi et tibi est, mulier? Sic inveniant mathematici occasionem fallaciae, quia dixit nondum venit hora mea. Dicunt enim: vides quia sub fato erat Christus, quia dixit nondum venit hora mea. Credant autem Deo dicenti: potestatem habeo ponendi animam meam, et iterum sumendi eam; et quaerant quare sit dictum nondum venit hora mea: nec ideo iam sub fato ponant conditorem caeli: quia si esset fatum de sideribus, non poterat esse sub necessitate siderum conditor siderum. Adde quod non solum Christus non habuit quod appellas fatum; sed nec tu, aut ille, aut quisquam hominum. Quare ergo dixit nondum venit hora mea? Quia in potestate habebat quando moreretur; sed nondum videbat esse opportunum ut illa potestate uteretur. Vocandi erant discipuli, annuntiandum erat regnum caelorum, faciendae erant virtutes, commendanda erat divinitas domini in miraculis, commendanda erat humanitas domini in ipsa compassione mortalitatis. At ubi tantum fecit quantum sufficere iudicavit, venit hora, non necessitatis, sed voluntatis; non conditionis, sed potestatis"
+      }
+    ]
+  },
+  {
+    "lectio": 2,
+    "versos": [
+      5,
+      11
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Quamvis dixerit nondum venit hora mea, postmodum fecit quod mater dixerat; ut etiam ex hoc sufficiens esset demonstratio quod non subiectus est horae. Si enim horae subiciebatur, qualiter debita hora nondum facta hoc fecit? Deinde et propter honorem matris, ut non finaliter ei contradicere videretur: neque eam tot praesentibus erubescere faceret: adduxerat enim ad eum ministros, ut a pluribus fieret petitio; unde sequitur dicit mater eius ministris: quodcumque dixerit vobis, facite"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quasi dicat: licet abnegare videatur, tamen faciet: noverat enim eum mater pium et misericordem. Sequitur erant autem ibi lapideae hydriae sex positae secundum purificationem Iudaeorum, capientes singulae metretas binas vel ternas. Hydriae vocantur vasa aquarum receptui parata; Graece enim aqua hydor dicitur"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Vasa autem aquarum receptui parata erant secundum purificationem Iudaeorum, quia inter alias Pharisaeorum traditiones etiam hoc observabant ut crebro se lavarent"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Quia vero inaquosa est Palaestina, et non erat multis in locis fontes et puteos invenire, replebant hydrias aqua, ut non currerent ad flumina, si quando immundi fierent; sed de prope haberent purgationis modum. Ne autem quidam infidelium suspicarentur quoniam, faece intus remanente, deinde aqua immissa, vinum subtilissimum factum esset, propterea ait secundum purificationem Iudaeorum, ostendens quod illa vasa numquam vini receptacula facta erant"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Metretas enim dicit mensuras quasdam, tamquam si diceret urnas, amphoras, vel aliud huiusmodi. Metron enim mensuram dicunt Graeci: inde appellatae metretae. Quod autem ait binas vel ternas, non ita accipiendum est quod aliae binas, aliae ternas; sed eaedem ipsae caperent binas quae etiam ternas. Sequitur dixit eis Iesus: implete hydrias aqua. Et impleverunt eas usque ad summum"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Sed quare antequam implevissent hydrias aqua, non fecit signum? Quod multo mirabilius esset: quia scilicet aliud est substantiam in aliam qualitatem transmutare, et ipsam substantiam ex nihilo facere. Hoc quidem mirabilius est, sed non ita videtur credibile multis. Propterea enim multoties a miraculorum magnitudine abstinet, volens magis credibile esse quod fiebat. Cum hoc et perversa dogmata evertit. Quia enim sunt quidam qui mundi conditorem alium esse dicunt, plura miraculorum ex subiectis substantiis facit; si enim contrarius ei esset qui conditor est mundi, non utique alienis uteretur ad propriae virtutis demonstrationem. Non autem ipse aquam hausit, et tunc vinum ostendit, sed hoc iubet ministris, ut eos testes haberet eius quod fiebat; unde sequitur et dicit eis Iesus: haurite nunc, et ferte architriclino"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Triclinium ordo trium lectorum; clini enim lectum significat. Architriclinus princeps triclinii, idest primus inter convivas, qui more antiquo in lectis discumbebant; unde quidam architriclinum intelligunt aliquem ex sacerdotibus Iudaeorum, qui nuptiis interesse poterant, ut illos instruerent qualiter nuptiis uti deberent"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Vel aliter. Quia aliqui possent dicere quod convivae ebrii erant, et sensus iudicantium corruptus, ut nescirent utrum aqua vel vinum esset; hi autem quibus ministratio conviviorum credita est, maxime vigiles sunt, unum opus habentes ut ornate et ordinate omnia disponantur; ideo in testimonium eorum quae fiebant dixit dominus ferte architriclino, propter evigilantem eius sensum: et non dixit: propinate discumbentibus"
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "de Trin",
+        "latim": "Aqua igitur hydriis infunditur, vinum calicibus hauritur: infundentis scientiae sensus non convenit haurientis. Qui infuderunt, hauriri aquam existimant: qui hauriunt vinum, infusum arbitrantur; unde sequitur ut autem gustavit architriclinus aquam vinum factam, et non sciebat unde esset (ministri autem sciebant, qui hauserant aquam), vocat sponsum architriclinus. Non autem aquae simplicitas defecit, et vini sapor natus est; non per transfusionem potioris obtinetur quod infirmius est; sed aboletur quod erat, et quod non erat coepit",
+        "pt": "A água, portanto, é derramada nas talhas, o vinho é tirado nos cálices: o conhecimento de quem derrama não coincide com o de quem tira. Os que derramaram julgam que se tira água; os que tiram o vinho pensam que foi derramado vinho; donde se segue: \"e quando o mestre-sala provou a água tornada vinho, e não sabia de onde era (mas os servos sabiam, que tinham tirado a água), chama o esposo o mestre-sala\". Ora, não é que a simplicidade da água tenha faltado e o sabor do vinho tenha nascido por transfusão de algo mais forte no que é mais fraco; mas se aboliu o que era, e começou o que não era",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Paulatim autem dominus volebat cognosci suorum signorum virtutem; et ideo neque ipse revelabat quod factum est, neque ministros architriclinus vocavit; non enim esset eis creditum de puro homine existimato tale testimonium reddentibus: sed vocat sponsum, qui maxime poterat conspicere quod fiebat. Non simpliciter autem Christus vinum, sed vinum optimum fecit; unde sequitur et dicit ei: omnis homo primum bonum vinum ponit, et cum inebriati fuerint, tunc id quod deterius est. Talia enim sunt Christi miracula, ut multo his quae per naturam fiunt, speciosiora et utiliora fiant. Igitur aqua vinum facta ministros testes habuit; boni vero vini factio architriclinum et sponsum. Probabile autem est et sponsum aliquid respondisse; sed Evangelista hoc praetermittit, tangens solum id quod necessarium est scire, scilicet quoniam vinum aquam fecit; unde statim subdit hoc fecit initium signorum Iesus in Cana Galilaeae. Tunc enim signa maxime necessarium erat facere, quando discipuli iam congregati erant devoti et attendentes his quae fiebant, manifeste aderant. Si vero dixerit quis non esse argumentum sufficiens ut hoc sit principium signorum, quia additur in Cana Galilaeae, quasi contingat alibi prius esse facta, dicemus, quod et antea diximus, quia Ioannes dicit: ut manifestetur Israeli, propterea veni baptizans. Si vero secundum primam aetatem miracula fecit, nequaquam indigebant Israelitae alio manifestante eum. Qui enim in brevi tempore ita per miraculorum multitudinem claruit, ut eius nomen manifestum fieret omnibus; multo magis si puer existens a prima aetate miracula fecisset: nam et ea quae fierent, inopinabiliora existimarentur ab infante facta, et tempus amplius esset. Decenter autem non incepit signa facere ex prima aetate: existimassent enim phantasiam esse incarnationem, et ante opportunum tempus cruci eum tradidissent livore liquefacti"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Hoc autem miraculum domini quo de aqua vinum fecit, non est mirum eis qui noverunt quia Deus fecit. Ipse enim fecit vinum illo die in hydriis qui omni anno hoc facit in vitibus; sed hoc assiduitate amisit admirationem: itaque servavit sibi Deus inusitata quaedam quae faceret, ut tamquam dormientes homines ad se colendum mirabiliter excitaret; propter quod sequitur et manifestavit gloriam suam",
+        "pt": "Ora, este milagre do Senhor, pelo qual fez vinho da água, não é motivo de espanto para aqueles que sabem que foi Deus quem o fez. Pois o mesmo que naquele dia fez o vinho nas talhas é quem todo ano o faz nas videiras; mas isso, pela assiduidade, perdeu a admiração: por isso Deus reservou para si algumas coisas inusitadas que faria, para despertar admiravelmente, como que a homens adormecidos, ao seu culto; por isso se segue: \"e manifestou a sua glória\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-09-26",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Quia ipse est rex gloriae, qui sicut dominus elementa mutabat"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Et hoc quantum ex parte sua: etsi vero tunc multi non cognoverunt, sed tamen omnes postea erant miraculum audituri. Sequitur et crediderunt in eum discipuli eius: hi enim debebant credere et facilius, et cum diligentia attendere his quae fiebant"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Sed si tunc in eum crediderunt, nondum erat discipuli cum ad nuptias vocati sunt; sed illo more locutionis hoc dictum est quo loquimur cum dicimus apostolum Paulum in Tharso Ciliciae natum: neque enim tunc iam erat apostolus. Ita discipulos Christi invitatos ad nuptias cum audimus, non iam discipulos, sed qui futuri erant discipuli intelligere debemus"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Illa autem mysteria quae in isto miraculo domini latent, videte. Oportebat impleri in Christo quae de illo scripta erant. Illa erat aqua; fecit autem de aqua vinum, cum aperuit eis sensum, et exposuit Scripturas: sic enim sapit quod non sapiebat, et inebriat quod non inebriabat"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Apparente enim domino in carne, vinosa legalis sensus suavitas paulatim coeperat ob carnalem Pharisaeorum interpretationem a prisca sua virtute deficere"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Si autem iussisset aquam effundi, et ipse mitteret vinum ex occultis creaturae finibus, videretur Scripturas veteres improbasse. Cum autem ipsam aquam convertit in vinum, ostendit nobis quod et Scriptura vetus ab ipso est: nam iussu ipsius impletae sunt hydriae. Sed nihil sapit illa Scriptura, si non ibi Christus intelligatur. Novimus autem legem ex quibus temporibus narret, idest ab exordio mundi; inde usque ad hoc tempus quod nunc agimus, sexta aetas est: nam prima aetas computatur ab Adam usque ad Noe, secunda a Noe usque ad Abraham, tertia ab Abraham usque ad David, quarta a David usque ad transmigrationem Babylonis, quinta usque ad Ioannem Baptistam, sexta inde usque ad finem saeculi. Sex ergo illae hydriae sex aetates significant, quibus non defuit prophetia. Impletae sunt prophetiae, plenae sunt hydriae. Quid est autem quod capiebant metretas binas vel trinas? Si trinas tantum diceret, non curreret animus noster nisi ad mysterium Trinitatis. Sed forte nec sic debemus inde sensum avertere, quia dixit binas vel trinas: quia nominato patre et filio, consequenter et spiritus sanctus intelligendus est. Oportet enim intelligi caritatem invicem patris et filii, quod est spiritus sanctus. Sed est et alius intellectus non praetermittendus: binae enim metretae intelliguntur in duobus generibus hominum, idest Iudaeis et Graecis; tres autem propter Noe tres filios significandos"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Ministri autem sunt doctores novi testamenti, qui Scripturas aliis sacras spiritualiter interpretantur; architriclinus autem est aliquis legisperitus, ut Nicodemus, Gamaliel, Saulus. Dum ergo talibus Evangelii verbum committitur, quod in littera legis occultabatur, quasi vinum de aqua factum architriclino propinatur. Et bene in domo nuptiarum tres ordines discumbentium describuntur: quia Ecclesia tribus ordinibus fidelium constat: coniugatorum, continentium et doctorum. Optimum autem vinum Christus usque adhuc servavit, idest Evangelium usque ad sextam aetatem distulit"
+      }
+    ]
+  },
+  {
+    "lectio": 3,
+    "versos": [
+      12,
+      13
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Quoniam autem paulo post dominus Hierosolymam ascensurus erat, Capharnaum adiit, ut non ubique fratres et matrem secum trahat; unde dicitur post haec descendit Capharnaum ipse et mater eius et fratres eius et discipuli eius; et ibi manserunt non multis diebus"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Hic est autem dominus Deus noster excelsus, ut nos faceret; humilis, ut nos reficeret; ambulans inter homines, patiens humana, abscondens divina. Ecce habet matrem, habet fratres, habet et discipulos. Inde fratres unde matrem. Fratres enim Scriptura nostra appellare consuevit non eos solos qui nascuntur ex eodem utero aut ex eodem patre; sed ex eodem gradu, velut compatrueles aut consobrinos. Unde ergo fratres domino? Num enim Maria iterum peperit? Absit: inde coepit dignitas virginum. Abraham patruus erat Lot, et Iacob Laban Syrum habebat avunculum; et utrique dicti sunt fratres"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Fratres ergo domini dicuntur cognati Mariae vel Ioseph, non filii Mariae vel Ioseph: quia non solum beata virgo, sed etiam Ioseph testis castitatis eius ab omni actione coniugali immunis permansit"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Quod vero dicit et discipuli eius, incertum est utrum iam illi adhaeserant etiam Petrus, et Andreas, et filii Zebedaei. Matthaeus enim primo narrat quod venerit et habitaverit in Capharnaum, et postea quod eos de navibus piscantes vocaverit. An forte Matthaeus quod praetermiserat recapitulavit? Quia sine ulla consequentis temporis differentia dixit: ambulans iuxta mare Galilaeae, vidit duos fratres, an potius alii discipuli fuerunt? Scriptura enim evangelica et apostolica non solum illos duodenos appellat discipulos eius, sed omnes qui in Deum credentes ad regnum caelorum magisterio eius erudiebantur. Illud etiam requirendum est, quomodo hic dicit, antequam Ioannes Baptista missus esset in carcerem, Iesum venisse in Galilaeam: cum Matthaeus dicat: cum autem audisset quod Ioannes traditus esset, secessit in Galilaeam: similiter etiam et Marcus. Lucas etiam nihil quidem dicit de tradito Ioanne: sed post Baptismum et tentationem Christi dicit eum iisse in Galilaeam, sicut illi duo. Unde intelligitur tres Evangelistas non Ioanni Evangelistae contraria narrasse, sed praetermisisse primum domini adventum in Galilaeam posteaquam baptizatus est, quando illic aquam convertit in vinum"
+      },
+      {
+        "autor": "Eusebius Eccles",
+        "obra": "Hist",
+        "latim": "Cum enim trium Evangeliorum ad Ioannem Evangelistam notitia pervenisset, probasse quidem dicitur fidem et veritatem dictorum; deesse tamen vidit aliqua, et ea maxime quae primo praedicationis suae tempore dominus gesserat: certum est enim quod in superioribus tribus Evangeliis haec videntur sola contineri quae in eo gesta sunt anno quo Ioannes Baptista vel inclusus est in carcere, vel punitus. Et ideo rogatus dicitur Ioannes apostolus ut ea quae praeterierant priores ante traditionem Ioannis, salvatoris gesta conscriberet. Unde si quis diligenter consideret, inveniet Evangelia non dissonare; sed alterius temporis gesta esse quae scribit Ioannes, alterius vero quae ceteri"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Neque enim in Capharnaum miraculum ullum tunc operatus est: qui enim civitatem habitabant illam, non sane se habebant ad Christum, sed erant valde corrupti: ideo tamen accedit et parum ibi trahit tempus propter eum qui ad matrem erat honorem"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Ideo etiam non multis diebus ibi manserunt, propter festum Paschae, quod iam appropinquabat; unde sequitur et prope erat Pascha Iudaeorum"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "in Ioannem",
+        "latim": "Sed quid intendit ibi appositio Iudaeorum? Non enim nationis alterius Paschae solemnitas fuerat. Forsan vero quia quoddam est Pascha humanum eorum qui procul a proposito Scripturae celebrant illud, quoddam vero divinum et verum, quod in spiritu et veritate perficitur. Ad distinctionem ergo divini dicitur Iudaeorum. Sequitur et ascendit Hierosolymam"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Bis in Evangeliis legitur Iesum ascendisse Hierosolymam: semel in primo anno praedicationis, dum adhuc Ioannes non erat missus in carcerem; de hoc ascensu nunc agitur; et iterum illo anno quo erat passurus. Dedit autem nobis exemplum dominus quanta cura divinis subdi debeamus imperiis. Si enim ipsa Dei filius decreta legis a se data implebat, celebrans solemnitates cum ceteris hominibus, quanto studio bonorum operum servi debent solemnitates et praevenire et celebrare?"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Mystice autem, cum facta est nuptiarum praeparatio in Cana Galilaeae, descendit una cum matre, fratribus et discipulis in Capharnaum, quae interpretatur ager consolationis. Oportebat enim post vini alacritatem, ad agrum consolationis, una cum matre et discipulis ascendere salvatorem, consolaturum in futuris fructibus et in agrorum multitudine suscipientes disciplinam eius, et animam quae illum spiritu sancto concepit, et iuvandos ibi. Sunt enim quidam fructificantes, ad quos dominus ipse descendit una cum verbi ministris atque discipulis, adiuvans huiusmodi praesente matre sua. Videntur autem qui Capharnaum ducti sunt, non capere diuturnam apud se Iesu praesentiam: quoniam illuminationem quae de pluribus dogmatibus est, inferioris consolationis agellus non capit, cum paucorum capax existat"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Vel Capharnaum villa pulcherrima est, et significat mundum, in quem verbum patris descendit"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non multis autem diebus ibi mansit, quia parvo in hoc mundo tempore cum hominibus conversatus est"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Est autem Hierosolyma civitas regis magni, velut ipse salvator ait, ad quam nullus eorum qui manent in terris conscendit nec ingreditur: sed quaelibet anima quae naturalem obtinet celsitudinem et acumen intelligibilium perspicuum, eius civitatis est incola, ad quam solus Iesus ascendisse dicitur. Videntur tamen post discipuli fore praesentes dum recolunt zelus domus tuae comedit me; sed quasi in quolibet discipulorum Iesus ascendit"
+      }
+    ]
+  },
+  {
+    "lectio": 4,
+    "versos": [
+      14,
+      17
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "super Matth",
+        "latim": "Dominus Ierusalem adveniens, continuo templum oraturus addit, nobis dans exemplum ut quocumque properamus, domum Dei primo ingrediamur, dominum deprecaturi; unde dicitur et invenit in templo vendentes boves et oves et columbas"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Sacrificia enim illi populo pro eius carnalitate talia data sunt, quibus teneretur ne ad idola deflueret; et immolabant boves et oves et columbas"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Sed quia de longinquo properantes quae iussa sunt immolari domino, secum ferre non poterant, eorum pretia deferebant: unde nacta occasione, haec animalia in templo Scribae et Pharisaei vendi instituerunt, ut venientes emerent et offerrent, eademque oblata ipsi aliis venderent; et sic sua lucra accumularent. Unde et nummularii ad hoc sedebant ad mensam, ut inter emptores venditoresque hostiarum prompta esset pecunia: unde subditur et nummularios sedentes. Dominus autem nolens aliquid in domo sua terrenae esse negotiationis, neque eius quae honesta putaretur, negotiatores omnes expulit foras"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Et qui flagellandus erat ab eis, prior illos flagellavit; unde sequitur et cum fecisset quasi flagellum de funiculis, omnes eiecit de templo"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Neque solum eos eiecit qui vendebant et emebant, sed etiam res eorum; unde subditur oves quoque et boves et nummulariorum effudit aes, et mensas evertit, scilicet nummularias, quae erant quasi vasa denariorum"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Consideremus autem, ne forte enorme videatur quod Dei filius captis funiculis parat sibi flagellum ad eiciendum de templo. Unum tamen refugium ad horum responsionem relinquitur divina potestas Iesu, ut cum volebat posset iracundiam hostium suffocare, quamvis essent innumeri, et sedare mentium turbines: dominus enim dissipat cogitationes gentium. Praesens autem historia in nullo minorem potestatem praetendit his quae ab eo miraculosius edita sunt: quinimmo constat hanc maiorem demonstrare potentiam miraculo quo aqua conversa est in vinum: eo quod illic inanimata subsistit materia, hic vero tot millium hominum domantur ingenia"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Manifestum est autem non semel, sed iterato hoc factum esse a domino. Sed illud primum commemoratur hic a Ioanne, istud ultimum a ceteris tribus"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Et Ioannes quidem hic dicit quod expulit vendentes de templo; Matthaeus autem ait quoniam expulit vendentes et ementes. Multo autem maior numerus erat ementium quam vendentium; quorum expulsio transcendebat dignitatem eius qui reputabatur filius carpentarii; nisi quod divina potestate sibi omnes subiecit, ut dictum est"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Commendatur autem in hac lectione utraque Christi natura: humana quidem, in hoc quod matrem comitem habuisse perhibetur; divina vero, in hoc quod verus Dei filius demonstratur; sequitur enim et his qui vendebant columbas dixit: auferte ista hinc, et nolite facere domum patris mei domum negotiationis"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Ecce patrem vocat, et non irascuntur: aestimant enim simpliciter eum dicere; sed quia postea apertius loquebatur, ut solam repraesentaret parilitatis intelligentiam, propterea saeviebant. Et Matthaeus quidem dicit quod eiciens eos dicebat: nolite facere domum meam speluncam latronum: illud enim fecit ad passionem veniens, ideo durioribus sermonibus utebatur; hoc autem in principio signorum fecit; unde non ita aspera, sed remissa quodammodo increpatione utitur"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Ecce templum illud figura adhuc erat, et eiecit inde dominus omnes qui ad nundinas venerant. Et quae ibi vendebant? Quae opus habebant homines in sacrificio illius temporis. Quid si ibi ebriosos inveniret? Si negotiationis non debet fieri domus Dei, potationis fieri debet?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Sed cuius gratia tali vehementia Christus usus est? Quia enim in sabbato curaturus erat, et multa facturus quae videbantur eis esse legis transgressio, ut non videatur Deo contrarius, hoc cum periculo fecit, dans intelligere quod qui periculis se exponit pro bono ornatu domus, dominum domus non contemnit: et ideo, ut ostenderet sui consonantiam ad Deum, non dixit: domum sanctam, sed domum patris mei. Et propter hoc etiam subditur recordati vero sunt discipuli eius quia scriptum est: zelus domus tuae comedit me"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Discipuli enim videntes in eo hunc ferventissimum zelum, recordati sunt quia zelo domus patris salvator eiecit impios de templo"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Zelus, cum in bono accipitur, est quidam fervor animi, quo mens relicto humano timore pro defensione veritatis accenditur"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Comeditur ergo zelus domus Dei, qui omnia quae videt ibi perversa cupit emendare: et si emendare non potest, tolerat et gemit. Si ergo in domo tua ne quid perversum fiat satagis, in domo Dei, ubi salus proposita est, debes pati, quantum in te est, si quid perversi videris? Amicus est? Admoneatur leniter; uxor est? Severissime frenetur; ancilla est? Etiam verberibus compescatur. Fac quicquid potes pro persona quam portas"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Mystice autem quotidie Deus spiritualiter suam Ecclesiam intrat, et qualiter ibi unusquisque conversetur attendit. Caveamus ergo ne in Ecclesia Dei fabulis, vel risibus, vel odiis, vel cupiditatibus vacemus, ne improvisus veniens nos flagellet, et de Ecclesia sua eiciat"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "in Ioannem",
+        "latim": "Possibile enim est Hierosolymitanum quoque delicto subiacere, et capacissimos deviare: quod nisi post delictum citissime convertantur, capacitatem amittunt. Invenit igitur in templo, idest in sacris, vel in enuntiatione ecclesiastici sermonis, quosdam qui patris domum, domum negotiationis constituebant, qui scilicet venales exponunt boves, quos oportet servare ad aratrum, ne retrocedentes non disponantur ad regnum Dei; qui etiam praeferunt mammonam iniquitatis ovibus, ex quibus habent ornatus materiam; qui etiam solertiam columbarum privata qualibet amaritudine vilipendunt. Cum ergo hos invenerit salvator in domo sacrata, facto de funiculis flagello fugat illos una cum venalibus ovibus et bobus suis, et spargit aeris pondera velut indigna in domo Dei retineri, subvertitque constitutas tabulas in animabus avarorum, et mandat ne ulterius in domo Dei columbae vendantur. Arbitror autem et exemplum ipsum statuisse per praedicta secretius, ut intelligamus per hoc, si quid agi debeat erga sacram illam oblationem a sacerdotibus, non debere ritu sensibilium oblationum agi, nec legem observari debere, ut carnales Iudaei volebant: nam Iesu propellente boves et oves, iubente auferri columbas, quae ut plurimum offerebantur iuxta consuetudinem Iudaeorum, et subvertente mensas materialium nummorum non expresse, sed figuraliter continentium divinas impressiones, ea scilicet quae secundum legis Scripturam videbantur honesta, et utente eo in plebem flagellis, dissolvenda et dispergenda haec erant, translato regno ad eos qui ex gentibus crediderunt"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Vel vendentes in Ecclesia sunt qui quae sua sunt quaerunt, non quae Iesu Christi. Venale habent totum, quia volunt redimi. Simon ideo volebat emere spiritum sanctum, quia vendere volebat: erat enim de illis qui columbas vendunt: etenim in columba apparuit spiritus sanctus: columba autem non est venalis; gratis datur, quia gratis vocatur"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vendunt igitur columbas qui acceptam spiritus sancti gratiam non gratis, ut praeceptum est, sed ad praemium dant; qui manuum impositionem, qua spiritus sanctus accipitur, etsi non in quaestum pecuniae, ad vulgi tamen favorem tribuunt; qui sacros ordines non ad vitae meritum, sed ad gratiam largiuntur"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Boves autem intelliguntur apostoli et prophetae, qui nobis Scripturas sacras dispensaverunt. Qui ergo ipsis Scripturis fallunt populos a quibus quaerunt honores, vendunt boves, vendunt et oves, idest ipsas plebes, et cui vendunt, nisi Diabolo? Quidquid enim de unica Ecclesia praeciditur, quis tollit nisi leo rugiens?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vel oves sunt opera munditiae et pietatis. Vendunt ergo oves qui humanae gratia laudis pietatis exercent. Nummos mutuo dant in templo qui aperte terrenis rebus in Ecclesia deserviunt. Domum etiam domini faciunt domum negotiationis, non solum hi qui propter sacros ordines pretium pecuniae vel laudis vel honoris quaerunt; verum etiam hi qui gradum vel gratiam spiritualem, quam in Ecclesia domino largiente perceperunt, non simplici intentione, sed cura humanae retributionis exercent"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Signum autem quoddam nobis ostendit dominus, quod fecit flagellum de resticulis, et inde negotiationem in templo facientes flagellavit. Etenim unusquisque in peccatis suis restem sibi texit, dum peccata addit peccatis. Quando ergo aliquid patiuntur homines propter iniquitates suas, agnoscant quia dominus facit flagellum de resticulis, et adhuc admonet eos ut mutent se: nam si se non mutaverint, audient in fine: ligate illi manus et pedes"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Facto igitur de funiculis flagello, illos eiecit de templo: quia de parte sortis sanctorum eiciuntur qui inter sanctos positi, vel ficte bona, vel aperte faciunt opera mala. Oves quoque et boves eiecit: quia talium vitam pariter et doctrinam ostendit esse reprobam. Nummulariorum quoque effudit aes, et mensas subvertit; quia damnatis in fine reprobis, etiam ipsarum quas dilexerunt rerum tollet figuram. Venditionem columbarum de templo auferri praecepit: quia gratia spiritus, quae gratis accipitur, gratis dari debet"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Potest etiam per templum intelligi anima studiosi, propter inhabitans verbum Dei, in qua ante doctrinam Iesu constiterant terrestres et bestiales motus. Signum autem terrestrium motuum bos est, quoniam est agri cultor; insensatorum autem motuum ovis, quod est pluribus animalibus irrationalius; levium vero atque inconstantium mentium signum est columba; eorum vero qui boni videntur, signa sunt aera, quae Christus verbo doctrinae expellit, ut non ultra domus patris eius sit forum"
+      }
+    ]
+  },
+  {
+    "lectio": 5,
+    "versos": [
+      18,
+      22
+    ],
+    "itens": [
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quia Iudaei videbant Iesum talia facere cum potestate multa, et dicentem nolite facere domum patris mei, domum negotiationis: signum ab eo petunt; unde dicitur responderunt ergo Iudaei, et dixerunt ei: quod signum ostendis nobis, quia haec facis?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Sed numquid signa opus erant ut ea quae male fiebant cessare faceret? Nonne zelum talem accipere pro domo Dei maximum signum virtutis erat? Non autem illius prophetiae meminerant; sed signum petebant, simul quidem de suo turpi lucro impedito dolentes, simul autem et per hoc prohibere eum volentes: opinantur enim eum aut provocare ad miracula, aut cessare ab his quae fiebant. Propterea non dat eis signum, sicut et petentibus signum respondit dicens: generatio mala et adultera signum quaerit, et signum non dabitur ei, nisi signum Ionae prophetae. Sed tunc quidem manifestius, nunc autem obscurius respondet idem. Non autem is utique qui non petentes praeoccupat, et signa dat, hic petentes avertisset, nisi mentem eorum cognovisset dolosam; sequitur enim et dixit eis: solvite templum hoc, et in tribus diebus excitabo illud"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quia enim signum quaerebant a domino, quare solita commercia proicere debuerit ex templo; respondit: quia ipsum templum significabat templum corporis sui, in quo nulla prorsus esset alicuius macula peccati; quasi dicat: sicut inanimatum templum a vestris commerciis sceleribusque mea expio potestate, ita et hoc corporis mei templum, cuius istud gestat figuram, vestris manibus dissolutum, tertia die resuscitabo"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Nequaquam tamen illos ad homicidium provocat dicens solvite; sed hoc eis affectantibus, non sibi esse absconditum demonstrat. Audiant autem Ariani, quomodo dominus mortis destructor dixit excitabo, virtute videlicet propria"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Resuscitavit eum quidem et pater, cui dicit: excita me, et reddam illis. Sed quid fecit pater sine verbo? Quomodo ergo eum pater resuscitat, sic et filius resuscitavit: quia filius dixit: ego et pater unum sumus"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Propter quid autem signum resurrectionis dat eis? Quoniam scilicet hoc maxime erat quod ostendebat eum non esse hominem purum, posse adversus mortem statuere triumphum, et tyrannidem eius longam velociter dissolvere"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Utraque autem, scilicet et corpus Iesu et templum, exemplar mihi fore videntur Ecclesiae, eo quod ex vivis lapidibus construitur in domum spiritualem, in sacerdotium sanctum, et propter illud: vos estis corpus Christi et membra de membro. Quamvis autem dissolvi lapidum videatur structura ac dissipari omnia ossa Christi adversitatibus tribulationum; instaurabitur tamen templum, ac resuscitabitur die tertia, quae in novo caelo et nova terra praesens erit. Sicut enim illud Christi corpus sensibile crucifixum est ac sepultum, et postea resurrexit; sic et totale sanctorum Christi corpus concrucifixum est Christo: quilibet enim eorum in nullo alio gloriatur nisi in cruce Christi, per quam ipse crucifixus est mundo. Sed et consepultus est Christo et resurrexit cum eo, quia in quadam novitate vitae ambulat. Sed secundum beatam resurrectionem nondum surrexit; unde non scriptum est: tertia die restaurabo illud, sed in tribus diebus: perficitur enim eius erectio in omnibus tribus diebus"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Iudaei enim de inanimato templo putantes eum hoc dicere, deridebant eum; unde sequitur dixerunt ergo Iudaei: quadraginta et sex annis aedificatum est templum hoc, et tu in tribus diebus excitabis illud?"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Et notandum, quod non de prima aedificatione, quae a Salomone septem annis perfecta est, sed de reaedificatione, quae facta est sub Zorobabel per quadraginta et sex annos impedientibus inimicis respondebant"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Vel dicit aliquis, quadraginta et sex annorum exsurgere computum, ex quo David allocutus est Nathan prophetam consulens de constructione templi, ex tunc satagens ad congregandam materiam templi. Animadverte vero si possibile est quadragenarium numerum statui erga templum propter quatuor elementa mundi, ac senarium propter hoc quod homo sexto die creatus est"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Trin",
+        "latim": "Vel hic numerus perfectioni dominici corporis apte congruit; quadragies enim sexies seni fiunt ducenta septuaginta sex; qui numerus dierum complet novem menses et sex dies. Ipsa autem perfectio corporis domini tot diebus ad partum producta comperitur, sicut a maioribus traditum suscipiens Ecclesiae custodit auctoritas. Octavo enim Kalendas Aprilis conceptus creditur, quo et passus; natus autem traditur octavo Kalendas Ianuarii. Ab illo ergo die usque ad istum computati ducenti septuaginta sex reperiuntur dies, qui senarium numerum quadragies sexies habent"
+      },
+      {
+        "autor": "Augustinus Lib",
+        "obra": "83 quaest",
+        "latim": "Dicitur etiam conceptio humana sic procedere, et perfici primis sex diebus, quasi lactis habeat similitudinem, sequentibus novem diebus convertatur in sanguinem, deinde duodecim diebus solidetur, reliquis decem et octo diebus formetur usque ad perfecta lineamenta omnium membrorum; et in reliquo tempore usque ad tempus partus magnitudine augeatur. Sex autem et novem et duodecim et decem et octo in unum coacti, fiunt quadraginta quinque: addito ergo uno fiunt quadraginta sex; qui si fuerint multiplicati per ipsum senarium numerum, qui huius ordinationis caput tenet, fiunt ducenti septuaginta sex, idest novem menses, et sex dies. Non ergo absurde quadraginta sex annis dicitur fabricatum esse templum, quod corpus eius significabat; ut quot anni fuerint in fabricatione templi, tot dies fuerint in corporis dominici perfectione"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Vel aliter. Quia dominus noster de Adam corpus accepit, non de Adam peccatum traxit; templum corporeum inde sumpsit, non iniquitatem, quae de templo pellenda est. Si autem facias quatuor nomina Graeca, anatoli, quod est oriens, dysis, quod est occidens, Arctos, quod est Septemtrio, mesembria, quod est meridies, capita verborum Adam habent. A quatuor enim ventis dominus collecturum se dicit electos suos cum venerit ad iudicium. Habent autem litterae nominis Adam numerum secundum Graecos; et ibi invenitur quadragintasex annis aedificatum templum. Habet enim Adam alpha, quod est unum; et delta, quod quatuor; et alpha, quod est unum; et mi, quod est quadraginta: et sic habet quadragintasex. Sed Iudaei, quia caro erant, carnalia sapiebant; ille spiritualiter loquebatur, et de quo templo diceret, per Evangelistam nobis aperuit; sequitur enim ille autem dicebat de templo corporis sui"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Ex hoc autem Apollinarius contradictionem sumit, volens ostendere, quod caro Christi esset inanimata, eo quod templum sit inanimatum: ergo carnem Christi et lapidem et lignum facies, quia ex his templum consistit. Si autem quod dicitur: anima mea turbata est; et: potestatem habeo ponendi animam meam; nequaquam de anima rationali dici dixeris; ubi pones illud: in manus tuas, domine, commendo spiritum meum? Non enim hoc de anima irrationali intelligere poteris: neque quod dicitur: non derelinques animam meam in Inferno"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Ideo autem corpus domini templum intelligitur, quia sicut templum gloriam Dei continebat habitantem in ipso, sic corpus Christi repraesentans Ecclesiam, unigenitum continet, qui est imago Dei et gloria"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Duo autem erant quae obstabant discipulis ne interim intelligerent: unum ipsa resurrectio; alterum vero, quod maius erat, scilicet quod Deus erat qui in illo corpore habitabat; quod dominus occulte ostenderat, dicens solvite templum hoc, et in tribus diebus excitabo illud. Et ideo subditur cum ergo resurrexisset a mortuis, recordati sunt discipuli eius quia hoc dicebat de corpore suo, et crediderunt Scripturae, et sermoni quem dixit Iesus"
+      },
+      {
+        "autor": "Alcuinus",
+        "obra": "",
+        "latim": "Ante resurrectionem enim non intelligebant Scripturas, quia nondum acceperant spiritum sanctum; sed in die resurrectionis apparens dominus aperuit discipulis sensum ut intelligerent quae de ipso scripta erant in lege et prophetis; et tunc crediderunt Scripturae prophetarum, qui praedixerunt Christum tertia die resurrecturum, et sermoni quem dixit Iesus solvite templum hoc"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "in Ioannem",
+        "latim": "Secundum anagogem vero, complementum fidei attingemus in magna resurrectione totius corporis Iesu, idest Ecclesiae eius; cum fides quae est ex specie, multum differat ab ea quae est per speculum in aenigmate"
+      }
+    ]
+  },
+  {
+    "lectio": 6,
+    "versos": [
+      23,
+      25
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Superius Evangelista narravit quid dominus Ierusalem adveniens gesserit; nunc vero eodem Hierosolymis commorante, quid ab aliis erga eum actum fuerit refert; unde dicitur cum autem esset Hierosolymis in Pascha in die festo, multi crediderunt in nomine eius, videntes signa quae faciebat"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "",
+        "latim": "Respiciendum autem quomodo ex signis eius plerique videntes credebant in eum. Non enim dicitur prodigia fecisse Hierosolymis, nisi forte, cum facta sint, in Scripturis non habeantur. Animadverte vero si possibile est in miraculis deputari quod fecerit flagellum ex funiculis, et cunctos ex templo propulerit"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Prudentiores autem fuerant discipuli, qui ad Christum accesserant, non propter signa sed propter doctrinam; nam grossiores quidem per signa trahuntur, rationabiliores vero per prophetias seu doctrinam; unde subditur ipse autem Iesus non credebat semetipsum eis"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "in Ioannem",
+        "latim": "Quid sibi vult hoc illi credebant in nomine eius, et ipse Iesus non credebat semetipsum eis? An forte non credebant ei, et fingebant se credidisse? Sed non diceret Evangelista multi crediderunt in nomine eius. Magna ergo res et mira. Credunt homines in Christum, et Christus non se credit hominibus, praesertim quia filius Dei est, et utique volens passus est, et si nollet, nunquam pateretur. Sed tales sunt omnes catechumeni. Si dixerimus catechumeno: credis Christo? Respondet: credo, et signat se. Si interrogemus eum: manducas carnem filii hominis? Nescit quid dicimus, quia Iesus non se credidit ei"
+      },
+      {
+        "autor": "Origenes",
+        "obra": "in Ioannem",
+        "latim": "Vel dicendum, quod Iesus non se credidit credentibus in nomine eius, et non in illum. In illum enim credunt qui angustam viam vadunt ducentem ad vitam: qui autem credunt signis, non in eum, sed in nomine eius credunt"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Vel hoc dicit, quia non confidebat in eis ut in discipulis perfectis, neque committebat eis omnia dogmata, ut iam firmiter fidelibus fratribus: non enim intendebat exterioribus verbis, ad mentem eorum intrans, et tempus opportunum manifeste sciens; unde sequitur eo quod ipse nosset omnes, et quia opus non erat ut quis testimonium perhiberet de homine: ipse enim sciebat quid esset in homine. Scire enim ea quae sunt in corde hominum, est Dei, qui solus corda plasmavit. Non indiget ergo testibus, ut propriorum plasmatum mentem addiscat"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Plus etiam noverat artifex quid esset in opere suo, quam ipsum opus quid esset in semetipso. Nam et Petrus non noverat quid in ipso esset quando dixit: tecum ero usque ad mortem; sed dominus noverat quid esset in homine, dicens: priusquam gallus cantet, ter me negabis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quapropter monemur ut nunquam de conscientia nostra securi simus, sed semper solliciti formidemus: quia quod nos latet, aeternum arbitrum latere non valet"
+      }
+    ]
+  }
+]

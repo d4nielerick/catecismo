@@ -2,7 +2,35 @@
   "data": "2026-10-01",
   "evangelho": "Lc 10,1-12",
   "leituras": "Jó 19,21-27 | Sl 26(27),7-8a.8b-9abc.13-14 (R. 13) | Lc 10,1-12",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 10,
+      "lectio": 1,
+      "versos": [
+        1,
+        2
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 10,
+      "lectio": 2,
+      "versos": [
+        3,
+        4
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 10,
+      "lectio": 3,
+      "versos": [
+        5,
+        12
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 765,
@@ -30,6 +58,19 @@
       "frase": "Jesus exorta os seus discípulos a levar para a oração esta solicitude em cooperar com o desígnio de Deus."
     }
   ],
-  "tema": "",
-  "destaques": []
+  "tema": "Os enviados dois a dois, a messe e o anúncio da paz",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 5
+    },
+    {
+      "lectio": 2,
+      "i": 3
+    },
+    {
+      "lectio": 3,
+      "i": 0
+    }
+  ]
 }
