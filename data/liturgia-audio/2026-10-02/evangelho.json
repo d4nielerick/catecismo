@@ -1,0 +1,107 @@
+{
+  "referencia": "Mt 18,1-5.10",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 51.98,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 4.02,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
+    },
+    {
+      "t0": 4.92,
+      "t1": 5.92,
+      "texto": "Naquela hora,"
+    },
+    {
+      "t0": 6.2,
+      "t1": 8.74,
+      "texto": "Os discípulos aproximaram-se de Jesus"
+    },
+    {
+      "t0": 8.74,
+      "t1": 9.8,
+      "texto": "e perguntaram:"
+    },
+    {
+      "t0": 9.8,
+      "t1": 12.62,
+      "texto": "\"Quem é o maior no Reino dos Céus?\""
+    },
+    {
+      "t0": 13.28,
+      "t1": 15.04,
+      "texto": "Jesus chamou uma criança,"
+    },
+    {
+      "t0": 15.04,
+      "t1": 16.98,
+      "texto": "colocou-a no meio deles"
+    },
+    {
+      "t0": 16.98,
+      "t1": 17.76,
+      "texto": "e disse:"
+    },
+    {
+      "t0": 18.7,
+      "t1": 20.12,
+      "texto": "\"Em verdade vos digo,"
+    },
+    {
+      "t0": 20.44,
+      "t1": 22.36,
+      "texto": "se não vos converterdes,"
+    },
+    {
+      "t0": 22.36,
+      "t1": 24.62,
+      "texto": "e não vos tornardes como crianças,"
+    },
+    {
+      "t0": 24.98,
+      "t1": 27.1,
+      "texto": "não entrareis no Reino dos Céus."
+    },
+    {
+      "t0": 27.94,
+      "t1": 30.24,
+      "texto": "Quem se faz pequeno como esta criança,"
+    },
+    {
+      "t0": 30.62,
+      "t1": 32.76,
+      "texto": "esse é o maior no Reino dos Céus."
+    },
+    {
+      "t0": 33.22,
+      "t1": 36.84,
+      "texto": "E quem recebe em meu nome uma criança como esta,"
+    },
+    {
+      "t0": 37.24,
+      "t1": 38.6,
+      "texto": "é a mim que recebe."
+    },
+    {
+      "t0": 38.6,
+      "t1": 41.88,
+      "texto": "Não desprezeis nenhum desses pequeninos,"
+    },
+    {
+      "t0": 42.08,
+      "t1": 45.04,
+      "texto": "pois eu vos digo que os seus anjos nos céus"
+    },
+    {
+      "t0": 45.04,
+      "t1": 49.44,
+      "texto": "veem sem cessar a face do meu Pai que está nos céus\"."
+    },
+    {
+      "t0": 50.28,
+      "t1": 51.98,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

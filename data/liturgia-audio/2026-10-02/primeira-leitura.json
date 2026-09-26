@@ -1,0 +1,97 @@
+{
+  "referencia": "Ex 23,20-23",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 52.76,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 2.06,
+      "texto": "Leitura do Livro do Êxodo."
+    },
+    {
+      "t0": 3.28,
+      "t1": 4.88,
+      "texto": "Assim diz o Senhor:"
+    },
+    {
+      "t0": 5.7,
+      "t1": 8.68,
+      "texto": "\"Vou enviar um anjo que vá à tua frente,"
+    },
+    {
+      "t0": 8.96,
+      "t1": 10.82,
+      "texto": "que te guarde pelo caminho"
+    },
+    {
+      "t0": 11.3,
+      "t1": 14.18,
+      "texto": "e te conduza ao lugar que te preparei."
+    },
+    {
+      "t0": 14.18,
+      "t1": 17.78,
+      "texto": "Respeita-o e ouve a sua voz."
+    },
+    {
+      "t0": 18.46,
+      "t1": 20.16,
+      "texto": "Não lhe sejas rebelde,"
+    },
+    {
+      "t0": 20.36,
+      "t1": 23.12,
+      "texto": "porque não suportará as vossas transgressões,"
+    },
+    {
+      "t0": 23.38,
+      "t1": 25.44,
+      "texto": "e nele está o meu nome."
+    },
+    {
+      "t0": 26.64,
+      "t1": 28.14,
+      "texto": "Se ouvires a sua voz"
+    },
+    {
+      "t0": 28.14,
+      "t1": 30.24,
+      "texto": "e fizeres tudo o que eu disser,"
+    },
+    {
+      "t0": 31.04,
+      "t1": 33.12,
+      "texto": "serei inimigo dos teus inimigos,"
+    },
+    {
+      "t0": 33.12,
+      "t1": 36.08,
+      "texto": "e adversário dos teus adversários."
+    },
+    {
+      "t0": 36.08,
+      "t1": 39.1,
+      "texto": "O meu anjo irá à tua frente"
+    },
+    {
+      "t0": 39.14,
+      "t1": 41.86,
+      "texto": "e te conduzirá à terra dos amorreus,"
+    },
+    {
+      "t0": 42.06,
+      "t1": 46,
+      "texto": "dos hititas, dos fereseus, dos cananeus,"
+    },
+    {
+      "t0": 46.24,
+      "t1": 50.24,
+      "texto": "dos heveus e dos jebuseus, e eu os exterminarei\"."
+    },
+    {
+      "t0": 51.5,
+      "t1": 52.76,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}
