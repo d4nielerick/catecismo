@@ -1,4 +1,4 @@
-# HANDOFF — santadoutrina.cloud
+# HANDOFF — santadoutrina.com
 
 > Documento de transição de contexto para o dono (Daniel) e para futuras sessões/agentes.
 > Sem segredos aqui — credenciais e IPs ficam só na memória privada (`infra-servers`,
@@ -21,7 +21,7 @@ Plataforma de busca e leitura para textos católicos em português, 100% client-
 | `/fontes/` | Documentos-fonte do Magistério hospedados na íntegra (hoje só um, de teste) | `fontes/<slug>/` |
 | Bíblia inline | Referências bíblicas viram tooltip com o versículo (Ave-Maria) | `data/biblia/` |
 
-Repo: `d4nielerick/catecismo`, branch `main`. Domínio: `santadoutrina.cloud`.
+Repo: `d4nielerick/catecismo`, branch `main`. Domínio: **`santadoutrina.com`** (desde 26/09/2026; `santadoutrina.cloud`, `www` e `liturgia.*` redirecionam com 301 no Caddy — o e-mail contato@santadoutrina.cloud continua no .cloud, que tem MX).
 
 ---
 
