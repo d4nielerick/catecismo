@@ -13,8 +13,10 @@
 import { COR_FUNDO, COR_CALENDARIO, cabecalhoDoDia, VERSO } from '/liturgiadiaria/render.mjs';
 import { paginas } from '/liturgiadiaria/imagem-do-dia.mjs';
 
-const SITE = 'santadoutrina.com/liturgiadiaria';   // do link compartilhado
-const SITE_CARD = 'liturgia.santadoutrina.com';      // o que aparece escrito no card (redireciona para a Liturgia)
+// o endereço que as pessoas veem: no card e no link compartilhado. O subdomínio redireciona (301)
+// para santadoutrina.com/liturgiadiaria/<o mesmo caminho>, que continua sendo o canonical
+const SITE_CARD = 'liturgia.santadoutrina.com';
+const SITE = SITE_CARD;
 const TITULO = "'Times New Roman', Times, Georgia, serif";
 const LEITURA = "'Inria Card', Georgia, serif";
 const VERMELHO = '#cb2e2e';
