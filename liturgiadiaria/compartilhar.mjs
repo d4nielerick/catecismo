@@ -517,8 +517,17 @@ const telaAtual = () => (modo === 'trecho' ? telas[atual] : paginasDoModo[atual]
 const nomeArquivo = (i = atual) => (modo === 'trecho'
   ? `liturgia-${conteudo.dt}-${LAYOUTS[i].id}.png`
   : `liturgia-${conteudo.dt}-${modo === 'todas' ? 'leituras' : 'leitura'}-${i + 1}.jpg`);
-const blobDoCard = () => new Promise(r => telaAtual().toBlob(r, 'image/png'));
-const blobsDasPaginas = () => Promise.all(paginasDoModo.map(cv => new Promise(r => cv.toBlob(r, 'image/jpeg', 0.9))));
+// O arquivo de cada card/página fica pronto assim que ele é desenhado: no toque em Instagram ou
+// Salvar, navigator.share() precisa ser chamado ainda "dentro" do toque (o Safari recusa depois de
+// uma espera longa), então não dá para gerar o PNG só na hora.
+const arquivosProntos = new WeakMap();
+const prepararArquivo = (cv, tipo = 'image/png', q) => {
+  const p = new Promise(r => cv.toBlob(r, tipo, q));
+  arquivosProntos.set(cv, p);
+  return p;
+};
+const blobDoCard = () => arquivosProntos.get(telaAtual()) ?? prepararArquivo(telaAtual());
+const blobsDasPaginas = () => Promise.all(paginasDoModo.map(cv => arquivosProntos.get(cv) ?? prepararArquivo(cv, 'image/jpeg', 0.9)));
 
 function baixar(blob, nome = nomeArquivo()) {
   const a = document.createElement('a');
@@ -542,7 +551,7 @@ function abrirApp(url, planoB) {
 
 // Uma página web não consegue entregar a imagem direto ao WhatsApp ou ao Instagram:
 // · WhatsApp: abre o app com o trecho e o link (a prévia do link mostra a imagem do dia);
-// · Instagram: copia o card e abre a câmera do stories, onde ele pode ser colado;
+// · Instagram: a folha do sistema com a imagem (lá aparecem Stories, Feed e Mensagens);
 // · Salvar: no celular, a folha do sistema (é o único caminho até a galeria de fotos).
 async function enviar(destino) {
   if (modo !== 'trecho') { await enviarPaginas(destino); return; }
@@ -556,17 +565,14 @@ async function enviar(destino) {
     return;
   }
 
+  // Instagram: a folha de compartilhar do sistema com a imagem. Nela o Instagram aparece com
+  // "Stories", "Feed" e "Mensagens", e a imagem já entra no app. (O caminho antigo, copiar e abrir a
+  // câmera do stories para colar, confundia: muita gente não sabia que era preciso colar.)
   if (destino === 'instagram') {
-    if (TOQUE.matches && navigator.clipboard?.write && window.ClipboardItem) {
-      try {
-        // o Safari exige que a escrita comece no próprio toque: vai a promessa do blob, não o blob
-        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blobDoCard() })]);
-        avisar('Card copiado. No stories, toque em “Adicionar” ou cole.');
-        setTimeout(() => abrirApp('instagram://story-camera', () => compartilharArquivo()), 700);
-        return;
-      } catch { /* sem permissão: segue para a folha do sistema */ }
+    if (TOQUE.matches && await compartilharArquivo()) {
+      avisar('Escolha o Instagram e depois “Stories” ou “Feed”.');
+      return;
     }
-    if (TOQUE.matches && await compartilharArquivo()) return;
     baixar(await blobDoCard());
     avisar('Imagem salva. Publique pelo app do Instagram.');
     return;
@@ -650,6 +656,7 @@ function desenharTodos() {
     const ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, cv.width, cv.height);
     LAYOUTS[i].desenhar(ctx, cv.width, cv.height, conteudo);
+    prepararArquivo(cv);
     const previa = Object.assign(document.createElement('canvas'), { width: PREVIA_L, height: Math.round(PREVIA_L * cv.height / cv.width) });
     previa.getContext('2d').drawImage(cv, 0, 0, previa.width, previa.height);
     previa.toBlob(b => {
@@ -704,6 +711,7 @@ async function trocarModo(m) {
   const lista = await cachePaginas[chave];
   if (vez !== pedidoModo) return;
   paginasDoModo = lista;
+  lista.forEach(cv => arquivosProntos.has(cv) || prepararArquivo(cv, 'image/jpeg', 0.9));
   montarSlides(lista.map((cv, i) => ({ w: cv.width, h: cv.height, alt: `Página ${i + 1} de ${lista.length}` })));
   marcar();
   const imgs = dlg.querySelectorAll('.lp-card-slide img');
