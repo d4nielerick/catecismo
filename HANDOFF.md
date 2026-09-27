@@ -389,6 +389,59 @@ de entrada; centavos a poucos dólares por lote com Sonnet/Opus. Zero custo em r
 Evangelhos; para 1ª leitura/salmo o Catecismo sozinho já serve); qualquer texto "de ligação"
 gerado; app.
 
+### Liturgia Diária — PLANO: acervo automático de pinturas em domínio público (27/09/2026)
+
+Para os fundos dos vídeos do YouTube (piloto: `scripts/video-liturgia.py`) e para os cards do site.
+Uma ferramenta que roda sozinha todo dia e cresce um acervo de pinturas de cenas do Evangelho e de
+santos, **só com licença verificável** (CC0, domínio público, CC-BY com crédito).
+
+**Fontes, em ordem de implementação** (pesquisa em `scratchpad`/relatório de 27/09; [nc] = conferir):
+1. **Wikidata SPARQL** — descoberta por tema: obras com `P180` (retrata) = cena/pessoa bíblica ou
+   `P1257` (Iconclass, ex. 73A5 Anunciação, 73C… vida pública), `P6216` = domínio público, `P18` =
+   imagem no Commons. Dá título, artista, data de morte, museu.
+2. **Wikimedia Commons API** — baixa o arquivo original e confirma a licença (templates PD-Art /
+   PD-old-100, CC0, CC-BY) e a resolução; `imageinfo` com `extmetadata`.
+3. **Metropolitan Museum** — sem chave, `isPublicDomain=true&hasImages=true`, `primaryImage` em alta.
+   Usar `/public/collection/v1.1/search` (o `/v1/search` sai do ar em 01/10/2026).
+4. **Art Institute of Chicago** — sem chave, 60 req/min, `is_public_domain`, imagens por IIIF (CC0).
+5. Complemento [nc]: Cleveland Museum of Art Open Access (CC0), National Gallery of Art (open data),
+   Rijksmuseum (chave grátis), Europeana (`reusability=open`, chave grátis), Smithsonian Open Access.
+
+**Fora, de propósito:** Pinterest e Google Imagens. Os termos proíbem scraping e as imagens não têm
+licença nem origem (repost). Não monetizar **não** torna o uso livre, e o Content ID do YouTube age
+igual. Também fora: fotos de museus que alegam direito sobre reprodução (Itália, parte da Alemanha),
+artistas mortos há menos de 70 anos (Brasil: 70 anos após a morte), ícones modernos.
+
+**Pipeline (scripts/acervo-*.mjs, tudo determinístico, sem IA no caminho crítico)**
+1. `acervo-temas.json` (curado à mão): tema → passagens (ex. "Bom Samaritano" → Lc 10,25-37),
+   termos de busca por fonte, códigos Iconclass, itens Wikidata. Começar pelos Evangelhos dominicais
+   e das festas; depois santos do calendário.
+2. `acervo-coleta.mjs` — para cada tema, consulta as fontes, deduplica (sha256 do arquivo e
+   Wikidata id), grava metadados em `data/acervo/obras/<id>.json` e o original em
+   `acervo-originais/` (fora do git e do deploy; só os recortes vão para o site).
+3. Regra de aceite automática: licença ∈ {CC0, PD, PD-Art, CC-BY}; artista morto antes de 1956;
+   largura ≥ 1920 px; proporção utilizável para 16:9 ou 9:16. O que falhar fica em `rejeitadas` com
+   o motivo.
+4. `acervo-recorte.mjs` — gera 1920×1080, 1080×1920 e o card 1280×960 (webp), com foco no centro de
+   interesse (sem IA: centro ou terço superior; ajuste manual opcional em `foco`).
+5. Liga ao dia: `liga-evangelho` passa a propor a obra do tema da perícope; a curadoria (skill da
+   janela) confirma. O vídeo e o card usam a mesma obra, com **crédito** ("Jean-François Millet,
+   O Semeador, 1850 · Museum of Fine Arts, Boston · domínio público") na descrição do YouTube e no
+   rodapé do card.
+6. Verificador: toda obra publicada tem licença, fonte, crédito e artista com data de morte; nenhuma
+   imagem do site/vídeo sem ficha no acervo.
+
+**Rodar todo dia:** cron na VPS (ou GitHub Actions agendado) às 4h: coleta de 1 tema novo por fonte,
+respeitando limites (Met sem pressa; AIC ≤ 60/min), e um relatório curto (novas, rejeitadas por
+motivo). Nada é publicado sem passar na regra de aceite; a escolha da obra de cada dia continua na
+curadoria.
+
+**Custo de voz (27/09/2026, preços oficiais; US$1 = R$5,19):** ~210 mil caracteres/mês.
+Gemini flash TTS pago ≈ US$4/mês (R$21) em 2026, ≈ US$8 (R$42) a partir de 2027 (preço dobra);
+flash-lite ≈ US$3 (R$14) / US$5,5 (R$28). ElevenLabs Creator US$22/mês (R$114, no limite) ou Pro
+US$99 (R$514). Decisão sugerida: Gemini pago como principal; ElevenLabs só para as leituras que o
+filtro de direitos autorais do Gemini recusa (parábolas).
+
 ### Liturgia Diária — modelo de negócio (direção, 24/09/2026)
 
 Três camadas, da mais segura para a mais ambiciosa. Premissa que amarra as três: **pedir a
