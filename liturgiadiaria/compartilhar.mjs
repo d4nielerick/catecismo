@@ -13,8 +13,8 @@
 import { COR_FUNDO, COR_CALENDARIO, cabecalhoDoDia, VERSO } from '/liturgiadiaria/render.mjs';
 import { paginas } from '/liturgiadiaria/imagem-do-dia.mjs';
 
-const SITE = 'santadoutrina.cloud/liturgiadiaria';   // do link compartilhado
-const SITE_CARD = 'liturgia.santadoutrina.cloud';      // o que aparece escrito no card (redireciona para a Liturgia)
+const SITE = 'santadoutrina.com/liturgiadiaria';   // do link compartilhado
+const SITE_CARD = 'liturgia.santadoutrina.com';      // o que aparece escrito no card (redireciona para a Liturgia)
 const TITULO = "'Times New Roman', Times, Georgia, serif";
 const LEITURA = "'Inria Card', Georgia, serif";
 const VERMELHO = '#cb2e2e';

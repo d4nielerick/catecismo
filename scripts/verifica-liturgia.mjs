@@ -120,7 +120,7 @@ for (const [celebracao, s] of Object.entries(santos)) {
     try { html = paginaDoDia(modelo, dt, lerDia(dt), indiceLit); }
     catch (e) { erros.push(`página ${dt}: ${e.message}`); break; }
     const falta = [
-      [`<link rel="canonical" href="https://santadoutrina.cloud/liturgiadiaria/${dt}/">`, 'canonical'],
+      [`<link rel="canonical" href="https://santadoutrina.com/liturgiadiaria/${dt}/">`, 'canonical'],
       ['<script type="application/ld+json">', 'dados estruturados'],
       ['class="leitura-card', 'leituras no HTML'],
       [`og/${dt}.jpg`, 'imagem de compartilhamento'],

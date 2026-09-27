@@ -18,7 +18,7 @@ const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const FONTE = path.join(RAIZ, 'data', 'santos-fonte.json');
 const SAIDA = path.join(RAIZ, 'data', 'santos');
 const API = 'https://pt.wikipedia.org/w/api.php';
-const AGENTE = 'santadoutrina-liturgia/1.0 (https://santadoutrina.cloud/liturgiadiaria/)';
+const AGENTE = 'santadoutrina-liturgia/1.0 (https://santadoutrina.com/liturgiadiaria/)';
 const RESUMO_MIN = 650;
 const RESUMO_PARAGRAFOS = 3;
 

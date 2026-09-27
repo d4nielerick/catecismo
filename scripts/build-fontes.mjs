@@ -78,7 +78,7 @@ function corpoComNotas(texto, maxNota) {
 
 function pagina(doc, est) {
   const maxNota = Math.max(0, ...Object.keys(est.notas).map(Number));
-  const canonical = `https://santadoutrina.cloud/fontes/${doc.slug}/`;
+  const canonical = `https://santadoutrina.com/fontes/${doc.slug}/`;
   const desc = `${doc.titulo} — ${doc.subtitulo}. Texto integral (${doc.tipo}, ${doc.data}).`;
   const secoesHtml = est.secoes.map((s) => `
       <section id="s${s.num}" class="fonte-secao">
@@ -100,7 +100,7 @@ function pagina(doc, est) {
   <meta property="og:description" content="${esc(desc)}">
   <meta property="og:type" content="article">
   <meta property="og:url" content="${canonical}">
-  <meta property="og:image" content="https://santadoutrina.cloud/assets/catecismo-logo.webp">
+  <meta property="og:image" content="https://santadoutrina.com/assets/catecismo-logo.webp">
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/png" href="/assets/favicon.png">

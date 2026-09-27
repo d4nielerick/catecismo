@@ -18,7 +18,7 @@ import {
 } from '../liturgiadiaria/render.mjs';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SITE = 'https://santadoutrina.cloud';
+const SITE = 'https://santadoutrina.com';
 const NOME_SITE = 'Catecismo da Igreja Católica';
 const MODELO = path.join(RAIZ, 'liturgiadiaria', 'index.html');
 const DADOS = path.join(RAIZ, 'data', 'liturgia');

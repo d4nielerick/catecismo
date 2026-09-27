@@ -16,7 +16,7 @@ const VERMELHO = '#cb2e2e';
 const TINTA = '#1c1812';
 const SUAVE = 'rgba(28, 24, 18, 0.55)';
 const FUNDO = '#fbf8f2';
-const SITE = 'liturgia.santadoutrina.cloud';
+const SITE = 'liturgia.santadoutrina.com';
 
 const M = 150, MD = 96;                 // margens (a da esquerda tem o ornamento)
 const LARG = W - M - MD;

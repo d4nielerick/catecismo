@@ -156,7 +156,7 @@ def desenhar(dt, dia, faixa):
             d.rectangle([X0, y_ref, X0 + 36, y_ref + 2], fill=VERMELHO)
             d.text((X0 + 52, y_ref - 17), f'Evangelho · {evangelho["referencia"]}', font=rodape, fill=TINTA)
 
-    d.text((L - 60, A - 48), 'santadoutrina.cloud', font=site, fill=SUAVE, anchor='ra')
+    d.text((L - 60, A - 48), 'santadoutrina.com', font=site, fill=SUAVE, anchor='ra')
     return img
 
 

@@ -14,7 +14,7 @@ Dois mini-sites independentes num mesmo repositório:
 Funcionalidades: busca client-side, modo leitura, índice analítico temático, resumos via IA (Grok), coletor de trechos, referências bíblicas em hover, cross-links entre os dois catecismos, doação via PIX.
 
 Hospedagem: **VPS Contabo + Caddy** (produção real). A Vercel existe como espelho/preview,
-mas não é o que serve `santadoutrina.cloud` — ver seção Deploy.
+mas não é o que serve `santadoutrina.com` — ver seção Deploy.
 
 ---
 
@@ -121,7 +121,7 @@ node test-search.mjs
 
 ## Deploy
 
-**A produção é a VPS Contabo, NÃO a Vercel.** O domínio `santadoutrina.cloud` é servido
+**A produção é a VPS Contabo, NÃO a Vercel.** O domínio `santadoutrina.com` é servido
 por **Caddy** a partir de `/opt/mediaserver/catecismo`, que é uma cópia rsync — não um
 `git clone` no servidor. A Vercel recebe os mesmos pushes e funciona como espelho/preview,
 mas não é o que o público acessa. O DNS é gerenciado na Hostinger (que também é a

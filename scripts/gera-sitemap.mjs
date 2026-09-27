@@ -21,7 +21,7 @@ const ROOT = path.join(__dirname, '..');
 const INDICE_PATH = path.join(ROOT, 'data/perguntas/_indice.json');
 const OUT_PATH = path.join(ROOT, 'sitemap.xml');
 
-const BASE_URL = 'https://santadoutrina.cloud';
+const BASE_URL = 'https://santadoutrina.com';
 
 const PAGINAS_ESTATICAS = [
   { path: '/',               changefreq: 'weekly',  priority: '1.0' },

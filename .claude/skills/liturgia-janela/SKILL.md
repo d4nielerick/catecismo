@@ -135,7 +135,7 @@ Deploy (o rsync manda tudo o que está na pasta; as exclusões são obrigatória
 rsync -az --delete --exclude={.git,.gitignore,api-server.mjs,'.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,.vscode,HANDOFF.md} ./ vps:/opt/mediaserver/catecismo/
 ```
 
-Depois, confira um dia no ar (`curl -s https://santadoutrina.cloud/data/liturgia-comentario/<dia>.json`)
+Depois, confira um dia no ar (`curl -s https://santadoutrina.com/data/liturgia-comentario/<dia>.json`)
 e diga ao Daniel o que a janela cobre agora e o que ficou pendente.
 
 ## Não fazer

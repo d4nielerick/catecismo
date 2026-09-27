@@ -119,7 +119,7 @@ const PASSOS = [
         <div class="t-san-corpo">
           <small>SANTO DO DIA · SANTA TERESINHA</small>
           <p>"No coração da Igreja, minha Mãe, eu serei o Amor."</p>
-          <footer><em>1/out</em><span>liturgia.santadoutrina.cloud</span></footer>
+          <footer><em>1/out</em><span>liturgia.santadoutrina.com</span></footer>
         </div>
       </div>
       <div class="t-san-apps"><span class="t-app-zap">${ZAP}</span><span class="t-app-insta">${INSTA}</span></div>
