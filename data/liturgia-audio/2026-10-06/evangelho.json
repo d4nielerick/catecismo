@@ -1,0 +1,107 @@
+{
+  "referencia": "Lc 10,38-42",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 54.9,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.98,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 3.98,
+      "t1": 5.82,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 6.12,
+      "t1": 7.88,
+      "texto": "Jesus entrou num povoado,"
+    },
+    {
+      "t0": 7.88,
+      "t1": 10.74,
+      "texto": "e certa mulher, de nome Marta,"
+    },
+    {
+      "t0": 10.74,
+      "t1": 12.74,
+      "texto": "recebeu-o em sua casa."
+    },
+    {
+      "t0": 13.3,
+      "t1": 15.36,
+      "texto": "Sua irmã, chamada Maria,"
+    },
+    {
+      "t0": 15.36,
+      "t1": 17.64,
+      "texto": "sentou-se aos pés do Senhor,"
+    },
+    {
+      "t0": 17.64,
+      "t1": 19.8,
+      "texto": "e escutava a sua palavra."
+    },
+    {
+      "t0": 20.52,
+      "t1": 24.64,
+      "texto": "Marta, porém, estava ocupada com muitos afazeres."
+    },
+    {
+      "t0": 25.2,
+      "t1": 27.42,
+      "texto": "Ela aproximou-se e disse:"
+    },
+    {
+      "t0": 27.42,
+      "t1": 30.84,
+      "texto": "\"Senhor, não te importas que minha irmã"
+    },
+    {
+      "t0": 30.84,
+      "t1": 33.42,
+      "texto": "me deixe sozinha, com todo o serviço?"
+    },
+    {
+      "t0": 33.78,
+      "t1": 35.34,
+      "texto": "Manda que ela me venha ajudar!\""
+    },
+    {
+      "t0": 35.86,
+      "t1": 37.9,
+      "texto": "O Senhor, porém, lhe respondeu:"
+    },
+    {
+      "t0": 38.78,
+      "t1": 41.5,
+      "texto": "\"Marta, Marta! Tu te preocupas"
+    },
+    {
+      "t0": 41.5,
+      "t1": 43.92,
+      "texto": "e andas agitada por muitas coisas."
+    },
+    {
+      "t0": 44.48,
+      "t1": 47.58,
+      "texto": "Porém, uma só coisa é necessária."
+    },
+    {
+      "t0": 48.06,
+      "t1": 50.16,
+      "texto": "Maria escolheu a melhor parte"
+    },
+    {
+      "t0": 50.16,
+      "t1": 52.88,
+      "texto": "e esta não lhe será tirada\"."
+    },
+    {
+      "t0": 53.5,
+      "t1": 54.9,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}
