@@ -1,0 +1,112 @@
+{
+  "referencia": "1Ts 1,5c-10",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 63.36,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 4.18,
+      "texto": "Leitura da Primeira Carta de São Paulo aos Tessalonicenses."
+    },
+    {
+      "t0": 6.14,
+      "t1": 6.78,
+      "texto": "Irmãos:"
+    },
+    {
+      "t0": 6.78,
+      "t1": 9.32,
+      "texto": "Sabeis de que maneira procedemos entre vós,"
+    },
+    {
+      "t0": 9.54,
+      "t1": 10.56,
+      "texto": "para o vosso bem."
+    },
+    {
+      "t0": 11.68,
+      "t1": 14.88,
+      "texto": "E vós vos tornastes imitadores nossos e do Senhor,"
+    },
+    {
+      "t0": 15.32,
+      "t1": 18.44,
+      "texto": "acolhendo a Palavra com a alegria do Espírito Santo,"
+    },
+    {
+      "t0": 18.9,
+      "t1": 20.72,
+      "texto": "apesar de tantas tribulações."
+    },
+    {
+      "t0": 21.66,
+      "t1": 23.58,
+      "texto": "Assim vos tornastes modelo"
+    },
+    {
+      "t0": 23.58,
+      "t1": 26.92,
+      "texto": "para todos os fiéis da Macedônia e da Acaia."
+    },
+    {
+      "t0": 27.52,
+      "t1": 30.06,
+      "texto": "Com efeito, a partir de vós,"
+    },
+    {
+      "t0": 30.24,
+      "t1": 32.72,
+      "texto": "a Palavra do Senhor não se divulgou apenas"
+    },
+    {
+      "t0": 32.72,
+      "t1": 34.36,
+      "texto": "na Macedônia e na Acaia,"
+    },
+    {
+      "t0": 34.62,
+      "t1": 38.08,
+      "texto": "mas a vossa fé em Deus propagou-se por toda parte."
+    },
+    {
+      "t0": 38.78,
+      "t1": 41.62,
+      "texto": "Assim, nós já nem precisamos de falar,"
+    },
+    {
+      "t0": 41.92,
+      "t1": 45.52,
+      "texto": "pois as pessoas mesmas contam como vós nos acolhestes"
+    },
+    {
+      "t0": 45.52,
+      "t1": 49.2,
+      "texto": "e como vos convertestes, abandonando os falsos deuses,"
+    },
+    {
+      "t0": 49.44,
+      "t1": 52.1,
+      "texto": "para servir ao Deus vivo e verdadeiro,"
+    },
+    {
+      "t0": 52.72,
+      "t1": 54.66,
+      "texto": "esperando dos céus o seu Filho,"
+    },
+    {
+      "t0": 54.74,
+      "t1": 57.18,
+      "texto": "a quem ele ressuscitou dentre os mortos:"
+    },
+    {
+      "t0": 57.58,
+      "t1": 61.14,
+      "texto": "Jesus, que nos livra do castigo que está por vir."
+    },
+    {
+      "t0": 62.42,
+      "t1": 63.36,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "referencia": "Is 25,6-10a",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 75.26,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 20.94,
+      "texto": "Leitura do Livro do Profeta Isaías."
+    },
+    {
+      "t0": 21.68,
+      "t1": 24.8,
+      "texto": "O Senhor dos exércitos dará neste monte,"
+    },
+    {
+      "t0": 24.98,
+      "t1": 26.2,
+      "texto": "para todos os povos,"
+    },
+    {
+      "t0": 26.2,
+      "t1": 30.58,
+      "texto": "um banquete de ricas iguarias, regado com vinho puro,"
+    },
+    {
+      "t0": 30.86,
+      "t1": 34.34,
+      "texto": "servido de pratos deliciosos e dos mais finos vinhos."
+    },
+    {
+      "t0": 35.1,
+      "t1": 37.2,
+      "texto": "Ele removerá, neste monte,"
+    },
+    {
+      "t0": 37.44,
+      "t1": 40.44,
+      "texto": "a ponta da cadeia que ligava todos os povos,"
+    },
+    {
+      "t0": 40.84,
+      "t1": 44.1,
+      "texto": "a teia em que tinha envolvido todas as nações."
+    },
+    {
+      "t0": 45.1,
+      "t1": 47.92,
+      "texto": "O Senhor Deus eliminará para sempre a morte"
+    },
+    {
+      "t0": 48.34,
+      "t1": 51.02,
+      "texto": "e enxugará as lágrimas de todas as faces"
+    },
+    {
+      "t0": 51.28,
+      "t1": 54.38,
+      "texto": "e acabará com a desonra do seu povo em toda a terra;"
+    },
+    {
+      "t0": 54.38,
+      "t1": 56.24,
+      "texto": "o Senhor o disse."
+    },
+    {
+      "t0": 57,
+      "t1": 60.6,
+      "texto": "Naquele dia, se dirá: \"Este é o nosso Deus,"
+    },
+    {
+      "t0": 61,
+      "t1": 63.16,
+      "texto": "esperamos nele, até que nos salvou;"
+    },
+    {
+      "t0": 63.62,
+      "t1": 66.92,
+      "texto": "este é o Senhor, nele temos confiado:"
+    },
+    {
+      "t0": 67.46,
+      "t1": 70.6,
+      "texto": "vamos alegrar-nos e exultar por nos ter salvo\"."
+    },
+    {
+      "t0": 71.3,
+      "t1": 73.74,
+      "texto": "E a mão do Senhor repousará sobre este monte."
+    },
+    {
+      "t0": 74.32,
+      "t1": 75.26,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

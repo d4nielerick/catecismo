@@ -1,0 +1,142 @@
+{
+  "referencia": "Lc 6,12-19",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 83.38,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.74,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 5.92,
+      "t1": 9.64,
+      "texto": "Naqueles dias, Jesus foi à montanha para rezar."
+    },
+    {
+      "t0": 9.74,
+      "t1": 13.02,
+      "texto": "E passou a noite toda em oração a Deus."
+    },
+    {
+      "t0": 14.38,
+      "t1": 17.34,
+      "texto": "Ao amanhecer, chamou seus discípulos"
+    },
+    {
+      "t0": 17.34,
+      "t1": 19.66,
+      "texto": "e escolheu doze dentre eles,"
+    },
+    {
+      "t0": 20.2,
+      "t1": 22.56,
+      "texto": "aos quais deu o nome de apóstolos:"
+    },
+    {
+      "t0": 22.56,
+      "t1": 26,
+      "texto": "Simão, a quem impôs o nome de Pedro,"
+    },
+    {
+      "t0": 26.32,
+      "t1": 27.72,
+      "texto": "e seu irmão André;"
+    },
+    {
+      "t0": 28.8,
+      "t1": 29.78,
+      "texto": "Tiago e João;"
+    },
+    {
+      "t0": 29.78,
+      "t1": 32.26,
+      "texto": "Filipe e Bartolomeu;"
+    },
+    {
+      "t0": 33.06,
+      "t1": 34.32,
+      "texto": "Mateus e Tomé;"
+    },
+    {
+      "t0": 35.36,
+      "t1": 39.84,
+      "texto": "Tiago, filho de Alfeu, e Simão, chamado Zelota;"
+    },
+    {
+      "t0": 40.92,
+      "t1": 42.68,
+      "texto": "Judas, filho de Tiago,"
+    },
+    {
+      "t0": 43.04,
+      "t1": 46.76,
+      "texto": "e Judas Iscariotes, aquele que se tornou traidor."
+    },
+    {
+      "t0": 47.78,
+      "t1": 50.02,
+      "texto": "Jesus desceu da montanha com eles"
+    },
+    {
+      "t0": 50.02,
+      "t1": 51.92,
+      "texto": "e parou num lugar plano."
+    },
+    {
+      "t0": 52.56,
+      "t1": 55.34,
+      "texto": "Ali estavam muitos dos seus discípulos"
+    },
+    {
+      "t0": 55.34,
+      "t1": 57.38,
+      "texto": "e grande multidão de gente"
+    },
+    {
+      "t0": 57.42,
+      "t1": 60.1,
+      "texto": "de toda a Judéia e de Jerusalém,"
+    },
+    {
+      "t0": 60.36,
+      "t1": 62.62,
+      "texto": "do litoral de Tiro e Sidônia."
+    },
+    {
+      "t0": 63.68,
+      "t1": 65.42,
+      "texto": "Vieram para ouvir Jesus"
+    },
+    {
+      "t0": 65.42,
+      "t1": 67.82,
+      "texto": "e serem curados de suas doenças."
+    },
+    {
+      "t0": 68.72,
+      "t1": 71.9,
+      "texto": "E aqueles que estavam atormentados por espíritos maus"
+    },
+    {
+      "t0": 71.9,
+      "t1": 73.66,
+      "texto": "também foram curados."
+    },
+    {
+      "t0": 74.8,
+      "t1": 77.3,
+      "texto": "A multidão toda procurava tocar em Jesus,"
+    },
+    {
+      "t0": 77.64,
+      "t1": 81.14,
+      "texto": "porque uma força saía dele, e curava a todos."
+    },
+    {
+      "t0": 81.14,
+      "t1": 83.38,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

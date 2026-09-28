@@ -1,0 +1,97 @@
+{
+  "referencia": "Ef 4,1-6",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 46.82,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 3.26,
+      "texto": "Leitura da Carta de São Paulo aos Efésios."
+    },
+    {
+      "t0": 4.22,
+      "t1": 4.94,
+      "texto": "Irmãos,"
+    },
+    {
+      "t0": 5.2,
+      "t1": 8.16,
+      "texto": "eu, prisioneiro no Senhor, vos exorto"
+    },
+    {
+      "t0": 8.16,
+      "t1": 10.66,
+      "texto": "a caminhardes de acordo com a vocação"
+    },
+    {
+      "t0": 10.66,
+      "t1": 11.66,
+      "texto": "que recebestes:"
+    },
+    {
+      "t0": 12.06,
+      "t1": 14.8,
+      "texto": "Com toda a humildade e mansidão,"
+    },
+    {
+      "t0": 14.8,
+      "t1": 17.08,
+      "texto": "suportai-vos uns aos outros"
+    },
+    {
+      "t0": 17.08,
+      "t1": 18.98,
+      "texto": "com paciência, no amor."
+    },
+    {
+      "t0": 18.98,
+      "t1": 22.56,
+      "texto": "Aplicai-vos a guardar a unidade do espírito"
+    },
+    {
+      "t0": 22.76,
+      "t1": 24.34,
+      "texto": "pelo vínculo da paz."
+    },
+    {
+      "t0": 25.16,
+      "t1": 27.74,
+      "texto": "Há um só Corpo e um só Espírito,"
+    },
+    {
+      "t0": 28.04,
+      "t1": 30.44,
+      "texto": "como também é uma só a esperança"
+    },
+    {
+      "t0": 30.44,
+      "t1": 32.1,
+      "texto": "à qual fostes chamados."
+    },
+    {
+      "t0": 32.52,
+      "t1": 36.58,
+      "texto": "Há um só Senhor, uma só fé, um só batismo,"
+    },
+    {
+      "t0": 36.94,
+      "t1": 39.02,
+      "texto": "um só Deus e Pai de todos,"
+    },
+    {
+      "t0": 39.34,
+      "t1": 40.82,
+      "texto": "que reina sobre todos,"
+    },
+    {
+      "t0": 41.48,
+      "t1": 44.88,
+      "texto": "age por meio de todos e permanece em todos."
+    },
+    {
+      "t0": 45.78,
+      "t1": 46.82,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

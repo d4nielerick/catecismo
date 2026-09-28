@@ -1,0 +1,92 @@
+{
+  "referencia": "Ef 1,11-14",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 47.14,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 3.02,
+      "texto": "Leitura da Carta de São Paulo aos Efésios."
+    },
+    {
+      "t0": 4.5,
+      "t1": 5.18,
+      "texto": "Irmãos,"
+    },
+    {
+      "t0": 5.48,
+      "t1": 8.26,
+      "texto": "em Cristo nós recebemos a nossa parte."
+    },
+    {
+      "t0": 8.26,
+      "t1": 10.76,
+      "texto": "Segundo o projeto daquele"
+    },
+    {
+      "t0": 10.76,
+      "t1": 13.94,
+      "texto": "que conduz tudo conforme a decisão de sua vontade,"
+    },
+    {
+      "t0": 14.5,
+      "t1": 16.32,
+      "texto": "nós fomos predestinados"
+    },
+    {
+      "t0": 16.32,
+      "t1": 19.5,
+      "texto": "a sermos, para o louvor de sua glória,"
+    },
+    {
+      "t0": 19.9,
+      "t1": 23.02,
+      "texto": "os que de antemão colocaram a sua esperança em Cristo."
+    },
+    {
+      "t0": 23.74,
+      "t1": 26.98,
+      "texto": "Nele também vós ouvistes a palavra da verdade,"
+    },
+    {
+      "t0": 27.26,
+      "t1": 28.94,
+      "texto": "o evangelho que vos salva."
+    },
+    {
+      "t0": 29.38,
+      "t1": 31.84,
+      "texto": "Nele, ainda, acreditastes"
+    },
+    {
+      "t0": 31.84,
+      "t1": 35.48,
+      "texto": "e fostes marcados com o selo do Espírito prometido,"
+    },
+    {
+      "t0": 35.7,
+      "t1": 37.1,
+      "texto": "o Espírito Santo,"
+    },
+    {
+      "t0": 37.1,
+      "t1": 39.94,
+      "texto": "o que é o penhor da nossa herança"
+    },
+    {
+      "t0": 40.2,
+      "t1": 42.84,
+      "texto": "para a redenção do povo que ele adquiriu,"
+    },
+    {
+      "t0": 43.24,
+      "t1": 45.36,
+      "texto": "para o louvor da sua glória."
+    },
+    {
+      "t0": 46.14,
+      "t1": 47.14,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "referencia": "Est 5,1b-2;7,2b-3",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 52.52,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 4.56,
+      "texto": "Leitura do Livro de Ester."
+    },
+    {
+      "t0": 4.56,
+      "t1": 5.86,
+      "texto": "Ester revestiu-se com vestes de rainha"
+    },
+    {
+      "t0": 5.86,
+      "t1": 9.08,
+      "texto": "e foi colocar-se no vestíbulo interno do palácio real,"
+    },
+    {
+      "t0": 9.48,
+      "t1": 11.14,
+      "texto": "frente à residência do rei."
+    },
+    {
+      "t0": 11.6,
+      "t1": 13.98,
+      "texto": "O rei estava sentado no trono real,"
+    },
+    {
+      "t0": 14.26,
+      "t1": 16.46,
+      "texto": "na sala do trono, frente à entrada."
+    },
+    {
+      "t0": 17.02,
+      "t1": 19.64,
+      "texto": "Ao ver a rainha Ester parada no vestíbulo,"
+    },
+    {
+      "t0": 19.8,
+      "t1": 21.34,
+      "texto": "olhou para ela com agrado"
+    },
+    {
+      "t0": 21.34,
+      "t1": 24.06,
+      "texto": "e estendeu-lhe o cetro de ouro que tinha na mão,"
+    },
+    {
+      "t0": 24.4,
+      "t1": 27.58,
+      "texto": "e Ester aproximou-se para tocar a ponta do cetro."
+    },
+    {
+      "t0": 28.16,
+      "t1": 29.64,
+      "texto": "Então, o rei lhe disse:"
+    },
+    {
+      "t0": 30,
+      "t1": 33.32,
+      "texto": "\"O que me pedes, Ester; o que queres que eu faça?"
+    },
+    {
+      "t0": 33.72,
+      "t1": 36.18,
+      "texto": "Ainda que me pedisses a metade do meu reino,"
+    },
+    {
+      "t0": 36.54,
+      "t1": 37.86,
+      "texto": "ela te seria concedida\"."
+    },
+    {
+      "t0": 37.86,
+      "t1": 40.16,
+      "texto": "Ester respondeu-lhe:"
+    },
+    {
+      "t0": 40.16,
+      "t1": 42.84,
+      "texto": "\"Se ganhei as tuas boas graças, ó rei,"
+    },
+    {
+      "t0": 42.94,
+      "t1": 44.56,
+      "texto": "e se for de teu agrado,"
+    },
+    {
+      "t0": 44.56,
+      "t1": 47.74,
+      "texto": "concede-me a vida - eis o meu pedido! -"
+    },
+    {
+      "t0": 47.74,
+      "t1": 50.82,
+      "texto": "e a vida do meu povo - eis o meu desejo!\""
+    },
+    {
+      "t0": 51.58,
+      "t1": 52.52,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

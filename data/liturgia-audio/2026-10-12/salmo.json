@@ -1,0 +1,102 @@
+{
+  "referencia": "Sl 44(45),11-12a.12b-13.14-15a.15b-16 (R. 11.12a)",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 63,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 1.56,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 2.62,
+      "t1": 5.6,
+      "texto": "Escutai, minha filha, olhai, ouvi isto:"
+    },
+    {
+      "t0": 6.1,
+      "t1": 8.76,
+      "texto": "que o Rei se encante com vossa beleza!"
+    },
+    {
+      "t0": 9.98,
+      "t1": 12.96,
+      "texto": "Escutai, minha filha, olhai, ouvi isto:"
+    },
+    {
+      "t0": 13.46,
+      "t1": 16.08,
+      "texto": "\"Esquecei vosso povo e a casa paterna!"
+    },
+    {
+      "t0": 16.24,
+      "t1": 19.24,
+      "texto": "Que o Rei se encante com vossa beleza!"
+    },
+    {
+      "t0": 19.24,
+      "t1": 22.7,
+      "texto": "Prestai-lhe homenagem: é vosso Senhor!"
+    },
+    {
+      "t0": 23.38,
+      "t1": 26.36,
+      "texto": "Escutai, minha filha, olhai, ouvi isto:"
+    },
+    {
+      "t0": 26.86,
+      "t1": 29.52,
+      "texto": "que o Rei se encante com vossa beleza!"
+    },
+    {
+      "t0": 30.74,
+      "t1": 33.76,
+      "texto": "O povo de Tiro vos traz seus presentes,"
+    },
+    {
+      "t0": 34.06,
+      "t1": 36.76,
+      "texto": "os grandes do povo vos pedem favores."
+    },
+    {
+      "t0": 37.9,
+      "t1": 40.64,
+      "texto": "Majestosa, a princesa real vem chegando,"
+    },
+    {
+      "t0": 41.02,
+      "t1": 43.28,
+      "texto": "vestida de ricos brocados de ouro."
+    },
+    {
+      "t0": 43.28,
+      "t1": 46.54,
+      "texto": "Em vestes vistosas ao Rei se dirige,"
+    },
+    {
+      "t0": 46.76,
+      "t1": 49.9,
+      "texto": "e as virgens amigas lhe formam cortejo;"
+    },
+    {
+      "t0": 50.64,
+      "t1": 53.54,
+      "texto": "entre cantos de Festa e com grande alegria,"
+    },
+    {
+      "t0": 54,
+      "t1": 56.32,
+      "texto": "ingressam, então, no palácio real\"."
+    },
+    {
+      "t0": 56.86,
+      "t1": 59.84,
+      "texto": "Escutai, minha filha, olhai, ouvi isto:"
+    },
+    {
+      "t0": 60.34,
+      "t1": 63,
+      "texto": "que o Rei se encante com vossa beleza!"
+    }
+  ]
+}

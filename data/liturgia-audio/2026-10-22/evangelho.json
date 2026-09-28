@@ -1,0 +1,92 @@
+{
+  "referencia": "Lc 12,49-53",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 53.1,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 3.9,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 3.9,
+      "t1": 8.22,
+      "texto": "Naquele tempo, disse Jesus a seus discípulos:"
+    },
+    {
+      "t0": 8.46,
+      "t1": 11.2,
+      "texto": "\"Eu vim para lançar fogo sobre a terra,"
+    },
+    {
+      "t0": 11.78,
+      "t1": 14.2,
+      "texto": "e como gostaria que já estivesse aceso!"
+    },
+    {
+      "t0": 14.64,
+      "t1": 16.38,
+      "texto": "Devo receber um batismo,"
+    },
+    {
+      "t0": 16.54,
+      "t1": 20.04,
+      "texto": "e como estou ansioso até que isto se cumpra!"
+    },
+    {
+      "t0": 20.42,
+      "t1": 23.42,
+      "texto": "Vós pensais que eu vim trazer a paz sobre a terra?"
+    },
+    {
+      "t0": 23.78,
+      "t1": 28.04,
+      "texto": "Pelo contrário, eu vos digo, vim trazer divisão."
+    },
+    {
+      "t0": 28.42,
+      "t1": 30,
+      "texto": "Pois, daqui em diante,"
+    },
+    {
+      "t0": 30.42,
+      "t1": 32.26,
+      "texto": "numa família de cinco pessoas,"
+    },
+    {
+      "t0": 32.84,
+      "t1": 35,
+      "texto": "três ficarão divididas contra duas"
+    },
+    {
+      "t0": 35.2,
+      "t1": 37.04,
+      "texto": "e duas contra três;"
+    },
+    {
+      "t0": 37.86,
+      "t1": 39.06,
+      "texto": "ficarão divididos:"
+    },
+    {
+      "t0": 39.34,
+      "t1": 42.54,
+      "texto": "o pai contra o filho e o filho contra o pai;"
+    },
+    {
+      "t0": 42.94,
+      "t1": 46.46,
+      "texto": "a mãe contra a filha e a filha contra a mãe;"
+    },
+    {
+      "t0": 46.88,
+      "t1": 50.72,
+      "texto": "a sogra contra a nora e a nora contra a sogra\"."
+    },
+    {
+      "t0": 50.72,
+      "t1": 53.1,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

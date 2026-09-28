@@ -1,0 +1,82 @@
+{
+  "referencia": "Lc 13,18-21",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 39.98,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 3.54,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 4.82,
+      "t1": 5.9,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 6.08,
+      "t1": 7.08,
+      "texto": "Jesus dizia:"
+    },
+    {
+      "t0": 7.08,
+      "t1": 10.14,
+      "texto": "\"A que é semelhante o Reino de Deus,"
+    },
+    {
+      "t0": 10.28,
+      "t1": 12.84,
+      "texto": "e com que poderei compará-lo?"
+    },
+    {
+      "t0": 12.84,
+      "t1": 15.08,
+      "texto": "Ele é como a semente de mostarda,"
+    },
+    {
+      "t0": 15.22,
+      "t1": 17.8,
+      "texto": "que um homem pega e atira no seu jardim."
+    },
+    {
+      "t0": 18.22,
+      "t1": 21.42,
+      "texto": "A semente cresce, torna-se uma grande árvore,"
+    },
+    {
+      "t0": 21.58,
+      "t1": 24.38,
+      "texto": "e as aves do céu fazem ninhos nos seus ramos\"."
+    },
+    {
+      "t0": 25.16,
+      "t1": 26.4,
+      "texto": "Jesus disse ainda:"
+    },
+    {
+      "t0": 26.4,
+      "t1": 29.7,
+      "texto": "\"Com que poderei ainda comparar o Reino de Deus?"
+    },
+    {
+      "t0": 30.34,
+      "t1": 33.08,
+      "texto": "Ele é como o fermento que uma mulher pega"
+    },
+    {
+      "t0": 33.08,
+      "t1": 35.64,
+      "texto": "e mistura com três porções de farinha,"
+    },
+    {
+      "t0": 35.64,
+      "t1": 37.94,
+      "texto": "até que tudo fique fermentado\"."
+    },
+    {
+      "t0": 38.64,
+      "t1": 39.98,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

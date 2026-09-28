@@ -1,0 +1,87 @@
+{
+  "referencia": "Sl 143(144),1.2.9-10 (R. 1a)",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 48.54,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 1.24,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 2.24,
+      "t1": 4.8,
+      "texto": "Bendito seja o Senhor, meu rochedo!"
+    },
+    {
+      "t0": 5.88,
+      "t1": 8.42,
+      "texto": "Bendito seja o Senhor, meu rochedo,"
+    },
+    {
+      "t0": 8.62,
+      "t1": 10.92,
+      "texto": "que adestrou minhas mãos para a luta,"
+    },
+    {
+      "t0": 11.54,
+      "t1": 13.56,
+      "texto": "e os meus dedos treinou para a guerra!"
+    },
+    {
+      "t0": 14.63,
+      "t1": 17.19,
+      "texto": "Bendito seja o Senhor, meu rochedo!"
+    },
+    {
+      "t0": 18.27,
+      "t1": 20.26,
+      "texto": "Ele é meu amor, meu refúgio,"
+    },
+    {
+      "t0": 20.8,
+      "t1": 23.22,
+      "texto": "libertador, fortaleza e abrigo;"
+    },
+    {
+      "t0": 23.95,
+      "t1": 26.28,
+      "texto": "É meu escudo: é nele que espero,"
+    },
+    {
+      "t0": 26.88,
+      "t1": 29.42,
+      "texto": "ele submete as nações a meus pés."
+    },
+    {
+      "t0": 30.36,
+      "t1": 32.92,
+      "texto": "Bendito seja o Senhor, meu rochedo!"
+    },
+    {
+      "t0": 34,
+      "t1": 37.66,
+      "texto": "Um canto novo, meu Deus, vou cantar-vos,"
+    },
+    {
+      "t0": 37.66,
+      "t1": 40.42,
+      "texto": "nas dez cordas da harpa louvar-vos,"
+    },
+    {
+      "t0": 40.42,
+      "t1": 42.94,
+      "texto": "a vós que dais a vitória aos reis"
+    },
+    {
+      "t0": 43.18,
+      "t1": 45.44,
+      "texto": "e salvais vosso servo Davi."
+    },
+    {
+      "t0": 45.98,
+      "t1": 48.54,
+      "texto": "Bendito seja o Senhor, meu rochedo!"
+    }
+  ]
+}

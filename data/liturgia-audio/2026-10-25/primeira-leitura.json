@@ -1,0 +1,117 @@
+{
+  "referencia": "Ex 22,20-26",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 64.5,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 2.02,
+      "texto": "Leitura do Livro do Êxodo."
+    },
+    {
+      "t0": 2.76,
+      "t1": 4.26,
+      "texto": "Assim diz o Senhor:"
+    },
+    {
+      "t0": 5.06,
+      "t1": 8.3,
+      "texto": "Não oprimas nem maltrates o estrangeiro,"
+    },
+    {
+      "t0": 8.46,
+      "t1": 11.82,
+      "texto": "pois vós fostes estrangeiros na terra do Egito."
+    },
+    {
+      "t0": 12.8,
+      "t1": 16.18,
+      "texto": "Não façais mal algum à viúva nem ao órfão."
+    },
+    {
+      "t0": 16.58,
+      "t1": 19.42,
+      "texto": "Se os maltratardes, gritarão por mim,"
+    },
+    {
+      "t0": 19.56,
+      "t1": 21.5,
+      "texto": "e eu ouvirei o seu clamor."
+    },
+    {
+      "t0": 22.36,
+      "t1": 24.98,
+      "texto": "Minha cólera, então, se inflamará"
+    },
+    {
+      "t0": 25.18,
+      "t1": 27.36,
+      "texto": "e eu vos matarei à espada;"
+    },
+    {
+      "t0": 28.36,
+      "t1": 30.14,
+      "texto": "vossas mulheres ficarão viúvas"
+    },
+    {
+      "t0": 30.16,
+      "t1": 32.56,
+      "texto": "e órfãos os vossos filhos."
+    },
+    {
+      "t0": 33.66,
+      "t1": 36.46,
+      "texto": "Se emprestares dinheiro a alguém do meu povo,"
+    },
+    {
+      "t0": 36.7,
+      "t1": 38.62,
+      "texto": "a um pobre que vive ao teu lado,"
+    },
+    {
+      "t0": 39.2,
+      "t1": 40.82,
+      "texto": "não sejas um usurário,"
+    },
+    {
+      "t0": 41.32,
+      "t1": 42.68,
+      "texto": "dele cobrando juros."
+    },
+    {
+      "t0": 43.6,
+      "t1": 46.68,
+      "texto": "Se tomares como penhor o manto do teu próximo,"
+    },
+    {
+      "t0": 47.28,
+      "t1": 49.98,
+      "texto": "deverás devolvê-lo antes do pôr do sol."
+    },
+    {
+      "t0": 50.68,
+      "t1": 53.5,
+      "texto": "Pois é a única veste que tem para o seu corpo,"
+    },
+    {
+      "t0": 53.78,
+      "t1": 55.9,
+      "texto": "e coberta que ele tem para dormir."
+    },
+    {
+      "t0": 56.78,
+      "t1": 59.96,
+      "texto": "Se clamar por mim, eu o ouvirei,"
+    },
+    {
+      "t0": 60.12,
+      "t1": 62.24,
+      "texto": "porque sou misericordioso."
+    },
+    {
+      "t0": 63.22,
+      "t1": 64.5,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

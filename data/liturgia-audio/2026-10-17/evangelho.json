@@ -1,0 +1,107 @@
+{
+  "referencia": "Lc 12,8-12",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 73.02,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 22.8,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 23.6,
+      "t1": 27.1,
+      "texto": "Naquele tempo, disse Jesus aos seus discípulos:"
+    },
+    {
+      "t0": 27.42,
+      "t1": 29.82,
+      "texto": "\"Todo aquele que der testemunho de mim"
+    },
+    {
+      "t0": 29.82,
+      "t1": 31.32,
+      "texto": "diante dos homens,"
+    },
+    {
+      "t0": 31.56,
+      "t1": 34.56,
+      "texto": "o Filho do Homem também dará testemunho dele"
+    },
+    {
+      "t0": 34.56,
+      "t1": 36.34,
+      "texto": "diante dos anjos de Deus."
+    },
+    {
+      "t0": 37.22,
+      "t1": 40.36,
+      "texto": "Mas aquele que me renegar diante dos homens,"
+    },
+    {
+      "t0": 40.54,
+      "t1": 43.3,
+      "texto": "será negado diante dos anjos de Deus."
+    },
+    {
+      "t0": 43.78,
+      "t1": 46.28,
+      "texto": "Todo aquele que disser alguma coisa"
+    },
+    {
+      "t0": 46.28,
+      "t1": 47.84,
+      "texto": "contra o Filho do Homem"
+    },
+    {
+      "t0": 48.06,
+      "t1": 49.18,
+      "texto": "será perdoado."
+    },
+    {
+      "t0": 49.18,
+      "t1": 52.44,
+      "texto": "Mas quem blasfemar contra o Espírito Santo"
+    },
+    {
+      "t0": 52.66,
+      "t1": 54.14,
+      "texto": "não será perdoado."
+    },
+    {
+      "t0": 54.64,
+      "t1": 57.72,
+      "texto": "Quando vos conduzirem diante das sinagogas,"
+    },
+    {
+      "t0": 57.92,
+      "t1": 59.9,
+      "texto": "magistrados e autoridades,"
+    },
+    {
+      "t0": 60.28,
+      "t1": 64.26,
+      "texto": "não fiqueis preocupados como ou com que vos defendereis,"
+    },
+    {
+      "t0": 64.4,
+      "t1": 65.86,
+      "texto": "ou com o que direis."
+    },
+    {
+      "t0": 66.24,
+      "t1": 69.86,
+      "texto": "Pois nessa hora o Espírito Santo vos ensinará"
+    },
+    {
+      "t0": 69.86,
+      "t1": 71.22,
+      "texto": "o que deveis dizer\"."
+    },
+    {
+      "t0": 71.62,
+      "t1": 73.02,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

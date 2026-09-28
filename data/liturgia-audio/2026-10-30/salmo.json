@@ -1,0 +1,112 @@
+{
+  "referencia": "Sl 110 (111),1-2.3-4.5-6 (R. 2a)",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 61.6,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 1.5,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 2.54,
+      "t1": 4.52,
+      "texto": "Grandiosas são as obras do Senhor!"
+    },
+    {
+      "t0": 5.28,
+      "t1": 8.04,
+      "texto": "Aleluia, Aleluia, Aleluia."
+    },
+    {
+      "t0": 8.04,
+      "t1": 11.26,
+      "texto": "Eu agradeço a Deus de todo o coração"
+    },
+    {
+      "t0": 11.68,
+      "t1": 14.46,
+      "texto": "junto com todos os seus justos reunidos!"
+    },
+    {
+      "t0": 15.32,
+      "t1": 17.72,
+      "texto": "Que grandiosas são as obras do Senhor,"
+    },
+    {
+      "t0": 18.18,
+      "t1": 21.02,
+      "texto": "elas merecem todo o amor e admiração!"
+    },
+    {
+      "t0": 21.76,
+      "t1": 23.74,
+      "texto": "Grandiosas são as obras do Senhor!"
+    },
+    {
+      "t0": 24.5,
+      "t1": 27.26,
+      "texto": "Aleluia, Aleluia, Aleluia."
+    },
+    {
+      "t0": 27.26,
+      "t1": 30,
+      "texto": "Que beleza e esplendor são os seus feitos!"
+    },
+    {
+      "t0": 30.42,
+      "t1": 33.1,
+      "texto": "Sua justiça permanece eternamente!"
+    },
+    {
+      "t0": 33.88,
+      "t1": 37.06,
+      "texto": "O Senhor bom e clemente nos deixou"
+    },
+    {
+      "t0": 37.06,
+      "t1": 39.32,
+      "texto": "a lembrança de suas grandes maravilhas."
+    },
+    {
+      "t0": 39.32,
+      "t1": 41.3,
+      "texto": "Grandiosas são as obras do Senhor!"
+    },
+    {
+      "t0": 42.06,
+      "t1": 44.82,
+      "texto": "Aleluia, Aleluia, Aleluia."
+    },
+    {
+      "t0": 44.82,
+      "t1": 47.58,
+      "texto": "Ele dá o alimento aos que o temem"
+    },
+    {
+      "t0": 47.58,
+      "t1": 49.9,
+      "texto": "e jamais esquecerá sua Aliança."
+    },
+    {
+      "t0": 50.68,
+      "t1": 52.72,
+      "texto": "Ao seu povo manifesta seu poder,"
+    },
+    {
+      "t0": 53.22,
+      "t1": 55.44,
+      "texto": "dando a ele a herança das nações."
+    },
+    {
+      "t0": 56.1,
+      "t1": 58.08,
+      "texto": "Grandiosas são as obras do Senhor!"
+    },
+    {
+      "t0": 58.84,
+      "t1": 61.6,
+      "texto": "Aleluia, Aleluia, Aleluia."
+    }
+  ]
+}

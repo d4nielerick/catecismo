@@ -1,0 +1,97 @@
+{
+  "referencia": "Ap 12,1.5.13a.15-16a",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 46.56,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 2.84,
+      "texto": "Leitura do Livro do Apocalipse de São João."
+    },
+    {
+      "t0": 4.04,
+      "t1": 6.1,
+      "texto": "Apareceu no céu um grande sinal:"
+    },
+    {
+      "t0": 6.44,
+      "t1": 8.48,
+      "texto": "uma mulher vestida do sol,"
+    },
+    {
+      "t0": 8.76,
+      "t1": 10.84,
+      "texto": "tendo a lua debaixo dos pés"
+    },
+    {
+      "t0": 11,
+      "t1": 14.64,
+      "texto": "e sobre a cabeça uma coroa de doze estrelas."
+    },
+    {
+      "t0": 15.4,
+      "t1": 17.3,
+      "texto": "E ela deu à luz um filho homem,"
+    },
+    {
+      "t0": 17.5,
+      "t1": 20.1,
+      "texto": "que veio para governar todas as nações"
+    },
+    {
+      "t0": 20.42,
+      "t1": 21.78,
+      "texto": "com cetro de ferro."
+    },
+    {
+      "t0": 22.42,
+      "t1": 25.34,
+      "texto": "Mas o filho foi levado para junto de Deus"
+    },
+    {
+      "t0": 25.34,
+      "t1": 26.42,
+      "texto": "e do seu trono."
+    },
+    {
+      "t0": 27.06,
+      "t1": 29.84,
+      "texto": "Quando viu que tinha sido expulso para a terra,"
+    },
+    {
+      "t0": 30.14,
+      "t1": 32.34,
+      "texto": "o dragão começou a perseguir a mulher"
+    },
+    {
+      "t0": 32.48,
+      "t1": 34.32,
+      "texto": "que tinha dado à luz o menino."
+    },
+    {
+      "t0": 35.02,
+      "t1": 36.2,
+      "texto": "A serpente, então,"
+    },
+    {
+      "t0": 36.82,
+      "t1": 39.32,
+      "texto": "vomitou como um rio de água atrás da mulher,"
+    },
+    {
+      "t0": 39.76,
+      "t1": 41.16,
+      "texto": "a fim de a submergir."
+    },
+    {
+      "t0": 41.66,
+      "t1": 44.84,
+      "texto": "A terra, porém, veio em socorro da mulher."
+    },
+    {
+      "t0": 45.54,
+      "t1": 46.56,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

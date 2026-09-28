@@ -1,0 +1,127 @@
+{
+  "referencia": "Lc 12,54-59",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 61.52,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.44,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 4.34,
+      "t1": 5.38,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 5.68,
+      "t1": 7.58,
+      "texto": "Jesus dizia às multidões:"
+    },
+    {
+      "t0": 7.58,
+      "t1": 10.76,
+      "texto": "\"Quando vedes uma nuvem vinda do ocidente,"
+    },
+    {
+      "t0": 11.1,
+      "t1": 12.6,
+      "texto": "logo dizeis que vem chuva."
+    },
+    {
+      "t0": 12.9,
+      "t1": 14.12,
+      "texto": "E assim acontece."
+    },
+    {
+      "t0": 14.88,
+      "t1": 17.08,
+      "texto": "Quando sentis soprar o vento do sul,"
+    },
+    {
+      "t0": 17.56,
+      "t1": 19.46,
+      "texto": "logo dizeis que vai fazer calor."
+    },
+    {
+      "t0": 20.82,
+      "t1": 22.04,
+      "texto": "E assim acontece."
+    },
+    {
+      "t0": 22.8,
+      "t1": 25.4,
+      "texto": "Hipócritas! Vós sabeis interpretar"
+    },
+    {
+      "t0": 25.4,
+      "t1": 27.32,
+      "texto": "o aspecto da terra e do céu."
+    },
+    {
+      "t0": 27.74,
+      "t1": 29.5,
+      "texto": "Como é que não sabeis"
+    },
+    {
+      "t0": 29.5,
+      "t1": 31.16,
+      "texto": "interpretar o tempo presente?"
+    },
+    {
+      "t0": 31.98,
+      "t1": 35.38,
+      "texto": "Por que não julgais por vós mesmos o que é justo?"
+    },
+    {
+      "t0": 36.68,
+      "t1": 39.98,
+      "texto": "Quando, pois, tu vais com o teu adversário"
+    },
+    {
+      "t0": 39.98,
+      "t1": 42.04,
+      "texto": "apresentar-te diante do magistrado,"
+    },
+    {
+      "t0": 42.38,
+      "t1": 44.22,
+      "texto": "procura resolver o caso com ele"
+    },
+    {
+      "t0": 44.42,
+      "t1": 45.6,
+      "texto": "enquanto estais a caminho."
+    },
+    {
+      "t0": 46.24,
+      "t1": 48.5,
+      "texto": "Senão ele te levará ao juiz,"
+    },
+    {
+      "t0": 48.74,
+      "t1": 50.84,
+      "texto": "o juiz te entregará ao guarda,"
+    },
+    {
+      "t0": 50.92,
+      "t1": 53.1,
+      "texto": "e o guarda te jogará na cadeia."
+    },
+    {
+      "t0": 53.66,
+      "t1": 56.54,
+      "texto": "Eu te digo: daí tu não sairás,"
+    },
+    {
+      "t0": 56.74,
+      "t1": 59.22,
+      "texto": "enquanto não pagares o último centavo\"."
+    },
+    {
+      "t0": 60.18,
+      "t1": 61.52,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}
