@@ -407,6 +407,15 @@ santos, **só com licença verificável** (CC0, domínio público, CC-BY com cr�
 5. Complemento [nc]: Cleveland Museum of Art Open Access (CC0), National Gallery of Art (open data),
    Rijksmuseum (chave grátis), Europeana (`reusability=open`, chave grátis), Smithsonian Open Access.
 
+**Gravuras em hachura (prioridade, 27/09):** séries completas de cenas bíblicas em domínio público,
+que cobrem quase toda perícope do lecionário e dão identidade visual forte (traço P&B + cor
+litúrgica do dia sobreposta): **Gustave Doré**, *La Sainte Bible* (1866, >240 gravuras; Commons:
+"Category:The Holy Bible (Doré)"); **Julius Schnorr von Carolsfeld**, *Die Bibel in Bildern*
+(1860, 240 xilogravuras); **Albrecht Dürer** (Paixões, Vida da Virgem); **James Tissot**
+(aquarelas da vida de Cristo, Brooklyn Museum, domínio público). Mapear cada gravura à passagem
+(o título das séries já traz a referência) em `acervo-temas.json`. Tratamento: tom da cor
+litúrgica por multiplicação, textura de papel, sem desfoque.
+
 **Fora, de propósito:** Pinterest e Google Imagens. Os termos proíbem scraping e as imagens não têm
 licença nem origem (repost). Não monetizar **não** torna o uso livre, e o Content ID do YouTube age
 igual. Também fora: fotos de museus que alegam direito sobre reprodução (Itália, parte da Alemanha),
