@@ -1,0 +1,82 @@
+{
+  "referencia": "At 1,12-14",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 46.4,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 2.38,
+      "texto": "Leitura dos Atos dos Apóstolos."
+    },
+    {
+      "t0": 3.7,
+      "t1": 5.9,
+      "texto": "Depois que Jesus subiu ao céu,"
+    },
+    {
+      "t0": 6.14,
+      "t1": 8.7,
+      "texto": "os apóstolos voltaram para Jerusalém,"
+    },
+    {
+      "t0": 8.84,
+      "t1": 10.68,
+      "texto": "vindo do monte das Oliveiras,"
+    },
+    {
+      "t0": 10.84,
+      "t1": 12.66,
+      "texto": "que fica perto de Jerusalém,"
+    },
+    {
+      "t0": 12.98,
+      "t1": 14.78,
+      "texto": "a mais ou menos um quilômetro."
+    },
+    {
+      "t0": 15.98,
+      "t1": 19.1,
+      "texto": "Entraram na cidade e subiram para a sala de cima,"
+    },
+    {
+      "t0": 19.36,
+      "t1": 20.84,
+      "texto": "onde costumavam ficar."
+    },
+    {
+      "t0": 20.84,
+      "t1": 25.98,
+      "texto": "Eram Pedro e João, Tiago e André, Filipe e Tomé,"
+    },
+    {
+      "t0": 26.68,
+      "t1": 30.18,
+      "texto": "Bartolomeu e Mateus, Tiago, filho de Alfeu,"
+    },
+    {
+      "t0": 30.64,
+      "t1": 33.84,
+      "texto": "Simão Zelota e Judas, filho de Tiago."
+    },
+    {
+      "t0": 34.84,
+      "t1": 37.94,
+      "texto": "Todos eles perseveravam na oração em comum,"
+    },
+    {
+      "t0": 38.3,
+      "t1": 41.34,
+      "texto": "junto com algumas mulheres, entre as quais Maria,"
+    },
+    {
+      "t0": 41.84,
+      "t1": 44.48,
+      "texto": "mãe de Jesus, e com os irmãos de Jesus."
+    },
+    {
+      "t0": 45.24,
+      "t1": 46.4,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}
