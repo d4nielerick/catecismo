@@ -1,0 +1,97 @@
+{
+  "referencia": "Lc 11,37-41",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 45.48,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 3.64,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 4.76,
+      "t1": 5.76,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 5.98,
+      "t1": 7.24,
+      "texto": "enquanto Jesus falava,"
+    },
+    {
+      "t0": 7.46,
+      "t1": 10.06,
+      "texto": "um fariseu convidou-o para jantar com ele."
+    },
+    {
+      "t0": 11.08,
+      "t1": 12.98,
+      "texto": "Jesus entrou e pôs-se à mesa."
+    },
+    {
+      "t0": 13.62,
+      "t1": 15.54,
+      "texto": "O fariseu ficou admirado"
+    },
+    {
+      "t0": 15.54,
+      "t1": 18.32,
+      "texto": "ao ver que Jesus não tivesse lavado as mãos"
+    },
+    {
+      "t0": 18.32,
+      "t1": 19.5,
+      "texto": "antes da refeição."
+    },
+    {
+      "t0": 20.22,
+      "t1": 22.24,
+      "texto": "O Senhor disse ao fariseu:"
+    },
+    {
+      "t0": 22.56,
+      "t1": 23.92,
+      "texto": "\"Vós fariseus,"
+    },
+    {
+      "t0": 24.62,
+      "t1": 26.58,
+      "texto": "limpais o copo e o prato por fora,"
+    },
+    {
+      "t0": 26.76,
+      "t1": 30.5,
+      "texto": "mas o vosso interior está cheio de roubos e maldades."
+    },
+    {
+      "t0": 31.84,
+      "t1": 32.56,
+      "texto": "Insensatos!"
+    },
+    {
+      "t0": 33.4,
+      "t1": 34.98,
+      "texto": "Aquele que fez o exterior"
+    },
+    {
+      "t0": 34.98,
+      "t1": 36.96,
+      "texto": "não fez também o interior?"
+    },
+    {
+      "t0": 37.7,
+      "t1": 41.18,
+      "texto": "Antes, dai esmola do que vós possuís"
+    },
+    {
+      "t0": 41.38,
+      "t1": 43.24,
+      "texto": "e tudo ficará puro para vós\"."
+    },
+    {
+      "t0": 44.18,
+      "t1": 45.48,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

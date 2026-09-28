@@ -1,0 +1,222 @@
+{
+  "referencia": "Lc 11,15-26",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 118.06,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.74,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 5.06,
+      "t1": 8.58,
+      "texto": "Naquele tempo, Jesus estava expulsando um demônio."
+    },
+    {
+      "t0": 8.94,
+      "t1": 10.44,
+      "texto": "Mas alguns disseram:"
+    },
+    {
+      "t0": 10.92,
+      "t1": 13.8,
+      "texto": "\"É por Belzebu, o príncipe dos demônios,"
+    },
+    {
+      "t0": 13.96,
+      "t1": 15.62,
+      "texto": "que ele expulsa os demônios\"."
+    },
+    {
+      "t0": 16.56,
+      "t1": 18.46,
+      "texto": "Outros, para tentar Jesus,"
+    },
+    {
+      "t0": 18.46,
+      "t1": 20.46,
+      "texto": "pediam-lhe um sinal do céu."
+    },
+    {
+      "t0": 21.2,
+      "t1": 23.42,
+      "texto": "Mas, conhecendo seus pensamentos,"
+    },
+    {
+      "t0": 23.74,
+      "t1": 25.62,
+      "texto": "Jesus disse-lhes:"
+    },
+    {
+      "t0": 25.62,
+      "t1": 29.4,
+      "texto": "\"Todo reino dividido contra si mesmo será destruído;"
+    },
+    {
+      "t0": 30,
+      "t1": 32.06,
+      "texto": "e cairá uma casa por cima da outra."
+    },
+    {
+      "t0": 32.74,
+      "t1": 36.68,
+      "texto": "Ora, se até Satanás está dividido contra si mesmo,"
+    },
+    {
+      "t0": 37,
+      "t1": 39.1,
+      "texto": "como poderá sobreviver o seu reino?"
+    },
+    {
+      "t0": 40.18,
+      "t1": 42.52,
+      "texto": "Vós dizeis que é por Belzebu"
+    },
+    {
+      "t0": 42.52,
+      "t1": 44.16,
+      "texto": "que eu expulso os demônios."
+    },
+    {
+      "t0": 44.76,
+      "t1": 46.58,
+      "texto": "Se é por meio de Belzebu"
+    },
+    {
+      "t0": 46.58,
+      "t1": 48.08,
+      "texto": "que eu expulso demônios,"
+    },
+    {
+      "t0": 48.34,
+      "t1": 50.78,
+      "texto": "vossos filhos os expulsam por meio de quem?"
+    },
+    {
+      "t0": 51.44,
+      "t1": 54.22,
+      "texto": "Por isso, eles mesmos serão vossos juízes."
+    },
+    {
+      "t0": 55.16,
+      "t1": 57.1,
+      "texto": "Mas, se é pelo dedo de Deus"
+    },
+    {
+      "t0": 57.1,
+      "t1": 58.76,
+      "texto": "que eu expulso os demônios,"
+    },
+    {
+      "t0": 58.76,
+      "t1": 61.72,
+      "texto": "então chegou para vós o Reino de Deus."
+    },
+    {
+      "t0": 62.82,
+      "t1": 65.2,
+      "texto": "Quando um homem forte e bem armado"
+    },
+    {
+      "t0": 65.2,
+      "t1": 66.88,
+      "texto": "guarda a própria casa,"
+    },
+    {
+      "t0": 67.16,
+      "t1": 68.64,
+      "texto": "seus bens estão seguros."
+    },
+    {
+      "t0": 69.3,
+      "t1": 72.04,
+      "texto": "Mas, quando chega um homem mais forte do que ele,"
+    },
+    {
+      "t0": 72.04,
+      "t1": 75.98,
+      "texto": "vence-o, arranca-lhe a armadura na qual ele confiava,"
+    },
+    {
+      "t0": 76.1,
+      "t1": 77.64,
+      "texto": "e reparte o que roubou."
+    },
+    {
+      "t0": 78.8,
+      "t1": 81.28,
+      "texto": "Quem não está comigo, está contra mim."
+    },
+    {
+      "t0": 81.28,
+      "t1": 84.7,
+      "texto": "E quem não recolhe comigo, dispersa."
+    },
+    {
+      "t0": 85.46,
+      "t1": 87.98,
+      "texto": "Quando o espírito mau sai de um homem,"
+    },
+    {
+      "t0": 88.16,
+      "t1": 90.32,
+      "texto": "fica vagando em lugares desertos,"
+    },
+    {
+      "t0": 90.46,
+      "t1": 91.62,
+      "texto": "à procura de repouso;"
+    },
+    {
+      "t0": 92.28,
+      "t1": 94.5,
+      "texto": "não o encontrando, ele diz:"
+    },
+    {
+      "t0": 94.7,
+      "t1": 99.04,
+      "texto": "'Vou voltar para minha casa de onde saí'."
+    },
+    {
+      "t0": 99.04,
+      "t1": 100.2,
+      "texto": "Quando ele chega,"
+    },
+    {
+      "t0": 100.68,
+      "t1": 102.78,
+      "texto": "encontra a casa varrida e arrumada."
+    },
+    {
+      "t0": 103.42,
+      "t1": 105.8,
+      "texto": "Então ele vai, e traz consigo"
+    },
+    {
+      "t0": 105.8,
+      "t1": 108.34,
+      "texto": "outros sete espíritos piores do que ele."
+    },
+    {
+      "t0": 108.34,
+      "t1": 111.08,
+      "texto": "E, entrando, instalam-se aí."
+    },
+    {
+      "t0": 112.12,
+      "t1": 113.68,
+      "texto": "No fim, esse homem"
+    },
+    {
+      "t0": 113.68,
+      "t1": 115.76,
+      "texto": "fica em condição pior do que antes\"."
+    },
+    {
+      "t0": 116.72,
+      "t1": 118.06,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

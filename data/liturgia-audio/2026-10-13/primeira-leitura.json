@@ -1,0 +1,112 @@
+{
+  "referencia": "Gl 5,1-6",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 58.28,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 3.04,
+      "texto": "Leitura da Carta de São Paulo aos Gálatas."
+    },
+    {
+      "t0": 4.26,
+      "t1": 4.94,
+      "texto": "Irmãos,"
+    },
+    {
+      "t0": 5.34,
+      "t1": 8.32,
+      "texto": "É para a liberdade que Cristo nos libertou."
+    },
+    {
+      "t0": 9.06,
+      "t1": 10.72,
+      "texto": "Ficai pois firmes"
+    },
+    {
+      "t0": 10.8,
+      "t1": 14.66,
+      "texto": "e não vos deixeis amarrar de novo ao jugo da escravidão."
+    },
+    {
+      "t0": 15.44,
+      "t1": 18.4,
+      "texto": "Eis que eu, Paulo, vos digo que"
+    },
+    {
+      "t0": 18.4,
+      "t1": 21.68,
+      "texto": "Cristo não será de nenhum proveito para vós,"
+    },
+    {
+      "t0": 21.86,
+      "t1": 23.82,
+      "texto": "se vos deixardes circuncidar."
+    },
+    {
+      "t0": 24.54,
+      "t1": 28.12,
+      "texto": "Mais uma vez, atesto a todo homem circuncidado"
+    },
+    {
+      "t0": 28.12,
+      "t1": 30.96,
+      "texto": "que ele está obrigado a observar toda a Lei."
+    },
+    {
+      "t0": 31.42,
+      "t1": 34.3,
+      "texto": "Vós que procurais a vossa justificação na Lei,"
+    },
+    {
+      "t0": 34.78,
+      "t1": 37.6,
+      "texto": "rompestes com Cristo, decaístes da graça."
+    },
+    {
+      "t0": 38.36,
+      "t1": 39.32,
+      "texto": "Quanto a nós,"
+    },
+    {
+      "t0": 39.46,
+      "t1": 41.86,
+      "texto": "que nos deixamos conduzir pelo Espírito,"
+    },
+    {
+      "t0": 42.16,
+      "t1": 44.8,
+      "texto": "é da fé que aguardamos a justificação,"
+    },
+    {
+      "t0": 45.16,
+      "t1": 46.66,
+      "texto": "objeto de nossa esperança."
+    },
+    {
+      "t0": 47.24,
+      "t1": 49.32,
+      "texto": "Com efeito, em Jesus Cristo,"
+    },
+    {
+      "t0": 49.54,
+      "t1": 52.3,
+      "texto": "o que vale é a fé agindo pela caridade;"
+    },
+    {
+      "t0": 53.08,
+      "t1": 54.92,
+      "texto": "observar ou não a circuncisão"
+    },
+    {
+      "t0": 54.92,
+      "t1": 56.26,
+      "texto": "não tem valor algum."
+    },
+    {
+      "t0": 57.28,
+      "t1": 58.28,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

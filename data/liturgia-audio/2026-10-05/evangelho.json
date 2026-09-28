@@ -1,0 +1,267 @@
+{
+  "referencia": "Lc 10,25-37",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 120.34,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.5,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 4.28,
+      "t1": 5.32,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 5.56,
+      "t1": 7.36,
+      "texto": "um mestre da Lei se levantou"
+    },
+    {
+      "t0": 7.36,
+      "t1": 9.96,
+      "texto": "e, querendo pôr Jesus em dificuldade,"
+    },
+    {
+      "t0": 10.24,
+      "t1": 10.76,
+      "texto": "perguntou:"
+    },
+    {
+      "t0": 11.5,
+      "t1": 13.7,
+      "texto": "\"Mestre, que devo fazer"
+    },
+    {
+      "t0": 13.7,
+      "t1": 15.8,
+      "texto": "para receber em herança a vida eterna?\""
+    },
+    {
+      "t0": 16.48,
+      "t1": 17.68,
+      "texto": "Jesus lhe disse:"
+    },
+    {
+      "t0": 17.68,
+      "t1": 19.66,
+      "texto": "\"O que está escrito na Lei?"
+    },
+    {
+      "t0": 20.04,
+      "t1": 20.92,
+      "texto": "Como lês?\""
+    },
+    {
+      "t0": 21.3,
+      "t1": 22.72,
+      "texto": "Ele então respondeu:"
+    },
+    {
+      "t0": 22.72,
+      "t1": 25.16,
+      "texto": "\"Amarás o Senhor, teu Deus,"
+    },
+    {
+      "t0": 25.42,
+      "t1": 28.58,
+      "texto": "de todo o teu coração e com toda a tua alma,"
+    },
+    {
+      "t0": 28.8,
+      "t1": 32.06,
+      "texto": "com toda a tua força e com toda a tua inteligência;"
+    },
+    {
+      "t0": 32.06,
+      "t1": 34.72,
+      "texto": "e ao teu próximo como a ti mesmo!\""
+    },
+    {
+      "t0": 34.72,
+      "t1": 35.92,
+      "texto": "Jesus lhe disse:"
+    },
+    {
+      "t0": 35.92,
+      "t1": 38.02,
+      "texto": "\"Tu respondeste corretamente."
+    },
+    {
+      "t0": 38.02,
+      "t1": 40.28,
+      "texto": "Faze isso e viverás\"."
+    },
+    {
+      "t0": 40.28,
+      "t1": 43.9,
+      "texto": "Ele, porém, querendo justificar-se,"
+    },
+    {
+      "t0": 43.9,
+      "t1": 44.54,
+      "texto": "disse a Jesus:"
+    },
+    {
+      "t0": 44.54,
+      "t1": 46.36,
+      "texto": "\"E quem é o meu próximo?\""
+    },
+    {
+      "t0": 46.8,
+      "t1": 48.04,
+      "texto": "Jesus respondeu:"
+    },
+    {
+      "t0": 48.04,
+      "t1": 51.14,
+      "texto": "\"Certo homem descia de Jerusalém para Jericó"
+    },
+    {
+      "t0": 51.14,
+      "t1": 53.18,
+      "texto": "e caiu nas mãos de assaltantes."
+    },
+    {
+      "t0": 53.18,
+      "t1": 56.48,
+      "texto": "Estes arrancaram-lhe tudo, espancaram-no,"
+    },
+    {
+      "t0": 56.48,
+      "t1": 59.2,
+      "texto": "e foram-se embora deixando-o quase morto."
+    },
+    {
+      "t0": 59.2,
+      "t1": 61.62,
+      "texto": "Por acaso, um sacerdote"
+    },
+    {
+      "t0": 61.62,
+      "t1": 63,
+      "texto": "estava descendo por aquele caminho."
+    },
+    {
+      "t0": 63,
+      "t1": 64.58,
+      "texto": "Quando viu o homem,"
+    },
+    {
+      "t0": 64.9,
+      "t1": 66.76,
+      "texto": "seguiu adiante, pelo outro lado."
+    },
+    {
+      "t0": 66.76,
+      "t1": 69.16,
+      "texto": "O mesmo aconteceu com um levita:"
+    },
+    {
+      "t0": 69.16,
+      "t1": 71.88,
+      "texto": "chegou ao lugar, viu o homem"
+    },
+    {
+      "t0": 71.88,
+      "t1": 74.38,
+      "texto": "e seguiu adiante, pelo outro lado."
+    },
+    {
+      "t0": 74.38,
+      "t1": 77,
+      "texto": "Mas um samaritano que estava viajando,"
+    },
+    {
+      "t0": 77,
+      "t1": 80.12,
+      "texto": "chegou perto dele, viu e sentiu compaixão."
+    },
+    {
+      "t0": 80.12,
+      "t1": 82.78,
+      "texto": "Aproximou-se dele e fez curativos,"
+    },
+    {
+      "t0": 82.78,
+      "t1": 85.02,
+      "texto": "derramando óleo e vinho nas feridas."
+    },
+    {
+      "t0": 85.54,
+      "t1": 87.76,
+      "texto": "Depois colocou o homem em seu próprio animal"
+    },
+    {
+      "t0": 87.76,
+      "t1": 90.9,
+      "texto": "e levou-o a uma pensão, onde cuidou dele."
+    },
+    {
+      "t0": 90.9,
+      "t1": 94.2,
+      "texto": "No dia seguinte, pegou duas moedas de prata"
+    },
+    {
+      "t0": 94.2,
+      "t1": 97.08,
+      "texto": "e entregou-as ao dono da pensão, recomendando:"
+    },
+    {
+      "t0": 97.08,
+      "t1": 98.44,
+      "texto": "\"Toma conta dele!"
+    },
+    {
+      "t0": 98.44,
+      "t1": 99.74,
+      "texto": "Quando eu voltar,"
+    },
+    {
+      "t0": 100.12,
+      "t1": 102,
+      "texto": "vou pagar o que tiveres gasto a mais'."
+    },
+    {
+      "t0": 102,
+      "t1": 103.74,
+      "texto": "E Jesus perguntou:"
+    },
+    {
+      "t0": 103.74,
+      "t1": 107.6,
+      "texto": "\"Na tua opinião, qual dos três foi o próximo do homem"
+    },
+    {
+      "t0": 107.6,
+      "t1": 109.34,
+      "texto": "que caiu nas mãos dos assaltantes?\""
+    },
+    {
+      "t0": 109.66,
+      "t1": 110.78,
+      "texto": "Ele respondeu:"
+    },
+    {
+      "t0": 110.78,
+      "t1": 113.6,
+      "texto": "\"Aquele que usou de misericórdia para com ele\"."
+    },
+    {
+      "t0": 113.6,
+      "t1": 115.76,
+      "texto": "Então Jesus lhe disse:"
+    },
+    {
+      "t0": 115.76,
+      "t1": 118.42,
+      "texto": "\"Vai e faze a mesma coisa\"."
+    },
+    {
+      "t0": 119.04,
+      "t1": 120.34,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

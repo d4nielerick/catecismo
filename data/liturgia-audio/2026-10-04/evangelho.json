@@ -1,0 +1,222 @@
+{
+  "referencia": "Mt 21,33-43",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 115.96,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.92,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
+    },
+    {
+      "t0": 5.02,
+      "t1": 8.62,
+      "texto": "Naquele tempo, Jesus disse aos sumos sacerdotes"
+    },
+    {
+      "t0": 8.62,
+      "t1": 9.98,
+      "texto": "e aos anciãos do povo:"
+    },
+    {
+      "t0": 11.2,
+      "t1": 13.02,
+      "texto": "\"Escutai esta outra parábola:"
+    },
+    {
+      "t0": 13.58,
+      "t1": 15.8,
+      "texto": "Certo proprietário plantou uma vinha,"
+    },
+    {
+      "t0": 16.34,
+      "t1": 17.52,
+      "texto": "pôs uma cerca em volta,"
+    },
+    {
+      "t0": 17.98,
+      "t1": 20.28,
+      "texto": "fez nela um lagar para esmagar as uvas,"
+    },
+    {
+      "t0": 20.28,
+      "t1": 22.56,
+      "texto": "e construiu uma torre de guarda."
+    },
+    {
+      "t0": 23.04,
+      "t1": 25.56,
+      "texto": "Depois, arrendou-a a vinhateiros,"
+    },
+    {
+      "t0": 25.56,
+      "t1": 27.46,
+      "texto": "e viajou para o estrangeiro."
+    },
+    {
+      "t0": 27.46,
+      "t1": 29.98,
+      "texto": "Quando chegou o tempo da colheita,"
+    },
+    {
+      "t0": 30.26,
+      "t1": 33.3,
+      "texto": "o proprietário mandou seus empregados aos vinhateiros"
+    },
+    {
+      "t0": 33.3,
+      "t1": 34.92,
+      "texto": "para receber seus frutos."
+    },
+    {
+      "t0": 36.02,
+      "t1": 38.98,
+      "texto": "Os vinhateiros, porém, agarraram os empregados,"
+    },
+    {
+      "t0": 39.4,
+      "t1": 41.94,
+      "texto": "espancaram a um, mataram a outro,"
+    },
+    {
+      "t0": 41.94,
+      "t1": 43.88,
+      "texto": "e ao terceiro apedrejaram."
+    },
+    {
+      "t0": 44.08,
+      "t1": 47.44,
+      "texto": "O proprietário mandou de novo outros empregados,"
+    },
+    {
+      "t0": 47.62,
+      "t1": 49.54,
+      "texto": "em maior número do que os primeiros."
+    },
+    {
+      "t0": 49.94,
+      "t1": 52.32,
+      "texto": "Mas eles os trataram da mesma forma."
+    },
+    {
+      "t0": 52.98,
+      "t1": 56,
+      "texto": "Finalmente, o proprietário enviou-lhes o seu filho,"
+    },
+    {
+      "t0": 56.36,
+      "t1": 59.62,
+      "texto": "pensando: 'Ao meu filho eles vão respeitar'."
+    },
+    {
+      "t0": 59.96,
+      "t1": 62.58,
+      "texto": "Os vinhateiros, porém, ao verem o filho,"
+    },
+    {
+      "t0": 62.8,
+      "t1": 65.62,
+      "texto": "disseram entre si: 'Este é o herdeiro."
+    },
+    {
+      "t0": 66.02,
+      "t1": 68.96,
+      "texto": "Vinde, vamos matá-lo e tomar posse da sua herança!'"
+    },
+    {
+      "t0": 69.62,
+      "t1": 71.18,
+      "texto": "Então agarraram o filho,"
+    },
+    {
+      "t0": 71.18,
+      "t1": 74.12,
+      "texto": "jogaram-no para fora da vinha e o mataram."
+    },
+    {
+      "t0": 74.6,
+      "t1": 77.32,
+      "texto": "Pois bem, quando o dono da vinha voltar,"
+    },
+    {
+      "t0": 77.6,
+      "t1": 79.44,
+      "texto": "o que fará com esses vinhateiros?\""
+    },
+    {
+      "t0": 79.44,
+      "t1": 83.24,
+      "texto": "Os sumos sacerdotes e os anciãos do povo responderam:"
+    },
+    {
+      "t0": 83.44,
+      "t1": 86.3,
+      "texto": "\"Com certeza mandará matar de modo violento"
+    },
+    {
+      "t0": 86.46,
+      "t1": 87.42,
+      "texto": "esses perversos"
+    },
+    {
+      "t0": 87.52,
+      "t1": 90.06,
+      "texto": "e arrendará a vinha a outros vinhateiros,"
+    },
+    {
+      "t0": 90.2,
+      "t1": 92.58,
+      "texto": "que lhe entregarão os frutos no tempo certo\"."
+    },
+    {
+      "t0": 93.1,
+      "t1": 94.68,
+      "texto": "Então Jesus lhes disse:"
+    },
+    {
+      "t0": 95.36,
+      "t1": 97.52,
+      "texto": "\"Vós nunca lestes nas Escrituras:"
+    },
+    {
+      "t0": 97.74,
+      "t1": 100.28,
+      "texto": "'A pedra que os construtores rejeitaram"
+    },
+    {
+      "t0": 100.28,
+      "t1": 101.9,
+      "texto": "tornou-se a pedra angular;"
+    },
+    {
+      "t0": 102.4,
+      "t1": 103.9,
+      "texto": "isto foi feito pelo Senhor"
+    },
+    {
+      "t0": 104.06,
+      "t1": 106.14,
+      "texto": "e é maravilhoso aos nossos olhos?'"
+    },
+    {
+      "t0": 106.82,
+      "t1": 108.28,
+      "texto": "Por isso, eu vos digo:"
+    },
+    {
+      "t0": 108.56,
+      "t1": 110.8,
+      "texto": "o Reino de Deus vos será tirado"
+    },
+    {
+      "t0": 110.96,
+      "t1": 113.96,
+      "texto": "e será entregue a um povo que produzirá frutos\"."
+    },
+    {
+      "t0": 114.74,
+      "t1": 115.96,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

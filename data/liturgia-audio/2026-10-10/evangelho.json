@@ -1,0 +1,67 @@
+{
+  "referencia": "Lc 11,27-28",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 49.66,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 24.3,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 25.6,
+      "t1": 26.62,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 27.08,
+      "t1": 28.58,
+      "texto": "enquanto Jesus falava,"
+    },
+    {
+      "t0": 28.58,
+      "t1": 32.18,
+      "texto": "uma mulher levantou a voz no meio da multidão"
+    },
+    {
+      "t0": 32.18,
+      "t1": 33.38,
+      "texto": "e lhe disse:"
+    },
+    {
+      "t0": 34.26,
+      "t1": 36.18,
+      "texto": "\"Feliz o ventre que te trouxe"
+    },
+    {
+      "t0": 36.18,
+      "t1": 38.32,
+      "texto": "e os seios que te amamentaram\"."
+    },
+    {
+      "t0": 39.38,
+      "t1": 40.68,
+      "texto": "Jesus respondeu:"
+    },
+    {
+      "t0": 40.68,
+      "t1": 43.44,
+      "texto": "\"Muito mais felizes são aqueles"
+    },
+    {
+      "t0": 43.44,
+      "t1": 45.26,
+      "texto": "que ouvem a palavra de Deus"
+    },
+    {
+      "t0": 45.26,
+      "t1": 46.98,
+      "texto": "e a põem em prática\"."
+    },
+    {
+      "t0": 48.08,
+      "t1": 49.66,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

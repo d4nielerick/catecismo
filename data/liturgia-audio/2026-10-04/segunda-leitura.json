@@ -1,0 +1,97 @@
+{
+  "referencia": "Fl 4,6-9",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 67.86,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 20.58,
+      "texto": "Leitura da Carta de São Paulo aos Filipenses."
+    },
+    {
+      "t0": 21.74,
+      "t1": 22.42,
+      "texto": "Irmãos:"
+    },
+    {
+      "t0": 23.14,
+      "t1": 25.22,
+      "texto": "Não vos inquieteis com coisa alguma,"
+    },
+    {
+      "t0": 25.58,
+      "t1": 28.26,
+      "texto": "mas apresentai as vossas necessidades a Deus,"
+    },
+    {
+      "t0": 28.52,
+      "t1": 33.32,
+      "texto": "em orações e súplicas, acompanhadas de ação de graças."
+    },
+    {
+      "t0": 34.26,
+      "t1": 35.78,
+      "texto": "E a paz de Deus,"
+    },
+    {
+      "t0": 35.96,
+      "t1": 37.76,
+      "texto": "que ultrapassa todo o entendimento,"
+    },
+    {
+      "t0": 38.28,
+      "t1": 40.5,
+      "texto": "guardará os vossos corações e pensamentos"
+    },
+    {
+      "t0": 40.78,
+      "t1": 41.86,
+      "texto": "em Cristo Jesus."
+    },
+    {
+      "t0": 43.32,
+      "t1": 44.88,
+      "texto": "Quanto ao mais, irmãos,"
+    },
+    {
+      "t0": 44.88,
+      "t1": 48.52,
+      "texto": "ocupai-vos com tudo o que é verdadeiro, respeitável,"
+    },
+    {
+      "t0": 49.02,
+      "t1": 52.58,
+      "texto": "justo, puro, amável, honroso,"
+    },
+    {
+      "t0": 52.92,
+      "t1": 54.56,
+      "texto": "tudo o que é virtude"
+    },
+    {
+      "t0": 54.56,
+      "t1": 56.84,
+      "texto": "ou de qualquer modo mereça louvor."
+    },
+    {
+      "t0": 58.16,
+      "t1": 60.6,
+      "texto": "Praticai o que aprendestes e recebestes de mim,"
+    },
+    {
+      "t0": 60.88,
+      "t1": 62.74,
+      "texto": "ou que de mim vistes e ouvistes."
+    },
+    {
+      "t0": 63.48,
+      "t1": 65.96,
+      "texto": "Assim o Deus da paz estará convosco."
+    },
+    {
+      "t0": 66.9,
+      "t1": 67.86,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

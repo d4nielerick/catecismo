@@ -1,0 +1,107 @@
+{
+  "referencia": "44.45.47.48 (R. 41a)",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 84.36,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 1.54,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 1.54,
+      "t1": 6.16,
+      "texto": "Senhor, que desça sobre mim a vossa graça!"
+    },
+    {
+      "t0": 6.92,
+      "t1": 10.82,
+      "texto": "Senhor, que desça sobre mim a vossa graça"
+    },
+    {
+      "t0": 11.73,
+      "t1": 14.4,
+      "texto": "e a vossa salvação que prometestes!"
+    },
+    {
+      "t0": 15.41,
+      "t1": 20.03,
+      "texto": "Senhor, que desça sobre mim a vossa graça!"
+    },
+    {
+      "t0": 20.79,
+      "t1": 23.76,
+      "texto": "Não retireis vossa verdade de meus lábios,"
+    },
+    {
+      "t0": 24.41,
+      "t1": 27.28,
+      "texto": "pois eu confio em vossos justos julgamentos!"
+    },
+    {
+      "t0": 28.32,
+      "t1": 32.94,
+      "texto": "Senhor, que desça sobre mim a vossa graça!"
+    },
+    {
+      "t0": 33.7,
+      "t1": 36.14,
+      "texto": "Cumprirei constantemente a vossa lei;"
+    },
+    {
+      "t0": 36.74,
+      "t1": 40.24,
+      "texto": "para sempre, eternamente a cumprirei!"
+    },
+    {
+      "t0": 41.35,
+      "t1": 45.97,
+      "texto": "Senhor, que desça sobre mim a vossa graça!"
+    },
+    {
+      "t0": 46.73,
+      "t1": 49.02,
+      "texto": "É amplo e agradável meu caminho,"
+    },
+    {
+      "t0": 49.26,
+      "t1": 53.04,
+      "texto": "porque busco e pesquiso as vossas ordens."
+    },
+    {
+      "t0": 54.06,
+      "t1": 58.68,
+      "texto": "Senhor, que desça sobre mim a vossa graça!"
+    },
+    {
+      "t0": 59.44,
+      "t1": 62.22,
+      "texto": "Muito me alegro com os vossos mandamentos,"
+    },
+    {
+      "t0": 62.48,
+      "t1": 66.52,
+      "texto": "que eu amo, amo tanto, mais que tudo!"
+    },
+    {
+      "t0": 67.82,
+      "t1": 72.44,
+      "texto": "Senhor, que desça sobre mim a vossa graça!"
+    },
+    {
+      "t0": 73.2,
+      "t1": 76.35,
+      "texto": "Elevarei as minhas mãos para louvar-vos"
+    },
+    {
+      "t0": 76.35,
+      "t1": 79,
+      "texto": "e com prazer meditarei vossa vontade."
+    },
+    {
+      "t0": 79.74,
+      "t1": 84.36,
+      "texto": "Senhor, que desça sobre mim a vossa graça!"
+    }
+  ]
+}
