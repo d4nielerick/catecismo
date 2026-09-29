@@ -59,9 +59,11 @@ def pintura_padrao(dt):
     return RAIZ / 'assets' / 'img' / 'cards' / 'trigo-colina.webp'
 
 
-def fundo(pintura, W, H, destino, vertical):
+def fundo(pintura, W, H, destino, vertical, espelhar=False):
     """Pintura cobrindo o quadro, escurecida; no vertical, a pintura fica no alto e o texto embaixo."""
     im = Image.open(pintura).convert('RGB')
+    if espelhar:   # quando a figura está à esquerda, embaixo do texto
+        im = im.transpose(Image.FLIP_LEFT_RIGHT)
     esc = max(W / im.width, H / im.height) * 1.15      # sobra para o zoom lento
     im = im.resize((round(im.width * esc), round(im.height * esc)), Image.LANCZOS)
     x, y = (im.width - W * 1.15) / 2, (im.height - H * 1.15) / 2
@@ -226,6 +228,7 @@ def main():
     ap.add_argument('leitura', choices=list(ROTULO))
     ap.add_argument('--short', action='store_true')
     ap.add_argument('--pintura')
+    ap.add_argument('--espelhar', action='store_true', help='espelha a pintura (figura principal para a direita)')
     ap.add_argument('--trilha', help='música de fundo (domínio público), bem baixa sob a voz')
     a = ap.parse_args()
 
@@ -266,7 +269,7 @@ def main():
 
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
-        fundo(pintura, W, H, tmp / 'fundo.png', a.short)
+        fundo(pintura, W, H, tmp / 'fundo.png', a.short, a.espelhar)
         quadros = quadros_texto(linhas, cab, W, H, tmp, a.short)
         # lista do concat: cada quadro fica até a próxima linha começar
         lista = [f"file '{q}'\nduration {t:.3f}" for q, t in quadros]
