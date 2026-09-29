@@ -75,10 +75,11 @@ def capa(pintura, espelhar, frase, linhas_info, destino):
     im = im.crop(((im.width - W) // 2, (im.height - H) // 2, (im.width - W) // 2 + W, (im.height - H) // 2 + H)).convert('RGBA')
     g = Image.new('L', (W, H))
     dg = ImageDraw.Draw(g)
-    for x in range(W):
-        dg.line([(x, 0), (x, H)], fill=int(235 * max(0, 1 - x / (W * 0.62))))
+    for x in range(W):   # escuro firme até ~45% e esmaece até ~78%: vale para pinturas claras
+        dg.line([(x, 0), (x, H)], fill=int(250 * min(1, max(0, (0.78 - x / W) / 0.33)) ** 0.8))
     im = Image.composite(Image.new('RGBA', (W, H), (12, 9, 6, 255)), im, g)
-    d = ImageDraw.Draw(im)
+    texto = Image.new('RGBA', (W, H), (0, 0, 0, 0))   # o texto vai numa camada própria, com sombra
+    d = ImageDraw.Draw(texto)
     d.text((64, 62), 'EVANGELHO DO DIA', font=fonte('inria-serif-700', 36), fill=(225, 60, 55))
     d.text((52, 70), '“', font=fonte('inria-serif-400-italic', 240), fill=VERMELHO)
     for tam in (120, 108, 96, 86, 76):
@@ -97,6 +98,11 @@ def capa(pintura, espelhar, frase, linhas_info, destino):
     for t in linhas_info:
         d.text((66, y), t, font=fi, fill=CREME)
         y += 54
+    sombra = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    sombra.putalpha(texto.getchannel('A').filter(ImageFilter.GaussianBlur(10)).point(lambda v: min(255, v * 2)))
+    im.alpha_composite(sombra)
+    im.alpha_composite(texto)
+    d = ImageDraw.Draw(im)
     im.alpha_composite(logo(96, 22), (64, H - 146))
     d.text((182, H - 124), 'Liturgia Diária', font=fonte('inria-serif-700', 40), fill=BRANCO)
     d.text((182, H - 78), 'liturgia.santadoutrina.com', font=fonte('inria-serif-400', 28), fill=CREME)
