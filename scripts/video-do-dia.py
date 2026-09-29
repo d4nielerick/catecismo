@@ -84,15 +84,19 @@ def capa(pintura, espelhar, frase, linhas_info, destino):
     for tam in (120, 108, 96, 86, 76):
         f = fonte('inria-serif-700', tam)
         ls = vl.quebrar(d, frase, f, W * 0.52)
-        if len(ls) <= 2:
+        if len(ls) == 1 or (len(ls) == 2 and tam <= 100):
             break
-    ls = ls[:2]
-    y0 = 210 if len(ls) == 1 else 200
-    for j, t in enumerate(ls):
-        d.text((64, y0 + j * tam * 0.88), t, font=f, fill=BRANCO)
+    if len(ls) > 2:
+        sys.exit(f'a frase "{frase}" não cabe em duas linhas na capa: use um trecho mais curto')
+    y = 200
+    for t in ls:
+        d.text((64, y), t, font=f, fill=BRANCO)
+        y += tam * 0.9
     fi = fonte('inria-serif-400-italic', 42)
-    for j, t in enumerate(linhas_info):
-        d.text((66, 420 + j * 54), t, font=fi, fill=CREME)
+    y += 58
+    for t in linhas_info:
+        d.text((66, y), t, font=fi, fill=CREME)
+        y += 54
     im.alpha_composite(logo(96, 22), (64, H - 146))
     d.text((182, H - 124), 'Liturgia Diária', font=fonte('inria-serif-700', 40), fill=BRANCO)
     d.text((182, H - 78), 'liturgia.santadoutrina.com', font=fonte('inria-serif-400', 28), fill=CREME)
@@ -111,6 +115,7 @@ def main():
     ap.add_argument('--pintura-leituras', help='pintura das outras leituras (padrão: a do trecho do dia)')
     ap.add_argument('--espelhar-leituras', action='store_true')
     ap.add_argument('--espelhar-evangelho', action='store_true')
+    ap.add_argument('--direita-leituras', action='store_true', help='pintura das leituras encostada à direita (retratos)')
     ap.add_argument('--frase', required=True, help='frase literal do Evangelho para a capa')
     ap.add_argument('--tema', required=True, help='subtítulo curto da capa, ex.: "A mão no arado"')
     ap.add_argument('--resumo', default='', help='frase de resumo do Evangelho para a descrição')
@@ -137,7 +142,7 @@ def main():
             if l == 'evangelho':
                 cmd += ['--pintura', a.pintura] + (['--espelhar'] if a.espelhar_evangelho else [])
             else:
-                cmd += (['--pintura', a.pintura_leituras] if a.pintura_leituras else []) + (['--espelhar'] if a.espelhar_leituras else [])
+                cmd += (['--pintura', a.pintura_leituras] if a.pintura_leituras else []) + (['--espelhar'] if a.espelhar_leituras else []) + (['--direita'] if a.direita_leituras else [])
             subprocess.run(cmd, check=True)
         durs.append(float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(mp4)],
                                          capture_output=True, text=True, check=True).stdout))

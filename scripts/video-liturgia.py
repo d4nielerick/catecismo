@@ -59,11 +59,26 @@ def pintura_padrao(dt):
     return RAIZ / 'assets' / 'img' / 'cards' / 'trigo-colina.webp'
 
 
-def fundo(pintura, W, H, destino, vertical, espelhar=False):
+def fundo(pintura, W, H, destino, vertical, espelhar=False, direita=False):
     """Pintura cobrindo o quadro, escurecida; no vertical, a pintura fica no alto e o texto embaixo."""
     im = Image.open(pintura).convert('RGB')
     if espelhar:   # quando a figura está à esquerda, embaixo do texto
         im = im.transpose(Image.FLIP_LEFT_RIGHT)
+    if direita and not vertical:
+        # pintura mais estreita que o quadro (retrato, 4:3): encosta à direita, na altura toda, e o
+        # lado esquerdo, onde fica o texto, é a própria pintura ampliada e bem desfocada
+        Wz, Hz = round(W * 1.15), round(H * 1.15)
+        e = Hz / im.height
+        frente = im.resize((round(im.width * e), Hz), Image.LANCZOS)
+        e2 = max(Wz / im.width, Hz / im.height)
+        tela = im.resize((round(im.width * e2), round(im.height * e2)), Image.LANCZOS).filter(ImageFilter.GaussianBlur(40))
+        tela = tela.crop((0, 0, Wz, Hz))
+        mask = Image.new('L', frente.size, 255)
+        dm = ImageDraw.Draw(mask)
+        for x in range(min(160, frente.width)):
+            dm.line([(x, 0), (x, Hz)], fill=int(255 * x / 160))
+        tela.paste(frente, (Wz - frente.width, 0), mask)
+        im = tela
     esc = max(W / im.width, H / im.height) * 1.15      # sobra para o zoom lento
     im = im.resize((round(im.width * esc), round(im.height * esc)), Image.LANCZOS)
     x, y = (im.width - W * 1.15) / 2, (im.height - H * 1.15) / 2
@@ -228,6 +243,7 @@ def main():
     ap.add_argument('leitura', choices=list(ROTULO))
     ap.add_argument('--short', action='store_true')
     ap.add_argument('--pintura')
+    ap.add_argument('--direita', action='store_true', help='pintura estreita encostada à direita, esquerda desfocada')
     ap.add_argument('--espelhar', action='store_true', help='espelha a pintura (figura principal para a direita)')
     ap.add_argument('--trilha', help='música de fundo (domínio público), bem baixa sob a voz')
     a = ap.parse_args()
@@ -269,7 +285,7 @@ def main():
 
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
-        fundo(pintura, W, H, tmp / 'fundo.png', a.short, a.espelhar)
+        fundo(pintura, W, H, tmp / 'fundo.png', a.short, a.espelhar, a.direita)
         quadros = quadros_texto(linhas, cab, W, H, tmp, a.short)
         # lista do concat: cada quadro fica até a próxima linha começar
         lista = [f"file '{q}'\nduration {t:.3f}" for q, t in quadros]
