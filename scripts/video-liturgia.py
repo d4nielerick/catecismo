@@ -66,6 +66,7 @@ def fundo(pintura, W, H, destino, vertical):
     im = im.resize((round(im.width * esc), round(im.height * esc)), Image.LANCZOS)
     x, y = (im.width - W * 1.15) / 2, (im.height - H * 1.15) / 2
     im = im.crop((round(x), round(y), round(x + W * 1.15), round(y + H * 1.15)))
+    im = im.filter(ImageFilter.GaussianBlur(3))
     escuro = Image.new('RGB', im.size, (12, 10, 8))
     im = Image.blend(im, escuro, 0.55 if not vertical else 0.45)
     # degradê: mais escuro onde o texto fica (esquerda no horizontal, embaixo no vertical)
@@ -88,48 +89,135 @@ def quebrar(draw, texto, f, largura):
             atual = p
         else:
             atual = t
-    return linhas + ([atual] if atual else [])
+    linhas = linhas + ([atual] if atual else [])
+    # sem palavra órfã: se a última linha ficou com uma palavra só, desce a última da anterior
+    while len(linhas) > 1 and len(linhas[-1].split()) == 1 and len(linhas[-2].split()) > 2:
+        *resto, ult = linhas[-2].split()
+        linhas[-2], linhas[-1] = ' '.join(resto), f'{ult} {linhas[-1]}'
+        if draw.textlength(linhas[-1], font=f) > largura:
+            break
+    return linhas
 
 
 def quadros_texto(linhas, cab, W, H, pasta, vertical):
-    """Um PNG transparente por linha lida: a atual acesa, até 2 antes e 3 depois esmaecidas."""
-    corpo = fonte('inria-serif-400', 54 if not vertical else 62)
-    f_cab = fonte('inria-serif-400-italic', 40 if not vertical else 46)
-    f_rot = fonte('inria-serif-700', 26 if not vertical else 34)
-    f_site = fonte('inria-serif-400', 26 if not vertical else 30)
+    """Letra no estilo do Apple Music: texto grande em negrito, a linha atual acesa, as outras
+    apagadas e cada vez mais desfocadas conforme se afastam; na troca de linha o texto rola
+    suave (8 quadros com easing). Devolve [(png, duração)] para o concat."""
+    corpo = fonte('inria-serif-700', 64 if not vertical else 70)
+    f_cab = fonte('inria-serif-400-italic', 34 if not vertical else 42)
+    f_rot = fonte('inria-serif-700', 24 if not vertical else 32)
+    f_site = fonte('inria-serif-400', 24 if not vertical else 30)
     m = 140 if not vertical else 90
-    larg = (W * 0.58) if not vertical else (W - 2 * m)
-    base_y = H * 0.52 if not vertical else H * 0.66
-    arquivos = []
-    for i in range(len(linhas)):
+    larg = (W * 0.62) if not vertical else (W - 2 * m)
+    ancora = H * 0.40 if not vertical else H * 0.50     # onde fica o topo da linha atual
+    lh = corpo.size * 1.22
+    gap = corpo.size * 0.55
+    rascunho = ImageDraw.Draw(Image.new('RGBA', (1, 1)))
+    blocos = [quebrar(rascunho, l['texto'], corpo, larg) for l in linhas]
+    topo, y = [], 0.0
+    for bl in blocos:
+        topo.append(y)
+        y += len(bl) * lh + gap
+    # camada fixa: rótulo, data e site
+    fixo = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(fixo)
+    d.text((m, 80 if not vertical else 120), cab['rotulo'].upper(), font=f_rot, fill=(*VERMELHO, 255))
+    for j, t in enumerate(quebrar(d, cab['sub'], f_cab, W - 2 * m)[:2]):
+        d.text((m, (116 if not vertical else 162) + j * f_cab.size * 1.25), t, font=f_cab, fill=(242, 234, 216, 220))
+    d.text((m, H - 76), 'liturgia.santadoutrina.com', font=f_site, fill=(242, 234, 216, 160))
+    # cada bloco desenhado uma vez em 5 níveis de desfoque
+    cache = {}
+    def bloco(k, nivel):
+        if (k, nivel) not in cache:
+            bl = blocos[k]
+            pad = 40
+            im = Image.new('RGBA', (int(larg) + 2 * pad, int(len(bl) * lh) + 2 * pad), (0, 0, 0, 0))
+            dd = ImageDraw.Draw(im)
+            alfa = 255 if nivel == 0 else max(60, 120 - 12 * nivel)
+            for j, t in enumerate(bl):
+                dd.text((pad, pad + j * lh), t, font=corpo, fill=(255, 255, 255, alfa))
+            if nivel:
+                im = im.filter(ImageFilter.GaussianBlur(1.6 + 2.2 * nivel))
+            cache[(k, nivel)] = im
+        return cache[(k, nivel)]
+    def quadro(atual, rolagem):
         im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-        d = ImageDraw.Draw(im)
-        # cabeçalho
-        d.text((m, 90 if not vertical else 120), cab['rotulo'].upper(), font=f_rot, fill=(*VERMELHO, 255))
-        # data e celebração: quebram em até 2 linhas na largura do texto (nomes longos de santos)
-        sub = quebrar(d, cab['sub'], f_cab, W - 2 * m)[:2]
-        for j, t in enumerate(sub):
-            d.text((m, (130 if not vertical else 165) + j * f_cab.size * 1.25), t, font=f_cab, fill=(242, 234, 216, 230))
-        d.text((m, H - 80), 'liturgia.santadoutrina.com', font=f_site, fill=(242, 234, 216, 170))
-        # a janela de linhas em volta da atual, com a atual no centro vertical
-        blocos = []
-        for k in range(i - 2, i + 4):
-            if 0 <= k < len(linhas):
-                blocos.append((k, quebrar(d, linhas[k]['texto'], corpo, larg)))
-        lh = corpo.size * 1.35
-        altura_atual = len(dict(blocos)[i]) * lh
-        y = base_y - altura_atual / 2 - sum(len(b) * lh + lh * 0.35 for k, b in blocos if k < i)
-        for k, bl in blocos:
-            alfa = 255 if k == i else (95 if k < i else 125)
-            for t in bl:
-                if 60 < y < H - 140:
-                    d.text((m, y), t, font=corpo, fill=(255, 255, 255, alfa) if k == i else (242, 234, 216, alfa))
-                y += lh
-            y += lh * 0.35
-        arq = pasta / f't{i:04d}.png'
+        for k in range(max(0, atual - 3), min(len(blocos), atual + 7)):
+            yk = ancora + topo[k] - rolagem
+            if yk > H or yk + len(blocos[k]) * lh < 0:
+                continue
+            im.alpha_composite(bloco(k, min(4, abs(k - atual))), (m - 40, int(yk) - 40))
+        # o texto some sob o cabeçalho e perto do rodapé
+        mascara = Image.new('L', (W, H), 255)
+        md = ImageDraw.Draw(mascara)
+        for yy in range(H):
+            a = 255
+            if yy < 260: a = int(255 * max(0, (yy - 180) / 80))
+            elif yy > H - 150: a = int(255 * max(0, (H - 110 - yy) / 40))
+            md.line([(0, yy), (W, yy)], fill=a)
+        im.putalpha(Image.composite(im.getchannel('A'), Image.new('L', (W, H), 0), mascara))
+        return Image.alpha_composite(im, fixo)
+    saida, n = [], 0
+    def grava(im, dur):
+        nonlocal n
+        arq = pasta / f't{n:05d}.png'
         im.save(arq)
-        arquivos.append(arq)
-    return arquivos
+        saida.append((arq, dur))
+        n += 1
+    PASSOS, QD = 8, 1 / 30
+    for i in range(len(linhas)):
+        ini = 0 if i == 0 else linhas[i]['t0']
+        fim = linhas[i + 1]['t0'] if i + 1 < len(linhas) else None
+        dur_total = (fim - ini) if fim is not None else None
+        if i > 0:
+            for p in range(1, PASSOS + 1):
+                e = 1 - (1 - p / PASSOS) ** 3
+                grava(quadro(i, topo[i - 1] + (topo[i] - topo[i - 1]) * e), QD)
+        resto = (dur_total - (PASSOS * QD if i > 0 else 0)) if dur_total is not None else 3600
+        grava(quadro(i, topo[i]), max(0.04, resto))
+    return saida
+
+
+def brilho_da_voz(mp3, ini, dur, W, H, pasta, vertical, fps=15, niveis=24):
+    """Um halo quente vindo da borda esquerda (de baixo, no vertical) que respira com o volume
+    da voz: envelope RMS suavizado, quantizado em poucos níveis, cada nível um PNG. Devolve
+    [(png, duração)] para um segundo concat."""
+    import numpy as np
+    sr = 8000
+    pcm = subprocess.run(['ffmpeg', '-loglevel', 'error', '-ss', f'{ini:.3f}', '-t', f'{dur:.3f}', '-i', str(mp3),
+                          '-ac', '1', '-ar', str(sr), '-f', 's16le', '-'], capture_output=True, check=True).stdout
+    x = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
+    passo = sr // fps
+    n = int(dur * fps) + 1
+    rms = np.array([np.sqrt(np.mean(x[k * passo:(k + 1) * passo] ** 2)) if k * passo < len(x) else 0 for k in range(n)])
+    rms = rms / (np.percentile(rms, 95) or 1)
+    env, v = [], 0.0
+    for r in np.clip(rms, 0, 1):                   # sobe rápido, desce devagar: suave
+        v = v + (r - v) * (0.35 if r > v else 0.08)
+        env.append(v)
+    # o halo: gradiente radial âmbar centrado fora da tela
+    cx, cy = (-W * 0.08, H * 0.55) if not vertical else (W * 0.5, H * 1.08)
+    raio = H * 0.75 if not vertical else W * 0.9
+    yy, xx = np.mgrid[0:H, 0:W]
+    d = np.sqrt((xx - cx) ** 2 + (yy - cy) ** 2) / raio
+    base = np.clip(1 - d, 0, 1) ** 2.2
+    arqs = {}
+    for q in range(niveis):
+        a = (0.10 + 0.55 * q / (niveis - 1)) * base
+        im = np.zeros((H, W, 4), np.uint8)
+        im[..., 0], im[..., 1], im[..., 2] = 255, 196, 120
+        im[..., 3] = (a * 255).astype(np.uint8)
+        arq = pasta / f'b{q:02d}.png'
+        Image.fromarray(im, 'RGBA').save(arq)
+        arqs[q] = arq
+    saida = []
+    for v in env:
+        q = int(round(min(1, v) * (niveis - 1)))
+        if saida and saida[-1][0] == arqs[q]:
+            saida[-1] = (arqs[q], saida[-1][1] + 1 / fps)
+        else:
+            saida.append((arqs[q], 1 / fps))
+    return saida
 
 
 def main():
@@ -138,6 +226,7 @@ def main():
     ap.add_argument('leitura', choices=list(ROTULO))
     ap.add_argument('--short', action='store_true')
     ap.add_argument('--pintura')
+    ap.add_argument('--trilha', help='música de fundo (domínio público), bem baixa sob a voz')
     a = ap.parse_args()
 
     base = DADOS / 'liturgia-audio' / a.dia / a.leitura
@@ -180,13 +269,11 @@ def main():
         fundo(pintura, W, H, tmp / 'fundo.png', a.short)
         quadros = quadros_texto(linhas, cab, W, H, tmp, a.short)
         # lista do concat: cada quadro fica até a próxima linha começar
-        lista = []
-        for k, q in enumerate(quadros):
-            t0 = 0 if k == 0 else linhas[k]['t0']
-            t1 = linhas[k + 1]['t0'] if k + 1 < len(linhas) else dur
-            lista.append(f"file '{q}'\nduration {max(0.04, t1 - t0):.3f}")
-        lista.append(f"file '{quadros[-1]}'")
+        lista = [f"file '{q}'\nduration {t:.3f}" for q, t in quadros]
+        lista.append(f"file '{quadros[-1][0]}'")
         (tmp / 'lista.txt').write_text('\n'.join(lista))
+        halo = brilho_da_voz(base.with_suffix('.mp3'), ini, dur, W, H, tmp, a.short)
+        (tmp / 'halo.txt').write_text('\n'.join([f"file '{q}'\nduration {t:.4f}" for q, t in halo] + [f"file '{halo[-1][0]}'"]))
         fps = 30
         n = int(dur * fps) + fps
         zoom = f"zoompan=z='1+0.12*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps={fps}"
@@ -194,8 +281,11 @@ def main():
                '-loop', '1', '-i', str(tmp / 'fundo.png'),
                '-f', 'concat', '-safe', '0', '-i', str(tmp / 'lista.txt'),
                '-ss', f'{ini:.3f}', '-t', f'{dur:.3f}', '-i', str(base.with_suffix('.mp3')),
-               '-filter_complex', f"[0:v]{zoom},format=yuv420p[bg];[1:v]fps={fps},format=rgba[tx];[bg][tx]overlay=0:0:shortest=1,fade=in:0:15,fade=out:st={dur - 0.6:.2f}:d=0.6[v]",
-               '-map', '[v]', '-map', '2:a', '-t', f'{dur:.3f}',
+               '-f', 'concat', '-safe', '0', '-i', str(tmp / 'halo.txt'),
+               *(['-stream_loop', '-1', '-i', a.trilha] if a.trilha else []),
+               '-filter_complex', f"[0:v]{zoom},format=yuv420p[bg0];[3:v]fps={fps},format=rgba[halo];[bg0][halo]overlay=0:0:shortest=1[bg];[1:v]fps={fps},format=rgba[tx];[bg][tx]overlay=0:0:shortest=1,fade=in:0:15,fade=out:st={dur - 0.6:.2f}:d=0.6[v]"
+               + (f";[4:a]volume=0.28,afade=in:d=2,afade=out:st={dur - 2.5:.2f}:d=2.5[m];[2:a][m]amix=inputs=2:duration=first:normalize=0[a]" if a.trilha else ''),
+               '-map', '[v]', '-map', '[a]' if a.trilha else '2:a', '-t', f'{dur:.3f}',
                '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-pix_fmt', 'yuv420p',
                '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', str(nome)]
         subprocess.run(cmd, check=True)

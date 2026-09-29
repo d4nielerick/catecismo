@@ -6,7 +6,8 @@
  *   node scripts/youtube.mjs autoriza          # uma vez: abre o Google, você escolhe o canal e permite
  *   node scripts/youtube.mjs canal             # confere para qual canal a autorização aponta
  *   node scripts/youtube.mjs envia video/2026-10-03-evangelho.mp4 \
- *        --titulo "…" --descricao-arquivo desc.txt [--publicar-em 2026-10-03T05:00:00-03:00] [--short]
+ *        --titulo "…" --descricao-arquivo desc.txt [--publicar-em 2026-10-03T05:00:00-03:00] [--capa capa.jpg]
+ *   node scripts/youtube.mjs capa <videoId> capa.jpg
  *
  * Segredos fora do repositório: o cliente OAuth fica em ~/.config/liturgia/youtube-client.json
  * (baixado do Google Cloud, projeto liturgia-diaria) e o refresh token no Keychain
@@ -106,6 +107,16 @@ async function envia(arquivo, opcoes) {
   const j = await r.json();
   if (!j.id) { console.error(`envio falhou (${r.status}): ${JSON.stringify(j).slice(0, 300)}`); process.exit(1); }
   console.log(`${path.basename(arquivo)} → https://youtu.be/${j.id}  (${j.status.privacyStatus}${j.status.publishAt ? `, publica em ${j.status.publishAt}` : ''})`);
+  if (opcoes.capa) await capa(j.id, opcoes.capa, tok);
+}
+
+// a capa (thumbnail) exige canal verificado por telefone; JPG/PNG até 2 MB, 1280×720
+async function capa(id, arquivo, tok) {
+  tok ||= await tokenDeAcesso();
+  const tipo = arquivo.endsWith('.png') ? 'image/png' : 'image/jpeg';
+  const r = await fetch(`https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=${id}&uploadType=media`, {
+    method: 'POST', headers: { Authorization: `Bearer ${tok}`, 'Content-Type': tipo }, body: fs.readFileSync(arquivo) });
+  console.log(r.ok ? `capa aplicada em ${id}` : `capa recusada (${r.status}): ${(await r.text()).slice(0, 300)}`);
 }
 
 // ── linha de comando ─────────────────────────────────────────────────────────
@@ -120,5 +131,6 @@ for (let i = 0; i < resto.length; i++) {
 }
 if (cmd === 'autoriza') await autoriza();
 else if (cmd === 'canal') await canal();
+else if (cmd === 'capa' && posicionais[1]) await capa(posicionais[0], posicionais[1]);
 else if (cmd === 'envia' && posicionais[0] && opcoes.titulo) await envia(posicionais[0], opcoes);
-else { console.error('uso: node scripts/youtube.mjs autoriza | canal | envia <mp4> --titulo "…" [--descricao-arquivo f] [--publicar-em ISO] [--publico]'); process.exit(2); }
+else { console.error('uso: node scripts/youtube.mjs autoriza | canal | envia <mp4> --titulo "…" [--descricao-arquivo f] [--publicar-em ISO] [--publico] [--capa jpg] | capa <videoId> <jpg>'); process.exit(2); }
