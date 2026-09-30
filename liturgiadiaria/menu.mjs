@@ -18,7 +18,8 @@ export const ICONE_MENU = '<svg class="lp-hamb" viewBox="0 0 24 24" aria-hidden=
 
 // Apoio: os links de pagamento e a meta ficam em data/apoio.json; o que já entrou no mês vem de /api/apoio
 // (alimentado pelo webhook da Stripe). Sem a API, a barra mostra só a meta.
-const API_APOIO = /(^|\.)santadoutrina\.com$/.test(location.hostname) ? '/api/apoio' : 'https://santadoutrina.com/api/apoio';
+const API = /(^|\.)santadoutrina\.com$/.test(location.hostname) ? '/api' : 'https://santadoutrina.com/api';
+const API_APOIO = `${API}/apoio`;
 let apoio = { meta: 150, links: {}, valores: [10, 20, 50] };
 
 let nivel = 0;
@@ -158,14 +159,95 @@ function fechar() {
 
 const reais = n => `R$ ${Number(n).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: Number.isInteger(n) ? 0 : 2 })}`;
 
-function pintarMeta({ arrecadado = 0, meta = apoio.meta }) {
+/** `oficial`: o valor veio do servidor (guarda-se como base para somar uma doação nova). */
+function pintarMeta({ arrecadado = 0, meta = apoio.meta }, oficial = true) {
   const el = dialogo?.querySelector('#lp-menu-meta');
   if (!el) return;
+  if (oficial) arrecadadoAtual = arrecadado;
   el.style.setProperty('--p', String(meta ? Math.min(1, arrecadado / meta) : 0));
   el.setAttribute('aria-valuemax', String(meta));
   el.setAttribute('aria-valuenow', String(arrecadado));
   el.querySelector('[data-arrecadado]').textContent = reais(arrecadado);
   el.querySelector('[data-meta]').textContent = reais(meta);
+}
+
+// ── Pix na própria página ────────────────────────────────────────────────────
+let pix = null;   // { id, valor, codigo, timer, fim }
+const $ = sel => dialogo.querySelector(sel);
+
+function pararPix() { if (pix?.timer) clearInterval(pix.timer); if (pix) pix.timer = null; }
+
+function mostrarEtapa(etapa) {   // 'botao' | 'valores' | 'pix' | 'obrigado'
+  $('#lp-menu-doar').hidden = etapa === 'pix' || etapa === 'obrigado';
+  $('#lp-menu-valores').hidden = etapa !== 'valores';
+  $('#lp-menu-outro').hidden = true;
+  $('#lp-menu-pix').hidden = etapa !== 'pix';
+  $('#lp-menu-obrigado').hidden = etapa !== 'obrigado';
+  $('#lp-menu-doar').setAttribute('aria-expanded', String(etapa === 'valores'));
+  $('#lp-menu-doar').textContent = etapa === 'valores' ? 'Escolha o valor' : 'Apoiar o site';
+  if (CELULAR.matches && dialogo.open) { medirAlturas(); irPara(etapa === 'botao' ? medioH : Math.max(medioH, Math.min(cheioH, dialogo.scrollHeight))); }
+}
+
+function estadoPix(texto, cor) {
+  const el = $('#lp-menu-pix-estado');
+  el.querySelector('span').textContent = texto;
+  el.dataset.estado = cor || 'espera';
+}
+
+async function gerarPix(valor) {
+  pararPix();
+  pix = { valor, id: null, codigo: '', timer: null, fim: 0 };
+  $('#lp-menu-pix-valor').textContent = `Pix de ${reais(valor)}`;
+  $('#lp-menu-qr').innerHTML = '<span class="lp-menu-qr-espera"></span>';
+  $('.lp-menu-copiar').disabled = true;
+  const cartao = $('#lp-menu-cartao');   // o cartão segue pelo Checkout Pro, com o mesmo valor
+  cartao.href = `${API}/apoio-checkout?valor=${valor}`;
+  estadoPix('Gerando o Pix…');
+  mostrarEtapa('pix');
+  try {
+    const r = await fetch(`${API}/apoio-pix`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ valor }) });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || 'erro');
+    pix = { ...pix, id: j.id, codigo: j.codigo, fim: Date.parse(j.expira) };
+    $('#lp-menu-qr').innerHTML = j.qr ? `<img alt="QR Code do Pix de ${reais(valor)}" src="data:image/png;base64,${j.qr}">` : '';
+    $('.lp-menu-copiar').disabled = false;
+    estadoPix('Aguardando o pagamento…');
+    pix.timer = setInterval(consultarPix, 3000);
+  } catch (e) {
+    estadoPix(e.message === 'Failed to fetch' ? 'Sem conexão. Tente de novo.' : (e.message || 'Não foi possível gerar o Pix.'), 'erro');
+  }
+}
+
+async function consultarPix() {
+  if (!pix?.id || !dialogo.open) return;
+  if (Date.now() > pix.fim) { pararPix(); estadoPix('O Pix expirou. Gere outro para doar.', 'erro'); return; }
+  try {
+    const r = await fetch(`${API}/apoio-status?id=${pix.id}`);
+    if (!r.ok) return;
+    const { status } = await r.json();
+    if (status === 'approved') agradecer(pix.valor);
+    else if (['rejected', 'cancelled'].includes(status)) { pararPix(); estadoPix('O pagamento não foi concluído.', 'erro'); }
+  } catch { /* sem rede por um instante: tenta no próximo ciclo */ }
+}
+
+let arrecadadoAtual = 0;
+function agradecer(valor) {
+  pararPix();
+  pix = null;
+  mostrarEtapa('obrigado');
+  pintarMeta({ arrecadado: arrecadadoAtual + valor }, false);   // sobe já; o total oficial vem do servidor logo em seguida
+  setTimeout(async () => { try { const r = await fetch(API_APOIO); if (r.ok) pintarMeta(await r.json()); } catch { /* fica o valor otimista */ } }, 4000);
+}
+
+async function copiarCodigo(botao) {
+  if (!pix?.codigo) return;
+  try { await navigator.clipboard.writeText(pix.codigo); }
+  catch {
+    const t = Object.assign(document.createElement('textarea'), { value: pix.codigo });
+    document.body.append(t); t.select(); try { document.execCommand('copy'); } catch { /* sem cópia */ } t.remove();
+  }
+  botao.textContent = 'Código copiado ✓';
+  setTimeout(() => { botao.textContent = 'Copiar código Pix'; }, 2200);
 }
 
 /** Lê a configuração (links e meta) e o que já entrou no mês; qualquer falha deixa a folha como está. */
@@ -181,8 +263,11 @@ async function carregarApoio() {
   const temLinks = apoio.valores.some(v => apoio.links?.[v]);
   botao.disabled = !temLinks;
   if (!temLinks) botao.textContent = 'Em breve';
+  const noSite = apoio.provedor === 'mercadopago';   // Pix na própria página; o cartão segue pelo link do provedor
   dialogo.querySelector('#lp-menu-valores').innerHTML = apoio.valores.filter(v => apoio.links?.[v])
-    .map(v => `<a class="lp-menu-valor" href="${apoio.links[v]}" rel="noopener">${reais(v)}</a>`).join('');
+    .map(v => noSite ? `<button type="button" class="lp-menu-valor" data-valor="${v}">${reais(v)}</button>`
+                     : `<a class="lp-menu-valor" href="${apoio.links[v]}" rel="noopener">${reais(v)}</a>`).join('')
+    + (noSite ? '<button type="button" class="lp-menu-valor lp-menu-valor-outro" data-acao="outro">Outro</button>' : '');
   pintarMeta({ meta: apoio.meta });
   try {
     const r = await fetch(API_APOIO);
@@ -210,7 +295,23 @@ export function iniciarMenu() {
           </div>
           <button type="button" class="lp-menu-doar" id="lp-menu-doar" aria-expanded="false">Apoiar o site</button>
           <div class="lp-menu-valores" id="lp-menu-valores" hidden></div>
-          <p class="lp-menu-obrigado" id="lp-menu-obrigado" hidden>Obrigado! Sua doação ajuda a manter a Liturgia Diária no ar.</p>
+          <div class="lp-menu-outro" id="lp-menu-outro" hidden>
+            <label for="lp-menu-outro-valor">R$</label>
+            <input id="lp-menu-outro-valor" type="number" inputmode="numeric" min="1" max="1000" step="1" placeholder="Outro valor">
+            <button type="button" data-acao="outro-ok">Gerar Pix</button>
+          </div>
+          <div class="lp-menu-pix" id="lp-menu-pix" hidden aria-live="polite">
+            <div class="lp-menu-pix-topo"><strong id="lp-menu-pix-valor"></strong><button type="button" data-acao="voltar">‹ Trocar valor</button></div>
+            <div class="lp-menu-qr" id="lp-menu-qr"><span class="lp-menu-qr-espera"></span></div>
+            <button type="button" class="lp-menu-copiar" data-acao="copiar" disabled>Copiar código Pix</button>
+            <p class="lp-menu-pix-estado" id="lp-menu-pix-estado"><i></i><span>Gerando o Pix…</span></p>
+            <a class="lp-menu-cartao" id="lp-menu-cartao" href="#" rel="noopener">Prefere cartão? Pagar no Mercado Pago</a>
+          </div>
+          <div class="lp-menu-obrigado" id="lp-menu-obrigado" hidden>
+            <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23"/><path d="M15 27l8 8 14-16"/></svg>
+            <strong>Obrigado!</strong>
+            <span>Sua doação ajuda a manter a Liturgia Diária no ar.</span>
+          </div>
         </div>
       </section>
       <section class="lp-menu-sec" aria-label="Dia">
@@ -242,19 +343,31 @@ export function iniciarMenu() {
     if (gatilho) { abrir(gatilho); return; }
     if (!dialogo.open) return;
     if (e.target === dialogo || e.target.closest('.lp-menu-fechar')) { fechar(); return; }
+    const valorBtn = e.target.closest('[data-valor]');
+    if (valorBtn) { gerarPix(Number(valorBtn.dataset.valor)); return; }
+    const acao = e.target.closest('[data-acao]')?.dataset.acao;
+    if (acao === 'outro') { $('#lp-menu-outro').hidden = false; $('#lp-menu-outro-valor').focus(); return; }
+    if (acao === 'outro-ok') {
+      const v = Number($('#lp-menu-outro-valor').value);
+      if (Number.isInteger(v) && v >= 1 && v <= 1000) gerarPix(v); else $('#lp-menu-outro-valor').focus();
+      return;
+    }
+    if (acao === 'voltar') { pararPix(); pix = null; mostrarEtapa('valores'); return; }
+    if (acao === 'copiar') { copiarCodigo(e.target.closest('[data-acao]')); return; }
     if (e.target.closest('#lp-menu-doar')) {
-      const botao = e.target.closest('#lp-menu-doar'), valores = dialogo.querySelector('#lp-menu-valores');
-      valores.hidden = !valores.hidden;
-      botao.setAttribute('aria-expanded', String(!valores.hidden));
-      botao.textContent = valores.hidden ? 'Apoiar o site' : 'Escolha o valor';
-      if (CELULAR.matches) { medirAlturas(); irPara(valores.hidden ? medioH : Math.max(medioH, Math.min(cheioH, dialogo.getBoundingClientRect().height + 70))); }
+      const aberto = $('#lp-menu-valores').hidden;
+      mostrarEtapa(aberto ? 'valores' : 'botao');
       return;
     }
     const btn = e.target.closest('[data-fonte]');
     if (btn) { aplicar(nivel + Number(btn.dataset.fonte)); gravar(nivel); return; }
     if (e.target.closest('a[href]')) setTimeout(fechar, 60);   // trocar de dia: a navegação roda e a folha desce
   });
-  dialogo.addEventListener('close', () => document.documentElement.classList.remove('lp-menu-aberto'));
+  dialogo.addEventListener('close', () => {
+    document.documentElement.classList.remove('lp-menu-aberto');
+    pararPix();
+    if (pix) { pix = null; mostrarEtapa('botao'); }   // fechou no meio de um Pix: volta ao início
+  });
   dialogo.addEventListener('cancel', e => { e.preventDefault(); fechar(); });
   const grab = dialogo.querySelector('.lp-menu-grab');
   grab.addEventListener('pointerdown', comecarArrasto);
@@ -265,8 +378,7 @@ export function iniciarMenu() {
   carregarApoio();
   // de volta do pagamento: a folha abre com o agradecimento
   if (new URLSearchParams(location.search).get('apoio') === 'obrigado') {
-    dialogo.querySelector('#lp-menu-obrigado').hidden = false;
-    dialogo.querySelector('#lp-menu-doar').hidden = true;
+    mostrarEtapa('obrigado');
     history.replaceState(null, '', location.pathname);
     setTimeout(() => abrir(document.querySelector('.lp-menu-fab')), 800);
   }

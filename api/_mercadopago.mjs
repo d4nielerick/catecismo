@@ -63,3 +63,38 @@ export async function buscarPagamento(id, { fetchFn = fetch, token = process.env
   if (!r.ok) throw new Error(`consulta do pagamento falhou (${r.status})`);
   return r.json();
 }
+
+const DESCRICAO = 'Apoio à Liturgia Diária';
+const EMAIL_PADRAO = 'doador-anonimo@santadoutrina.com';
+export const emailValido = e => typeof e === 'string' && e.length <= 120 && /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);
+
+/** Cria um pagamento Pix (aparece na própria página) e devolve o código "copia e cola" e o QR em base64. */
+export async function criarPix(reais, { email, fetchFn = fetch, token = process.env.MP_ACCESS_TOKEN, agora = Date.now(), chave = crypto.randomUUID() } = {}) {
+  if (!token) throw new Error('MP_ACCESS_TOKEN ausente');
+  const expira = new Date(agora + 30 * 60 * 1000);
+  const r = await fetchFn(`${API}/v1/payments`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', 'X-Idempotency-Key': chave },
+    body: JSON.stringify({
+      transaction_amount: reais,
+      description: DESCRICAO,
+      payment_method_id: 'pix',
+      payer: { email: emailValido(email) ? email : EMAIL_PADRAO },
+      notification_url: URL_AVISO,
+      external_reference: `apoio-pix-${agora}`,
+      date_of_expiration: expira.toISOString().replace('Z', '+00:00'),
+    }),
+  });
+  if (!r.ok) throw new Error(`Mercado Pago recusou o Pix (${r.status})`);
+  const j = await r.json();
+  const d = j.point_of_interaction?.transaction_data;
+  if (!j.id || !d?.qr_code) throw new Error('resposta do Pix sem código');
+  return { id: j.id, codigo: d.qr_code, qr: d.qr_code_base64 || null, expira: expira.toISOString() };
+}
+
+/** Situação de um pagamento de apoio (só devolve o status: nada de dados do pagador). */
+export async function statusDoApoio(id, deps = {}) {
+  const pg = await buscarPagamento(id, deps);
+  if (pg.description !== DESCRICAO) return null;   // não é um pagamento de apoio
+  return { status: pg.status, valor: Number(pg.transaction_amount) };
+}
