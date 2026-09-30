@@ -59,6 +59,8 @@
       document.documentElement.classList.add('lp-anima');
       setTimeout(() => document.documentElement.classList.add('lp-pronto', 'lp-cabeca-pronta'), 3000);
     }
+    // Tamanho do texto escolhido no menu: aplicado antes do primeiro desenho, sem salto de layout.
+    try { const k = [1, 1.125, 1.25, 1.375][Number(localStorage.getItem('lp-fonte')) || 0]; if (k) document.documentElement.style.setProperty('--lp-k', k); } catch (e) {}
     // Rede ruim ou script quebrado nunca deixam o ícone de carregamento preso na tela.
     setTimeout(() => document.documentElement.classList.add('lp-carregado'), 4000);
   </script>

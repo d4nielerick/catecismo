@@ -13,6 +13,7 @@ import {
   referenciasDoDia, somarDias,
 } from '/liturgiadiaria/render.mjs';
 import { icone, iconeDaLeitura } from '/liturgiadiaria/icones-leituras.mjs';
+import { iniciarMenu, atualizarDias, ICONE_MENU } from '/liturgiadiaria/menu.mjs';
 
 // O que a página está mostrando; trocar de dia acontece aqui mesmo, sem recarregar.
 const estado = { dt: null, hoje: null, indice: null, santos: null, destaques: new Map() };
@@ -95,7 +96,15 @@ function construirNav(blocos) {
   const dt = estado.dt;
   tabsEl.innerHTML = (dt ? dias(somarDias(dt, -1), 'prev', SETA_ANT, 'Dia anterior') : '')
     + `<span class="lp-tabs-leituras">${abasHtml(blocos)}<span class="lp-tabs-luz" aria-hidden="true"></span></span>`
-    + (dt ? dias(somarDias(dt, 1), 'next', SETA_PROX, 'Dia seguinte') : '');
+    + (dt ? dias(somarDias(dt, 1), 'next', SETA_PROX, 'Dia seguinte') : '')
+    + `<button type="button" class="lp-tabs-menu" data-lp-menu aria-haspopup="dialog" aria-label="Abrir o menu">${ICONE_MENU}</button>`;
+  const vizinho = d => (estado.indice && d >= estado.indice.inicio && d <= estado.indice.fim) ? { data: d, href: urlDoDia(d) } : null;
+  atualizarDias(dt ? {
+    atual: dt,
+    anterior: vizinho(somarDias(dt, -1)),
+    proximo: vizinho(somarDias(dt, 1)),
+    irParaHoje: estado.hoje && dt !== estado.hoje ? '/liturgiadiaria/' : null,
+  } : {});
   const itens = itensDasAbas(blocos);
   const links = [...tabsEl.querySelectorAll('.lp-tabs-leituras a')];
   // cada aba: ícone (só no celular, onde a barra é só de ícones) + nome (só no desktop)
@@ -285,6 +294,8 @@ const BLOCOS_INTEIROS = '.leitura-label, .leitura-ref, .lp-resumo-rotulo';
 const UNIDADES_INLINE = 'sup, .salmo-r-label, .salmo-ou';
 const PASSO_LINHA_MS = 55;
 const LEVA_MAX_MS = 1000;
+const PASSO_ABERTURA_MS = 85;      // na abertura da página a cascata é mais lenta e visível
+const LEVA_ABERTURA_MS = 1600;
 
 function quebrarEmPalavras(bloco) {
   const textos = [];
@@ -292,15 +303,24 @@ function quebrarEmPalavras(bloco) {
   while (walker.nextNode()) textos.push(walker.currentNode);
   for (const no of textos) {
     const inline = no.parentElement.closest(UNIDADES_INLINE);
-    if (inline && bloco.contains(inline)) { inline.classList.add('lp-palavra', 'lp-oculto'); continue; }
+    if (inline && bloco.contains(inline)) {
+      // Número de versículo colado na palavra seguinte ("<sup>14</sup>Quem"): entra junto com ela,
+      // na mesma caixa. Como caixas separadas, o navegador podia deixá-lo sozinho no fim da linha
+      // enquanto animava e puxá-lo para a linha de baixo quando a animação acabava.
+      if (inline.matches('sup') && /^\S/.test(inline.nextSibling?.textContent ?? '')) { inline.dataset.lpJunto = '1'; continue; }
+      inline.classList.add('lp-palavra', 'lp-oculto');
+      continue;
+    }
     if (!no.textContent.trim()) continue;
     const frag = document.createDocumentFragment();
+    let antes = no.previousSibling?.dataset?.lpJunto ? no.previousSibling : null;
     for (const parte of no.textContent.split(/(\s+)/)) {
       if (!parte) continue;
       if (/^\s+$/.test(parte)) { frag.append(parte); continue; }
       const span = document.createElement('span');
       span.className = 'lp-palavra lp-oculto';
-      span.textContent = parte;
+      if (antes) { delete antes.dataset.lpJunto; span.append(antes); antes = null; }
+      span.append(parte);
       frag.append(span);
     }
     no.replaceWith(frag);
@@ -341,28 +361,40 @@ function animarEntrada() {
       if (!mesmaLinha) { atual = { bloco, top: r.top, unidades: [] }; linhas.push(atual); }
       atual.unidades.push(u);
     }
+    // A tela que já está à vista ao abrir (ou ao trocar de dia) entra inteira, em cascata de cima para baixo;
+    // o gatilho mais alto (-16%) só vale para o que vem depois, conforme se rola.
+    const naTela = [], resto = [];
+    for (const l of linhas) (l.unidades[0].getBoundingClientRect().top < innerHeight ? naTela : resto).push(l);
+    cascata(naTela.map(l => ({ unidades: l.unidades, el: l.unidades[0], top: l.unidades[0].getBoundingClientRect().top })), PASSO_ABERTURA_MS, LEVA_ABERTURA_MS);
+
     const obs = observadorLinhas = new IntersectionObserver(entradas => {
-      // Lateral e leitura fazem cada uma a sua cascata, em paralelo; o passo encolhe quando
-      // muitas linhas entram de uma vez, para a leva inteira caber em ~1s.
-      const colunas = new Map();
+      const chegando = [];
       for (const e of entradas) {
         if (!e.isIntersecting) continue;
-        const coluna = e.target.closest('.lp-lateral') ? 'lateral' : 'leitura';
-        if (!colunas.has(coluna)) colunas.set(coluna, []);
-        colunas.get(coluna).push(e);
+        chegando.push({ unidades: linhaDo.get(e.target), el: e.target, top: e.boundingClientRect.top });
+        obs.unobserve(e.target);
       }
-      for (const lista of colunas.values()) {
-        lista.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        const passo = Math.min(PASSO_LINHA_MS, LEVA_MAX_MS / lista.length);
-        lista.forEach((e, k) => {
-          revelar(linhaDo.get(e.target), Math.round(k * passo));
-          obs.unobserve(e.target);
-        });
-      }
-    }, { rootMargin: '0px 0px -6% 0px' });
-    for (const l of linhas) {
+      cascata(chegando, PASSO_LINHA_MS, LEVA_MAX_MS);
+    }, { rootMargin: '0px 0px -16% 0px' });   // a linha só entra depois de subir um pouco da borda de baixo
+    for (const l of resto) {
       linhaDo.set(l.unidades[0], l.unidades);
       obs.observe(l.unidades[0]);
+    }
+  }
+
+  // Lateral e leitura fazem cada uma a sua cascata, em paralelo; o passo encolhe quando muitas
+  // linhas entram de uma vez, para a leva inteira caber no tempo máximo.
+  function cascata(itens, passoMax, levaMax) {
+    const colunas = new Map();
+    for (const it of itens) {
+      const coluna = it.el.closest('.lp-lateral') ? 'lateral' : 'leitura';
+      if (!colunas.has(coluna)) colunas.set(coluna, []);
+      colunas.get(coluna).push(it);
+    }
+    for (const lista of colunas.values()) {
+      lista.sort((a, b) => a.top - b.top);
+      const passo = Math.min(passoMax, levaMax / lista.length);
+      lista.forEach((it, k) => revelar(it.unidades, Math.round(k * passo)));
     }
   }
 
@@ -880,7 +912,31 @@ async function irParaDia(dt) {
 
 const LINK_DE_DIA = /^\/liturgiadiaria\/(\d{4}-\d{2}-\d{2})\/$/;
 
+/** Toque na barra com a página ainda rolando (inércia do dedo): o navegador usa esse toque para parar a
+ *  rolagem e descarta o "click", então a aba parecia morta. Aqui o toque que começa e termina no mesmo
+ *  botão, sem arrastar, vira o clique na hora; o clique nativo que ainda chegar é ignorado. */
+function toqueNaBarraDuranteRolagem() {
+  const barra = document.getElementById('lp-tabs');
+  if (!barra) return;
+  let rolando = false, fimRolagem, inicio = null, tratadoEm = -1e9;
+  addEventListener('scroll', () => { rolando = true; clearTimeout(fimRolagem); fimRolagem = setTimeout(() => { rolando = false; }, 140); }, { passive: true });
+  barra.addEventListener('pointerdown', e => {
+    inicio = e.pointerType === 'mouse' ? null : { rolando, x: e.clientX, y: e.clientY, alvo: e.target.closest('a[href], button') };
+  });
+  barra.addEventListener('pointerup', e => {
+    const i = inicio; inicio = null;
+    const alvo = e.target.closest('a[href], button');
+    if (!i || !i.rolando || !alvo || alvo !== i.alvo || Math.hypot(e.clientX - i.x, e.clientY - i.y) > 12) return;
+    tratadoEm = performance.now();
+    alvo.click();
+  });
+  document.addEventListener('click', e => {
+    if (e.isTrusted && performance.now() - tratadoEm < 600 && e.target.closest('#lp-tabs')) { e.preventDefault(); e.stopImmediatePropagation(); }
+  }, true);
+}
+
 function configurarNavegacao() {
+  toqueNaBarraDuranteRolagem();
   document.addEventListener('touchstart', () => {}, { passive: true });   // faz o :active funcionar no iPhone
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -1079,6 +1135,7 @@ async function init() {
   // O calendário também já pode ser desenhado (o intervalo real de datas chega com o índice).
   construirCalendario(dt, hoje, { inicio: '0000-00-00', fim: '9999-99-99' });
   organizarColunas();
+  iniciarMenu();
   configurarDicas();
   configurarNavegacao();
   configurarRolagem();

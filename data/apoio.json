@@ -1,0 +1,10 @@
+{
+  "meta": 150,
+  "valores": [10, 20, 50],
+  "modo": "teste",
+  "links": {
+    "10": "https://buy.stripe.com/test_eVq7sKgtdapr7bOcNfgIo01",
+    "20": "https://buy.stripe.com/test_14AcN42Cnbtv0NqbJbgIo00",
+    "50": "https://buy.stripe.com/test_cNi3cudh11SV8fS3cFgIo02"
+  }
+}

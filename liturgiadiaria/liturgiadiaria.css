@@ -29,6 +29,8 @@
   --lp-linha: rgba(0, 0, 0, 0.08);
   --lp-vermelho: #cb2e2e; /* o mesmo da cruz do divisor */
   --lp-faixa-w: 120px;
+  --lp-k: 1;                       /* escala do texto das leituras (menu › Tamanho do texto) */
+  --lp-fs: calc(16px * var(--lp-k));
   --font-titulo: 'Times New Roman', Times, Georgia, serif;
   --font-leitura: 'Inria Serif', 'Inria reserva', Georgia, serif;
   --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -39,7 +41,7 @@ body { font-family: var(--font-leitura); color: var(--lp-texto); }
 
 .lp-pagina {
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) var(--lp-faixa-w) minmax(0, 500px) var(--lp-faixa-w) minmax(290px, 1fr);
+  grid-template-columns: minmax(280px, 1fr) var(--lp-faixa-w) minmax(0, calc(500px * var(--lp-k))) var(--lp-faixa-w) minmax(290px, 1fr);
   min-height: 100vh;
 }
 
@@ -334,7 +336,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 .secao-menor .leitura-label { font-size: 40px; line-height: 1.3; margin-bottom: 0.35rem; }
 
 .leitura-ref {
-  font-size: 16px;
+  font-size: var(--lp-fs);
   line-height: 1.5;
   color: var(--lp-tinta);
   margin-bottom: 11px;
@@ -342,14 +344,14 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 
 .leitura-titulo {
   font-style: italic;
-  font-size: 16px;
+  font-size: var(--lp-fs);
   line-height: 1.5;
   color: var(--lp-tinta);
   margin: 0 0 11px;
 }
 
 .leitura-texto {
-  font-size: 16px;
+  font-size: var(--lp-fs);
   line-height: 1.6;
   color: var(--lp-texto);
 }
@@ -364,9 +366,9 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
    o número do versículo vem antes da letra.) */
 .capitular {
   --cap-linhas: 4;
-  --cap-l: 25.6px;                                   /* entrelinha do texto */
-  --cap-topo: 7.94px;                                /* do topo da linha ao topo da maiúscula */
-  --cap-base: 18.82px;                               /* do topo da linha à linha de base */
+  --cap-l: calc(25.6px * var(--lp-k));               /* entrelinha do texto */
+  --cap-topo: calc(7.94px * var(--lp-k));                               /* do topo da linha ao topo da maiúscula */
+  --cap-base: calc(18.82px * var(--lp-k));                              /* do topo da linha à linha de base */
   --cap-f: calc(((var(--cap-linhas) - 1) * var(--cap-l) + var(--cap-base) - var(--cap-topo)) / 0.662);
   float: left;
   font-family: var(--font-titulo);
@@ -444,6 +446,9 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 /* inline-block só enquanto entra (transform precisa); depois volta a ser texto corrido: com milhares
    de blocos, segurar o dedo (seleção/lupa do iPhone) fazia o texto tremer */
 .lp-palavra.lp-oculto, .lp-palavra.lp-entra { display: inline-block; }
+/* Palavra inteira, também depois de a animação acabar e ela voltar a ser inline: inline-block não
+   quebra em hífen ("erguer-se"), inline quebra; sem isto a linha reorganizava no meio da rolagem. */
+.lp-palavra { white-space: nowrap; }
 .lp-oculto { opacity: 0; }
 .lp-entra {
   animation: lp-entrada 0.5s cubic-bezier(0.2, 0.65, 0.25, 1) both;
@@ -456,6 +461,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 /* O desfoque não fica em cada palavra (pesa): uma única camada presa ao pé da tela desfoca o texto
    que ainda está chegando, com a intensidade sumindo para cima, como nas bordas do iOS/macOS. */
 .lp-borda-desfoque {
+  display: none;   /* desligado a pedido (30/09/2026); o elemento segue no HTML para o gerador das páginas */
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; /* acima das faixas de ornamento */
   height: 9rem;
   pointer-events: none;
@@ -551,7 +557,7 @@ html.lenis.lenis-smooth { scroll-behavior: auto !important; }
 /* ── Responsivo ──────────────────────────────────────────────────────── */
 /* Até 1320px: some a faixa da direita; o calendário vem logo depois do texto */
 @media (max-width: 1320px) {
-  .lp-pagina { grid-template-columns: 250px 88px minmax(0, 560px) 300px minmax(0, 1fr); }
+  .lp-pagina { grid-template-columns: 250px 88px minmax(0, calc(560px * var(--lp-k))) 300px minmax(0, 1fr); }
   .lp-faixa-dir { display: none; }
   .lp-direita { grid-column: 4; padding: 3.25rem 1.5rem 3rem 1rem; }
   .lp-main { --lp-main-lado: clamp(1.75rem, 3.5vw, 2.75rem); }
@@ -1131,7 +1137,7 @@ html:has(.lp-card[open]) { overflow: hidden; }
   }
   html.lp-barra-on .lp-main .lp-tabs { transform: none; }
   .lp-main .lp-tabs.lp-tabs-muitas { --lp-barra: clamp(44px, 13vw, 62px); }   /* domingos e festas: 4 ícones */
-  .lp-main .lp-tabs .lp-tabs-leituras, .lp-main .lp-tabs .lp-tabs-dia {
+  .lp-main .lp-tabs .lp-tabs-leituras, .lp-main .lp-tabs .lp-tabs-dia, .lp-main .lp-tabs .lp-tabs-menu {
     position: relative;
     border-radius: 999px;
     /* o vidro: desfoca e satura o que passa por trás; claro o bastante para ler sobre qualquer texto */
@@ -1882,3 +1888,199 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .t-pad-texto { font: 0.7rem/1.45 var(--font-leitura); color: #333; }
 .t-pad-texto span { font-variant: small-caps; font-weight: 700; color: var(--lp-vermelho); letter-spacing: 0.04em; }
 @keyframes t-pad-sobe { 0%, 18% { transform: none; } 45%, 100% { transform: translateY(-86px); } }
+
+/* ── Menu flutuante (menu.mjs) ───────────────────────────────────────────── */
+/* Botão do desktop: uma âncora sem altura presa à base da janela, dentro da coluna de leitura */
+.lp-menu-ancora { position: sticky; top: calc(100vh - 4.75rem); top: calc(100dvh - 4.75rem); height: 0; z-index: 30; pointer-events: none; }
+.lp-menu-fab, .lp-tabs-menu {
+  display: grid; place-items: center; padding: 0; border: 0; cursor: pointer; color: var(--lp-tinta);
+  border-radius: 50%; -webkit-tap-highlight-color: transparent;
+}
+.lp-menu-fab {
+  position: absolute; right: 0.25rem; top: 0; width: 46px; height: 46px; pointer-events: auto;
+  background: rgba(253, 252, 250, 0.78);
+  -webkit-backdrop-filter: blur(20px) saturate(1.15); backdrop-filter: blur(20px) saturate(1.15);
+  box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.95), inset 0 0 0 0.5px rgba(40, 30, 15, 0.12),
+    0 6px 20px -6px rgba(40, 30, 15, 0.25), 0 1px 3px rgba(40, 30, 15, 0.08);
+  transition: transform 0.15s ease, color 0.2s;
+}
+.lp-menu-fab:hover { color: var(--lp-vermelho); }
+.lp-menu-fab:active { transform: scale(0.92); }
+.lp-menu-fab svg, .lp-tabs-menu svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+.lp-tabs .lp-tabs-menu { display: none; }   /* no desktop o botão é o flutuante */
+
+/* A folha */
+.lp-menu {
+  width: min(360px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); margin: 0; padding: 0; border: 0; overflow: auto;
+  position: fixed; color: var(--lp-tinta); border-radius: 26px; font-family: var(--font-sans);
+  background: rgba(253, 252, 250, 0.9);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1); backdrop-filter: blur(16px) saturate(1.1);
+  box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.95), inset 0 0 0 0.5px rgba(40, 30, 15, 0.1),
+    0 24px 60px -16px rgba(40, 30, 15, 0.35), 0 2px 8px rgba(40, 30, 15, 0.1);
+  overscroll-behavior: contain;
+}
+.lp-menu::backdrop { background: rgba(40, 30, 15, 0.26); }   /* sem desfoque no fundo: era ele que pesava na abertura */
+.lp-menu[open] { animation: lp-menu-sobe 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.lp-menu[open]::backdrop { animation: lp-menu-vela 0.25s ease-out; }
+.lp-menu.saindo { animation: lp-menu-desce 0.18s ease-in forwards; }
+@keyframes lp-menu-sobe { from { opacity: 0; transform: translateY(18px) scale(0.98); } }
+@keyframes lp-menu-desce { to { opacity: 0; transform: translateY(14px); } }
+@keyframes lp-menu-vela { from { opacity: 0; } }
+html.lp-menu-aberto { overflow: hidden; }
+.lp-menu-corpo:focus { outline: none; }
+
+.lp-menu-corpo { position: relative; padding: 1.15rem 1.2rem 1.3rem; }
+/* Puxador: só no celular, onde a folha sobe de baixo e pode ser arrastada (altura média ↔ cheia, ou descer para fechar) */
+.lp-menu-grab { display: none; }
+.lp-menu-fechar {
+  position: absolute; top: 0.7rem; right: 0.75rem; width: 34px; height: 34px; display: grid; place-items: center;
+  padding: 0; border: 0; border-radius: 50%; background: rgba(40, 30, 15, 0.06); color: var(--lp-tinta); cursor: pointer;
+}
+.lp-menu-fechar svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+.lp-menu-sec + .lp-menu-sec { margin-top: 1.25rem; padding-top: 1.15rem; border-top: 1px solid var(--lp-linha); }
+.lp-menu-sec h3 {
+  margin: 0 0 0.7rem; font-size: 0.64rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lp-suave);
+}
+.lp-menu-sec:first-of-type h3 { padding-right: 2.5rem; }
+@media (max-width: 760px) { .lp-menu-sec:first-of-type h3 { padding-right: 0; } }
+
+/* as seções entram em sequência, subindo e clareando, logo depois da folha */
+.lp-menu[open] .lp-menu-sec { animation: lp-menu-sec 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.lp-menu[open] .lp-menu-sec:nth-of-type(1) { animation-delay: 0.06s; }
+.lp-menu[open] .lp-menu-sec:nth-of-type(2) { animation-delay: 0.12s; }
+.lp-menu[open] .lp-menu-sec:nth-of-type(3) { animation-delay: 0.18s; }
+@keyframes lp-menu-sec { from { opacity: 0; transform: translateY(14px); } }
+
+/* Dia: setas redondas nas pontas (as mesmas bolinhas da barra) e a data no meio */
+.lp-menu-dias { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.lp-menu-seta {
+  flex: 0 0 auto; display: grid; place-items: center; width: 50px; height: 50px; border-radius: 50%;
+  background: rgba(40, 30, 15, 0.055); color: var(--lp-tinta); text-decoration: none;
+  transition: background 0.2s, transform 0.15s; -webkit-tap-highlight-color: transparent;
+}
+a.lp-menu-seta:hover { background: rgba(40, 30, 15, 0.09); }
+a.lp-menu-seta:active { background: rgba(203, 46, 46, 0.14); transform: scale(0.92); }
+.lp-menu-seta.vazio { color: #d6d0c7; background: rgba(40, 30, 15, 0.03); }
+.lp-menu-seta svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.lp-menu-atual { flex: 1; min-width: 0; text-align: center; line-height: 1.15; }
+.lp-menu-atual strong { display: block; font-family: var(--font-titulo); font-style: italic; font-weight: 400; font-size: 1.55rem; letter-spacing: -0.02em; white-space: nowrap; }
+.lp-menu-atual small { display: block; margin-top: 0.2rem; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lp-suave); }
+.lp-menu-hoje { display: block; margin-top: 0.55rem; text-align: center; font-size: 0.8rem; color: var(--lp-vermelho); text-decoration: none; padding: 0.35rem; }
+.lp-menu-hoje:hover { text-decoration: underline; }
+
+/* Tamanho do texto */
+.lp-menu-fonte { display: flex; align-items: center; gap: 0.9rem; }
+.lp-menu-fonte button {
+  flex: 0 0 auto; width: 46px; height: 46px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 14px;
+  background: rgba(40, 30, 15, 0.045); color: var(--lp-tinta); cursor: pointer; font-family: var(--font-titulo); line-height: 1;
+  transition: background 0.15s, opacity 0.15s;
+}
+.lp-menu-fonte button:hover:not(:disabled) { background: rgba(40, 30, 15, 0.08); }
+.lp-menu-fonte button:active:not(:disabled) { background: rgba(203, 46, 46, 0.12); }
+.lp-menu-fonte button:disabled { opacity: 0.3; cursor: default; }
+.lp-menu-fonte .a-menor { font-size: 15px; }
+.lp-menu-fonte .a-maior { font-size: 26px; }
+.lp-menu-pontos { --p: 0; flex: 1; height: 46px; position: relative; display: flex; align-items: center; justify-content: space-between; margin: 0 0.9rem; }
+.lp-menu-pontos::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; border-radius: 1px; background: rgba(40, 30, 15, 0.1); }
+/* a linha vermelha enche até o nível e o polegar desliza junto, com a mesma mola da luz das abas */
+.lp-menu-enche { position: absolute; left: 0; top: 50%; height: 2px; margin-top: -1px; border-radius: 1px; background: var(--lp-vermelho);
+  width: calc(100% * var(--p)); transition: width 0.5s cubic-bezier(0.3, 1.25, 0.45, 1); }
+.lp-menu-ponto { position: relative; z-index: 1; width: 8px; height: 8px; border-radius: 50%; background: #d3cdc3; transition: background 0.3s; }
+.lp-menu-ponto.on { background: var(--lp-vermelho); }
+.lp-menu-polegar { position: absolute; z-index: 2; top: 50%; left: calc(100% * var(--p)); width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 50%;
+  background: #fff; border: 2px solid var(--lp-vermelho); box-shadow: 0 2px 8px rgba(203, 46, 46, 0.3);
+  transition: left 0.5s cubic-bezier(0.3, 1.25, 0.45, 1); }
+.lp-menu-polegar.pulo { animation: lp-polegar-pulo 0.45s cubic-bezier(0.3, 1.5, 0.5, 1); }
+@keyframes lp-polegar-pulo { 35% { transform: scale(1.3); } }
+.lp-menu-fonte .a-menor, .lp-menu-fonte .a-maior { transition: transform 0.2s; }
+.lp-menu-fonte button:active:not(:disabled) span { transform: scale(0.85); }
+
+/* Apoio */
+.lp-menu-meta { margin: 0 0 1rem; }
+.lp-menu-meta-trilho { display: block; height: 8px; border-radius: 4px; background: rgba(40, 30, 15, 0.09); overflow: hidden; }
+.lp-menu-meta-trilho i { display: block; height: 100%; width: calc(100% * var(--p)); min-width: 8px; border-radius: 4px; background: var(--lp-vermelho); transform-origin: left; }
+.lp-menu[open] .lp-menu-meta-trilho i { animation: lp-meta-enche 0.9s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes lp-meta-enche { from { transform: scaleX(0); } }
+.lp-menu-meta-valores { display: flex; justify-content: space-between; margin-top: 0.4rem; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; color: var(--lp-suave); font-variant-numeric: tabular-nums; }
+.lp-menu-apoio p { margin: 0 0 0.9rem; font-family: var(--font-leitura); font-size: 0.92rem; line-height: 1.5; color: var(--lp-texto); }
+.lp-menu-doar {
+  width: 100%; padding: 0.85rem 1rem; border: 0; border-radius: 999px; cursor: pointer;
+  background: var(--lp-vermelho); color: #fff; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.02em;
+  box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.35), 0 6px 16px -6px rgba(203, 46, 46, 0.6);
+  transition: transform 0.15s, filter 0.2s;
+}
+.lp-menu-doar:active { transform: scale(0.98); filter: brightness(0.94); }
+
+/* Celular: a barra de baixo fica só com as leituras e o botão de menu; a folha sobe de baixo */
+@media (max-width: 760px) {
+  .lp-menu-ancora { display: none; }
+  .lp-main .lp-tabs .lp-tabs-dia { display: none; }   /* provisório: o dia anterior/seguinte mora no menu */
+  .lp-main .lp-tabs .lp-tabs-menu {
+    display: grid; position: relative; flex: 0 0 auto; width: var(--lp-barra); height: var(--lp-barra);
+    background: rgba(253, 252, 250, 0.74);
+  }
+  .lp-main .lp-tabs .lp-tabs-menu:active { background: rgba(255, 255, 255, 0.8); transform: scale(0.92); }
+  .lp-tabs-menu svg { width: calc(var(--lp-barra) * 0.41); height: calc(var(--lp-barra) * 0.41); }
+  .lp-menu {
+    inset: auto 0 0 0; width: 100%; max-width: none; border-radius: 28px 28px 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .lp-menu { max-height: 88dvh; transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s ease; will-change: height; }
+  .lp-menu-grab {
+    display: flex; justify-content: center; align-items: center; height: 26px; position: sticky; top: 0; z-index: 2;
+    touch-action: none; cursor: grab;
+  }
+  .lp-menu-grab i { width: 38px; height: 5px; border-radius: 3px; background: rgba(40, 30, 15, 0.22); }
+  .lp-menu-corpo { padding: 0.2rem 1.4rem 3.6rem; }   /* respiro embaixo: o último controle não fica colado na borda da tela */
+  .lp-menu-fechar { display: none; }   /* no celular fecha-se arrastando, tocando fora ou pelo puxador */
+  .lp-menu[open] { animation: lp-menu-folha 0.38s cubic-bezier(0.22, 1.1, 0.36, 1); }
+  .lp-menu.saindo { animation: lp-menu-folha-desce 0.2s ease-in forwards; }
+}
+@keyframes lp-menu-folha { from { transform: translateY(100%); } }
+@keyframes lp-menu-folha-desce { to { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) {
+  .lp-menu[open], .lp-menu.saindo, .lp-menu[open]::backdrop { animation: none; }
+}
+
+/* Hambúrguer que vira X com o menu aberto (e volta quando ele fecha) */
+.lp-hamb path { transform-box: fill-box; transform-origin: center; transition: transform 0.7s cubic-bezier(0.3, 1.4, 0.45, 1), opacity 0.4s ease; }
+html.lp-menu-aberto .lp-hamb-1 { transform: translateY(4px) rotate(45deg); }
+html.lp-menu-aberto .lp-hamb-2 { transform: scaleX(0.2); opacity: 0; }
+html.lp-menu-aberto .lp-hamb-3 { transform: translate(2.5px, -4px) rotate(-45deg) scaleX(1.55); }
+
+/* Celular: com a folha aberta a barra desce para fora da tela; ao fechar, ela entra de novo com a mola */
+@media (max-width: 760px) {
+  html.lp-menu-aberto.lp-barra-on .lp-main .lp-tabs {
+    transform: translateY(calc(100% + 60px + env(safe-area-inset-bottom)));
+    transition: transform 0.35s cubic-bezier(0.5, 0, 0.75, 0) 0.1s;
+  }
+  /* Ao fechar, a barra sobe de trás da folha; o X só se desfaz quando ela já está à vista, traço por traço.
+     (Ao abrir, o X se forma na hora: a folha cobre a barra logo em seguida.) */
+  html.lp-barra-on .lp-main .lp-tabs .lp-hamb-1 { transition-delay: 0.4s, 0.4s; }
+  html.lp-barra-on .lp-main .lp-tabs .lp-hamb-2 { transition-delay: 0.55s, 0.55s; }
+  html.lp-barra-on .lp-main .lp-tabs .lp-hamb-3 { transition-delay: 0.47s, 0.47s; }
+  html.lp-menu-aberto .lp-main .lp-tabs .lp-hamb path { transition-delay: 0s; transition-duration: 0.4s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-hamb path, .lp-menu[open] .lp-menu-meta-trilho i { transition: none; animation: none; }
+}
+
+/* Barra de leituras: toque direto, sem espera nem zoom por toque duplo */
+.lp-tabs, .lp-tabs a, .lp-tabs-menu { touch-action: manipulation; }
+
+/* Apoio: valores sugeridos (cada um é o link de pagamento da Stripe) e o agradecimento */
+.lp-menu-valores { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+.lp-menu-valor {
+  flex: 1; text-align: center; padding: 0.75rem 0.4rem; border-radius: 14px; text-decoration: none;
+  font-family: var(--font-titulo); font-size: 1.2rem; color: var(--lp-tinta);
+  background: rgba(40, 30, 15, 0.055); transition: background 0.15s, transform 0.15s;
+}
+.lp-menu-valor:hover { background: rgba(40, 30, 15, 0.09); }
+.lp-menu-valor:active { background: rgba(203, 46, 46, 0.14); transform: scale(0.96); }
+.lp-menu-valores:not([hidden]) .lp-menu-valor { animation: lp-menu-sec 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.lp-menu-valores:not([hidden]) .lp-menu-valor:nth-child(2) { animation-delay: 0.05s; }
+.lp-menu-valores:not([hidden]) .lp-menu-valor:nth-child(3) { animation-delay: 0.1s; }
+.lp-menu-doar:disabled { opacity: 0.55; cursor: default; }
+.lp-menu-obrigado { margin: 0 !important; padding: 0.9rem 1rem; border-radius: 14px; background: rgba(203, 46, 46, 0.08); color: var(--lp-tinta) !important; }
+
+.lp-menu-sec[hidden] + .lp-menu-sec { margin-top: 0; padding-top: 0; border-top: 0; }

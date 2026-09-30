@@ -1,0 +1,273 @@
+/**
+ * menu.mjs — menu flutuante da Liturgia Diária.
+ *
+ * Um botão (na barra de vidro, no celular; flutuando na coluna de leitura, no desktop) abre uma
+ * folha com: navegação entre os dias, tamanho do texto e o apoio ao site. O tamanho é uma escala
+ * (--lp-k no <html>) que o CSS usa no texto, na capitular e na largura da coluna; o nível fica
+ * guardado no aparelho.
+ */
+
+const CHAVE = 'lp-fonte';
+const ESCALAS = [1, 1.125, 1.25, 1.375];   // 16, 18, 20 e 22 px
+const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+
+const SETA_ANT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>';
+const SETA_PROX = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>';
+// três traços separados: com o menu aberto viram um X (CSS: html.lp-menu-aberto .lp-hamb-*)
+export const ICONE_MENU = '<svg class="lp-hamb" viewBox="0 0 24 24" aria-hidden="true"><path class="lp-hamb-1" d="M5 8h14"/><path class="lp-hamb-2" d="M5 12h14"/><path class="lp-hamb-3" d="M5 16h9"/></svg>';
+
+// Apoio: os links de pagamento e a meta ficam em data/apoio.json; o que já entrou no mês vem de /api/apoio
+// (alimentado pelo webhook da Stripe). Sem a API, a barra mostra só a meta.
+const API_APOIO = /(^|\.)santadoutrina\.com$/.test(location.hostname) ? '/api/apoio' : 'https://santadoutrina.com/api/apoio';
+let apoio = { meta: 150, links: {}, valores: [10, 20, 50] };
+
+let nivel = 0;
+let dialogo = null;
+let diasEl = null;
+
+const ler = () => { try { return Number(localStorage.getItem(CHAVE)) || 0; } catch { return 0; } };
+const gravar = n => { try { localStorage.setItem(CHAVE, String(n)); } catch { /* sem armazenamento: vale só nesta visita */ } };
+
+/** Aplica o nível (0 a 3): muda a escala no <html> e atualiza os pontinhos e os botões. */
+function aplicar(n) {
+  nivel = Math.max(0, Math.min(ESCALAS.length - 1, n));
+  document.documentElement.style.setProperty('--lp-k', String(ESCALAS[nivel]));
+  dialogo?.querySelectorAll('.lp-menu-ponto').forEach((p, i) => p.classList.toggle('on', i <= nivel));
+  const trilha = dialogo?.querySelector('.lp-menu-pontos');
+  if (trilha) {
+    trilha.style.setProperty('--p', String(nivel / (ESCALAS.length - 1)));   // a linha enche e o polegar desliza até aqui
+    const polegar = trilha.querySelector('.lp-menu-polegar');
+    polegar.classList.remove('pulo'); void polegar.offsetWidth; polegar.classList.add('pulo');
+  }
+  const menos = dialogo?.querySelector('[data-fonte="-1"]');
+  const mais = dialogo?.querySelector('[data-fonte="1"]');
+  if (menos) menos.disabled = nivel === 0;
+  if (mais) mais.disabled = nivel === ESCALAS.length - 1;
+}
+
+const dataPorExtenso = d => { const [, m, dd] = d.split('-').map(Number); return `${dd} de ${MESES[m - 1]}`; };
+const SEMANA = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+const diaDaSemana = d => { const [a, m, dd] = d.split('-').map(Number); return SEMANA[new Date(a, m - 1, dd).getDay()]; };
+
+/** Atualiza a seção "Dia": setas redondas nas pontas (como as da barra) e a data de hoje no meio.
+ *  `atual`: 'AAAA-MM-DD'; `anterior` e `proximo`: { data, href } (ou null se não há esse dia);
+ *  `irParaHoje`: href de hoje quando a página não está nele. */
+export function atualizarDias({ atual, anterior, proximo, irParaHoje }) {
+  if (!diasEl || !atual) return;
+  const seta = (d, rel, svg, rotulo) => d
+    ? `<a class="lp-menu-seta" rel="${rel}" href="${d.href}" aria-label="${rotulo}: ${dataPorExtenso(d.data)}" title="${rotulo}: ${dataPorExtenso(d.data)}">${svg}</a>`
+    : `<span class="lp-menu-seta vazio" aria-hidden="true">${svg}</span>`;
+  diasEl.innerHTML = `<div class="lp-menu-dias">${seta(anterior, 'prev', SETA_ANT, 'Dia anterior')}`
+    + `<div class="lp-menu-atual"><strong>${dataPorExtenso(atual)}</strong><small>${diaDaSemana(atual)}</small></div>`
+    + `${seta(proximo, 'next', SETA_PROX, 'Dia seguinte')}</div>`
+    + (irParaHoje ? `<a class="lp-menu-hoje" href="${irParaHoje}">Voltar para hoje</a>` : '');
+}
+
+const CELULAR = matchMedia('(max-width: 760px)');
+const ALTURA_MAX = 0.88;           // a folha cheia ocupa até 88% da altura
+let medioH = 0, cheioH = 0;        // as duas alturas de repouso (como os detents da Apple)
+let arrasto = null;
+
+/** Mede as duas posições: "média" mostra o apoio, o dia e o tamanho do texto;
+ *  "cheia" mostra tudo. Se tudo já cabe na média, não há o que expandir. */
+function medirAlturas() {
+  dialogo.style.height = '';
+  const total = dialogo.scrollHeight;
+  cheioH = Math.min(total, Math.round(innerHeight * ALTURA_MAX));
+  const terceira = dialogo.querySelectorAll('.lp-menu-sec')[2];
+  const corpo = dialogo.querySelector('.lp-menu-corpo');
+  const respiro = parseFloat(getComputedStyle(corpo).paddingBottom) + parseFloat(getComputedStyle(dialogo).paddingBottom);
+  medioH = terceira ? Math.min(cheioH, Math.round(corpo.offsetTop + terceira.offsetTop + terceira.offsetHeight + respiro)) : cheioH;   // até o fim do tamanho do texto; o que vier depois aparece ao expandir
+  if (cheioH - medioH < 24) medioH = cheioH;   // diferença pequena demais: uma altura só
+}
+const irPara = (h, anima = true) => {
+  dialogo.style.transition = anima ? '' : 'none';
+  dialogo.style.transform = '';
+  if (cheioH > medioH) dialogo.style.height = `${h}px`;
+};
+
+function comecarArrasto(e) {
+  if (!CELULAR.matches || e.button > 0) return;
+  arrasto = { y0: e.clientY, h0: dialogo.getBoundingClientRect().height, t0: performance.now(), movido: false, ultimoY: e.clientY, ultimoT: performance.now(), v: 0 };
+  e.currentTarget.setPointerCapture(e.pointerId);
+  dialogo.style.transition = 'none';
+}
+function moverArrasto(e) {
+  if (!arrasto) return;
+  const dy = e.clientY - arrasto.y0;
+  if (Math.abs(dy) > 4) arrasto.movido = true;
+  const agora = performance.now();
+  arrasto.v = (e.clientY - arrasto.ultimoY) / Math.max(1, agora - arrasto.ultimoT);   // px/ms, positivo = descendo
+  arrasto.ultimoY = e.clientY; arrasto.ultimoT = agora;
+  const alvo = arrasto.h0 - dy;   // altura que o dedo pede
+  if (alvo >= medioH) {
+    if (cheioH > medioH) dialogo.style.height = `${Math.min(alvo, cheioH)}px`;
+    dialogo.style.transform = '';
+  } else {
+    dialogo.style.height = cheioH > medioH ? `${medioH}px` : '';
+    dialogo.style.transform = `translateY(${Math.round(medioH - alvo)}px)`;   // abaixo da média: a folha desce
+  }
+}
+function terminarArrasto() {
+  if (!arrasto) return;
+  const { h0, y0, ultimoY, v, movido } = arrasto;
+  arrasto = null;
+  const atual = h0 - (ultimoY - y0);
+  const desce = v > 0.5, sobe = v < -0.5;
+  if (!movido) {   // toque no puxador: alterna entre as alturas
+    if (cheioH > medioH) irPara(dialogo.getBoundingClientRect().height > medioH + 4 ? medioH : cheioH);
+    return;
+  }
+  if (atual < medioH * 0.62 || (atual < medioH && desce)) { fecharArrastando(); return; }
+  if (cheioH > medioH) irPara(sobe || (!desce && atual > (medioH + cheioH) / 2) ? cheioH : medioH);
+  else irPara(medioH);
+}
+function fecharArrastando() {
+  document.documentElement.classList.remove('lp-menu-aberto');   // a barra volta (animada) enquanto a folha desce
+  dialogo.style.transition = 'transform 0.2s ease-in';
+  dialogo.style.transform = 'translateY(100%)';
+  setTimeout(() => { dialogo.close(); dialogo.style.transition = dialogo.style.transform = dialogo.style.height = ''; }, 200);
+}
+
+function abrir(origem) {
+  if (!dialogo || dialogo.open) return;
+  dialogo.showModal();
+  document.documentElement.classList.add('lp-menu-aberto');
+  // no desktop a folha abre colada ao botão; no celular, embaixo, em largura total
+  if (matchMedia('(min-width: 761px)').matches && origem) {
+    const r = origem.getBoundingClientRect();
+    dialogo.style.left = `${Math.max(12, r.right - dialogo.offsetWidth)}px`;
+    dialogo.style.top = 'auto';
+    dialogo.style.bottom = `${innerHeight - r.top + 12}px`;
+  } else {
+    dialogo.style.left = dialogo.style.top = dialogo.style.bottom = '';
+  }
+  if (CELULAR.matches) { medirAlturas(); irPara(medioH, false); requestAnimationFrame(() => { dialogo.style.transition = ''; }); }
+  else dialogo.style.height = '';
+}
+
+function fechar() {
+  if (!dialogo?.open) return;
+  if (CELULAR.matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) { fecharArrastando(); return; }
+  document.documentElement.classList.remove('lp-menu-aberto');
+  dialogo.classList.add('saindo');
+  const fim = () => { dialogo.classList.remove('saindo'); dialogo.close(); };
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) fim();
+  else setTimeout(fim, 180);
+}
+
+const reais = n => `R$ ${Number(n).toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: Number.isInteger(n) ? 0 : 2 })}`;
+
+function pintarMeta({ arrecadado = 0, meta = apoio.meta }) {
+  const el = dialogo?.querySelector('#lp-menu-meta');
+  if (!el) return;
+  el.style.setProperty('--p', String(meta ? Math.min(1, arrecadado / meta) : 0));
+  el.setAttribute('aria-valuemax', String(meta));
+  el.setAttribute('aria-valuenow', String(arrecadado));
+  el.querySelector('[data-arrecadado]').textContent = reais(arrecadado);
+  el.querySelector('[data-meta]').textContent = reais(meta);
+}
+
+/** Lê a configuração (links e meta) e o que já entrou no mês; qualquer falha deixa a folha como está. */
+async function carregarApoio() {
+  try {
+    const r = await fetch('/data/apoio.json', { cache: 'no-cache' });
+    if (r.ok) apoio = { ...apoio, ...(await r.json()) };
+  } catch { /* sem configuração: o botão fica desligado */ }
+  // Enquanto os links forem de teste, o apoio só aparece fora do site de verdade (desenvolvimento e testes).
+  const naProducao = /(^|\.)santadoutrina\.com$/.test(location.hostname);
+  if (naProducao && apoio.modo !== 'producao') { dialogo.querySelector('.lp-menu-sec-apoio').hidden = true; return; }
+  const botao = dialogo.querySelector('#lp-menu-doar');
+  const temLinks = apoio.valores.some(v => apoio.links?.[v]);
+  botao.disabled = !temLinks;
+  if (!temLinks) botao.textContent = 'Em breve';
+  dialogo.querySelector('#lp-menu-valores').innerHTML = apoio.valores.filter(v => apoio.links?.[v])
+    .map(v => `<a class="lp-menu-valor" href="${apoio.links[v]}" rel="noopener">${reais(v)}</a>`).join('');
+  pintarMeta({ meta: apoio.meta });
+  try {
+    const r = await fetch(API_APOIO);
+    if (r.ok) pintarMeta(await r.json());
+  } catch { /* offline ou API fora do ar: fica só a meta */ }
+}
+
+/** Monta a folha, o botão do desktop e os ouvintes. Chamada uma vez. */
+export function iniciarMenu() {
+  dialogo = document.createElement('dialog');
+  dialogo.className = 'lp-menu';
+  dialogo.id = 'lp-menu';
+  dialogo.setAttribute('aria-label', 'Menu');
+  dialogo.innerHTML = `
+    <div class="lp-menu-grab" aria-hidden="true"><i></i></div>
+    <div class="lp-menu-corpo" tabindex="-1" autofocus>
+      <button class="lp-menu-fechar" type="button" aria-label="Fechar o menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+      <section class="lp-menu-sec lp-menu-sec-apoio" aria-labelledby="lp-menu-h-apoio">
+        <h3 id="lp-menu-h-apoio">Ajude a manter o site</h3>
+        <div class="lp-menu-apoio" id="lp-menu-apoio">
+          <p>Para manter o site no ar temos algumas despesas. Contribua.</p>
+          <div class="lp-menu-meta" id="lp-menu-meta" role="progressbar" aria-label="Meta do mês" aria-valuemin="0" style="--p:0">
+            <span class="lp-menu-meta-trilho"><i></i></span>
+            <span class="lp-menu-meta-valores"><span data-arrecadado>R$ 0</span><span data-meta>R$ 150</span></span>
+          </div>
+          <button type="button" class="lp-menu-doar" id="lp-menu-doar" aria-expanded="false">Apoiar o site</button>
+          <div class="lp-menu-valores" id="lp-menu-valores" hidden></div>
+          <p class="lp-menu-obrigado" id="lp-menu-obrigado" hidden>Obrigado! Sua doação ajuda a manter a Liturgia Diária no ar.</p>
+        </div>
+      </section>
+      <section class="lp-menu-sec" aria-label="Dia">
+        <div id="lp-menu-dias"></div>
+      </section>
+      <section class="lp-menu-sec" aria-labelledby="lp-menu-h-fonte">
+        <h3 id="lp-menu-h-fonte">Tamanho do texto</h3>
+        <div class="lp-menu-fonte">
+          <button type="button" data-fonte="-1" aria-label="Diminuir o texto"><span class="a-menor">A</span></button>
+          <span class="lp-menu-pontos" aria-hidden="true">${ESCALAS.map(() => '<i class="lp-menu-ponto"></i>').join('')}<b class="lp-menu-enche"></b><b class="lp-menu-polegar"></b></span>
+          <button type="button" data-fonte="1" aria-label="Aumentar o texto"><span class="a-maior">A</span></button>
+        </div>
+      </section>
+    </div>`;
+  document.body.append(dialogo);
+  diasEl = dialogo.querySelector('#lp-menu-dias');
+
+  // botão flutuante do desktop: uma âncora sem altura, presa à base da janela, dentro da coluna
+  const main = document.querySelector('.lp-main');
+  if (main) {
+    const ancora = document.createElement('div');
+    ancora.className = 'lp-menu-ancora';
+    ancora.innerHTML = `<button class="lp-menu-fab" type="button" data-lp-menu aria-haspopup="dialog" aria-label="Abrir o menu">${ICONE_MENU}</button>`;
+    main.prepend(ancora);
+  }
+
+  document.addEventListener('click', e => {
+    const gatilho = e.target.closest?.('[data-lp-menu]');
+    if (gatilho) { abrir(gatilho); return; }
+    if (!dialogo.open) return;
+    if (e.target === dialogo || e.target.closest('.lp-menu-fechar')) { fechar(); return; }
+    if (e.target.closest('#lp-menu-doar')) {
+      const botao = e.target.closest('#lp-menu-doar'), valores = dialogo.querySelector('#lp-menu-valores');
+      valores.hidden = !valores.hidden;
+      botao.setAttribute('aria-expanded', String(!valores.hidden));
+      botao.textContent = valores.hidden ? 'Apoiar o site' : 'Escolha o valor';
+      if (CELULAR.matches) { medirAlturas(); irPara(valores.hidden ? medioH : Math.max(medioH, Math.min(cheioH, dialogo.getBoundingClientRect().height + 70))); }
+      return;
+    }
+    const btn = e.target.closest('[data-fonte]');
+    if (btn) { aplicar(nivel + Number(btn.dataset.fonte)); gravar(nivel); return; }
+    if (e.target.closest('a[href]')) setTimeout(fechar, 60);   // trocar de dia: a navegação roda e a folha desce
+  });
+  dialogo.addEventListener('close', () => document.documentElement.classList.remove('lp-menu-aberto'));
+  dialogo.addEventListener('cancel', e => { e.preventDefault(); fechar(); });
+  const grab = dialogo.querySelector('.lp-menu-grab');
+  grab.addEventListener('pointerdown', comecarArrasto);
+  grab.addEventListener('pointermove', moverArrasto);
+  grab.addEventListener('pointerup', terminarArrasto);
+  grab.addEventListener('pointercancel', terminarArrasto);
+  aplicar(ler());
+  carregarApoio();
+  // de volta do pagamento: a folha abre com o agradecimento
+  if (new URLSearchParams(location.search).get('apoio') === 'obrigado') {
+    dialogo.querySelector('#lp-menu-obrigado').hidden = false;
+    dialogo.querySelector('#lp-menu-doar').hidden = true;
+    history.replaceState(null, '', location.pathname);
+    setTimeout(() => abrir(document.querySelector('.lp-menu-fab')), 800);
+  }
+}
