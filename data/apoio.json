@@ -1,8 +1,12 @@
 {
   "meta": 150,
-  "valores": [10, 20, 50],
+  "valores": [
+    10,
+    20,
+    50
+  ],
   "provedor": "mercadopago",
-  "modo": "teste",
+  "modo": "producao",
   "links": {
     "10": "https://santadoutrina.com/api/apoio-checkout?valor=10",
     "20": "https://santadoutrina.com/api/apoio-checkout?valor=20",
