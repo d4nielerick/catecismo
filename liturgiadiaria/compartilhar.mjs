@@ -516,18 +516,37 @@ function montarSlides(lista) {
 const telaAtual = () => (modo === 'trecho' ? telas[atual] : paginasDoModo[atual]);
 const nomeArquivo = (i = atual) => (modo === 'trecho'
   ? `liturgia-${conteudo.dt}-${LAYOUTS[i].id}.png`
-  : `liturgia-${conteudo.dt}-${modo === 'todas' ? 'leituras' : 'leitura'}-${i + 1}.jpg`);
+  : `liturgia-${conteudo.dt}-${modo === 'todas' ? 'leituras' : 'leitura'}-${i + 1}.png`);
 // O arquivo de cada card/página fica pronto assim que ele é desenhado: no toque em Instagram ou
 // Salvar, navigator.share() precisa ser chamado ainda "dentro" do toque (o Safari recusa depois de
 // uma espera longa), então não dá para gerar o PNG só na hora.
 const arquivosProntos = new WeakMap();
+
+// Cantos arredondados no arquivo, como na janela (a imagem exportada era um retângulo reto). Fora do
+// arredondado o PNG é transparente: WhatsApp e Telegram mantêm; o Instagram preenche o canto com o
+// próprio fundo. O raio é proporcional à largura (4,4%): o mesmo que o CSS dá à prévia reduzida.
+const RAIO_CARD = 0.044;
+const arredondados = new WeakSet();
+function arredondar(cv) {
+  if (arredondados.has(cv)) return;
+  arredondados.add(cv);
+  const c = cv.getContext('2d');
+  c.save();
+  c.globalCompositeOperation = 'destination-in';
+  c.fillStyle = '#000';   // opaco: o que sobra do canvas leva a transparência da cor que estava em uso
+  c.beginPath();
+  c.roundRect(0, 0, cv.width, cv.height, Math.round(cv.width * RAIO_CARD));
+  c.fill();
+  c.restore();
+}
 const prepararArquivo = (cv, tipo = 'image/png', q) => {
+  arredondar(cv);   // sempre depois de a prévia ser tirada do desenho reto (as prévias já têm o raio em CSS)
   const p = new Promise(r => cv.toBlob(r, tipo, q));
   arquivosProntos.set(cv, p);
   return p;
 };
 const blobDoCard = () => arquivosProntos.get(telaAtual()) ?? prepararArquivo(telaAtual());
-const blobsDasPaginas = () => Promise.all(paginasDoModo.map(cv => arquivosProntos.get(cv) ?? prepararArquivo(cv, 'image/jpeg', 0.9)));
+const blobsDasPaginas = () => Promise.all(paginasDoModo.map(cv => arquivosProntos.get(cv) ?? prepararArquivo(cv)));
 
 function baixar(blob, nome = nomeArquivo()) {
   const a = document.createElement('a');
@@ -591,7 +610,7 @@ async function enviar(destino) {
 // como álbum, uma foto por página. Sem a folha (computador), baixam uma a uma.
 async function enviarPaginas(destino) {
   const blobs = await blobsDasPaginas();
-  const arquivos = blobs.map((b, i) => new File([b], nomeArquivo(i), { type: 'image/jpeg' }));
+  const arquivos = blobs.map((b, i) => new File([b], nomeArquivo(i), { type: 'image/png' }));
   if (TOQUE.matches && navigator.canShare?.({ files: arquivos })) {
     avisar(destino === 'salvar' ? 'Toque em “Salvar imagens”.' : destino === 'instagram' ? 'Escolha o Instagram na lista.' : 'Escolha o WhatsApp na lista.');
     try { await navigator.share({ files: arquivos }); } catch { /* cancelou */ }
@@ -655,10 +674,11 @@ function desenharTodos() {
   return Promise.all(telas.map((cv, i) => new Promise(pronto => {
     const ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, cv.width, cv.height);
+    arredondados.delete(cv);   // redesenhado: os cantos voltam a ser retos até o arquivo ser preparado
     LAYOUTS[i].desenhar(ctx, cv.width, cv.height, conteudo);
-    prepararArquivo(cv);
     const previa = Object.assign(document.createElement('canvas'), { width: PREVIA_L, height: Math.round(PREVIA_L * cv.height / cv.width) });
-    previa.getContext('2d').drawImage(cv, 0, 0, previa.width, previa.height);
+    previa.getContext('2d').drawImage(cv, 0, 0, previa.width, previa.height);   // a prévia sai do desenho reto (o CSS arredonda)
+    prepararArquivo(cv);
     previa.toBlob(b => {
       if (!b) { pronto(); return; }
       const antigo = imgs[i].src;
@@ -711,7 +731,7 @@ async function trocarModo(m) {
   const lista = await cachePaginas[chave];
   if (vez !== pedidoModo) return;
   paginasDoModo = lista;
-  lista.forEach(cv => arquivosProntos.has(cv) || prepararArquivo(cv, 'image/jpeg', 0.9));
+  
   montarSlides(lista.map((cv, i) => ({ w: cv.width, h: cv.height, alt: `Página ${i + 1} de ${lista.length}` })));
   marcar();
   const imgs = dlg.querySelectorAll('.lp-card-slide img');
@@ -724,6 +744,7 @@ async function trocarModo(m) {
       imgs[i].src = URL.createObjectURL(b);
     }, 'image/jpeg', 0.9);
   })));
+  lista.forEach(cv => arquivosProntos.has(cv) || prepararArquivo(cv));   // os arquivos ficam prontos antes do toque (o Safari exige)
   if (vez === pedidoModo) carregando(false);
 }
 
