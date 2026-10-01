@@ -2146,3 +2146,13 @@ button.lp-menu-valor { border: 0; cursor: pointer; }
 
 /* os blocos do menu têm display próprio: sem isto o atributo hidden não os esconderia */
 .lp-menu [hidden] { display: none !important; }
+
+/* Depois do agradecimento: doar de novo, discreto (o apoio recorrente é bem-vindo, mas sem pressão) */
+.lp-menu-denovo {
+  margin-top: 0.9rem; padding: 0.7rem 1.4rem; border: 1px solid rgba(203, 46, 46, 0.4); border-radius: 999px; background: transparent;
+  color: var(--lp-vermelho); font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+.lp-menu-denovo:hover { background: rgba(203, 46, 46, 0.06); border-color: var(--lp-vermelho); }
+.lp-menu-denovo:active { transform: scale(0.97); }
+.lp-menu-obrigado:not([hidden]) .lp-menu-denovo { animation: lp-menu-sec 0.5s 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }

@@ -311,6 +311,7 @@ export function iniciarMenu() {
             <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23"/><path d="M15 27l8 8 14-16"/></svg>
             <strong>Obrigado!</strong>
             <span>Sua doação ajuda a manter a Liturgia Diária no ar.</span>
+            <button type="button" class="lp-menu-denovo" data-acao="de-novo">Doar novamente</button>
           </div>
         </div>
       </section>
@@ -352,6 +353,7 @@ export function iniciarMenu() {
       if (Number.isInteger(v) && v >= 1 && v <= 1000) gerarPix(v); else $('#lp-menu-outro-valor').focus();
       return;
     }
+    if (acao === 'de-novo') { mostrarEtapa('valores'); return; }
     if (acao === 'voltar') { pararPix(); pix = null; mostrarEtapa('valores'); return; }
     if (acao === 'copiar') { copiarCodigo(e.target.closest('[data-acao]')); return; }
     if (e.target.closest('#lp-menu-doar')) {
