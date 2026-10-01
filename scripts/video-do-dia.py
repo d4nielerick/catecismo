@@ -75,10 +75,10 @@ def capa(pintura, espelhar, frase, linhas_info, destino):
     im = im.crop(((im.width - W) // 2, (im.height - H) // 2, (im.width - W) // 2 + W, (im.height - H) // 2 + H)).convert('RGBA')
     g = Image.new('L', (W, H))
     dg = ImageDraw.Draw(g)
-    for x in range(W):   # escurece suave da esquerda até ~75%; a leitura vem da sombra do texto
+    for x in range(W):   # escurece suave da esquerda até ~75%
         dg.line([(x, 0), (x, H)], fill=int(205 * max(0, 1 - x / (W * 0.75)) ** 0.7))
     im = Image.composite(Image.new('RGBA', (W, H), (12, 9, 6, 255)), im, g)
-    texto = Image.new('RGBA', (W, H), (0, 0, 0, 0))   # o texto vai numa camada própria, com sombra
+    texto = Image.new('RGBA', (W, H), (0, 0, 0, 0))   # o texto vai numa camada própria
     d = ImageDraw.Draw(texto)
     d.text((64, 62), 'EVANGELHO DO DIA', font=fonte('inria-serif-700', 36), fill=(225, 60, 55))
     d.text((52, 70), '“', font=fonte('inria-serif-400-italic', 240), fill=VERMELHO)
@@ -98,10 +98,7 @@ def capa(pintura, espelhar, frase, linhas_info, destino):
     for t in linhas_info:
         d.text((66, y), t, font=fi, fill=CREME)
         y += 54
-    sombra = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    sombra.putalpha(texto.getchannel('A').filter(ImageFilter.GaussianBlur(14)).point(lambda v: min(255, v * 3)))
-    im.alpha_composite(sombra)
-    im.alpha_composite(texto)
+    im.alpha_composite(texto)   # sem sombra no texto: a leitura vem só do escurecimento à esquerda
     d = ImageDraw.Draw(im)
     im.alpha_composite(logo(96, 22), (64, H - 146))
     d.text((182, H - 124), 'Liturgia Diária', font=fonte('inria-serif-700', 40), fill=BRANCO)
