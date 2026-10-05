@@ -169,10 +169,11 @@ const formatar = (d, opcoes) => MEIO_DIA(d).toLocaleDateString('pt-BR', { timeZo
  *  ("Quarta-feira de Cinzas"), a linha de baixo some. */
 /** Título do dia (aba do navegador e <title> da página gerada). Começa pelo que se busca — "Liturgia
  *  Diária 6 de outubro de 2026" — e leva a referência do Evangelho, que o Google corta por último. */
-export function tituloDoDia(dt, dia) {
+export function tituloDoDia(dt, dia, hoje = false) {
   const quando = formatar(dt, { day: 'numeric', month: 'long', year: 'numeric' });
   const ev = dia?.missas?.[0]?.leituras?.find(l => !l.alternativa && l.tipo === 'evangelho');
-  return ev?.referencia ? `Liturgia Diária ${quando}: Evangelho ${ev.referencia} e leituras da missa` : `Liturgia Diária ${quando}: leituras da missa`;
+  const prefixo = hoje ? 'Liturgia Diária de hoje,' : 'Liturgia Diária';   // a página /liturgiadiaria/ é sempre "o dia de hoje"
+  return ev?.referencia ? `${prefixo} ${quando}: Evangelho ${ev.referencia} e leituras da missa` : `${prefixo} ${quando}: leituras da missa`;
 }
 
 export function cabecalhoDoDia(dt, dia) {

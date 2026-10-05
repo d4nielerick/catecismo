@@ -17,3 +17,6 @@ catecismo/
 /liturgiadiaria/og/
 /sitemap-liturgia.xml
 /video/
+
+# Página de hoje pré-renderizada pelo cron da VPS (scripts/pagina-hoje.mjs)
+/liturgiadiaria/hoje.html
