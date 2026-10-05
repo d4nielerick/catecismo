@@ -14,6 +14,7 @@ import {
 } from '/liturgiadiaria/render.mjs';
 import { icone, iconeDaLeitura } from '/liturgiadiaria/icones-leituras.mjs';
 import { iniciarMenu, atualizarDias, ICONE_MENU } from '/liturgiadiaria/menu.mjs';
+import { registrarServiceWorker } from '/liturgiadiaria/pwa.mjs';
 
 // O que a página está mostrando; trocar de dia acontece aqui mesmo, sem recarregar.
 const estado = { dt: null, hoje: null, indice: null, santos: null, destaques: new Map() };
@@ -1136,6 +1137,7 @@ async function init() {
   construirCalendario(dt, hoje, { inicio: '0000-00-00', fim: '9999-99-99' });
   organizarColunas();
   iniciarMenu();
+  registrarServiceWorker();
   configurarDicas();
   configurarNavegacao();
   configurarRolagem();

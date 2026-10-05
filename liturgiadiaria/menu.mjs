@@ -17,6 +17,7 @@ const SETA_PROX = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5
 export const ICONE_MENU = '<svg class="lp-hamb" viewBox="0 0 24 24" aria-hidden="true"><path class="lp-hamb-1" d="M5 8h14"/><path class="lp-hamb-2" d="M5 12h14"/><path class="lp-hamb-3" d="M5 16h9"/></svg>';
 
 import { evento } from '/liturgiadiaria/metricas.mjs';
+import { modoInstalacao, aoMudarInstalacao, instalar } from '/liturgiadiaria/pwa.mjs';
 
 // Apoio: os links de pagamento e a meta ficam em data/apoio.json; o que já entrou no mês vem de /api/apoio
 // (alimentado pelo webhook da Stripe). Sem a API, a barra mostra só a meta.
@@ -258,6 +259,16 @@ function carregarStripe() {
   });
 }
 
+/** Mostra o botão de instalar (Chrome), a instrução (iPhone) ou nada (já instalado / sem suporte). */
+function pintarInstalacao() {
+  const secao = dialogo?.querySelector('#lp-menu-app');
+  if (!secao) return;
+  const modo = modoInstalacao();
+  secao.hidden = modo === 'nada';
+  secao.querySelector('.lp-menu-instalar').hidden = modo !== 'botao';
+  secao.querySelector('.lp-menu-app-ios').hidden = modo !== 'ios';
+}
+
 function fecharCartao() {
   if (janelaCartao?.open) janelaCartao.close();
 }
@@ -405,6 +416,12 @@ export function iniciarMenu() {
           <button type="button" data-fonte="1" aria-label="Aumentar o texto"><span class="a-maior">A</span></button>
         </div>
       </section>
+      <section class="lp-menu-sec lp-menu-sec-app" id="lp-menu-app" aria-labelledby="lp-menu-h-app" hidden>
+        <h3 id="lp-menu-h-app">Instalar o app</h3>
+        <p class="lp-menu-app-txt">Abra a liturgia direto da tela inicial, até sem internet.</p>
+        <button type="button" class="lp-menu-instalar" data-acao="instalar" hidden>Instalar</button>
+        <p class="lp-menu-app-ios" hidden>No iPhone: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
+      </section>
     </div>`;
   document.body.append(dialogo);
   diasEl = dialogo.querySelector('#lp-menu-dias');
@@ -439,6 +456,7 @@ export function iniciarMenu() {
     if (acao === 'de-novo') { mostrarEtapa('valores'); return; }
     if (acao === 'voltar') { pararPix(); pix = null; mostrarEtapa('valores'); return; }
     if (acao === 'copiar') { copiarCodigo(e.target.closest('[data-acao]')); return; }
+    if (acao === 'instalar') { instalar(); return; }
     if (acao === 'cartao') { e.preventDefault(); abrirCartao(pix.valor); return; }
     if (e.target.closest('#lp-menu-doar')) {
       const aberto = $('#lp-menu-valores').hidden;
@@ -463,6 +481,8 @@ export function iniciarMenu() {
   grab.addEventListener('pointercancel', terminarArrasto);
   aplicar(ler());
   carregarApoio();
+  aoMudarInstalacao(pintarInstalacao);
+  pintarInstalacao();
   // de volta do pagamento: a folha abre com o agradecimento
   if (new URLSearchParams(location.search).get('apoio') === 'obrigado') {
     mostrarEtapa('obrigado');
