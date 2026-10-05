@@ -2128,6 +2128,21 @@ button.lp-menu-valor { border: 0; cursor: pointer; }
 .lp-menu-cartao { display: block; margin-top: 0.7rem; text-align: center; font-family: var(--font-sans); font-size: 0.78rem; color: var(--lp-suave); text-decoration: underline; text-underline-offset: 2px; }
 .lp-menu-cartao[hidden] { display: none; }
 
+/* Janela do cartão (Checkout embutido da Stripe): fica por cima do menu, com rolagem própria */
+.lp-pagar {
+  width: min(480px, calc(100vw - 24px)); max-height: min(92dvh, 760px); margin: auto; padding: 0; border: 0; border-radius: 22px; overflow: hidden;
+  background: #fff; color: var(--lp-tinta); box-shadow: 0 30px 80px -20px rgba(20, 12, 4, 0.55);
+}
+.lp-pagar[open] { display: flex; flex-direction: column; animation: lp-menu-sec 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.lp-pagar::backdrop { background: rgba(20, 14, 8, 0.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.lp-pagar-topo { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.9rem 0.9rem 0.5rem 1.3rem; }
+.lp-pagar-valor { font-family: var(--font-titulo); font-weight: 400; font-style: italic; font-size: 1.35rem; letter-spacing: -0.02em; }
+.lp-pagar-fechar { display: grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.05); cursor: pointer; color: var(--lp-tinta); }
+.lp-pagar-fechar svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.lp-pagar-corpo { flex: 1; min-height: 220px; overflow-y: auto; overscroll-behavior: contain; padding: 0 0.5rem 0.8rem; }
+.lp-pagar-espera { display: block; width: 28px; height: 28px; margin: 5rem auto; border-radius: 50%; border: 3px solid rgba(40, 30, 15, 0.1); border-top-color: var(--lp-vermelho); animation: lp-gira 0.8s linear infinite; }
+.lp-pagar-erro { margin: 4rem 1.3rem; text-align: center; font-family: var(--font-sans); font-size: 0.9rem; color: var(--lp-suave); }
+
 /* Agradecimento: o círculo e o visto se desenham */
 .lp-menu-obrigado { display: grid; justify-items: center; gap: 0.3rem; padding: 0.4rem 0 0.2rem; text-align: center; }
 .lp-menu-obrigado strong { font-family: var(--font-titulo); font-weight: 400; font-style: italic; font-size: 1.7rem; letter-spacing: -0.02em; }

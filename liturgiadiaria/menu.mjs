@@ -200,8 +200,16 @@ async function gerarPix(valor) {
   $('#lp-menu-pix-valor').textContent = `Pix de ${reais(valor)}`;
   $('#lp-menu-qr').innerHTML = '<span class="lp-menu-qr-espera"></span>';
   $('.lp-menu-copiar').disabled = true;
-  const cartao = $('#lp-menu-cartao');   // o cartão segue pelo Checkout Pro, com o mesmo valor
-  cartao.href = `${API}/apoio-checkout?valor=${valor}`;
+  const cartao = $('#lp-menu-cartao');
+  if (apoio.stripe?.chave_publica) {   // cartão, Apple Pay e Google Pay na própria página (Stripe)
+    cartao.href = '#';
+    cartao.dataset.acao = 'cartao';
+    cartao.textContent = 'Prefere cartão, Apple Pay ou Google Pay?';
+  } else {                             // sem Stripe: o cartão segue pelo Checkout Pro, com o mesmo valor
+    cartao.href = `${API}/apoio-checkout?valor=${valor}`;
+    delete cartao.dataset.acao;
+    cartao.textContent = 'Prefere cartão? Pagar no Mercado Pago';
+  }
   estadoPix('Gerando o Pix…');
   mostrarEtapa('pix');
   try {
@@ -228,6 +236,71 @@ async function consultarPix() {
     if (status === 'approved') agradecer(pix.valor);
     else if (['rejected', 'cancelled'].includes(status)) { pararPix(); estadoPix('O pagamento não foi concluído.', 'erro'); }
   } catch { /* sem rede por um instante: tenta no próximo ciclo */ }
+}
+
+// ── Cartão, Apple Pay e Google Pay (Checkout embutido da Stripe) ─────────────
+let janelaCartao = null;   // <dialog> da Stripe
+let checkout = null;       // formulário montado (precisa de destroy ao fechar)
+let pagou = false;         // o fechamento veio do pagamento concluído
+
+function carregarStripe() {
+  return new Promise((ok, erro) => {
+    if (window.Stripe) { ok(window.Stripe); return; }
+    const s = document.createElement('script');
+    s.src = 'https://js.stripe.com/v3/';
+    s.onload = () => ok(window.Stripe);
+    s.onerror = () => erro(new Error('Não foi possível carregar o pagamento. Verifique a conexão.'));
+    document.head.append(s);
+  });
+}
+
+function fecharCartao() {
+  if (janelaCartao?.open) janelaCartao.close();
+}
+
+async function abrirCartao(valor) {
+  pararPix();
+  pix = null;
+  if (!janelaCartao) {
+    janelaCartao = document.createElement('dialog');
+    janelaCartao.className = 'lp-pagar';
+    janelaCartao.setAttribute('aria-label', 'Pagar com cartão');
+    janelaCartao.innerHTML = `
+      <div class="lp-pagar-topo"><strong class="lp-pagar-valor"></strong><button type="button" class="lp-pagar-fechar" data-acao="fechar-cartao" aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button></div>
+      <div class="lp-pagar-corpo"></div>`;
+    janelaCartao.addEventListener('close', () => {
+      try { checkout?.destroy(); } catch { /* já destruído */ }
+      checkout = null;
+      if (!pagou) mostrarEtapa('valores');   // fechou sem pagar: volta a escolher o valor
+      pagou = false;
+    });
+    document.body.append(janelaCartao);
+  }
+  const corpo = janelaCartao.querySelector('.lp-pagar-corpo');
+  janelaCartao.querySelector('.lp-pagar-valor').textContent = `Doação de ${reais(valor)}`;
+  corpo.innerHTML = '<span class="lp-pagar-espera"></span>';
+  janelaCartao.showModal();
+  try {
+    const [Stripe, r] = await Promise.all([
+      carregarStripe(),
+      fetch(`${API}/apoio-stripe`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ valor }) }),
+    ]);
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || 'Não foi possível abrir o pagamento.');
+    if (!janelaCartao.open) return;   // fechou enquanto carregava
+    checkout = await Stripe(apoio.stripe.chave_publica, { locale: 'pt-BR' }).initEmbeddedCheckout({
+      clientSecret: j.clientSecret,
+      onComplete: () => { pagou = true; fecharCartao(); agradecer(valor); },
+    });
+    corpo.innerHTML = '';
+    checkout.mount(corpo);
+  } catch (e) {
+    corpo.innerHTML = '';
+    corpo.append(Object.assign(document.createElement('p'), {
+      className: 'lp-pagar-erro',
+      textContent: e.message === 'Failed to fetch' ? 'Sem conexão. Tente de novo.' : (e.message || 'Não foi possível abrir o pagamento.'),
+    }));
+  }
 }
 
 let arrecadadoAtual = 0;
@@ -342,6 +415,10 @@ export function iniciarMenu() {
   document.addEventListener('click', e => {
     const gatilho = e.target.closest?.('[data-lp-menu]');
     if (gatilho) { abrir(gatilho); return; }
+    if (janelaCartao?.open) {   // a janela do cartão fica por cima do menu
+      if (e.target === janelaCartao || e.target.closest('[data-acao="fechar-cartao"]')) fecharCartao();
+      return;
+    }
     if (!dialogo.open) return;
     if (e.target === dialogo || e.target.closest('.lp-menu-fechar')) { fechar(); return; }
     const valorBtn = e.target.closest('[data-valor]');
@@ -356,6 +433,7 @@ export function iniciarMenu() {
     if (acao === 'de-novo') { mostrarEtapa('valores'); return; }
     if (acao === 'voltar') { pararPix(); pix = null; mostrarEtapa('valores'); return; }
     if (acao === 'copiar') { copiarCodigo(e.target.closest('[data-acao]')); return; }
+    if (acao === 'cartao') { e.preventDefault(); abrirCartao(pix.valor); return; }
     if (e.target.closest('#lp-menu-doar')) {
       const aberto = $('#lp-menu-valores').hidden;
       mostrarEtapa(aberto ? 'valores' : 'botao');
