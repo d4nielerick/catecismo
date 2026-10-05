@@ -516,61 +516,18 @@ function montarSlides(lista) {
 const telaAtual = () => (modo === 'trecho' ? telas[atual] : paginasDoModo[atual]);
 const nomeArquivo = (i = atual) => (modo === 'trecho'
   ? `liturgia-${conteudo.dt}-${LAYOUTS[i].id}.png`
-  : `liturgia-${conteudo.dt}-${modo === 'todas' ? 'leituras' : 'leitura'}-${i + 1}.png`);
+  : `liturgia-${conteudo.dt}-${modo === 'todas' ? 'leituras' : 'leitura'}-${i + 1}.jpg`);
 // O arquivo de cada card/página fica pronto assim que ele é desenhado: no toque em Instagram ou
 // Salvar, navigator.share() precisa ser chamado ainda "dentro" do toque (o Safari recusa depois de
 // uma espera longa), então não dá para gerar o PNG só na hora.
 const arquivosProntos = new WeakMap();
-
-// Cantos arredondados no arquivo, como na janela (a imagem exportada era um retângulo reto). Fora do
-// arredondado o PNG é transparente: WhatsApp e Telegram mantêm; o Instagram preenche o canto com o
-// próprio fundo. O raio é proporcional à largura (4,4%): o mesmo que o CSS dá à prévia reduzida.
-const RAIO_CARD = 0.044;
-const arredondados = new WeakSet();
-function arredondar(cv) {
-  if (arredondados.has(cv)) return;
-  arredondados.add(cv);
-  const c = cv.getContext('2d');
-  c.save();
-  c.globalCompositeOperation = 'destination-in';
-  c.fillStyle = '#000';   // opaco: o que sobra do canvas leva a transparência da cor que estava em uso
-  c.beginPath();
-  c.roundRect(0, 0, cv.width, cv.height, Math.round(cv.width * RAIO_CARD));
-  c.fill();
-  c.restore();
-}
 const prepararArquivo = (cv, tipo = 'image/png', q) => {
-  arredondar(cv);   // sempre depois de a prévia ser tirada do desenho reto (as prévias já têm o raio em CSS)
-  arquivosInsta.delete(cv);
-  paraInstagram(cv);   // a versão do Instagram também fica pronta antes do toque
   const p = new Promise(r => cv.toBlob(r, tipo, q));
   arquivosProntos.set(cv, p);
   return p;
 };
-// Instagram: o app não aceita transparência (pinta os cantos de preto). Para ele, o card arredondado
-// vai sobre uma moldura opaca da cor da janela de compartilhar, com a mesma margem dos quatro lados,
-// e segue como JPEG (o Instagram recomprime de qualquer jeito). O resultado parece o card da tela.
-const COR_MOLDURA = '#17140f';
-const MARGEM_IG = 0.05;
-const arquivosInsta = new WeakMap();
-function paraInstagram(cv) {
-  if (!arquivosInsta.has(cv)) {
-    arredondar(cv);
-    const w = cv.width, m = Math.round(w * MARGEM_IG), sw = w - 2 * m, sh = Math.round(cv.height * sw / w);
-    const out = Object.assign(document.createElement('canvas'), { width: w, height: sh + 2 * m });
-    const c = out.getContext('2d');
-    c.fillStyle = COR_MOLDURA;
-    c.fillRect(0, 0, out.width, out.height);
-    c.imageSmoothingQuality = 'high';
-    c.drawImage(cv, m, m, sw, sh);
-    arquivosInsta.set(cv, new Promise(r => out.toBlob(r, 'image/jpeg', 0.93)));
-  }
-  return arquivosInsta.get(cv);
-}
-const nomeInsta = (i = atual) => nomeArquivo(i).replace(/\.png$/, '-instagram.jpg');
 const blobDoCard = () => arquivosProntos.get(telaAtual()) ?? prepararArquivo(telaAtual());
-const blobsInstaDasPaginas = () => Promise.all(paginasDoModo.map(paraInstagram));
-const blobsDasPaginas = () => Promise.all(paginasDoModo.map(cv => arquivosProntos.get(cv) ?? prepararArquivo(cv)));
+const blobsDasPaginas = () => Promise.all(paginasDoModo.map(cv => arquivosProntos.get(cv) ?? prepararArquivo(cv, 'image/jpeg', 0.9)));
 
 function baixar(blob, nome = nomeArquivo()) {
   const a = document.createElement('a');
@@ -612,11 +569,11 @@ async function enviar(destino) {
   // "Stories", "Feed" e "Mensagens", e a imagem já entra no app. (O caminho antigo, copiar e abrir a
   // câmera do stories para colar, confundia: muita gente não sabia que era preciso colar.)
   if (destino === 'instagram') {
-    if (TOQUE.matches && await compartilharArquivo(true)) {
+    if (TOQUE.matches && await compartilharArquivo()) {
       avisar('Escolha o Instagram e depois “Stories” ou “Feed”.');
       return;
     }
-    baixar(await paraInstagram(telaAtual()), nomeInsta());
+    baixar(await blobDoCard());
     avisar('Imagem salva. Publique pelo app do Instagram.');
     return;
   }
@@ -633,23 +590,19 @@ async function enviar(destino) {
 // Páginas (leitura inteira ou o dia): vão todas juntas pela folha do sistema — no WhatsApp chegam
 // como álbum, uma foto por página. Sem a folha (computador), baixam uma a uma.
 async function enviarPaginas(destino) {
-  const insta = destino === 'instagram';
-  const blobs = await (insta ? blobsInstaDasPaginas() : blobsDasPaginas());
-  const nome = i => (insta ? nomeInsta(i) : nomeArquivo(i));
-  const arquivos = blobs.map((b, i) => new File([b], nome(i), { type: insta ? 'image/jpeg' : 'image/png' }));
+  const blobs = await blobsDasPaginas();
+  const arquivos = blobs.map((b, i) => new File([b], nomeArquivo(i), { type: 'image/jpeg' }));
   if (TOQUE.matches && navigator.canShare?.({ files: arquivos })) {
     avisar(destino === 'salvar' ? 'Toque em “Salvar imagens”.' : destino === 'instagram' ? 'Escolha o Instagram na lista.' : 'Escolha o WhatsApp na lista.');
     try { await navigator.share({ files: arquivos }); } catch { /* cancelou */ }
     return;
   }
-  blobs.forEach((b, i) => setTimeout(() => baixar(b, nome(i)), i * 250));
+  blobs.forEach((b, i) => setTimeout(() => baixar(b, nomeArquivo(i)), i * 250));
   avisar(blobs.length > 1 ? `${blobs.length} imagens salvas.` : 'Imagem salva.');
 }
 
-async function compartilharArquivo(insta = false) {
-  const arquivo = insta
-    ? new File([await paraInstagram(telaAtual())], nomeInsta(), { type: 'image/jpeg' })
-    : new File([await blobDoCard()], nomeArquivo(), { type: 'image/png' });
+async function compartilharArquivo() {
+  const arquivo = new File([await blobDoCard()], nomeArquivo(), { type: 'image/png' });
   if (!navigator.canShare?.({ files: [arquivo] })) return false;
   try { await navigator.share({ files: [arquivo] }); } catch { /* cancelou */ }
   return true;
@@ -702,12 +655,10 @@ function desenharTodos() {
   return Promise.all(telas.map((cv, i) => new Promise(pronto => {
     const ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, cv.width, cv.height);
-    arredondados.delete(cv);   // redesenhado: os cantos voltam a ser retos até o arquivo ser preparado
-    arquivosInsta.delete(cv);
     LAYOUTS[i].desenhar(ctx, cv.width, cv.height, conteudo);
-    const previa = Object.assign(document.createElement('canvas'), { width: PREVIA_L, height: Math.round(PREVIA_L * cv.height / cv.width) });
-    previa.getContext('2d').drawImage(cv, 0, 0, previa.width, previa.height);   // a prévia sai do desenho reto (o CSS arredonda)
     prepararArquivo(cv);
+    const previa = Object.assign(document.createElement('canvas'), { width: PREVIA_L, height: Math.round(PREVIA_L * cv.height / cv.width) });
+    previa.getContext('2d').drawImage(cv, 0, 0, previa.width, previa.height);
     previa.toBlob(b => {
       if (!b) { pronto(); return; }
       const antigo = imgs[i].src;
@@ -760,7 +711,7 @@ async function trocarModo(m) {
   const lista = await cachePaginas[chave];
   if (vez !== pedidoModo) return;
   paginasDoModo = lista;
-  
+  lista.forEach(cv => arquivosProntos.has(cv) || prepararArquivo(cv, 'image/jpeg', 0.9));
   montarSlides(lista.map((cv, i) => ({ w: cv.width, h: cv.height, alt: `Página ${i + 1} de ${lista.length}` })));
   marcar();
   const imgs = dlg.querySelectorAll('.lp-card-slide img');
@@ -773,7 +724,6 @@ async function trocarModo(m) {
       imgs[i].src = URL.createObjectURL(b);
     }, 'image/jpeg', 0.9);
   })));
-  lista.forEach(cv => arquivosProntos.has(cv) || prepararArquivo(cv));   // os arquivos ficam prontos antes do toque (o Safari exige)
   if (vez === pedidoModo) carregando(false);
 }
 
