@@ -486,13 +486,17 @@
     },
     {
       "id": "ramos",
-      "titulo": "Palmas sobre os degraus",
+      "titulo": "A entrada em Jerusalém",
       "tempos": [
         "Semana Santa"
       ],
       "cores": [
         "vermelho"
-      ]
+      ],
+      "autor": "Jacopo Bassano (oficina)",
+      "obra_antes_de": 1592,
+      "fonte": "https://commons.wikimedia.org/wiki/File:Jacopo_Bassano_(workshop)_Entry_into_Jerusalem.jpg",
+      "dominio_publico": true
     },
     {
       "id": "quaresma-cinzas",
@@ -516,14 +520,18 @@
       ]
     },
     {
-      "id": "ramos-jerusalem",
-      "titulo": "Palmas diante de Jerusalém",
+      "id": "ramos-van-dyck",
+      "titulo": "A entrada em Jerusalém",
       "tempos": [
         "Semana Santa"
       ],
       "cores": [
         "vermelho"
-      ]
+      ],
+      "autor": "Anthony van Dyck",
+      "obra_antes_de": 1617,
+      "fonte": "https://commons.wikimedia.org/wiki/File:Entry_of_Christ_into_Jerusalem_by_Anthony_van_Dyck.jpg",
+      "dominio_publico": true
     }
   ]
 }
