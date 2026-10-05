@@ -78,10 +78,11 @@ function medirAlturas() {
   dialogo.style.height = '';
   const total = dialogo.scrollHeight;
   cheioH = Math.min(total, Math.round(innerHeight * ALTURA_MAX));
-  const terceira = dialogo.querySelectorAll('.lp-menu-sec')[2];
+  const visiveis = [...dialogo.querySelectorAll('.lp-menu-sec')].filter(sec => !sec.hidden);
+  const terceira = visiveis[visiveis.length - 1];   // a última seção que aparece (com o convite de instalar, ele conta)
   const corpo = dialogo.querySelector('.lp-menu-corpo');
   const respiro = parseFloat(getComputedStyle(corpo).paddingBottom) + parseFloat(getComputedStyle(dialogo).paddingBottom);
-  medioH = terceira ? Math.min(cheioH, Math.round(corpo.offsetTop + terceira.offsetTop + terceira.offsetHeight + respiro)) : cheioH;   // até o fim do tamanho do texto; o que vier depois aparece ao expandir
+  medioH = terceira ? Math.min(cheioH, Math.round(corpo.offsetTop + terceira.offsetTop + terceira.offsetHeight + respiro)) : cheioH;   // até o fim da última seção visível
   if (cheioH - medioH < 24) medioH = cheioH;   // diferença pequena demais: uma altura só
 }
 const irPara = (h, anima = true) => {
@@ -137,6 +138,7 @@ function abrir(origem) {
   if (!dialogo || dialogo.open) return;
   evento('menu-abrir');
   dialogo.showModal();
+  dialogo.scrollTop = 0;   // o foco automático rola a folha (a altura do puxador) e o título ficava debaixo dele
   document.documentElement.classList.add('lp-menu-aberto');
   // no desktop a folha abre colada ao botão; no celular, embaixo, em largura total
   if (matchMedia('(min-width: 761px)').matches && origem) {
@@ -149,6 +151,7 @@ function abrir(origem) {
   }
   if (CELULAR.matches) { medirAlturas(); irPara(medioH, false); requestAnimationFrame(() => { dialogo.style.transition = ''; }); }
   else dialogo.style.height = '';
+  requestAnimationFrame(() => { dialogo.scrollTop = 0; });
 }
 
 function fechar() {
@@ -267,6 +270,7 @@ function pintarInstalacao() {
   secao.hidden = modo === 'nada';
   secao.querySelector('.lp-menu-instalar').hidden = modo !== 'botao';
   secao.querySelector('.lp-menu-app-ios').hidden = modo !== 'ios';
+  secao.querySelector('.lp-menu-ver').hidden = modo !== 'ios';
 }
 
 function fecharCartao() {
@@ -421,6 +425,7 @@ export function iniciarMenu() {
         <p class="lp-menu-app-txt">Abra a liturgia direto da tela inicial, até sem internet.</p>
         <button type="button" class="lp-menu-instalar" data-acao="instalar" hidden>Instalar</button>
         <p class="lp-menu-app-ios" hidden>No iPhone: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
+        <button type="button" class="lp-menu-instalar lp-menu-ver" data-acao="ver-instalar" hidden>Ver como fazer</button>
       </section>
     </div>`;
   document.body.append(dialogo);
@@ -457,6 +462,7 @@ export function iniciarMenu() {
     if (acao === 'voltar') { pararPix(); pix = null; mostrarEtapa('valores'); return; }
     if (acao === 'copiar') { copiarCodigo(e.target.closest('[data-acao]')); return; }
     if (acao === 'instalar') { instalar(); return; }
+    if (acao === 'ver-instalar') { evento('pwa-ver-como'); fechar(); setTimeout(() => import('/liturgiadiaria/tour.mjs').then(t => t.abrirTour('instalar')), 320); return; }
     if (acao === 'cartao') { e.preventDefault(); abrirCartao(pix.valor); return; }
     if (e.target.closest('#lp-menu-doar')) {
       const aberto = $('#lp-menu-valores').hidden;

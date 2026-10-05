@@ -10,7 +10,7 @@ const pad = n => String(n).padStart(2, '0');
 const hojeLocal = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
 
 export const jaInstalado = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
-const noIphone = () => /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+export const noIphone = () => /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
 let convite = null;          // o evento do Chrome, guardado até a pessoa tocar em "Instalar"
 const ouvintes = new Set();

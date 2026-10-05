@@ -2182,3 +2182,66 @@ button.lp-menu-valor { border: 0; cursor: pointer; }
 .lp-menu-denovo:hover { background: rgba(203, 46, 46, 0.06); border-color: var(--lp-vermelho); }
 .lp-menu-denovo:active { transform: scale(0.97); }
 .lp-menu-obrigado:not([hidden]) .lp-menu-denovo { animation: lp-menu-sec 0.5s 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Dois santos na mesma data: uma linha só, que alterna entre eles (toque para trocar na hora) */
+.nome-dia-gira .nome-dia-item { cursor: pointer; }
+.nome-dia-entra { animation: lp-nome-entra 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes lp-nome-entra { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+.nome-dia-pontos { display: inline-flex; gap: 4px; margin-left: 0.55em; vertical-align: middle; }
+.nome-dia-pontos i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: 0.22; transition: opacity 0.4s, background 0.4s; }
+.nome-dia-pontos i[data-on="1"] { opacity: 1; background: var(--lp-vermelho); }
+@media (prefers-reduced-motion: reduce) { .nome-dia-entra { animation: none; } }
+
+/* Tour › instalar no iPhone: o Safari, o toque em compartilhar, "Adicionar à Tela de Início" e o ícone na tela */
+.t-ios { overflow: hidden; border-radius: 16px; background: #fbf9f4; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 10px 24px -14px rgba(40, 30, 15, 0.5); }
+.t-ios-pagina { position: absolute; inset: 0 0 28px; padding: 12px 14px; animation: t-ios-pagina var(--t) var(--ease) infinite; }
+.t-ios-pagina b { display: block; font: italic 1.55rem/1 var(--font-leitura); color: #111; }
+.t-ios-pagina small { display: block; margin: 3px 0 8px; font-size: 0.5rem; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.45); }
+.t-ios-pagina i { display: block; height: 6px; margin-top: 8px; border-radius: 3px; background: rgba(0, 0, 0, 0.1); }
+.t-ios-pagina i:nth-of-type(2) { width: 88%; }
+.t-ios-pagina i:nth-of-type(3) { width: 70%; }
+.t-ios-pagina i:nth-of-type(4) { width: 80%; }
+.t-ios-barra {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 28px; display: flex; align-items: center; justify-content: space-around; padding: 0 6px;
+  background: rgba(246, 243, 238, 0.97); border-top: 1px solid rgba(0, 0, 0, 0.08); color: #2f6df0; font-size: 1.05rem; line-height: 1;
+}
+.t-ios-barra svg { width: 15px; height: 15px; }
+.t-ios-liv, .t-ios-abas { width: 14px; height: 12px; border: 1.6px solid currentColor; border-radius: 3px; }
+.t-ios-abas { width: 11px; height: 11px; }
+.t-ios-share { animation: t-ios-share var(--t) var(--ease) infinite; }
+.t-ios-folha {
+  position: absolute; left: 6px; right: 6px; bottom: 0; top: 40px; padding: 6px 8px; border-radius: 14px 14px 0 0; background: #fff;
+  box-shadow: 0 -10px 26px rgba(0, 0, 0, 0.2); transform: translateY(105%); animation: t-ios-folha var(--t) var(--ease) infinite;
+}
+.t-ios-grab { width: 28px; height: 3px; margin: 0 auto 6px; border-radius: 2px; background: rgba(0, 0, 0, 0.18); }
+.t-ios-linha { display: flex; align-items: center; justify-content: space-between; height: 26px; padding: 0 8px; border-radius: 8px; font-size: 0.62rem; color: #1c1c1e; }
+.t-ios-linha svg { width: 14px; height: 14px; }
+.t-ios-alvo { animation: t-ios-alvo var(--t) var(--ease) infinite; }
+.t-ios-home {
+  position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, 1fr); align-content: start; gap: 8px 12px; padding: 16px 18px;
+  background: linear-gradient(160deg, #cdd7ea, #e9d8cf); opacity: 0; animation: t-ios-home var(--t) var(--ease) infinite;
+}
+.t-ios-home > i { display: block; aspect-ratio: 1; border-radius: 11px; background: rgba(255, 255, 255, 0.55); }
+.t-ios-home > .t-ios-nosso { position: relative; background: none; }
+.t-ios-nosso img { display: block; width: 100%; height: 100%; border-radius: 11px; transform: scale(0); animation: t-ios-icone var(--t) var(--ease) infinite; box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.4); }
+.t-ios-nosso em { position: absolute; left: -6px; right: -6px; top: 100%; margin-top: 3px; text-align: center; font: normal 600 0.5rem var(--font-sans); color: #222; opacity: 0; animation: t-ios-rotulo var(--t) var(--ease) infinite; }
+.t-ios-dedo { animation: t-ios-dedo var(--t) var(--ease) infinite; }
+@keyframes t-ios-dedo {
+  0% { left: 78%; top: 70%; opacity: 0; transform: scale(1); }
+  8% { left: 50%; top: 91%; opacity: 1; transform: scale(1); }
+  12% { left: 50%; top: 91%; opacity: 1; transform: scale(0.8); }
+  17% { left: 50%; top: 91%; opacity: 1; transform: scale(1); }
+  22% { left: 50%; top: 91%; opacity: 0; }
+  30% { left: 62%; top: 70%; opacity: 0; transform: scale(1); }
+  36% { left: 52%; top: 56%; opacity: 1; transform: scale(1); }
+  41% { left: 52%; top: 56%; opacity: 1; transform: scale(0.8); }
+  46% { left: 52%; top: 56%; opacity: 1; transform: scale(1); }
+  52%, 100% { left: 52%; top: 56%; opacity: 0; }
+}
+@keyframes t-ios-share { 0%, 10% { background: transparent; } 12%, 16% { background: rgba(47, 109, 240, 0.18); border-radius: 6px; } 19%, 100% { background: transparent; } }
+@keyframes t-ios-folha { 0%, 14% { transform: translateY(105%); } 24%, 50% { transform: translateY(0); } 58%, 100% { transform: translateY(105%); } }
+@keyframes t-ios-alvo { 0%, 40% { background: transparent; } 42%, 50% { background: rgba(47, 109, 240, 0.14); } 56%, 100% { background: transparent; } }
+@keyframes t-ios-pagina { 0%, 54% { opacity: 1; } 62%, 92% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes t-ios-home { 0%, 54% { opacity: 0; } 64%, 92% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t-ios-icone { 0%, 64% { transform: scale(0); } 71% { transform: scale(1.18); } 75%, 100% { transform: scale(1); } }
+@keyframes t-ios-rotulo { 0%, 72% { opacity: 0; } 78%, 92% { opacity: 1; } 100% { opacity: 0; } }

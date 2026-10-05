@@ -30,6 +30,7 @@ function preencherData(dt, dia) {
   return cab;
 }
 
+let giraNome = null;   // o intervalo que alterna os dois santos do dia, quando há dois
 function preencherCabecalho(dt, dia, santos) {
   const cab = preencherData(dt, dia);
   document.getElementById('lp-compacto-data').textContent = cab.dataExtenso;
@@ -43,25 +44,36 @@ function preencherCabecalho(dt, dia, santos) {
   }
 
   const el = document.getElementById('lp-nome-dia');
-  el.textContent = cab.nome;
+  clearInterval(giraNome);
+  giraNome = null;
+  el.onclick = null;
   const slug = dia.celebracao && santos?.[dia.celebracao];
+  // santo do dia: um botão para compartilhar uma frase dele, com a pintura dele (data/santos-frases.json)
+  // (em dia comum ou domingo, o santo lembrado na data vem de "porData", com o nome dele ao lado)
+  const doDia = estado.santosFrases?.frases?.[dia.celebracao];
+  const santo = doDia || estado.santosFrases?.porData?.[dt.slice(5)];
+  // dois santos na mesma data (ex.: São Benedito no Brasil e Santa Faustina no calendário universal):
+  // uma linha só, que alterna entre os dois
+  const giro = Boolean(santo && !doDia);
+  el.classList.toggle('nome-dia-gira', giro);
+  let item0 = el;
+  if (giro) {
+    el.textContent = '';
+    item0 = Object.assign(document.createElement('span'), { className: 'nome-dia-item', textContent: cab.nome });
+    el.append(item0);
+  } else el.textContent = cab.nome;
   if (slug) {
     const mais = document.createElement('button'); // só aparece no celular
     mais.type = 'button';
     mais.className = 'nome-dia-mais';
     mais.textContent = 'Saiba mais';
     mais.addEventListener('click', () => abrirSobre(slug, dia.celebracao));
-    el.append(mais);
+    item0.append(mais);
   }
-  // santo do dia: um botão para compartilhar uma frase dele, com a pintura dele (data/santos-frases.json)
-  // (em dia comum ou domingo, o santo lembrado na data vem de "porData", com o nome dele ao lado)
-  const doDia = estado.santosFrases?.frases?.[dia.celebracao];
-  const santo = doDia || estado.santosFrases?.porData?.[dt.slice(5)];
-  if (santo && !doDia) {
-    const nome = document.createElement('span');
-    nome.className = 'nome-dia-santo';
-    nome.textContent = santo.nome;
-    el.append(nome);
+  let item1 = el;
+  if (giro) {
+    item1 = Object.assign(document.createElement('span'), { className: 'nome-dia-item', textContent: santo.nome, hidden: true });
+    el.append(item1);
   }
   if (santo) {
     const b = document.createElement('button');
@@ -71,7 +83,29 @@ function preencherCabecalho(dt, dia, santos) {
     b.title = 'Compartilhar uma frase do santo do dia';
     b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
     b.addEventListener('click', () => compartilharSanto(dt, dia, santo, b));
-    el.append(b);
+    item1.append(b);
+  }
+  if (giro) {
+    const pontos = Object.assign(document.createElement('span'), { className: 'nome-dia-pontos', innerHTML: '<i></i><i></i>' });
+    pontos.setAttribute('aria-hidden', 'true');
+    el.append(pontos);
+    const itens = [item0, item1];
+    let atual = 0;
+    const mostrar = i => {
+      atual = i;
+      itens.forEach((x, k) => {
+        x.hidden = k !== i;
+        if (k === i) { x.classList.remove('nome-dia-entra'); void x.offsetWidth; x.classList.add('nome-dia-entra'); }
+      });
+      [...pontos.children].forEach((p, k) => { p.dataset.on = k === i ? '1' : ''; });
+    };
+    const reiniciar = () => {
+      clearInterval(giraNome);
+      giraNome = setInterval(() => { if (!document.hidden && !el.matches(':focus-within')) mostrar(1 - atual); }, 5200);
+    };
+    el.onclick = e => { if (!e.target.closest('button')) { mostrar(1 - atual); reiniciar(); } };   // tocar no nome troca na hora
+    mostrar(0);
+    reiniciar();
   }
   mostrarSobre(slug ? { slug, celebracao: dia.celebracao } : null);
 }

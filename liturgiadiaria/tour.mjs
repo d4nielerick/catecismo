@@ -7,6 +7,7 @@
  * Cada cena é um laço de 6 s com um "dedo" que toca onde a pessoa tocaria.
  */
 import { icone } from '/liturgiadiaria/icones-leituras.mjs';
+import { jaInstalado, noIphone } from '/liturgiadiaria/pwa.mjs';
 
 const CHAVE = 'lp-tour-visto';
 const CELULAR = matchMedia('(max-width: 760px)');
@@ -24,6 +25,8 @@ const CABECA = (titulo, qual) => `<div class="t-leitura-cabeca"><b>${titulo}</b>
 const DESTAQUES = { 1: 'santo', 4: 'santo', 7: 'maria', 12: 'maria', 15: 'santo', 22: 'santo' };
 const MES = Array.from({ length: 4 }, () => '<span></span>').join('')
   + Array.from({ length: 31 }, (_, i) => `<span class="${DESTAQUES[i + 1] ? `d-${DESTAQUES[i + 1]}` : ''}">${i + 1}</span>`).join('');
+
+const COMPARTILHAR_IOS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14V3.5M8 7.5l4-4 4 4"/><path d="M8.5 10.5H7a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6.5a2 2 0 0 0-2-2h-1.5"/></svg>';
 
 const PASSOS = [
   {
@@ -126,6 +129,24 @@ const PASSOS = [
       ${dedo('t-san-dedo')}
     </div>`,
   },
+  {
+    id: 'instalar',
+    titulo: 'Instale como app',
+    texto: 'No iPhone, toque no botão de compartilhar do Safari e depois em "Adicionar à Tela de Início". Aí a liturgia abre direto da tela inicial, até sem internet.',
+    soIphone: true,
+    cena: `<div class="t-ios">
+      <div class="t-ios-pagina"><b>5/out</b><small>LITURGIA DIÁRIA</small><i></i><i></i><i></i><i></i></div>
+      <div class="t-ios-barra"><span>‹</span><span>›</span><span class="t-ios-share">${COMPARTILHAR_IOS}</span><span class="t-ios-liv"></span><span class="t-ios-abas"></span></div>
+      <div class="t-ios-folha">
+        <div class="t-ios-grab"></div>
+        <div class="t-ios-linha"><span>Copiar</span></div>
+        <div class="t-ios-linha t-ios-alvo"><span>Adicionar à Tela de Início</span><svg ${TRACO}><rect x="4" y="4" width="16" height="16" rx="3.5"/><path d="M12 8.5v7M8.5 12h7"/></svg></div>
+        <div class="t-ios-linha"><span>Imprimir</span></div>
+      </div>
+      <div class="t-ios-home"><i></i><i></i><i></i><i></i><i></i><i class="t-ios-nosso"><img src="/assets/img/liturgia-icone-192.png?v=3" alt=""><em>Liturgia</em></i><i></i><i></i></div>
+      ${dedo('t-ios-dedo')}
+    </div>`,
+  },
 ];
 
 let dlg = null;
@@ -196,11 +217,13 @@ function fechar() {
   setTimeout(() => { dlg.classList.remove('saindo'); dlg.close(); }, 280);
 }
 
-export function abrirTour() {
+/** `id`: abre direto num passo (o menu usa 'instalar' no botão "Ver como fazer"). */
+export function abrirTour(id) {
   if (!dlg) montar();
-  passos = PASSOS.filter(p => !p.soCelular || CELULAR.matches);   // no computador não há a barra de baixo
+  passos = PASSOS.filter(p => (!p.soCelular || CELULAR.matches)   // no computador não há a barra de baixo
+    && (!p.soIphone || (noIphone() && !jaInstalado())));          // a instalação só para quem está no iPhone e ainda não instalou
   dlg.querySelector('.lp-tour-pontos').innerHTML = passos.map(() => '<span></span>').join('');
-  passo = 0;
-  mostrar(0);
+  passo = Math.max(0, passos.findIndex(p => p.id === id));
+  mostrar(passo);
   dlg.showModal();
 }
