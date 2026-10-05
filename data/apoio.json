@@ -16,5 +16,8 @@
     "10": "https://buy.stripe.com/test_eVq7sKgtdapr7bOcNfgIo01",
     "20": "https://buy.stripe.com/test_14AcN42Cnbtv0NqbJbgIo00",
     "50": "https://buy.stripe.com/test_cNi3cudh11SV8fS3cFgIo02"
+  },
+  "stripe": {
+    "chave_publica": "pk_live_51ULTn7AfzMmChsF5eHehdVjZswDWUJSstdvKr8Y3lXlDrAKdQlI64hsoBPxzPvRJHbAUQSLyahgTMHJ2ea5ZxP5q00ZL8zaVJF"
   }
 }
