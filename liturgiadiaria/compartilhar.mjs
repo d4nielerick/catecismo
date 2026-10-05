@@ -12,6 +12,7 @@
 
 import { COR_FUNDO, COR_CALENDARIO, cabecalhoDoDia, VERSO } from '/liturgiadiaria/render.mjs';
 import { paginas } from '/liturgiadiaria/imagem-do-dia.mjs';
+import { evento } from '/liturgiadiaria/metricas.mjs';
 
 // o endereço que as pessoas veem: no card e no link compartilhado. O subdomínio redireciona (301)
 // para santadoutrina.com/liturgiadiaria/<o mesmo caminho>, que continua sendo o canonical
@@ -554,6 +555,7 @@ function abrirApp(url, planoB) {
 // · Instagram: a folha do sistema com a imagem (lá aparecem Stories, Feed e Mensagens);
 // · Salvar: no celular, a folha do sistema (é o único caminho até a galeria de fotos).
 async function enviar(destino) {
+  evento('compartilhar', { destino, modo });
   if (modo !== 'trecho') { await enviarPaginas(destino); return; }
   const link = `https://${SITE}/${conteudo.dt}/`;
   const texto = `“${conteudo.trecho}” (${conteudo.referencia})\n${link}`;
@@ -887,6 +889,7 @@ function pintarVersos(texto = selA >= 0 ? textoDe(selA, selB) : '') {
  *  Com dia e referenciaCompleta, abre em "Esta leitura" (e há "Todas as leituras"); sem trecho,
  *  a aba "Trecho" some. O card do santo (selo) é só trecho. */
 export async function abrirCard(c, { aoFechar } = {}) {
+  evento('compartilhar-abrir');
   if (!dlg) montarJanela();
   conteudo = { ...c, trecho: c.trecho ? maiuscula(c.trecho) : '' };
   prepararVersos(c);

@@ -16,6 +16,8 @@ const SETA_PROX = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5
 // três traços separados: com o menu aberto viram um X (CSS: html.lp-menu-aberto .lp-hamb-*)
 export const ICONE_MENU = '<svg class="lp-hamb" viewBox="0 0 24 24" aria-hidden="true"><path class="lp-hamb-1" d="M5 8h14"/><path class="lp-hamb-2" d="M5 12h14"/><path class="lp-hamb-3" d="M5 16h9"/></svg>';
 
+import { evento } from '/liturgiadiaria/metricas.mjs';
+
 // Apoio: os links de pagamento e a meta ficam em data/apoio.json; o que já entrou no mês vem de /api/apoio
 // (alimentado pelo webhook da Stripe). Sem a API, a barra mostra só a meta.
 const API = /(^|\.)santadoutrina\.com$/.test(location.hostname) ? '/api' : 'https://santadoutrina.com/api';
@@ -132,6 +134,7 @@ function fecharArrastando() {
 
 function abrir(origem) {
   if (!dialogo || dialogo.open) return;
+  evento('menu-abrir');
   dialogo.showModal();
   document.documentElement.classList.add('lp-menu-aberto');
   // no desktop a folha abre colada ao botão; no celular, embaixo, em largura total
@@ -195,6 +198,7 @@ function estadoPix(texto, cor) {
 }
 
 async function gerarPix(valor) {
+  evento('apoio-pix', { valor });
   pararPix();
   pix = { valor, id: null, codigo: '', timer: null, fim: 0 };
   $('#lp-menu-pix-valor').textContent = `Pix de ${reais(valor)}`;
@@ -233,7 +237,7 @@ async function consultarPix() {
     const r = await fetch(`${API}/apoio-status?id=${pix.id}`);
     if (!r.ok) return;
     const { status } = await r.json();
-    if (status === 'approved') agradecer(pix.valor);
+    if (status === 'approved') agradecer(pix.valor, 'pix');
     else if (['rejected', 'cancelled'].includes(status)) { pararPix(); estadoPix('O pagamento não foi concluído.', 'erro'); }
   } catch { /* sem rede por um instante: tenta no próximo ciclo */ }
 }
@@ -259,6 +263,7 @@ function fecharCartao() {
 }
 
 async function abrirCartao(valor) {
+  evento('apoio-cartao', { valor });
   pararPix();
   pix = null;
   if (!janelaCartao) {
@@ -290,7 +295,7 @@ async function abrirCartao(valor) {
     if (!janelaCartao.open) return;   // fechou enquanto carregava
     checkout = await Stripe(apoio.stripe.chave_publica, { locale: 'pt-BR' }).initEmbeddedCheckout({
       clientSecret: j.clientSecret,
-      onComplete: () => { pagou = true; fecharCartao(); agradecer(valor); },
+      onComplete: () => { pagou = true; fecharCartao(); agradecer(valor, 'cartao'); },
     });
     corpo.innerHTML = '';
     checkout.mount(corpo);
@@ -304,7 +309,8 @@ async function abrirCartao(valor) {
 }
 
 let arrecadadoAtual = 0;
-function agradecer(valor) {
+function agradecer(valor, via) {
+  evento('apoio-concluido', { via, valor });
   pararPix();
   pix = null;
   mostrarEtapa('obrigado');
@@ -436,6 +442,7 @@ export function iniciarMenu() {
     if (acao === 'cartao') { e.preventDefault(); abrirCartao(pix.valor); return; }
     if (e.target.closest('#lp-menu-doar')) {
       const aberto = $('#lp-menu-valores').hidden;
+      if (aberto) evento('apoio-abrir');
       mostrarEtapa(aberto ? 'valores' : 'botao');
       return;
     }
