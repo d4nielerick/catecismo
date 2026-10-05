@@ -10,7 +10,7 @@
 import {
   esc, pad, hojeLocal, abasHtml, cabecalhoDoDia, conteudoDoDia, diasHtml, itensDasAbas, urlDoDia, NOME_COR,
   comentarioHtml, lectioHtml, referenciasDoDia as assinaturaDoDia,
-  referenciasDoDia, somarDias,
+  referenciasDoDia, somarDias, tituloDoDia,
 } from '/liturgiadiaria/render.mjs';
 import { icone, iconeDaLeitura } from '/liturgiadiaria/icones-leituras.mjs';
 import { iniciarMenu, atualizarDias, ICONE_MENU } from '/liturgiadiaria/menu.mjs';
@@ -760,8 +760,7 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
   document.getElementById('lp-dias').innerHTML = diasHtml(dt, estado.indice);
   // o mesmo título das páginas geradas (scripts/build-paginas-liturgia.mjs)
   if (!primeira && dia) {
-    const quando = new Date(`${dt}T12:00:00Z`).toLocaleDateString('pt-BR', { timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' });
-    document.title = `Liturgia Diária ${quando} · ${dia.celebracao}`;
+    document.title = tituloDoDia(dt, dia);
   }
 
   const conteudo = document.getElementById('conteudo');

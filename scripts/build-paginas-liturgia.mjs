@@ -14,7 +14,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  esc, VERSO, NOME_COR, cabecalhoDoDia, conteudoDoDia, abasHtml, diasHtml, urlDoDia,
+  esc, VERSO, NOME_COR, cabecalhoDoDia, conteudoDoDia, abasHtml, diasHtml, urlDoDia, tituloDoDia,
 } from '../liturgiadiaria/render.mjs';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -60,6 +60,22 @@ export function descricaoDoDia(dt, dia, resumo = null) {
   return descricaoPorReferencias(dt, dia);
 }
 
+/** A descrição que o Google mostra: o que a página tem (data, celebração, as referências) e o que
+ *  ela dá a mais (resumo e comentário dos Padres). O resumo em prosa fica para o WhatsApp (og:description). */
+export function descricaoDeBusca(dt, dia, { santo = null, comentario = false } = {}) {
+  const leituras = dia.missas[0].leituras
+    .filter(l => !l.alternativa && l.referencia && ['leitura', 'salmo', 'evangelho'].includes(l.tipo));
+  // o Evangelho primeiro (é o que mais se busca) e o Salmo só pelo número: "Sl 138(139),1-3…" não cabe
+  const curta = l => (l.tipo === 'salmo' ? l.referencia.replace(/[(,].*$/, '').trim() : l.referencia);
+  const ev = leituras.find(l => l.tipo === 'evangelho');
+  const refs = [ev && `Evangelho ${ev.referencia}`, ...leituras.filter(l => l !== ev).map(curta)].filter(Boolean).join('; ');
+  const quando = formatar(dt, { day: 'numeric', month: 'long', year: 'numeric' });
+  const celebracao = [dia.celebracao, santo].filter(Boolean).join(' · ');
+  const base = `Leituras da missa de ${quando} (${celebracao}): ${refs}.`;
+  const cauda = comentario ? ' Texto completo, resumo e comentário dos Padres da Igreja.' : ' Texto completo, resumo e áudio para ouvir.';
+  return base.length + cauda.length <= DESCRICAO_MAX ? base + cauda : cortar(base, DESCRICAO_MAX);
+}
+
 function descricaoPorReferencias(dt, dia) {
   const leituras = dia.missas[0].leituras
     .filter(l => !l.alternativa && l.referencia && ['leitura', 'salmo', 'evangelho'].includes(l.tipo));
@@ -91,8 +107,10 @@ export function paginaDoDia(modelo, dt, dia, indice, resumo = lerResumo(dt)) {
   // "Liturgia Diária 4 de outubro de 2026 · 27º Domingo do Tempo Comum" — a data por extenso é como
   // se busca ("liturgia diária 4 de outubro") e é o que o WhatsApp mostra em negrito
   const santo = santoDoDia(dt, dia);
-  const titulo = `Liturgia Diária ${quando} · ${dia.celebracao}${santo ? ` · ${santo}` : ''}`;
-  const descricao = descricaoDoDia(dt, dia, resumo);
+  const titulo = tituloDoDia(dt, dia);
+  const temComentario = fs.existsSync(path.join(RAIZ, 'data', 'liturgia-comentario', `${dt}.json`));
+  const descricao = descricaoDeBusca(dt, dia, { santo, comentario: temComentario });   // <meta description> e dados estruturados
+  const descricaoSocial = descricaoDoDia(dt, dia, resumo);                              // WhatsApp / redes: o resumo convida a abrir
 
   const dados = {
     '@context': 'https://schema.org',
@@ -102,6 +120,16 @@ export function paginaDoDia(modelo, dt, dia, indice, resumo = lerResumo(dt)) {
         isPartOf: { '@type': 'WebSite', name: NOME_SITE, url: `${SITE}/` },
         primaryImageOfPage: { '@type': 'ImageObject', url: imagem, width: 1200, height: 630 },
         breadcrumb: { '@id': `${url}#trilha` },
+      },
+      {
+        '@type': 'Article', '@id': `${url}#artigo`, mainEntityOfPage: { '@id': url },
+        headline: titulo, description: descricao, inLanguage: 'pt-BR', image: imagem, isAccessibleForFree: true,
+        datePublished: `${dt}T00:00:00-03:00`, dateModified: `${dt}T00:00:00-03:00`,
+        author: { '@id': `${SITE}/#organizacao` }, publisher: { '@id': `${SITE}/#organizacao` },
+      },
+      {
+        '@type': 'Organization', '@id': `${SITE}/#organizacao`, name: 'Santa Doutrina', url: `${SITE}/`,
+        logo: { '@type': 'ImageObject', url: `${SITE}/assets/img/liturgia-icone-512.png`, width: 512, height: 512 },
       },
       {
         '@type': 'BreadcrumbList', '@id': `${url}#trilha`,
@@ -121,13 +149,13 @@ export function paginaDoDia(modelo, dt, dia, indice, resumo = lerResumo(dt)) {
   h = meta(h, 'name', 'description', descricao);
   h = trocar(h, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${url}">`);
   h = meta(h, 'property', 'og:title', titulo);
-  h = meta(h, 'property', 'og:description', descricao);
+  h = meta(h, 'property', 'og:description', descricaoSocial);
   h = meta(h, 'property', 'og:type', 'article');
   h = meta(h, 'property', 'og:url', url);
   h = meta(h, 'property', 'og:image', imagem);
   h = meta(h, 'property', 'og:image:alt', `Liturgia Diária de ${quando}: ${dia.celebracao}`);
   h = meta(h, 'name', 'twitter:title', titulo);
-  h = meta(h, 'name', 'twitter:description', descricao);
+  h = meta(h, 'name', 'twitter:description', descricaoSocial);
   h = meta(h, 'name', 'twitter:image', imagem);
   h = trocar(h, /<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">\n  ${jsonLd}\n  </script>`);
 

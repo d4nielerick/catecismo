@@ -167,6 +167,14 @@ const formatar = (d, opcoes) => MEIO_DIA(d).toLocaleDateString('pt-BR', { timeZo
  *  ("Quarta-feira da 24ª Semana") e, só quando é uma celebração própria, o nome dela. Nada se repete:
  *  num dia do temporal o nome já está na linha de baixo; numa festa que já diz o dia da semana
  *  ("Quarta-feira de Cinzas"), a linha de baixo some. */
+/** Título do dia (aba do navegador e <title> da página gerada). Começa pelo que se busca — "Liturgia
+ *  Diária 6 de outubro de 2026" — e leva a referência do Evangelho, que o Google corta por último. */
+export function tituloDoDia(dt, dia) {
+  const quando = formatar(dt, { day: 'numeric', month: 'long', year: 'numeric' });
+  const ev = dia?.missas?.[0]?.leituras?.find(l => !l.alternativa && l.tipo === 'evangelho');
+  return ev?.referencia ? `Liturgia Diária ${quando}: Evangelho ${ev.referencia} e leituras da missa` : `Liturgia Diária ${quando}: leituras da missa`;
+}
+
 export function cabecalhoDoDia(dt, dia) {
   const [, m, d] = dt.split('-').map(Number);
   const celebracao = dia?.celebracao || '';
