@@ -31,7 +31,7 @@ const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const GEMINI = process.argv.includes('--gemini');
 const VOZ = GEMINI
   ? { modelo: process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts', id: 'Algenib', nome: `Algenib (${process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts'})` }
-  : { id: 'nPczCjzI2devNBz1zQrb', nome: 'Brian (ElevenLabs, multilíngue v2)' };
+  : { id: 'onwK4e9ZLuTAKqWW03F9', nome: 'Daniel (ElevenLabs, v4)' };
 const ENSAIO = process.argv.includes('--ensaio');   // só mostra o texto que seria lido, sem gerar
 const [dt, pedido = 'evangelho', audioArq, temposArq] = process.argv.slice(2).filter(a => !a.startsWith('--'));
 
@@ -119,8 +119,8 @@ async function gerar(falado) {
     method: 'POST',
     headers: { 'xi-api-key': chave, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      text: falado, model_id: 'eleven_multilingual_v2', language_code: 'pt',
-      voice_settings: { stability: 0.6, similarity_boost: 0.75, style: 0.1, use_speaker_boost: true },
+      text: falado, model_id: 'eleven_v4', language_code: 'pt',
+      voice_settings: { stability: 0.5 },
     }),
   });
   if (!r.ok) throw new Error(`ElevenLabs ${r.status}: ${(await r.text()).slice(0, 200)}`);
