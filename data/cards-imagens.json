@@ -532,6 +532,26 @@
       "obra_antes_de": 1617,
       "fonte": "https://commons.wikimedia.org/wiki/File:Entry_of_Christ_into_Jerusalem_by_Anthony_van_Dyck.jpg",
       "dominio_publico": true
+    },
+    {
+      "id": "ramos-gotico",
+      "titulo": "Entrada em Jerusalém (retábulo dourado)",
+      "tempos": [
+        "Semana Santa"
+      ],
+      "cores": [
+        "vermelho"
+      ]
+    },
+    {
+      "id": "ramos-barroco",
+      "titulo": "Entrada em Jerusalém (barroco)",
+      "tempos": [
+        "Semana Santa"
+      ],
+      "cores": [
+        "vermelho"
+      ]
     }
   ]
 }
