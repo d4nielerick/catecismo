@@ -408,6 +408,112 @@
         "festa"
       ],
       "cores": []
+    },
+    {
+      "id": "pomba-oliveira",
+      "titulo": "Pomba sobre o ramo de oliveira",
+      "tempos": [
+        "Tempo da Páscoa"
+      ],
+      "cores": [
+        "branco"
+      ]
+    },
+    {
+      "id": "janela-trigo",
+      "titulo": "Janela aberta sobre o trigal",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "caminho-ciprestes",
+      "titulo": "Caminho entre ciprestes",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "lamparina",
+      "titulo": "Lamparina e ramo de oliveira",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "natal-pastores",
+      "titulo": "Pastores sob a estrela",
+      "tempos": [
+        "Tempo do Natal",
+        "Tempo do Advento"
+      ],
+      "cores": [
+        "branco"
+      ]
+    },
+    {
+      "id": "natal-manjedoura",
+      "titulo": "Manjedoura",
+      "tempos": [
+        "Tempo do Natal"
+      ],
+      "cores": [
+        "branco"
+      ]
+    },
+    {
+      "id": "natal-magos",
+      "titulo": "Presentes dos Magos",
+      "tempos": [
+        "Tempo do Natal"
+      ],
+      "cores": [
+        "branco"
+      ]
+    },
+    {
+      "id": "lava-pes",
+      "titulo": "Bacia e toalha do lava-pés",
+      "tempos": [
+        "Semana Santa"
+      ],
+      "cores": [
+        "branco"
+      ]
+    },
+    {
+      "id": "ramos",
+      "titulo": "Ramos de Jerusalém",
+      "tempos": [
+        "Semana Santa"
+      ],
+      "cores": [
+        "vermelho"
+      ]
+    },
+    {
+      "id": "quaresma-cinzas",
+      "titulo": "Cinzas e cruz",
+      "tempos": [
+        "Tempo da Quaresma"
+      ],
+      "cores": [
+        "roxo"
+      ]
+    },
+    {
+      "id": "quaresma-cruz-colina",
+      "titulo": "Cruz na colina",
+      "tempos": [
+        "Tempo da Quaresma",
+        "Semana Santa"
+      ],
+      "cores": [
+        "roxo"
+      ]
     }
   ]
 }
