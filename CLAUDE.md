@@ -131,7 +131,7 @@ Deploy a partir de um clone local com a `main` atualizada:
 
 ```bash
 rsync -az --delete \
-  --exclude={.git,.gitignore,api-server.mjs,'.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store} \
+  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html} \
   ./ vps:/opt/mediaserver/catecismo/
 ```
 
@@ -201,6 +201,18 @@ título, descrição, canonical, dados estruturados (WebPage + BreadcrumbList) e
 node scripts/build-paginas-liturgia.mjs   # liturgiadiaria/AAAA-MM-DD/index.html + sitemap-liturgia.xml
 python3 scripts/build-og-liturgia.py      # liturgiadiaria/og/AAAA-MM-DD.jpg (imagem do WhatsApp; --tudo refaz)
 ```
+
+### Liturgia Diária: `/liturgiadiaria/` com as leituras de hoje no HTML
+
+O endereço principal servia uma casca ("Buscando leituras do dia…") que o JavaScript preenche; o Google
+ficava sem texto no endereço que responde a "liturgia de hoje". Agora o Caddy serve
+`liturgiadiaria/hoje.html` em `/liturgiadiaria/` (e cai no `index.html` se ele não existir). O arquivo é
+gerado por `scripts/pagina-hoje.mjs` (dia de Brasília, canonical `/liturgiadiaria/`, título "de hoje") e
+**só existe na VPS**: um cron de hora em hora (`docker exec -w /app catecismo-api node scripts/pagina-hoje.mjs`)
+o renova, então a virada do dia leva no máximo 1 h. O rsync de deploy leva `--exclude=/liturgiadiaria/hoje.html`
+(sem isso o `--delete` apaga o arquivo e o endereço volta ao `index.html` até o próximo cron). Regra no Caddyfile
+(backup `Caddyfile.bak-hoje-*`): `@liturgiaRaiz path /liturgiadiaria/` → `try_files hoje.html index.html`.
+Os títulos e descrições das páginas de cada dia vêm de `tituloDoDia` (render.mjs) e `descricaoDeBusca`.
 
 Esses arquivos são gerados e ficam fora do git (.gitignore): **rode os dois antes de cada deploy** e
 envie `liturgiadiaria/`, `sitemap-liturgia.xml` e `robots.txt`. O desenho das leituras mora em
