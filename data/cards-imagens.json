@@ -486,7 +486,7 @@
     },
     {
       "id": "ramos",
-      "titulo": "Ramos de Jerusalém",
+      "titulo": "Palmas sobre os degraus",
       "tempos": [
         "Semana Santa"
       ],
@@ -513,6 +513,16 @@
       ],
       "cores": [
         "roxo"
+      ]
+    },
+    {
+      "id": "ramos-jerusalem",
+      "titulo": "Palmas diante de Jerusalém",
+      "tempos": [
+        "Semana Santa"
+      ],
+      "cores": [
+        "vermelho"
       ]
     }
   ]
