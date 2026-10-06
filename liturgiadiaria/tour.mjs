@@ -1,5 +1,5 @@
 /**
- * liturgiadiaria/tour.mjs — boas-vindas na primeira visita: sete telas curtas, cada uma com uma
+ * liturgiadiaria/tour.mjs — boas-vindas na primeira visita: oito telas curtas (nove no iPhone), cada uma com uma
  * cena animada (HTML + CSS, sem vídeo) feita com as mesmas peças da página — os ícones reais da
  * barra, as pinturas do acervo, os textos de verdade. Aparece uma vez só (localStorage
  * "lp-tour-visto"); ?tour=1 na URL mostra de novo. Pulável a qualquer momento.
@@ -84,7 +84,7 @@ const PASSOS = [
   },
   {
     titulo: 'Compartilhe as leituras',
-    texto: 'O segundo ícone compartilha: a leitura inteira em imagens, todas as leituras do dia, ou um trecho com uma pintura, e você pode escolher os versículos.',
+    texto: 'O segundo ícone compartilha: esta leitura inteira, todas as leituras do dia ou só um trecho com uma pintura, e você escolhe os versículos. Sai direto para o WhatsApp ou o Instagram.',
     cena: `<div class="t-com">
       <div class="t-com-leitura">${CABECA('Salmo', 'compartilhar')}<i></i><i></i><i></i></div>
       <div class="t-com-card">
@@ -114,7 +114,7 @@ const PASSOS = [
   },
   {
     titulo: 'O santo do dia',
-    texto: 'Quando o dia lembra um santo, o nome dele aparece embaixo da data, com um botão para compartilhar uma frase dele com a sua pintura.',
+    texto: 'Quando o dia lembra um santo, o nome dele aparece embaixo da data, com um botão para compartilhar uma frase dele com a sua pintura. Se há dois santos no mesmo dia, os nomes se alternam na mesma linha; toque no nome para trocar.',
     cena: `<div class="t-san">
       <div class="t-san-dia"><b>1/out</b><div class="t-san-nome"><span>Santa Teresinha do Menino Jesus</span><i class="t-san-botao">${COMPARTILHAR}</i></div></div>
       <div class="t-san-card">
@@ -127,6 +127,24 @@ const PASSOS = [
       </div>
       <div class="t-san-apps"><span class="t-app-zap">${ZAP}</span><span class="t-app-insta">${INSTA}</span></div>
       ${dedo('t-san-dedo')}
+    </div>`,
+  },
+  {
+    id: 'menu',
+    titulo: 'O menu',
+    texto: 'No ícone de menu (as três linhas) você aumenta o texto, instala a liturgia como app e ajuda a manter o site no ar, por Pix ou cartão. No celular ele fica na barra de baixo; no computador, no canto da tela.',
+    cena: `<div class="t-menu">
+      <div class="t-menu-pagina"><b>Evangelho</b><i></i><i></i><i></i></div>
+      <span class="t-menu-botao"><svg ${TRACO}><path d="M5 8h14M5 12h14M5 16h9"/></svg></span>
+      <div class="t-menu-folha">
+        <div class="t-menu-grab"></div>
+        <div class="t-menu-sec"><b>Ajude a manter o site</b><span class="t-menu-meta"><i></i></span></div>
+        <div class="t-menu-sec t-menu-fonte"><b>Tamanho do texto</b>
+          <span class="t-menu-regua"><em class="t-menu-a1">A</em><span class="t-menu-trilho">${'<i></i>'.repeat(4)}<u></u></span><em class="t-menu-a2">A</em></span>
+        </div>
+        <div class="t-menu-sec"><b>Instalar o app</b><span class="t-menu-inst">Instalar</span></div>
+      </div>
+      ${dedo('t-menu-dedo')}
     </div>`,
   },
   {

@@ -2192,6 +2192,59 @@ button.lp-menu-valor { border: 0; cursor: pointer; }
 .nome-dia-pontos i[data-on="1"] { opacity: 1; background: var(--lp-vermelho); }
 @media (prefers-reduced-motion: reduce) { .nome-dia-entra { animation: none; } }
 
+/* Tour › o menu: a folha sobe do botão, o texto cresce um ponto de cada vez */
+.t-menu { overflow: hidden; border-radius: 12px; }
+.t-menu-pagina { padding: 8px 10px; }
+.t-menu-pagina b { display: block; font: italic 1.3rem/1.2 var(--font-leitura); color: #111; margin-bottom: 8px; }
+.t-menu-pagina i { display: block; height: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(0, 0, 0, 0.1); }
+.t-menu-pagina i:nth-of-type(2) { width: 85%; } .t-menu-pagina i:nth-of-type(3) { width: 70%; }
+.t-menu-botao {
+  position: absolute; right: 6px; bottom: 4px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 6px 16px rgba(30, 24, 16, 0.16); color: #222;
+  animation: t-menu-botao var(--t) var(--ease) infinite;
+}
+.t-menu-botao svg { width: 20px; height: 20px; }
+@keyframes t-menu-botao { 0%, 8% { transform: none; } 10% { transform: scale(0.88); } 14%, 100% { transform: none; } }
+.t-menu-folha {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 6px 12px 8px; border-radius: 14px 14px 0 0; background: #fbf9f5;
+  box-shadow: 0 -8px 24px rgba(30, 24, 16, 0.18); transform: translateY(105%); animation: t-menu-folha var(--t) var(--ease) infinite;
+}
+@keyframes t-menu-folha { 0%, 14% { transform: translateY(105%); } 24%, 86% { transform: none; } 94%, 100% { transform: translateY(105%); } }
+.t-menu-grab { width: 28px; height: 3px; margin: 0 auto 6px; border-radius: 2px; background: rgba(0, 0, 0, 0.18); }
+.t-menu-sec { display: flex; flex-direction: column; gap: 4px; padding: 5px 0; border-top: 1px solid rgba(0, 0, 0, 0.07); }
+.t-menu-sec:first-of-type { border-top: 0; }
+.t-menu-sec b { font-size: 0.56rem; font-weight: 700; letter-spacing: 0.02em; color: #333; }
+.t-menu-meta { display: block; height: 5px; border-radius: 3px; background: rgba(40, 30, 15, 0.09); overflow: hidden; }
+.t-menu-meta i { display: block; width: 46%; height: 100%; border-radius: 3px; background: var(--lp-vermelho); }
+.t-menu-regua { display: flex; align-items: center; gap: 8px; }
+.t-menu-regua em { font: normal 700 0.9rem/1 var(--font-leitura); color: #333; }
+.t-menu-a1 { font-size: 0.62rem !important; }
+.t-menu-a2 { font-size: 1.05rem !important; animation: t-menu-a2 var(--t) var(--ease) infinite; }
+@keyframes t-menu-a2 { 0%, 38% { transform: none; } 40% { transform: scale(0.82); } 44%, 52% { transform: none; } 54% { transform: scale(0.82); } 58%, 100% { transform: none; } }
+.t-menu-trilho { position: relative; flex: 1; display: flex; justify-content: space-between; align-items: center; height: 14px; }
+.t-menu-trilho::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: rgba(40, 30, 15, 0.1); }
+.t-menu-trilho i { position: relative; width: 6px; height: 6px; border-radius: 50%; background: #d3cdc3; }
+.t-menu-trilho u {
+  position: absolute; left: 0; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 5px rgba(0, 0, 0, 0.2); animation: t-menu-polegar var(--t) var(--ease) infinite;
+}
+@keyframes t-menu-polegar { 0%, 42% { left: 0; } 48%, 56% { left: 33.3%; } 62%, 100% { left: 66.6%; } }
+.t-menu-inst {
+  align-self: flex-start; padding: 3px 12px; border-radius: 11px; background: #1f1c18; color: #fff; font-size: 0.55rem; font-weight: 600;
+}
+.t-menu-dedo { animation: t-menu-dedo var(--t) var(--ease) infinite; }
+@keyframes t-menu-dedo {
+  0% { transform: translate(228px, 156px); opacity: 0; }
+  5% { transform: translate(257px, 150px); opacity: 1; }
+  10% { transform: translate(257px, 150px) scale(0.78); } 14% { transform: translate(257px, 150px) scale(1); opacity: 1; }
+  20% { transform: translate(257px, 150px); opacity: 0; }
+  34% { transform: translate(236px, 120px); opacity: 0; }
+  38% { transform: translate(250px, 116px); opacity: 1; }
+  40% { transform: translate(250px, 116px) scale(0.78); } 44%, 52% { transform: translate(250px, 116px) scale(1); opacity: 1; }
+  54% { transform: translate(250px, 116px) scale(0.78); } 58% { transform: translate(250px, 116px) scale(1); opacity: 1; }
+  68%, 100% { transform: translate(262px, 140px); opacity: 0; }
+}
+
 /* Tour › instalar no iPhone: o Safari, o toque em compartilhar, "Adicionar à Tela de Início" e o ícone na tela */
 .t-ios { overflow: hidden; border-radius: 16px; background: #fbf9f4; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 10px 24px -14px rgba(40, 30, 15, 0.5); }
 .t-ios-pagina { position: absolute; inset: 0 0 28px; padding: 12px 14px; animation: t-ios-pagina var(--t) var(--ease) infinite; }
