@@ -1449,8 +1449,7 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
   position: absolute; top: 0.8rem; right: 0.9rem; border: 0; background: none; padding: 0.3rem 0.4rem;
   font: 500 0.78rem var(--font-sans); color: var(--lp-suave, #777); cursor: pointer;
 }
-.lp-tour-cena { height: 9.5rem; display: grid; place-items: center; margin: 0.6rem 0 0.4rem; }
-.lp-tour-cena svg { width: 100%; max-width: 17rem; height: 100%; overflow: visible; }
+.lp-tour-cena { height: 11rem; display: grid; place-items: center; margin: 0.6rem 0 0.4rem; }
 .lp-tour-titulo { margin: 0 0 0.35rem; font: italic 400 1.45rem/1.2 var(--font-leitura); color: var(--lp-tinta); }
 .lp-tour-texto { margin: 0; font: 400 0.93rem/1.5 var(--font-sans); color: #3d3a36; min-height: 4.2em; }
 .lp-tour-rodape { display: flex; align-items: center; justify-content: space-between; margin-top: 1.1rem; }
@@ -1469,261 +1468,9 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 @keyframes lp-tour-sobe { from { transform: translateY(40px); opacity: 0; } }
 @keyframes lp-tour-desce { to { transform: translateY(40px); opacity: 0; } }
 @keyframes lp-tour-conteudo { from { transform: translateX(14px); opacity: 0; } }
-
-/* ── cenas do tour: laços de 6 s; o "dedo" toca onde a pessoa tocaria ── */
-.lp-tour-cena { height: 11rem; overflow: hidden; }
-.lp-tour-cena > div { position: relative; width: 17.5rem; height: 10.5rem; font-family: var(--font-sans); --t: 6s; --ease: cubic-bezier(0.45, 0, 0.2, 1); }
-.lp-tour-cena > div * { box-sizing: border-box; }
 .lp-tour-caixa.volta .lp-tour-cena, .lp-tour-caixa.volta .lp-tour-titulo, .lp-tour-caixa.volta .lp-tour-texto { animation-name: lp-tour-conteudo-volta; }
 @keyframes lp-tour-conteudo-volta { from { transform: translateX(-14px); opacity: 0; } }
-.t-dedo {
-  position: absolute; left: 0; top: 0; z-index: 5; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%;
-  background: rgba(40, 30, 20, 0.22); box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9), 0 4px 10px rgba(0, 0, 0, 0.18);
-  pointer-events: none; opacity: 0;
-}
-
-/* 1 · calendário */
-.t-cal { padding-top: 0.2rem; }
-.t-cal-mes { display: flex; justify-content: space-between; align-items: center; height: 22px; padding: 0 10px; font-size: 0.78rem; font-weight: 600; color: #222; }
-.t-cal-mes b { color: #999; font-weight: 400; font-size: 1rem; }
-.t-cal-sem, .t-cal-grade { display: grid; grid-template-columns: repeat(7, 40px); }
-.t-cal-sem span { height: 16px; text-align: center; font-size: 0.55rem; color: #aaa; font-weight: 600; }
-.t-cal-grade { position: relative; margin-top: 4px; }
-.t-cal-grade span { position: relative; height: 20px; line-height: 18px; text-align: center; font-size: 0.66rem; color: #555; z-index: 1; }
-.t-cal-grade span.d-santo::after, .t-cal-grade span.d-maria::after {
-  content: ''; position: absolute; left: 50%; bottom: 1px; width: 3px; height: 3px; margin-left: -1.5px; border-radius: 50%; background: #c9ab6b;
-}
-.t-cal-grade span.d-maria::after { background: #8fa6c4; }
-.t-cal-sel {
-  position: absolute; left: 0; top: 0; width: 32px; height: 19px; border-radius: 6px; background: color-mix(in srgb, var(--lp-cor-dia, #2f6b46) 20%, transparent);
-  animation: t-cal-sel var(--t) var(--ease) infinite;
-}
-/* dia 4 = coluna 0, linha 1; dia 15 = col. 4, lin. 2; dia 22 = col. 4, lin. 3 (colunas de 40 px, linhas de 20 px) */
-@keyframes t-cal-sel {
-  0%, 30% { transform: translate(4px, 20px); } 36%, 62% { transform: translate(164px, 40px); }
-  68%, 90% { transform: translate(164px, 60px); } 96%, 100% { transform: translate(4px, 20px); }
-}
-.t-cal-dedo { animation: t-cal-dedo var(--t) var(--ease) infinite; }
-@keyframes t-cal-dedo {
-  0% { transform: translate(250px, 170px); opacity: 0; }
-  12% { transform: translate(200px, 130px); opacity: 1; }
-  26% { transform: translate(180px, 95px) scale(1); }
-  30% { transform: translate(180px, 95px) scale(0.78); } 34% { transform: translate(180px, 95px) scale(1); }
-  56% { transform: translate(180px, 115px) scale(1); }
-  60% { transform: translate(180px, 115px) scale(0.78); } 64% { transform: translate(180px, 115px) scale(1); opacity: 1; }
-  80%, 100% { transform: translate(250px, 170px); opacity: 0; }
-}
-
-/* 2 · resumo */
-.t-res { display: flex; align-items: flex-start; justify-content: center; padding-top: 14px; }
-.t-res-caixa {
-  width: 100%; border-radius: 6px; background: color-mix(in srgb, var(--lp-cor-titulo, #000) 6%, transparent);   /* como .lp-resumo */
-  overflow: hidden; animation: t-res-caixa var(--t) var(--ease) infinite;
-}
-.t-res-topo { display: flex; justify-content: space-between; align-items: center; height: 34px; padding: 0 12px; }
-.t-res-topo span { font-size: 0.56rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-suave, #888); }
-.t-res-topo b { display: grid; font-size: 0.56rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-tinta); }
-.t-res-topo em { grid-area: 1 / 1; font-style: normal; text-align: right; }
-.t-res-topo em:first-child { animation: t-res-mostrar var(--t) linear infinite; }
-.t-res-topo em:last-child { animation: t-res-ocultar var(--t) linear infinite; }
-.t-res p { margin: 0; padding: 0 12px 12px; font: 0.76rem/1.55 var(--font-leitura); color: var(--lp-texto, #222); animation: t-res-texto var(--t) var(--ease) infinite; }
-@keyframes t-res-caixa { 0%, 26% { height: 34px; } 36%, 74% { height: 140px; } 84%, 100% { height: 34px; } }
-@keyframes t-res-texto { 0%, 30% { opacity: 0; transform: translateY(6px); } 40%, 72% { opacity: 1; transform: none; } 78%, 100% { opacity: 0; } }
-@keyframes t-res-mostrar { 0%, 27% { opacity: 1; } 28%, 76% { opacity: 0; } 77%, 100% { opacity: 1; } }
-@keyframes t-res-ocultar { 0%, 27% { opacity: 0; } 28%, 76% { opacity: 1; } 77%, 100% { opacity: 0; } }
-.t-res-dedo { animation: t-res-dedo var(--t) var(--ease) infinite; }
-/* a caixa fica centrada na cena: o "Mostrar" está a ~17 px do topo dela */
-@keyframes t-res-dedo {
-  0% { transform: translate(250px, 150px); opacity: 0; }
-  14% { transform: translate(248px, 100px); opacity: 1; }
-  24% { transform: translate(240px, 31px) scale(1); }
-  28% { transform: translate(240px, 31px) scale(0.78); } 32% { transform: translate(240px, 31px) scale(1); }
-  50% { transform: translate(262px, 168px) scale(1); }
-  70% { transform: translate(240px, 31px) scale(1); }
-  74% { transform: translate(240px, 31px) scale(0.78); } 78% { transform: translate(240px, 31px) scale(1); opacity: 1; }
-  92%, 100% { transform: translate(260px, 170px); opacity: 0; }
-}
-
-/* 3 · barra de baixo (celular) */
-.t-nav-pagina { position: absolute; inset: 0 0 44px; overflow: hidden; }
-.t-nav-data { position: relative; display: block; height: 16px; font-size: 0.6rem; color: #888; }
-.t-nav-data span { position: absolute; left: 4px; top: 0; }
-.t-nav-data span:first-child { animation: t-nav-data1 var(--t) var(--ease) infinite; }
-.t-nav-data span:last-child { animation: t-nav-data2 var(--t) var(--ease) infinite; }
-.t-nav-rolo { animation: t-nav-rolo var(--t) var(--ease) infinite; }
-.t-nav-rolo div { height: 108px; padding: 2px 4px; }
-.t-nav-rolo b { display: block; font: italic 1.25rem/1.2 var(--font-leitura); color: #111; margin-bottom: 8px; }
-.t-nav-rolo i { display: block; height: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(0, 0, 0, 0.1); }
-.t-nav-rolo i:nth-of-type(2) { width: 85%; } .t-nav-rolo i:nth-of-type(3) { width: 70%; }
-@keyframes t-nav-rolo {
-  0%, 10% { transform: translateY(0); opacity: 1; } 18%, 26% { transform: translateY(-108px); } 34%, 42% { transform: translateY(-216px); }
-  50%, 64% { transform: translateY(-324px); opacity: 1; } 68% { opacity: 0; } 72% { transform: translateY(0); opacity: 0; } 78%, 100% { transform: translateY(0); opacity: 1; }
-}
-@keyframes t-nav-data1 { 0%, 66% { opacity: 1; transform: none; } 70%, 96% { opacity: 0; transform: translateX(-10px); } 100% { opacity: 1; transform: none; } }
-@keyframes t-nav-data2 { 0%, 68% { opacity: 0; transform: translateX(10px); } 74%, 94% { opacity: 1; transform: none; } 98%, 100% { opacity: 0; } }
-.t-nav-barra { position: absolute; left: 50%; bottom: 2px; display: flex; gap: 6px; transform: translateX(-50%); }
-.t-nav-seta, .t-nav-abas {
-  display: grid; place-items: center; height: 36px; border-radius: 18px; background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 6px 16px rgba(30, 24, 16, 0.14); color: #222;
-}
-.t-nav-seta { width: 36px; font-size: 1.1rem; line-height: 1; }
-.t-nav-prox { animation: t-nav-prox var(--t) var(--ease) infinite; }
-@keyframes t-nav-prox { 0%, 64% { transform: none; } 66% { transform: scale(0.88); } 70%, 100% { transform: none; } }
-.t-nav-abas { position: relative; display: flex; gap: 0; padding: 0 4px; }
-.t-nav-abas svg { display: block; flex: 0 0 34px; position: relative; z-index: 1; width: 34px; height: 20px; fill: none; stroke: #9a948c; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-.t-nav-abas svg text { fill: currentColor; stroke: none; font-family: var(--font-leitura); font-weight: 700; color: #9a948c; }
-.t-nav-luz { position: absolute; left: 4px; top: 4px; width: 34px; height: 28px; border-radius: 14px; background: rgba(0, 0, 0, 0.07); animation: t-nav-luz var(--t) var(--ease) infinite; }
-@keyframes t-nav-luz {
-  0%, 10% { transform: translateX(0); } 18%, 26% { transform: translateX(34px); } 34%, 42% { transform: translateX(68px); }
-  50%, 70% { transform: translateX(102px); } 76%, 100% { transform: translateX(0); }
-}
-.t-nav-dedo { animation: t-nav-dedo var(--t) var(--ease) infinite; }
-/* arrasta a página para cima (rolar) e depois toca na seta › */
-@keyframes t-nav-dedo {
-  0% { transform: translate(150px, 110px); opacity: 0; }
-  6% { transform: translate(150px, 100px); opacity: 1; }
-  46% { transform: translate(150px, 30px); opacity: 1; }
-  50% { transform: translate(150px, 30px); opacity: 0; }
-  54% { transform: translate(250px, 120px); opacity: 0; }
-  60% { transform: translate(236px, 148px) scale(1); opacity: 1; }
-  66% { transform: translate(236px, 148px) scale(0.78); } 70% { transform: translate(236px, 148px) scale(1); opacity: 1; }
-  82%, 100% { transform: translate(270px, 180px); opacity: 0; }
-}
-.t-nav-dedo { left: 0; top: 0; }
-
-/* 4 · ouvir */
-.t-ouv { overflow: hidden; border-radius: 12px; }
-.t-ouv-leitura { padding: 8px 10px; }
-.t-ouv-leitura b, .t-com-leitura b { display: block; font: italic 1.3rem/1.2 var(--font-leitura); color: #111; }
-/* a linha do título com os dois ícones, como na página: o ativo pisca ao toque */
-.t-leitura-cabeca { display: flex; align-items: center; justify-content: space-between; }
-.t-acoes { display: flex; gap: 6px; }
-.t-acao { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; color: #8c867e; }
-.t-acao svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
-.t-acao-ativa { animation: t-acao var(--t) var(--ease) infinite; }
-@keyframes t-acao { 0%, 16% { transform: none; color: #8c867e; } 18% { transform: scale(0.85); color: var(--lp-vermelho); background: rgba(203, 46, 46, 0.1); } 22%, 40% { transform: none; color: var(--lp-vermelho); } 46%, 100% { color: #8c867e; } }
-.t-ouv-leitura i, .t-com-leitura i { display: block; height: 6px; margin-top: 9px; border-radius: 3px; background: rgba(0, 0, 0, 0.1); }
-.t-ouv-leitura i:nth-of-type(2), .t-com-leitura i:nth-of-type(2) { width: 85%; }
-.t-ouv-leitura i:nth-of-type(3), .t-com-leitura i:nth-of-type(3) { width: 65%; }
-.t-ouv-tela {
-  position: absolute; inset: 0; padding: 10px 14px; border-radius: 12px; color: rgba(255, 255, 255, 0.35);
-  background: linear-gradient(170deg, #4a3a14, #0d0a07 80%); animation: t-ouv-tela var(--t) var(--ease) infinite;
-}
-.t-ouv-tela small { display: block; margin-bottom: 6px; font-size: 0.5rem; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.5); }
-.t-ouv-tela p { margin: 0 0 3px; font: 0.82rem/1.3 var(--font-leitura); }
-.t-ouv-tela p:nth-of-type(1) { animation: t-ouv-l1 var(--t) linear infinite; }
-.t-ouv-tela p:nth-of-type(2) { animation: t-ouv-l2 var(--t) linear infinite; }
-.t-ouv-tela p:nth-of-type(3) { animation: t-ouv-l3 var(--t) linear infinite; }
-.t-ouv-tela p:nth-of-type(4) { animation: t-ouv-l4 var(--t) linear infinite; }
-@keyframes t-ouv-l1 { 0%, 32% { color: rgba(255, 255, 255, 0.35); } 34%, 46% { color: #fff; } 48%, 100% { color: rgba(255, 255, 255, 0.35); } }
-@keyframes t-ouv-l2 { 0%, 46% { color: rgba(255, 255, 255, 0.35); } 48%, 60% { color: #fff; } 62%, 100% { color: rgba(255, 255, 255, 0.35); } }
-@keyframes t-ouv-l3 { 0%, 60% { color: rgba(255, 255, 255, 0.35); } 62%, 74% { color: #fff; } 76%, 100% { color: rgba(255, 255, 255, 0.35); } }
-@keyframes t-ouv-l4 { 0%, 74% { color: rgba(255, 255, 255, 0.35); } 76%, 86% { color: #fff; } 88%, 100% { color: rgba(255, 255, 255, 0.35); } }
-.t-ouv-barra { position: absolute; left: 14px; right: 14px; bottom: 12px; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, 0.18); overflow: hidden; }
-.t-ouv-barra i { display: block; height: 100%; background: rgba(255, 255, 255, 0.85); transform-origin: left; animation: t-ouv-progresso var(--t) linear infinite; }
-@keyframes t-ouv-tela { 0%, 20% { transform: translateY(105%); } 28%, 88% { transform: none; } 96%, 100% { transform: translateY(105%); } }
-@keyframes t-ouv-progresso { 0%, 30% { transform: scaleX(0); } 88%, 100% { transform: scaleX(1); } }
-.t-ouv-dedo { animation: t-ouv-dedo var(--t) var(--ease) infinite; }
-@keyframes t-ouv-dedo {
-  0% { transform: translate(140px, 150px); opacity: 0; }
-  10% { transform: translate(200px, 70px) scale(1); opacity: 1; }
-  16% { transform: translate(236px, 24px) scale(1); }
-  18% { transform: translate(236px, 24px) scale(0.78); } 22% { transform: translate(236px, 24px) scale(1); opacity: 1; }
-  28%, 100% { transform: translate(200px, 120px); opacity: 0; }
-}
-
-/* 5 · compartilhar */
-.t-com-leitura { padding: 8px 10px; }
-.t-san-botao svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.t-com-card, .t-san-card {
-  position: absolute; left: 50%; top: 6px; width: 7.2rem; margin-left: -3.6rem; border-radius: 8px; overflow: hidden;
-  background: #f3ede3; box-shadow: 0 10px 26px rgba(20, 14, 8, 0.28);
-}
-.t-com-card img, .t-san-card img { display: block; width: 100%; height: 4.3rem; object-fit: cover; }
-.t-com-card p, .t-san-card p { margin: 0; padding: 6px 8px 4px; font: italic 0.66rem/1.3 var(--font-leitura); color: #222; }
-.t-com-card small { display: block; padding: 0 8px 6px; font: italic 0.55rem var(--font-leitura); color: var(--lp-vermelho); }
-.t-com-card { animation: t-com-card var(--t) var(--ease) infinite; }
-@keyframes t-com-card {
-  0%, 22% { opacity: 0; transform: translateY(16px) scale(0.9); } 30%, 62% { opacity: 1; transform: none; }
-  74%, 100% { opacity: 0; transform: translate(70px, 60px) scale(0.3); }
-}
-.t-com-zap {
-  position: absolute; left: 50%; bottom: 4px; padding: 5px 12px; border-radius: 999px; transform: translateX(-50%);
-  background: #25d366; color: #fff; font-size: 0.62rem; font-weight: 700; animation: t-com-zap var(--t) var(--ease) infinite;
-}
-@keyframes t-com-zap {
-  0%, 30% { opacity: 0; transform: translate(-50%, 8px); } 36%, 58% { opacity: 1; transform: translate(-50%, 0); }
-  60% { transform: translate(-50%, 0) scale(0.9); } 64%, 72% { opacity: 1; transform: translate(-50%, 0); } 78%, 100% { opacity: 0; }
-}
-.t-com-dedo { animation: t-com-dedo var(--t) var(--ease) infinite; }
-@keyframes t-com-dedo {
-  0% { transform: translate(200px, 140px); opacity: 0; }
-  10% { transform: translate(250px, 60px) scale(1); opacity: 1; }
-  16% { transform: translate(267px, 24px) scale(1); }
-  18% { transform: translate(267px, 24px) scale(0.78); } 22% { transform: translate(267px, 24px) scale(1); }
-  40% { transform: translate(200px, 120px) scale(1); }
-  56% { transform: translate(140px, 153px) scale(1); }
-  60% { transform: translate(140px, 153px) scale(0.78); } 64% { transform: translate(140px, 153px) scale(1); opacity: 1; }
-  76%, 100% { transform: translate(180px, 190px); opacity: 0; }
-}
-
-/* 6 · santo do dia: o card completo sobe do botão, passa da borda de cima da folha e se
-   dissolve no texto de baixo */
-.lp-tour-cena:has(.t-san) { overflow: visible; }
-.t-san-dia { padding: 8px 6px; }
-.t-san-dia b { display: block; font: italic 2.3rem/1 var(--font-leitura); color: #111; }
-.t-san-nome { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
-.t-san-nome span { font: italic 0.82rem/1 var(--font-leitura); color: #333; }
-.t-san-botao {
-  display: grid; place-items: center; flex: 0 0 24px; width: 24px; height: 24px; border-radius: 50%;
-  border: 1px solid rgba(203, 46, 46, 0.35); color: var(--lp-vermelho); animation: t-com-botao var(--t) var(--ease) infinite;
-}
-.t-san-card {
-  position: absolute; left: 50%; top: -3.2rem; z-index: 2; width: 10.5rem; margin-left: -5.25rem; border-radius: 10px; overflow: hidden;
-  background: #f3ede3; box-shadow: 0 16px 36px rgba(20, 14, 8, 0.3);
-  -webkit-mask-image: linear-gradient(#000 62%, transparent 100%); mask-image: linear-gradient(#000 62%, transparent 100%);
-  transform-origin: 80% 60%; animation: t-san-card var(--t) var(--ease) infinite;
-}
-.t-san-card img { display: block; width: 100%; height: 7.2rem; object-fit: cover; object-position: 50% 28%; }
-.t-san-corpo { padding: 8px 10px 10px; }
-.t-san-corpo small { display: block; white-space: nowrap; font-size: 0.4rem; font-weight: 700; letter-spacing: 0.08em; color: #8a8378; }
-.t-san-corpo p { margin: 5px 0 8px; font: italic 0.72rem/1.3 var(--font-leitura); color: #222; }
-.t-san-corpo footer { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.42rem; color: #8a8378; }
-.t-san-corpo em { font: italic 0.6rem var(--font-leitura); color: var(--lp-vermelho); }
-@keyframes t-san-card {
-  0%, 22% { opacity: 0; transform: translate(40px, 40px) scale(0.3); }
-  32%, 84% { opacity: 1; transform: none; }
-  94%, 100% { opacity: 0; transform: translateY(-10px); }
-}
-.t-san-dedo { animation: t-san-dedo var(--t) var(--ease) infinite; }
-@keyframes t-san-dedo {
-  0% { transform: translate(250px, 160px); opacity: 0; }
-  10% { transform: translate(236px, 110px) scale(1); opacity: 1; }
-  16% { transform: translate(226px, 65px) scale(1); }
-  18% { transform: translate(226px, 65px) scale(0.78); } 22% { transform: translate(226px, 65px) scale(1); opacity: 1; }
-  30%, 100% { transform: translate(250px, 170px); opacity: 0; }
-}
-
-/* no compartilhar e no santo, a leitura escurece atrás do card (como a janela real) */
-.t-com::before {
-  content: ''; position: absolute; inset: 0; z-index: 0; border-radius: 12px; background: rgba(13, 10, 7, 0.55); opacity: 0;
-  animation: t-escurece var(--t) var(--ease) infinite;
-}
-.t-com-card, .t-com-zap { z-index: 1; }
-@keyframes t-escurece { 0%, 22% { opacity: 0; } 30%, 70% { opacity: 1; } 80%, 100% { opacity: 0; } }
-/* santo: quando o card sobe, a data e o nome somem; embaixo aparecem WhatsApp e Instagram */
-.t-san-dia { animation: t-san-some var(--t) var(--ease) infinite; }
-@keyframes t-san-some { 0%, 22% { opacity: 1; } 30%, 86% { opacity: 0; } 94%, 100% { opacity: 1; } }
-.t-san-apps { position: absolute; left: 50%; bottom: -2px; z-index: 3; display: flex; gap: 14px; transform: translateX(-50%); }
-.t-san-apps span {
-  display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: #fff;
-  box-shadow: 0 6px 14px rgba(20, 14, 8, 0.22); opacity: 0; animation: t-san-app var(--t) var(--ease) infinite;
-}
-.t-san-apps svg { width: 19px; height: 19px; }
-.t-app-zap svg { width: 22px; height: 22px; }
-.t-app-zap { background: #25d366; }
-.t-app-insta { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%); animation-delay: 0.08s !important; }
-@keyframes t-san-app { 0%, 34% { opacity: 0; transform: translateY(8px) scale(0.8); } 42%, 84% { opacity: 1; transform: none; } 92%, 100% { opacity: 0; transform: translateY(4px); } }
+/* (as cenas animadas ficam no fim do arquivo: "Tour › cenas") */
 
 /* ── Legibilidade (feedback de 24/09/2026): calendário e cabeçalho maiores e mais escuros; o dia
    marcado no calendário em tom neutro — a cor litúrgica mudando a cada dia parecia aleatória
@@ -1740,7 +1487,6 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .cal-dia:hover { background: rgba(0, 0, 0, 0.06); }
 .cal-hoje { color: var(--lp-tinta); background: rgba(0, 0, 0, 0.06); }
 .cal-hoje:hover { background: rgba(0, 0, 0, 0.1); }
-.t-cal-sel { background: rgba(0, 0, 0, 0.08); }
 @media (max-width: 760px) {
   /* numa linha só: "Quinta-feira da 25ª Semana do Tempo Comum" encolhe com a largura da tela */
   .lp-data { font-size: min(0.92rem, 3.25vw); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -1875,19 +1621,6 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-lectio-item p { margin: 0 0 0.35rem; }
 .lp-latim summary { font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lp-suave); cursor: pointer; }
 .lp-latim p { margin: 0.4rem 0 0; font-size: 13.5px; font-style: italic; color: var(--lp-suave); }
-
-/* 6 · os Padres e o Catecismo: a folha sobe devagar mostrando o bloco embaixo do Evangelho */
-.t-pad { overflow: hidden; border-radius: 12px; background: #fbf8f2; }
-.t-pad-folha { padding: 10px 14px; animation: t-pad-sobe var(--t) var(--ease) infinite; }
-.t-pad-folha p { margin: 0; }
-.t-pad-evangelho { font: 0.78rem/1.45 var(--font-leitura); color: #222; }
-.t-pad-fim { margin-top: 4px !important; font: italic 0.66rem var(--font-leitura); color: #8a8378; }
-.t-pad-cruz { margin: 10px 0 8px; text-align: center; font-size: 0.7rem; color: var(--lp-vermelho); }
-.t-pad-rotulo { margin-top: 8px !important; font-size: 0.52rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lp-vermelho); }
-.t-pad-tema { margin: 2px 0 4px !important; font: italic 0.92rem/1.2 var(--font-titulo); color: #111; }
-.t-pad-texto { font: 0.7rem/1.45 var(--font-leitura); color: #333; }
-.t-pad-texto span { font-variant: small-caps; font-weight: 700; color: var(--lp-vermelho); letter-spacing: 0.04em; }
-@keyframes t-pad-sobe { 0%, 18% { transform: none; } 45%, 100% { transform: translateY(-86px); } }
 
 /* ── Menu flutuante (menu.mjs) ───────────────────────────────────────────── */
 /* Botão do desktop: uma âncora sem altura presa à base da janela, dentro da coluna de leitura */
@@ -2192,109 +1925,726 @@ button.lp-menu-valor { border: 0; cursor: pointer; }
 .nome-dia-pontos i[data-on="1"] { opacity: 1; background: var(--lp-vermelho); }
 @media (prefers-reduced-motion: reduce) { .nome-dia-entra { animation: none; } }
 
-/* Tour › o menu: a folha sobe do botão, o texto cresce um ponto de cada vez */
-.t-menu { overflow: hidden; border-radius: 12px; }
-.t-menu-pagina { padding: 8px 10px; }
-.t-menu-pagina b { display: block; font: italic 1.3rem/1.2 var(--font-leitura); color: #111; margin-bottom: 8px; }
-.t-menu-pagina i { display: block; height: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(0, 0, 0, 0.1); }
-.t-menu-pagina i:nth-of-type(2) { width: 85%; } .t-menu-pagina i:nth-of-type(3) { width: 70%; }
-.t-menu-botao {
-  position: absolute; right: 6px; bottom: 4px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
-  background: rgba(255, 255, 255, 0.95); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 6px 16px rgba(30, 24, 16, 0.16); color: #222;
-  animation: t-menu-botao var(--t) var(--ease) infinite;
+/* ── Tour › cenas (tour.mjs) ──────────────────────────────────────────────
+   Cada cena é um pedaço da tela real, em escala (~0,72 do celular de 375 px): mesmas fontes,
+   cores, raios e sombras da página, num laço de 6 s que termina no mesmo quadro em que começa.
+   O "dedo" toca e o alvo reage no mesmo instante; a onda de cada toque nasce em --d (tour.mjs). */
+.lp-tour-cena > div {
+  position: relative; width: 280px; height: 168px; overflow: hidden; isolation: isolate; border-radius: 14px;
+  font-family: var(--font-sans); color: var(--lp-tinta); background: var(--lp-fundo); text-align: left;
+  box-shadow: 0 0 0 1px rgba(40, 30, 15, 0.08), 0 6px 16px -12px rgba(40, 30, 15, 0.4);
+  --t: 6s; --ease: cubic-bezier(0.45, 0, 0.2, 1);
 }
-.t-menu-botao svg { width: 20px; height: 20px; }
-@keyframes t-menu-botao { 0%, 8% { transform: none; } 10% { transform: scale(0.88); } 14%, 100% { transform: none; } }
+.lp-tour-cena > div * { box-sizing: border-box; }
+/* zera o que vem do resto da página sem disputar especificidade com as classes das cenas */
+.lp-tour-cena :where(p, h3) { margin: 0; }
+.lp-tour-cena :where(i, b, em, small, h3) { font: inherit; }
+.lp-tour-cena :where(i, img) { display: block; }
+
+.t-dedo {
+  position: absolute; left: 0; top: 0; z-index: 30; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%;
+  background: rgba(30, 22, 14, 0.18); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.95), 0 2px 6px rgba(20, 14, 8, 0.2);
+  opacity: 0; pointer-events: none;
+}
+.t-dedo b {
+  position: absolute; inset: 0; border-radius: 50%; opacity: 0;
+  border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 0 0 1px rgba(30, 22, 14, 0.18);
+  animation: t-onda var(--t) linear var(--d) infinite;
+}
+@keyframes t-onda {
+  0% { opacity: 0.9; transform: scale(1); animation-timing-function: cubic-bezier(0.2, 0.7, 0.3, 1); }
+  8%, 100% { opacity: 0; transform: scale(2.4); }
+}
+
+/* peças da página, na escala das cenas */
+.t-titulo, .t-cabeca b { display: block; font: italic 400 34px/1.15 var(--font-titulo); letter-spacing: -0.03em; color: var(--lp-tinta); }
+.t-ref { display: block; margin-top: 3px; font: 10px/1.4 var(--font-leitura); color: var(--lp-tinta); white-space: nowrap; }
+.t-texto { margin-top: 6px; font: 10.5px/1.6 var(--font-leitura); color: var(--lp-texto); }
+.t-texto sup { font-size: 0.66em; line-height: 0; color: var(--lp-vermelho); margin-right: 1px; }
+.t-r { color: var(--lp-tinta); }
+.t-cap { float: left; margin: 2px 2px 0 0; font: 30px/0.86 var(--font-titulo); color: var(--lp-vermelho); }
+.t-pagina { position: absolute; inset: 0; padding: 14px 18px; }
+.t-cabeca { display: flex; align-items: center; justify-content: space-between; }
+.t-acoes { display: flex; gap: 4px; margin-right: -4px; }
+.t-acoes i { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; color: #8c867e; }
+.t-acoes svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+/* a data por extenso que fica no alto da tela quando se rola a leitura (.lp-compacto) */
+.t-compacto {
+  position: absolute; left: 0; right: 0; top: 0; z-index: 2; padding: 7px 18px 9px; font: 8.5px/1 var(--font-leitura); color: var(--lp-suave);
+  background: linear-gradient(var(--lp-fundo) 65%, rgba(252, 250, 247, 0));
+}
+/* o toque num ícone da linha do título: fica vermelho e afunda (.lp-leitura-acoes button:active) */
+@keyframes t-acao-toque {
+  0%, 14% { color: #8c867e; background: transparent; scale: 1; }
+  15.5% { color: var(--lp-vermelho); background: rgba(203, 46, 46, 0.1); scale: 0.88; }
+  19% { scale: 1; }
+  30% { color: var(--lp-vermelho); background: rgba(203, 46, 46, 0.1); }
+  34%, 100% { color: #8c867e; background: transparent; scale: 1; }
+}
+
+/* a barra de vidro do celular (.lp-tabs), com --lp-barra = 44 px */
+.t-barra { position: absolute; left: 0; right: 0; bottom: 14px; z-index: 3; display: flex; justify-content: center; gap: 6px; }
+.t-barra-leituras, .t-barra-menu {
+  position: relative; height: 44px; border-radius: 999px; background: rgba(253, 252, 250, 0.74);
+  -webkit-backdrop-filter: blur(12px) saturate(1.15); backdrop-filter: blur(12px) saturate(1.15);
+  box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.95), inset 0 -1px 0.5px rgba(40, 30, 15, 0.06), inset 0 0 0 0.5px rgba(40, 30, 15, 0.09),
+    0 6px 20px -6px rgba(40, 30, 15, 0.2), 0 1px 3px rgba(40, 30, 15, 0.07);
+}
+.t-barra-leituras { display: flex; align-items: center; gap: 2px; padding: 0 4px; }
+.t-barra-leituras::before {
+  content: ''; position: absolute; inset: 1px 1px 50% 1px; border-radius: 999px 999px 40% 40% / 999px 999px 100% 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
+}
+.t-barra-leituras a { position: relative; z-index: 1; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 999px; color: #8c867e; }
+.t-barra svg { display: block; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+.t-barra .lp-aba-numeral { fill: currentColor; stroke: currentColor; stroke-width: 0.75; stroke-linejoin: round; paint-order: stroke; font-family: var(--font-titulo); font-weight: 700; letter-spacing: 0.02em; }
+.t-barra-luz { position: absolute; left: 4px; top: 4px; bottom: 4px; width: 36px; border-radius: 999px; background: rgba(40, 30, 15, 0.07); box-shadow: inset 0 0 0 0.5px rgba(40, 30, 15, 0.04); }
+.t-barra-menu { display: grid; place-items: center; width: 44px; color: var(--lp-tinta); }
+.t-barra-menu svg { width: 18px; height: 18px; }
+.t-barra-menu path { transform-box: fill-box; transform-origin: center; }
+
+/* a janela escura de compartilhar (.lp-card), em miniatura */
+.t-janela { position: absolute; inset: 0; z-index: 4; background: #17140f; color: #f2ead8; opacity: 0; }
+.t-janela-topo { position: absolute; left: 12px; right: 8px; top: 8px; height: 20px; display: flex; align-items: center; justify-content: space-between; }
+.t-janela-rot { font: 600 6.5px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242, 234, 216, 0.6); }
+.t-janela-selo { padding: 3.5px 7px; border-radius: 999px; background: #cb2e2e; color: #fff; font: 700 6.5px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; }
+.t-janela-x { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); }
+.t-janela-x svg, .t-ouv-fechar svg { width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+.t-janela-acoes { position: absolute; left: 0; right: 0; top: 134px; display: flex; justify-content: center; gap: 6px; }
+.t-janela-acoes > span { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 44px; font: italic 6.5px/1 var(--font-leitura); color: rgba(242, 234, 216, 0.6); }
+.t-janela-acoes i { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(242, 234, 216, 0.28); color: #f2ead8; }
+.t-janela-acoes svg { width: 11px; height: 11px; stroke-width: 1.6; }
+/* o card de um trecho (pintura em cima, frase embaixo), como sai em "Trecho" e no santo do dia */
+.t-card-trecho { position: absolute; left: 50%; overflow: hidden; border-radius: 5px; background: #ebe5dc; color: #2a251f; box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45); }
+.t-card-trecho img { width: 100%; height: 40%; object-fit: cover; }
+.t-card-trecho div { padding: 4px 5px 0; }
+.t-card-trecho small { display: block; font: 600 2.6px/1.2 var(--font-leitura); letter-spacing: 0.1em; text-transform: uppercase; color: #6f675d; white-space: nowrap; overflow: hidden; }
+.t-card-trecho p { margin-top: 3px; font: 5.4px/1.35 var(--font-leitura); }
+.t-card-trecho footer { position: absolute; left: 5px; right: 5px; bottom: 4px; display: flex; justify-content: space-between; align-items: baseline; font: 2.6px var(--font-leitura); color: #6f675d; }
+.t-card-trecho footer em { font: italic 4px var(--font-leitura); color: var(--lp-vermelho); }
+
+/* 1 · calendário: toca o 7 (Nossa Senhora), o 15 (santa) e "Hoje" volta ao dia */
+.t-cal-titulo { position: absolute; left: 16px; right: 16px; top: 9px; height: 44px; }
+.t-cal-titulo span { position: absolute; inset: 0; display: flex; flex-direction: column; }
+.t-cal-titulo b { font: italic 400 29px/1 var(--font-titulo); letter-spacing: -0.03em; }
+.t-cal-titulo em { margin-top: 4px; font: italic 11px/1.2 var(--font-leitura); }
+.t-cal-t0 { animation: t-cal-t0 var(--t) var(--ease) infinite; }
+.t-cal-t1 { opacity: 0; animation: t-cal-t1 var(--t) var(--ease) infinite; }
+.t-cal-t2 { opacity: 0; animation: t-cal-t2 var(--t) var(--ease) infinite; }
+/* o título sai e o novo entra em seguida (sem os dois sobrepostos), como a página que troca de dia */
+@keyframes t-cal-t0 { 0%, 15% { opacity: 1; translate: 0 0; } 16.5% { opacity: 0; translate: 0 -2px; } 64% { opacity: 0; translate: 0 4px; } 66.5%, 100% { opacity: 1; translate: 0 0; } }
+@keyframes t-cal-t1 { 0%, 16.5% { opacity: 0; translate: 0 4px; } 19.5%, 38% { opacity: 1; translate: 0 0; } 39.5%, 100% { opacity: 0; translate: 0 -2px; } }
+@keyframes t-cal-t2 { 0%, 39.5% { opacity: 0; translate: 0 4px; } 42.5%, 62.5% { opacity: 1; translate: 0 0; } 64%, 100% { opacity: 0; translate: 0 -2px; } }
+.t-cal::before { content: ''; position: absolute; left: 14px; right: 14px; top: 57px; height: 1px; background: var(--lp-linha); }
+.t-cal-mes { position: absolute; left: 14px; right: 14px; top: 63px; height: 18px; display: flex; align-items: center; justify-content: center; gap: 10px; font: 600 11px/1 var(--font-sans); }
+.t-cal-mes i { color: var(--lp-suave); font-size: 13px; }
+.t-cal-hoje {
+  position: absolute; left: 0; top: 2px; padding: 4px 7px; border-radius: 999px; background: rgba(0, 0, 0, 0.06);
+  font: 600 6.5px/1 var(--font-sans); letter-spacing: 0.07em; text-transform: uppercase; opacity: 0;
+  animation: t-cal-hoje var(--t) var(--ease) infinite;
+}
+@keyframes t-cal-hoje {
+  0%, 16% { opacity: 0; translate: -6px 0; scale: 1; } 22% { opacity: 1; translate: 0 0; }
+  62% { opacity: 1; scale: 1; } 63.5% { scale: 0.88; background: rgba(0, 0, 0, 0.12); } 65% { opacity: 1; }
+  68%, 100% { opacity: 0; translate: -6px 0; scale: 1; background: rgba(0, 0, 0, 0.06); }
+}
+.t-cal-sem, .t-cal-grade { position: absolute; left: 14px; display: grid; grid-template-columns: repeat(7, 36px); }
+.t-cal-sem { top: 83px; }
+.t-cal-sem span { text-align: center; font: 600 7.5px/13px var(--font-sans); color: var(--lp-suave); }
+.t-cal-grade { top: 98px; grid-auto-rows: 22px; }
+.t-cal-grade span { position: relative; z-index: 1; text-align: center; font: 10.5px/20px var(--font-sans); color: #3a3632; }
+.t-cal-grade span.hoje { color: #fff; font-weight: 600; }
+.t-cal-grade span.hoje::before { content: ''; position: absolute; z-index: -1; left: 3px; top: 1px; width: 30px; height: 20px; border-radius: 6px; background: #26211b; }
+.t-cal-grade .d-santo::after, .t-cal-grade .d-maria::after {
+  content: ''; position: absolute; left: 50%; bottom: 2px; width: 3px; height: 3px; margin-left: -1.5px; border-radius: 50%; background: #c9ab6b;
+}
+.t-cal-grade .d-maria::after { background: #8fa6c4; }
+/* o dia aberto: o mesmo quadrado claro de .cal-dia.selecionado */
+.t-cal-sel { position: absolute; left: 0; top: 0; z-index: 0; width: 30px; height: 20px; border-radius: 6px; background: rgba(0, 0, 0, 0.08); opacity: 0; animation: t-cal-sel var(--t) var(--ease) infinite; }
+@keyframes t-cal-sel {
+  0%, 15% { translate: 111px 23px; scale: 0.8; opacity: 0; }
+  17.5% { scale: 1; opacity: 1; }
+  38% { translate: 111px 23px; scale: 1; opacity: 1; }
+  39.5% { translate: 111px 23px; scale: 0.9; opacity: 0; }
+  39.6% { translate: 147px 45px; }
+  41.5% { scale: 1; opacity: 1; }
+  62% { translate: 147px 45px; scale: 1; opacity: 1; }
+  65%, 100% { translate: 147px 45px; scale: 0.9; opacity: 0; }
+}
+.t-cal::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 9px; z-index: 2; background: linear-gradient(rgba(252, 250, 247, 0), var(--lp-fundo)); }
+.t-cal-dedo { animation: t-cal-dedo var(--t) var(--ease) infinite; }
+@keyframes t-cal-dedo {
+  0% { translate: 236px 196px; opacity: 0; scale: 1; }
+  5% { translate: 196px 172px; opacity: 0; }
+  13% { translate: 140px 131px; opacity: 1; }
+  15% { scale: 1; } 16.5% { scale: 0.8; } 20% { scale: 1; }
+  24% { translate: 140px 131px; }
+  35% { translate: 176px 153px; }
+  38% { scale: 1; } 39.5% { scale: 0.8; } 43% { scale: 1; }
+  48% { translate: 176px 153px; }
+  59% { translate: 29px 72px; }
+  62% { scale: 1; } 63.5% { scale: 0.8; } 67% { scale: 1; }
+  70% { translate: 29px 72px; opacity: 1; }
+  78% { translate: 52px 104px; opacity: 0; }
+  100% { translate: 236px 196px; opacity: 0; scale: 1; }
+}
+
+/* 2 · resumo: "Mostrar" abre a caixa e empurra a leitura; "Ocultar" fecha */
+.t-res-caixa {
+  position: absolute; left: 12px; right: 12px; top: 12px; height: 30px; overflow: hidden; border-radius: 6px;
+  background: color-mix(in srgb, var(--lp-cor-titulo, #000) 6%, var(--lp-fundo)); animation: t-res-caixa var(--t) linear infinite;
+}
+.t-res-topo { display: flex; align-items: center; justify-content: space-between; height: 30px; padding: 0 12px; font: 600 7px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+.t-res-topo span { color: var(--lp-suave); }
+.t-res-topo b { display: grid; font-weight: 600; }
+.t-res-topo em { grid-area: 1 / 1; text-align: right; }
+.t-res-topo em:first-child { animation: t-res-mostrar var(--t) linear infinite; }
+.t-res-topo em:last-child { opacity: 0; animation: t-res-ocultar var(--t) linear infinite; }
+.t-res-caixa p { padding: 0 12px 12px; font: 10.5px/1.6 var(--font-leitura); color: var(--lp-texto); opacity: 0; animation: t-res-texto var(--t) var(--ease) infinite; }
+.t-res-pagina { position: absolute; left: 18px; right: 18px; top: 58px; animation: t-res-pagina var(--t) linear infinite; }
+@keyframes t-res-caixa {
+  0%, 16% { height: 30px; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+  25%, 70% { height: 126px; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+  79%, 100% { height: 30px; }
+}
+@keyframes t-res-pagina {
+  0%, 16% { translate: 0 0; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+  25%, 70% { translate: 0 96px; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+  79%, 100% { translate: 0 0; }
+}
+@keyframes t-res-texto { 0%, 17.5% { opacity: 0; translate: 0 4px; } 26%, 70% { opacity: 1; translate: 0 0; } 74%, 100% { opacity: 0; translate: 0 2px; } }
+@keyframes t-res-mostrar { 0%, 16.4% { opacity: 1; } 16.5%, 70.4% { opacity: 0; } 70.5%, 100% { opacity: 1; } }
+@keyframes t-res-ocultar { 0%, 16.4% { opacity: 0; } 16.5%, 70.4% { opacity: 1; } 70.5%, 100% { opacity: 0; } }
+.t-res-dedo { animation: t-res-dedo var(--t) var(--ease) infinite; }
+@keyframes t-res-dedo {
+  0% { translate: 262px 196px; opacity: 0; scale: 1; }
+  6% { translate: 252px 120px; opacity: 0; }
+  13% { translate: 238px 27px; opacity: 1; }
+  16% { scale: 1; } 17.5% { scale: 0.8; } 21% { scale: 1; }
+  24% { translate: 238px 27px; opacity: 1; }
+  32% { translate: 252px 110px; opacity: 0; }
+  60% { translate: 252px 110px; opacity: 0; }
+  67% { translate: 238px 27px; opacity: 1; }
+  70% { scale: 1; } 71.5% { scale: 0.8; } 75% { scale: 1; }
+  78% { translate: 238px 27px; opacity: 1; }
+  86% { translate: 252px 120px; opacity: 0; }
+  100% { translate: 262px 196px; opacity: 0; scale: 1; }
+}
+
+/* 3 · barra de baixo (celular): cada ícone leva à sua leitura; a luz desliza com a mola da barra real */
+.t-bar-pagina { position: absolute; inset: 0; overflow: hidden; }
+.t-bar-rolo { animation: t-bar-rolo var(--t) linear infinite; }
+.t-bar-rolo section { height: 168px; padding: 22px 18px 0; }
+@keyframes t-bar-rolo {
+  0%, 14% { translate: 0 0; animation-timing-function: cubic-bezier(0.45, 0, 0.2, 1); }
+  23%, 34% { translate: 0 -168px; animation-timing-function: cubic-bezier(0.45, 0, 0.2, 1); }
+  43%, 54% { translate: 0 -336px; animation-timing-function: cubic-bezier(0.45, 0, 0.2, 1); }
+  63%, 76% { translate: 0 -504px; animation-timing-function: cubic-bezier(0.45, 0, 0.2, 1); }
+  87%, 100% { translate: 0 0; }
+}
+.t-bar .t-barra-luz { animation: t-bar-luz var(--t) linear infinite; }
+@keyframes t-bar-luz {
+  0%, 14% { translate: 0 0; animation-timing-function: cubic-bezier(0.3, 1.35, 0.45, 1); }
+  22.5%, 34% { translate: 38px 0; animation-timing-function: cubic-bezier(0.3, 1.35, 0.45, 1); }
+  42.5%, 54% { translate: 76px 0; animation-timing-function: cubic-bezier(0.3, 1.35, 0.45, 1); }
+  62.5%, 76% { translate: 114px 0; animation-timing-function: cubic-bezier(0.3, 1.35, 0.45, 1); }
+  85%, 100% { translate: 0 0; }
+}
+.t-bar .t-barra-leituras a:nth-of-type(1) { color: var(--lp-vermelho); animation: t-bar-a1 var(--t) linear infinite; }
+.t-bar .t-barra-leituras a:nth-of-type(2) { animation: t-bar-a2 var(--t) linear infinite; }
+.t-bar .t-barra-leituras a:nth-of-type(3) { animation: t-bar-a3 var(--t) linear infinite; }
+.t-bar .t-barra-leituras a:nth-of-type(4) { animation: t-bar-a4 var(--t) linear infinite; }
+@keyframes t-bar-a1 { 0%, 14% { color: var(--lp-vermelho); } 16%, 76% { color: #8c867e; scale: 1; } 77.5% { scale: 0.88; } 78% { color: var(--lp-vermelho); } 81%, 100% { color: var(--lp-vermelho); scale: 1; } }
+@keyframes t-bar-a2 { 0%, 14% { color: #8c867e; scale: 1; } 15.5% { scale: 0.88; } 16% { color: var(--lp-vermelho); } 19% { scale: 1; } 34% { color: var(--lp-vermelho); } 36%, 100% { color: #8c867e; } }
+@keyframes t-bar-a3 { 0%, 34% { color: #8c867e; scale: 1; } 35.5% { scale: 0.88; } 36% { color: var(--lp-vermelho); } 39% { scale: 1; } 54% { color: var(--lp-vermelho); } 56%, 100% { color: #8c867e; } }
+@keyframes t-bar-a4 { 0%, 54% { color: #8c867e; scale: 1; } 55.5% { scale: 0.88; } 56% { color: var(--lp-vermelho); } 59% { scale: 1; } 76% { color: var(--lp-vermelho); } 78%, 100% { color: #8c867e; } }
+.t-bar-dedo { animation: t-bar-dedo var(--t) var(--ease) infinite; }
+@keyframes t-bar-dedo {
+  0% { translate: 110px 196px; opacity: 0; scale: 1; }
+  4% { translate: 102px 172px; opacity: 0; }
+  11% { translate: 96px 132px; opacity: 1; }
+  14% { scale: 1; } 15.5% { scale: 0.8; } 19% { scale: 1; }
+  22% { translate: 96px 132px; }
+  31% { translate: 134px 132px; }
+  34% { scale: 1; } 35.5% { scale: 0.8; } 39% { scale: 1; }
+  42% { translate: 134px 132px; }
+  51% { translate: 172px 132px; }
+  54% { scale: 1; } 55.5% { scale: 0.8; } 59% { scale: 1; }
+  62% { translate: 172px 132px; }
+  73% { translate: 58px 132px; }
+  76% { scale: 1; } 77.5% { scale: 0.8; } 81% { scale: 1; }
+  83% { translate: 58px 132px; opacity: 1; }
+  90% { translate: 66px 184px; opacity: 0; }
+  100% { translate: 110px 196px; opacity: 0; scale: 1; }
+}
+
+/* 4 · ouvir: o fone abre a tela escura, a linha lida acende e, no fim, "A seguir: Evangelho" */
+.t-ouv .t-acao-ouvir, .t-com .t-acao-comp { animation: t-acao-toque var(--t) linear infinite; }
+.t-ouv-tela {
+  position: absolute; inset: 0; z-index: 4; display: flex; flex-direction: column; color: #fff; translate: 0 100%;
+  background: radial-gradient(120% 80% at 20% 0%, #29190c 0%, transparent 70%), linear-gradient(170deg, #241a10, #0d0a07 75%);
+  animation: t-ouv-tela var(--t) linear infinite;
+}
+@keyframes t-ouv-tela {
+  0%, 16% { translate: 0 100%; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+  25%, 88% { translate: 0 0; animation-timing-function: cubic-bezier(0.55, 0, 0.9, 0.4); }
+  95%, 100% { translate: 0 100%; }
+}
+.t-ouv-topo { display: flex; align-items: center; justify-content: space-between; padding: 9px 9px 0 14px; animation: t-ouv-quieto var(--t) linear infinite; }
+.t-ouv-topo p { display: flex; flex-direction: column; gap: 2px; }
+.t-ouv-rot, .t-ouv-ref { display: grid; }
+.t-ouv-rot em, .t-ouv-ref em { grid-area: 1 / 1; }
+.t-ouv-rot { font: 600 6.5px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255, 255, 255, 0.55); }
+.t-ouv-ref { font: italic 9px/1.2 var(--font-leitura); color: rgba(255, 255, 255, 0.85); }
+.t-ouv-rot em:first-child, .t-ouv-ref em:first-child { animation: t-ouv-sai var(--t) linear infinite; }
+.t-ouv-rot em:last-child, .t-ouv-ref em:last-child { opacity: 0; animation: t-ouv-entra var(--t) linear infinite; }
+.t-ouv-fechar { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); }
+.t-ouv-texto {
+  position: relative; flex: 1; overflow: hidden;
+  -webkit-mask-image: linear-gradient(transparent, #000 22%, #000 70%, transparent); mask-image: linear-gradient(transparent, #000 22%, #000 70%, transparent);
+}
+.t-ouv-col { position: absolute; left: 14px; right: 18px; top: 26px; }
+.t-ouv-col p { margin: 0 0 0.5em; font: 700 12.5px/1.22 var(--font-leitura); color: rgba(255, 255, 255, 0.28); transform-origin: left center; scale: 0.96; }
+.t-ouv-col p.refrao { font-style: italic; font-weight: 400; }
+.t-ouv-salmo { animation: t-ouv-rola var(--t) var(--ease) infinite; }
+.t-ouv-salmo p:nth-child(1) { animation: t-ouv-l1 var(--t) linear infinite; }
+.t-ouv-salmo p:nth-child(2) { animation: t-ouv-l2 var(--t) linear infinite; }
+.t-ouv-salmo p:nth-child(3) { animation: t-ouv-l3 var(--t) linear infinite; }
+.t-ouv-salmo p:nth-child(4) { animation: t-ouv-l4 var(--t) linear infinite; }
+.t-ouv-ev { opacity: 0; animation: t-ouv-entra var(--t) linear infinite; }
+.t-ouv-ev p:first-child { color: #fff; scale: 1; }
+/* a linha atual acende (o refrão, dourado) e a lida fica um pouco mais clara que a por ler */
+@keyframes t-ouv-l1 { 0%, 25% { color: #f1d38b; scale: 1; } 35% { color: #f1d38b; scale: 1; } 37%, 100% { color: rgba(255, 255, 255, 0.4); scale: 0.96; } }
+@keyframes t-ouv-l2 { 0%, 35% { color: rgba(255, 255, 255, 0.28); scale: 0.96; } 37%, 45% { color: #fff; scale: 1; } 47%, 100% { color: rgba(255, 255, 255, 0.4); scale: 0.96; } }
+@keyframes t-ouv-l3 { 0%, 45% { color: rgba(255, 255, 255, 0.28); scale: 0.96; } 47%, 55% { color: #fff; scale: 1; } 57%, 100% { color: rgba(255, 255, 255, 0.4); scale: 0.96; } }
+@keyframes t-ouv-l4 { 0%, 55% { color: rgba(255, 255, 255, 0.28); scale: 0.96; } 57%, 64% { color: #fff; scale: 1; } 66%, 100% { color: rgba(255, 255, 255, 0.4); scale: 0.96; } }
+@keyframes t-ouv-rola {
+  0%, 35% { translate: 0 0; } 38%, 45% { translate: 0 -21px; } 48%, 55% { translate: 0 -43px; }
+  58%, 80% { translate: 0 -64px; opacity: 1; } 83%, 95% { translate: 0 -64px; opacity: 0; } 96%, 100% { translate: 0 0; opacity: 1; }
+}
+@keyframes t-ouv-sai { 0%, 80% { opacity: 1; } 83%, 95% { opacity: 0; } 96%, 100% { opacity: 1; } }
+@keyframes t-ouv-entra { 0%, 81% { opacity: 0; } 85%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
+/* os controles somem enquanto toca e voltam no fim da leitura, com o aviso (.lp-ouvir-quieto) */
+@keyframes t-ouv-quieto { 0%, 33% { opacity: 1; } 38%, 62% { opacity: 0; } 66%, 100% { opacity: 1; } }
+.t-ouv-controles { padding: 0 14px 9px; animation: t-ouv-quieto var(--t) linear infinite; }
+.t-ouv-progresso { height: 3px; margin-bottom: 7px; border-radius: 2px; background: rgba(255, 255, 255, 0.18); overflow: hidden; }
+.t-ouv-progresso i { height: 100%; background: rgba(255, 255, 255, 0.85); transform-origin: left; animation: t-ouv-progresso var(--t) linear infinite; }
+@keyframes t-ouv-progresso { 0%, 25% { scale: 0 1; } 64%, 80% { scale: 1 1; } 81% { scale: 0 1; } 95% { scale: 0.12 1; } 96%, 100% { scale: 0 1; } }
+.t-ouv-botoes { display: grid; grid-template-columns: repeat(5, 1fr); justify-items: center; align-items: center; max-width: 200px; margin: 0 auto; }
+.t-ouv-botoes i { display: grid; place-items: center; width: 22px; height: 22px; }
+.t-ouv-botoes svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.t-ouv-botoes text { font-family: var(--font-sans); }
+.t-ouv-botoes .t-ouv-tocar { width: 28px; height: 28px; border-radius: 50%; background: #fff; color: #0d0a07; }
+.t-ouv-tocar svg { grid-area: 1 / 1; width: 13px; height: 13px; }
+.t-ouv-tocar .t-tocar { margin-left: 2px; opacity: 0; animation: t-ouv-play var(--t) linear infinite; }
+.t-ouv-tocar .t-pausar { stroke-width: 2.4; animation: t-ouv-pausa var(--t) linear infinite; }
+/* tocando, o botão mostra a pausa; no fim da leitura (com o aviso) volta a ser o triângulo */
+@keyframes t-ouv-pausa { 0%, 63% { opacity: 1; } 63.1%, 82% { opacity: 0; } 82.1%, 100% { opacity: 1; } }
+@keyframes t-ouv-play { 0%, 63% { opacity: 0; } 63.1%, 82% { opacity: 1; } 82.1%, 100% { opacity: 0; } }
+/* fim do Salmo: "A seguir: Evangelho, em 3", e ele começa sozinho */
+.t-ouv-aviso {
+  position: absolute; left: 50%; bottom: 46px; width: 178px; margin-left: -89px; padding: 8px 8px 7px; border-radius: 14px; text-align: center;
+  background: rgba(20, 16, 12, 0.84); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 22px rgba(0, 0, 0, 0.4); opacity: 0; animation: t-ouv-aviso var(--t) linear infinite;
+}
+.t-ouv-aviso p { margin-bottom: 6px; font: italic 10px/1.2 var(--font-leitura); }
+.t-ouv-aviso p span { display: inline-grid; } .t-ouv-aviso p em { grid-area: 1 / 1; }
+.t-ouv-aviso p em:first-child { animation: t-ouv-tres var(--t) linear infinite; }
+.t-ouv-aviso p em:last-child { opacity: 0; animation: t-ouv-dois var(--t) linear infinite; }
+.t-ouv-aviso div { display: flex; justify-content: center; gap: 4px; }
+.t-ouv-aviso b { padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.28); font: 600 6.5px/1 var(--font-sans); }
+.t-ouv-aviso b:first-child { background: #fff; color: #0d0a07; border-color: #fff; }
+@keyframes t-ouv-aviso {
+  0%, 64% { opacity: 0; translate: 0 6px; scale: 0.97; animation-timing-function: cubic-bezier(0.2, 0.9, 0.3, 1.2); }
+  68%, 78% { opacity: 1; translate: 0 0; scale: 1; } 81%, 100% { opacity: 0; translate: 0 0; scale: 1; }
+}
+@keyframes t-ouv-tres { 0%, 72% { opacity: 1; } 72.1%, 100% { opacity: 0; } }
+@keyframes t-ouv-dois { 0%, 72% { opacity: 0; } 72.1%, 100% { opacity: 1; } }
+.t-ouv-dedo { animation: t-ouv-dedo var(--t) var(--ease) infinite; }
+@keyframes t-ouv-dedo {
+  0% { translate: 236px 196px; opacity: 0; scale: 1; }
+  5% { translate: 230px 120px; opacity: 0; }
+  11% { translate: 222px 34px; opacity: 1; }
+  14% { scale: 1; } 15.5% { scale: 0.8; } 19% { scale: 1; }
+  20% { translate: 222px 34px; opacity: 1; }
+  26% { translate: 232px 76px; opacity: 0; }
+  100% { translate: 236px 196px; opacity: 0; scale: 1; }
+}
+
+/* 5 · compartilhar: abre a janela, troca para "Trecho" (o card ganha a pintura) e toca no WhatsApp */
+.t-com .t-janela { animation: t-com-janela var(--t) linear infinite; }
+@keyframes t-com-janela { 0%, 15.5% { opacity: 0; } 20.5%, 74% { opacity: 1; } 80%, 100% { opacity: 0; } }
+.t-modos { position: absolute; left: 59px; top: 30px; display: flex; padding: 2px; border-radius: 999px; background: rgba(242, 234, 216, 0.1); }
+.t-modos span { position: relative; z-index: 1; padding: 4.5px 0; text-align: center; font: 600 6.5px/1 var(--font-sans); white-space: nowrap; color: rgba(242, 234, 216, 0.62); }
+.t-modos span:nth-of-type(1) { width: 52px; color: #1c1812; animation: t-modos-esta var(--t) linear infinite; }
+.t-modos span:nth-of-type(2) { width: 70px; }
+.t-modos span:nth-of-type(3) { width: 36px; animation: t-modos-trecho var(--t) linear infinite; }
+.t-modos-luz { position: absolute; left: 2px; top: 2px; bottom: 2px; width: 52px; border-radius: 999px; background: #f2ead8; animation: t-modos-luz var(--t) linear infinite; }
+@keyframes t-modos-luz {
+  0%, 38% { translate: 0 0; width: 52px; animation-timing-function: cubic-bezier(0.3, 1.2, 0.45, 1); }
+  45%, 84% { translate: 122px 0; width: 36px; } 85%, 100% { translate: 0 0; width: 52px; }
+}
+@keyframes t-modos-esta { 0%, 38.5% { color: #1c1812; } 40.5%, 84% { color: rgba(242, 234, 216, 0.62); } 85%, 100% { color: #1c1812; } }
+@keyframes t-modos-trecho { 0%, 39% { color: rgba(242, 234, 216, 0.62); } 41%, 84% { color: #1c1812; } 85%, 100% { color: rgba(242, 234, 216, 0.62); } }
+.t-com-cards { position: absolute; left: 0; right: 0; top: 55px; height: 76px; }
+.t-card-leitura {
+  position: absolute; left: 50%; top: 0; width: 49px; height: 76px; margin-left: -24.5px; overflow: hidden; border-radius: 5px; background: #faf6ee; color: #1c1812;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45); animation: t-com-leitura var(--t) var(--ease) infinite;
+}
+.t-card-faixa {
+  position: absolute; left: 1.5px; top: 0; bottom: 0; width: 5px; background: #d99a96;
+  -webkit-mask: url('/assets/img/liturgia-faixa.webp') repeat-y center top / 100% auto; mask: url('/assets/img/liturgia-faixa.webp') repeat-y center top / 100% auto;
+  -webkit-mask-mode: luminance; mask-mode: luminance;
+}
+.t-card-leitura div { padding: 6px 4px 0 10px; }
+.t-card-leitura em { display: block; font: italic 3.4px/1 var(--font-leitura); color: var(--lp-vermelho); }
+.t-card-leitura b { display: block; margin: 1px 0 3px; font: italic 9.5px/1 var(--font-titulo); }
+.t-card-leitura small { display: block; font: 600 2.2px/1 var(--font-leitura); letter-spacing: 0.1em; text-transform: uppercase; color: var(--lp-vermelho); }
+.t-card-leitura p { margin-top: 2.5px; font: 3px/1.45 var(--font-leitura); color: #3a352e; }
+.t-card-leitura p.t-card-r { font-style: italic; color: var(--lp-vermelho); }
+.t-com .t-card-trecho { top: 0; width: 61px; height: 76px; margin-left: -30.5px; opacity: 0; animation: t-com-trecho var(--t) var(--ease) infinite; }
+@keyframes t-com-leitura { 0%, 16% { scale: 0.94; opacity: 1; } 24%, 39% { scale: 1; opacity: 1; } 42.5% { scale: 0.96; opacity: 0; } 84% { opacity: 0; } 85%, 100% { scale: 0.94; opacity: 1; } }
+@keyframes t-com-trecho { 0%, 39.5% { scale: 0.96; opacity: 0; } 44.5%, 84% { scale: 1; opacity: 1; } 85%, 100% { scale: 0.96; opacity: 0; } }
+.t-com .t-acao-zap i, .t-san .t-acao-zap i { animation: t-zap-toque var(--t) linear infinite; animation-delay: var(--zap, 0s); }
+.t-com { --zap: 0s; }
+/* o toque no WhatsApp: o círculo acende e afunda (.lp-card-acoes button:active) */
+@keyframes t-zap-toque {
+  0%, 60% { background: transparent; border-color: rgba(242, 234, 216, 0.28); scale: 1; }
+  61.5% { background: rgba(242, 234, 216, 0.16); border-color: rgba(242, 234, 216, 0.7); scale: 0.88; }
+  65% { scale: 1; } 72% { background: rgba(242, 234, 216, 0.16); border-color: rgba(242, 234, 216, 0.7); }
+  78%, 100% { background: transparent; border-color: rgba(242, 234, 216, 0.28); scale: 1; }
+}
+.t-com-dedo { animation: t-com-dedo var(--t) var(--ease) infinite; }
+@keyframes t-com-dedo {
+  0% { translate: 244px 196px; opacity: 0; scale: 1; }
+  5% { translate: 248px 112px; opacity: 0; }
+  11% { translate: 253px 34px; opacity: 1; }
+  14% { scale: 1; } 15.5% { scale: 0.8; } 19% { scale: 1; }
+  22% { translate: 253px 34px; }
+  34% { translate: 201px 40px; }
+  38% { scale: 1; } 39.5% { scale: 0.8; } 43% { scale: 1; }
+  46% { translate: 201px 40px; }
+  57% { translate: 90px 145px; }
+  60% { scale: 1; } 61.5% { scale: 0.8; } 65% { scale: 1; }
+  67% { translate: 90px 145px; opacity: 1; }
+  74% { translate: 106px 190px; opacity: 0; }
+  100% { translate: 244px 196px; opacity: 0; scale: 1; }
+}
+
+/* 6 · os Padres e o Catecismo: o dedo rola a página até o bloco embaixo do Evangelho */
+.t-pad-folha { padding: 14px 18px; animation: t-pad-rola var(--t) linear infinite; }
+.t-pad-folha .t-texto { margin-top: 0; }
+.t-pad-divisor { width: 150px; height: 30px; margin: 22px auto 22px; opacity: 0.85; }
+.t-pad-rotulo { margin-bottom: 4px; font: 600 6.5px/1.3 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--lp-vermelho); }
+.t-pad-fonte { font: italic 9.5px/1.3 var(--font-leitura); color: var(--lp-suave); }
+.t-pad-fonte i { display: inline; }
+.t-pad-tema { margin: 3px 0 7px; font: italic 15px/1.2 var(--font-titulo); letter-spacing: -0.01em; color: var(--lp-tinta); }
+.t-pad-texto { margin-bottom: 6px; font: 10px/1.58 var(--font-leitura); color: var(--lp-texto); }
+.t-pad-texto span { font-variant: small-caps; letter-spacing: 0.05em; font-weight: 700; color: var(--lp-vermelho); }
+.t-pad-texto b { font: 600 7.5px var(--font-sans); color: var(--lp-vermelho); margin-right: 2px; }
+.t-pad-mais { display: inline-block; padding-bottom: 1px; border-bottom: 1px solid rgba(203, 46, 46, 0.35); font: 600 6.5px/1.2 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--lp-vermelho); }
+.t-pad-cic { margin-top: 18px; }
+/* arrastar segue o dedo; ao soltar, a página ainda corre um pouco e para (inércia) */
+@keyframes t-pad-rola {
+  0%, 15% { translate: 0 0; opacity: 1; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  27% { translate: 0 -78px; animation-timing-function: cubic-bezier(0.15, 0.6, 0.3, 1); }
+  38%, 47% { translate: 0 -132px; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  59% { translate: 0 -210px; animation-timing-function: cubic-bezier(0.15, 0.6, 0.3, 1); }
+  70%, 86% { translate: 0 -262px; opacity: 1; }
+  90% { translate: 0 -262px; opacity: 0; }
+  90.5% { translate: 0 0; opacity: 0; }
+  97%, 100% { translate: 0 0; opacity: 1; }
+}
+.t-pad-dedo { animation: t-pad-dedo var(--t) linear infinite; }
+@keyframes t-pad-dedo {
+  0%, 9% { translate: 196px 140px; opacity: 0; scale: 1; }
+  12% { opacity: 1; scale: 1; }
+  14% { scale: 0.86; }
+  15% { translate: 196px 140px; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  27% { translate: 196px 62px; opacity: 1; scale: 0.86; }
+  29% { scale: 1; }
+  31% { translate: 196px 56px; opacity: 0; }
+  40% { translate: 196px 140px; opacity: 0; scale: 1; }
+  44% { opacity: 1; scale: 1; }
+  46% { scale: 0.86; }
+  47% { translate: 196px 140px; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  59% { translate: 196px 62px; opacity: 1; scale: 0.86; }
+  61% { scale: 1; }
+  63% { translate: 196px 56px; opacity: 0; }
+  100% { translate: 196px 140px; opacity: 0; scale: 1; }
+}
+
+/* 7 · santo do dia: o botão ao lado do nome abre a janela "Santo do dia" com a frase e a pintura */
+.t-san-cabeca { position: absolute; left: 18px; right: 14px; top: 11px; }
+.t-san-marca { display: block; font: italic 11.5px/1 var(--font-titulo); color: #b59a5c; }
+.t-san-data { display: block; margin-top: 3px; font: italic 400 46px/0.95 var(--font-titulo); letter-spacing: -0.03em; }
+.t-san-cabeca small { display: block; margin-top: 3px; font: 9px/1.4 var(--font-leitura); color: var(--lp-suave); }
+.t-san-nome { margin-top: 2px; font: italic 12px/1.35 var(--font-leitura); }
+.t-san-linha { display: flex; align-items: center; gap: 6px; margin-top: 3px; }
+.t-san-linha span { font: 600 6.5px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-vermelho); }
+.t-san-botao {
+  display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+  border: 1px solid rgba(203, 46, 46, 0.35); color: var(--lp-vermelho); animation: t-san-botao var(--t) linear infinite;
+}
+.t-san-botao svg { width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes t-san-botao {
+  0%, 14% { background: transparent; scale: 1; } 15.5% { background: rgba(203, 46, 46, 0.14); border-color: var(--lp-vermelho); scale: 0.86; }
+  19% { scale: 1; } 30%, 100% { background: transparent; border-color: rgba(203, 46, 46, 0.35); scale: 1; }
+}
+.t-san .t-janela { animation: t-san-janela var(--t) linear infinite; }
+@keyframes t-san-janela { 0%, 15.5% { opacity: 0; } 20.5%, 72% { opacity: 1; } 78%, 100% { opacity: 0; } }
+.t-layouts { position: absolute; left: 0; right: 0; top: 31px; display: flex; justify-content: center; gap: 4px; }
+.t-layouts span { padding: 4px 8px; border-radius: 999px; font: 600 6.5px/1 var(--font-sans); color: rgba(242, 234, 216, 0.5); }
+.t-layouts span:first-child { background: rgba(242, 234, 216, 0.14); color: #fff; }
+.t-san-card { top: 50px; width: 64px; height: 80px; margin-left: -32px; animation: t-san-card var(--t) var(--ease) infinite; }
+.t-san-card img { object-position: 50% 22%; }
+@keyframes t-san-card { 0%, 16% { scale: 0.92; translate: 0 6px; } 26%, 100% { scale: 1; translate: 0 0; } }
+.t-san { --zap: -0.3s; }
+.t-san-dedo { animation: t-san-dedo var(--t) var(--ease) infinite; }
+@keyframes t-san-dedo {
+  0% { translate: 150px 196px; opacity: 0; scale: 1; }
+  5% { translate: 112px 160px; opacity: 0; }
+  11% { translate: 81px 117px; opacity: 1; }
+  14% { scale: 1; } 15.5% { scale: 0.8; } 19% { scale: 1; }
+  21% { translate: 81px 117px; opacity: 1; }
+  28% { translate: 120px 150px; opacity: 0; }
+  43% { translate: 110px 180px; opacity: 0; }
+  51% { translate: 90px 145px; opacity: 1; }
+  55% { scale: 1; } 56.5% { scale: 0.8; } 60% { scale: 1; }
+  63% { translate: 90px 145px; opacity: 1; }
+  70% { translate: 106px 190px; opacity: 0; }
+  100% { translate: 150px 196px; opacity: 0; scale: 1; }
+}
+
+/* 8 · o menu: o botão vira X, a barra desce e a folha sobe; rola-se até o tamanho do texto, que
+   cresce um ponto por toque (a leitura atrás cresce junto), e um toque fora fecha */
+.t-menu-pagina { position: absolute; inset: 0; padding: 20px 18px; }
+.t-menu-pagina .t-texto { font-size: 10.5px; animation: t-menu-k var(--t) linear infinite; }
+@keyframes t-menu-k {
+  0%, 44% { font-size: 10.5px; opacity: 1; } 46%, 54% { font-size: 11.8px; } 56%, 89% { font-size: 13.1px; opacity: 1; }
+  92% { font-size: 13.1px; opacity: 0; } 92.5% { font-size: 10.5px; opacity: 0; } 97%, 100% { font-size: 10.5px; opacity: 1; }
+}
+.t-menu .t-barra-luz { translate: 114px 0; }
+.t-menu .t-barra-leituras a:nth-of-type(4) { color: var(--lp-vermelho); }
+.t-menu .t-barra { animation: t-menu-barra var(--t) linear infinite; }
+@keyframes t-menu-barra {
+  0%, 14% { translate: 0 0; animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0); }
+  21%, 80% { translate: 0 72px; animation-timing-function: cubic-bezier(0.22, 1.25, 0.36, 1); }
+  92%, 100% { translate: 0 0; }
+}
+.t-menu .t-barra-menu { animation: t-menu-botao var(--t) linear infinite; }
+@keyframes t-menu-botao { 0%, 12% { scale: 1; background: rgba(253, 252, 250, 0.74); } 13.5% { scale: 0.92; background: rgba(255, 255, 255, 0.9); } 17%, 100% { scale: 1; background: rgba(253, 252, 250, 0.74); } }
+/* o hambúrguer vira X ao abrir (como .lp-hamb) e se desfaz quando a barra já voltou */
+.t-menu .t-hamb-1 { animation: t-hamb-1 var(--t) linear infinite; }
+.t-menu .t-hamb-2 { animation: t-hamb-2 var(--t) linear infinite; }
+.t-menu .t-hamb-3 { animation: t-hamb-3 var(--t) linear infinite; }
+@keyframes t-hamb-1 { 0%, 12% { transform: none; animation-timing-function: cubic-bezier(0.3, 1.4, 0.45, 1); } 18%, 88% { transform: translateY(4px) rotate(45deg); animation-timing-function: cubic-bezier(0.3, 1.4, 0.45, 1); } 96%, 100% { transform: none; } }
+@keyframes t-hamb-2 { 0%, 12% { transform: none; opacity: 1; } 16%, 89% { transform: scaleX(0.2); opacity: 0; } 95%, 100% { transform: none; opacity: 1; } }
+@keyframes t-hamb-3 { 0%, 12% { transform: none; animation-timing-function: cubic-bezier(0.3, 1.4, 0.45, 1); } 18%, 89% { transform: translate(2.5px, -4px) rotate(-45deg) scaleX(1.55); animation-timing-function: cubic-bezier(0.3, 1.4, 0.45, 1); } 97%, 100% { transform: none; } }
+.t-menu-veu { position: absolute; inset: 0; z-index: 3; background: rgba(40, 30, 15, 0.26); opacity: 0; animation: t-menu-veu var(--t) linear infinite; }
+@keyframes t-menu-veu { 0%, 13% { opacity: 0; } 19%, 77% { opacity: 1; } 83%, 100% { opacity: 0; } }
 .t-menu-folha {
-  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 6px 12px 8px; border-radius: 14px 14px 0 0; background: #fbf9f5;
-  box-shadow: 0 -8px 24px rgba(30, 24, 16, 0.18); transform: translateY(105%); animation: t-menu-folha var(--t) var(--ease) infinite;
+  position: absolute; left: 0; right: 0; top: 52px; height: 420px; z-index: 4; overflow: hidden; border-radius: 20px 20px 0 0;
+  background: rgba(253, 252, 250, 0.94); -webkit-backdrop-filter: blur(12px) saturate(1.1); backdrop-filter: blur(12px) saturate(1.1);
+  box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.95), inset 0 0 0 0.5px rgba(40, 30, 15, 0.1), 0 -10px 30px -12px rgba(40, 30, 15, 0.35);
+  translate: 0 150px; animation: t-menu-folha var(--t) linear infinite;
 }
-@keyframes t-menu-folha { 0%, 14% { transform: translateY(105%); } 24%, 86% { transform: none; } 94%, 100% { transform: translateY(105%); } }
-.t-menu-grab { width: 28px; height: 3px; margin: 0 auto 6px; border-radius: 2px; background: rgba(0, 0, 0, 0.18); }
-.t-menu-sec { display: flex; flex-direction: column; gap: 4px; padding: 5px 0; border-top: 1px solid rgba(0, 0, 0, 0.07); }
-.t-menu-sec:first-of-type { border-top: 0; }
-.t-menu-sec b { font-size: 0.56rem; font-weight: 700; letter-spacing: 0.02em; color: #333; }
-.t-menu-meta { display: block; height: 5px; border-radius: 3px; background: rgba(40, 30, 15, 0.09); overflow: hidden; }
-.t-menu-meta i { display: block; width: 46%; height: 100%; border-radius: 3px; background: var(--lp-vermelho); }
-.t-menu-regua { display: flex; align-items: center; gap: 8px; }
-.t-menu-regua em { font: normal 700 0.9rem/1 var(--font-leitura); color: #333; }
-.t-menu-a1 { font-size: 0.62rem !important; }
-.t-menu-a2 { font-size: 1.05rem !important; animation: t-menu-a2 var(--t) var(--ease) infinite; }
-@keyframes t-menu-a2 { 0%, 38% { transform: none; } 40% { transform: scale(0.82); } 44%, 52% { transform: none; } 54% { transform: scale(0.82); } 58%, 100% { transform: none; } }
-.t-menu-trilho { position: relative; flex: 1; display: flex; justify-content: space-between; align-items: center; height: 14px; }
-.t-menu-trilho::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: rgba(40, 30, 15, 0.1); }
-.t-menu-trilho i { position: relative; width: 6px; height: 6px; border-radius: 50%; background: #d3cdc3; }
-.t-menu-trilho u {
-  position: absolute; left: 0; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: #fff;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 5px rgba(0, 0, 0, 0.2); animation: t-menu-polegar var(--t) var(--ease) infinite;
+@keyframes t-menu-folha {
+  0%, 14% { translate: 0 150px; animation-timing-function: cubic-bezier(0.22, 1.1, 0.36, 1); }
+  23%, 77% { translate: 0 0; animation-timing-function: cubic-bezier(0.4, 0, 1, 1); }
+  82%, 100% { translate: 0 150px; }
 }
-@keyframes t-menu-polegar { 0%, 42% { left: 0; } 48%, 56% { left: 33.3%; } 62%, 100% { left: 66.6%; } }
-.t-menu-inst {
-  align-self: flex-start; padding: 3px 12px; border-radius: 11px; background: #1f1c18; color: #fff; font-size: 0.55rem; font-weight: 600;
+.t-menu-grab { position: relative; z-index: 1; display: flex; justify-content: center; align-items: center; height: 18px; background: #fbfaf8; }
+.t-menu-grab i { width: 28px; height: 4px; border-radius: 2px; background: rgba(40, 30, 15, 0.22); }
+.t-menu-corpo { padding: 2px 16px 0; animation: t-menu-rola var(--t) linear infinite; }
+/* duas arrastadas: até o tamanho do texto e, depois, até "Instalar o app" */
+@keyframes t-menu-rola {
+  0%, 27% { translate: 0 0; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  35% { translate: 0 -80px; animation-timing-function: cubic-bezier(0.15, 0.6, 0.3, 1); }
+  41%, 62.5% { translate: 0 -189px; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  69% { translate: 0 -228px; animation-timing-function: cubic-bezier(0.15, 0.6, 0.3, 1); }
+  72%, 82% { translate: 0 -249px; }
+  83%, 100% { translate: 0 0; }
+}
+
+.t-menu-sec + .t-menu-sec { margin-top: 13px; padding-top: 12px; border-top: 1px solid var(--lp-linha); }
+.t-menu-sec h3 { margin-bottom: 7px; font: 600 6.5px/1.2 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--lp-suave); }
+.t-menu-sec p { margin-bottom: 8px; font: 9.5px/1.5 var(--font-leitura); color: var(--lp-texto); }
+.t-menu-meta { display: block; height: 6px; border-radius: 3px; background: rgba(40, 30, 15, 0.09); overflow: hidden; }
+.t-menu-meta i { width: 45%; height: 100%; border-radius: 3px; background: var(--lp-vermelho); }
+.t-menu-valores { display: flex; justify-content: space-between; margin: 4px 0 10px; font: 600 7px/1 var(--font-sans); color: var(--lp-suave); font-variant-numeric: tabular-nums; }
+.t-menu-doar, .t-menu-instalar { display: flex; align-items: center; justify-content: center; height: 30px; border-radius: 999px; font: 600 9px/1 var(--font-sans); letter-spacing: 0.02em; }
+.t-menu-doar { background: var(--lp-vermelho); color: #fff; box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.35), 0 5px 12px -6px rgba(203, 46, 46, 0.6); }
+.t-menu-instalar { border: 1px solid var(--lp-linha); background: rgba(255, 255, 255, 0.55); }
+.t-menu-dias { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.t-menu-seta { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(40, 30, 15, 0.055); }
+.t-menu-seta svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.t-menu-dias > span { flex: 1; text-align: center; }
+.t-menu-dias b { display: block; font: italic 400 17px/1.1 var(--font-titulo); letter-spacing: -0.02em; }
+.t-menu-dias small { display: block; margin-top: 2px; font: 600 6.5px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--lp-suave); }
+.t-menu-fonte { display: flex; align-items: center; }
+.t-menu-a1, .t-menu-a2 { display: grid; place-items: center; flex: 0 0 34px; height: 34px; border-radius: 10px; background: rgba(40, 30, 15, 0.045); font-family: var(--font-titulo); line-height: 1; }
+.t-menu-a1 { font-size: 11px; opacity: 0.3; animation: t-menu-a1 var(--t) linear infinite; }
+.t-menu-a2 { font-size: 19px; animation: t-menu-a2 var(--t) linear infinite; }
+@keyframes t-menu-a1 { 0%, 44% { opacity: 0.3; } 45.5%, 82% { opacity: 1; } 83%, 100% { opacity: 0.3; } }
+@keyframes t-menu-a2 {
+  0%, 44% { background: rgba(40, 30, 15, 0.045); scale: 1; } 45.5% { background: rgba(203, 46, 46, 0.12); scale: 0.92; } 49% { background: rgba(40, 30, 15, 0.045); scale: 1; }
+  54% { background: rgba(40, 30, 15, 0.045); scale: 1; } 55.5% { background: rgba(203, 46, 46, 0.12); scale: 0.92; } 59%, 100% { background: rgba(40, 30, 15, 0.045); scale: 1; }
+}
+/* trilho de 4 níveis: os pontos ficam nas pontas e a cada terço; o polegar e a linha vermelha param
+   exatamente sobre eles (3 px = meio ponto) */
+.t-menu-pontos { position: relative; flex: 1; height: 34px; margin: 0 21px; display: flex; align-items: center; justify-content: space-between; }
+.t-menu-pontos::before { content: ''; position: absolute; left: 3px; right: 3px; top: 50%; height: 2px; margin-top: -1px; border-radius: 1px; background: rgba(40, 30, 15, 0.1); }
+.t-menu-pontos i { position: relative; width: 6px; height: 6px; border-radius: 50%; background: #d3cdc3; }
+.t-menu-pontos i:nth-of-type(1) { background: var(--lp-vermelho); }
+.t-menu-pontos i:nth-of-type(2) { animation: t-menu-p2 var(--t) linear infinite; }
+.t-menu-pontos i:nth-of-type(3) { animation: t-menu-p3 var(--t) linear infinite; }
+@keyframes t-menu-p2 { 0%, 46% { background: #d3cdc3; } 47.5%, 82% { background: var(--lp-vermelho); } 83%, 100% { background: #d3cdc3; } }
+@keyframes t-menu-p3 { 0%, 56% { background: #d3cdc3; } 57.5%, 82% { background: var(--lp-vermelho); } 83%, 100% { background: #d3cdc3; } }
+.t-menu-enche { position: absolute; left: 3px; top: 50%; height: 2px; margin-top: -1px; border-radius: 1px; background: var(--lp-vermelho); width: 0; animation: t-menu-enche var(--t) linear infinite; }
+.t-menu-polegar {
+  position: absolute; z-index: 2; left: 3px; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%;
+  background: #fff; border: 2px solid var(--lp-vermelho); box-shadow: 0 2px 6px rgba(203, 46, 46, 0.3); animation: t-menu-polegar var(--t) linear infinite;
+}
+/* a mesma mola do polegar real (left 0,5 s) e o pulinho dele (lp-polegar-pulo) */
+@keyframes t-menu-enche {
+  0%, 44% { width: 0; animation-timing-function: cubic-bezier(0.3, 1.25, 0.45, 1); }
+  52%, 54% { width: calc((100% - 6px) / 3); animation-timing-function: cubic-bezier(0.3, 1.25, 0.45, 1); }
+  62%, 82% { width: calc((100% - 6px) * 2 / 3); } 83%, 100% { width: 0; }
+}
+@keyframes t-menu-polegar {
+  0%, 44% { left: 3px; scale: 1; animation-timing-function: cubic-bezier(0.3, 1.25, 0.45, 1); }
+  47% { scale: 1.3; } 52% { left: calc(3px + (100% - 6px) / 3); scale: 1; animation-timing-function: cubic-bezier(0.3, 1.25, 0.45, 1); }
+  54% { left: calc(3px + (100% - 6px) / 3); scale: 1; animation-timing-function: cubic-bezier(0.3, 1.25, 0.45, 1); }
+  57% { scale: 1.3; } 62%, 82% { left: calc(3px + (100% - 6px) * 2 / 3); scale: 1; } 83%, 100% { left: 3px; scale: 1; }
 }
 .t-menu-dedo { animation: t-menu-dedo var(--t) var(--ease) infinite; }
 @keyframes t-menu-dedo {
-  0% { transform: translate(228px, 156px); opacity: 0; }
-  5% { transform: translate(257px, 150px); opacity: 1; }
-  10% { transform: translate(257px, 150px) scale(0.78); } 14% { transform: translate(257px, 150px) scale(1); opacity: 1; }
-  20% { transform: translate(257px, 150px); opacity: 0; }
-  34% { transform: translate(236px, 120px); opacity: 0; }
-  38% { transform: translate(250px, 116px); opacity: 1; }
-  40% { transform: translate(250px, 116px) scale(0.78); } 44%, 52% { transform: translate(250px, 116px) scale(1); opacity: 1; }
-  54% { transform: translate(250px, 116px) scale(0.78); } 58% { transform: translate(250px, 116px) scale(1); opacity: 1; }
-  68%, 100% { transform: translate(262px, 140px); opacity: 0; }
+  0% { translate: 236px 196px; opacity: 0; scale: 1; }
+  4% { translate: 228px 172px; opacity: 0; }
+  10% { translate: 222px 132px; opacity: 1; }
+  12% { scale: 1; } 13.5% { scale: 0.8; } 17% { scale: 1; }
+  18% { translate: 222px 132px; opacity: 1; }
+  22% { translate: 210px 140px; opacity: 0; }
+  24% { translate: 200px 128px; opacity: 0; scale: 1; }
+  26% { opacity: 1; }
+  27% { translate: 200px 128px; scale: 0.86; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  35% { translate: 200px 48px; scale: 0.86; opacity: 1; }
+  36% { scale: 1; }
+  37.5% { translate: 200px 44px; opacity: 0; }
+  39% { translate: 247px 111px; opacity: 0; scale: 1; }
+  42% { translate: 247px 111px; opacity: 1; }
+  44% { scale: 1; } 45.5% { scale: 0.8; } 49% { scale: 1; }
+  54% { scale: 1; } 55.5% { scale: 0.8; } 59% { scale: 1; }
+  60% { translate: 247px 111px; opacity: 1; }
+  61% { translate: 247px 111px; opacity: 0; }
+  61.5% { translate: 200px 150px; opacity: 0; scale: 1; }
+  62.5% { translate: 200px 150px; opacity: 1; scale: 0.86; animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  69% { translate: 200px 111px; scale: 0.86; opacity: 1; }
+  70% { scale: 1; }
+  71% { translate: 200px 107px; opacity: 0; }
+  73% { translate: 140px 16px; opacity: 0; }
+  75% { opacity: 1; }
+  76% { scale: 1; } 77.5% { scale: 0.8; } 81% { scale: 1; }
+  82% { translate: 140px 16px; opacity: 1; }
+  87% { translate: 150px 40px; opacity: 0; }
+  100% { translate: 236px 196px; opacity: 0; scale: 1; }
 }
 
-/* Tour › instalar no iPhone: o Safari, o toque em compartilhar, "Adicionar à Tela de Início" e o ícone na tela */
-.t-ios { overflow: hidden; border-radius: 16px; background: #fbf9f4; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 10px 24px -14px rgba(40, 30, 15, 0.5); }
-.t-ios-pagina { position: absolute; inset: 0 0 28px; padding: 12px 14px; animation: t-ios-pagina var(--t) var(--ease) infinite; }
-.t-ios-pagina b { display: block; font: italic 1.55rem/1 var(--font-leitura); color: #111; }
-.t-ios-pagina small { display: block; margin: 3px 0 8px; font-size: 0.5rem; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.45); }
-.t-ios-pagina i { display: block; height: 6px; margin-top: 8px; border-radius: 3px; background: rgba(0, 0, 0, 0.1); }
-.t-ios-pagina i:nth-of-type(2) { width: 88%; }
-.t-ios-pagina i:nth-of-type(3) { width: 70%; }
-.t-ios-pagina i:nth-of-type(4) { width: 80%; }
-.t-ios-barra {
-  position: absolute; left: 0; right: 0; bottom: 0; height: 28px; display: flex; align-items: center; justify-content: space-around; padding: 0 6px;
-  background: rgba(246, 243, 238, 0.97); border-top: 1px solid rgba(0, 0, 0, 0.08); color: #2f6df0; font-size: 1.05rem; line-height: 1;
+/* 9 · instalar no iPhone: compartilhar do Safari → "Adicionar à Tela de Início" → "Adicionar" → o ícone */
+.t-ios { --azul: #007aff; background: #fff; }
+.t-ios-safari { position: absolute; inset: 0; }
+.t-ios-pagina { position: absolute; inset: 0 0 64px; padding: 12px 18px; background: var(--lp-fundo); }
+.t-ios-pagina em { display: block; font: italic 11.5px/1 var(--font-titulo); color: #4f7d5c; }
+.t-ios-pagina b { display: block; margin-top: 3px; font: italic 400 44px/0.95 var(--font-titulo); letter-spacing: -0.03em; }
+.t-ios-pagina small { display: block; margin-top: 4px; font: italic 11px/1.2 var(--font-leitura); }
+.t-ios-endereco {
+  position: absolute; left: 10px; right: 10px; bottom: 34px; height: 24px; display: flex; align-items: center; padding: 0 10px; gap: 6px; border-radius: 12px;
+  background: #fff; box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.1); font: 500 8px/1 var(--font-sans); color: #1c1c1e;
 }
-.t-ios-barra svg { width: 15px; height: 15px; }
-.t-ios-liv, .t-ios-abas { width: 14px; height: 12px; border: 1.6px solid currentColor; border-radius: 3px; }
-.t-ios-abas { width: 11px; height: 11px; }
-.t-ios-share { animation: t-ios-share var(--t) var(--ease) infinite; }
-.t-ios-folha {
-  position: absolute; left: 6px; right: 6px; bottom: 0; top: 40px; padding: 6px 8px; border-radius: 14px 14px 0 0; background: #fff;
-  box-shadow: 0 -10px 26px rgba(0, 0, 0, 0.2); transform: translateY(105%); animation: t-ios-folha var(--t) var(--ease) infinite;
+.t-ios-endereco span { font-weight: 600; font-size: 7.5px; }
+.t-ios-endereco b { flex: 1; text-align: center; padding-right: 18px; font-weight: 500; }
+.t-ios-safari::before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 64px; background: rgba(246, 246, 246, 0.96); box-shadow: 0 -0.5px 0 rgba(0, 0, 0, 0.12); }
+.t-ios-barra { position: absolute; left: 0; right: 0; bottom: 4px; height: 26px; display: flex; justify-content: space-around; align-items: center; color: var(--azul); }
+.t-ios-barra i { display: grid; place-items: center; width: 28px; height: 26px; }
+.t-ios-barra svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.t-ios-barra .t-ios-off { color: #c7c7cc; }
+.t-ios-share { animation: t-ios-share var(--t) linear infinite; }
+@keyframes t-ios-share { 0%, 12% { opacity: 1; } 13% { opacity: 0.3; } 17%, 100% { opacity: 1; } }
+.t-ios-folha, .t-ios-add {
+  position: absolute; left: 0; right: 0; top: 12px; bottom: 0; z-index: 2; padding: 7px 10px; border-radius: 12px 12px 0 0;
+  background: #f2f2f7; box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.18); translate: 0 110%;
 }
-.t-ios-grab { width: 28px; height: 3px; margin: 0 auto 6px; border-radius: 2px; background: rgba(0, 0, 0, 0.18); }
-.t-ios-linha { display: flex; align-items: center; justify-content: space-between; height: 26px; padding: 0 8px; border-radius: 8px; font-size: 0.62rem; color: #1c1c1e; }
-.t-ios-linha svg { width: 14px; height: 14px; }
-.t-ios-alvo { animation: t-ios-alvo var(--t) var(--ease) infinite; }
+.t-ios-folha { animation: t-ios-folha var(--t) linear infinite; }
+@keyframes t-ios-folha {
+  0%, 13% { translate: 0 110%; animation-timing-function: cubic-bezier(0.2, 0.9, 0.3, 1); }
+  21%, 44% { translate: 0 0; } 44.5%, 100% { translate: 0 110%; }
+}
+.t-ios-site { display: flex; align-items: center; gap: 7px; height: 26px; }
+.t-ios-site img { width: 22px; height: 22px; border-radius: 5px; }
+.t-ios-site span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.t-ios-site b, .t-ios-add-card b { font: 600 8.5px/1 var(--font-sans); color: #1c1c1e; }
+.t-ios-site small, .t-ios-add-card small { font: 6.5px/1 var(--font-sans); color: #8e8e93; }
+.t-ios-x { display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: #e3e3e8; color: #8e8e93; }
+.t-ios-x svg { width: 8px; height: 8px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+.t-ios-apps { display: flex; gap: 14px; height: 24px; align-items: center; padding: 0 2px; margin: 3px 0 5px; }
+.t-ios-apps i { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(#5ac8fa, #007aff); }
+.t-ios-apps i:nth-child(2) { background: linear-gradient(#65e06c, #2fbf3a); }
+.t-ios-apps i:nth-child(3) { border-radius: 7px; background: linear-gradient(#5aa7ff, #1a73f0); }
+.t-ios-apps i:nth-child(4) { border-radius: 7px; background: linear-gradient(#5ee07a, #25d366); }
+.t-ios-apps i:nth-child(5) { border-radius: 7px; background: linear-gradient(#ffd25a, #ff9f0a); }
+.t-ios-lista { overflow: hidden; border-radius: 9px; background: #fff; }
+.t-ios-lista div { position: relative; display: flex; align-items: center; justify-content: space-between; height: 22px; padding: 0 10px; font: 8.5px/1 var(--font-sans); color: #1c1c1e; }
+.t-ios-lista div + div::before { content: ''; position: absolute; left: 10px; right: 0; top: 0; height: 0.5px; background: #d8d8dc; }
+.t-ios-lista svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.t-ios-alvo { animation: t-ios-alvo var(--t) linear infinite; }
+@keyframes t-ios-alvo { 0%, 34% { background: #fff; } 35%, 40% { background: #d1d1d6; } 44%, 100% { background: #fff; } }
+.t-ios-add { animation: t-ios-add var(--t) linear infinite; }
+@keyframes t-ios-add {
+  0%, 36% { translate: 0 110%; animation-timing-function: cubic-bezier(0.2, 0.9, 0.3, 1); }
+  44%, 62% { translate: 0 0; } 62.5%, 100% { translate: 0 110%; }
+}
+.t-ios-add-topo { display: flex; align-items: center; justify-content: space-between; height: 22px; font: 8.5px/1 var(--font-sans); color: var(--azul); }
+.t-ios-add-topo b { font-weight: 600; color: #1c1c1e; }
+.t-ios-ok { font-weight: 600; animation: t-ios-ok var(--t) linear infinite; }
+@keyframes t-ios-ok { 0%, 54% { opacity: 1; } 55% { opacity: 0.3; } 59%, 100% { opacity: 1; } }
+.t-ios-add-card { display: flex; align-items: center; gap: 9px; margin-top: 10px; padding: 9px 10px; border-radius: 9px; background: #fff; }
+.t-ios-add-card img { width: 36px; height: 36px; border-radius: 8px; box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.1); }
+.t-ios-add-card span { display: flex; flex-direction: column; gap: 4px; }
 .t-ios-home {
-  position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, 1fr); align-content: start; gap: 8px 12px; padding: 16px 18px;
-  background: linear-gradient(160deg, #cdd7ea, #e9d8cf); opacity: 0; animation: t-ios-home var(--t) var(--ease) infinite;
+  position: absolute; inset: 0; z-index: 5; display: grid; grid-template-columns: repeat(4, 34px); justify-content: space-between; align-content: start;
+  gap: 16px 0; padding: 18px 30px; background: linear-gradient(160deg, #b9c9e6, #e7cfc4 70%, #f0dcc8); opacity: 0; animation: t-ios-home var(--t) linear infinite;
 }
-.t-ios-home > i { display: block; aspect-ratio: 1; border-radius: 11px; background: rgba(255, 255, 255, 0.55); }
+@keyframes t-ios-home { 0%, 56% { opacity: 0; } 62%, 88% { opacity: 1; } 95%, 100% { opacity: 0; } }
+.t-ios-home > i { width: 34px; height: 34px; border-radius: 9px; background: rgba(255, 255, 255, 0.5); }
 .t-ios-home > .t-ios-nosso { position: relative; background: none; }
-.t-ios-nosso img { display: block; width: 100%; height: 100%; border-radius: 11px; transform: scale(0); animation: t-ios-icone var(--t) var(--ease) infinite; box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.4); }
-.t-ios-nosso em { position: absolute; left: -6px; right: -6px; top: 100%; margin-top: 3px; text-align: center; font: normal 600 0.5rem var(--font-sans); color: #222; opacity: 0; animation: t-ios-rotulo var(--t) var(--ease) infinite; }
+.t-ios-nosso img { width: 34px; height: 34px; border-radius: 9px; scale: 0; box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.35); animation: t-ios-icone var(--t) linear infinite; }
+.t-ios-nosso em { position: absolute; left: -10px; right: -10px; top: 100%; margin-top: 3px; text-align: center; font: 500 6.5px/1 var(--font-sans); color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); opacity: 0; animation: t-ios-rotulo var(--t) linear infinite; }
+@keyframes t-ios-icone { 0%, 62% { scale: 0; animation-timing-function: cubic-bezier(0.3, 1.5, 0.5, 1); } 70%, 100% { scale: 1; } }
+@keyframes t-ios-rotulo { 0%, 66% { opacity: 0; } 71%, 100% { opacity: 1; } }
+.t-ios-dock { position: absolute; left: 14px; right: 14px; bottom: 8px; height: 46px; display: flex; justify-content: space-around; align-items: center; border-radius: 16px; background: rgba(255, 255, 255, 0.32); }
+.t-ios-dock i { width: 32px; height: 32px; border-radius: 9px; background: rgba(255, 255, 255, 0.55); }
 .t-ios-dedo { animation: t-ios-dedo var(--t) var(--ease) infinite; }
 @keyframes t-ios-dedo {
-  0% { left: 78%; top: 70%; opacity: 0; transform: scale(1); }
-  8% { left: 50%; top: 91%; opacity: 1; transform: scale(1); }
-  12% { left: 50%; top: 91%; opacity: 1; transform: scale(0.8); }
-  17% { left: 50%; top: 91%; opacity: 1; transform: scale(1); }
-  22% { left: 50%; top: 91%; opacity: 0; }
-  30% { left: 62%; top: 70%; opacity: 0; transform: scale(1); }
-  36% { left: 52%; top: 56%; opacity: 1; transform: scale(1); }
-  41% { left: 52%; top: 56%; opacity: 1; transform: scale(0.8); }
-  46% { left: 52%; top: 56%; opacity: 1; transform: scale(1); }
-  52%, 100% { left: 52%; top: 56%; opacity: 0; }
+  0% { translate: 200px 196px; opacity: 0; scale: 1; }
+  5% { translate: 168px 176px; opacity: 0; }
+  10% { translate: 140px 151px; opacity: 1; }
+  12% { scale: 1; } 13.5% { scale: 0.8; } 17% { scale: 1; }
+  19% { translate: 140px 151px; opacity: 1; }
+  24% { translate: 200px 160px; opacity: 0; }
+  27% { translate: 176px 166px; opacity: 0; }
+  32% { translate: 140px 132px; opacity: 1; }
+  34% { scale: 1; } 35.5% { scale: 0.8; } 39% { scale: 1; }
+  41% { translate: 140px 132px; }
+  51% { translate: 249px 30px; }
+  54% { scale: 1; } 55.5% { scale: 0.8; } 59% { scale: 1; }
+  60% { translate: 249px 30px; opacity: 1; }
+  66% { translate: 262px 76px; opacity: 0; }
+  100% { translate: 200px 196px; opacity: 0; scale: 1; }
 }
-@keyframes t-ios-share { 0%, 10% { background: transparent; } 12%, 16% { background: rgba(47, 109, 240, 0.18); border-radius: 6px; } 19%, 100% { background: transparent; } }
-@keyframes t-ios-folha { 0%, 14% { transform: translateY(105%); } 24%, 50% { transform: translateY(0); } 58%, 100% { transform: translateY(105%); } }
-@keyframes t-ios-alvo { 0%, 40% { background: transparent; } 42%, 50% { background: rgba(47, 109, 240, 0.14); } 56%, 100% { background: transparent; } }
-@keyframes t-ios-pagina { 0%, 54% { opacity: 1; } 62%, 92% { opacity: 0; } 100% { opacity: 1; } }
-@keyframes t-ios-home { 0%, 54% { opacity: 0; } 64%, 92% { opacity: 1; } 100% { opacity: 0; } }
-@keyframes t-ios-icone { 0%, 64% { transform: scale(0); } 71% { transform: scale(1.18); } 75%, 100% { transform: scale(1); } }
-@keyframes t-ios-rotulo { 0%, 72% { opacity: 0; } 78%, 92% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Movimento reduzido: cada cena fica parada no quadro que melhor a explica (--quadro), sem o dedo */
+@media (prefers-reduced-motion: reduce) {
+  .lp-tour-cena > div, .lp-tour-cena > div * { animation-play-state: paused !important; animation-delay: calc(-1 * var(--quadro, 0s)) !important; }
+  .t-dedo { display: none; }
+}
