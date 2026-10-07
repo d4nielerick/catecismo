@@ -1,0 +1,650 @@
+[
+  {
+    "lectio": 1,
+    "versos": [
+      1,
+      7
+    ],
+    "itens": [
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Didiceras in superioribus, saecularibus occupationibus non teneri, caduca non praeferre perpetuis. Sed quia fragilitas humana firmum nequit in tanto saeculi lubrico tenere vestigium, etiam adversus errorem remedia tibi bonus medicus demonstravit, spem veniae iudex misericors non negavit; unde subditur erant autem appropinquantes ei publicani et peccatores ut audirent eum"
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Idest, qui publica exigunt vectigalia, vel conducunt, et qui lucra saeculi per negotia sectantur"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Hoc enim exequebatur cuius causa carnem susceperat, admittens peccatores, sicut medicus aegrotantes. Sed Pharisaei vere criminosi huic pietati murmura recompensabant; unde sequitur et murmurabant Pharisaei et Scribae, dicentes, quia hic peccatores recipit et manducat cum illis"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Ex qua re colligitur quia vera iustitia compassionem habet, falsa dedignationem; quamvis et iusti soleant recte peccatoribus indignari. Sed aliud est quod agitur typo superbiae, aliud quod zelo disciplinae: quia iusti, etsi foris increpationes per disciplinam exaggerant, intus tamen dulcedinem per caritatem servant: praeponunt sibi in animo ipsos plerumque quos corrigunt: quod agentes per disciplinam subditos, et per humilitatem custodiunt semetipsos. At contra hi qui de falsa iustitia superbire solent, ceteros quosque despiciunt, nulla infirmantibus misericordia condescendunt; et quo se peccatores esse non credunt, eo deterius peccatores fiunt: de quorum numero Pharisaei erant, qui diiudicantes dominum quod peccatores susciperet, arenti corde ipsum fontem misericordiae reprehendebant. Sed quia aegri erant ita ut aegros se esse nescirent, quatenus quod erant agnoscerent, caelestis medicus blandis eos fomentis curat; sequitur enim et ait ad illos parabolam istam, dicens: quis ex vobis homo? Similitudinem dedit quam in se homo recognosceret, et tamen ad auctorem hominum pertineret: quia enim centenarius perfectus est numerus, ipse centum ovem habuit, cum sanctorum Angelorum et hominum naturam possedit; unde subditur qui habet centum oves"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Hinc percipe latitudinem regni salvatoris nostri. Dicit enim oves esse centum, referens numerum subiectarum sibi rationalium naturarum ad integram multitudinem: est enim centenarius numerus perfectus ex decem decadibus constitutus. Sed ex his una oberravit, scilicet genus humanum, quod terram colit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Dives pastor, cuius nos omnes centesima portio sumus; unde sequitur et si perdiderit unam ex illis"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Una ovis tunc periit quando peccando homo pascua vitae reliquit. In deserto autem nonagintanovem remanserant: quia rationalis creaturae numerus, Angelorum videlicet et hominum, qui ad videndum Deum conditus fuerat, pereunte homine, erat imminutus; unde sequitur nonne dimittit nonaginta novem in deserto? Quia scilicet Angelorum choros reliquit in caelo. Tunc autem homo caelum deseruit, cum peccavit. Et ut perfecta summa ovium integraretur in caelo, homo perditus quaerebatur in terra; unde sequitur et vadit ad illam quae perierat, donec inveniat illam"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Numquid autem saeviens in reliquas motus est pietate unius? Nequaquam: sunt enim illae in tuto, circumsepiente illas potentissima dextera: sed magis oportebat misereri pereuntis, ne imperfecta videretur residua multitudo: una enim reducta, sortitur centenarius propriam speciem"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Vel illas nonaginta novem dixit quas reliquit in deserto, superbos significans, tamquam solitudinem gerentes in animo, dum solos se videri volunt; quibus ad perfectionem unitas deest: cum enim quisque a vera unitate divellitur, superbe divellitur: suae quippe potestatis esse cupiens, non sequitur unum, quod est Deus. Uni autem deputat omnes per poenitentiam reconciliatos, quae humilitate obtinetur"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Cum autem pastor invenisset ovem, non punivit: non duxit ad gregem urgendo; sed superponens humero, et portans, clementer annumeravit gregi; unde sequitur et cum invenerit ovem, imponit in humeros suos gaudens",
+        "pt": "Ora, tendo o pastor encontrado a ovelha, não a castigou: não a conduziu ao rebanho tocando-a à força; mas, pondo-a sobre o ombro e carregando-a, reintegrou-a com clemência ao rebanho; por isso segue-se: \"e, quando encontra a ovelha, põe-na sobre os ombros, alegre\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-opus (subagente)",
+          "em": "2026-10-07",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Ovem humeris suis imposuit, quia humanam naturam suscipiens, peccata nostra ipse portavit. Inventa autem ove, ad domum redit, quia pastor noster, reparato homine, ad regnum caeleste rediit; unde sequitur et veniens domum, convocat amicos et vicinos, dicens illis: congratulamini mihi, quia inveni ovem meam quae perierat. Amicos et vicinos vocat Angelorum choros; quia amici eius sunt, quia voluntatem eius continue in sua stabilitate custodiunt; vicini quoque eius sunt, quia claritatem visionis illius sua assiduitate perfruuntur",
+        "pt": "Pôs a ovelha sobre os seus ombros, porque, assumindo a natureza humana, ele mesmo carregou os nossos pecados. Encontrada a ovelha, volta para casa, porque o nosso Pastor, reparado o homem, voltou ao Reino celeste; por isso segue-se: \"e, chegando a casa, convoca os amigos e vizinhos, dizendo-lhes: Alegrai-vos comigo, porque encontrei a minha ovelha que se havia perdido\". Chama amigos e vizinhos aos coros dos anjos; porque são seus amigos, pois guardam continuamente a sua vontade na sua firmeza; são também seus vizinhos, porque, pela sua assiduidade, gozam plenamente da claridade da sua visão.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-opus (subagente)",
+          "em": "2026-10-07",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Supernae igitur virtutes oves dicuntur in eo quod omnis natura creata aspectu Dei bestialis est; in eo vero quod rationalis est, amici et vicini dicuntur"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Et notandum, quod non dicit congratulamini inventae ovi, sed mihi: quia videlicet eius est gaudium vita nostra; et cum nos ad caelum reducimur, solemnitatem laetitiae illius implemus"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Angeli autem, quoniam sunt rationales, non immerito hominum redemptione laetantur; unde sequitur dico vobis, quod ita gaudium erit in caelo super uno peccatore poenitentiam agente, quam supra nonaginta novem iustis, qui non indigent poenitentia. Hoc proficiat ad incentiva probitatis, si unusquisque conversionem suam gratam fore credat coetibus Angelorum, quorum aut affectare patrocinium, aut vereri debet offensam",
+        "pt": "Os anjos, porém, por serem racionais, não sem razão se alegram com a redenção dos homens; por isso segue-se: \"Eu vos digo que assim haverá alegria no céu por um só pecador que faz penitência, mais do que por noventa e nove justos que não precisam de penitência\". Sirva isto de incentivo à retidão, se cada um crer que a sua conversão será agradável às assembleias dos anjos, cujo patrocínio deve buscar ou cuja ofensa deve temer.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-opus (subagente)",
+          "em": "2026-10-07",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Plus autem de conversis peccatoribus quam de stantibus iustis in caelo gaudium esse fatetur; quia plerumque hi qui nullis se oppressos peccatorum molibus sciunt, stant quidem in via iustitiae, sed tamen ad caelestem patriam anxie non anhelant, et plerumque pigri remanent ad exercenda bona praecipua, quia securi sibi sunt quod nulla commiserint mala graviora: at contra nonnunquam hi qui se aliqua illicita egisse meminerunt, ex ipso suo dolore compuncti, ad amorem Dei inardescunt, et quia errasse se a Deo considerant, damna praecedentia lucris sequentibus recompensant. Maius ergo gaudium fit in caelo, quia et dux in praelio plus eum militem diligit qui post fugam reversus hostem fortiter premit, quam eum qui numquam terga praebuit, et numquam aliquid fortiter fecit. Sic agricola illam amplius terram amat quae post spinas uberes fructus profert, quam eam quae numquam spinas habuit, et numquam fertilem messem producit. Sed inter haec sciendum est, quia sunt plerique iusti, in quorum vita tantum est gaudium, ut eis quaelibet peccatorum poenitentia praeponi nullatenus possit. Hinc ergo colligendum quantum Deo gaudium faciat quando humiliter plangit iustus, si facit in caelo gaudium quando hoc quod male gessit, per poenitentiam damnat iniustus"
+      }
+    ]
+  },
+  {
+    "lectio": 2,
+    "versos": [
+      8,
+      10
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Per praecedentem parabolam, in qua genus humanum dicebatur ovis erratica, docebamur nos fore creatura sublimis Dei, qui fecit nos, et non ipsi nos; cuius pascuae oves sumus: subiungitur secunda parabola, qua genus humanum comparatur drachmae quae periit; per quam ostendit nos ad similitudinem et imaginem regiam factos esse, scilicet summi Dei: nam drachma nummus est impressam habens regiam figuram; unde dicitur aut quae mulier habens decem drachmas"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Qui significatur per pastorem, ipse per mulierem; ipse enim Deus, ipse et Dei sapientia. Angelorum autem et hominum naturam ad cognoscendum se dominus condidit, et ad similitudinem suam creavit. Decem ergo drachmas habuit, quia novem sunt chori Angelorum; sed ut compleretur electorum numerus, homo decimus est creatus"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Vel in novem drachmis, sicut et in nonaginta novem ovibus, ponit eorum significationem qui de se praesumentes peccatoribus ad salutem redeuntibus se praeponunt: unum enim deest a novem ut decem sint, et a nonaginta novem ut centum sint; cui uni deputat omnes per poenitentiam reconciliatos"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Et quia imago exprimitur in drachma, mulier drachmam perdiderat, quando homo, qui conditus ad imaginem Dei fuerat, peccando a similitudine sui conditoris recessit; et hoc est quod subditur si perdiderit drachmam unam, nonne accendit lucernam? Accendit mulier lucernam, quia Dei sapientia apparuit in humanitate. Lucerna quippe lumen in testa est; lumen vero in testa est divinitas in carne: accensa autem lucerna, sequitur et evertit domum: quia scilicet mox ut eius divinitas per carnem claruit, omnis se nostra conscientia concussit: quia eversionis sermo non discrepat in eo quod in aliis codicibus legitur emundat: quia prava mens si non prius prae timore evertitur, ab assuetis vitiis non mundatur. Eversa autem domo, invenitur drachma; sequitur enim et quaerit diligenter donec inveniat; quia scilicet cum perturbatur conscientia hominis, reparatur in homine similitudo conditoris"
+      },
+      {
+        "autor": "Gregorius Nazianzenus",
+        "obra": "",
+        "latim": "Inventa autem drachma, caelestes virtutes facit participes gaudii, quas ministras dispensationis fecit; unde sequitur et cum invenerit, convocat amicas et vicinas dicens: congratulamini mihi, quia inveni drachmam quam perdideram"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Supernae enim virtutes tanto divinae sapientiae iuxta sunt, quanto ei per gratiam continuae visionis appropinquant"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Vel amicae sunt, ut exequentes voluntatem ipsius: vicinae vero, ut incorporeae; vel forte amicae ipsius sunt omnes supernae virtutes, vicinae vero sunt propinquiores, scilicet throni, Cherubim et Seraphim"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Vel aliter. Hoc reor dominum nobis proponere in inquisitione perditae drachmae, quia nulla nobis a ceteris virtutibus utilitas provenit, quas drachmas vocat, quamvis praesto sint omnes, una sola deficiente animae viduatae, qua scilicet divinae similitudinis nitorem sortitur: propter quod primo quidem iubet lucernam accendere, scilicet verbum divinum, quod abscondita patefacit. Vel forsan poenitentiae lampadem, sed in domo propria, idest in seipso et in sua conscientia, oportet perquirere drachmam perditam, idest regis imaginem, quae non penitus deperiit, sed est tecta sub fimo, qui significat carnis contagia; quibus studiose abstersis, idest dilutis per solertiam vitae, elucescit quod quaeritur: unde oportet ipsam quae invenit gratulari; necnon ad participia gaudii vocare vicinas, idest contubernales virtutes, idest rationabilem et concupiscibilem et innatum iracundiae affectum, et si quae sint tales vires circa animam consideratae, quas docet gaudere in domino. Deinde concludens parabolam, subdit ita dico vobis, gaudium erit Angelis super uno peccatore poenitentiam agente"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Poenitentiam agere est praeterita mala plangere, et plangenda non perpetrare. Nam qui sic alia deplorat ut tamen alia committat, adhuc poenitentiam agere aut ignorat aut dissimulat. Cogitandum est etiam ut per hoc conditori suo satisfaciat: ut qui commisit prohibita, sibi abscindere debeat etiam concessa; et se reprehendat in minimis qui se meminit in maximis deliquisse",
+        "pt": "Fazer penitência é chorar os males passados e não cometer o que se deve chorar. Pois quem chora umas coisas de tal modo que, no entanto, comete outras, ainda ou ignora ou dissimula o fazer penitência. Deve-se pensar também em que por isto satisfaça ao seu Criador: que quem cometeu coisas proibidas deve cortar para si também as permitidas; e repreenda-se nas mínimas quem se lembra de ter pecado nas máximas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-opus (subagente)",
+          "em": "2026-10-07",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 3,
+    "versos": [
+      11,
+      16
+    ],
+    "itens": [
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Tres ex ordine Lucas parabolas posuit: ovis quae perierat et inventa est; drachmae quae perierat, et inventa est; filii qui erat mortuus et revixit; ut triplici remedio provocati vulnera nostra curemus. Christus ut pastor te suo corpore vehit, quaerit ut mater Ecclesia, recipit Deus pater: prima misericordia, secunda suffragatio, tertia reconciliatio"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Est etiam inter parabolas supradictas ratio distinctionis secundum personas vel mentes peccantium, ut pater filium recipiat poenitentem, qui arbitrii sui libertate utitur, ut cognoscat unde ceciderit; pastor vero ovem errantem et non sapientem reverti requirat, et humeris suis referat, irrationabili animali imprudentem hominem comparans, qui alieno dolo circumventus, erraverat sicut ovis. Praesens ergo parabola proponitur cum dicitur ait autem: homo quidam habuit duos filios. Sunt qui dicant de duobus filiis istis seniorem Angelos esse, iuniorem vero hominem ponunt, qui in longinquam peregrinationem abierit, quando in terram de caelis et Paradiso cecidit: et aptant consequentia, respicientes ad casum vel statum Adae. Sed hic sensus pius quidem videtur, nescio tamen si verus sit: quia iunior filius ad poenitentiam venit sua sponte, recordatus praeteritae abundantiae patris sui; dominus autem veniens ad poenitentiam vocavit humanum genus, dum sponte sua regredi, unde ceciderat, non cogitaret. Deinde senior filius in reditu et salute fratris sui tristatur; cum dominus dicat laetitiam esse apud Angelos super uno peccatore poenitentiam agente"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quidam vero per seniorem filium dicunt significari Israel secundum carnem; per alium vero qui discessit a patre describitur multitudo gentium"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Hic ergo homo habens duos filios, Deus habens duos populos intelligitur, tamquam duas stirpes generis humani: unam eorum qui permanserunt in unius Dei cultu, alteram eorum qui usque ad colendum idola deseruerunt Deum. Ab ipso ergo exordio creaturae mortalium, maior filius ad cultum unius Dei pertinet, minor autem petit ut sibi pars substantiae quae eum tangeret, daretur a patre; unde sequitur et dixit adolescentior ex illis patri: pater, da mihi portionem substantiae quae me contingit; tamquam anima potestate sua delectata, id quod illi est vivere, intelligere, meminisse, vel ingenio alacri excellere, petit, quae divina sunt munera. Haec autem in potestate sua accepit per liberum arbitrium; unde sequitur et divisit illis substantiam"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Hominis substantia rationalitas est, quam comitatur libertas arbitrii; et similiter quaecumque dominus dedit nobis, pro substantia nostra putabitur, ut caelum, terra et universa creatura, lex et prophetae"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vides autem, quod divinum patrimonium petentibus datur; nec putes culpa patris, quod adolescentiori dedit: nulla Dei regno infirma aetas, nec fides gravatur annis. Ipse certe se iudicavit idoneum qui poposcit: atque utinam non recessisset a patre; impedimentum nescisset aetatis; sequitur enim et non post multos dies, congregatis omnibus, adolescentior filius peregre profectus est in regionem longinquam"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Minor filius in regionem longinquam profectus est, non localiter a Deo decedens, qui ubique est, sed affectu: fugit enim Deum peccator ut a longinquo stet"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Quisquis enim ita vult esse similis Deo ut fortitudinem suam ad illum custodiat, non ab illo recedat, ei cohaerendo, ut custodiat similitudinem et imaginem ad quam factus est. Porro si perverse vult imitari Deum, ut quomodo Deus non habet a quo regatur, sic ipse velit sua potestate uti, ut nullo regente vivat; quid restat nisi ut recedens ab eius calore torpescat, recedens a veritate vanescat?"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Quod autem non post multos dies dixit factum, ut congregatis omnibus peregre proficisceretur in regionem longinquam, quae est oblivio Dei; hoc est quia non multo post institutionem humani generis placuit animae per liberum arbitrium ferre secum velut quamdam potentiam naturae suae, et deserere eum a quo condita est, fidens de viribus suis; quas vires tanto consumit citius, quanto eum deseruit a quo datae sunt; unde sequitur et ibi dissipavit substantiam suam vivendo luxuriose. Luxuriosam vero vel prodigam vitam vocat amantem fundere atque spatiari pompis exterioribus, intus inanescentem, cum ea quisque sequitur quae ad alia procedunt, et relinquit eum qui sibi est interior; unde sequitur et postquam consummasset omnia, facta est fames magna in regione illa. Fames est indigentia verbi veritatis. Sequitur et ipse coepit egere"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Merito egere coepit qui thesauros sapientiae et scientiae Dei, divitiarumque caelestium altitudinem dereliquit. Sequitur et abiit, et adhaesit uni civium regionis illius"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Unus civium regionis illius aliquis aereus princeps est ad militiam Diaboli pertinens, cuius villa est modus potestatis ipsius; de qua sequitur et misit illum in villam suam, ut pasceret porcos. Porci sunt immundi spiritus qui sub ipso erant"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Porcos autem pascere est ea quibus immundi spiritus gaudent, operari. Sequitur et cupiebat implere ventrem suum de siliquis quas porci manducabant"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Siliqua genus leguminis est, intus inanis, foris mollis, quo corpus non reficitur, sed impletur, ut sit magis oneri quam usui"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Siliquae ergo, quibus porcos pascebat, saeculares doctrinae sunt, steriles, vanitatem personantes, de quibus laudes idolorum fabularumque ad deos gentium pertinentium vario sermone atque carminibus percrepant; quibus Daemonia delectantur: unde cum iste satiari cupiebat, aliquid solidum et rectum, quod ad beatam vitam pertineret, invenire volebat in talibus, et non poterat; unde sequitur et nemo illi dabat"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Sed cum Iudaei multipliciter arguantur in sacra Scriptura de multis criminibus, quomodo populo illi convenient verba maioris filii dicentis ecce tot annis servio tibi, et numquam mandatum tuum praeterivi? Est ergo hic sensus parabolae. Arguentibus eum Pharisaeis et Scribis quod reciperet peccatores, proponit praesentem parabolam, in qua hominem vocat Deum, qui pater est duorum fratrum, iustorum scilicet et peccatorum; quorum primus gradus est iustorum ab initio iustitiam sequentium, secundus gradus est hominum per poenitentiam ad iustitiam reductorum"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Facit etiam ad antiquioris consistentiam magis animus senilis et gravitas, quam canities capillorum; nec qui secundum aetatem est iuvenis increpatur, sed iuvenis moribus, qui secundum passiones vivit"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Abiit ergo adolescentior nondum adultus mente, petitque a patre id quod ei de hereditate contingit, ut scilicet non ex necessitate serviat: sumus enim animalia rationalia liberum arbitrium habentia"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Dicit autem Scriptura dividere patrem ex aequo filiis duobus substantiam suam, idest scientiam boni et mali, quae verae et perpetuae sunt opes animae bene utentis. Quae enim ex Deo est in prima nativitate hominibus substantia rationalis, aequaliter cunctis nascentibus datur. De subsequenti autem conversatione unusquisque plus aut minus huius substantiae possidere invenitur, dum unus ea quae sumpserit patris esse credens, quasi paterna custodit; alius sicut propriae possessionis licentia dissipandis abutitur. Ostenditur autem libertas arbitrii: quia pater neque discedere volentem retinuit, ne liberi arbitrii auferat potestatem; neque manere cupientem cogit abscedere. Abiit autem longe, non locorum translatione, sed mentis declinatione; unde sequitur peregre profectus est in regionem longinquam"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Quid enim longinquius est quam a se recedere, nec regionibus, sed moribus separari? Etenim qui se a Christo separat, exul est patriae, et civis mundi. Merito ergo prodegit patrimonium qui recessit ab Ecclesia"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Unde et denominatus est prodigus, dissipans substantiam suam, idest intellectum rectum, castimoniam, documenta veritatis, notitiam genitoris, memoriam creationis, sensum"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Facta est autem in regione illa fames non epularum, sed bonorum operum atque virtutum, quae sunt miserabiliora ieiunia: etenim qui recedit a verbo Dei, esurit, quia non in solo pane vivit homo, sed in omni verbo Dei, et qui recedit a thesauro eget. Egere ergo ideo coepit et famem pati, quia nihil prodigae satis est voluntati. Abiit itaque, et adhaesit uni civium: qui enim haeret, in laqueo est; et videtur civis iste princeps esse istius mundi. Denique ad villam eius mittitur, quam emit qui se excusat a regno"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "In villam enim mitti est substantiae mundialis cupiditate subiugari"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Pascit autem porcos illos in quos petit Diabolus introire, in sordibus ac foetore viventes"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Hos igitur pascit qui alios praecellit in vitio, ut sunt lenones, archipraedones, archipublicani, qui aliis sunt doctores operationis malae"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Vel spiritualibus destitutus operibus, quasi prudentia et intellectu, porcos pascere dicitur, hoc est, sordidas et immundas in anima sua cogitationes nutrire: et edit escas irrationabiles pravae conversationis, dulces quidem egenti bonorum: quia suave perversis videtur omne opus carneae voluptatis, quae virtutes animae penitus enervat et perimit. Huiusmodi cibos quasi porcinos et male dulces, idest carnalium delectationum illecebras, siliquarum nomine Scriptura designat"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Cupiebat autem siliquis ventrem implere suum: nec enim alia est cura luxuriosis nisi ut ventrem suum impleant"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quibus nullus dat saturitatem malorum; distat enim a Deo qui talibus vescitur. Daemones autem ad hoc student, ne unquam saturitas malorum proveniat"
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Vel nemo illi dabat, quia cum Diabolus aliquem suum facit, ultra ei abundantiam non procurat, sciens eum esse mortuum"
+      }
+    ]
+  },
+  {
+    "lectio": 4,
+    "versos": [
+      17,
+      24
+    ],
+    "itens": [
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Contempserat patrem in primo recessu adolescentior filius, et opes paternas profuderat: at ubi lapsu temporis est attritus laboribus, dum mercenarius fieret, et eodem cum porcis pabulo pasceretur, rediit in domum paternam castigatus; unde dicitur in se autem reversus dixit: quanti mercenarii in domo patris mei abundant panibus? Ego autem hic fame pereo"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Bene in se revertitur, quia a se recessit: etenim qui ad Deum regreditur, se sibi reddit; et qui recedit a Christo, se sibi abdicat"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "In se autem reversus est cum ab eis quae forinsecus frustra illiciunt et seducunt, in conscientiae suae interiora suam intentionem reduxit"
+      },
+      {
+        "autor": "Gregorius Nazianzenus",
+        "obra": "",
+        "latim": "Est autem secundum tres differentias obedientiae discretio: aut enim metuentes supplicia declinamus a malo, et sumus in dispositione servili; aut mercedis lucra venantes exequimur quae mandantur, mercenariis assimilati; aut ipsius gratia boni et dilectionis ad eum qui dedit legem servimus; et sic dispositionem redolemus filiorum"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Filius enim, qui habet sancti spiritus pignus in corde, saecularis mercedis lucra non quaerit, sed ius servat heredis. Sunt etiam mercenarii boni qui conducuntur ad vineam; isti non siliquis, sed panibus abundant"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Unde autem hoc scire poterat in quo tanta erat oblivio Dei, sicut in omnibus idololatris fuit, nisi quia ista recogitatio resipiscentis est, cum Evangelium praedicaretur? Iam poterat talis animadvertere, multos praedicare veritatem; inter quos quidam essent non ipsius amore veritatis ducti, sed cupiditate comparandorum saecularium commodorum; qui tamen non aliud annuntiant, sicut haeretici: unde mercenarii recte appellantur: in eadem quippe domo sunt eumdem panem verbi tractantes, non tamen in hereditatem aeternam vocati, sed temporali mercede conducti"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Signanter autem subdit ego autem hic fame pereo: quasi diceret: ego non alienus, sed filius boni patris, et frater filii obsequentis, ego liber et generosus, factus sum miserior mercenariis, a summa celsitudine primae nobilitatis ad infimam humilitatem delapsus"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Non prius autem rediit ad pristinam felicitatem, quam in se rediens sentiret opprimentis aerumnae praesentiam, et meditaretur poenitentiae verba, quae subduntur: surgam"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Quia iacebat; et ibo, quia longe aberat; ad patrem meum, quia sub principe porcorum erat. Cetera vero sunt poenitentiam meditantis in confessione peccati, nondum tamen agentis: non enim iam dicit patri, sed dicturum se esse promittit cum venerit. Intelligas igitur, hoc nunc accipiendum esse venire ad patrem, in Ecclesia constitui per fidem, ubi peccatorum legitima et fructuosa iam possit esse confessio. Dicit ergo dicturum se esse patri: pater"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Quam misericors qui offensus. Nec paternum nomen dedignatur audire. Peccavi. Haec est prima confessio apud auctorem naturae, praesulem misericordiae, arbitrum culpae. Sed si Deus novit omnia, vocem tamen tuae confessionis expectat: ore enim confessio fit ad salutem quia alleviat pondus erroris quisquis ipse se onerat; et accusationis excludit invidiam qui accusatorem praevenit confitendo. Frustra velis occultare quem nihil fallit, et sine periculo prodas quod scias esse iam cognitum: confitere magis ut interveniat pro te Christus, roget pro te Ecclesia, illacrymet populus; nec verearis ne non impetres. Advocatus spondet veniam, patronus promittit gratiam, reconciliationem tibi paternae pietatis pollicetur assertor. Subdit autem in caelum et coram te"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Dicens coram te, ostendit hunc patrem Deum debere intelligi: Deus enim solus conspector est omnium, a quo nec in corde meditata peccata abscondi possunt"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Utrum autem hoc est peccatum in caelum quod est coram te, ut caelum appellaverit ipsam summitatem patris; an potius peccavi in caelum coram sanctis animabus, coram te autem in ipso penetrali conscientiae?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Vel caelum hoc loco intelligatur Christus: qui enim in caelum peccat, quod etsi supernum, tamen visibile elementum est, ipse est qui peccat in hominem quem suscepit filius Dei pro salute nostra"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vel peccato animae caelestia significantur dona spiritus imminuta; vel quia ab illius gremio matris Ierusalem quae est in caelo non oportuit deviari. Deiectus autem se exaltare non debet; unde subdit iam non sum dignus vocari filius tuus. Et ut merito suae humilitatis possit attolli, subdit fac me sicut unum de mercenariis tuis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Ad filii affectum, qui omnia quae patris sunt, sua esse non ambigit, aspirare nequaquam praesumit; sed mercenarii statum iam pro mercede serviturus desiderat; verum nec hunc quidem nisi paterna dignatione se mereri posse testatur"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Hunc autem filium prodigum spiritus sanctus nobis descripsit, ut instruamur nos qualiter debeamus cordis deplorare peccamina"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Qui postquam dixit ibo ad patrem meum, quod ei cuncta attulit bona, non mansit, sed totum iter transivit; sequitur enim et surgens venit ad patrem suum. Sic et nos faciamus, nec pigeat nos longitudinis viae: quia si voluerimus, fiet regressus celer et facilis, dummodo deseramus peccatum, quod nos a domo paterna eduxit. Est autem pater redeuntibus clemens: nam subditur cum autem adhuc longe esset, vidit illum pater suus"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Ante enim quam intelligeret Deum longe existens, cum tamen iam pie quaereret, vidit illum pater ipsius. Impios enim, et superbos convenienter non videre dicitur tamquam ante oculos non habens: ante oculos enim haberi nonnisi qui diliguntur, dici solent"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Sensit autem pater poenitentiam; non expectavit recipere confessionis verba, sed praevenit petitionem, misericorditer agens: unde subditur et misericordia motus est"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Confessionis meditatio placavit ei patrem, ut obviam iret ei, et oscula collo conferret; sequitur enim et accurrens cecidit super collum eius, et osculatus est eum. Quod significat rationale iugum hominis ori impositum per evangelicam traditionem, quae abiecit observantiam legis"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Quid enim est aliud quod occurrit, nisi quia nos, peccatis impedientibus, nostra virtute ad Deum pervenire non poteramus? Ipse autem potens ad invalidos pervenire descendit. Osculatur autem os, per quod emissa de corde confessio poenitentis exierat, quam pater laetus excepit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Occurrit igitur tibi, quia audit te intra mentis secreta tractantem: et cum adhuc longe sis, occurrit, ne quis impediat: complectitur quoque: in occursu enim praescientia est, in complexu clementia; et quasi quodam patrii amoris affectu supra collum cadit, ut iacentem erigat, et oneratum peccatis atque in terrena deflexum reflectat ad caelum. Malo ergo filius esse, quam ovis: ovis enim a pastore reperitur, a patre filius honoratur"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Vel accurrens cecidit super collum eius: non enim pater unigenitum filium suum deseruit, in quo usque in nostram longinquam peregrinationem cucurrit: quia Deus erat in Christo mundum reconcilians sibi. Cadere autem super collum eius, est humiliare in amplexum eius brachium suum, quod est dominus Iesus Christus. Consolari autem verbo gratiae Dei ad spem indulgentiae peccatorum, hoc est post longa itinera remeantem mereri a patre osculum caritatis. Incipit autem iam constitutis in Ecclesia peccata confiteri, nec dicit omnia quae dicturum se esse promiserat; sequitur enim dixitque filius ei: pater, peccavi in caelum et coram te: iam non sum dignus vocari filius tuus. Hoc enim vult fieri per gratiam, quo se indignum per merita fatetur. Non addit quod in illa meditatione dixerat fac me sicut unum de mercenariis tuis: cum enim panem non haberet, vel mercenarius esse cupiebat; quod post osculum patris generosissime iam dedignabatur"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Pater autem ad filium sermonem non dirigit, sed ministris loquitur: quia qui poenitet orat: sed responsum verbo vere non accipit, misericordiam vero efficaciter in effectu intuetur; sequitur enim dixit autem pater ad servos suos: cito proferte stolam primam, et induite illum"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Servos vel Angelos intelligas administratorios spiritus, vel sacerdotes, qui Baptismate et verbo doctrinae animam vestiunt in ipso Christo. Quotquot enim in Christo baptizati sumus, Christum induimus"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Vel stola prima est dignitas quam perdidit Adam; servi qui eam proferunt, sunt reconciliationis praedicatores"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vel stola est amictus sapientiae, quo nuda corporis apostoli tegunt. Accepit autem sapientiam primam: est enim et alia quae mysterium nescit. Annulus autem est sincerae fidei signaculum et expressio veritatis; de quo sequitur et date annulum in manum eius"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Idest in operatione, ut per opera fides clarescat, et per fidem opera confirmentur"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Vel annulus in manu pignus est spiritus sancti, propter gratiae participationem, quae digito bene significatur"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Vel iubet annulum dari, sive signaculum salutaris symbolum, seu magis desponsationis insigne et nuptiarum pignus, quibus Christus Ecclesiam sponsat, cum anima resipiscens per annulum fidei iungitur"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Calceamenta autem in pedes praeparatio est evangelizandi ad non tangenda terrena; de quibus sequitur et calceamenta in pedes eius"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Vel mandat calceamenta pedibus imponi, aut propter cooperienda vestigia, ut per lubricum mundi istius iter fixus incedat; aut propter mortificationem membrorum: vitae enim nostrae cursus in Scripturis pes appellatur; et mortificationis species calceamentis imponitur, quia de animalium mortuorum pellibus conficiuntur. Addit et vitulum illi saginatum, iugulandum in convivii exhibitione; sequitur enim et adducite vitulum saginatum, idest dominum Iesum Christum; quem vitulum nominat propter hostiam corporis immaculati: saginatum autem dixit, quia pinguis et opimus intantum est ut pro totius mundi salute sufficiat. Non autem ipse pater vitulum immolavit, sed aliis immolandum tradidit; permittente enim patre consentiens filius ab hominibus crucifixus est"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Vel vitulus saginatus est ipse dominus, secundum carnem satiatus opprobriis. Quod autem imperat ut adducant eum, quid aliud est nisi ut praedicent eum, et annuntiando faciant venire in exhausta fame viscera filii esurientis? Nam etiam ut occidant eum iubet: hoc est, ut mortem eius insinuent: tunc enim cuique occiditur cum credit occisum: sequitur enim et manducemus"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Bene carnem vituli, quia sacerdotalis est victima, quae pro peccatis fiebat. Epulantem autem inducit, cum dicit epulemur, ut ostenderet quoniam paternus est cibus, salus nostra; et patris est gaudium, nostrorum redemptio peccatorum"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Ipse enim pater gaudet in reditu filii, et convivatur in vitulo: quia misericordiae suae fructum in immolatione filii sui gaudens creator, in acquisitione populi credentis epulatur; unde sequitur quia hic filius meus mortuus erat et revixit; perierat, et inventus est"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Ille periit qui fuit. Itaque gentes non sunt, Christianus est. Potest tamen et hic una species accipi generis humani. Fuit Adam, et in illo fuimus omnes; periit Adam, et in illo omnes perierunt. Homo igitur in illo homine qui perierat reformatur. Potest et de agente poenitentiam dictum videri, quia non moritur nisi qui aliquando vixerit. Et gentes quidem cum crediderint, per gratiam vivificantur; qui vero lapsus fuerit, per poenitentiam reviviscit"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quantum ergo ad vitiorum conditionem mortuus fuerat desperatus; sed quantum ad humanam naturam, quae mutabilis est, et potest a vitio ad virtutem converti, deperditus dicitur: nam minus est perdi quam mori. Quilibet autem revocatus et mundatus a crimine, saginati vituli particeps causa laetitiae fit patri et famulis eius, idest Angelis et sacerdotibus; unde sequitur et coeperunt omnes epulari"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Istae epulae atque festivitas nunc celebrantur, per orbem terrarum Ecclesia dilatata atque diffusa: vitulus enim ille in corpore et sanguine dominico et offertur patri, et pascit totam domum"
+      }
+    ]
+  },
+  {
+    "lectio": 5,
+    "versos": [
+      25,
+      32
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Murmurantibus de peccatorum susceptione Scribis et Pharisaeis; tres per ordinem parabolas salvator posuit: duabus primis quantum ipse cum Angelis de poenitentium salute gaudeat insinuat; in hac vero tertia non suum tantummodo suorumque gaudium demonstrat, sed et invidentium murmur reprehendit; dicitur enim erat autem filius eius senior in agro"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Maior filius populus Israel est, non quidem profectus in longinquam regionem, sed tamen in domo non est: in agro autem est; idest, in ipsa hereditaria opulentia legis et prophetarum terrena potius operatur. Veniens autem de agro domum appropinquare coepit; idest, labore servilis operis improbato, ex eisdem Scripturis Ecclesiae libertatem consideravit; unde sequitur et cum veniret, et appropinquaret domui, audivit symphoniam et chorum; idest, spiritu sancto plenos vocibus consonis Evangelium praedicare; sequitur enim et vocavit unum de servis, et interrogavit quid hoc esset: idest, sumit ad legendum aliquem prophetarum, et in eo quaerens quodammodo interrogat unde ista festa in Ecclesia celebrantur, in qua se esse non videt. Respondet ei servus patris propheta; sequitur enim isque dixit illi: frater tuus venit et occidit pater tuus vitulum saginatum, quia salvum illum recepit; quasi dicat: in extremis terrae fuit frater tuus; sed inde maior exultatio cantantium domino canticum novum, quia laus eius ab extremis terrae, et propter eum qui absens erat, occisus est vir sciens ferre imbecillitatem: quia quibus non est narratum de eo viderunt"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Adolescentiori autem filio, idest populo ex gentibus, Israel, tamquam maior frater, beneficium paternae benedictionis invidit; quod faciebant Iudaei, quia Christus cum gentibus epularetur; unde sequitur indignatus est autem, et nolebat introire"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Indignatur etiam et nunc, et adhuc non vult intrare. Cum ergo plenitudo gentium introierit, egredietur opportuno tempore pater eius, ut etiam omnis Israel salvus fiat; unde sequitur pater ergo illius egressus coepit rogare eum. Erit enim quandoque aperta vocatio Iudaeorum in salutem Evangelii; quam manifestationem vocationis tamquam egressum patris appellat ad rogandum maiorem filium. Deinde quae respondit maior filius, quaestiones duas habent; sequitur enim at ille respondens dixit patri suo: ecce tot annis servio tibi, et nunquam mandatum tuum praeterivi. De mandato non praetergresso facile illud occurrit, non de omni mandato dictum, sed de uno maxime necessario, quod nullum alium Deum praeter unum creatorem omnium colere visus est. Neque iste filius in omnibus Israelitis, sed in his intelligitur personam habere qui numquam ab uno Deo ad simulacra conversi sunt. Quamquam enim terrena desideraret, ab uno tamen Deo iste desiderabat bona, quamvis communia cum pecoribus: unde et in Psalmo 72, 23 dicitur: ut iumentum factus sum apud te, et ego semper tecum. Sed quis est hoedus quem numquam accepit ad epulandum? Sequitur enim et nunquam dedisti mihi hoedum, ut cum amicis meis epularer. Peccator hoedi nomine significari valet"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Iudaeus hoedum requirit, Christianus agnum; et ideo illis Barabbas solvitur, nobis agnus immolatur. Quae res etiam in hoedo videtur, quia Iudaei ritum veteris sacrificii perdiderunt. Vel qui hoedum quaerunt, expectant Antichristum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Sed non invenio exitum huius sententiae. Multum enim absurdum est eum cui post dicitur tu mecum es semper, hoc a patre optasse ut Antichristo crederet. Neque omnino aliquem Iudaeorum, qui Antichristo credituri sunt, istum filium fas est intelligi. Quomodo autem epularetur ex illo hoedo, si ipse est Antichristus, qui ei non crederet? At si hoc est epulari ex hoedi occisione, quod est de Antichristi perditione laetari; quomodo dicit filius quem recepit pater, hoc sibi non fuisse concessum, cum omnes filii de eius perditione laetaturi sint? Ipsum igitur sibi dominum negatum ad epulandum conqueritur, dum eum peccatorem putat: cum enim hoedus est illi genti, idest cum eum sabbati violatorem et profanatorem aestimat, iucundari epulis illius non meruit"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Quod autem dicit cum amicis meis, aut ex persona principum cum plebe intelligatur, aut ex persona populi Hierosolymitani, cum ceteris populis Iuda"
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Vel dicit nunquam dedisti mihi hoedum; idest, nullus sanguis prophetae vel sacerdotis a Romano imperio nos liberavit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Impudens autem filius similis est publicano iustificanti se, quia legem servabat in littera: impie accusabat fratrem, quod cum meretricibus paternam substantiam prodegisset; sequitur enim sed postquam filius tuus hic, qui devoravit substantiam suam cum meretricibus, venit, occidisti illi vitulum saginatum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Meretrices autem sunt superstitiones gentilium, cum quibus substantiam dissipat qui, relicto vero connubio veri Dei, cum Daemone foeda cupiditate fornicatur"
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "In hoc autem quod dicit occidisti illi vitulum saginatum, confitetur venisse Christum, sed invidia non vult salvari"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Non autem pater eum quasi mentientem redarguit, sed secum perseverantiam eius approbans, ad perfectionem potioris atque iucundioris exultationis invitat; unde sequitur at ipse dixit illi: fili, tu semper mecum es"
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Vel quod dixerat, iactantia est, non veritas; cui pater non consentit, sed alia compescit ratione, dicens mecum es, lege qua stringeris: non quia non peccaverit, sed quia Deus eum semper castigando retraxit. Nec mirum si patri mentitur qui fratri invidet"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Sed bonus pater etiam hunc salvare cupiebat, dicens tu mecum semper es, vel quasi Iudaeus in lege, vel quasi iustus in communione"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Quid autem sibi vult quod addidit et omnia mea tua sunt, quasi non sint et fratris? Sed sic a perfectis et immortalibus filiis habentur omnia, ut sint et omnium singula, et omnia singulorum: ut enim cupiditas nihil sine angustia, ita nihil cum angustia caritas tenet. Sed quomodo omnia? Nonne et Angelos Deus in possessionem tali filio subiecisse putandus est? Si possessionem sic accipias ut eius possessor ipse sit dominus, non utique omnia: non enim domini erimus, sed consortes potius Angelorum. Si vero possessio sic intelligitur; quomodo recte dicimus possidere animas veritatem, non invenio cur non vere ac proprie id possimus accipere: non enim illud loquimur ut dominas veritatis dicamus animas. Aut si nomine possessionis ab hoc sensu impedimur, illud quoque auferatur: non enim ait pater: omnia possides, sed omnia mea tua sunt; nec tamen ut ipsius domini. Quod enim est in nostra pecunia, potest familiae nostrae vel alimentum esse, vel ornamentum, vel aliud huiusmodi. Et certe cum ipsum patrem recte ille possit suum dicere, non video quomodo quae ipsius sunt, non etiam recte sua vocare possit, diversis dumtaxat modis. Cum enim beatitudinem illam obtinuerimus, nostra erunt ad videndum superiora, ad convivendum aequalia, ad dominandum inferiora. Congaudeat igitur securissimus maior frater"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Si enim desinat invidere, omnia sua sunt, vel Iudaeus sacramenta veteris testamenti, vel baptizatus nova etiam possidens"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Vel aliter totum. Persona filii, qui videtur murmurare, sumitur pro omnibus quicumque scandalizantur in subditis; sicut David introducit personam passam scandalum in peccatorum pace"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Maior igitur filius sicut agricola insistebat agriculturae, non terrestrem, sed animae agrum fodiens, et salutis arbores inserens, scilicet virtutes"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Vel erat in agro, hoc est in mundo, colens propriam carnem, ut repleatur panibus, et seminans in lacrymis ut in gaudio metat: sed cognitis gestis nolebat intrare ad commune gaudium"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Quaeritur autem si afficitur passione livoris dolens in prosperis aliorum. Dicendum est autem, quod nullus sanctorum dolet in talibus; immo bona aliorum sua existimat. Non autem oportet omnia quaecumque parabola continet, ad litteram pertractare; sed sensum elicientes cuius causa componitur, nihil aliud perscrutari. Haec ergo parabola ad hoc est composita ut peccatores non diffidant reverti, scientes quod magna consequentur: unde introducit alios turbatos in eorum bonis, ut indicet eos livore tabescentes, sed tanto decore honoratos redeuntes, ut etiam invidiosi possint aliis fieri"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Vel Pharisaeorum intentionem corrigit dominus per praesentem parabolam, quos ex hypothesi nominat iustos; quasi dicat: esto vere vos iustos esse, nec transgressos aliquod mandatorum: numquid igitur propter hoc non oportet admittere a flagitiis redeuntes?"
+      },
+      {
+        "autor": "Hieronimus",
+        "obra": "",
+        "latim": "Vel aliter. Omnis iustitia in comparatione Dei est iniustitia; unde Paulus: quis me liberabit de corpore mortis huius? Unde apostoli indignati sunt pro petitione matris filiorum Zebedaei"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Quod et nos ipsi quandoque patimur; vivunt enim quidam praestantissimam et optimam vitam; alius autem in ipso senio multoties ad Deum convertitur, vel forsitan extremum diem claudere debens, ac diluit reatus, domino miserante. Hoc quidem aliquando respuunt ex importuna pusillanimitate, non attendentes mentem salvatoris, qui de salute pereuntium gaudet"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Dicit ergo filius patri: gratis duxi in doloribus vitam, a peccatoribus molestatus; et numquam causa mei decrevisti mactandum esse hoedum, idest persequentem me peccatorem, ut paululum recrearer; qualis hoedus fuit Achab Eliae qui dicebat: domine, prophetas tuos occiderunt"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vel aliter. Notatur hic frater usque adeo ut de villa venire dicatur, hoc est terrenis operibus occupatus, ignorans quae sunt spiritus Dei, ut denique numquam pro se vel hoedum quaeratur occisum: non enim pro invidia, sed pro venia mundi agnus est immolatus. Invidus hoedum quaerit, innocens agnum pro se desiderat immolari. Ideo et senior dicitur, eo quod cito quis per invidiam consenescat; ideo et foris stat, eo quod malevolentia eum excludat; ideo chorum et symphoniam audire non potest, hoc est nonnulla theatralis incentiva lasciviae, sed plebis concordiam concinentis quae de peccatore salvato dulcem laetitiae suavitatem resultat; qui enim sibi iusti videntur, indignantur quando alicui peccatum fatenti venia laxatur. Quis tu es qui domino contradicas, ne videlicet culpam relaxaret, cum tu cui volueris ignoscas? Sed remittendis post poenitentiam debemus favere peccatis; ne dum veniae alterius invidemus, ipsi eam non mereamur a domino. Non invideamus de longinqua regione remeantibus, quia et nos fuimus in regione longinqua"
+      }
+    ]
+  }
+]

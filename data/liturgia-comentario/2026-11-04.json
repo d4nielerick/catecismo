@@ -1,0 +1,58 @@
+{
+  "data": "2026-11-04",
+  "evangelho": "Lc 14,25-33",
+  "leituras": "Fl 2,12-18 | Sl 26 (27),1.4.13-14 (R. 1a) | Lc 14,25-33",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 14,
+      "lectio": 5,
+      "versos": [
+        25,
+        27
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 14,
+      "lectio": 6,
+      "versos": [
+        28,
+        33
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 1618,
+      "comum": [
+        26
+      ],
+      "direto": false,
+      "frase": "A união com Ele prevalece sobre todas as outras, quer se trate de laços familiares, quer sociais."
+    },
+    {
+      "numero": 2544,
+      "comum": [
+        33
+      ],
+      "direto": false,
+      "frase": "Jesus impõe aos seus discípulos que O prefiram a tudo e a todos e propõe-lhes que renunciem a todos os seus bens por causa d'Ele e do Evangelho."
+    }
+  ],
+  "tema": "Os pais, a cruz e a renúncia a todos os bens",
+  "destaques": [
+    {
+      "lectio": 5,
+      "i": 3
+    },
+    {
+      "lectio": 5,
+      "i": 9
+    },
+    {
+      "lectio": 6,
+      "i": 12
+    }
+  ]
+}

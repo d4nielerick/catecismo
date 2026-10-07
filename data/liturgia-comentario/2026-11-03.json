@@ -1,0 +1,32 @@
+{
+  "data": "2026-11-03",
+  "evangelho": "Lc 14,15-24",
+  "leituras": "Fl 2,5-11 | Sl 21(22),26b-27.28-30a.31-32 (R. 26a) | Lc 14,15-24",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 14,
+      "lectio": 4,
+      "versos": [
+        15,
+        24
+      ]
+    }
+  ],
+  "catecismo": [],
+  "tema": "A grande ceia preparada em Cristo e as desculpas dos convidados",
+  "destaques": [
+    {
+      "lectio": 4,
+      "i": 6
+    },
+    {
+      "lectio": 4,
+      "i": 10
+    },
+    {
+      "lectio": 4,
+      "i": 20
+    }
+  ]
+}

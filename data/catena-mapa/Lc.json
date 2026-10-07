@@ -459,5 +459,27 @@
       35
     ]
   },
+  "15": {
+    "1": [
+      1,
+      7
+    ],
+    "2": [
+      8,
+      10
+    ],
+    "3": [
+      11,
+      16
+    ],
+    "4": [
+      17,
+      24
+    ],
+    "5": [
+      25,
+      32
+    ]
+  },
   "_": "Catena Aurea in Lucam (Corpus Thomisticum): intervalo de versículos de cada lectio, por capítulo. Curado à mão a partir dos lemas; a fonte não traz os números."
 }

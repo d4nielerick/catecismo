@@ -857,7 +857,14 @@
       {
         "autor": "Gregorius Nyssenus",
         "obra": "",
-        "latim": "Vel aliter. Consummatis nuptiis, et desponsata sibi Ecclesia, et admissa ea in thalamum secretorum, praestolabantur Angeli reditum regis ad naturalem beatitudinem; quibus similem fieri decet nostram vitam; ut sicut illi sine malitia conversantes parati fuerint dominicum regressum recipere; sic et nos vigilantes ad obedientiam promptos nos faciamus cum advenerit pulsans; sequitur enim ut cum venerit et pulsaverit, confestim aperiant illi"
+        "latim": "Vel aliter. Consummatis nuptiis, et desponsata sibi Ecclesia, et admissa ea in thalamum secretorum, praestolabantur Angeli reditum regis ad naturalem beatitudinem; quibus similem fieri decet nostram vitam; ut sicut illi sine malitia conversantes parati fuerint dominicum regressum recipere; sic et nos vigilantes ad obedientiam promptos nos faciamus cum advenerit pulsans; sequitur enim ut cum venerit et pulsaverit, confestim aperiant illi",
+        "pt": "Ou de outro modo. Consumadas as núpcias, desposada consigo a Igreja e admitida ela na câmara dos segredos, os anjos aguardavam o retorno do Rei à bem-aventurança natural; e convém que a nossa vida se torne semelhante à deles; para que, assim como eles, vivendo sem malícia, estiveram prontos para receber o regresso do Senhor, assim também nós, vigiando, nos tornemos prontos para a obediência quando ele chegar batendo; pois segue-se: \"para que, quando ele chegar e bater, imediatamente lhe abram\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-opus (subagente)",
+          "em": "2026-10-07",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
@@ -901,7 +908,14 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Vel praecinget se in eo quod non totam ubertatem bonorum largitur, sed hanc cohibet secundum certam mensuram. Quis enim Deum capere potest quantus est? Unde Seraphim velari dicuntur propter excellentiam divini splendoris. Sequitur et faciet illos discumbere, idest omnino requiescere: sicut enim discumbens totum corpus facit quiescere, sic in futuro adventu sancti totaliter requiescent. Hic enim non habuerunt requiem corporis, illic vero simul cum animabus spiritualia corpora incorruptionem sortita, plena gaudebunt quiete"
+        "latim": "Vel praecinget se in eo quod non totam ubertatem bonorum largitur, sed hanc cohibet secundum certam mensuram. Quis enim Deum capere potest quantus est? Unde Seraphim velari dicuntur propter excellentiam divini splendoris. Sequitur et faciet illos discumbere, idest omnino requiescere: sicut enim discumbens totum corpus facit quiescere, sic in futuro adventu sancti totaliter requiescent. Hic enim non habuerunt requiem corporis, illic vero simul cum animabus spiritualia corpora incorruptionem sortita, plena gaudebunt quiete",
+        "pt": "Ou \"se cingirá\" no sentido de que não concede toda a abundância dos bens, mas a contém segundo uma medida certa. Pois quem pode compreender a Deus, quão grande é? Por isso se diz que os Serafins se velam, por causa da excelência do esplendor divino. Segue-se: \"e os fará sentar-se à mesa\", isto é, repousar inteiramente: pois, assim como quem se reclina à mesa faz repousar todo o corpo, assim, na vinda futura, os santos repousarão totalmente. Pois aqui não tiveram repouso do corpo; lá, porém, juntamente com as almas, os corpos espirituais, tendo recebido a incorruptibilidade, gozarão de pleno repouso.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-opus (subagente)",
+          "em": "2026-10-07",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
@@ -938,7 +952,14 @@
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Prima ergo vigilia primaevum tempus est vitae nostrae, idest pueritia; secunda, adolescentia vel iuventus; tertia autem senectus accipitur. Qui ergo vigilare in prima vigilia noluit, custodiat in secunda: et qui in secunda noluit, tertiae vigiliae remedia non amittat: ut qui converti in pueritia neglexit, saltem in tempore iuventutis vel in senectute resipiscat"
+        "latim": "Prima ergo vigilia primaevum tempus est vitae nostrae, idest pueritia; secunda, adolescentia vel iuventus; tertia autem senectus accipitur. Qui ergo vigilare in prima vigilia noluit, custodiat in secunda: et qui in secunda noluit, tertiae vigiliae remedia non amittat: ut qui converti in pueritia neglexit, saltem in tempore iuventutis vel in senectute resipiscat",
+        "pt": "A primeira vigília, pois, é o tempo primeiro da nossa vida, isto é, a infância; a segunda, a adolescência ou a juventude; a terceira, porém, entende-se como a velhice. Quem, pois, não quis vigiar na primeira vigília, guarde a segunda; e quem não quis na segunda, não perca os remédios da terceira vigília: para que quem descuidou de converter-se na infância, ao menos no tempo da juventude ou na velhice volte a si.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-opus (subagente)",
+          "em": "2026-10-07",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",

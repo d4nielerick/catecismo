@@ -1,0 +1,122 @@
+{
+  "data": "2026-11-01",
+  "evangelho": "Mt 5,1-12a",
+  "leituras": "Ap 7,2-4.9-14 | Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6) | 1Jo 3,1-3 | Mt 5,1-12a",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 1,
+      "versos": [
+        1,
+        3
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 2,
+      "versos": [
+        4,
+        4
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 3,
+      "versos": [
+        5,
+        5
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 4,
+      "versos": [
+        6,
+        6
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 5,
+      "versos": [
+        7,
+        7
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 6,
+      "versos": [
+        8,
+        8
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 7,
+      "versos": [
+        9,
+        9
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 8,
+      "versos": [
+        10,
+        10
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 5,
+      "lectio": 9,
+      "versos": [
+        11,
+        12
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 520,
+      "comum": [
+        11,
+        12
+      ],
+      "direto": false,
+      "frase": "Em toda a sua vida, Jesus mostra-Se como nosso modelo: é «o homem perfeito», que nos convida a tornarmo-nos seus discípulos e a segui-Lo; com a sua humilhação, deu-nos um exemplo a imitar; com a sua oração, convida-nos à oração; com a sua pobreza, incita--nos a aceitar livremente o despojamento e as perseguições."
+    },
+    {
+      "numero": 581,
+      "comum": [
+        1
+      ],
+      "direto": false,
+      "frase": "N'Ele, era a própria Palavra de Deus, que Se fizera ouvir no Sinai, para dar a Moisés a Lei escrita, que de novo Se fazia ouvir sobre a montanha das bem-aventuranças."
+    }
+  ],
+  "tema": "Os pobres em espírito, os que choram e os pacíficos",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 19
+    },
+    {
+      "lectio": 3,
+      "i": 7
+    },
+    {
+      "lectio": 7,
+      "i": 6
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "data": "2026-11-05",
+  "evangelho": "Lc 15,1-10",
+  "leituras": "Fl 3,3-8a | Sl 104(105),2-3.4-5.6-7 (R. 3b) | Lc 15,1-10",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 15,
+      "lectio": 1,
+      "versos": [
+        1,
+        7
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 15,
+      "lectio": 2,
+      "versos": [
+        8,
+        10
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 589,
+      "comum": [
+        1,
+        2
+      ],
+      "direto": false,
+      "frase": "Chegou, até, a dar a entender que, sentando-Se à mesa dos pecadores, os admitia no banquete messiânico."
+    }
+  ],
+  "tema": "A ovelha carregada nos ombros e a alegria do céu pela penitência",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 9
+    },
+    {
+      "lectio": 1,
+      "i": 13
+    },
+    {
+      "lectio": 2,
+      "i": 8
+    }
+  ]
+}
