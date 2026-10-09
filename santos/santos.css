@@ -1,0 +1,202 @@
+/* santos.css — páginas de "santo do dia" (scripts/build-paginas-santos.mjs): /santos/, /santos/<slug>/
+   e /santos/dia/<MM-DD>/. Mesma família visual da Liturgia Diária (Inria Serif, título em itálico,
+   fita na cor litúrgica), numa coluna só. */
+
+@font-face {
+  font-family: 'Inria Serif'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/assets/fonts/inria-serif-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inria Serif'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('/assets/fonts/inria-serif-400-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inria Serif'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('/assets/fonts/inria-serif-700.woff2') format('woff2');
+}
+
+:root {
+  --sd-fundo: #fcfaf7;
+  --sd-tinta: #000;
+  --sd-texto: rgba(0, 0, 0, 0.67);
+  --sd-suave: rgba(0, 0, 0, 0.6);
+  --sd-linha: rgba(0, 0, 0, 0.08);
+  --sd-vermelho: #cb2e2e;
+  --sd-cor: #b8972e;          /* cor litúrgica do dia (o gerador sobrescreve no <html>) */
+  --sd-cor-titulo: #c9b27a;
+  --font-titulo: 'Times New Roman', Times, Georgia, serif;
+  --font-leitura: 'Inria Serif', Georgia, serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html, body { background: var(--sd-fundo); min-height: 100%; }
+body { font-family: var(--font-leitura); color: var(--sd-texto); line-height: 1.6; }
+
+.sd-pagina {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 16px 5rem;
+}
+@media (min-width: 761px) { .sd-pagina { padding: 3rem 2rem 6rem; } }
+
+/* ── Fita na cor litúrgica (a mesma da Liturgia) ───────────────────── */
+.sd-fita {
+  --fita: var(--sd-cor);
+  --fita-costura: rgba(255, 255, 255, 0.35);
+  --fita-borda: transparent;
+  position: fixed;
+  top: 0;
+  right: 1.25rem;
+  width: 16px;
+  height: 38px;
+  z-index: 5;
+}
+.sd-fita svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.sd-fita-fundo { fill: var(--fita); stroke: var(--fita-borda); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.sd-fita-costura { fill: none; stroke: var(--fita-costura); stroke-width: 1; stroke-dasharray: 3 2.5; vector-effect: non-scaling-stroke; }
+.sd-fita[data-cor="branco"] { --fita: #f5eedc; --fita-costura: #b8972e; --fita-borda: rgba(184, 151, 46, 0.6); }
+
+/* ── Cabeçalho ─────────────────────────────────────────────────────── */
+.sd-trilha {
+  font-family: var(--font-sans); font-size: 0.68rem; color: var(--sd-suave);
+  margin: 0 0 1.75rem;
+}
+.sd-trilha a { color: inherit; text-decoration: none; }
+.sd-trilha a:hover { color: var(--sd-tinta); }
+
+.sd-marca {
+  font-family: var(--font-titulo); font-style: italic; font-size: 1.4rem; line-height: 1;
+  letter-spacing: -0.01em; color: var(--sd-cor-titulo); margin: 0 0 0.5rem;
+}
+.sd-titulo {
+  font-family: var(--font-titulo); font-style: italic; font-weight: 400;
+  font-size: clamp(2.1rem, 7vw, 3.4rem); line-height: 1; letter-spacing: -0.03em;
+  color: var(--sd-tinta); margin: 0 0 0.6rem; text-wrap: balance;
+}
+.sd-titulo-data { font-size: clamp(1.7rem, 5.5vw, 2.6rem); line-height: 1.1; }
+.sd-data { font-size: 0.95rem; color: var(--sd-suave); margin: 0 0 0.5rem; }
+.sd-data::first-letter { text-transform: uppercase; }
+
+.tempo-wrap { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.35rem; }
+.cor-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.tempo-badge {
+  font-family: var(--font-sans); font-size: 0.64rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--sd-suave);
+}
+
+/* ── Pintura e frase ───────────────────────────────────────────────── */
+.sd-pintura { margin: 2.25rem 0 0; }
+.sd-pintura img {
+  display: block; width: 100%; height: auto; border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+}
+.sd-frase { margin: 1.5rem 0 0.5rem; padding: 0; }
+.sd-frase p {
+  font-style: italic; font-size: 1.35rem; line-height: 1.35; color: var(--sd-tinta);
+  margin: 0; text-wrap: balance;
+}
+.sd-pintura figcaption { font-size: 0.78rem; line-height: 1.5; color: var(--sd-suave); }
+.sd-credito-pintura { display: block; font-size: 0.68rem; margin-top: 0.25rem; }
+
+/* ── Seções (um ornamento entre elas, como entre as leituras) ──────── */
+.sd-vida, .sd-leituras, .sd-cartoes { margin-top: 3rem; }
+.sd-vida::before, .sd-leituras::before {
+  content: ''; display: block; width: min(300px, 80%); height: 60px; margin: 0 auto 2.25rem;
+  background: url('/assets/img/liturgia-divisor.svg') center / contain no-repeat; opacity: 0.85;
+}
+.sd-vida h2, .sd-leituras h2, .sd-mes h2 {
+  font-family: var(--font-sans); font-size: 0.64rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--sd-suave); margin: 0 0 1rem;
+}
+.sd-artigo h3 { font-size: 1.05rem; font-weight: 700; color: var(--sd-tinta); margin: 0 0 0.4rem; }
+.sd-artigo p { font-size: 1.02rem; margin: 0 0 0.9rem; }
+.sd-artigo + .sd-artigo { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px dotted rgba(0, 0, 0, 0.28); }
+.sd-artigo-img {
+  float: right; width: 38%; max-width: 200px; height: auto; margin: 0.25rem 0 0.75rem 1.25rem;
+  border-radius: 3px; background: rgba(0, 0, 0, 0.05);
+}
+/* Com pintura própria, a foto da Wikipédia fica pequena: a pintura já apresenta o santo */
+.sd-pintura + .sd-vida .sd-artigo-img { width: 26%; max-width: 140px; }
+.sd-vida::after { content: ''; display: block; clear: both; }
+
+.sd-link { color: var(--sd-vermelho); text-decoration: none; font-size: 0.92rem; }
+.sd-link:hover { text-decoration: underline; }
+
+.sd-complemento { font-size: 0.85rem; color: var(--sd-suave); margin: -0.5rem 0 0.75rem; }
+.sd-lista-leituras { list-style: none; padding: 0; margin: 0 0 1rem; }
+.sd-lista-leituras li { padding: 0.45rem 0; border-top: 1px solid var(--sd-linha); font-size: 1rem; color: var(--sd-tinta); }
+.sd-lista-leituras li:last-child { border-bottom: 1px solid var(--sd-linha); }
+.sd-rotulo {
+  display: inline-block; min-width: 7.5rem; font-family: var(--font-sans); font-size: 0.64rem;
+  font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sd-suave);
+}
+.sd-outros-anos { font-size: 0.82rem; color: var(--sd-suave); margin: 0.75rem 0 0; }
+.sd-outros-anos a { color: inherit; }
+
+.sd-outras { margin-top: 2rem; padding: 0.9rem 1rem; border-left: 2px solid var(--sd-cor); background: rgba(0, 0, 0, 0.025); }
+.sd-outras p { margin: 0; font-size: 0.9rem; }
+.sd-outras a { color: var(--sd-tinta); }
+
+/* ── Cartões da página de data ─────────────────────────────────────── */
+.sd-cartoes { display: grid; gap: 1.75rem; }
+.sd-cartao { display: grid; grid-template-columns: 1fr; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--sd-linha); }
+.sd-cartao:first-child { border-top: 0; padding-top: 0; }
+.sd-cartao-img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.sd-cartao h2 { font-family: var(--font-titulo); font-style: italic; font-weight: 400; font-size: 1.6rem; line-height: 1.1; margin: 0 0 0.3rem; }
+.sd-cartao h2 a { color: var(--sd-tinta); text-decoration: none; }
+.sd-cartao h2 a:hover { text-decoration: underline; }
+.sd-cartao-anos { font-size: 0.8rem; color: var(--sd-suave); margin: 0 0 0.6rem; }
+.sd-cartao-frase { font-style: italic; color: var(--sd-tinta); margin: 0 0 0.6rem; }
+.sd-cartao-texto p { margin: 0 0 0.6rem; font-size: 0.98rem; }
+@media (min-width: 560px) {
+  .sd-cartao { grid-template-columns: 200px 1fr; align-items: start; }
+  .sd-cartao:not(:has(.sd-cartao-img)) { grid-template-columns: 1fr; }
+}
+
+/* ── Anterior · hoje · seguinte ────────────────────────────────────── */
+.sd-dias {
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: start;
+  margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--sd-linha);
+  font-size: 0.85rem;
+}
+.sd-dias a { color: var(--sd-suave); text-decoration: none; transition: color 0.15s; }
+.sd-dias a:hover, .sd-dias a:focus-visible { color: var(--sd-tinta); }
+.sd-dia-prox { text-align: right; }
+.sd-dia-hoje {
+  font-family: var(--font-sans); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; text-align: center; padding-top: 0.2rem;
+}
+@media (max-width: 480px) {
+  .sd-dias { grid-template-columns: 1fr 1fr; }
+  .sd-dia-hoje { grid-column: 1 / -1; order: -1; text-align: left; }
+}
+
+/* ── Índice por mês ────────────────────────────────────────────────── */
+.sd-meses { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; margin-top: 1.25rem; }
+.sd-meses a {
+  font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--sd-suave); text-decoration: none;
+}
+.sd-meses a:hover { color: var(--sd-tinta); }
+.sd-indice { margin-top: 2.5rem; column-gap: 2.5rem; }
+@media (min-width: 761px) { .sd-indice { columns: 2; } }
+.sd-mes { break-inside: avoid; margin-bottom: 2.25rem; scroll-margin-top: 1rem; }
+.sd-mes ul { list-style: none; padding: 0; margin: 0; }
+.sd-mes li { display: flex; gap: 0.75rem; padding: 0.3rem 0; border-top: 1px solid var(--sd-linha); font-size: 0.95rem; }
+.sd-mes li a { color: var(--sd-tinta); text-decoration: none; }
+.sd-mes li a:hover { text-decoration: underline; }
+.sd-indice-dia {
+  flex: 0 0 1.6rem; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600;
+  color: var(--sd-suave) !important; padding-top: 0.2rem;
+}
+.sd-sem-pagina { color: var(--sd-suave); }
+.sd-indice-anos { display: block; font-size: 0.78rem; color: var(--sd-suave); }
+.sd-moveis li { display: block; }
+.sd-legenda { margin-top: 1rem; }
+
+/* ── Rodapé ─────────────────────────────────────────────────────────── */
+.sd-rodape { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--sd-linha); }
+.sd-credito { font-size: 0.72rem; line-height: 1.5; color: var(--sd-suave); margin: 1.1rem 0 0; }
+.sd-credito a { color: inherit; }
+.sd-rodape .sd-credito { margin-top: 0.4rem; }
