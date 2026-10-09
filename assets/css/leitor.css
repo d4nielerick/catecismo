@@ -14,7 +14,7 @@
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-xl);
-  background: rgba(255,255,255,0.97);
+  background: var(--header-bg);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
@@ -52,6 +52,27 @@
   color: var(--color-primary);
   background: var(--color-bg);
 }
+
+/* Tamanho da fonte (A− / A+) */
+#leitor-fonte-ctl {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+#leitor-fonte-ctl .leitor-btn-icon {
+  width: 32px;
+  height: 30px;
+  border-radius: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1;
+}
+#leitor-fonte-ctl .leitor-btn-icon:first-child { font-size: 0.8rem; }
+#leitor-fonte-ctl .leitor-btn-icon:last-child  { font-size: 1.1rem; }
+#leitor-fonte-ctl .leitor-btn-icon:disabled { opacity: 0.3; cursor: default; background: transparent; color: var(--color-muted); }
 
 /* Body: TOC + conteúdo */
 #leitor-body {
@@ -230,7 +251,7 @@
 /* Coluna de prosa centrada */
 .leitor-conteudo {
   width: 100%;
-  max-width: 68ch;
+  max-width: calc(68 * var(--leitor-fonte, 1.05rem) * 0.6);
 }
 
 .leitor-cap-titulo {
@@ -264,30 +285,82 @@
 }
 
 .leitor-paragrafo {
-  display: flex;
-  gap: var(--space-md);
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.8rem minmax(0, 1fr);
+  column-gap: var(--space-md);
   margin-bottom: var(--space-lg);
-  align-items: flex-start;
+  align-items: start;
+}
+
+/* Ações (Salvar / Reportar) ficam FORA da coluna de prosa, na canaleta à
+   direita, em versão compacta (só ícones). Antes eram um 3º item do flex row e
+   roubavam ~160px de cada linha mesmo invisíveis (opacity: 0 não tira do
+   fluxo) — no celular sobravam 124px para o texto. */
+.leitor-paragrafo .para-acoes {
+  position: absolute;
+  top: 0.15em;
+  left: calc(100% + var(--space-md));
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.leitor-paragrafo .para-acoes .para-btn {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  justify-content: center;
+}
+.leitor-paragrafo .para-acoes .para-btn-label {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* O formulário de correção ("Reportar") ocupa a coluna do texto, abaixo dele. */
+.leitor-paragrafo .card-correcao-form {
+  grid-column: 2;
+}
+
+/* Sem canaleta suficiente (TOC aberta em tela média, tablets): as ações vão
+   para uma linha própria abaixo do texto, com rótulos. */
+@media (max-width: 1099px) {
+  .leitor-paragrafo .para-acoes {
+    position: static;
+    grid-column: 2;
+    flex-direction: row;
+    margin-top: var(--space-xs);
+  }
+  .leitor-paragrafo .para-acoes .para-btn {
+    width: auto;
+    height: auto;
+    padding: 0.2rem 0.55rem;
+  }
+  .leitor-paragrafo .para-acoes .para-btn-label {
+    position: static;
+    width: auto; height: auto;
+    clip: auto;
+  }
 }
 
 .leitor-paragrafo-num {
   font-family: var(--font-sans);
   font-size: 0.68rem;
+  text-align: right;
   font-weight: 600;
   color: var(--color-accent-dk);
   opacity: 0.65;
-  min-width: 2.8rem;
-  padding-top: 0.25em;
-  flex-shrink: 0;
+  padding-top: 0.45em;
   user-select: none;
 }
 
 .leitor-paragrafo-texto {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: var(--leitor-fonte, 1.05rem);
   line-height: 1.85;
   color: var(--color-text);
-  flex: 1;
+  min-width: 0;
 }
 
 .leitor-para-save-btn {
@@ -523,6 +596,13 @@
   #leitor-texto {
     padding: var(--space-lg) var(--space-md);
   }
+
+  .leitor-paragrafo {
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    column-gap: var(--space-sm);
+  }
+
+  #leitor-fonte-ctl .leitor-btn-icon { width: 30px; }
 
   #leitor-nav-caps {
     padding: var(--space-sm) var(--space-md);

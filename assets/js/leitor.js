@@ -10,9 +10,21 @@ import { buscarVersiculo, mostrarCard, mostrarCardMobile } from './biblia.js';
 import { enriquecerNota } from './fontes.js';
 
 // ── Utilitários ───────────────────────────────────────────────────────────────
+// Nomes próprios que a fonte traz em caixa alta e precisam voltar com maiúscula
+// depois do lowercase ("Creio em jesus cristo" → "Creio em Jesus Cristo").
+const _NOMES_PROPRIOS = [
+  'Espírito Santo', 'Jesus Cristo', 'Deus Pai', 'Pai Nosso',
+  'Deus', 'Jesus', 'Cristo', 'Igreja', 'Senhor', 'Filho', 'Espírito',
+];
+const _NOMES_RE = _NOMES_PROPRIOS.map((n) => [
+  new RegExp(`(^|[^\\p{L}])${n.toLowerCase()}(?![\\p{L}])`, 'giu'), n,
+]);
+
 function _sentenceCase(str) {
   if (!str) return str;
-  return str.toLowerCase().replace(/[a-záàâãéèêíïóòôõúùûüç]/i, c => c.toUpperCase());
+  let out = str.toLowerCase().replace(/[a-záàâãéèêíïóòôõúùûüç]/i, c => c.toUpperCase());
+  for (const [re, nome] of _NOMES_RE) out = out.replace(re, (m, antes) => antes + nome);
+  return out;
 }
 
 // ── Estado ────────────────────────────────────────────────────────────────────
@@ -68,6 +80,36 @@ export function iniciarLeitor(paragrafos) {
   saveBtnEl.addEventListener('click', salvarSelecao);
 
   construirToc();
+  iniciarFonte();
+}
+
+// ── Tamanho da fonte (A− / A+) ───────────────────────────────────────────────
+const FONTE_KEY    = 'catecismo-leitor-fonte';
+const FONTE_PASSOS = [0.95, 1.05, 1.2, 1.35, 1.5]; // rem
+let _fonteIdx = 1;
+
+function aplicarFonte() {
+  container.style.setProperty('--leitor-fonte', `${FONTE_PASSOS[_fonteIdx]}rem`);
+  const menos = document.getElementById('leitor-fonte-menos');
+  const mais  = document.getElementById('leitor-fonte-mais');
+  if (menos) menos.disabled = _fonteIdx === 0;
+  if (mais)  mais.disabled  = _fonteIdx === FONTE_PASSOS.length - 1;
+}
+
+function iniciarFonte() {
+  try {
+    const salvo = parseInt(localStorage.getItem(FONTE_KEY), 10);
+    if (salvo >= 0 && salvo < FONTE_PASSOS.length) _fonteIdx = salvo;
+  } catch { /* localStorage indisponível */ }
+  document.getElementById('leitor-fonte-menos')?.addEventListener('click', () => mudarFonte(-1));
+  document.getElementById('leitor-fonte-mais')?.addEventListener('click', () => mudarFonte(1));
+  aplicarFonte();
+}
+
+function mudarFonte(delta) {
+  _fonteIdx = Math.max(0, Math.min(FONTE_PASSOS.length - 1, _fonteIdx + delta));
+  try { localStorage.setItem(FONTE_KEY, String(_fonteIdx)); } catch { /* ignora */ }
+  aplicarFonte();
 }
 
 export function abrirLeitor(indice = 0) {
@@ -75,13 +117,13 @@ export function abrirLeitor(indice = 0) {
   app.classList.remove('estado-inicial', 'estado-busca');
   app.classList.add('estado-leitura');
 
+  renderizarCapitulo(_indice);
   if (window.innerWidth < 768) {
-    // Mobile: abre o TOC primeiro; usuário escolhe o capítulo
+    // Mobile: o índice abre por cima para a pessoa escolher o capítulo; o
+    // capítulo já está renderizado atrás, então fechar o índice mostra texto.
     _tocAberta = true;
     container.classList.remove('toc-fechada');
     btnToc.setAttribute('aria-expanded', 'true');
-  } else {
-    renderizarCapitulo(_indice);
   }
 }
 
