@@ -788,6 +788,7 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
 // citações: nada é escrito na hora. O capítulo da Catena e a tabela de autores ficam em cache.
 const cacheCatena = new Map();
 let autoresCatena = null;
+let catenaPublicada = null;   // capítulos com página em /catena/ (gerada no deploy); sem o arquivo, sem link
 async function comentarioDoEvangelho(dt, dia) {
   const comentario = await buscarJson(`/data/liturgia-comentario/${dt}.json`);
   if (!comentario || estado.dt !== dt) return;
@@ -795,12 +796,13 @@ async function comentarioDoEvangelho(dt, dia) {
   if (!card || card.querySelector('.lp-comentario')) return;
   const ref = comentario.catena?.[0];
   const chave = ref ? `${ref.ev}/${String(ref.cap).padStart(2, '0')}` : null;
-  const [capitulo, autores] = await Promise.all([
+  const [capitulo, autores, publicados] = await Promise.all([
     chave ? (cacheCatena.get(chave) ?? cacheCatena.set(chave, buscarJson(`/data/catena/${chave}.json`)).get(chave)) : null,
     autoresCatena ??= buscarJson('/data/catena-autores.json'),
+    catenaPublicada ??= buscarJson('/data/catena-publicados.json'),
   ]);
   if (estado.dt !== dt) return;
-  const html = comentarioHtml(comentario, capitulo, autores, { referenciasDia: assinaturaDoDia(dia) });
+  const html = comentarioHtml(comentario, capitulo, autores, { referenciasDia: assinaturaDoDia(dia), publicados });
   if (!html) return;
   card.insertAdjacentHTML('beforeend', html);
   card.querySelector('.lp-coment-inteiro')?.addEventListener('click', () => {

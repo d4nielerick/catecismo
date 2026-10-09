@@ -279,13 +279,21 @@ export function autorHtml(item, autores) {
 }
 
 /** As palavras do Evangelho dentro do comentário (entre aspas) ficam em itálico, como na glosa. */
-const comLema = pt => esc(pt).replace(/&quot;([^&]{3,}?)&quot;/g, '<i class="lp-lema">$1</i>');
+export const comLema = pt => esc(pt).replace(/&quot;([^&]{3,}?)&quot;/g, '<i class="lp-lema">$1</i>');
 
 /** Formato da leitura patrística do Ofício das Leituras: rubrica vermelha, fonte em itálico, um
  *  título de tema em itálico (curado, uma linha) e o texto em corpo menor, com o nome do Padre em
  *  versalete no início de cada parágrafo. */
-export function comentarioHtml(comentario, capitulo, autores, { referenciasDia } = {}) {
+export function comentarioHtml(comentario, capitulo, autores, { referenciasDia, publicados } = {}) {
   if (!comentario || (referenciasDia && comentario.leituras !== referenciasDia)) return '';
+  // Link para o capítulo inteiro em /catena/ só quando a página existe (data/catena-publicados.json,
+  // gravado por scripts/build-paginas-catena.mjs): a lista vem de fora para o render não ler arquivo.
+  const ref = comentario.catena?.[0];
+  const nomeEv = { Mt: 'Mateus', Mc: 'Marcos', Lc: 'Lucas', Jo: 'João' }[ref?.ev];
+  const capituloPublicado = ref && nomeEv && publicados?.includes(`${ref.ev.toLowerCase()}/${+ref.cap}`);
+  const linkCapitulo = capituloPublicado
+    ? `<a class="lp-coment-inteiro lp-coment-capitulo" style="text-decoration: none" href="/catena/${ref.ev.toLowerCase()}/${+ref.cap}/#${ref.versos ? ref.versos.join('-') : ''}">Ler ${nomeEv} ${+ref.cap} inteiro comentado pelos Padres →</a>`
+    : '';
   const lectiones = new Map((capitulo || []).map(l => [l.lectio, l]));
   const destaques = (comentario.destaques || [])
     .map(d => ({ ...d, item: lectiones.get(d.lectio)?.itens?.[d.i] }))
@@ -299,7 +307,7 @@ export function comentarioHtml(comentario, capitulo, autores, { referenciasDia }
       <div class="lp-padres-texto">${destaques.map(d => `
         <p><span class="lp-padre-nome">${esc(autores?.[d.item.autor]?.nome || d.item.autor)}.</span> ${comLema(d.item.pt)}</p>`).join('')}
       </div>
-      ${temCatena ? `<p class="lp-coment-mais"><button type="button" class="lp-coment-inteiro">Ler o comentário inteiro</button></p>` : ''}
+      ${temCatena || linkCapitulo ? `<p class="lp-coment-mais">${temCatena ? '<button type="button" class="lp-coment-inteiro">Ler o comentário inteiro</button>' : ''}${temCatena && linkCapitulo ? ' <span aria-hidden="true">·</span> ' : ''}${linkCapitulo}</p>` : ''}
     </section>` : '';
   const cic = comentario.catecismo?.length ? `
     <section class="lp-cic" aria-label="No Catecismo">

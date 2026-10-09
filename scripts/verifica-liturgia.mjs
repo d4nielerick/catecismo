@@ -14,6 +14,7 @@ import path from 'node:path';
 import { buildDia, listarFonte, lerFonte, indiceDe, SAIDA, RE, cabecalho } from './build-liturgia.mjs';
 import { lerModelo, lerIndice, listarDias, lerDia, paginaDoDia, sitemapLiturgia } from './build-paginas-liturgia.mjs';
 import { referenciasDoDia } from '../liturgiadiaria/render.mjs';
+import { lerAutores, capitulosPublicados, paginaDoCapitulo, sitemapCatena } from './build-paginas-catena.mjs';
 import { conferirTrechos } from './lib-trechos.mjs';
 
 const semEspaco = s => (s || '').replace(/\s+/g, '');
@@ -242,6 +243,26 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
       }
     }
   }
+}
+
+// Catena Aurea por capítulo (scripts/build-paginas-catena.mjs): o gerador roda em todos os capítulos
+// publicáveis e cada página sai com canonical, dados estruturados, só itens traduzidos e nada de latim.
+{
+  const autores = lerAutores();
+  const capitulos = capitulosPublicados();
+  for (const c of capitulos) {
+    let html;
+    try { html = paginaDoCapitulo(c, autores); }
+    catch (e) { erros.push(`catena ${c.chave}: ${e.message}`); break; }
+    const falta = [
+      [`<link rel="canonical" href="https://santadoutrina.com/catena/${c.chave}/">`, 'canonical'],
+      ['<script type="application/ld+json">', 'dados estruturados'],
+      ['class="ca-lectio"', 'perícopes no HTML'],
+    ].filter(([trecho]) => !html.includes(trecho)).map(([, nome]) => nome);
+    if (/undefined|lang="la"/.test(html)) falta.push('"undefined" ou latim na página');
+    if (falta.length) erros.push(`catena ${c.chave}: ${falta.join(', ')}`);
+  }
+  if (capitulos.length && (sitemapCatena(capitulos).match(/<loc>/g) || []).length !== capitulos.length + 1) erros.push('sitemap-catena.xml incompleto');
 }
 
 if (erros.length) {

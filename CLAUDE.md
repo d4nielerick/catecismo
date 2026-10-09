@@ -231,6 +231,24 @@ leituras do dia mudarem, o resumo some e `verifica-liturgia.mjs` falha. O verifi
 40–110 palavras e que todo nome próprio do resumo esteja nas leituras daquele dia (só o que está no
 texto: nada de interpretação). Nenhuma chamada de IA em tempo de execução.
 
+### Catena Aurea: páginas por capítulo (gerar antes do deploy)
+
+`/catena/lc/15/` = "Lucas 15 comentado pelos Padres da Igreja": uma página estática por capítulo com
+alguma lectio traduzida em `data/catena/<Ev>/<NN>.json` (só itens com `pt`; o latim nunca vai para a
+página; lectio sem `versos` ou sem tradução fica fora), com os versículos de `data/biblia/` como
+epígrafe e a lista dos dias da Liturgia que leem o capítulo (`data/liturgia-comentario/`).
+
+```
+node scripts/build-paginas-catena.mjs   # catena/index.html, catena/<ev>/<cap>/index.html (mt, mc, lc, jo),
+                                        # sitemap-catena.xml e data/catena-publicados.json
+```
+
+Tudo isso é gerado e fica fora do repositório; só `catena/catena.css` e o script são versionados. `sitemap-catena.xml`
+precisa estar listado no `robots.txt`. A página do dia mostra "Ler Lucas 15 inteiro comentado pelos
+Padres →" **só se** o capítulo está em `data/catena-publicados.json` (o `liturgiadiaria.js` busca o arquivo e
+passa a lista a `comentarioHtml` como opção `publicados`; sem o arquivo, sem link). `verifica-liturgia.mjs`
+roda o gerador em memória e confere canonical, dados estruturados e ausência de latim/`undefined`.
+
 ### Integridade do texto do Catecismo (NÃO editar catecismo.json à mão)
 
 `data/catecismo.json` é gerado deterministicamente e o CI (`.github/workflows/verifica.yml`)
