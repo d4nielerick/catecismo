@@ -17,7 +17,7 @@ const SETA_PROX = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5
 export const ICONE_MENU = '<svg class="lp-hamb" viewBox="0 0 24 24" aria-hidden="true"><path class="lp-hamb-1" d="M5 8h14"/><path class="lp-hamb-2" d="M5 12h14"/><path class="lp-hamb-3" d="M5 16h9"/></svg>';
 
 import { evento } from '/liturgiadiaria/metricas.mjs';
-import { modoInstalacao, aoMudarInstalacao, instalar } from '/liturgiadiaria/pwa.mjs';
+import { modoInstalacao, aoMudarInstalacao, instalar, jaInstalado, noIphone, estadoAvisos, ligarAvisos, desligarAvisos } from '/liturgiadiaria/pwa.mjs';
 
 // Apoio: os links de pagamento e a meta ficam em data/apoio.json; o que já entrou no mês vem de /api/apoio
 // (alimentado pelo webhook da Stripe). Sem a API, a barra mostra só a meta.
@@ -277,6 +277,43 @@ function fecharCartao() {
   if (janelaCartao?.open) janelaCartao.close();
 }
 
+/** Seção "Evangelho de hoje": o botão liga/desliga; no iPhone sem o app instalado, só a instrução. */
+async function pintarAvisos(estado) {
+  const secao = dialogo?.querySelector('#lp-menu-avisos');
+  if (!secao) return;
+  const botao = secao.querySelector('[data-acao="avisos"]');
+  const nota = secao.querySelector('.lp-menu-avisos-nota');
+  estado = estado || await estadoAvisos();
+  const iphoneSemApp = noIphone() && !jaInstalado();
+  secao.hidden = estado === 'indisponivel' && !iphoneSemApp;
+  botao.hidden = estado === 'indisponivel' || estado === 'bloqueado';
+  botao.disabled = false;
+  botao.classList.toggle('ligado', estado === 'ligado');
+  botao.textContent = estado === 'ligado' ? 'Avisos ativados · desativar' : 'Ativar avisos';
+  nota.hidden = !(iphoneSemApp || estado === 'bloqueado' || estado === 'erro');
+  nota.textContent = iphoneSemApp ? 'No iPhone, instale o app primeiro (seção acima).'
+    : estado === 'bloqueado' ? 'Os avisos estão bloqueados nas configurações do navegador para este site.'
+    : estado === 'erro' ? 'Não deu para ativar agora. Tente de novo mais tarde.' : '';
+  // a nota aparece ou some: a folha acompanha, como em mostrarEtapa
+  if (CELULAR.matches && dialogo.open) { const h = dialogo.offsetHeight; medirAlturas(); irPara(h >= cheioH - 1 ? cheioH : medioH); }
+}
+
+async function alternarAvisos(botao) {
+  if (botao.disabled) return;
+  const ligado = botao.classList.contains('ligado');
+  botao.disabled = true;
+  botao.textContent = ligado ? 'Desativando…' : 'Ativando…';
+  if (ligado) {
+    await desligarAvisos();
+    evento('push-desativar');
+    pintarAvisos('desligado');
+  } else {
+    const resultado = await ligarAvisos();
+    evento('push-ativar', { resultado });
+    pintarAvisos(resultado === 'ligado' ? 'ligado' : resultado === 'bloqueado' ? 'bloqueado' : 'erro');
+  }
+}
+
 async function abrirCartao(valor) {
   evento('apoio-cartao', { valor });
   pararPix();
@@ -427,6 +464,12 @@ export function iniciarMenu() {
         <p class="lp-menu-app-ios" hidden>No iPhone: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
         <button type="button" class="lp-menu-instalar lp-menu-ver" data-acao="ver-instalar" hidden>Ver como fazer</button>
       </section>
+      <section class="lp-menu-sec lp-menu-sec-avisos" id="lp-menu-avisos" aria-labelledby="lp-menu-h-avisos" hidden>
+        <h3 id="lp-menu-h-avisos">Evangelho de hoje</h3>
+        <p class="lp-menu-app-txt">Receba o Evangelho todo dia às 6h, direto no aparelho.</p>
+        <button type="button" class="lp-menu-instalar" data-acao="avisos">Ativar avisos</button>
+        <p class="lp-menu-app-ios lp-menu-avisos-nota" hidden></p>
+      </section>
     </div>`;
   document.body.append(dialogo);
   diasEl = dialogo.querySelector('#lp-menu-dias');
@@ -462,6 +505,7 @@ export function iniciarMenu() {
     if (acao === 'voltar') { pararPix(); pix = null; mostrarEtapa('valores'); return; }
     if (acao === 'copiar') { copiarCodigo(e.target.closest('[data-acao]')); return; }
     if (acao === 'instalar') { instalar(); return; }
+    if (acao === 'avisos') { alternarAvisos(e.target.closest('[data-acao]')); return; }
     if (acao === 'ver-instalar') { evento('pwa-ver-como'); fechar(); setTimeout(() => import('/liturgiadiaria/tour.mjs').then(t => t.abrirTour('instalar')), 320); return; }
     if (acao === 'cartao') { e.preventDefault(); abrirCartao(pix.valor); return; }
     if (e.target.closest('#lp-menu-doar')) {
@@ -487,8 +531,9 @@ export function iniciarMenu() {
   grab.addEventListener('pointercancel', terminarArrasto);
   aplicar(ler());
   carregarApoio();
-  aoMudarInstalacao(pintarInstalacao);
+  aoMudarInstalacao(() => { pintarInstalacao(); pintarAvisos(); });
   pintarInstalacao();
+  pintarAvisos();
   // de volta do pagamento: a folha abre com o agradecimento
   if (new URLSearchParams(location.search).get('apoio') === 'obrigado') {
     mostrarEtapa('obrigado');
