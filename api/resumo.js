@@ -1,9 +1,9 @@
 /**
  * api/resumo.js — Vercel Serverless Function
- * Recebe query + parágrafos relevantes, retorna resumo via Grok.
+ * Recebe query + parágrafos relevantes, retorna resumo via Claude.
  */
 
-import { chamarModelo } from './_xai.mjs';
+import { chamarModelo } from './_modelo.mjs';
 
 export const config = { runtime: 'edge' };
 
@@ -62,7 +62,7 @@ export default async function handler(req) {
     });
   }
 
-  const apiKey = process.env.GROK_API_KEY;
+  const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     return new Response(JSON.stringify({ error: 'API key não configurada.' }), {
       status: 500,
@@ -102,7 +102,7 @@ export default async function handler(req) {
     : `Tema pesquisado: "${query}"\n\nParágrafos do Catecismo:\n\n${contexto}`;
 
   try {
-    // Prazo e reforço em _xai.mjs: sem prazo, uma xAI travada deixava o botão
+    // Prazo e reforço em _modelo.mjs: sem prazo, um modelo travado deixava o botão
     // de resumo pendurado por minutos (visto numa chamada de 301 s).
     const { texto } = await chamarModelo(apiKey, {
       sistema: systemPrompt,

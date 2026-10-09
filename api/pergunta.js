@@ -22,7 +22,7 @@
  * Se o planejador falhar, a busca segue só com a pergunta original.
  *
  * Guardas de custo: cache por pergunta normalizada, limite por IP, teto diário
- * de perguntas, prazo e reforço em cada chamada (_xai.mjs). Cache e contador ficam no tmp do
+ * de perguntas, prazo e reforço em cada chamada (_modelo.mjs). Cache e contador ficam no tmp do
  * container — sobrevivem a `docker restart` e nunca na pasta que o Caddy serve.
  */
 
@@ -31,7 +31,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { recuperar, recuperarFundido, textoDoParagrafo } from './_recuperar.mjs';
 import { filtrarRedacao } from './_guardas.mjs';
-import { chamarModelo } from './_xai.mjs';
+import { chamarModelo } from './_modelo.mjs';
 
 const MAX_CHARS_PARAGRAFO = 1200;
 
@@ -374,7 +374,7 @@ export default async function handler(req) {
     return json({ error: 'O limite de perguntas de hoje foi atingido. Volte amanhã.' }, 503);
   }
 
-  const apiKey = process.env.GROK_API_KEY;
+  const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return json({ error: 'Serviço indisponível.' }, 503);
 
   contarPergunta();
