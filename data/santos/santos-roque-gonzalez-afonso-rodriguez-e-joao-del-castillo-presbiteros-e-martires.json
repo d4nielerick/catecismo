@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santos Roque González, Afonso Rodríguez e João del Castillo, presbíteros e mártires",
+  "artigos": [
+    {
+      "titulo": "Roque González de Santa Cruz",
+      "url": "https://pt.wikipedia.org/wiki/Roque_Gonz%C3%A1lez_de_Santa_Cruz",
+      "resumo": [
+        "Roque González de Santa Cruz, SJ (Assunção, 16 de agosto de 1576 — Caibaté, 15 de novembro de 1628) foi um religioso santo, natural do Paraguai, que entrou na história do Brasil meridional ao disseminar a religião cristã entre os povos originais das terras do oeste do Rio Grande do Sul. Foi canonizado em 1988 pelo Papa João Paulo II."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/78/Roque_Gonz%C3%A1lez_de_Santa_Cruz.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 307,
+        "altura": 384
+      }
+    }
+  ]
+}

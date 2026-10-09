@@ -1,0 +1,19 @@
+{
+  "celebracao": "São Benedito, o Negro, religioso",
+  "artigos": [
+    {
+      "titulo": "Benedito, o Mouro",
+      "url": "https://pt.wikipedia.org/wiki/Benedito,_o_Mouro",
+      "resumo": [
+        "São Benedito, o Negro (ordem OFM Cap), conhecido também como São Benedito, o Mouro (cor escura da pele); Benedito, o Africano; Benedito de Palermo (São Fratello, Sicília, 31 de março de 1526 - Palermo, 4 de abril de 1589), é um santo católico, que possui duas versões históricas: na primeira delas, teria sido um italiano descendente de africanos escravizados na Etiópia; em outra, teria sido um mouro islâmico escravizado ao norte da África, acontecimento comum no sul da Itália na época.",
+        "O Missal Romano, ou Missal Cotidiano, estabelece como memória facultativa de São Benedito, o Negro, no dia 5 de outubro, afirmando:",
+        "\"Filho de escravos vindos da Etiópia para San Fratello, na Sicília, vendeu seus bens e fez-se eremita franciscano nas vizinhanças de Palermo. Mais tarde, obedecendo a uma determinação do Papa Pio VI, obrigando todos os seguidores da Regra de São Francisco a viverem em conventos de sua Ordem, abandonou o eremitério."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Capela_do_Divino_Esp%C3%ADrito_Santo_em_Porto_Alegre_011-aa.JPG/500px-Capela_do_Divino_Esp%C3%ADrito_Santo_em_Porto_Alegre_011-aa.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 764
+      }
+    }
+  ]
+}

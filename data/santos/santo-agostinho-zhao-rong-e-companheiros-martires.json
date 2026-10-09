@@ -1,0 +1,30 @@
+{
+  "celebracao": "Santo Agostinho Zhao Rong e companheiros, mártires",
+  "artigos": [
+    {
+      "titulo": "Zhao Rong",
+      "url": "https://pt.wikipedia.org/wiki/Zhao_Rong",
+      "resumo": [
+        "Zhao Rong (Anhui, 2 de agosto de 1991) é uma futebolista profissional chinesa que atua como atacante."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Zhao_Rong_defending_FIFA_Women%27s_World_Cup_Canada_2015_-_Edmonton.jpg/500px-Zhao_Rong_defending_FIFA_Women%27s_World_Cup_Canada_2015_-_Edmonton.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 844
+      }
+    },
+    {
+      "titulo": "Os 120 Mártires da China",
+      "url": "https://pt.wikipedia.org/wiki/Os_120_M%C3%A1rtires_da_China",
+      "resumo": [
+        "Os 120 Mártires da China, ou Agostinho Zhao Rong e 119 Companheiros, mártires na China, são mártires católicos da China e santos da Igreja Católica canonizados no dia 1 de Outubro de 2000 pelo Papa João Paulo II.",
+        "Entre 1648 e 1930, 87 chineses e 33 missionários ocidentais (incluindo sete religiosas) foram martirizados simplesmente por serem católicos e, em vários casos, pela sua recusa a apostatar. Muitos morreram no Levante dos Boxers (1899-1900), em que camponeses e ultra-nacionalistas chineses xenófobos mataram milhares de cristãos chineses, missionários e outros estrangeiros ocidentais. Na Igreja Católica, os 120 mártires chineses são lembrados todos os anos no dia 9 de Julho como uma memória facultativa."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Martyr_Saints_of_China.jpg/500px-Martyr_Saints_of_China.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 360
+      }
+    }
+  ]
+}

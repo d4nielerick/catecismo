@@ -1,0 +1,19 @@
+{
+  "celebracao": "São José de Anchieta, presbítero",
+  "artigos": [
+    {
+      "titulo": "José de Anchieta",
+      "url": "https://pt.wikipedia.org/wiki/Jos%C3%A9_de_Anchieta",
+      "resumo": [
+        "José de Anchieta SJ (San Cristóbal de La Laguna, 19 de março de 1534 – Reritiba, 9 de junho de 1597) foi um padre jesuíta espanhol que ingressou na Companhia de Jesus no Reino de Portugal, ficando ao seu serviço, e um dos fundadores das cidades brasileiras de São Paulo e do Rio de Janeiro.",
+        "Foi o primeiro dramaturgo, o primeiro gramático e o primeiro poeta nascido nas Ilhas Canárias. Foi o autor da primeira gramática da língua tupi e um dos primeiros autores da literatura brasileira, para a qual compôs inúmeras peças teatrais e poemas de teor religioso, a mais notória das quais o Auto de São Lourenço, e uma epopeia.",
+        "Considerado santo pela Igreja Católica, foi beatificado em 1980 pelo papa João Paulo II e canonizado em 2014 pelo papa Francisco. É conhecido como o Apóstolo do Brasil, por ter sido um dos pioneiros na introdução do cristianismo no país. Em abril de 2015 foi declarado co-padroeiro do Brasil na 53.ª Assembleia Geral da CNBB."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Benedito_Calixto_de_Jesus_-_Retrato_do_Padre_Jos%C3%A9_de_Anchieta%2C_Acervo_do_Museu_Paulista_da_USP.jpg/500px-Benedito_Calixto_de_Jesus_-_Retrato_do_Padre_Jos%C3%A9_de_Anchieta%2C_Acervo_do_Museu_Paulista_da_USP.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 666
+      }
+    }
+  ]
+}

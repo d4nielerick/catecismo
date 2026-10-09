@@ -1,0 +1,18 @@
+{
+  "celebracao": "São João Batista de la Salle",
+  "artigos": [
+    {
+      "titulo": "João Batista de La Salle",
+      "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Batista_de_La_Salle",
+      "resumo": [
+        "João Batista de La Salle (Reims, 30 de abril de 1651 - Saint-Yon, 7 de abril de 1719) foi um sacerdote, pedagogo e pedagogista francês inovador, que consagrou sua vida a formar professores destinados à formação de crianças pobres. Foi fundador de uma congregação religiosa, os Irmãos das Escolas Cristãs, ou Irmãos Lassalistas, dedicada à educação, especialmente dos mais pobres. Em 15 de maio de 1950, foi declarado patrono de todos os educadores pelo Papa Pio XII.",
+        "Foi canonizado pela Igreja Católica. Sua festa litúrgica é comemorada no dia 7 de abril."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/05/Jean_baptiste_de_la_Salle.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 232,
+        "altura": 345
+      }
+    }
+  ]
+}

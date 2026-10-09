@@ -1,0 +1,19 @@
+{
+  "celebracao": "Santa Dulce dos Pobres, virgem",
+  "artigos": [
+    {
+      "titulo": "Irmã Dulce",
+      "url": "https://pt.wikipedia.org/wiki/Irm%C3%A3_Dulce",
+      "resumo": [
+        "Maria Rita de Sousa Brito Lopes Pontes (Salvador, 26 de maio de 1914 — Salvador, 13 de março de 1992), conhecida como Irmã Dulce ou Santa Dulce dos Pobres, é uma santa da Igreja Católica e foi uma freira brasileira.",
+        "Em 2011 foi beatificada pelo enviado especial do Papa Bento XVI, Dom Geraldo Majella Agnelo, em Salvador, e canonizada em 13 de outubro de 2019 pelo papa Francisco com o título de Santa Dulce dos Pobres, sendo a primeira santa nascida no Brasil.",
+        "Irmã Dulce ganhou notoriedade por suas obras de caridade e de assistência aos pobres e necessitados, obras essas que ela praticava desde muito cedo. Na juventude já lotava a casa de seus pais acolhendo doentes. Ela também criou e ajudou a criar várias instituições filantrópicas: uma das mais importantes e famosas é o Hospital Santo Antônio, que foi construído no lugar do galinheiro do Convento Santo Antônio. Hoje o hospital atende diariamente mais de cinco mil pessoas. Foi uma das mais importantes e influentes ativistas humanitárias do século XX. Por suas ações de assistência aos desfavorecidos, recebeu a alcunha de \"Anjo Bom da Bahia\". Suas obras de caridade são referência nacional, e ganharam repercussão pelo mundo. Seu nome é sempre relacionado à caridade e amor ao próximo, fato pelo qual é intitulada \"Mãe dos Desamparados\", gravado como epitáfio de seu primeiro túmulo. Foi indicada ao Prêmio Nobel da Paz no ano de 1988 pelo então presidente do Brasil, José Sarney, porém não ficou com o título. Em 2001, foi eleita \"a religiosa do século XX\", em uma eleição que foi publicada pela revista Isto É. Em 2012, foi eleita uma dos 12 maiores brasileiros de todos os tempos em pesquisa feita pelo SBT, para eleger a personalidade que mais contribuiu para o país."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/62/Irma-dulce-santa-canonizada.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 367,
+        "altura": 550
+      }
+    }
+  ]
+}

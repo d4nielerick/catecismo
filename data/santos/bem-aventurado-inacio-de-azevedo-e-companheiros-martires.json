@@ -1,0 +1,17 @@
+{
+  "celebracao": "Bem-aventurado Inácio de Azevedo e companheiros, mártires",
+  "artigos": [
+    {
+      "titulo": "Inácio de Azevedo",
+      "url": "https://pt.wikipedia.org/wiki/In%C3%A1cio_de_Azevedo",
+      "resumo": [
+        "Inácio de Azevedo de Ataíde Abreu e Malafaya S.J., ou simplesmente Inácio de Azevedo (Porto, c. 1526 – La Palma, 15 de julho de 1570), foi um sacerdote jesuíta português do século XVI. É um dos \"Quarenta Mártires do Brasil\", beatificados pelo Papa Pio IX em 11 de Maio de 1854."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/P._Ignatius_Azevedius_S._I._Illustrissim%C3%A2_Lusitaniae_famili%C3%A2_oriundus%2C_in_itinere_Brasilo_%C3%A0_Calvinistis_pro_Catholica_Religione_mari_demers_%281675%2C_Karel_Skr%C3%A9ta_delineavit%2C_Melchoir_K%C3%BCsel_fecit%29_-_John_Carter_Brown_Library.png/500px-thumbnail.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 685
+      }
+    }
+  ]
+}

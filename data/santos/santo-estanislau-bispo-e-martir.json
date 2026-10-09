@@ -1,0 +1,18 @@
+{
+  "celebracao": "Santo Estanislau, bispo e mártir",
+  "artigos": [
+    {
+      "titulo": "Estanislau de Szczepanów",
+      "url": "https://pt.wikipedia.org/wiki/Estanislau_de_Szczepan%C3%B3w",
+      "resumo": [
+        "Estanislau ou Stanislaus de Szczepanów (em polonês/polaco: Stanisław ze Szczepanowa; 26 de julho de 1030 – 11 de abril de 1079) foi um prelado católico polonês que serviu como Bispo de Cracóvia e foi martirizado pelo Rei polonês Boleslau II, o Audaz. Ele é o santo padroeiro da Polônia.",
+        "Stanislaus é venerado na Igreja Católica como Stanislaus, o Mártir (para distingui-lo do jesuíta do século XVI, Stanislaus Kostka)."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/SStanis%C5%82aw.JPG/500px-SStanis%C5%82aw.JPG?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 653
+      }
+    }
+  ]
+}

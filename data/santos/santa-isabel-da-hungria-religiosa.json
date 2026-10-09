@@ -1,0 +1,17 @@
+{
+  "celebracao": "Santa Isabel da Hungria, religiosa",
+  "artigos": [
+    {
+      "titulo": "Isabel da Hungria e da Turíngia",
+      "url": "https://pt.wikipedia.org/wiki/Isabel_da_Hungria_e_da_Tur%C3%ADngia",
+      "resumo": [
+        "Isabel da Hungria e da Turíngia, OFS (Em húngaro: Szent Erzsébet, em alemão: Elisabeth von Thüringen) (Bratislava, 7 de julho de 1207 – Marburgo, 17 de novembro de 1231), foi uma princesa do Reino da Hungria, filha de André II da Hungria e da rainha Gertrudes de Andechs-Meran, descendente da família dos condes de Andechs-Meran, e uma santa católica."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Francisco_de_Zurbar%C3%A1n_-_Saint_Elizabeth_of_Thuringia_-_Google_Art_Project.jpg/500px-Francisco_de_Zurbar%C3%A1n_-_Saint_Elizabeth_of_Thuringia_-_Google_Art_Project.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 597
+      }
+    }
+  ]
+}

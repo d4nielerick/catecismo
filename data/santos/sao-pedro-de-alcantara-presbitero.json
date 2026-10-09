@@ -1,0 +1,17 @@
+{
+  "celebracao": "São Pedro de Alcântara, presbítero",
+  "artigos": [
+    {
+      "titulo": "Pedro de Alcântara",
+      "url": "https://pt.wikipedia.org/wiki/Pedro_de_Alc%C3%A2ntara",
+      "resumo": [
+        "São Pedro de Alcântara, nascido como Juan de Garabito y Vilela de Sanabria (Alcântara, 1499 – Arenas de San Pedro, 18 de outubro de 1562), foi um frade franciscano espanhol que fez grandes reformas na sua ordem religiosa, a Ordem dos Frades Menores, no Reino de Portugal."
+      ],
+      "imagem": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Luca_Giordano_-_The_apparition_of_St_John_of_Capistrano_to_St_Peter_of_Alcantara.jpg/500px-Luca_Giordano_-_The_apparition_of_St_John_of_Capistrano_to_St_Peter_of_Alcantara.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "largura": 480,
+        "altura": 681
+      }
+    }
+  ]
+}
