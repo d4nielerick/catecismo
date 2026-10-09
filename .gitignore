@@ -20,3 +20,15 @@ catecismo/
 
 # Página de hoje pré-renderizada pelo cron da VPS (scripts/pagina-hoje.mjs)
 /liturgiadiaria/hoje.html
+
+# Catena Aurea e Santo do dia: páginas geradas antes do deploy (scripts/build-paginas-catena.mjs, build-paginas-santos.mjs)
+/catena/index.html
+/catena/mt/
+/catena/mc/
+/catena/lc/
+/catena/jo/
+/sitemap-catena.xml
+/data/catena-publicados.json
+/santos/*/
+/santos/index.html
+/sitemap-santos.xml
