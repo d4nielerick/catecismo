@@ -100,7 +100,8 @@ export async function enviar(inscricao, payload, { ttl = 12 * 3600, topico } = {
     'TTL': String(ttl),
     'Urgency': 'normal',
   };
-  if (topico) headers.Topic = topico;   // o serviço guarda só o último aviso do mesmo tópico
+  // o serviço guarda só o último aviso do mesmo tópico; a Apple recusa o cabeçalho (400 BadWebPushTopic)
+  if (topico && !new URL(inscricao.endpoint).hostname.endsWith('push.apple.com')) headers.Topic = topico;
   const r = await fetch(inscricao.endpoint, { method: 'POST', headers, body: corpo, signal: AbortSignal.timeout(15000) });
   await r.arrayBuffer().catch(() => {});
   return { status: r.status, morta: r.status === 404 || r.status === 410 };
