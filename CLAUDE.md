@@ -231,6 +231,35 @@ leituras do dia mudarem, o resumo some e `verifica-liturgia.mjs` falha. O verifi
 40–110 palavras e que todo nome próprio do resumo esteja nas leituras daquele dia (só o que está no
 texto: nada de interpretação). Nenhuma chamada de IA em tempo de execução.
 
+### Liturgia Diária: avisos push ("Evangelho de hoje" às 6h)
+
+Quem liga os avisos no menu do app (seção "Evangelho de hoje") recebe, às 6h de Brasília, uma
+notificação com a referência do Evangelho e a celebração do dia, que abre `/liturgiadiaria/`.
+Web Push sem dependência: `api/_push.mjs` faz VAPID (RFC 8292) e a cifra aes128gcm (RFC 8291) só
+com `node:crypto` (a função `cifrar` aceita salt e chave fixos para conferir com o vetor da RFC).
+
+- Cliente: `liturgiadiaria/pwa.mjs` (`estadoAvisos`, `ligarAvisos`, `desligarAvisos`), `sw.js`
+  (`push`, `notificationclick`, `pushsubscriptionchange`), `menu.mjs` (botão "Ativar avisos").
+  A chave pública VAPID vem de `data/push.json` (pública, versionada). Eventos Umami: `push-ativar`
+  (`resultado`), `push-desativar`.
+- Servidor: `api/push-inscrever.js` (POST `{ inscricao }`) e `api/push-cancelar.js` (POST
+  `{ endpoint }`) gravam em `PUSH_ARQUIVO` (padrão `/dados/push.json`, volume `apoio-dados` da VPS):
+  `{ inscricoes: [{ endpoint, keys, desde }], ultimoEnvio: "AAAA-MM-DD" }`.
+- Envio: `scripts/enviar-push.mjs`. O cron da VPS (root) roda **toda hora** (`0 * * * *`), porque o
+  cron roda no fuso de Berlim (com horário de verão) e não aceita fuso por tarefa; o script só manda
+  quando em Brasília já passou das 6h e `ultimoEnvio` ainda não é hoje. Inscrições com 404/410 são
+  apagadas. Log: `/var/log/push-liturgia.log`. Para mandar na hora (teste): `--agora`.
+- Variáveis (container `catecismo-api`, de `/opt/mediaserver/.env`): `VAPID_PUBLIC_KEY`,
+  `VAPID_PRIVATE_KEY` (nunca sai da VPS), `VAPID_SUBJECT`. Par novo: `gerarChaves()` em `_push.mjs`;
+  trocar a chave invalida todas as inscrições.
+- Testar localmente: `PUSH_ARQUIVO=/tmp/push.json VAPID_PUBLIC_KEY=… VAPID_PRIVATE_KEY=… node
+  scripts/dev-api.mjs 8787` (site + handlers), pôr a mesma pública em `data/push.json`, abrir
+  `http://localhost:8787/liturgiadiaria/` no Chrome, ligar os avisos no menu e rodar
+  `node scripts/enviar-push.mjs --agora` com as mesmas variáveis. Devolver a chave de produção a
+  `data/push.json` antes de commitar.
+- iPhone: só com o app instalado na tela inicial (iOS 16.4+); no Safari comum a seção mostra a
+  instrução de instalar. Chrome/Edge/Firefox no desktop e Android funcionam direto.
+
 ### Integridade do texto do Catecismo (NÃO editar catecismo.json à mão)
 
 `data/catecismo.json` é gerado deterministicamente e o CI (`.github/workflows/verifica.yml`)

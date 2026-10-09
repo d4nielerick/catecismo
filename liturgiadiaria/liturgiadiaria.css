@@ -1871,6 +1871,11 @@ button.lp-menu-valor { border: 0; cursor: pointer; }
 }
 .lp-menu-instalar:active { transform: scale(0.98); }
 .lp-menu-instalar:hover { background: rgba(255, 255, 255, 0.85); }
+.lp-menu-instalar:disabled { opacity: 0.6; cursor: default; }
+/* Avisos ligados: o botão vira um lembrete discreto, com um pontinho aceso */
+.lp-menu-instalar.ligado { background: transparent; color: var(--lp-suave); font-weight: 500; }
+.lp-menu-instalar.ligado::before { content: ''; display: inline-block; width: 8px; height: 8px; margin: 0 0.5rem 1px 0; border-radius: 50%; background: var(--lp-vermelho); vertical-align: middle; }
+.lp-menu-avisos-nota { margin-top: 0.6rem !important; }
 
 /* Janela do cartão (Checkout embutido da Stripe): fica por cima do menu, com rolagem própria */
 .lp-pagar {

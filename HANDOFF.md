@@ -132,6 +132,13 @@ no tooltip; o tooltip só abre no clique e fica fixo até o usuário fechar, com
   a chave (console.x.ai) e recriado o container. Testado de ponta a ponta (clique real no
   botão em produção → resposta da IA renderizada). Ver gotcha na §6 sobre esse padrão de
   interpolação silenciosamente vazia.
+- **Liturgia Diária — avisos push "Evangelho de hoje" (2026-10-09):** Web Push sem npm
+  (`api/_push.mjs`: VAPID + aes128gcm com `node:crypto`, conferido contra o vetor da RFC 8291).
+  Inscrição pelo menu (`pwa.mjs`/`menu.mjs`), rotas `/api/push-inscrever` e `/api/push-cancelar`
+  gravando em `/dados/push.json`, envio por `scripts/enviar-push.mjs` num cron de hora em hora que
+  só dispara às 6h de Brasília. Chaves em `/opt/mediaserver/.env` (`VAPID_*`), pública em
+  `data/push.json`. Detalhes e teste local na seção "avisos push" do CLAUDE.md. Testado de ponta a
+  ponta em localhost (inscrição → FCM → notificação no Chrome → desativar).
 - **Hub "Pergunte ao Catecismo" — publicação silenciosa (2026-09-14):** `/perguntar/` está no
   ar, mas **sem link** (convite da hero com `hidden` em `index.html`, atalho da busca desligado por
   `HUB_ABERTO = false` em `assets/js/ui.js`) e com `noindex`. Abrir = tirar o `hidden`, trocar para

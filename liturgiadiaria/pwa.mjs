@@ -56,3 +56,53 @@ export function registrarServiceWorker() {
   if (document.readyState === 'complete') setTimeout(iniciar, 1500);
   else addEventListener('load', () => setTimeout(iniciar, 1500), { once: true });
 }
+
+// ---- avisos: "Evangelho de hoje" às 6h (Web Push) ----------------------------------------------
+// A inscrição fica no navegador e no servidor (/api/push-inscrever); o envio sai de
+// scripts/enviar-push.mjs na VPS. No iPhone só funciona com o app instalado (iOS 16.4+).
+
+const API = /(^|\.)santadoutrina\.com$/.test(location.hostname) || location.hostname === 'localhost' ? '/api' : 'https://santadoutrina.com/api';
+const suportaPush = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
+
+async function inscricaoAtual() {
+  const reg = await navigator.serviceWorker.getRegistration('/liturgiadiaria/');
+  return reg ? reg.pushManager.getSubscription() : null;
+}
+
+/** 'indisponivel' (navegador sem push), 'bloqueado' (permissão negada), 'desligado' ou 'ligado'. */
+export async function estadoAvisos() {
+  if (!suportaPush()) return 'indisponivel';
+  if (Notification.permission === 'denied') return 'bloqueado';
+  try { return (await inscricaoAtual()) ? 'ligado' : 'desligado'; } catch { return 'desligado'; }
+}
+
+/** Pede permissão, inscreve e avisa o servidor. Devolve o estado final ('ligado', 'bloqueado' ou 'erro'). */
+export async function ligarAvisos() {
+  if (!suportaPush()) return 'indisponivel';
+  let inscricao = null;
+  try {
+    const { chave_publica } = await (await fetch('/data/push.json', { cache: 'no-cache' })).json();
+    if ((await Notification.requestPermission()) !== 'granted') return 'bloqueado';
+    const reg = await navigator.serviceWorker.ready;   // o registro sai 1,5 s depois do load; aqui espera por ele
+    inscricao = await reg.pushManager.getSubscription()
+      || await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: Uint8Array.from(atob(chave_publica.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0)) });
+    const r = await fetch(`${API}/push-inscrever`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ inscricao: inscricao.toJSON() }) });
+    if (!r.ok) throw new Error(`servidor ${r.status}`);
+    return 'ligado';
+  } catch (e) {
+    console.warn('[avisos]', e.message);
+    await inscricao?.unsubscribe().catch(() => {});   // não deixa o navegador inscrito num aviso que o servidor não conhece
+    return 'erro';
+  }
+}
+
+export async function desligarAvisos() {
+  try {
+    const inscricao = await inscricaoAtual();
+    if (!inscricao) return 'desligado';
+    const { endpoint } = inscricao;
+    await inscricao.unsubscribe();
+    fetch(`${API}/push-cancelar`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ endpoint }) }).catch(() => {});
+  } catch (e) { console.warn('[avisos]', e.message); }
+  return 'desligado';
+}

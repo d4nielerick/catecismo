@@ -11,10 +11,13 @@
  *                              indice.json vai pela rede primeiro (o calendário muda com o ano);
  *  · fontes e imagens ....... a cópia guardada primeiro.
  *
+ * Avisos (Web Push): `push` mostra a notificação que scripts/enviar-push.mjs manda às 6h,
+ * `notificationclick` abre (ou foca) a Liturgia e `pushsubscriptionchange` refaz a inscrição.
+ *
  * Para trocar tudo (mudou a lista da casca, por exemplo), suba a VERSAO.
  */
 
-const VERSAO = 'v1';
+const VERSAO = 'v2';
 const CASCA = `lit-${VERSAO}-casca`;
 const DADOS = `lit-${VERSAO}-dados`;
 const MIDIA = `lit-${VERSAO}-midia`;
@@ -119,7 +122,7 @@ self.addEventListener('fetch', e => {
     e.respondWith(redePrimeiro(req, CASCA, { tempo: 3500, reserva: '/liturgiadiaria/' }));
     return;
   }
-  if (p === '/data/liturgia/indice.json') { e.respondWith(redePrimeiro(req, DADOS, { tempo: 2500 })); return; }
+  if (p === '/data/liturgia/indice.json' || p === '/data/push.json') { e.respondWith(redePrimeiro(req, DADOS, { tempo: 2500 })); return; }
   if (p.startsWith('/data/')) { e.respondWith(guardarEAtualizar(e, req)); return; }
   if (/\.(?:woff2|png|webp|jpg|jpeg|svg)$/.test(p)) { e.respondWith(copiaPrimeiro(req, MIDIA, MAX_MIDIA)); return; }
   if (/\.(?:js|mjs|css|webmanifest)$/.test(p)) { e.respondWith(redePrimeiro(req, CASCA)); return; }
@@ -139,5 +142,49 @@ self.addEventListener('message', e => {
       }
     }
     await aparar(cache, MAX_DADOS);
+  })());
+});
+
+// ---- avisos ------------------------------------------------------------------------------------
+
+const ICONE = '/assets/img/liturgia-icone-192.png?v=3';
+const API = /(^|\.)santadoutrina\.com$/.test(location.hostname) || location.hostname === 'localhost' ? '/api' : 'https://santadoutrina.com/api';
+
+self.addEventListener('push', e => {
+  let aviso = {};
+  try { aviso = e.data?.json() || {}; } catch { aviso = { corpo: e.data?.text() }; }
+  e.waitUntil(self.registration.showNotification(aviso.titulo || 'Evangelho de hoje', {
+    body: aviso.corpo || '',
+    icon: ICONE,
+    badge: ICONE,
+    tag: aviso.tag || 'evangelho',
+    data: { url: aviso.url || '/liturgiadiaria/' },
+  }));
+});
+
+self.addEventListener('notificationclick', e => {
+  e.notification.close();
+  const destino = new URL(e.notification.data?.url || '/liturgiadiaria/', location.origin).href;
+  e.waitUntil((async () => {
+    const abas = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    const aberta = abas.find(c => new URL(c.url).pathname.startsWith('/liturgiadiaria/'));
+    if (aberta) { await aberta.focus(); if (aberta.url !== destino && 'navigate' in aberta) await aberta.navigate(destino).catch(() => {}); return; }
+    await self.clients.openWindow(destino);
+  })());
+});
+
+// o navegador trocou a inscrição por conta própria: refaz com a mesma chave e avisa o servidor
+self.addEventListener('pushsubscriptionchange', e => {
+  e.waitUntil((async () => {
+    let chave = e.oldSubscription?.options?.applicationServerKey;
+    if (!chave) {
+      const { chave_publica } = await (await fetch('/data/push.json')).json();
+      chave = Uint8Array.from(atob(chave_publica.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+    }
+    const nova = e.newSubscription || await self.registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: chave });
+    await fetch(`${API}/push-inscrever`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ inscricao: nova.toJSON() }) });
+    if (e.oldSubscription && e.oldSubscription.endpoint !== nova.endpoint) {
+      await fetch(`${API}/push-cancelar`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ endpoint: e.oldSubscription.endpoint }) }).catch(() => {});
+    }
   })());
 });
