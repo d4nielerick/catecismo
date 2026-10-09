@@ -221,6 +221,20 @@ redesenha, então não há salto de layout). O modelo é `liturgiadiaria/index.h
 de o gerador não encaixar, `verifica-liturgia.mjs` falha no CI. No Caddy, fontes, imagens, os JSON dos
 dias, os santos e as imagens `og/` têm cache de 30 dias; HTML, JS, CSS e `indice.json`, não.
 
+### Santo do dia: páginas (gerar antes do deploy)
+
+Páginas estáticas para a busca "santo do dia 1 de outubro", na família visual da Liturgia:
+
+```
+node scripts/build-paginas-santos.mjs   # santos/<slug>/ · santos/dia/<MM-DD>/ · santos/index.html · sitemap-santos.xml
+```
+
+Entram `data/santos/<slug>.json` (resumo da Wikipédia), `data/liturgia/*.json` (em que datas cada
+celebração cai: memorial que caiu em domingo some naquele ano, festa móvel muda de data) e
+`data/santos-frases.json` (frase e pintura, quando há; a pintura vira imagem da página e OG). Tudo o que o
+script gera fica fora do git; só `santos/santos.css` é versionado. O texto da Wikipédia é **CC BY-SA 4.0**:
+toda página que o usa traz o crédito e o link do artigo (não remova). `sitemap-santos.xml` vai no `robots.txt`.
+
 ### Liturgia Diária: resumo das leituras
 
 Antes da 1ª leitura, um parágrafo resume as leituras do dia ("Hoje, a primeira leitura (…) …; o
