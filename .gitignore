@@ -32,3 +32,6 @@ catecismo/
 /santos/*/
 /santos/index.html
 /sitemap-santos.xml
+
+# @liturgia_hoje: cards do Instagram (scripts/build-instagram-liturgia.py)
+/liturgiadiaria/instagram/
