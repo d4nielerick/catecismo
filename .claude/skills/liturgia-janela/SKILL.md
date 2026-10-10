@@ -123,6 +123,9 @@ Não bloqueiam o deploy do comentário.
 node scripts/verifica-liturgia.mjs
 node scripts/build-paginas-liturgia.mjs
 python3 scripts/build-og-liturgia.py
+node scripts/build-paginas-catena.mjs
+node scripts/build-paginas-santos.mjs
+python3 scripts/build-instagram-liturgia.py      # cards do @liturgia_hoje (hoje +30); a VPS publica às 6h
 ```
 
 Commit só do que mudou em `data/catena*`, `data/liturgia-comentario/`, `data/liturgia-audio/` (dias
