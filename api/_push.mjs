@@ -98,7 +98,7 @@ export async function enviar(inscricao, payload, { ttl = 12 * 3600, topico } = {
     'Content-Type': 'application/octet-stream',
     'Content-Length': String(corpo.length),
     'TTL': String(ttl),
-    'Urgency': 'normal',
+    'Urgency': 'high',   // com 'normal' a Apple segura o aviso enquanto o iPhone está parado (de madrugada)
   };
   // o serviço guarda só o último aviso do mesmo tópico; a Apple recusa o cabeçalho (400 BadWebPushTopic)
   if (topico && !new URL(inscricao.endpoint).hostname.endsWith('push.apple.com')) headers.Topic = topico;
