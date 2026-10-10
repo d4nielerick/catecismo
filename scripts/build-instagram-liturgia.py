@@ -52,7 +52,6 @@ def card(arquivo, imagem, rotulo, texto, ref, data_txt):
     p = p.crop((int(p.width * .06), int(p.height * .04), int(p.width * .94), int(p.height * .96)))   # borda da foto da tela
     r = max(W / p.width, ALT / p.height); p = p.resize((int(p.width * r) + 1, int(p.height * r) + 1), Image.LANCZOS)
     x = (p.width - W) // 2; y = int((p.height - ALT) * .3); im.paste(p.crop((x, y, x + W, y + ALT)), (0, 0))
-    g = Image.linear_gradient('L').resize((W, 120)); im.paste(Image.new('RGB', (W, 120), CREME), (0, ALT - 120), g)
     m, topo, fundo = 90, ALT + 10, H - 130
     for tam in (92, 84, 76, 68, 60, 54, 48, 42):
         f = fonte('Times New Roman Italic.ttf', tam); linhas = quebrar(d, f'“{texto}”', f, W - 2 * m)
