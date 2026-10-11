@@ -63,7 +63,7 @@ def card(arquivo, imagem, rotulo, texto, ref, data_txt):
     d.text((m, y + 20), ref, font=fonte('Georgia Italic.ttf', 30), fill=CINZA)
     d.line((m, H - 110, W - m, H - 110), fill=(222, 214, 200), width=2)
     d.text((m, H - 88), data_txt, font=fonte('Times New Roman Italic.ttf', 36), fill=VERM)
-    s = '@liturgia_hoje · liturgia.santadoutrina.com'; sf = fonte('Georgia.ttf', 24)
+    s = '@liturgia_hoje'; sf = fonte('Georgia.ttf', 24)
     d.text((W - m - d.textlength(s, font=sf), H - 80), s, font=sf, fill=CINZA)
     im.save(arquivo, quality=90)
 
@@ -95,7 +95,7 @@ def main():
         if resumo.exists():
             r = ler(resumo).get('resumo') or ler(resumo).get('texto')
             if r: partes.append(f'Hoje, {r[0].lower()}{r[1:]}')
-        partes += [f'📖 Leituras completas, áudio e o Evangelho comentado pelos Padres da Igreja:\nhttps://liturgia.santadoutrina.com/{data}/\n(o link também está na bio)', HASHTAGS]
+        partes += ['📖 Leituras completas, áudio e o Evangelho comentado pelos Padres da Igreja: link na bio', HASHTAGS]
         (SAIDA / f'{data}.json').write_text(json.dumps({'data': data, 'legenda': '\n\n'.join(partes)}, ensure_ascii=False, indent=2) + '\n')
         feitos += 1
     print(f'instagram: {feitos} cards em liturgiadiaria/instagram/' + (f' · sem trecho/dados: {", ".join(faltam)}' if faltam else ''))
