@@ -95,7 +95,7 @@ def main():
         if resumo.exists():
             r = ler(resumo).get('resumo') or ler(resumo).get('texto')
             if r: partes.append(f'Hoje, {r[0].lower()}{r[1:]}')
-        partes += ['📖 Leituras completas, áudio e o Evangelho comentado pelos Padres da Igreja: link na bio (liturgia.santadoutrina.com)', HASHTAGS]
+        partes += [f'📖 Leituras completas, áudio e o Evangelho comentado pelos Padres da Igreja:\nhttps://liturgia.santadoutrina.com/{data}/\n(o link também está na bio)', HASHTAGS]
         (SAIDA / f'{data}.json').write_text(json.dumps({'data': data, 'legenda': '\n\n'.join(partes)}, ensure_ascii=False, indent=2) + '\n')
         feitos += 1
     print(f'instagram: {feitos} cards em liturgiadiaria/instagram/' + (f' · sem trecho/dados: {", ".join(faltam)}' if faltam else ''))
