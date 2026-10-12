@@ -10,9 +10,8 @@ struct LeituraView: View {
     var compartilhar: (() -> Void)? = nil
     /// Só o título e o texto (a leitura alternativa, aberta dentro do "ou …").
     var soCorpo = false
-    @EnvironmentObject var player: Player
-
-    private var tocando: Bool { player.tocando == leitura.id }
+    /// Abre a tela de ouvir nesta leitura (só quando há voz).
+    var ouvir: (() -> Void)? = nil
     @AppStorage(TamanhoTexto.chave) private var escala = TamanhoTexto.padrao
     /// Corpo da leitura: 16pt (como no site) vezes o "Tamanho do texto" do menu.
     private var corpoT: CGFloat { 16 * TamanhoTexto.escala(escala) }
@@ -34,18 +33,16 @@ struct LeituraView: View {
             HStack(alignment: .center, spacing: 4) {
                 rotulo
                 Spacer(minLength: 8)
-                if let audio {
-                    Button {
-                        player.alternar(id: leitura.id, url: Servidor.urlAudio(dia: dia.data, nome: audio),
-                                        titulo: "\(leitura.rotulo) · \(leitura.referencia)", subtitulo: dia.celebracao)
-                    } label: {
-                        Image(systemName: tocando ? "pause.fill" : "headphones")
-                            .font(.system(size: tocando ? 17 : 21, weight: .regular))
-                            .foregroundStyle(tocando ? Estilo.vermelho : Color(hex: 0x8c867e))
+                if audio != nil, let ouvir {
+                    Button(action: ouvir) {
+                        Image(systemName: "headphones")
+                            .font(.system(size: 21, weight: .regular))
+                            .foregroundStyle(Color(hex: 0x8c867e))
                             .frame(width: 36, height: 36)
-                            .background(Circle().fill(tocando ? Estilo.vermelho.opacity(0.1) : .clear))
+                            .contentShape(Rectangle())
                     }
-                    .accessibilityLabel(tocando ? "Pausar" : "Ouvir \(leitura.rotulo)")
+                    .buttonStyle(Afunda())
+                    .accessibilityLabel("Ouvir: \(leitura.rotulo)")
                 }
                 if let compartilhar {
                     Button(action: compartilhar) {

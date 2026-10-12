@@ -88,6 +88,9 @@ struct HojeView: View {
             }
         }
         .environmentObject(player)
+        .fullScreenCover(isPresented: Binding(get: { player.aberto }, set: { if !$0 { player.parar() } })) {
+            LeitorAudioView().environmentObject(player)
+        }
         .fullScreenCover(item: $pedidoCard) { CompartilharView(pedido: $0) }
         .sheet(isPresented: $sobreAberto) {
             if let s = extras.sobre { SobreView(slug: s.slug, celebracao: s.celebracao) }
@@ -203,7 +206,8 @@ struct HojeView: View {
                         }
                         LeituraView(leitura: b.leitura, dia: dia,
                                     audio: b.leitura.nomeAudio(entre: dia.leituras).flatMap { audios.contains($0) ? $0 : nil },
-                                    compartilhar: podeCompartilhar(b.leitura) ? { compartilhar(b.leitura, dia) } : nil)
+                                    compartilhar: podeCompartilhar(b.leitura) ? { compartilhar(b.leitura, dia) } : nil,
+                                    ouvir: b.leitura.nomeAudio(entre: dia.leituras).map { nome in { ouvir(nome, dia) } })
                         ForEach(b.alternativas) { l in
                             if l.id == bs.flatMap(\.alternativas).first?.id { Color.clear.frame(height: 0).id("alternativa") }
                             Alternativa(leitura: l, dia: dia)
@@ -274,6 +278,15 @@ struct HojeView: View {
             dia: nil, leitura: nil, fotos: fotos, selo: "Santo do dia")
     }
 
+    // MARK: Ouvir (botaoOuvir do site)
+
+    /// Abre a tela de ouvir na leitura `nome`; a fila são as leituras do dia que têm voz.
+    private func ouvir(_ nome: String, _ dia: Dia) {
+        let fila = ItemFila.fila(audios)
+        guard let inicio = fila.firstIndex(where: { $0.nome == nome }) else { return }
+        player.ouvir(dia: dia.data, cor: dia.cor, fila: fila, inicio: inicio)
+    }
+
     private func mover(_ n: Int) {
         player.parar()
         if let d = Calendar.current.date(byAdding: .day, value: n, to: data) { data = d }
@@ -294,6 +307,8 @@ struct HojeView: View {
             for nome in ["primeira-leitura", "salmo", "segunda-leitura", "evangelho"] {
                 if await Servidor.compartilhado.temAudio(dia: alvo, nome: nome), alvo == chave { audios.insert(nome) }
             }
+            // Depuração: `-ouvir evangelho` (ou salmo, primeira-leitura…) abre a tela de ouvir ao carregar
+            if let q = UserDefaults.standard.string(forKey: "ouvir"), audios.contains(q), alvo == chave { ouvir(q, d) }
         } catch { if alvo == chave { erro = true } }
     }
 }

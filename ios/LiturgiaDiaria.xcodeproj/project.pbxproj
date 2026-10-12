@@ -16,6 +16,7 @@
 		5D333B0B507E4DCF06C8B7EE /* LeituraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E6634A405F99640B5E8C03 /* LeituraView.swift */; };
 		7675515C58BE94D1FAE2DBF9 /* MenuVidro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03532BD461DBB3CEF65BD973 /* MenuVidro.swift */; };
 		82777FA3B20D31AFBEC616AE /* LiturgiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */; };
+		9A26B18377FB3759FB68B845 /* LeitorAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08379E826A02BD9CD9C6727B /* LeitorAudio.swift */; };
 		9B00DEFD68CB578CBEAA5BF1 /* inria-serif-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46843BAB3C751CBAE84A7F7 /* inria-serif-400.ttf */; };
 		A864720EFD9A1057539CD84F /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917A2989A1D56764D329D43 /* Cards.swift */; };
 		AF7C5A0BBEEC81C9C90F6D48 /* Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D41804088A504BF266BBE7 /* Extras.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		03532BD461DBB3CEF65BD973 /* MenuVidro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVidro.swift; sourceTree = "<group>"; };
+		08379E826A02BD9CD9C6727B /* LeitorAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeitorAudio.swift; sourceTree = "<group>"; };
 		0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HojeView.swift; sourceTree = "<group>"; };
 		19D41804088A504BF266BBE7 /* Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extras.swift; sourceTree = "<group>"; };
 		3ED4D239CE4EE2CC97116C48 /* Texto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texto.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				19D41804088A504BF266BBE7 /* Extras.swift */,
 				0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */,
 				E18C6238766A5A55604FC059 /* Info.plist */,
+				08379E826A02BD9CD9C6727B /* LeitorAudio.swift */,
 				D2E6634A405F99640B5E8C03 /* LeituraView.swift */,
 				865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */,
 				03532BD461DBB3CEF65BD973 /* MenuVidro.swift */,
@@ -195,6 +198,7 @@
 				CDFAD8D82B590723B3B26818 /* Cores.swift in Sources */,
 				AF7C5A0BBEEC81C9C90F6D48 /* Extras.swift in Sources */,
 				476011C0D03AF5B91F759487 /* HojeView.swift in Sources */,
+				9A26B18377FB3759FB68B845 /* LeitorAudio.swift in Sources */,
 				5D333B0B507E4DCF06C8B7EE /* LeituraView.swift in Sources */,
 				82777FA3B20D31AFBEC616AE /* LiturgiaApp.swift in Sources */,
 				7675515C58BE94D1FAE2DBF9 /* MenuVidro.swift in Sources */,

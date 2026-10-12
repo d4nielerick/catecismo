@@ -44,6 +44,18 @@ enum CorLiturgica {
         default: return Color(hex: 0xc9b27a)
         }
     }
+    /// COR_CALENDARIO (corDia): a cor que tinge o fundo da tela de ouvir; sem cor, o marrom do site.
+    static func calendario(_ cor: String) -> Color {
+        switch cor {
+        case "roxo": return Color(hex: 0x5b2d86)
+        case "verde": return Color(hex: 0x1f6e3d)
+        case "vermelho": return Color(hex: 0xb8282a)
+        case "rosa": return Color(hex: 0xc7688b)
+        case "preto": return Color(hex: 0x262422)
+        case "branco": return Color(hex: 0xb8972e)
+        default: return Color(hex: 0x3a2a1a)
+        }
+    }
     /// .lp-fita[data-cor]: (fundo, costura, borda)
     static func fita(_ cor: String) -> (Color, Color, Color) {
         let costura = Color.white.opacity(0.35)
