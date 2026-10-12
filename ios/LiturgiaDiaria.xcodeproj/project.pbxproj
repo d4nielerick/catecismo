@@ -13,6 +13,7 @@
 		504E7F087B29F85FA3D31F46 /* Texto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4D239CE4EE2CC97116C48 /* Texto.swift */; };
 		5149541A598577298D919564 /* inria-serif-700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 919A68FB000B2BB46AC6739C /* inria-serif-700.ttf */; };
 		5D333B0B507E4DCF06C8B7EE /* LeituraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E6634A405F99640B5E8C03 /* LeituraView.swift */; };
+		7675515C58BE94D1FAE2DBF9 /* MenuVidro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03532BD461DBB3CEF65BD973 /* MenuVidro.swift */; };
 		82777FA3B20D31AFBEC616AE /* LiturgiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */; };
 		9B00DEFD68CB578CBEAA5BF1 /* inria-serif-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46843BAB3C751CBAE84A7F7 /* inria-serif-400.ttf */; };
 		BEDF4AA8AF18149809F4F3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495E03E070606537C9FEE694 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03532BD461DBB3CEF65BD973 /* MenuVidro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVidro.swift; sourceTree = "<group>"; };
 		0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HojeView.swift; sourceTree = "<group>"; };
 		3ED4D239CE4EE2CC97116C48 /* Texto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texto.swift; sourceTree = "<group>"; };
 		495E03E070606537C9FEE694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				E18C6238766A5A55604FC059 /* Info.plist */,
 				D2E6634A405F99640B5E8C03 /* LeituraView.swift */,
 				865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */,
+				03532BD461DBB3CEF65BD973 /* MenuVidro.swift */,
 				97F26EF38D94915AB3F4293B /* Models.swift */,
 				BC3C42A78CF1FBD70C54CB58 /* Player.swift */,
 				E2C50D4EE877352043AC4DFD /* ProsaCapitular.swift */,
@@ -168,6 +171,7 @@
 				476011C0D03AF5B91F759487 /* HojeView.swift in Sources */,
 				5D333B0B507E4DCF06C8B7EE /* LeituraView.swift in Sources */,
 				82777FA3B20D31AFBEC616AE /* LiturgiaApp.swift in Sources */,
+				7675515C58BE94D1FAE2DBF9 /* MenuVidro.swift in Sources */,
 				CFF208B95D35FF5E678479F0 /* Models.swift in Sources */,
 				CA693A5E61CA853DDB91DBC1 /* Player.swift in Sources */,
 				C56D26D2F150F6014A3E9380 /* ProsaCapitular.swift in Sources */,

@@ -9,7 +9,9 @@ struct LeituraView: View {
     @EnvironmentObject var player: Player
 
     private var tocando: Bool { player.tocando == leitura.id }
-    private let corpoT: CGFloat = 16
+    @AppStorage(TamanhoTexto.chave) private var escala = TamanhoTexto.padrao
+    /// Corpo da leitura: 16pt (como no site) vezes o "Tamanho do texto" do menu.
+    private var corpoT: CGFloat { 16 * TamanhoTexto.escala(escala) }
     private var menor: Bool { leitura.tipo == "aclamacao" || leitura.tipo == "sequencia" }
 
     var body: some View {
@@ -32,11 +34,11 @@ struct LeituraView: View {
                 }
             }
             if !leitura.referencia.isEmpty {
-                Text(leitura.referencia).font(Estilo.leitura(16)).foregroundStyle(Estilo.tinta)
+                Text(leitura.referencia).font(Estilo.leitura(corpoT)).foregroundStyle(Estilo.tinta)
                     .padding(.bottom, 11)
             }
             if let t = leitura.titulo, !t.isEmpty {
-                Text(t).font(Estilo.leituraItalico(16)).foregroundStyle(Estilo.tinta)
+                Text(t).font(Estilo.leituraItalico(corpoT)).foregroundStyle(Estilo.tinta)
                     .padding(.bottom, 11).padding(.top, 8)
             }
             corpo.padding(.top, 14)

@@ -8,6 +8,8 @@ struct HojeView: View {
     @State private var erro = false
     @State private var audios: Set<String> = []
     @State private var avisos = Avisos.ligados()
+    /// Depuração: `-abrirMenu YES` nos argumentos de lançamento abre o menu ao iniciar.
+    @State private var menuAberto = UserDefaults.standard.bool(forKey: "abrirMenu")
     @State private var destaques: [String: Indice.Destaque] = [:]
     @StateObject private var player = Player()
 
@@ -33,12 +35,13 @@ struct HojeView: View {
                     .overlay(alignment: .topTrailing) { Fita(cor: dia?.cor ?? "branco").padding(.trailing, Estilo.lado) }
                 }
                 .scrollIndicators(.hidden)
+                .onChange(of: chave) { rolagem.scrollTo("topo") }
             }
             GeometryReader { g in   // faixa de papel sob a barra de status, para o texto não passar por baixo dela
                 Estilo.fundo.frame(height: g.safeAreaInsets.top).ignoresSafeArea(edges: .top)
             }.allowsHitTesting(false)
             Moldura().ignoresSafeArea()
-            sino
+            MenuVidro(data: $data, avisos: $avisos, aberto: $menuAberto)
         }
         .environmentObject(player)
         .task(id: chave) { await carregar() }
@@ -114,25 +117,6 @@ struct HojeView: View {
         .font(Estilo.titulo(24)).foregroundStyle(Estilo.tinta)
         .padding(.top, 64)
         .opacity(dia == nil ? 0 : 1)
-    }
-
-    /// Aviso das 6h: botão redondo branco no canto, como o botão de menu do site.
-    private var sino: some View {
-        VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Button { if avisos { Avisos.desligar(); avisos = false } else { Task { avisos = await Avisos.ligar() } } } label: {
-                    Image(systemName: avisos ? "bell.fill" : "bell")
-                        .font(.system(size: 18, weight: .medium))
-                        .foregroundStyle(avisos ? Estilo.vermelho : Estilo.tinta)
-                        .frame(width: 48, height: 48)
-                        .background(Circle().fill(.white).shadow(color: .black.opacity(0.1), radius: 10, y: 3))
-                }
-                .accessibilityLabel(avisos ? "Desligar aviso das 6h" : "Ligar aviso das 6h")
-            }
-        }
-        .padding(.trailing, 46).padding(.bottom, 12)
     }
 
     private func abrirSobre() {
