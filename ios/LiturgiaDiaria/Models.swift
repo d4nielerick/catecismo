@@ -10,6 +10,26 @@ struct Dia: Codable, Equatable {
 
     /// Leituras da primeira missa (a do dia). Natal e a Vigília Pascal têm várias missas.
     var leituras: [Leitura] { missas.first?.leituras ?? [] }
+
+    /// blocosDaMissa (render.mjs): a leitura "à escolha" (alternativa) entra no bloco da anterior,
+    /// então a Páscoa, com duas 2ª Leituras e dois Evangelhos, tem um bloco (e uma aba) de cada.
+    var blocos: [Bloco] {
+        var bs: [Bloco] = []
+        for l in leituras {
+            if l.alternativa, !bs.isEmpty { bs[bs.count - 1].alternativas.append(l); continue }
+            bs.append(Bloco(leitura: l, alternativas: []))
+        }
+        return bs
+    }
+}
+
+/// Uma leitura da página com as suas alternativas ("ou…").
+struct Bloco: Identifiable {
+    let leitura: Leitura
+    var alternativas: [Leitura]
+    var id: String { leitura.id }
+    /// itensDasAbas: a aclamação e a sequência não ganham aba.
+    var temAba: Bool { !["aclamacao", "sequencia"].contains(leitura.tipo) }
 }
 
 struct Missa: Codable, Equatable {
@@ -22,6 +42,7 @@ struct Leitura: Codable, Equatable, Identifiable {
     let referencia: String
     let texto: String
     let titulo: String?
+    let alternativa: Bool     // "à escolha": outra opção para a leitura anterior
 
     var id: String { "\(rotulo)|\(referencia)|\(texto.prefix(24))" }
 
@@ -33,10 +54,13 @@ struct Leitura: Codable, Equatable, Identifiable {
         referencia = try c.decodeIfPresent(String.self, forKey: .referencia) ?? ""
         texto = try c.decode(String.self, forKey: .texto)
         titulo = try c.decodeIfPresent(String.self, forKey: .titulo)
+        alternativa = try c.decodeIfPresent(Bool.self, forKey: .alternativa) ?? false
     }
 
     /// Nome do arquivo de áudio em /data/liturgia-audio/<dia>/<nome>.mp3 (nil: não tem voz).
     func nomeAudio(entre todas: [Leitura]) -> String? {
+        guard !alternativa else { return nil }
+        let todas = todas.filter { !$0.alternativa }
         switch tipo {
         case "evangelho": return todas.first(where: { $0.tipo == "evangelho" }) == self ? "evangelho" : nil
         case "salmo": return todas.first(where: { $0.tipo == "salmo" }) == self ? "salmo" : nil
@@ -86,6 +110,9 @@ extension String {
 struct Indice: Codable {
     struct Destaque: Codable { let data: String; let tipo: String; let nome: String }
     let destaques: [Destaque]
+    /// Primeiro e último dia com leituras ("AAAA-MM-DD"): as setas de dia param nas pontas.
+    let inicio: String?
+    let fim: String?
 }
 
 /// O cabeçalho do dia, com as mesmas regras de cabecalhoDoDia (render.mjs).

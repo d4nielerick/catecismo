@@ -3,7 +3,9 @@ import SwiftUI
 /// A tela do dia, no desenho do site no celular: papel claro, moldura floral vermelha nas
 /// laterais, fita marcadora, data grande em Times itálico, calendário e as leituras.
 struct HojeView: View {
-    @State private var data = Date()
+    /// Depuração: `-dia AAAA-MM-DD` abre num dia; `-irPara salmo` rola até essa aba depois de carregar
+    /// (primeira, salmo, segunda, evangelho ou o número da aba).
+    @State private var data = UserDefaults.standard.string(forKey: "dia").flatMap(Datas.data) ?? Date()
     @State private var dia: Dia?
     @State private var erro = false
     @State private var audios: Set<String> = []
@@ -11,45 +13,117 @@ struct HojeView: View {
     /// Depuração: `-abrirMenu YES` nos argumentos de lançamento abre o menu ao iniciar.
     @State private var menuAberto = UserDefaults.standard.bool(forKey: "abrirMenu")
     @State private var destaques: [String: Indice.Destaque] = [:]
+    @State private var limites: (String, String)?
     @StateObject private var player = Player()
+    @Namespace private var vidro
+
+    /// Aba ativa (índice em `abas`) e até quando a rolagem não a muda (depois de um toque).
+    @State private var ativa = 0
+    @State private var travadaAte = Date.distantPast
+    @State private var alturaVisivel: CGFloat = 800
 
     private var chave: String { Datas.chave(data) }
+    private var blocos: [Bloco] { dia?.blocos ?? [] }
+    private var abas: [Bloco] { blocos.filter(\.temAba) }
+    private let molaLuz = Animation.spring(response: 0.5, dampingFraction: 0.68)
 
     var body: some View {
-        ZStack(alignment: .top) {
-            Estilo.fundo.ignoresSafeArea()
+        GeometryReader { tela in
+            let lado = Barra.lado(largura: tela.size.width, abas: abas.count)
             ScrollViewReader { rolagem in
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Color.clear.frame(height: 0).id("topo")
-                        cabecalho
-                        Rectangle().fill(Estilo.linha).frame(height: 1).padding(.top, 28)
-                        Calendario(selecionado: $data, destaques: destaques)
-                            .padding(.top, 28)
-                        conteudo
-                        outrosDias(rolagem)
+                ZStack(alignment: .top) {
+                    Estilo.fundo.ignoresSafeArea()
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 0) {
+                            Color.clear.frame(height: 0).id("topo")
+                            cabecalho
+                            Rectangle().fill(Estilo.linha).frame(height: 1).padding(.top, 28)
+                            Calendario(selecionado: $data, destaques: destaques)
+                                .padding(.top, 28)
+                            conteudo
+                            outrosDias(rolagem)
+                        }
+                        .padding(.horizontal, Estilo.lado)
+                        .padding(.top, 18)
+                        // o fim do texto não fica sob a barra de vidro
+                        .padding(.bottom, Barra.altura(lado) + 44)
+                        .overlay(alignment: .topTrailing) { Fita(cor: dia?.cor ?? "branco").padding(.trailing, Estilo.lado) }
                     }
-                    .padding(.horizontal, Estilo.lado)
-                    .padding(.top, 18)
-                    .padding(.bottom, 90)
-                    .overlay(alignment: .topTrailing) { Fita(cor: dia?.cor ?? "branco").padding(.trailing, Estilo.lado) }
+                    .scrollIndicators(.hidden)
+                    .coordinateSpace(name: "rolagem")
+                    .background(GeometryReader { g in
+                        Color.clear.onAppear { alturaVisivel = g.size.height }
+                            .onChange(of: g.size.height) { _, h in alturaVisivel = h }
+                    })
+                    .onPreferenceChange(PosicoesAbas.self) { acompanhar($0) }
+                    .onChange(of: chave) { rolagem.scrollTo("topo") }
+                    GeometryReader { g in   // faixa de papel sob a barra de status, para o texto não passar por baixo dela
+                        Estilo.fundo.frame(height: g.safeAreaInsets.top).ignoresSafeArea(edges: .top)
+                    }.allowsHitTesting(false)
+                    Moldura().ignoresSafeArea()
+                    MenuVidro(data: $data, avisos: $avisos, aberto: $menuAberto, lado: lado, ns: vidro) {
+                        BarraLeituras(blocos: abas, ativa: ativa, lado: lado, ns: vidro,
+                                      anterior: existe(-1), proximo: existe(1),
+                                      tocarAba: { irPara($0, rolagem) },
+                                      mudarDia: { n in withAnimation(.easeInOut(duration: 0.2)) { mover(n) } })
+                    }
+                    .animation(.spring(response: 0.4, dampingFraction: 0.82), value: abas.count)
                 }
-                .scrollIndicators(.hidden)
-                .onChange(of: chave) { rolagem.scrollTo("topo") }
+                .task(id: chave) {
+                    await carregar()
+                    if let alvo = UserDefaults.standard.string(forKey: "irPara"), let i = indiceDaAba(alvo) {
+                        try? await Task.sleep(for: .milliseconds(500))
+                        irPara(i, rolagem)
+                    }
+                }
             }
-            GeometryReader { g in   // faixa de papel sob a barra de status, para o texto não passar por baixo dela
-                Estilo.fundo.frame(height: g.safeAreaInsets.top).ignoresSafeArea(edges: .top)
-            }.allowsHitTesting(false)
-            Moldura().ignoresSafeArea()
-            MenuVidro(data: $data, avisos: $avisos, aberto: $menuAberto)
         }
         .environmentObject(player)
-        .task(id: chave) { await carregar() }
         .task {
             await Avisos.reagendar()
             if let i = await Servidor.compartilhado.indice() {
                 destaques = Dictionary(i.destaques.map { ($0.data, $0) }, uniquingKeysWith: { a, _ in a })
+                if let a = i.inicio, let b = i.fim { limites = (a, b) }
             }
+        }
+    }
+
+    // MARK: Barra de leituras
+
+    /// Há leituras no dia ao lado? (sem o índice, deixa andar)
+    private func existe(_ n: Int) -> Bool {
+        guard let l = limites, let d = Calendar.current.date(byAdding: .day, value: n, to: data) else { return true }
+        let k = Datas.chave(d)
+        return k >= l.0 && k <= l.1
+    }
+
+    /// A aba ativa é a última leitura cujo topo já passou de 40% da altura visível
+    /// (o IntersectionObserver do site: logo abaixo do alto, até a metade da tela).
+    private func acompanhar(_ topos: [Int: CGFloat]) {
+        guard Date() >= travadaAte, !topos.isEmpty else { return }
+        let limite = alturaVisivel * 0.4
+        let i = topos.filter { $0.value <= limite }.keys.max() ?? 0
+        if i != ativa { withAnimation(molaLuz) { ativa = i } }
+    }
+
+    /// Toque numa aba: a luz vai já até ela e a rolagem não a mexe até chegar (luzAoToque do site).
+    private func irPara(_ i: Int, _ rolagem: ScrollViewProxy) {
+        guard abas.indices.contains(i) else { return }
+        travadaAte = Date().addingTimeInterval(1.2)
+        withAnimation(molaLuz) { ativa = i }
+        withAnimation(.easeInOut(duration: 0.55)) {
+            rolagem.scrollTo("aba-\(i)", anchor: UnitPoint(x: 0.5, y: 0.03))
+        }
+    }
+
+    private func indiceDaAba(_ nome: String) -> Int? {
+        if let n = Int(nome) { return n }
+        switch nome {
+        case "primeira": return abas.firstIndex { $0.leitura.tipo == "leitura" }
+        case "segunda":
+            let ls = abas.indices.filter { abas[$0].leitura.tipo == "leitura" }
+            return ls.count > 1 ? ls[1] : nil
+        default: return abas.firstIndex { $0.leitura.tipo == nome }
         }
     }
 
@@ -81,11 +155,25 @@ struct HojeView: View {
 
     @ViewBuilder private var conteudo: some View {
         if let dia {
+            let bs = dia.blocos
             VStack(alignment: .leading, spacing: 0) {
-                ForEach(Array(dia.leituras.enumerated()), id: \.element.id) { i, l in
+                ForEach(Array(bs.enumerated()), id: \.element.id) { i, b in
                     if i > 0 { Divisor() }
-                    LeituraView(leitura: l, dia: dia,
-                                audio: l.nomeAudio(entre: dia.leituras).flatMap { audios.contains($0) ? $0 : nil })
+                    let aba = bs[..<i].filter(\.temAba).count
+                    VStack(alignment: .leading, spacing: 0) {
+                        if b.temAba {   // âncora da aba (scrollTo) e posição para a aba ativa
+                            Color.clear.frame(height: 0).id("aba-\(aba)")
+                                .background(GeometryReader { g in
+                                    Color.clear.preference(key: PosicoesAbas.self,
+                                                           value: [aba: g.frame(in: .named("rolagem")).minY])
+                                })
+                        }
+                        ForEach(Array(([b.leitura] + b.alternativas).enumerated()), id: \.element.id) { k, l in
+                            if k > 0 { Divisor() }
+                            LeituraView(leitura: l, dia: dia,
+                                        audio: l.nomeAudio(entre: dia.leituras).flatMap { audios.contains($0) ? $0 : nil })
+                        }
+                    }
                 }
             }
             .padding(.top, 56)
@@ -129,7 +217,7 @@ struct HojeView: View {
     }
 
     private func carregar() async {
-        dia = nil; erro = false; audios = []
+        dia = nil; erro = false; audios = []; ativa = 0; travadaAte = .distantPast
         player.parar()
         let alvo = chave
         do {
@@ -140,6 +228,14 @@ struct HojeView: View {
                 if await Servidor.compartilhado.temAudio(dia: alvo, nome: nome), alvo == chave { audios.insert(nome) }
             }
         } catch { if alvo == chave { erro = true } }
+    }
+}
+
+/// Topo de cada leitura com aba, no espaço da rolagem.
+struct PosicoesAbas: PreferenceKey {
+    static let defaultValue: [Int: CGFloat] = [:]
+    static func reduce(value: inout [Int: CGFloat], nextValue: () -> [Int: CGFloat]) {
+        value.merge(nextValue(), uniquingKeysWith: { _, b in b })
     }
 }
 

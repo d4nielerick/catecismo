@@ -18,6 +18,7 @@
 		9B00DEFD68CB578CBEAA5BF1 /* inria-serif-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46843BAB3C751CBAE84A7F7 /* inria-serif-400.ttf */; };
 		BEDF4AA8AF18149809F4F3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495E03E070606537C9FEE694 /* Assets.xcassets */; };
 		C0093A511D224389D153EA94 /* inria-serif-400-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF90680B53D386F79B33C82E /* inria-serif-400-italic.ttf */; };
+		C3FD139F1A70AB5E16E9A625 /* BarraLeituras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6506CBB3B6D667FBC8071217 /* BarraLeituras.swift */; };
 		C56D26D2F150F6014A3E9380 /* ProsaCapitular.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C50D4EE877352043AC4DFD /* ProsaCapitular.swift */; };
 		CA693A5E61CA853DDB91DBC1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3C42A78CF1FBD70C54CB58 /* Player.swift */; };
 		CAF64107A3FFB9843DFB2CBB /* Avisos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43333D1D74E69775F6224CB /* Avisos.swift */; };
@@ -31,6 +32,7 @@
 		3ED4D239CE4EE2CC97116C48 /* Texto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texto.swift; sourceTree = "<group>"; };
 		495E03E070606537C9FEE694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C9B9D897E66735B1CD70094 /* Cores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cores.swift; sourceTree = "<group>"; };
+		6506CBB3B6D667FBC8071217 /* BarraLeituras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraLeituras.swift; sourceTree = "<group>"; };
 		72CC7E54A2A118A2D53E53C7 /* Calendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendario.swift; sourceTree = "<group>"; };
 		746B5751B43279AFA8CA4B43 /* Servidor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servidor.swift; sourceTree = "<group>"; };
 		865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgiaApp.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			children = (
 				495E03E070606537C9FEE694 /* Assets.xcassets */,
 				F43333D1D74E69775F6224CB /* Avisos.swift */,
+				6506CBB3B6D667FBC8071217 /* BarraLeituras.swift */,
 				72CC7E54A2A118A2D53E53C7 /* Calendario.swift */,
 				4C9B9D897E66735B1CD70094 /* Cores.swift */,
 				0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */,
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF64107A3FFB9843DFB2CBB /* Avisos.swift in Sources */,
+				C3FD139F1A70AB5E16E9A625 /* BarraLeituras.swift in Sources */,
 				289200FA7BAEBE6B42198B7D /* Calendario.swift in Sources */,
 				CDFAD8D82B590723B3B26818 /* Cores.swift in Sources */,
 				476011C0D03AF5B91F759487 /* HojeView.swift in Sources */,

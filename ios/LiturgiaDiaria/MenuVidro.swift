@@ -9,23 +9,27 @@ enum TamanhoTexto {
     static func escala(_ i: Int) -> CGFloat { escalas[min(max(i, 0), escalas.count - 1)] }
 }
 
-/// O menu do app (o menu do site, liturgiadiaria/menu.mjs), em vidro da Apple: um botão redondo
-/// no canto de baixo que, ao toque, se desfaz e vira o painel (morph com glassEffectID no iOS 26;
-/// no iOS 17–25, material translúcido com matchedGeometryEffect).
-struct MenuVidro: View {
+/// O menu do app (o menu do site, liturgiadiaria/menu.mjs), em vidro da Apple. O botão redondo fica
+/// na ponta direita da barra de leituras (.lp-tabs-menu) e, ao toque, se desfaz e vira o painel
+/// (morph com glassEffectID no iOS 26; no iOS 17–25, material translúcido com matchedGeometryEffect).
+/// As outras peças da barra (setas e abas) vêm de fora, em `barra`, e somem enquanto o painel está aberto.
+struct MenuVidro<Pecas: View>: View {
     @Binding var data: Date
     @Binding var avisos: Bool
     @Binding var aberto: Bool
+    /// Diâmetro das peças da barra (--lp-barra).
+    let lado: CGFloat
+    let ns: Namespace.ID
+    @ViewBuilder let barra: () -> Pecas
     @AppStorage(TamanhoTexto.chave) private var escala = TamanhoTexto.padrao
     @State private var avisoNegado = false
-    @Namespace private var ns
     @Environment(\.openURL) private var abrirURL
 
     private let raio: CGFloat = 34
     private let mola = Animation.spring(response: 0.46, dampingFraction: 0.84)
 
     var body: some View {
-        ZStack(alignment: .bottomTrailing) {
+        ZStack(alignment: .bottom) {
             if aberto {
                 Color(hex: 0x281e0f).opacity(0.22)   // .lp-menu::backdrop
                     .ignoresSafeArea()
@@ -39,17 +43,23 @@ struct MenuVidro: View {
                         .modifier(Vidro(forma: RoundedRectangle(cornerRadius: raio, style: .continuous),
                                         ns: ns, painel: true))
                         .padding(.horizontal, 12)
-                        .padding(.bottom, 6)
+                        .padding(.bottom, Barra.abaivo)
                 } else {
-                    botao
+                    HStack(spacing: Barra.vao) {
+                        barra()
+                        botao
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, Barra.margem)
+                    .padding(.bottom, Barra.abaivo)
                 }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
     }
 
     @ViewBuilder private func container<C: View>(@ViewBuilder _ c: () -> C) -> some View {
-        if #available(iOS 26, *) { GlassEffectContainer(spacing: 20) { c() } } else { c() }
+        if #available(iOS 26, *) { GlassEffectContainer(spacing: Barra.vao - 2) { c() } } else { c() }
     }
 
     private func alternar() {
@@ -62,14 +72,12 @@ struct MenuVidro: View {
         Button(action: alternar) {
             IconeMenu()
                 .stroke(Estilo.tinta, style: StrokeStyle(lineWidth: 2.1, lineCap: .round))
-                .frame(width: 22, height: 22)
-                .frame(width: 54, height: 54)
+                .frame(width: lado * 0.41, height: lado * 0.41)
+                .frame(width: lado, height: lado)
                 .contentShape(Circle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(Afunda())
         .modifier(Vidro(forma: Circle(), ns: ns, painel: false))
-        .padding(.trailing, 40)
-        .padding(.bottom, 10)
         .accessibilityLabel("Abrir o menu")
         .accessibilityAddTraits(.isButton)
     }
@@ -78,8 +86,12 @@ struct MenuVidro: View {
 
     private var painel: some View {
         VStack(alignment: .leading, spacing: 0) {
-            secaoApoio
-            separador
+            HStack(alignment: .center) {
+                titulo("Dia").padding(.bottom, -10)
+                Spacer(minLength: 8)
+                fechar.padding(.trailing, -10).padding(.top, -8)
+            }
+            .padding(.bottom, 4)
             secaoDia
             separador
             secaoFonte
@@ -92,7 +104,6 @@ struct MenuVidro: View {
         .padding(.top, 22)
         .padding(.bottom, 20)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .overlay(alignment: .topTrailing) { fechar.padding(12) }
         .transition(.opacity.combined(with: .scale(scale: 0.96, anchor: .bottomTrailing)))
         .accessibilityElement(children: .contain)
         .accessibilityLabel("Menu")
@@ -121,25 +132,6 @@ struct MenuVidro: View {
         .buttonStyle(.plain)
         .frame(width: 44, height: 44)
         .accessibilityLabel("Fechar o menu")
-    }
-
-    // 1. Apoio: só leva ao site, sem pagamento dentro do app (regra da App Store).
-    private var secaoApoio: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            titulo("Ajude a manter o site").padding(.trailing, 44)
-            Text("Para manter o site no ar temos algumas despesas. Contribua.")
-                .font(Estilo.leitura(15.5)).foregroundStyle(Estilo.texto).lineSpacing(4)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.bottom, 14)
-            Button {
-                if let u = URL(string: "https://santadoutrina.com/liturgiadiaria/") { abrirURL(u) }
-            } label: {
-                Text("Apoiar o site").font(Estilo.sans(15, .semibold)).kerning(0.3)
-                    .frame(maxWidth: .infinity).frame(minHeight: 24)
-            }
-            .modifier(BotaoVidro(destaque: true))
-            .accessibilityHint("Abre o site no Safari")
-        }
     }
 
     // 2. Dia: anterior, a data e o próximo; "Hoje" quando estiver em outro dia.
@@ -353,22 +345,26 @@ struct Vidro<S: Shape>: ViewModifier {
     let forma: S
     let ns: Namespace.ID
     let painel: Bool
+    /// "menu": o botão e o painel (o mesmo id faz o morph); as outras peças da barra têm o seu.
+    var id = "menu"
 
     func body(content: Content) -> some View {
         if #available(iOS 26, *) {
             content
+                // as peças da barra passam sobre o texto: um véu de papel deixa o ícone legível (.lp-tabs: 0.74)
+                .background(forma.fill(Color(hex: 0xfdfcfa, alpha: painel ? 0 : 0.5)))
                 .glassEffect(painel ? .regular.tint(Color(hex: 0xfdfcfa, alpha: 0.55))
-                                    : .regular.tint(Color(hex: 0xfdfcfa, alpha: 0.35)).interactive(),
+                                    : .regular.tint(Color(hex: 0xfdfcfa, alpha: 0.72)).interactive(),
                              in: forma)
-                .glassEffectID("menu", in: ns)
+                .glassEffectID(id, in: ns)
         } else {
             content
                 .background(forma.fill(.ultraThinMaterial))
-                .background(forma.fill(Color(hex: 0xfdfcfa, alpha: painel ? 0.7 : 0.5)))
+                .background(forma.fill(Color(hex: 0xfdfcfa, alpha: painel ? 0.7 : 0.74)))
                 .overlay(forma.stroke(Color(hex: 0x281e0f, alpha: 0.1), lineWidth: 0.5))
                 .clipShape(forma)
                 .shadow(color: Color(hex: 0x281e0f, alpha: 0.22), radius: painel ? 24 : 12, y: painel ? 12 : 5)
-                .matchedGeometryEffect(id: "menu", in: ns)
+                .matchedGeometryEffect(id: id, in: ns)
         }
     }
 }
