@@ -95,7 +95,7 @@ struct CompartilharView: View {
                     Color.black.opacity(0.45).ignoresSafeArea()
                         .onTapGesture { withAnimation(.easeOut(duration: 0.25)) { escolhendo = false } }
                     EscolherVersos(versos: v, sel: sel, cor: conteudo.cor,
-                                   escolher: { a, b in escolher(a, b) },
+                                   escolher: { a, b, exato in escolher(a, b, exato: exato) },
                                    pronto: { withAnimation(.easeOut(duration: 0.25)) { escolhendo = false } })
                         .frame(maxHeight: .infinity, alignment: .bottom)
                         .padding(.top, 90)
@@ -317,9 +317,9 @@ struct CompartilharView: View {
         }
     }
 
-    private func escolher(_ a: Int, _ b: Int) {
+    private func escolher(_ a: Int, _ b: Int, exato: Bool = false) {
         guard let v = versos else { return }
-        let s = v.efetivo(a, v.unidades[a].n == "R." ? a : b)
+        let s = exato ? (a, b) : v.efetivo(a, v.unidades[a].n == "R." ? a : b)
         let t = v.texto(s.0, s.1)
         sel = s
         guard t.count <= Versos.maximo else { return }
@@ -423,7 +423,7 @@ struct EscolherVersos: View {
     let versos: Versos
     @State var sel: (Int, Int)?
     let cor: String
-    var escolher: (Int, Int) -> Void
+    var escolher: (Int, Int, Bool) -> Void   // (início, fim, exato)
     var pronto: () -> Void
     @State private var quadros: [Int: CGRect] = [:]
 
@@ -435,7 +435,7 @@ struct EscolherVersos: View {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("Escolha o trecho").font(Estilo.titulo(24)).foregroundStyle(Estilo.tinta)
-                    Text("Toque num versículo; para pegar vários, toque depois no último")
+                    Text("Toque num versículo; use + e − para aumentar ou diminuir o trecho")
                         .font(Estilo.sans(12.5)).foregroundStyle(Estilo.suave)
                 }
                 Spacer()
@@ -466,29 +466,53 @@ struct EscolherVersos: View {
 
     private func linha(_ u: Versos.Unidade) -> some View {
         let marcado = (marcados.map { u.id >= min($0.0, $0.1) && u.id <= max($0.0, $0.1) } ?? false)
-        return (Text(u.n + "\u{2009}").font(Estilo.leitura(11)).foregroundColor(Estilo.vermelho).baselineOffset(5)
-                + Text(u.texto).font(u.n == "R." ? Estilo.leituraItalico(16) : Estilo.leitura(16)).foregroundColor(Estilo.tinta.opacity(0.78)))
-            .lineSpacing(5)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 8).padding(.vertical, 6)
-            .background(RoundedRectangle(cornerRadius: 6).fill(marcado ? Color(hex: 0xf3d58c, alpha: 0.55) : .clear))
-            .animation(.easeOut(duration: 0.15), value: marcado)
-            .background(GeometryReader { g in Color.clear.preference(key: QuadrosVersos.self, value: [u.id: g.frame(in: .named("versos"))]) })
-            .contentShape(Rectangle())
-            .onTapGesture {
-                // um toque escolhe o versículo; com um só escolhido, tocar em outro estende o trecho até ele
-                if let s = sel, s.0 == s.1, s.0 != u.id { aplicar(min(s.0, u.id), max(s.0, u.id)) }
-                else { aplicar(u.id, u.id) }
-                UISelectionFeedbackGenerator().selectionChanged()
-            }
-            .accessibilityAddTraits(.isButton)
-            .accessibilityAddTraits(marcado ? .isSelected : [])
+        return HStack(alignment: .center, spacing: 6) {
+            (Text(u.n + "\u{2009}").font(Estilo.leitura(11)).foregroundColor(Estilo.vermelho).baselineOffset(5)
+             + Text(u.texto).font(u.n == "R." ? Estilo.leituraItalico(16) : Estilo.leitura(16)).foregroundColor(Estilo.tinta.opacity(0.78)))
+                .lineSpacing(5)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .contentShape(Rectangle())
+                .onTapGesture { aplicar(u.id, u.id); UISelectionFeedbackGenerator().selectionChanged() }
+            botao(u).frame(width: 34)
+        }
+        .padding(.leading, 8).padding(.trailing, 2).padding(.vertical, 6)
+        .background(RoundedRectangle(cornerRadius: 6).fill(marcado ? Color(hex: 0xf3d58c, alpha: 0.55) : .clear))
+        .animation(.easeOut(duration: 0.15), value: marcado)
+        .background(GeometryReader { g in Color.clear.preference(key: QuadrosVersos.self, value: [u.id: g.frame(in: .named("versos"))]) })
+        .accessibilityAddTraits(.isButton)
+        .accessibilityAddTraits(marcado ? .isSelected : [])
     }
 
+    /// "+" no versículo vizinho do trecho (acrescenta) e "−" nas pontas do trecho (tira).
+    @ViewBuilder private func botao(_ u: Versos.Unidade) -> some View {
+        if let s = sel, versos.unidades[s.0].n != "R.", u.n != "R." {
+            let (a, b) = (min(s.0, s.1), max(s.0, s.1))
+            if u.id == a - 1 || u.id == b + 1 {
+                Button { ajustar(min(a, u.id), max(b, u.id)) } label: {
+                    Image(systemName: "plus.circle.fill").font(.system(size: 24)).foregroundStyle(Estilo.vermelho)
+                }
+                .accessibilityLabel("Acrescentar o versículo \(u.n)")
+            } else if a != b && (u.id == a || u.id == b) {
+                Button { ajustar(u.id == a ? a + 1 : a, u.id == b ? b - 1 : b) } label: {
+                    Image(systemName: "minus.circle.fill").font(.system(size: 24)).foregroundStyle(Estilo.suave)
+                }
+                .accessibilityLabel("Tirar o versículo \(u.n)")
+            }
+        }
+    }
+
+    /// Toque no texto: escolhe o versículo (completando a frase, como no site).
     private func aplicar(_ a: Int, _ b: Int) {
         let s = versos.efetivo(a, versos.unidades[a].n == "R." ? a : b)
         sel = s
-        escolher(a, b)
+        escolher(s.0, s.1, true)
+    }
+
+    /// + e −: exatamente o que a pessoa pediu.
+    private func ajustar(_ a: Int, _ b: Int) {
+        sel = (a, b)
+        escolher(a, b, true)
+        UISelectionFeedbackGenerator().selectionChanged()
     }
 }
 
