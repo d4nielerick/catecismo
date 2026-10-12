@@ -446,7 +446,11 @@ struct EscolherVersos: View {
             ScrollViewReader { rolar in
                 ScrollView {
                     VStack(alignment: .leading, spacing: 4) {
-                        ForEach(versos.unidades) { u in linha(u).id(u.id) }
+                        ForEach(versos.unidades) { u in
+                            if let s = sel, u.id == min(s.0, s.1), podeAjustar { pontas(acima: true) }
+                            linha(u).id(u.id)
+                            if let s = sel, u.id == max(s.0, s.1), podeAjustar { pontas(acima: false) }
+                        }
                     }
                     .padding(.horizontal, 16).padding(.bottom, 24)
                     .coordinateSpace(name: "versos")
@@ -455,7 +459,10 @@ struct EscolherVersos: View {
                 .onAppear { if let s = sel { rolar.scrollTo(s.0, anchor: .center) } }
             }
             let longo = textoSel.count > Versos.maximo
-            Text(textoSel.isEmpty ? "" : longo ? "Longo demais para o card: \(textoSel.count)/\(Versos.maximo) letras" : "\(textoSel.count)/\(Versos.maximo) letras")
+            let fim = sel.map { versos.unidades[max($0.0, $0.1)].texto } ?? ""
+            let cortada = !fim.isEmpty && fim.range(of: #"[.!?…]["”'»]?$"#, options: .regularExpression) == nil
+            Text(textoSel.isEmpty ? "" : longo ? "Longo demais para o card: \(textoSel.count)/\(Versos.maximo) letras"
+                 : cortada ? "O trecho termina no meio da frase · \(textoSel.count)/\(Versos.maximo)" : "\(textoSel.count)/\(Versos.maximo) letras")
                 .font(Estilo.sans(12, longo ? .semibold : .regular))
                 .foregroundStyle(longo ? Estilo.vermelho : Estilo.suave)
                 .frame(maxWidth: .infinity).padding(.vertical, 10)
@@ -473,9 +480,8 @@ struct EscolherVersos: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .contentShape(Rectangle())
                 .onTapGesture { aplicar(u.id, u.id); UISelectionFeedbackGenerator().selectionChanged() }
-            botao(u).frame(width: 34)
         }
-        .padding(.leading, 8).padding(.trailing, 2).padding(.vertical, 6)
+        .padding(.horizontal, 8).padding(.vertical, 6)
         .background(RoundedRectangle(cornerRadius: 6).fill(marcado ? Color(hex: 0xf3d58c, alpha: 0.55) : .clear))
         .animation(.easeOut(duration: 0.15), value: marcado)
         .background(GeometryReader { g in Color.clear.preference(key: QuadrosVersos.self, value: [u.id: g.frame(in: .named("versos"))]) })
@@ -483,22 +489,37 @@ struct EscolherVersos: View {
         .accessibilityAddTraits(marcado ? .isSelected : [])
     }
 
-    /// "+" no versículo vizinho do trecho (acrescenta) e "−" nas pontas do trecho (tira).
-    @ViewBuilder private func botao(_ u: Versos.Unidade) -> some View {
-        if let s = sel, versos.unidades[s.0].n != "R.", u.n != "R." {
-            let (a, b) = (min(s.0, s.1), max(s.0, s.1))
-            if u.id == a - 1 || u.id == b + 1 {
-                Button { ajustar(min(a, u.id), max(b, u.id)) } label: {
-                    Image(systemName: "plus.circle.fill").font(.system(size: 24)).foregroundStyle(Estilo.vermelho)
-                }
-                .accessibilityLabel("Acrescentar o versículo \(u.n)")
-            } else if a != b && (u.id == a || u.id == b) {
-                Button { ajustar(u.id == a ? a + 1 : a, u.id == b ? b - 1 : b) } label: {
-                    Image(systemName: "minus.circle.fill").font(.system(size: 24)).foregroundStyle(Estilo.suave)
-                }
-                .accessibilityLabel("Tirar o versículo \(u.n)")
+    private var podeAjustar: Bool { sel.map { versos.unidades[$0.0].n != "R." } ?? false }
+
+    /// Um par "− / +" em cada ponta do trecho: em cima mexe no começo, embaixo mexe no fim.
+    private func pontas(acima: Bool) -> some View {
+        let (a, b) = (min(sel!.0, sel!.1), max(sel!.0, sel!.1))
+        let primeiro = versos.unidades.first?.n == "R." ? 1 : 0
+        let podeMais = acima ? a > primeiro : b < versos.unidades.count - 1
+        let podeMenos = a != b
+        return HStack(spacing: 0) {
+            botaoPonta("minus", ativo: podeMenos, rotulo: acima ? "Tirar o primeiro versículo" : "Tirar o último versículo") {
+                acima ? ajustar(a + 1, b) : ajustar(a, b - 1)
+            }
+            Rectangle().fill(Estilo.tinta.opacity(0.12)).frame(width: 1, height: 18)
+            botaoPonta("plus", ativo: podeMais, rotulo: acima ? "Acrescentar o versículo anterior" : "Acrescentar o versículo seguinte") {
+                acima ? ajustar(a - 1, b) : ajustar(a, b + 1)
             }
         }
+        .background(Capsule().fill(Color(hex: 0xf3d58c, alpha: 0.35)))
+        .overlay(Capsule().stroke(Color(hex: 0xc9a54a, alpha: 0.45), lineWidth: 1))
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 2)
+    }
+
+    private func botaoPonta(_ icone: String, ativo: Bool, rotulo: String, acao: @escaping () -> Void) -> some View {
+        Button(action: acao) {
+            Image(systemName: icone).font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(ativo ? Estilo.vermelho : Estilo.tinta.opacity(0.2))
+                .frame(width: 52, height: 34).contentShape(Rectangle())
+        }
+        .disabled(!ativo)
+        .accessibilityLabel(rotulo)
     }
 
     /// Toque no texto: escolhe o versículo (completando a frase, como no site).
