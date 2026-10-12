@@ -99,7 +99,7 @@ struct CompartilharView: View {
                                    pronto: { withAnimation(.easeOut(duration: 0.25)) { escolhendo = false } })
                         .frame(maxHeight: .infinity, alignment: .bottom)
                         .padding(.top, 90)
-                        .clipShape(UnevenRoundedRectangle(topLeadingRadius: 22, topTrailingRadius: 22))
+                        .clipShape(UnevenRoundedRectangle(topLeadingRadius: 34, topTrailingRadius: 34, style: .continuous))
                         .ignoresSafeArea(edges: .bottom)
                         .transition(.move(edge: .bottom))
                 }
@@ -432,6 +432,8 @@ struct EscolherVersos: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
+            Capsule().fill(Color.black.opacity(0.18)).frame(width: 36, height: 5)
+                .frame(maxWidth: .infinity).padding(.top, 8)
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("Escolha o trecho").font(Estilo.titulo(24)).foregroundStyle(Estilo.tinta)
@@ -439,10 +441,9 @@ struct EscolherVersos: View {
                         .font(Estilo.sans(12.5)).foregroundStyle(Estilo.suave)
                 }
                 Spacer()
-                Button("Pronto") { pronto() }.font(Estilo.sans(15, .semibold)).foregroundStyle(Estilo.vermelho)
-                    .padding(.top, 4)
+                botaoPronto.padding(.top, 2)
             }
-            .padding(.horizontal, 22).padding(.top, 22).padding(.bottom, 12)
+            .padding(.horizontal, 22).padding(.top, 12).padding(.bottom, 12)
             ScrollViewReader { rolar in
                 ScrollView {
                     VStack(alignment: .leading, spacing: 4) {
@@ -479,46 +480,68 @@ struct EscolherVersos: View {
                 .lineSpacing(5)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .contentShape(Rectangle())
-                .onTapGesture { aplicar(u.id, u.id); UISelectionFeedbackGenerator().selectionChanged() }
+                .onTapGesture { withAnimation(.snappy(duration: 0.28)) { aplicar(u.id, u.id) }; UISelectionFeedbackGenerator().selectionChanged() }
         }
-        .padding(.horizontal, 8).padding(.vertical, 6)
-        .background(RoundedRectangle(cornerRadius: 6).fill(marcado ? Color(hex: 0xf3d58c, alpha: 0.55) : .clear))
+        .padding(.horizontal, 12).padding(.vertical, 8)
+        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(marcado ? Estilo.vermelho.opacity(0.08) : .clear))
+        .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(marcado ? Estilo.vermelho.opacity(0.22) : .clear, lineWidth: 1))
         .animation(.easeOut(duration: 0.15), value: marcado)
         .background(GeometryReader { g in Color.clear.preference(key: QuadrosVersos.self, value: [u.id: g.frame(in: .named("versos"))]) })
         .accessibilityAddTraits(.isButton)
         .accessibilityAddTraits(marcado ? .isSelected : [])
     }
 
+    @ViewBuilder private var botaoPronto: some View {
+        if #available(iOS 26, *) {
+            Button("Pronto") { pronto() }.font(.system(size: 16, weight: .semibold))
+                .buttonStyle(.glassProminent).tint(Estilo.vermelho)
+        } else {
+            Button("Pronto") { pronto() }.font(.system(size: 16, weight: .semibold))
+                .buttonStyle(.borderedProminent).buttonBorderShape(.capsule).tint(Estilo.vermelho)
+        }
+    }
+
     private var podeAjustar: Bool { sel.map { versos.unidades[$0.0].n != "R." } ?? false }
 
-    /// Um par "− / +" em cada ponta do trecho: em cima mexe no começo, embaixo mexe no fim.
+    /// Um par "− / +" em cada ponta do trecho, em vidro como os controles do iOS: em cima mexe no
+    /// começo, embaixo mexe no fim.
     private func pontas(acima: Bool) -> some View {
         let (a, b) = (min(sel!.0, sel!.1), max(sel!.0, sel!.1))
         let primeiro = versos.unidades.first?.n == "R." ? 1 : 0
         let podeMais = acima ? a > primeiro : b < versos.unidades.count - 1
         let podeMenos = a != b
-        return HStack(spacing: 0) {
+        let par = HStack(spacing: 0) {
             botaoPonta("minus", ativo: podeMenos, rotulo: acima ? "Tirar o primeiro versículo" : "Tirar o último versículo") {
                 acima ? ajustar(a + 1, b) : ajustar(a, b - 1)
             }
-            Rectangle().fill(Estilo.tinta.opacity(0.12)).frame(width: 1, height: 18)
+            Capsule().fill(.secondary.opacity(0.35)).frame(width: 1, height: 16)
             botaoPonta("plus", ativo: podeMais, rotulo: acima ? "Acrescentar o versículo anterior" : "Acrescentar o versículo seguinte") {
                 acima ? ajustar(a - 1, b) : ajustar(a, b + 1)
             }
         }
-        .background(Capsule().fill(Color(hex: 0xf3d58c, alpha: 0.35)))
-        .overlay(Capsule().stroke(Color(hex: 0xc9a54a, alpha: 0.45), lineWidth: 1))
+        return Group {
+            if #available(iOS 26, *) {
+                par.glassEffect(.regular.tint(Color.white.opacity(0.75)).interactive(), in: .capsule)
+                    .shadow(color: .black.opacity(0.08), radius: 10, y: 4)
+            } else {
+                par.background(.regularMaterial, in: Capsule())
+                    .shadow(color: .black.opacity(0.10), radius: 8, y: 3)
+            }
+        }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 2)
+        .padding(.vertical, 4)
+        .transition(.scale(scale: 0.85).combined(with: .opacity))
     }
 
     private func botaoPonta(_ icone: String, ativo: Bool, rotulo: String, acao: @escaping () -> Void) -> some View {
-        Button(action: acao) {
-            Image(systemName: icone).font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(ativo ? Estilo.vermelho : Estilo.tinta.opacity(0.2))
-                .frame(width: 52, height: 34).contentShape(Rectangle())
+        Button { withAnimation(.snappy(duration: 0.28)) { acao() } } label: {
+            Image(systemName: icone).font(.system(size: 17, weight: .semibold))
+                .foregroundStyle(ativo ? Estilo.vermelho : Color.secondary.opacity(0.35))
+                .frame(width: 56, height: 40).contentShape(Rectangle())
         }
+        .buttonStyle(.plain)
         .disabled(!ativo)
+        .sensoryFeedback(.selection, trigger: sel.map { "\($0.0)-\($0.1)" } ?? "")
         .accessibilityLabel(rotulo)
     }
 
@@ -533,7 +556,6 @@ struct EscolherVersos: View {
     private func ajustar(_ a: Int, _ b: Int) {
         sel = (a, b)
         escolher(a, b, true)
-        UISelectionFeedbackGenerator().selectionChanged()
     }
 }
 
