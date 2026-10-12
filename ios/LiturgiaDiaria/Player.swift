@@ -192,7 +192,9 @@ final class Player: ObservableObject {
 
     /// A linha que está sendo lida (acompanhar() do site).
     private func acompanhar(_ t: Double) {
-        guard let ls = dados?.linhas, !ls.isEmpty else { return }
+        // no começo e ao buscar, o AVPlayer às vezes informa um tempo inválido (NaN): sem isso a
+        // linha "atual" virava a última por um instante e o texto saltava para o fim
+        guard t.isFinite, t >= 0, let ls = dados?.linhas, !ls.isEmpty else { return }
         var i = ls.firstIndex { t < $0.t1 + 0.15 } ?? ls.count - 1
         if t < ls[0].t0 { i = 0 }
         if i != atual { atual = i }

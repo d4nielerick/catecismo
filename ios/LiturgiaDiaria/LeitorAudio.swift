@@ -9,6 +9,8 @@ struct LeitorAudioView: View {
     @EnvironmentObject var player: Player
     @Environment(\.accessibilityReduceMotion) private var reduzido
 
+    @State private var posicao: CGFloat = 0          // altura de rolagem pedida (iOS 18+)
+    @State private var topos: [Int: CGFloat] = [:]   // topo de cada linha no texto
     @State private var quieto = false            // .lp-ouvir-quieto: topo e controles apagados
     @State private var esperaControles: Task<Void, Never>?
     @State private var entrou = false            // lp-ouvir-sobe: o texto chega logo depois da folha
@@ -98,6 +100,9 @@ struct LeitorAudioView: View {
                         LinhaOuvir(texto: l.texto, tipo: tipo(l, i, linhas), atual: i == player.atual, lida: i < player.atual,
                                    ultima: i == linhas.count - 1, tamanho: tamanho, tamRubrica: tamRubrica, reduzido: reduzido)
                             .id(i)
+                            .background(GeometryReader { g in
+                                Color.clear.preference(key: TopoLinhas.self, value: [i: g.frame(in: .named("conteudo")).minY])
+                            })
                             .onTapGesture { player.ir(linha: i); mostrarControles() }
                     }
                 }
@@ -106,12 +111,15 @@ struct LeitorAudioView: View {
                 .padding(.horizontal, 24)
                 .padding(.top, altTela * 0.30)
                 .padding(.bottom, altTela * 0.45)
+                .coordinateSpace(name: "conteudo")
+                .onPreferenceChange(TopoLinhas.self) { topos = $0 }
                 .background(GeometryReader { c in
                     Color.clear.preference(key: RolagemOuvir.self,
                                            value: RolagemOuvir.Valor(topo: -c.frame(in: .named("caixa")).minY, altura: c.size.height))
                 })
                 .id(player.geracao)   // leitura nova: o texto volta ao começo
             }
+            .modifier(PosicaoRolagem(posicao: $posicao))
             .coordinateSpace(name: "caixa")
             .background(GeometryReader { c in
                 Color.clear.onAppear { alturaCaixa = c.size.height }
@@ -128,8 +136,16 @@ struct LeitorAudioView: View {
             .onChange(of: player.atual) { _, i in
                 guard i >= 0, Date() >= maoAte else { return }
                 // a linha atual fica um pouco acima do meio (38% da caixa), como no site
-                withAnimation(reduzido ? nil : .timingCurve(0.25, 0.1, 0.25, 1, duration: 0.6)) {
-                    rolagem.scrollTo(i, anchor: UnitPoint(x: 0, y: 0.38))
+                // scrollPosition em vez de scrollTo: o scrollTo animado, com as linhas mudando de
+                // tamanho ao mesmo tempo, às vezes mirava o fim do texto antes de voltar
+                // Rola para uma altura calculada (topo da linha − 38% da caixa) em vez de pedir ao
+                // SwiftUI para achar a linha: o scrollTo/scrollPosition por id, com as linhas mudando
+                // de estado na mesma hora, às vezes mirava o fim do texto antes de voltar.
+                let anima: Animation? = reduzido ? nil : .timingCurve(0.25, 0.1, 0.25, 1, duration: 0.6)
+                if #available(iOS 18, *), let y = topos[i] {
+                    withAnimation(anima) { posicao = max(0, y - alturaCaixa * 0.38) }
+                } else {
+                    withAnimation(anima) { rolagem.scrollTo(i, anchor: UnitPoint(x: 0, y: 0.38)) }
                 }
             }
             .mask(LinearGradient(stops: [.init(color: .clear, location: 0), .init(color: .black, location: 0.18),
@@ -434,6 +450,29 @@ private struct MaoNaRolagem: ViewModifier {
         } else {
             content.simultaneousGesture(DragGesture(minimumDistance: 10).onChanged { _ in mao() })
         }
+    }
+}
+
+private struct TopoLinhas: PreferenceKey {
+    static let defaultValue: [Int: CGFloat] = [:]
+    static func reduce(value: inout [Int: CGFloat], nextValue: () -> [Int: CGFloat]) { value.merge(nextValue()) { $1 } }
+}
+
+/// iOS 18+: a rolagem vai exatamente para `posicao` (ScrollPosition.scrollTo(y:)).
+private struct PosicaoRolagem: ViewModifier {
+    @Binding var posicao: CGFloat
+    func body(content: Content) -> some View {
+        if #available(iOS 18, *) { content.modifier(PosicaoRolagem18(posicao: $posicao)) } else { content }
+    }
+}
+
+@available(iOS 18, *)
+private struct PosicaoRolagem18: ViewModifier {
+    @Binding var posicao: CGFloat
+    @State private var sp = ScrollPosition(edge: .top)
+    func body(content: Content) -> some View {
+        content.scrollPosition($sp)
+            .onChange(of: posicao) { _, y in sp.scrollTo(y: y) }
     }
 }
 
