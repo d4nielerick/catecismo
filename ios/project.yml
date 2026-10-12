@@ -29,6 +29,8 @@ targets:
         UIStatusBarStyle: UIStatusBarStyleDarkContent
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.santadoutrina.liturgia
+        PRODUCT_BUNDLE_IDENTIFIER: com.danielerick.liturgia
+        DEVELOPMENT_TEAM: NM33KUNYGF
+        CODE_SIGN_STYLE: Automatic
         TARGETED_DEVICE_FAMILY: "1"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

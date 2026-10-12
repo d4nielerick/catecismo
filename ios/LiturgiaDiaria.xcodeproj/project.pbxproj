@@ -128,6 +128,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					F2A0087C8BF6BE4F8EDBF96F = {
+						DevelopmentTeam = NM33KUNYGF;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 650E642D1C752AD5151C3F6E /* Build configuration list for PBXProject "LiturgiaDiaria" */;
@@ -257,12 +261,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NM33KUNYGF;
 				INFOPLIST_FILE = LiturgiaDiaria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.santadoutrina.liturgia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielerick.liturgia;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -331,12 +337,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NM33KUNYGF;
 				INFOPLIST_FILE = LiturgiaDiaria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.santadoutrina.liturgia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielerick.liturgia;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
