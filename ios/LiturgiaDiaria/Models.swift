@@ -21,6 +21,7 @@ struct Leitura: Codable, Equatable, Identifiable {
     let rotulo: String        // "1ª Leitura", "Salmo", "Evangelho"…
     let referencia: String
     let texto: String
+    let titulo: String?
 
     var id: String { "\(rotulo)|\(referencia)|\(texto.prefix(24))" }
 
@@ -31,6 +32,7 @@ struct Leitura: Codable, Equatable, Identifiable {
         rotulo = try c.decode(String.self, forKey: .rotulo)
         referencia = try c.decodeIfPresent(String.self, forKey: .referencia) ?? ""
         texto = try c.decode(String.self, forKey: .texto)
+        titulo = try c.decodeIfPresent(String.self, forKey: .titulo)
     }
 
     /// Nome do arquivo de áudio em /data/liturgia-audio/<dia>/<nome>.mp3 (nil: não tem voz).
@@ -78,4 +80,41 @@ enum Datas {
 
 extension String {
     var capitalizedFirst: String { prefix(1).uppercased() + dropFirst() }
+}
+
+/// data/liturgia/indice.json: só os "destaques" (pontinhos do calendário).
+struct Indice: Codable {
+    struct Destaque: Codable { let data: String; let tipo: String; let nome: String }
+    let destaques: [Destaque]
+}
+
+/// O cabeçalho do dia, com as mesmas regras de cabecalhoDoDia (render.mjs).
+enum Cabecalho {
+    static let mesCurto = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
+    static let temporal = try! NSRegularExpression(pattern: #"^(?:\d+º Domingo\b|\d+º dia da Oitava|(?:Domingo|Segunda-feira|Terça-feira|Quarta-feira|Quinta-feira|Sexta-feira|Sábado) (?:da \d+ª Semana|depois d|da Oitava|do Tempo do Natal))"#)
+    static let semana = try! NSRegularExpression(pattern: #"\b(?:Domingo|Segunda-feira|Terça-feira|Quarta-feira|Quinta-feira|Sexta-feira|Sábado)\b"#)
+
+    static func casa(_ r: NSRegularExpression, _ s: String) -> Bool {
+        r.firstMatch(in: s, range: NSRange(s.startIndex..., in: s)) != nil
+    }
+
+    static func dataCurta(_ d: Date) -> String {
+        let c = Datas.calendario.dateComponents([.day, .month], from: d)
+        return "\(c.day!)/\(mesCurto[c.month! - 1])"
+    }
+
+    static let semanaF: DateFormatter = {
+        let f = DateFormatter(); f.locale = Locale(identifier: "pt_BR"); f.dateFormat = "EEEE"; return f
+    }()
+
+    /// (linha de baixo da data, nome da celebração)
+    static func linhas(_ d: Date, _ dia: Dia?) -> (String, String) {
+        let diaSemana = semanaF.string(from: d).capitalizedFirst
+        guard let dia else { return (diaSemana, "") }
+        let cel = dia.celebracao
+        let ehTemporal = casa(temporal, cel)
+        var linha = [diaSemana, dia.tempo].filter { !$0.isEmpty }.joined(separator: " · ")
+        if ehTemporal { linha = cel } else if casa(semana, cel) { linha = dia.tempo }
+        return (linha, ehTemporal ? "" : cel)
+    }
 }

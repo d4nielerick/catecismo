@@ -25,6 +25,8 @@ targets:
         ITSAppUsesNonExemptEncryption: false
         CFBundleLocalizations: [pt-BR]
         CFBundleDevelopmentRegion: pt-BR
+        UIAppFonts: [inria-serif-400.ttf, inria-serif-400-italic.ttf, inria-serif-700.ttf]
+        UIStatusBarStyle: UIStatusBarStyleDarkContent
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.santadoutrina.liturgia

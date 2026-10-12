@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// Uma leitura, no desenho do site: rótulo, referência e o texto com os versículos pequenos.
+/// Uma leitura no desenho do site (.leitura-card): rótulo grande em Times itálico, referência,
+/// título em itálico, e o texto em Inria Serif com capitular e versículos vermelhos.
 struct LeituraView: View {
     let leitura: Leitura
     let dia: Dia
@@ -8,77 +9,138 @@ struct LeituraView: View {
     @EnvironmentObject var player: Player
 
     private var tocando: Bool { player.tocando == leitura.id }
-    private var destaque: Color { CorLiturgica.ponto(dia.cor) }
+    private let corpoT: CGFloat = 16
+    private var menor: Bool { leitura.tipo == "aclamacao" || leitura.tipo == "sequencia" }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(alignment: .firstTextBaseline) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(leitura.rotulo.uppercased())
-                        .font(.caption.weight(.semibold)).tracking(1.4).foregroundStyle(destaque)
-                    if !leitura.referencia.isEmpty {
-                        Text(leitura.referencia).font(.system(.subheadline, design: .serif)).italic().foregroundStyle(.secondary)
-                    }
-                }
-                Spacer()
+        VStack(alignment: .leading, spacing: 0) {
+            HStack(alignment: .center) {
+                rotulo
+                Spacer(minLength: 8)
                 if let audio {
                     Button {
                         player.alternar(id: leitura.id, url: Servidor.urlAudio(dia: dia.data, nome: audio),
                                         titulo: "\(leitura.rotulo) · \(leitura.referencia)", subtitulo: dia.celebracao)
                     } label: {
-                        Image(systemName: tocando ? "pause.circle.fill" : "play.circle.fill").font(.system(size: 34))
+                        Image(systemName: tocando ? "pause.fill" : "headphones")
+                            .font(.system(size: tocando ? 17 : 21, weight: .regular))
+                            .foregroundStyle(tocando ? Estilo.vermelho : Color(hex: 0x8c867e))
+                            .frame(width: 36, height: 36)
+                            .background(Circle().fill(tocando ? Estilo.vermelho.opacity(0.1) : .clear))
                     }
-                    .tint(destaque)
                     .accessibilityLabel(tocando ? "Pausar" : "Ouvir \(leitura.rotulo)")
                 }
             }
-            corpo
+            if !leitura.referencia.isEmpty {
+                Text(leitura.referencia).font(Estilo.leitura(16)).foregroundStyle(Estilo.tinta)
+                    .padding(.bottom, 11)
+            }
+            if let t = leitura.titulo, !t.isEmpty {
+                Text(t).font(Estilo.leituraItalico(16)).foregroundStyle(Estilo.tinta)
+                    .padding(.bottom, 11).padding(.top, 8)
+            }
+            corpo.padding(.top, 14)
         }
-        .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.background, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .shadow(color: .black.opacity(0.05), radius: 8, y: 2)
+    }
+
+    /// "1ª Leitura": o "ª" fica elevado como no site.
+    private var rotulo: some View {
+        let t: CGFloat = menor ? 30 : 41.25
+        var a = AttributedString(leitura.rotulo)
+        a.font = Estilo.titulo(t)
+        if let r = a.range(of: "ª") ?? a.range(of: "º") {
+            a[r].font = Estilo.titulo(t * 0.6)
+            a[r].baselineOffset = t * 0.33
+        }
+        return Text(a).foregroundStyle(Estilo.tinta).tracking(-t * 0.03)
+            .lineLimit(2).minimumScaleFactor(0.6)
     }
 
     @ViewBuilder private var corpo: some View {
-        if leitura.tipo == "salmo" || leitura.tipo == "sequencia" || leitura.tipo == "aclamacao" {
-            poema
-        } else {
-            Text(prosa).font(.system(.body, design: .serif)).lineSpacing(6)
+        switch leitura.tipo {
+        case "salmo": salmo
+        case "aclamacao": aclamacao
+        case "sequencia":
+            Text(leitura.texto).font(Estilo.leitura(corpoT)).foregroundStyle(Estilo.texto).lineSpacing(corpoT * 0.45)
+        default: ProsaCapitular(texto: leitura.texto, tamanho: corpoT)
         }
     }
 
-    /// Prosa: as linhas viram um parágrafo corrido; o número do versículo fica pequeno e elevado.
-    private var prosa: AttributedString {
-        var out = AttributedString()
-        for t in Texto.trechos(leitura.texto) {
-            switch t {
-            case .verso(let v):
-                var a = AttributedString(v + "\u{2009}")
-                a.font = .system(.caption2, design: .rounded).weight(.semibold)
-                a.baselineOffset = 6
-                a.foregroundColor = destaque
-                out += a
-            case .refrao(let s), .linha(let s):
-                out += AttributedString(s + " ")
-            }
-        }
-        return out
+    private func estiloParagrafo(_ t: Text) -> some View {
+        t.font(Estilo.leitura(corpoT)).foregroundStyle(Estilo.texto).lineSpacing(corpoT * 0.45)
+            .fixedSize(horizontal: false, vertical: true)
     }
 
-    /// Salmo e aclamação: um verso por linha; o refrão em destaque.
-    private var poema: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            ForEach(Array(Texto.trechos(leitura.texto).enumerated()), id: \.offset) { _, t in
-                switch t {
-                case .verso(let v):
-                    Text(v).font(.caption2.weight(.semibold)).foregroundStyle(destaque).padding(.top, 6)
-                case .refrao(let s):
-                    Text(s).font(.system(.body, design: .serif)).fontWeight(.semibold)
-                case .linha(let s):
-                    Text(s).font(.system(.body, design: .serif))
-                }
+    private func versiculo(_ v: String) -> Text {
+        Text(v + "\u{2009}").font(Estilo.leitura(corpoT * 0.66)).foregroundColor(Estilo.vermelho).baselineOffset(corpoT * 0.36)
+    }
+
+    private func rotuloR(_ r: String) -> Text { Text(r + " ").foregroundColor(Estilo.tinta) }
+
+    /// renderSalmo: refrão ("R." preto + texto corrido) e as estrofes em parágrafos corridos.
+    private var salmo: some View {
+        let linhas = leitura.texto.split(separator: "\n").map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
+        var i = 0
+        var refrao: [String] = []
+        if let p = linhas.first, p == "R." || p == "R" || p.hasPrefix("R. ") {
+            let resto = p.hasPrefix("R. ") ? String(p.dropFirst(3)) : ""
+            if !resto.isEmpty { refrao.append(resto) }
+            i = 1
+            while i < linhas.count {
+                let l = linhas[i]
+                if Texto.ehVerso(l) || l.contains("*") { break }
+                if l != "R." && l != "R" { refrao.append(l) }
+                i += 1
             }
         }
+        var estrofes: [Text] = []
+        var atual: Text? = nil
+        let fechar = { if let a = atual { estrofes.append(a) }; atual = nil }
+        while i < linhas.count {
+            let l = linhas[i].replacingOccurrences(of: "*", with: "").replacingOccurrences(of: "†", with: "").trimmingCharacters(in: .whitespaces)
+            i += 1
+            if l.isEmpty { continue }
+            if l == "R." || l == "R" || l.hasPrefix("R. ") { fechar(); continue }
+            let pedaco = Texto.ehVerso(l) ? versiculo(l) : Text(l + " ")
+            atual = atual.map { $0 + pedaco } ?? pedaco
+        }
+        fechar()
+        return VStack(alignment: .leading, spacing: 24) {
+            if !refrao.isEmpty { estiloParagrafo(rotuloR("R.") + Text(refrao.joined(separator: " "))) }
+            ForEach(Array(estrofes.enumerated()), id: \.offset) { _, t in estiloParagrafo(t) }
+        }
+    }
+
+    /// renderAclamacao: blocos "R." e "V." com quebra de linha.
+    private var aclamacao: some View {
+        var blocos: [(String?, [String])] = []
+        for l in leitura.texto.split(separator: "\n").map({ $0.trimmingCharacters(in: .whitespaces) }) where !l.isEmpty {
+            if l.hasPrefix("R.") || l.hasPrefix("V.") {
+                let resto = l.dropFirst(2).trimmingCharacters(in: .whitespaces)
+                blocos.append((String(l.prefix(2)), resto.isEmpty ? [] : [resto]))
+            } else if blocos.isEmpty {
+                blocos.append((nil, [l]))
+            } else {
+                blocos[blocos.count - 1].1.append(l)
+            }
+        }
+        return VStack(alignment: .leading, spacing: 24) {
+            ForEach(Array(blocos.enumerated()), id: \.offset) { _, b in
+                estiloParagrafo((b.0.map { rotuloR($0) } ?? Text("")) + Text(b.1.joined(separator: "\n")))
+            }
+        }
+    }
+}
+
+/// Divisor entre as leituras: fio, cruz vermelha, fio.
+struct Divisor: View {
+    var body: some View {
+        VStack(spacing: 0) {
+            Rectangle().fill(Estilo.linha).frame(height: 1)
+            Text("✠").font(.system(size: 30, weight: .bold)).foregroundStyle(Estilo.vermelho).padding(.vertical, 22)
+            Rectangle().fill(Estilo.linha).frame(height: 1)
+        }
+        .padding(.vertical, 40)
     }
 }

@@ -33,6 +33,18 @@ actor Servidor {
         return d
     }
 
+    /// Pontinhos do calendário (santos e Nossa Senhora). Cache em disco: muda pouco.
+    func indice() async -> Indice? {
+        let arquivo = pasta.appendingPathComponent("indice.json")
+        let url = Self.base.appendingPathComponent("data/liturgia/indice.json")
+        if let (dados, resp) = try? await sessao.data(from: url), (resp as? HTTPURLResponse)?.statusCode == 200,
+           let i = try? JSONDecoder().decode(Indice.self, from: dados) {
+            try? dados.write(to: arquivo, options: .atomic)
+            return i
+        }
+        return (try? Data(contentsOf: arquivo)).flatMap { try? JSONDecoder().decode(Indice.self, from: $0) }
+    }
+
     static func urlAudio(dia: String, nome: String) -> URL {
         base.appendingPathComponent("data/liturgia-audio/\(dia)/\(nome).mp3")
     }
