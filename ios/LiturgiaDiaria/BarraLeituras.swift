@@ -33,11 +33,8 @@ struct BarraLeituras: View {
 
     var body: some View {
         Group {
-            BotaoDia(sentido: -1, lado: lado, ns: ns, ativo: anterior, acao: { mudarDia(-1) })
-                .accessibilityLabel("Dia anterior")
+            // as setas de dia ficam só no menu (pedido do dono)
             if !blocos.isEmpty { abas }
-            BotaoDia(sentido: 1, lado: lado, ns: ns, ativo: proximo, acao: { mudarDia(1) })
-                .accessibilityLabel("Dia seguinte")
         }
     }
 
