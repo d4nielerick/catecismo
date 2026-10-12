@@ -39,7 +39,7 @@ struct HojeView: View {
                     Button { mover(-1) } label: { Image(systemName: "chevron.left") }.accessibilityLabel("Dia anterior")
                 }
                 ToolbarItemGroup(placement: .topBarTrailing) {
-                    Button { avisos ? desligarAvisos() : Task { avisos = await Avisos.ligar() } } label: {
+                    Button { if avisos { desligarAvisos() } else { Task { avisos = await Avisos.ligar() } } } label: {
                         Image(systemName: avisos ? "bell.fill" : "bell")
                     }.accessibilityLabel(avisos ? "Desligar aviso das 6h" : "Ligar aviso das 6h")
                     Button { escolhendoData = true } label: { Image(systemName: "calendar") }.accessibilityLabel("Escolher dia")
