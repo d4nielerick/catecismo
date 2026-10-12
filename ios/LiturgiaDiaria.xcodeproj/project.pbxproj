@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4734208D7CC2A2C339510982 /* Servidor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B5751B43279AFA8CA4B43 /* Servidor.swift */; };
+		476011C0D03AF5B91F759487 /* HojeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */; };
+		504E7F087B29F85FA3D31F46 /* Texto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4D239CE4EE2CC97116C48 /* Texto.swift */; };
+		5D333B0B507E4DCF06C8B7EE /* LeituraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E6634A405F99640B5E8C03 /* LeituraView.swift */; };
+		82777FA3B20D31AFBEC616AE /* LiturgiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */; };
+		BEDF4AA8AF18149809F4F3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495E03E070606537C9FEE694 /* Assets.xcassets */; };
+		CA693A5E61CA853DDB91DBC1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3C42A78CF1FBD70C54CB58 /* Player.swift */; };
+		CAF64107A3FFB9843DFB2CBB /* Avisos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43333D1D74E69775F6224CB /* Avisos.swift */; };
+		CDFAD8D82B590723B3B26818 /* Cores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B9D897E66735B1CD70094 /* Cores.swift */; };
+		CFF208B95D35FF5E678479F0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F26EF38D94915AB3F4293B /* Models.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HojeView.swift; sourceTree = "<group>"; };
+		3ED4D239CE4EE2CC97116C48 /* Texto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texto.swift; sourceTree = "<group>"; };
+		495E03E070606537C9FEE694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C9B9D897E66735B1CD70094 /* Cores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cores.swift; sourceTree = "<group>"; };
+		746B5751B43279AFA8CA4B43 /* Servidor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servidor.swift; sourceTree = "<group>"; };
+		865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgiaApp.swift; sourceTree = "<group>"; };
+		97F26EF38D94915AB3F4293B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BC3C42A78CF1FBD70C54CB58 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C68A47FB8FD822FEEEAD5ED5 /* LiturgiaDiaria.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LiturgiaDiaria.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E6634A405F99640B5E8C03 /* LeituraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeituraView.swift; sourceTree = "<group>"; };
+		E18C6238766A5A55604FC059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F43333D1D74E69775F6224CB /* Avisos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avisos.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		175C741A480634167E669629 /* LiturgiaDiaria */ = {
+			isa = PBXGroup;
+			children = (
+				495E03E070606537C9FEE694 /* Assets.xcassets */,
+				F43333D1D74E69775F6224CB /* Avisos.swift */,
+				4C9B9D897E66735B1CD70094 /* Cores.swift */,
+				0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */,
+				E18C6238766A5A55604FC059 /* Info.plist */,
+				D2E6634A405F99640B5E8C03 /* LeituraView.swift */,
+				865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */,
+				97F26EF38D94915AB3F4293B /* Models.swift */,
+				BC3C42A78CF1FBD70C54CB58 /* Player.swift */,
+				746B5751B43279AFA8CA4B43 /* Servidor.swift */,
+				3ED4D239CE4EE2CC97116C48 /* Texto.swift */,
+			);
+			path = LiturgiaDiaria;
+			sourceTree = "<group>";
+		};
+		7A67AACD6BE90388A93D18AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C68A47FB8FD822FEEEAD5ED5 /* LiturgiaDiaria.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3ED6469CC4C80E3B20EE8DE = {
+			isa = PBXGroup;
+			children = (
+				175C741A480634167E669629 /* LiturgiaDiaria */,
+				7A67AACD6BE90388A93D18AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2A0087C8BF6BE4F8EDBF96F /* LiturgiaDiaria */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCAEA341426987A1BAF7196 /* Build configuration list for PBXNativeTarget "LiturgiaDiaria" */;
+			buildPhases = (
+				C9F36DF2DD0606EF467CB9B4 /* Sources */,
+				8E8BDA4EC7F83C661BBCE4D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiturgiaDiaria;
+			packageProductDependencies = (
+			);
+			productName = LiturgiaDiaria;
+			productReference = C68A47FB8FD822FEEEAD5ED5 /* LiturgiaDiaria.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		170DEAC8EB8BA549BCC00287 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 650E642D1C752AD5151C3F6E /* Build configuration list for PBXProject "LiturgiaDiaria" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D3ED6469CC4C80E3B20EE8DE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7A67AACD6BE90388A93D18AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2A0087C8BF6BE4F8EDBF96F /* LiturgiaDiaria */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E8BDA4EC7F83C661BBCE4D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDF4AA8AF18149809F4F3CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9F36DF2DD0606EF467CB9B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF64107A3FFB9843DFB2CBB /* Avisos.swift in Sources */,
+				CDFAD8D82B590723B3B26818 /* Cores.swift in Sources */,
+				476011C0D03AF5B91F759487 /* HojeView.swift in Sources */,
+				5D333B0B507E4DCF06C8B7EE /* LeituraView.swift in Sources */,
+				82777FA3B20D31AFBEC616AE /* LiturgiaApp.swift in Sources */,
+				CFF208B95D35FF5E678479F0 /* Models.swift in Sources */,
+				CA693A5E61CA853DDB91DBC1 /* Player.swift in Sources */,
+				4734208D7CC2A2C339510982 /* Servidor.swift in Sources */,
+				504E7F087B29F85FA3D31F46 /* Texto.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2A03590584D568E96421D6B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		720D3296556DC5ACD480856A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = LiturgiaDiaria/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santadoutrina.liturgia;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BAF557AE57429F9A08FF603A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		E9D51C9E1C38AFCD44B1A0AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = LiturgiaDiaria/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santadoutrina.liturgia;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		650E642D1C752AD5151C3F6E /* Build configuration list for PBXProject "LiturgiaDiaria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A03590584D568E96421D6B0 /* Debug */,
+				BAF557AE57429F9A08FF603A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EFCAEA341426987A1BAF7196 /* Build configuration list for PBXNativeTarget "LiturgiaDiaria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				720D3296556DC5ACD480856A /* Debug */,
+				E9D51C9E1C38AFCD44B1A0AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 170DEAC8EB8BA549BCC00287 /* Project object */;
+}

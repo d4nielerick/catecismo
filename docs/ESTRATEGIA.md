@@ -100,3 +100,11 @@ distribuição → retenção → dinheiro.
 - Qualquer trabalho em andamento de outra sessão fica fora do rsync (`--exclude`) até commitar.
 - Cron na VPS (Europe/Berlin, sem fuso por tarefa): push `0 * * * *`, hoje.html `5 * * * *`, Instagram `2 * * * *`:
   todos rodam de hora em hora e o script decide pelo horário de Brasília.
+
+## App de iPhone (ios/)
+
+SwiftUI nativo (iOS 17+), projeto gerado por XcodeGen (`cd ios && xcodegen generate`), que lê do site os mesmos
+`data/liturgia/AAAA-MM-DD.json` e `data/liturgia-audio/`. **Fica fora do rsync de deploy (`--exclude=/ios/`).**
+Hoje: leituras do dia, navegação por dia, áudio (com tela de bloqueio) e aviso local às 6h. Pendente: widget,
+Catena, santos, Xcode no Mac (ainda não instalado) e conta Apple Developer (não há; US$ 99/ano) para iPhone e loja.
+`Models.swift` e `Texto.swift` foram conferidos contra os 1.461 dias do site; as telas ainda não foram compiladas.

@@ -135,7 +135,7 @@ completos), `data/liturgia-resumos/`, `data/liturgia-trechos/`. Mensagem no padr
 Deploy (o rsync manda tudo o que está na pasta; as exclusões são obrigatórias):
 
 ```bash
-rsync -az --delete --exclude={.git,.gitignore,api-server.mjs,'.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,.vscode,HANDOFF.md} ./ vps:/opt/mediaserver/catecismo/
+rsync -az --delete --exclude={.git,.gitignore,api-server.mjs,'.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,.vscode,HANDOFF.md,/ios/} ./ vps:/opt/mediaserver/catecismo/
 ```
 
 Depois, confira um dia no ar (`curl -s https://santadoutrina.com/data/liturgia-comentario/<dia>.json`)

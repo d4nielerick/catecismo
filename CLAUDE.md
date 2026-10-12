@@ -131,7 +131,7 @@ Deploy a partir de um clone local com a `main` atualizada:
 
 ```bash
 rsync -az --delete \
-  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html} \
+  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/ios/} \
   ./ vps:/opt/mediaserver/catecismo/
 ```
 
