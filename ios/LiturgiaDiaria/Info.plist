@@ -26,6 +26,12 @@
 	<string>1</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>whatsapp</string>
+	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Para salvar nas suas Fotos os cards e as páginas das leituras que você escolher.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>inria-serif-400.ttf</string>

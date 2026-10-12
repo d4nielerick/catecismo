@@ -15,6 +15,11 @@ struct HojeView: View {
     @State private var destaques: [String: Indice.Destaque] = [:]
     @State private var limites: (String, String)?
     @StateObject private var player = Player()
+    /// Resumo, trechos, santo e comentário do dia (cada um pode faltar).
+    @State private var extras = ExtrasDoDia()
+    @State private var pedidoCard: PedidoCard?
+    @State private var sobreAberto = false
+    @State private var comentarioAberto = false
     @Namespace private var vidro
 
     /// Aba ativa (índice em `abas`) e até quando a rolagem não a muda (depois de um toque).
@@ -62,7 +67,8 @@ struct HojeView: View {
                     }.allowsHitTesting(false)
                     Moldura().ignoresSafeArea()
                     MenuVidro(data: $data, avisos: $avisos, aberto: $menuAberto, lado: lado, ns: vidro) {
-                        BarraLeituras(blocos: abas, ativa: ativa, lado: lado, ns: vidro,
+                        BarraLeituras(blocos: abas, ativa: ativa, lado: lado,
+                                      larguraAba: Barra.larguraAba(largura: tela.size.width, abas: abas.count, lado: lado), ns: vidro,
                                       anterior: existe(-1), proximo: existe(1),
                                       tocarAba: { irPara($0, rolagem) },
                                       mudarDia: { n in withAnimation(.easeInOut(duration: 0.2)) { mover(n) } })
@@ -71,7 +77,10 @@ struct HojeView: View {
                 }
                 .task(id: chave) {
                     await carregar()
-                    if let alvo = UserDefaults.standard.string(forKey: "irPara"), let i = indiceDaAba(alvo) {
+                    if let alvo = UserDefaults.standard.string(forKey: "irPara"), ["resumo", "comentario", "alternativa"].contains(alvo) {
+                        try? await Task.sleep(for: .milliseconds(500))
+                        rolagem.scrollTo(alvo, anchor: UnitPoint(x: 0.5, y: 0.08))
+                    } else if let alvo = UserDefaults.standard.string(forKey: "irPara"), let i = indiceDaAba(alvo) {
                         try? await Task.sleep(for: .milliseconds(500))
                         irPara(i, rolagem)
                     }
@@ -79,6 +88,13 @@ struct HojeView: View {
             }
         }
         .environmentObject(player)
+        .fullScreenCover(item: $pedidoCard) { CompartilharView(pedido: $0) }
+        .sheet(isPresented: $sobreAberto) {
+            if let s = extras.sobre { SobreView(slug: s.slug, celebracao: s.celebracao) }
+        }
+        .sheet(isPresented: $comentarioAberto) {
+            if let c = extras.comentario { ComentarioInteiroView(comentario: c) }
+        }
         .task {
             await Avisos.reagendar()
             if let i = await Servidor.compartilhado.indice() {
@@ -116,6 +132,20 @@ struct HojeView: View {
         }
     }
 
+    /// Depuração: `-abrirCompartilhar evangelho|trecho|santo|sobre|comentario` abre a janela ao carregar.
+    private func abrirDepuracao(_ d: Dia) {
+        let q = UserDefaults.standard.string(forKey: "abrirCompartilhar") ?? ""
+        switch q {
+        case "santo": compartilharSanto()
+        case "sobre": sobreAberto = extras.sobre != nil
+        case "comentario": comentarioAberto = extras.comentario != nil
+        default:
+            if let l = d.leituras.first(where: { $0.tipo == (q == "trecho" || q.isEmpty ? "evangelho" : q) && !$0.alternativa }) {
+                compartilhar(l, d)
+            }
+        }
+    }
+
     private func indiceDaAba(_ nome: String) -> Int? {
         if let n = Int(nome) { return n }
         switch nome {
@@ -139,13 +169,11 @@ struct HojeView: View {
                 .foregroundStyle(Estilo.tinta).padding(.top, 2)
                 .accessibilityLabel(Datas.longa(data))
             Text(linha).font(Estilo.leitura(12.2)).foregroundStyle(Estilo.suave).padding(.top, 6)
-            if !nome.isEmpty {
-                (Text(nome).font(Estilo.leituraItalico(16)).foregroundColor(Estilo.tinta)
-                 + Text("  SAIBA MAIS").font(Estilo.sans(9, .semibold)).foregroundColor(Estilo.vermelho).kerning(0.72)
-                    .baselineOffset(1.5))
-                    .lineSpacing(5)
+            if !nome.isEmpty || extras.santo != nil {
+                NomeDoDia(nome: nome, santo: extras.santo, saibaMais: extras.sobre != nil && !nome.isEmpty,
+                          abrirSobre: { sobreAberto = true },
+                          compartilharSanto: compartilharSanto)
                     .padding(.top, 12)
-                    .onTapGesture { abrirSobre() }
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -157,6 +185,11 @@ struct HojeView: View {
         if let dia {
             let bs = dia.blocos
             VStack(alignment: .leading, spacing: 0) {
+                if let r = extras.resumo {
+                    ResumoView(texto: r, hoje: Calendar.current.isDateInToday(data), cor: dia.cor)
+                        .padding(.bottom, 44)
+                        .id("resumo")
+                }
                 ForEach(Array(bs.enumerated()), id: \.element.id) { i, b in
                     if i > 0 { Divisor() }
                     let aba = bs[..<i].filter(\.temAba).count
@@ -168,10 +201,18 @@ struct HojeView: View {
                                                            value: [aba: g.frame(in: .named("rolagem")).minY])
                                 })
                         }
-                        ForEach(Array(([b.leitura] + b.alternativas).enumerated()), id: \.element.id) { k, l in
-                            if k > 0 { Divisor() }
-                            LeituraView(leitura: l, dia: dia,
-                                        audio: l.nomeAudio(entre: dia.leituras).flatMap { audios.contains($0) ? $0 : nil })
+                        LeituraView(leitura: b.leitura, dia: dia,
+                                    audio: b.leitura.nomeAudio(entre: dia.leituras).flatMap { audios.contains($0) ? $0 : nil },
+                                    compartilhar: podeCompartilhar(b.leitura) ? { compartilhar(b.leitura, dia) } : nil)
+                        ForEach(b.alternativas) { l in
+                            if l.id == bs.flatMap(\.alternativas).first?.id { Color.clear.frame(height: 0).id("alternativa") }
+                            Alternativa(leitura: l, dia: dia)
+                        }
+                        if b.leitura.tipo == "evangelho", !b.leitura.alternativa, let c = extras.comentario,
+                           bs.firstIndex(where: { $0.leitura.tipo == "evangelho" }) == i {
+                            ComentarioView(comentario: c, abrirInteiro: { comentarioAberto = true })
+                                .padding(.top, 48)
+                                .id("comentario")
                         }
                     }
                 }
@@ -207,8 +248,30 @@ struct HojeView: View {
         .opacity(dia == nil ? 0 : 1)
     }
 
-    private func abrirSobre() {
-        if let url = URL(string: "https://santadoutrina.com/liturgiadiaria/\(chave)/") { UIApplication.shared.open(url) }
+    // MARK: Compartilhar (botoesDeCompartilhar e compartilharSanto do site)
+
+    private func podeCompartilhar(_ l: Leitura) -> Bool {
+        !l.alternativa && ["leitura", "salmo", "evangelho"].contains(l.tipo)
+    }
+
+    private func compartilhar(_ l: Leitura, _ dia: Dia) {
+        let trecho = extras.trechos?.trechos?[l.referencia] ?? ""
+        let fotos = extras.catalogo?.escolher(tempo: dia.tempo, cor: dia.cor, dt: dia.data,
+                                              preferida: extras.trechos?.imagens?[l.referencia]) ?? []
+        let ref = l.referencia.replacingOccurrences(of: #"\s*\(R\..*\)$"#, with: "", options: .regularExpression)
+        pedidoCard = PedidoCard(
+            conteudo: ConteudoCard(dt: dia.data, trecho: trecho, referencia: ref, rotulo: l.rotulo,
+                                   dataCurta: Cabecalho.dataCurta(data), cor: dia.cor),
+            dia: dia, leitura: l, fotos: fotos, selo: nil)
+    }
+
+    private func compartilharSanto() {
+        guard let dia, let s = extras.santo else { return }
+        let fotos = extras.catalogo?.escolher(tempo: dia.tempo, cor: dia.cor, dt: dia.data, preferida: s.imagem) ?? []
+        pedidoCard = PedidoCard(
+            conteudo: ConteudoCard(dt: dia.data, trecho: s.frase, referencia: s.nome ?? dia.celebracao, rotulo: "Santo do dia",
+                                   dataCurta: Cabecalho.dataCurta(data), cor: dia.cor, aspas: true),
+            dia: nil, leitura: nil, fotos: fotos, selo: "Santo do dia")
     }
 
     private func mover(_ n: Int) {
@@ -217,13 +280,17 @@ struct HojeView: View {
     }
 
     private func carregar() async {
-        dia = nil; erro = false; audios = []; ativa = 0; travadaAte = .distantPast
+        dia = nil; erro = false; audios = []; ativa = 0; travadaAte = .distantPast; extras = ExtrasDoDia()
         player.parar()
         let alvo = chave
         do {
             let d = try await Servidor.compartilhado.dia(alvo)
             guard alvo == chave else { return }
             dia = d
+            let e = await Servidor.compartilhado.extras(d)
+            guard alvo == chave else { return }
+            withAnimation(.easeOut(duration: 0.35)) { extras = e }
+            if UserDefaults.standard.string(forKey: "abrirCompartilhar") != nil { abrirDepuracao(d) }
             for nome in ["primeira-leitura", "salmo", "segunda-leitura", "evangelho"] {
                 if await Servidor.compartilhado.temAudio(dia: alvo, nome: nome), alvo == chave { audios.insert(nome) }
             }

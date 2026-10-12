@@ -4,15 +4,27 @@ import SwiftUI
 /// vidro — ( ‹ )  ( leituras do dia )  ( › ) — e, à direita, o botão do menu (MenuVidro). As abas
 /// são só ícones; a "luz" (.lp-tabs-luz) desliza com mola até a aba ativa.
 enum Barra {
-    static let margem: CGFloat = 28     // dentro das faixas floridas (26pt visíveis)
-    static let vao: CGFloat = 8         // entre as peças
-    static let abaivo: CGFloat = 6      // acima da safe area
+    static let margem: CGFloat = 18     // dos lados da tela (a barra pode passar sobre as faixas floridas)
+    static let vao: CGFloat = 10        // entre a cápsula das leituras e o botão do menu
+    static let abaivo: CGFloat = 4      // acima da safe area
+    static let alturaMax: CGFloat = 64  // como a tab bar do iOS 26
 
-    /// --lp-barra: o diâmetro das peças, do tamanho que couber na largura (60pt no máximo, 54 com 4 abas).
+    /// Folga interna da cápsula das abas (a "luz" fica a essa distância da borda).
+    static func folga(_ lado: CGFloat) -> CGFloat { (lado * 0.09).rounded() }
+
+    /// Largura de cada aba na altura `lado`.
+    static func larguraAba(largura: CGFloat, abas n: Int, lado: CGFloat) -> CGFloat {
+        guard n > 0 else { return 0 }
+        let livre = largura - 2 * margem - vao - lado - 2 * folga(lado)
+        return min((lado * 1.2).rounded(), (livre / CGFloat(n)).rounded(.down))
+    }
+
+    /// --lp-barra: a altura das peças (e o diâmetro do botão do menu). 64pt; só encolhe quando
+    /// há tantas abas (Vigília Pascal) que cada uma ficaria estreita demais para o dedo.
     static func lado(largura: CGFloat, abas n: Int) -> CGFloat {
-        let livre = largura - 2 * margem - 3 * vao - 2 * CGFloat(max(n - 1, 0))
-        let pecas = 3 + (n > 0 ? 0.826 * CGFloat(n) + 0.174 : 0)
-        return max(40, min(n > 3 ? 54 : 60, (livre / pecas).rounded(.down)))
+        var l = alturaMax
+        while l > 48 && n > 0 && larguraAba(largura: largura, abas: n, lado: l) < 46 { l -= 2 }
+        return l
     }
 
     /// Altura total ocupada acima da safe area (para o respiro no fim do texto).
@@ -24,6 +36,7 @@ struct BarraLeituras: View {
     let blocos: [Bloco]               // só os que têm aba
     let ativa: Int
     let lado: CGFloat
+    let larguraAba: CGFloat
     let ns: Namespace.ID
     let anterior: Bool                // existe dia anterior com leituras?
     let proximo: Bool
@@ -39,13 +52,15 @@ struct BarraLeituras: View {
     }
 
     private var abas: some View {
-        HStack(spacing: 2) {
+        let icone = min(28, (lado * 0.43).rounded(), larguraAba * 0.62)
+        let f = Barra.folga(lado)
+        return HStack(spacing: 0) {
             ForEach(Array(blocos.enumerated()), id: \.element.id) { i, b in
                 Button { tocarAba(i) } label: {
                     IconeLeitura(leitura: b.leitura)
-                        .frame(width: lado * 0.457, height: lado * 0.457)
-                        .foregroundStyle(i == ativa ? Estilo.vermelho : Color(hex: 0x8c867e))
-                        .frame(width: lado * 0.826, height: lado * 0.826)
+                        .frame(width: icone, height: icone)
+                        .foregroundStyle(i == ativa ? Estilo.vermelho : Color(hex: 0x7d776f))
+                        .frame(width: larguraAba, height: lado - 2 * f)
                         .background {
                             if i == ativa {   // .lp-tabs-luz
                                 Capsule().fill(Color(hex: 0x281e0f, alpha: 0.07))
@@ -60,7 +75,7 @@ struct BarraLeituras: View {
                 .accessibilityAddTraits(i == ativa ? [.isSelected] : [])
             }
         }
-        .padding(.horizontal, lado * 0.087)
+        .padding(.horizontal, f)
         .frame(height: lado)
         .modifier(Vidro(forma: Capsule(), ns: ns, painel: false, id: "abas"))
         .accessibilityElement(children: .contain)

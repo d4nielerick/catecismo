@@ -6,6 +6,10 @@ struct LeituraView: View {
     let leitura: Leitura
     let dia: Dia
     let audio: String?          // nome do mp3, se existe voz
+    /// Abre a janela de compartilhar (só nas leituras, salmo e evangelho que não são alternativa).
+    var compartilhar: (() -> Void)? = nil
+    /// Só o título e o texto (a leitura alternativa, aberta dentro do "ou …").
+    var soCorpo = false
     @EnvironmentObject var player: Player
 
     private var tocando: Bool { player.tocando == leitura.id }
@@ -16,7 +20,18 @@ struct LeituraView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HStack(alignment: .center) {
+            if !soCorpo { cabeca }
+            if let t = leitura.titulo, !t.isEmpty {
+                Text(t).font(Estilo.leituraItalico(corpoT)).foregroundStyle(Estilo.tinta)
+                    .padding(.bottom, 11).padding(.top, soCorpo ? 0 : 8)
+            }
+            corpo.padding(.top, soCorpo ? 4 : 14)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    @ViewBuilder private var cabeca: some View {
+            HStack(alignment: .center, spacing: 4) {
                 rotulo
                 Spacer(minLength: 8)
                 if let audio {
@@ -32,18 +47,23 @@ struct LeituraView: View {
                     }
                     .accessibilityLabel(tocando ? "Pausar" : "Ouvir \(leitura.rotulo)")
                 }
+                if let compartilhar {
+                    Button(action: compartilhar) {
+                        IconeCompartilhar()
+                            .stroke(style: StrokeStyle(lineWidth: 1.8, lineCap: .round, lineJoin: .round))
+                            .foregroundStyle(Color(hex: 0x8c867e))
+                            .frame(width: 22, height: 22)
+                            .frame(width: 40, height: 40)
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(Afunda())
+                    .accessibilityLabel("Compartilhar: \(leitura.rotulo)")
+                }
             }
             if !leitura.referencia.isEmpty {
                 Text(leitura.referencia).font(Estilo.leitura(corpoT)).foregroundStyle(Estilo.tinta)
                     .padding(.bottom, 11)
             }
-            if let t = leitura.titulo, !t.isEmpty {
-                Text(t).font(Estilo.leituraItalico(corpoT)).foregroundStyle(Estilo.tinta)
-                    .padding(.bottom, 11).padding(.top, 8)
-            }
-            corpo.padding(.top, 14)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     /// "1ª Leitura": o "ª" fica elevado como no site.

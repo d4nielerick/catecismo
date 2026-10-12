@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 /// Lê o que o site já publica. O app não tem servidor próprio: tudo vem de santadoutrina.com.
 actor Servidor {
@@ -43,6 +44,60 @@ actor Servidor {
             return i
         }
         return (try? Data(contentsOf: arquivo)).flatMap { try? JSONDecoder().decode(Indice.self, from: $0) }
+    }
+
+    // MARK: Outros arquivos do site (resumo, trechos, santos, comentário, pinturas)
+
+    private var json: [String: Data] = [:]
+    private var imagens: [String: UIImage] = [:]
+
+    private func arquivoCache(_ caminho: String) -> URL {
+        pasta.appendingPathComponent(caminho.replacingOccurrences(of: "/", with: "_"))
+    }
+
+    /// Um JSON do site. `fixo`: o arquivo não muda (ou muda pouco), então o disco basta e a rede
+    /// só é usada na falta dele; senão a rede vem primeiro e o disco cobre a falta de conexão.
+    /// 404 vira nil (dia sem resumo, sem trecho…), e o nil não fica guardado.
+    func dados(_ caminho: String, fixo: Bool = false) async -> Data? {
+        if let d = json[caminho] { return d }
+        let arquivo = arquivoCache(caminho)
+        if fixo, let d = try? Data(contentsOf: arquivo) { json[caminho] = d; return d }
+        var req = URLRequest(url: Self.base.appendingPathComponent(caminho))
+        req.timeoutInterval = 12
+        if let (d, resp) = try? await sessao.data(for: req), let http = resp as? HTTPURLResponse {
+            if http.statusCode == 200 {
+                try? d.write(to: arquivo, options: .atomic)
+                json[caminho] = d
+                return d
+            }
+            if http.statusCode == 404 { try? FileManager.default.removeItem(at: arquivo); return nil }
+        }
+        return try? Data(contentsOf: arquivo)
+    }
+
+    func objeto<T: Decodable>(_ tipo: T.Type, _ caminho: String, fixo: Bool = false) async -> T? {
+        guard let d = await dados(caminho, fixo: fixo) else { return nil }
+        return try? JSONDecoder().decode(T.self, from: d)
+    }
+
+    /// Imagem (as pinturas dos cards são .webp; a do santo vem da Wikipédia, com URL inteira).
+    func imagem(_ caminhoOuURL: String) async -> UIImage? {
+        if let i = imagens[caminhoOuURL] { return i }
+        let externo = caminhoOuURL.hasPrefix("http")
+        let arquivo = arquivoCache(externo ? "ext-\(abs(caminhoOuURL.hashValue))" : caminhoOuURL)
+        var dados = try? Data(contentsOf: arquivo)
+        if dados == nil {
+            guard let url = externo ? URL(string: caminhoOuURL) : Self.base.appendingPathComponent(caminhoOuURL) else { return nil }
+            var req = URLRequest(url: url)
+            req.setValue("LiturgiaDiaria-iOS/1.0 (santadoutrina.com)", forHTTPHeaderField: "User-Agent")
+            if let (d, r) = try? await sessao.data(for: req), (r as? HTTPURLResponse)?.statusCode == 200 {
+                dados = d
+                if !externo { try? d.write(to: arquivo, options: .atomic) }
+            }
+        }
+        guard let dados, let img = UIImage(data: dados) else { return nil }
+        imagens[caminhoOuURL] = img
+        return img
     }
 
     static func urlAudio(dia: String, nome: String) -> URL {

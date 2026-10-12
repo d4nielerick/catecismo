@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24E319DCF7F1E5860E9308FC /* Compartilhar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD9E0042A1ACB748993CBC8 /* Compartilhar.swift */; };
 		289200FA7BAEBE6B42198B7D /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC7E54A2A118A2D53E53C7 /* Calendario.swift */; };
 		4734208D7CC2A2C339510982 /* Servidor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B5751B43279AFA8CA4B43 /* Servidor.swift */; };
 		476011C0D03AF5B91F759487 /* HojeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */; };
@@ -16,6 +17,10 @@
 		7675515C58BE94D1FAE2DBF9 /* MenuVidro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03532BD461DBB3CEF65BD973 /* MenuVidro.swift */; };
 		82777FA3B20D31AFBEC616AE /* LiturgiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */; };
 		9B00DEFD68CB578CBEAA5BF1 /* inria-serif-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46843BAB3C751CBAE84A7F7 /* inria-serif-400.ttf */; };
+		A864720EFD9A1057539CD84F /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917A2989A1D56764D329D43 /* Cards.swift */; };
+		AF7C5A0BBEEC81C9C90F6D48 /* Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D41804088A504BF266BBE7 /* Extras.swift */; };
+		B95359598521F344E17B46C0 /* Secoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB0337F133B79EB9E5C984 /* Secoes.swift */; };
+		BD45A48A984CAA39399CF41A /* Versos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62C1BF5475659B23FA2865 /* Versos.swift */; };
 		BEDF4AA8AF18149809F4F3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495E03E070606537C9FEE694 /* Assets.xcassets */; };
 		C0093A511D224389D153EA94 /* inria-serif-400-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF90680B53D386F79B33C82E /* inria-serif-400-italic.ttf */; };
 		C3FD139F1A70AB5E16E9A625 /* BarraLeituras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6506CBB3B6D667FBC8071217 /* BarraLeituras.swift */; };
@@ -29,22 +34,27 @@
 /* Begin PBXFileReference section */
 		03532BD461DBB3CEF65BD973 /* MenuVidro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVidro.swift; sourceTree = "<group>"; };
 		0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HojeView.swift; sourceTree = "<group>"; };
+		19D41804088A504BF266BBE7 /* Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extras.swift; sourceTree = "<group>"; };
 		3ED4D239CE4EE2CC97116C48 /* Texto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texto.swift; sourceTree = "<group>"; };
 		495E03E070606537C9FEE694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C9B9D897E66735B1CD70094 /* Cores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cores.swift; sourceTree = "<group>"; };
+		5DD9E0042A1ACB748993CBC8 /* Compartilhar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compartilhar.swift; sourceTree = "<group>"; };
 		6506CBB3B6D667FBC8071217 /* BarraLeituras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraLeituras.swift; sourceTree = "<group>"; };
 		72CC7E54A2A118A2D53E53C7 /* Calendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendario.swift; sourceTree = "<group>"; };
 		746B5751B43279AFA8CA4B43 /* Servidor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servidor.swift; sourceTree = "<group>"; };
 		865CC68321DA2103DA7C55AD /* LiturgiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgiaApp.swift; sourceTree = "<group>"; };
+		8917A2989A1D56764D329D43 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		919A68FB000B2BB46AC6739C /* inria-serif-700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "inria-serif-700.ttf"; sourceTree = "<group>"; };
 		97F26EF38D94915AB3F4293B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A46843BAB3C751CBAE84A7F7 /* inria-serif-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "inria-serif-400.ttf"; sourceTree = "<group>"; };
 		BC3C42A78CF1FBD70C54CB58 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C68A47FB8FD822FEEEAD5ED5 /* LiturgiaDiaria.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LiturgiaDiaria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E6634A405F99640B5E8C03 /* LeituraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeituraView.swift; sourceTree = "<group>"; };
+		DC62C1BF5475659B23FA2865 /* Versos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Versos.swift; sourceTree = "<group>"; };
 		E18C6238766A5A55604FC059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E2C50D4EE877352043AC4DFD /* ProsaCapitular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProsaCapitular.swift; sourceTree = "<group>"; };
 		EF90680B53D386F79B33C82E /* inria-serif-400-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "inria-serif-400-italic.ttf"; sourceTree = "<group>"; };
+		F1BB0337F133B79EB9E5C984 /* Secoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secoes.swift; sourceTree = "<group>"; };
 		F43333D1D74E69775F6224CB /* Avisos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avisos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +66,10 @@
 				F43333D1D74E69775F6224CB /* Avisos.swift */,
 				6506CBB3B6D667FBC8071217 /* BarraLeituras.swift */,
 				72CC7E54A2A118A2D53E53C7 /* Calendario.swift */,
+				8917A2989A1D56764D329D43 /* Cards.swift */,
+				5DD9E0042A1ACB748993CBC8 /* Compartilhar.swift */,
 				4C9B9D897E66735B1CD70094 /* Cores.swift */,
+				19D41804088A504BF266BBE7 /* Extras.swift */,
 				0AB9FDDFE812EEF7BBF0B894 /* HojeView.swift */,
 				E18C6238766A5A55604FC059 /* Info.plist */,
 				D2E6634A405F99640B5E8C03 /* LeituraView.swift */,
@@ -65,8 +78,10 @@
 				97F26EF38D94915AB3F4293B /* Models.swift */,
 				BC3C42A78CF1FBD70C54CB58 /* Player.swift */,
 				E2C50D4EE877352043AC4DFD /* ProsaCapitular.swift */,
+				F1BB0337F133B79EB9E5C984 /* Secoes.swift */,
 				746B5751B43279AFA8CA4B43 /* Servidor.swift */,
 				3ED4D239CE4EE2CC97116C48 /* Texto.swift */,
+				DC62C1BF5475659B23FA2865 /* Versos.swift */,
 				AB9D9398C7D27AC592EC5A41 /* Fontes */,
 			);
 			path = LiturgiaDiaria;
@@ -175,7 +190,10 @@
 				CAF64107A3FFB9843DFB2CBB /* Avisos.swift in Sources */,
 				C3FD139F1A70AB5E16E9A625 /* BarraLeituras.swift in Sources */,
 				289200FA7BAEBE6B42198B7D /* Calendario.swift in Sources */,
+				A864720EFD9A1057539CD84F /* Cards.swift in Sources */,
+				24E319DCF7F1E5860E9308FC /* Compartilhar.swift in Sources */,
 				CDFAD8D82B590723B3B26818 /* Cores.swift in Sources */,
+				AF7C5A0BBEEC81C9C90F6D48 /* Extras.swift in Sources */,
 				476011C0D03AF5B91F759487 /* HojeView.swift in Sources */,
 				5D333B0B507E4DCF06C8B7EE /* LeituraView.swift in Sources */,
 				82777FA3B20D31AFBEC616AE /* LiturgiaApp.swift in Sources */,
@@ -183,8 +201,10 @@
 				CFF208B95D35FF5E678479F0 /* Models.swift in Sources */,
 				CA693A5E61CA853DDB91DBC1 /* Player.swift in Sources */,
 				C56D26D2F150F6014A3E9380 /* ProsaCapitular.swift in Sources */,
+				B95359598521F344E17B46C0 /* Secoes.swift in Sources */,
 				4734208D7CC2A2C339510982 /* Servidor.swift in Sources */,
 				504E7F087B29F85FA3D31F46 /* Texto.swift in Sources */,
+				BD45A48A984CAA39399CF41A /* Versos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

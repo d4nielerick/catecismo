@@ -27,6 +27,8 @@ targets:
         CFBundleDevelopmentRegion: pt-BR
         UIAppFonts: [inria-serif-400.ttf, inria-serif-400-italic.ttf, inria-serif-700.ttf]
         UIStatusBarStyle: UIStatusBarStyleDarkContent
+        NSPhotoLibraryAddUsageDescription: Para salvar nas suas Fotos os cards e as páginas das leituras que você escolher.
+        LSApplicationQueriesSchemes: [whatsapp]
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.danielerick.liturgia
