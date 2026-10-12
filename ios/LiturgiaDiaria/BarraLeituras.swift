@@ -4,7 +4,7 @@ import SwiftUI
 /// vidro — ( ‹ )  ( leituras do dia )  ( › ) — e, à direita, o botão do menu (MenuVidro). As abas
 /// são só ícones; a "luz" (.lp-tabs-luz) desliza com mola até a aba ativa.
 enum Barra {
-    static let margem: CGFloat = 18     // dos lados da tela (a barra pode passar sobre as faixas floridas)
+    static let margem: CGFloat = 30     // dentro das faixas floridas
     static let vao: CGFloat = 10        // entre a cápsula das leituras e o botão do menu
     static let abaivo: CGFloat = 4      // acima da safe area
     static let alturaMax: CGFloat = 64  // como a tab bar do iOS 26
@@ -16,7 +16,7 @@ enum Barra {
     static func larguraAba(largura: CGFloat, abas n: Int, lado: CGFloat) -> CGFloat {
         guard n > 0 else { return 0 }
         let livre = largura - 2 * margem - vao - lado - 2 * folga(lado)
-        return min((lado * 1.2).rounded(), (livre / CGFloat(n)).rounded(.down))
+        return min((lado * 0.8).rounded(), (livre / CGFloat(n)).rounded(.down))
     }
 
     /// --lp-barra: a altura das peças (e o diâmetro do botão do menu). 64pt; só encolhe quando

@@ -69,7 +69,7 @@ struct CompartilharView: View {
                 palco.frame(maxHeight: .infinity)
                 if modo == .trecho && pedido.fotos.count > 1 { fileiraFotos }
                 if modo == .trecho, let v = versos, !v.vazio {
-                    Button { escolhendo = true } label: {
+                    Button { withAnimation(.easeOut(duration: 0.28)) { escolhendo = true } } label: {
                         Text("Escolher outro trecho").font(Estilo.sans(13, .semibold)).foregroundStyle(Self.creme)
                             .padding(.horizontal, 16).padding(.vertical, 9)
                             .background(Capsule().stroke(Self.creme.opacity(0.3), lineWidth: 1))
@@ -88,11 +88,21 @@ struct CompartilharView: View {
         .preferredColorScheme(.dark)
         .task { await preparar() }
         .onChange(of: modo) { _, m in pagina = 0; Task { await prepararPaginas(m) } }
-        .sheet(isPresented: $escolhendo) {
-            if let v = versos {
-                EscolherVersos(versos: v, sel: sel, cor: conteudo.cor) { a, b in escolher(a, b) }
-                    .presentationDetents([.medium, .large])
-                    .presentationDragIndicator(.visible)
+        // painel próprio em vez de .sheet: dentro do fullScreenCover a folha não abria no aparelho
+        .overlay {
+            if escolhendo, let v = versos {
+                ZStack(alignment: .bottom) {
+                    Color.black.opacity(0.45).ignoresSafeArea()
+                        .onTapGesture { withAnimation(.easeOut(duration: 0.25)) { escolhendo = false } }
+                    EscolherVersos(versos: v, sel: sel, cor: conteudo.cor,
+                                   escolher: { a, b in escolher(a, b) },
+                                   pronto: { withAnimation(.easeOut(duration: 0.25)) { escolhendo = false } })
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                        .padding(.top, 90)
+                        .clipShape(UnevenRoundedRectangle(topLeadingRadius: 22, topTrailingRadius: 22))
+                        .ignoresSafeArea(edges: .bottom)
+                        .transition(.move(edge: .bottom))
+                }
             }
         }
     }
@@ -414,13 +424,10 @@ struct EscolherVersos: View {
     @State var sel: (Int, Int)?
     let cor: String
     var escolher: (Int, Int) -> Void
-    @Environment(\.dismiss) private var fechar
-    @State private var ancora: Int?
-    @State private var marcadoEm = Date.distantPast
-    @State private var faixa: (Int, Int)?
+    var pronto: () -> Void
     @State private var quadros: [Int: CGRect] = [:]
 
-    private var marcados: (Int, Int)? { faixa ?? ancora.map { ($0, $0) } ?? sel }
+    private var marcados: (Int, Int)? { sel }
     private var textoSel: String { sel.map { versos.texto($0.0, $0.1) } ?? "" }
 
     var body: some View {
@@ -428,11 +435,11 @@ struct EscolherVersos: View {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("Escolha o trecho").font(Estilo.titulo(24)).foregroundStyle(Estilo.tinta)
-                    Text(ancora != nil ? "Arraste ou toque no último versículo" : "Toque num versículo; para pegar vários, segure e arraste")
+                    Text("Toque num versículo; para pegar vários, toque depois no último")
                         .font(Estilo.sans(12.5)).foregroundStyle(Estilo.suave)
                 }
                 Spacer()
-                Button("Pronto") { fechar() }.font(Estilo.sans(15, .semibold)).foregroundStyle(Estilo.vermelho)
+                Button("Pronto") { pronto() }.font(Estilo.sans(15, .semibold)).foregroundStyle(Estilo.vermelho)
                     .padding(.top, 4)
             }
             .padding(.horizontal, 22).padding(.top, 22).padding(.bottom, 12)
@@ -465,35 +472,15 @@ struct EscolherVersos: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 8).padding(.vertical, 6)
             .background(RoundedRectangle(cornerRadius: 6).fill(marcado ? Color(hex: 0xf3d58c, alpha: 0.55) : .clear))
-            .scaleEffect(ancora == u.id ? 1.02 : 1)
             .animation(.easeOut(duration: 0.15), value: marcado)
             .background(GeometryReader { g in Color.clear.preference(key: QuadrosVersos.self, value: [u.id: g.frame(in: .named("versos"))]) })
             .contentShape(Rectangle())
             .onTapGesture {
-                // o toque que solta o "segurar" não conta: o versículo fica marcado, à espera do último
-                if ancora == u.id && Date().timeIntervalSince(marcadoEm) < 1.2 { return }
-                if let a = ancora { ancora = nil; aplicar(min(a, u.id), max(a, u.id)) } else { aplicar(u.id, u.id) }
+                // um toque escolhe o versículo; com um só escolhido, tocar em outro estende o trecho até ele
+                if let s = sel, s.0 == s.1, s.0 != u.id { aplicar(min(s.0, u.id), max(s.0, u.id)) }
+                else { aplicar(u.id, u.id) }
+                UISelectionFeedbackGenerator().selectionChanged()
             }
-            .gesture(LongPressGesture(minimumDuration: 0.26)
-                .sequenced(before: DragGesture(minimumDistance: 0, coordinateSpace: .named("versos")))
-                .onChanged { v in
-                    switch v {
-                    case .first(true), .second(true, nil):
-                        if ancora != u.id {
-                            ancora = u.id; marcadoEm = Date(); faixa = (u.id, u.id)
-                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                        }
-                    case .second(true, let d?):
-                        if let i = quadros.first(where: { $0.value.contains(CGPoint(x: 40, y: d.location.y)) })?.key, faixa?.1 != i {
-                            faixa = (u.id, i); UISelectionFeedbackGenerator().selectionChanged()
-                        }
-                    default: break
-                    }
-                }
-                .onEnded { _ in
-                    if let f = faixa, f.0 != f.1 { ancora = nil; faixa = nil; aplicar(min(f.0, f.1), max(f.0, f.1)) }
-                    else { faixa = nil }   // segurou sem arrastar: espera o toque no último
-                })
             .accessibilityAddTraits(.isButton)
             .accessibilityAddTraits(marcado ? .isSelected : [])
     }
