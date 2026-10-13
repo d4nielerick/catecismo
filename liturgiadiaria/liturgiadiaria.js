@@ -612,7 +612,7 @@ function configurarModal() {
 }
 
 // ── Início ───────────────────────────────────────────────────────────────────
-const buscarJson = url => fetch(url).then(r => (r.ok ? r.json() : null)).catch(() => null);
+const buscarJson = url => fetch(url, { cache: 'no-cache' }).then(r => (r.ok ? r.json() : null)).catch(() => null);
 
 // ── Entrada do cabeçalho ─────────────────────────────────────────────────────
 // "Liturgia Diária" entra grande, na cor litúrgica do dia, sai pela esquerda e dá lugar à data

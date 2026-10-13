@@ -17,7 +17,7 @@
  * Para trocar tudo (mudou a lista da casca, por exemplo), suba a VERSAO.
  */
 
-const VERSAO = 'v2';
+const VERSAO = 'v3';   // v3: dados revalidam (cache: 'no-cache'); o servidor guarda /data/ por 30 dias e um dia corrigido não chegava ao aparelho
 const CASCA = `lit-${VERSAO}-casca`;
 const DADOS = `lit-${VERSAO}-dados`;
 const MIDIA = `lit-${VERSAO}-midia`;
@@ -94,7 +94,7 @@ async function redePrimeiro(req, nome, { tempo = 0, reserva } = {}) {
 async function guardarEAtualizar(e, req) {
   const cache = await caches.open(DADOS);
   const guardado = await cache.match(req);
-  const rede = fetch(req).then(r => { if (r.ok) { cache.put(req, r.clone()).then(() => aparar(cache, MAX_DADOS)); } return r; }).catch(() => null);
+  const rede = fetch(req, { cache: 'no-cache' }).then(r => { if (r.ok) { cache.put(req, r.clone()).then(() => aparar(cache, MAX_DADOS)); } return r; }).catch(() => null);
   if (guardado) { e.waitUntil(rede); return guardado; }
   return (await rede) || new Response('null', { status: 504, headers: { 'Content-Type': 'application/json' } });
 }
@@ -138,7 +138,7 @@ self.addEventListener('message', e => {
       const d = new Date(base.getTime() + i * 86400000).toISOString().slice(0, 10);
       for (const pasta of ['liturgia', 'liturgia-resumos', 'liturgia-trechos', 'liturgia-comentario']) {
         const u = `/data/${pasta}/${d}.json`;
-        try { if (!(await cache.match(u))) { const r = await fetch(u); if (r.ok) await cache.put(u, r); } } catch { /* sem rede: fica para a próxima */ }
+        try { if (!(await cache.match(u))) { const r = await fetch(u, { cache: 'no-cache' }); if (r.ok) await cache.put(u, r); } } catch { /* sem rede: fica para a próxima */ }
       }
     }
     await aparar(cache, MAX_DADOS);

@@ -13,7 +13,7 @@ actor Servidor {
     init(sessao: URLSession = .shared) {
         self.sessao = sessao
         let caches = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-        pasta = caches.appendingPathComponent("liturgia", isDirectory: true)
+        pasta = caches.appendingPathComponent("liturgia-v2", isDirectory: true)   // v2: descarta dias guardados antes de 13/10 (São Carlo Acutis)
         try? FileManager.default.createDirectory(at: pasta, withIntermediateDirectories: true)
     }
 
