@@ -1,0 +1,19 @@
+"""Os conjuntos de mistérios do terço: nomes, frutos, dias, pinturas e enquadramento."""
+C={
+ 'gozosos':dict(adj='gozoso',titulo='Mistérios Gozosos',dias='segunda-feira e sábado',pasta='img',escriva='escriva-gozosos.json',
+   nomes=['A Anunciação do Anjo a Nossa Senhora','A visita de Nossa Senhora a sua prima Isabel','O nascimento de Jesus em Belém',
+          'A apresentação do Menino Jesus no Templo','A perda e o encontro do Menino Jesus no Templo'],
+   curtos=['A Anunciação','A Visitação','O Nascimento de Jesus','A Apresentação no Templo','O Encontro no Templo'],
+   frutos=['Peçamos a graça da humildade.','Peçamos a graça da caridade para com o próximo.','Peçamos a graça do desapego das coisas do mundo.',
+           'Peçamos a graça da obediência e da pureza.','Peçamos a graça de buscar sempre a Jesus.'],
+   pinturas=['0-rosario.jpg','1-anunciacao.jpg','2-visitacao.jpg','3-natividade.jpg','4-apresentacao.jpg','5-encontro.jpg','0-rosario.jpg'],
+   foco=[(.5,.35),(.6,.5),(.45,.45),(.45,.5),(.6,.45),(.66,.5),(.5,.35)], capa=1, capa_foco=.62),
+ 'dolorosos':dict(adj='doloroso',titulo='Mistérios Dolorosos',dias='terça-feira e sexta-feira',pasta='img-dol',escriva='escriva-dolorosos.json',
+   nomes=['A agonia de Jesus no Horto das Oliveiras','A flagelação de Jesus atado à coluna','A coroação de espinhos',
+          'Jesus carregando a Cruz para o Calvário','A crucifixão e morte de Jesus'],
+   curtos=['A Agonia no Horto','A Flagelação','A Coroação de Espinhos','Jesus carrega a Cruz','A Crucifixão'],
+   frutos=['Peçamos a graça da contrição dos nossos pecados.','Peçamos a graça da mortificação dos sentidos.','Peçamos a graça de vencer o orgulho.',
+           'Peçamos a graça da paciência nas cruzes de cada dia.','Peçamos a graça da perseverança e do amor a Deus.'],
+   pinturas=['0-dolorosa.jpg','1-horto.jpg','2-flagelacao.jpg','3-coroacao.jpg','4-cruz.jpg','5-crucifixao.jpg','0-dolorosa.jpg'],
+   foco=[(.5,.35),(.5,.45),(.5,.4),(.45,.4),(.55,.35),(.5,.3),(.5,.35)], capa=1, capa_foco=.5),
+}

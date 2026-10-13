@@ -1,5 +1,7 @@
-import json,re,os
-ESC=json.load(open('escriva-gozosos.json'))['misterios']
+import json,re,os,sys
+from conjuntos import C
+NOME=sys.argv[1] if len(sys.argv)>1 else 'gozosos'; K=C[NOME]
+ESC=json.load(open(K['escriva']))['misterios']
 B=lambda liv,c,v1,v2=None: ' '.join(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','data','biblia',f'{liv}.json')))[str(c)][str(v)] for v in range(v1,(v2 or v1)+1))
 SINAL='Em nome do Pai, e do Filho, e do Espírito Santo. Amém.'
 OFER=('Divino Jesus, nós vos oferecemos este terço que vamos rezar, contemplando os mistérios da nossa redenção. '
@@ -21,13 +23,7 @@ SALVE=('Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, 
        'A vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei. '
        'E depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre. Ó clemente, ó piedosa, ó doce sempre Virgem Maria.')
 ROGAI='Rogai por nós, santa Mãe de Deus, para que sejamos dignos das promessas de Cristo. Amém.'
-MIST=[
- ('Primeiro mistério gozoso','A Anunciação do Anjo a Nossa Senhora',('Lc',1,38),'Peçamos a graça da humildade.'),
- ('Segundo mistério gozoso','A visita de Nossa Senhora a sua prima Isabel',('Lc',1,42),'Peçamos a graça da caridade para com o próximo.'),
- ('Terceiro mistério gozoso','O nascimento de Jesus em Belém',('Lc',2,7),'Peçamos a graça do desapego das coisas do mundo.'),
- ('Quarto mistério gozoso','A apresentação do Menino Jesus no Templo',('Lc',2,22),'Peçamos a graça da obediência e da pureza.'),
- ('Quinto mistério gozoso','A perda e o encontro do Menino Jesus no Templo',('Lc',2,49),'Peçamos a graça de buscar sempre a Jesus.'),
-]
+MIST=[(f"{o} mistério {K['adj']}",K['nomes'][i],None,K['frutos'][i]) for i,o in enumerate(['Primeiro','Segundo','Terceiro','Quarto','Quinto'])]
 ORD=['No primeiro mistério','No segundo mistério','No terceiro mistério','No quarto mistério','No quinto mistério']
 seg=[]
 def add(texto,rot,m=-1,conta=0,var=0,tipo='oracao',ref='',fala=None):
@@ -38,11 +34,11 @@ for i,int_ in enumerate(['pelo aumento da fé','pelo aumento da esperança','pel
     add(AVE,'Ave-Maria',conta=i+1,var=i%4)
 add(GLORIA,'Glória')
 k=0
-for i,(tit,nome,(lv,c,v),fruto) in enumerate(MIST):
-    anuncio=f'{ORD[i]} gozoso, contemplamos {nome[0].lower()+nome[1:]}.'
+for i,(tit,nome,_,fruto) in enumerate(MIST):
+    anuncio=f"{ORD[i]} {K['adj']}, contemplamos {nome[0].lower()+nome[1:]}."
     add(anuncio,tit,m=i,tipo='anuncio')
     for par in ESC[i]:
-        fala=re.sub(r'\s*\((?:Lc|Mt|Mc|Jo)[^)]*\)','',par).replace(' - ',', ').replace('…','... ').strip()
+        fala=re.sub(r'\s*\([^)]*\d[^)]*\)','',par).replace(' - ',', ').replace('…','... ').strip()
         add(par,tit,m=i,tipo='meditacao',fala=fala)
     add(fruto,tit,m=i,tipo='fruto')
     add(PAI,'Pai-Nosso',m=i)
@@ -50,5 +46,5 @@ for i,(tit,nome,(lv,c,v),fruto) in enumerate(MIST):
         add(AVE,'Ave-Maria',m=i,conta=n+1,var=k%4); k+=1
     add(GLORIA,'Glória',m=i,conta=10); add(FATIMA,'Ó meu Jesus',m=i,conta=10)
 add(SALVE,'Salve-Rainha',m=5); add(ROGAI,'Salve-Rainha',m=5); add(SINAL,'Sinal da Cruz',m=5)
-json.dump(seg,open('roteiro-gozosos.json','w'),ensure_ascii=False,indent=1)
+json.dump(seg,open(f'roteiro-{NOME}.json','w'),ensure_ascii=False,indent=1)
 print(len(seg),'segmentos;',len({(s['texto'],s['var']) for s in seg}),'únicos')

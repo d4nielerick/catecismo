@@ -8,8 +8,11 @@ inriab=lambda t:ImageFont.truetype(F+'inria-serif-700.ttf',t)
 sans=lambda t,i=5:ImageFont.truetype('/System/Library/Fonts/Avenir Next.ttc',t,index=i)
 W,H=1920,1080; PW=1000
 PAPEL=(252,250,247); TINTA=(26,22,18); SUAVE=(110,100,92); VERM=(203,46,46)
-PINT=['img/0-rosario.jpg','img/1-anunciacao.jpg','img/2-visitacao.jpg','img/3-natividade.jpg','img/4-apresentacao.jpg','img/5-encontro.jpg','img/0-rosario.jpg']
-FOCO=[(.5,.35),(.6,.5),(.45,.45),(.45,.5),(.6,.45),(.66,.5),(.5,.35)]
+import sys
+from conjuntos import C
+NOME=sys.argv[1] if len(sys.argv)>1 else 'gozosos'; K=C[NOME]
+PINT=[f"{K['pasta']}/{p}" for p in K['pinturas']]
+FOCO=K['foco']
 def pintura(i):
     o=Image.open(PINT[i]).convert('RGB'); r=PW/H
     if o.width/o.height>r: cw,ch=int(o.height*r),o.height
@@ -32,11 +35,11 @@ def quadro(s,saida):
     if idx not in cache: cache[idx]=pintura(idx)
     im=Image.new('RGB',(W,H),PAPEL); im.paste(cache[idx],(0,0))
     d=ImageDraw.Draw(im); X=PW+90; L=W-X-90
-    esp(d,(X,96),'TERÇO  ·  MISTÉRIOS GOZOSOS',sans(20),VERM,5)
+    esp(d,(X,96),'TERÇO  ·  '+K['titulo'].upper(),sans(20),VERM,5)
     if 0<=m<5:
         tit=['Primeiro','Segundo','Terceiro','Quarto','Quinto'][m]+' mistério'
         d.text((X,140),tit,font=inriai(30),fill=SUAVE)
-        nome=['A Anunciação','A Visitação','O Nascimento de Jesus','A Apresentação no Templo','O Encontro no Templo'][m]
+        nome=K['curtos'][m]
         d.text((X,182),nome,font=inriab(50),fill=TINTA)
     elif m==5: d.text((X,170),'Encerramento',font=inriab(50),fill=TINTA)
     else: d.text((X,170),'Orações iniciais',font=inriab(50),fill=TINTA)
@@ -61,6 +64,6 @@ def quadro(s,saida):
     d.text((X,1010),'Liturgia Diária  ·  liturgia.santadoutrina.com',font=sans(18,2),fill=(160,150,140))
     im.save(saida,quality=93)
 if __name__=='__main__':
-    s=json.load(open('roteiro-gozosos.json')); os.makedirs('quadros',exist_ok=True)
-    for i,x in enumerate(s): quadro(x,f'quadros/{i:03d}.jpg')
+    s=json.load(open(f'roteiro-{NOME}.json')); os.makedirs(f'quadros-{NOME}',exist_ok=True)
+    for i,x in enumerate(s): quadro(x,f'quadros-{NOME}/{i:03d}.jpg')
     print('ok',len(s))
