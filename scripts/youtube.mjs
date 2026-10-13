@@ -119,6 +119,20 @@ async function capa(id, arquivo, tok) {
   console.log(r.ok ? `capa aplicada em ${id}` : `capa recusada (${r.status}): ${(await r.text()).slice(0, 300)}`);
 }
 
+/** Muda a visibilidade de um vídeo (public | unlisted | private). */
+async function visibilidade(id, valor) {
+  const tok = await tokenDeAcesso();
+  const atual = await (await fetch(`https://www.googleapis.com/youtube/v3/videos?part=status&id=${id}`, { headers: { Authorization: `Bearer ${tok}` } })).json();
+  const st = atual.items?.[0]?.status;
+  if (!st) { console.error('vídeo não encontrado'); process.exit(1); }
+  const corpo = { id, status: { privacyStatus: valor, embeddable: st.embeddable, license: st.license, publicStatsViewable: st.publicStatsViewable, selfDeclaredMadeForKids: st.madeForKids ?? false } };
+  const r = await fetch('https://www.googleapis.com/youtube/v3/videos?part=status', { method: 'PUT',
+    headers: { Authorization: `Bearer ${tok}`, 'Content-Type': 'application/json' }, body: JSON.stringify(corpo) });
+  const j = await r.json();
+  if (!r.ok) { console.error(`erro ${r.status}: ${j.error?.message}`); process.exit(1); }
+  console.log(`${id}: ${st.privacyStatus} → ${j.status.privacyStatus}`);
+}
+
 // ── linha de comando ─────────────────────────────────────────────────────────
 const [cmd, ...resto] = process.argv.slice(2);
 const opcoes = {};
@@ -132,5 +146,6 @@ for (let i = 0; i < resto.length; i++) {
 if (cmd === 'autoriza') await autoriza();
 else if (cmd === 'canal') await canal();
 else if (cmd === 'capa' && posicionais[1]) await capa(posicionais[0], posicionais[1]);
+else if (cmd === 'visibilidade' && posicionais[1]) await visibilidade(posicionais[0], posicionais[1]);
 else if (cmd === 'envia' && posicionais[0] && opcoes.titulo) await envia(posicionais[0], opcoes);
 else { console.error('uso: node scripts/youtube.mjs autoriza | canal | envia <mp4> --titulo "…" [--descricao-arquivo f] [--publicar-em ISO] [--publico] [--capa jpg] | capa <videoId> <jpg>'); process.exit(2); }
