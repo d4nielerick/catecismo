@@ -1,0 +1,18 @@
+{
+  "celebracao": "São Carlo Acutis",
+  "artigos": [
+    {
+      "titulo": "Carlo Acutis",
+      "url": "https://pt.wikipedia.org/wiki/Carlo_Acutis",
+      "resumo": [
+        "Carlo Acutis (Londres, 3 de maio de 1991 – Monza, 12 de outubro de 2006) foi um adolescente católico anglo-italiano, beatificado pela Igreja Católica em 2020 e canonizado no dia 7 de setembro de 2025. Tornou-se conhecido por documentar milagres eucarísticos e as aparições marianas aprovadas ao redor do mundo e catalogá-los em um site que ele mesmo criou nos meses anteriores à sua morte por leucemia, com apenas 15 anos. Ele também ficou conhecido por sua alegria e por suas habilidades com a informática, bem como por sua profunda devoção à Eucaristia, que se tornou um tema central de sua vida.",
+        "Os pedidos para sua beatificação começaram não muito tempo depois de sua morte, ganhando impulso significativo no ano de 2013, depois que a causa começou e que ele recebeu o título de Servo de Deus — o primeiro estágio no caminho para o reconhecimento da santidade. O Papa Francisco declarou-o Venerável em 5 de julho de 2018."
+      ],
+      "imagem": {
+        "src": "https://upload.wikimedia.org/wikipedia/pt/7/78/Carlo_Acutis.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "largura": 333,
+        "altura": 500
+      }
+    }
+  ]
+}

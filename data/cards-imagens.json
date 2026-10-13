@@ -524,6 +524,15 @@
       "cores": [
         "vermelho"
       ]
+    },
+    {
+      "id": "sao-carlo-acutis",
+      "titulo": "São Carlo Acutis",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato do santo",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
     }
   ]
 }

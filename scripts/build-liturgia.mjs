@@ -510,7 +510,7 @@ const SANTOS_DE_DEVOCAO = new Set([
   'Santos Anjos da Guarda', 'Santa Teresinha do Menino Jesus', 'São Francisco de Assis',
   'Santo Antônio de Sant’Ana Galvão', 'São Simão e São Judas, apóstolos', 'Todos os Santos',
   'Santa Luzia, virgem e mártir', 'Santa Paulina do Coração Agonizante de Jesus', 'São João Bosco',
-  'São Tomás de Aquino', 'Santa Teresa de Jesus', 'São Vicente de Paulo', 'Santa Cecília, virgem e mártir',
+  'São Tomás de Aquino', 'Santa Teresa de Jesus', 'São Vicente de Paulo', 'São Carlo Acutis', 'Santa Cecília, virgem e mártir',
   // apóstolos, evangelistas e santos muito conhecidos
   'São João, apóstolo e evangelista', 'Santo André, apóstolo', 'São Mateus, apóstolo e evangelista',
   'São Marcos, evangelista', 'São Lucas, evangelista', 'São Tiago, apóstolo', 'São Tomé, apóstolo',

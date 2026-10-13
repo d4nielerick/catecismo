@@ -213,6 +213,7 @@ const FIXAS = {
   '10-04': ['M', 'São Francisco de Assis'],
   '10-05': ['M', 'São Benedito, o Negro, religioso'],
   '10-07': ['M', 'Nossa Senhora do Rosário'],
+  '10-13': ['M', 'São Carlo Acutis'],   // CNBB (abr/2026): no Brasil a memória vai para 13/10 (12/10 é Aparecida); Roma ainda confirma
   '10-15': ['M', 'Santa Teresa de Jesus'],
   '10-17': ['M', 'Santo Inácio de Antioquia, bispo e mártir'],
   '10-19': ['M', 'São Pedro de Alcântara, presbítero'],
