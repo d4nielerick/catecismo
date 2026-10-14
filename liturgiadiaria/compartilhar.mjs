@@ -633,7 +633,10 @@ export function escolherFotos(catalogo, { tempo, cor, dt, preferida }, maxDoDia 
   const doDia = lista.filter(im => nota(im) > 0).sort((a, b) => nota(b) - nota(a));
   const melhores = doDia.filter(im => nota(im) === nota(doDia[0]));
   const ordem = [...girar(melhores), ...doDia.slice(melhores.length)].slice(0, maxDoDia);
-  const neutras = girar(lista.filter(im => im.tempos.includes('todos'))).slice(0, maxNeutras);
+  // neutras: o grupo anda `maxNeutras` por dia (e não 1), para dias seguidos não repetirem as mesmas pinturas
+  const todasNeutras = lista.filter(im => im.tempos.includes('todos'));
+  const kn = todasNeutras.length ? (diaDoAno(dt) * maxNeutras) % todasNeutras.length : 0;
+  const neutras = [...todasNeutras.slice(kn), ...todasNeutras.slice(0, kn)].slice(0, maxNeutras);
   const pref = preferida && lista.find(im => im.id === preferida);
   const fotos = [...(pref ? [pref] : []), ...ordem, ...neutras].filter((im, i, arr) => arr.indexOf(im) === i);
   return fotos.map(im => ({ ...im, src: `${CARDS}/${im.id}.webp`, mini: `${CARDS}/mini/${im.id}.webp` }));

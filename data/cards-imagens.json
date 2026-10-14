@@ -212,8 +212,26 @@
       "cores": []
     },
     {
+      "id": "neutra-arco-a",
+      "titulo": "Arco de pedra com glicínia",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "capela",
       "titulo": "Capela no campo",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-estrada-a",
+      "titulo": "Estrada entre oliveiras",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
       ],
@@ -228,6 +246,15 @@
       "cores": []
     },
     {
+      "id": "neutra-jarra-a",
+      "titulo": "Jarra e taça à janela",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "rio",
       "titulo": "Rio ao amanhecer",
       "tempos": [
@@ -236,32 +263,9 @@
       "cores": []
     },
     {
-      "id": "flores-campo",
-      "titulo": "Flores do campo",
-      "tempos": [
-        "todos"
-      ],
-      "cores": []
-    },
-    {
-      "id": "claustro",
-      "titulo": "Claustro",
-      "tempos": [
-        "todos"
-      ],
-      "cores": []
-    },
-    {
-      "id": "mar-aurora",
-      "titulo": "Mar na aurora",
-      "tempos": [
-        "todos"
-      ],
-      "cores": []
-    },
-    {
-      "id": "biblia-rosario",
-      "titulo": "Bíblia e terço",
+      "id": "neutra-lago-a",
+      "titulo": "Lago entre montanhas",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
       ],
@@ -420,24 +424,25 @@
       ]
     },
     {
-      "id": "janela-trigo",
-      "titulo": "Janela aberta sobre o trigal",
+      "id": "flores-campo",
+      "titulo": "Flores do campo",
       "tempos": [
         "todos"
       ],
       "cores": []
     },
     {
-      "id": "caminho-ciprestes",
-      "titulo": "Caminho entre ciprestes",
+      "id": "neutra-papoulas-a",
+      "titulo": "Trigal com papoulas",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
       ],
       "cores": []
     },
     {
-      "id": "lamparina",
-      "titulo": "Lamparina e ramo de oliveira",
+      "id": "claustro",
+      "titulo": "Claustro",
       "tempos": [
         "todos"
       ],
@@ -531,6 +536,109 @@
       "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato do santo",
       "tempos": [
         "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-porta-a",
+      "titulo": "Porta aberta para o jardim",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "mar-aurora",
+      "titulo": "Mar na aurora",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-arco-b",
+      "titulo": "Arco de pedra com luz",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "biblia-rosario",
+      "titulo": "Bíblia e terço",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-estrada-b",
+      "titulo": "Oliveiral ao entardecer",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "janela-trigo",
+      "titulo": "Janela aberta sobre o trigal",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-jarra-b",
+      "titulo": "Jarra, taça e linho",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "caminho-ciprestes",
+      "titulo": "Caminho entre ciprestes",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-lago-b",
+      "titulo": "Lago ao amanhecer",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "lamparina",
+      "titulo": "Lamparina e ramo de oliveira",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-papoulas-b",
+      "titulo": "Trigal com papoulas e nuvens",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-porta-b",
+      "titulo": "Porta de madeira e flores",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
       ],
       "cores": []
     }

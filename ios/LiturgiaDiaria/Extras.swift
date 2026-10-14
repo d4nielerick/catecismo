@@ -51,7 +51,10 @@ struct CatalogoCards: Decodable {
         }.map(\.element)
         let melhores = doDia.filter { nota($0) == nota(doDia[0]) }
         let ordem = Array((girar(melhores) + doDia.dropFirst(melhores.count)).prefix(maxDoDia))
-        let neutras = Array(girar(imagens.filter { $0.tempos.contains("todos") }).prefix(maxNeutras))
+        // neutras: o grupo anda `maxNeutras` por dia (e não 1), como no site
+        let todasNeutras = imagens.filter { $0.tempos.contains("todos") }
+        let kn = todasNeutras.isEmpty ? 0 : (((diaDoAno * maxNeutras) % todasNeutras.count) + todasNeutras.count) % todasNeutras.count
+        let neutras = Array((Array(todasNeutras[kn...]) + Array(todasNeutras[..<kn])).prefix(maxNeutras))
         let pref = preferida.flatMap { p in imagens.first { $0.id == p } }
         var vistos = Set<String>()
         return ((pref.map { [$0] } ?? []) + ordem + neutras).filter { vistos.insert($0.id).inserted }
