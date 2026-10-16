@@ -2,7 +2,7 @@ import json,re,os,sys
 from conjuntos import C
 NOME=sys.argv[1] if len(sys.argv)>1 else 'gozosos'; K=C[NOME]
 ESC=json.load(open(K['escriva']))['misterios']
-B=lambda liv,c,v1,v2=None: ' '.join(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','data','biblia',f'{liv}.json')))[str(c)][str(v)] for v in range(v1,(v2 or v1)+1))
+B=lambda liv,c,v1,v2=None: ' '.join(json.load(open(f'/Users/daniel/catecismo/data/biblia/{liv}.json'))[str(c)][str(v)] for v in range(v1,(v2 or v1)+1))
 SINAL='Em nome do Pai, e do Filho, e do Espírito Santo. Amém.'
 OFER=('Divino Jesus, nós vos oferecemos este terço que vamos rezar, contemplando os mistérios da nossa redenção. '
       'Concedei-nos, pela intercessão da Virgem Maria, Mãe de Deus e nossa Mãe, as virtudes que nos são necessárias para bem rezá-lo.')

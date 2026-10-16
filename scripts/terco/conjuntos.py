@@ -16,4 +16,12 @@ C={
            'Peçamos a graça da paciência nas cruzes de cada dia.','Peçamos a graça da perseverança e do amor a Deus.'],
    pinturas=['0-dolorosa.jpg','1-horto.jpg','2-flagelacao.jpg','3-coroacao.jpg','4-cruz.jpg','5-crucifixao.jpg','0-dolorosa.jpg'],
    foco=[(.5,.35),(.5,.45),(.5,.4),(.45,.4),(.55,.35),(.5,.3),(.5,.35)], capa=1, capa_foco=.5),
+ 'gloriosos':dict(adj='glorioso',titulo='Mistérios Gloriosos',dias='quarta-feira e domingo',pasta='img-glo',escriva='escriva-gloriosos.json',
+   nomes=['A ressurreição de Jesus','A ascensão de Jesus ao céu','A vinda do Espírito Santo sobre os apóstolos',
+          'A assunção de Nossa Senhora ao céu','A coroação de Nossa Senhora como Rainha do céu e da terra'],
+   curtos=['A Ressurreição','A Ascensão','Pentecostes','A Assunção','A Coroação'],
+   frutos=['Peçamos a graça da fé.','Peçamos a graça da esperança.','Peçamos a graça do amor a Deus e os dons do Espírito Santo.',
+           'Peçamos a graça de uma boa morte e a devoção a Nossa Senhora.','Peçamos a graça da perseverança e da coroa da glória eterna.'],
+   pinturas=['0-gloriosa.jpg','1-ressurreicao.jpg','2-ascensao.jpg','3-pentecostes.jpg','4-assuncao.jpg','5-coroacao.jpg','0-gloriosa.jpg'],
+   foco=[(.5,.3),(.5,.5),(.5,.35),(.5,.42),(.5,.32),(.5,.3),(.5,.3)], capa=5, capa_foco=.5),
 }

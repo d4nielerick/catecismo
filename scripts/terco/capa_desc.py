@@ -2,8 +2,7 @@ import json,sys
 from PIL import Image,ImageDraw,ImageFont
 from conjuntos import C
 NOME=sys.argv[1]; K=C[NOME]; pint=sys.argv[2]; foco=float(sys.argv[3])
-import os
-F=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','ios','LiturgiaDiaria','Fontes')+'/'
+F='/Users/daniel/catecismo/ios/LiturgiaDiaria/Fontes/'
 W,H=1280,720
 o=Image.open(f"{K['pasta']}/{pint}").convert('RGB'); r=640/720
 if o.width/o.height>r: cw,ch=int(o.height*r),o.height

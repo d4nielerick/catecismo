@@ -1,7 +1,6 @@
 import json,os
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
-import os
-F=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','ios','LiturgiaDiaria','Fontes')+'/'
+F='/Users/daniel/catecismo/ios/LiturgiaDiaria/Fontes/'
 inria=lambda t:ImageFont.truetype(F+'inria-serif-400.ttf',t)
 inriai=lambda t:ImageFont.truetype(F+'inria-serif-400-italic.ttf',t)
 inriab=lambda t:ImageFont.truetype(F+'inria-serif-700.ttf',t)

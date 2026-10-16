@@ -39,15 +39,19 @@ ficam fora do git; aqui estão os scripts e o caminho de cada peça.
   10 Ave-Marias, Glória, Ó meu Jesus; encerramento) → `gera_vozes.py` (voz) → `quadros.py` (1920×1080:
   pintura à esquerda, texto e 10 contas à direita) → `montar.py` (concatena, trilha baixa, −16 LUFS,
   capítulos em `tmp/capitulos.json`).
-- **Voz:** ElevenLabs, voz Daniel (`tts_eleven.py`): orações no `eleven_v4`; textos de construção lusitana
-  (meditações de São Josemaria) no `eleven_multilingual_v2`, que soa brasileiro. O Gemini TTS (`tts.py`)
-  pula o começo de orações conhecidas, lê a instrução em voz alta e, sem `languageCode: pt-BR`, sai em espanhol.
+- **Voz (a partir de 16/10/2026): Grok TTS (xAI), voz `leo`, `pt-BR`** (`tts_grok.py`, `gera_vozes_grok.py`; chave `xai-api-key`
+  no Keychain, nunca no chat). Sem sotaque de Portugal nas meditações, custo de centavos por terço (~8 mil caracteres únicos),
+  `POST https://api.x.ai/v1/tts` com `voice_id` e `language: pt-BR`. A clonagem de voz da xAI não vale no Brasil (API só Enterprise,
+  console só EUA). Alternativa testada: `orion`. Antes: ElevenLabs voz Daniel (`tts_eleven.py`; orações no `eleven_v4`, meditações no
+  `eleven_multilingual_v2`) — os arquivos antigos ficam com final `-eleven`. Descartados: VoiceStudio/OmniVoice local (voz ruim) e Gemini
+  TTS (`tts.py`: pula o começo de orações conhecidas, lê a instrução em voz alta, sem `languageCode: pt-BR` sai em espanhol).
 - **Meditações:** São Josemaria Escrivá, "Santo Rosário" (escriva.org), © Fundação Studium —
   **usado com autorização obtida pelo Daniel em 13/10/2026**. O texto (`escriva-<misterios>.json`) fica só na
   pasta de trabalho, fora do repositório; o crédito vai na descrição de cada vídeo.
-- Publicados: gozosos sem meditação (https://youtu.be/pv1unI6utZY, passar para não listado) e
-  gozosos com São Josemaria (https://youtu.be/l0rlEaHUlpc). Faltam dolorosos, gloriosos (com meditações)
-  e luminosos (não estão no livro: anúncio + Evangelho + fruto).
+- Publicados (voz Grok, agendados em 16/10/2026): dolorosos https://youtu.be/9W6FV7l2R2Q (16/10), gozosos https://youtu.be/fW8XsbV2Ogw
+  (sábado 17/10, 6h) e gloriosos https://youtu.be/tD2SDC5IfT0 (domingo 18/10, 6h). Os vídeos antigos (ElevenLabs: gozosos
+  pv1unI6utZY e l0rlEaHUlpc, dolorosos da 1ª versão) devem ir para **Não listado** no Studio. Faltam luminosos (não estão no livro:
+  anúncio + Evangelho + fruto).
 - Pinturas: domínio público na Wikimedia Commons; créditos na descrição. Gozosos: Murillo (Virgem do Rosário),
   Fra Angelico (Anunciação), Ghirlandaio (Visitação), Honthorst (Adoração dos Pastores), Fra Angelico
   (Apresentação), Holman Hunt (Encontro no Templo).
@@ -107,10 +111,10 @@ Pinturas do mês (12–31/10; título — autor): 12 Bodas de Caná — Murillo 
 
 ## Receita 4 — terço em vídeo (YouTube)
 
-1. Pasta de trabalho `video/terco/` (copiar de `scripts/terco/`): `conjuntos.py` define gozosos e dolorosos (nomes, frutos, dias, pinturas, enquadramento); **faltam gloriosos e luminosos** (luminosos não estão no livro de São Josemaria: usar anúncio + Evangelho + fruto).
-2. `python3 roteiro.py <conjunto>` → `gera_vozes.py <conjunto>` (ElevenLabs; **meditações no `eleven_multilingual_v2`**, orações no `eleven_v4`) → `quadros.py <conjunto>` → `montar.py <conjunto>` → `capa_desc.py <conjunto> <pintura-da-capa> <foco> "<créditos>"`.
-3. Subir: `node scripts/youtube.mjs envia video/terco/terco-<conjunto>.mp4 --titulo "…" --descricao-arquivo video/terco/descricao-<conjunto>.txt --publicar-em <ISO> --capa video/terco/capa-<conjunto>.jpg` (sobe privado + agendado; o token expira: `autoriza` de novo).
-4. Pendências YouTube: o vídeo "sem São Josemaria" (https://youtu.be/pv1unI6utZY) deve ir para **Não listado** no Studio (o token atual só tem escopo de envio).
+1. Pasta de trabalho `video/terco/` (copiar de `scripts/terco/`): `conjuntos.py` define gozosos, dolorosos e gloriosos (nomes, frutos, dias, pinturas, enquadramento); **falta luminosos** (não estão no livro de São Josemaria: usar anúncio + Evangelho + fruto). O texto das meditações vem de escriva.org/pt-br/santo-rosario/<n>/ (gloriosos = 11 a 15), lido pelo Chrome (curl dá 403).
+2. `python3 roteiro.py <conjunto>` → `GROK_VOZ=leo python3 gera_vozes_grok.py <conjunto>` (Grok; o antigo `gera_vozes.py` usa ElevenLabs) → `quadros.py <conjunto>` → `montar.py <conjunto>` → `capa_desc.py <conjunto> <pintura-da-capa> <foco> "<créditos>"`.
+3. Subir: `node scripts/youtube.mjs envia video/terco/terco-<conjunto>.mp4 --titulo "…" --descricao-arquivo video/terco/descricao-<conjunto>.txt --publicar-em <ISO> --capa video/terco/capa-<conjunto>.jpg` (sobe privado + agendado; o token expira: `autoriza` de novo). Título com até 100 caracteres: sem o " | Liturgia Diária" da 1ª linha da descrição.
+4. Pendências YouTube: marcar os vídeos antigos como **Não listado** no Studio (o token atual só tem escopo de envio). `montar.py` usa `tmp/` compartilhado: nunca rodar dois ao mesmo tempo.
 
 ## Armadilhas já pisadas
 
