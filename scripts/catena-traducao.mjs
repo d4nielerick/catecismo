@@ -11,6 +11,15 @@
  *       (proteção contra tradução fora do lugar) ou se `pt` estiver vazio/curto demais.
  *       Campo opcional `por` no arquivo (ex.: "claude-fable-5-1 (sessão)").
  *
+ *   node scripts/catena-traducao.mjs capitulo Mt 5 [--lotes pasta 15]
+ *       Itens sem `pt` de um capítulo inteiro; com --lotes, grava pasta/lote-1.json, lote-2.json…
+ *       (15 itens por lote) e imprime só a contagem.
+ *   node scripts/catena-traducao.mjs confere Mt 5
+ *       Itens ainda sem tradução e traduções suspeitas (tamanho fora de 0,7–2,5× o latim, aspas
+ *       desbalanceadas, latim deixado no texto) — para retraduzir. Sai com código 1 se houver.
+ *   node scripts/catena-traducao.mjs estado
+ *       Capítulos baixados e itens traduzidos por Evangelho.
+ *
  * A tradução em si é feita fora daqui (na sessão, com a skill liturgia-janela). Regras estão na
  * skill: literal e sóbria, sem acrescentar nem resumir; as palavras do Evangelho entre aspas.
  */
@@ -77,5 +86,56 @@ if (modo === 'grava') {
   process.exit(0);
 }
 
-console.error('uso: node scripts/catena-traducao.mjs pendentes AAAA-MM-DD +N | grava traducoes.json');
+if (modo === 'capitulo') {
+  const [ev, capA, flag, pasta, porLote = '15'] = args;
+  const arqCat = path.join(DADOS, 'catena', ev || '', `${String(capA || '').padStart(2, '0')}.json`);
+  if (!/^(Mt|Mc|Lc|Jo)$/.test(ev || '') || !fs.existsSync(arqCat)) { console.error('uso: node scripts/catena-traducao.mjs capitulo <Mt|Mc|Lc|Jo> <cap> [--lotes pasta 15] (o capítulo precisa estar baixado)'); process.exit(2); }
+  const saida = [];
+  for (const l of ler(arqCat)) l.itens.forEach((it, i) => { if (!it.pt) saida.push({ ev, cap: +capA, lectio: l.lectio, i, autor: it.autor, obra: it.obra, latim: it.latim }); });
+  if (flag !== '--lotes') { console.log(JSON.stringify(saida, null, 2)); process.exit(0); }
+  fs.mkdirSync(pasta, { recursive: true });
+  const n = parseInt(porLote, 10);
+  let k = 0;
+  for (let a = 0; a < saida.length; a += n) fs.writeFileSync(path.join(pasta, `lote-${++k}.json`), JSON.stringify(saida.slice(a, a + n), null, 2));
+  console.log(`${ev} ${capA}: ${saida.length} itens pendentes em ${k} lote(s) em ${pasta}`);
+  process.exit(0);
+}
+
+if (modo === 'confere') {
+  const [ev, capA] = args;
+  const arqCat = path.join(DADOS, 'catena', ev || '', `${String(capA || '').padStart(2, '0')}.json`);
+  if (!fs.existsSync(arqCat)) { console.error('uso: node scripts/catena-traducao.mjs confere <Ev> <cap>'); process.exit(2); }
+  const problemas = [];
+  let total = 0;
+  for (const l of ler(arqCat)) l.itens.forEach((it, i) => {
+    total++;
+    const onde = `l.${l.lectio} #${i}`;
+    if (!it.pt) return problemas.push(`${onde}: sem tradução`);
+    const r = it.pt.length / Math.max(1, it.latim.length);
+    if (it.latim.length > 60 && (r < 0.7 || r > 2.5)) problemas.push(`${onde}: tamanho suspeito (${r.toFixed(2)}× o latim)`);
+    if ((it.pt.match(/"/g) || []).length % 2) problemas.push(`${onde}: aspas desbalanceadas`);
+    if (/\b(quod|autem|enim|quia|ergo|vero|sicut|dicitur)\b/i.test(it.pt)) problemas.push(`${onde}: sobrou latim no texto`);
+  });
+  console.log(`${ev} ${capA}: ${total} itens, ${problemas.length} problema(s)${problemas.length ? '\n  ' + problemas.join('\n  ') : ''}`);
+  process.exit(problemas.length ? 1 : 0);
+}
+
+if (modo === 'estado') {
+  const TOTAL = { Mt: 28, Mc: 16, Lc: 24, Jo: 21 };
+  for (const [ev, caps] of Object.entries(TOTAL)) {
+    const pasta = path.join(DADOS, 'catena', ev);
+    const arqs = fs.existsSync(pasta) ? fs.readdirSync(pasta).filter(f => f.endsWith('.json')) : [];
+    let n = 0, t = 0;
+    const completos = [];
+    for (const f of arqs) {
+      let nn = 0, tt = 0;
+      for (const l of ler(path.join(pasta, f))) for (const it of l.itens) { nn++; if (it.pt) tt++; }
+      n += nn; t += tt; if (nn && nn === tt) completos.push(+f.slice(0, 2));
+    }
+    console.log(`${ev}: ${arqs.length}/${caps} capítulos baixados · ${t}/${n} itens traduzidos · completos: ${completos.sort((a, b) => a - b).join(', ') || '—'}`);
+  }
+  process.exit(0);
+}
+
+console.error('uso: node scripts/catena-traducao.mjs pendentes AAAA-MM-DD +N | capitulo <Ev> <cap> [--lotes pasta N] | grava traducoes.json | confere <Ev> <cap> | estado');
 process.exit(2);
