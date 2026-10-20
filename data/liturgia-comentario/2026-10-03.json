@@ -41,7 +41,10 @@
         20
       ],
       "direto": false,
-      "frase": "Revelou-lhes o mistério do Reino: deu-lhes parte na sua missão, na sua alegria e nos seus sofrimentos."
+      "ref": "Lc 10,17-20",
+      "frase": "Revelou-lhes o mistério do Reino: deu-lhes parte na sua missão, na sua alegria e nos seus sofrimentos.",
+      "texto": "Desde o princípio, Jesus associou os discípulos à sua vida. Revelou-lhes o mistério do Reino: deu-lhes parte na sua missão, na sua alegria e nos seus sofrimentos. Jesus fala duma comunhão ainda mais íntima entre Ele e os que O seguem: «Permanecei em Mim, como Eu em vós [...]. Eu sou a cepa, vós os ramos» (Jo 15, 4-5). E anuncia uma comunhão misteriosa e real entre o seu próprio Corpo e o nosso: «Quem come a minha Carne e bebe o meu Sangue permanece em Mim e Eu nele» (Jo 6, 56).",
+      "local": "Creio no espírito santo › «creio na santa igreja católica»"
     },
     {
       "numero": 2603,
@@ -50,7 +53,10 @@
         22
       ],
       "direto": false,
-      "frase": "Na primeira, Jesus louva o Pai, reconhece-O e bendi-Lo por ter escondido os mistérios do Reino aos que se julgavam sábios e os ter revelado aos «pequeninos» (os pobres das bem-aventuranças)."
+      "ref": "Lc 10,21-22",
+      "frase": "Na primeira, Jesus louva o Pai, reconhece-O e bendi-Lo por ter escondido os mistérios do Reino aos que se julgavam sábios e os ter revelado aos «pequeninos» (os pobres das bem-aventuranças).",
+      "texto": "Os evangelistas retiveram duas orações mais explícitas de Cristo durante o seu ministério. E ambas começam por uma ação de graças. Na primeira, Jesus louva o Pai, reconhece-O e bendi-Lo por ter escondido os mistérios do Reino aos que se julgavam sábios e os ter revelado aos «pequeninos» (os pobres das bem-aventuranças). O seu estremecimento – «Sim Pai!» – revela o íntimo do seu coração, a sua adesão ao «beneplácito» do Pai, como um eco do «Fiat» da sua Mãe aquando da sua concepção e como prelúdio do que Ele próprio dirá ao Pai na sua agonia. Toda a oração de Jesus está nesta adesão amorosa do seu coração de homem ao «mistério da vontade» do Pai.",
+      "local": "A oração na vida cristã › A revelação da oração"
     },
     {
       "numero": 1083,
@@ -58,9 +64,32 @@
         21
       ],
       "direto": false,
-      "frase": "Por um lado, a Igreja, unida ao seu Senhor e «sob a ação do Espírito Santo», bendiz o Pai «pelo seu Dom inefável» (2 Cor 9, 15), mediante a adoração, o louvor e a ação de graças."
+      "ref": "Lc 10,21",
+      "frase": "Por um lado, a Igreja, unida ao seu Senhor e «sob a ação do Espírito Santo», bendiz o Pai «pelo seu Dom inefável» (2 Cor 9, 15), mediante a adoração, o louvor e a ação de graças.",
+      "texto": "Compreende-se então a dupla dimensão da liturgia cristã, como resposta de fé e de amor às «bênçãos espirituais» com que o Pai nos gratifica. Por um lado, a Igreja, unida ao seu Senhor e «sob a ação do Espírito Santo», bendiz o Pai «pelo seu Dom inefável» (2 Cor 9, 15), mediante a adoração, o louvor e a ação de graças. Por outro lado, e até à consumação do desígnio de Deus, a Igreja não cessa de oferecer ao Pai «a oblação dos seus próprios dons» e de Lhe implorar que envie o Espírito Santo sobre esta oblação, sobre si própria, sobre os fiéis e sobre o mundo inteiro, a fim de que, pela comunhão na morte e ressurreição de Cristo-Sacerdote e pelo poder do Espírito, estas bênçãos divinas produzam frutos de vida, «para que seja enaltecida a glória da sua graça» (Ef 1, 6).",
+      "local": "O mistério pascal no tempo da igreja › Artigo 1: a liturgia – obra da santíssima trindade"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Jó 42,1-3.5-6.12-16 (hebr. 1-3.5-6.12-17)",
+      "catecismo": [
+        {
+          "numero": 299,
+          "comum": [
+            3
+          ],
+          "direto": false,
+          "ref": "Jó 42,3",
+          "frase": "A nossa inteligência, participante da luz do intelecto divino, pode entender o que Deus nos diz pela sua criação, sem dúvida com grande esforço e num espírito de humildade e de respeito perante o Criador e a sua obra.",
+          "texto": "Uma vez que Deus cria com sabedoria, a criação possui ordem. «Dispusestes tudo com medida, número e peso» (Sb 11, 20). Criada no Verbo e pelo Verbo eterno, «que é a imagem do Deus invisível» (Cl 1, 15), a criação destina-se e orienta-se para o homem, imagem de Deus, chamado ele próprio a uma relação pessoal com Deus. A nossa inteligência, participante da luz do intelecto divino, pode entender o que Deus nos diz pela sua criação, sem dúvida com grande esforço e num espírito de humildade e de respeito perante o Criador e a sua obra. Saída da bondade divina, a criação partilha dessa bondade («E Deus viu que isto era bom [...] muito bom»: Gn 1, 4. 10. 12. 18. 21. 31). Porque a criação é querida por Deus como um dom orientado para o homem, como herança que lhe é destinada e confiada. A Igreja, em diversas ocasiões, viu-se na necessidade de defender a bondade da criação, mesmo a do mundo material.",
+          "local": "Creio em deus pai › «creio em deus pai todo-poderosocriador do céu e da terra»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "A queda de Satanás e os mistérios revelados aos pequenos",
   "destaques": [
     {

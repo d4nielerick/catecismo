@@ -48,7 +48,10 @@
         22
       ],
       "direto": false,
-      "frase": "Devemos, portanto, abordar a questão da origem do mal, fixando o olhar da nossa fé n'Aquele que é o seu único vencedor."
+      "ref": "Lc 11,21-22",
+      "frase": "Devemos, portanto, abordar a questão da origem do mal, fixando o olhar da nossa fé n'Aquele que é o seu único vencedor.",
+      "texto": "Deus é infinitamente bom e todas as suas obras são boas. No entanto, ninguém escapa à experiência do sofrimento, dos males da natureza – que aparecem como ligados aos limites próprios das criaturas –, e sobretudo à questão do mal moral. Donde vem o mal? «Quaerebam unde malum et non erat exitus – Procurava a origem do mal e não encontrava solução», diz Santo Agostinho. A sua própria busca dolorosa só encontrará saída na conversão ao Deus vivo. Porque «o mistério da iniquidade» (2 Ts 2, 7) só se esclarece à luz do «mistério da piedade». A revelação do amor divino em Cristo manifestou, ao mesmo tempo, a extensão do mal e a superabundância da graça. Devemos, portanto, abordar a questão da origem do mal, fixando o olhar da nossa fé n'Aquele que é o seu único vencedor.",
+      "local": "Creio em deus pai › «creio em deus pai todo-poderosocriador do céu e da terra»"
     },
     {
       "numero": 700,
@@ -56,9 +59,55 @@
         20
       ],
       "direto": false,
-      "frase": "«É pelo dedo de Deus que Jesus expulsa os demônios»."
+      "ref": "Lc 11,20",
+      "frase": "«É pelo dedo de Deus que Jesus expulsa os demônios».",
+      "texto": "O dedo. «É pelo dedo de Deus que Jesus expulsa os demônios». Se a Lei de Deus foi escrita em tábuas de pedra «pelo dedo de Deus» (Ex 31, 18), a «carta de Cristo», entregue ao cuidado dos Apóstolos, «é escrita com o Espírito de Deus vivo: não em placas de pedra, mas em placas que são corações de carne» (2 Cor 3, 3). O hino «Veni Creator Spiritus» invoca o Espírito Santo como «digitus paternae dexterae» — «Dedo da mão direita do Pai».",
+      "local": "Creio no espírito santo › «creio no espírito santo»"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Gl 3,7-14",
+      "catecismo": [
+        {
+          "numero": 580,
+          "comum": [
+            10,
+            13
+          ],
+          "direto": false,
+          "ref": "Gl 3,10.13",
+          "frase": "Jesus cumpriu a Lei até ao ponto de tomar sobre Si «a maldição da Lei» em que incorrem aqueles que não «praticam todos os preceitos da Lei»; porque «a morte de Cristo foi para remir as faltas cometidas durante a primeira Aliança» (Heb 9, 15).",
+          "texto": "O cumprimento perfeito da Lei só podia ser obra do divino Legislador, nascido sujeito à Lei na pessoa do Filho. Em Jesus, a Lei já não aparece gravada em tábuas de pedra, mas «no íntimo do coração» (Jr 31, 33) do Servo, o qual, proclamando «fielmente o direito» (Is 42, 3), se tornou «a aliança do povo» (Is 42, 6). Jesus cumpriu a Lei até ao ponto de tomar sobre Si «a maldição da Lei» em que incorrem aqueles que não «praticam todos os preceitos da Lei»; porque «a morte de Cristo foi para remir as faltas cometidas durante a primeira Aliança» (Heb 9, 15).",
+          "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
+        },
+        {
+          "numero": 59,
+          "comum": [
+            8
+          ],
+          "direto": false,
+          "ref": "Gl 3,8",
+          "frase": "Para reunir a humanidade dispersa, Deus escolhe Abrão, chamando-o para «deixar a sua terra, a sua família e a casa de seu pai» (Gn 12, 1), para o fazer Abraão, quer dizer, «pai de um grande número de nações» (Gn 17, 5): «Em ti serão abençoadas todas as nações da Terra» (Gn 12, 3).",
+          "texto": "Para reunir a humanidade dispersa, Deus escolhe Abrão, chamando-o para «deixar a sua terra, a sua família e a casa de seu pai» (Gn 12, 1), para o fazer Abraão, quer dizer, «pai de um grande número de nações» (Gn 17, 5): «Em ti serão abençoadas todas as nações da Terra» (Gn 12, 3).",
+          "local": "Deus ao encontro do homem › A revelação de deus"
+        },
+        {
+          "numero": 578,
+          "comum": [
+            10
+          ],
+          "direto": false,
+          "ref": "Gl 3,10",
+          "frase": "Com efeito, a Lei constitui um todo e, como lembra São Tiago, «quem observa toda a Lei, mas falta num só mandamento, torna-se réu de todos os outros» (Tg 2, 10).",
+          "texto": "Jesus, o Messias de Israel e, portanto, o maior no Reino dos céus, fazia questão de cumprir a Lei, executando-a integralmente até nos mais pequenos preceitos, segundo as suas próprias palavras. Foi, mesmo, o único a poder fazê-lo perfeitamente. Os Judeus, segundo a sua própria confissão, não puderam nunca cumprir integralmente a Lei sem violação do mínimo preceito. Por isso é que, em cada festa anual da Expiação, os filhos de Israel pediam a Deus perdão pelas suas transgressões da Lei. Com efeito, a Lei constitui um todo e, como lembra São Tiago, «quem observa toda a Lei, mas falta num só mandamento, torna-se réu de todos os outros» (Tg 2, 10).",
+          "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "O reino dividido, o dedo de Deus e o homem mais forte",
   "destaques": [
     {

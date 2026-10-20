@@ -37,7 +37,10 @@
         13
       ],
       "direto": false,
-      "frase": "A primeira, a do «amigo importuno», convida-nos a uma oração persistente: «Batei, e a porta abrir-se-vos-á»."
+      "ref": "Lc 11,5-13",
+      "frase": "A primeira, a do «amigo importuno», convida-nos a uma oração persistente: «Batei, e a porta abrir-se-vos-á».",
+      "texto": "São Lucas transmite-nos três parábolas principais sobre a oração. A primeira, a do «amigo importuno», convida-nos a uma oração persistente: «Batei, e a porta abrir-se-vos-á». Aquele que assim ora, o Pai celeste «dará tudo quanto necessitar» e dará, sobretudo, o Espírito Santo, que encerra todos os dons. A segunda, a da «viúva importuna», está centrada numa das qualidades da oração: é preciso orar sem se cansar, com a paciência da fé. «Mas o Filho do Homem, quando voltar, achará porventura fé sobre a terra?». A terceira, a do «fariseu e do publicano», diz respeito à humildade do coração orante. «Meu Deus, tende compaixão de mim, que sou pecador». A Igreja não cessa de fazer sua esta oração: «Kyrie, eleison!».",
+      "local": "A oração na vida cristã › A revelação da oração"
     },
     {
       "numero": 443,
@@ -45,7 +48,10 @@
         13
       ],
       "direto": false,
-      "frase": "Ele distinguiu a sua filiação da dos Seus discípulos, nunca dizendo «Pai nosso», a não ser para lhes ordenar: «vós, quando rezardes, dizei assim: Pai nosso» (Mt 6,9); e sublinhou esta distinção: «o meu Pai e vosso Pai» (Jo 20, 17)."
+      "ref": "Lc 11,13",
+      "frase": "Ele distinguiu a sua filiação da dos Seus discípulos, nunca dizendo «Pai nosso», a não ser para lhes ordenar: «vós, quando rezardes, dizei assim: Pai nosso» (Mt 6,9); e sublinhou esta distinção: «o meu Pai e vosso Pai» (Jo 20, 17).",
+      "texto": "Se Pedro pôde reconhecer o caráter transcendente da filiação divina de Jesus-Messias, foi porque Este lha deixou perceber nitidamente. Diante do Sinédrio, à pergunta dos seus acusadores: «Então, tu és o Filho de Deus?» Jesus respondeu: «É como dizeis, sou» (Lc 22, 70). Já muito antes, Ele Se designara como «o Filho» que conhece o Pai, diferente dos «servos» que Deus anteriormente enviara ao seu povo, superior aos próprios anjos. Ele distinguiu a sua filiação da dos Seus discípulos, nunca dizendo «Pai nosso», a não ser para lhes ordenar: «vós, quando rezardes, dizei assim: Pai nosso» (Mt 6,9); e sublinhou esta distinção: «o meu Pai e vosso Pai» (Jo 20, 17).",
+      "local": "Creio em jesus cristo, filho único de deus › «e em jesus cristo, seu único filho, nosso senhor»"
     },
     {
       "numero": 2671,
@@ -53,9 +59,32 @@
         13
       ],
       "direto": false,
-      "frase": "A forma tradicional de pedir o Espírito é invocar o Pai, por Cristo, nosso Senhor, para que nos dê o Espírito Consolador."
+      "ref": "Lc 11,13",
+      "frase": "A forma tradicional de pedir o Espírito é invocar o Pai, por Cristo, nosso Senhor, para que nos dê o Espírito Consolador.",
+      "texto": "A forma tradicional de pedir o Espírito é invocar o Pai, por Cristo, nosso Senhor, para que nos dê o Espírito Consolador. Jesus insiste nesta petição em seu nome no próprio momento em que promete o dom do Espírito de verdade. Mas também é tradicional a oração mais simples e mais direta: «Vinde, Espírito Santo». Cada tradição litúrgica desenvolveu-a em antífonas e hinos: «Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do vosso amor». «Rei celeste, Espírito consolador, Espírito da verdade, presente em toda a parte e tudo enchendo, tesouro de todo o bem e fonte da vida, vem, habita em nós, purifica-nos e salva-nos, Tu que és Bom!».",
+      "local": "A oração na vida cristã › A tradição da oração"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Gl 3,1-5",
+      "catecismo": [
+        {
+          "numero": 476,
+          "comum": [
+            1
+          ],
+          "direto": false,
+          "ref": "Gl 3,1",
+          "frase": "Portanto, o rosto humano de Jesus pode ser «pintado».",
+          "texto": "Uma vez que o Verbo Se fez carne, assumindo uma verdadeira natureza humana, o corpo de Cristo era circunscrito. Portanto, o rosto humano de Jesus pode ser «pintado». No VII Concílio ecumênico, a Igreja reconheceu como legítimo que ele fosse representado em santas imagens.",
+          "local": "Creio em jesus cristo, filho único de deus › «jesus cristo foi concebido pelo poder do espírito santo e nasceu da virgem maria»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "A insistência na oração e o dom do Espírito Santo",
   "destaques": [
     {

@@ -21,7 +21,10 @@
         4
       ],
       "direto": false,
-      "frase": "Isto vale sobretudo para a questão do sábado: Jesus lembra, e muitas vezes com argumentos rabínicos, que o repouso sabático não é violado pelo serviço de Deus ou do próximo que as suas curas realizam."
+      "ref": "Lc 14,3-4",
+      "frase": "Isto vale sobretudo para a questão do sábado: Jesus lembra, e muitas vezes com argumentos rabínicos, que o repouso sabático não é violado pelo serviço de Deus ou do próximo que as suas curas realizam.",
+      "texto": "Indo mais longe, Jesus cumpriu a lei sobre a pureza dos alimentos, tão importante na vida quotidiana judaica, explicando o seu sentido «pedagógico» por uma interpretação divina: «Não há nada fora do homem que, ao entrar nele, o possa tornar impuro [...] – e assim declarava puros todos os alimentos – [...]. O que sai do homem é que o toma impuro. Pois, do interior do coração dos homens é que saem os pensamentos perversos» (Mc 7, 18-21). Proporcionando, com autoridade divina, a interpretação definitiva da Lei, Jesus colocou-Se numa situação de confronto com certos doutores da Lei, que não aceitavam a sua interpretação, muito embora garantida pelos sinais divinos que a acompanhavam. Isto vale sobretudo para a questão do sábado: Jesus lembra, e muitas vezes com argumentos rabínicos, que o repouso sabático não é violado pelo serviço de Deus ou do próximo que as suas curas realizam.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
     },
     {
       "numero": 575,
@@ -29,7 +32,10 @@
         1
       ],
       "direto": false,
-      "frase": "Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus."
+      "ref": "Lc 14,1",
+      "frase": "Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus.",
+      "texto": "Muitas atitudes e palavras de Jesus foram, portanto, «sinal de contradição» para as autoridades religiosas de Jerusalém, a quem o Evangelho de São João muitas vezes chama simplesmente «os Judeus», mais ainda do que para o comum do Povo de Deus. Sem dúvida que as suas relações com os fariseus não foram unicamente polêmicas: são fariseus que O previnem do perigo que corre. Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus. Jesus confirma doutrinas partilhadas por esta elite religiosa do povo de Deus: a ressurreição dos mortos formas de piedade (esmola, jejum e oração) e o hábito de se dirigir a Deus como Pai, o caráter central do mandamento do amor de Deus e do próximo.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
     },
     {
       "numero": 588,
@@ -37,9 +43,46 @@
         1
       ],
       "direto": false,
-      "frase": "Jesus escandalizou os fariseus por comer com os publicanos e os pecadores tão familiarmente como com eles."
+      "ref": "Lc 14,1",
+      "frase": "Jesus escandalizou os fariseus por comer com os publicanos e os pecadores tão familiarmente como com eles.",
+      "texto": "Jesus escandalizou os fariseus por comer com os publicanos e os pecadores tão familiarmente como com eles. Contra aqueles «que se consideravam justos e desprezavam os demais» (Lc 18, 9) Jesus afirmou: «Eu não vim chamar os justos, vim chamar os pecadores, para que se arrependam» (Lc 5, 32). E foi mais longe, afirmando, diante dos fariseus, que, sendo o pecado universal, cegam-se a si próprios aqueles que pretendem não precisar de salvação.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Fl 1,1-11",
+      "catecismo": [
+        {
+          "numero": 2632,
+          "comum": [
+            9,
+            10,
+            11
+          ],
+          "direto": false,
+          "ref": "Fl 1,9-11",
+          "frase": "É a oração de Paulo, o apóstolo por excelência, que nos revela como a solicitude divina por todas as Igrejas deve animar a oração cristã.",
+          "texto": "A petição cristã está centrada no desejo e na busca do Reino que há-de vir, em conformidade com o ensinamento de Jesus. Há uma hierarquia nas petições: primeiro, o Reino; depois, tudo quanto é necessário para o acolher e para cooperar com a sua vinda. Esta cooperação com a missão de Cristo e do Espírito Santo, que agora é a da Igreja, é o objeto da oração da comunidade apostólica. É a oração de Paulo, o apóstolo por excelência, que nos revela como a solicitude divina por todas as Igrejas deve animar a oração cristã. Pela oração, todo o cristão trabalha pela vinda do Reino.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        },
+        {
+          "numero": 2636,
+          "comum": [
+            3,
+            4
+          ],
+          "direto": false,
+          "ref": "Fl 1,3-4",
+          "frase": "O apóstolo Paulo fá-las participar deste modo no seu ministério do Evangelho mas ele próprio também intercede por elas.",
+          "texto": "As primeiras comunidades cristãs viveram intensamente esta forma de partilha. O apóstolo Paulo fá-las participar deste modo no seu ministério do Evangelho mas ele próprio também intercede por elas. A intercessão dos cristãos não conhece fronteiras: «[...] por todos os homens, [...] por todos os que exercem a autoridade» (1 Tm 2, 1), pelos perseguidores, pela salvação dos que rejeitam o Evangelho.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "O hidrópico curado em dia de sábado",
   "destaques": [
     {

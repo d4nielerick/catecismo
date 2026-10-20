@@ -14,6 +14,48 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Gl 3,22-29",
+      "catecismo": [
+        {
+          "numero": 582,
+          "comum": [
+            24
+          ],
+          "direto": false,
+          "ref": "Gl 3,24",
+          "frase": "Indo mais longe, Jesus cumpriu a lei sobre a pureza dos alimentos, tão importante na vida quotidiana judaica, explicando o seu sentido «pedagógico» por uma interpretação divina: «Não há nada fora do homem que, ao entrar nele, o possa tornar impuro [...] – e assim declarava puros todos os alimentos – [...].",
+          "texto": "Indo mais longe, Jesus cumpriu a lei sobre a pureza dos alimentos, tão importante na vida quotidiana judaica, explicando o seu sentido «pedagógico» por uma interpretação divina: «Não há nada fora do homem que, ao entrar nele, o possa tornar impuro [...] – e assim declarava puros todos os alimentos – [...]. O que sai do homem é que o toma impuro. Pois, do interior do coração dos homens é que saem os pensamentos perversos» (Mc 7, 18-21). Proporcionando, com autoridade divina, a interpretação definitiva da Lei, Jesus colocou-Se numa situação de confronto com certos doutores da Lei, que não aceitavam a sua interpretação, muito embora garantida pelos sinais divinos que a acompanhavam. Isto vale sobretudo para a questão do sábado: Jesus lembra, e muitas vezes com argumentos rabínicos, que o repouso sabático não é violado pelo serviço de Deus ou do próximo que as suas curas realizam.",
+          "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
+        },
+        {
+          "numero": 708,
+          "comum": [
+            24
+          ],
+          "direto": false,
+          "ref": "Gl 3,24",
+          "frase": "A Lei foi dada como um «pedagogo» para conduzir o povo a Cristo.",
+          "texto": "Esta pedagogia de Deus manifesta-se especialmente no dom da Lei. A Lei foi dada como um «pedagogo» para conduzir o povo a Cristo. Mas a sua impotência para salvar o homem, privado da «semelhança» divina e o conhecimento acrescido que ela dá do pecado suscitam o desejo do Espírito Santo. Os gemidos dos Salmos são disso testemunho.",
+          "local": "Creio no espírito santo › «creio no espírito santo»"
+        },
+        {
+          "numero": 1227,
+          "comum": [
+            27
+          ],
+          "direto": false,
+          "ref": "Gl 3,27",
+          "frase": "Os batizados «revestem-se de Cristo».",
+          "texto": "Segundo o apóstolo São Paulo, pelo Batismo o crente comunga na morte de Cristo; é sepultado e ressuscita com Ele: «Todos nós, que fomos batizados em Cristo Jesus, fomos batizados na sua morte. Fomos sepultados com Ele pelo batismo na morte, para que, assim como Cristo ressuscitou dos mortos, pela glória do Pai, também nós vivamos uma vida nova» (Rm 6, 3-4). Os batizados «revestem-se de Cristo». Pelo Espírito Santo, o Batismo é um banho que purifica, santifica e justifica.",
+          "local": "Os sacramentos da iniciação cristã › Artigo 1: o sacramento do baptismo"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "A bem-aventurança da Mãe e dos que guardam a palavra",
   "destaques": [
     {

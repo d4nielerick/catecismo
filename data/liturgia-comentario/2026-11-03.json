@@ -14,6 +14,56 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Fl 2,5-11",
+      "catecismo": [
+        {
+          "numero": 1224,
+          "comum": [
+            7
+          ],
+          "direto": true,
+          "ref": "Fl 2,7",
+          "frase": "Este gesto de Jesus é uma manifestação do seu «aniquilamento».",
+          "texto": "Nosso Senhor sujeitou-se voluntariamente ao Batismo de São João, destinado aos pecadores, para cumprir toda a justiça. Este gesto de Jesus é uma manifestação do seu «aniquilamento». O Espírito que pairava sobre as águas da primeira criação, desce então sobre Cristo como prelúdio da nova criação e o Pai manifesta Jesus como seu «Filho muito amado».",
+          "local": "Os sacramentos da iniciação cristã › Artigo 1: o sacramento do baptismo"
+        },
+        {
+          "numero": 2641,
+          "comum": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "direto": false,
+          "ref": "Fl 2,6-11",
+          "frase": "Na novidade do Espírito, compõem também hinos e cânticos a partir do acontecimento inaudito que Deus realizou em seu Filho: a sua encarnação, a sua morte vitoriosa sobre a morte, a sua ressurreição e a sua ascensão à direita do Pai.",
+          "texto": "«Recitai entre vós salmos, hinos e cânticos inspirados; cantai e louvai ao Senhor no vosso coração» (Ef 5, 19). Tal como os escritores inspirados do Novo Testamento, as primeiras comunidades cristãs relêem o livro dos Salmos, cantando neles o mistério de Cristo. Na novidade do Espírito, compõem também hinos e cânticos a partir do acontecimento inaudito que Deus realizou em seu Filho: a sua encarnação, a sua morte vitoriosa sobre a morte, a sua ressurreição e a sua ascensão à direita do Pai. É desta «maravilha» de toda a economia da salvação que sobe a doxologia, o louvor de Deus.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        },
+        {
+          "numero": 1850,
+          "comum": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "direto": false,
+          "ref": "Fl 2,6-9",
+          "frase": "Por esta exaltação orgulhosa de si mesmo, o pecado é diametralmente oposto à obediência de Jesus, que realizou a salvação.",
+          "texto": "O pecado é uma ofensa a Deus: «Pequei contra Vós, só contra Vós, e fiz o mal diante dos vossos olhos» (Sl 51, 6). O pecado é contrário ao amor que Deus nos tem e afasta d'Ele os nossos corações. É, como o primeiro pecado, uma desobediência, uma revolta contra Deus, pela vontade de os homens se tornarem «como deuses», conhecendo e determinando o que é bem e o que é mal (Gn 3, 5). Assim, o pecado é «o amor de si próprio levado até ao desprezo de Deus». Por esta exaltação orgulhosa de si mesmo, o pecado é diametralmente oposto à obediência de Jesus, que realizou a salvação.",
+          "local": "A dignidade da pessoa humana › Artigo 8: o pecado"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "A grande ceia preparada em Cristo e as desculpas dos convidados",
   "destaques": [
     {

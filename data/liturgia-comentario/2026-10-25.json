@@ -20,7 +20,10 @@
         34
       ],
       "direto": false,
-      "frase": "Jesus confirma doutrinas partilhadas por esta elite religiosa do povo de Deus: a ressurreição dos mortos formas de piedade (esmola, jejum e oração) e o hábito de se dirigir a Deus como Pai, o caráter central do mandamento do amor de Deus e do próximo."
+      "ref": "Mt 22,34",
+      "frase": "Jesus confirma doutrinas partilhadas por esta elite religiosa do povo de Deus: a ressurreição dos mortos formas de piedade (esmola, jejum e oração) e o hábito de se dirigir a Deus como Pai, o caráter central do mandamento do amor de Deus e do próximo.",
+      "texto": "Muitas atitudes e palavras de Jesus foram, portanto, «sinal de contradição» para as autoridades religiosas de Jerusalém, a quem o Evangelho de São João muitas vezes chama simplesmente «os Judeus», mais ainda do que para o comum do Povo de Deus. Sem dúvida que as suas relações com os fariseus não foram unicamente polêmicas: são fariseus que O previnem do perigo que corre. Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus. Jesus confirma doutrinas partilhadas por esta elite religiosa do povo de Deus: a ressurreição dos mortos formas de piedade (esmola, jejum e oração) e o hábito de se dirigir a Deus como Pai, o caráter central do mandamento do amor de Deus e do próximo.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
     },
     {
       "numero": 1824,
@@ -28,9 +31,34 @@
         40
       ],
       "direto": false,
-      "frase": "Se guardardes os meus mandamentos, permanecereis no meu amor» (Jo 15, 9-10)."
+      "ref": "Mt 22,40",
+      "frase": "Se guardardes os meus mandamentos, permanecereis no meu amor» (Jo 15, 9-10).",
+      "texto": "Fruto do Espírito e plenitude da Lei, a caridade guarda os mandamentos de Deus e do seu Cristo: «Permanecei no meu amor. Se guardardes os meus mandamentos, permanecereis no meu amor» (Jo 15, 9-10).",
+      "local": "A dignidade da pessoa humana › Artigo 7: as virtudes"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ex 22,20-26",
+      "catecismo": [
+        {
+          "numero": 1867,
+          "comum": [
+            20,
+            21,
+            22
+          ],
+          "direto": false,
+          "ref": "Ex 22,20-22",
+          "frase": "Bradam ao céu: o sangue de Abel; o pecado dos sodomitas; o clamor do povo oprimido no Egito; o lamento do estrangeiro, da viúva e do órfão; a injustiça para com o assalariado.",
+          "texto": "A tradição catequética lembra também a existência de «pecados que bradam ao céu». Bradam ao céu: o sangue de Abel; o pecado dos sodomitas; o clamor do povo oprimido no Egito; o lamento do estrangeiro, da viúva e do órfão; a injustiça para com o assalariado.",
+          "local": "A dignidade da pessoa humana › Artigo 8: o pecado"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "O maior mandamento e o amor a Deus e ao próximo",
   "destaques": [
     {

@@ -14,6 +14,49 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Gl 1,13-24",
+      "catecismo": [
+        {
+          "numero": 153,
+          "comum": [
+            15,
+            16
+          ],
+          "direto": false,
+          "ref": "Gl 1,15-16",
+          "frase": "Quando Pedro confessa que Jesus é o Cristo, o Filho do Deus vivo, Jesus declara-lhe que esta revelação não lhe veio «da carne nem do sangue, mas do seu Pai que está nos Céus» (Mt 16, 17).",
+          "texto": "Quando Pedro confessa que Jesus é o Cristo, o Filho do Deus vivo, Jesus declara-lhe que esta revelação não lhe veio «da carne nem do sangue, mas do seu Pai que está nos Céus» (Mt 16, 17). A fé é um dom de Deus, uma virtude sobrenatural infundida por Ele. «Para prestar esta adesão da fé, são necessários a prévia e concomitante ajuda da graça divina e os interiores auxílios do Espírito Santo, o qual move e converte o coração para Deus, abre os olhos do entendimento, e dá \"a todos a suavidade em aceitar e crer a verdade\"».",
+          "local": "A resposta do homem a deus › Eu creio"
+        },
+        {
+          "numero": 500,
+          "comum": [
+            19
+          ],
+          "direto": false,
+          "ref": "Gl 1,19",
+          "frase": "A isso objeta-se, por vezes, que a Escritura menciona irmãos e irmãs de Jesus.",
+          "texto": "A isso objeta-se, por vezes, que a Escritura menciona irmãos e irmãs de Jesus. A Igreja entendeu sempre estas passagens como não designando outros filhos da Virgem Maria. Com efeito, Tiago e José, «irmãos de Jesus» (Mt 13, 55), são filhos duma Maria discípula de Cristo designada significativamente como «a outra Maria» (Mt 28, 1). Trata-se de parentes próximos de Jesus, segundo uma expressão conhecida do Antigo Testamento.",
+          "local": "Creio em jesus cristo, filho único de deus › «jesus cristo foi concebido pelo poder do espírito santo e nasceu da virgem maria»"
+        },
+        {
+          "numero": 659,
+          "comum": [
+            16
+          ],
+          "direto": false,
+          "ref": "Gl 1,16",
+          "frase": "Só de modo absolutamente excepcional e único é que Se mostrará a Paulo, «como a um aborto» (1 Cor 15, 8), numa última aparição que o constitui Apóstolo.",
+          "texto": "«Então, o Senhor Jesus, depois de lhes ter falado, foi elevado ao céu e sentou-se à direita de Deus» (Mc 16, 19). O corpo de Cristo foi glorificado desde o momento da sua ressurreição, como o provam as propriedades novas e sobrenaturais de que, a partir de então, ele goza permanentemente. Mas, durante os quarenta dias em que vai comer e beber familiarmente com os discípulos e instruí-los sobre o Reino, a sua glória fica ainda velada sob as aparências duma humanidade normal. A última aparição de Jesus termina com a entrada irreversível da sua humanidade na glória divina, simbolizada pela nuvem e pelo céu. onde a partir de então, está sentado à direita de Deus. Só de modo absolutamente excepcional e único é que Se mostrará a Paulo, «como a um aborto» (1 Cor 15, 8), numa última aparição que o constitui Apóstolo.",
+          "local": "Creio em jesus cristo, filho único de deus › «jesus subiu aos céus e está sentado à direita de deus, pai todo-poderoso»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "Marta e Maria: o serviço e a melhor parte",
   "destaques": [
     {

@@ -10,6 +10,9 @@
  *     escolhido; nada de interpretação própria. 4–12 palavras, sem ponto final.
  *   - `destaques`: 2 a 4 ponteiros para itens da Catena (lectio da perícope do dia, índice do
  *     item), todos já traduzidos. Autores variados quando der; 30–120 palavras cada.
+ *   - `padres` (opcional): [{ autor, numero }] — no máximo 2 §§ do Catecismo cujas notas citam um
+ *     Padre que comenta o Evangelho de hoje, e que falam do mesmo assunto (escolher lendo, com
+ *     `node scripts/padres-no-catecismo.mjs AAAA-MM-DD`). A frase é tirada do próprio Catecismo.
  * Roda liga-evangelho antes se o arquivo do dia não existir. Recusa ponteiro para item inexistente,
  * fora das lectiones do dia, ou sem tradução.
  */
@@ -17,6 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { citacoesDoPadre } from './lib-cic.mjs';
 
 const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DADOS = path.join(RAIZ, 'data');
@@ -25,6 +29,7 @@ const arq = process.argv[2];
 if (!arq || !fs.existsSync(arq)) { console.error('uso: node scripts/grava-curadoria.mjs curadoria.json'); process.exit(2); }
 
 const erros = [];
+let notas, paragrafos;
 let gravados = 0;
 for (const c of ler(arq)) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(c.data || '')) { erros.push(`"${c.data}": data inválida`); continue; }
@@ -48,6 +53,18 @@ for (const c of ler(arq)) {
     if (!item.pt) { erros.push(`${c.data}: l.${d.lectio} #${d.i} sem tradução`); ok = false; break; }
   }
   if (!ok) continue;
+  const padres = [];
+  for (const p of c.padres || []) {
+    const lects = cat.filter(l => lectiones.has(l.lectio));
+    if (!lects.some(l => l.itens.some(it => it.autor === p.autor && it.pt))) { erros.push(`${c.data}: ${p.autor} não comenta (traduzido) o Evangelho de hoje`); ok = false; break; }
+    notas ??= ler(path.join(DADOS, 'notas.json'));
+    paragrafos ??= new Map(ler(path.join(DADOS, 'catecismo.json')).paragrafos.map(x => [x.numero, x.texto]));
+    const cit = citacoesDoPadre(p.autor, notas, paragrafos).find(x => x.numero === p.numero);
+    if (!cit) { erros.push(`${c.data}: as notas do § ${p.numero} não citam ${p.autor}`); ok = false; break; }
+    padres.push({ autor: p.autor, numero: p.numero, frase: cit.frase });
+  }
+  if (!ok || padres.length > 2) { if (ok) erros.push(`${c.data}: mais de 2 padres`); continue; }
+  com.padres = padres;
   com.tema = tema;
   com.destaques = destaques.map(d => ({ lectio: d.lectio, i: d.i }));
   fs.writeFileSync(arqCom, JSON.stringify(com, null, 2) + '\n');

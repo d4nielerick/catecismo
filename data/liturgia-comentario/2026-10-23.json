@@ -23,6 +23,54 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ef 4,1-6",
+      "catecismo": [
+        {
+          "numero": 172,
+          "comum": [
+            4,
+            5,
+            6
+          ],
+          "direto": false,
+          "ref": "Ef 4,4-6",
+          "frase": "Desde há séculos, através de tantas línguas, culturas, povos e nações, a Igreja não cessa de confessar a sua fé única, recebida de um só Senhor, transmitida por um só Batismo, enraizada na convicção de que todos os homens têm apenas um só Deus e Pai.",
+          "texto": "Desde há séculos, através de tantas línguas, culturas, povos e nações, a Igreja não cessa de confessar a sua fé única, recebida de um só Senhor, transmitida por um só Batismo, enraizada na convicção de que todos os homens têm apenas um só Deus e Pai. Santo Ireneu de Lião, testemunha desta fé, declara:",
+          "local": "A resposta do homem a deus › Nós cremos"
+        },
+        {
+          "numero": 249,
+          "comum": [
+            4,
+            5,
+            6
+          ],
+          "direto": false,
+          "ref": "Ef 4,4-6",
+          "frase": "Tais formulações encontram-se já nos escritos apostólicos, como o comprova esta saudação retomada na liturgia eucarística: «A graça do Senhor Jesus Cristo, o amor de Deus e a comunhão do Espírito Santo estejam com todos vós» (2 Cor 13, 13).",
+          "texto": "A verdade revelada da Santíssima Trindade esteve, desde a origem, na raiz da fé viva da Igreja. principalmente por meio do Batismo. Encontra a sua expressão na regra da fé batismal, formulada na pregação, na catequese e na oração da Igreja. Tais formulações encontram-se já nos escritos apostólicos, como o comprova esta saudação retomada na liturgia eucarística: «A graça do Senhor Jesus Cristo, o amor de Deus e a comunhão do Espírito Santo estejam com todos vós» (2 Cor 13, 13).",
+          "local": "Creio em deus pai › «creio em deus pai todo-poderosocriador do céu e da terra»"
+        },
+        {
+          "numero": 866,
+          "comum": [
+            3,
+            4,
+            5
+          ],
+          "direto": false,
+          "ref": "Ef 4,3-5",
+          "frase": "A Igreja é una: tem um só Senhor, professa uma só fé, nasce dum só Batismo e forma um só Corpo, vivificado por um só Espírito, em vista duma única esperança, no termo da qual todas as divisões serão superadas.",
+          "texto": "A Igreja é una: tem um só Senhor, professa uma só fé, nasce dum só Batismo e forma um só Corpo, vivificado por um só Espírito, em vista duma única esperança, no termo da qual todas as divisões serão superadas.",
+          "local": "Creio no espírito santo › «creio na santa igreja católica»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "Os sinais do tempo e o acordo com o adversário",
   "destaques": [
     {

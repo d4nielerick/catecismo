@@ -23,6 +23,55 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ef 1,11-14",
+      "catecismo": [
+        {
+          "numero": 2627,
+          "comum": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "direto": false,
+          "ref": "Ef 1,11-14",
+          "frase": "Exprimem este movimento duas formas fundamentais: umas vezes, a bênção sobe, levada por Cristo no Espírito Santo, para o Pai (nós O bendizemos por Ele nos ter abençoado); outras vezes, implora a graça do Espírito Santo que, por Cristo, desce de junto do Pai (é Ele que nos abençoa).",
+          "texto": "Exprimem este movimento duas formas fundamentais: umas vezes, a bênção sobe, levada por Cristo no Espírito Santo, para o Pai (nós O bendizemos por Ele nos ter abençoado); outras vezes, implora a graça do Espírito Santo que, por Cristo, desce de junto do Pai (é Ele que nos abençoa).",
+          "local": "A oração na vida cristã › A revelação da oração"
+        },
+        {
+          "numero": 2641,
+          "comum": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "direto": false,
+          "ref": "Ef 1,11-14",
+          "frase": "É desta «maravilha» de toda a economia da salvação que sobe a doxologia, o louvor de Deus.",
+          "texto": "«Recitai entre vós salmos, hinos e cânticos inspirados; cantai e louvai ao Senhor no vosso coração» (Ef 5, 19). Tal como os escritores inspirados do Novo Testamento, as primeiras comunidades cristãs relêem o livro dos Salmos, cantando neles o mistério de Cristo. Na novidade do Espírito, compõem também hinos e cânticos a partir do acontecimento inaudito que Deus realizou em seu Filho: a sua encarnação, a sua morte vitoriosa sobre a morte, a sua ressurreição e a sua ascensão à direita do Pai. É desta «maravilha» de toda a economia da salvação que sobe a doxologia, o louvor de Deus.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        },
+        {
+          "numero": 706,
+          "comum": [
+            13,
+            14
+          ],
+          "direto": false,
+          "ref": "Ef 1,13-14",
+          "frase": "Comprometendo-Se por juramento, Deus obriga-Se, desde logo, ao dom do seu Filho muito-amado e ao dom do «Espírito Santo prometido, que constitui o título de garantia da nossa herança para a redenção do povo que Deus adquiriu para Si mesmo».",
+          "texto": "Contra toda a esperança humana, Deus promete a Abraão uma descendência, como fruto da fé e do poder do Espírito Santo. Nessa descendência serão abençoadas todas as nações da terra. Essa descendência será o Cristo no qual a efusão do Espírito Santo fará «a unidade dos filhos de Deus dispersos». Comprometendo-Se por juramento, Deus obriga-Se, desde logo, ao dom do seu Filho muito-amado e ao dom do «Espírito Santo prometido, que constitui o título de garantia da nossa herança para a redenção do povo que Deus adquiriu para Si mesmo».",
+          "local": "Creio no espírito santo › «creio no espírito santo»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "O fermento dos fariseus e aquele a quem se deve temer",
   "destaques": [
     {

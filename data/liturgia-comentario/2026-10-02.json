@@ -30,7 +30,10 @@
         4
       ],
       "direto": false,
-      "frase": "«Tornar-se criança» diante de Deus é a condição para entrar no Reino, e para isso, é preciso abaixar-se tornar-se pequeno."
+      "ref": "Mt 18,3-4",
+      "frase": "«Tornar-se criança» diante de Deus é a condição para entrar no Reino, e para isso, é preciso abaixar-se tornar-se pequeno.",
+      "texto": "«Tornar-se criança» diante de Deus é a condição para entrar no Reino, e para isso, é preciso abaixar-se tornar-se pequeno. Mais ainda: é preciso «nascer do Alto» (Jo 3, 7), «nascer de Deus» para se «tornar filho de Deus». O mistério do Natal cumpre-se em nós quando Cristo «Se forma» em nós. O Natal é o mistério desta «admirável permuta»: «O admirabile commercium! Creator generis humani, animatum corpus sumens de Virgine nasci dignatus est; et, procedens homo sine semine, largitus est nobis suam deitatem». – «Oh admirável permuta! O Criador do gênero humano, tomando corpo e alma, dignou-Se nascer duma Virgem; e, feito homem sem progenitor humano, tornou-nos participantes da sua divindade!».",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo foi concebido pelo poder do espírito santo e nasceu da virgem maria»"
     },
     {
       "numero": 336,
@@ -38,9 +41,35 @@
         10
       ],
       "direto": false,
-      "frase": "Desde o seu começo até à morte, a vida humana é acompanhada pela sua assistência e intercessão."
+      "ref": "Mt 18,10",
+      "frase": "Desde o seu começo até à morte, a vida humana é acompanhada pela sua assistência e intercessão.",
+      "texto": "Desde o seu começo até à morte, a vida humana é acompanhada pela sua assistência e intercessão. «Cada fiel tem a seu lado um anjo como protetor e pastor para o guiar na vida». Desde este mundo, a vida cristã participa, pela fé, na sociedade bem-aventurada dos anjos e dos homens, unidos em Deus.",
+      "local": "Creio em deus pai › «creio em deus pai todo-poderosocriador do céu e da terra»"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ex 23,20-23",
+      "catecismo": [
+        {
+          "numero": 332,
+          "comum": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "direto": false,
+          "ref": "Ex 23,20-23",
+          "frase": "Ei-los, desde a criação e ao longo de toda a história da salvação, anunciando de longe ou de perto esta mesma salvação, e postos ao serviço do plano divino da sua realização: eles fecham o paraíso terrestre; protegem Lot, salvam Agar e seu filho, detêm a mão de Abraão pelo seu ministério é comunicada a Lei, são eles que conduzem o povo de Deus, anunciam nascimentos e vocações assistem os profetas – para não citar senão alguns exemplos.",
+          "texto": "Ei-los, desde a criação e ao longo de toda a história da salvação, anunciando de longe ou de perto esta mesma salvação, e postos ao serviço do plano divino da sua realização: eles fecham o paraíso terrestre; protegem Lot, salvam Agar e seu filho, detêm a mão de Abraão pelo seu ministério é comunicada a Lei, são eles que conduzem o povo de Deus, anunciam nascimentos e vocações assistem os profetas – para não citar senão alguns exemplos. Finalmente, é o anjo Gabriel que anuncia o nascimento do Precursor e o do próprio Jesus.",
+          "local": "Creio em deus pai › «creio em deus pai todo-poderosocriador do céu e da terra»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "A humildade das crianças e os anjos que veem o Pai",
   "destaques": [
     {

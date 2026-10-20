@@ -93,7 +93,10 @@
         12
       ],
       "direto": false,
-      "frase": "Em toda a sua vida, Jesus mostra-Se como nosso modelo: é «o homem perfeito», que nos convida a tornarmo-nos seus discípulos e a segui-Lo; com a sua humilhação, deu-nos um exemplo a imitar; com a sua oração, convida-nos à oração; com a sua pobreza, incita--nos a aceitar livremente o despojamento e as perseguições."
+      "ref": "Mt 5,11-12",
+      "frase": "Em toda a sua vida, Jesus mostra-Se como nosso modelo: é «o homem perfeito», que nos convida a tornarmo-nos seus discípulos e a segui-Lo; com a sua humilhação, deu-nos um exemplo a imitar; com a sua oração, convida-nos à oração; com a sua pobreza, incita--nos a aceitar livremente o despojamento e as perseguições.",
+      "texto": "Em toda a sua vida, Jesus mostra-Se como nosso modelo: é «o homem perfeito», que nos convida a tornarmo-nos seus discípulos e a segui-Lo; com a sua humilhação, deu-nos um exemplo a imitar; com a sua oração, convida-nos à oração; com a sua pobreza, incita--nos a aceitar livremente o despojamento e as perseguições.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo foi concebido pelo poder do espírito santo e nasceu da virgem maria»"
     },
     {
       "numero": 581,
@@ -101,7 +104,89 @@
         1
       ],
       "direto": false,
-      "frase": "N'Ele, era a própria Palavra de Deus, que Se fizera ouvir no Sinai, para dar a Moisés a Lei escrita, que de novo Se fazia ouvir sobre a montanha das bem-aventuranças."
+      "ref": "Mt 5,1",
+      "frase": "N'Ele, era a própria Palavra de Deus, que Se fizera ouvir no Sinai, para dar a Moisés a Lei escrita, que de novo Se fazia ouvir sobre a montanha das bem-aventuranças.",
+      "texto": "Jesus apareceu aos olhos dos Judeus e dos seus chefes espirituais como um «rabbi». Muitas vezes argumentou, no quadro da interpretação rabínica da Lei. Mas, ao mesmo tempo, Jesus tinha forçosamente de Se confrontar com os doutores da Lei porque não Se contentava com propor a sua interpretação a par das deles: «ensinava como quem tem autoridade e não como os escribas» (Mt 7, 28-29). N'Ele, era a própria Palavra de Deus, que Se fizera ouvir no Sinai, para dar a Moisés a Lei escrita, que de novo Se fazia ouvir sobre a montanha das bem-aventuranças. Esta Palavra de Deus não aboliu a Lei, mas cumpriu-a, ao fornecer, de modo divino, a sua interpretação última: «Ouvistes que foi dito aos antigos [...] Eu, porém, digo-vos» (Mt 5, 33-34). Com esta mesma autoridade divina, desaprova certas «tradições humanas» dos fariseus, que «anulam a Palavra de Deus».",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ap 7,2-4.9-14",
+      "catecismo": [
+        {
+          "numero": 1138,
+          "comum": [
+            2,
+            3,
+            4
+          ],
+          "direto": false,
+          "ref": "Ap 7,2-4",
+          "frase": "«Recapitulados» em Cristo, tomam parte no serviço do louvor de Deus e na realização do seu desígnio: os Poderes celestes, toda a criação (os quatro viventes), os servidores da Antiga e da Nova Aliança (os vinte e quatro anciãos), o novo povo de Deus (os cento e quarenta e quatro mil), em particular os mártires, «degolados por causa da Palavra de Deus» (Ap 6, 9) e a santíssima Mãe de Deus (a Mulher; a Esposa do Cordeiro enfim, «uma numerosa multidão que ninguém podia contar e provinda de todas as nações, tribos, povos e línguas» (Ap 7, 9).",
+          "texto": "«Recapitulados» em Cristo, tomam parte no serviço do louvor de Deus e na realização do seu desígnio: os Poderes celestes, toda a criação (os quatro viventes), os servidores da Antiga e da Nova Aliança (os vinte e quatro anciãos), o novo povo de Deus (os cento e quarenta e quatro mil), em particular os mártires, «degolados por causa da Palavra de Deus» (Ap 6, 9) e a santíssima Mãe de Deus (a Mulher; a Esposa do Cordeiro enfim, «uma numerosa multidão que ninguém podia contar e provinda de todas as nações, tribos, povos e línguas» (Ap 7, 9).",
+          "local": "A celebração sacramental do mistério pascal › Artigo 1: celebrar a liturgia da igreja"
+        },
+        {
+          "numero": 1296,
+          "comum": [
+            2,
+            3
+          ],
+          "direto": false,
+          "ref": "Ap 7,2-3",
+          "frase": "Este selo do Espírito Santo marca a pertença total a Cristo, a entrega para sempre ao seu serviço, mas também a promessa da proteção divina na grande prova escatológica.",
+          "texto": "O próprio Cristo se declara marcado com o selo do Pai. O cristão também está marcado com um selo: «Foi Deus que nos concedeu a unção, nos marcou também com o seu selo e depôs as arras do Espírito em nossos corações» (2 Cor 1, 21-22). Este selo do Espírito Santo marca a pertença total a Cristo, a entrega para sempre ao seu serviço, mas também a promessa da proteção divina na grande prova escatológica.",
+          "local": "Os sacramentos da iniciação cristã › Artigo 2: o sacramento da confirmação"
+        }
+      ]
+    },
+    {
+      "rotulo": "2ª Leitura",
+      "referencia": "1Jo 3,1-3",
+      "catecismo": [
+        {
+          "numero": 1161,
+          "comum": [
+            2
+          ],
+          "direto": false,
+          "ref": "1Jo 3,2",
+          "frase": "Através dos seus ícones, é o homem «à imagem de Deus», finalmente transfigurado «à sua semelhança», que se revela à nossa fé – como ainda os anjos, também eles recapitulados em Cristo: «Seguindo a doutrina divinamente inspirada dos nossos santos Padres e a tradição da Igreja Católica, que nós sabemos ser a tradição do Espírito Santo que nela habita, definimos com toda a certeza e cuidado que as veneráveis e santas imagens, bem como as representações da Cruz preciosa e vivificante, pintadas, representadas em mosaico ou de qualquer outra matéria apropriada, devem ser colocadas nas santas igrejas de Deus, sobre as alfaias e vestes sagradas, nos muros e em quadros, nas casas e nos caminhos: e tanto a imagem de nosso Senhor, Deus e Salvador, Jesus Cristo, como a de nossa Senhora, a puríssima e santa Mãe de Deus, a dos santos anjos e de todos os santos e justos».",
+          "texto": "Todos os sinais da celebração litúrgica fazem referência a Cristo: também as imagens sagradas da Mãe de Deus e dos santos. De fato, elas significam Cristo que nelas é glorificado; manifestam «a nuvem de testemunhas» (Heb 12, 1) que continuam a participar na salvação do mundo e às quais estamos unidos, sobretudo na celebração sacramental. Através dos seus ícones, é o homem «à imagem de Deus», finalmente transfigurado «à sua semelhança», que se revela à nossa fé – como ainda os anjos, também eles recapitulados em Cristo: «Seguindo a doutrina divinamente inspirada dos nossos santos Padres e a tradição da Igreja Católica, que nós sabemos ser a tradição do Espírito Santo que nela habita, definimos com toda a certeza e cuidado que as veneráveis e santas imagens, bem como as representações da Cruz preciosa e vivificante, pintadas, representadas em mosaico ou de qualquer outra matéria apropriada, devem ser colocadas nas santas igrejas de Deus, sobre as alfaias e vestes sagradas, nos muros e em quadros, nas casas e nos caminhos: e tanto a imagem de nosso Senhor, Deus e Salvador, Jesus Cristo, como a de nossa Senhora, a puríssima e santa Mãe de Deus, a dos santos anjos e de todos os santos e justos».",
+          "local": "A celebração sacramental do mistério pascal › Artigo 1: celebrar a liturgia da igreja"
+        },
+        {
+          "numero": 1720,
+          "comum": [
+            2
+          ],
+          "direto": false,
+          "ref": "1Jo 3,2",
+          "frase": "O Novo Testamento emprega muitas expressões para caracterizar a bem-aventurança a que Deus chama o homem: a chegada do Reino de Deus; a visão de Deus: «Bem-aventurados os puros de coração, porque verão a Deus» (Mt 5, 8); a entrada na alegria do Senhor a entrada no repouso de Deus: «Lá, descansaremos e veremos: veremos e amaremos; amaremos e louvaremos.",
+          "texto": "O Novo Testamento emprega muitas expressões para caracterizar a bem-aventurança a que Deus chama o homem: a chegada do Reino de Deus; a visão de Deus: «Bem-aventurados os puros de coração, porque verão a Deus» (Mt 5, 8); a entrada na alegria do Senhor a entrada no repouso de Deus: «Lá, descansaremos e veremos: veremos e amaremos; amaremos e louvaremos. Eis o que acontecerá no fim sem fim. E que outro fim temos nós, sendo chegar ao Reino que não tem fim?».",
+          "local": "A dignidade da pessoa humana › Artigo 2: a nossa vocação para a bem-aventurança"
+        },
+        {
+          "numero": 2345,
+          "comum": [
+            3
+          ],
+          "direto": false,
+          "ref": "1Jo 3,3",
+          "frase": "O Espírito Santo concede a graça de imitar a pureza de Cristo àquele que regenerou pela água do Batismo.",
+          "texto": "A castidade é uma virtude moral. Mas é também um dom de Deus, uma graça, um fruto do trabalho espiritual. O Espírito Santo concede a graça de imitar a pureza de Cristo àquele que regenerou pela água do Batismo.",
+          "local": "«amarás o teu próximo como a ti mesmo» › Artigo 6: o sexto mandamento"
+        }
+      ]
+    }
+  ],
+  "padres": [
+    {
+      "autor": "Augustinus",
+      "numero": 2547,
+      "frase": "«O orgulhoso procura o poder terreno, ao passo que o pobre em espírito procura o Reino dos céus»."
     }
   ],
   "tema": "Os pobres em espírito, os que choram e os pacíficos",

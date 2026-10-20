@@ -14,6 +14,65 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ef 1,1-10",
+      "catecismo": [
+        {
+          "numero": 2627,
+          "comum": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "direto": false,
+          "ref": "Ef 1,3-10",
+          "frase": "Exprimem este movimento duas formas fundamentais: umas vezes, a bênção sobe, levada por Cristo no Espírito Santo, para o Pai (nós O bendizemos por Ele nos ter abençoado); outras vezes, implora a graça do Espírito Santo que, por Cristo, desce de junto do Pai (é Ele que nos abençoa).",
+          "texto": "Exprimem este movimento duas formas fundamentais: umas vezes, a bênção sobe, levada por Cristo no Espírito Santo, para o Pai (nós O bendizemos por Ele nos ter abençoado); outras vezes, implora a graça do Espírito Santo que, por Cristo, desce de junto do Pai (é Ele que nos abençoa).",
+          "local": "A oração na vida cristã › A revelação da oração"
+        },
+        {
+          "numero": 2641,
+          "comum": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "direto": false,
+          "ref": "Ef 1,3-10",
+          "frase": "É desta «maravilha» de toda a economia da salvação que sobe a doxologia, o louvor de Deus.",
+          "texto": "«Recitai entre vós salmos, hinos e cânticos inspirados; cantai e louvai ao Senhor no vosso coração» (Ef 5, 19). Tal como os escritores inspirados do Novo Testamento, as primeiras comunidades cristãs relêem o livro dos Salmos, cantando neles o mistério de Cristo. Na novidade do Espírito, compõem também hinos e cânticos a partir do acontecimento inaudito que Deus realizou em seu Filho: a sua encarnação, a sua morte vitoriosa sobre a morte, a sua ressurreição e a sua ascensão à direita do Pai. É desta «maravilha» de toda a economia da salvação que sobe a doxologia, o louvor de Deus.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        },
+        {
+          "numero": 381,
+          "comum": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "direto": false,
+          "ref": "Ef 1,3-6",
+          "frase": "O homem foi predestinado para reproduzir a imagem do Filho de Deus feito homem –«imagem do Deus invisível» (Cl 1, 15) –, para que Cristo seja o primogênito duma multidão de irmãos e irmãs.",
+          "texto": "O homem foi predestinado para reproduzir a imagem do Filho de Deus feito homem –«imagem do Deus invisível» (Cl 1, 15) –, para que Cristo seja o primogênito duma multidão de irmãos e irmãs.",
+          "local": "Creio em deus pai › «creio em deus pai todo-poderosocriador do céu e da terra»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "Os sepulcros dos profetas e a chave da ciência",
   "destaques": [
     {

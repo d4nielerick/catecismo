@@ -39,9 +39,73 @@
         40
       ],
       "direto": false,
-      "frase": "A vigilância do coração é lembrada com insistência em comunhão com a sua."
+      "ref": "Lc 12,39-40",
+      "frase": "A vigilância do coração é lembrada com insistência em comunhão com a sua.",
+      "texto": "Ora um tal combate e uma tal vitória só são possíveis pela oração. Foi pela oração que Jesus venceu o Tentador desde o princípio e no último combate da sua agonia. Foi ao seu combate e à sua agonia que Cristo nos uniu nesta petição ao nosso Pai. A vigilância do coração é lembrada com insistência em comunhão com a sua. A vigilância é a «guarda do coração» e Jesus pede ao Pai que «nos guarde em seu nome». O Espírito Santo procura incessantemente despertar-nos para esta vigilância. Esta petição adquire todo o seu sentido dramático, quando relacionada com a tentação final do nosso combate na terra: ela pede a perseverança final. «Olhai que vou chegar como um ladrão: feliz de quem estiver vigilante!» (Ap 16, 15).",
+      "local": "A oração cristã › A oração do senhor: «pai nosso»"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ef 3,2-12",
+      "catecismo": [
+        {
+          "numero": 772,
+          "comum": [
+            9,
+            10,
+            11
+          ],
+          "direto": false,
+          "ref": "Ef 3,9-11",
+          "frase": "Porque está unida a Cristo como a seu esposo, a própria Igreja, por seu turno, se torna mistério.",
+          "texto": "É na Igreja que Cristo realiza e revela o seu próprio mistério, como a meta do desígnio de Deus: «recapitular tudo n'Ele» (Ef 1, 10). São Paulo chama «grande mistério» (Ef 5, 32) à união esponsal de Cristo e da Igreja. Porque está unida a Cristo como a seu esposo, a própria Igreja, por seu turno, se torna mistério. E é contemplando nela este mistério, que S. Paulo exclama: «Cristo em vós — eis a esperança da glória!» (Cl 1, 27).",
+          "local": "Creio no espírito santo › «creio na santa igreja católica»"
+        },
+        {
+          "numero": 1066,
+          "comum": [
+            4
+          ],
+          "direto": false,
+          "ref": "Ef 3,4",
+          "frase": "Tal é o mistério de Cristo, revelado e realizado na história segundo um plano, uma «disposição» sabiamente ordenada, a que São Paulo chama «a economia do mistério» (Ef 3, 9) e a que a tradição patrística chamará «a economia do Verbo encarnado» ou «economia da salvação».",
+          "texto": "No Símbolo da Fé, a Igreja confessa o mistério da Santíssima Trindade e o seu «desígnio admirável» (Ef 1, 9) sobre toda a criação: o Pai realiza o «mistério da sua vontade», dando o seu Filho muito amado e o seu Espírito Santo para a salvação do mundo e para a glória do seu nome. Tal é o mistério de Cristo, revelado e realizado na história segundo um plano, uma «disposição» sabiamente ordenada, a que São Paulo chama «a economia do mistério» (Ef 3, 9) e a que a tradição patrística chamará «a economia do Verbo encarnado» ou «economia da salvação».",
+          "local": "A celebração do mistério cristão"
+        },
+        {
+          "numero": 2778,
+          "comum": [
+            12
+          ],
+          "direto": false,
+          "ref": "Ef 3,12",
+          "frase": "Este poder do Espírito que nos introduz na oração do Senhor é expresso, nas liturgias do Oriente e do Ocidente, pela bela expressão tipicamente cristã: «parrêsía», simplicidade sem desvio, confiança filial, segurança alegre, ousadia humilde, certeza de ser amado.",
+          "texto": "Este poder do Espírito que nos introduz na oração do Senhor é expresso, nas liturgias do Oriente e do Ocidente, pela bela expressão tipicamente cristã: «parrêsía», simplicidade sem desvio, confiança filial, segurança alegre, ousadia humilde, certeza de ser amado.",
+          "local": "A oração cristã › A oração do senhor: «pai nosso»"
+        }
+      ]
+    },
+    {
+      "rotulo": "Salmo",
+      "referencia": "Is 12,2-3.4bcd.5-6 (R. cf. 3)",
+      "catecismo": [
+        {
+          "numero": 2561,
+          "comum": [
+            3
+          ],
+          "direto": false,
+          "ref": "Is 12,3",
+          "frase": "Resposta ao lamento do Deus vivo: «Abandonou-Me a Mim, nascente de águas vivas, e foi escavar cisternas fendidas» (Jr 2, 13); resposta de fé à promessa gratuita da salvação; resposta de amor à sede do Filho Único.",
+          "texto": "«Tu é que Lhe terias pedido e Ele te daria água viva» (Jo 4, 10). Paradoxalmente, a nossa oração de súplica é uma resposta. Resposta ao lamento do Deus vivo: «Abandonou-Me a Mim, nascente de águas vivas, e foi escavar cisternas fendidas» (Jr 2, 13); resposta de fé à promessa gratuita da salvação; resposta de amor à sede do Filho Único.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "A hora incerta do Senhor e o administrador fiel",
   "destaques": [
     {

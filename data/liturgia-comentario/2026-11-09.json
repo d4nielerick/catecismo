@@ -1,0 +1,121 @@
+{
+  "data": "2026-11-09",
+  "evangelho": "Jo 2,13-22",
+  "leituras": "Ez 47,1-2.8-9.12 | Sl 45(46),2-3.5-6.8-9 (R. 5) | 1Cor 3,9c-11.16-17 | Jo 2,13-22",
+  "catena": [
+    {
+      "ev": "Jo",
+      "cap": 2,
+      "lectio": 3,
+      "versos": [
+        12,
+        13
+      ]
+    },
+    {
+      "ev": "Jo",
+      "cap": 2,
+      "lectio": 4,
+      "versos": [
+        14,
+        17
+      ]
+    },
+    {
+      "ev": "Jo",
+      "cap": 2,
+      "lectio": 5,
+      "versos": [
+        18,
+        22
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 575,
+      "comum": [
+        18
+      ],
+      "direto": true,
+      "ref": "Jo 2,18",
+      "frase": "Muitas atitudes e palavras de Jesus foram, portanto, «sinal de contradição» para as autoridades religiosas de Jerusalém, a quem o Evangelho de São João muitas vezes chama simplesmente «os Judeus», mais ainda do que para o comum do Povo de Deus.",
+      "texto": "Muitas atitudes e palavras de Jesus foram, portanto, «sinal de contradição» para as autoridades religiosas de Jerusalém, a quem o Evangelho de São João muitas vezes chama simplesmente «os Judeus», mais ainda do que para o comum do Povo de Deus. Sem dúvida que as suas relações com os fariseus não foram unicamente polêmicas: são fariseus que O previnem do perigo que corre. Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus. Jesus confirma doutrinas partilhadas por esta elite religiosa do povo de Deus: a ressurreição dos mortos formas de piedade (esmola, jejum e oração) e o hábito de se dirigir a Deus como Pai, o caráter central do mandamento do amor de Deus e do próximo.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
+    },
+    {
+      "numero": 586,
+      "comum": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "direto": false,
+      "ref": "Jo 2,18-22",
+      "frase": "Mais ainda: identificou-Se com o templo, apresentando-Se como a morada definitiva de Deus entre os homens.",
+      "texto": "Longe de ter sido contra o templo onde proclamou o essencial da sua doutrina, Jesus quis pagar o imposto do templo, associando a Si Pedro, que Ele acabara de estabelecer como pedra basilar da sua Igreja futura. Mais ainda: identificou-Se com o templo, apresentando-Se como a morada definitiva de Deus entre os homens. Por isso é que a sua entrega à morte corporal prenuncia a destruição do templo, a qual vai assinalar a entrada numa nova idade da história da salvação: «Vai chegar a hora em que nem neste monte nem em Jerusalém adorareis o Pai» (Jo 4, 21).",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
+    },
+    {
+      "numero": 994,
+      "comum": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "direto": false,
+      "ref": "Jo 2,19-22",
+      "frase": "Jesus fala deste acontecimento único como do «sinal de Jonas», do sinal do templo; Ele anuncia a sua ressurreição ao terceiro dia depois da morte.",
+      "texto": "Mas há mais: Jesus liga a fé na ressurreição à sua própria pessoa: «Eu sou a Ressurreição e a Vida» (Jo 11, 25). É o próprio Jesus que, no último dia, há-de ressuscitar os que n'Ele tiverem acreditado, comido o seu Corpo e bebido o seu Sangue Desde logo, Ele dá um sinal disto mesmo e uma garantia, restituindo a vida a alguns mortos e preanunciando assim a sua própria ressurreição que, no entanto, será de ordem diferente. Jesus fala deste acontecimento único como do «sinal de Jonas», do sinal do templo; Ele anuncia a sua ressurreição ao terceiro dia depois da morte.",
+      "local": "Creio no espírito santo › «creio na ressurreição da carne»"
+    },
+    {
+      "numero": 583,
+      "comum": [
+        13,
+        14
+      ],
+      "direto": false,
+      "ref": "Jo 2,13-14",
+      "frase": "O seu próprio ministério público foi ritmado pelas peregrinações a Jerusalém nas grandes festas judaicas.",
+      "texto": "Jesus, como antes d'Ele os profetas, professou pelo templo de Jerusalém o mais profundo respeito. Ali foi apresentado por José e Maria, quarenta dias depois do seu nascimento. Na idade de doze anos, decidiu ficar no templo para lembrar aos seus pais que tinha de Se ocupar das coisas de seu Pai. Ao templo subiu todos os anos, ao menos pela Páscoa, durante a vida oculta. O seu próprio ministério público foi ritmado pelas peregrinações a Jerusalém nas grandes festas judaicas.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "2ª Leitura",
+      "referencia": "1Cor 3,9c-11.16-17",
+      "catecismo": [
+        {
+          "numero": 755,
+          "comum": [
+            9
+          ],
+          "direto": false,
+          "ref": "1Cor 3,9",
+          "frase": "«A Igreja é a agricultura ou o campo de Deus.",
+          "texto": "«A Igreja é a agricultura ou o campo de Deus. Nesse campo cresce a oliveira antiga, de que os patriarcas foram a raiz santa e na qual se realizou e realizará a reconciliação de judeus e gentios. Ela foi plantada pelo celeste Agricultor como uma vinha eleita. A verdadeira Videira é Cristo: é Ele que dá vida e fecundidade aos sarmentos, isto é, a nós que, pela Igreja, permanecemos n'Ele, e sem o Qual nada podemos fazer».",
+          "local": "Creio no espírito santo › «creio na santa igreja católica»"
+        },
+        {
+          "numero": 756,
+          "comum": [
+            9
+          ],
+          "direto": false,
+          "ref": "1Cor 3,9",
+          "frase": "«A Igreja é também muitas vezes chamada construção de Deus.",
+          "texto": "«A Igreja é também muitas vezes chamada construção de Deus. O próprio Senhor se comparou à pedra que os construtores rejeitaram e que se tornou pedra angular (Mt 21, 42 par.: At 4, 11; 1 Pe 2, 7; Sl 118, 22). Sobre esse fundamento é a Igreja construída pelos Apóstolos, e dele recebe firmeza e coesão. Esta construção recebe vários nomes: casa de Deus, na qual habita a sua família; habitação de Deus no Espírito; tabernáculo de Deus com os homens; e, sobretudo, templo santo, o qual, representado pelos santuários de pedra e louvado pelos santos Padres, é com razão comparado, na Liturgia, à cidade santa, a nova Jerusalém. Nela, com efeito, somos edificados cá na terra como pedras vivas. Esta cidade, S. João contemplou-a \"descendo do céu, da presença de Deus, na renovação do mundo, como esposa adornada para ir ao encontro do esposo\" (Ap 21, 1-2)».",
+          "local": "Creio no espírito santo › «creio na santa igreja católica»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

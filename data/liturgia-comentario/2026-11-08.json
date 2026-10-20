@@ -1,0 +1,99 @@
+{
+  "data": "2026-11-08",
+  "evangelho": "Mt 25,1-13",
+  "leituras": "Sb 6,12-16 | Sl 62(63),2.3-4.5-6.7-8 (R. 2b) | 1Ts 4,13-18 | Mt 25,1-13",
+  "catena": [],
+  "catecismo": [
+    {
+      "numero": 672,
+      "comum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "direto": false,
+      "ref": "Mt 25,1-13",
+      "frase": "É um tempo de espera e de vigília.",
+      "texto": "Cristo afirmou, antes da sua ascensão, que ainda não era a hora do estabelecimento glorioso do Reino messiânico esperado por Israel, o qual devia trazer a todos os homens, segundo os profetas, a ordem definitiva da justiça, do amor e da paz. O tempo presente é, segundo o Senhor, o tempo do Espírito e do testemunho mas é também um tempo ainda marcado pela «desolação» e pela provação do mal, que não poupa a Igreja e inaugura os combates dos últimos dias. É um tempo de espera e de vigília.",
+      "local": "Creio em jesus cristo, filho único de deus › «de onde há-de vir a julgar os vivos e os mortos»"
+    },
+    {
+      "numero": 796,
+      "comum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "direto": false,
+      "ref": "Mt 25,1-13",
+      "frase": "O próprio Senhor Se designou como «o Esposo» (Mc 2, 19).",
+      "texto": "A unidade de Cristo e da Igreja, Cabeça e membros do Corpo, implica também a distinção entre ambos, numa relação pessoal. Este aspecto é, muitas vezes, expresso pela imagem do esposo e da esposa. O tema de Cristo Esposo da Igreja foi preparado pelos profetas e anunciado por João Batista. O próprio Senhor Se designou como «o Esposo» (Mc 2, 19). E o Apóstolo apresenta a Igreja e cada fiel, membro do seu Corpo, como uma esposa «desposada» com Cristo Senhor, para formar com Ele um só Espírito. Ela é a Esposa imaculada do Cordeiro imaculado que Cristo amou, pela qual Se entregou «para a santificar» (Ef 5, 26), que associou a Si por uma aliança eterna, e à qual não cessa de prestar cuidados como ao Seu próprio Corpo. «Eis o Cristo total, Cabeça e Corpo, um só, formado de muitos [...]. Quer seja a Cabeça que fale, quer sejam os membros, é Cristo que fala: fala desempenhando o papel de Cabeça (ex persona capitis), ou, então, desempenhando o papel do Corpo (ex persona corporis). Conforme ao que está escrito: «Serão os dois uma só carne. É esse um grande mistério; digo-o em relação a Cristo e à Igreja» (Ef 5, 31-32). E o próprio Senhor diz no Evangelho: «Já não são dois, mas uma só carne» (Mt 19, 6). Como vedes, temos, de algum modo, duas pessoas diferentes; no entanto, tornam-se uma só na união esponsal [...] «Diz-se \"Esposo\" enquanto Cabeça e \"esposa\" enquanto Corpo».",
+      "local": "Creio no espírito santo › «creio na santa igreja católica»"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "2ª Leitura",
+      "referencia": "1Ts 4,13-18",
+      "catecismo": [
+        {
+          "numero": 1012,
+          "comum": [
+            13,
+            14
+          ],
+          "direto": false,
+          "ref": "1Ts 4,13-14",
+          "frase": "A visão cristã da morte é expressa de modo privilegiado na liturgia da Igreja: «Para os que crêem em Vós, Senhor, a vida não acaba, apenas se transforma: e, desfeita a morada deste exílio terrestre, adquirimos no céu uma habitação eterna».",
+          "texto": "A visão cristã da morte é expressa de modo privilegiado na liturgia da Igreja: «Para os que crêem em Vós, Senhor, a vida não acaba, apenas se transforma: e, desfeita a morada deste exílio terrestre, adquirimos no céu uma habitação eterna».",
+          "local": "Creio no espírito santo › «creio na ressurreição da carne»"
+        },
+        {
+          "numero": 989,
+          "comum": [
+            14
+          ],
+          "direto": false,
+          "ref": "1Ts 4,14",
+          "frase": "Tal como a d'Ele, também a nossa ressurreição será obra da Santíssima Trindade: «Se o Espírito d'Aquele que ressuscitou Jesus de entre os mortos habita em vós, Ele, que ressuscitou Cristo Jesus de entre os mortos, também dará vida aos vossos corpos mortais, pelo seu Espírito que habita em vós» (Rm 8, 11).",
+          "texto": "Nós cremos e esperamos firmemente que, tal como Cristo ressuscitou verdadeiramente dos mortos e vive para sempre, assim também os justos, depois da morte, viverão para sempre com Cristo ressuscitado, e que Ele os ressuscitará no último dia. Tal como a d'Ele, também a nossa ressurreição será obra da Santíssima Trindade: «Se o Espírito d'Aquele que ressuscitou Jesus de entre os mortos habita em vós, Ele, que ressuscitou Cristo Jesus de entre os mortos, também dará vida aos vossos corpos mortais, pelo seu Espírito que habita em vós» (Rm 8, 11).",
+          "local": "Creio no espírito santo › «creio na ressurreição da carne»"
+        },
+        {
+          "numero": 1025,
+          "comum": [
+            17
+          ],
+          "direto": false,
+          "ref": "1Ts 4,17",
+          "frase": "Viver no céu é «estar com Cristo».",
+          "texto": "Viver no céu é «estar com Cristo». Os eleitos vivem «n'Ele»; mas n'Ele conservam, ou melhor, encontram a sua verdadeira identidade, o seu nome próprio: «Porque a vida consiste em estar com Cristo, onde está Cristo, aí está a vida, aí está o Reino».",
+          "local": "Creio no espírito santo › «creio na vida eterna»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

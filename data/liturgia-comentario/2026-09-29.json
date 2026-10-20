@@ -14,6 +14,26 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Dn 7,9-10.13-14",
+      "catecismo": [
+        {
+          "numero": 678,
+          "comum": [
+            10
+          ],
+          "direto": false,
+          "ref": "Dn 7,10",
+          "frase": "Na sequência dos profetas e de João Batista, Jesus anunciou, na sua pregação, o Juízo do último dia.",
+          "texto": "Na sequência dos profetas e de João Batista, Jesus anunciou, na sua pregação, o Juízo do último dia. Então será revelado o procedimento de cada um e o segredo dos corações. Então, será condenada a incredulidade culpável, que não teve em conta a graça oferecida por Deus. A atitude tomada para com o próximo revelará a aceitação ou a recusa da graça e do amor divino. No último dia, Jesus dirá: «Sempre que o fizestes a um dos meus irmãos mais pequeninos, a Mim o fizestes» (Mt 25, 40).",
+          "local": "Creio em jesus cristo, filho único de deus › «de onde há-de vir a julgar os vivos e os mortos»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "O israelita sem falsidade e a figueira de Natanael",
   "destaques": [
     {

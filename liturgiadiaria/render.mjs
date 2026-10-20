@@ -309,11 +309,30 @@ export function comentarioHtml(comentario, capitulo, autores, { referenciasDia, 
       </div>
       ${temCatena || linkCapitulo ? `<p class="lp-coment-mais">${temCatena ? '<button type="button" class="lp-coment-inteiro">Ler o comentário inteiro</button>' : ''}${temCatena && linkCapitulo ? ' <span aria-hidden="true">·</span> ' : ''}${linkCapitulo}</p>` : ''}
     </section>` : '';
-  const cic = comentario.catecismo?.length ? `
+  // Cada § vem com o versículo que ele cita e abre o parágrafo inteiro ali mesmo (arquivos antigos,
+  // sem `ref`/`texto`, ficam no formato de antes: número e frase com link).
+  const curta = (t, max = 220) => t.length <= max ? t : t.slice(0, t.lastIndexOf(' ', max)).replace(/[,;:]$/, '') + ' […]';
+  const cicItem = p => p.texto ? `
+      <details class="lp-cic-item">
+        <summary><span class="lp-cic-ref">${esc(p.ref)} · § ${p.numero}</span> ${esc(curta(p.frase))}</summary>
+        <div class="lp-cic-par">
+          ${p.local ? `<p class="lp-cic-local">${esc(p.local)}</p>` : ''}
+          <p>${esc(p.texto)}</p>
+          <a href="/#paragrafo-${p.numero}">Abrir o § ${p.numero} no Catecismo →</a>
+        </div>
+      </details>` : `
+      <p class="lp-cic-item"><a href="/#paragrafo-${p.numero}"><span class="lp-cic-num">§ ${p.numero}</span> ${esc(p.frase)}</a></p>`;
+  const grupos = [
+    { rotulo: comentario.outrasLeituras?.length ? 'Evangelho' : '', itens: (comentario.catecismo || []).slice(0, 4) },
+    ...(comentario.outrasLeituras || []).map(g => ({ rotulo: g.rotulo, itens: g.catecismo.slice(0, 2) })),
+  ].filter(g => g.itens.length);
+  const padresCic = (comentario.padres || []).filter(p => p.frase);
+  const cic = grupos.length || padresCic.length ? `
     <section class="lp-cic" aria-label="No Catecismo">
       <p class="lp-coment-rotulo">No Catecismo</p>
-      ${comentario.catecismo.slice(0, 6).map(p => `
-      <p class="lp-cic-item"><a href="/#paragrafo-${p.numero}"><span class="lp-cic-num">§ ${p.numero}</span> ${esc(p.frase)}</a></p>`).join('')}
+      ${grupos.map(g => `${g.rotulo ? `<p class="lp-cic-grupo">${esc(g.rotulo)}</p>` : ''}${g.itens.map(cicItem).join('')}`).join('')}
+      ${padresCic.length ? `<p class="lp-cic-grupo">Os Padres de hoje no Catecismo</p>${padresCic.map(p => `
+      <p class="lp-cic-item"><a href="/#paragrafo-${p.numero}"><span class="lp-cic-ref">${esc(autores?.[p.autor]?.nome || p.autor)} · § ${p.numero}</span> ${esc(curta(p.frase))}</a></p>`).join('')}` : ''}
     </section>` : '';
   if (!padres && !cic) return '';
   return `<div class="lp-comentario">${padres}${cic}</div>`;

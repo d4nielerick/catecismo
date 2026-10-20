@@ -49,8 +49,9 @@ node scripts/liga-evangelho.mjs 2026-09-24 +30
 ```
 
 Cruza a referência do Evangelho com a Catena (ponteiros para as lectiones) e com as notas do
-Catecismo (§§ que citam o versículo, com a frase exata da citação). Preserva `tema` e `destaques`
-já gravados. Rode sempre depois dos passos 1 e 2.
+Catecismo (§§ que citam o versículo, com a frase exata da citação, o parágrafo inteiro e onde ele
+fica), e faz o mesmo para a 1ª leitura, o salmo e a 2ª leitura (`outrasLeituras`). Preserva `tema`,
+`destaques` e `padres` já gravados. Rode sempre depois dos passos 1 e 2.
 
 ## 4. Traduzir a Catena (subagentes Sonnet, esforço baixo)
 
@@ -90,8 +91,13 @@ Para os dias em "sem tema/destaques", dispare **um subagente** (`model: "opus"`)
 > Jesus); evite itens de harmonia entre evangelistas (Agostinho, *De consensu*) e de crítica textual.
 > Escreva um tema de 4–12 palavras, sem ponto final, como o título da leitura patrística no Ofício
 > das Leituras: nomeia o assunto dos destaques, não interpreta (ex.: "O medo do pecador e a pergunta
-> de Herodes"). Grave `<caminho>/curadoria.json` = `[{ data, tema, destaques }]` e responda com uma
-> tabela dia · Evangelho · tema · autores dos destaques. Não grave nada em `data/`.
+> de Herodes"). Depois rode `node scripts/padres-no-catecismo.mjs <dia>` (lista, para cada Padre que
+> comenta o dia, os §§ do Catecismo cujas notas o citam) e escolha **no máximo 1–2** §§ que tratem do
+> MESMO assunto dos destaques (ex.: Agostinho sobre os pobres em espírito, § 2547, no dia das
+> bem-aventuranças). Se nenhum casa de verdade, deixe `padres` vazio: é o caso comum.
+> Grave `<caminho>/curadoria.json` = `[{ data, tema, destaques, padres: [{ autor, numero }] }]` e
+> responda com uma tabela dia · Evangelho · tema · autores dos destaques · Padres no Catecismo.
+> Não grave nada em `data/`.
 
 **Mostre a tabela ao Daniel e pergunte se aprova**; ele pode pedir troca. Só então:
 
@@ -99,7 +105,8 @@ Para os dias em "sem tema/destaques", dispare **um subagente** (`model: "opus"`)
 node scripts/grava-curadoria.mjs "$SCRATCH/curadoria.json"
 ```
 
-O script recusa ponteiro para item inexistente, fora da perícope do dia, ou sem tradução.
+O script recusa ponteiro para item inexistente, fora da perícope do dia, ou sem tradução, e § cujas
+notas não citam aquele Padre (a frase vem do próprio Catecismo).
 
 ## 6. Áudio (Gemini, grátis e devagar)
 

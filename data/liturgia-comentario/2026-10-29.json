@@ -20,7 +20,10 @@
         31
       ],
       "direto": false,
-      "frase": "Sem dúvida que as suas relações com os fariseus não foram unicamente polêmicas: são fariseus que O previnem do perigo que corre."
+      "ref": "Lc 13,31",
+      "frase": "Sem dúvida que as suas relações com os fariseus não foram unicamente polêmicas: são fariseus que O previnem do perigo que corre.",
+      "texto": "Muitas atitudes e palavras de Jesus foram, portanto, «sinal de contradição» para as autoridades religiosas de Jerusalém, a quem o Evangelho de São João muitas vezes chama simplesmente «os Judeus», mais ainda do que para o comum do Povo de Deus. Sem dúvida que as suas relações com os fariseus não foram unicamente polêmicas: são fariseus que O previnem do perigo que corre. Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus. Jesus confirma doutrinas partilhadas por esta elite religiosa do povo de Deus: a ressurreição dos mortos formas de piedade (esmola, jejum e oração) e o hábito de se dirigir a Deus como Pai, o caráter central do mandamento do amor de Deus e do próximo.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
     },
     {
       "numero": 585,
@@ -28,9 +31,45 @@
         35
       ],
       "direto": false,
-      "frase": "Há aqui o anúncio dum sinal dos últimos tempos, que vão iniciar-se com a sua própria Páscoa."
+      "ref": "Lc 13,35",
+      "frase": "Há aqui o anúncio dum sinal dos últimos tempos, que vão iniciar-se com a sua própria Páscoa.",
+      "texto": "No entanto, nas vésperas da sua paixão, Jesus anunciou a ruína deste esplêndido edifício, do qual não ficaria pedra sobre pedra. Há aqui o anúncio dum sinal dos últimos tempos, que vão iniciar-se com a sua própria Páscoa. Mas esta profecia pôde ser referida de modo deturpado por falsas testemunhas, quando do interrogatório a que Jesus foi sujeito em casa do sumo-sacerdote e ser-Lhe lançada em rosto, como injúria, quando agonizava, pregado na cruz.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ef 6,10-20",
+      "catecismo": [
+        {
+          "numero": 2636,
+          "comum": [
+            18,
+            19,
+            20
+          ],
+          "direto": false,
+          "ref": "Ef 6,18-20",
+          "frase": "O apóstolo Paulo fá-las participar deste modo no seu ministério do Evangelho mas ele próprio também intercede por elas.",
+          "texto": "As primeiras comunidades cristãs viveram intensamente esta forma de partilha. O apóstolo Paulo fá-las participar deste modo no seu ministério do Evangelho mas ele próprio também intercede por elas. A intercessão dos cristãos não conhece fronteiras: «[...] por todos os homens, [...] por todos os que exercem a autoridade» (1 Tm 2, 1), pelos perseguidores, pela salvação dos que rejeitam o Evangelho.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        },
+        {
+          "numero": 1174,
+          "comum": [
+            18
+          ],
+          "direto": false,
+          "ref": "Ef 6,18",
+          "frase": "Esta celebração, na fidelidade às recomendações apostólicas de «orar sem cessar» «constituiu-se de modo a consagrar, pelo louvor a Deus, todo o curso diurno e noturno do tempo».",
+          "texto": "O mistério de Cristo, a sua Encarnação e a sua Páscoa, que celebramos na Eucaristia, especialmente na assembleia dominical, penetra e transfigura o tempo de cada dia pela celebração da Liturgia das Horas, «o Ofício divino». Esta celebração, na fidelidade às recomendações apostólicas de «orar sem cessar» «constituiu-se de modo a consagrar, pelo louvor a Deus, todo o curso diurno e noturno do tempo». É «a oração pública da Igreja», na qual os fiéis (clérigos, religiosos e leigos) exercem o sacerdócio real dos batizados. Celebrada «segundo a forma aprovada» pela Igreja, a Liturgia das Horas «é verdadeiramente a voz da própria Esposa que fala com o Esposo; mais ainda, é a oração que Cristo, unido ao seu corpo, eleva ao Pai».",
+          "local": "A celebração sacramental do mistério pascal › Artigo 1: celebrar a liturgia da igreja"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "Herodes, a raposa, e a ave que reúne os filhotes",
   "destaques": [
     {

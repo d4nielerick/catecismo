@@ -13,6 +13,8 @@
  *   - `catecismo`: §§ cujas notas citam o mesmo livro/capítulo com versículo em comum, ordenados
  *     citação direta antes de "Cf.", depois por versículos em comum; `frase` é a frase do § em que a
  *     citação aparece (do nosso catecismo.json), não a abertura do parágrafo.
+ *   - `outrasLeituras`: o mesmo para a 1ª leitura, o salmo (numeração hebraica) e a 2ª leitura,
+ *     sem repetir os §§ do Evangelho; cada § leva `ref` (versículos citados), `texto` e `local`.
  *   - `tema` (uma linha em itálico, como o título da leitura patrística no Ofício das Leituras) e
  *     `destaques` (curadoria, ponteiros [{ lectio, i }]) são preservados de uma rodada anterior.
  * Nada aqui usa IA: tudo é cruzamento de referências.
@@ -22,6 +24,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extrairReferencias } from '../assets/js/biblia-refs.js';
 import { refDe, lectionesDoDia, arquivoDaCatena, diasDesde } from './lib-catena.mjs';
+import { fraseDaNota } from './lib-cic.mjs';
 
 const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DADOS = path.join(RAIZ, 'data');
@@ -44,23 +47,56 @@ for (const [par, ns] of Object.entries(notas)) {
   }
 }
 const paragrafos = new Map(ler(path.join(DADOS, 'catecismo.json')).paragrafos.map(p => [p.numero, p.texto]));
-/** A frase do § em que a nota (marcador "(N)") aparece — é o que o Catecismo faz com o versículo,
- *  não a abertura do parágrafo. Sai sem os marcadores de nota. */
-function fraseDaNota(texto, marcador) {
-  const t = texto.replace(/\s+/g, ' ').trim();
-  const pos = t.indexOf(`(${marcador})`);
-  if (pos < 0) return null;
-  const antes = t.slice(0, pos);
-  const ini = Math.max(antes.lastIndexOf('. '), antes.lastIndexOf('! '), antes.lastIndexOf('? '));
-  const depois = t.slice(pos);
-  const fimRel = depois.search(/[.!?](?=\s|$)/);
-  const fim = fimRel < 0 ? t.length : pos + fimRel + 1;
-  return t.slice(ini < 0 ? 0 : ini + 2, fim).replace(/\s*\(\d+\)/g, '').replace(/\s+([,.;:!?])/g, '$1').trim();
-}
-
 const referenciasDoDia = dia => dia.missas[0].leituras
   .filter(l => !l.alternativa && ['leitura', 'salmo', 'evangelho'].includes(l.tipo))
   .map(l => l.referencia).join(' | ');
+
+
+const semNotas = t => t.replace(/\s*\(\d+\)/g, '').replace(/\s+([,.;:!?])/g, '$1').replace(/\s+/g, ' ').trim();
+const localDe = p => [p.parte, p.secao, p.capitulo, p.artigo].filter(Boolean)
+  .map(x => x.charAt(0) + x.slice(1).toLowerCase()).slice(-2).join(' › ');
+const infoParagrafo = new Map(ler(path.join(DADOS, 'catecismo.json')).paragrafos.map(p => [p.numero, p]));
+
+/** "Lc 12,35-38" com os versículos em comum (faixas contínuas juntas). */
+function refCurta(abrev, cap, versos) {
+  const fx = [];
+  for (const v of versos) { const u = fx.at(-1); if (u && v === u[1] + 1) u[1] = v; else fx.push([v, v]); }
+  return `${abrev} ${cap},${fx.map(([a, b]) => a === b ? a : `${a}-${b}`).join('.')}`;
+}
+
+/** §§ cujas notas citam versículos de uma referência ({ abrev, cap, versos }). */
+function citacoes(alvo) {
+  const porParagrafo = new Map();
+  for (const { numero, marcador, direto, versos } of indice[alvo.abrev]?.[alvo.cap] ?? []) {
+    const comum = versos.filter(v => alvo.versos.includes(v));
+    if (!comum.length) continue;
+    const j = porParagrafo.get(numero) ?? { comum: new Set(), marcador, direto: false };
+    comum.forEach(v => j.comum.add(v));
+    if (direto && !j.direto) { j.direto = true; j.marcador = marcador; }
+    porParagrafo.set(numero, j);
+  }
+  return [...porParagrafo].map(([numero, j]) => {
+    const comum = [...j.comum].sort((a, b) => a - b);
+    const info = infoParagrafo.get(numero);
+    return {
+      numero, comum, direto: j.direto,
+      ref: refCurta(alvo.abrev, alvo.cap, comum),
+      frase: fraseDaNota(paragrafos.get(numero) || '', j.marcador),
+      texto: semNotas(info?.texto || ''),
+      local: info ? localDe(info) : '',
+    };
+  })
+    .filter(p => p.frase)
+    .sort((a, b) => (b.direto - a.direto) || (b.comum.length - a.comum.length) || (a.numero - b.numero));
+}
+
+/** Referência de uma leitura para o índice das notas. O salmo vem como "Sl 84(85),…": as notas do
+ *  Catecismo usam a numeração hebraica, a que está entre parênteses. */
+function refDaLeitura(l) {
+  const r = l.referencia.replace(/^Sl\s+\d+\((\d+)\)/, 'Sl $1').replace(/\s*\(R\..*$/, '');
+  const [x] = extrairReferencias(r);
+  return x && { abrev: x.abrev, cap: x.cap, versos: x.versos };
+}
 
 fs.mkdirSync(SAIDA, { recursive: true });
 for (const dt of dias) {
@@ -76,22 +112,19 @@ for (const dt of dias) {
   const catena = (fs.existsSync(arqCat) ? lectionesDoDia(ler(arqCat), alvo) : [])
     .map(l => ({ ev: alvo.ev, cap: +alvo.cap, lectio: l.lectio, versos: l.versos }));
 
-  // Catecismo: §§ cujas notas citam versículos do trecho
-  const porParagrafo = new Map();
-  for (const { numero, marcador, direto, versos } of indice[alvo.ev]?.[alvo.cap] ?? []) {
-    const comum = versos.filter(v => alvo.versos.includes(v));
-    if (!comum.length) continue;
-    const j = porParagrafo.get(numero) ?? { comum: new Set(), marcador, direto: false };
-    comum.forEach(v => j.comum.add(v));
-    if (direto && !j.direto) { j.direto = true; j.marcador = marcador; }
-    porParagrafo.set(numero, j);
-  }
-  const catecismo = [...porParagrafo].map(([numero, j]) => ({
-    numero, comum: [...j.comum].sort((a, b) => a - b), direto: j.direto,
-    frase: fraseDaNota(paragrafos.get(numero) || '', j.marcador),
-  }))
-    .filter(p => p.frase)
-    .sort((a, b) => (b.direto - a.direto) || (b.comum.length - a.comum.length) || (a.numero - b.numero));
+  // Catecismo: §§ cujas notas citam versículos do trecho (Evangelho) e das outras leituras
+  const catecismo = citacoes({ abrev: alvo.ev, cap: alvo.cap, versos: alvo.versos });
+  const ROTULO = { leitura: '1ª Leitura', salmo: 'Salmo' };
+  let nLeitura = 0;
+  const outrasLeituras = dia.missas[0].leituras
+    .filter(l => !l.alternativa && (l.tipo === 'leitura' || l.tipo === 'salmo'))
+    .map(l => {
+      const rotulo = l.tipo === 'leitura' ? (++nLeitura === 1 ? '1ª Leitura' : '2ª Leitura') : ROTULO.salmo;
+      const ref = refDaLeitura(l);
+      const vistos = new Set(catecismo.map(p => p.numero));
+      return { rotulo, referencia: l.referencia, catecismo: ref ? citacoes(ref).filter(p => !vistos.has(p.numero)).slice(0, 3) : [] };
+    })
+    .filter(x => x.catecismo.length);
 
   const arq = path.join(SAIDA, `${dt}.json`);
   const anterior = fs.existsSync(arq) ? ler(arq) : null;
@@ -101,9 +134,12 @@ for (const dt of dias) {
     leituras: referenciasDoDia(dia),
     catena,
     catecismo,
+    outrasLeituras,
+    // `padres` (curadoria, grava-curadoria.mjs): § do Catecismo que cita um Padre dos destaques
+    padres: anterior?.leituras === referenciasDoDia(dia) ? (anterior.padres ?? []) : [],
     tema: anterior?.leituras === referenciasDoDia(dia) ? (anterior.tema ?? '') : '',
     destaques: anterior?.leituras === referenciasDoDia(dia) ? (anterior.destaques ?? []) : [],
   };
   fs.writeFileSync(arq, JSON.stringify(saida, null, 2) + '\n');
-  console.log(`${dt} ${evangelho.referencia.padEnd(16)} catena: ${catena.map(c => `l.${c.lectio}`).join(' ') || '—'}   catecismo: ${catecismo.map(p => `§${p.numero}`).join(' ') || '—'}${catena.length ? '' : '   (sem capítulo da Catena baixado)'}`);
+  console.log(`${dt} ${evangelho.referencia.padEnd(16)} catena: ${catena.map(c => `l.${c.lectio}`).join(' ') || '—'}   catecismo: ${catecismo.map(p => `§${p.numero}`).join(' ') || '—'}   leituras: ${outrasLeituras.flatMap(x => x.catecismo.map(p => `§${p.numero}`)).join(' ') || '—'}${catena.length ? '' : '   (sem capítulo da Catena baixado)'}`);
 }

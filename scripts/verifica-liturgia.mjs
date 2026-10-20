@@ -10,6 +10,7 @@
  *    leituras que a fonte traz (ex.: "Ascensão do Senhor" ⇒ At 1,1-11; domingo comum ⇒ verde).
  */
 import fs from 'node:fs';
+import { PADRE_NA_NOTA } from './lib-cic.mjs';
 import path from 'node:path';
 import { buildDia, listarFonte, lerFonte, indiceDe, SAIDA, RE, cabecalho } from './build-liturgia.mjs';
 import { lerModelo, lerIndice, listarDias, lerDia, paginaDoDia, sitemapLiturgia } from './build-paginas-liturgia.mjs';
@@ -206,6 +207,7 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
   const COMENT = path.join(SAIDA, '..', 'liturgia-comentario');
   const CATENA = path.join(SAIDA, '..', 'catena');
   const numeros = new Set(JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'catecismo.json'), 'utf8')).paragrafos.map(p => p.numero));
+  const notasCic = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'notas.json'), 'utf8'));
   const capitulos = new Map();
   const cap = (ev, c) => {
     const k = `${ev}/${String(c).padStart(2, '0')}`;
@@ -218,7 +220,7 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
     if (!fs.existsSync(destino)) { erros.push(`comentário ${c.data}: dia sem leituras`); continue; }
     const dia = JSON.parse(fs.readFileSync(destino, 'utf8'));
     if (c.leituras !== referenciasDoDia(dia)) erros.push(`comentário ${c.data}: as leituras do dia mudaram (rode node scripts/liga-evangelho.mjs ${c.data})`);
-    for (const p of c.catecismo || []) {
+    for (const p of [...(c.catecismo || []), ...(c.outrasLeituras || []).flatMap(g => g.catecismo), ...(c.padres || [])]) {
       if (!numeros.has(p.numero)) erros.push(`comentário ${c.data}: § ${p.numero} não existe`);
       if (!p.frase?.trim()) erros.push(`comentário ${c.data}: § ${p.numero} sem frase`);
     }
@@ -228,6 +230,9 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
       const item = ref && cap(ref.ev, ref.cap)?.find(l => l.lectio === d.lectio)?.itens?.[d.i];
       if (!lectiones.has(d.lectio) || !item) erros.push(`comentário ${c.data}: destaque l.${d.lectio} #${d.i} não existe na perícope`);
       else if (!item.pt) erros.push(`comentário ${c.data}: destaque l.${d.lectio} #${d.i} sem tradução`);
+    }
+    for (const p of c.padres || []) {
+      if (!PADRE_NA_NOTA[p.autor] || !Object.values(notasCic[p.numero] || {}).some(n => PADRE_NA_NOTA[p.autor].test(n))) erros.push(`comentário ${c.data}: as notas do § ${p.numero} não citam ${p.autor}`);
     }
     if (c.destaques?.length && !c.tema?.trim()) erros.push(`comentário ${c.data}: destaques sem tema`);
   }

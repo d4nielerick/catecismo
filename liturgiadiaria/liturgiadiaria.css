@@ -1614,6 +1614,17 @@ html:has(.lp-ouvir[open]) { overflow: hidden; }
 .lp-cic-item a { color: var(--lp-texto); text-decoration: none; }
 .lp-cic-item a:hover { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(203, 46, 46, 0.5); }
 .lp-cic-num { font-family: var(--font-sans); font-weight: 600; font-size: 0.78rem; color: var(--lp-vermelho); margin-right: 0.25rem; }
+.lp-cic-grupo { margin: 1rem 0 0.4rem; font-family: var(--font-titulo); font-style: italic; font-size: 0.98rem; color: var(--lp-suave); }
+.lp-cic-grupo:first-of-type { margin-top: 0.2rem; }
+.lp-cic-ref { display: block; margin-bottom: 0.1rem; font-family: var(--font-sans); font-weight: 600; font-size: 0.7rem; letter-spacing: 0.06em; color: var(--lp-vermelho); }
+details.lp-cic-item summary { cursor: pointer; list-style: none; color: var(--lp-texto); }
+details.lp-cic-item summary::-webkit-details-marker { display: none; }
+details.lp-cic-item summary::after { content: ' ＋'; font-size: 0.75rem; color: var(--lp-vermelho); }
+details.lp-cic-item[open] summary::after { content: ' －'; }
+.lp-cic-par { margin: 0.5rem 0 0.9rem; padding-left: 0.9rem; border-left: 2px solid rgba(203, 46, 46, 0.35); font-size: 14px; color: var(--lp-texto); }
+.lp-cic-par p { margin: 0 0 0.45rem; }
+.lp-cic-local { font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--lp-suave); }
+.lp-cic-par a { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--lp-vermelho); text-decoration: none; }
 /* modal com a perícope inteira */
 .lp-lectio-item { margin: 0 0 1.3rem; font-size: 15px; line-height: 1.62; }
 .lp-lectio-item .lp-padre { display: block; margin-bottom: 0.2rem; font-family: var(--font-sans); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--lp-vermelho); font-style: normal; }

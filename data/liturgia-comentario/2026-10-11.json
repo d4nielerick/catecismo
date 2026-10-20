@@ -20,7 +20,10 @@
         1
       ],
       "direto": false,
-      "frase": "Por meio delas, convida para o banquete do Reino, mas exige também uma opção radical: para adquirir o Reino é preciso dar tudo."
+      "ref": "Mt 22,1",
+      "frase": "Por meio delas, convida para o banquete do Reino, mas exige também uma opção radical: para adquirir o Reino é preciso dar tudo.",
+      "texto": "Jesus chama para entrar no Reino, por meio de parábolas, traço característico do seu ensino. Por meio delas, convida para o banquete do Reino, mas exige também uma opção radical: para adquirir o Reino é preciso dar tudo. As palavras não bastam, exigem-se atos. As parábolas são, para o homem, uma espécie de espelho: como é que ele recebe a Palavra? Como chão duro, ou como terra boa? Que faz ele dos talentos recebidos? Jesus e a presença do Reino neste mundo estão secretamente no coração das parábolas. É preciso entrar no Reino, quer dizer, tornar-se discípulo de Cristo, para «conhecer os mistérios do Reino dos céus» (Mt 13, 11). Para os que ficam «fora» (Mc 4, 11), tudo permanece enigmático.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo foi concebido pelo poder do espírito santo e nasceu da virgem maria»"
     },
     {
       "numero": 796,
@@ -28,9 +31,43 @@
         1
       ],
       "direto": false,
-      "frase": "O próprio Senhor Se designou como «o Esposo» (Mc 2, 19)."
+      "ref": "Mt 22,1",
+      "frase": "O próprio Senhor Se designou como «o Esposo» (Mc 2, 19).",
+      "texto": "A unidade de Cristo e da Igreja, Cabeça e membros do Corpo, implica também a distinção entre ambos, numa relação pessoal. Este aspecto é, muitas vezes, expresso pela imagem do esposo e da esposa. O tema de Cristo Esposo da Igreja foi preparado pelos profetas e anunciado por João Batista. O próprio Senhor Se designou como «o Esposo» (Mc 2, 19). E o Apóstolo apresenta a Igreja e cada fiel, membro do seu Corpo, como uma esposa «desposada» com Cristo Senhor, para formar com Ele um só Espírito. Ela é a Esposa imaculada do Cordeiro imaculado que Cristo amou, pela qual Se entregou «para a santificar» (Ef 5, 26), que associou a Si por uma aliança eterna, e à qual não cessa de prestar cuidados como ao Seu próprio Corpo. «Eis o Cristo total, Cabeça e Corpo, um só, formado de muitos [...]. Quer seja a Cabeça que fale, quer sejam os membros, é Cristo que fala: fala desempenhando o papel de Cabeça (ex persona capitis), ou, então, desempenhando o papel do Corpo (ex persona corporis). Conforme ao que está escrito: «Serão os dois uma só carne. É esse um grande mistério; digo-o em relação a Cristo e à Igreja» (Ef 5, 31-32). E o próprio Senhor diz no Evangelho: «Já não são dois, mas uma só carne» (Mt 19, 6). Como vedes, temos, de algum modo, duas pessoas diferentes; no entanto, tornam-se uma só na união esponsal [...] «Diz-se \"Esposo\" enquanto Cabeça e \"esposa\" enquanto Corpo».",
+      "local": "Creio no espírito santo › «creio na santa igreja católica»"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "2ª Leitura",
+      "referencia": "Fl 4,12-14.19-20",
+      "catecismo": [
+        {
+          "numero": 308,
+          "comum": [
+            13
+          ],
+          "direto": false,
+          "ref": "Fl 4,13",
+          "frase": "Muito menos pode atingir o seu fim último, sem a ajuda da graça.",
+          "texto": "Esta é uma verdade inseparável da fé em Deus Criador: Deus age em toda a ação das suas criaturas. É Ele a causa-primeira, que opera nas e pelas causas-segundas: «É Deus que produz em nós o querer e o operar, segundo o seu beneplácito» (Fl 2, 13). Longe de diminuir a dignidade da criatura, esta verdade realça-a. Tirada «do nada» pelo poder, sabedoria e bondade de Deus, a criatura separada da sua origem, nada pode, porque «a criatura sem o Criador esvai-se». Muito menos pode atingir o seu fim último, sem a ajuda da graça.",
+          "local": "Creio em deus pai › «creio em deus pai todo-poderosocriador do céu e da terra»"
+        },
+        {
+          "numero": 1460,
+          "comum": [
+            13
+          ],
+          "direto": false,
+          "ref": "Fl 4,13",
+          "frase": "Tais penitências fazem que nos tornemos co-herdeiros de Cristo Ressuscitado, «uma vez que também sofremos com Ele» (Rm 8, 17): «Mas esta satisfação, que realizamos pelos nossos pecados, não é possível senão por Jesus Cristo: nós que, por nós próprios, nada podemos, com a ajuda \"d'Aquele que nos conforta, podemos tudo\".",
+          "texto": "A penitência que o confessor impõe deve ter em conta a situação pessoal do penitente e procurar o seu bem espiritual. Deve corresponder, quanto possível, à gravidade e natureza dos pecados cometidos. Pode consistir na oração, num donativo, nas obras de misericórdia, no serviço do próximo, em privações voluntárias, sacrifícios e, sobretudo, na aceitação paciente da cruz que temos de levar. Tais penitências ajudam-nos a configurar-nos com Cristo, que, por Si só, expiou os nossos pecados uma vez por todas. Tais penitências fazem que nos tornemos co-herdeiros de Cristo Ressuscitado, «uma vez que também sofremos com Ele» (Rm 8, 17): «Mas esta satisfação, que realizamos pelos nossos pecados, não é possível senão por Jesus Cristo: nós que, por nós próprios, nada podemos, com a ajuda \"d'Aquele que nos conforta, podemos tudo\". Assim, o homem não tem nada de que se gloriar. Toda a nossa «glória» está em Cristo [...] em quem nós satisfazemos, \"produzindo dignos frutos de penitência\", os quais vão haurir n'Ele toda a sua força, por Ele são oferecidos ao Pai, e graças a Ele são aceitos pelo Pai».",
+          "local": "Os sacramentos de cura › Artigo 4: o sacramento da penitência e da reconciliação"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "As núpcias do Filho do Rei e a veste nupcial",
   "destaques": [
     {

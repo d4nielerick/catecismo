@@ -29,7 +29,10 @@
         26
       ],
       "direto": false,
-      "frase": "A união com Ele prevalece sobre todas as outras, quer se trate de laços familiares, quer sociais."
+      "ref": "Lc 14,26",
+      "frase": "A união com Ele prevalece sobre todas as outras, quer se trate de laços familiares, quer sociais.",
+      "texto": "Cristo é o centro de toda a vida cristã. A união com Ele prevalece sobre todas as outras, quer se trate de laços familiares, quer sociais. Desde o princípio da Igreja, houve homens e mulheres que renunciaram ao grande bem do matrimônio, para seguirem o Cordeiro aonde quer que Ele vá, para cuidarem das coisas do Senhor, para procurarem agradar-Lhe para saírem ao encontro do Esposo que vem. O próprio Cristo convidou alguns a seguirem-n'O neste modo de vida, de que Ele é o modelo: «Há eunucos que nasceram assim do seio materno; há os que foram feitos eunucos pelos homens; e há os que a si mesmos se fizeram eunucos por amor do Reino dos céus. Quem puder entender, entenda!» (Mt 19, 12).",
+      "local": "Os sacramentos ao serviço da comunhão › Artigo 7: o sacramento do matrimônio"
     },
     {
       "numero": 2544,
@@ -37,9 +40,46 @@
         33
       ],
       "direto": false,
-      "frase": "Jesus impõe aos seus discípulos que O prefiram a tudo e a todos e propõe-lhes que renunciem a todos os seus bens por causa d'Ele e do Evangelho."
+      "ref": "Lc 14,33",
+      "frase": "Jesus impõe aos seus discípulos que O prefiram a tudo e a todos e propõe-lhes que renunciem a todos os seus bens por causa d'Ele e do Evangelho.",
+      "texto": "Jesus impõe aos seus discípulos que O prefiram a tudo e a todos e propõe-lhes que renunciem a todos os seus bens por causa d'Ele e do Evangelho. Pouco antes da sua paixão, deu-lhes o exemplo da pobre viúva de Jerusalém que, da sua penúria, deu tudo o que tinha para viver. O preceito do desapego das riquezas é obrigatório para entrar no Reino dos céus.",
+      "local": "«amarás o teu próximo como a ti mesmo» › Artigo 10: o décimo mandamento"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Fl 2,12-18",
+      "catecismo": [
+        {
+          "numero": 1070,
+          "comum": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "direto": false,
+          "ref": "Fl 2,14-17",
+          "frase": "No Novo Testamento, a palavra «liturgia» é empregada para designar, não somente a celebração do culto divino mas também o anúncio do Evangelho e a caridade em ato.",
+          "texto": "No Novo Testamento, a palavra «liturgia» é empregada para designar, não somente a celebração do culto divino mas também o anúncio do Evangelho e a caridade em ato. Em todas estas situações, trata-se do serviço de Deus e dos homens. Na celebração litúrgica, a Igreja é serva, à imagem do seu Senhor, o único « Liturgo», participando no seu sacerdócio (culto) profético (anúncio) e real (serviço da caridade): «Com razão se considera a liturgia como o exercício da função sacerdotal de Jesus Cristo. Nela, mediante sinais sensíveis e no modo próprio de cada qual, significa-se e realiza-se a santificação dos homens e é exercido o culto público integral pelo corpo Místico de Jesus Cristo, isto é, pela cabeça e pelos membros. Portanto, qualquer celebração litúrgica, enquanto obra de Cristo Sacerdote e do seu corpo que é a Igreja, é ação sagrada por excelência e nenhuma outra ação da Igreja a iguala em eficácia com o mesmo título e no mesmo grau».",
+          "local": "A celebração do mistério cristão"
+        },
+        {
+          "numero": 1243,
+          "comum": [
+            15
+          ],
+          "direto": false,
+          "ref": "Fl 2,15",
+          "frase": "Em Cristo, os batizados são «a luz do mundo» (Mt 5, 14).",
+          "texto": "A veste branca simboliza que o batizado «se revestiu de Cristo»: ressuscitou com Cristo. A vela, acesa no círio pascal, significa que Cristo iluminou o neófito. Em Cristo, os batizados são «a luz do mundo» (Mt 5, 14). O recém-batizado é agora filho de Deus no seu Filho Único e pode dizer a oração dos filhos de Deus: O Pai-Nosso.",
+          "local": "Os sacramentos da iniciação cristã › Artigo 1: o sacramento do baptismo"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "Os pais, a cruz e a renúncia a todos os bens",
   "destaques": [
     {

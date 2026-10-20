@@ -30,7 +30,10 @@
         43
       ],
       "direto": false,
-      "frase": "Ela foi plantada pelo celeste Agricultor como uma vinha eleita."
+      "ref": "Mt 21,33-43",
+      "frase": "Ela foi plantada pelo celeste Agricultor como uma vinha eleita.",
+      "texto": "«A Igreja é a agricultura ou o campo de Deus. Nesse campo cresce a oliveira antiga, de que os patriarcas foram a raiz santa e na qual se realizou e realizará a reconciliação de judeus e gentios. Ela foi plantada pelo celeste Agricultor como uma vinha eleita. A verdadeira Videira é Cristo: é Ele que dá vida e fecundidade aos sarmentos, isto é, a nós que, pela Igreja, permanecemos n'Ele, e sem o Qual nada podemos fazer».",
+      "local": "Creio no espírito santo › «creio na santa igreja católica»"
     },
     {
       "numero": 443,
@@ -42,9 +45,33 @@
         38
       ],
       "direto": false,
-      "frase": "Já muito antes, Ele Se designara como «o Filho» que conhece o Pai, diferente dos «servos» que Deus anteriormente enviara ao seu povo, superior aos próprios anjos."
+      "ref": "Mt 21,34-38",
+      "frase": "Já muito antes, Ele Se designara como «o Filho» que conhece o Pai, diferente dos «servos» que Deus anteriormente enviara ao seu povo, superior aos próprios anjos.",
+      "texto": "Se Pedro pôde reconhecer o caráter transcendente da filiação divina de Jesus-Messias, foi porque Este lha deixou perceber nitidamente. Diante do Sinédrio, à pergunta dos seus acusadores: «Então, tu és o Filho de Deus?» Jesus respondeu: «É como dizeis, sou» (Lc 22, 70). Já muito antes, Ele Se designara como «o Filho» que conhece o Pai, diferente dos «servos» que Deus anteriormente enviara ao seu povo, superior aos próprios anjos. Ele distinguiu a sua filiação da dos Seus discípulos, nunca dizendo «Pai nosso», a não ser para lhes ordenar: «vós, quando rezardes, dizei assim: Pai nosso» (Mt 6,9); e sublinhou esta distinção: «o meu Pai e vosso Pai» (Jo 20, 17).",
+      "local": "Creio em jesus cristo, filho único de deus › «e em jesus cristo, seu único filho, nosso senhor»"
     }
   ],
+  "outrasLeituras": [
+    {
+      "rotulo": "2ª Leitura",
+      "referencia": "Fl 4,6-9",
+      "catecismo": [
+        {
+          "numero": 2633,
+          "comum": [
+            6,
+            7
+          ],
+          "direto": false,
+          "ref": "Fl 4,6-7",
+          "frase": "É com esta certeza que Tiago e Paulo nos exortam a orar em todas as ocasiões.",
+          "texto": "Quando se participa assim no amor salvífico de Deus, compreende-se que qualquer necessidade pode tornar-se objeto de pedido. Cristo, que tudo assumiu a fim de tudo resgatar, é glorificado pelos pedidos que dirigimos ao Pai em seu nome. É com esta certeza que Tiago e Paulo nos exortam a orar em todas as ocasiões.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "A vinha, o filho morto e o Reino dado a outros",
   "destaques": [
     {

@@ -23,6 +23,64 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Gl 5,18-25",
+      "catecismo": [
+        {
+          "numero": 2744,
+          "comum": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "direto": false,
+          "ref": "Gl 5,18-25",
+          "frase": "A demonstração do contrário não é menos convincente: se não nos deixarmos conduzir pelo Espírito Santo, recairemos na escravidão do pecado.",
+          "texto": "Orar é uma necessidade vital. A demonstração do contrário não é menos convincente: se não nos deixarmos conduzir pelo Espírito Santo, recairemos na escravidão do pecado. Ora, como pode o Espírito Santo ser a «nossa vida» se o nosso coração estiver longe d'Ele? «Nada iguala o valor da oração; ela torna possível o impossível, fácil o difícil. [...] É impossível [...] que o homem que ora caia no pecado». «Quem reza salva-se, de certeza; quem não reza condena-se, de certeza»».",
+          "local": "A oração na vida cristã › A vida de oração"
+        },
+        {
+          "numero": 2819,
+          "comum": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "direto": false,
+          "ref": "Gl 5,18-25",
+          "frase": "Trava-se desde então um combate decisivo entre «a carne» e o Espírito: «Só um coração puro pode dizer com confiança: \"Venha a nós o vosso Reino\".",
+          "texto": "«O Reino de Deus [...] é justiça, paz e alegria no Espírito Santo» (Rm 14, 17). Os últimos tempos em que nos encontramos são os da efusão do Espírito Santo. Trava-se desde então um combate decisivo entre «a carne» e o Espírito: «Só um coração puro pode dizer com confiança: \"Venha a nós o vosso Reino\". É preciso ter passado pela escola de Paulo para dizer: \"Que o pecado deixe de reinar no vosso corpo mortal\" (Rm 6, 12). Quem se conserva puro nos seus atos, pensamentos e palavras é que pode dizer a Deus: \"Venha a nós o vosso Reino!\"».",
+          "local": "A oração cristã › A oração do senhor: «pai nosso»"
+        },
+        {
+          "numero": 1470,
+          "comum": [
+            19,
+            20,
+            21
+          ],
+          "direto": false,
+          "ref": "Gl 5,19-21",
+          "frase": ".",
+          "texto": "Neste sacramento, o pecador, remetendo-se ao juízo misericordioso de Deus, de certo modo antecipa o julgamento a que será submetido no fim desta vida terrena. É aqui e agora, nesta vida, que nos é oferecida a opção entre a vida e a morte. Só pelo caminho da conversão é que podemos entrar no Reino de onde o pecado grave nos exclui?. Convertendo-se a Cristo pela penitência e pela fé, o pecador passa da morte à vida «e não é sujeito a julgamento» (Jo 5, 24).",
+          "local": "Os sacramentos de cura › Artigo 4: o sacramento da penitência e da reconciliação"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "O juízo, o amor de Deus e os fardos dos legistas",
   "destaques": [
     {

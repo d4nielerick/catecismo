@@ -23,6 +23,57 @@
     }
   ],
   "catecismo": [],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ef 4,7-16",
+      "catecismo": [
+        {
+          "numero": 794,
+          "comum": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "direto": false,
+          "ref": "Ef 4,11-16",
+          "frase": "Provê ao nosso crescimento: a fim de crescermos em tudo para Aquele que é a Cabeça, Cristo distribui no seu Corpo, a Igreja, os dons e os serviços pelos quais mutuamente nos ajudamos no caminho da salvação.",
+          "texto": "Provê ao nosso crescimento: a fim de crescermos em tudo para Aquele que é a Cabeça, Cristo distribui no seu Corpo, a Igreja, os dons e os serviços pelos quais mutuamente nos ajudamos no caminho da salvação.",
+          "local": "Creio no espírito santo › «creio na santa igreja católica»"
+        },
+        {
+          "numero": 661,
+          "comum": [
+            8,
+            9,
+            10
+          ],
+          "direto": false,
+          "ref": "Ef 4,8-10",
+          "frase": "«Ninguém subiu ao céu senão Aquele que desceu do céu: o Filho do Homem» (Jo 3, 13).",
+          "texto": "Esta última etapa continua intimamente unida à primeira, isto é, à descida do céu realizada na Encarnação. Só Aquele que «saiu do Pai» pode «voltar para o Pai»: Cristo. «Ninguém subiu ao céu senão Aquele que desceu do céu: o Filho do Homem» (Jo 3, 13). Abandonada às suas forças naturais, a humanidade não tem acesso à «Casa do Pai», à vida e à felicidade de Deus. Só Cristo Ode abrir ao homem este acesso: «subindo aos céus, como nossa cabeça e primogênito, deu-nos a esperança de irmos um dia ao seu encontro, como membros do seu corpo».",
+          "local": "Creio em jesus cristo, filho único de deus › «jesus subiu aos céus e está sentado à direita de deus, pai todo-poderoso»"
+        },
+        {
+          "numero": 669,
+          "comum": [
+            11,
+            12,
+            13
+          ],
+          "direto": false,
+          "ref": "Ef 4,11-13",
+          "frase": "A redenção é a fonte da autoridade que Cristo, em virtude do Espírito Santo, exerce sobre a Igreja.",
+          "texto": "Como Senhor, Cristo é também a cabeça da Igreja, que é o seu corpo. Elevado ao céu e glorificado, tendo assim cumprido plenamente a sua missão, continua na terra por meio da Igreja. A redenção é a fonte da autoridade que Cristo, em virtude do Espírito Santo, exerce sobre a Igreja. «O Reino de Cristo já está misteriosamente presente na Igreja», «gérmen e princípio deste mesmo Reino na Terra».",
+          "local": "Creio em jesus cristo, filho único de deus › «de onde há-de vir a julgar os vivos e os mortos»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
   "tema": "A penitência e a figueira estéril",
   "destaques": [
     {
