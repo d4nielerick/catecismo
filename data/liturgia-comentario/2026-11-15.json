@@ -2,7 +2,17 @@
   "data": "2026-11-15",
   "evangelho": "Mt 25,14-30",
   "leituras": "Pr 31,10-13.19-20.30-31 | Sl 127(128),1-2.3.4-5 (R. 1a) | 1Ts 5,1-6 | Mt 25,14-30",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 25,
+      "lectio": 2,
+      "versos": [
+        14,
+        30
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 546,
@@ -102,6 +112,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "Os talentos confiados e a alegria do servo fiel",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 1
+    },
+    {
+      "lectio": 2,
+      "i": 31
+    },
+    {
+      "lectio": 2,
+      "i": 46
+    }
+  ]
 }

@@ -2,7 +2,17 @@
   "data": "2026-11-08",
   "evangelho": "Mt 25,1-13",
   "leituras": "Sb 6,12-16 | Sl 62(63),2.3-4.5-6.7-8 (R. 2b) | 1Ts 4,13-18 | Mt 25,1-13",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 25,
+      "lectio": 1,
+      "versos": [
+        1,
+        13
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 672,
@@ -94,6 +104,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "As lâmpadas, o óleo das boas obras e a hora que ninguém sabe",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 9
+    },
+    {
+      "lectio": 1,
+      "i": 18
+    },
+    {
+      "lectio": 1,
+      "i": 54
+    }
+  ]
 }
