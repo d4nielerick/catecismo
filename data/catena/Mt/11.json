@@ -1,0 +1,1868 @@
+[
+  {
+    "lectio": 1,
+    "versos": [
+      1,
+      1
+    ],
+    "itens": [
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Postquam discipulos suos dominus ad praedicandum mittens, praemissis verbis eos instruxit, ipse etiam quod docuerat verbis, factis implevit, offerens primam praedicationem Iudaeis; et hoc est quod dicitur et factum est cum consummasset Iesus. Dicit autem transiit inde",
+        "pt": "Depois que o Senhor, enviando seus discípulos a pregar, os instruiu com palavras prévias, ele próprio cumpriu também com obras o que havia ensinado com palavras, oferecendo a primeira pregação aos judeus; e é isto o que se diz: \"E aconteceu que, quando Jesus terminou\". Diz ainda: \"partiu dali\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Quia enim eos misit, subtraxit seipsum dans locum eis et tempus facere quae iniunxerat: eo enim praesente et curante, nullus ad discipulos vellet accedere",
+        "pt": "Pois, ao enviá-los, retirou-se a si mesmo, dando-lhes lugar e tempo para fazerem o que lhes havia ordenado; com efeito, estando ele presente e curando, ninguém quereria aproximar-se dos discípulos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Pulchre autem de speciali doctrina, qua scilicet apostolos instruxerat, ad generalem transit, in civitatibus praedicando; quia in hoc de caelis ad terras descendit, ut omnes illuminaret: in quo facto monentur etiam sancti praedicatores ut omnibus prodesse studeant",
+        "pt": "Passa, de modo muito apropriado, da doutrina especial, com a qual instruíra os apóstolos, à geral, pregando nas cidades; porque nisto desceu dos céus à terra, para iluminar a todos; com esse fato, são também advertidos os santos pregadores a procurarem ser úteis a todos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 2,
+    "versos": [
+      2,
+      6
+    ],
+    "itens": [
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Posuerat supra Evangelista quomodo per miracula et doctrinam Christi tam discipuli quam turbae instruebantur; nunc ostendit quomodo haec instructio usque ad discipulos Ioannis perveniret, qui ad Christum aemulationem habere videbantur: unde dicit Ioannes autem cum audisset in vinculis opera Christi, mittens duos ex discipulis suis, ait illi: tu es qui venturus es, an alium expectamus?",
+        "pt": "O Evangelista havia exposto acima como, pelos milagres e pela doutrina de Cristo, tanto os discípulos quanto as multidões eram instruídos; agora mostra como essa instrução chegou até os discípulos de João, que pareciam ter emulação para com Cristo; por isso diz: \"João, porém, ao ouvir no cárcere as obras de Cristo, enviando dois de seus discípulos, disse-lhe: És tu aquele que há de vir, ou esperamos outro?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Quaerendum autem nobis est: Ioannes propheta, et plusquam propheta, qui venientem ad Baptismum dominum ostendit, dicens: ecce agnus Dei, ecce qui tollit peccata mundi, cur in carcere positus mittens discipulos requirit tu es qui venturus es, an alium expectamus? Tamquam si ignoraret quem ostenderat; et an ipse sit nesciat quem ipse prophetando, baptizando, ostendendo, ipsum esse clamaverat",
+        "pt": "Devemos perguntar: João, profeta e mais que profeta, que mostrou o Senhor quando vinha ao Batismo, dizendo: \"Eis o Cordeiro de Deus, eis aquele que tira os pecados do mundo\", por que, posto no cárcere, enviando discípulos, pergunta: \"És tu aquele que há de vir, ou esperamos outro?\" Como se ignorasse aquele que havia mostrado; e não soubesse se é ele aquele que ele mesmo, profetizando, batizando, mostrando, proclamara que era ele.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "super Lucam",
+        "latim": "Nonnulli autem hoc sic intelligunt. Magnum quidem ita prophetam esse Ioannem, ut Christum agnosceret, annuntiaret remissionem peccatorum futuram; sed tamen, tamquam pium vatem, quem venturum crediderat, non credidisse moriturum. Non igitur fide, sed pietate dubitavit. Dubitavit etiam Petrus dicens: propitius tibi esto, domine: non fiat hoc",
+        "pt": "Alguns, porém, entendem isto assim: que João era um profeta tão grande que reconhecia Cristo e anunciava que viria a remissão dos pecados; mas que, como piedoso vidente, não acreditava que aquele que cria que haveria de vir fosse morrer. Portanto, duvidou não por fé, mas por piedade. Também Pedro duvidou, dizendo: \"Tem compaixão de ti, Senhor: isso não te acontecerá\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Sed non utique hoc habet rationem. Ioannes enim neque hoc ignorabat: sed hoc primum testatus est dicens: ecce agnus Dei, ecce qui tollit peccata mundi. Agnum enim vocans, crucem divulgat: nec aliter quam per crucem peccatum abstulit mundi. Qualiter autem maior propheta est hic si neque quae prophetarum sunt noscit? Etenim Isaias dicit: sicut ovis ad occisionem ductus est",
+        "pt": "Mas isto, de modo algum, tem fundamento. Pois João não ignorava também isto: antes, testemunhou-o em primeiro lugar, dizendo: \"Eis o Cordeiro de Deus, eis aquele que tira os pecados do mundo\". Ao chamá-lo Cordeiro, divulga a cruz; e não foi senão pela cruz que ele tirou o pecado do mundo. Como, aliás, seria ele o maior profeta, se nem sequer conhece o que pertence aos profetas? Pois Isaías diz: \"Como ovelha foi levado ao matadouro\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Sed aliter haec quaestio solvitur, si gestae rei tempus pensatur. Ad Iordanis enim fluenta positus, quia ipse redemptor mundi esset, asseruit; missus vero in carcerem, an ipse veniat, requirit: non quia ipsum esse mundi redemptorem dubitat; sed quaerit, ut sciat si is qui per se in mundum venerat, per se etiam ad Inferni claustra descendat",
+        "pt": "Mas essa questão se resolve de outro modo, se se pondera o tempo do fato ocorrido. Pois, posto junto às águas do Jordão, afirmou que ele era o redentor do mundo; enviado, porém, ao cárcere, pergunta se ele vem: não porque duvide que ele seja o redentor do mundo, mas pergunta para saber se aquele que por si mesmo viera ao mundo desceria também por si mesmo às prisões do Inferno.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Unde non ait: tu es qui venisti? Sed tu es qui venturus es? Et est sensus: manda mihi, quia ad Inferna descensurus sum, utrum te etiam Inferis debeam nuntiare, an alium ad haec sacramenta missurus es?",
+        "pt": "Por isso não diz: \"És tu aquele que vieste?\", mas: \"És tu aquele que há de vir?\" E o sentido é: Manda-me dizer, pois estou para descer aos Infernos, se devo anunciar-te também aos que estão nos Infernos, ou se enviarás outro a esses mistérios.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Sed qualiter et hoc habet rationem? Cuius enim gratia non dixit: tu es qui venturus es in Infernum? Sed simpliciter: qui venturus es? Quamvis et derisibilius videatur quod propter hoc ei dixerit, ut et illuc abiens praedicaret: praesens enim vita, gratiae tempus est; post obitum autem iudicium est et poena: quare in nullo opus erat praecursore illic. Sed aliter. Si infideles post mortem credentes essent salvandi, nullus peribit aliquando: omnes enim poenitebunt tunc, et adorabunt. Omne enim genu flectetur, caelestium, terrestrium, et Infernorum",
+        "pt": "Mas como também isto tem fundamento? Por que motivo, com efeito, não disse: \"És tu aquele que há de vir ao Inferno?\", mas simplesmente: \"Aquele que há de vir?\" Embora pareça até ridículo que lhe tenha dito isso para que, indo também ali, pregasse: pois a vida presente é o tempo da graça; depois da morte, porém, há o juízo e a pena; por isso, ali não havia necessidade alguma de precursor. Mas, de outro modo: se os infiéis houvessem de ser salvos crendo depois da morte, ninguém jamais pereceria; pois todos então se arrependerão e adorarão. \"Pois todo joelho se dobrará, dos celestes, dos terrestres e dos Infernos\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Considerandum autem est, quod non ideo Hieronymus et Gregorius dixerunt, quod Ioannes adventum Christi in Infernum praenuntiaturus esset, quia eius praedicatione aliqui non credentes converterentur ad fidem; sed ut iustis in expectatione Christi manentibus ex vicino adventu consolationem afferret",
+        "pt": "Deve-se considerar que Jerônimo e Gregório não disseram que João haveria de anunciar de antemão a vinda de Cristo ao Inferno por que, com a sua pregação, alguns que não criam se convertessem à fé; mas para levar, aos justos que permaneciam na expectativa de Cristo, a consolação de uma vinda próxima.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Certum est tamen quod qui venturum ut praecursor nuntiavit, consistentem ut propheta agnovit, adeuntem ut confessor veneratus est, eius abundanti scientiae error non obrepsit. Nec sane credi potest, spiritus sancti gratiam in carcere posito defuisse, cum apostolis virtutis suae lumen esset in carcere positis ministraturus",
+        "pt": "É certo, contudo, que aquele que anunciou como futuro, como precursor, que reconheceu como presente, como profeta, e que venerou como quem se aproximava, como confessor, não foi surpreendido pelo erro em sua abundante ciência. E não se pode, de fato, crer que a graça do Espírito Santo tenha faltado a quem estava posto no cárcere, quando ela haveria de ministrar aos apóstolos, postos no cárcere, a luz de seu poder.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Non ergo quasi ignorans interrogat, sed quomodo salvator interrogat ubi sit Lazarus positus; ut qui locum sepulcri indicabant, saltem sic pararentur ad fidem, ut viderent mortuum resurgentem; sic et Ioannes interficiendus ab Herode discipulos suos mittit ad Christum, ut per hanc occasionem videntes signa atque virtutes, crederent in eum, et magistro interrogante sibi discerent. Quod autem haberent discipuli Ioannis aliquid mordacitatis ex invidia adversus dominum, superior quoque interrogatio demonstravit, cum dixerunt: quare nos et Pharisaei ieiunamus frequenter, discipuli tui non ieiunant?",
+        "pt": "Não pergunta, portanto, como quem ignora, mas como o Salvador pergunta onde foi posto Lázaro; para que aqueles que indicavam o lugar do sepulcro fossem, ao menos assim, preparados para a fé, vendo o morto ressurgir; assim também João, prestes a ser morto por Herodes, envia seus discípulos a Cristo, para que, por essa ocasião, vendo sinais e milagres, cressem nele, e aprendessem, pela pergunta do mestre, para si mesmos. Que os discípulos de João tivessem alguma mordacidade, por inveja, contra o Senhor, mostrou-o também a pergunta anterior, quando disseram: \"Por que nós e os fariseus jejuamos frequentemente, e os teus discípulos não jejuam?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Donec igitur Ioannes erat cum ipsis, suadebat eis continue de Christo: quia autem iam erat obiturus, amplius studium facit. Etenim formidabat, ne relinquat in discipulis suis perniciosi dogmatis conditionem, et maneant abiecti a Christo, cui et a principio omnes suos afferre studuit. Si autem dixisset eis: abite ad ipsum, quia melior me est, non utique persuasisset, sed aestimaretur humilia de se sentiens hoc dicere; et sic magis essent ei affixi. Quid igitur facit? Expectat ab eis audire quod Christus miracula facit. Neque omnes misit; sed duos quosdam, quos noverat fortassis aliis persuasibiliores existentes, ut insuspicabilis interrogatio fieret, et ex rebus ipsis discerent distantiam inter eum et Iesum",
+        "pt": "Enquanto, pois, João estava com eles, persuadia-os continuamente a respeito de Cristo; mas, como já estava para morrer, empenha-se mais. Com efeito, temia deixar em seus discípulos a condição de uma doutrina perniciosa, e que permanecessem afastados de Cristo, a quem desde o princípio procurou levar todos os seus. Se, porém, lhes tivesse dito: \"Ide a ele, pois é melhor do que eu\", certamente não os teria persuadido, mas julgariam que dizia isso por sentir humildemente de si; e assim ficariam ainda mais apegados a ele. Que faz, então? Espera ouvir deles que Cristo faz milagres. Nem enviou todos, mas apenas dois, que talvez soubesse serem mais persuasíveis que os outros, para que a pergunta fosse insuspeita, e para que aprendessem pelos próprios fatos a distância entre ele e Jesus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Ioannes igitur non suae, sed discipulorum ignorantiae consulit: ut enim scirent non alium a se praedicatum, ad opera eius intuenda discipulos suos misit, ut auctoritatem dictis suis illius opera conferrent; nec Christus alius expectaretur quam cui testimonium opera praestitissent",
+        "pt": "João, portanto, cuida não da sua ignorância, mas da dos discípulos: para que soubessem que não era outro o que ele pregara, enviou seus discípulos a contemplar as obras dele, para que as obras dele conferissem autoridade às suas palavras; e não se esperasse outro Cristo senão aquele a quem as obras haviam prestado testemunho.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth. Idem Christus autem mentem noscens Ioannis, non dixit: quoniam ego sum, quia per hoc rursus obsisteret audientibus: excogitassent enim, etsi non dixissent, quod Iudaei ad ipsum dixerunt",
+        "latim": "tu de teipso testimonium perhibes. Et propter hoc a miraculis fecit eos discere, insuspicabilem doctrinam faciens et manifestiorem. Testimonium enim quod est a rebus, credibilius est testimonio quod est a verbis. Unde confestim curavit caecos et claudos et alios multos, non ut doceret Ioannem scientem, sed hos qui dubitabant: et ideo sequitur et respondens Iesus ait illis: euntes renuntiate Ioanni quae audistis et vidistis. Caeci vident, claudi ambulant, leprosi mundantur, surdi audiunt mortui resurgunt, pauperes evangelizantur",
+        "pt": "\"Tu dás testemunho de ti mesmo.\" E por isso os fez aprender pelos milagres, tornando a doutrina insuspeita e mais manifesta. Com efeito, o testemunho que vem das coisas é mais digno de crédito do que o testemunho que vem das palavras. Por isso, imediatamente curou cegos, coxos e muitos outros, não para instruir João, que sabia, mas aqueles que duvidavam; e por isso segue: \"E Jesus, respondendo, disse-lhes: Ide e anunciai a João o que ouvistes e vistes. Os cegos veem, os coxos andam, os leprosos são purificados, os surdos ouvem, os mortos ressuscitam, os pobres são evangelizados.\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Quod praemissis non minus est. Pauperes autem evangelizatos intellige, vel pauperes spiritu, vel certe opibus pauperes: ut nulla inter nobiles et ignobiles, inter divites et egenos in praedicatione distantia sit: haec magistri rigorem, haec praeceptoris comprobant veritatem, quando omnis apud eum qui salvare potest aequalis est",
+        "pt": "Isto não é menos do que o que foi dito antes. Entende, porém, os pobres evangelizados ou como os pobres em espírito, ou certamente como os pobres em riquezas, de modo que na pregação não haja nenhuma distância entre nobres e plebeus, entre ricos e necessitados; isto comprova o rigor do mestre, isto a verdade do preceptor, pois todos são iguais diante daquele que pode salvar.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Quod autem ait: et beatus est qui non fuerit scandalizatus in me, internuntios percutit: quia enim scandalizabantur in ipso, dubitationem eorum non divulgans, et soli eorum conscientiae derelinquens, redargutionem eorum latenter induxit",
+        "pt": "Quanto ao que diz: \"E bem-aventurado é aquele que não se escandalizar de mim\", atinge os mensageiros; pois, como se escandalizavam dele, sem divulgar a dúvida deles e deixando-a apenas à consciência deles, introduziu veladamente a sua repreensão.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "",
+        "latim": "Itaque cui rei Ioannes cavisset, ostendit dicens beatos eos in quibus aliquid in se scandali non fuisset: quia metu eius, scilicet ne scandalizarentur, discipulos suos Ioannes, ut Christum audirent, misit",
+        "pt": "Assim, mostrou aquilo de que João se acautelara, dizendo bem-aventurados aqueles em quem não houvesse algo de escândalo; pois foi por temor disso, isto é, de que se escandalizassem, que João enviou seus discípulos para que ouvissem a Cristo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Vel aliter. Infidelium mens grave in Christo scandalum pertulit, cum eum etiam post tot miracula morientem vidit: unde Paulus dicit: nos praedicamus Christum crucifixum, Iudaeis quidem scandalum. Quid ergo est dicere: beatus qui non fuerit scandalizatus in me, nisi aperta voce abiectionem mortis suae humilitatemque signare? Ac si patenter dicat: mira quidem facio, sed abiecta perpeti non dedignor. Quia ergo moriendo te subsequor, cavendum valde est hominibus ne in me mortem despiciant qui signa venerantur",
+        "pt": "Ou de outro modo. O espírito dos infiéis sofreu grave escândalo em Cristo, quando o viu morrendo mesmo depois de tantos milagres; donde diz Paulo: \"Nós pregamos Cristo crucificado, escândalo para os judeus.\" Que é, pois, dizer: \"Bem-aventurado aquele que não se escandalizar de mim\", senão indicar em voz aberta o aviltamento e a humildade de sua morte? Como se dissesse claramente: realizo coisas admiráveis, mas não me recuso a sofrer coisas aviltantes. Visto que, portanto, ao morrer eu te sigo, os homens devem acautelar-se muito para que, quando veneram os sinais, não desprezem em mim a morte.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "",
+        "latim": "Praebetur etiam mystice in his quae in Ioanne gesta sunt, intelligentia amplior, ut propheta ipso conditionis suae genere prophetizaret, quia in eo forma legis lata est: Christum enim lex annuntiavit, et remissionem peccatorum praedicavit, et regnum caelorum spopondit; et Ioannes totum hoc opus legis explevit. Igitur, cessante iam lege (quae peccatis plebis inclusa, ne Christus posset intelligi, quasi vinculis et quasi carcere continebatur), ad Evangelia contuenda lex mittit, ut infidelitas fidem dictorum contempletur in factis",
+        "pt": "Oferece-se também, em sentido místico, nestas coisas que se passaram com João, uma inteligência mais ampla: que o profeta profetizasse pelo próprio gênero de sua condição, pois nele foi apresentada a figura da lei. Com efeito, a lei anunciou a Cristo, pregou a remissão dos pecados e prometeu o reino dos céus; e João cumpriu toda essa obra da lei. Por isso, cessando já a lei (que, encerrada pelos pecados do povo, para que Cristo não pudesse ser entendido, era mantida como que em cadeias e como que em um cárcere), a lei envia aos Evangelhos para que a infidelidade contemple a verdade das palavras nos fatos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "super Lucam",
+        "latim": "Et fortasse isti discipuli quos misit, sunt duo populi: unus qui ex Iudaeis credidit, alter qui ex gentibus",
+        "pt": "E talvez esses discípulos que ele enviou sejam os dois povos: um que creu vindo dos judeus, o outro dos gentios.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 3,
+    "versos": [
+      7,
+      10
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Quantum ad discipulos Ioannis, satis actum erat: certificati enim de Christo per signa quae viderant, recesserunt. Sed oportebat etiam turbas sanari, quae ex interrogatione discipulorum Ioannis multa inconvenientia subintellexerint, ignorantes mittentis consilium. Poterant utique dicere: qui tanta testatus est de Christo, aliter persuasus est nunc et dubitat utrum sit ipse. Numquid ergo altercans ad Iesum hoc dicit? Numquid timidior a carcere factus? Numquid vane et inaniter priora dixit?",
+        "pt": "Quanto aos discípulos de João, já se havia feito o bastante: certificados acerca de Cristo pelos sinais que tinham visto, retiraram-se. Mas era preciso que também as multidões fossem curadas, as quais, pela pergunta dos discípulos de João, teriam suposto muitas coisas inconvenientes, ignorando o propósito de quem os enviava. Podiam, com efeito, dizer: aquele que testemunhou tanto a respeito de Cristo foi agora persuadido de outro modo e duvida se ele é o mesmo. Porventura, então, diz isso disputando com Jesus? Porventura se tornou mais tímido por causa do cárcere? Porventura falou em vão e inutilmente antes?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Ac ne illud quod immediate praemiserat, referri posset ad Ioannem, tamquam scandalizatus esset de Christo, subditur illis autem abeuntibus, coepit Iesus dicere ad turbas de Ioanne",
+        "pt": "E, para que aquilo que acabara de dizer não pudesse ser referido a João, como se este tivesse se escandalizado de Cristo, acrescenta-se: \"Tendo eles partido, Jesus começou a falar às multidões a respeito de João.\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Propter hoc autem abeuntibus eis, ut non videatur homini adulari. Corrigens autem et plebem, non ducit in medium suspicionem eorum, sed solutionem cogitationum eorum inducit, quae eos in dubitationem mittebant, demonstrans se nosse occulta. Neque enim dixit sicut Iudaeis: quis cogitatis mala? Etsi mala cogitaverint; non tamen ex malitia, sed ex ignorantia; unde non loquitur eis dure, sed respondet pro Ioanne, ostendens quod non excidit a priore opinione. Hoc autem docet, non solum proprio verbo, sed eorum testimonio; non tantum per ea quae dixerunt, sed per ea quae egerunt: ideoque ait quid existis in desertum videre? Ac si diceret: propter quid civitates dimittentes convenistis in desertum? Non enim plebs tanta cum tanto desiderio in eremum venisset, nisi magnum quemdam et mirabilem et petra solidiorem se videre existimans",
+        "pt": "Por isso, quando eles partiram, para que não parecesse lisonjear um homem. E, corrigindo também o povo, não leva ao meio a suspeita deles, mas introduz a solução dos pensamentos que os lançavam na dúvida, mostrando que conhece as coisas ocultas. Com efeito, não disse, como aos judeus: \"Por que pensais o mal?\" Embora tenham pensado mal, não foi por malícia, mas por ignorância; por isso não lhes fala duramente, mas responde em favor de João, mostrando que não decaiu da opinião anterior. E isto ensina não só com a sua própria palavra, mas com o testemunho deles; não só pelo que disseram, mas pelo que fizeram; e por isso diz: \"Que saístes a ver no deserto?\" Como se dissesse: por que motivo, deixando as cidades, vos reunistes no deserto? Pois um povo tão grande não teria ido ao ermo com tamanho desejo, se não julgasse ver alguém grande, admirável e mais sólido que a pedra.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Non autem tunc exierant in desertum ad hoc ut viderent Ioannem: nec enim erat tunc in deserto, sed in carcere: sed praeteritum refert, quia frequenter exierat populus in desertum videre Ioannem, cum adhuc esset in deserto",
+        "pt": "Ora, não tinham saído então ao deserto para ver João, pois então ele não estava no deserto, mas no cárcere; mas refere o passado, porque o povo saíra frequentemente ao deserto para ver João, quando ele ainda estava no deserto.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Et vide quia, omnem aliam malitiam praetermittens, removet a Ioanne levitatem, de qua turbae dubitabant, dicens arundinem vento agitatam?",
+        "pt": "E vê que, passando por alto toda outra malícia, afasta de João a leviandade, da qual as multidões duvidavam, dizendo: \"Um caniço agitado pelo vento?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Quod videlicet non asserendo, sed negando intulit. Arundinem quippe, mox ut aura contingit, in partem flectit; per quam carnalis animus designatur, qui mox ut favore et detractione tangitur, in partem quamlibet declinatur. Arundo ergo vento agitata Ioannes non erat, quem a status sui rectitudine nulla rerum varietas inflectebat. Ac si dominus diceret",
+        "pt": "Isto, evidentemente, ele o introduziu não afirmando, mas negando. Com efeito, o caniço, assim que a brisa o toca, inclina-se para um lado; por ele se designa o ânimo carnal, que, assim que é tocado pelo favor e pela detração, se inclina para qualquer parte. Portanto, João não era um caniço agitado pelo vento, ele a quem nenhuma variedade de coisas desviava da retidão de seu estado. Como se o Senhor dissesse:",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "numquid ob hoc existis in desertum ut videretis hominem calamo similem, qui omni vento circumfertur, et levitate mentis de eo ambigeret quem antea praedicaret? An forsitan stimulis invidiae contra me cogitur, et praedicatio eius vanam sectatur gloriam, ut ex ea quaerat lucra? Cur divitias cupiat? Ut affluat dapibus? Locustis vescitur et melle silvestri. An ut mollibus vestiatur? Pili camelorum sunt tegmen eius; et ideo subdit sed quid existis videre? Hominem mollibus vestitum?",
+        "pt": "porventura saístes ao deserto para ver um homem semelhante a um caniço, que é levado por todo vento, e que, por leviandade de espírito, duvidaria daquele a quem antes pregava? Ou talvez seja constrangido contra mim pelos aguilhões da inveja, e a sua pregação persiga uma vã glória, para daí buscar lucros? Por que desejaria riquezas? Para abundar em banquetes? Alimenta-se de gafanhotos e de mel silvestre. Ou para vestir-se de roupas macias? Pelos de camelo são a sua cobertura; e por isso acrescenta: \"Mas que saístes a ver? Um homem vestido de roupas macias?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Vel aliter. Quod non sit Ioannes similis calamo mobili per vestrum studium significastis, scilicet in desertum exeuntes. Non tamen potest aliquis dicere, quod Ioannes quidem constans erat, sed postea lasciviae serviens factus est mobilis: sicut enim aliquis est iracundus natura, alius per infirmitatem longam, ita aliqui sunt mobiles per naturam, alii vero lasciviae serviendo mobiles fiunt. Ioannes autem neque natura mobilis erat; propter quod dixerat num existis videre arundinem vento agitatam? Neque lasciviae dans se ipsum, perdidit quam habebat excellentiam: quod enim non servierit lasciviae, monstrat stola, solitudo et carcer. Si enim vellet mollibus vestiri, non eremum inhabitasset, sed regum palatia: unde sequitur ecce qui mollibus vestiuntur, in domibus regum sunt",
+        "pt": "Ou de outro modo. Que João não seja semelhante a um caniço volúvel, vós o indicastes pelo vosso zelo, isto é, ao saírem para o deserto. Contudo, ninguém pode dizer que João era constante, mas depois, servindo à lascívia, se tornou volúvel; pois, assim como alguém é irascível por natureza, outro por longa enfermidade, assim alguns são volúveis por natureza, outros, porém, tornam-se volúveis servindo à lascívia. João, no entanto, nem era volúvel por natureza (por isso dissera: \"Saístes para ver um caniço agitado pelo vento?\"), nem, entregando-se à lascívia, perdeu a excelência que tinha; pois que não serviu à lascívia, mostram-no a veste, a solidão e o cárcere. Com efeito, se quisesse vestir-se de roupas macias, não teria habitado o ermo, mas os palácios dos reis; donde segue: \"Eis que os que se vestem de roupas macias estão nas casas dos reis.\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Ex hoc ostenditur rigidam vitam et austeram praedicationem vitare debere aulas regum, et mollium hominum palatia declinare",
+        "pt": "Disto se mostra que a vida rigorosa e a pregação austera devem evitar as cortes dos reis e afastar-se dos palácios dos homens amolecidos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Nemo autem existimet in luxu atque studio pretiosarum vestium peccata deesse: quia si hoc culpa non esset, nullo modo Ioannem dominus de vestimenti sui asperitate laudasset. Et nequaquam Petrus feminas a pretiosarum vestium appetitu compesceret, dicens: non in veste pretiosa",
+        "pt": "Ninguém julgue, porém, que no luxo e no empenho por vestes preciosas não haja pecados; pois, se isso não fosse culpa, de modo algum o Senhor teria louvado João pela aspereza de sua veste. E Pedro de modo nenhum reprimiria nas mulheres o desejo de vestes preciosas, dizendo: \"não em veste preciosa\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Doctr. Christ",
+        "latim": "Cum in omnibus talibus non usus rerum, sed libido utentis in culpa est. Quisquis enim rebus restrictius utitur quam se habent mores eorum cum quibus vivit, aut temperans, aut superstitiosus est. Quisquis vero sic utitur, ut metas consuetudinis bonorum inter quos versatur excedat, aut aliquid significat, aut flagitiosus est",
+        "pt": "Pois em todas as coisas desse gênero a culpa não está no uso das coisas, mas na paixão de quem as usa. Com efeito, quem usa as coisas de modo mais restrito do que o permitem os costumes daqueles com quem vive, ou é temperante ou é supersticioso. Quem, porém, as usa de tal modo que excede os limites do costume dos bons entre os quais vive, ou significa alguma coisa, ou é dissoluto.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "A loco autem et vestimentis, et a concursu hominum, eius moribus designatis, inducit iam et prophetam eum esse, dicens sed quid existis videre? Prophetam? Dico vobis etiam plus quam prophetam",
+        "pt": "Tendo, pois, indicado o lugar, as vestes, a afluência dos homens e os costumes dele, introduz agora que ele é também profeta, dizendo: \"mas que saístes para ver? Um profeta? Digo-vos: e mais do que profeta\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Prophetae enim ministerium est ventura praedicere, non etiam demonstrare. Ioannes ergo plusquam propheta est: quia eum quem praecurrendo prophetaverat, etiam ostendendo nuntiabat",
+        "pt": "Com efeito, o ofício do profeta é predizer as coisas futuras, e não também mostrá-las. João, portanto, é mais do que profeta, porque aquele que havia profetizado precedendo-o, anunciava-o também mostrando-o.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "In quo etiam ceteris prophetis maior est, et quia ad privilegium prophetale etiam Baptismi accessit praemium, ut suum dominum baptizaret",
+        "pt": "Nisto ele é maior também do que os demais profetas, e porque ao privilégio profético se acrescentou ainda o prêmio do Batismo, de modo que batizasse o seu Senhor.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Deinde monstrat secundum quid est maior, dicens hic est enim de quo scriptum est: ecce mitto Angelum meum ante faciem tuam",
+        "pt": "Em seguida, mostra em que sentido ele é maior, dizendo: \"este é aquele de quem está escrito: eis que envio o meu anjo diante da tua face\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Ut enim meritorum Ioannis augmentum faceret, de Malachia testimonium infert, in quo etiam Angelus praedicatur. Angelum autem hic dici Ioannem non putemus naturae societate, sed officii dignitate; idest nuntium qui venturum dominum nuntiavit",
+        "pt": "Com efeito, para engrandecer os méritos de João, traz o testemunho de Malaquias, no qual ele é também proclamado Anjo. Não pensemos, porém, que aqui João é chamado Anjo por comunhão de natureza, mas pela dignidade do ofício; isto é, o mensageiro que anunciou o Senhor que haveria de vir.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Qui enim Graece Angelus, hic Latine nuntius dicitur. Recte ergo qui nuntiare supernum nuntium venerat, Angelus vocatur, ut dignitatem servet in nomine, quam explet in operatione",
+        "pt": "Com efeito, o que em grego se diz Anjo, em latim se diz mensageiro. Com razão, portanto, aquele que viera anunciar o mensageiro do alto é chamado Anjo, para que conserve no nome a dignidade que cumpre na obra.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Monstrat igitur secundum quid est maior Ioannes prophetis, secundum id scilicet quod est prope Christum: et ideo dicit mitto ante faciem tuam, hoc est prope te: sicut enim qui prope currum regis incedunt, aliis sunt clariores, ita et Ioannes prope Christi praesentiam",
+        "pt": "Mostra, pois, em que sentido João é maior do que os profetas, a saber, no fato de estar perto de Cristo; e por isso diz: \"envio diante da tua face\", isto é, perto de ti. Assim como os que caminham junto ao carro do rei são mais ilustres que os outros, assim também João junto à presença de Cristo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Deinde alii prophetae missi sunt ut adventum Christi annuntiarent; iste autem, ut praepararet viam ipsius: unde sequitur qui praeparabit viam tuam ante te: idest, pervia reddet tibi corda auditorum, poenitentiam praedicando et baptizando",
+        "pt": "Além disso, os outros profetas foram enviados para anunciar o advento de Cristo; este, porém, para preparar o seu caminho. Daí se segue: \"que preparará o teu caminho diante de ti\", isto é, tornará transitáveis para ti os corações dos ouvintes, pregando a penitência e batizando.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Mystice autem desertum spiritu sancto vacuum est sentiendum, in quo habitatio Dei nulla sit; in arundine homo talis ostenditur de gloria saeculi vitae suae inanitate speciosus, in se autem fructu veritatis cavus, exterior placens, et nullus interior, ad omnem ventorum motum, idest, immundorum spirituum flatum, movendus, neque ad consistendi firmitatem valens, et animae medullis inanis. Veste autem, corpus quo induitur anima signatur, quod luxu ac lasciviis mollescit. In regibus transgressorum Angelorum nuncupatio est: hi enim saeculi sunt potentes, mundique dominantes. Ergo vestiti mollibus in domibus regum sunt; idest illos quibus per luxum fluida et dissoluta sunt corpora, patet esse Daemonum habitationem",
+        "pt": "Em sentido místico, porém, o deserto deve ser entendido como vazio do Espírito Santo, onde não haja habitação alguma de Deus; no caniço mostra-se um homem tal, vistoso pela glória do mundo e pela vaidade de sua vida, mas oco em si quanto ao fruto da verdade, agradável por fora e nenhum por dentro, que se move a todo movimento dos ventos, isto é, ao sopro dos espíritos impuros, sem capacidade de firmeza para se manter, e vazio da medula da alma. Pela veste, porém, significa-se o corpo de que a alma se reveste, que se amolece com o luxo e as lascívias. Em \"reis\" está a designação dos anjos transgressores: pois estes são os poderosos do século e os dominadores do mundo. Portanto, os vestidos de coisas macias estão nas casas dos reis; isto é, aqueles cujos corpos, pelo luxo, são frouxos e dissolutos, é claro que são habitação dos demônios.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Ioannes etiam mollibus vestitus non fuit, quia vitam peccantium non blandimentis fovit, sed rigore asperae invectionis increpavit, dicens: genimina viperarum,",
+        "pt": "João também não foi vestido de coisas macias, porque não fomentou com afagos a vida dos pecadores, mas a repreendeu com o rigor de uma áspera invectiva, dizendo: \"raça de víboras\",",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 4,
+    "versos": [
+      11,
+      11
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Praemissa commendatione Ioannis ex prophetae testimonio, non hic stetit, sed iam sententiam propriam de ipso inducit, dicens amen dico vobis, non surrexit maior inter natos mulierum Ioanne Baptista",
+        "pt": "Apresentado o louvor de João pelo testemunho do profeta, não parou aí, mas já introduz o seu próprio juízo a respeito dele, dizendo: \"em verdade vos digo: entre os nascidos de mulher não surgiu outro maior do que João Batista\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Ac si diceret: quid dicere per singula de commendatione Ioannis? Amen dico vobis, inter natos mulierum, et cetera. Inter natos, inquit, mulierum, non virginum: mulieres enim proprie corruptae vocantur. Si autem Maria aliquando mulier in Evangelio nuncupatur, sciendum est, interpretem, mulierem pro femina posuisse, sicut ibi: mulier, ecce filius tuus",
+        "pt": "Como se dissesse: por que falar de cada ponto do louvor de João? \"Em verdade vos digo: entre os nascidos de mulher\", etc. Entre os nascidos, diz, de mulheres, não de virgens: pois as mulheres, propriamente, são chamadas corrompidas. Se, porém, Maria é chamada alguma vez mulher no Evangelho, deve-se saber que o tradutor pôs \"mulher\" por \"fêmea\", como ali: \"mulher, eis o teu filho\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "His ergo praefertur hominibus qui de mulieribus nati sunt et de concubitu viri, et non ei qui natus est ex virgine et spiritu sancto; quamvis in eo quod dicit non surrexit inter natos mulierum maior Ioanne Baptista, non ceteris prophetis et patriarchis cunctisque hominibus Ioannem praetulit, sed Ioanni ceteros exaequavit: non enim statim sequitur ut si alii maiores eo non sunt, ille maior aliorum sit",
+        "pt": "Portanto, é preferido a esses homens que nasceram de mulheres e do concúbito de um homem, e não àquele que nasceu da Virgem e do Espírito Santo; embora, ao dizer “não surgiu entre os nascidos de mulher maior que João Batista”, não tenha preferido João aos demais profetas e patriarcas e a todos os homens, mas tenha igualado os demais a João: pois não se segue logo que, se outros não são maiores que ele, ele seja maior que os outros.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Sed tanta cum sit iustitiae altitudo ut in illa nemo possit esse perfectus nisi solus Deus, puto quia omnes sancti quantum ad subtilitatem divini iudicii invicem sibi inferiores sunt aut priores. Ex quo intelligimus quoniam qui maiorem se non habet, maior omnibus est",
+        "pt": "Mas, sendo tão grande a altura da justiça que nela ninguém pode ser perfeito, a não ser somente Deus, penso que todos os santos, quanto à sutileza do juízo divino, são uns inferiores ou anteriores aos outros. Daí entendemos que aquele que não tem ninguém maior do que si é maior que todos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Ne autem rursus superabundantia laudum pariat aliquod inconveniens Iudaeis Ioannem praeferentibus Christo, convenienter hoc removet dicens qui autem minor est in regno caelorum hic maior est illo",
+        "pt": "Para que, por sua vez, a superabundância dos louvores não gerasse algum inconveniente entre os judeus, que prefeririam João a Cristo, convenientemente remove isso dizendo: “Aquele, porém, que é menor no Reino dos Céus é maior do que ele”.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "contra Advers. legis et Prophet",
+        "latim": "Argumentatur autem ex hoc haereticus ita, velut ratiocinando, tamquam Ioannes non pertineat ad regnum caelorum, et ob hoc multo minus ceteri prophetae illius populi, quibus maior est Ioannes. Haec autem verba domini duobus modis possunt intelligi: aut enim regnum caelorum appellavit hoc quod nondum accepimus, de quo in fine dicturus est: venite, benedicti patris mei, percipite regnum; et quia ibi sunt Angeli, quilibet in eis minor maior est quolibet iusto portante corpus quod corrumpitur. Aut si regnum caelorum intelligi voluit Ecclesiam, cuius filii sunt ab institutione generis humani usque nunc omnes iusti, dominus seipsum signavit: qui nascendi tempore minor erat Ioanne, maior autem divinitatis aeternitate et dominica potestate. Proinde secundum priorem expositionem, ita distinguitur: qui minor est in regno caelorum, ac deinde subinfertur maior est illo. Secundum hanc autem posteriorem, ita: qui autem minor est, ac deinde subinfertur in regno caelorum maior est illo",
+        "pt": "O herege argumenta a partir disso, como que raciocinando, de modo que João não pertenceria ao Reino dos Céus e, por isso, muito menos os demais profetas daquele povo, dos quais João é maior. Estas palavras do Senhor, porém, podem ser entendidas de dois modos: ou chamou Reino dos Céus aquilo que ainda não recebemos, a respeito do qual dirá no fim: “Vinde, benditos de meu Pai, recebei o reino”; e, porque ali estão os Anjos, qualquer um deles, ainda que menor, é maior do que qualquer justo que carrega o corpo corruptível. Ou, se quis que se entendesse por Reino dos Céus a Igreja, cujos filhos são, desde a instituição do gênero humano até agora, todos os justos, o Senhor designou a si mesmo: que, no tempo do nascimento, era menor que João, mas maior pela eternidade da divindade e pelo poder de Senhor. Por conseguinte, segundo a primeira exposição, assim se pontua: “aquele que é menor no Reino dos Céus”, e depois se acrescenta: “é maior do que ele”. Segundo esta última, porém, assim: “aquele que é menor”, e depois se acrescenta: “no Reino dos Céus é maior do que ele”.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Dicit autem in regno caelorum, idest in spiritualibus, et universis quae sunt secundum caelum. Quidam autem dicunt quoniam de apostolis hoc dixit Christus",
+        "pt": "Diz, porém, “no Reino dos Céus”, isto é, nas coisas espirituais e em tudo o que é segundo o céu. Alguns, contudo, dizem que Cristo disse isso a respeito dos apóstolos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Nos autem simpliciter intelligamus, quia omnis sanctus qui iam cum domino est, sit maior illo qui adhuc consistit in praelio: aliud est enim victoriae coronam possidere, aliud adhuc in acie dimicare",
+        "pt": "Nós, porém, entendamos simplesmente que todo santo que já está com o Senhor é maior do que aquele que ainda se encontra no combate: uma coisa é, com efeito, possuir a coroa da vitória; outra, ainda lutar na linha de batalha.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 5,
+    "versos": [
+      12,
+      15
+    ],
+    "itens": [
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Quia dixerat superius: qui minor est in regno caelorum, est maior Ioanne, ne videretur Ioannes a regno caelorum esse alienus, hoc removet subdens a die autem Ioannis Baptistae usque nunc regnum caelorum vim patitur, et violenti rapiunt illud",
+        "pt": "Porque havia dito antes: “aquele que é menor no Reino dos Céus é maior que João”, para que João não parecesse alheio ao Reino dos Céus, remove isso acrescentando: “Desde os dias de João Batista até agora, o Reino dos Céus sofre violência, e os violentos o arrebatam”.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Per regnum caelorum supernum solium signatur, quo cum peccatores quolibet facinore polluti ad poenitentiam redeunt, et semetipsos corrigunt, quasi praedatores in locum alienum intrant et violenter regnum caelorum rapiunt",
+        "pt": "Por Reino dos Céus significa-se o trono supremo, no qual, quando os pecadores, manchados por qualquer crime, voltam à penitência e se corrigem, entram como saqueadores em lugar alheio e arrebatam violentamente o Reino dos Céus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Si autem primus Ioannes Baptista poenitentiam populis nuntiavit dicens: poenitentiam agite, appropinquabit enim regnum caelorum, convenienter a diebus illius regnum caelorum vim patitur et violenti rapiunt illud. Grandis est enim violentia, in terra nos esse generatos, et caelorum sedem quaerere, et possidere per virtutem quae non tenuimus per naturam",
+        "pt": "Se, porém, João Batista foi o primeiro a anunciar a penitência aos povos, dizendo: “Fazei penitência, pois o Reino dos Céus se aproxima”, convenientemente “desde os dias dele o Reino dos Céus sofre violência e os violentos o arrebatam”. É grande, com efeito, a violência de termos sido gerados na terra e buscarmos a sede dos céus, e de possuirmos pela virtude o que não tínhamos por natureza.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Vel aliter. Dominus apostolos ire ad oves perditas Israel iusserat; sed omnis haec praedicatio profectum publicanis et peccatoribus afferebat. Itaque vim regnum patitur, et violenti diripiunt: quia gloria Israel patribus debita. Prophetis nuntiata, a Christo oblata, fide gentium occupatur et rapitur",
+        "pt": "Ou de outro modo. O Senhor havia ordenado aos apóstolos que fossem às ovelhas perdidas de Israel; mas toda esta pregação trazia proveito aos publicanos e pecadores. Assim, “o reino sofre violência, e os violentos o arrebatam”: porque a glória de Israel, devida aos pais, anunciada pelos profetas, oferecida por Cristo, é ocupada e arrebatada pela fé dos gentios.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Vel rapiunt regnum Dei per fidem Christi omnes qui cum festinatione veniunt: unde dicit a diebus autem Ioannis usque nunc; et ita impellit et festinare facit ad fidem suam, simul autem et his quae antea dicta sunt a Ioanne opitulatur. Si enim usque ad Ioannem omnia completa sunt, ipse est qui venturus est: unde subdit omnes enim prophetae et lex usque ad Ioannem prophetaverunt",
+        "pt": "Ou: arrebatam o Reino de Deus, pela fé em Cristo, todos os que vêm com presteza; por isso diz “desde os dias de João até agora”; e assim o impele e faz apressar-se para a sua fé, e ao mesmo tempo socorre também as coisas ditas antes por João. Pois, se até João tudo foi cumprido, ele é aquele que há de vir; por isso acrescenta: “Todos os profetas e a Lei profetizaram até João”.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Non quod post Ioannem excludat prophetas; legimus enim in actibus apostolorum et Agabum prophetizasse et quatuor virgines filias Philippi; sed quod lex et prophetae quos scriptos legimus, quicquid prophetizaverunt, de domino vaticinati sunt. Quando ergo dicitur usque ad Ioannem prophetaverunt, Christi tempus ostenditur; et quem illi dixerunt esse venturum, Ioannes venisse ostendit",
+        "pt": "Não que exclua os profetas depois de João; lemos, com efeito, nos Atos dos Apóstolos que Ágabo profetizou e também as quatro virgens filhas de Filipe; mas a Lei e os profetas, que lemos por escrito, tudo o que profetizaram, vaticinaram a respeito do Senhor. Quando, pois, se diz “profetizaram até João”, mostra-se o tempo de Cristo; e aquele que eles disseram que haveria de vir, João mostrou que veio.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Deinde aliam coniecturam sui adventus ponit, dicens et si vultis recipere, ipse est Elias, qui venturus est. Dicit dominus in Malachia: mittam vobis Eliam Thesbitem; et de isto dicit ecce ego mitto Angelum meum ante faciem tuam",
+        "pt": "Em seguida, apresenta outra conjectura de sua vinda, dizendo: “E, se quereis aceitar, ele é Elias, que há de vir”. Diz o Senhor em Malaquias: “Enviar-vos-ei Elias, o Tesbita”; e a respeito deste diz: “Eis que envio o meu Anjo diante de tua face”.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Elias ergo Ioannes dicitur, non secundum stultos philosophos, et quosdam haereticos, qui metempsychosin, idest animae ex uno in aliud corpus migrationem introducunt; sed quod, iuxta aliud testimonium Evangelii, venerit in spiritu et virtute Eliae, et eamdem spiritus sancti vel gratiam habuerit vel mensuram. Sed et vitae austeritas rigorque mentis Eliae et Ioannis pares sunt: uterque in eremo, uterque zona pellicea cingebatur: ille, quoniam regem Achab et Iezabel impietatis arguit, fugere compulsus est; iste, quia Herodis et Herodiadis illicitas arguit nuptias, capite truncatur",
+        "pt": "João é chamado Elias, portanto, não segundo os filósofos tolos e certos hereges, que introduzem a metempsicose, isto é, a migração da alma de um corpo para outro; mas porque, conforme outro testemunho do Evangelho, veio no espírito e na virtude de Elias, e teve a mesma graça ou medida do Espírito Santo. Mas também a austeridade de vida e o rigor de espírito de Elias e de João são iguais: ambos no deserto, ambos cingidos por um cinto de pele; aquele, porque repreendeu o rei Acab e Jezabel por sua impiedade, foi obrigado a fugir; este, porque repreendeu as núpcias ilícitas de Herodes e Herodíades, foi decapitado.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Et bene dixit si vultis recipere, libertatem ostendens, et voluntariam expetens mentem. Est enim ille hic, et hic ille: quia praecursores facti sunt utrique",
+        "pt": "E disse bem “se quereis aceitar”, mostrando a liberdade e exigindo um espírito voluntário. Pois aquele é este, e este é aquele: porque ambos se tornaram precursores.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Hoc autem quod dictum est, ipse est Elias, mysticum esse, et egere intelligentia, sequens domini sermo demonstrat, dicens qui habet aures audiendi audiat",
+        "pt": "Que isto que foi dito, “ele mesmo é Elias”, é místico e precisa de inteligência, demonstra-o a palavra seguinte do Senhor, dizendo: “Quem tem ouvidos para ouvir, ouça”.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Ac si diceret: qui habet aures cordis audiendi, idest intelligendi, intelligat: quia non dixit Ioannem Eliam esse in persona, sed in spiritu",
+        "pt": "Como se dissesse: quem tem ouvidos do coração para ouvir, isto é, para entender, entenda; porque não disse que João era Elias em pessoa, mas em espírito.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 6,
+    "versos": [
+      16,
+      19
+    ],
+    "itens": [
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Totus hic sermo infidelitatis opprobrium est, et de affectu superioris querimoniae descendit: quia insolens plebs per diversa sermonum genera docta non fuerit",
+        "pt": "Todo este discurso é uma censura à incredulidade e provém do sentimento da queixa anterior: porque o povo insolente não se deixou instruir pelos diversos gêneros de palavras.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Unde et interrogatione utitur, monstrans quoniam nihil quod deberet fieri ad salutem eorum, derelictum est, dicens cui autem similem aestimabo generationem istam?",
+        "pt": "Por isso usa também de uma interrogação, mostrando que nada do que devia ser feito para a salvação deles foi deixado de lado, dizendo: “A quem compararei esta geração?”",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Quasi dicat: tantus est Ioannes; sed vos nec sibi nec mihi voluistis credere: et ideo cui vos similes aestimabo? Per generationem accipit communiter et Iudaeos, et se cum Ioanne",
+        "pt": "Como se dissesse: tão grande é João; mas vós não quisestes crer nem nele nem em mim; e por isso, a quem vos compararei? Por “geração” entende em geral tanto os judeus quanto a si mesmo com João.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Mox autem sibi ipsi respondet, subiungens similis est pueris sedentibus in foro, qui clamantes coaequalibus dicunt: cecinimus vobis, et non saltastis; lamentavimus, et non planxistis",
+        "pt": "Logo depois responde a si mesmo, acrescentando: “É semelhante a crianças sentadas na praça, que gritam aos companheiros: Tocamos flauta para vós, e não dançastes; entoamos lamentações, e não batestes no peito.”",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "In pueris prophetae signantur, qui in simplicitate sensus, ut pueri, praedicaverunt, et in medio synagogae tamquam in publico fori conventu coarguunt, quod cantantibus sibi officio corporis non obsecundaverint, et quod dictis suis non paruerint: ad cantantium enim modum saltantium motus aptatur. Prophetae enim ad confessionem psallendi Deo provocaverunt, ut cantico Moysi tenetur, ut Isaiae, ut David",
+        "pt": "Nas crianças são designados os profetas, que pregaram na simplicidade do entendimento, como crianças, e no meio da sinagoga, como numa reunião pública da praça, repreendem porque não acompanharam com o ofício do corpo os que cantavam, e porque não obedeceram às suas palavras; pois ao modo dos que cantam se ajusta o movimento dos que dançam. Os profetas, com efeito, convidaram a louvar a Deus com salmos, como se vê no cântico de Moisés, de Isaías e de Davi.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Dicunt ergo cecinimus vobis et non saltastis: idest, provocavimus vos ut ad nostrum canticum bona opera faceretis, et noluistis. Lamentati sumus, et vos ad poenitentiam provocavimus; et nec hoc quidem facere voluistis, spernentes utramque praedicationem, tam exhortationis ad virtutes, quam poenitentiae post peccata",
+        "pt": "Dizem, pois: “Tocamos flauta para vós e não dançastes”, isto é: convidamo-vos a praticar boas obras ao som do nosso canto, e não quisestes. Lamentamos, e vos convidamos à penitência; e nem isto quisestes fazer, desprezando ambas as pregações, tanto a da exortação às virtudes quanto a da penitência depois dos pecados.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Quid est autem quod dicit coaequalibus? Numquid infideles Iudaei coaequales erant sanctis prophetis? Sed hoc dicit, quoniam de una stirpe orti fuerunt",
+        "pt": "Que significa, porém, o que diz “aos companheiros”? Acaso os judeus infiéis eram iguais aos santos profetas? Mas diz isto porque nasceram de uma só estirpe.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Pueri etiam sunt de quibus Isaias loquitur: ecce ego et pueri mei quos dedit mihi dominus. Isti ergo pueri sedent in foro, ubi multa venalia sunt, et dicunt",
+        "pt": "Também são crianças aquelas de quem Isaías fala: “Eis que eu e os meus filhos, que o Senhor me deu”. Estas crianças, portanto, estão sentadas na praça, onde há muitas coisas à venda, e dizem:",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth.",
+        "latim": "cecinimus vobis, et non saltastis; hoc est, remissam vitam ostendi, et non persuasi estis; lamentavimus, et non planxistis: hoc est, Ioannes duram sustinuit vitam, et non attendistis. Non autem dicit ille illud et ego hoc, sed communiter: quia una intentio utriusque erat; unde sequitur venit enim Ioannes neque manducans neque bibens; et dicunt: Daemonium habet. Venit filius hominis",
+        "pt": "“Tocamos flauta para vós, e não dançastes”; isto é: mostrei-vos uma vida mais branda, e não vos persuadistes; “lamentamos, e não batestes no peito”: isto é, João suportou uma vida dura, e não prestastes atenção. Ele não diz “aquele isto e eu aquilo”, mas em geral, porque a intenção de ambos era uma só; por isso segue: “Veio João, que não comia nem bebia; e dizem: Tem um demônio. Veio o Filho do Homem”.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "contra Faustum",
+        "latim": "Vellem autem ut mihi Manichaei dicerent quid manducabat et quid bibebat Christus, qui in comparatione Ioannis non manducantis neque bibentis, hic se dixit manducantem ac bibentem. Non enim dictum est quod Ioannes omnino non biberet; sed quod vinum et siceram non biberet: bibebat ergo aquam. Cibus autem eius non omnino nullus erat, sed locustae, et mel silvestre. Unde ergo dictus est non manducans neque bibens, nisi quia illo victu quo Iudaei utebantur, non utebatur? Hoc ergo dominus nisi uteretur, non in eius comparatione manducans bibensque diceretur. Mirum autem si non manducans dicitur qui locustas et mel comedit, et manducans dicitur qui pane et olere contentus est",
+        "pt": "Eu quisera, porém, que os maniqueus me dissessem o que comia e o que bebia Cristo, que, em comparação com João, que não comia nem bebia, disse de si mesmo que comia e bebia. Com efeito, não foi dito que João não bebia absolutamente nada, mas que não bebia vinho nem bebida fermentada: bebia, portanto, água. E o seu alimento não era absolutamente nenhum, mas gafanhotos e mel silvestre. Por que então se disse que não comia nem bebia, senão porque não usava aquele modo de viver de que os judeus usavam? Se o Senhor não o usasse, não seria dito, em comparação com ele, que comia e bebia. É de admirar, porém, que se diga que não come quem come gafanhotos e mel, e se diga que come quem se contenta com pão e legumes.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Dicit ergo venit Iesus; ac si dicat: per contrariam viam venimus ego et Ioannes et idem fecimus: sicut si venatores per duas contrarias vias aliquod animal insequantur, ut in alterum incidat. Universum autem hominum genus ieiunium et duram viam admiratur; et propter hoc dispensatum est a prima aetate ita nutriri Ioannem, ut per hoc digna fide essent quae dicerentur ab ipso. Incessit siquidem dominus per hanc viam quando quadraginta diebus ieiunavit; sed tamen et aliter docuit quod sibi esset credendum; multo enim maius erat quod testaretur pro eo Ioannes qui per hanc viam incesserat, quam quod ipse per hanc viam incederet. Aliter Ioannes nihil plus ostendit praeter vitam et iustitiam; Christus autem et a miraculis testimonium habebat. Dimittens ergo Ioannem ieiunio fulgere, ipse contrariam incessit viam, ad mensam intrans publicanorum, et manducans et bibens",
+        "pt": "Diz, pois: “Veio Jesus”; como se dissesse: por caminho contrário viemos eu e João, e fizemos o mesmo; como se caçadores perseguissem um animal por dois caminhos contrários, para que caia num deles. Todo o gênero humano, porém, admira o jejum e o caminho duro; e por isso foi disposto que João fosse assim alimentado desde a primeira idade, para que, por isso, fossem dignas de fé as coisas ditas por ele. O Senhor, de fato, andou por este caminho quando jejuou quarenta dias; mas ensinou também de outro modo que devia ser acreditado; pois era muito maior o que João, que andara por este caminho, testemunhava a seu favor, do que o fato de ele mesmo andar por este caminho. De outro modo, João nada mais mostrou além da vida e da justiça; Cristo, porém, tinha testemunho também dos milagres. Deixando, pois, que João resplandecesse pelo jejum, ele mesmo andou pelo caminho contrário, entrando à mesa dos publicanos, comendo e bebendo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Si ergo ieiunium vobis placet, cur Ioannes displicuit? Si saturitas, cur filius hominis? Quorum alterum Daemonium habentem, alterum voracem et ebrium nuncupastis",
+        "pt": "Se, pois, o jejum vos agrada, por que João vos desagradou? Se a fartura, por que o Filho do Homem? De um dos quais dissestes que tinha um demônio, e do outro que era comilão e beberrão.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Qualem igitur iam excusationem accipient? Propter hoc subdit et iustificata est sapientia a filiis suis: hoc est, etsi vos persuasi non estis, sed me iam incusare non habetis: quod et de patre ait propheta: ut iustificeris in sermonibus tuis: etsi enim nihil in vobis expleatur a procuratione Dei, quae est circa vos; omnia quae sunt ex parte sua, complet, ut inverecundis neque umbram relinquat ingratae dubitationis",
+        "pt": "Que desculpa receberão, então? Por isso acrescenta: “E a sabedoria foi justificada por seus filhos”: isto é, ainda que vós não vos tenhais persuadido, não tendes, porém, como me acusar; o que também o profeta diz do Pai: “Para que sejas justificado em tuas palavras”: pois, ainda que nada se cumpra em vós do cuidado de Deus para convosco, ele cumpre tudo o que é de sua parte, de modo a não deixar sequer sombra a uma dúvida ingrata dos sem-vergonha.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Iustificata est ergo sapientia a filiis suis; idest, Dei dispensatio atque doctrina, vel ipse Christus, qui est Dei virtus et Dei sapientia, iuste fecisse, ab apostolis suis filiis comprobatus est",
+        "pt": "\"A sabedoria foi, pois, justificada por seus filhos\"; isto é, a dispensação e a doutrina de Deus, ou o próprio Cristo, que é a virtude de Deus e a sabedoria de Deus, foi aprovado por seus filhos, os apóstolos, por ter agido com justiça.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Est autem ipsa sapientia non ex effectu, sed ex natura. Plures enim dictum apostolicum, quod ait: Christum Dei sapientiam et Dei virtutem, his modis solent eludere, quod in eo ex virgine creando efficax Dei sapientia et virtus extiterit. Sed ne tale posset intelligi, ipsum se sapientiam nuncupavit, eam in se, non quae sunt eius ostendens. Non enim idem opus virtutis et virtus; et efficiens discernitur ab effectu",
+        "pt": "Ora, essa sabedoria é tal não por efeito, mas por natureza. Muitos costumam esquivar-se da palavra apostólica que diz que Cristo é a sabedoria de Deus e a virtude de Deus, de modos tais que, ao ser criado da Virgem, a sabedoria e a virtude de Deus se teriam mostrado eficazes nele. Mas, para que não se pudesse entender assim, ele mesmo se chamou sabedoria, mostrando-a nele mesmo, e não as coisas que são dela. Com efeito, a obra da virtude e a virtude não são o mesmo; e o que produz distingue-se do efeito.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Vel iustificata est sapientia a filiis suis: quia sancti apostoli intellexerunt regnum Dei non esse in esca et potu, sed in aequanimitate tolerandi; quos nec copia sublevat, nec deprimit egestas; unde et Paulus dicebat: scio abundare et penuriam pati",
+        "pt": "Ou então: \"a sabedoria foi justificada por seus filhos\", porque os santos apóstolos compreenderam que o Reino de Deus não está na comida e na bebida, mas na equanimidade de suportar; a eles nem a abundância exalta, nem a penúria abate; donde Paulo dizia: \"sei viver na abundância e sei passar necessidade\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "In quibusdam libris legitur iustificata est sapientia ab operibus suis: sapientia namque non quaerit vocis testimonium, sed operum",
+        "pt": "Em alguns livros lê-se: \"a sabedoria foi justificada por suas obras\"; pois a sabedoria não busca o testemunho da palavra, mas o das obras.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Si autem exempla vilia sunt de pueris, non mireris: ad imbecillitatem enim audientium loquebatur: sicut Ezechiel multa dicit exempla Iudaeis convenientia, Dei magnitudine indigna",
+        "pt": "Se os exemplos tirados das crianças são humildes, não te admires: ele falava à fraqueza dos ouvintes; assim como Ezequiel diz muitos exemplos adequados aos judeus, indignos da grandeza de Deus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "",
+        "latim": "Mystice autem Iudaeos nec Ioannis praedicatio inflexit, quibus et lex gravis visa est, potibus cibisque praescriptis, et difficilis et molesta peccatum in se, quod Daemonium nuncupat, habens: quia per observantiae difficultatem necesse eis esset in lege peccare: rursusque in Christo Evangelii praedicatio vitae libertate non placuit, per quam difficultates legis et onera laxata sunt, et ad eam publicani peccatoresque crediderunt. Atque ita tot et tantis admonitionum generibus frustra habitis, nec per gratiam iustificantur, et a lege sunt abdicati: et iustificata est sapientia a filiis suis, ab his scilicet qui regnum caelorum fidei iustificatione diripiunt, confitentes iustum sapientiae opus, quod munus suum ad fideles a contumacibus transtulerit",
+        "pt": "Misticamente, porém, nem a pregação de João dobrou os judeus, aos quais também a Lei pareceu pesada, com as bebidas e os alimentos prescritos, e difícil e molesta, tendo em si o pecado que ele chama demônio: porque, pela dificuldade da observância, lhes seria necessário pecar na Lei; e, por sua vez, em Cristo a pregação do Evangelho não lhes agradou pela liberdade de vida, pela qual as dificuldades e os fardos da Lei foram aliviados, e nela creram os publicanos e os pecadores. E assim, tendo sido inúteis tantos e tão grandes gêneros de advertências, nem são justificados pela graça, e são repudiados pela Lei; e \"a sabedoria foi justificada por seus filhos\", isto é, por aqueles que arrebatam o Reino dos céus pela justificação da fé, confessando que foi justa a obra da sabedoria, que transferiu dos obstinados para os fiéis o seu dom.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 7,
+    "versos": [
+      20,
+      24
+    ],
+    "itens": [
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Hucusque Iudaeos communiter increpaverat; nunc autem quasi nominatim quasdam civitates increpat, quibus specialiter praedicaverat, nec tamen converti volebant: unde dicitur tunc coepit exprobrare civitatibus in quibus factae sunt plurimae virtutes eius, quia non egissent poenitentiam",
+        "pt": "Até aqui repreendera os judeus em geral; agora, porém, repreende como que nominalmente algumas cidades, às quais pregara de modo especial, e que não queriam converter-se; por isso se diz: \"Então começou a censurar as cidades nas quais foram feitos muitíssimos de seus milagres, porque não tinham feito penitência\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Exprobratio enim civitatum Corozaim et Bethsaidae et Capharnaum, capituli huius titulo panditur, quod ideo exprobraverit eis, quia post factas virtutes et signa quamplurima, non egerint poenitentiam: unde subdit vae tibi, Corozaim, vae tibi, Bethsaida",
+        "pt": "A censura às cidades de Corazim, Betsaida e Cafarnaum se manifesta no título deste capítulo: censurou-as porque, depois de tantos milagres e sinais realizados, não fizeram penitência; por isso acrescenta: \"Ai de ti, Corazim! Ai de ti, Betsaida!\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Ut autem non dicas a natura ipsos esse malos, ponit nomen civitatis, scilicet Bethsaida, a qua quandoque processerunt apostoli; etenim Philippus et duo binarii principalium apostolorum hinc fuerunt: scilicet Petrus et Andreas, Iacobus et Ioannes",
+        "pt": "Para que não digas que eles são maus por natureza, põe o nome de uma cidade, a saber, Betsaida, de onde em algum tempo vieram os apóstolos; pois Filipe e os dois pares dos principais apóstolos foram daqui: a saber, Pedro e André, Tiago e João.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Sed per hoc quod dicit vae, hae urbes Galilaeae a salvatore planguntur, quod post tanta signa atque virtutes non egerint poenitentiam",
+        "pt": "Mas, pelo \"ai\" que diz, essas cidades da Galileia são lamentadas pelo Salvador porque, depois de tantos sinais e milagres, não fizeram penitência.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Corozaim autem, quae interpretatur mysterium meum, et Bethsaida, quae domus fructuum, vel domus venatorum dicitur, civitates sunt Galilaeae sitae in littore maris Galilaeae. Plangit ergo dominus civitates quae quondam mysterium Dei tenuerunt, et virtutum iam fructum gignere debuerunt, et in quas spiritales venatores sunt missi",
+        "pt": "Corazim, que se interpreta \"meu mistério\", e Betsaida, que se diz \"casa dos frutos\" ou \"casa dos caçadores\", são cidades da Galileia situadas na margem do mar da Galileia. O Senhor lamenta, pois, as cidades que outrora possuíram o mistério de Deus, e que já deviam ter produzido fruto de virtudes, e às quais foram enviados caçadores espirituais.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Et praeferuntur eis Tyrus et Sidon urbes idololatriae et vitiis deditae; et ideo sequitur quia si in Tyro et Sidone factae essent virtutes quae factae sunt in vobis, olim in Cilicio et cinere poenitentiam egissent",
+        "pt": "E são-lhes preferidas Tiro e Sidônia, cidades entregues à idolatria e aos vícios; e por isso segue: \"Se em Tiro e Sidônia tivessem sido feitos os milagres que foram feitos em vós, há muito tempo teriam feito penitência em saco e cinza\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "In Cilicio quidem asperitas, quae punctio peccatorum, in cinere autem pulvis ostenditur mortuorum: et idcirco utrumque hoc adhiberi ad poenitentiam solet, ut in punctione Cilicii cognoscamus quid per culpam fecimus, et in favilla cineris perpendamus quid per iudicium facti sumus",
+        "pt": "No cilício, de fato, mostra-se a aspereza, que é o aguilhão dos pecados; na cinza, porém, o pó dos mortos; e por isso costumam empregar-se ambos para a penitência, a fim de que, no aguilhão do cilício, reconheçamos o que fizemos pela culpa, e, na brasa da cinza, consideremos o que nos tornamos pelo juízo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Tyrus autem et Sidon sunt urbes Phoenicis. Interpretatur autem Tyrus angustia, et Sidon venatio; et significat gentes quas venator Diabolus in angustia peccatorum comprehendit, sed salvator Iesus per Evangelium absolvit",
+        "pt": "Tiro e Sidônia são cidades da Fenícia. Tiro se interpreta \"angústia\", e Sidônia, \"caça\"; e significa os povos que o caçador, o Diabo, prende na angústia dos pecados, mas que o Salvador Jesus liberta pelo Evangelho.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Quaerimus autem ubi scriptum sit quod in Corozaim et Bethsaida dominus signa fecerit. Supra legimus: et circuibat civitates omnes et vicos, curans omnem infirmitatem, et reliqua; inter ceteras ergo urbes et viculos existimandum est in Corozaim et in Bethsaida dominum signa fecisse",
+        "pt": "Perguntamos, porém, onde está escrito que o Senhor fez sinais em Corazim e Betsaida. Lemos acima: \"E percorria todas as cidades e povoados, curando toda enfermidade\", e o resto; portanto, entre as demais cidades e povoados, deve-se supor que o Senhor fez sinais em Corazim e em Betsaida.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de bono Persev",
+        "latim": "Non ergo verum est quod his temporibus et his locis Evangelium eius praedicatum non est, in quibus tales omnes futuros esse praesciebat, quales multi in eius corporali praesentia fuerunt, qui in eum nec suscitatis ab eo mortuis credere voluerunt. Ecce enim dominus attestatur quod Tyrii et Sidonii acturi essent magnae humilitatis poenitentiam, si in eis facta essent divinarum signa virtutum. Porro si etiam secundum facta quae facturi essent si viverent, mortui iudicantur; profecto quia fideles futuri erant isti, si eis cum tantis miraculis Evangelium fuisset praedicatum, non sunt utique puniendi, et tamen in die iudicii punientur: sequitur enim verumtamen dico vobis, et cetera. Severius ergo punientur illi, isti remissius",
+        "pt": "Não é, portanto, verdade que o seu Evangelho não tenha sido pregado nestes tempos e nestes lugares, nos quais ele previa que todos seriam tais como muitos foram na sua presença corporal, os quais não quiseram crer nele nem mesmo depois de ressuscitados por ele os mortos. Eis que, com efeito, o Senhor atesta que os habitantes de Tiro e de Sidônia fariam penitência de grande humildade, se neles tivessem sido feitos os sinais de poder divino. Ora, se também segundo os atos que fariam, se vivessem, os mortos são julgados; certamente, porque estes haveriam de ser fiéis, se lhes tivesse sido pregado o Evangelho com tão grandes milagres, não devem de modo algum ser punidos, e no entanto serão punidos no dia do juízo: pois segue-se: \"Contudo, eu vos digo\", etc. Portanto, aqueles serão punidos com mais severidade, estes com mais brandura.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Quod ideo est, quia Tyrus et Sidon naturalem tantum legem calcaverant: istae vero civitates post transgressionem naturalis legis et scriptae, etiam signa quae apud eos facta sunt, parvi duxerunt",
+        "pt": "O que acontece porque Tiro e Sidônia tinham transgredido somente a lei natural; estas cidades, porém, depois da transgressão da lei natural e da escrita, tiveram em pouca conta até os sinais que foram feitos entre elas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Impletum autem hodie videmus dictum salvatoris: quia scilicet Corozaim et Bethsaida praesente domino credere noluerunt; Tyrus autem et Sidon, postea evangelizantibus discipulis crediderunt",
+        "pt": "Vemos hoje cumprida a palavra do Salvador: porque Corazaim e Betsaida não quiseram crer estando o Senhor presente; Tiro e Sidônia, porém, creram depois, quando os discípulos evangelizavam.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Capharnaum autem metropolis erat Galilaeae, et insignis civitas illius provinciae: et ideo dominus specialiter mentionem illius facit, dicens et tu, Capharnaum, numquid usque in caelum exaltaberis? Usque ad Infernum descendes",
+        "pt": "Cafarnaum era a metrópole da Galileia e a cidade insigne daquela província; e por isso o Senhor faz menção dela de modo especial, dizendo: \"E tu, Cafarnaum, porventura serás elevada até o céu? Descerás até o Inferno\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "In altero exemplari reperimus: et tu, Capharnaum, quae usque ad caelum exaltata es, usque ad Inferna descendes; et est duplex intelligentia. Vel ideo ad Inferna descendes, quia contra praedicationem meam superbissime restitisti; vel ideo quia exaltata usque in caelum meo hospitio, et meis signis atque virtutibus tantum habens privilegium, maioribus plecteris suppliciis, quod his quoque credere noluisti",
+        "pt": "Em outro exemplar encontramos: \"E tu, Cafarnaum, que foste elevada até o céu, descerás até os Infernos\"; e há duplo entendimento. Ou descerás aos Infernos porque resististe com soberba extrema à minha pregação; ou porque, elevada até o céu pela minha hospedagem, e tendo tão grande privilégio nos meus sinais e prodígios, serás castigada com suplícios maiores, porque nem mesmo a estes quiseste crer.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Non solum autem Tyri et Sidonis, sed ipsa Sodomorum et Gomorrhaeorum fuerunt levia peccata per comparationem: et ideo sequitur quia si in Sodomis factae essent virtutes quae factae sunt in te, forte mansissent usque in hunc diem",
+        "pt": "Mas não só os pecados de Tiro e de Sidônia, como os próprios pecados de Sodoma e de Gomorra foram leves em comparação; e por isso segue-se: \"porque, se em Sodoma tivessem sido feitos os prodígios que foram feitos em ti, talvez tivesse permanecido até o dia de hoje\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "In quo augetur eorum accusatio: etenim maxima malitiae demonstratio est, cum non solum his qui tunc erant, sed his qui unquam fuerant mali, apparent deteriores",
+        "pt": "Com isso aumenta a acusação contra eles: pois é a maior demonstração de malícia mostrarem-se piores não só do que os que então existiam, mas do que os que jamais existiram como maus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "In Capharnaum autem, quae interpretatur villa pulcherrima, condemnatur Ierusalem, cum dicitur per Ezechielem: iustificata est Sodoma ex te",
+        "pt": "Em Cafarnaum, que se interpreta \"aldeia belíssima\", é condenada Jerusalém, quando se diz por Ezequiel: \"Sodoma foi justificada por ti\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Ideo autem dominus, qui omnia novit, in hoc loco verbum dubitativum posuit, scilicet forte, ut demonstraret quia liberum arbitrium concessum est hominibus. Sequitur verumtamen dico vobis, quia terrae Sodomorum remissius erit in die iudicii quam vobis. Et sciendum est, quod nomine civitatis vel terrae, non aedificia vel domorum parietes dominus increpat, sed homines in eis commorantes; secundum speciem tropi, quae est metonymia, in qua per hoc quod continet id quod continetur ostenditur. Per hoc autem quod dicit remissius erit in die iudicii, aperte demonstrat quia diversa sunt supplicia in Inferno, sicut et diversae sunt mansiones in regno caelorum",
+        "pt": "Por isso o Senhor, que conhece todas as coisas, pôs neste lugar uma palavra dubitativa, a saber, \"talvez\", para demonstrar que o livre-arbítrio foi concedido aos homens. Segue-se: \"Contudo, eu vos digo que a terra de Sodoma será tratada com mais brandura no dia do juízo do que vós\". E deve-se saber que, pelo nome de cidade ou de terra, o Senhor não repreende os edifícios nem as paredes das casas, mas os homens que nelas habitam; segundo a espécie de tropo que é a metonímia, na qual, por aquilo que contém, se designa aquilo que é contido. Ao dizer, porém, \"será tratada com mais brandura no dia do juízo\", demonstra claramente que são diversos os suplícios no Inferno, assim como são diversas as moradas no reino dos céus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Quaerat autem prudens lector, et dicat: si Tyrus et Sidon et Sodoma potuerunt agere poenitentiam ad praedicationem salvatoris, signorumque miracula, non sunt in culpa, quia non crediderunt; sed vitii silentium in eo est qui acturis poenitentiam noluit praedicare. Ad quod facilis et aperta est responsio: ignorare nos iudicia Dei, et singularium eius dispensationum sacramenta nescire. Propositum fuerat domino Iudaeae fines non excedere, ne iustam Pharisaeis et sacerdotibus occasionem persecutionis daret: unde et apostolis praecepit: in viam gentium ne abieritis. Corozaim et Bethsaida damnantur, quod praesente domino credere noluerunt; Tyrus et Sidon iustificantur, quod apostolis illius crediderunt. Non quaeras tempora, cum credentium intuearis salutem",
+        "pt": "Pergunte, porém, o leitor prudente, e diga: se Tiro, Sidônia e Sodoma poderiam ter feito penitência diante da pregação do Salvador e dos milagres dos sinais, não são culpadas por não terem crido; mas a falta do silêncio está naquele que não quis pregar aos que fariam penitência. A isto a resposta é fácil e clara: que ignoramos os juízos de Deus e desconhecemos os mistérios de suas disposições particulares. O Senhor tinha o propósito de não ultrapassar as fronteiras da Judeia, para não dar aos fariseus e aos sacerdotes justa ocasião de perseguição; por isso também ordenou aos apóstolos: \"Não entreis no caminho dos gentios\". Corazaim e Betsaida são condenadas porque não quiseram crer estando o Senhor presente; Tiro e Sidônia são justificadas porque creram nos apóstolos dele. Não busques os tempos, quando contemplas a salvação dos que creem.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Solvitur autem et aliter. Fortassis erant plurimi in Corozaim et Bethsaida qui credituri erant; et erant multi in Tyro et Sidone qui non erant credituri; et ideo non erant digni Evangelio. Dominus ergo ideo habitatoribus Corozaim et Bethsaidae praedicavit, ut illi qui credituri erant, crederent; et habitatoribus Tyri et Sidonis praedicare noluit, ne forte illi qui non erant credituri, contemptu Evangelii deteriores facti atrocius punirentur",
+        "pt": "Resolve-se também de outro modo. Talvez houvesse muitos em Corazaim e Betsaida que haviam de crer; e havia muitos em Tiro e Sidônia que não haviam de crer; e por isso não eram dignos do Evangelho. O Senhor, portanto, pregou aos habitantes de Corazaim e Betsaida para que aqueles que haviam de crer, cressem; e não quis pregar aos habitantes de Tiro e Sidônia, para que, porventura, os que não haviam de crer, tornados piores pelo desprezo do Evangelho, não fossem punidos mais atrozmente.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de bono Persev",
+        "latim": "Quidam autem disputator Catholicus non ignobilis hunc Evangelii locum sic exposuit ut diceret, praescisse dominum Tyrios et Sidonios a fide fuisse postea recessuros, cum factis apud se miraculis credidissent; et misericordia potius non eum illic ista fecisse, quoniam graviori poenae obnoxii fierent, si fidem quam tenuerant reliquissent, quam si eam nullo tempore tenuissent. Vel aliter. Praescivit profecto Deus beneficia sua, quibus nos liberare dignatur. Haec autem est praedestinatio sanctorum, praescientia scilicet et praeparatio beneficiorum Dei, quibus certissime liberantur quicumque liberantur. Ceteri autem non nisi in massa perditionis iusto divino iudicio relinquuntur, ubi Tyrii relicti sunt et Sidonii, qui etiam credere poterant, si multa Christi signa vidissent; sed quoniam ut crederent non eis erat datum, et unde crederent est negatum. Ex quo apparet habere quosdam in ipso ingenio divinum naturaliter munus intelligentiae, quo moveantur ad fidem, si congrua suis mentibus vel audiant verba vel signa conspiciant: et tamen si Dei altiore iudicio a perditionis massa non sunt gratiae praedestinatione discreti, nec ipsa eis adhibentur vel dicta divina vel facta, per quae possent credere, si audirent utique talia vel viderent. In eadem perditionis massa relicti sunt etiam Iudaei, qui non potuerunt credere factis in conspectu suo tam magnis clarisque virtutibus. Cur enim non poterant credere, non tacuit Evangelium dicens: dum autem tanta signa fecisset coram eis, non poterant credere, quia dixit Isaias: excaecavi oculos illorum, et induravi cor eorum. Non erant ergo sic excaecati oculi nec sic induratum cor Tyriorum et Sidoniorum: quia credidissent, si qualia viderunt isti, signa vidissent. Sed nec illis profuit quod poterant credere quia praedestinati non erant, nec istis obfuisset quod non poterant credere, si ita praedestinati essent ut eos caecos dominus illuminaret, et induratis cor lapideum vellet auferre",
+        "pt": "Certo controversista católico, não pouco ilustre, expôs assim este passo do Evangelho: dizendo que o Senhor previu que os habitantes de Tiro e de Sidônia se afastariam depois da fé, depois de terem crido pelos milagres feitos entre eles; e que, por misericórdia, antes não fez ali tais coisas, porque ficariam sujeitos a uma pena mais grave se abandonassem a fé que tinham mantido, do que se jamais a tivessem mantido. Ou de outro modo. Deus previu certamente os seus benefícios, pelos quais se digna livrar-nos. Ora, esta é a predestinação dos santos: a presciência e a preparação dos benefícios de Deus, pelos quais são libertados com toda a certeza quantos são libertados. Os demais, porém, são deixados, por justo juízo divino, na massa de perdição, onde foram deixados os de Tiro e de Sidônia, que também poderiam crer, se tivessem visto muitos sinais de Cristo; mas, porque não lhes foi dado que cressem, foi-lhes negado aquilo por que haveriam de crer. Disso se vê que alguns têm, na própria índole, por natureza, o dom divino da inteligência, pelo qual são movidos à fé, se ouvirem palavras ou virem sinais adequados às suas mentes; e no entanto, se por juízo mais alto de Deus não foram separados da massa de perdição pela predestinação da graça, nem lhes são aplicadas as palavras ou as obras divinas por meio das quais poderiam crer, se ouvissem ou vissem tais coisas. Na mesma massa de perdição foram deixados também os judeus, que não puderam crer diante de prodígios tão grandes e tão claros feitos à sua vista. Por que não podiam crer, o Evangelho não calou, dizendo: \"Mas, tendo feito tantos sinais diante deles, não podiam crer, porque disse Isaías: Cegou os seus olhos e endureceu o seu coração\". Não estavam, portanto, assim cegos os olhos nem assim endurecido o coração dos habitantes de Tiro e de Sidônia: porque teriam crido, se tivessem visto sinais como os que estes viram. Mas nem àqueles aproveitou poderem crer, porque não estavam predestinados, nem a estes teria prejudicado não poderem crer, se tivessem sido predestinados de tal modo que o Senhor iluminasse os cegos e quisesse tirar dos endurecidos o coração de pedra.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Hoc autem quod hic dicitur, etiam Lucas commemorat, continuatim cuidam sermoni domini etiam hoc ex ipsius ore coniungens; unde magis videtur ipse hoc ordine illa commemorare quo a domino dicta sunt; Matthaeus autem suae recordationis ordinem tenuisse. Aut illud quod Matthaeus ait tunc coepit exprobrare civitatibus, sic accipiendum putant ut punctum ipsum temporis voluisse credatur exprimere, in hoc quod est tunc; non autem ipsum tempus aliquanto latius quo hic multa gerebantur et dicebantur. Quisque ergo hoc credit, credat hoc esse bis dictum. Cum enim apud unum Evangelistam inveniantur quaedam quae bis dixerat dominus, sicut apud Lucam de non tollenda pera in via; quid mirum si aliquid aliud bis dictum sigillatim a singulis dicitur eodem ordine quo dictum est? Et ideo diversus ordo apparet in singulis: quia et tunc quando ille, et tunc quando iste commemorat, dictum est",
+        "pt": "Isto que aqui se diz, Lucas também o menciona, ligando-o, em continuação, a um discurso do Senhor, também da sua própria boca; por isso parece antes que ele relata aquelas coisas na ordem em que foram ditas pelo Senhor, e que Mateus manteve a ordem da sua lembrança. Ou, quanto ao que Mateus diz: \"Então começou a censurar as cidades\", pensam que se deve entender que se crê que ele quis exprimir o próprio ponto do tempo, naquilo que é \"então\"; e não o próprio tempo, um pouco mais amplo, em que aqui muitas coisas eram feitas e ditas. Quem, portanto, crê isso, creia que foi dito duas vezes. Pois, como se encontram em um só Evangelista algumas coisas que o Senhor dissera duas vezes, como em Lucas sobre não levar a bolsa pelo caminho, que há de admirar se alguma outra coisa dita duas vezes é referida por cada um separadamente na mesma ordem em que foi dita? E por isso aparece uma ordem diferente em cada um: porque foi dito tanto quando aquele o relata, como quando este o relata.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 8,
+    "versos": [
+      25,
+      26
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Quia sciebat dominus multos de superiori quaestione dubitaturos, scilicet quod Iudaei Christum non receperunt, quem gentilitas tam prona suscepit, respondet his cogitationibus eorum; et ideo dicit respondens Iesus dixit: confiteor tibi, pater domine caeli et terrae",
+        "pt": "Porque o Senhor sabia que muitos duvidariam da questão anterior, a saber, de que os judeus não receberam Cristo, a quem os gentios acolheram tão prontamente, responde a esses pensamentos deles; e por isso diz: \"Respondendo, Jesus disse: Eu te louvo, Pai, Senhor do céu e da terra\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Idest, qui facis caelos, et relinquis in terrenitate quos vis. Vel ad litteram",
+        "pt": "Isto é, tu que fazes os céus e deixas na terrenidade aqueles que queres. Ou, ao pé da letra.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Si Christus dixit confiteor, a quo longe est omne peccatum, confessio non est solius peccatoris, sed aliquando etiam laudatoris. Confitemur ergo sive laudantes Deum, sive accusantes nosmetipsos. Dixit ergo confiteor tibi; idest, laudo te, non accuso me",
+        "pt": "Se Cristo disse \"confesso\", ele de quem todo pecado está longe, a confissão não é somente do pecador, mas às vezes também de quem louva. Confessamos, portanto, seja louvando a Deus, seja acusando a nós mesmos. Disse, pois, \"confesso-te\"; isto é, louvo-te, não me acuso.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Audiant ergo qui salvatorem non natum, sed creatum calumniantur, quod patrem suum vocet caeli et terrae dominum. Si enim et ipse creatura est, et creatura conditorem suum patrem appellare potest, stultum fuit non et sui, et caeli, et terrae dominum, vel patrem similiter appellare. Gratias autem agit, quod apostolis adventus sui aperuerit sacramenta, quae ignoraverunt Scribae et Pharisaei, qui sibi sapientes videntur et in conspectu suo prudentes: et ideo sequitur quia abscondisti haec a sapientibus et prudentibus, et revelasti ea parvulis",
+        "pt": "Ouçam, pois, os que caluniam o Salvador como criado e não gerado, porque chama seu Pai de Senhor do céu e da terra. Se, com efeito, ele próprio é criatura, e uma criatura pode chamar de pai o seu criador, foi tolice não chamar igualmente de pai também o Senhor de si mesmo, do céu e da terra. Dá graças, porém, porque na sua vinda abriu aos apóstolos os mistérios que ignoraram os escribas e fariseus, que parecem sábios a si mesmos e prudentes aos seus próprios olhos; e por isso segue: \"porque escondeste estas coisas aos sábios e prudentes, e as revelaste aos pequeninos\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Nomine sapientum et prudentum superbos intelligi posse ipse exposuit, cum ait revelasti ea parvulis: quid enim est parvulis, nisi humilibus?",
+        "pt": "Pelo nome de sábios e prudentes, ele próprio explicou que se podem entender os soberbos, quando disse \"as revelaste aos pequeninos\": pois que são os pequeninos, senão os humildes?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Quod enim non subiungit: revelasti ea stultis, sed parvulis, tumorem se damnasse innuit, non acumen",
+        "pt": "Pois, ao não acrescentar \"revelaste-as aos tolos\", mas \"aos pequeninos\", dá a entender que condenou o orgulho, não a agudeza de espírito.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Vel dicens sapientes, non veram sapientiam dicit, sed eam quam videbantur Scribae et Pharisaei ab eloquentia habere. Propter hoc neque dixit: revelasti ea stultis, sed parvulis, idest informibus aut rusticis; in quo erudit nos per omnia ab elatione erui, humilitatem autem zelare",
+        "pt": "Ou ainda: ao dizer \"sábios\", não fala da verdadeira sabedoria, mas daquela que os escribas e fariseus pareciam ter por causa da eloquência. Por isso não disse: \"revelaste-as aos tolos\", mas \"aos pequeninos\", isto é, aos sem formação ou rústicos; com o que nos ensina a nos livrarmos em tudo da soberba e a cultivar a humildade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Caelestium ergo verborum arcana atque virtutes sapientibus absconduntur, et parvulis revelantur; parvulis malitia, non sensu; sapientibus vero stultitiae suae praesumptione, non sapientiae causa",
+        "pt": "Os segredos e as virtudes das palavras celestes, portanto, estão escondidos aos sábios e são revelados aos pequeninos; pequeninos pela inocência, não pelo entendimento; sábios, porém, pela presunção da sua tolice, não por causa da sabedoria.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Revelatum autem esse his, dignum est laetitia; occultari autem his, non laetitia, sed lacrymis dignum est. Non ergo propter hoc laetatur, sed quoniam quae sapientes non cognoverunt, cognoverunt hi",
+        "pt": "Ora, que isto tenha sido revelado a estes é digno de alegria; que tenha sido ocultado àqueles, é digno não de alegria, mas de lágrimas. Não se alegra, portanto, por isso, mas porque estes conheceram o que os sábios não conheceram.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "",
+        "latim": "Facti autem huius aequitatem dominus paternae voluntatis iudicio confirmat; ut qui indignantur parvuli in Deo fieri, stulti deinceps in sapientia sua fiant: et ideo subditur ita, pater, quoniam sic placitum fuit ante te",
+        "pt": "O Senhor confirma a justiça deste fato pelo juízo da vontade do Pai, para que os que se indignam de que outros se façam pequeninos em Deus se tornem, depois, tolos na sua sabedoria; e por isso se acrescenta: \"Sim, Pai, porque assim foi do teu agrado\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Quibus verbis exempla humilitatis accipimus, ne temere discutere superna consilia de aliorum vocatione, aliorum vero repulsione praesumamus: ostendens quod iniustum esse non potest quod placuit iusto",
+        "pt": "Por estas palavras recebemos exemplos de humildade, para que não presumamos examinar temerariamente os desígnios do alto sobre a vocação de uns e a rejeição de outros, mostrando que não pode ser injusto o que agradou ao Justo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "In his etiam verbis blandientis affectu loquitur ad patrem, ut coeptum in apostolis compleatur beneficium",
+        "pt": "Nestas palavras, fala também ao Pai com afeto de quem o acaricia, para que o benefício começado nos apóstolos se complete.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Haec autem quae dominus discipulis dixit, studiosiores eos fecerunt: quia enim consequens erat eos de se magna sapere, quia Daemones abigebant, ideo hic eos reprimit: revelatio enim erat quod eis factum est, non illorum studium; ideoque Scribae, sapientes et prudentes existimantes se esse, exciderunt propter proprium tumorem; unde si propter hoc ab eis abscondita sunt Dei mysteria: timete, dicit, et vos, et manete parvuli: hoc enim fecit vos revelatione potiri. Sicut autem cum Paulus dicit: tradidit illos Deus in reprobum sensum, non hoc dicit inducens Deum hoc agentem, sed illos qui causam tribuerunt, ita et hic abscondisti haec a sapientibus et prudentibus. Et propter quid abscondita sunt ab illis? Audi Paulum dicentem quoniam quaerentes propriam iustitiam statuere, iustitiae Dei non sunt subiecti",
+        "pt": "Ora, estas coisas que o Senhor disse aos discípulos os tornaram mais atentos: pois, como era de se esperar que pensassem grandes coisas de si, porque expulsavam os demônios, aqui ele os reprime; com efeito, o que lhes foi feito era uma revelação, não obra do esforço deles; e por isso os escribas, que se julgavam sábios e prudentes, decaíram por causa do próprio orgulho; donde, se por isso lhes foram ocultados os mistérios de Deus: temei, diz, também vós, e permanecei pequeninos: pois isto fez que alcançásseis a revelação. Assim como, quando Paulo diz: \"Deus os entregou a um sentimento reprovável\", não diz isso apresentando Deus como quem o faz, mas aqueles que deram a causa, assim também aqui: \"escondeste estas coisas aos sábios e prudentes\". E por que lhes foram ocultadas? Ouve Paulo dizendo: \"procurando estabelecer a sua própria justiça, não se sujeitaram à justiça de Deus\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 9,
+    "versos": [
+      27,
+      27
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Quia dixerat: confiteor tibi, pater, quoniam abscondisti haec a sapientibus, ut non existimes quoniam ita gratias agit patri, sicut si ipse sit hac virtute privatus, consequenter adiungit omnia mihi tradita sunt a patre meo. Cum autem audieris quoniam tradita sunt, nihil humanum suspiceris: ut enim non duos deos ingenitos esse aestimes, hanc ponit dictionem. Simul enim cum genitus est, omnium dominator fuit",
+        "pt": "Tendo dito: \"Eu te confesso, Pai, porque escondeste estas coisas aos sábios\", para que não penses que dá graças ao Pai como se ele próprio estivesse privado desse poder, acrescenta em seguida: \"Tudo me foi entregue por meu Pai\". Mas quando ouvires que foi entregue, não suspeites nada de humano: com efeito, para que não julgues que há dois deuses não gerados, emprega esta expressão. Pois, ao ser gerado, foi ao mesmo tempo senhor de todas as coisas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Alioquin si iuxta nostram fragilitatem sentire volumus, cum coeperit habere qui accepit, incipiet non habere qui dedit. Vel tradita sibi omnia, non caelum et terra et elementa intelligenda sunt, et cetera quae ipse fecit et condidit; sed hi qui per filium accessum habent ad patrem",
+        "pt": "De outro modo, se quisermos entender segundo a nossa fragilidade, quando aquele que recebeu começar a ter, aquele que deu começará a não ter. Ou ainda: por \"tudo lhe foi entregue\" não se devem entender o céu, a terra, os elementos e as demais coisas que ele próprio fez e criou, mas aqueles que, por meio do Filho, têm acesso ao Pai.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "",
+        "latim": "Vel hoc dixit ne quid in illo minus quam quod in Deo est, aestimaretur",
+        "pt": "Ou disse isto para que não se julgasse haver nele algo a menos do que há em Deus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "contra maximum",
+        "latim": "Nam si minus habet in potestate aliquid quam pater, non sunt eius omnia quae habet pater: gignendo enim dedit pater potentiam filio, sicut omnia, quae habet in substantia sua, gignendo dedit ei quem genuit de substantia sua",
+        "pt": "Pois, se tem em seu poder algo a menos que o Pai, nem tudo o que o Pai tem é dele: com efeito, o Pai, ao gerar, deu o poder ao Filho, assim como, ao gerar, deu a quem gerou de sua substância tudo o que tem em sua substância.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Deinde in mutua cognitione patris et filii dat intelligere non aliud in filio quam quod in patre extitisse: sequitur enim et nemo novit filium nisi pater, neque patrem quis novit nisi filius",
+        "pt": "Em seguida, no conhecimento mútuo do Pai e do Filho, dá a entender que no Filho não existe outra coisa senão o que existiu no Pai; pois segue-se: \"e ninguém conhece o Filho, senão o Pai, nem alguém conhece o Pai, senão o Filho\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Ex eo enim quod solus patrem novit, latenter ostendit eiusdem se esse substantiae; ac si diceret: quid mirum est, si omnium sum dominator, cum aliquid aliud maius habeam, scilicet scire patrem, et eiusdem esse substantiae?",
+        "pt": "Pois, pelo fato de que só ele conhece o Pai, mostra veladamente que é da mesma substância; como se dissesse: que há de admirar, se sou o senhor de todas as coisas, quando tenho algo outro maior, a saber, conhecer o Pai e ser da mesma substância?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Eamdem enim utriusque in mutua cognitione docet esse substantiam; cum qui filium cognosceret, patrem quoque cogniturus esset in filio, quia omnia ei a patre sunt tradita",
+        "pt": "Ensina, pois, que a substância de ambos é a mesma no conhecimento mútuo, pois quem conhecesse o Filho haveria de conhecer também o Pai no Filho, porque todas as coisas lhe foram entregues pelo Pai.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Cum autem dicat neque patrem aliquis cognoscit nisi filius, hoc ait non quoniam eum omnes omnino ignorent, sed quoniam cognitione qua ipse eum novit, nullus eum scit; quod et de filio dicendum est. Neque etiam de ignoto quodam Deo hoc dixit, sicut Marcion ait",
+        "pt": "Ora, ao dizer: \"nem alguém conhece o Pai, senão o Filho\", diz isto não porque todos o ignorem absolutamente, mas porque ninguém o conhece com o conhecimento com que o próprio Filho o conhece; o que se deve dizer também do Filho. Nem disse isto de algum Deus desconhecido, como afirma Marcião.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Trin",
+        "latim": "Denique propter substantiae inseparabilitatem sufficienter aliquando nominatur vel solus pater vel solus filius: nec inde separatur utriusque spiritus, qui proprie dicitur spiritus veritatis",
+        "pt": "Enfim, por causa da inseparabilidade da substância, às vezes basta nomear só o Pai ou só o Filho; e daí não se separa o Espírito de ambos, que é chamado propriamente Espírito da verdade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Erubescat ergo Eunomius haereticus tantam sibi notitiam patris et filii quantam ad alterutrum inter se habent, vindicans. Quod si inde contendit, et suam consolatur insaniam, quia sequitur et cui voluerit filius revelare; aliud est naturae aequalitate nosse quod noveris, aliud revelantis dignatione",
+        "pt": "Enrubesça, pois, o herege Eunômio, que reivindica para si tanto conhecimento do Pai e do Filho quanto o que eles têm um do outro. E se daí argumenta, e consola a sua loucura, porque se segue: \"e aquele a quem o Filho o quiser revelar\", uma coisa é conhecer por igualdade de natureza o que se conhece, outra coisa é conhecer pela dignação de quem revela.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Trin",
+        "latim": "Revelatur autem pater per filium, idest per verbum suum. Si enim hoc verbum quod nos proferimus temporale et transitorium, et seipsum ostendit, et illud de quo loquimur, quanto magis verbum Dei, per quod facta sunt omnia, quod ita ostendit patrem sicuti est pater, quia et ipsum ita est et hoc est quod pater?",
+        "pt": "Ora, o Pai é revelado pelo Filho, isto é, por seu Verbo. Pois se esta palavra que nós proferimos, temporal e transitória, mostra tanto a si mesma quanto aquilo de que falamos, quanto mais o Verbo de Deus, por quem foram feitas todas as coisas, que mostra o Pai tal como o Pai é, porque também ele mesmo é assim e é o que o Pai é?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Cum autem diceret nemo novit filium nisi pater, non dixit: et cui voluerit pater filium revelare; sed cum diceret nemo novit patrem nisi filius, addidit et cui voluerit filius revelare: quod non ita intelligendum est quasi filius a nullo possit agnosci nisi a patre solo, pater autem non solum a filio, sed etiam ab eis quibus revelaverit filius: sic enim potius dictum est, ut intelligamus patrem et ipsum filium per filium revelari, quia ipse est mentis nostrae lumen; et quod postea intulit et cui voluerit filius revelare, non tantum patrem, sed etiam filium accipiamus: ad totum enim quod dixit, illatum est: verbo enim suo se pater declarat; verbum autem non solum id quod per verbum declaratur, sed etiam seipsum declarat",
+        "pt": "Ora, ao dizer: \"ninguém conhece o Filho, senão o Pai\", não disse: \"e aquele a quem o Pai o quiser revelar\"; mas, ao dizer: \"ninguém conhece o Pai, senão o Filho\", acrescentou: \"e aquele a quem o Filho o quiser revelar\". Isto não se deve entender como se o Filho não pudesse ser conhecido por ninguém senão só pelo Pai, e o Pai, porém, não só pelo Filho, mas também por aqueles a quem o Filho o revelou; pois foi dito assim, antes, para que entendamos que o Pai e o próprio Filho são revelados por meio do Filho, porque ele é a luz da nossa mente; e o que depois acrescentou, \"e aquele a quem o Filho o quiser revelar\", entendamos não só do Pai, mas também do Filho: pois foi acrescentado a tudo o que disse. Com efeito, o Pai se declara por seu Verbo; e o Verbo declara não só aquilo que é declarado por meio do Verbo, mas também a si mesmo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Si ergo patrem revelat, et seipsum revelat. Sed hoc quidem ut manifestum dimisit; illud autem posuit, quia scilicet poterat esse dubium. Per hoc etiam instruit quod adeo concordat patri quod non est possibile aliquem venire ad patrem nisi per filium: hoc enim maxime scandalizabat, quod videbatur Deo contrarius; et ideo per omnia hoc destruere studuit",
+        "pt": "Se, portanto, revela o Pai, revela também a si mesmo. Isto, na verdade, deixou de dizer como manifesto; aquilo, porém, afirmou, porque podia haver dúvida. Por isso também ensina que concorda de tal modo com o Pai que não é possível alguém vir ao Pai senão pelo Filho: pois isto escandalizava sobretudo, que parecia contrário a Deus; e por isso procurou destruir isso por todos os meios.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 10,
+    "versos": [
+      28,
+      30
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Per ea quae dicta sunt, in desiderium sui discipulos constituerat, ostendens ineffabilem suam virtutem; nunc autem eos ad se vocat, dicens venite ad me, omnes qui laboratis et onerati estis",
+        "pt": "Pelas coisas que foram ditas, havia suscitado nos discípulos o desejo de si, mostrando o seu poder inefável; agora, porém, chama-os a si, dizendo: \"vinde a mim, todos os que estais cansados e sobrecarregados\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Quare enim omnes laboramus, nisi quia sumus homines mortales, lutea vasa portantes, quae faciunt invicem angustias? Sed si angustiantur vasa carnis, dilatentur spatia caritatis. Ad quid ergo dicit venite ad me, omnes qui laboratis, nisi ut non laboretis?",
+        "pt": "Por que todos nós nos cansamos, senão porque somos homens mortais, que carregam vasos de barro, os quais se apertam mutuamente? Mas se os vasos da carne se apertam, dilatem-se os espaços da caridade. Para que, pois, diz: \"vinde a mim, todos os que estais cansados\", senão para que não vos canseis?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Legis etiam difficultatibus laborantes et peccatis saeculi oneratos ad se advocat",
+        "pt": "Chama a si também os que se cansam com as dificuldades da Lei e os sobrecarregados com os pecados do mundo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Gravia enim esse onera peccati, et Zacharias propheta testatur iniquitatem dicens sedere super talentum plumbi. Et Psalmista complevit: iniquitates meae aggravatae sunt super me",
+        "pt": "Que os fardos do pecado são pesados, o testemunha também o profeta Zacarias, dizendo que a iniquidade está sentada sobre um talento de chumbo. E o Salmista o completou: \"as minhas iniquidades pesaram sobre mim\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Asperum etiam iugum et durum servitutis pondus est subesse temporalibus, ambire terrena, retinere labentia, velle stare in non stantibus, appetere quidem transeuntia, sed cum transeuntibus nolle transire. Dum enim contra votum cuncta fugiunt, quae prius mentem ex desiderio adeptionis afflixerant, post ex pavore amissionis premunt",
+        "pt": "É também jugo áspero e duro peso de servidão estar sujeito às coisas temporais, cobiçar as terrenas, reter as que escorregam, querer ficar de pé no que não se mantém de pé, desejar, sim, as coisas que passam, mas não querer passar com as que passam. Pois, quando, contra o desejo, fogem todas as coisas que antes tinham afligido a mente pelo desejo de obtê-las, depois a oprimem pelo temor de perdê-las.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Non autem dicit: venite ille et ille; sed omnes qui in sollicitudinibus, qui in tristitiis, qui in peccatis estis; non ut expetam noxas, sed ut solvam peccata. Venite, non quoniam indigeo vestra gloria, sed quia volo vestram salutem: unde dicit et ego reficiam vos; non dixit: salvabo solum; sed, quod multo amplius erat, reficiam vos; idest, in omni quiete constituam",
+        "pt": "Ora, não diz: \"vinde este e aquele\"; mas todos os que estais em preocupações, em tristezas, em pecados; não para exigir castigos, mas para perdoar os pecados. Vinde, não porque eu precise da vossa glória, mas porque quero a vossa salvação: por isso diz: \"e eu vos aliviarei\"; não disse: \"só vos salvarei\"; mas, o que era muito mais, \"vos aliviarei\", isto é, vos colocarei em todo repouso.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Non solum exonerabo, sed interna refectione saturabo",
+        "pt": "Não só aliviarei, mas saciarei com um refrigério interior.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Remigius",
+        "obra": "",
+        "latim": "Venite, dicit, non pedibus, sed moribus; non corpore, sed fide. Iste namque est spiritualis accessus, quo quisque Deo appropinquat; et ideo sequitur tollite iugum meum super vos",
+        "pt": "\"Vinde\", diz, não com os pés, mas com os costumes; não com o corpo, mas com a fé. Pois este é o acesso espiritual, pelo qual cada um se aproxima de Deus; e por isso segue: \"tomai sobre vós o meu jugo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Iugum Christi est Evangelium Christi, quod Iudaeos et gentes in unitate fidei coniungit et sociat. Hoc autem super nos iubemur sumere, idest in honore habere, ne forte subtus ponentes, idest illud prave contemnentes, lutulentis pedibus vitiorum conculcemus: unde subditur discite a me",
+        "pt": "O jugo de Cristo é o Evangelho de Cristo, que une e associa judeus e gentios na unidade da fé. Ora, ordena-se que o tomemos sobre nós, isto é, que o tenhamos em honra, para que, por acaso, pondo-o debaixo de nós, isto é, desprezando-o perversamente, não o pisemos com os pés lodosos dos vícios; por isso se acrescenta: \"aprendei de mim\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Non mundum fabricare, non in ipso mundo miracula facere; sed quia mitis sum et humilis corde. Magnus esse vis? A minimo incipe. Cogitas magnam fabricam constituere celsitudinis? De fundamento prius cogita humilitatis. Et quanto quisque vult superponere maius aedificium, tanto altius fodiat fundamentum. Quo autem perventurum est cacumen nostri aedificii? Usque ad conspectum Dei",
+        "pt": "Não a fabricar o mundo, não a fazer milagres no próprio mundo; mas \"porque sou manso e humilde de coração\". Queres ser grande? Começa pelo menor. Pensas em construir um grande edifício de altura? Pensa primeiro no fundamento da humildade. E quanto maior o edifício que alguém quer erguer, tanto mais profundo cave o fundamento. Mas até onde chegará o cume de nosso edifício? Até a visão de Deus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Discendum ergo nobis est a salvatore nostro ut simus mites moribus et humiles mentibus: neminem laedamus, neminem contemnamus, et virtutes quas foris ostendimus in opere, intus teneamus in corde",
+        "pt": "Devemos, pois, aprender de nosso Salvador a ser mansos nos costumes e humildes nos pensamentos: a não ofender ninguém, a não desprezar ninguém, e a guardar dentro, no coração, as virtudes que mostramos fora, na obra.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Et ideo incipiens divinas leges, ab humilitate incipit; et maximum praemium ponit, dicens et invenietis requiem animabus vestris. Hoc maximum est praemium: non enim alteri efficeris utilis solum, sed teipsum requiescere facis; et ante futura hanc tibi dat promissionem; in futuro autem perpetua gaudebis requie",
+        "pt": "E por isso, ao começar as leis divinas, começa pela humildade; e põe o maior prêmio, dizendo: \"e encontrareis descanso para as vossas almas\". Este é o maior prêmio: pois não te tornas útil apenas a outro, mas fazes a ti mesmo repousar; e antes das coisas futuras dá-te esta promessa; no futuro, porém, gozarás de perpétuo descanso.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Et ne formidarent quia dixerat onus et iugum, subdit iugum enim meum suave est, et onus meum leve",
+        "pt": "E para que não se atemorizassem por ele ter dito fardo e jugo, acrescenta: \"pois o meu jugo é suave, e o meu fardo é leve\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "",
+        "latim": "Iugi autem suavis et levis oneris blandimenta proponit, ut credentibus eius boni scientiam praestet quod ipse solus novit in patre",
+        "pt": "Propõe os afagos do jugo suave e do fardo leve, para conceder aos que creem nele o conhecimento do bem que somente ele conhece no Pai.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Quid grave mentis nostrae cervicibus imponit qui vitare omne desiderium quod perturbat praecipit, qui declinare laboriosa mundi huius itinera monet?",
+        "pt": "Que coisa pesada impõe à cerviz de nossa mente aquele que manda evitar todo desejo que perturba, que adverte a se afastar dos caminhos trabalhosos deste mundo?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hilarius",
+        "obra": "in Matth",
+        "latim": "Et quid iugo ipso suavius, quid onere levius? Probatiorem fieri, scelere abstinere, bonum velle, malum nolle, amare omnes, odisse nullum, aeterna consequi, praesentibus non capi, nolle inferre alteri quod sibi perpeti sit molestum",
+        "pt": "E o que há de mais suave que este jugo, de mais leve que este fardo? Tornar-se mais íntegro, abster-se do crime, querer o bem, não querer o mal, amar a todos, odiar a ninguém, alcançar as coisas eternas, não se deixar prender pelas presentes, não querer fazer a outro o que lhe seria molesto sofrer.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Rabanus",
+        "obra": "",
+        "latim": "Sed quomodo iugum Christi suave, cum supra dicatur: arcta est via quae ducit ad vitam? Sed quod angusto initio incipitur, processu temporis ineffabili dilectionis dulcedine dilatatur",
+        "pt": "Mas como é suave o jugo de Cristo, quando acima se diz: \"estreito é o caminho que conduz à vida\"? Mas o que se começa num início estreito, com o passar do tempo se dilata pela inefável doçura do amor.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Item qui iugum domini intrepida cervice subierunt, tam difficilia pericula patiuntur, ut non a laboribus ad quietem, sed a quiete ad laborem vocari videantur. Sed profecto aderat spiritus sanctus, qui in exterioris hominis corruptione interiorem renovaret de die in diem; et gustata requie spirituali in affluentia deliciarum Dei in spe futurae beatitudinis, omnia praesentia deliniret aspera, et omnia gravia relevaret. Secari et uri se homines patiuntur, ut dolores non aeterni, sed aliquanto diuturnioris ulceris, acriorum dolorum pretio redimantur. Quibus tempestatibus vel poenis importuni sunt mercatores, ut divitias perituras acquirant? Sed qui has non amant, eadem gravia patiuntur; qui vero amant, eadem quidem, sed non gravia patiuntur. Omnia enim saeva et immania, prorsus facilia et prope nulla efficit amor; quanto ergo facilius ad veram beatitudinem caritas facit quod ad miseriam, quantum potuit, cupiditas fecit?",
+        "pt": "Igualmente, os que submeteram a cerviz sem temor ao jugo do Senhor sofrem perigos tão difíceis que parecem chamados não dos trabalhos ao repouso, mas do repouso ao trabalho. Mas certamente estava presente o Espírito Santo, que, na corrupção do homem exterior, renovava o interior de dia em dia; e, tendo provado o repouso espiritual na abundância das delícias de Deus, na esperança da futura bem-aventurança, suavizava todas as asperezas presentes e aliviava todas as dificuldades. Os homens suportam ser cortados e queimados, para que as dores não eternas, mas de uma úlcera um pouco mais duradoura, sejam resgatadas ao preço de dores mais agudas. Que tempestades ou penas não enfrentam os mercadores importunos, para adquirir riquezas perecíveis? Mas os que não as amam suportam as mesmas coisas como pesadas; os que, porém, as amam, suportam as mesmas, mas não pesadas. Pois o amor torna fáceis, e quase nulas, todas as coisas cruéis e enormes; quanto mais facilmente, então, a caridade conduz à verdadeira bem-aventurança o que a cobiça, quanto pôde, fez para a miséria?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Quomodo etiam levius est lege Evangelium, cum in lege homicidium et adulterium, in Evangelio ira concupiscentiaque puniantur; in lege enim multa praecepta sunt, quae apostolus non posse compleri plenissime docet: in lege opera requiruntur; in Evangelio voluntas quaeritur, quae etsi effectum non habuerit, tamen praemium non amittit. Evangelium ea praecipit quae possumus, ne scilicet concupiscamus: hoc in nostro arbitrio est; lex cum voluntatem non puniat, punit effectum, ne adulterium facias. Finge in persecutione aliquam virginem prostitutam: haec apud Evangelium, quia voluntate non peccat, virgo suscipitur; in lege quasi corrupta repudiatur",
+        "pt": "Como também o Evangelho é mais leve que a lei, quando na lei se punem o homicídio e o adultério, e no Evangelho a ira e a concupiscência; pois na lei há muitos preceitos que o Apóstolo ensina não poderem ser plenamente cumpridos: na lei exigem-se as obras; no Evangelho busca-se a vontade, que, mesmo que não tenha tido efeito, nem por isso perde o prêmio. O Evangelho prescreve o que podemos, a saber, não cobiçar: isto está em nosso arbítrio; a lei, como não pune a vontade, pune o efeito: não cometas adultério. Imagina em uma perseguição uma virgem prostituída: esta, junto ao Evangelho, porque não peca pela vontade, é recebida como virgem; na lei é repudiada como corrompida.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  }
+]
