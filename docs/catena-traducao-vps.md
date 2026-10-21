@@ -103,6 +103,18 @@ original; nomes bíblicos como na CNBB; "dominus" → "o Senhor"; citações do 
 duplas; trecho obscuro: o mais próximo possível, sem nota.
 ```
 
+## Lições da primeira rodada (Mateus, 20–21/10/2026)
+
+- Mateus inteiro (28 capítulos, 4.848 itens) saiu em cerca de um dia, sem nenhum item suspeito no
+  `confere`. Parou em Mt 28 a pedido; João, Lucas e Marcos continuam pendentes.
+- **Subagentes só escrevem `traducoes-N.json`; a sessão principal roda `grava` em série.** Com muitos
+  lotes gravando o mesmo arquivo de capítulo em paralelo, há risco de um sobrescrever o outro
+  (aconteceu em Mt 18 e foi refeito). Ao retomar, troque o passo 5 do prompt para isso.
+- **Mt 6,1-4 está no arquivo de Mt 5** (lectiones 22 e 23 de `data/catena/Mt/05.json`, sem `versos`):
+  no Corpus Thomisticum o "Caput 5" vai até a esmola. Precisa de ajuste antes da **Quarta-feira de
+  Cinzas (10/02/2027)**, cujo Evangelho é Mt 6,1-6.16-18. Notas completas da VPS em
+  `/srv/catena-notas.md` (também há diferenças de numeração entre a CNBB e a Vulgata).
+
 ## 3. Depois (Mac)
 
 - `git pull`, revisar uma amostra por capítulo (ler 5 itens ao acaso de cada um).
