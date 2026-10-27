@@ -1,0 +1,117 @@
+{
+  "referencia": "Sl 45(46),2-3.5-6.8-9 (R. 5)",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 74.48,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 1.46,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 1.46,
+      "t1": 5.04,
+      "texto": "Os braços de um rio vêm trazer alegria"
+    },
+    {
+      "t0": 5.8,
+      "t1": 8.6,
+      "texto": "à Cidade de Deus, à morada do Altíssimo."
+    },
+    {
+      "t0": 8.6,
+      "t1": 12.02,
+      "texto": "O Senhor para nós é refúgio e vigor,"
+    },
+    {
+      "t0": 12.36,
+      "t1": 15.7,
+      "texto": "sempre pronto, mostrou-se um socorro na angústia;"
+    },
+    {
+      "t0": 16.22,
+      "t1": 19.3,
+      "texto": "assim não tememos, se a terra estremece,"
+    },
+    {
+      "t0": 19.52,
+      "t1": 22.32,
+      "texto": "se os montes desabam, caindo nos mares."
+    },
+    {
+      "t0": 22.72,
+      "t1": 26.3,
+      "texto": "Os braços de um rio vêm trazer alegria"
+    },
+    {
+      "t0": 27.06,
+      "t1": 29.86,
+      "texto": "à Cidade de Deus, à morada do Altíssimo."
+    },
+    {
+      "t0": 29.86,
+      "t1": 33.44,
+      "texto": "Os braços de um rio vêm trazer alegria"
+    },
+    {
+      "t0": 34.2,
+      "t1": 37,
+      "texto": "à Cidade de Deus, à morada do Altíssimo."
+    },
+    {
+      "t0": 37,
+      "t1": 40.4,
+      "texto": "Quem a pode abalar? Deus está no seu meio!"
+    },
+    {
+      "t0": 40.78,
+      "t1": 44.42,
+      "texto": "Já bem antes da aurora, ele vem ajudá-la."
+    },
+    {
+      "t0": 44.42,
+      "t1": 48,
+      "texto": "Os braços de um rio vêm trazer alegria"
+    },
+    {
+      "t0": 48.76,
+      "t1": 51.56,
+      "texto": "à Cidade de Deus, à morada do Altíssimo."
+    },
+    {
+      "t0": 51.56,
+      "t1": 53.72,
+      "texto": "Conosco está o Senhor do universo!"
+    },
+    {
+      "t0": 53.96,
+      "t1": 56.68,
+      "texto": "O nosso refúgio é o Deus de Jacó!"
+    },
+    {
+      "t0": 56.68,
+      "t1": 60.7,
+      "texto": "Vinde ver, contemplai os prodígios de Deus"
+    },
+    {
+      "t0": 60.7,
+      "t1": 63.94,
+      "texto": "e a obra estupenda que fez no universo:"
+    },
+    {
+      "t0": 64.36,
+      "t1": 66.78,
+      "texto": "reprime as guerras na face da terra."
+    },
+    {
+      "t0": 67.34,
+      "t1": 70.92,
+      "texto": "Os braços de um rio vêm trazer alegria"
+    },
+    {
+      "t0": 71.68,
+      "t1": 74.48,
+      "texto": "à Cidade de Deus, à morada do Altíssimo."
+    }
+  ]
+}

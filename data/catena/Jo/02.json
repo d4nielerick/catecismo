@@ -215,67 +215,158 @@
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Quoniam autem paulo post dominus Hierosolymam ascensurus erat, Capharnaum adiit, ut non ubique fratres et matrem secum trahat; unde dicitur post haec descendit Capharnaum ipse et mater eius et fratres eius et discipuli eius; et ibi manserunt non multis diebus"
+        "latim": "Quoniam autem paulo post dominus Hierosolymam ascensurus erat, Capharnaum adiit, ut non ubique fratres et matrem secum trahat; unde dicitur post haec descendit Capharnaum ipse et mater eius et fratres eius et discipuli eius; et ibi manserunt non multis diebus",
+        "pt": "Como o Senhor, pouco depois, subiria a Jerusalém, foi a Cafarnaum, para não arrastar consigo por toda parte os irmãos e a mãe; por isso se diz: \"Depois disto desceu a Cafarnaum, ele, sua mãe, seus irmãos e seus discípulos; e ali permaneceram não muitos dias\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Hic est autem dominus Deus noster excelsus, ut nos faceret; humilis, ut nos reficeret; ambulans inter homines, patiens humana, abscondens divina. Ecce habet matrem, habet fratres, habet et discipulos. Inde fratres unde matrem. Fratres enim Scriptura nostra appellare consuevit non eos solos qui nascuntur ex eodem utero aut ex eodem patre; sed ex eodem gradu, velut compatrueles aut consobrinos. Unde ergo fratres domino? Num enim Maria iterum peperit? Absit: inde coepit dignitas virginum. Abraham patruus erat Lot, et Iacob Laban Syrum habebat avunculum; et utrique dicti sunt fratres"
+        "latim": "Hic est autem dominus Deus noster excelsus, ut nos faceret; humilis, ut nos reficeret; ambulans inter homines, patiens humana, abscondens divina. Ecce habet matrem, habet fratres, habet et discipulos. Inde fratres unde matrem. Fratres enim Scriptura nostra appellare consuevit non eos solos qui nascuntur ex eodem utero aut ex eodem patre; sed ex eodem gradu, velut compatrueles aut consobrinos. Unde ergo fratres domino? Num enim Maria iterum peperit? Absit: inde coepit dignitas virginum. Abraham patruus erat Lot, et Iacob Laban Syrum habebat avunculum; et utrique dicti sunt fratres",
+        "pt": "Este é o Senhor nosso Deus: excelso, para nos fazer; humilde, para nos restaurar; caminhando entre os homens, sofrendo as coisas humanas, ocultando as divinas. Eis que tem mãe, tem irmãos, tem também discípulos. De onde os irmãos, daí a mãe. A nossa Escritura costuma chamar irmãos não só os que nascem do mesmo ventre ou do mesmo pai, mas os do mesmo grau, como os primos por parte de pai ou os primos. De onde, então, irmãos do Senhor? Acaso Maria deu à luz outra vez? Longe disso: daí começou a dignidade das virgens. Abraão era tio paterno de Ló, e Jacó tinha por tio materno Labão, o Sírio; e ambos foram chamados irmãos",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Fratres ergo domini dicuntur cognati Mariae vel Ioseph, non filii Mariae vel Ioseph: quia non solum beata virgo, sed etiam Ioseph testis castitatis eius ab omni actione coniugali immunis permansit"
+        "latim": "Fratres ergo domini dicuntur cognati Mariae vel Ioseph, non filii Mariae vel Ioseph: quia non solum beata virgo, sed etiam Ioseph testis castitatis eius ab omni actione coniugali immunis permansit",
+        "pt": "Os irmãos do Senhor, portanto, são chamados os parentes de Maria ou de José, não filhos de Maria ou de José: porque não só a bem-aventurada Virgem, mas também José, testemunha da castidade dela, permaneceu isento de toda ação conjugal",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de Cons. Evang",
-        "latim": "Quod vero dicit et discipuli eius, incertum est utrum iam illi adhaeserant etiam Petrus, et Andreas, et filii Zebedaei. Matthaeus enim primo narrat quod venerit et habitaverit in Capharnaum, et postea quod eos de navibus piscantes vocaverit. An forte Matthaeus quod praetermiserat recapitulavit? Quia sine ulla consequentis temporis differentia dixit: ambulans iuxta mare Galilaeae, vidit duos fratres, an potius alii discipuli fuerunt? Scriptura enim evangelica et apostolica non solum illos duodenos appellat discipulos eius, sed omnes qui in Deum credentes ad regnum caelorum magisterio eius erudiebantur. Illud etiam requirendum est, quomodo hic dicit, antequam Ioannes Baptista missus esset in carcerem, Iesum venisse in Galilaeam: cum Matthaeus dicat: cum autem audisset quod Ioannes traditus esset, secessit in Galilaeam: similiter etiam et Marcus. Lucas etiam nihil quidem dicit de tradito Ioanne: sed post Baptismum et tentationem Christi dicit eum iisse in Galilaeam, sicut illi duo. Unde intelligitur tres Evangelistas non Ioanni Evangelistae contraria narrasse, sed praetermisisse primum domini adventum in Galilaeam posteaquam baptizatus est, quando illic aquam convertit in vinum"
+        "latim": "Quod vero dicit et discipuli eius, incertum est utrum iam illi adhaeserant etiam Petrus, et Andreas, et filii Zebedaei. Matthaeus enim primo narrat quod venerit et habitaverit in Capharnaum, et postea quod eos de navibus piscantes vocaverit. An forte Matthaeus quod praetermiserat recapitulavit? Quia sine ulla consequentis temporis differentia dixit: ambulans iuxta mare Galilaeae, vidit duos fratres, an potius alii discipuli fuerunt? Scriptura enim evangelica et apostolica non solum illos duodenos appellat discipulos eius, sed omnes qui in Deum credentes ad regnum caelorum magisterio eius erudiebantur. Illud etiam requirendum est, quomodo hic dicit, antequam Ioannes Baptista missus esset in carcerem, Iesum venisse in Galilaeam: cum Matthaeus dicat: cum autem audisset quod Ioannes traditus esset, secessit in Galilaeam: similiter etiam et Marcus. Lucas etiam nihil quidem dicit de tradito Ioanne: sed post Baptismum et tentationem Christi dicit eum iisse in Galilaeam, sicut illi duo. Unde intelligitur tres Evangelistas non Ioanni Evangelistae contraria narrasse, sed praetermisisse primum domini adventum in Galilaeam posteaquam baptizatus est, quando illic aquam convertit in vinum",
+        "pt": "Quanto ao que diz \"e seus discípulos\", é incerto se já lhe aderiam também Pedro, André e os filhos de Zebedeu. Mateus, com efeito, narra primeiro que ele veio e habitou em Cafarnaum, e depois que chamou os que pescavam das barcas. Ou talvez Mateus tenha recapitulado o que omitira? Porque, sem nenhuma diferença do tempo seguinte, disse: \"caminhando junto ao mar da Galileia, viu dois irmãos\"; ou antes foram outros discípulos? A Escritura evangélica e apostólica, com efeito, não chama discípulos dele somente aqueles doze, mas todos os que, crendo em Deus, eram instruídos pelo seu magistério para o reino dos céus. Deve-se também investigar como aqui diz que Jesus veio à Galileia antes que João Batista fosse lançado no cárcere, quando Mateus diz: \"Ao ouvir que João fora preso, retirou-se para a Galileia\"; de modo semelhante também Marcos. Lucas também nada diz, na verdade, de João preso; mas diz que, depois do Batismo e da tentação de Cristo, ele foi à Galileia, como aqueles dois. Donde se entende que os três Evangelistas não narraram coisas contrárias ao Evangelista João, mas omitiram a primeira vinda do Senhor à Galileia depois de ser batizado, quando ali converteu a água em vinho",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius Eccles",
         "obra": "Hist",
-        "latim": "Cum enim trium Evangeliorum ad Ioannem Evangelistam notitia pervenisset, probasse quidem dicitur fidem et veritatem dictorum; deesse tamen vidit aliqua, et ea maxime quae primo praedicationis suae tempore dominus gesserat: certum est enim quod in superioribus tribus Evangeliis haec videntur sola contineri quae in eo gesta sunt anno quo Ioannes Baptista vel inclusus est in carcere, vel punitus. Et ideo rogatus dicitur Ioannes apostolus ut ea quae praeterierant priores ante traditionem Ioannis, salvatoris gesta conscriberet. Unde si quis diligenter consideret, inveniet Evangelia non dissonare; sed alterius temporis gesta esse quae scribit Ioannes, alterius vero quae ceteri"
+        "latim": "Cum enim trium Evangeliorum ad Ioannem Evangelistam notitia pervenisset, probasse quidem dicitur fidem et veritatem dictorum; deesse tamen vidit aliqua, et ea maxime quae primo praedicationis suae tempore dominus gesserat: certum est enim quod in superioribus tribus Evangeliis haec videntur sola contineri quae in eo gesta sunt anno quo Ioannes Baptista vel inclusus est in carcere, vel punitus. Et ideo rogatus dicitur Ioannes apostolus ut ea quae praeterierant priores ante traditionem Ioannis, salvatoris gesta conscriberet. Unde si quis diligenter consideret, inveniet Evangelia non dissonare; sed alterius temporis gesta esse quae scribit Ioannes, alterius vero quae ceteri",
+        "pt": "Quando, com efeito, chegou ao Evangelista João o conhecimento dos três Evangelhos, diz-se que aprovou a fé e a verdade do que fora dito; viu, porém, que faltavam algumas coisas, e sobretudo as que o Senhor fizera no primeiro tempo de sua pregação: é certo, com efeito, que nos três Evangelhos anteriores parecem estar contidas somente as coisas que nele foram feitas no ano em que João Batista foi encerrado no cárcere ou punido. E por isso se diz que o apóstolo João foi rogado a escrever as obras do Salvador que os primeiros haviam omitido, antes da prisão de João. Donde, quem considerar com diligência, verá que os Evangelhos não discordam; mas que o que João escreve foi feito em outro tempo, e o que os demais escrevem, em outro",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Neque enim in Capharnaum miraculum ullum tunc operatus est: qui enim civitatem habitabant illam, non sane se habebant ad Christum, sed erant valde corrupti: ideo tamen accedit et parum ibi trahit tempus propter eum qui ad matrem erat honorem"
+        "latim": "Neque enim in Capharnaum miraculum ullum tunc operatus est: qui enim civitatem habitabant illam, non sane se habebant ad Christum, sed erant valde corrupti: ideo tamen accedit et parum ibi trahit tempus propter eum qui ad matrem erat honorem",
+        "pt": "Com efeito, em Cafarnaum não realizou então nenhum milagre: pois os que habitavam aquela cidade não se mostravam, de fato, bem dispostos para com Cristo, mas eram muito corrompidos; vai, contudo, e demora ali pouco tempo, por causa da honra que tinha para com a mãe",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Ideo etiam non multis diebus ibi manserunt, propter festum Paschae, quod iam appropinquabat; unde sequitur et prope erat Pascha Iudaeorum"
+        "latim": "Ideo etiam non multis diebus ibi manserunt, propter festum Paschae, quod iam appropinquabat; unde sequitur et prope erat Pascha Iudaeorum",
+        "pt": "Por isso também não permaneceram ali muitos dias, por causa da festa da Páscoa, que já se aproximava; por isso se segue: \"E estava próxima a Páscoa dos judeus\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "in Ioannem",
-        "latim": "Sed quid intendit ibi appositio Iudaeorum? Non enim nationis alterius Paschae solemnitas fuerat. Forsan vero quia quoddam est Pascha humanum eorum qui procul a proposito Scripturae celebrant illud, quoddam vero divinum et verum, quod in spiritu et veritate perficitur. Ad distinctionem ergo divini dicitur Iudaeorum. Sequitur et ascendit Hierosolymam"
+        "latim": "Sed quid intendit ibi appositio Iudaeorum? Non enim nationis alterius Paschae solemnitas fuerat. Forsan vero quia quoddam est Pascha humanum eorum qui procul a proposito Scripturae celebrant illud, quoddam vero divinum et verum, quod in spiritu et veritate perficitur. Ad distinctionem ergo divini dicitur Iudaeorum. Sequitur et ascendit Hierosolymam",
+        "pt": "Mas que pretende ali o acréscimo dos judeus? Pois a solenidade da Páscoa não pertencera a outra nação. Talvez porque há uma Páscoa humana, a dos que a celebram longe do propósito da Escritura, e outra divina e verdadeira, que se realiza em espírito e verdade. Para distinguir da divina, diz-se, portanto, dos judeus. Segue: \"E subiu a Jerusalém\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Bis in Evangeliis legitur Iesum ascendisse Hierosolymam: semel in primo anno praedicationis, dum adhuc Ioannes non erat missus in carcerem; de hoc ascensu nunc agitur; et iterum illo anno quo erat passurus. Dedit autem nobis exemplum dominus quanta cura divinis subdi debeamus imperiis. Si enim ipsa Dei filius decreta legis a se data implebat, celebrans solemnitates cum ceteris hominibus, quanto studio bonorum operum servi debent solemnitates et praevenire et celebrare?"
+        "latim": "Bis in Evangeliis legitur Iesum ascendisse Hierosolymam: semel in primo anno praedicationis, dum adhuc Ioannes non erat missus in carcerem; de hoc ascensu nunc agitur; et iterum illo anno quo erat passurus. Dedit autem nobis exemplum dominus quanta cura divinis subdi debeamus imperiis. Si enim ipsa Dei filius decreta legis a se data implebat, celebrans solemnitates cum ceteris hominibus, quanto studio bonorum operum servi debent solemnitates et praevenire et celebrare?",
+        "pt": "Lê-se duas vezes nos Evangelhos que Jesus subiu a Jerusalém: uma vez no primeiro ano da pregação, quando João ainda não fora lançado no cárcere; trata-se agora desta subida; e de novo no ano em que haveria de padecer. O Senhor nos deu exemplo de quanta diligência devemos nos submeter aos mandamentos divinos. Se, com efeito, o próprio Filho de Deus cumpria os decretos da lei por ele dada, celebrando as solenidades com os demais homens, com quanto zelo de boas obras devem os servos antecipar e celebrar as solenidades?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Mystice autem, cum facta est nuptiarum praeparatio in Cana Galilaeae, descendit una cum matre, fratribus et discipulis in Capharnaum, quae interpretatur ager consolationis. Oportebat enim post vini alacritatem, ad agrum consolationis, una cum matre et discipulis ascendere salvatorem, consolaturum in futuris fructibus et in agrorum multitudine suscipientes disciplinam eius, et animam quae illum spiritu sancto concepit, et iuvandos ibi. Sunt enim quidam fructificantes, ad quos dominus ipse descendit una cum verbi ministris atque discipulis, adiuvans huiusmodi praesente matre sua. Videntur autem qui Capharnaum ducti sunt, non capere diuturnam apud se Iesu praesentiam: quoniam illuminationem quae de pluribus dogmatibus est, inferioris consolationis agellus non capit, cum paucorum capax existat"
+        "latim": "Mystice autem, cum facta est nuptiarum praeparatio in Cana Galilaeae, descendit una cum matre, fratribus et discipulis in Capharnaum, quae interpretatur ager consolationis. Oportebat enim post vini alacritatem, ad agrum consolationis, una cum matre et discipulis ascendere salvatorem, consolaturum in futuris fructibus et in agrorum multitudine suscipientes disciplinam eius, et animam quae illum spiritu sancto concepit, et iuvandos ibi. Sunt enim quidam fructificantes, ad quos dominus ipse descendit una cum verbi ministris atque discipulis, adiuvans huiusmodi praesente matre sua. Videntur autem qui Capharnaum ducti sunt, non capere diuturnam apud se Iesu praesentiam: quoniam illuminationem quae de pluribus dogmatibus est, inferioris consolationis agellus non capit, cum paucorum capax existat",
+        "pt": "Misticamente, porém, quando se fez o preparo das núpcias em Caná da Galileia, desceu juntamente com a mãe, os irmãos e os discípulos a Cafarnaum, que se interpreta campo de consolação. Convinha, com efeito, depois da alegria do vinho, que o Salvador subisse ao campo da consolação, junto com a mãe e os discípulos, para consolar, nos frutos futuros e na multidão dos campos, os que recebem a sua disciplina, e a alma que o concebeu pelo Espírito Santo, e os que ali devem ser ajudados. Há, com efeito, alguns que frutificam, aos quais o próprio Senhor desce junto com os ministros da palavra e os discípulos, ajudando tais pessoas com a presença de sua mãe. Parece, porém, que os conduzidos a Cafarnaum não comportam junto de si a presença duradoura de Jesus: porque o campinho de consolação inferior não comporta a iluminação que provém de muitos dogmas, pois só é capaz de poucos",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Vel Capharnaum villa pulcherrima est, et significat mundum, in quem verbum patris descendit"
+        "latim": "Vel Capharnaum villa pulcherrima est, et significat mundum, in quem verbum patris descendit",
+        "pt": "Ou Cafarnaum é uma aldeia belíssima, e significa o mundo, no qual desceu o Verbo do Pai",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Non multis autem diebus ibi mansit, quia parvo in hoc mundo tempore cum hominibus conversatus est"
+        "latim": "Non multis autem diebus ibi mansit, quia parvo in hoc mundo tempore cum hominibus conversatus est",
+        "pt": "Não permaneceu ali muitos dias, porque conviveu com os homens por pouco tempo neste mundo",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Est autem Hierosolyma civitas regis magni, velut ipse salvator ait, ad quam nullus eorum qui manent in terris conscendit nec ingreditur: sed quaelibet anima quae naturalem obtinet celsitudinem et acumen intelligibilium perspicuum, eius civitatis est incola, ad quam solus Iesus ascendisse dicitur. Videntur tamen post discipuli fore praesentes dum recolunt zelus domus tuae comedit me; sed quasi in quolibet discipulorum Iesus ascendit"
+        "latim": "Est autem Hierosolyma civitas regis magni, velut ipse salvator ait, ad quam nullus eorum qui manent in terris conscendit nec ingreditur: sed quaelibet anima quae naturalem obtinet celsitudinem et acumen intelligibilium perspicuum, eius civitatis est incola, ad quam solus Iesus ascendisse dicitur. Videntur tamen post discipuli fore praesentes dum recolunt zelus domus tuae comedit me; sed quasi in quolibet discipulorum Iesus ascendit",
+        "pt": "Jerusalém é a cidade do grande rei, como diz o próprio Salvador, à qual nenhum dos que permanecem na terra sobe nem entra; mas toda alma que possui a elevação natural e a agudeza clara das coisas inteligíveis é habitante dessa cidade, à qual somente Jesus é dito ter subido. Parecem, contudo, os discípulos estar depois presentes quando recordam: \"o zelo da tua casa me devora\"; mas Jesus sobe como em cada um dos discípulos",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       }
     ]
   },
@@ -289,122 +380,290 @@
       {
         "autor": "Beda",
         "obra": "super Matth",
-        "latim": "Dominus Ierusalem adveniens, continuo templum oraturus addit, nobis dans exemplum ut quocumque properamus, domum Dei primo ingrediamur, dominum deprecaturi; unde dicitur et invenit in templo vendentes boves et oves et columbas"
+        "latim": "Dominus Ierusalem adveniens, continuo templum oraturus addit, nobis dans exemplum ut quocumque properamus, domum Dei primo ingrediamur, dominum deprecaturi; unde dicitur et invenit in templo vendentes boves et oves et columbas",
+        "pt": "O Senhor, chegando a Jerusalém, logo entra no templo para orar, dando-nos exemplo de que, aonde quer que nos dirijamos, entremos primeiro na casa de Deus, para suplicar ao Senhor; por isso se diz: \"E achou no templo vendedores de bois, ovelhas e pombas\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Sacrificia enim illi populo pro eius carnalitate talia data sunt, quibus teneretur ne ad idola deflueret; et immolabant boves et oves et columbas"
+        "latim": "Sacrificia enim illi populo pro eius carnalitate talia data sunt, quibus teneretur ne ad idola deflueret; et immolabant boves et oves et columbas",
+        "pt": "Com efeito, tais sacrifícios foram dados àquele povo, por causa de sua carnalidade, para que fosse contido de se desviar para os ídolos; e imolavam bois, ovelhas e pombas",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Sed quia de longinquo properantes quae iussa sunt immolari domino, secum ferre non poterant, eorum pretia deferebant: unde nacta occasione, haec animalia in templo Scribae et Pharisaei vendi instituerunt, ut venientes emerent et offerrent, eademque oblata ipsi aliis venderent; et sic sua lucra accumularent. Unde et nummularii ad hoc sedebant ad mensam, ut inter emptores venditoresque hostiarum prompta esset pecunia: unde subditur et nummularios sedentes. Dominus autem nolens aliquid in domo sua terrenae esse negotiationis, neque eius quae honesta putaretur, negotiatores omnes expulit foras"
+        "latim": "Sed quia de longinquo properantes quae iussa sunt immolari domino, secum ferre non poterant, eorum pretia deferebant: unde nacta occasione, haec animalia in templo Scribae et Pharisaei vendi instituerunt, ut venientes emerent et offerrent, eademque oblata ipsi aliis venderent; et sic sua lucra accumularent. Unde et nummularii ad hoc sedebant ad mensam, ut inter emptores venditoresque hostiarum prompta esset pecunia: unde subditur et nummularios sedentes. Dominus autem nolens aliquid in domo sua terrenae esse negotiationis, neque eius quae honesta putaretur, negotiatores omnes expulit foras",
+        "pt": "Mas porque os que vinham de longe não podiam trazer consigo o que fora ordenado imolar ao Senhor, levavam o seu preço; por isso, tendo achado ocasião, os Escribas e Fariseus instituíram que estes animais fossem vendidos no templo, para que os que vinham comprassem e oferecessem, e os mesmos animais oferecidos eles os vendessem a outros; e assim acumulassem seus lucros. Por isso também os cambistas se sentavam à mesa para isto, a fim de que houvesse dinheiro pronto entre compradores e vendedores de vítimas; por isso se acrescenta: \"e os cambistas sentados\". O Senhor, porém, não querendo que houvesse em sua casa nenhum negócio terreno, nem sequer o que se julgava honesto, expulsou para fora todos os negociantes",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Et qui flagellandus erat ab eis, prior illos flagellavit; unde sequitur et cum fecisset quasi flagellum de funiculis, omnes eiecit de templo"
+        "latim": "Et qui flagellandus erat ab eis, prior illos flagellavit; unde sequitur et cum fecisset quasi flagellum de funiculis, omnes eiecit de templo",
+        "pt": "E aquele que haveria de ser flagelado por eles, flagelou-os primeiro; por isso se segue: \"E tendo feito como que um flagelo de cordas, expulsou a todos do templo\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Neque solum eos eiecit qui vendebant et emebant, sed etiam res eorum; unde subditur oves quoque et boves et nummulariorum effudit aes, et mensas evertit, scilicet nummularias, quae erant quasi vasa denariorum"
+        "latim": "Neque solum eos eiecit qui vendebant et emebant, sed etiam res eorum; unde subditur oves quoque et boves et nummulariorum effudit aes, et mensas evertit, scilicet nummularias, quae erant quasi vasa denariorum",
+        "pt": "Não expulsou somente os que vendiam e compravam, mas também as coisas deles; por isso se acrescenta: \"Também as ovelhas e os bois; e derramou o dinheiro dos cambistas e virou as mesas\", a saber, as dos cambistas, que eram como os recipientes dos denários",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Consideremus autem, ne forte enorme videatur quod Dei filius captis funiculis parat sibi flagellum ad eiciendum de templo. Unum tamen refugium ad horum responsionem relinquitur divina potestas Iesu, ut cum volebat posset iracundiam hostium suffocare, quamvis essent innumeri, et sedare mentium turbines: dominus enim dissipat cogitationes gentium. Praesens autem historia in nullo minorem potestatem praetendit his quae ab eo miraculosius edita sunt: quinimmo constat hanc maiorem demonstrare potentiam miraculo quo aqua conversa est in vinum: eo quod illic inanimata subsistit materia, hic vero tot millium hominum domantur ingenia"
+        "latim": "Consideremus autem, ne forte enorme videatur quod Dei filius captis funiculis parat sibi flagellum ad eiciendum de templo. Unum tamen refugium ad horum responsionem relinquitur divina potestas Iesu, ut cum volebat posset iracundiam hostium suffocare, quamvis essent innumeri, et sedare mentium turbines: dominus enim dissipat cogitationes gentium. Praesens autem historia in nullo minorem potestatem praetendit his quae ab eo miraculosius edita sunt: quinimmo constat hanc maiorem demonstrare potentiam miraculo quo aqua conversa est in vinum: eo quod illic inanimata subsistit materia, hic vero tot millium hominum domantur ingenia",
+        "pt": "Consideremos, porém, que talvez não pareça desmedido o fato de o Filho de Deus, tomadas as cordas, preparar para si um flagelo para expulsar do templo. Resta, contudo, um único refúgio como resposta a esses: o poder divino de Jesus, de modo que, quando quisesse, pudesse sufocar a ira dos inimigos, ainda que fossem inumeráveis, e acalmar as turbulências das mentes: pois o Senhor dissipa os pensamentos das nações. Ora, a presente narrativa não manifesta poder menor do que o daquelas coisas que por ele foram realizadas de modo mais milagroso; antes, consta que ela demonstra maior poder do que o milagre em que a água foi mudada em vinho, pois ali subsiste uma matéria inanimada, ao passo que aqui são domadas as disposições de tantos milhares de homens.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de Cons. Evang",
-        "latim": "Manifestum est autem non semel, sed iterato hoc factum esse a domino. Sed illud primum commemoratur hic a Ioanne, istud ultimum a ceteris tribus"
+        "latim": "Manifestum est autem non semel, sed iterato hoc factum esse a domino. Sed illud primum commemoratur hic a Ioanne, istud ultimum a ceteris tribus",
+        "pt": "É manifesto que isto foi feito pelo Senhor não uma só vez, mas repetidamente. Mas aquela primeira é aqui lembrada por João; esta última, pelos outros três.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Et Ioannes quidem hic dicit quod expulit vendentes de templo; Matthaeus autem ait quoniam expulit vendentes et ementes. Multo autem maior numerus erat ementium quam vendentium; quorum expulsio transcendebat dignitatem eius qui reputabatur filius carpentarii; nisi quod divina potestate sibi omnes subiecit, ut dictum est"
+        "latim": "Et Ioannes quidem hic dicit quod expulit vendentes de templo; Matthaeus autem ait quoniam expulit vendentes et ementes. Multo autem maior numerus erat ementium quam vendentium; quorum expulsio transcendebat dignitatem eius qui reputabatur filius carpentarii; nisi quod divina potestate sibi omnes subiecit, ut dictum est",
+        "pt": "E João diz aqui que ele expulsou do templo os que vendiam; Mateus, porém, diz que expulsou os que vendiam e os que compravam. Ora, era muito maior o número dos que compravam do que dos que vendiam; a expulsão deles ultrapassava a dignidade daquele que era tido como filho de um carpinteiro, a não ser que, pelo poder divino, ele tenha submetido todos a si, como foi dito.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Commendatur autem in hac lectione utraque Christi natura: humana quidem, in hoc quod matrem comitem habuisse perhibetur; divina vero, in hoc quod verus Dei filius demonstratur; sequitur enim et his qui vendebant columbas dixit: auferte ista hinc, et nolite facere domum patris mei domum negotiationis"
+        "latim": "Commendatur autem in hac lectione utraque Christi natura: humana quidem, in hoc quod matrem comitem habuisse perhibetur; divina vero, in hoc quod verus Dei filius demonstratur; sequitur enim et his qui vendebant columbas dixit: auferte ista hinc, et nolite facere domum patris mei domum negotiationis",
+        "pt": "Nesta leitura, porém, recomenda-se cada uma das duas naturezas de Cristo: a humana, no fato de se dizer que teve a mãe por companheira; a divina, no fato de se mostrar verdadeiro Filho de Deus; com efeito, segue-se: \"e disse aos que vendiam pombas: Tirai isto daqui, e não façais da casa de meu Pai uma casa de comércio\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Ecce patrem vocat, et non irascuntur: aestimant enim simpliciter eum dicere; sed quia postea apertius loquebatur, ut solam repraesentaret parilitatis intelligentiam, propterea saeviebant. Et Matthaeus quidem dicit quod eiciens eos dicebat: nolite facere domum meam speluncam latronum: illud enim fecit ad passionem veniens, ideo durioribus sermonibus utebatur; hoc autem in principio signorum fecit; unde non ita aspera, sed remissa quodammodo increpatione utitur"
+        "latim": "Ecce patrem vocat, et non irascuntur: aestimant enim simpliciter eum dicere; sed quia postea apertius loquebatur, ut solam repraesentaret parilitatis intelligentiam, propterea saeviebant. Et Matthaeus quidem dicit quod eiciens eos dicebat: nolite facere domum meam speluncam latronum: illud enim fecit ad passionem veniens, ideo durioribus sermonibus utebatur; hoc autem in principio signorum fecit; unde non ita aspera, sed remissa quodammodo increpatione utitur",
+        "pt": "Eis que o chama de Pai, e não se irritam: pensam, com efeito, que ele fala de modo simples; mas, porque depois falava mais abertamente, para representar apenas a compreensão da igualdade, por isso se enfureciam. E Mateus diz que, ao expulsá-los, ele dizia: \"Não façais da minha casa um covil de ladrões\"; isso, com efeito, ele fez quando vinha para a paixão, e por isso usava palavras mais duras; já isto, ele o fez no início dos sinais; por isso não usa uma repreensão tão áspera, mas de certo modo suave.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Ecce templum illud figura adhuc erat, et eiecit inde dominus omnes qui ad nundinas venerant. Et quae ibi vendebant? Quae opus habebant homines in sacrificio illius temporis. Quid si ibi ebriosos inveniret? Si negotiationis non debet fieri domus Dei, potationis fieri debet?"
+        "latim": "Ecce templum illud figura adhuc erat, et eiecit inde dominus omnes qui ad nundinas venerant. Et quae ibi vendebant? Quae opus habebant homines in sacrificio illius temporis. Quid si ibi ebriosos inveniret? Si negotiationis non debet fieri domus Dei, potationis fieri debet?",
+        "pt": "Eis que aquele templo ainda era figura, e o Senhor expulsou dali todos os que tinham vindo para as feiras. E o que vendiam ali? O de que os homens precisavam para o sacrifício daquele tempo. E se ali encontrasse bêbados? Se a casa de Deus não deve tornar-se casa de comércio, deve tornar-se casa de bebedeira?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Sed cuius gratia tali vehementia Christus usus est? Quia enim in sabbato curaturus erat, et multa facturus quae videbantur eis esse legis transgressio, ut non videatur Deo contrarius, hoc cum periculo fecit, dans intelligere quod qui periculis se exponit pro bono ornatu domus, dominum domus non contemnit: et ideo, ut ostenderet sui consonantiam ad Deum, non dixit: domum sanctam, sed domum patris mei. Et propter hoc etiam subditur recordati vero sunt discipuli eius quia scriptum est: zelus domus tuae comedit me"
+        "latim": "Sed cuius gratia tali vehementia Christus usus est? Quia enim in sabbato curaturus erat, et multa facturus quae videbantur eis esse legis transgressio, ut non videatur Deo contrarius, hoc cum periculo fecit, dans intelligere quod qui periculis se exponit pro bono ornatu domus, dominum domus non contemnit: et ideo, ut ostenderet sui consonantiam ad Deum, non dixit: domum sanctam, sed domum patris mei. Et propter hoc etiam subditur recordati vero sunt discipuli eius quia scriptum est: zelus domus tuae comedit me",
+        "pt": "Mas por que motivo Cristo usou de tal veemência? Como ia curar no sábado e fazer muitas coisas que lhes pareciam transgressão da lei, para que não parecesse contrário a Deus, fez isto com risco, dando a entender que quem se expõe a perigos pelo bom ornato da casa não despreza o dono da casa; e por isso, para mostrar sua conformidade com Deus, não disse: casa santa, mas \"casa de meu Pai\". E por causa disso acrescenta-se também: \"Seus discípulos lembraram-se de que está escrito: O zelo da tua casa me devora\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Discipuli enim videntes in eo hunc ferventissimum zelum, recordati sunt quia zelo domus patris salvator eiecit impios de templo"
+        "latim": "Discipuli enim videntes in eo hunc ferventissimum zelum, recordati sunt quia zelo domus patris salvator eiecit impios de templo",
+        "pt": "Os discípulos, com efeito, vendo nele esse zelo ardentíssimo, lembraram-se de que o Salvador expulsou os ímpios do templo por zelo pela casa do Pai.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Zelus, cum in bono accipitur, est quidam fervor animi, quo mens relicto humano timore pro defensione veritatis accenditur"
+        "latim": "Zelus, cum in bono accipitur, est quidam fervor animi, quo mens relicto humano timore pro defensione veritatis accenditur",
+        "pt": "O zelo, quando tomado em bom sentido, é certo fervor do ânimo, pelo qual a mente, deixado o temor humano, se inflama em defesa da verdade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Comeditur ergo zelus domus Dei, qui omnia quae videt ibi perversa cupit emendare: et si emendare non potest, tolerat et gemit. Si ergo in domo tua ne quid perversum fiat satagis, in domo Dei, ubi salus proposita est, debes pati, quantum in te est, si quid perversi videris? Amicus est? Admoneatur leniter; uxor est? Severissime frenetur; ancilla est? Etiam verberibus compescatur. Fac quicquid potes pro persona quam portas"
+        "latim": "Comeditur ergo zelus domus Dei, qui omnia quae videt ibi perversa cupit emendare: et si emendare non potest, tolerat et gemit. Si ergo in domo tua ne quid perversum fiat satagis, in domo Dei, ubi salus proposita est, debes pati, quantum in te est, si quid perversi videris? Amicus est? Admoneatur leniter; uxor est? Severissime frenetur; ancilla est? Etiam verberibus compescatur. Fac quicquid potes pro persona quam portas",
+        "pt": "O zelo da casa de Deus é, pois, devorado por aquele que deseja corrigir tudo o que ali vê de perverso; e, se não pode corrigir, tolera e geme. Se, portanto, em tua casa te esforças para que nada de perverso aconteça, na casa de Deus, onde a salvação está proposta, deves suportar, quanto está em ti, se vires algo de perverso? É um amigo? Seja advertido com suavidade; é a esposa? Seja refreada com a máxima severidade; é a serva? Seja contida até com açoites. Faze tudo o que podes pela pessoa que representas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Mystice autem quotidie Deus spiritualiter suam Ecclesiam intrat, et qualiter ibi unusquisque conversetur attendit. Caveamus ergo ne in Ecclesia Dei fabulis, vel risibus, vel odiis, vel cupiditatibus vacemus, ne improvisus veniens nos flagellet, et de Ecclesia sua eiciat"
+        "latim": "Mystice autem quotidie Deus spiritualiter suam Ecclesiam intrat, et qualiter ibi unusquisque conversetur attendit. Caveamus ergo ne in Ecclesia Dei fabulis, vel risibus, vel odiis, vel cupiditatibus vacemus, ne improvisus veniens nos flagellet, et de Ecclesia sua eiciat",
+        "pt": "Misticamente, porém, Deus entra todos os dias espiritualmente em sua Igreja e observa de que modo cada um ali se comporta. Guardemo-nos, pois, de nos entregar na Igreja de Deus a conversas fúteis, risos, ódios ou cobiças, para que, chegando de improviso, não nos flagele e não nos expulse de sua Igreja.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "in Ioannem",
-        "latim": "Possibile enim est Hierosolymitanum quoque delicto subiacere, et capacissimos deviare: quod nisi post delictum citissime convertantur, capacitatem amittunt. Invenit igitur in templo, idest in sacris, vel in enuntiatione ecclesiastici sermonis, quosdam qui patris domum, domum negotiationis constituebant, qui scilicet venales exponunt boves, quos oportet servare ad aratrum, ne retrocedentes non disponantur ad regnum Dei; qui etiam praeferunt mammonam iniquitatis ovibus, ex quibus habent ornatus materiam; qui etiam solertiam columbarum privata qualibet amaritudine vilipendunt. Cum ergo hos invenerit salvator in domo sacrata, facto de funiculis flagello fugat illos una cum venalibus ovibus et bobus suis, et spargit aeris pondera velut indigna in domo Dei retineri, subvertitque constitutas tabulas in animabus avarorum, et mandat ne ulterius in domo Dei columbae vendantur. Arbitror autem et exemplum ipsum statuisse per praedicta secretius, ut intelligamus per hoc, si quid agi debeat erga sacram illam oblationem a sacerdotibus, non debere ritu sensibilium oblationum agi, nec legem observari debere, ut carnales Iudaei volebant: nam Iesu propellente boves et oves, iubente auferri columbas, quae ut plurimum offerebantur iuxta consuetudinem Iudaeorum, et subvertente mensas materialium nummorum non expresse, sed figuraliter continentium divinas impressiones, ea scilicet quae secundum legis Scripturam videbantur honesta, et utente eo in plebem flagellis, dissolvenda et dispergenda haec erant, translato regno ad eos qui ex gentibus crediderunt"
+        "latim": "Possibile enim est Hierosolymitanum quoque delicto subiacere, et capacissimos deviare: quod nisi post delictum citissime convertantur, capacitatem amittunt. Invenit igitur in templo, idest in sacris, vel in enuntiatione ecclesiastici sermonis, quosdam qui patris domum, domum negotiationis constituebant, qui scilicet venales exponunt boves, quos oportet servare ad aratrum, ne retrocedentes non disponantur ad regnum Dei; qui etiam praeferunt mammonam iniquitatis ovibus, ex quibus habent ornatus materiam; qui etiam solertiam columbarum privata qualibet amaritudine vilipendunt. Cum ergo hos invenerit salvator in domo sacrata, facto de funiculis flagello fugat illos una cum venalibus ovibus et bobus suis, et spargit aeris pondera velut indigna in domo Dei retineri, subvertitque constitutas tabulas in animabus avarorum, et mandat ne ulterius in domo Dei columbae vendantur. Arbitror autem et exemplum ipsum statuisse per praedicta secretius, ut intelligamus per hoc, si quid agi debeat erga sacram illam oblationem a sacerdotibus, non debere ritu sensibilium oblationum agi, nec legem observari debere, ut carnales Iudaei volebant: nam Iesu propellente boves et oves, iubente auferri columbas, quae ut plurimum offerebantur iuxta consuetudinem Iudaeorum, et subvertente mensas materialium nummorum non expresse, sed figuraliter continentium divinas impressiones, ea scilicet quae secundum legis Scripturam videbantur honesta, et utente eo in plebem flagellis, dissolvenda et dispergenda haec erant, translato regno ad eos qui ex gentibus crediderunt",
+        "pt": "É possível, com efeito, que também o habitante de Jerusalém esteja sujeito ao delito, e que os mais capazes se desviem; se, depois do delito, não se converterem muito depressa, perdem a capacidade. Encontrou, portanto, no templo, isto é, nas coisas sagradas ou na proclamação da palavra eclesiástica, alguns que faziam da casa do Pai uma casa de comércio, a saber, os que expõem à venda os bois, que convém guardar para o arado, a fim de que, voltando atrás, não fiquem inaptos para o reino de Deus; que também preferem o dinheiro da iniquidade às ovelhas, das quais tiram a matéria de seus adornos; que também desprezam a astúcia das pombas, isenta de qualquer amargura. Quando, pois, o Salvador encontra estes na casa sagrada, feito um flagelo de cordas, expulsa-os juntamente com suas ovelhas e bois postos à venda, e espalha as moedas de bronze, como indignas de serem retidas na casa de Deus, e derruba as mesas postas nas almas dos avarentos, e manda que daí em diante não se vendam pombas na casa de Deus. Julgo, porém, que, por essas coisas, ele estabeleceu também um exemplo mais secreto, para que entendamos que, se algo se deve fazer em relação àquela oferta sagrada pelos sacerdotes, não se deve fazê-lo segundo o rito das oferendas sensíveis, nem observar a lei como queriam os judeus carnais; pois, quando Jesus afasta os bois e as ovelhas, manda retirar as pombas, que ordinariamente eram oferecidas segundo o costume dos judeus, derruba as mesas das moedas materiais, que contêm não expressamente, mas de modo figurado, as impressões divinas, isto é, aquelas coisas que, segundo a Escritura da lei, pareciam honestas, e usa de flagelos contra o povo, tudo isso devia ser dissolvido e disperso, transferido o reino para aqueles que, vindos das nações, creram.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Vel vendentes in Ecclesia sunt qui quae sua sunt quaerunt, non quae Iesu Christi. Venale habent totum, quia volunt redimi. Simon ideo volebat emere spiritum sanctum, quia vendere volebat: erat enim de illis qui columbas vendunt: etenim in columba apparuit spiritus sanctus: columba autem non est venalis; gratis datur, quia gratis vocatur"
+        "latim": "Vel vendentes in Ecclesia sunt qui quae sua sunt quaerunt, non quae Iesu Christi. Venale habent totum, quia volunt redimi. Simon ideo volebat emere spiritum sanctum, quia vendere volebat: erat enim de illis qui columbas vendunt: etenim in columba apparuit spiritus sanctus: columba autem non est venalis; gratis datur, quia gratis vocatur",
+        "pt": "Ou ainda: os que vendem na Igreja são os que buscam o que é seu, não o que é de Jesus Cristo. Têm tudo à venda, porque querem ser recompensados. Simão queria comprar o Espírito Santo porque queria vender: era, com efeito, daqueles que vendem pombas, pois o Espírito Santo apareceu em forma de pomba; ora, a pomba não está à venda; é dada gratuitamente, porque gratuitamente é chamada.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Vendunt igitur columbas qui acceptam spiritus sancti gratiam non gratis, ut praeceptum est, sed ad praemium dant; qui manuum impositionem, qua spiritus sanctus accipitur, etsi non in quaestum pecuniae, ad vulgi tamen favorem tribuunt; qui sacros ordines non ad vitae meritum, sed ad gratiam largiuntur"
+        "latim": "Vendunt igitur columbas qui acceptam spiritus sancti gratiam non gratis, ut praeceptum est, sed ad praemium dant; qui manuum impositionem, qua spiritus sanctus accipitur, etsi non in quaestum pecuniae, ad vulgi tamen favorem tribuunt; qui sacros ordines non ad vitae meritum, sed ad gratiam largiuntur",
+        "pt": "Vendem, portanto, as pombas os que dão por recompensa, e não gratuitamente, como foi ordenado, a graça recebida do Espírito Santo; os que concedem a imposição das mãos, pela qual se recebe o Espírito Santo, se não por lucro em dinheiro, ao menos pelo favor do povo; os que conferem as ordens sagradas não pelo mérito da vida, mas por favor.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Boves autem intelliguntur apostoli et prophetae, qui nobis Scripturas sacras dispensaverunt. Qui ergo ipsis Scripturis fallunt populos a quibus quaerunt honores, vendunt boves, vendunt et oves, idest ipsas plebes, et cui vendunt, nisi Diabolo? Quidquid enim de unica Ecclesia praeciditur, quis tollit nisi leo rugiens?"
+        "latim": "Boves autem intelliguntur apostoli et prophetae, qui nobis Scripturas sacras dispensaverunt. Qui ergo ipsis Scripturis fallunt populos a quibus quaerunt honores, vendunt boves, vendunt et oves, idest ipsas plebes, et cui vendunt, nisi Diabolo? Quidquid enim de unica Ecclesia praeciditur, quis tollit nisi leo rugiens?",
+        "pt": "Pelos bois, porém, entendem-se os apóstolos e os profetas, que nos distribuíram as Sagradas Escrituras. Os que, pois, com as próprias Escrituras enganam os povos dos quais buscam honras, vendem os bois; vendem também as ovelhas, isto é, os próprios povos; e a quem vendem, senão ao Diabo? Com efeito, tudo o que é cortado da única Igreja, quem o leva, senão o leão que ruge?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Vel oves sunt opera munditiae et pietatis. Vendunt ergo oves qui humanae gratia laudis pietatis exercent. Nummos mutuo dant in templo qui aperte terrenis rebus in Ecclesia deserviunt. Domum etiam domini faciunt domum negotiationis, non solum hi qui propter sacros ordines pretium pecuniae vel laudis vel honoris quaerunt; verum etiam hi qui gradum vel gratiam spiritualem, quam in Ecclesia domino largiente perceperunt, non simplici intentione, sed cura humanae retributionis exercent"
+        "latim": "Vel oves sunt opera munditiae et pietatis. Vendunt ergo oves qui humanae gratia laudis pietatis exercent. Nummos mutuo dant in templo qui aperte terrenis rebus in Ecclesia deserviunt. Domum etiam domini faciunt domum negotiationis, non solum hi qui propter sacros ordines pretium pecuniae vel laudis vel honoris quaerunt; verum etiam hi qui gradum vel gratiam spiritualem, quam in Ecclesia domino largiente perceperunt, non simplici intentione, sed cura humanae retributionis exercent",
+        "pt": "Ou as ovelhas são as obras de pureza e de piedade. Vendem, pois, as ovelhas os que praticam a piedade por causa do louvor humano. Emprestam dinheiro no templo os que abertamente servem às coisas terrenas na Igreja. Fazem da casa do Senhor uma casa de comércio não somente os que, por causa das ordens sagradas, buscam o preço de dinheiro, de louvor ou de honra, mas também os que exercem o grau ou a graça espiritual que receberam na Igreja por concessão do Senhor, não com intenção simples, mas com preocupação de retribuição humana.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Signum autem quoddam nobis ostendit dominus, quod fecit flagellum de resticulis, et inde negotiationem in templo facientes flagellavit. Etenim unusquisque in peccatis suis restem sibi texit, dum peccata addit peccatis. Quando ergo aliquid patiuntur homines propter iniquitates suas, agnoscant quia dominus facit flagellum de resticulis, et adhuc admonet eos ut mutent se: nam si se non mutaverint, audient in fine: ligate illi manus et pedes"
+        "latim": "Signum autem quoddam nobis ostendit dominus, quod fecit flagellum de resticulis, et inde negotiationem in templo facientes flagellavit. Etenim unusquisque in peccatis suis restem sibi texit, dum peccata addit peccatis. Quando ergo aliquid patiuntur homines propter iniquitates suas, agnoscant quia dominus facit flagellum de resticulis, et adhuc admonet eos ut mutent se: nam si se non mutaverint, audient in fine: ligate illi manus et pedes",
+        "pt": "O Senhor nos mostra, porém, um certo sinal ao fazer um flagelo de cordinhas e com ele açoitar os que faziam comércio no templo. Com efeito, cada um tece para si uma corda em seus pecados, ao acrescentar pecados a pecados. Quando, portanto, os homens sofrem algo por causa de suas iniquidades, reconheçam que o Senhor faz um flagelo de cordinhas e ainda os adverte a mudarem; pois, se não mudarem, ouvirão no fim: \"Atai-lhe as mãos e os pés\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Facto igitur de funiculis flagello, illos eiecit de templo: quia de parte sortis sanctorum eiciuntur qui inter sanctos positi, vel ficte bona, vel aperte faciunt opera mala. Oves quoque et boves eiecit: quia talium vitam pariter et doctrinam ostendit esse reprobam. Nummulariorum quoque effudit aes, et mensas subvertit; quia damnatis in fine reprobis, etiam ipsarum quas dilexerunt rerum tollet figuram. Venditionem columbarum de templo auferri praecepit: quia gratia spiritus, quae gratis accipitur, gratis dari debet"
+        "latim": "Facto igitur de funiculis flagello, illos eiecit de templo: quia de parte sortis sanctorum eiciuntur qui inter sanctos positi, vel ficte bona, vel aperte faciunt opera mala. Oves quoque et boves eiecit: quia talium vitam pariter et doctrinam ostendit esse reprobam. Nummulariorum quoque effudit aes, et mensas subvertit; quia damnatis in fine reprobis, etiam ipsarum quas dilexerunt rerum tollet figuram. Venditionem columbarum de templo auferri praecepit: quia gratia spiritus, quae gratis accipitur, gratis dari debet",
+        "pt": "Feito, pois, o flagelo de cordas, expulsou-os do templo: porque são expulsos da parte da sorte dos santos os que, postos entre os santos, ou fingem fazer o bem, ou abertamente fazem obras más. Expulsou também as ovelhas e os bois: porque mostra que a vida e igualmente a doutrina de tais pessoas são reprovadas. Derramou também o bronze dos cambistas e derrubou as mesas; porque, condenados os réprobos no fim, tirará também a figura das próprias coisas que amaram. Ordenou que se retirasse do templo a venda das pombas: porque a graça do Espírito, que se recebe gratuitamente, deve ser dada gratuitamente.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Potest etiam per templum intelligi anima studiosi, propter inhabitans verbum Dei, in qua ante doctrinam Iesu constiterant terrestres et bestiales motus. Signum autem terrestrium motuum bos est, quoniam est agri cultor; insensatorum autem motuum ovis, quod est pluribus animalibus irrationalius; levium vero atque inconstantium mentium signum est columba; eorum vero qui boni videntur, signa sunt aera, quae Christus verbo doctrinae expellit, ut non ultra domus patris eius sit forum"
+        "latim": "Potest etiam per templum intelligi anima studiosi, propter inhabitans verbum Dei, in qua ante doctrinam Iesu constiterant terrestres et bestiales motus. Signum autem terrestrium motuum bos est, quoniam est agri cultor; insensatorum autem motuum ovis, quod est pluribus animalibus irrationalius; levium vero atque inconstantium mentium signum est columba; eorum vero qui boni videntur, signa sunt aera, quae Christus verbo doctrinae expellit, ut non ultra domus patris eius sit forum",
+        "pt": "Pode-se também entender pelo templo a alma do estudioso, por causa do Verbo de Deus que nela habita, na qual, antes da doutrina de Jesus, se achavam movimentos terrenos e bestiais. O sinal dos movimentos terrenos é o boi, porque é lavrador do campo; o dos movimentos insensatos é a ovelha, que é, entre muitos animais, a mais irracional; o das mentes leves e inconstantes é a pomba; e o dos que parecem bons são as moedas de bronze, que Cristo expulsa com a palavra da doutrina, para que não seja mais mercado a casa de seu Pai.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       }
     ]
   },
@@ -418,92 +677,218 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quia Iudaei videbant Iesum talia facere cum potestate multa, et dicentem nolite facere domum patris mei, domum negotiationis: signum ab eo petunt; unde dicitur responderunt ergo Iudaei, et dixerunt ei: quod signum ostendis nobis, quia haec facis?"
+        "latim": "Quia Iudaei videbant Iesum talia facere cum potestate multa, et dicentem nolite facere domum patris mei, domum negotiationis: signum ab eo petunt; unde dicitur responderunt ergo Iudaei, et dixerunt ei: quod signum ostendis nobis, quia haec facis?",
+        "pt": "Como os judeus viam Jesus fazer tais coisas com muito poder e dizer: \"Não façais da casa de meu Pai uma casa de comércio\", pedem-lhe um sinal; por isso se diz: \"Os judeus então lhe responderam e disseram: Que sinal nos mostras, para fazeres estas coisas?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Sed numquid signa opus erant ut ea quae male fiebant cessare faceret? Nonne zelum talem accipere pro domo Dei maximum signum virtutis erat? Non autem illius prophetiae meminerant; sed signum petebant, simul quidem de suo turpi lucro impedito dolentes, simul autem et per hoc prohibere eum volentes: opinantur enim eum aut provocare ad miracula, aut cessare ab his quae fiebant. Propterea non dat eis signum, sicut et petentibus signum respondit dicens: generatio mala et adultera signum quaerit, et signum non dabitur ei, nisi signum Ionae prophetae. Sed tunc quidem manifestius, nunc autem obscurius respondet idem. Non autem is utique qui non petentes praeoccupat, et signa dat, hic petentes avertisset, nisi mentem eorum cognovisset dolosam; sequitur enim et dixit eis: solvite templum hoc, et in tribus diebus excitabo illud"
+        "latim": "Sed numquid signa opus erant ut ea quae male fiebant cessare faceret? Nonne zelum talem accipere pro domo Dei maximum signum virtutis erat? Non autem illius prophetiae meminerant; sed signum petebant, simul quidem de suo turpi lucro impedito dolentes, simul autem et per hoc prohibere eum volentes: opinantur enim eum aut provocare ad miracula, aut cessare ab his quae fiebant. Propterea non dat eis signum, sicut et petentibus signum respondit dicens: generatio mala et adultera signum quaerit, et signum non dabitur ei, nisi signum Ionae prophetae. Sed tunc quidem manifestius, nunc autem obscurius respondet idem. Non autem is utique qui non petentes praeoccupat, et signa dat, hic petentes avertisset, nisi mentem eorum cognovisset dolosam; sequitur enim et dixit eis: solvite templum hoc, et in tribus diebus excitabo illud",
+        "pt": "Mas por acaso eram necessários sinais para que ele fizesse cessar o que se fazia mal? Receber tal zelo pela casa de Deus não era o maior sinal de virtude? Contudo, não se lembravam daquela profecia; pediam um sinal, em parte lamentando o próprio lucro vergonhoso que era impedido, em parte também querendo, por isso, impedi-lo: julgam, com efeito, que ele ou seria provocado a fazer milagres, ou deixaria de fazer o que fazia. Por isso não lhes dá o sinal, como também respondeu aos que pediam um sinal, dizendo: \"Uma geração má e adúltera pede um sinal, e não lhe será dado outro sinal senão o do profeta Jonas\". Mas então respondeu mais claramente; agora, porém, responde o mesmo de modo mais obscuro. Aquele que antecipa os que não pedem e dá sinais não teria rejeitado os que pedem, se não tivesse conhecido a mente dolosa deles; com efeito, segue-se: \"e lhes disse: Destruí este templo, e em três dias o levantarei\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Quia enim signum quaerebant a domino, quare solita commercia proicere debuerit ex templo; respondit: quia ipsum templum significabat templum corporis sui, in quo nulla prorsus esset alicuius macula peccati; quasi dicat: sicut inanimatum templum a vestris commerciis sceleribusque mea expio potestate, ita et hoc corporis mei templum, cuius istud gestat figuram, vestris manibus dissolutum, tertia die resuscitabo"
+        "latim": "Quia enim signum quaerebant a domino, quare solita commercia proicere debuerit ex templo; respondit: quia ipsum templum significabat templum corporis sui, in quo nulla prorsus esset alicuius macula peccati; quasi dicat: sicut inanimatum templum a vestris commerciis sceleribusque mea expio potestate, ita et hoc corporis mei templum, cuius istud gestat figuram, vestris manibus dissolutum, tertia die resuscitabo",
+        "pt": "Como lhe pediam um sinal do Senhor, para saber por que devia expulsar do templo o comércio habitual, ele respondeu: porque o próprio templo significava o templo de seu corpo, no qual não haveria absolutamente mancha alguma de pecado; como se dissesse: assim como purifico, por meu poder, o templo inanimado de vossos comércios e crimes, assim também este templo do meu corpo, do qual aquele leva a figura, destruído por vossas mãos, ressuscitarei ao terceiro dia.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Nequaquam tamen illos ad homicidium provocat dicens solvite; sed hoc eis affectantibus, non sibi esse absconditum demonstrat. Audiant autem Ariani, quomodo dominus mortis destructor dixit excitabo, virtute videlicet propria"
+        "latim": "Nequaquam tamen illos ad homicidium provocat dicens solvite; sed hoc eis affectantibus, non sibi esse absconditum demonstrat. Audiant autem Ariani, quomodo dominus mortis destructor dixit excitabo, virtute videlicet propria",
+        "pt": "Contudo, ao dizer \"destruí\", não os provoca ao homicídio; mas mostra que, estando eles com essa vontade, isso não lhe estava oculto. Ouçam, porém, os arianos de que modo o Senhor, destruidor da morte, disse \"levantarei\", isto é, por virtude própria.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Resuscitavit eum quidem et pater, cui dicit: excita me, et reddam illis. Sed quid fecit pater sine verbo? Quomodo ergo eum pater resuscitat, sic et filius resuscitavit: quia filius dixit: ego et pater unum sumus"
+        "latim": "Resuscitavit eum quidem et pater, cui dicit: excita me, et reddam illis. Sed quid fecit pater sine verbo? Quomodo ergo eum pater resuscitat, sic et filius resuscitavit: quia filius dixit: ego et pater unum sumus",
+        "pt": "O Pai também o ressuscitou, a quem ele diz: \"Levanta-me, e lhes retribuirei\". Mas que fez o Pai sem o Verbo? Assim como, portanto, o Pai o ressuscita, assim também o Filho ressuscitou: porque o Filho disse: \"Eu e o Pai somos um\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Propter quid autem signum resurrectionis dat eis? Quoniam scilicet hoc maxime erat quod ostendebat eum non esse hominem purum, posse adversus mortem statuere triumphum, et tyrannidem eius longam velociter dissolvere"
+        "latim": "Propter quid autem signum resurrectionis dat eis? Quoniam scilicet hoc maxime erat quod ostendebat eum non esse hominem purum, posse adversus mortem statuere triumphum, et tyrannidem eius longam velociter dissolvere",
+        "pt": "Mas por que lhes dá o sinal da ressurreição? Porque era isso sobretudo que mostrava que ele não era simples homem, que podia erguer um triunfo contra a morte e dissolver rapidamente a longa tirania dela.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Utraque autem, scilicet et corpus Iesu et templum, exemplar mihi fore videntur Ecclesiae, eo quod ex vivis lapidibus construitur in domum spiritualem, in sacerdotium sanctum, et propter illud: vos estis corpus Christi et membra de membro. Quamvis autem dissolvi lapidum videatur structura ac dissipari omnia ossa Christi adversitatibus tribulationum; instaurabitur tamen templum, ac resuscitabitur die tertia, quae in novo caelo et nova terra praesens erit. Sicut enim illud Christi corpus sensibile crucifixum est ac sepultum, et postea resurrexit; sic et totale sanctorum Christi corpus concrucifixum est Christo: quilibet enim eorum in nullo alio gloriatur nisi in cruce Christi, per quam ipse crucifixus est mundo. Sed et consepultus est Christo et resurrexit cum eo, quia in quadam novitate vitae ambulat. Sed secundum beatam resurrectionem nondum surrexit; unde non scriptum est: tertia die restaurabo illud, sed in tribus diebus: perficitur enim eius erectio in omnibus tribus diebus"
+        "latim": "Utraque autem, scilicet et corpus Iesu et templum, exemplar mihi fore videntur Ecclesiae, eo quod ex vivis lapidibus construitur in domum spiritualem, in sacerdotium sanctum, et propter illud: vos estis corpus Christi et membra de membro. Quamvis autem dissolvi lapidum videatur structura ac dissipari omnia ossa Christi adversitatibus tribulationum; instaurabitur tamen templum, ac resuscitabitur die tertia, quae in novo caelo et nova terra praesens erit. Sicut enim illud Christi corpus sensibile crucifixum est ac sepultum, et postea resurrexit; sic et totale sanctorum Christi corpus concrucifixum est Christo: quilibet enim eorum in nullo alio gloriatur nisi in cruce Christi, per quam ipse crucifixus est mundo. Sed et consepultus est Christo et resurrexit cum eo, quia in quadam novitate vitae ambulat. Sed secundum beatam resurrectionem nondum surrexit; unde non scriptum est: tertia die restaurabo illud, sed in tribus diebus: perficitur enim eius erectio in omnibus tribus diebus",
+        "pt": "Ambos, isto é, o corpo de Jesus e o templo, parecem-me ser modelo da Igreja, porque ela é edificada com pedras vivas em casa espiritual, em sacerdócio santo, e por causa daquilo: \"Vós sois o corpo de Cristo e membros uns dos outros\". Embora pareça que a construção das pedras se desfaz e que todos os ossos de Cristo se dispersam pelas adversidades das tribulações, o templo será, contudo, restaurado e ressuscitado no terceiro dia, que estará presente no novo céu e na nova terra. Pois, assim como aquele corpo sensível de Cristo foi crucificado e sepultado, e depois ressuscitou, assim também o corpo inteiro dos santos de Cristo foi crucificado juntamente com Cristo: cada um deles, com efeito, não se gloria em nenhuma outra coisa senão na cruz de Cristo, pela qual ele mesmo foi crucificado para o mundo. Mas também foi sepultado com Cristo e ressuscitou com ele, porque caminha em certa novidade de vida. Mas, quanto à ressurreição bem-aventurada, ainda não ressuscitou; por isso não está escrito: \"ao terceiro dia o restaurarei\", mas \"em três dias\": pois sua restauração se completa em todos os três dias.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Iudaei enim de inanimato templo putantes eum hoc dicere, deridebant eum; unde sequitur dixerunt ergo Iudaei: quadraginta et sex annis aedificatum est templum hoc, et tu in tribus diebus excitabis illud?"
+        "latim": "Iudaei enim de inanimato templo putantes eum hoc dicere, deridebant eum; unde sequitur dixerunt ergo Iudaei: quadraginta et sex annis aedificatum est templum hoc, et tu in tribus diebus excitabis illud?",
+        "pt": "Os judeus, pensando que ele falava do templo inanimado, zombavam dele; por isso se segue: \"Os judeus disseram então: Quarenta e seis anos foi preciso para construir este templo, e tu o levantarás em três dias?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Et notandum, quod non de prima aedificatione, quae a Salomone septem annis perfecta est, sed de reaedificatione, quae facta est sub Zorobabel per quadraginta et sex annos impedientibus inimicis respondebant"
+        "latim": "Et notandum, quod non de prima aedificatione, quae a Salomone septem annis perfecta est, sed de reaedificatione, quae facta est sub Zorobabel per quadraginta et sex annos impedientibus inimicis respondebant",
+        "pt": "E deve-se notar que respondiam não a respeito da primeira construção, que foi concluída por Salomão em sete anos, mas a respeito da reconstrução, que foi feita sob Zorobabel em quarenta e seis anos, por causa do impedimento dos inimigos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Vel dicit aliquis, quadraginta et sex annorum exsurgere computum, ex quo David allocutus est Nathan prophetam consulens de constructione templi, ex tunc satagens ad congregandam materiam templi. Animadverte vero si possibile est quadragenarium numerum statui erga templum propter quatuor elementa mundi, ac senarium propter hoc quod homo sexto die creatus est"
+        "latim": "Vel dicit aliquis, quadraginta et sex annorum exsurgere computum, ex quo David allocutus est Nathan prophetam consulens de constructione templi, ex tunc satagens ad congregandam materiam templi. Animadverte vero si possibile est quadragenarium numerum statui erga templum propter quatuor elementa mundi, ac senarium propter hoc quod homo sexto die creatus est",
+        "pt": "Ou alguém diz que a contagem dos quarenta e seis anos começa desde que Davi falou ao profeta Natã, consultando-o sobre a construção do templo, e desde então se empenhou em reunir o material do templo. Considera, porém, se é possível que o número quarenta seja posto a respeito do templo por causa dos quatro elementos do mundo, e o seis porque o homem foi criado no sexto dia.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de Trin",
-        "latim": "Vel hic numerus perfectioni dominici corporis apte congruit; quadragies enim sexies seni fiunt ducenta septuaginta sex; qui numerus dierum complet novem menses et sex dies. Ipsa autem perfectio corporis domini tot diebus ad partum producta comperitur, sicut a maioribus traditum suscipiens Ecclesiae custodit auctoritas. Octavo enim Kalendas Aprilis conceptus creditur, quo et passus; natus autem traditur octavo Kalendas Ianuarii. Ab illo ergo die usque ad istum computati ducenti septuaginta sex reperiuntur dies, qui senarium numerum quadragies sexies habent"
+        "latim": "Vel hic numerus perfectioni dominici corporis apte congruit; quadragies enim sexies seni fiunt ducenta septuaginta sex; qui numerus dierum complet novem menses et sex dies. Ipsa autem perfectio corporis domini tot diebus ad partum producta comperitur, sicut a maioribus traditum suscipiens Ecclesiae custodit auctoritas. Octavo enim Kalendas Aprilis conceptus creditur, quo et passus; natus autem traditur octavo Kalendas Ianuarii. Ab illo ergo die usque ad istum computati ducenti septuaginta sex reperiuntur dies, qui senarium numerum quadragies sexies habent",
+        "pt": "Ou este número convém adequadamente à perfeição do corpo do Senhor; com efeito, quarenta e seis vezes seis dão duzentos e setenta e seis; este número de dias completa nove meses e seis dias. Ora, verifica-se que a própria perfeição do corpo do Senhor foi levada ao parto em tantos dias, como a autoridade da Igreja guarda, recebendo-o como tradição dos antigos. Crê-se, com efeito, que foi concebido no oitavo dia antes das calendas de abril, no qual também padeceu; e transmite-se que nasceu no oitavo dia antes das calendas de janeiro. Contados, pois, desde aquele dia até este, acham-se duzentos e setenta e seis dias, que contêm quarenta e seis vezes o número seis.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus Lib",
         "obra": "83 quaest",
-        "latim": "Dicitur etiam conceptio humana sic procedere, et perfici primis sex diebus, quasi lactis habeat similitudinem, sequentibus novem diebus convertatur in sanguinem, deinde duodecim diebus solidetur, reliquis decem et octo diebus formetur usque ad perfecta lineamenta omnium membrorum; et in reliquo tempore usque ad tempus partus magnitudine augeatur. Sex autem et novem et duodecim et decem et octo in unum coacti, fiunt quadraginta quinque: addito ergo uno fiunt quadraginta sex; qui si fuerint multiplicati per ipsum senarium numerum, qui huius ordinationis caput tenet, fiunt ducenti septuaginta sex, idest novem menses, et sex dies. Non ergo absurde quadraginta sex annis dicitur fabricatum esse templum, quod corpus eius significabat; ut quot anni fuerint in fabricatione templi, tot dies fuerint in corporis dominici perfectione"
+        "latim": "Dicitur etiam conceptio humana sic procedere, et perfici primis sex diebus, quasi lactis habeat similitudinem, sequentibus novem diebus convertatur in sanguinem, deinde duodecim diebus solidetur, reliquis decem et octo diebus formetur usque ad perfecta lineamenta omnium membrorum; et in reliquo tempore usque ad tempus partus magnitudine augeatur. Sex autem et novem et duodecim et decem et octo in unum coacti, fiunt quadraginta quinque: addito ergo uno fiunt quadraginta sex; qui si fuerint multiplicati per ipsum senarium numerum, qui huius ordinationis caput tenet, fiunt ducenti septuaginta sex, idest novem menses, et sex dies. Non ergo absurde quadraginta sex annis dicitur fabricatum esse templum, quod corpus eius significabat; ut quot anni fuerint in fabricatione templi, tot dies fuerint in corporis dominici perfectione",
+        "pt": "Diz-se também que a concepção humana procede e se completa assim: nos seis primeiros dias, tem semelhança de leite; nos nove dias seguintes, converte-se em sangue; depois, durante doze dias, solidifica-se; nos dezoito dias restantes, é formada até os traços perfeitos de todos os membros; e no tempo restante, até o tempo do parto, aumenta em tamanho. Ora, seis, nove, doze e dezoito, reunidos em um só, dão quarenta e cinco; acrescentado, pois, um, dão quarenta e seis; e, se estes forem multiplicados pelo próprio número seis, que ocupa o primeiro lugar desta ordenação, dão duzentos e setenta e seis, isto é, nove meses e seis dias. Não é, portanto, absurdo dizer que o templo, que significava o corpo dele, foi construído em quarenta e seis anos, de modo que quantos foram os anos na construção do templo, tantos fossem os dias na perfeição do corpo do Senhor.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Vel aliter. Quia dominus noster de Adam corpus accepit, non de Adam peccatum traxit; templum corporeum inde sumpsit, non iniquitatem, quae de templo pellenda est. Si autem facias quatuor nomina Graeca, anatoli, quod est oriens, dysis, quod est occidens, Arctos, quod est Septemtrio, mesembria, quod est meridies, capita verborum Adam habent. A quatuor enim ventis dominus collecturum se dicit electos suos cum venerit ad iudicium. Habent autem litterae nominis Adam numerum secundum Graecos; et ibi invenitur quadragintasex annis aedificatum templum. Habet enim Adam alpha, quod est unum; et delta, quod quatuor; et alpha, quod est unum; et mi, quod est quadraginta: et sic habet quadragintasex. Sed Iudaei, quia caro erant, carnalia sapiebant; ille spiritualiter loquebatur, et de quo templo diceret, per Evangelistam nobis aperuit; sequitur enim ille autem dicebat de templo corporis sui"
+        "latim": "Vel aliter. Quia dominus noster de Adam corpus accepit, non de Adam peccatum traxit; templum corporeum inde sumpsit, non iniquitatem, quae de templo pellenda est. Si autem facias quatuor nomina Graeca, anatoli, quod est oriens, dysis, quod est occidens, Arctos, quod est Septemtrio, mesembria, quod est meridies, capita verborum Adam habent. A quatuor enim ventis dominus collecturum se dicit electos suos cum venerit ad iudicium. Habent autem litterae nominis Adam numerum secundum Graecos; et ibi invenitur quadragintasex annis aedificatum templum. Habet enim Adam alpha, quod est unum; et delta, quod quatuor; et alpha, quod est unum; et mi, quod est quadraginta: et sic habet quadragintasex. Sed Iudaei, quia caro erant, carnalia sapiebant; ille spiritualiter loquebatur, et de quo templo diceret, per Evangelistam nobis aperuit; sequitur enim ille autem dicebat de templo corporis sui",
+        "pt": "Ou de outro modo. Porque nosso Senhor recebeu de Adão o corpo, mas não contraiu de Adão o pecado; dali tomou o templo corpóreo, não a iniquidade, que deve ser expulsa do templo. Se, porém, formares quatro nomes gregos, anatolé, que é oriente, dýsis, que é ocidente, árktos, que é norte, mesembría, que é meio-dia, as iniciais das palavras formam Adão. Com efeito, o Senhor diz que reunirá seus eleitos dos quatro ventos quando vier para o julgamento. As letras do nome Adão têm um número, segundo os gregos; e ali se encontra o templo construído em quarenta e seis anos. Com efeito, Adão tem alfa, que é um; delta, que é quatro; alfa, que é um; e mi, que é quarenta: e assim tem quarenta e seis. Mas os judeus, porque eram carne, pensavam coisas carnais; ele falava espiritualmente, e de que templo falava, o Evangelista nos revelou; com efeito, segue-se: \"Ele, porém, falava do templo de seu corpo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Ex hoc autem Apollinarius contradictionem sumit, volens ostendere, quod caro Christi esset inanimata, eo quod templum sit inanimatum: ergo carnem Christi et lapidem et lignum facies, quia ex his templum consistit. Si autem quod dicitur: anima mea turbata est; et: potestatem habeo ponendi animam meam; nequaquam de anima rationali dici dixeris; ubi pones illud: in manus tuas, domine, commendo spiritum meum? Non enim hoc de anima irrationali intelligere poteris: neque quod dicitur: non derelinques animam meam in Inferno"
+        "latim": "Ex hoc autem Apollinarius contradictionem sumit, volens ostendere, quod caro Christi esset inanimata, eo quod templum sit inanimatum: ergo carnem Christi et lapidem et lignum facies, quia ex his templum consistit. Si autem quod dicitur: anima mea turbata est; et: potestatem habeo ponendi animam meam; nequaquam de anima rationali dici dixeris; ubi pones illud: in manus tuas, domine, commendo spiritum meum? Non enim hoc de anima irrationali intelligere poteris: neque quod dicitur: non derelinques animam meam in Inferno",
+        "pt": "Daí Apolinário toma uma objeção, querendo mostrar que a carne de Cristo seria inanimada, porque o templo é inanimado: farás então da carne de Cristo pedra e madeira, porque disso consta o templo. Se, porém, o que se diz: \"Minha alma está perturbada\" e \"Tenho poder de dar a minha vida\" disseres que não se diz da alma racional, onde porás aquilo: \"Em tuas mãos, Senhor, entrego o meu espírito\"? Com efeito, não poderás entender isto da alma irracional, nem o que se diz: \"Não abandonarás a minha alma no Inferno\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Ideo autem corpus domini templum intelligitur, quia sicut templum gloriam Dei continebat habitantem in ipso, sic corpus Christi repraesentans Ecclesiam, unigenitum continet, qui est imago Dei et gloria"
+        "latim": "Ideo autem corpus domini templum intelligitur, quia sicut templum gloriam Dei continebat habitantem in ipso, sic corpus Christi repraesentans Ecclesiam, unigenitum continet, qui est imago Dei et gloria",
+        "pt": "O corpo do Senhor é entendido como templo porque, assim como o templo continha a glória de Deus que nele habitava, assim o corpo de Cristo, representando a Igreja, contém o Unigênito, que é a imagem de Deus e a glória.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Duo autem erant quae obstabant discipulis ne interim intelligerent: unum ipsa resurrectio; alterum vero, quod maius erat, scilicet quod Deus erat qui in illo corpore habitabat; quod dominus occulte ostenderat, dicens solvite templum hoc, et in tribus diebus excitabo illud. Et ideo subditur cum ergo resurrexisset a mortuis, recordati sunt discipuli eius quia hoc dicebat de corpore suo, et crediderunt Scripturae, et sermoni quem dixit Iesus"
+        "latim": "Duo autem erant quae obstabant discipulis ne interim intelligerent: unum ipsa resurrectio; alterum vero, quod maius erat, scilicet quod Deus erat qui in illo corpore habitabat; quod dominus occulte ostenderat, dicens solvite templum hoc, et in tribus diebus excitabo illud. Et ideo subditur cum ergo resurrexisset a mortuis, recordati sunt discipuli eius quia hoc dicebat de corpore suo, et crediderunt Scripturae, et sermoni quem dixit Iesus",
+        "pt": "Eram duas as coisas que impediam os discípulos de entender, por ora: uma, a própria ressurreição; a outra, que era maior, a saber, que era Deus quem habitava naquele corpo, o que o Senhor tinha mostrado de modo oculto, dizendo: \"Destruí este templo, e em três dias o levantarei\". E por isso se acrescenta: \"Quando, pois, ressuscitou dos mortos, seus discípulos lembraram-se de que ele dizia isso a respeito de seu corpo, e creram na Escritura e na palavra que Jesus tinha dito\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Ante resurrectionem enim non intelligebant Scripturas, quia nondum acceperant spiritum sanctum; sed in die resurrectionis apparens dominus aperuit discipulis sensum ut intelligerent quae de ipso scripta erant in lege et prophetis; et tunc crediderunt Scripturae prophetarum, qui praedixerunt Christum tertia die resurrecturum, et sermoni quem dixit Iesus solvite templum hoc"
+        "latim": "Ante resurrectionem enim non intelligebant Scripturas, quia nondum acceperant spiritum sanctum; sed in die resurrectionis apparens dominus aperuit discipulis sensum ut intelligerent quae de ipso scripta erant in lege et prophetis; et tunc crediderunt Scripturae prophetarum, qui praedixerunt Christum tertia die resurrecturum, et sermoni quem dixit Iesus solvite templum hoc",
+        "pt": "Antes da ressurreição, com efeito, não entendiam as Escrituras, porque ainda não tinham recebido o Espírito Santo; mas, no dia da ressurreição, o Senhor, aparecendo, abriu aos discípulos o sentido para que entendessem o que estava escrito a seu respeito na lei e nos profetas; e então creram na Escritura dos profetas, que predisseram que Cristo ressuscitaria ao terceiro dia, e na palavra que Jesus disse: \"Destruí este templo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "in Ioannem",
-        "latim": "Secundum anagogem vero, complementum fidei attingemus in magna resurrectione totius corporis Iesu, idest Ecclesiae eius; cum fides quae est ex specie, multum differat ab ea quae est per speculum in aenigmate"
+        "latim": "Secundum anagogem vero, complementum fidei attingemus in magna resurrectione totius corporis Iesu, idest Ecclesiae eius; cum fides quae est ex specie, multum differat ab ea quae est per speculum in aenigmate",
+        "pt": "Segundo a anagogia, porém, alcançaremos a plenitude da fé na grande ressurreição de todo o corpo de Jesus, isto é, de sua Igreja; pois a fé que é pela visão difere muito daquela que é por espelho, em enigma.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       }
     ]
   },

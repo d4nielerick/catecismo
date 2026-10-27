@@ -2,7 +2,26 @@
   "data": "2026-11-18",
   "evangelho": "Lc 19,11-28",
   "leituras": "Ap 4,1-11 | Sl 150,1-2.3-4.5-6 (R. Ap 4,8b) | Lc 19,11-28",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 19,
+      "lectio": 2,
+      "versos": [
+        11,
+        27
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 19,
+      "lectio": 3,
+      "versos": [
+        28,
+        36
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 1880,
@@ -77,6 +96,23 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "As minas confiadas aos servos e o lucro da palavra",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 9
+    },
+    {
+      "lectio": 2,
+      "i": 17
+    },
+    {
+      "lectio": 2,
+      "i": 22
+    },
+    {
+      "lectio": 2,
+      "i": 30
+    }
+  ]
 }

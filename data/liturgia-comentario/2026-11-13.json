@@ -2,10 +2,55 @@
   "data": "2026-11-13",
   "evangelho": "Lc 17,26-37",
   "leituras": "2Jo 1,4-9 | Sl 118(119),1.2.10.11.17.18 (R. 1b) | Lc 17,26-37",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 17,
+      "lectio": 8,
+      "versos": [
+        26,
+        30
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 17,
+      "lectio": 9,
+      "versos": [
+        31,
+        33
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 17,
+      "lectio": 10,
+      "versos": [
+        34,
+        37
+      ]
+    }
+  ],
   "catecismo": [],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "Os dias de Noé e de Ló e o olhar para trás",
+  "destaques": [
+    {
+      "lectio": 8,
+      "i": 5
+    },
+    {
+      "lectio": 8,
+      "i": 6
+    },
+    {
+      "lectio": 9,
+      "i": 5
+    },
+    {
+      "lectio": 9,
+      "i": 6
+    }
+  ]
 }

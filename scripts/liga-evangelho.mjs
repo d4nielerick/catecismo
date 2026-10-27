@@ -116,13 +116,15 @@ for (const dt of dias) {
   const catecismo = citacoes({ abrev: alvo.ev, cap: alvo.cap, versos: alvo.versos });
   const ROTULO = { leitura: '1ª Leitura', salmo: 'Salmo' };
   let nLeitura = 0;
+  const vistos = new Set(catecismo.map(p => p.numero));   // nenhum § repetido entre as leituras do dia
   const outrasLeituras = dia.missas[0].leituras
     .filter(l => !l.alternativa && (l.tipo === 'leitura' || l.tipo === 'salmo'))
     .map(l => {
       const rotulo = l.tipo === 'leitura' ? (++nLeitura === 1 ? '1ª Leitura' : '2ª Leitura') : ROTULO.salmo;
       const ref = refDaLeitura(l);
-      const vistos = new Set(catecismo.map(p => p.numero));
-      return { rotulo, referencia: l.referencia, catecismo: ref ? citacoes(ref).filter(p => !vistos.has(p.numero)).slice(0, 3) : [] };
+      const lista = ref ? citacoes(ref).filter(p => !vistos.has(p.numero)).slice(0, 3) : [];
+      lista.forEach(p => vistos.add(p.numero));
+      return { rotulo, referencia: l.referencia, catecismo: lista };
     })
     .filter(x => x.catecismo.length);
 

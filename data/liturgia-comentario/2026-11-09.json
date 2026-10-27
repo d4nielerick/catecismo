@@ -116,6 +116,23 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A casa do Pai e o templo do corpo de Cristo",
+  "destaques": [
+    {
+      "lectio": 4,
+      "i": 11
+    },
+    {
+      "lectio": 4,
+      "i": 14
+    },
+    {
+      "lectio": 5,
+      "i": 2
+    },
+    {
+      "lectio": 5,
+      "i": 14
+    }
+  ]
 }

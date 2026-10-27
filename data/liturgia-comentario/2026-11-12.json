@@ -2,10 +2,42 @@
   "data": "2026-11-12",
   "evangelho": "Lc 17,20-25",
   "leituras": "Fm 1,7-20 | Sl 145(146),7.8-9a.9bc-10 (R. 5a) | Lc 17,20-25",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 17,
+      "lectio": 6,
+      "versos": [
+        20,
+        21
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 17,
+      "lectio": 7,
+      "versos": [
+        22,
+        25
+      ]
+    }
+  ],
   "catecismo": [],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "O reino dentro de nós e a paixão do Filho do homem",
+  "destaques": [
+    {
+      "lectio": 6,
+      "i": 2
+    },
+    {
+      "lectio": 6,
+      "i": 3
+    },
+    {
+      "lectio": 7,
+      "i": 6
+    }
+  ]
 }

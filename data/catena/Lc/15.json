@@ -9,47 +9,110 @@
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Didiceras in superioribus, saecularibus occupationibus non teneri, caduca non praeferre perpetuis. Sed quia fragilitas humana firmum nequit in tanto saeculi lubrico tenere vestigium, etiam adversus errorem remedia tibi bonus medicus demonstravit, spem veniae iudex misericors non negavit; unde subditur erant autem appropinquantes ei publicani et peccatores ut audirent eum"
+        "latim": "Didiceras in superioribus, saecularibus occupationibus non teneri, caduca non praeferre perpetuis. Sed quia fragilitas humana firmum nequit in tanto saeculi lubrico tenere vestigium, etiam adversus errorem remedia tibi bonus medicus demonstravit, spem veniae iudex misericors non negavit; unde subditur erant autem appropinquantes ei publicani et peccatores ut audirent eum",
+        "pt": "Tinhas aprendido acima a não te deixar prender pelas ocupações do século e a não preferir o perecível ao perpétuo. Mas, como a fragilidade humana não pode manter firme o passo em tamanha escorregadiça do século, o bom médico te mostrou remédios também contra o erro, e o juiz misericordioso não te negou a esperança do perdão; daí o que se acrescenta: Aproximavam-se dele todos os publicanos e pecadores para o ouvir.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Glossa",
         "obra": "",
-        "latim": "Idest, qui publica exigunt vectigalia, vel conducunt, et qui lucra saeculi per negotia sectantur"
+        "latim": "Idest, qui publica exigunt vectigalia, vel conducunt, et qui lucra saeculi per negotia sectantur",
+        "pt": "Isto é, os que cobram ou arrendam os tributos públicos, e os que buscam os lucros do século por meio de negócios.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Hoc enim exequebatur cuius causa carnem susceperat, admittens peccatores, sicut medicus aegrotantes. Sed Pharisaei vere criminosi huic pietati murmura recompensabant; unde sequitur et murmurabant Pharisaei et Scribae, dicentes, quia hic peccatores recipit et manducat cum illis"
+        "latim": "Hoc enim exequebatur cuius causa carnem susceperat, admittens peccatores, sicut medicus aegrotantes. Sed Pharisaei vere criminosi huic pietati murmura recompensabant; unde sequitur et murmurabant Pharisaei et Scribae, dicentes, quia hic peccatores recipit et manducat cum illis",
+        "pt": "Pois fazia isto aquele por cuja causa tomara a carne, acolhendo os pecadores como o médico os doentes. Mas os fariseus, verdadeiramente criminosos, retribuíam a esta bondade com murmurações; daí o que se segue: E murmuravam os fariseus e os escribas, dizendo: Este acolhe os pecadores e come com eles.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Ex qua re colligitur quia vera iustitia compassionem habet, falsa dedignationem; quamvis et iusti soleant recte peccatoribus indignari. Sed aliud est quod agitur typo superbiae, aliud quod zelo disciplinae: quia iusti, etsi foris increpationes per disciplinam exaggerant, intus tamen dulcedinem per caritatem servant: praeponunt sibi in animo ipsos plerumque quos corrigunt: quod agentes per disciplinam subditos, et per humilitatem custodiunt semetipsos. At contra hi qui de falsa iustitia superbire solent, ceteros quosque despiciunt, nulla infirmantibus misericordia condescendunt; et quo se peccatores esse non credunt, eo deterius peccatores fiunt: de quorum numero Pharisaei erant, qui diiudicantes dominum quod peccatores susciperet, arenti corde ipsum fontem misericordiae reprehendebant. Sed quia aegri erant ita ut aegros se esse nescirent, quatenus quod erant agnoscerent, caelestis medicus blandis eos fomentis curat; sequitur enim et ait ad illos parabolam istam, dicens: quis ex vobis homo? Similitudinem dedit quam in se homo recognosceret, et tamen ad auctorem hominum pertineret: quia enim centenarius perfectus est numerus, ipse centum ovem habuit, cum sanctorum Angelorum et hominum naturam possedit; unde subditur qui habet centum oves"
+        "latim": "Ex qua re colligitur quia vera iustitia compassionem habet, falsa dedignationem; quamvis et iusti soleant recte peccatoribus indignari. Sed aliud est quod agitur typo superbiae, aliud quod zelo disciplinae: quia iusti, etsi foris increpationes per disciplinam exaggerant, intus tamen dulcedinem per caritatem servant: praeponunt sibi in animo ipsos plerumque quos corrigunt: quod agentes per disciplinam subditos, et per humilitatem custodiunt semetipsos. At contra hi qui de falsa iustitia superbire solent, ceteros quosque despiciunt, nulla infirmantibus misericordia condescendunt; et quo se peccatores esse non credunt, eo deterius peccatores fiunt: de quorum numero Pharisaei erant, qui diiudicantes dominum quod peccatores susciperet, arenti corde ipsum fontem misericordiae reprehendebant. Sed quia aegri erant ita ut aegros se esse nescirent, quatenus quod erant agnoscerent, caelestis medicus blandis eos fomentis curat; sequitur enim et ait ad illos parabolam istam, dicens: quis ex vobis homo? Similitudinem dedit quam in se homo recognosceret, et tamen ad auctorem hominum pertineret: quia enim centenarius perfectus est numerus, ipse centum ovem habuit, cum sanctorum Angelorum et hominum naturam possedit; unde subditur qui habet centum oves",
+        "pt": "Disto se conclui que a verdadeira justiça tem compaixão, e a falsa, desdém; embora os justos costumem com razão indignar-se contra os pecadores. Mas uma coisa é o que se faz por soberba, outra o que se faz por zelo da disciplina: porque os justos, embora exteriormente exagerem as repreensões pela disciplina, interiormente conservam a doçura pela caridade: antepõem a si mesmos, no íntimo, aqueles mesmos que corrigem: e, assim agindo, mantêm os súditos pela disciplina e guardam a si mesmos pela humildade. Ao contrário, os que costumam ensoberbecer-se de uma falsa justiça desprezam todos os outros, não condescendem com misericórdia alguma para com os fracos; e, quanto menos creem ser pecadores, tanto piores pecadores se tornam: desse número eram os fariseus, que, julgando o Senhor por acolher os pecadores, com o coração seco repreendiam a própria fonte da misericórdia. Mas, porque estavam enfermos de modo a não saberem que estavam enfermos, para que reconhecessem o que eram, o médico celeste os cura com doces fomentos; pois se segue: E disse-lhes esta parábola: Qual de vós é o homem? Deu uma comparação em que o homem se reconhecesse a si mesmo e que, contudo, dissesse respeito ao autor dos homens: pois, porque o cem é número perfeito, ele mesmo teve cem ovelhas quando possuiu a natureza dos santos Anjos e dos homens; daí o que se acrescenta: que tem cem ovelhas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Hinc percipe latitudinem regni salvatoris nostri. Dicit enim oves esse centum, referens numerum subiectarum sibi rationalium naturarum ad integram multitudinem: est enim centenarius numerus perfectus ex decem decadibus constitutus. Sed ex his una oberravit, scilicet genus humanum, quod terram colit"
+        "latim": "Hinc percipe latitudinem regni salvatoris nostri. Dicit enim oves esse centum, referens numerum subiectarum sibi rationalium naturarum ad integram multitudinem: est enim centenarius numerus perfectus ex decem decadibus constitutus. Sed ex his una oberravit, scilicet genus humanum, quod terram colit",
+        "pt": "Daqui compreende a amplitude do reino de nosso Salvador. Pois diz que são cem as ovelhas, referindo o número das naturezas racionais a ele sujeitas à multidão inteira: o cem é, com efeito, número perfeito, constituído de dez dezenas. Mas dentre elas uma se extraviou, isto é, o gênero humano, que habita a terra.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Dives pastor, cuius nos omnes centesima portio sumus; unde sequitur et si perdiderit unam ex illis"
+        "latim": "Dives pastor, cuius nos omnes centesima portio sumus; unde sequitur et si perdiderit unam ex illis",
+        "pt": "O rico pastor, de quem todos nós somos a centésima parte; daí o que se segue: e se perder uma delas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Una ovis tunc periit quando peccando homo pascua vitae reliquit. In deserto autem nonagintanovem remanserant: quia rationalis creaturae numerus, Angelorum videlicet et hominum, qui ad videndum Deum conditus fuerat, pereunte homine, erat imminutus; unde sequitur nonne dimittit nonaginta novem in deserto? Quia scilicet Angelorum choros reliquit in caelo. Tunc autem homo caelum deseruit, cum peccavit. Et ut perfecta summa ovium integraretur in caelo, homo perditus quaerebatur in terra; unde sequitur et vadit ad illam quae perierat, donec inveniat illam"
+        "latim": "Una ovis tunc periit quando peccando homo pascua vitae reliquit. In deserto autem nonagintanovem remanserant: quia rationalis creaturae numerus, Angelorum videlicet et hominum, qui ad videndum Deum conditus fuerat, pereunte homine, erat imminutus; unde sequitur nonne dimittit nonaginta novem in deserto? Quia scilicet Angelorum choros reliquit in caelo. Tunc autem homo caelum deseruit, cum peccavit. Et ut perfecta summa ovium integraretur in caelo, homo perditus quaerebatur in terra; unde sequitur et vadit ad illam quae perierat, donec inveniat illam",
+        "pt": "A ovelha única perdeu-se então, quando o homem, pecando, abandonou as pastagens da vida. No deserto, porém, haviam ficado noventa e nove: porque o número da criatura racional, a saber, dos Anjos e dos homens, que fora criada para ver a Deus, estava diminuído com a perda do homem; daí o que se segue: Não deixa as noventa e nove no deserto? Isto é, deixou os coros dos Anjos no céu. Então, porém, o homem abandonou o céu, quando pecou. E, para que a soma perfeita das ovelhas se completasse no céu, o homem perdido era procurado na terra; daí o que se segue: e vai atrás daquela que se perdera, até encontrá-la.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Numquid autem saeviens in reliquas motus est pietate unius? Nequaquam: sunt enim illae in tuto, circumsepiente illas potentissima dextera: sed magis oportebat misereri pereuntis, ne imperfecta videretur residua multitudo: una enim reducta, sortitur centenarius propriam speciem"
+        "latim": "Numquid autem saeviens in reliquas motus est pietate unius? Nequaquam: sunt enim illae in tuto, circumsepiente illas potentissima dextera: sed magis oportebat misereri pereuntis, ne imperfecta videretur residua multitudo: una enim reducta, sortitur centenarius propriam speciem",
+        "pt": "Acaso, porém, irritado com as demais, deixou-se mover pela piedade para com uma só? De modo algum: pois elas estão em segurança, cercadas pela destra poderosíssima; mas convinha antes compadecer-se da que perecia, para que a multidão restante não parecesse incompleta: pois, reconduzida uma só, o cem recobra sua própria forma.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de quaest. Evang",
-        "latim": "Vel illas nonaginta novem dixit quas reliquit in deserto, superbos significans, tamquam solitudinem gerentes in animo, dum solos se videri volunt; quibus ad perfectionem unitas deest: cum enim quisque a vera unitate divellitur, superbe divellitur: suae quippe potestatis esse cupiens, non sequitur unum, quod est Deus. Uni autem deputat omnes per poenitentiam reconciliatos, quae humilitate obtinetur"
+        "latim": "Vel illas nonaginta novem dixit quas reliquit in deserto, superbos significans, tamquam solitudinem gerentes in animo, dum solos se videri volunt; quibus ad perfectionem unitas deest: cum enim quisque a vera unitate divellitur, superbe divellitur: suae quippe potestatis esse cupiens, non sequitur unum, quod est Deus. Uni autem deputat omnes per poenitentiam reconciliatos, quae humilitate obtinetur",
+        "pt": "Ou disse que são aquelas noventa e nove que deixou no deserto os soberbos, como quem traz a solidão no ânimo, enquanto querem parecer sozinhos; falta-lhes a unidade para a perfeição: pois, quando alguém se separa da verdadeira unidade, separa-se por soberba: querendo estar sob seu próprio poder, não segue o Uno, que é Deus. Ora, à unidade atribui todos os reconciliados pela penitência, a qual se alcança pela humildade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius Nyssenus",
@@ -78,12 +141,26 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Supernae igitur virtutes oves dicuntur in eo quod omnis natura creata aspectu Dei bestialis est; in eo vero quod rationalis est, amici et vicini dicuntur"
+        "latim": "Supernae igitur virtutes oves dicuntur in eo quod omnis natura creata aspectu Dei bestialis est; in eo vero quod rationalis est, amici et vicini dicuntur",
+        "pt": "As virtudes supernas são, pois, chamadas ovelhas no sentido de que toda natureza criada é, diante da vista de Deus, como animal; no sentido, porém, de que é racional, são chamadas amigos e vizinhos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Et notandum, quod non dicit congratulamini inventae ovi, sed mihi: quia videlicet eius est gaudium vita nostra; et cum nos ad caelum reducimur, solemnitatem laetitiae illius implemus"
+        "latim": "Et notandum, quod non dicit congratulamini inventae ovi, sed mihi: quia videlicet eius est gaudium vita nostra; et cum nos ad caelum reducimur, solemnitatem laetitiae illius implemus",
+        "pt": "E deve-se notar que não diz: congratulai-vos com a ovelha encontrada, mas: comigo; porque a alegria dela é, evidentemente, a nossa vida; e, quando somos reconduzidos ao céu, completamos a solenidade da sua alegria.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
@@ -100,7 +177,14 @@
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Plus autem de conversis peccatoribus quam de stantibus iustis in caelo gaudium esse fatetur; quia plerumque hi qui nullis se oppressos peccatorum molibus sciunt, stant quidem in via iustitiae, sed tamen ad caelestem patriam anxie non anhelant, et plerumque pigri remanent ad exercenda bona praecipua, quia securi sibi sunt quod nulla commiserint mala graviora: at contra nonnunquam hi qui se aliqua illicita egisse meminerunt, ex ipso suo dolore compuncti, ad amorem Dei inardescunt, et quia errasse se a Deo considerant, damna praecedentia lucris sequentibus recompensant. Maius ergo gaudium fit in caelo, quia et dux in praelio plus eum militem diligit qui post fugam reversus hostem fortiter premit, quam eum qui numquam terga praebuit, et numquam aliquid fortiter fecit. Sic agricola illam amplius terram amat quae post spinas uberes fructus profert, quam eam quae numquam spinas habuit, et numquam fertilem messem producit. Sed inter haec sciendum est, quia sunt plerique iusti, in quorum vita tantum est gaudium, ut eis quaelibet peccatorum poenitentia praeponi nullatenus possit. Hinc ergo colligendum quantum Deo gaudium faciat quando humiliter plangit iustus, si facit in caelo gaudium quando hoc quod male gessit, per poenitentiam damnat iniustus"
+        "latim": "Plus autem de conversis peccatoribus quam de stantibus iustis in caelo gaudium esse fatetur; quia plerumque hi qui nullis se oppressos peccatorum molibus sciunt, stant quidem in via iustitiae, sed tamen ad caelestem patriam anxie non anhelant, et plerumque pigri remanent ad exercenda bona praecipua, quia securi sibi sunt quod nulla commiserint mala graviora: at contra nonnunquam hi qui se aliqua illicita egisse meminerunt, ex ipso suo dolore compuncti, ad amorem Dei inardescunt, et quia errasse se a Deo considerant, damna praecedentia lucris sequentibus recompensant. Maius ergo gaudium fit in caelo, quia et dux in praelio plus eum militem diligit qui post fugam reversus hostem fortiter premit, quam eum qui numquam terga praebuit, et numquam aliquid fortiter fecit. Sic agricola illam amplius terram amat quae post spinas uberes fructus profert, quam eam quae numquam spinas habuit, et numquam fertilem messem producit. Sed inter haec sciendum est, quia sunt plerique iusti, in quorum vita tantum est gaudium, ut eis quaelibet peccatorum poenitentia praeponi nullatenus possit. Hinc ergo colligendum quantum Deo gaudium faciat quando humiliter plangit iustus, si facit in caelo gaudium quando hoc quod male gessit, per poenitentiam damnat iniustus",
+        "pt": "Declara que há mais alegria no céu pelos pecadores convertidos do que pelos justos que permanecem firmes; porque, na maioria das vezes, os que sabem não estar oprimidos por nenhum peso de pecados permanecem, sim, no caminho da justiça, mas não anseiam com ardor pela pátria celeste, e frequentemente ficam indolentes para praticar os bens principais, por estarem seguros de que não cometeram nenhum mal mais grave: ao contrário, às vezes os que se lembram de ter feito algo ilícito, compungidos pela sua própria dor, inflamam-se de amor a Deus e, porque consideram que se afastaram de Deus, compensam as perdas anteriores com os ganhos seguintes. Faz-se, pois, maior alegria no céu, porque também o chefe, na batalha, ama mais o soldado que, depois da fuga, volta e investe com valentia contra o inimigo, do que aquele que nunca voltou as costas e nunca fez nada com valentia. Assim o agricultor ama mais a terra que, depois dos espinhos, produz frutos abundantes, do que aquela que nunca teve espinhos e nunca produz uma colheita fértil. Mas entre estas coisas se deve saber que há muitos justos em cuja vida há tanta alegria que a penitência de nenhum pecador pode de modo algum ser-lhes preferida. Daqui se deve concluir quanta alegria dá a Deus o justo quando chora humildemente, se o injusto lhe dá alegria no céu quando condena, pela penitência, aquilo que fez mal.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       }
     ]
   },
@@ -114,42 +198,98 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Per praecedentem parabolam, in qua genus humanum dicebatur ovis erratica, docebamur nos fore creatura sublimis Dei, qui fecit nos, et non ipsi nos; cuius pascuae oves sumus: subiungitur secunda parabola, qua genus humanum comparatur drachmae quae periit; per quam ostendit nos ad similitudinem et imaginem regiam factos esse, scilicet summi Dei: nam drachma nummus est impressam habens regiam figuram; unde dicitur aut quae mulier habens decem drachmas"
+        "latim": "Per praecedentem parabolam, in qua genus humanum dicebatur ovis erratica, docebamur nos fore creatura sublimis Dei, qui fecit nos, et non ipsi nos; cuius pascuae oves sumus: subiungitur secunda parabola, qua genus humanum comparatur drachmae quae periit; per quam ostendit nos ad similitudinem et imaginem regiam factos esse, scilicet summi Dei: nam drachma nummus est impressam habens regiam figuram; unde dicitur aut quae mulier habens decem drachmas",
+        "pt": "Pela parábola precedente, em que o gênero humano era chamado ovelha extraviada, éramos ensinados a ser criatura sublime de Deus, que nos fez, e não nós a nós mesmos; de quem somos as ovelhas do pasto: acrescenta-se a segunda parábola, na qual o gênero humano é comparado à dracma que se perdeu; por ela mostra que fomos feitos à semelhança e imagem real, isto é, do Deus altíssimo: pois a dracma é uma moeda que tem impressa a figura real; daí o que se diz: Ou que mulher que tem dez dracmas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Qui significatur per pastorem, ipse per mulierem; ipse enim Deus, ipse et Dei sapientia. Angelorum autem et hominum naturam ad cognoscendum se dominus condidit, et ad similitudinem suam creavit. Decem ergo drachmas habuit, quia novem sunt chori Angelorum; sed ut compleretur electorum numerus, homo decimus est creatus"
+        "latim": "Qui significatur per pastorem, ipse per mulierem; ipse enim Deus, ipse et Dei sapientia. Angelorum autem et hominum naturam ad cognoscendum se dominus condidit, et ad similitudinem suam creavit. Decem ergo drachmas habuit, quia novem sunt chori Angelorum; sed ut compleretur electorum numerus, homo decimus est creatus",
+        "pt": "Aquele que é significado pelo pastor é também significado pela mulher; pois ele é o próprio Deus e também a sabedoria de Deus. O Senhor criou a natureza dos Anjos e dos homens para conhecê-lo e a criou à sua semelhança. Teve, pois, dez dracmas, porque são nove os coros dos Anjos; mas, para que se completasse o número dos eleitos, o homem foi criado como décimo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de quaest. Evang",
-        "latim": "Vel in novem drachmis, sicut et in nonaginta novem ovibus, ponit eorum significationem qui de se praesumentes peccatoribus ad salutem redeuntibus se praeponunt: unum enim deest a novem ut decem sint, et a nonaginta novem ut centum sint; cui uni deputat omnes per poenitentiam reconciliatos"
+        "latim": "Vel in novem drachmis, sicut et in nonaginta novem ovibus, ponit eorum significationem qui de se praesumentes peccatoribus ad salutem redeuntibus se praeponunt: unum enim deest a novem ut decem sint, et a nonaginta novem ut centum sint; cui uni deputat omnes per poenitentiam reconciliatos",
+        "pt": "Ou nas nove dracmas, como nas noventa e nove ovelhas, põe a significação dos que, presumindo de si, se antepõem aos pecadores que voltam à salvação: pois falta um para que nove sejam dez, e para que noventa e nove sejam cem; a esse um atribui todos os reconciliados pela penitência.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Et quia imago exprimitur in drachma, mulier drachmam perdiderat, quando homo, qui conditus ad imaginem Dei fuerat, peccando a similitudine sui conditoris recessit; et hoc est quod subditur si perdiderit drachmam unam, nonne accendit lucernam? Accendit mulier lucernam, quia Dei sapientia apparuit in humanitate. Lucerna quippe lumen in testa est; lumen vero in testa est divinitas in carne: accensa autem lucerna, sequitur et evertit domum: quia scilicet mox ut eius divinitas per carnem claruit, omnis se nostra conscientia concussit: quia eversionis sermo non discrepat in eo quod in aliis codicibus legitur emundat: quia prava mens si non prius prae timore evertitur, ab assuetis vitiis non mundatur. Eversa autem domo, invenitur drachma; sequitur enim et quaerit diligenter donec inveniat; quia scilicet cum perturbatur conscientia hominis, reparatur in homine similitudo conditoris"
+        "latim": "Et quia imago exprimitur in drachma, mulier drachmam perdiderat, quando homo, qui conditus ad imaginem Dei fuerat, peccando a similitudine sui conditoris recessit; et hoc est quod subditur si perdiderit drachmam unam, nonne accendit lucernam? Accendit mulier lucernam, quia Dei sapientia apparuit in humanitate. Lucerna quippe lumen in testa est; lumen vero in testa est divinitas in carne: accensa autem lucerna, sequitur et evertit domum: quia scilicet mox ut eius divinitas per carnem claruit, omnis se nostra conscientia concussit: quia eversionis sermo non discrepat in eo quod in aliis codicibus legitur emundat: quia prava mens si non prius prae timore evertitur, ab assuetis vitiis non mundatur. Eversa autem domo, invenitur drachma; sequitur enim et quaerit diligenter donec inveniat; quia scilicet cum perturbatur conscientia hominis, reparatur in homine similitudo conditoris",
+        "pt": "E porque na dracma está expressa a imagem, a mulher havia perdido a dracma quando o homem, que fora criado à imagem de Deus, pecando se afastou da semelhança de seu criador; e é isto o que se acrescenta: se perder uma dracma, não acende uma lâmpada? A mulher acende a lâmpada, porque a sabedoria de Deus apareceu na humanidade. A lâmpada é, com efeito, a luz num vaso de barro; e a luz no vaso de barro é a divindade na carne: acesa a lâmpada, segue-se: e revira a casa: isto é, logo que a sua divindade brilhou pela carne, toda a nossa consciência se abalou: pois a palavra “revirar” não discorda do que em outros códices se lê: limpa: porque a mente perversa, se não for antes revirada pelo temor, não se limpa dos vícios habituais. Revirada a casa, encontra-se a dracma; pois se segue: e procura diligentemente até encontrar; isto é, quando se perturba a consciência do homem, repara-se no homem a semelhança do criador.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius Nazianzenus",
         "obra": "",
-        "latim": "Inventa autem drachma, caelestes virtutes facit participes gaudii, quas ministras dispensationis fecit; unde sequitur et cum invenerit, convocat amicas et vicinas dicens: congratulamini mihi, quia inveni drachmam quam perdideram"
+        "latim": "Inventa autem drachma, caelestes virtutes facit participes gaudii, quas ministras dispensationis fecit; unde sequitur et cum invenerit, convocat amicas et vicinas dicens: congratulamini mihi, quia inveni drachmam quam perdideram",
+        "pt": "Encontrada a dracma, faz participantes da alegria as virtudes celestes, que fez ministras da dispensação; daí o que se segue: e, quando a encontra, convoca as amigas e vizinhas, dizendo: congratulai-vos comigo, porque encontrei a dracma que perdera.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Supernae enim virtutes tanto divinae sapientiae iuxta sunt, quanto ei per gratiam continuae visionis appropinquant"
+        "latim": "Supernae enim virtutes tanto divinae sapientiae iuxta sunt, quanto ei per gratiam continuae visionis appropinquant",
+        "pt": "As virtudes supernas estão tanto mais perto da divina sabedoria quanto mais dela se aproximam pela graça da visão contínua.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Vel amicae sunt, ut exequentes voluntatem ipsius: vicinae vero, ut incorporeae; vel forte amicae ipsius sunt omnes supernae virtutes, vicinae vero sunt propinquiores, scilicet throni, Cherubim et Seraphim"
+        "latim": "Vel amicae sunt, ut exequentes voluntatem ipsius: vicinae vero, ut incorporeae; vel forte amicae ipsius sunt omnes supernae virtutes, vicinae vero sunt propinquiores, scilicet throni, Cherubim et Seraphim",
+        "pt": "Ou são amigas, como executoras da vontade dele; vizinhas, porém, como incorpóreas; ou talvez suas amigas sejam todas as virtudes supernas, e vizinhas as mais próximas, isto é, os tronos, os Querubins e os Serafins.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius Nyssenus",
         "obra": "",
-        "latim": "Vel aliter. Hoc reor dominum nobis proponere in inquisitione perditae drachmae, quia nulla nobis a ceteris virtutibus utilitas provenit, quas drachmas vocat, quamvis praesto sint omnes, una sola deficiente animae viduatae, qua scilicet divinae similitudinis nitorem sortitur: propter quod primo quidem iubet lucernam accendere, scilicet verbum divinum, quod abscondita patefacit. Vel forsan poenitentiae lampadem, sed in domo propria, idest in seipso et in sua conscientia, oportet perquirere drachmam perditam, idest regis imaginem, quae non penitus deperiit, sed est tecta sub fimo, qui significat carnis contagia; quibus studiose abstersis, idest dilutis per solertiam vitae, elucescit quod quaeritur: unde oportet ipsam quae invenit gratulari; necnon ad participia gaudii vocare vicinas, idest contubernales virtutes, idest rationabilem et concupiscibilem et innatum iracundiae affectum, et si quae sint tales vires circa animam consideratae, quas docet gaudere in domino. Deinde concludens parabolam, subdit ita dico vobis, gaudium erit Angelis super uno peccatore poenitentiam agente"
+        "latim": "Vel aliter. Hoc reor dominum nobis proponere in inquisitione perditae drachmae, quia nulla nobis a ceteris virtutibus utilitas provenit, quas drachmas vocat, quamvis praesto sint omnes, una sola deficiente animae viduatae, qua scilicet divinae similitudinis nitorem sortitur: propter quod primo quidem iubet lucernam accendere, scilicet verbum divinum, quod abscondita patefacit. Vel forsan poenitentiae lampadem, sed in domo propria, idest in seipso et in sua conscientia, oportet perquirere drachmam perditam, idest regis imaginem, quae non penitus deperiit, sed est tecta sub fimo, qui significat carnis contagia; quibus studiose abstersis, idest dilutis per solertiam vitae, elucescit quod quaeritur: unde oportet ipsam quae invenit gratulari; necnon ad participia gaudii vocare vicinas, idest contubernales virtutes, idest rationabilem et concupiscibilem et innatum iracundiae affectum, et si quae sint tales vires circa animam consideratae, quas docet gaudere in domino. Deinde concludens parabolam, subdit ita dico vobis, gaudium erit Angelis super uno peccatore poenitentiam agente",
+        "pt": "Ou de outro modo. Penso que o Senhor nos propõe isto na busca da dracma perdida: que nenhuma utilidade nos vem das demais virtudes, que chama dracmas, ainda que todas estejam presentes, faltando uma só, à alma viúva, aquela pela qual ela alcança o esplendor da semelhança divina: por isso, primeiro manda acender a lâmpada, isto é, a palavra divina, que revela as coisas ocultas. Ou talvez a lâmpada da penitência; mas é na casa própria, isto é, em si mesmo e em sua consciência, que é preciso procurar a dracma perdida, isto é, a imagem do rei, que não pereceu inteiramente, mas está coberta sob o esterco, que significa as máculas da carne; removidas estas com zelo, isto é, dissolvidas pela diligência da vida, resplandece o que se procura: por isso convém que aquela que a encontrou se alegre; e chame à participação da alegria as vizinhas, isto é, as virtudes companheiras, a saber, a racional, a concupiscível e o afeto inato da irascibilidade, e quaisquer outras tais forças consideradas em torno da alma, às quais ensina a alegrar-se no Senhor. Depois, concluindo a parábola, acrescenta: Assim vos digo: haverá alegria entre os Anjos por um só pecador que faz penitência.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",

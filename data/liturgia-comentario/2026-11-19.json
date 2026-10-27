@@ -2,7 +2,17 @@
   "data": "2026-11-19",
   "evangelho": "Lc 19,41-44",
   "leituras": "Ap 5,1-10 | Sl 149,1-2.3-4.5-6a e 9b (R. Ap 5,10) | Lc 19,41-44",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 19,
+      "lectio": 5,
+      "versos": [
+        41,
+        44
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 558,
@@ -49,6 +59,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "O pranto de Cristo sobre Jerusalém e a paz escondida",
+  "destaques": [
+    {
+      "lectio": 5,
+      "i": 0
+    },
+    {
+      "lectio": 5,
+      "i": 4
+    },
+    {
+      "lectio": 5,
+      "i": 10
+    }
+  ]
 }

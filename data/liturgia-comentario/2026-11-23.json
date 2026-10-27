@@ -1,0 +1,64 @@
+{
+  "data": "2026-11-23",
+  "evangelho": "Lc 21,1-4",
+  "leituras": "Ap 14,1-3.4b-5 | Sl 23(24),1-2.3-4ab.5-6 (R. cf. 6) | Lc 21,1-4",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 21,
+      "lectio": 1,
+      "versos": [
+        1,
+        4
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 2544,
+      "comum": [
+        4
+      ],
+      "direto": false,
+      "ref": "Lc 21,4",
+      "frase": "Pouco antes da sua paixão, deu-lhes o exemplo da pobre viúva de Jerusalém que, da sua penúria, deu tudo o que tinha para viver.",
+      "texto": "Jesus impõe aos seus discípulos que O prefiram a tudo e a todos e propõe-lhes que renunciem a todos os seus bens por causa d'Ele e do Evangelho. Pouco antes da sua paixão, deu-lhes o exemplo da pobre viúva de Jerusalém que, da sua penúria, deu tudo o que tinha para viver. O preceito do desapego das riquezas é obrigatório para entrar no Reino dos céus.",
+      "local": "«amarás o teu próximo como a ti mesmo» › Artigo 10: o décimo mandamento"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ap 14,1-3.4b-5",
+      "catecismo": [
+        {
+          "numero": 1138,
+          "comum": [
+            1
+          ],
+          "direto": false,
+          "ref": "Ap 14,1",
+          "frase": "«Recapitulados» em Cristo, tomam parte no serviço do louvor de Deus e na realização do seu desígnio: os Poderes celestes, toda a criação (os quatro viventes), os servidores da Antiga e da Nova Aliança (os vinte e quatro anciãos), o novo povo de Deus (os cento e quarenta e quatro mil), em particular os mártires, «degolados por causa da Palavra de Deus» (Ap 6, 9) e a santíssima Mãe de Deus (a Mulher; a Esposa do Cordeiro enfim, «uma numerosa multidão que ninguém podia contar e provinda de todas as nações, tribos, povos e línguas» (Ap 7, 9).",
+          "texto": "«Recapitulados» em Cristo, tomam parte no serviço do louvor de Deus e na realização do seu desígnio: os Poderes celestes, toda a criação (os quatro viventes), os servidores da Antiga e da Nova Aliança (os vinte e quatro anciãos), o novo povo de Deus (os cento e quarenta e quatro mil), em particular os mártires, «degolados por causa da Palavra de Deus» (Ap 6, 9) e a santíssima Mãe de Deus (a Mulher; a Esposa do Cordeiro enfim, «uma numerosa multidão que ninguém podia contar e provinda de todas as nações, tribos, povos e línguas» (Ap 7, 9).",
+          "local": "A celebração sacramental do mistério pascal › Artigo 1: celebrar a liturgia da igreja"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "As duas moedas da viúva e o coração que Deus pesa",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 2
+    },
+    {
+      "lectio": 1,
+      "i": 3
+    },
+    {
+      "lectio": 1,
+      "i": 4
+    }
+  ]
+}

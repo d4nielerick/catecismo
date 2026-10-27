@@ -1,0 +1,772 @@
+[
+  {
+    "lectio": 1,
+    "versos": [
+      1,
+      8
+    ],
+    "itens": [
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Postquam aerumnarum et periculorum dominus meminit, subdit horum remedium, quod est oratio iugis et praemeditata; unde dicit dicebat autem et parabolam ad illos, quoniam oportet semper orare, et non deficere",
+        "pt": "Depois de mencionar o Senhor as tribulações e os perigos, acrescenta o remédio deles, que é a oração contínua e premeditada; donde diz: \"Dizia-lhes também uma parábola, sobre ser necessário orar sempre e não desfalecer\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Qui te redemit, quid te facere voluit demonstravit. Non vult te cessare a precibus; vult te beneficia meditari dum petis: vult te rogando accipere quod benignitas desiderat impertiri. Nec unquam oranti beneficia denegat qui ut orantes non deficiant, sua pietate instigat. Hortamenta domini libenter admitte: quod praecepit, velle debes; nolle, si ipse dominus prohiberet. Denique considera quanta est tibi concessa felicitas, orationibus fabulari cum Deo, quod desideras postulare; qui et si verbis silet, tamen beneficiis respondet; non aspernatur quod petis, non taedet nisi forte tacueris",
+        "pt": "Aquele que te redimiu mostrou o que quis que fizesses. Não quer que cesses as preces; quer que medites os benefícios enquanto pedes; quer que, rogando, recebas o que a benignidade deseja conceder. E nunca nega benefícios a quem ora aquele que, para que os que oram não desfaleçam, os estimula por sua bondade. Acolhe de bom grado as exortações do Senhor: o que ele mandou, deves querer; e não querer, se o próprio Senhor o proibisse. Considera, enfim, quanta felicidade te foi concedida: conversar com Deus em orações, para pedir o que desejas; ele, ainda que se cale em palavras, responde contudo com benefícios; não despreza o que pedes, e não se enfada, a não ser que talvez tenhas calado",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Dicendum est autem, eum semper orare et non deficere qui canonicis horis rogare non desistit; aut omnia quae iustus secundum Deum gerit et dicit, ad orationem sunt reputanda",
+        "pt": "Deve-se dizer que ora sempre e não desfalece aquele que não deixa de rezar nas horas canônicas; ou que tudo o que o justo faz e diz segundo Deus deve ser reputado como oração",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Parabolas autem dominus aut secundum similitudinem ponit, sicut de feneratore, qui cum duobus debitoribus donasset quod debebant, ab eo plus dilectus est cui plus donavit; aut de ipsa similitudine aliquid probat, veluti est illud, quod si fenum agri, quod hodie est, et cras in clibanum mittitur, Deus sic vestit, quanto magis vos, modicae fidei? Hic ergo iniquus iudex non ex similitudine, sed ex dissimilitudine adhibitus est, de quo subditur iudex quidam erat in quadam civitate, qui Deum non timebat, et hominem non reverebatur",
+        "pt": "O Senhor, porém, propõe as parábolas ou por semelhança, como a do credor que, tendo perdoado a dois devedores o que deviam, foi mais amado por aquele a quem mais perdoou; ou prova algo a partir da própria semelhança, como aquilo: \"se o feno do campo, que hoje existe e amanhã é lançado ao forno, Deus assim o veste, quanto mais a vós, homens de pouca fé?\" Este juiz iníquo, portanto, foi empregado não por semelhança, mas por dessemelhança; dele acrescenta-se: \"Havia numa cidade um juiz que não temia a Deus e não respeitava homem algum\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Vide quod impudentem erga homines esse, gravioris est mali indicium: Deum enim quamplures non timent, attamen humano cohibentur pudore, et ideo minus peccant; cum vero fit aliquis impudens etiam quoad homines, tunc excrescit cumulus vitiorum. Sequitur vidua autem quaedam erat in illa civitate",
+        "pt": "Vê que ser impudente para com os homens é indício de mal mais grave: com efeito, muitíssimos não temem a Deus, mas são contidos pelo pudor humano, e por isso pecam menos; quando, porém, alguém se torna impudente também quanto aos homens, então cresce o acúmulo dos vícios. Segue-se: \"Havia também naquela cidade uma viúva\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Ista vidua potest habere similitudinem Ecclesiae, quae desolata videtur donec veniat dominus, qui nunc in secreto curam eius gerit. Sed quia sequitur et veniebat ad eum dicens: vindica me de adversario meo. Et nolebat per multum tempus, hic monet cur electi Dei se vindicare deprecentur, quod etiam in Apocalypsi Ioannis de martyribus dicitur, cum apertissime moneamur ut pro nostris inimicis et persecutoribus oremus. Intelligendum est autem eam vindictam esse iustorum ut omnes mali pereant. Pereunt autem duobus modis: aut conversione ad iustitiam, aut amissa per supplicium potestate. Itaque si omnes homines convertentur ad Deum, Diabolus tamen remaneret in saeculi fine damnandus; quem finem cum iusti videre desiderant, non absurde vindictam desiderare dicuntur",
+        "pt": "Esta viúva pode ter semelhança com a Igreja, que parece desolada até que venha o Senhor, que agora em segredo cuida dela. Mas porque se segue: \"e vinha a ele dizendo: Faze-me justiça contra o meu adversário\". \"E durante muito tempo não quis\", aqui adverte por que os eleitos de Deus pedem vingança, o que também se diz no Apocalipse de João acerca dos mártires, embora sejamos muito claramente exortados a rezar por nossos inimigos e perseguidores. Deve-se entender, porém, que essa vingança dos justos é que todos os maus pereçam. Perecem, porém, de dois modos: ou pela conversão à justiça, ou perdendo o poder pelo suplício. Assim, ainda que todos os homens se convertessem a Deus, o Diabo permaneceria, para ser condenado no fim do mundo; e, desejando os justos ver esse fim, diz-se, não sem razão, que desejam vingança",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Vel aliter. Quoties nobis ab aliquibus irrogantur offensae, tunc gloriosam esse putabimus oblivionem malorum: quoties vero aliquid ad ipsam Dei gloriam peccant, contra dogmatis divini ministros bellantes, tunc Deum adimus postulantes subsidium, et exclamantes contra impugnantes gloriam eius",
+        "pt": "Ou de outro modo. Sempre que algumas ofensas nos são infligidas por alguns, então julgaremos glorioso o esquecimento dos males; sempre, porém, que pecam contra a própria glória de Deus, combatendo os ministros da doutrina divina, então nos achegamos a Deus pedindo auxílio e clamando contra os que impugnam a sua glória",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Apud iniquissimum ergo iudicem usque ad effectum implendi desiderii valuit trahere perseverantia deprecantis; unde sequitur post haec autem dixit intra se: etsi Deum non timeo, neque hominem revereor, tamen quia molesta est mihi haec vidua, vindicabo illam, ne in novissimo veniens sugillet me. Multo igitur certiores esse debent qui Deum perseveranter rogant, fontem iustitiae atque misericordiae; unde sequitur ait autem dominus: audite quid iudex iniquitatis dicat. Deus autem non faciet vindictam electorum suorum clamantium ad se die ac nocte et patientiam habebit in illis?",
+        "pt": "Junto ao juiz iniquíssimo, portanto, a perseverança da que suplicava teve força de arrastar até a realização do desejo; donde se segue: \"Depois disso, disse consigo: Embora eu não tema a Deus nem respeite homem algum, contudo, porque esta viúva me importuna, farei justiça a ela, para que, vindo por fim, não me agrida\". Muito mais seguros devem estar, portanto, os que rogam perseverantemente a Deus, fonte de justiça e de misericórdia; donde se segue: \"E o Senhor disse: Ouvi o que diz o juiz de iniquidade. Deus, porém, não fará justiça aos seus eleitos, que clamam a ele dia e noite, e terá paciência com eles?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quasi dicat: si iudicem imbutum quolibet scelere demulsit assiduitas, quanto magis patrem misericordiae Deum flectemus ad pietatem orando? Unde sequitur dico autem vobis, quia cito faciet vindictam illorum. Tentaverunt autem quidam subtilius hanc indagare parabolam; dicunt enim viduam esse quamlibet animam quae pristinum virum, scilicet Diabolum, excludit, ob hoc ei adversantem quod accedit ad Deum iustitiae iudicem; qui neque Deum timet, nam ipse solus est Deus; sed nec veretur hominem, non est enim apud Deum personarum acceptio. Huius igitur viduae, idest animae supplicantis, iugiter sibi contra Diabolum miseretur Deus, demulcente eum instantia eius. Postquam autem dominus docuit quod utendum sit in tempore consummationis oratione pro tunc futuris periculis, subdit verumtamen filius hominis veniens, putas, inveniet fidem in terra?",
+        "pt": "Como se dissesse: se a assiduidade abrandou um juiz imbuído de qualquer crime, quanto mais inclinaremos à piedade, orando, a Deus, pai de misericórdia? Donde se segue: \"Digo-vos que depressa lhes fará justiça\". Alguns tentaram investigar mais sutilmente esta parábola; dizem, com efeito, que a viúva é qualquer alma que exclui o antigo marido, isto é, o Diabo, que lhe é adverso por ela se aproximar de Deus, juiz de justiça; o qual nem teme a Deus, pois somente ele é Deus; nem respeita o homem, pois em Deus não há acepção de pessoas. Desta viúva, portanto, isto é, da alma suplicante, Deus se compadece continuamente contra o Diabo, abrandando-o a insistência dela. Depois que o Senhor ensinou que se deve usar, no tempo da consumação, a oração contra os perigos então futuros, acrescenta: \"Contudo, o Filho do homem, ao vir, pensas que achará fé na terra?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Dicit autem dominus de fide quae perfecta est: ipsa enim vix invenitur in terra. Ecce plena est Ecclesia Dei: quis huc accederet, si nulla esset fides: quis non montes transferret, si plena esset fides?",
+        "pt": "Fala o Senhor, porém, da fé que é perfeita: esta, com efeito, dificilmente se encontra na terra. Eis que a Igreja de Deus está cheia: quem viria até aqui, se nenhuma fé houvesse? Quem não transportaria montes, se a fé fosse plena?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Cum autem omnipotens conditor in forma filii hominis apparuerit, tanta erit raritas electorum, ut non tam ob clamorem fidelium, quam torporem aliorum, totius mundi sit acceleranda ruina. Quod autem dominus hic quasi dubitative dicit, non dubitat, sed arguit: nam et nos aliquando de rebus quas certas habemus, increpative verbum dubitationis promimus; ut si dicatur servo: considera, forsitan dominus tuus sum",
+        "pt": "Quando, porém, o Criador onipotente aparecer na forma de Filho do homem, tão grande será a raridade dos eleitos que, não tanto pelo clamor dos fiéis quanto pela tibieza dos outros, deverá ser apressada a ruína do mundo inteiro. O que o Senhor aqui diz como que em dúvida, não o diz duvidando, mas censurando: pois também nós, às vezes, a respeito de coisas que temos por certas, proferimos em tom de repreensão uma palavra de dúvida; como se se dissesse a um servo: considera, talvez eu seja o teu senhor",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Hoc autem dominus adicit, ut ostendat quod si fides deficit, oratio perit. Ergo ut oremus credamus, et ut ipsa fides non deficiat oremus. Fides fundit orationem, fusa oratio fidei impetrat firmitatem",
+        "pt": "Isto, porém, o Senhor acrescenta para mostrar que, se a fé desfalece, a oração perece. Portanto, creiamos para orar, e oremos para que a própria fé não desfaleça. A fé derrama a oração; derramada a oração, alcança a firmeza da fé",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 2,
+    "versos": [
+      9,
+      14
+    ],
+    "itens": [
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Quia fides non est superborum, sed humilium, praemissis subiecit parabolam de humilitate, et contra superbiam; unde dicitur dixit autem et ad quosdam qui in se confidebant tamquam iusti, et aspernabantur ceteros, parabolam istam"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quia enim superbia plus quam aliae passiones vexat hominum mentes, ideo crebrius de hac monet. Est autem superbia Dei contemptus: quoties enim aliquis non Deo sed sibi ascribit bona quae facit, quid est aliud quam Dei negatio? Causa igitur confidentium in seipsis, non autem totum attribuentium Deo, sed ob hoc etiam ceteros contemnentium, parabolam proponit, ostendens quod iustitia quamvis hominem approximet Deo, si tamen assumat superbiam, ad infimum deicit hominem; unde sequitur duo homines ascenderunt in templum ut orarent: unus Pharisaeus, et alter publicanus"
+      },
+      {
+        "autor": "Graecus",
+        "obra": "",
+        "latim": "Diligentiam quidem orationis docuit nos per viduam et iudicem; hic autem per Pharisaeum et publicanum docet nos quomodo sint ei dirigenda precamina, ne sit infructuosum orationis negotium. Condemnatus est autem Pharisaeus, cum incaute oraret; nam sequitur Pharisaeus autem stans, haec apud se orabat"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Per hoc quod dicit stans, elatum eius animum notat: ipso enim habitu superbissimus videbatur"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Dicit autem apud se orabat; quasi non apud Deum, quia ad seipsum redibat per peccatum superbiae; sequitur enim Deus, gratias ago tibi"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Non reprehenditur quia Deo gratias agebat, sed quia nihil sibi addi cupiebat. Ergo iam plenus es, iam abundas; non est quare dicas: dimitte nobis debita nostra. Quis est igitur qui impune oppugnat gratiam, si reprehenditur qui superbe agit gratias? Audiant qui dicunt: Deus me hominem fecit; ego me iustum facio. O peior et detestabilior Pharisaeo, qui superbe iustum se dicebat, sed tamen inde gratias Deo agebat"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Attende autem seriem orationis Pharisaei. Primo namque dixit quae ei aberant, deinde subiungit quae habebat; sequitur enim quia non sum sicut ceteri hominum, raptores, iniusti, adulteri"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Diceret saltem: sicut multi homines. Quid est ceteri homines, nisi omnes praeter ipsum? Ego, inquit, iustus sum, ceteri peccatores"
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Quatuor quippe sunt species quibus omnis tumor arrogantium demonstratur: cum bonum aut a semetipsis habere se aestimant; aut si sibi datum desuper credunt, pro suis se hoc accepisse meritis putant; aut certe cum iactant se habere quod non habent; aut despectis ceteris singulariter videri appetunt habere quod habent; unde et Pharisaeus hic bonorum sibi operum merita singulariter tribuit"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Ecce autem ex vicino publicano maioris erat ei tumoris occasio; sequitur enim velut etiam hic publicanus; quasi dicat: ego solus sum, iste de ceteris est"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Non enim satiaverat contemptum eius tota humana natura, sed et publicanum aggressus est. Moderatius autem peccasset, si publicanum excepisset; nunc autem uno verbo et absentes invadit, et vulnera praesentis lacessit. Non est autem gratiarum actio invectiva aliorum. Si regratiaris Deo, ipse tibi tantum sufficiat, nec te ad homines transferas, nec proximum condemnes"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Discrepat autem elatus a conviciatore sola habitudine: is enim in alios utitur conviciis, hic autem se mentis temeritate extollit"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Qui autem aliis conviciatur, sibi et aliis multa mala facit. Primo enim audientem reddit peiorem: quia si sit peccator, fit laetior, criminis invento collega; si sit iustus, extollitur, per aliena crimina inductus de se magna putare. Secundo communitatem Ecclesiae laedit: non enim omnes audientes vituperant eum solum qui peccavit, sed ritui Christiano contumelias innectunt. Tertio Dei gloriam blasphemare facit: sicut enim nobis recte agentibus nomen Dei glorificatur, sic nobis peccantibus blasphematur. Quarto eum qui audivit opprobria, confundit, impudentiorem eum et adversarium faciens. Quinto statuit se poenae obnoxium, rebus prolatis quae sibi non conveniunt"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Expedit autem non solum declinare a malo, sed etiam agere bonum; et ideo cum dixisset: non sum sicut adulteri, subiungit per oppositum ieiuno bis in sabbato. Sabbatum hi dicebant hebdomadam ab ultima die quietis. Ieiunabant enim Pharisaei secunda et quinta feria. Sic igitur ieiunia obiecit contra passionem adulterii: nam ex voluptate est lascivia. Rapacibus vero et iniustis opposuit decimarum solutionem; sequitur enim decimas do omnium quae possideo; quasi dicat: adeo rapinas et nequitias refugio ut etiam mea contribuam"
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Ecce civitatem cordis sui insidiantibus hostibus per elationem aperuit, quam frustra per ieiunium et orationem clausit. Incassum munita sunt cetera, cum locus unus, de quo hosti patet aditus, munitus non est"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Quaere autem in verbis eius: nihil invenies quod Deum rogaverit: ascendit quidem orare, noluit Deum rogare, sed se laudare, et roganti insultare. Publicanum autem cordis conscientia removebat, sed pietas applicabat; unde sequitur et publicanus a longe stans nolebat nec oculos ad caelum levare"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quamvis autem publicanus stetisse dicatur, distabat tamen a Pharisaeo tam verbis quam habitu, nec non et corde contrito: nam verebatur oculos levare in caelum, censens indignos visionis supernae eos qui maluerunt bona terrena spectare et quaerere; necnon et pectus tundebat; unde sequitur sed percutiebat pectus suum, cor quodammodo pungens causa cogitationum pravarum, nec non et excitans ut dormitans: unde non aliud quam Deum propitiatorem petebat; sequitur enim dicens: Deus, propitius esto mihi peccatori"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Audivit quia non sum velut hic publicanus, nec indignatus est, sed compunctus: detexit ille vulnus, quaerit hic medicinam. Nemo igitur illud frigidum proferat verbum: non audeo, pudorosus sum, non possum aperire os. Talis reverentia est diabolica: vult enim Diabolus obserare tibi fores accessus ad Deum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Quid igitur miraris si Deus ignoscit, quando ipse agnoscit? De longinquo stabat; Deo tamen appropinquabat, et eum dominus de prope attendebat: excelsus enim dominus, et humilia respicit; nec oculos ad caelum levabat ut respiceret; tremebat conscientia, spes sublevabat; percutiebat pectus suum, poenas de seipso exigebat: propterea dominus confitenti parcebat. Audisti superbum accusatorem, audisti humilem reum: audi nunc iudicem dicentem amen dico vobis: descendit hic iustificatus in domum suam ab illo"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Geminos aurigas et duas bigas in stadio positas sermo praesens proponit: in altera peccatum et humilitatem: et vides bigam peccati superare iustitiam, non propriis virtutibus, sed humilitatis coniunctae; illam vero devictam non fragilitate iustitiae, sed mole et tumore superbiae: nam sicut humilitas per sui eminentiam peccati pondus superat, et saliens attingit Deum; sic superbia ob sui molem de facili iustitiam deprimit. Si ergo plura facta strenue geras, putas autem te posse praesumere, tota caruisti oratione; si vero mille feras in conscientia fasces reatuum, et hoc solum de te credas quod es infimus omnium, multam obtinebis ante Deum fiduciam. Et ideo suae sententiae causam assignans subdit quia omnis qui se exaltat, humiliabitur; et qui se humiliat, exaltabitur. Humilitatis nomen multiplex est. Est enim quaedam virtus humilitas, iuxta illud: cor contritum et humiliatum, Deus, non despicies. Est et humilitas ab aerumnis, iuxta illud: humiliavit in terra vitam meam. Est et humilitas a peccatis et superbia et insatiabilitate divitiarum: quid enim humilius his qui se submittunt in divitiis et potentatu, et haec reputant magna?"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Similiter etiam et exaltari laudabiliter contingit, quando scilicet non humilia cogitas, sed mens tua est per magnanimitatem in virtutem erecta. Talis autem animi celsitudo est eminentia in tristitiis, terrenorum contemptus, conversatio in caelis: et videtur huiusmodi mentis sublimitas eamdem habere differentiam ad elationem quam arrogantia parit, quam habet corpulentia corporis bene dispositi ad inflationem carnis cum ex hydropisi tumet"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Haec igitur fastus inflatio ab ipsis caelis potest deprimere non caventem; humilitas vero et ab ipsa abysso reatuum hominem sublimare: haec enim prae Pharisaeo publicanum salvavit, latronem ante apostolos in Paradisum duxit; illa vero etiam incorpoream ingressa est potestatem. Ceterum si iuncta delicto humilitas tam facile currit, ut superbiam iustitiae transeat; si iustitiae coniunxeris eam, quomodo non ibit? Assistet ipsa tribunali divino in medio Angelorum cum fiducia multa. Rursus si fastus coniunctus iustitiae eam deprimere potuit, si coniunctus sit peccato, in quantam Gehennam detrudet? Hoc dico, non ut negligamus iustitiam, sed ut fastum vitemus"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Sed forsitan mirabitur aliquis, quomodo Pharisaeus, cum pauca verba suae laudis protulerit, condemnatur; Iob vero cum plurima fuderit, coronatur. Eo scilicet quod Pharisaeus talia dicebat criminando alios, nulla ratione cogente; Iob vero, urgentibus eum amicis, et pressuris prementibus, coactus est proprias virtutes referre ad Dei gloriam, ne homines desisterent a profectu virtutis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Typice autem Pharisaeus est populus Iudaeorum, qui ex iustificationibus legis extollit merita sua; publicanus vero gentilis est, qui longe a Deo positus, confitetur peccata sua; quorum unus superbiendo recessit humiliatus, alter lamentando appropinquare meruit exaltatus"
+      }
+    ]
+  },
+  {
+    "lectio": 3,
+    "versos": [
+      15,
+      17
+    ],
+    "itens": [
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Post praedicta, humilitatem dominus docet per ea quae fecit, non repellens, sed gratanter parvulos admittens; unde dicitur afferebant autem ad illum infantes, ut eos tangeret"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Verb. Dom",
+        "latim": "Cui afferuntur tangendi nisi salvatori? Sed si salvator est, salvandi offeruntur illi qui venit salvum facere quod perierat. Ubi isti perierant, quantum ad ipsos pertinet innocentes? Sed secundum apostolum, per unum hominem intravit peccatum in orbem terrarum. Veniant ergo parvuli, ut languidi ad medicum, perditi ad redemptorem"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Durum autem aliquibus videri potest quod discipuli dominum infantulos adire prohibebant; sequitur enim quod cum viderent discipuli, increpabant illos. Ubi vel mysterium intelligas, vel affectum. Neque enim hoc invidia aut in pueros mentis asperitate faciebant; sed sedulae servitutis obsequia domino deferebant, ne comprimeretur a turbis. Respuenda quippe est utilitas nostra ubi divinitatis iniuria est. In mysterio autem, quia prius salvari populum Iudaeorum, ex quo secundum carnem nati fuerant, gestiebant. Sciebant quidem mysterium quod utrisque populis vocatio deberetur: nam et pro Chananaea muliere supplicarunt; sed fortasse adhuc ordinem nesciebant; unde sequitur Iesus autem convocans eos dixit: sinite parvulos venire ad me, et nolite vetare eos: talium est enim regnum Dei. Non aetas praefertur aetati: alioquin obesset adolescere. Cur ergo pueros dicit aptos esse regno caelorum? Fortasse quia malitiam nesciant, fraudare non noverint, referire non audeant, scortari ignorent, opes, honorem, ambitionem non appetant. Sed non ignorare ista, virtus est, sed contemnere: non enim virtus est non posse peccare, sed nolle. Non igitur pueritia, sed aemula puerilis simplicitatis bonitas designatur"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Unde signanter dixit talium, non istorum, ut ostenderet non aetatem regnare, sed mores; et his qui similem haberent innocentiam et simplicitatem, praemia repromitti"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Denique hoc salvator expressit dicens amen dico vobis: quicumque non acceperit regnum Dei sicut puer, non intrabit in illud. Quis puer imitandus est apostolis Christi, nisi de quo Isaias dixit: puer natus est nobis, qui cum malediceretur, non maledicebat? Itaque in pueritia est quaedam venerabilis morum senectus, et in senectute innocens pueritia"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Suscipiemus autem regnum Dei ut puer, si dispositi fuerimus erga doctrinam domini ut puer, in disciplina, nequaquam contradicens nec disputans cum magistris, sed credibiliter et obedienter imbibens documenta"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Gentilium ergo sapientes quaerentes sapientiam in mysterio, quod est regnum Dei, nec volentes hoc absque fide syllogisticae probationis admittere, merito exclusi sunt ab hoc regno"
+      }
+    ]
+  },
+  {
+    "lectio": 4,
+    "versos": [
+      18,
+      23
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Audierat princeps quidam a domino, tantum eos qui puerorum vellent esse similes, regnum Dei intraturos; atque ideo poscit sibi non per parabolam, sed palam, quibus operum meritis vitam aeternam consequatur, exponi; unde dicitur et interrogavit eum quidam princeps, dicens: magister bone, quid faciendo vitam aeternam possidebo?"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Tentator princeps iste magistrum bonum dixit, qui Deum bonum dicere debuisset: nam licet in divinitate bonitas sit, et in bonitate divinitas, tamen addendo magister bone, in portione bonum dixit, non in universitate: nam Deus in universitate bonus, homo ex parte"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Putavit autem se Christum capere, dum vituperaret Mosaicum praeceptum, introduceret vero sua statuta. Accedit ergo ad magistrum, et bonum eum nuncupans, dicit se velle doceri. Quia ergo tentative quaerebat, qui apprehendit sapientes in astutia sua, convenienter ei respondet; nam sequitur dixit autem ei Iesus: quid me dicis bonum? Nemo bonus nisi solus Deus"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Non bonum se negat, sed Deum designat. Bonus quidem non est, nisi plenus bonitatis. Quod si quem moveat quia nemo bonus, moveat et illud nisi Deus. Quod si a Deo filius non excipitur, utique nec a bono Christus excipitur: nam quomodo non bonus ex bono natus? Arbor enim bona fructus bonos facit. Quomodo non bonus, cum bonitatis suae substantia ex patre assumpta non degeneravit in filio, quae non degeneravit in spiritu? Spiritus tuus bonus deducet me in terram rectam. Quod si bonus spiritus qui accepit a filio, bonus utique et ille qui tradidit. Itaque quia legisperitus est iste qui tentat, sicut in libro alio demonstratur, ei bene dixit nemo bonus nisi unus Deus: ut admoneret, quia scriptum est: non tentabis dominum Deum tuum; sed magis confiteretur domino, quoniam bonus"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Vel aliter. Avarum quidem dicere hunc principem non verebor: nam hoc Christus ei improperat; tentatorem autem minime"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Ergo cum dicit magister bone, quid faciendo vitam aeternam possidebo? Idem est ac si dicat: bonus es: dignare me responso in eo quod quaero: doctus sum vetus testamentum, te tamen praestantiorem video non promittentem terram, sed praedicantem regnum caelorum. Dic ergo mihi, quid faciendo vitam aeternam potero possidere? Intentionem igitur attendens salvator, quia fides est via ad opera, cum dixisset ille quid faciam? Hac quaestione omissa, in notitiam fidei eum ducit: velut si quis interrogaret medicum: quid comedam? Et ille ostenderet quae deberent cibum praecedere; et ideo eum ad patrem remittit, dicens quid me dicis bonum? Non quod ipse bonus non esset: erat enim bonum ex bono patre germen, bonus boni filius"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Potest autem videri distare aliquid quod secundum Matthaeum dicitur: quid me interrogas de bono? Quod ad illud magis referri potest quod ait ille quaerens: quid boni faciam? Ibi enim et bonum nominavit, et interrogatio est. Commodissime ergo intelligitur utrumque dictum: quid me dicis bonum? Et: quid me interrogas de bono? Quod ad illud magis referri potest"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Denique postquam docuit cognitionem fidei, subiungit mandata nosti; quasi dicat: quando prius Deum noveris, tunc optime quaeres quid facias"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Expectante autem principe audire Christum dicentem: recedas a mandatis Mosaicis, et meis attende, ad Mosaica eum mittit; unde sequitur non occides, non moechaberis"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Primo quidem lex ea corrigit ad quae facilius labimur, ut moechari, cuius incentivum est intrinsecum et naturale; et occidere, quia immanis bellua furor; sed furtum et falsi testimonii culpam raro contingit incurrere. Sed et graviora illa existunt; et ideo secundario furtum et falsum testimonium ponit, ut rarius fallentia et leviora; sequitur enim non furtum facies, non falsum testimonium dices"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Non est autem intelligendum fures esse solum bursarum incisores, vel latrocinantes in balneis; sed et si qui duces legionum statuti, vel commisso sibi regimine civitatum aut gentium, hoc quidem furtim tollunt, hoc vero vi ac publice exigunt"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Sed videas in non agendo praecepta consistere: quoniam si moechatus non fueris, castus es; si non fureris, benevolus; si falso non testeris, veridicus. Attende virtutem iam facilem per bonitatem statuentis: nam mali fugam ingerit, non boni exercitium; quaelibet autem quies quolibet est facilior opere"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Sed quia in parentes committere quamquam magnum sit crimen, raro tamen accidit, post omnia ponit honora patrem tuum et matrem"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Est autem honor non solum honorificentiae, sed etiam largitati. Honor enim est deferre pro meritis. Pasce patrem tuum, pasce matrem; et si paveris, adhuc non reddidisti dolores et cruciatus quos pro te mater passa est. Illi debes quod habes, huic debes quod es. Quantum iudicium, si pascat Ecclesia quos tu pascere nolis? Sed dices: quod eram parentibus collaturus, Ecclesiae mallem conferre. Non quaerit Deus donum de fame parentum; sed ut pascendos Scriptura dicit parentes, ita propter Deum relinquendos, si impediant devotae mentis affectum. Sequitur qui ait: haec omnia custodivi a iuventute mea"
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Mentitur adolescens. Si enim quod postpositum est in mandatis: diliges proximum tuum sicut teipsum, opere complesset, quomodo postea audiens: vade, et vende omnia quae habes, et da pauperibus, tristis abscessit?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vel non est putandus esse mentitus, sed simpliciter ut vixerit, scilicet exterius, esse confessus: alioquin nequaquam Marcus diceret quod Iesus intuitus eum dilexit eum"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Ostendit autem consequenter dominus quod si aliquis vetus testamentum peregit, perfectus non est, sed deest ei sequi Christum; unde subditur quo audito Iesus ait ei: adhuc unum tibi deest: omnia quaecumque habes vende, et da pauperibus, et habebis thesaurum in caelo; quasi dicat: quaeris quomodo sit possidenda vita aeterna: sparge facultates pauperibus, et obtinebis illam. Parva sunt quae impendis, magna quae recipis"
+      },
+      {
+        "autor": "Athanasius",
+        "obra": "",
+        "latim": "Non enim mundum despicientes putemus grandia quidem abdicasse, quia tota terra est in comparatione caeli brevissima: quapropter si toti terrae dominaremur, ei abrenuntiantes, nihil dignum esset in comparatione regni caelorum"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quicumque ergo perfectus esse voluerit, oportet vendere quae habet, non ex parte, sicut Ananias fecit et Saphira, sed totum"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Unde dicens omnia quae habes, summam paupertatem suadet; si quid enim restiterit, illius servus est"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Non tamen docet facultates vendere eo quod naturaliter sint pravae; alioquin creatura Dei non essent: unde eas non tamquam malas abicere, sed dispensare monuit: et condemnatur aliquis, non quia eas possidet, sed quia eis abusus est: quo fit ut facultatum secundum mandata Dei dispensatio, et crimina deleat, et regnum conferat; unde subdit et da pauperibus"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Poterat quidem Deus alere pauperes et sine hoc quod nos misereremur eorum; sed vult dantes dilectione astringi accipientibus"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Dicente autem domino da pauperibus, puto non expedire cuiquam negligenter gerere, sed omnia diligenter disponere, praecipue per seipsum, si ex parte se habeat; sin autem, per eos de quibus constat quod fideliter et prudenter disponant: maledictus enim qui negligenter perficit opera domini"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Sed illud quaeritur quomodo Christus erogare cuncta pauperibus perfectionis esse fatetur; Paulus autem absque dilectione hoc asserit esse imperfectum. Sed valde consonat quod subiunxit et veni, sequere me: quod ostenditur ex dilectione esse: in hoc enim cognoscent omnes quod mei estis discipuli, si dilectionem habueritis ad invicem"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Cum paupertate enim ceteras quoque virtutes hominem habere oportet; ob hoc ait et veni, sequere me: idest, in ceteris esto meus discipulus, iugiter me sequaris"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Princeps autem ille vini recentis capax non fuit, vetus uter existens; sed tristitia ruptus est; unde sequitur his ille auditis, contristatus est, quia dives erat valde"
+      },
+      {
+        "autor": "Basilius",
+        "obra": "",
+        "latim": "Mercator non tristatur in nundinis paciscendo quae possidet, acquirendo sibi opportuna; tu vero tristaris pulverem dans, ut acquiras vitam beatam"
+      }
+    ]
+  },
+  {
+    "lectio": 5,
+    "versos": [
+      24,
+      30
+    ],
+    "itens": [
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Quoniam dives, audita opum abiectione, tristatus fuit, dominus admiranter locutus est; dicit enim videns autem Iesus illum tristem factum, dixit: quam difficile qui pecunias habent in regnum Dei intrabunt. Non dicit: impossibile est eos intrare, sed difficile; possunt enim per divitias adipisci superna, sed difficile est: quia viscosiores sunt visco divitiae, et vix evellitur animus occupatus ab eis: sed subsequenter ut impossibile hoc indicat, cum dicit facilius est enim camelum per foramen acus transire, quam divitem intrare in regnum Dei. Nam sive per camelum animal intelligas, sive funem nauticum crassum; quocumque modo impossibile est quod foramen acus totum capiat camelum. Si igitur facilius est camelum per foramen acus transire quam divitem salvari, et hoc quod facilius est, impossibile est; impossibilius ergo est salvari divitem. Quid igitur dicendum? Equidem quod vere sic habet, divitem servari non posse. Neque mihi dicas, quod salvatus sit dives quispiam, qui sua dederit: non enim dives salvatus est, sed quia pauper factus, vel dispensator existens servatus est, non dives. Aliud est enim dispensator, aliud dives: dives est qui sibi divitias reservat, dispensator vero cui divitiae propter alios concreditae sunt"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Ioannem",
+        "latim": "Abraham quidem possidebat opes pauperibus; et qui iuste eas possident, quasi suscipientes a Deo dispensant in divinis mandatis; qui vero contra Deum acquisierunt, et in expendendo faciunt illud idem, meretricibus et parasitis dantes, vel humi abscondentes, egenis vero nihil impendentes. Non ergo prohibet ditari, sed opibus famulari: vult necessariis ut eis utamur, non ut custodiamus: nam famuli est custodire, sed domini dispensare. Si conservari eas vellet, non tradidisset eas hominibus, sed sineret in terra iacere"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Porro attendas illud quod divitem quidem impossibile dicit salvari, possidentem vero divitias difficile; quasi dicat: dives, qui captus est a divitiis, et famulatur eis, non salvabitur; habens vero illas, scilicet qui eis dominatur, vix salvabitur causa humanae fragilitatis. Conatur enim nos Diabolus supplantare quoadusque possidemus divitias, et difficile est aufugere decipulas eius: ideoque bonum est paupertas, et quasi tentatione carens"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Nulla enim est divitiarum commoditas, anima patiente penuriam; nec laesio paupertatis, anima divitiis affluente. Si autem ditescentis indicium est nullius egere, et pauperascentis indigere; palam est quod magis esse pauperem facit magis ditescere: facilius est enim quod quis in paupertate quam in divitiis opes contemnat: neque enim talis est ambitus ut per magis habere sedetur; sed per hoc consuevit magis accendi, sicut ignis quando maiorem suscipit escam. Quae autem mala videntur esse inopiae, communia sunt; quae vero divitiarum, propria sunt earum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Divitem ergo hic appellat cupidum rerum temporalium, et de talibus superbientem. His divitibus contrarii sunt pauperes spiritu, quorum est regnum caelorum. Mystice autem facilius est Christum pati pro dilectoribus saeculi, quam dilectores saeculi ad Christum posse converti. Cameli enim nomine se intelligi voluit, quia sponte humiliatus infirmitatis nostrae onera sustulit. Per acum autem punctiones significat, per punctiones dolores in passione susceptos; foramen autem acus dicit angustiam passionis"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Hic autem sermo quasi gravis transcendebat discipulorum virtutem; unde sequitur et dixerunt qui haec audiebant: et quis potest salvus fieri? Hoc dixerunt discipuli, non de se, sed de toto mundo timentes"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Cum autem incomparabiliter maior sit turba pauperum, quae, divitibus perditis, potest salvari; intellexerunt, omnes qui divitias amant, etiam si adipisci nequeant, in divitum numero deputari. Sequitur ait illis: quae impossibilia sunt apud homines, possibilia sunt apud Deum: quod non ita intelligendum est, quasi dives cum cupiditate et superbia in regnum Dei sit intraturus; sed possibile est Deo ut a cupiditate et superbia ad caritatem et humilitatem convertatur"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Apud homines ergo, quorum serpit intentio ad terrena, impossibilis est salus, ut dictum est; apud Deum vero possibilis est. Cum enim homo consiliarium habet Deum, et iustificationes et doctrinas paupertatis imbiberit, necnon eius auxilium invocet, hoc fiet possibile"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Congrue autem dives cum multa contempserit, recompensationem expectabit; qui vero parva possidens ea abdicavit, quid ei sperandum esset, quaerere decebat; unde sequitur ait autem Petrus: ecce dimisimus omnia. Matthaeus addit: quid ergo erit nobis?"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quasi dicat: fecimus quod iussisti: quid igitur dabis nobis praemii? Et quia non sufficit dimittere omnia, iungit quod perfectum est, dicens et secuti sumus te"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Illud autem necesse est dicere, quod paucis abrenuntiantes, quantum spectat ad propositum et obedientiam, pari lance cum opulentis penduntur, paribus utentes affectibus, dum rerum quas possident abiectionem ultro inferunt; unde sequitur amen dico vobis: nemo est qui reliquerit domum aut parentes aut fratres aut uxores aut filios aut agros propter regnum Dei, et non recipiat multo plura in hoc tempore, et in saeculo futuro vitam aeternam. Elevat ad acceptissimam spem omnes audientes, iureiurando promittens, dum apponit sermoni amen. Doctrina enim divina mundum vocante ad fidem Christi, forsitan aliqui respicientes parentes infideles, noluerunt eos turbare veniendo ad fidem; et similis est ratio aliorum germanorum. Deserunt autem quidam patrem et matrem, et totius parentelae amorem despiciunt propter amorem Christi"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Sensus igitur iste est: qui propter regnum Dei inquirendum omnes affectus contempserit, omnes saeculi divitias, delicias risusque calcaverit, multo plura in praesenti recipiet. Cuius sententiae occasione, quidam Iudaicam mille annorum fabulam post resurrectionem iustorum aedificant, quando omnia quae propter Deum dimittimus, multiplici nobis sint fenore reddenda, et insuper vita aeterna donanda: nec vident inexperti, quod si in ceteris digna sit repromissio, in uxoribus tamen, iuxta alios Evangelistas centenis, appareat turpitudo; praesertim cum dominus in resurrectione non esse nubendum testetur; et iuxta Marcum, ea quae dimissa fuerint, in hoc tempore cum persecutionibus accipienda confirmet, quasi in illis mille annis abesse dogmatizant"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Hoc ergo dicimus, quod omissis temporalibus et carnalibus, multo maiora sibi aliquis vindicabit: quoniam et apostoli, cum pauca dimiserint, obtinuerunt multiplicia dona charismatum, et celebres reputati sunt ubique. Erimus ergo similes illis: si domum quis dimittat, recipiet mansiones supernas, si patrem, patrem habebit caelestem; si a germanis recesserit, in fratrem hunc recipiet Christus; cum dimiserit coniugem, inveniet divinam sapientiam, a qua procreabit spiritales fructus, inveniet Ierusalem caelestem, quae est mater nostra; a fratribus etiam et a sororibus sui propositi glutino spirituali colligatis, multo in hac vita gratiosiorem recipiet caritatem"
+      }
+    ]
+  },
+  {
+    "lectio": 6,
+    "versos": [
+      31,
+      34
+    ],
+    "itens": [
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Praevidens salvator ex passione sua discipulorum animos turbandos, eis longe ante et passionis suae poenam et resurrectionis suae gloriam praedicit; unde dicitur assumpsit autem Iesus duodecim et ait illis: ecce ascendimus Hierosolymam, et consummabuntur omnia quae scripta sunt per prophetas de filio hominis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Praevidens enim quosdam haereticos futuros, qui Christum dicerent legi prophetisque docuisse contraria, ostendit quod per prophetarum praesagia suae passionis et posterioris gloriae sit celebrata perfectio"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Seorsum autem de passione cum discipulis confert: non enim oportebat hunc sermonem pluribus divulgari, ne turbarentur. Hoc autem praedicebat discipulis, ut exercitati per expectationem facilius sustinerent"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Et ut sciant quoniam passionem praenovit, et spontaneus ad eam accessit; ne dicerent: qualiter in manus hostium incidit qui nos promittebat salvare? Unde seriatim ordinem passionis enarrat, subdens tradetur enim gentibus et illudetur et flagellabitur et conspuetur"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Hoc Isaias praedixerat dicens: obtuli scapulas meas ad verbera, genas meas ad alapas, et faciem meam non diverti a sputorum dedecore. Sed et crucis patibulum praedixit propheta cum ait: tradidit in mortem animam suam, et cum sceleratis reputatus est. Unde et hic subditur et postquam flagellaverint, occident eum. Sed et resurrectionem eius David praedixit dicens: non derelinques animam meam in Inferno. Unde hic subditur et tertia die resurget"
+      },
+      {
+        "autor": "Isidorus",
+        "obra": "",
+        "latim": "Admiror autem dementiam quaerentium cur Christus ante triduum resurrexit: si enim resurgeret tardius quam praedixerat, impotentiae esset; celerius vero est summae virtutis indicium. Si quem enim cum spoponderit suo creditori post triduum persolvere debitum, eadem die satisfacientem viderimus; non fallacem, sed potius ut veridicum eum mirabimur. Dicam etiam quod non dixit se post tres dies resurrecturum, sed die tertia. Habes parasceven, habes sabbatum usque ad solis occasum; et post sabbatum resurrexit"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Discipuli autem nondum noverant exquisite quod prophetae praedixerant; sed postquam resurrexit, aperuit eis sensum ut intelligerent Scripturas; unde sequitur et ipsi nihil horum intellexerunt"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quia enim discipuli, eius vitam maxime desiderabant, eius mortem audire non poterant: et quoniam non solum hominem innocentem, sed et Deum verum sciebant, hunc nullatenus mori posse putabant; et quia parabolas eum saepe loquentem audire consueverant, quoties aliquid de sua passione dicebat, ad aliud allegorice referendum esse credebant; unde sequitur erat autem verbum istud absconditum ab eis, et non intelligebant quae dicebantur. Iudaei vero, quia in eius necem conspiraverant, quod de passione sua loqueretur dicens: oportet exaltari filium hominis, intelligebant; unde dixerunt: nos audivimus ex lege, quia Christus manet in aeternum; et quomodo tu dicis: oportet exaltari filium hominis?"
+      }
+    ]
+  },
+  {
+    "lectio": 7,
+    "versos": [
+      35,
+      43
+    ],
+    "itens": [
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Quia carnales adhuc discipuli non valebant capere verba mysterii, venitur ad miraculum: ante eorum oculos caecus lumen recipit, ut eos ad fidem caelestia facta solidarent; unde dicitur factum est autem cum appropinquaret Iericho, caecus quidam sedebat secus viam mendicans",
+        "pt": "Porque os discípulos, ainda carnais, não eram capazes de apreender as palavras do mistério, chega-se ao milagre: diante dos olhos deles um cego recebe a luz, para que os feitos celestes os firmassem na fé; donde se diz: \"Aconteceu que, aproximando-se ele de Jericó, um cego estava sentado à beira do caminho, pedindo esmola\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Et ne incessus domini esset inutilis, in via fecit caeci miraculum, hoc documentum discipulis suis dans, ut in omnibus simus proficui, et nihil sit in nobis otiosum",
+        "pt": "E para que o caminhar do Senhor não fosse inútil, no caminho realizou o milagre do cego, dando este ensinamento aos seus discípulos: que sejamos proveitosos em tudo, e que nada em nós seja ocioso",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Possumus de appropinquantibus Iericho sic intelligere, ut iam inde egressi, prope tamen adhuc essent ad eam civitatem: quod quidem minus usitate dicitur; sed tamen videri posset hoc dictum, quoniam Matthaeus, egredientibus eis ab Iericho dicit illuminatos duos caecos, qui iuxta viam sedebant. De numero quidem nulla esset quaestio, si alter Evangelistarum de uno tacuisset, unius reminiscens: nam et Marcus unum commemorat, cum et egredientibus eis ab Iericho dicit illuminatum; cuius et nomen dixit et patrem, ut intelligamus eum fuisse potissimum, alterum ignotum, ut merito ille notus etiam solus decenter commemoraretur. Sed quoniam quae sequuntur in Evangelio secundum Lucam, aptissime ostendunt illud quod ipse narrat, adhuc venientibus ipsis Iericho factum esse, nihil aliud restat intelligere, nisi bis esse factum hoc miraculum; semel in uno caeco, cum adhuc veniret in illam civitatem; iterum in duobus, cum inde egrederetur: ut illud unum Lucas, alterum Matthaeus enarret",
+        "pt": "Podemos entender dos que se aproximam de Jericó que, já tendo saído dali, estavam ainda perto daquela cidade; o que, na verdade, se diz de modo pouco usual; mas, contudo, isto poderia parecer dito, porque Mateus diz que, ao saírem eles de Jericó, foram iluminados dois cegos, que estavam sentados junto ao caminho. Quanto ao número, não haveria questão alguma, se um dos Evangelistas tivesse silenciado sobre um, lembrando-se de um só: pois também Marcos menciona um, dizendo que foi iluminado quando eles saíam de Jericó; do qual disse também o nome e o pai, para que entendamos que era o mais eminente, e o outro desconhecido, de modo que, com razão, aquele conhecido fosse decentemente mencionado também sozinho. Mas, como o que se segue no Evangelho segundo Lucas mostra muito adequadamente que isso que ele narra aconteceu quando eles ainda chegavam a Jericó, nada resta a entender senão que este milagre foi feito duas vezes: uma vez num só cego, quando ainda vinha para aquela cidade; outra vez em dois, quando dali saía: de modo que Lucas narre aquele um, Mateus o outro",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Multus autem erat populus circa Christum, et caecus eum quidem non noverat, sentiebat autem effectum, et rapiebat per affectum quod non hausit aspectus; unde subditur et cum audiret turbam praetereuntem, interrogabat quid hoc esset. Et oculati quidem secundum opinionem loquebantur; sequitur enim dixerunt autem ei, quod Iesus Nazarenus transiret. Caecus vero vera clamabat: alia docetur, et alia praedicat; nam sequitur et clamavit dicens: Iesu fili David, miserere mei. Quis te docuit haec, o homo? Num perlegisti libros privatus luminibus? Unde igitur nosti luminare mundi? Vere dominus illuminat caecos",
+        "pt": "Havia, porém, muita gente em volta de Cristo, e o cego não o conhecia, mas sentia o efeito, e arrebatava pelo afeto o que a vista não colhera; donde se acrescenta: \"e, ouvindo a multidão que passava, perguntava o que era aquilo\". E os que enxergavam falavam segundo a opinião; segue-se, com efeito: \"Disseram-lhe que Jesus, o Nazareno, passava\". O cego, porém, clamava coisas verdadeiras: é ensinado uma coisa e proclama outra; pois se segue: \"e clamou, dizendo: Jesus, filho de Davi, tem piedade de mim\". Quem te ensinou isto, ó homem? Porventura leste os livros, privado da luz? Donde, pois, conheces o luzeiro do mundo? Verdadeiramente o Senhor ilumina os cegos",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "In Iudaismo autem nutritus non ignoravit quod de progenie David Deus secundum carnem nasceretur; et ideo ei ut Deo loquitur, dicens miserere mei. Hunc imitentur qui in duo dividunt Christum: hic enim Christum tamquam Deum adit, et filium David eum nominat. Mirentur autem instantiam confessionis eius: quidam enim eum confitentem fidem compescebant. Sequitur et qui praeibant increpabant eum ut taceret. Sed per inhibitiones huiusmodi non impediebatur eius audacia. Novit enim fides omnibus repugnare et in omnia triumphare: utile enim est pro cultu divino pudorem deponere: nam si causa pecuniae sunt impudentes nonnulli, pro animae salute non decet bonam induere impudentiam? Unde sequitur ipse vero multo magis clamabat: fili David, miserere mei. Sistit autem Christum vox invocantis in fide, et invocantes in fide respicit; et ideo merito vocat caecum, et accedere iussit; unde sequitur stans autem Iesus iussit illum adduci ad se, ut scilicet qui prius fide eum tetigerat, appropinquaret et corpore. Appropinquantem caecum dominus interrogat; nam sequitur et cum appropinquasset, interrogavit illum, dicens: quid tibi vis faciam? Dispensative interrogat, non quasi ignorans; sed ut scirent astantes quod non petebat pecuniam, sed divinam efficaciam, ut a Deo; unde sequitur at ille dixit: domine, ut videam",
+        "pt": "Educado no judaísmo, porém, não ignorava que da descendência de Davi nasceria Deus segundo a carne; e por isso lhe fala como a Deus, dizendo: tem piedade de mim. Imitem-no os que dividem Cristo em dois: este, com efeito, aproxima-se de Cristo como de Deus e o chama filho de Davi. Admirem, porém, a insistência da sua confissão: alguns, com efeito, reprimiam o que confessava a fé. Segue-se: \"E os que iam à frente o repreendiam para que se calasse\". Mas por tais proibições a sua ousadia não era impedida. A fé sabe, com efeito, resistir a todos e triunfar em tudo: é útil, com efeito, depor o pudor pelo culto divino: pois, se alguns são impudentes por causa do dinheiro, pela salvação da alma não convém revestir-se de boa impudência? Donde se segue: \"Ele, porém, clamava ainda muito mais: Filho de Davi, tem piedade de mim\". A voz de quem invoca na fé detém Cristo, e ele olha para os que invocam na fé; e por isso, com razão, chama o cego e manda que se aproxime; donde se segue: \"Parando, Jesus mandou que o trouxessem a ele\", para que, isto é, quem antes o tocara pela fé se aproximasse também com o corpo. Ao cego que se aproxima o Senhor interroga; pois se segue: \"E, quando ele se aproximou, perguntou-lhe, dizendo: Que queres que eu te faça?\" Interroga por dispensação, não como quem ignora, mas para que os presentes soubessem que ele não pedia dinheiro, mas a eficácia divina, como a Deus; donde se segue: \"Ele disse: Senhor, que eu veja\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Vel quia calumniatores veritatis Iudaei possent dicere, ut in caeco nato: non est hic, sed similis eius; voluit ut caecus prius ostenderet defectum naturae, et tunc cognoscat gratiae maiestatem. At ubi petitionis modum caecus explicuit, tunc cum summa maiestate praecepit ei ut videret: unde sequitur et dixit illi Iesus: respice: quod redundabat in crimen perfidiae Iudaeorum: quis enim prophetarum talia dixit? Aspice tamen quid assumat medicus ab eo cui collata est sanitas; sequitur enim fides tua te salvum fecit. Pro fide enim venduntur beneficia; diffunditur enim gratia quam suscepit fides. Et sicut ab aliquo fonte hi quidem parvis vasis modicum aquae hauriunt, hi vero maioribus multum, fonte non distinguente mensuras; et secundum fenestras quae aperiuntur magis vel minus, splendor solis infunditur; ita secundum capacitatem intentionis hauritur gratia. Vertitur autem vox Christi in lucem languentis; erat enim verbum verae lucis; unde sequitur et confestim vidit. At caecus et ante beneficium fidem ostendit fervidam, et post beneficium benevolentiam observavit; sequitur enim et sequebatur illum magnificans Deum",
+        "pt": "Ou, porque os judeus, caluniadores da verdade, poderiam dizer, como no cego de nascença: não é este, mas semelhante a ele; quis que o cego primeiro mostrasse o defeito da natureza, e então reconhecesse a majestade da graça. Mas, quando o cego explicou o teor do pedido, então com suprema majestade ordenou-lhe que visse: donde se segue: \"E Jesus lhe disse: Recobra a vista\"; o que redundava em acusação da perfídia dos judeus: qual dos profetas, com efeito, disse tais coisas? Observa, contudo, o que o médico toma daquele a quem foi dada a saúde; segue-se, com efeito: \"A tua fé te salvou\". Pela fé, com efeito, são vendidos os benefícios; difunde-se, com efeito, a graça que a fé recebeu. E, como de uma fonte uns tiram pouca água com vasos pequenos, e outros muita com maiores, sem a fonte distinguir medidas; e, conforme as janelas que se abrem mais ou menos, o esplendor do sol se derrama; assim, segundo a capacidade da intenção, tira-se a graça. A voz de Cristo converte-se em luz para o enfermo; era, com efeito, a palavra da verdadeira luz; donde se segue: \"e logo viu\". Ora, o cego, já antes do benefício, mostrou fé fervorosa, e depois do benefício observou a benevolência; segue-se, com efeito: \"e seguia-o, glorificando a Deus\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Ex quo patet quod a duplici caecitate liberabatur, corporali scilicet et intellectuali: neque enim glorificasset ut Deum nisi vere vidisset; sed et aliis factus est occasio glorificandi Deum; sequitur enim et omnis plebs ut vidit, dedit laudem Deo",
+        "pt": "Disto fica claro que ele era libertado de dupla cegueira, isto é, a corporal e a intelectual: pois não teria glorificado como a Deus se não tivesse visto verdadeiramente; mas tornou-se também para outros ocasião de glorificar a Deus; segue-se, com efeito: \"e todo o povo, ao ver, deu louvor a Deus\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non solum pro impetrato munere lucis, sed et merito fidei impetrantis",
+        "pt": "Não só pelo dom da luz obtido, mas também pelo mérito da fé de quem o obteve",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Hic autem necesse est quaerere cur Christus daemoniacum quidem curatum sequi volentem prohibet, caecum autem illuminatum sequentem non prohibet? Sed neutrum irrationale puto: illum enim mittit praeconem, ut ex sua consistentia benefactorem praedicet: erat enim excellens miraculum, videre furiosum sanae mentis effectum: caecum vero permittit sequi, quando Hierosolymam ascendebat per crucem perfecturus altum mysterium, ut recentem habentes miraculi mentionem, non existimarent eum infirmitate potius quam misericordia pati",
+        "pt": "Aqui, porém, é necessário perguntar por que Cristo proíbe ao endemoninhado curado, que queria segui-lo, mas não proíbe ao cego iluminado que o segue? Mas julgo que nenhuma das duas coisas é irracional: àquele, com efeito, envia como pregador, para que, por seu estado, proclame o benfeitor: era, com efeito, milagre excelente ver um furioso tornado de mente sã; o cego, porém, permite que o siga, quando subia a Jerusalém para realizar pela cruz o alto mistério, para que, tendo recente a menção do milagre, não julgassem que ele sofria por fraqueza antes que por misericórdia",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "In hoc autem caeco typus populi gentilis est, qui sacramento dominico recepit amissi luminis claritatem. Nihil autem interest utrum in uno caeco medicinam, an in duobus accipiat; quoniam ex Cham et Iaphet, Noe filiis, originem ducens, in duobus caecis, duos generis sui praetendebat auctores",
+        "pt": "Neste cego, porém, há o tipo do povo gentio, que pelo sacramento do Senhor recebeu a claridade da luz perdida. Nada importa, contudo, que receba a medicina num só cego ou em dois; porque, tirando a origem de Cam e Jafé, filhos de Noé, nos dois cegos apresentava os dois autores da sua raça",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Vel caecum est genus humanum, quod in parente primo claritatem supernae lucis ignorans, damnationis suae tenebras patitur. Iericho autem interpretatur luna, quae dum menstruis momentis decrescit, defectum nostrae mortalitatis designat. Dum igitur conditor noster appropinquat Iericho, caecus ad lumen redit: quia dum divinitas defectum nostrae carnis suscepit, humanum genus lumen quod amiserat recepit. Qui ergo aeternae lucis claritatem nescit, caecus est. Si autem tantum redemptorem credidit, qui dixit: ego sum via, iuxta viam sedet: si vero credidit, et exorat ut aeternum lumen recipiat, iuxta viam sedet et mendicat. Illi autem qui Iesum venientem praecedunt, designant carnalium desideriorum turbas, tumultusque vitiorum, qui priusquam Iesus ad cor nostrum perveniat, dissipant cogitationem nostram, et in ipsa nos nostra oratione conturbant. Ipse vero magis clamabat: quia quanto graviori tumultu cogitationum premimur, tanto orationi insistere ardentius debemus. Cum autem adhuc turbas phantasmatum in oratione patimur, Iesum aliquatenus transeuntem sentimus; cum vero orationi vehementer insistimus, Deus in corde figitur, et lux amissa reparatur. Vel transire humanitatis est, stare divinitatis. Caecum igitur clamantem dominus transiens audivit, stans illuminavit: quia per humanitatem suam vocibus nostrae caecitatis compatiendo misertus est, sed lumen nobis gratiae per divinitatis potentiam infundit. Ad hoc autem requirit quid velit, ut cor ad orationem excitet: peti enim hoc vult quod et nos petere et se concedere praenoscit",
+        "pt": "Ou o gênero humano é o cego, que, ignorando no primeiro pai a claridade da luz superior, sofre as trevas da sua condenação. Jericó, porém, interpreta-se lua, que, enquanto decresce nos momentos mensais, designa o declínio da nossa mortalidade. Enquanto, pois, nosso Criador se aproxima de Jericó, o cego volta à luz: porque, enquanto a divindade assumiu o declínio da nossa carne, o gênero humano recebeu a luz que perdera. Quem, portanto, ignora a claridade da luz eterna é cego. Se, porém, creu num tão grande redentor, que disse: \"Eu sou o caminho\", senta-se junto ao caminho; se de fato creu e suplica que receba a luz eterna, senta-se junto ao caminho e mendiga. Aqueles, porém, que vão adiante de Jesus que vem designam as multidões dos desejos carnais e os tumultos dos vícios, que, antes que Jesus chegue ao nosso coração, dissipam o nosso pensamento e nos perturbam na própria oração. Ele, porém, clamava ainda mais: porque, quanto mais grave é o tumulto de pensamentos que nos oprime, tanto mais ardentemente devemos insistir na oração. Quando, porém, ainda padecemos na oração as multidões de fantasmas, sentimos Jesus de algum modo passando; quando, porém, insistimos veementemente na oração, Deus se fixa no coração, e a luz perdida é reparada. Ou passar é próprio da humanidade, parar é da divindade. O Senhor, pois, passando ouviu o cego que clamava, parando o iluminou: porque, por sua humanidade, compadecendo-se, teve misericórdia das vozes da nossa cegueira, mas pelo poder da divindade infunde em nós a luz da graça. Para isto, porém, pergunta o que ele quer, para excitar o coração à oração: quer, com efeito, que se peça aquilo que também sabe de antemão que nós pediremos e que ele concederá",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Vel interrogavit caecum, ut crederemus nisi confitentem non posse salvari",
+        "pt": "Ou perguntou ao cego para que cressemos que não pode ser salvo senão o que confessa",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Caecus autem a domino non aurum, sed lucem quaerit; et nos non falsas divitias, sed lucem quaeramus, quam videre cum solis Angelis possimus; ad quam lucem via fides est; unde recte caeco dicitur respice: fides tua te salvum fecit. Qui videt et sequitur, quia bonum quod intelligit operatur",
+        "pt": "O cego, porém, não pede ao Senhor ouro, mas luz; e nós busquemos não falsas riquezas, mas a luz, que possamos ver com os Anjos somente; para essa luz a fé é o caminho; donde se diz com razão ao cego: \"Recobra a vista: a tua fé te salvou\". Aquele que vê e segue, porque opera o bem que entende",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Si autem Iericho lunam, et ob hoc mortalitatem interpretamur, morti propinquans dominus Iudaeis solis lumen Evangelii iusserat praedicari; quos significavit ille unus caecus quem Lucas commemorat: a morte autem resurgens, atque descendens, et Iudaeis et gentibus; quos duos populos significare videntur duo caeci commemorati a Matthaeo",
+        "pt": "Se, porém, interpretarmos Jericó como lua, e por isso mortalidade, o Senhor, aproximando-se da morte, mandara pregar aos judeus a luz do sol do Evangelho; os quais significou aquele único cego que Lucas menciona: ressurgindo, porém, da morte e descendo, aos judeus e aos gentios; os quais dois povos parecem significar os dois cegos mencionados por Mateus",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
+      }
+    ]
+  }
+]

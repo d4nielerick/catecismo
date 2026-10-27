@@ -817,42 +817,98 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Postquam suum discipulum modestum statuit dominus, spolians eum qualibet vitae cura et elevatione, iam nunc ad ministrandum inducit, dicens sint lumbi vestri praecincti, idest semper proclives ad exequenda opera domini vestri; et lucernae ardentes, idest, non ducatis vitam in tenebris, sed adsit vobis lux rationis, ostendens vobis agenda et fugienda: est enim hic mundus nox. Cincti vero lumbos sunt qui practicam exequuntur; nam talis est ministrantium habitus, quibus oportet adesse et lucernas ardentes, idest discretionis donum: ut valeat dignoscere practicus non solum quid oporteat agere, sed et quomodo: alioquin in praecipitium superbiae homines ruunt. Notandum autem quod primo iubet lumbos praecingi, secundo lucernas ardere: nam primo quidem est operatio, deinde speculatio, quae est illustratio mentis. Ideo studeamus exercere virtutes, ut duas lucernas habeamus ardentes, scilicet conceptum mentis iugiter in anima emicantem, quo nos illustramur, et doctrinam, qua ceteros illuminamus"
+        "latim": "Postquam suum discipulum modestum statuit dominus, spolians eum qualibet vitae cura et elevatione, iam nunc ad ministrandum inducit, dicens sint lumbi vestri praecincti, idest semper proclives ad exequenda opera domini vestri; et lucernae ardentes, idest, non ducatis vitam in tenebris, sed adsit vobis lux rationis, ostendens vobis agenda et fugienda: est enim hic mundus nox. Cincti vero lumbos sunt qui practicam exequuntur; nam talis est ministrantium habitus, quibus oportet adesse et lucernas ardentes, idest discretionis donum: ut valeat dignoscere practicus non solum quid oporteat agere, sed et quomodo: alioquin in praecipitium superbiae homines ruunt. Notandum autem quod primo iubet lumbos praecingi, secundo lucernas ardere: nam primo quidem est operatio, deinde speculatio, quae est illustratio mentis. Ideo studeamus exercere virtutes, ut duas lucernas habeamus ardentes, scilicet conceptum mentis iugiter in anima emicantem, quo nos illustramur, et doctrinam, qua ceteros illuminamus",
+        "pt": "Depois que o Senhor estabeleceu modesto o seu discípulo, despojando-o de qualquer cuidado e elevação da vida, conduz agora ao ministério, dizendo: \"Estejam cingidos os vossos rins\", isto é, sempre inclinados a executar as obras do vosso Senhor; \"e lâmpadas acesas\", isto é, não passeis a vida nas trevas, mas esteja presente em vós a luz da razão, mostrando-vos o que se deve fazer e o que se deve evitar: este mundo é, com efeito, noite. Cingidos nos rins são os que executam a prática; pois tal é o hábito dos que servem, aos quais convém estarem presentes também lâmpadas acesas, isto é, o dom do discernimento: para que o prático possa discernir não só o que convém fazer, mas também como: de outro modo, os homens se precipitam no abismo da soberba. Deve-se notar, porém, que primeiro manda cingir os rins, depois acender as lâmpadas: pois primeiro vem a operação, depois a especulação, que é a iluminação da mente. Por isso, esforcemo-nos por exercer as virtudes, para que tenhamos duas lâmpadas acesas, a saber, o conceito da mente brilhando continuamente na alma, pelo qual somos iluminados, e a doutrina, pela qual iluminamos os demais",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Maximus",
         "obra": "",
-        "latim": "Vel lucernas accensas docet habere per orationem et contemplationem, et spiritualem dilectionem"
+        "latim": "Vel lucernas accensas docet habere per orationem et contemplationem, et spiritualem dilectionem",
+        "pt": "Ou ensina a ter as lâmpadas acesas pela oração, pela contemplação e pelo amor espiritual",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Vel subcingi significat agilitatem et promptitudinem ad sustinenda mala intuitu divini amoris; lucernae autem accensio significat, ut non patiamur aliquos in tenebris ignorantiae vivere"
+        "latim": "Vel subcingi significat agilitatem et promptitudinem ad sustinenda mala intuitu divini amoris; lucernae autem accensio significat, ut non patiamur aliquos in tenebris ignorantiae vivere",
+        "pt": "Ou \"estar cingido\" significa a agilidade e a prontidão para suportar os males em vista do amor divino; o acender da lâmpada, porém, significa que não toleremos que alguns vivam nas trevas da ignorância",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Vel aliter. Lumbos praecingimus cum carnis luxuriam per continentiam coarctamus: viris enim luxuria in lumbis est, feminis in umbilico. A principali igitur sexu lumborum nomine luxuria designatur. Sed quia minus est mala non agere, nisi etiam quisque studeat bonis operibus insudare, additur et lucernae ardentes; quas in manibus tenemus cum per bona opera, proximis nostris lucis exempla monstramus"
+        "latim": "Vel aliter. Lumbos praecingimus cum carnis luxuriam per continentiam coarctamus: viris enim luxuria in lumbis est, feminis in umbilico. A principali igitur sexu lumborum nomine luxuria designatur. Sed quia minus est mala non agere, nisi etiam quisque studeat bonis operibus insudare, additur et lucernae ardentes; quas in manibus tenemus cum per bona opera, proximis nostris lucis exempla monstramus",
+        "pt": "Ou de outro modo. Cingimos os rins quando restringimos pela continência a luxúria da carne: nos homens, com efeito, a luxúria está nos rins; nas mulheres, no umbigo. Do sexo principal, portanto, a luxúria é designada pelo nome dos rins. Mas, porque é pouco não praticar o mal, se alguém não se empenha também em suar nas boas obras, acrescenta-se também \"lâmpadas acesas\"; as quais seguramos nas mãos quando, pelas boas obras, mostramos aos nossos próximos exemplos de luz",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de quaest. Evang",
-        "latim": "Vel docet et lumbos praecingere propter continentiam ab amore rerum saecularium, et lucernas ardentes habere, ut hoc ipsum vero fine et recta intentione fiat"
+        "latim": "Vel docet et lumbos praecingere propter continentiam ab amore rerum saecularium, et lucernas ardentes habere, ut hoc ipsum vero fine et recta intentione fiat",
+        "pt": "Ou ensina também a cingir os rins, por causa da continência, quanto ao amor das coisas seculares, e a ter lâmpadas acesas, para que isto mesmo se faça com verdadeiro fim e reta intenção",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Sed si utrumque horum agitur, restat ut quisquis ille est, totam spem suam in redemptoris sui adventu constituat; unde subditur et vos similes hominibus expectantibus dominum suum quando revertatur a nuptiis. Ad nuptias quippe dominus abiit, quia ascendens in caelum supernam sibi multitudinem Angelorum novus homo copulavit"
+        "latim": "Sed si utrumque horum agitur, restat ut quisquis ille est, totam spem suam in redemptoris sui adventu constituat; unde subditur et vos similes hominibus expectantibus dominum suum quando revertatur a nuptiis. Ad nuptias quippe dominus abiit, quia ascendens in caelum supernam sibi multitudinem Angelorum novus homo copulavit",
+        "pt": "Mas, se ambas estas coisas se fazem, resta que cada um, quem quer que seja, ponha toda a sua esperança na vinda de seu Redentor; donde se acrescenta: \"e vós, semelhantes a homens que esperam o seu Senhor, quando voltar das núpcias\". Às núpcias, com efeito, foi o Senhor, porque, subindo ao céu, o homem novo uniu a si a multidão celeste dos Anjos",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quotidie etiam in caelis desponsat sanctorum animas, quas ei Paulus vel alius similis offert virginem castam. Redit autem a nuptiis celebratis in caelis, forsan quidem universaliter in consummatione totius mundi, quando veniet de caelo in gloria patris; forsan etiam singulis horis astans inopinate particulari uniuscuiusque consummationi"
+        "latim": "Quotidie etiam in caelis desponsat sanctorum animas, quas ei Paulus vel alius similis offert virginem castam. Redit autem a nuptiis celebratis in caelis, forsan quidem universaliter in consummatione totius mundi, quando veniet de caelo in gloria patris; forsan etiam singulis horis astans inopinate particulari uniuscuiusque consummationi",
+        "pt": "Cada dia também nos céus desposa as almas dos santos, que Paulo, ou outro semelhante, lhe oferece como virgem casta. Volta, porém, das núpcias celebradas nos céus, talvez de modo universal na consumação de todo o mundo, quando vier do céu na glória do Pai; talvez também, a cada hora, estando presente inopinadamente à consumação particular de cada um",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Considera etiam, quod a nuptiis quasi a solemnitate venit, in qua semper existit divinitas: nihil enim potest incorruptibili naturae inferre tristitiam"
+        "latim": "Considera etiam, quod a nuptiis quasi a solemnitate venit, in qua semper existit divinitas: nihil enim potest incorruptibili naturae inferre tristitiam",
+        "pt": "Considera também que vem das núpcias como de uma solenidade, na qual sempre existe a divindade: nada, com efeito, pode trazer tristeza à natureza incorruptível",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius Nyssenus",
@@ -893,17 +949,38 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Cum igitur dominus veniens suos insomnes invenerit, et praecinctos, cor illuminatum habentes, tunc eos promulgabit beatos; sequitur enim amen dico vobis, quia praecinget se: ex quo percipimus quod similia nobis retribuet, dum cum succinctis se praecinget"
+        "latim": "Cum igitur dominus veniens suos insomnes invenerit, et praecinctos, cor illuminatum habentes, tunc eos promulgabit beatos; sequitur enim amen dico vobis, quia praecinget se: ex quo percipimus quod similia nobis retribuet, dum cum succinctis se praecinget",
+        "pt": "Quando, portanto, o Senhor, ao vir, achar os seus insones e cingidos, tendo o coração iluminado, então os proclamará bem-aventurados; segue-se, com efeito: \"Em verdade vos digo que se cingirá\": donde percebemos que nos retribuirá coisas semelhantes, ao cingir-se com os que estão cingidos",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Erit enim praecinctus iustitia circa lumbos suos, secundum Isaiam"
+        "latim": "Erit enim praecinctus iustitia circa lumbos suos, secundum Isaiam",
+        "pt": "Estará, com efeito, cingido de justiça em volta dos seus rins, segundo Isaías",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Per quam praecingit se, idest ad retributionem se praeparat"
+        "latim": "Per quam praecingit se, idest ad retributionem se praeparat",
+        "pt": "Por ela se cinge, isto é, prepara-se para a retribuição",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
@@ -920,7 +997,14 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Faciet igitur illos discumbere, quasi fessos refocillans, apponens spirituales delicias, et statuens dapsilem donorum suorum mensam"
+        "latim": "Faciet igitur illos discumbere, quasi fessos refocillans, apponens spirituales delicias, et statuens dapsilem donorum suorum mensam",
+        "pt": "Fá-los-á, portanto, reclinar-se à mesa, refazendo-os como cansados, apresentando delícias espirituais e pondo a mesa farta de seus dons",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Dionysius",
@@ -937,17 +1021,38 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quasi vicem aequalem eis reddens, ut sicut ipsi ministraverunt ei, ita et ipse eis ministret"
+        "latim": "Quasi vicem aequalem eis reddens, ut sicut ipsi ministraverunt ei, ita et ipse eis ministret",
+        "pt": "Como que retribuindo-lhes igual troca, para que, assim como eles o serviram, também ele os sirva",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Transiens vero dictum est cum de iudicio ad regnum redit. Vel dominus nobis post iudicium transit, qui ab humanitatis forma in divinitatis suae contemplationem nos elevat"
+        "latim": "Transiens vero dictum est cum de iudicio ad regnum redit. Vel dominus nobis post iudicium transit, qui ab humanitatis forma in divinitatis suae contemplationem nos elevat",
+        "pt": "Foi dito \"passando\" quando do juízo volta ao reino. Ou o Senhor passa por nós depois do juízo, ele que da forma da humanidade nos eleva à contemplação de sua divindade",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Novit autem dominus lubricum fragilitatis humanae ad peccandum; sed quoniam bonus est, desperare non sinit, sed magis miseretur, et dat nobis poenitentiam in salutis antidotum; et ideo subdit et si venerit in secunda vigilia, et si in tertia vigilia venerit, et ita invenerit, beati sunt servi illi. Dividunt enim excubantes in moeniis civitatum, et hostium servantes aggressus, noctem in tres aut quatuor vigilias"
+        "latim": "Novit autem dominus lubricum fragilitatis humanae ad peccandum; sed quoniam bonus est, desperare non sinit, sed magis miseretur, et dat nobis poenitentiam in salutis antidotum; et ideo subdit et si venerit in secunda vigilia, et si in tertia vigilia venerit, et ita invenerit, beati sunt servi illi. Dividunt enim excubantes in moeniis civitatum, et hostium servantes aggressus, noctem in tres aut quatuor vigilias",
+        "pt": "Conhece, porém, o Senhor a escorregadia fragilidade humana para o pecado; mas, porque é bom, não deixa desesperar, antes se compadece e nos dá a penitência como antídoto de salvação; e por isso acrescenta: \"E se vier na segunda vigília, e se vier na terceira vigília, e assim os achar, bem-aventurados são esses servos\". Dividem, com efeito, os que montam guarda nas muralhas das cidades e observam os ataques dos inimigos a noite em três ou quatro vigílias",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
@@ -964,27 +1069,62 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "De prima tamen vigilia mentionem non facit, quia pueritia non punitur a Deo, sed veniam meretur. Secunda vero et tertia aetas, debet obedientiam Deo, et vitam honestam ducere ad voluntatem ipsius"
+        "latim": "De prima tamen vigilia mentionem non facit, quia pueritia non punitur a Deo, sed veniam meretur. Secunda vero et tertia aetas, debet obedientiam Deo, et vitam honestam ducere ad voluntatem ipsius",
+        "pt": "Da primeira vigília, porém, não faz menção, porque a infância não é punida por Deus, mas merece perdão. A segunda e a terceira idade devem obediência a Deus e levar vida honesta segundo a vontade dele",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Graecus",
         "obra": "",
-        "latim": "Vel ad primam vigiliam pertinent diligentius viventes, quasi primum gradum sortiti; ad secundam vero mediae conversationis mensuram tenentes; ad tertiam vero qui sunt infra hos; et idem de quarta putandum est, et, si contingat, de quinta: diversae enim sunt conversationum mensurae, et bonus remunerator metitur unicuique quod dignum est"
+        "latim": "Vel ad primam vigiliam pertinent diligentius viventes, quasi primum gradum sortiti; ad secundam vero mediae conversationis mensuram tenentes; ad tertiam vero qui sunt infra hos; et idem de quarta putandum est, et, si contingat, de quinta: diversae enim sunt conversationum mensurae, et bonus remunerator metitur unicuique quod dignum est",
+        "pt": "Ou então pertencem à primeira vigília os que vivem com mais diligência, como quem obteve o primeiro grau; à segunda, os que mantêm uma medida mediana de conduta; à terceira, os que estão abaixo destes; e o mesmo se deve pensar da quarta e, se for o caso, da quinta: pois diversas são as medidas de conduta, e o bom remunerador mede a cada um o que é digno.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Vel quia vigiliae sunt horae noctis provocantes soporem hominibus, intelligas etiam in vita nostra esse quasdam horas quae faciunt nos beatos, si insomnes reperti fuerimus. Rapuit tibi aliquis facultates, defuncti sunt tibi filii, accusatus es: sed si in his temporibus non feceris contra Dei mandata quidquam, vigilantem te inveniet in secunda et tertia vigilia, idest in tempore malo perniciosum somnum animabus lentis inferente"
+        "latim": "Vel quia vigiliae sunt horae noctis provocantes soporem hominibus, intelligas etiam in vita nostra esse quasdam horas quae faciunt nos beatos, si insomnes reperti fuerimus. Rapuit tibi aliquis facultates, defuncti sunt tibi filii, accusatus es: sed si in his temporibus non feceris contra Dei mandata quidquam, vigilantem te inveniet in secunda et tertia vigilia, idest in tempore malo perniciosum somnum animabus lentis inferente",
+        "pt": "Ou então, porque as vigílias são as horas da noite que provocam o sono nos homens, entende que também em nossa vida há certas horas que nos tornam bem-aventurados, se formos encontrados sem sono. Alguém te arrebatou os bens, morreram-te os filhos, foste acusado: mas se nesses tempos nada fizeres contra os mandamentos de Deus, ele te encontrará vigilante na segunda e na terceira vigília, isto é, no tempo mau que traz às almas indolentes o sono pernicioso.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Ad excutiendam vero nostrae mentis desidiam, etiam exteriora damna per similitudinem ad medium deducuntur; nam subditur hoc autem scitote: quoniam si sciret paterfamilias qua hora fur veniret, vigilaret utique, et non sineret perfodi domum suam"
+        "latim": "Ad excutiendam vero nostrae mentis desidiam, etiam exteriora damna per similitudinem ad medium deducuntur; nam subditur hoc autem scitote: quoniam si sciret paterfamilias qua hora fur veniret, vigilaret utique, et non sineret perfodi domum suam",
+        "pt": "Para sacudir a indolência de nossa mente, também os danos exteriores são trazidos ao meio por semelhança; pois se acrescenta: \"Sabei isto: se o pai de família soubesse a que hora viria o ladrão, vigiaria certamente e não deixaria arrombar a sua casa\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quidam hunc furem intelligunt esse Diabolum, domum animam, patremfamilias hominem: non tamen videtur haec acceptio consonare sequentibus: adventus enim domini comparatur huic furi tamquam ex inopinato proveniens, secundum illud apostoli: dies domini sicut fur, ita in nocte veniet; unde et hic subditur et vos estote parati: quia qua hora non putatis filius hominis veniet"
+        "latim": "Quidam hunc furem intelligunt esse Diabolum, domum animam, patremfamilias hominem: non tamen videtur haec acceptio consonare sequentibus: adventus enim domini comparatur huic furi tamquam ex inopinato proveniens, secundum illud apostoli: dies domini sicut fur, ita in nocte veniet; unde et hic subditur et vos estote parati: quia qua hora non putatis filius hominis veniet",
+        "pt": "Alguns entendem que este ladrão é o Diabo, a casa a alma, o pai de família o homem; contudo, essa interpretação não parece concordar com o que segue: pois a vinda do Senhor é comparada a este ladrão, como algo que sobrevém inesperadamente, segundo aquilo do Apóstolo: O dia do Senhor virá como um ladrão na noite; por isso aqui se acrescenta: \"Estai também vós preparados, porque na hora em que não pensais virá o Filho do Homem\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",

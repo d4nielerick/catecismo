@@ -2,7 +2,26 @@
   "data": "2026-11-07",
   "evangelho": "Lc 16,9-15",
   "leituras": "Fl 4,10-19 | Sl 111(112),1-2.5-6.8a e 9 (R. 1a) | Lc 16,9-15",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 16,
+      "lectio": 2,
+      "versos": [
+        8,
+        13
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 16,
+      "lectio": 3,
+      "versos": [
+        14,
+        18
+      ]
+    }
+  ],
   "catecismo": [],
   "outrasLeituras": [
     {
@@ -34,7 +53,26 @@
       ]
     }
   ],
-  "padres": [],
-  "tema": "",
-  "destaques": []
+  "padres": [
+    {
+      "autor": "Gregorius Moralium",
+      "numero": 2446,
+      "frase": "Mais do que praticar uma obra de misericórdia, cumprimos um dever de justiça»."
+    }
+  ],
+  "tema": "A mamona da iniquidade e os dois senhores",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 6
+    },
+    {
+      "lectio": 2,
+      "i": 18
+    },
+    {
+      "lectio": 2,
+      "i": 23
+    }
+  ]
 }

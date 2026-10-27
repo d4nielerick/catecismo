@@ -182,12 +182,26 @@
       {
         "autor": "Glossa",
         "obra": "",
-        "latim": "Insurgentibus adversarii contra Christi miracula et doctrinam, apostolos elegit quasi defensores veritatis et testes: quorum electioni orationem praemittit; unde dicitur factum est autem in illis diebus, exiit in montem orare"
+        "latim": "Insurgentibus adversarii contra Christi miracula et doctrinam, apostolos elegit quasi defensores veritatis et testes: quorum electioni orationem praemittit; unde dicitur factum est autem in illis diebus, exiit in montem orare",
+        "pt": "Levantando-se os adversários contra os milagres e a doutrina de Cristo, escolheu os apóstolos como defensores e testemunhas da verdade; e antepõe oração à escolha deles; por isso se diz: \"Aconteceu naqueles dias que ele saiu para o monte a fim de orar\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Noli insidiatrices aperire aures, ut putes filium Dei quasi infirmum rogare, ut impetret quod implere non possit: potestatis enim auctor, obedientiae magister, ad praecepta virtutis suo nos informat exemplo"
+        "latim": "Noli insidiatrices aperire aures, ut putes filium Dei quasi infirmum rogare, ut impetret quod implere non possit: potestatis enim auctor, obedientiae magister, ad praecepta virtutis suo nos informat exemplo",
+        "pt": "Não abras os ouvidos aos que armam ciladas, a ponto de julgares que o Filho de Deus pede como um fraco, para obter o que não pudesse realizar; pois o autor do poder, mestre da obediência, nos forma com seu exemplo para os preceitos da virtude.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
@@ -204,12 +218,26 @@
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Ubique etiam solus obsecrat: Dei enim consilium humana vota non capiunt; nec quisquam interiorum potest esse particeps Christi. Non autem omnis qui orat, ascendit in montem, sed qui orat a terrenis ad superiora progrediens; sed non ille qui de saeculi divitiis aut de honore sollicitus est. Omnes sublimes in montem ascendunt: quare in Evangelio invenies solos in montem cum domino ascendisse discipulos. Species autem tibi, Christiane, datur; forma praescribitur quam debeas aemulari, cum sequitur et erat pernoctans in oratione Dei. Quid enim te pro salute tua facere oportet, quando pro te Christus in oratione pernoctat?"
+        "latim": "Ubique etiam solus obsecrat: Dei enim consilium humana vota non capiunt; nec quisquam interiorum potest esse particeps Christi. Non autem omnis qui orat, ascendit in montem, sed qui orat a terrenis ad superiora progrediens; sed non ille qui de saeculi divitiis aut de honore sollicitus est. Omnes sublimes in montem ascendunt: quare in Evangelio invenies solos in montem cum domino ascendisse discipulos. Species autem tibi, Christiane, datur; forma praescribitur quam debeas aemulari, cum sequitur et erat pernoctans in oratione Dei. Quid enim te pro salute tua facere oportet, quando pro te Christus in oratione pernoctat?",
+        "pt": "Em toda parte, também, suplica sozinho: os desígnios de Deus, com efeito, os votos humanos não os alcançam; e ninguém pode ser partícipe das coisas íntimas de Cristo. Nem todo aquele que ora sobe ao monte, mas aquele que ora avançando das coisas terrenas para as superiores; não, porém, aquele que se preocupa com as riquezas do século ou com a honra. Todos os sublimes sobem ao monte: por isso, no Evangelho, acharás que só os discípulos subiram ao monte com o Senhor. Dá-se-te, cristão, um modelo; prescreve-se-te a forma que deves imitar, quando se segue: \"E passou a noite em oração a Deus\". Que te convém, pois, fazer por tua salvação, quando por ti Cristo passa a noite em oração?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Exurge igitur et tu tempore noctis. Purior est enim tunc temporis anima; ipsae tenebrae, silentium nimium possunt sufficienter ad compunctionem perducere. Ceterum si ipsum quoque caelum inspicias punctatum stellis, quasi infinitis luminibus; si consideres quod qui per diem saltant iniurianturque, hi tunc nihil, a mortuis discrepant; detestaberis quemlibet ausum humanum. Haec omnia sufficiunt ad animam erigendam: tunc non vexat inanis gloria, non acedia, non concitatio occupat; non sic ignis ferri sequestrat rubiginem, velut nocturna oratio aeruginem peccatorum. Quem de die solis aestus perussit, nocte refrigeratur. Quemlibet rorem superant nocturnae lacrymae; et contra concupiscentiam valent, et quemlibet timorem. Si vero praedicto rore non foveatur, homo arescit sub die. Quapropter licet non multum ores, semel ora vigilando, et sufficit: ostende quod non solum ad corpus nox pertinet, sed etiam ad animam"
+        "latim": "Exurge igitur et tu tempore noctis. Purior est enim tunc temporis anima; ipsae tenebrae, silentium nimium possunt sufficienter ad compunctionem perducere. Ceterum si ipsum quoque caelum inspicias punctatum stellis, quasi infinitis luminibus; si consideres quod qui per diem saltant iniurianturque, hi tunc nihil, a mortuis discrepant; detestaberis quemlibet ausum humanum. Haec omnia sufficiunt ad animam erigendam: tunc non vexat inanis gloria, non acedia, non concitatio occupat; non sic ignis ferri sequestrat rubiginem, velut nocturna oratio aeruginem peccatorum. Quem de die solis aestus perussit, nocte refrigeratur. Quemlibet rorem superant nocturnae lacrymae; et contra concupiscentiam valent, et quemlibet timorem. Si vero praedicto rore non foveatur, homo arescit sub die. Quapropter licet non multum ores, semel ora vigilando, et sufficit: ostende quod non solum ad corpus nox pertinet, sed etiam ad animam",
+        "pt": "Levanta-te, pois, também tu, no tempo da noite. Mais pura é, com efeito, nesse tempo a alma; as próprias trevas e o grande silêncio podem conduzir suficientemente à compunção. Além disso, se contemplas o próprio céu pontilhado de estrelas, como de luzes infinitas; se consideras que os que de dia saltam e são injuriados, esses então em nada diferem dos mortos, detestarás qualquer audácia humana. Tudo isso basta para levantar a alma: então não a perturba a vanglória, nem o tédio, nem a agitação a ocupa; o fogo não afasta tanto a ferrugem do ferro quanto a oração noturna afasta a ferrugem dos pecados. Aquele que de dia o calor do sol abrasou, de noite é refrescado. As lágrimas noturnas superam qualquer orvalho; e valem contra a concupiscência e contra qualquer temor. Se o homem, porém, não é fomentado pelo referido orvalho, resseca-se sob o dia. Por isso, ainda que não ores muito, ora uma vez vigiando, e basta: mostra que a noite pertence não só ao corpo, mas também à alma.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
@@ -226,42 +254,98 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Attende autem maximam Evangelistae sedulitatem; non solum dicit electos fuisse sacros apostolos, immo nominatim eos enumerat, ne quisquam audeat alios inscribere apostolorum catalogo. Simonem quem cognominavit Petrum, et Andream fratrem eius"
+        "latim": "Attende autem maximam Evangelistae sedulitatem; non solum dicit electos fuisse sacros apostolos, immo nominatim eos enumerat, ne quisquam audeat alios inscribere apostolorum catalogo. Simonem quem cognominavit Petrum, et Andream fratrem eius",
+        "pt": "Atende, porém, ao grandíssimo zelo do Evangelista; não diz apenas que foram escolhidos os sagrados apóstolos, mas os enumera nominalmente, para que ninguém ouse inscrever outros no catálogo dos apóstolos. \"Simão, a quem deu o nome de Pedro, e André, seu irmão\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Non modo primum eum cognominavit, sed longe prius; cum ab Andrea adducto dicitur: tu vocaberis Cephas, quod interpretatur Petrus. Sed volens Lucas nomina apostolorum enumerare, cum necesse haberet Petrum dicere, breviter voluit innuere quod non hoc antea cognominaretur, sed ita dominus cognominaverit"
+        "latim": "Non modo primum eum cognominavit, sed longe prius; cum ab Andrea adducto dicitur: tu vocaberis Cephas, quod interpretatur Petrus. Sed volens Lucas nomina apostolorum enumerare, cum necesse haberet Petrum dicere, breviter voluit innuere quod non hoc antea cognominaretur, sed ita dominus cognominaverit",
+        "pt": "Não lhe deu o nome só então, mas muito antes; quando, trazido por André, se diz: \"Tu serás chamado Cefas, que se interpreta Pedro\". Mas Lucas, querendo enumerar os nomes dos apóstolos, como tinha de dizer Pedro, quis brevemente dar a entender que ele não recebera esse nome antes, mas que assim o Senhor lhe dera o nome.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Secunda autem combinatio est Iacobi et Ioannis; unde sequitur Iacobum et Ioannem; ambos scilicet filios Zebedaei, qui etiam piscatores fuerunt. Post hos autem dicit Philippum et Bartholomaeum. Philippum dicit Ioannes fuisse de Bethsaida, concivem Andreae et Petri; ipse quoque Bartholomaeus, vir simplex et expers scientiae mundanae et amaritudinis. Matthaeus vero ex his qui prius census exigebant vocatus est, de quo subdit Matthaeum et Thomam"
+        "latim": "Secunda autem combinatio est Iacobi et Ioannis; unde sequitur Iacobum et Ioannem; ambos scilicet filios Zebedaei, qui etiam piscatores fuerunt. Post hos autem dicit Philippum et Bartholomaeum. Philippum dicit Ioannes fuisse de Bethsaida, concivem Andreae et Petri; ipse quoque Bartholomaeus, vir simplex et expers scientiae mundanae et amaritudinis. Matthaeus vero ex his qui prius census exigebant vocatus est, de quo subdit Matthaeum et Thomam",
+        "pt": "A segunda combinação é a de Tiago e João; por isso se segue: \"Tiago e João\"; ambos, a saber, filhos de Zebedeu, que também foram pescadores. Depois destes, diz \"Filipe e Bartolomeu\". João diz que Filipe era de Betsaida, concidadão de André e Pedro; o próprio Bartolomeu, homem simples e sem ciência mundana e sem amargura. Mateus, porém, foi chamado dentre os que antes cobravam o tributo, e dele acrescenta: \"Mateus e Tomé\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Matthaeus compari suo Thomae in ordine, humilitatis causa se supponit, cum a ceteris Evangelistis praelatus sit. Sequitur Iacobum Alphaei et Simonem, qui vocatur Zelotes"
+        "latim": "Matthaeus compari suo Thomae in ordine, humilitatis causa se supponit, cum a ceteris Evangelistis praelatus sit. Sequitur Iacobum Alphaei et Simonem, qui vocatur Zelotes",
+        "pt": "Mateus, por humildade, coloca-se na ordem abaixo de seu companheiro Tomé, embora tenha sido posto à frente pelos outros Evangelistas. Segue-se: \"Tiago, filho de Alfeu, e Simão, chamado Zelota\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Glossa",
         "obra": "",
-        "latim": "Quia scilicet fuit de Cana Galilaeae, qui interpretatur zelus, quod additur ad differentiam Simonis Petri. Sequitur Iudam Iacobi, et Iudam Iscariotem qui fuit proditor"
+        "latim": "Quia scilicet fuit de Cana Galilaeae, qui interpretatur zelus, quod additur ad differentiam Simonis Petri. Sequitur Iudam Iacobi, et Iudam Iscariotem qui fuit proditor",
+        "pt": "Porque, a saber, era de Caná da Galileia, e Zelota se interpreta \"zelo\"; o que se acrescenta para distingui-lo de Simão Pedro. Segue-se: \"Judas, filho de Tiago, e Judas Iscariotes, que foi o traidor\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de Cons. Evang",
-        "latim": "In nomine Iudae Iacobi Lucas videtur discrepare a Matthaeo, qui eum Thaddaeum appellat. Sed quis unquam prohibuit duobus vel tribus nominibus unum hominem vocari? Eligitur autem Iudas proditor, non per imprudentiam, sed per providentiam: susceperat quidem hominis fragilitatem, et ideo nec has partes recusavit infirmitatis humanae: voluit ab apostolo suo tradi, ut tu a socio proditus moderate feras, tuum errasse iudicium, periisse beneficium"
+        "latim": "In nomine Iudae Iacobi Lucas videtur discrepare a Matthaeo, qui eum Thaddaeum appellat. Sed quis unquam prohibuit duobus vel tribus nominibus unum hominem vocari? Eligitur autem Iudas proditor, non per imprudentiam, sed per providentiam: susceperat quidem hominis fragilitatem, et ideo nec has partes recusavit infirmitatis humanae: voluit ab apostolo suo tradi, ut tu a socio proditus moderate feras, tuum errasse iudicium, periisse beneficium",
+        "pt": "No nome de Judas, filho de Tiago, Lucas parece discordar de Mateus, que o chama Tadeu. Mas quem jamais proibiu que um só homem seja chamado por dois ou três nomes? Judas, o traidor, é escolhido não por imprudência, mas por providência: assumira, com efeito, a fragilidade do homem e, por isso, não recusou sequer essa parte da fraqueza humana: quis ser entregue por seu apóstolo, para que tu, traído por um companheiro, suportes com moderação que teu juízo se enganou e que o benefício se perdeu.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Mystice autem mons in quo apostolos elegit, altitudinem designat iustitiae, qua instituendi erant, et eam praedicaturi: sic et lex in monte data fuit"
+        "latim": "Mystice autem mons in quo apostolos elegit, altitudinem designat iustitiae, qua instituendi erant, et eam praedicaturi: sic et lex in monte data fuit",
+        "pt": "Misticamente, porém, o monte em que escolheu os apóstolos designa a altura da justiça com que haviam de ser instruídos e que haviam de pregar: assim também a lei foi dada no monte.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Quod si libet interpretationem apostolicorum nominum scire, scito quia Petrus dicitur dissolvens vel agnoscens; Andreas decora potentia vel respondens; Iacobus autem supplantator doloris; Ioannes domini gratia; Matthaeus donatus; Philippus os magnum vel orificium lampadis; Bartholomaeus filius aquas suspendentis; Thomas abyssus, vel geminus; Iacobus Alphaei supplantator gressus vitae; Iudas confessio, et Simon obedientia"
+        "latim": "Quod si libet interpretationem apostolicorum nominum scire, scito quia Petrus dicitur dissolvens vel agnoscens; Andreas decora potentia vel respondens; Iacobus autem supplantator doloris; Ioannes domini gratia; Matthaeus donatus; Philippus os magnum vel orificium lampadis; Bartholomaeus filius aquas suspendentis; Thomas abyssus, vel geminus; Iacobus Alphaei supplantator gressus vitae; Iudas confessio, et Simon obedientia",
+        "pt": "Se te agrada saber a interpretação dos nomes dos apóstolos, sabe que Pedro significa \"o que desata\" ou \"o que reconhece\"; André, \"poder decoroso\" ou \"o que responde\"; Tiago, \"suplantador da dor\"; João, \"graça do Senhor\"; Mateus, \"dado\"; Filipe, \"boca grande\" ou \"orifício de lâmpada\"; Bartolomeu, \"filho do que suspende as águas\"; Tomé, \"abismo\" ou \"gêmeo\"; Tiago, filho de Alfeu, \"suplantador do caminho da vida\"; Judas, \"confissão\"; e Simão, \"obediência\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       }
     ]
   },
@@ -275,27 +359,62 @@
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Celebrata ordinatione apostolorum, pluribus congregatis et de regione Iudaeorum, nec non a maritima Tyri et Sidonis, qui erant idololatrae, constituit eos totius orbis doctores, utpote qui evocarent Iudaeos a legis servitute cultores autem Daemonum ab errore gentili ad veritatis cognitionem; unde dicitur et descendens de monte cum illis, stetit in loco campestri, et turba discipulorum eius, et multitudo copiosa plebis ab omni Iudaea et Ierusalem et maritima"
+        "latim": "Celebrata ordinatione apostolorum, pluribus congregatis et de regione Iudaeorum, nec non a maritima Tyri et Sidonis, qui erant idololatrae, constituit eos totius orbis doctores, utpote qui evocarent Iudaeos a legis servitute cultores autem Daemonum ab errore gentili ad veritatis cognitionem; unde dicitur et descendens de monte cum illis, stetit in loco campestri, et turba discipulorum eius, et multitudo copiosa plebis ab omni Iudaea et Ierusalem et maritima",
+        "pt": "Celebrada a ordenação dos apóstolos, reunidos muitos, tanto da região dos judeus quanto do litoral de Tiro e de Sidônia, que eram idólatras, constituiu-os doutores de todo o orbe, como quem haveria de chamar os judeus da servidão da lei e os cultores dos demônios do erro pagão ao conhecimento da verdade; por isso se diz: \"E, descendo do monte com eles, parou num lugar plano, e havia uma multidão de seus discípulos e uma grande multidão de povo, de toda a Judeia, de Jerusalém e do litoral\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Non a proximo mari Galilaeae maritima dicit, quia hoc non miraculi loco poneretur; sed a mari magno cognominatur, in quo etiam Tyrus et Sidon comprehendi poterant; de quibus sequitur et Tyri et Sidonis; quae quia civitates gentium sunt, consulto nominatim ponuntur, ut quanta sit fama virtusque salvatoris intimetur, quae exteras etiam ad sanitatem doctrinamque capessendam civitates accersierat; unde sequitur qui venerant ut audirent eum"
+        "latim": "Non a proximo mari Galilaeae maritima dicit, quia hoc non miraculi loco poneretur; sed a mari magno cognominatur, in quo etiam Tyrus et Sidon comprehendi poterant; de quibus sequitur et Tyri et Sidonis; quae quia civitates gentium sunt, consulto nominatim ponuntur, ut quanta sit fama virtusque salvatoris intimetur, quae exteras etiam ad sanitatem doctrinamque capessendam civitates accersierat; unde sequitur qui venerant ut audirent eum",
+        "pt": "Não chama de litoral o mar próximo da Galileia, porque isso não seria posto como lugar de milagre; mas chama-o assim do mar grande, no qual também Tiro e Sidônia podiam estar compreendidas; delas se segue: \"E de Tiro e de Sidônia\"; porque são cidades dos gentios, são postas de propósito nominalmente, para que se dê a conhecer quão grande é a fama e o poder do Salvador, que atraíra também cidades estrangeiras para receber a cura e a doutrina; por isso se segue: \"que tinham vindo para ouvi-lo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Hoc est ad animarum medelam; et sanarentur a languoribus suis, hoc est ad medelam eorum corporum"
+        "latim": "Hoc est ad animarum medelam; et sanarentur a languoribus suis, hoc est ad medelam eorum corporum",
+        "pt": "Isto é, para o remédio das almas; \"e para serem curados de suas enfermidades\", isto é, para o remédio dos corpos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Postquam autem sacros publicavit apostolos, plurima et ardua fecit miracula: ut qui convenerant Iudaei et gentiles, scirent eos decoratos esse a Christo dignitate apostolatus; et quod ipse non erat sicut unus aliorum hominum, magis autem Deus, ut verbum incarnatum; unde sequitur et omnis turba quaerebat eum tangere, quia virtus de illo exibat et sanabat omnes. Neque enim alienam virtutem accipiebat Christus: sed cum naturaliter esset Deus, propriam virtutem super infirmos emittens sanabat omnes"
+        "latim": "Postquam autem sacros publicavit apostolos, plurima et ardua fecit miracula: ut qui convenerant Iudaei et gentiles, scirent eos decoratos esse a Christo dignitate apostolatus; et quod ipse non erat sicut unus aliorum hominum, magis autem Deus, ut verbum incarnatum; unde sequitur et omnis turba quaerebat eum tangere, quia virtus de illo exibat et sanabat omnes. Neque enim alienam virtutem accipiebat Christus: sed cum naturaliter esset Deus, propriam virtutem super infirmos emittens sanabat omnes",
+        "pt": "Depois de tornar públicos os sagrados apóstolos, fez muitíssimos e arduos milagres, para que os judeus e gentios que se tinham reunido soubessem que eles foram honrados por Cristo com a dignidade do apostolado; e que ele não era como um dos outros homens, mas antes Deus, como Verbo encarnado; por isso se segue: \"E toda a multidão procurava tocá-lo, porque dele saía uma força que curava a todos\". Cristo, com efeito, não recebia poder alheio: sendo Deus por natureza, emitindo sobre os enfermos o seu próprio poder, curava a todos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Adverte autem omnia diligenter, quomodo et cum apostolis ascendat, ac descendat ad turbas; quomodo eum turba non sequitur ad excelsa; denique ubi descendit, invenit infirmos: in excelsis enim infirmi esse non possunt"
+        "latim": "Adverte autem omnia diligenter, quomodo et cum apostolis ascendat, ac descendat ad turbas; quomodo eum turba non sequitur ad excelsa; denique ubi descendit, invenit infirmos: in excelsis enim infirmi esse non possunt",
+        "pt": "Observa diligentemente tudo: como sobe com os apóstolos e desce às multidões; como a multidão não o segue às alturas; enfim, quando desce, encontra os enfermos: nas alturas, com efeito, não pode haver enfermos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-27",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",

@@ -2,7 +2,17 @@
   "data": "2026-11-16",
   "evangelho": "Lc 18,35-43",
   "leituras": "Ap 1,1-4.2,1-5a | Sl 1,1-2.3.4 e 6 (R. Ap 2,7b) | Lc 18,35-43",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 18,
+      "lectio": 7,
+      "versos": [
+        35,
+        43
+      ]
+    }
+  ],
   "catecismo": [],
   "outrasLeituras": [
     {
@@ -24,6 +34,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "O clamor do cego e a luz que a fé alcança",
+  "destaques": [
+    {
+      "lectio": 7,
+      "i": 3
+    },
+    {
+      "lectio": 7,
+      "i": 8
+    },
+    {
+      "lectio": 7,
+      "i": 12
+    }
+  ]
 }

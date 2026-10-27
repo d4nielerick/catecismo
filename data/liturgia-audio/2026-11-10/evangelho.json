@@ -1,0 +1,92 @@
+{
+  "referencia": "Lc 17,7-10",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 44.72,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.48,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 4.74,
+      "t1": 6.74,
+      "texto": "Naquele tempo, disse Jesus:"
+    },
+    {
+      "t0": 7.48,
+      "t1": 9.8,
+      "texto": "\"Se algum de vós tem um empregado"
+    },
+    {
+      "t0": 9.8,
+      "t1": 12.42,
+      "texto": "que trabalha a terra ou cuida dos animais,"
+    },
+    {
+      "t0": 12.86,
+      "t1": 15.6,
+      "texto": "por acaso vai dizer-lhe, quando ele volta do campo:"
+    },
+    {
+      "t0": 16.04,
+      "t1": 17.18,
+      "texto": "'Vem depressa para a mesa?'"
+    },
+    {
+      "t0": 17.7,
+      "t1": 20.34,
+      "texto": "Pelo contrário, não vai dizer ao empregado:"
+    },
+    {
+      "t0": 20.34,
+      "t1": 23.64,
+      "texto": "'Prepara-me o jantar, cinge-te e serve-me,"
+    },
+    {
+      "t0": 23.64,
+      "t1": 25.1,
+      "texto": "enquanto eu como e bebo;"
+    },
+    {
+      "t0": 25.48,
+      "t1": 27.9,
+      "texto": "depois disso tu poderás comer e beber?'"
+    },
+    {
+      "t0": 27.9,
+      "t1": 30.72,
+      "texto": "Será que vai agradecer ao empregado,"
+    },
+    {
+      "t0": 30.84,
+      "t1": 32.6,
+      "texto": "porque fez o que lhe havia mandado?"
+    },
+    {
+      "t0": 33.16,
+      "t1": 34.6,
+      "texto": "Assim também vós:"
+    },
+    {
+      "t0": 35,
+      "t1": 37.5,
+      "texto": "quando tiverdes feito tudo o que vos mandaram,"
+    },
+    {
+      "t0": 37.88,
+      "t1": 40.12,
+      "texto": "dizei: 'Somos servos inúteis;"
+    },
+    {
+      "t0": 40.34,
+      "t1": 43.08,
+      "texto": "fizemos o que devíamos fazer' \"."
+    },
+    {
+      "t0": 43.08,
+      "t1": 44.72,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

@@ -2,7 +2,17 @@
   "data": "2026-11-17",
   "evangelho": "Lc 19,1-10",
   "leituras": "Ap 3,1-6.14-22 | Sl 14(15),1a e 2-3ab.3cd-4ab.5 (R. Ap 3,21) | Lc 19,1-10",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 19,
+      "lectio": 1,
+      "versos": [
+        1,
+        10
+      ]
+    }
+  ],
   "catecismo": [
     {
       "numero": 2712,
@@ -49,6 +59,23 @@
   ],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "Zaqueu no sicômoro e o médico que veio buscar os pecadores",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 2
+    },
+    {
+      "lectio": 1,
+      "i": 11
+    },
+    {
+      "lectio": 1,
+      "i": 13
+    },
+    {
+      "lectio": 1,
+      "i": 20
+    }
+  ]
 }

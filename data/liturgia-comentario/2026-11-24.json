@@ -1,0 +1,43 @@
+{
+  "data": "2026-11-24",
+  "evangelho": "Lc 21,5-11",
+  "leituras": "Ap 14,14-19 | Sl 95(96),10.11-12.13 (R. 13b) | Lc 21,5-11",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 21,
+      "lectio": 2,
+      "versos": [
+        5,
+        8
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 21,
+      "lectio": 3,
+      "versos": [
+        9,
+        11
+      ]
+    }
+  ],
+  "catecismo": [],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "O templo destruído, os falsos cristos e os sinais do fim",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 2
+    },
+    {
+      "lectio": 2,
+      "i": 6
+    },
+    {
+      "lectio": 3,
+      "i": 0
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "referencia": "Mt 25,1-13",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 96.08,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.7,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
+    },
+    {
+      "t0": 4.58,
+      "t1": 5.66,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 5.9,
+      "t1": 8.98,
+      "texto": "disse Jesus a seus discípulos esta parábola:"
+    },
+    {
+      "t0": 9.6,
+      "t1": 12.58,
+      "texto": "\"O Reino dos Céus é como a história das dez jovens"
+    },
+    {
+      "t0": 12.58,
+      "t1": 14.7,
+      "texto": "que pegaram suas lâmpadas de óleo"
+    },
+    {
+      "t0": 14.7,
+      "t1": 16.68,
+      "texto": "e saíram ao encontro do noivo."
+    },
+    {
+      "t0": 17.42,
+      "t1": 19.44,
+      "texto": "Cinco delas eram imprevidentes,"
+    },
+    {
+      "t0": 19.56,
+      "t1": 21.96,
+      "texto": "e as outras cinco eram previdentes."
+    },
+    {
+      "t0": 22.38,
+      "t1": 25.18,
+      "texto": "As imprevidentes pegaram as suas lâmpadas,"
+    },
+    {
+      "t0": 25.38,
+      "t1": 26.98,
+      "texto": "mas não levaram óleo consigo."
+    },
+    {
+      "t0": 26.98,
+      "t1": 31.08,
+      "texto": "As previdentes, porém, levaram vasilhas com óleo"
+    },
+    {
+      "t0": 31.08,
+      "t1": 32.34,
+      "texto": "junto com as lâmpadas."
+    },
+    {
+      "t0": 32.58,
+      "t1": 34.52,
+      "texto": "O noivo estava demorando,"
+    },
+    {
+      "t0": 34.64,
+      "t1": 37.5,
+      "texto": "e todas elas acabaram cochilando e dormindo."
+    },
+    {
+      "t0": 37.92,
+      "t1": 40.42,
+      "texto": "No meio da noite, ouviu-se um grito:"
+    },
+    {
+      "t0": 40.68,
+      "t1": 43.92,
+      "texto": "'O noivo está chegando. Ide ao seu encontro!'"
+    },
+    {
+      "t0": 44.5,
+      "t1": 46.8,
+      "texto": "Então as dez jovens se levantaram"
+    },
+    {
+      "t0": 46.8,
+      "t1": 48.4,
+      "texto": "e prepararam as lâmpadas."
+    },
+    {
+      "t0": 48.84,
+      "t1": 51.54,
+      "texto": "As imprevidentes disseram às previdentes:"
+    },
+    {
+      "t0": 51.54,
+      "t1": 53.36,
+      "texto": "'Dai-nos um pouco de óleo,"
+    },
+    {
+      "t0": 53.5,
+      "t1": 55.46,
+      "texto": "porque nossas lâmpadas estão se apagando'."
+    },
+    {
+      "t0": 55.46,
+      "t1": 57.82,
+      "texto": "As previdentes responderam:"
+    },
+    {
+      "t0": 57.96,
+      "t1": 59.04,
+      "texto": "'De modo nenhum,"
+    },
+    {
+      "t0": 59.36,
+      "t1": 61.46,
+      "texto": "porque o óleo pode ser insuficiente"
+    },
+    {
+      "t0": 61.46,
+      "t1": 62.88,
+      "texto": "para nós e para vós."
+    },
+    {
+      "t0": 63.14,
+      "t1": 65.68,
+      "texto": "É melhor irdes comprar dos vendedores'."
+    },
+    {
+      "t0": 66.18,
+      "t1": 69.06,
+      "texto": "Enquanto elas foram comprar óleo, o noivo chegou,"
+    },
+    {
+      "t0": 69.2,
+      "t1": 71.04,
+      "texto": "e as que estavam preparadas"
+    },
+    {
+      "t0": 71.04,
+      "t1": 73.72,
+      "texto": "entraram com ele para a festa de casamento."
+    },
+    {
+      "t0": 73.94,
+      "t1": 75.6,
+      "texto": "E a porta se fechou."
+    },
+    {
+      "t0": 76.1,
+      "t1": 79.72,
+      "texto": "Por fim, chegaram também as outras jovens e disseram:"
+    },
+    {
+      "t0": 80,
+      "t1": 82.5,
+      "texto": "'Senhor! Senhor! Abre-nos a porta!'"
+    },
+    {
+      "t0": 82.5,
+      "t1": 84.38,
+      "texto": "Ele, porém, respondeu:"
+    },
+    {
+      "t0": 85.01,
+      "t1": 88.06,
+      "texto": "'Em verdade eu vos digo: Não vos conheço!'"
+    },
+    {
+      "t0": 88.72,
+      "t1": 90.72,
+      "texto": "Portanto, ficai vigiando,"
+    },
+    {
+      "t0": 90.96,
+      "t1": 93.98,
+      "texto": "pois não sabeis qual será o dia, nem a hora\"."
+    },
+    {
+      "t0": 94.72,
+      "t1": 96.08,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

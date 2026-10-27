@@ -1,0 +1,117 @@
+{
+  "referencia": "Sl 111(112),1-2.5-6.8a e 9 (R. 1a)",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 63.72,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 1.32,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 2.34,
+      "t1": 4.34,
+      "texto": "Feliz aquele que respeita o Senhor!"
+    },
+    {
+      "t0": 5.44,
+      "t1": 7.62,
+      "texto": "Aleluia, Aleluia, Aleluia"
+    },
+    {
+      "t0": 8.78,
+      "t1": 10.92,
+      "texto": "Feliz o homem que respeita o Senhor"
+    },
+    {
+      "t0": 10.92,
+      "t1": 13.12,
+      "texto": "e que ama com carinho a sua lei!"
+    },
+    {
+      "t0": 13.64,
+      "t1": 16.42,
+      "texto": "Sua descendência será forte sobre a terra,"
+    },
+    {
+      "t0": 16.88,
+      "t1": 19.36,
+      "texto": "abençoada a geração dos homens retos!"
+    },
+    {
+      "t0": 19.96,
+      "t1": 21.96,
+      "texto": "Feliz aquele que respeita o Senhor!"
+    },
+    {
+      "t0": 23.06,
+      "t1": 25.24,
+      "texto": "Aleluia, Aleluia, Aleluia"
+    },
+    {
+      "t0": 26.4,
+      "t1": 29.02,
+      "texto": "Feliz o homem caridoso e prestativo,"
+    },
+    {
+      "t0": 29.18,
+      "t1": 31.68,
+      "texto": "que resolve seus negócios com justiça."
+    },
+    {
+      "t0": 32.18,
+      "t1": 34.66,
+      "texto": "Porque jamais vacilará o homem reto,"
+    },
+    {
+      "t0": 34.88,
+      "t1": 37.24,
+      "texto": "sua lembrança permanece eternamente!"
+    },
+    {
+      "t0": 37.64,
+      "t1": 39.64,
+      "texto": "Feliz aquele que respeita o Senhor!"
+    },
+    {
+      "t0": 40.74,
+      "t1": 42.92,
+      "texto": "Aleluia, Aleluia, Aleluia"
+    },
+    {
+      "t0": 44.08,
+      "t1": 46.88,
+      "texto": "Seu coração está tranquilo e nada teme,"
+    },
+    {
+      "t0": 47.04,
+      "t1": 49.44,
+      "texto": "e confusos há de ver seus inimigos."
+    },
+    {
+      "t0": 50.33,
+      "t1": 52.5,
+      "texto": "Ele reparte com os pobres os seus bens,"
+    },
+    {
+      "t0": 52.8,
+      "t1": 54.94,
+      "texto": "permanece para sempre o bem que fez,"
+    },
+    {
+      "t0": 54.94,
+      "t1": 57.76,
+      "texto": "e crescerão a sua glória e seu poder."
+    },
+    {
+      "t0": 58.44,
+      "t1": 60.44,
+      "texto": "Feliz aquele que respeita o Senhor!"
+    },
+    {
+      "t0": 61.54,
+      "t1": 63.72,
+      "texto": "Aleluia, Aleluia, Aleluia"
+    }
+  ]
+}

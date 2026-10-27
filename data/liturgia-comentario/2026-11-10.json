@@ -2,7 +2,17 @@
   "data": "2026-11-10",
   "evangelho": "Lc 17,7-10",
   "leituras": "Tt 2,1-8.11-14 | Sl 36(37),3-4.18-23.27 e 29 (R. 39a) | Lc 17,7-10",
-  "catena": [],
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 17,
+      "lectio": 4,
+      "versos": [
+        7,
+        10
+      ]
+    }
+  ],
   "catecismo": [],
   "outrasLeituras": [
     {
@@ -29,6 +39,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "Os servos inúteis e a tentação da soberba",
+  "destaques": [
+    {
+      "lectio": 4,
+      "i": 0
+    },
+    {
+      "lectio": 4,
+      "i": 8
+    },
+    {
+      "lectio": 4,
+      "i": 9
+    }
+  ]
 }

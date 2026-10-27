@@ -1,0 +1,38 @@
+{
+  "data": "2026-11-20",
+  "evangelho": "Lc 19,45-48",
+  "leituras": "Ap 10,8-11 | Sl 118(119),14.24.72.103.111.131 (R. 103a) | Lc 19,45-48",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 19,
+      "lectio": 6,
+      "versos": [
+        45,
+        48
+      ]
+    }
+  ],
+  "catecismo": [],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "A casa de oração e o covil de ladrões",
+  "destaques": [
+    {
+      "lectio": 6,
+      "i": 1
+    },
+    {
+      "lectio": 6,
+      "i": 2
+    },
+    {
+      "lectio": 6,
+      "i": 5
+    },
+    {
+      "lectio": 6,
+      "i": 14
+    }
+  ]
+}
