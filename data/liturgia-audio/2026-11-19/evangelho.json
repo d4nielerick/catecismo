@@ -1,0 +1,87 @@
+{
+  "referencia": "Lc 19,41-44",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 43.82,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.8,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 5.04,
+      "t1": 6.08,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 6.34,
+      "t1": 8.68,
+      "texto": "quando Jesus se aproximou de Jerusalém"
+    },
+    {
+      "t0": 8.68,
+      "t1": 9.98,
+      "texto": "e viu a cidade,"
+    },
+    {
+      "t0": 10.42,
+      "t1": 12.64,
+      "texto": "começou a chorar. E disse:"
+    },
+    {
+      "t0": 12.64,
+      "t1": 15.86,
+      "texto": "\"Se tu também compreendesses hoje"
+    },
+    {
+      "t0": 16.02,
+      "t1": 17.66,
+      "texto": "o que te pode trazer a paz!"
+    },
+    {
+      "t0": 19.54,
+      "t1": 23.08,
+      "texto": "Agora, porém, isso está escondido aos teus olhos!"
+    },
+    {
+      "t0": 23.86,
+      "t1": 25.94,
+      "texto": "Dias virão em que os inimigos"
+    },
+    {
+      "t0": 25.94,
+      "t1": 27.6,
+      "texto": "farão trincheiras contra ti"
+    },
+    {
+      "t0": 27.6,
+      "t1": 30.1,
+      "texto": "e te cercarão de todos os lados."
+    },
+    {
+      "t0": 31.22,
+      "t1": 33.76,
+      "texto": "Eles esmagarão a ti e a teus filhos."
+    },
+    {
+      "t0": 33.76,
+      "t1": 37.26,
+      "texto": "E não deixarão em ti pedra sobre pedra."
+    },
+    {
+      "t0": 37.64,
+      "t1": 39.9,
+      "texto": "Porque tu não reconheceste o tempo"
+    },
+    {
+      "t0": 39.9,
+      "t1": 41.5,
+      "texto": "em que foste visitada\"."
+    },
+    {
+      "t0": 42.42,
+      "t1": 43.82,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

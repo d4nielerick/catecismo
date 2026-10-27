@@ -1,0 +1,222 @@
+{
+  "referencia": "Lc 1,46-47.48-49.50-51.52-53.54-55 (R. 49 ou:)",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 129.1,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 1.76,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 1.76,
+      "t1": 5.36,
+      "texto": "O Poderoso fez por mim maravilhas,"
+    },
+    {
+      "t0": 5.52,
+      "t1": 7.28,
+      "texto": "e Santo é o seu nome."
+    },
+    {
+      "t0": 8.12,
+      "t1": 10.52,
+      "texto": "Bendita sejais, ó Virgem Maria;"
+    },
+    {
+      "t0": 10.7,
+      "t1": 13.62,
+      "texto": "trouxestes no ventre a Palavra eterna!"
+    },
+    {
+      "t0": 14.4,
+      "t1": 16.64,
+      "texto": "A minh'alma engrandece ao Senhor,"
+    },
+    {
+      "t0": 16.94,
+      "t1": 20.58,
+      "texto": "e se alegrou o meu espírito em Deus, meu Salvador,"
+    },
+    {
+      "t0": 21.1,
+      "t1": 24.7,
+      "texto": "O Poderoso fez por mim maravilhas,"
+    },
+    {
+      "t0": 24.86,
+      "t1": 26.62,
+      "texto": "e Santo é o seu nome."
+    },
+    {
+      "t0": 27.46,
+      "t1": 29.86,
+      "texto": "Bendita sejais, ó Virgem Maria;"
+    },
+    {
+      "t0": 30.04,
+      "t1": 32.96,
+      "texto": "trouxestes no ventre a Palavra eterna!"
+    },
+    {
+      "t0": 33.74,
+      "t1": 36.38,
+      "texto": "pois, ele viu a pequenez de sua serva,"
+    },
+    {
+      "t0": 36.78,
+      "t1": 40.52,
+      "texto": "eis que agora as gerações hão de chamar-me de bendita."
+    },
+    {
+      "t0": 40.52,
+      "t1": 43.48,
+      "texto": "O Poderoso fez por mim maravilhas"
+    },
+    {
+      "t0": 43.62,
+      "t1": 45.2,
+      "texto": "e Santo é o seu nome!"
+    },
+    {
+      "t0": 45.68,
+      "t1": 49.28,
+      "texto": "O Poderoso fez por mim maravilhas,"
+    },
+    {
+      "t0": 49.44,
+      "t1": 51.2,
+      "texto": "e Santo é o seu nome."
+    },
+    {
+      "t0": 52.04,
+      "t1": 54.44,
+      "texto": "Bendita sejais, ó Virgem Maria;"
+    },
+    {
+      "t0": 54.62,
+      "t1": 57.54,
+      "texto": "trouxestes no ventre a Palavra eterna!"
+    },
+    {
+      "t0": 58.32,
+      "t1": 61.22,
+      "texto": "Seu amor, de geração em geração,"
+    },
+    {
+      "t0": 61.6,
+      "t1": 63.6,
+      "texto": "chega a todos que o respeitam."
+    },
+    {
+      "t0": 64.34,
+      "t1": 66.38,
+      "texto": "Demonstrou o poder de seu braço,"
+    },
+    {
+      "t0": 66.72,
+      "t1": 68.58,
+      "texto": "dispersou os orgulhosos."
+    },
+    {
+      "t0": 69.14,
+      "t1": 72.74,
+      "texto": "O Poderoso fez por mim maravilhas,"
+    },
+    {
+      "t0": 72.9,
+      "t1": 74.66,
+      "texto": "e Santo é o seu nome."
+    },
+    {
+      "t0": 75.5,
+      "t1": 77.9,
+      "texto": "Bendita sejais, ó Virgem Maria;"
+    },
+    {
+      "t0": 78.08,
+      "t1": 81,
+      "texto": "trouxestes no ventre a Palavra eterna!"
+    },
+    {
+      "t0": 81.78,
+      "t1": 84.16,
+      "texto": "Derrubou os poderosos de seus tronos"
+    },
+    {
+      "t0": 84.34,
+      "t1": 86.14,
+      "texto": "e os humildes exaltou."
+    },
+    {
+      "t0": 86.6,
+      "t1": 88.86,
+      "texto": "De bens saciou os famintos"
+    },
+    {
+      "t0": 89,
+      "t1": 92.06,
+      "texto": "e despediu, sem nada, os ricos."
+    },
+    {
+      "t0": 92.06,
+      "t1": 95.66,
+      "texto": "O Poderoso fez por mim maravilhas,"
+    },
+    {
+      "t0": 95.82,
+      "t1": 97.58,
+      "texto": "e Santo é o seu nome."
+    },
+    {
+      "t0": 98.42,
+      "t1": 100.82,
+      "texto": "Bendita sejais, ó Virgem Maria;"
+    },
+    {
+      "t0": 101,
+      "t1": 103.92,
+      "texto": "trouxestes no ventre a Palavra eterna!"
+    },
+    {
+      "t0": 104.7,
+      "t1": 107.78,
+      "texto": "Acolheu Israel, seu servidor,"
+    },
+    {
+      "t0": 108.48,
+      "t1": 109.62,
+      "texto": "fiel ao seu amor,"
+    },
+    {
+      "t0": 110.06,
+      "t1": 112.52,
+      "texto": "como havia prometido aos nossos pais,"
+    },
+    {
+      "t0": 113.08,
+      "t1": 116.64,
+      "texto": "em favor de Abraão e de seus filhos, para sempre."
+    },
+    {
+      "t0": 117.24,
+      "t1": 120.84,
+      "texto": "O Poderoso fez por mim maravilhas,"
+    },
+    {
+      "t0": 121,
+      "t1": 122.76,
+      "texto": "e Santo é o seu nome."
+    },
+    {
+      "t0": 123.6,
+      "t1": 126,
+      "texto": "Bendita sejais, ó Virgem Maria;"
+    },
+    {
+      "t0": 126.18,
+      "t1": 129.1,
+      "texto": "trouxestes no ventre a Palavra eterna!"
+    }
+  ]
+}

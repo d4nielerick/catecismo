@@ -1,0 +1,232 @@
+{
+  "referencia": "Ap 5,1-10",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 128.46,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 2.76,
+      "texto": "Leitura do Livro do Apocalipse de São João."
+    },
+    {
+      "t0": 8.7,
+      "t1": 10.24,
+      "texto": "Eu, João,"
+    },
+    {
+      "t0": 11.28,
+      "t1": 12.92,
+      "texto": "vi um livro na mão direita"
+    },
+    {
+      "t0": 12.92,
+      "t1": 15.32,
+      "texto": "daquele que estava sentado no trono."
+    },
+    {
+      "t0": 16.54,
+      "t1": 19.4,
+      "texto": "Era um rolo escrito por dentro e por fora,"
+    },
+    {
+      "t0": 19.58,
+      "t1": 22.04,
+      "texto": "e estava lacrado com sete selos."
+    },
+    {
+      "t0": 22.8,
+      "t1": 24.82,
+      "texto": "Vi então um anjo forte,"
+    },
+    {
+      "t0": 24.82,
+      "t1": 26.68,
+      "texto": "que proclamava em voz alta:"
+    },
+    {
+      "t0": 26.68,
+      "t1": 30.74,
+      "texto": "\"Quem é digno de romper os selos e abrir o livro?\""
+    },
+    {
+      "t0": 31.74,
+      "t1": 34.02,
+      "texto": "Ninguém no céu, nem na terra,"
+    },
+    {
+      "t0": 34.76,
+      "t1": 36.14,
+      "texto": "nem debaixo da terra"
+    },
+    {
+      "t0": 36.42,
+      "t1": 38.48,
+      "texto": "era digno de abrir o livro"
+    },
+    {
+      "t0": 38.48,
+      "t1": 40.62,
+      "texto": "ou de ler o que nele estava escrito."
+    },
+    {
+      "t0": 41.38,
+      "t1": 42.88,
+      "texto": "Eu chorava muito,"
+    },
+    {
+      "t0": 43.12,
+      "t1": 45.78,
+      "texto": "porque ninguém foi considerado digno"
+    },
+    {
+      "t0": 45.78,
+      "t1": 47.44,
+      "texto": "de abrir ou de ler o livro."
+    },
+    {
+      "t0": 48.02,
+      "t1": 49.98,
+      "texto": "Um dos anciãos me consolou:"
+    },
+    {
+      "t0": 50.52,
+      "t1": 51.52,
+      "texto": "\"Não chores!"
+    },
+    {
+      "t0": 52.32,
+      "t1": 54.3,
+      "texto": "Eis que o Leão da tribo de Judá,"
+    },
+    {
+      "t0": 54.6,
+      "t1": 57.66,
+      "texto": "o Rebento de Davi, saiu vencedor."
+    },
+    {
+      "t0": 58.28,
+      "t1": 61.1,
+      "texto": "Ele pode romper os selos e abrir o livro\"."
+    },
+    {
+      "t0": 61.86,
+      "t1": 64.06,
+      "texto": "De fato, vi um Cordeiro."
+    },
+    {
+      "t0": 64.54,
+      "t1": 66.28,
+      "texto": "Estava no centro do trono"
+    },
+    {
+      "t0": 66.28,
+      "t1": 68.12,
+      "texto": "e dos quatro Seres vivos,"
+    },
+    {
+      "t0": 68.3,
+      "t1": 70.12,
+      "texto": "no meio dos Anciãos."
+    },
+    {
+      "t0": 70.12,
+      "t1": 72.64,
+      "texto": "Estava de pé como que imolado."
+    },
+    {
+      "t0": 73.44,
+      "t1": 76.34,
+      "texto": "O Cordeiro tinha sete chifres e sete olhos,"
+    },
+    {
+      "t0": 76.6,
+      "t1": 78.9,
+      "texto": "que são os sete Espíritos de Deus,"
+    },
+    {
+      "t0": 79.16,
+      "t1": 80.98,
+      "texto": "enviados por toda a terra."
+    },
+    {
+      "t0": 81.66,
+      "t1": 84.22,
+      "texto": "Então, o Cordeiro veio receber o livro"
+    },
+    {
+      "t0": 84.22,
+      "t1": 87.28,
+      "texto": "da mão direita daquele que está sentado no trono."
+    },
+    {
+      "t0": 88.08,
+      "t1": 89.48,
+      "texto": "Quando ele recebeu o livro,"
+    },
+    {
+      "t0": 89.94,
+      "t1": 93.78,
+      "texto": "os quatro Seres vivos e os vinte e quatro Anciãos"
+    },
+    {
+      "t0": 93.78,
+      "t1": 94.68,
+      "texto": "prostraram-se diante do Cordeiro."
+    },
+    {
+      "t0": 94.68,
+      "t1": 98.92,
+      "texto": "Todos tinham harpas e taças de ouro cheias de incenso,"
+    },
+    {
+      "t0": 99.06,
+      "t1": 100.9,
+      "texto": "que são as orações dos santos."
+    },
+    {
+      "t0": 101.1,
+      "t1": 103.6,
+      "texto": "E entoaram um cântico novo:"
+    },
+    {
+      "t0": 104.48,
+      "t1": 108.4,
+      "texto": "\"Tu és digno de receber o livro e abrir seus selos,"
+    },
+    {
+      "t0": 108.74,
+      "t1": 110.46,
+      "texto": "porque foste imolado,"
+    },
+    {
+      "t0": 110.64,
+      "t1": 113.72,
+      "texto": "e com teu sangue adquiriste para Deus"
+    },
+    {
+      "t0": 113.72,
+      "t1": 118.74,
+      "texto": "homens de toda a tribo, língua, povo e nação."
+    },
+    {
+      "t0": 119.54,
+      "t1": 121.74,
+      "texto": "Deles fizeste para o nosso Deus"
+    },
+    {
+      "t0": 121.74,
+      "t1": 123.7,
+      "texto": "um reino de sacerdotes."
+    },
+    {
+      "t0": 123.9,
+      "t1": 126.22,
+      "texto": "E eles reinarão sobre a terra.\""
+    },
+    {
+      "t0": 127.24,
+      "t1": 128.46,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "referencia": "3Jo 1,5-8",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 38.68,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 2.98,
+      "texto": "Leitura da Terceira Carta de São João."
+    },
+    {
+      "t0": 4.48,
+      "t1": 5.66,
+      "texto": "Caríssimo Gaio,"
+    },
+    {
+      "t0": 5.9,
+      "t1": 8.16,
+      "texto": "é muito leal o teu proceder,"
+    },
+    {
+      "t0": 8.62,
+      "t1": 10.7,
+      "texto": "agindo assim com teus irmãos,"
+    },
+    {
+      "t0": 11.14,
+      "t1": 12.36,
+      "texto": "ainda que estrangeiros."
+    },
+    {
+      "t0": 12.78,
+      "t1": 14.64,
+      "texto": "Eles deram testemunho"
+    },
+    {
+      "t0": 14.64,
+      "t1": 16.98,
+      "texto": "da tua caridade diante da Igreja."
+    },
+    {
+      "t0": 17.5,
+      "t1": 20.4,
+      "texto": "Farás bem em provê-los para a viagem"
+    },
+    {
+      "t0": 20.6,
+      "t1": 22.32,
+      "texto": "de um modo digno de Deus."
+    },
+    {
+      "t0": 22.78,
+      "t1": 24.88,
+      "texto": "Pois, por amor do Nome,"
+    },
+    {
+      "t0": 25.36,
+      "t1": 27.14,
+      "texto": "eles empreenderam a viagem,"
+    },
+    {
+      "t0": 27.3,
+      "t1": 30,
+      "texto": "sem aceitar nada da parte dos pagãos."
+    },
+    {
+      "t0": 30,
+      "t1": 33.68,
+      "texto": "A nós, portanto, cabe acolhê-los,"
+    },
+    {
+      "t0": 33.68,
+      "t1": 36.34,
+      "texto": "para sermos cooperadores da Verdade."
+    },
+    {
+      "t0": 37.24,
+      "t1": 38.68,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

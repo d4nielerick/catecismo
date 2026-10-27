@@ -1,0 +1,112 @@
+{
+  "referencia": "Lc 17,20-25",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 78.38,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 22.94,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 24.24,
+      "t1": 25.32,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 25.56,
+      "t1": 27.58,
+      "texto": "os fariseus perguntaram a Jesus"
+    },
+    {
+      "t0": 27.58,
+      "t1": 30.66,
+      "texto": "sobre o momento em que chegaria o Reino de Deus."
+    },
+    {
+      "t0": 31.3,
+      "t1": 32.64,
+      "texto": "Jesus respondeu:"
+    },
+    {
+      "t0": 33.4,
+      "t1": 36.08,
+      "texto": "\"O Reino de Deus não vem ostensivamente."
+    },
+    {
+      "t0": 36.32,
+      "t1": 37.9,
+      "texto": "Nem se poderá dizer:"
+    },
+    {
+      "t0": 38.14,
+      "t1": 40.42,
+      "texto": "'Está aqui' ou 'Está ali',"
+    },
+    {
+      "t0": 41.12,
+      "t1": 43.5,
+      "texto": "porque o Reino de Deus está entre vós\"."
+    },
+    {
+      "t0": 44.4,
+      "t1": 46.76,
+      "texto": "E Jesus disse aos discípulos:"
+    },
+    {
+      "t0": 47.62,
+      "t1": 50.06,
+      "texto": "\"Dias virão em que desejareis ver"
+    },
+    {
+      "t0": 50.06,
+      "t1": 53.18,
+      "texto": "um só dia do Filho do Homem e não podereis ver."
+    },
+    {
+      "t0": 53.52,
+      "t1": 55.16,
+      "texto": "As pessoas vos dirão:"
+    },
+    {
+      "t0": 55.38,
+      "t1": 58.5,
+      "texto": "'Ele está ali' ou 'Ele está aqui'."
+    },
+    {
+      "t0": 59.12,
+      "t1": 61.42,
+      "texto": "Não deveis ir, nem correr atrás."
+    },
+    {
+      "t0": 62.18,
+      "t1": 64.36,
+      "texto": "Pois, como o relâmpago brilha"
+    },
+    {
+      "t0": 64.36,
+      "t1": 66.48,
+      "texto": "de um lado até ao outro do céu,"
+    },
+    {
+      "t0": 67.02,
+      "t1": 69.88,
+      "texto": "assim também será o Filho do Homem, no seu dia."
+    },
+    {
+      "t0": 70.5,
+      "t1": 73.62,
+      "texto": "Antes, porém, ele deverá sofrer muito"
+    },
+    {
+      "t0": 73.62,
+      "t1": 76.08,
+      "texto": "e ser rejeitado por esta geração\"."
+    },
+    {
+      "t0": 76.76,
+      "t1": 78.38,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "referencia": "Sl 145(146),7.8-9a.9bc-10 (R. 5a)",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 70.28,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 1.74,
+      "texto": "Salmo responsorial."
+    },
+    {
+      "t0": 2.74,
+      "t1": 5.68,
+      "texto": "Feliz quem se apoia no Deus de Jacó!"
+    },
+    {
+      "t0": 6.3,
+      "t1": 9.32,
+      "texto": "Aleluia, Aleluia, Aleluia"
+    },
+    {
+      "t0": 10.21,
+      "t1": 13.72,
+      "texto": "O Senhor faz justiça aos que são oprimidos;"
+    },
+    {
+      "t0": 14.33,
+      "t1": 16.64,
+      "texto": "ele dá alimento aos famintos,"
+    },
+    {
+      "t0": 16.98,
+      "t1": 19.72,
+      "texto": "é o Senhor quem liberta os cativos."
+    },
+    {
+      "t0": 20.18,
+      "t1": 23.12,
+      "texto": "Feliz quem se apoia no Deus de Jacó!"
+    },
+    {
+      "t0": 23.74,
+      "t1": 26.76,
+      "texto": "Aleluia, Aleluia, Aleluia"
+    },
+    {
+      "t0": 27.65,
+      "t1": 30.57,
+      "texto": "O Senhor abre os olhos aos cegos, +"
+    },
+    {
+      "t0": 30.57,
+      "t1": 33.37,
+      "texto": "o Senhor faz erguer-se o caído,"
+    },
+    {
+      "t0": 33.77,
+      "t1": 36.51,
+      "texto": "o Senhor ama aquele que é justo."
+    },
+    {
+      "t0": 37.47,
+      "t1": 39.85,
+      "texto": "É o Senhor quem protege o estrangeiro;"
+    },
+    {
+      "t0": 40.27,
+      "t1": 43.21,
+      "texto": "Feliz quem se apoia no Deus de Jacó!"
+    },
+    {
+      "t0": 43.83,
+      "t1": 46.85,
+      "texto": "Aleluia, Aleluia, Aleluia"
+    },
+    {
+      "t0": 47.74,
+      "t1": 50.98,
+      "texto": "É ele quem ampara a viúva e o órfão,"
+    },
+    {
+      "t0": 51.24,
+      "t1": 53.72,
+      "texto": "mas confunde os caminhos dos maus."
+    },
+    {
+      "t0": 54.34,
+      "t1": 56.98,
+      "texto": "O Senhor reinará para sempre!"
+    },
+    {
+      "t0": 57.64,
+      "t1": 60.36,
+      "texto": "Ó Sião, o teu Deus reinará"
+    },
+    {
+      "t0": 60.36,
+      "t1": 63.04,
+      "texto": "para sempre e por todos os séculos!"
+    },
+    {
+      "t0": 63.7,
+      "t1": 66.64,
+      "texto": "Feliz quem se apoia no Deus de Jacó!"
+    },
+    {
+      "t0": 67.26,
+      "t1": 70.28,
+      "texto": "Aleluia, Aleluia, Aleluia"
+    }
+  ]
+}

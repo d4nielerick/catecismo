@@ -1,0 +1,82 @@
+{
+  "referencia": "Lc 21,1-4",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 37.7,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.54,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 3.54,
+      "t1": 5.26,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 5.58,
+      "t1": 8.6,
+      "texto": "Jesus ergueu os olhos e viu pessoas ricas"
+    },
+    {
+      "t0": 8.6,
+      "t1": 11.46,
+      "texto": "depositando ofertas no tesouro do Templo."
+    },
+    {
+      "t0": 12.3,
+      "t1": 14.08,
+      "texto": "Viu também uma pobre viúva"
+    },
+    {
+      "t0": 14.08,
+      "t1": 16.46,
+      "texto": "que depositou duas pequenas moedas."
+    },
+    {
+      "t0": 17.3,
+      "t1": 19.26,
+      "texto": "Diante disto, ele disse:"
+    },
+    {
+      "t0": 19.94,
+      "t1": 22.88,
+      "texto": "\"Em verdade vos digo que essa pobre viúva"
+    },
+    {
+      "t0": 22.88,
+      "t1": 24.4,
+      "texto": "ofertou mais do que todos."
+    },
+    {
+      "t0": 24.4,
+      "t1": 26.86,
+      "texto": "Pois todos eles depositaram,"
+    },
+    {
+      "t0": 26.92,
+      "t1": 28.4,
+      "texto": "como oferta feita a Deus,"
+    },
+    {
+      "t0": 28.9,
+      "t1": 30.02,
+      "texto": "aquilo que lhes sobrava."
+    },
+    {
+      "t0": 30.48,
+      "t1": 32.86,
+      "texto": "Mas a viúva, na sua pobreza,"
+    },
+    {
+      "t0": 33.42,
+      "t1": 35.5,
+      "texto": "ofertou tudo quanto tinha para viver\"."
+    },
+    {
+      "t0": 36.42,
+      "t1": 37.7,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}
