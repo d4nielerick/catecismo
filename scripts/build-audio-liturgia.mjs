@@ -7,6 +7,7 @@
  *   (leituras: primeira-leitura, salmo, segunda-leitura, evangelho — os ids dos cards na página)
  *   node scripts/build-audio-liturgia.mjs AAAA-MM-DD evangelho audio.mp3 tempos.json   # só monta, sem gerar
  *   … --gemini                                                            # voz do Gemini (grátis, devagar)
+ *   … --grok                                                              # voz do Grok TTS (xAI, voz "leo")
  *
  * Gera a voz com antecedência (fora do site, nada de IA em tempo de execução): o texto falado é o
  * texto oficial da leitura, sem números de versículo, com a abertura e o fecho litúrgicos. O
@@ -21,6 +22,7 @@
  * (instalado no Mac, modelo large-v3-turbo) marca o tempo de cada palavra ouvida, e as palavras
  * ouvidas são casadas com as do texto oficial (as que não casam ficam entre as vizinhas). Pula
  * leituras que já têm áudio do Gemini; na cota gratuita esgotada (429), para sem erro.
+ * Com --grok a voz é do Grok TTS (item "xai-api-key"), com o mesmo caminho do Whisper.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -29,8 +31,9 @@ import { fileURLToPath } from 'node:url';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const GEMINI = process.argv.includes('--gemini');
-const VOZ = GEMINI
-  ? { modelo: process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts', id: 'Algenib', nome: `Algenib (${process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts'})` }
+const GROK = process.argv.includes('--grok');
+const VOZ = GROK ? { id: 'leo', nome: 'leo (Grok TTS)' }
+  : GEMINI ? { modelo: process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts', id: 'Algenib', nome: `Algenib (${process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts'})` }
   : { id: 'onwK4e9ZLuTAKqWW03F9', nome: 'Daniel (ElevenLabs, v4)' };
 const ENSAIO = process.argv.includes('--ensaio');   // só mostra o texto que seria lido, sem gerar
 const [dt, pedido = 'evangelho', audioArq, temposArq] = process.argv.slice(2).filter(a => !a.startsWith('--'));
@@ -102,12 +105,12 @@ async function gerarLeitura(qual) {
   if (!leitura) { console.log(`${dt}: sem ${qual}`); return; }
   const unidades = unidadesDe(leitura);
   const jaFeito = path.join(RAIZ, 'data', 'liturgia-audio', dt, `${qual}.json`);
-  if (GEMINI && !ENSAIO && fs.existsSync(jaFeito) && JSON.parse(fs.readFileSync(jaFeito, 'utf8')).voz === VOZ.nome) return;
+  if ((GEMINI || GROK) && !ENSAIO && fs.existsSync(jaFeito) && JSON.parse(fs.readFileSync(jaFeito, 'utf8')).voz === VOZ.nome) return;
   const falado = unidades.join(' ').replace(/\s+/g, ' ').trim();
   if (ENSAIO) { console.log(`\n── ${qual} (${falado.length} caracteres)\n${unidades.join('\n')}`); return; }
   const { audio, tempos } = audioArq
     ? { audio: fs.readFileSync(audioArq), tempos: JSON.parse(fs.readFileSync(temposArq, 'utf8')) }
-    : GEMINI ? gerarGemini(unidades, falado) : await gerar(falado);
+    : GEMINI || GROK ? gerarGemini(unidades, falado) : await gerar(falado);
   if (!audio) return;
   montar(qual, leitura, unidades, falado, audio, tempos);
 }
@@ -136,6 +139,8 @@ function gerarGemini(unidades, falado) {
   const wav = path.join(tmp, 'voz.wav'), mp3 = path.join(tmp, 'voz.mp3');
   const unicas = [...new Set(unidades)];
   const faladoU = unicas.join(' ').replace(/\s+/g, ' ').trim();
+  if (GROK) sintetizarGrok(unicas, tmp, wav);
+  else {
   const chave = execFileSync('security', ['find-generic-password', '-a', process.env.USER, '-s', 'gemini-api-key', '-w']).toString().trim();
   const instrucao = 'Leia em português do Brasil, com sotaque brasileiro neutro (T e R como no Brasil), como um leitor da Palavra '
     + 'na missa: voz calma, sóbria e reverente, em ritmo um pouco mais ágil, sem dramatizar. Pausa breve ao fim de cada linha.';
@@ -151,6 +156,7 @@ function gerarGemini(unidades, falado) {
   const dados = j.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
   if (!dados) throw new Error(`Gemini: ${JSON.stringify(j.error || j).slice(0, 200)}`);
   fs.writeFileSync(wav, Buffer.from(dados, 'base64'));
+  }
   execFileSync('whisper', [wav, '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
     '--output_format', 'json', '--output_dir', tmp, '--fp16', 'False'], { stdio: 'ignore' });
   const ouvidas = JSON.parse(fs.readFileSync(path.join(tmp, 'voz.json'), 'utf8')).segments.flatMap(sg => sg.words || []);
@@ -186,6 +192,20 @@ function gerarGemini(unidades, falado) {
     desloc += x.ate - x.de;
   });
   return { audio: fs.readFileSync(mp3), tempos: { characters: [...falado], character_start_times_seconds: ini, character_end_times_seconds: fim } };
+}
+
+/** Grok TTS: lê as linhas como estão (não aceita instrução de estilo; a voz "leo" já é sóbria). */
+function sintetizarGrok(unicas, tmp, wav) {
+  const chave = execFileSync('security', ['find-generic-password', '-a', process.env.USER, '-s', 'xai-api-key', '-w']).toString().trim();
+  fs.writeFileSync(path.join(tmp, 'pedido.json'), JSON.stringify({
+    text: unicas.join('\n'), language: 'pt-BR', voice_id: VOZ.id,
+    output_format: { codec: 'mp3', sample_rate: 44100, bit_rate: 128000 },
+  }));
+  const bruto = path.join(tmp, 'grok.mp3');
+  const status = execFileSync('curl', ['-s', '--max-time', '600', '-w', '%{http_code}', '-o', bruto, '-H', `Authorization: Bearer ${chave}`,
+    '-H', 'Content-Type: application/json', '-d', `@${path.join(tmp, 'pedido.json')}`, 'https://api.x.ai/v1/tts']).toString().trim();
+  if (status !== '200') throw new Error(`Grok ${status}: ${fs.readFileSync(bruto, 'utf8').slice(0, 200)}`);
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', bruto, '-ar', '24000', '-ac', '1', wav]);
 }
 
 /** Casa as palavras do texto com as ouvidas pelo Whisper (maior subsequência comum) e espalha os

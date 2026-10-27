@@ -1,0 +1,112 @@
+{
+  "referencia": "Ap 10,8-11",
+  "voz": "leo (Grok TTS)",
+  "duracao": 40.7,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 2.56,
+      "texto": "Leitura do Livro do Apocalipse de São João."
+    },
+    {
+      "t0": 2.56,
+      "t1": 4.6,
+      "texto": "Aquela mesma voz do céu,"
+    },
+    {
+      "t0": 4.8,
+      "t1": 6.74,
+      "texto": "que eu, João, já tinha ouvido,"
+    },
+    {
+      "t0": 7.08,
+      "t1": 8.28,
+      "texto": "tornou a falar comigo:"
+    },
+    {
+      "t0": 8.6,
+      "t1": 9.12,
+      "texto": "\"Vai."
+    },
+    {
+      "t0": 9.34,
+      "t1": 11.74,
+      "texto": "Pega o livrinho aberto da mão do anjo"
+    },
+    {
+      "t0": 11.74,
+      "t1": 13.74,
+      "texto": "que está de pé sobre o mar e a terra\"."
+    },
+    {
+      "t0": 14.14,
+      "t1": 15.58,
+      "texto": "Eu fui até ao anjo"
+    },
+    {
+      "t0": 15.58,
+      "t1": 17.28,
+      "texto": "e pedi que me entregasse o livrinho."
+    },
+    {
+      "t0": 17.58,
+      "t1": 18.38,
+      "texto": "Ele me falou:"
+    },
+    {
+      "t0": 18.76,
+      "t1": 19.72,
+      "texto": "\"Pega e come."
+    },
+    {
+      "t0": 19.96,
+      "t1": 21.6,
+      "texto": "Será amargo no estômago,"
+    },
+    {
+      "t0": 21.78,
+      "t1": 24.36,
+      "texto": "mas na tua boca, será doce como mel\"."
+    },
+    {
+      "t0": 24.86,
+      "t1": 27.38,
+      "texto": "Peguei da mão do anjo o livrinho e comi-o."
+    },
+    {
+      "t0": 27.38,
+      "t1": 29.5,
+      "texto": "Na boca era doce como mel,"
+    },
+    {
+      "t0": 29.7,
+      "t1": 30.84,
+      "texto": "mas quando o engoli,"
+    },
+    {
+      "t0": 31.06,
+      "t1": 32.86,
+      "texto": "meu estômago tornou-se amargo."
+    },
+    {
+      "t0": 33.1,
+      "t1": 34.28,
+      "texto": "Então ele me disse:"
+    },
+    {
+      "t0": 34.5,
+      "t1": 36.08,
+      "texto": "\"Deves profetizar ainda"
+    },
+    {
+      "t0": 36.08,
+      "t1": 39.44,
+      "texto": "contra outros povos e nações, línguas e reis\"."
+    },
+    {
+      "t0": 39.68,
+      "t1": 40.7,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

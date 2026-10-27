@@ -1,0 +1,267 @@
+{
+  "referencia": "Ap 4,1-11",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 142.36,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 2.54,
+      "texto": "Leitura do Livro do Apocalipse de São João."
+    },
+    {
+      "t0": 2.54,
+      "t1": 4.28,
+      "texto": "Eu, João,"
+    },
+    {
+      "t0": 4.92,
+      "t1": 6.44,
+      "texto": "vi uma porta aberta no céu,"
+    },
+    {
+      "t0": 6.48,
+      "t1": 10.96,
+      "texto": "e a voz que antes eu tinha ouvido falar-me como trombeta, disse:"
+    },
+    {
+      "t0": 11.26,
+      "t1": 14.12,
+      "texto": "\"Sobe até aqui, para que eu te mostre as coisas"
+    },
+    {
+      "t0": 14.12,
+      "t1": 16.42,
+      "texto": "que devem acontecer depois destas\"."
+    },
+    {
+      "t0": 17.4,
+      "t1": 20.02,
+      "texto": "Imediatamente, o Espírito tomou conta de mim."
+    },
+    {
+      "t0": 20.46,
+      "t1": 22.24,
+      "texto": "Havia no céu um trono"
+    },
+    {
+      "t0": 22.38,
+      "t1": 24.54,
+      "texto": "e, no trono, alguém sentado."
+    },
+    {
+      "t0": 25.04,
+      "t1": 26.64,
+      "texto": "Aquele que estava sentado"
+    },
+    {
+      "t0": 26.64,
+      "t1": 29.84,
+      "texto": "parecia uma pedra de jaspe e cornalina;"
+    },
+    {
+      "t0": 29.84,
+      "t1": 32.4,
+      "texto": "um arco-íris envolvia o trono"
+    },
+    {
+      "t0": 32.46,
+      "t1": 34.12,
+      "texto": "com reflexos de esmeralda."
+    },
+    {
+      "t0": 34.64,
+      "t1": 35.86,
+      "texto": "Ao redor do trono"
+    },
+    {
+      "t0": 36.06,
+      "t1": 38.38,
+      "texto": "havia outros vinte e quatro tronos;"
+    },
+    {
+      "t0": 39.18,
+      "t1": 41.96,
+      "texto": "neles estavam sentados vinte e quatro anciãos,"
+    },
+    {
+      "t0": 42.42,
+      "t1": 44.1,
+      "texto": "todos eles vestidos de branco"
+    },
+    {
+      "t0": 44.1,
+      "t1": 46.26,
+      "texto": "e com coroas de ouro nas cabeças."
+    },
+    {
+      "t0": 46.76,
+      "t1": 50.78,
+      "texto": "Do trono saíam relâmpagos, vozes e trovões."
+    },
+    {
+      "t0": 51.54,
+      "t1": 52.42,
+      "texto": "Diante do trono"
+    },
+    {
+      "t0": 52.58,
+      "t1": 55.22,
+      "texto": "estavam acesas sete lâmpadas de fogo,"
+    },
+    {
+      "t0": 55.38,
+      "t1": 57.48,
+      "texto": "que são os sete espíritos de Deus."
+    },
+    {
+      "t0": 57.48,
+      "t1": 59.32,
+      "texto": "Na frente do trono"
+    },
+    {
+      "t0": 59.46,
+      "t1": 62.54,
+      "texto": "havia como que um mar de vidro cristalino."
+    },
+    {
+      "t0": 63.28,
+      "t1": 65.18,
+      "texto": "No meio, em redor do trono,"
+    },
+    {
+      "t0": 65.7,
+      "t1": 67.28,
+      "texto": "estavam quatro Seres vivos,"
+    },
+    {
+      "t0": 67.62,
+      "t1": 70.48,
+      "texto": "cheios de olhos pela frente e por detrás."
+    },
+    {
+      "t0": 70.84,
+      "t1": 73.48,
+      "texto": "O primeiro Ser vivo parecia um leão;"
+    },
+    {
+      "t0": 73.86,
+      "t1": 76.12,
+      "texto": "o segundo parecia um touro;"
+    },
+    {
+      "t0": 76.72,
+      "t1": 78.82,
+      "texto": "o terceiro tinha rosto de homem;"
+    },
+    {
+      "t0": 79.18,
+      "t1": 82.48,
+      "texto": "o quarto parecia uma águia em pleno voo."
+    },
+    {
+      "t0": 82.48,
+      "t1": 86.26,
+      "texto": "Cada um dos quatro Seres vivos tinha seis asas,"
+    },
+    {
+      "t0": 86.54,
+      "t1": 89.04,
+      "texto": "cobertas de olhos ao redor e por dentro."
+    },
+    {
+      "t0": 89.54,
+      "t1": 92.86,
+      "texto": "Dia e noite, sem parar, eles proclamavam:"
+    },
+    {
+      "t0": 93.38,
+      "t1": 96.52,
+      "texto": "\"Santo! Santo! Santo!"
+    },
+    {
+      "t0": 97.42,
+      "t1": 99.88,
+      "texto": "Senhor Deus Todo-poderoso!"
+    },
+    {
+      "t0": 99.88,
+      "t1": 102.8,
+      "texto": "Aquele que é, que era e que vem!\""
+    },
+    {
+      "t0": 102.8,
+      "t1": 105.12,
+      "texto": "Os seres vivos davam glória,"
+    },
+    {
+      "t0": 105.6,
+      "t1": 107.14,
+      "texto": "honra e ação de graças"
+    },
+    {
+      "t0": 107.14,
+      "t1": 110.5,
+      "texto": "ao que estava no trono e que vive para sempre."
+    },
+    {
+      "t0": 111.25,
+      "t1": 113.52,
+      "texto": "E cada vez que os Seres vivos faziam isto,"
+    },
+    {
+      "t0": 113.8,
+      "t1": 116.5,
+      "texto": "os vinte e quatro anciãos se prostravam"
+    },
+    {
+      "t0": 116.5,
+      "t1": 118.66,
+      "texto": "diante daquele que estava sentado no trono,"
+    },
+    {
+      "t0": 118.66,
+      "t1": 121.52,
+      "texto": "para adorar o que vive para sempre."
+    },
+    {
+      "t0": 121.52,
+      "t1": 142.06,
+      "texto": "Colocavam suas coroas diante do trono de Deus,"
+    },
+    {
+      "t0": 142.06,
+      "t1": 142.06,
+      "texto": "e diziam:"
+    },
+    {
+      "t0": 142.06,
+      "t1": 142.34,
+      "texto": "\"Senhor, nosso Deus,"
+    },
+    {
+      "t0": 142.34,
+      "t1": 142.34,
+      "texto": "tu és digno de receber a glória, a honra e o poder,"
+    },
+    {
+      "t0": 142.34,
+      "t1": 142.34,
+      "texto": "porque tu criaste todas as coisas."
+    },
+    {
+      "t0": 142.34,
+      "t1": 142.34,
+      "texto": "Pela tua vontade é que elas existem"
+    },
+    {
+      "t0": 142.34,
+      "t1": 142.34,
+      "texto": "e foram criadas\"."
+    },
+    {
+      "t0": 142.34,
+      "t1": 142.36,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

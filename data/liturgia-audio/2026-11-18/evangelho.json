@@ -1,0 +1,302 @@
+{
+  "referencia": "Lc 19,11-28",
+  "voz": "leo (Grok TTS)",
+  "duracao": 126.54,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.26,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Lucas."
+    },
+    {
+      "t0": 3.26,
+      "t1": 4.74,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 5.02,
+      "t1": 6.82,
+      "texto": "Jesus acrescentou uma parábola,"
+    },
+    {
+      "t0": 7.06,
+      "t1": 8.96,
+      "texto": "porque estava perto de Jerusalém"
+    },
+    {
+      "t0": 8.96,
+      "t1": 11.78,
+      "texto": "e eles pensavam que o Reino de Deus ia chegar logo."
+    },
+    {
+      "t0": 12.16,
+      "t1": 13.4,
+      "texto": "Então Jesus disse:"
+    },
+    {
+      "t0": 13.64,
+      "t1": 16.36,
+      "texto": "\"Um homem nobre partiu para um país distante,"
+    },
+    {
+      "t0": 16.58,
+      "t1": 19.16,
+      "texto": "a fim de ser coroado rei e depois voltar."
+    },
+    {
+      "t0": 19.78,
+      "t1": 21.82,
+      "texto": "Chamou então dez dos seus empregados,"
+    },
+    {
+      "t0": 22.26,
+      "t1": 24.46,
+      "texto": "entregou cem moedas de prata a cada um,"
+    },
+    {
+      "t0": 24.46,
+      "t1": 25.22,
+      "texto": "e disse:"
+    },
+    {
+      "t0": 25.54,
+      "t1": 27.56,
+      "texto": "'Procurai negociar até que eu volte'."
+    },
+    {
+      "t0": 28.08,
+      "t1": 30.36,
+      "texto": "Seus concidadãos, porém, o odiavam,"
+    },
+    {
+      "t0": 30.48,
+      "t1": 32.74,
+      "texto": "e enviaram uma embaixada atrás dele,"
+    },
+    {
+      "t0": 33.1,
+      "t1": 33.5,
+      "texto": "dizendo:"
+    },
+    {
+      "t0": 33.76,
+      "t1": 36.48,
+      "texto": "'Nós não queremos que esse homem reine sobre nós'."
+    },
+    {
+      "t0": 36.68,
+      "t1": 39.08,
+      "texto": "Mas o homem foi coroado rei e voltou."
+    },
+    {
+      "t0": 39.28,
+      "t1": 40.98,
+      "texto": "Mandou chamar os empregados,"
+    },
+    {
+      "t0": 41.1,
+      "t1": 42.54,
+      "texto": "aos quais havia dado o dinheiro,"
+    },
+    {
+      "t0": 42.8,
+      "t1": 45.3,
+      "texto": "a fim de saber quanto cada um havia lucrado."
+    },
+    {
+      "t0": 45.5,
+      "t1": 47.12,
+      "texto": "O primeiro chegou e disse:"
+    },
+    {
+      "t0": 47.46,
+      "t1": 50.48,
+      "texto": "'Senhor, as cem moedas renderam dez vezes mais.'"
+    },
+    {
+      "t0": 50.76,
+      "t1": 51.68,
+      "texto": "O homem disse:"
+    },
+    {
+      "t0": 51.98,
+      "t1": 53.24,
+      "texto": "'Muito bem, servo bom."
+    },
+    {
+      "t0": 53.58,
+      "t1": 55.58,
+      "texto": "Como foste fiel em coisas pequenas,"
+    },
+    {
+      "t0": 55.58,
+      "t1": 57.76,
+      "texto": "recebe o governo de dez cidades'."
+    },
+    {
+      "t0": 58.08,
+      "t1": 59.62,
+      "texto": "O segundo chegou e disse:"
+    },
+    {
+      "t0": 59.82,
+      "t1": 62.96,
+      "texto": "'Senhor, as cem moedas renderam cinco vezes mais'."
+    },
+    {
+      "t0": 63.22,
+      "t1": 64.88,
+      "texto": "O homem disse também a este:"
+    },
+    {
+      "t0": 65.28,
+      "t1": 67.72,
+      "texto": "'Recebe tu também o governo de cinco cidades'."
+    },
+    {
+      "t0": 68.02,
+      "t1": 69.94,
+      "texto": "Chegou o outro empregado e disse:"
+    },
+    {
+      "t0": 70.3,
+      "t1": 72.66,
+      "texto": "'Senhor, aqui estão as tuas cem moedas"
+    },
+    {
+      "t0": 72.66,
+      "t1": 73.76,
+      "texto": "que guardei num lenço,"
+    },
+    {
+      "t0": 73.92,
+      "t1": 75.28,
+      "texto": "pois eu tinha medo de ti,"
+    },
+    {
+      "t0": 75.52,
+      "t1": 77,
+      "texto": "porque és um homem severo."
+    },
+    {
+      "t0": 77.18,
+      "t1": 78.5,
+      "texto": "Recebes o que não deste"
+    },
+    {
+      "t0": 78.5,
+      "t1": 80.12,
+      "texto": "e colhes o que não semeaste'."
+    },
+    {
+      "t0": 80.46,
+      "t1": 81.38,
+      "texto": "O homem disse:"
+    },
+    {
+      "t0": 81.68,
+      "t1": 84.6,
+      "texto": "'Servo mau, eu te julgo pela tua própria boca."
+    },
+    {
+      "t0": 84.6,
+      "t1": 86.92,
+      "texto": "Tu sabias que eu sou um homem severo,"
+    },
+    {
+      "t0": 87.02,
+      "t1": 89.68,
+      "texto": "que recebo o que não dei e colho o que não semeei."
+    },
+    {
+      "t0": 89.94,
+      "t1": 91.7,
+      "texto": "Então, porque tu não depositaste"
+    },
+    {
+      "t0": 91.7,
+      "t1": 92.7,
+      "texto": "meu dinheiro no banco?"
+    },
+    {
+      "t0": 93.02,
+      "t1": 95.38,
+      "texto": "Ao chegar, eu o retiraria com juros'."
+    },
+    {
+      "t0": 95.82,
+      "t1": 98.1,
+      "texto": "Depois disse aos que estavam aí presentes:"
+    },
+    {
+      "t0": 98.28,
+      "t1": 101.36,
+      "texto": "'Tirai dele as cem moedas e dai-as àquele que tem mil'."
+    },
+    {
+      "t0": 101.58,
+      "t1": 102.94,
+      "texto": "Os presentes disseram:"
+    },
+    {
+      "t0": 103.16,
+      "t1": 105.32,
+      "texto": "'Senhor, esse já tem mil moedas!'"
+    },
+    {
+      "t0": 105.48,
+      "t1": 106.34,
+      "texto": "Ele respondeu:"
+    },
+    {
+      "t0": 106.58,
+      "t1": 109.18,
+      "texto": "'Eu vos digo: a todo aquele que já possui,"
+    },
+    {
+      "t0": 109.34,
+      "t1": 110.62,
+      "texto": "será dado mais ainda;"
+    },
+    {
+      "t0": 110.86,
+      "t1": 112.24,
+      "texto": "mas àquele que nada tem,"
+    },
+    {
+      "t0": 112.64,
+      "t1": 114.22,
+      "texto": "será tirado até mesmo o que tem."
+    },
+    {
+      "t0": 114.22,
+      "t1": 115.96,
+      "texto": "E quanto a esses inimigos,"
+    },
+    {
+      "t0": 116.1,
+      "t1": 118.18,
+      "texto": "que não queriam que eu reinasse sobre eles,"
+    },
+    {
+      "t0": 118.18,
+      "t1": 121.06,
+      "texto": "trazei-os aqui e matai-os na minha frente' \"."
+    },
+    {
+      "t0": 121.06,
+      "t1": 123.44,
+      "texto": "Jesus caminhava à frente dos discípulos,"
+    },
+    {
+      "t0": 123.64,
+      "t1": 124.96,
+      "texto": "subindo para Jerusalém."
+    },
+    {
+      "t0": 125.32,
+      "t1": 126.54,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

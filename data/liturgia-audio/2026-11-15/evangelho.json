@@ -1,0 +1,292 @@
+{
+  "referencia": "Mt 25,14-30",
+  "voz": "leo (Grok TTS)",
+  "duracao": 134.72,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.48,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
+    },
+    {
+      "t0": 3.48,
+      "t1": 4.82,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 5.06,
+      "t1": 7.72,
+      "texto": "Jesus contou esta parábola a seus discípulos:"
+    },
+    {
+      "t0": 7.98,
+      "t1": 10.4,
+      "texto": "\"Um homem ia viajar para o estrangeiro."
+    },
+    {
+      "t0": 10.74,
+      "t1": 13.36,
+      "texto": "Chamou seus empregados e lhes entregou seus bens."
+    },
+    {
+      "t0": 13.58,
+      "t1": 15.28,
+      "texto": "A um deu cinco talentos,"
+    },
+    {
+      "t0": 15.5,
+      "t1": 18.04,
+      "texto": "a outro deu dois e ao terceiro, um;"
+    },
+    {
+      "t0": 18.42,
+      "t1": 21.02,
+      "texto": "a cada qual de acordo com a sua capacidade."
+    },
+    {
+      "t0": 21.28,
+      "t1": 22.7,
+      "texto": "Em seguida viajou."
+    },
+    {
+      "t0": 23,
+      "t1": 25.72,
+      "texto": "O empregado que havia recebido cinco talentos"
+    },
+    {
+      "t0": 25.72,
+      "t1": 26.64,
+      "texto": "saiu logo,"
+    },
+    {
+      "t0": 27.02,
+      "t1": 29.46,
+      "texto": "trabalhou com eles, e lucrou outros cinco."
+    },
+    {
+      "t0": 29.46,
+      "t1": 32.42,
+      "texto": "Do mesmo modo, o que havia recebido dois"
+    },
+    {
+      "t0": 32.42,
+      "t1": 33.68,
+      "texto": "lucrou outros dois."
+    },
+    {
+      "t0": 33.96,
+      "t1": 36.08,
+      "texto": "Mas aquele que havia recebido um só,"
+    },
+    {
+      "t0": 36.36,
+      "t1": 38.5,
+      "texto": "saiu, cavou um buraco na terra,"
+    },
+    {
+      "t0": 38.5,
+      "t1": 40.56,
+      "texto": "e escondeu o dinheiro do seu patrão."
+    },
+    {
+      "t0": 41.04,
+      "t1": 43.42,
+      "texto": "Depois de muito tempo, o patrão voltou"
+    },
+    {
+      "t0": 43.42,
+      "t1": 45.5,
+      "texto": "e foi acertar contas com os empregados."
+    },
+    {
+      "t0": 45.5,
+      "t1": 48.22,
+      "texto": "O empregado que havia recebido cinco talentos"
+    },
+    {
+      "t0": 48.22,
+      "t1": 50.38,
+      "texto": "entregou-lhe mais cinco, dizendo:"
+    },
+    {
+      "t0": 50.6,
+      "t1": 53.2,
+      "texto": "'Senhor, tu me entregaste cinco talentos."
+    },
+    {
+      "t0": 53.38,
+      "t1": 55.2,
+      "texto": "Aqui estão mais cinco que lucrei'."
+    },
+    {
+      "t0": 55.44,
+      "t1": 58.64,
+      "texto": "O patrão lhe disse: 'Muito bem, servo bom e fiel!"
+    },
+    {
+      "t0": 58.64,
+      "t1": 61.6,
+      "texto": "como foste fiel na administração de tão pouco,"
+    },
+    {
+      "t0": 61.84,
+      "t1": 63.42,
+      "texto": "eu te confiarei muito mais."
+    },
+    {
+      "t0": 63.7,
+      "t1": 65.48,
+      "texto": "Vem participar da minha alegria!'"
+    },
+    {
+      "t0": 65.9,
+      "t1": 68.52,
+      "texto": "Chegou também o que havia recebido dois talentos,"
+    },
+    {
+      "t0": 68.62,
+      "t1": 69.22,
+      "texto": "e disse:"
+    },
+    {
+      "t0": 69.44,
+      "t1": 71.92,
+      "texto": "'Senhor, tu me entregaste dois talentos."
+    },
+    {
+      "t0": 72.06,
+      "t1": 73.82,
+      "texto": "Aqui estão mais dois que lucrei'."
+    },
+    {
+      "t0": 73.82,
+      "t1": 77.02,
+      "texto": "O patrão lhe disse: 'Muito bem, servo bom e fiel!"
+    },
+    {
+      "t0": 77.02,
+      "t1": 79.98,
+      "texto": "Como foste fiel na administração de tão pouco,"
+    },
+    {
+      "t0": 80.22,
+      "t1": 81.8,
+      "texto": "eu te confiarei muito mais."
+    },
+    {
+      "t0": 82.08,
+      "t1": 83.86,
+      "texto": "Vem participar da minha alegria!'"
+    },
+    {
+      "t0": 84.28,
+      "t1": 87.4,
+      "texto": "Por fim, chegou aquele que havia recebido um talento,"
+    },
+    {
+      "t0": 87.48,
+      "t1": 90.52,
+      "texto": "e disse: 'Senhor, sei que és um homem severo,"
+    },
+    {
+      "t0": 90.68,
+      "t1": 92.44,
+      "texto": "pois colhes onde não plantaste"
+    },
+    {
+      "t0": 92.44,
+      "t1": 94.14,
+      "texto": "e ceifas onde não semeaste."
+    },
+    {
+      "t0": 94.14,
+      "t1": 95.8,
+      "texto": "Por isso, fiquei com medo"
+    },
+    {
+      "t0": 95.8,
+      "t1": 97.68,
+      "texto": "e escondi o teu talento no chão."
+    },
+    {
+      "t0": 97.88,
+      "t1": 99.5,
+      "texto": "Aqui tens o que te pertence'."
+    },
+    {
+      "t0": 99.74,
+      "t1": 102.98,
+      "texto": "O patrão lhe respondeu: 'Servo mau e preguiçoso!"
+    },
+    {
+      "t0": 103.22,
+      "t1": 105.42,
+      "texto": "Tu sabias que eu colho onde não plantei"
+    },
+    {
+      "t0": 105.42,
+      "t1": 107.12,
+      "texto": "e que ceifo onde não semeei?"
+    },
+    {
+      "t0": 107.3,
+      "t1": 110.08,
+      "texto": "Então, devias ter depositado meu dinheiro no banco,"
+    },
+    {
+      "t0": 110.28,
+      "t1": 111.34,
+      "texto": "para que, ao voltar,"
+    },
+    {
+      "t0": 111.6,
+      "t1": 113.86,
+      "texto": "eu recebesse com juros o que me pertence'."
+    },
+    {
+      "t0": 114.24,
+      "t1": 116.16,
+      "texto": "Em seguida, o patrão ordenou:"
+    },
+    {
+      "t0": 116.6,
+      "t1": 119.42,
+      "texto": "'Tirai dele o talento e dai-o àquele que tem dez!"
+    },
+    {
+      "t0": 119.7,
+      "t1": 121.14,
+      "texto": "Porque a todo aquele que tem"
+    },
+    {
+      "t0": 121.14,
+      "t1": 123.5,
+      "texto": "será dado mais, e terá em abundância,"
+    },
+    {
+      "t0": 123.68,
+      "t1": 126.82,
+      "texto": "mas daquele que não tem, até o que tem lhe será tirado."
+    },
+    {
+      "t0": 127.06,
+      "t1": 128.66,
+      "texto": "Quanto a este servo inútil,"
+    },
+    {
+      "t0": 128.66,
+      "t1": 130.72,
+      "texto": "jogai-o lá fora, na escuridão."
+    },
+    {
+      "t0": 131.06,
+      "t1": 133.24,
+      "texto": "Aí haverá choro e ranger de dentes!'\"."
+    },
+    {
+      "t0": 133.58,
+      "t1": 134.72,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

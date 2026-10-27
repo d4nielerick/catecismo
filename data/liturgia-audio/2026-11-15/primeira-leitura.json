@@ -1,0 +1,92 @@
+{
+  "referencia": "Pr 31,10-13.19-20.30-31",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 48.9,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 1.98,
+      "texto": "Leitura do Livro dos Provérbios."
+    },
+    {
+      "t0": 2.72,
+      "t1": 6.1,
+      "texto": "Uma mulher forte, quem a encontrará?"
+    },
+    {
+      "t0": 6.1,
+      "t1": 8.7,
+      "texto": "Ela vale muito mais do que as joias."
+    },
+    {
+      "t0": 8.7,
+      "t1": 11.62,
+      "texto": "Seu marido confia nela plenamente,"
+    },
+    {
+      "t0": 11.62,
+      "t1": 13.6,
+      "texto": "e não terá falta de recursos."
+    },
+    {
+      "t0": 13.6,
+      "t1": 17.26,
+      "texto": "Ela lhe dá só alegria e nenhum desgosto,"
+    },
+    {
+      "t0": 17.26,
+      "t1": 19.36,
+      "texto": "todos os dias de sua vida."
+    },
+    {
+      "t0": 19.36,
+      "t1": 21.76,
+      "texto": "Procura lã e linho,"
+    },
+    {
+      "t0": 21.76,
+      "t1": 24.54,
+      "texto": "e com habilidade trabalham as suas mãos."
+    },
+    {
+      "t0": 24.54,
+      "t1": 29.1,
+      "texto": "Estende a mão para a roca, e seus dedos seguram o fuso."
+    },
+    {
+      "t0": 29.1,
+      "t1": 31.76,
+      "texto": "Abre suas mãos ao necessitado"
+    },
+    {
+      "t0": 31.76,
+      "t1": 33.86,
+      "texto": "e estende suas mãos ao pobre."
+    },
+    {
+      "t0": 33.86,
+      "t1": 37.7,
+      "texto": "O encanto é enganador e a beleza é passageira;"
+    },
+    {
+      "t0": 37.7,
+      "t1": 42.06,
+      "texto": "a mulher que teme ao Senhor, essa sim, merece louvor."
+    },
+    {
+      "t0": 42.06,
+      "t1": 44.92,
+      "texto": "Proclamem o êxito de suas mãos,"
+    },
+    {
+      "t0": 44.92,
+      "t1": 47.14,
+      "texto": "e na praça louvem-na as suas obras!"
+    },
+    {
+      "t0": 47.14,
+      "t1": 48.9,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

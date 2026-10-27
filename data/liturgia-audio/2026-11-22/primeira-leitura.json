@@ -1,0 +1,107 @@
+{
+  "referencia": "Ez 34,11-12.15-17",
+  "voz": "Algenib (gemini-3.8-flash-tts)",
+  "duracao": 56.6,
+  "linhas": [
+    {
+      "t0": 0.2,
+      "t1": 2.28,
+      "texto": "Leitura da Profecia de Ezequiel."
+    },
+    {
+      "t0": 3.28,
+      "t1": 5.1,
+      "texto": "Assim diz o Senhor Deus:"
+    },
+    {
+      "t0": 5.6,
+      "t1": 8.68,
+      "texto": "\"Vede! Eu mesmo vou procurar minhas ovelhas"
+    },
+    {
+      "t0": 8.68,
+      "t1": 10.08,
+      "texto": "e tomar conta delas."
+    },
+    {
+      "t0": 10.08,
+      "t1": 13.36,
+      "texto": "Como o pastor toma conta do rebanho, de dia,"
+    },
+    {
+      "t0": 13.54,
+      "t1": 16.16,
+      "texto": "quando se encontra no meio das ovelhas dispersas,"
+    },
+    {
+      "t0": 16.44,
+      "t1": 19.86,
+      "texto": "assim vou cuidar de minhas ovelhas e vou resgatá-las"
+    },
+    {
+      "t0": 19.86,
+      "t1": 22.5,
+      "texto": "de todos os lugares em que foram dispersadas"
+    },
+    {
+      "t0": 22.8,
+      "t1": 24.96,
+      "texto": "num dia de nuvens e escuridão."
+    },
+    {
+      "t0": 25.92,
+      "t1": 28.5,
+      "texto": "Eu mesmo vou apascentar as minhas ovelhas"
+    },
+    {
+      "t0": 28.5,
+      "t1": 31.76,
+      "texto": "e fazê-las repousar — oráculo do Senhor Deus —."
+    },
+    {
+      "t0": 31.76,
+      "t1": 36.14,
+      "texto": "Vou procurar a ovelha perdida, reconduzir a extraviada,"
+    },
+    {
+      "t0": 36.46,
+      "t1": 38.2,
+      "texto": "enfaixar a da perna quebrada,"
+    },
+    {
+      "t0": 38.72,
+      "t1": 42.04,
+      "texto": "fortalecer a doente, e vigiar a ovelha gorda e forte."
+    },
+    {
+      "t0": 42.69,
+      "t1": 44.84,
+      "texto": "Vou apascentá-las conforme o direito."
+    },
+    {
+      "t0": 45.62,
+      "t1": 47.48,
+      "texto": "Quanto a vós, minhas ovelhas,"
+    },
+    {
+      "t0": 47.48,
+      "t1": 49.58,
+      "texto": "— assim diz o Senhor Deus —"
+    },
+    {
+      "t0": 49.58,
+      "t1": 52.58,
+      "texto": "eu farei justiça entre uma ovelha e outra,"
+    },
+    {
+      "t0": 53.04,
+      "t1": 54.72,
+      "texto": "entre carneiros e bodes\"."
+    },
+    {
+      "t0": 55.56,
+      "t1": 56.6,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}
