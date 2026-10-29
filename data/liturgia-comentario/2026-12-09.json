@@ -28,7 +28,30 @@
     }
   ],
   "outrasLeituras": [],
-  "padres": [],
-  "tema": "",
-  "destaques": []
+  "padres": [
+    {
+      "autor": "Augustinus",
+      "numero": 30,
+      "frase": "Tu próprio a isso o incitas, fazendo com que ele encontre as suas delícias no teu louvor, porque nos fizeste para Ti e o nosso coração não descansa enquanto não repousar em Ti."
+    }
+  ],
+  "tema": "O descanso prometido e o jugo suave de Cristo",
+  "destaques": [
+    {
+      "lectio": 10,
+      "i": 1
+    },
+    {
+      "lectio": 10,
+      "i": 5
+    },
+    {
+      "lectio": 10,
+      "i": 10
+    },
+    {
+      "lectio": 10,
+      "i": 15
+    }
+  ]
 }

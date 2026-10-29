@@ -106,6 +106,19 @@
   ],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "O anúncio do nascimento de João a Zacarias",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 11
+    },
+    {
+      "lectio": 4,
+      "i": 6
+    },
+    {
+      "lectio": 5,
+      "i": 15
+    }
+  ]
 }

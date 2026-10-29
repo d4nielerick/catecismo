@@ -73,6 +73,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "Os pescadores de homens e o abandono das redes",
+  "destaques": [
+    {
+      "lectio": 7,
+      "i": 6
+    },
+    {
+      "lectio": 7,
+      "i": 7
+    },
+    {
+      "lectio": 7,
+      "i": 22
+    }
+  ]
 }

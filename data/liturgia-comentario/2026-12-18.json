@@ -134,6 +134,23 @@
   ],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A Virgem desposada, a justiça de José e o nome de Jesus",
+  "destaques": [
+    {
+      "lectio": 9,
+      "i": 3
+    },
+    {
+      "lectio": 10,
+      "i": 4
+    },
+    {
+      "lectio": 12,
+      "i": 8
+    },
+    {
+      "lectio": 14,
+      "i": 0
+    }
+  ]
 }

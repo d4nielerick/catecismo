@@ -75,6 +75,23 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A voz que prepara o caminho e o batismo no Espírito Santo",
+  "destaques": [
+    {
+      "lectio": 2,
+      "i": 13
+    },
+    {
+      "lectio": 3,
+      "i": 2
+    },
+    {
+      "lectio": 3,
+      "i": 17
+    },
+    {
+      "lectio": 3,
+      "i": 18
+    }
+  ]
 }

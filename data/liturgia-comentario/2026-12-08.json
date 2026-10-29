@@ -390,7 +390,30 @@
       ]
     }
   ],
-  "padres": [],
-  "tema": "",
-  "destaques": []
+  "padres": [
+    {
+      "autor": "Augustinus",
+      "numero": 510,
+      "frase": "Maria permaneceu «Virgem ao conceber o seu Filho, Virgem ao dá-Lo à luz, Virgem grávida, Virgem fecunda, Virgem perpétua»; com todo o seu ser; ela é a «serva do Senhor» (Lc 1, 38)."
+    }
+  ],
+  "tema": "A plenitude da graça e a pureza da Virgem Maria",
+  "destaques": [
+    {
+      "lectio": 9,
+      "i": 2
+    },
+    {
+      "lectio": 10,
+      "i": 3
+    },
+    {
+      "lectio": 10,
+      "i": 16
+    },
+    {
+      "lectio": 12,
+      "i": 5
+    }
+  ]
 }

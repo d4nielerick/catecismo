@@ -66,6 +66,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A vigilância contra a embriaguez e os cuidados da vida",
+  "destaques": [
+    {
+      "lectio": 8,
+      "i": 3
+    },
+    {
+      "lectio": 8,
+      "i": 4
+    },
+    {
+      "lectio": 8,
+      "i": 9
+    }
+  ]
 }

@@ -27,7 +27,30 @@
     }
   ],
   "outrasLeituras": [],
-  "padres": [],
-  "tema": "",
-  "destaques": []
+  "padres": [
+    {
+      "autor": "Ambrosius",
+      "numero": 983,
+      "frase": "A catequese deve esforçar-se por despertar e alimentar, entre os fiéis, a fé na grandeza incomparável do dom que Cristo ressuscitado fez à sua Igreja: a missão e o poder de verdadeiramente perdoar os pecados, pelo ministério dos Apóstolos e seus sucessores: «O Senhor quer que os seus discípulos tenham um poder imenso: Ele quer que os seus pobres servidores façam, em seu nome, tudo quanto Ele fazia quando vivia na terra»."
+    }
+  ],
+  "tema": "O paralítico e o poder de perdoar os pecados",
+  "destaques": [
+    {
+      "lectio": 5,
+      "i": 2
+    },
+    {
+      "lectio": 5,
+      "i": 3
+    },
+    {
+      "lectio": 5,
+      "i": 14
+    },
+    {
+      "lectio": 5,
+      "i": 16
+    }
+  ]
 }

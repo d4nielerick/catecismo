@@ -339,7 +339,26 @@
       ]
     }
   ],
-  "padres": [],
-  "tema": "",
-  "destaques": []
+  "padres": [
+    {
+      "autor": "Gregorius Nyssenus",
+      "numero": 457,
+      "frase": "Não seriam suficientes para comover a Deus, a ponto de O fazer descer até à nossa natureza humana para a visitar, já que a humanidade se encontrava em estado tão miserável e infeliz?»."
+    }
+  ],
+  "tema": "A encarnação do Verbo no seio da Virgem",
+  "destaques": [
+    {
+      "lectio": 10,
+      "i": 5
+    },
+    {
+      "lectio": 11,
+      "i": 6
+    },
+    {
+      "lectio": 11,
+      "i": 13
+    }
+  ]
 }

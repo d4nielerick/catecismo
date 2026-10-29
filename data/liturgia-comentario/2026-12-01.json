@@ -98,6 +98,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A revelação aos pequeninos e a bem-aventurança dos discípulos",
+  "destaques": [
+    {
+      "lectio": 6,
+      "i": 1
+    },
+    {
+      "lectio": 6,
+      "i": 15
+    },
+    {
+      "lectio": 7,
+      "i": 4
+    }
+  ]
 }

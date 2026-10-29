@@ -50,6 +50,19 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "Os dois filhos: os que prometem e os que fazem",
+  "destaques": [
+    {
+      "lectio": 5,
+      "i": 6
+    },
+    {
+      "lectio": 5,
+      "i": 14
+    },
+    {
+      "lectio": 5,
+      "i": 15
+    }
+  ]
 }

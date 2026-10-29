@@ -16,6 +16,19 @@
   "catecismo": [],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A figueira e as palavras que não passarão",
+  "destaques": [
+    {
+      "lectio": 7,
+      "i": 8
+    },
+    {
+      "lectio": 7,
+      "i": 10
+    },
+    {
+      "lectio": 7,
+      "i": 12
+    }
+  ]
 }

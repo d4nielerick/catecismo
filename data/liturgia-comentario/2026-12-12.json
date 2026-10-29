@@ -174,7 +174,30 @@
       ]
     }
   ],
-  "padres": [],
-  "tema": "",
-  "destaques": []
+  "padres": [
+    {
+      "autor": "Augustinus",
+      "numero": 506,
+      "frase": "É graças à sua fé que ela vem a ser a Mãe do Salvador: «Beatior est Maria percipiendo fïdem Christi quam concipiendo carnem Christi – Maria é mais feliz por receber a fé de Cristo do que por conceber a carne de Cristo»."
+    }
+  ],
+  "tema": "A Visitação, o júbilo do Precursor e a fé de Maria",
+  "destaques": [
+    {
+      "lectio": 13,
+      "i": 0
+    },
+    {
+      "lectio": 13,
+      "i": 8
+    },
+    {
+      "lectio": 13,
+      "i": 21
+    },
+    {
+      "lectio": 15,
+      "i": 0
+    }
+  ]
 }

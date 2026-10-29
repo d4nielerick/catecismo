@@ -79,6 +79,19 @@
   "catecismo": [],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "O livro da origem de Cristo e as mulheres da genealogia",
+  "destaques": [
+    {
+      "lectio": 1,
+      "i": 6
+    },
+    {
+      "lectio": 1,
+      "i": 8
+    },
+    {
+      "lectio": 3,
+      "i": 2
+    }
+  ]
 }

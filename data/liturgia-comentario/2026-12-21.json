@@ -50,6 +50,19 @@
   ],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A visita de Maria a Isabel",
+  "destaques": [
+    {
+      "lectio": 13,
+      "i": 7
+    },
+    {
+      "lectio": 13,
+      "i": 21
+    },
+    {
+      "lectio": 13,
+      "i": 23
+    }
+  ]
 }

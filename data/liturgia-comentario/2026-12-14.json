@@ -16,6 +16,19 @@
   "catecismo": [],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "A autoridade de Jesus e o batismo de João",
+  "destaques": [
+    {
+      "lectio": 4,
+      "i": 2
+    },
+    {
+      "lectio": 4,
+      "i": 5
+    },
+    {
+      "lectio": 4,
+      "i": 8
+    }
+  ]
 }

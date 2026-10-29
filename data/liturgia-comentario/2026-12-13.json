@@ -172,6 +172,23 @@
     }
   ],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "João, testemunha da luz e voz que precede o Verbo",
+  "destaques": [
+    {
+      "lectio": 10,
+      "i": 9
+    },
+    {
+      "lectio": 10,
+      "i": 11
+    },
+    {
+      "lectio": 19,
+      "i": 16
+    },
+    {
+      "lectio": 19,
+      "i": 21
+    }
+  ]
 }

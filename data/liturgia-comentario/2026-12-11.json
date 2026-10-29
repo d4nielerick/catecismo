@@ -16,6 +16,19 @@
   "catecismo": [],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "As crianças na praça e a sabedoria justificada",
+  "destaques": [
+    {
+      "lectio": 6,
+      "i": 4
+    },
+    {
+      "lectio": 6,
+      "i": 8
+    },
+    {
+      "lectio": 6,
+      "i": 13
+    }
+  ]
 }

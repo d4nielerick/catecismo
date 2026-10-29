@@ -34,6 +34,23 @@
   "catecismo": [],
   "outrasLeituras": [],
   "padres": [],
-  "tema": "",
-  "destaques": []
+  "tema": "O nascimento de João e a imposição do seu nome",
+  "destaques": [
+    {
+      "lectio": 24,
+      "i": 1
+    },
+    {
+      "lectio": 25,
+      "i": 2
+    },
+    {
+      "lectio": 25,
+      "i": 5
+    },
+    {
+      "lectio": 25,
+      "i": 6
+    }
+  ]
 }
