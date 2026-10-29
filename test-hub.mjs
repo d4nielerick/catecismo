@@ -24,8 +24,8 @@ const ok = (nome, cond) => { if (!cond) falhas++; console.log((cond ? '✓ ' : '
 ok('curta demais → 400', (await handler(req({ pergunta: 'oi' }))).status === 400);
 ok('não-string → 400', (await handler(req({ pergunta: 42 }))).status === 400);
 ok('GET → 405', (await handler(new Request('http://x', { method: 'GET' }))).status === 405);
-delete process.env.GROK_API_KEY;
-ok('sem GROK_API_KEY → 503', (await handler(req({ pergunta: 'O que é o purgatório?' }, '1.0.0.1'))).status === 503);
+delete process.env.ANTHROPIC_API_KEY;
+ok('sem ANTHROPIC_API_KEY → 503', (await handler(req({ pergunta: 'O que é o purgatório?' }, '1.0.0.1'))).status === 503);
 
 // ── lerPlano: nada do planejador passa sem validação
 ok('plano válido', JSON.stringify(lerPlano('{"escopo":true,"assunto":"purgatório","termos":["purificação","eleitos"],"hipotese":"A purificação final dos eleitos."}')) === '{"escopo":true,"assunto":"purgatório","termos":["purificação","eleitos"],"hipotese":"A purificação final dos eleitos"}');
@@ -74,23 +74,25 @@ ok('NAO_ENCONTRADO → nao-encontrado', _montar(redacao('NAO_ENCONTRADO'), envia
 ok('texto solto, sem JSON → nao-encontrado', _montar('O purgatório é a purificação final dos eleitos [§1031].', enviados).tipo === 'nao-encontrado');
 
 // ── fluxo com modelo simulado
-process.env.GROK_API_KEY = 'teste';
+process.env.ANTHROPIC_API_KEY = 'teste';
+// resposta no formato da API da Anthropic (_modelo.mjs)
+const respostaModelo = (texto) => new Response(JSON.stringify({ content: [{ type: 'text', text: texto }], usage: { input_tokens: 1, output_tokens: 1 } }));
 let chamadas = { plano: 0, seletor: 0, redator: 0 };
 let seletorQuebrado = false;
 let planoSimulado = '{"escopo":true,"assunto":"purgatório purificação final","termos":["purificação","eleitos"]}';
 globalThis.fetch = async (_url, opts) => {
   const body = JSON.parse(opts.body);
-  if (body.messages[0].content.startsWith('Você prepara a busca')) {
+  if (body.system.startsWith('Você prepara a busca')) {
     chamadas.plano++;
-    return new Response(JSON.stringify({ choices: [{ message: { content: planoSimulado } }], usage: { prompt_tokens: 1, completion_tokens: 1 } }));
+    return respostaModelo(planoSimulado);
   }
-  if (body.messages[0].content.startsWith('Você escolhe')) {
+  if (body.system.startsWith('Você escolhe')) {
     chamadas.seletor++;
     if (seletorQuebrado) return new Response('erro simulado', { status: 400 });
-    return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ paragrafos: [1031, 99999, 1031] }) } }], usage: { prompt_tokens: 1, completion_tokens: 1 } }));
+    return respostaModelo(JSON.stringify({ paragrafos: [1031, 99999, 1031] }));
   }
   chamadas.redator++;
-  return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ resposta: 'É a purificação final dos eleitos [§1031].', apoios: [{ paragrafo: 1031, trecho: 'A Igreja chama Purgatório a esta purificação final dos eleitos' }] }) } }], usage: { prompt_tokens: 1, completion_tokens: 1 } }));
+  return respostaModelo(JSON.stringify({ resposta: 'É a purificação final dos eleitos [§1031].', apoios: [{ paragrafo: 1031, trecho: 'A Igreja chama Purgatório a esta purificação final dos eleitos' }] }));
 };
 
 const r1 = await (await handler(req({ pergunta: 'O que é o Purgatório?!' }, '2.2.2.2'))).json();
@@ -121,7 +123,7 @@ const timeout = () => Object.assign(new Error('The operation was aborted due to 
 planoSimulado = '{"escopo":true,"assunto":"purgatório purificação final","termos":["purificação"]}';
 let falhasRedator = 1;
 globalThis.fetch = async (url, opts) => {
-  if (JSON.parse(opts.body).messages[0].content.startsWith('Você responde') && falhasRedator-- > 0) throw timeout();
+  if (JSON.parse(opts.body).system.startsWith('Você responde') && falhasRedator-- > 0) throw timeout();
   return fetchNormal(url, opts);
 };
 const r5 = await handler(req({ pergunta: 'Existe purificação final dos eleitos?' }, '6.6.6.6'));
