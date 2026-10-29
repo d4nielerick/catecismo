@@ -113,9 +113,10 @@ duplas; trecho obscuro: o mais próximo possível, sem nota.
 - **Subagentes só escrevem `traducoes-N.json`; a sessão principal roda `grava` em série.** Com muitos
   lotes gravando o mesmo arquivo de capítulo em paralelo, há risco de um sobrescrever o outro
   (aconteceu em Mt 18 e foi refeito). Ao retomar, troque o passo 5 do prompt para isso.
-- **Mt 6,1-4 está no arquivo de Mt 5** (lectiones 22 e 23 de `data/catena/Mt/05.json`, sem `versos`):
-  no Corpus Thomisticum o "Caput 5" vai até a esmola. Precisa de ajuste antes da **Quarta-feira de
-  Cinzas (10/02/2027)**, cujo Evangelho é Mt 6,1-6.16-18. Notas completas da VPS em
+- **Mt 6,1-4 vinha no arquivo de Mt 5**: no Corpus Thomisticum o "Caput 5" vai até a esmola.
+  Resolvido em 29/10 com `_capitulo` em `data/catena-mapa/Mt.json`: o `scrape-catena.mjs` leva as
+  lectiones 22 e 23 para `Mt/06.json` (6,1 e 6,2-4), e a Quarta-feira de Cinzas (10/02/2027) as
+  recebe. Se outro capítulo tiver o mesmo problema, é o mesmo caminho. Notas completas da VPS em
   `/srv/catena-notas.md` (também há diferenças de numeração entre a CNBB e a Vulgata).
 
 ## 3. Depois (Mac)

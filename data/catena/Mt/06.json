@@ -1,5 +1,371 @@
 [
   {
+    "lectio": 22,
+    "versos": [
+      1,
+      1
+    ],
+    "itens": [
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Postquam Christus legem quantum ad praecepta implevit, incipit nunc eam adimplere quantum ad promissa, ut pro caelesti mercede praecepta Dei faciamus, non pro terrenis quae lex promittebat. Omnia autem terrena ad duo potissima reducuntur: scilicet ad humanam gloriam, et ad terrenorum affluentiam; quorum utrumque in lege promissum esse videtur. De gloria enim dicitur in Deuteronomio: faciet te dominus excelsiorem cunctis gentibus quae versantur in terra. De affluentia vero temporalium ibidem subditur: abundare te faciet dominus in omnibus bonis. Et ideo dominus haec duo ab intentione fidelium excludit, scilicet gloriam et terrenorum affluentiam. Sed sciendum quod appetitus gloriae propinquus est virtuti",
+        "pt": "Depois que Cristo cumpriu a lei quanto aos preceitos, começa agora a cumpri-la quanto às promessas, para que façamos os preceitos de Deus em vista da recompensa celeste, e não das terrenas que a lei prometia. Ora, todas as coisas terrenas se reduzem a duas principais: a saber, à glória humana e à abundância dos bens terrenos; ambas parecem ter sido prometidas na lei. Com efeito, sobre a glória diz-se no Deuteronômio: “O Senhor te fará mais elevado do que todas as nações que habitam sobre a terra.” Quanto à abundância dos bens temporais, acrescenta-se ali mesmo: “O Senhor te fará abundar em todos os bens.” E por isso o Senhor exclui da intenção dos fiéis estas duas coisas, a saber, a glória e a abundância dos bens terrenos. Mas deve-se saber que o desejo de glória é vizinho da virtude.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Ubi enim res agitur gloriosa, ibi facilius invenit locum gloriationis occasio; et ideo intentionem gloriae primo dominus excludit: prae omnibus enim vitiis carnalibus periculosius hoc esse in hominibus intellexit: cum enim omnia mala servos Diaboli vexent, concupiscentia vanae gloriae magis vexat servos Dei quam servos Diaboli",
+        "pt": "Com efeito, onde se trata de coisa gloriosa, ali mais facilmente a ocasião de vangloriar-se encontra lugar; e por isso o Senhor exclui primeiro a intenção de glória: percebeu que, mais do que todos os vícios carnais, este é o mais perigoso para os homens; pois, embora todos os males afligam os servos do Diabo, a cobiça da vã glória aflige mais os servos de Deus do que os servos do Diabo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Prosper",
+        "obra": "in libro Sentent. August",
+        "latim": "Quas etiam vires nocendi habeat humanae gloriae amor, non sentit nisi qui ei bellum indixerit: quia etsi cuiquam facile est laudem non cupere dum negatur, difficile tamen est ea non delectari cum offertur",
+        "pt": "Que forças para prejudicar tem o amor da glória humana, só o sente quem lhe declarou guerra; pois, embora seja fácil a alguém não desejar o louvor enquanto lhe é negado, é difícil, contudo, não se deleitar com ele quando é oferecido.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Intuere autem qualiter incepit velut de fera aliqua difficile cognita disputans, et apta furari eum qui non valde vigilat: occulte enim ingreditur, et omnia quae intus sunt, insensibiliter aufert",
+        "pt": "Observa, porém, como começou, discorrendo como sobre uma fera de difícil conhecimento, apta a roubar quem não vigia com muita atenção: entra, com efeito, ocultamente e leva, sem que se sinta, tudo o que está dentro.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Et ideo hoc cautius cavendum mandat dicens attendite ne iustitiam vestram faciatis coram hominibus. Cor autem nostrum attendere debemus: invisibilis enim est serpens quem observare iubemur, et latenter ingreditur et seducit. Sed in corde mundo si surreptio inimici successerit, mox homo iustus discernit quia spiritu alieno pulsatur; si autem cor fuerit iniquitatibus plenum, suggestionem Diaboli non facile intelligit; et ideo praemisit ne irascaris, ne concupiscas: quia qui malis istis subiectus est, cor suum non potest attendere. Sed quomodo potest fieri ut non coram hominibus eleemosynam faciamus? Aut si fiat, quomodo non sentiemus? Si enim praesente aliquo occurrerit pauper, quomodo dabitur ei absconse? Sed educendo eum in secreto, videtur quia datur. Sed considera, quia non dixit: ne tantum coram hominibus faciatis; sed addidit ut videamini ab eis. Qui ergo non ideo facit ut ab hominibus videatur, etsi coram hominibus fecerit, non tamen coram hominibus fecisse videtur: qui enim aliquid facit propter Deum, neminem videt in corde suo nisi Deum propter quem facit; sicut artifex eum semper habet prae oculis qui sibi opus faciendum commisit",
+        "pt": "E por isso manda que isso seja evitado com maior cautela, dizendo: “Guardai-vos de praticar a vossa justiça diante dos homens.” Devemos, porém, vigiar o nosso coração: com efeito, invisível é a serpente que somos mandados observar, e entra às ocultas e seduz. Mas se num coração puro sobrevier a investida do inimigo, logo o homem justo discerne que é assaltado por um espírito alheio; se, porém, o coração estiver cheio de iniquidades, não entende facilmente a sugestão do Diabo; e por isso o Senhor antepôs: “não te irrites”, “não cobices”, porque quem está sujeito a esses males não pode vigiar o seu coração. Mas como pode acontecer que não façamos esmola diante dos homens? Ou, se acontecer, como não o perceberemos? Com efeito, se na presença de alguém vier ao encontro um pobre, como lhe será dado às ocultas? Mas, levando-o a um lugar secreto, vê-se que lhe é dado. Considera, porém, que ele não disse: “não façais apenas diante dos homens”, mas acrescentou: “para serdes vistos por eles”. Quem, portanto, não o faz para ser visto pelos homens, ainda que o tenha feito diante dos homens, não parece tê-lo feito diante dos homens: pois quem faz algo por causa de Deus não vê ninguém em seu coração senão Deus, por causa de quem o faz; assim como o artífice tem sempre diante dos olhos aquele que lhe encomendou a obra a fazer.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Si ergo dantis gloriam quaerimus, et publicata nostra opera in conspectu illius occulta servamus; si vero per hoc nostram laudem concupiscimus, foras ab eius conspectu iam fusa sunt, etiam si a multis ignorentur. Sed valde perfectorum est, sic ostenso opere, auctoris gloriam quaerere, ut de illata laude, privata nesciant exultatione gaudere, quam infirmi quia perfecte contemnendo non superant, necesse est ut bonum quod operantur, abscondant",
+        "pt": "Se, pois, buscamos a glória daquele que dá, mesmo publicadas as nossas obras, guardamo-las ocultas diante dele; se, porém, por meio delas cobiçamos o nosso louvor, já estão derramadas fora da sua vista, ainda que sejam ignoradas por muitos. Mas é próprio dos muito perfeitos buscar de tal modo a glória do autor, mostrada a obra, que saibam alegrar-se com o louvor recebido sem exultação privada; os fracos, porque não a superam desprezando-a perfeitamente, necessitam esconder o bem que operam.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "de Serm. Dom. In hoc vero quod dicit ut videamini ab eis, nihil addens, apparet hoc eum prohibuisse ut ibi finem nostri propositi collocemus. Nam et apostolus qui dicit: si adhuc hominibus placerem, Christi servus non essem, alio loco dicit: ego omnibus per omnia placeo. Quod non ideo facit ut placeret hominibus, sed Deo, ad cuius amorem corda hominum volebat convertere ex eo quod eis placebat; sicut non absurde loqueretur qui diceret: in hoc opere quo navem quaero, non navem quaero, sed patriam",
+        "pt": "Nisto, porém, que diz “para serdes vistos por eles”, nada acrescentando, parece que proibiu que coloquemos aí o fim do nosso propósito. Pois também o Apóstolo, que diz: “Se ainda agradasse aos homens, não seria servo de Cristo”, diz em outro lugar: “Eu agrado a todos em tudo.” Ele não o faz para agradar aos homens, mas a Deus, para cujo amor queria converter os corações dos homens por aquilo que neles agradava; assim como não falaria absurdamente quem dissesse: nesta obra em que procuro um navio, não procuro o navio, mas a pátria.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Dicit autem ut videamini ab eis, quia sunt quidam qui sic faciunt iustitiam coram hominibus ut non videantur ab eis, sed ut ipsa opera videantur, et glorificetur pater qui in caelis est: non enim suam iustitiam deputant, sed eius cuius fide vivunt",
+        "pt": "Diz, porém, “para serdes vistos por eles”, porque há alguns que praticam a justiça diante dos homens, não para serem vistos por eles, mas para que as próprias obras sejam vistas e seja glorificado o Pai que está nos céus: pois não atribuem a justiça a si mesmos, mas àquele de cuja fé vivem.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "In hoc etiam quod addit alioquin mercedem non habebitis apud patrem vestrum qui in caelis est, nihil aliud demonstrat, nisi illud, nos cavere oportere ne humanam laudem pro nostrorum operum mercede quaeramus",
+        "pt": "Também naquilo que acrescenta: “Do contrário, não tereis recompensa junto do vosso Pai que está nos céus”, nada mais mostra senão que devemos cuidar de não buscar o louvor humano como recompensa de nossas obras.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Quid autem a Deo recipies qui Deo nihil dedisti? Nam quod propter Deum fit, Deo datur, et ab eo recipitur; quod autem propter homines fit, in ventos effunditur. Quae est autem sapientia res dare, et verba vacua comparare, et mercedem Dei contemnere? Vel illum aspice a quo laudem expectas, qui te propter Deum facere putat; alioquin vituperaret te magis. Ille autem qui plena quidem voluntate propter homines facit, ille propter homines fecisse videtur. Si autem per alicuius cor cogitatio vana ascendit, desiderans hominibus apparere, anima autem intelligens contradicit, ille non propter homines fecisse videtur: quia quod cogitavit, passio carnis est; quod elegit, iudicium animae",
+        "pt": "Que receberás de Deus, tu que nada deste a Deus? Pois o que se faz por causa de Deus, a Deus é dado e dele é recebido; o que se faz por causa dos homens, derrama-se aos ventos. Que sabedoria é dar bens, adquirir palavras vazias e desprezar a recompensa de Deus? Olha também para aquele de quem esperas o louvor: ele julga que fazes por causa de Deus; caso contrário, te censuraria mais. Aquele, porém, que faz com plena vontade por causa dos homens, esse parece ter feito por causa dos homens. Se, contudo, um pensamento vão sobe ao coração de alguém, desejando aparecer aos homens, mas a alma, entendendo, o contradiz, esse não parece ter feito por causa dos homens: porque o que pensou é paixão da carne; o que escolheu, juízo da alma.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 23,
+    "versos": [
+      2,
+      4
+    ],
+    "itens": [
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Generaliter supra dominus iustitiam nominavit cum dixit: attendite ne iustitiam etc.; nunc autem per partes exequitur",
+        "pt": "Acima, o Senhor nomeou a justiça de modo geral quando disse: “Guardai-vos de praticar a vossa justiça” etc.; agora, porém, a expõe por partes.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Ponit autem tria fortia bona, scilicet eleemosynam, orationem et ieiunium, contra tria mala adversus quae dominus tentationis bellum suscepit: pugnavit enim pro nobis contra gulam in eremo, contra avaritiam supra montem, contra vanam gloriam supra templum. Est ergo eleemosyna quae dispergit, contra avaritiam quae congregat; ieiunium contra gulam, quia ei contrarium; oratio vero contra vanam gloriam, quia cum omne malum ex malo nascatur, sola vana gloria de bono procedit: ideo non destruitur per bonum, sed magis nutritur: nullum ergo remedium potest esse contra vanam gloriam nisi oratio sola",
+        "pt": "Põe, pois, três bens fortes, a saber, a esmola, a oração e o jejum, contra três males, contra os quais o Senhor travou o combate da tentação: pois lutou por nós contra a gula no deserto, contra a avareza sobre o monte, contra a vanglória sobre o templo. A esmola, portanto, que distribui, é contra a avareza, que acumula; o jejum, contra a gula, porque lhe é contrário; a oração, porém, contra a vanglória, porque, embora todo mal nasça do mal, somente a vanglória procede do bem: por isso não é destruída pelo bem, mas antes é alimentada; portanto, não pode haver contra a vanglória nenhum remédio, senão a oração somente.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Omnis autem sententia disciplinae Christianae in misericordia et pietate est; et ideo ab eleemosyna incipit, dicens cum ergo facis eleemosynam, noli tuba canere ante te",
+        "pt": "Ora, toda a doutrina da disciplina cristã consiste na misericórdia e na piedade; e por isso começa pela esmola, dizendo: \"Quando, pois, fizeres esmola, não toques a trombeta diante de ti\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Tuba autem est omnis actus vel sermo per quem operis iactantia demonstratur; puta, qui facit eleemosynam quando aliquem videt praesentem vel intercedente aliquo, aut honestiori personae quae potest retribuere; alias autem non facit. Sed et si in loco secreto fecerit eo proposito ut laudabilis videatur, tuba est",
+        "pt": "Trombeta é todo ato ou palavra pela qual se manifesta a jactância da obra; por exemplo, aquele que faz esmola quando vê alguém presente, ou por intermédio de alguém, ou a uma pessoa mais honrada que pode retribuir; em outras ocasiões, porém, não a faz. Mas também se a fizer em lugar secreto com o propósito de parecer louvável, é trombeta.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Sic ergo quod dicit noli tuba canere ante te, ad hoc respicit quod superius ait attendite ne iustitiam vestram faciatis coram hominibus",
+        "pt": "Assim, pois, o que diz: \"Não toques a trombeta diante de ti\", refere-se ao que disse antes: \"Cuidai de não praticar a vossa justiça diante dos homens\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "in Matth",
+        "latim": "Qui autem tuba canit eleemosynam faciens, hypocrita est; et ideo subdit sicut hypocritae faciunt",
+        "pt": "Quem toca a trombeta ao fazer esmola é hipócrita; e por isso acrescenta: \"como fazem os hipócritas\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Isidorus Etymolog",
+        "obra": "",
+        "latim": "Nomen hypocritae tractum est a specie eorum qui in spectaculis contecta facie incedunt, distinguentes vultum vario colore, ut ad personae, quam simulant, colorem perveniant, modo in specie viri, modo in feminae, ut fallant populum dum in ludis agunt",
+        "pt": "O nome de hipócrita deriva da aparência daqueles que nos espetáculos andam com o rosto coberto, distinguindo o semblante com várias cores, para chegarem à cor da personagem que simulam, ora na aparência de homem, ora na de mulher, a fim de enganar o povo enquanto atuam nos jogos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Sicut ergo hypocritae, idest simulatores, tamquam imitatores personarum aliarum, agunt partes illius quod non sunt - non enim qui agit partes Agamemnonis, vere ipse est, sed simulat eum -, sic et in Ecclesiis in omni vita humana quisquis se vult videri quod non est, hypocrita est: simulat enim se iustum et non exhibet, qui totum fructum in laude hominum ponit",
+        "pt": "Assim, pois, como os hipócritas, isto é, os simuladores, como imitadores de outras personagens, representam o papel daquilo que não são - pois quem representa o papel de Agamenon não é verdadeiramente ele, mas o simula -, assim também nas Igrejas, em toda a vida humana, quem quer parecer o que não é, é hipócrita: simula, com efeito, ser justo e não o mostra, aquele que põe todo o fruto no louvor dos homens.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Et ideo subdit loca publica, cum dicit in synagogis et vicis; et finem intentum cum subdit ut honorificentur ab hominibus",
+        "pt": "E por isso acrescenta os lugares públicos, quando diz: \"nas sinagogas e nas ruas\"; e o fim pretendido, quando acrescenta: \"para serem honrados pelos homens\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Gregorius Moralium",
+        "obra": "",
+        "latim": "Sciendum vero est, quod sunt nonnulli qui et sanctitatis habitum tenent, et perfectionis meritum exequi non valent; quos nequaquam credendum est inter hypocritarum numerum currere: quia aliud est infirmitate, aliud callida simulatione peccare",
+        "pt": "Deve-se saber, porém, que há alguns que mantêm o hábito da santidade e não conseguem alcançar o mérito da perfeição; esses de modo algum se deve crer que se contem entre o número dos hipócritas: porque uma coisa é pecar por fraqueza, outra, por astuta simulação.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "",
+        "latim": "Tales autem qui simulatione peccant, ab inspectore cordis Deo mercedem non capiunt, nisi fallaciae supplicium; et ideo subditur amen dico vobis, receperunt mercedem suam",
+        "pt": "Ora, os que pecam por simulação não recebem de Deus, que inspeciona o coração, recompensa, a não ser o castigo da falsidade; e por isso se acrescenta: \"Em verdade vos digo, já receberam a sua recompensa\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Hieronymus",
+        "obra": "",
+        "latim": "Non Dei mercedem, sed suam: laudati enim sunt ab hominibus, quorum causa exercuere virtutes",
+        "pt": "Não a recompensa de Deus, mas a sua: pois foram louvados pelos homens, por causa dos quais exerceram as virtudes.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Hoc autem respicit ad illud quod supra posuit alioquin mercedem non habebitis apud patrem vestrum. Sic ergo non quomodo illi eleemosynam facias, sed quomodo facienda sit, iubet convenienter, cum dicit te autem faciente eleemosynam, nesciat sinistra tua quid faciat dextera tua",
+        "pt": "Isto se refere ao que antes pôs: \"Do contrário, não tereis recompensa junto a vosso Pai\". Assim, ordena convenientemente não como aqueles fazem a esmola, mas como se deve fazê-la, quando diz: \"Tu, porém, ao fazeres esmola, que a tua esquerda não saiba o que faz a tua direita\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Hoc autem per superabundantiam dicitur, ac si dicat: si possibile est teipsum ignorare, et ipsas manus latere possibile esset, studiosissimum est tibi",
+        "pt": "Isto, porém, se diz por superabundância, como se dissesse: se é possível ignorares a ti mesmo, e se fosse possível ocultá-lo às próprias mãos, seria o mais desejável para ti.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Apostoli autem interpretantur in libro canonum sic: dextera est populus Christianus, qui est ad dexteram Christi; sinistra autem est omnis populus, qui est ad sinistram. Hoc ergo dicit, ne Christiano eleemosynam faciente, qui est dextera, infidelis aspiciat, qui est sinistra",
+        "pt": "Os apóstolos, porém, interpretam no livro dos cânones assim: a direita é o povo cristão, que está à direita de Cristo; a esquerda, porém, é todo o povo que está à esquerda. Isto, pois, diz: que, quando o cristão, que é a direita, faz esmola, o infiel, que é a esquerda, não o veja.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Sed secundum hoc videbitur nulla esse culpa velle placere fidelibus, cum tamen in quorumlibet hominum laude finem boni operis constituere prohibeamur. Ut autem te imitentur quibus facta tua placuerint, non tantum fidelibus, sed etiam infidelibus exhibendum est. Si autem (ut alii dicunt) sinistram inimicum putaveris, ut nesciat inimicus tuus cum eleemosynam facis, cur ipse dominus inimicis Iudaeis circumstantibus misericorditer sanavit homines? Deinde quomodo cum ipso inimico faciemus, ut illud impleamus praeceptum: si esurierit inimicus tuus, ciba illum? Tertia opinio est ridenda eorum qui dicunt, sinistrae nomine uxorem significari; ut quoniam in re familiari tenaciores pecuniarum solent esse feminae, lateat eas cum aliquid viri alienis impendunt, propter domesticas lites. Non autem solis viris hoc praeceptum datum est, sed etiam feminis; cui ergo sinistrae iubetur femina occultare opus misericordiae suae? An etiam vir sinistra erit feminae? Quod si quispiam putat, cum praeceptum sit talibus, ut se invicem bonis moribus lucrifaciant, non sibi debent occultare bona opera sua: nec furta facienda sunt ut promereatur Deus. Quod si occultandum est aliquid quamdiu alterius infirmitas id aequo animo non potest sustinere, quamvis non illicite fiat, non tamen femina per sinistram significari facile apparet totius capituli significatione; et etiam quam sinistram vocet. Quod enim in hypocritis culpatum est, quod scilicet laudes hominum quaerunt, hoc tu facere vetaris; quapropter sinistra videtur significare delectationem laudis, dextera autem significat intentionem implendi praecepta divina. Cum ergo conscientiae facienti eleemosynam miscet se appetitio laudis humanae, fit sinistra conscientia dexterae. Nesciat ergo sinistra, idest, non se misceat conscientiae tuae laudis humanae appetitio. Dominus autem noster multo magis prohibet solam sinistram in nobis operari, quam eam miscere operibus dexterae. Quo autem fine hoc dixerit, ostendit cum subdit ut sit eleemosyna vestra in abscondito, idest in ipsa bona conscientia, quae humanis oculis demonstrari non potest, nec verbis aperiri, quandoquidem multi multa mentiuntur. Sufficit autem tibi ad promerendum praemium ipsa conscientia, si ab eo expectas praemium qui solus conscientiae inspector est. Et hoc est quod subditur et pater tuus, qui videt in abscondito, reddet tibi. Multa Latina exemplaria habent reddet tibi palam",
+        "pt": "Mas, segundo isso, parecerá não haver culpa alguma em querer agradar aos fiéis, embora nos seja proibido pôr o fim da boa obra no louvor de quaisquer homens. Ora, para que te imitem aqueles a quem tuas obras tiverem agradado, deve-se mostrá-las não só aos fiéis, mas também aos infiéis. Se, porém (como outros dizem), tiveres a esquerda por inimigo, de modo que teu inimigo não saiba quando fazes esmola, por que o próprio Senhor curou misericordiosamente os homens, estando presentes os judeus inimigos? Depois, como faremos com o próprio inimigo, para cumprirmos aquele preceito: \"Se teu inimigo tiver fome, dá-lhe de comer\"? A terceira opinião é de rir-se: a daqueles que dizem que pelo nome de esquerda se significa a esposa; de modo que, como no patrimônio familiar as mulheres costumam ser mais apegadas ao dinheiro, lhes fique oculto quando os maridos gastam algo com estranhos, por causa das disputas domésticas. Mas este preceito não foi dado só aos homens, mas também às mulheres; a qual esquerda, então, se manda que a mulher oculte a obra de sua misericórdia? Será que também o marido será a esquerda da mulher? Se alguém pensa isso, já que o preceito foi dado a tais pessoas para que se ganhem mutuamente com bons costumes, não devem ocultar uma da outra suas boas obras; nem se devem fazer furtos para que Deus seja merecido. Se, porém, se deve ocultar algo enquanto a fraqueza de outro não pode suportá-lo com serenidade, ainda que se faça sem ilicitude, contudo que a mulher não seja significada pela esquerda aparece facilmente pelo sentido de todo o capítulo, e também por aquilo que ele chama esquerda. Com efeito, o que foi censurado nos hipócritas, a saber, que buscam os louvores dos homens, isso te é vedado fazer; por isso a esquerda parece significar o deleite do louvor, e a direita, a intenção de cumprir os preceitos divinos. Quando, pois, à consciência que faz esmola se mistura o desejo do louvor humano, a esquerda torna-se consciência da direita. Que a esquerda não saiba, portanto, isto é, que o desejo do louvor humano não se misture à tua consciência. O nosso Senhor, aliás, proíbe muito mais que só a esquerda opere em nós do que que ela se misture às obras da direita. Com que fim o disse, mostra-o quando acrescenta: \"para que a tua esmola seja em segredo\", isto é, na própria boa consciência, que não pode ser mostrada aos olhos humanos, nem revelada por palavras, uma vez que muitos mentem muito. Basta-te, porém, para mereceres o prêmio, a própria consciência, se esperas o prêmio daquele que é o único inspetor da consciência. E é isto que se acrescenta: \"e teu Pai, que vê em segredo, te recompensará\". Muitos exemplares latinos têm: \"te recompensará publicamente\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "super Matth",
+        "latim": "Impossibile est enim ut opus bonum hominis in abscondito dimittat Deus; sed in hoc saeculo manifestat, et in illo glorificat, quia gloria Dei est; sicut et Diabolus manifestat malum, in quo malitiae eius virtus ostenditur. Proprie autem publicat Deus omne bonum in saeculo illo cuius bona non sunt communia bonis et malis; ideo cuicumque illic bene fecerit Deus, manifestum est quia pro mercede iustitiae suae meruit illud. Merces autem iustitiae in hoc saeculo manifesta non est; quia hic non solum boni, sed etiam mali sunt divites",
+        "pt": "Pois é impossível que Deus deixe oculta a boa obra do homem; mas neste mundo a manifesta, e no outro a glorifica, porque é glória de Deus; assim como o Diabo manifesta o mal, no qual se mostra o poder de sua malícia. Deus torna pública, de modo próprio, toda boa obra naquele mundo, cujos bens não são comuns aos bons e aos maus; por isso, a quem quer que Deus tenha feito o bem ali, é manifesto que o mereceu como recompensa de sua justiça. Ora, a recompensa da justiça não é manifesta neste mundo, porque aqui são ricos não só os bons, mas também os maus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Serm. Dom",
+        "latim": "Sed in Graecis exemplaribus, quae propria sunt, non invenimus palam",
+        "pt": "Mas nos exemplares gregos, que são os originais, não encontramos \"publicamente\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matth",
+        "latim": "Si ergo vis habere inspectores eorum quae facis, ecce habes non solum Angelos aut Archangelos, sed Deum universorum",
+        "pt": "Se, pois, queres ter espectadores do que fazes, eis que tens não só os Anjos ou os Arcanjos, mas o Deus do universo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-21",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
     "lectio": 1,
     "versos": [
       5,

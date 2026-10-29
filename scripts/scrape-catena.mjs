@@ -14,6 +14,9 @@
  * dos Padres na forma "Autor. <I>texto</I>." — o nome do autor (às vezes com a obra: "Chrysostomus
  * in Matthaeum", "Augustinus de Cons. Evang.") vem fora do itálico e o comentário, dentro. Os
  * intervalos de versículos não estão na fonte: vêm de data/catena-mapa/<Ev>.json, curado à mão.
+ * Às vezes a fonte fecha um capítulo com a perícope do seguinte (o "Caput 5" de Mt vai até a
+ * esmola, Mt 6,1-4): `_capitulo` no mapa ({ "5": { "22": "6" } }) leva a lectio para o capítulo
+ * certo, que a lê da fonte crua do anterior e a põe antes das suas (o número da lectio não muda).
  * A tradução (`pt`) é acrescentada depois por outro passo e é preservada aqui quando existe.
  */
 import fs from 'node:fs';
@@ -77,12 +80,30 @@ const corpo = html.slice(iniCap, fimCap < 0 ? undefined : fimCap);
 const limpar = s => s.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 const mapa = fs.existsSync(mapaArq) ? JSON.parse(fs.readFileSync(mapaArq, 'utf8')) : {};
 const anterior = fs.existsSync(saida) ? JSON.parse(fs.readFileSync(saida, 'utf8')) : [];
+const mudancas = mapa._capitulo || {};   // { capítulo da fonte: { lectio: capítulo de destino } }
+
+// lectiones de outros capítulos da fonte que pertencem a este, e a tradução que já tinham lá
+const vindas = [];
+for (const [de, lects] of Object.entries(mudancas)) {
+  const aqui = Object.keys(lects).filter(l => lects[l] === cap).map(Number);
+  if (!aqui.length) continue;
+  const f = path.join(RAIZ, 'data', 'catena-fonte', ev, `${de.padStart(2, '0')}.html`);
+  if (!fs.existsSync(f)) { console.error(`${ev} ${cap}: falta a fonte crua de ${ev} ${de} (rode node scripts/scrape-catena.mjs ${ev} ${de})`); process.exit(1); }
+  const h = fs.readFileSync(f, 'utf8');
+  const i0 = h.indexOf(`<DIV CLASS="C">Caput ${de}</DIV>`), i1 = h.indexOf('<DIV CLASS="C">Caput ', i0 + 10);
+  const jsonDe = path.join(RAIZ, 'data', 'catena', ev, `${de.padStart(2, '0')}.json`);
+  const traducoesDe = fs.existsSync(jsonDe) ? JSON.parse(fs.readFileSync(jsonDe, 'utf8')) : [];
+  vindas.push({ corpo: h.slice(i0, i1 < 0 ? undefined : i1), so: aqui, traducoes: traducoesDe });
+}
 
 const lectiones = [];
 const RE_LECTIO = /<DIV CLASS="D">Lectio (\d+)<\/DIV>\s*<P TITLE="[^"]*">([\s\S]*?)<\/P>/g;
+for (const { corpo: c, so, traducoes } of [...vindas, { corpo, so: null, traducoes: [] }]) {
 let m;
-while ((m = RE_LECTIO.exec(corpo)) !== null) {
+RE_LECTIO.lastIndex = 0;
+while ((m = RE_LECTIO.exec(c)) !== null) {
   const lectio = parseInt(m[1], 10);
+  if (so ? !so.includes(lectio) : mudancas[cap]?.[String(lectio)]) continue;
   const p = m[2].replace(/<A NAME="\d+"><SPAN CLASS="ref">[^<]*<\/SPAN><\/A>/, '');
   const itens = [];
   const RE_ITEM = /([^<>]*?)<I>([\s\S]*?)<\/I>/g;
@@ -99,12 +120,13 @@ while ((m = RE_LECTIO.exec(corpo)) !== null) {
   if (!itens.length) { console.error(`lectio ${lectio}: nenhum item reconhecido`); process.exit(1); }
   const versos = mapa[cap]?.[String(lectio)] ?? null;
   // a tradução já feita fica, desde que o latim não tenha mudado
-  const velha = anterior.find(l => l.lectio === lectio);
+  const velha = anterior.find(l => l.lectio === lectio) ?? traducoes.find(l => l.lectio === lectio);
   itens.forEach((item, i) => {
     const v = velha?.itens?.[i];
     if (v?.pt && v.latim === item.latim) { item.pt = v.pt; if (v.traducao) item.traducao = v.traducao; }
   });
   lectiones.push({ lectio, versos, itens });
+}
 }
 if (!lectiones.length) { console.error('nenhuma lectio encontrada'); process.exit(1); }
 

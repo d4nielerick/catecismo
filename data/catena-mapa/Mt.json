@@ -341,6 +341,14 @@
     "21": [
       34,
       34
+    ],
+    "22": [
+      1,
+      1
+    ],
+    "23": [
+      2,
+      4
     ]
   },
   "7": {
@@ -1187,5 +1195,11 @@
       20
     ]
   },
-  "_": "Catena Aurea (Corpus Thomisticum): intervalo de versículos de cada lectio, por capítulo. Curado à mão a partir dos lemas; a fonte não traz os números."
+  "_": "Catena Aurea (Corpus Thomisticum): intervalo de versículos de cada lectio, por capítulo. Curado à mão a partir dos lemas; a fonte não traz os números.",
+  "_capitulo": {
+    "5": {
+      "22": "6",
+      "23": "6"
+    }
+  }
 }

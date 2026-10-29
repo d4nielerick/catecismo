@@ -32,8 +32,10 @@ for (const par of pares) {
   const item = catena.find(x => x.lectio === l);
   if (!item) { console.error(`lectio ${l} não existe em ${ev} ${cap}`); process.exit(1); }
   if (a < 1 || b < a) { console.error(`lectio ${l}: intervalo ${a}-${b} inválido`); process.exit(1); }
-  const antes = mapa[cap][String(l - 1)];
-  if (antes && a < antes[1]) { console.error(`lectio ${l}: começa em ${a}, antes do fim da lectio ${l - 1} (${antes[1]})`); process.exit(1); }
+  // a lectio anterior na ordem do arquivo (uma lectio vinda do capítulo anterior abre o arquivo; ver _capitulo)
+  const ant = catena[catena.indexOf(item) - 1]?.lectio;
+  const antes = ant !== undefined && mapa[cap][String(ant)];
+  if (antes && a < antes[1]) { console.error(`lectio ${l}: começa em ${a}, antes do fim da lectio ${ant} (${antes[1]})`); process.exit(1); }
   mapa[cap][String(l)] = [a, b];
   item.versos = [a, b];
 }
