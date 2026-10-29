@@ -18,8 +18,9 @@ Claude da VPS vai bater no limite de uso do plano e retomar depois. Tudo é reto
 6. **Verificar e enviar**: `verifica-liturgia.mjs`, um commit por capítulo, push para a `main`.
 7. **Publicar** (Daniel ou o Claude do Mac, nunca o da VPS): `build-paginas-catena.mjs` + deploy.
 
-Prioridade dos capítulos: **Mateus** primeiro (o Ano A começa no Advento, 29/11/2026, e os domingos
-do ano inteiro são de Mateus), depois **João** (Quaresma e Páscoa), **Lucas** e **Marcos**.
+Prioridade dos capítulos: Mateus (feito em 20–21/10). O Advento de 29/11/2026 abre o **Ano B
+(Marcos)**: primeiro os capítulos do Advento e do Natal (Mc 13, Mc 1, Lc 1, Jo 1, Lc 2, Lc 5, Lc 7,
+Lc 10), depois o resto de **Marcos**, **João** (Quaresma e Páscoa) e **Lucas**.
 
 Enquanto a VPS traduz, a rotina da janela no Mac **não traduz** (só liga, curadoria e áudio), para
 os dois não mexerem no mesmo arquivo de capítulo.
@@ -65,7 +66,8 @@ LIMITES (não negociáveis)
 - Nunca use `git push --force` nem reescreva histórico.
 
 ORDEM DOS CAPÍTULOS
-Mateus 1→28, depois João 1→21, Lucas 1→24, Marcos 1→16. Pule os já completos
+Primeiro os do Advento e do Natal de 2026 (Ano B): Mc 13, Mc 1, Lc 1, Jo 1, Lc 2, Lc 5, Lc 7,
+Lc 10. Depois o resto de Marcos (2→16), João (2→21) e Lucas (1→24). Pule os já completos
 (`node scripts/catena-traducao.mjs estado` mostra "completos").
 
 PARA CADA CAPÍTULO <Ev> <cap>
@@ -80,8 +82,9 @@ PARA CADA CAPÍTULO <Ev> <cap>
    sentido). As lectiones são contíguas e crescentes; na dúvida, compare com o capítulo vizinho.
 4. node scripts/catena-traducao.mjs capitulo <Ev> <cap> --lotes /srv/lotes/<Ev>-<cap> 15
 5. Um subagente por lote (Agent tool, model "sonnet", até 6 em paralelo), com o prompt da seção
-   "4. Traduzir a Catena" da skill, trocando o caminho do lote. Cada um grava traducoes-N.json e
-   roda `node scripts/catena-traducao.mjs grava <arquivo>`; responde só a saída do comando.
+   "4. Traduzir a Catena" da skill, trocando o caminho do lote, mas o subagente SÓ escreve
+   traducoes-N.json (não roda `grava`). Depois você roda `node scripts/catena-traducao.mjs grava
+   <arquivo>` para cada lote, um por vez (em paralelo corrompe o JSON do capítulo, ver Mt 18).
    Se um lote falhar, reenvie só ele (no máximo 2 vezes; depois anote em /srv/catena-notas.md).
 6. node scripts/catena-traducao.mjs confere <Ev> <cap>. Para os itens suspeitos, um subagente Opus
    relê latim e tradução e regrava os que estiverem errados (mesmo formato, mesmo `grava`).
