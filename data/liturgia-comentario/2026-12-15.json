@@ -1,0 +1,55 @@
+{
+  "data": "2026-12-15",
+  "evangelho": "Mt 21,28-32",
+  "leituras": "Sf 3,1-2.9-13 | Sl 33(34),2-3.6-7.17-18.19.23 (R. 7a) | Mt 21,28-32",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 21,
+      "lectio": 5,
+      "versos": [
+        28,
+        32
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 546,
+      "comum": [
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "direto": false,
+      "ref": "Mt 21,28-32",
+      "frase": "As palavras não bastam, exigem-se atos.",
+      "texto": "Jesus chama para entrar no Reino, por meio de parábolas, traço característico do seu ensino. Por meio delas, convida para o banquete do Reino, mas exige também uma opção radical: para adquirir o Reino é preciso dar tudo. As palavras não bastam, exigem-se atos. As parábolas são, para o homem, uma espécie de espelho: como é que ele recebe a Palavra? Como chão duro, ou como terra boa? Que faz ele dos talentos recebidos? Jesus e a presença do Reino neste mundo estão secretamente no coração das parábolas. É preciso entrar no Reino, quer dizer, tornar-se discípulo de Cristo, para «conhecer os mistérios do Reino dos céus» (Mt 13, 11). Para os que ficam «fora» (Mc 4, 11), tudo permanece enigmático.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo foi concebido pelo poder do espírito santo e nasceu da virgem maria»"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "Salmo",
+      "referencia": "Sl 33(34),2-3.6-7.17-18.19.23 (R. 7a)",
+      "catecismo": [
+        {
+          "numero": 716,
+          "comum": [
+            3
+          ],
+          "direto": false,
+          "ref": "Sl 34,3",
+          "frase": "O povo dos «pobres», dos humildes e dos mansos, totalmente entregues aos desígnios misteriosos do seu Deus, o povo dos que esperam a justiça, não dos homens mas do Messias, tal é, afinal, a grande obra da missão oculta do Espírito Santo, durante o tempo das promessas, para preparar a vinda de Cristo.",
+          "texto": "O povo dos «pobres», dos humildes e dos mansos, totalmente entregues aos desígnios misteriosos do seu Deus, o povo dos que esperam a justiça, não dos homens mas do Messias, tal é, afinal, a grande obra da missão oculta do Espírito Santo, durante o tempo das promessas, para preparar a vinda de Cristo. É a qualidade do seu coração, purificado e iluminado pelo Espírito, que se exprime nos salmos. Nestes pobres, o Espírito prepara para o Senhor «um povo bem disposto».",
+          "local": "Creio no espírito santo › «creio no espírito santo»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

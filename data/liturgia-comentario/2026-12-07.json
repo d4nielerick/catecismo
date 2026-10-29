@@ -1,0 +1,33 @@
+{
+  "data": "2026-12-07",
+  "evangelho": "Lc 5,17-26",
+  "leituras": "Is 35,1-10 | Sl 84(85),9ab-10.11-12.13-14 (R. Is 35,4d) | Lc 5,17-26",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 5,
+      "lectio": 5,
+      "versos": [
+        17,
+        26
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 1116,
+      "comum": [
+        17
+      ],
+      "direto": false,
+      "ref": "Lc 5,17",
+      "frase": "«Forças que saem» do corpo de Cristo, sempre vivo e vivificante: ações do Espírito Santo que opera no seu corpo que é a Igreja, os sacramentos são «as obras-primas de Deus», na nova e eterna Aliança.",
+      "texto": "«Forças que saem» do corpo de Cristo, sempre vivo e vivificante: ações do Espírito Santo que opera no seu corpo que é a Igreja, os sacramentos são «as obras-primas de Deus», na nova e eterna Aliança.",
+      "local": "O mistério pascal no tempo da igreja › Artigo 2: o mistério pascal nos sacramentos da igreja"
+    }
+  ],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

@@ -1,0 +1,84 @@
+{
+  "data": "2026-12-17",
+  "evangelho": "Mt 1,1-17",
+  "leituras": "Gn 49,2.8-10 | Sl 71(72),1-2.3-4ab.7-8.17 (R. cf. 7) | Mt 1,1-17",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 1,
+      "lectio": 1,
+      "versos": [
+        1,
+        1
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 1,
+      "lectio": 2,
+      "versos": [
+        2,
+        2
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 1,
+      "lectio": 3,
+      "versos": [
+        3,
+        5
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 1,
+      "lectio": 4,
+      "versos": [
+        6,
+        6
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 1,
+      "lectio": 5,
+      "versos": [
+        7,
+        10
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 1,
+      "lectio": 6,
+      "versos": [
+        11,
+        15
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 1,
+      "lectio": 7,
+      "versos": [
+        16,
+        16
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 1,
+      "lectio": 8,
+      "versos": [
+        17,
+        17
+      ]
+    }
+  ],
+  "catecismo": [],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

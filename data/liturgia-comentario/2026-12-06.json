@@ -1,0 +1,80 @@
+{
+  "data": "2026-12-06",
+  "evangelho": "Mc 1,1-8",
+  "leituras": "Is 40,1-5.9-11 | Sl 84(85),9ab-10.11-12.13-14 (R. 8) | 2Pd 3,8-14 | Mc 1,1-8",
+  "catena": [
+    {
+      "ev": "Mc",
+      "cap": 1,
+      "lectio": 1,
+      "versos": [
+        1,
+        1
+      ]
+    },
+    {
+      "ev": "Mc",
+      "cap": 1,
+      "lectio": 2,
+      "versos": [
+        2,
+        3
+      ]
+    },
+    {
+      "ev": "Mc",
+      "cap": 1,
+      "lectio": 3,
+      "versos": [
+        4,
+        8
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 422,
+      "comum": [
+        1
+      ],
+      "direto": false,
+      "ref": "Mc 1,1",
+      "frase": "Esta é a «Boa-Nova de Jesus Cristo, Filho de Deus»: Deus visitou o seu povo e cumpriu as promessas feitas a Abraão e à sua descendência fê-lo para além de toda a expectativa: enviou o seu «Filho muito-amado».",
+      "texto": "«Quando chegou a plenitude dos tempos, Deus enviou o seu Filho, nascido de uma mulher e sujeito à Lei, para resgatar os que estavam sujeitos à Lei e nos tornar seus filhos adotivos» (Gl 4, 4-5). Esta é a «Boa-Nova de Jesus Cristo, Filho de Deus»: Deus visitou o seu povo e cumpriu as promessas feitas a Abraão e à sua descendência fê-lo para além de toda a expectativa: enviou o seu «Filho muito-amado».",
+      "local": "A profissão da fé cristã › Creio em jesus cristo, filho único de deus"
+    },
+    {
+      "numero": 515,
+      "comum": [
+        1
+      ],
+      "direto": false,
+      "ref": "Mc 1,1",
+      "frase": "Os evangelhos foram escritos por homens que foram dos primeiros a receber a fé e que quiseram partilhá-la com outros.",
+      "texto": "Os evangelhos foram escritos por homens que foram dos primeiros a receber a fé e que quiseram partilhá-la com outros. Tendo conhecido, pela fé, quem é Jesus, puderam ver e fazer ver os traços do seu mistério em toda a sua vida terrena. Desde os panos do nascimento até ao vinagre da paixão e ao sudário da ressurreição, tudo, na vida de Jesus, é sinal do seu mistério. Através dos seus gestos, milagres e palavras, foi revelado que «n'Ele habita corporalmente toda a plenitude da Divindade» (Cl 2, 9). A sua humanidade aparece, assim, como «sacramento», isto é, sinal e instrumento da sua divindade e da salvação que Ele veio trazer. O que havia de visível na sua vida terrena conduz ao mistério invisível da sua filiação divina e da sua missão redentora.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo foi concebido pelo poder do espírito santo e nasceu da virgem maria»"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "2ª Leitura",
+      "referencia": "2Pd 3,8-14",
+      "catecismo": [
+        {
+          "numero": 1405,
+          "comum": [
+            13
+          ],
+          "direto": false,
+          "ref": "2Pd 3,13",
+          "frase": "Desta grande esperança – dos novos céus e da nova terra, onde habitará a justiça – não temos garantia mais segura nem sinal mais manifesto do que a Eucaristia.",
+          "texto": "Desta grande esperança – dos novos céus e da nova terra, onde habitará a justiça – não temos garantia mais segura nem sinal mais manifesto do que a Eucaristia. Com efeito, cada vez que se celebra este mistério, «realiza-se a obra da nossa redenção» e nós «partimos o mesmo pão, que é remédio de imortalidade, antídoto para não morrer, mas viver em Jesus Cristo para sempre».",
+          "local": "Os sacramentos da iniciação cristã › Artigo 3: o sacramento da eucaristia"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

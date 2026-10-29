@@ -1,7 +1,10 @@
 [
   {
     "lectio": 1,
-    "versos": null,
+    "versos": [
+      1,
+      1
+    ],
     "itens": [
       {
         "autor": "Chrysostomus",
@@ -117,7 +120,10 @@
   },
   {
     "lectio": 2,
-    "versos": null,
+    "versos": [
+      1,
+      1
+    ],
     "itens": [
       {
         "autor": "Chrysostomus",
@@ -153,7 +159,10 @@
   },
   {
     "lectio": 3,
-    "versos": null,
+    "versos": [
+      1,
+      1
+    ],
     "itens": [
       {
         "autor": "Hilarius",
@@ -189,7 +198,10 @@
   },
   {
     "lectio": 4,
-    "versos": null,
+    "versos": [
+      2,
+      2
+    ],
     "itens": [
       {
         "autor": "Hilarius",
@@ -220,7 +232,10 @@
   },
   {
     "lectio": 5,
-    "versos": null,
+    "versos": [
+      3,
+      3
+    ],
     "itens": [
       {
         "autor": "Alcuinus",
@@ -271,7 +286,10 @@
   },
   {
     "lectio": 6,
-    "versos": null,
+    "versos": [
+      3,
+      3
+    ],
     "itens": [
       {
         "autor": "Chrysostomus",
@@ -322,7 +340,10 @@
   },
   {
     "lectio": 7,
-    "versos": null,
+    "versos": [
+      3,
+      4
+    ],
     "itens": [
       {
         "autor": "Beda",
@@ -358,7 +379,10 @@
   },
   {
     "lectio": 8,
-    "versos": null,
+    "versos": [
+      4,
+      4
+    ],
     "itens": [
       {
         "autor": "Theophylactus",
@@ -384,7 +408,10 @@
   },
   {
     "lectio": 9,
-    "versos": null,
+    "versos": [
+      5,
+      5
+    ],
     "itens": [
       {
         "autor": "Augustinus",
@@ -435,78 +462,175 @@
   },
   {
     "lectio": 10,
-    "versos": null,
+    "versos": [
+      6,
+      8
+    ],
     "itens": [
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Ea quae dicta sunt superius, de divinitate Christi dicta sunt, qui sic venit ad nos secundum quod apparuit homo. Quia igitur sic erat homo ut lateret in illo Deus, missus est ante illum magnus homo, per cuius testimonium inveniretur plusquam homo. Et quis est hic? Fuit homo"
+        "latim": "Ea quae dicta sunt superius, de divinitate Christi dicta sunt, qui sic venit ad nos secundum quod apparuit homo. Quia igitur sic erat homo ut lateret in illo Deus, missus est ante illum magnus homo, per cuius testimonium inveniretur plusquam homo. Et quis est hic? Fuit homo",
+        "pt": "O que foi dito acima foi dito sobre a divindade de Cristo, que assim veio a nós segundo o que apareceu como homem. Porque, pois, era homem de tal modo que Deus nele se ocultava, foi enviado antes dele um grande homem, por cujo testemunho fosse encontrado mais que homem. E quem é este? \"Houve um homem\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Non Angelus, ut suspicionem multorum destrueret"
+        "latim": "Non Angelus, ut suspicionem multorum destrueret",
+        "pt": "Não um Anjo, para destruir a suspeita de muitos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Et quomodo posset iste verum de Deo dicere, nisi missus a Deo?"
+        "latim": "Et quomodo posset iste verum de Deo dicere, nisi missus a Deo?",
+        "pt": "E como poderia este dizer a verdade sobre Deus, se não fosse enviado por Deus?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Nihil de reliquo humanum esse aestimo eorum quae dicuntur ab illo: non enim quae eius sunt, sed quae mittentis omnia loquitur: ideo et Angelus nuncupatus est a propheta dicente: ego mitto Angelum meum. Angeli enim virtus est nihil proprium dicere. Hoc autem quod dicit fuit missus, non eius qui ad esse processus ostensivum est. Sicut autem Isaias missus fuit non aliunde quam a mundo, sed a statu quo vidit dominum sedentem super solium excelsum et elevatum, ad plebem; sic et Ioannes a deserto ad baptizandum mittitur; ait enim: qui misit me baptizare, ille mihi dixit: super quem videris spiritum descendentem et manentem super eum, hic est qui baptizat in spiritu sancto"
+        "latim": "Nihil de reliquo humanum esse aestimo eorum quae dicuntur ab illo: non enim quae eius sunt, sed quae mittentis omnia loquitur: ideo et Angelus nuncupatus est a propheta dicente: ego mitto Angelum meum. Angeli enim virtus est nihil proprium dicere. Hoc autem quod dicit fuit missus, non eius qui ad esse processus ostensivum est. Sicut autem Isaias missus fuit non aliunde quam a mundo, sed a statu quo vidit dominum sedentem super solium excelsum et elevatum, ad plebem; sic et Ioannes a deserto ad baptizandum mittitur; ait enim: qui misit me baptizare, ille mihi dixit: super quem videris spiritum descendentem et manentem super eum, hic est qui baptizat in spiritu sancto",
+        "pt": "Julgo que nada do que ele diz é humano: pois não fala o que é seu, mas tudo o que é de quem o envia; por isso foi também chamado Anjo pelo profeta que diz: \"Eu envio o meu Anjo\". Pois é próprio da virtude do Anjo nada dizer de próprio. Quanto ao que diz \"foi enviado\", não indica o de quem procede para existir. Assim como Isaías foi enviado não de outro lugar senão do mundo, mas do estado em que viu o Senhor sentado sobre um trono alto e elevado, ao povo; assim também João é enviado do deserto para batizar; pois diz: \"Aquele que me enviou a batizar, ele me disse: Aquele sobre quem vires o Espírito descer e permanecer, esse é o que batiza no Espírito Santo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Quid vocabatur? Cui nomen erat Ioannes"
+        "latim": "Quid vocabatur? Cui nomen erat Ioannes",
+        "pt": "Como se chamava? \"Cujo nome era João\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Idest gratia Dei, vel in quo est gratia, qui gratiam novi testamenti, idest Christum, suo testimonio primum mundo innotuit. Vel Ioannes interpretatur cui donatum est, quia per gratiam Dei donatum est illi regem regum non solum praecurrere, sed etiam baptizare"
+        "latim": "Idest gratia Dei, vel in quo est gratia, qui gratiam novi testamenti, idest Christum, suo testimonio primum mundo innotuit. Vel Ioannes interpretatur cui donatum est, quia per gratiam Dei donatum est illi regem regum non solum praecurrere, sed etiam baptizare",
+        "pt": "Isto é, graça de Deus, ou aquele em quem há graça, que com o seu testemunho deu a conhecer primeiro ao mundo a graça do Novo Testamento, isto é, Cristo. Ou João se interpreta \"aquele a quem foi dado\", porque, pela graça de Deus, lhe foi dado não só preceder o rei dos reis, mas também batizá-lo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Quare venit? Hic venit in testimonium, ut testimonium perhiberet de lumine"
+        "latim": "Quare venit? Hic venit in testimonium, ut testimonium perhiberet de lumine",
+        "pt": "Por que veio? \"Este veio para testemunho, para dar testemunho da luz\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "in Ioannem",
-        "latim": "Quidam improbare nituntur edita de Christo testimonia prophetarum, dicentes non egere testibus Dei filium habentem credulitatis sufficientiam tum in his quae protulit salubribus verbis, tum in mirabilibus operibus suis. Siquidem et Moyses credi meruit per verbum et virtutes, non egens praeviis testibus. Ad hoc dicendum est, quod multis existentibus causis inducentibus ad credendum, plerumque quidam ex hac demonstratione non admirantur, ex alia vero habent causam ut credant. Deus autem est qui pro cunctis hominibus homo factus est. Constat igitur quosdam ex dictis propheticis ad Christi admirationem coactos, mirantes tot prophetarum ante eius adventum voces, constituentes nativitatis eius locum, et alia huiusmodi. Illud quoque advertendum, quod prodigiosae virtutes ad credendum provocare poterant eos qui tempore Christi erant, non autem post longa tempora: nam fabulosa quaedam aestimata fuerunt: plus enim peractis virtutibus facit ad credulitatem quae cum virtutibus quaeritur prophetia. Est autem et tale quid dicere, quod quidam in hoc quod testimonium perhibent Deo, honorati sunt. Privare vult ergo chorum prophetarum ingenti gratia qui dicit, illos non oportere de Christo testimonium exhibere. Accessit autem his Ioannes, ut testimonium de luce perhibeat"
+        "latim": "Quidam improbare nituntur edita de Christo testimonia prophetarum, dicentes non egere testibus Dei filium habentem credulitatis sufficientiam tum in his quae protulit salubribus verbis, tum in mirabilibus operibus suis. Siquidem et Moyses credi meruit per verbum et virtutes, non egens praeviis testibus. Ad hoc dicendum est, quod multis existentibus causis inducentibus ad credendum, plerumque quidam ex hac demonstratione non admirantur, ex alia vero habent causam ut credant. Deus autem est qui pro cunctis hominibus homo factus est. Constat igitur quosdam ex dictis propheticis ad Christi admirationem coactos, mirantes tot prophetarum ante eius adventum voces, constituentes nativitatis eius locum, et alia huiusmodi. Illud quoque advertendum, quod prodigiosae virtutes ad credendum provocare poterant eos qui tempore Christi erant, non autem post longa tempora: nam fabulosa quaedam aestimata fuerunt: plus enim peractis virtutibus facit ad credulitatem quae cum virtutibus quaeritur prophetia. Est autem et tale quid dicere, quod quidam in hoc quod testimonium perhibent Deo, honorati sunt. Privare vult ergo chorum prophetarum ingenti gratia qui dicit, illos non oportere de Christo testimonium exhibere. Accessit autem his Ioannes, ut testimonium de luce perhibeat",
+        "pt": "Alguns se esforçam por desaprovar os testemunhos dos profetas dados sobre Cristo, dizendo que o Filho de Deus não precisa de testemunhas, tendo suficiência de credibilidade tanto nas palavras salutares que proferiu quanto em suas obras admiráveis. Pois também Moisés mereceu ser crido pela palavra e pelos prodígios, sem precisar de testemunhas que o precedessem. A isso se deve dizer que, havendo muitas causas que levam a crer, muitas vezes alguns não se admiram por esta demonstração, mas têm motivo para crer por outra. Ora, é Deus quem se fez homem por todos os homens. Consta, pois, que alguns foram levados à admiração de Cristo pelas palavras proféticas, admirando-se de tantas vozes de profetas antes de sua vinda, que determinavam o lugar de seu nascimento e outras coisas semelhantes. Deve-se também notar que os poderes prodigiosos podiam provocar à fé os que viviam no tempo de Cristo, mas não depois de longo tempo: pois algumas coisas foram tidas por fabulosas: com efeito, mais do que os poderes realizados, contribui para a credibilidade a profecia, que se busca juntamente com os poderes. Pode-se também dizer isto: que alguns foram honrados por darem testemunho a Deus. Quer, pois, privar o coro dos profetas de imensa graça aquele que diz que eles não deviam dar testemunho sobre Cristo. A estes acrescentou-se João, para dar testemunho da luz.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Non ea indigente testimonio, sed propter quid, ipse Ioannes docet, dicens ut omnes crederent per illum. Sicut enim carnem induit, ne omnes perderet; ita et praeconem hominem misit, ut cognatam audientes vocem, facilius advenirent"
+        "latim": "Non ea indigente testimonio, sed propter quid, ipse Ioannes docet, dicens ut omnes crederent per illum. Sicut enim carnem induit, ne omnes perderet; ita et praeconem hominem misit, ut cognatam audientes vocem, facilius advenirent",
+        "pt": "Não porque ela precisasse de testemunho, mas por quê, o próprio João ensina, dizendo: \"Para que todos cressem por meio dele\". Assim como ele assumiu a carne para não perder a todos, assim também enviou um homem como arauto, para que, ouvindo uma voz da mesma natureza, viessem com mais facilidade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Non autem ait: ut omnes crederent in illum: maledictus enim homo qui confidit in homine; sed ut omnes crederent per illum; hoc est, per illius testimonium crederent in lucem"
+        "latim": "Non autem ait: ut omnes crederent in illum: maledictus enim homo qui confidit in homine; sed ut omnes crederent per illum; hoc est, per illius testimonium crederent in lucem",
+        "pt": "Não disse: para que todos cressem nele: pois \"maldito o homem que confia no homem\"; mas para que todos cressem por meio dele; isto é, para que, por seu testemunho, cressem na luz.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Si vero aliqui non crediderint, excusabilis permanet ipse: nam sicut si aliquis includens se in domo caliginis, et ipsum solis radius non illustret, ipse causam tribuit, et non sol; sic Ioannes, ut omnes crederent, missus fuit; sed si minime consecutum est, ipse huius rei causa non extitit"
+        "latim": "Si vero aliqui non crediderint, excusabilis permanet ipse: nam sicut si aliquis includens se in domo caliginis, et ipsum solis radius non illustret, ipse causam tribuit, et non sol; sic Ioannes, ut omnes crederent, missus fuit; sed si minime consecutum est, ipse huius rei causa non extitit",
+        "pt": "Se, porém, alguns não crerem, ele permanece escusável: pois, assim como, se alguém se encerra numa casa escura e o raio do sol não o ilumina, a causa é ele, e não o sol; assim João foi enviado para que todos cressem; mas, se isso não se conseguiu, ele não foi a causa disso.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Quia vero multum apud nos maior qui testatur, eo cui testimonium perhibet, et dignior fide esse videtur; ne quis et de Ioanne hoc suspicetur, hanc suspicionem destruit, dicens non erat ille lux; sed ut testimonium perhiberet de lumine. Si vero non huic instans opinioni hoc resumpsit ut testimonium perhiberet de lumine, superfluum esset quod dicitur, et magis iteratio sermonis quam explanatio doctrinae"
+        "latim": "Quia vero multum apud nos maior qui testatur, eo cui testimonium perhibet, et dignior fide esse videtur; ne quis et de Ioanne hoc suspicetur, hanc suspicionem destruit, dicens non erat ille lux; sed ut testimonium perhiberet de lumine. Si vero non huic instans opinioni hoc resumpsit ut testimonium perhiberet de lumine, superfluum esset quod dicitur, et magis iteratio sermonis quam explanatio doctrinae",
+        "pt": "Como entre nós é muito maior quem testemunha do que aquele de quem dá testemunho, e parece mais digno de fé, para que ninguém suspeitasse isso também de João, destrói esta suspeita, dizendo: \"Ele não era a luz; mas veio para dar testemunho da luz\". Se, porém, não insistisse nesta opinião ao retomar \"para dar testemunho da luz\", seria supérfluo o que se diz, e mais repetição de discurso do que explicação de doutrina.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Sed dicet aliquis: ergo neque Ioannem, neque sanctorum quempiam lucem esse vel fuisse dicemus. Sed si sanctorum aliquem lucem velimus dicere, ponemus lucem absque articulo; ut si interrogatus fueris utrum Ioannes est lux sine articulo, secure concedas; si vero cum articulo, non concedas. Non enim est ipsa lux principalior; sed lux dicitur quia secundum participationem lucem habeat a vero lumine"
+        "latim": "Sed dicet aliquis: ergo neque Ioannem, neque sanctorum quempiam lucem esse vel fuisse dicemus. Sed si sanctorum aliquem lucem velimus dicere, ponemus lucem absque articulo; ut si interrogatus fueris utrum Ioannes est lux sine articulo, secure concedas; si vero cum articulo, non concedas. Non enim est ipsa lux principalior; sed lux dicitur quia secundum participationem lucem habeat a vero lumine",
+        "pt": "Mas dirá alguém: então não diremos que nem João nem qualquer dos santos é ou foi luz. Mas se quisermos dizer que algum dos santos é luz, empregaremos \"luz\" sem artigo; de modo que, se fores interrogado se João é luz sem artigo, concedas com segurança; se, porém, com artigo, não concedas. Pois ele não é a própria luz em sentido principal; mas é chamado luz porque tem a luz por participação da verdadeira luz",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },
   {
     "lectio": 11,
-    "versos": null,
+    "versos": [
+      9,
+      9
+    ],
     "itens": [
       {
         "autor": "Augustinus",
@@ -557,7 +681,10 @@
   },
   {
     "lectio": 12,
-    "versos": null,
+    "versos": [
+      10,
+      10
+    ],
     "itens": [
       {
         "autor": "Augustinus",
@@ -593,7 +720,10 @@
   },
   {
     "lectio": 13,
-    "versos": null,
+    "versos": [
+      11,
+      13
+    ],
     "itens": [
       {
         "autor": "Chrysostomus",
@@ -674,7 +804,10 @@
   },
   {
     "lectio": 14,
-    "versos": null,
+    "versos": [
+      14,
+      14
+    ],
     "itens": [
       {
         "autor": "Augustinus",
@@ -745,7 +878,10 @@
   },
   {
     "lectio": 15,
-    "versos": null,
+    "versos": [
+      14,
+      14
+    ],
     "itens": [
       {
         "autor": "Chrysostomus",
@@ -791,7 +927,10 @@
   },
   {
     "lectio": 16,
-    "versos": null,
+    "versos": [
+      15,
+      15
+    ],
     "itens": [
       {
         "autor": "Alcuinus",
@@ -832,7 +971,10 @@
   },
   {
     "lectio": 17,
-    "versos": null,
+    "versos": [
+      16,
+      17
+    ],
     "itens": [
       {
         "autor": "Origenes",
@@ -863,7 +1005,10 @@
   },
   {
     "lectio": 18,
-    "versos": null,
+    "versos": [
+      18,
+      18
+    ],
     "itens": [
       {
         "autor": "Origenes",
@@ -974,229 +1119,532 @@
   },
   {
     "lectio": 19,
-    "versos": null,
+    "versos": [
+      19,
+      23
+    ],
     "itens": [
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Secundum legitur hoc testimonium a Ioanne Baptista de Christo prolatum, incipiente primo illic: hic est de quo dixi, et desinente ibi: ipse enarravit"
+        "latim": "Secundum legitur hoc testimonium a Ioanne Baptista de Christo prolatum, incipiente primo illic: hic est de quo dixi, et desinente ibi: ipse enarravit",
+        "pt": "Lê-se em segundo lugar este testemunho dado por João Batista acerca de Cristo, começando primeiro ali: \"Este é aquele de quem eu disse\", e terminando ali: \"ele mesmo o deu a conhecer\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Vel aliter. Postquam superius dixit Evangelista, quod Ioannes testabatur de Christo: ante me factus est, nunc subiungit quando praemissum testimonium reddiderit Christo Ioannes; unde dicit et hoc est testimonium Ioannis, quando miserunt Iudaei ab Hierosolymis sacerdotes et Levitas ad Ioannem"
+        "latim": "Vel aliter. Postquam superius dixit Evangelista, quod Ioannes testabatur de Christo: ante me factus est, nunc subiungit quando praemissum testimonium reddiderit Christo Ioannes; unde dicit et hoc est testimonium Ioannis, quando miserunt Iudaei ab Hierosolymis sacerdotes et Levitas ad Ioannem",
+        "pt": "Ou de outro modo. Depois de o Evangelista ter dito acima que João testemunhava de Cristo: \"foi feito antes de mim\", acrescenta agora quando João deu a Cristo o testemunho mencionado; donde diz: \"E este é o testemunho de João, quando os judeus enviaram de Jerusalém sacerdotes e levitas a João\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Iudaei quidem ab Hierosolymis, ut cognati existentes Baptistae de stirpe sacerdotali existentis, sacerdotes et Levitas destinant, sciscitaturos quis esset Ioannes; eos scilicet qui reputati sunt secundum electionem ab aliis differre; et ab electo Hierosolymorum loco. Ioannem itaque quaerunt cum tanta veneratione; erga Christum autem nihil huiusmodi factum legitur a Iudaeis. Sed quod erga Ioannem Iudaei, hoc Ioannes erga Christum prosequitur, per proprios discipulos interrogans: tu es qui venturus es, an alium expectamus?"
+        "latim": "Iudaei quidem ab Hierosolymis, ut cognati existentes Baptistae de stirpe sacerdotali existentis, sacerdotes et Levitas destinant, sciscitaturos quis esset Ioannes; eos scilicet qui reputati sunt secundum electionem ab aliis differre; et ab electo Hierosolymorum loco. Ioannem itaque quaerunt cum tanta veneratione; erga Christum autem nihil huiusmodi factum legitur a Iudaeis. Sed quod erga Ioannem Iudaei, hoc Ioannes erga Christum prosequitur, per proprios discipulos interrogans: tu es qui venturus es, an alium expectamus?",
+        "pt": "Os judeus de Jerusalém, por serem parentes do Batista, que era de estirpe sacerdotal, enviam sacerdotes e levitas para indagar quem era João; isto é, aqueles que são tidos por diferir dos demais segundo a eleição; e a partir do lugar escolhido, Jerusalém. Procuram, pois, João com tanta veneração; mas para com Cristo não se lê que os judeus tenham feito algo semelhante. Mas o que os judeus fazem para com João, João o faz para com Cristo, interrogando por meio de seus próprios discípulos: \"És tu aquele que há de vir, ou esperamos outro?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Sic autem fide dignum aestimaverunt esse Ioannem, ut ei de seipso dicenti crederent; unde dicitur ut interrogarent eum: tu quis es?"
+        "latim": "Sic autem fide dignum aestimaverunt esse Ioannem, ut ei de seipso dicenti crederent; unde dicitur ut interrogarent eum: tu quis es?",
+        "pt": "Julgaram João tão digno de fé que acreditariam nele quando falasse de si mesmo; donde se diz: \"para o interrogarem: Quem és tu?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Non autem mitterent nisi moverentur excellentia auctoritatis eius, quia ausus est baptizare"
+        "latim": "Non autem mitterent nisi moverentur excellentia auctoritatis eius, quia ausus est baptizare",
+        "pt": "Não enviariam, porém, se não fossem movidos pela excelência da autoridade dele, porque ousou batizar",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Ioannes autem, ut videtur, discernebat ex quaestione, sacerdotum et Levitarum dubitationem, ne forte Christus esset baptizans; apertius tamen illud profiteri cavebant, ne temerarii putarentur. Quapropter merito, ut eorum opinio fallax de eo primitus aboleretur, ac subinde veritas propalaretur, quod non sit Christus ante omnia manifestat; unde sequitur et confessus est, et non negavit: et confessus est: quia non sum ego Christus. Hic etiam adiciamus, quia tempus adventus Christi populum recreabat quodammodo iam praesens existens, legisperitis ex sacris Scripturis illius tempus speratum colligentibus: propter quod Theodas non modicam multitudinem quasi Christus congregavit, et post illum Iudas Galilaeus in diebus professionis. Cum ergo ferventius Christi expectaretur adventus, Iudaei transmittunt ad Ioannem, per hoc quod est tu quis es? Conicere volentes si ipse se Christum fateretur. Non autem ex eo quod dicit non sum ego Christus, negavit: ex hoc enim ipso confessus est veritatem"
+        "latim": "Ioannes autem, ut videtur, discernebat ex quaestione, sacerdotum et Levitarum dubitationem, ne forte Christus esset baptizans; apertius tamen illud profiteri cavebant, ne temerarii putarentur. Quapropter merito, ut eorum opinio fallax de eo primitus aboleretur, ac subinde veritas propalaretur, quod non sit Christus ante omnia manifestat; unde sequitur et confessus est, et non negavit: et confessus est: quia non sum ego Christus. Hic etiam adiciamus, quia tempus adventus Christi populum recreabat quodammodo iam praesens existens, legisperitis ex sacris Scripturis illius tempus speratum colligentibus: propter quod Theodas non modicam multitudinem quasi Christus congregavit, et post illum Iudas Galilaeus in diebus professionis. Cum ergo ferventius Christi expectaretur adventus, Iudaei transmittunt ad Ioannem, per hoc quod est tu quis es? Conicere volentes si ipse se Christum fateretur. Non autem ex eo quod dicit non sum ego Christus, negavit: ex hoc enim ipso confessus est veritatem",
+        "pt": "João, como parece, discernia pela pergunta a dúvida dos sacerdotes e levitas, se acaso Cristo seria aquele que batizava; contudo, evitavam professá-lo abertamente, para não serem tidos por temerários. Por isso, com razão, para que a opinião enganosa deles a seu respeito fosse primeiro abolida e em seguida a verdade fosse revelada, manifesta antes de tudo que não é o Cristo; donde se segue: \"e confessou, e não negou: e confessou: Eu não sou o Cristo\". Acrescentemos também aqui que o tempo da vinda de Cristo reanimava de algum modo o povo, já como presente, pois os peritos da lei reuniam, a partir das Sagradas Escrituras, o tempo esperado dele; por isso Teudas reuniu uma multidão não pequena como se fosse o Cristo, e depois dele Judas, o Galileu, nos dias do recenseamento. Como, pois, a vinda de Cristo era esperada com maior fervor, os judeus enviam a João, com as palavras \"Quem és tu?\", querendo conjeturar se ele mesmo se declarava o Cristo. Ele, porém, não negou ao dizer \"Eu não sou o Cristo\": pois por isso mesmo confessou a verdade",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Negavit plane quod non erat, sed non negavit quod erat, ut veritatem loquens, eius membrum fieret cuius sibi nomen fallaciter non usurparet"
+        "latim": "Negavit plane quod non erat, sed non negavit quod erat, ut veritatem loquens, eius membrum fieret cuius sibi nomen fallaciter non usurparet",
+        "pt": "Negou claramente o que não era, mas não negou o que era, para que, falando a verdade, se tornasse membro daquele cujo nome não usurpou para si falsamente",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Vel aliter. Passi erant Iudaei quamdam humanam passionem ad Ioannem. Indignum enim aestimabant, subici eum Christo propter multa quae Ioannis claritatem demonstrabant: quorum primum erat genus illustre, principis enim sacerdotum filius erat; deinde dura educatio, humanorum despectio. In Christo autem contrarium videbatur: genus humile, quod ei exprobrabant dicentes: nonne hic est fabri filius? Dieta communis, et vestimenta nihil plus multis habentia. Quia igitur Ioannes continue ad Christum mittebat, volentes magis Ioannem habere magistrum, mittunt ad eum, opinantes per blanditias eum allicere ad confitendum se Christum esse. Non ergo quosdam contemptibiles mittunt, ut ad Christum, ministros et Herodianos, sed sacerdotes et Levitas; et non quoscumque, sed eos qui erant ex Hierosolymis, hoc est honorabiliores; et ad hoc mittunt ut interrogarent tu quis es? Non quasi ignorantes, sed volentes eum inducere ad hoc quod dixi: unde Ioannes ad mentem et non ad interrogationem eis respondit et confessus est, et non negavit; et confessus est: quia non sum ego Christus. Et vide sapientiam Evangelistae. Tertio quasi idem dicit, et virtutem Baptistae indicans, et malitiam et amentiam Iudaeorum. Devoti enim famuli est, non solum non rapere gloriam domini, sed oblatam a multis respuere. Turbae quidem ex ignorantia ad hanc venerunt suspicionem ut Ioannem Christum aestimaret; hi vero a maligna mente, ex qua interrogabant eum, aestimantes per blanditias attrahere ad hoc quod volebant: nisi enim excogitassent hoc, respondenti non sum ego Christus, dixissent: non hoc suspicati sumus, non hoc venimus interrogaturi. Sed capti et manifesti effecti ad aliud veniunt; unde sequitur et interrogaverunt eum: quid ergo? Elias es tu?"
+        "latim": "Vel aliter. Passi erant Iudaei quamdam humanam passionem ad Ioannem. Indignum enim aestimabant, subici eum Christo propter multa quae Ioannis claritatem demonstrabant: quorum primum erat genus illustre, principis enim sacerdotum filius erat; deinde dura educatio, humanorum despectio. In Christo autem contrarium videbatur: genus humile, quod ei exprobrabant dicentes: nonne hic est fabri filius? Dieta communis, et vestimenta nihil plus multis habentia. Quia igitur Ioannes continue ad Christum mittebat, volentes magis Ioannem habere magistrum, mittunt ad eum, opinantes per blanditias eum allicere ad confitendum se Christum esse. Non ergo quosdam contemptibiles mittunt, ut ad Christum, ministros et Herodianos, sed sacerdotes et Levitas; et non quoscumque, sed eos qui erant ex Hierosolymis, hoc est honorabiliores; et ad hoc mittunt ut interrogarent tu quis es? Non quasi ignorantes, sed volentes eum inducere ad hoc quod dixi: unde Ioannes ad mentem et non ad interrogationem eis respondit et confessus est, et non negavit; et confessus est: quia non sum ego Christus. Et vide sapientiam Evangelistae. Tertio quasi idem dicit, et virtutem Baptistae indicans, et malitiam et amentiam Iudaeorum. Devoti enim famuli est, non solum non rapere gloriam domini, sed oblatam a multis respuere. Turbae quidem ex ignorantia ad hanc venerunt suspicionem ut Ioannem Christum aestimaret; hi vero a maligna mente, ex qua interrogabant eum, aestimantes per blanditias attrahere ad hoc quod volebant: nisi enim excogitassent hoc, respondenti non sum ego Christus, dixissent: non hoc suspicati sumus, non hoc venimus interrogaturi. Sed capti et manifesti effecti ad aliud veniunt; unde sequitur et interrogaverunt eum: quid ergo? Elias es tu?",
+        "pt": "Ou de outro modo. Os judeus sofriam uma certa paixão humana em relação a João. Pois julgavam indigno que ele fosse submetido a Cristo, por causa de muitas coisas que demonstravam o esplendor de João: a primeira delas era a linhagem ilustre, pois era filho de um príncipe dos sacerdotes; depois, a educação austera e o desprezo das coisas humanas. Em Cristo, porém, via-se o contrário: linhagem humilde, que lhe censuravam, dizendo: \"Não é este o filho do carpinteiro?\"; dieta comum, e vestes que nada tinham de mais que as de muitos. Porque, pois, João remetia continuamente a Cristo, querendo eles antes ter João por mestre, enviam a ele, pensando atraí-lo com lisonjas a confessar que era o Cristo. Não enviam, portanto, gente desprezível, como se fosse a Cristo, servos e herodianos, mas sacerdotes e levitas; e não quaisquer, mas os que eram de Jerusalém, isto é, os mais honrados; e enviam para que perguntassem: \"Quem és tu?\" Não como ignorantes, mas querendo induzi-lo ao que eu disse: por isso João respondeu-lhes ao pensamento e não à pergunta, e confessou, e não negou; e confessou: \"Eu não sou o Cristo\". E vê a sabedoria do Evangelista. Pela terceira vez diz quase o mesmo, indicando tanto a virtude do Batista como a malícia e a insensatez dos judeus. Pois é próprio do servo devoto não só não arrebatar a glória do senhor, mas recusar a que muitos lhe oferecem. As multidões chegaram a essa suspeita, de que João seria o Cristo, por ignorância; estes, porém, por uma mente maligna, com a qual o interrogavam, pensando atraí-lo com lisonjas ao que queriam: pois se não tivessem urdido isso, ao que respondia \"Eu não sou o Cristo\" teriam dito: não suspeitamos isto, não viemos perguntar isto. Mas, apanhados e desmascarados, passam a outra coisa; donde se segue: \"E perguntaram-lhe: Que és, então? És tu Elias?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Noverant enim quod praecessurus erat Elias Christum: non enim alicui ignotum erat nomen Christi apud Hebraeos; sed non putabant illum esse Christum; nec tamen omnino putaverunt Christum non esse venturum; et cum sperarent futurum, offenderunt in praesentem. Sequitur et dixit: non sum"
+        "latim": "Noverant enim quod praecessurus erat Elias Christum: non enim alicui ignotum erat nomen Christi apud Hebraeos; sed non putabant illum esse Christum; nec tamen omnino putaverunt Christum non esse venturum; et cum sperarent futurum, offenderunt in praesentem. Sequitur et dixit: non sum",
+        "pt": "Sabiam, pois, que Elias precederia o Cristo: com efeito, o nome de Cristo não era desconhecido de ninguém entre os hebreus; mas não pensavam que ele fosse o Cristo; nem por isso julgaram de todo que o Cristo não haveria de vir; e, embora o esperassem como futuro, tropeçaram nele presente. Segue-se: \"E disse: Não sou\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Ex his verbis nobis quaestio valde implexa generatur. Alio quippe in loco inquisitus a discipulis dominus de Eliae adventu, respondit: si vultis scire, Ioannes ipse est Elias. Requisitus autem Ioannes dicit non sum Elias. Quomodo ergo propheta veritatis est si eiusdem veritatis sermonibus concors non est?"
+        "latim": "Ex his verbis nobis quaestio valde implexa generatur. Alio quippe in loco inquisitus a discipulis dominus de Eliae adventu, respondit: si vultis scire, Ioannes ipse est Elias. Requisitus autem Ioannes dicit non sum Elias. Quomodo ergo propheta veritatis est si eiusdem veritatis sermonibus concors non est?",
+        "pt": "Destas palavras nasce para nós uma questão muito intricada. Com efeito, em outro lugar, interrogado pelos discípulos sobre a vinda de Elias, o Senhor respondeu: \"Se quereis saber, ele mesmo, João, é Elias\". Mas João, interrogado, diz: \"Não sou Elias\". Como, então, é profeta da verdade, se não concorda com as palavras da própria Verdade?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Dicet aliquis quod se ignorabat Ioannes esse Eliam; et hoc nimirum utentur documento qui assistunt iteratae incorporationis rationi, tamquam anima denuo induente corpora. Quaerunt enim Iudaei per Levitas ac sacerdotes, an esset Elias, cum iteratae corporis assumptionis documentum verax arbitrantur, quasi paternum existens, nec alienum ab arcanorum suorum doctrina. Ob hoc itaque dicit Ioannes: Elias non sum; nam nescit primaevam vitam propriam. Qualiter autem videtur rationabile, si tamquam propheta spiritu illuminatus est, et de Deo et unigenito tanta narravit, ignorasse de seipso an unquam eius anima fuerit in Elia?"
+        "latim": "Dicet aliquis quod se ignorabat Ioannes esse Eliam; et hoc nimirum utentur documento qui assistunt iteratae incorporationis rationi, tamquam anima denuo induente corpora. Quaerunt enim Iudaei per Levitas ac sacerdotes, an esset Elias, cum iteratae corporis assumptionis documentum verax arbitrantur, quasi paternum existens, nec alienum ab arcanorum suorum doctrina. Ob hoc itaque dicit Ioannes: Elias non sum; nam nescit primaevam vitam propriam. Qualiter autem videtur rationabile, si tamquam propheta spiritu illuminatus est, et de Deo et unigenito tanta narravit, ignorasse de seipso an unquam eius anima fuerit in Elia?",
+        "pt": "Dirá alguém que João ignorava ser Elias; e certamente usarão este argumento os que defendem a doutrina da reencarnação repetida, como se a alma revestisse de novo corpos. Pois os judeus perguntam, por meio dos levitas e sacerdotes, se ele era Elias, porque consideram verdadeira a doutrina da repetida assunção do corpo, como se fosse herdada dos pais e não alheia ao ensino de seus segredos. Por isso, então, João diz: \"Não sou Elias\"; pois não conhece a sua própria vida anterior. Mas como parece razoável que, sendo iluminado pelo Espírito como profeta, e tendo narrado tantas coisas de Deus e do Unigênito, ignorasse a respeito de si mesmo se alguma vez a sua alma esteve em Elias?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Sed si subtiliter veritas ipsa requiratur, hoc quidem quod inter se contrarium sonat, quomodo contrarium non sit invenitur. Ad Zachariam namque de Ioanne Angelus dixit: ipse praecedet ante illum in spiritu et virtute Eliae, quia scilicet sicut Elias secundum domini adventum praeveniet, ita Ioannes praevenit primum; sicut ille praecursor venturus est iudicis, ita iste praecursor factus est redemptoris. Ioannes igitur in spiritu Elias erat, in persona Elias non erat. Quod autem dominus fatetur de spiritu, hoc Ioannes denegat de persona: quia et iustum sic erat ut discipulis dominus spiritalem de Ioanne sententiam diceret, et Ioannes turbis carnalibus non de suo spiritu, sed de corpore responderet"
+        "latim": "Sed si subtiliter veritas ipsa requiratur, hoc quidem quod inter se contrarium sonat, quomodo contrarium non sit invenitur. Ad Zachariam namque de Ioanne Angelus dixit: ipse praecedet ante illum in spiritu et virtute Eliae, quia scilicet sicut Elias secundum domini adventum praeveniet, ita Ioannes praevenit primum; sicut ille praecursor venturus est iudicis, ita iste praecursor factus est redemptoris. Ioannes igitur in spiritu Elias erat, in persona Elias non erat. Quod autem dominus fatetur de spiritu, hoc Ioannes denegat de persona: quia et iustum sic erat ut discipulis dominus spiritalem de Ioanne sententiam diceret, et Ioannes turbis carnalibus non de suo spiritu, sed de corpore responderet",
+        "pt": "Mas se a própria verdade for investigada com sutileza, descobre-se como não é contrário aquilo que soa contrário entre si. Com efeito, a Zacarias, a respeito de João, disse o Anjo: \"Ele irá adiante dele no espírito e no poder de Elias\", porque, assim como Elias precederá a segunda vinda do Senhor, assim João precedeu a primeira; como aquele será o precursor do juiz que há de vir, assim este se fez precursor do redentor. João, portanto, era Elias em espírito, não era Elias em pessoa. O que o Senhor afirma quanto ao espírito, João nega quanto à pessoa: porque era justo que o Senhor dissesse aos discípulos a sentença espiritual sobre João, e que João respondesse às multidões carnais não a respeito do seu espírito, mas do seu corpo",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Respondit ergo Levitis et sacerdotibus: non sum, coniectans propositum quaestionis eorum: non enim sapiebat praemissa examinatio, si idem spiritus esset in utroque; sed si Ioannes esset ipse Elias qui assumptus est, nunc apparens, secundum quod a Iudaeis expectabatur, absque nativitate. Primus autem arbitrans resumptionem corporum, dicet, quod inconsequens est filium Zachariae tanti sacerdotis in senio natum, super omnem humanam expectationem, ignorari a sacerdotibus et Levitis ipsum natum fuisse; maxime Luca testante quod factus est timor in omnibus habitantibus circa eos. Sed forsan quoniam prope finem Eliam expectabant ante Christum, quasi tropice sciscitari videntur: an es tu qui praenuntias Christum venturum? Et caute respondit: non sum. Sed nihil mirabile. Sicut in salvatore, pluribus scientibus ex Maria nativitatem eius, quidam fallebantur putantes eum Ioannem Baptistam vel Eliam, aut aliquem prophetarum; sic et in Ioanne quosdam ortus eius ex Zacharia non latebat; et quidam dubitabant, si forsan qui expectabatur Elias apparuit in Ioanne. Quoniam vero cum plures in Israel editi fuerint prophetae, unus de quo Moyses prophetaverat, praesertim expectabatur, iuxta illud: prophetam vobis suscitabit Deus ex fratribus vestris: sicut mihi, illi parebitis; tertio sciscitantur, non si foret propheta simpliciter, sed cum articulo, ut in Graeco ponitur; unde sequitur propheta es tu? Per singulos enim prophetas noverat populus Israel neminem eorum fore hunc quem Moyses prophetaverat, qui sicut Moyses medius staret inter Deum et homines, et accepto testamento a Deo traderet discipulis. Hoc autem illis nomen non Christo attribuentibus, sed arbitrantibus alium a Christo ipsum fore, Ioannes scivit quoniam et Christus ille propheta esset; unde subditur et respondit: non"
+        "latim": "Respondit ergo Levitis et sacerdotibus: non sum, coniectans propositum quaestionis eorum: non enim sapiebat praemissa examinatio, si idem spiritus esset in utroque; sed si Ioannes esset ipse Elias qui assumptus est, nunc apparens, secundum quod a Iudaeis expectabatur, absque nativitate. Primus autem arbitrans resumptionem corporum, dicet, quod inconsequens est filium Zachariae tanti sacerdotis in senio natum, super omnem humanam expectationem, ignorari a sacerdotibus et Levitis ipsum natum fuisse; maxime Luca testante quod factus est timor in omnibus habitantibus circa eos. Sed forsan quoniam prope finem Eliam expectabant ante Christum, quasi tropice sciscitari videntur: an es tu qui praenuntias Christum venturum? Et caute respondit: non sum. Sed nihil mirabile. Sicut in salvatore, pluribus scientibus ex Maria nativitatem eius, quidam fallebantur putantes eum Ioannem Baptistam vel Eliam, aut aliquem prophetarum; sic et in Ioanne quosdam ortus eius ex Zacharia non latebat; et quidam dubitabant, si forsan qui expectabatur Elias apparuit in Ioanne. Quoniam vero cum plures in Israel editi fuerint prophetae, unus de quo Moyses prophetaverat, praesertim expectabatur, iuxta illud: prophetam vobis suscitabit Deus ex fratribus vestris: sicut mihi, illi parebitis; tertio sciscitantur, non si foret propheta simpliciter, sed cum articulo, ut in Graeco ponitur; unde sequitur propheta es tu? Per singulos enim prophetas noverat populus Israel neminem eorum fore hunc quem Moyses prophetaverat, qui sicut Moyses medius staret inter Deum et homines, et accepto testamento a Deo traderet discipulis. Hoc autem illis nomen non Christo attribuentibus, sed arbitrantibus alium a Christo ipsum fore, Ioannes scivit quoniam et Christus ille propheta esset; unde subditur et respondit: non",
+        "pt": "Respondeu, pois, aos levitas e sacerdotes: \"Não sou\", conjeturando o propósito da pergunta deles: pois o exame precedente não tinha sentido se o mesmo espírito estivesse em ambos; mas perguntavam se João seria o próprio Elias que foi arrebatado, agora aparecendo, sem nascimento, como era esperado pelos judeus. O primeiro, porém, que julga haver reassunção dos corpos, dirá que é inconsequente que o filho de Zacarias, sacerdote tão grande, nascido na velhice, além de toda expectativa humana, fosse ignorado pelos sacerdotes e levitas quanto ao seu nascimento; sobretudo atestando Lucas que \"veio o temor sobre todos os que habitavam ao redor deles\". Mas talvez, porque esperavam Elias perto do fim, antes de Cristo, parecem perguntar como que em sentido figurado: És tu aquele que anuncia a vinda do Cristo? E ele respondeu cautelosamente: \"Não sou\". Mas nada há de admirável. Como no Salvador, sabendo muitos de seu nascimento de Maria, alguns se enganavam julgando que fosse João Batista, ou Elias, ou algum dos profetas; assim também, quanto a João, o seu nascimento de Zacarias não era ignorado por alguns; e alguns duvidavam se porventura Elias, que era esperado, aparecera em João. Como, porém, tendo surgido muitos profetas em Israel, esperava-se sobretudo um, aquele de quem Moisés profetizara, segundo aquilo: \"O Senhor, vosso Deus, suscitará para vós, do meio de vossos irmãos, um profeta como eu: a ele ouvireis\"; perguntam pela terceira vez, não se seria profeta simplesmente, mas com artigo, como se põe no grego; donde se segue: \"És tu o profeta?\" Pois, por meio de cada um dos profetas, o povo de Israel sabia que nenhum deles seria aquele de quem Moisés profetizara, que, como Moisés, ficaria no meio entre Deus e os homens e, recebido de Deus o testamento, o transmitiria aos discípulos. Atribuindo eles este nome não a Cristo, mas julgando que seria outro que não o Cristo, João soube que também o Cristo é aquele profeta; donde se acrescenta: \"E respondeu: Não\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Vel quia Ioannes maior erat quam propheta: quia prophetae longe praenuntiaverunt, Ioannes praesentem demonstrabat. Sequitur dixerunt ergo ei: quis es, ut responsum demus his qui miserunt nos? Quid dicis de teipso?"
+        "latim": "Vel quia Ioannes maior erat quam propheta: quia prophetae longe praenuntiaverunt, Ioannes praesentem demonstrabat. Sequitur dixerunt ergo ei: quis es, ut responsum demus his qui miserunt nos? Quid dicis de teipso?",
+        "pt": "Ou porque João era maior que um profeta: pois os profetas anunciaram de longe, João mostrava o presente. Segue-se: \"Disseram-lhe, pois: Quem és, para que demos resposta aos que nos enviaram? Que dizes de ti mesmo?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Vides hic vehementius insistentes et interrogantes; hunc autem cum mansuetudine eas quae non erant verae suspiciones destruentem, et eam quae est vera ponentem: unde sequitur ait: ego vox clamantis in deserto"
+        "latim": "Vides hic vehementius insistentes et interrogantes; hunc autem cum mansuetudine eas quae non erant verae suspiciones destruentem, et eam quae est vera ponentem: unde sequitur ait: ego vox clamantis in deserto",
+        "pt": "Vês aqui os que insistem e interrogam com mais veemência; e a este, com mansidão, destruindo as suspeitas que não eram verdadeiras e estabelecendo a que é verdadeira: donde se segue: \"Disse: Eu sou a voz do que clama no deserto\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Isaias illud dixit; in Ioanne prophetia ista completa est"
+        "latim": "Isaias illud dixit; in Ioanne prophetia ista completa est",
+        "pt": "Isaías disse isto; em João essa profecia se cumpriu",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Scitis autem quod unigenitus filius verbum patris vocatur. Ex ipsa autem nostra locutione cognoscimus, quia prius vox sonat, ut verbum possit audiri. Ioannes ergo vocem se asserit esse, quia verbum praecedit, et per eius ministerium, patris verbum ab hominibus auditur"
+        "latim": "Scitis autem quod unigenitus filius verbum patris vocatur. Ex ipsa autem nostra locutione cognoscimus, quia prius vox sonat, ut verbum possit audiri. Ioannes ergo vocem se asserit esse, quia verbum praecedit, et per eius ministerium, patris verbum ab hominibus auditur",
+        "pt": "Sabeis que o Filho Unigênito é chamado o Verbo do Pai. Pela nossa própria fala sabemos que primeiro soa a voz, para que a palavra possa ser ouvida. João afirma, pois, ser a voz, porque precede o Verbo, e por seu ministério o Verbo do Pai é ouvido pelos homens",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Ineleganter autem Heracleon de Ioanne et prophetis considerans, ait, quoniam verbum quidem salvator est, vox autem per Ioannem intelligitur; solus enim sonus est omnis gradus propheticus. Cui dicendum, quod si non significativam vocem dederit tuba, nemo se accinget ad praelium. Si ergo nil aliud quam sonus est vox prophetica, quomodo transmittit nos ad illam salvator? Scrutamini Scripturas. Dicit autem Ioannes se esse vocem non clamantem in deserto, sed clamantis in deserto, eius scilicet qui stabat et clamabat: si quis sitit, veniat ad me, et bibat. Clamat enim ut distantes auditu percipiant, et gravem habentes auditum sentiant immensitatem eorum quae dicuntur"
+        "latim": "Ineleganter autem Heracleon de Ioanne et prophetis considerans, ait, quoniam verbum quidem salvator est, vox autem per Ioannem intelligitur; solus enim sonus est omnis gradus propheticus. Cui dicendum, quod si non significativam vocem dederit tuba, nemo se accinget ad praelium. Si ergo nil aliud quam sonus est vox prophetica, quomodo transmittit nos ad illam salvator? Scrutamini Scripturas. Dicit autem Ioannes se esse vocem non clamantem in deserto, sed clamantis in deserto, eius scilicet qui stabat et clamabat: si quis sitit, veniat ad me, et bibat. Clamat enim ut distantes auditu percipiant, et gravem habentes auditum sentiant immensitatem eorum quae dicuntur",
+        "pt": "Heracleão, porém, considerando João e os profetas, diz sem elegância que o Verbo é o Salvador, e que a voz se entende por João; pois toda a ordem profética seria somente som. A ele se deve dizer: \"Se a trombeta der um som sem significado, ninguém se preparará para o combate\". Se, pois, a voz profética não é nada mais que som, como nos remete a ela o Salvador? \"Examinai as Escrituras.\" João diz que é a voz não do que clama no deserto, mas \"do que clama no deserto\", isto é, daquele que estava de pé e clamava: \"Se alguém tem sede, venha a mim e beba\". Clama, com efeito, para que os distantes o percebam pelo ouvido, e os de ouvido pesado sintam a imensidão do que se diz",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Vel quia veritatem manifeste annuntiat: omnes enim qui in lege erant, obscure loquebantur"
+        "latim": "Vel quia veritatem manifeste annuntiat: omnes enim qui in lege erant, obscure loquebantur",
+        "pt": "Ou porque anuncia a verdade manifestamente: pois todos os que estavam na lei falavam obscuramente",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Vel in deserto Ioannes clamat, quia quasi derelictae ac destitutae Iudaeae solatium redemptoris annuntiat"
+        "latim": "Vel in deserto Ioannes clamat, quia quasi derelictae ac destitutae Iudaeae solatium redemptoris annuntiat",
+        "pt": "Ou João clama no deserto porque anuncia à Judeia, como abandonada e desamparada, o consolo do Redentor",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Opus autem vocis in deserto clamantis est ut anima a Deo destituta, ad rectam faciendam viam domini revocetur, nequaquam pravitatem serpentini gressus prosequendo: secundum contemplationem quidem sublimatam in veritate absque permixtione mendacii, et secundum actionem post congruam speculationem licitum opus referentem; unde sequitur dirigite viam domini, sicut dixit Isaias propheta"
+        "latim": "Opus autem vocis in deserto clamantis est ut anima a Deo destituta, ad rectam faciendam viam domini revocetur, nequaquam pravitatem serpentini gressus prosequendo: secundum contemplationem quidem sublimatam in veritate absque permixtione mendacii, et secundum actionem post congruam speculationem licitum opus referentem; unde sequitur dirigite viam domini, sicut dixit Isaias propheta",
+        "pt": "A obra da voz que clama no deserto é que a alma, desamparada por Deus, seja chamada de volta a tornar reta a via do Senhor, não seguindo de modo algum a perversidade do passo serpentino: quanto à contemplação, elevada na verdade, sem mistura de mentira; e quanto à ação, apresentando, depois da devida meditação, uma obra lícita; donde se segue: \"Endireitai o caminho do Senhor, como disse o profeta Isaías\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Via domini ad cor dirigitur, cum veritatis sermo humiliter auditur; via domini ad cor dirigitur, cum ad praeceptum vita praeparatur"
+        "latim": "Via domini ad cor dirigitur, cum veritatis sermo humiliter auditur; via domini ad cor dirigitur, cum ad praeceptum vita praeparatur",
+        "pt": "A via do Senhor é dirigida ao coração quando a palavra da verdade é ouvida com humildade; a via do Senhor é dirigida ao coração quando a vida se prepara para o preceito",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },
   {
     "lectio": 20,
-    "versos": null,
+    "versos": [
+      24,
+      28
+    ],
     "itens": [
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Facta responsione versus sacerdotes et Levitas, denuo missum est a Pharisaeis; unde dicitur et qui missi fuerant erant ex Pharisaeis. Quantum enim ex ipso sermone coniecturari contingit, dico tertium hoc esse testimonium. Vide tamen quomodo iuxta sacerdotalem et leviticam personam est cum mansuetudine prolatum illud tu quis es? Nihil enim arrogans vel protervorum in eorum quaestione continetur, sed cuncta decentia veros Dei ministros. Sed Pharisaei secundum suum nomen divisi et importuni ex discordia contumeliosas voces praetendunt Baptistae; unde sequitur et dixerunt ei: quid ergo baptizas, si tu non es Christus, neque Elias, neque propheta? Non quasi scire volentes, sed prohibere eum a Baptismo. Deinde vero nescio quo pacto proni ad Baptismum iverunt ad Ioannem. Huius autem solutio est, quia Pharisaei non credentes accedunt ad Baptisma, sed ex hypocrisi, cum timerent populum"
+        "latim": "Facta responsione versus sacerdotes et Levitas, denuo missum est a Pharisaeis; unde dicitur et qui missi fuerant erant ex Pharisaeis. Quantum enim ex ipso sermone coniecturari contingit, dico tertium hoc esse testimonium. Vide tamen quomodo iuxta sacerdotalem et leviticam personam est cum mansuetudine prolatum illud tu quis es? Nihil enim arrogans vel protervorum in eorum quaestione continetur, sed cuncta decentia veros Dei ministros. Sed Pharisaei secundum suum nomen divisi et importuni ex discordia contumeliosas voces praetendunt Baptistae; unde sequitur et dixerunt ei: quid ergo baptizas, si tu non es Christus, neque Elias, neque propheta? Non quasi scire volentes, sed prohibere eum a Baptismo. Deinde vero nescio quo pacto proni ad Baptismum iverunt ad Ioannem. Huius autem solutio est, quia Pharisaei non credentes accedunt ad Baptisma, sed ex hypocrisi, cum timerent populum",
+        "pt": "Dada a resposta aos sacerdotes e levitas, foi enviada de novo uma delegação por parte dos fariseus; donde se diz: \"E os que tinham sido enviados eram dos fariseus\". Quanto é possível conjeturar pelo próprio texto, digo que este é o terceiro testemunho. Vê, contudo, como, segundo a pessoa sacerdotal e levítica, aquele \"Quem és tu?\" foi proferido com mansidão. Com efeito, nada de arrogante ou de insolente se contém na pergunta deles, mas tudo é conveniente a verdadeiros ministros de Deus. Mas os fariseus, conforme o seu nome, divididos e importunos, por discórdia lançam palavras injuriosas ao Batista; donde se segue: \"E disseram-lhe: Por que, então, batizas, se não és o Cristo, nem Elias, nem o profeta?\" Não como quem quer saber, mas para impedi-lo do batismo. Depois, porém, não sei de que modo, inclinados ao batismo, foram a João. A solução disto é que os fariseus se aproximam do batismo não por crerem, mas por hipocrisia, por temerem o povo",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Vel ipsi idem sacerdotes et Levitae ex Pharisaeis erant. Et quia blanditiis eum non valuerunt supplantare, accusationem ei immittere tentant, cogentes eum dicere quod non erat; unde sequitur et interrogaverunt eum, et dixerunt: quid ergo baptizas, si tu non es Christus, neque Elias, neque propheta? Quasi audaciae videbatur esse baptizare, si Christus non erat, nec praecursor illius, nec praeco, idest propheta"
+        "latim": "Vel ipsi idem sacerdotes et Levitae ex Pharisaeis erant. Et quia blanditiis eum non valuerunt supplantare, accusationem ei immittere tentant, cogentes eum dicere quod non erat; unde sequitur et interrogaverunt eum, et dixerunt: quid ergo baptizas, si tu non es Christus, neque Elias, neque propheta? Quasi audaciae videbatur esse baptizare, si Christus non erat, nec praecursor illius, nec praeco, idest propheta",
+        "pt": "Ou aqueles mesmos sacerdotes e levitas eram dos fariseus. E porque não puderam suplantá-lo com lisonjas, tentam lançar-lhe uma acusação, forçando-o a dizer o que não era; donde se segue: \"E interrogaram-no, e disseram: Por que, então, batizas, se não és o Cristo, nem Elias, nem o profeta?\" Como se parecesse ousadia batizar, se não era o Cristo, nem seu precursor, nem arauto, isto é, profeta",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Sed sanctus quisque etiam cum perversa mente requiritur, a bonitatis suae studio non mutatur. Unde Ioannes quoque ad verba invidiae praedicamenta respondit vitae; unde sequitur respondit eis dicens: ego baptizo in aqua"
+        "latim": "Sed sanctus quisque etiam cum perversa mente requiritur, a bonitatis suae studio non mutatur. Unde Ioannes quoque ad verba invidiae praedicamenta respondit vitae; unde sequitur respondit eis dicens: ego baptizo in aqua",
+        "pt": "Mas todo santo, mesmo quando é interrogado com mente perversa, não se desvia do empenho de sua bondade. Por isso João também respondeu às palavras de inveja com os predicados de sua vida; donde se segue: \"Respondeu-lhes, dizendo: Eu batizo com água\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Ad illud enim quid ergo baptizas? Quid aliud afferri decebat, nisi proprium Baptismum carnale praetendere?"
+        "latim": "Ad illud enim quid ergo baptizas? Quid aliud afferri decebat, nisi proprium Baptismum carnale praetendere?",
+        "pt": "Pois àquele \"Por que, então, batizas?\", que outra coisa convinha apresentar, senão mostrar o seu próprio batismo carnal?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Ioannes enim non spiritu, sed aqua baptizat: quia peccata solvere non valebat: baptizatorum corpora per aquam lavat, sed tamen animas per veniam non lavat. Cur ergo baptizat qui peccata per Baptismum non relaxat? Nisi ut praecursionis suae ordinem servans, scilicet qui nasciturum nascendo praevenerat, baptizaturum quoque dominum baptizando praeveniret; et qui praedicando factus est praecursor Christi, baptizando etiam praecursor eius fieret imitatione sacramenti; qui inter haec mysterium redemptionis nostrae annuntians, hanc in medio hominum et stetisse asserit et nesciri; sequitur enim medius autem vestrum stetit quem vos nescitis: quia per carnem dominus apparens, et visibilis extitit corpore, et invisibilis maiestate"
+        "latim": "Ioannes enim non spiritu, sed aqua baptizat: quia peccata solvere non valebat: baptizatorum corpora per aquam lavat, sed tamen animas per veniam non lavat. Cur ergo baptizat qui peccata per Baptismum non relaxat? Nisi ut praecursionis suae ordinem servans, scilicet qui nasciturum nascendo praevenerat, baptizaturum quoque dominum baptizando praeveniret; et qui praedicando factus est praecursor Christi, baptizando etiam praecursor eius fieret imitatione sacramenti; qui inter haec mysterium redemptionis nostrae annuntians, hanc in medio hominum et stetisse asserit et nesciri; sequitur enim medius autem vestrum stetit quem vos nescitis: quia per carnem dominus apparens, et visibilis extitit corpore, et invisibilis maiestate",
+        "pt": "Pois João batiza não com o Espírito, mas com água: porque não podia remir os pecados; lava pela água os corpos dos batizados, mas não lava as almas pelo perdão. Por que, então, batiza quem não perdoa os pecados pelo batismo? Senão para que, guardando a ordem de sua precursão, isto é, ele que precedera ao nascer aquele que haveria de nascer, precedesse também ao batizar o Senhor que haveria de batizar; e ele que, pregando, se fez precursor de Cristo, batizando também se fizesse seu precursor pela imitação do sacramento; e que, entretanto, anunciando o mistério da nossa redenção, afirma que ela estava no meio dos homens e era desconhecida; segue-se, com efeito: \"No meio de vós esteve aquele que vós não conheceis\": porque o Senhor, aparecendo na carne, foi visível no corpo e invisível na majestade",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Hoc autem dixit, quoniam decens erat Christum commixtum esse populo, ut unum multorum, se ubique humilem esse docentem. Cum autem dixit quem vos nescitis, scientiam hic cognitionem certissimam dicit; puta quis est, et unde"
+        "latim": "Hoc autem dixit, quoniam decens erat Christum commixtum esse populo, ut unum multorum, se ubique humilem esse docentem. Cum autem dixit quem vos nescitis, scientiam hic cognitionem certissimam dicit; puta quis est, et unde",
+        "pt": "Disse isto porque era conveniente que Cristo estivesse misturado ao povo, como um entre muitos, ensinando que ele é humilde em toda parte. Quando, porém, disse \"que vós não conheceis\", chama aqui de ciência o conhecimento certíssimo; a saber, quem é e donde",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "in Ioannem",
-        "latim": "Humilis enim non videbatur, et propterea lucerna accensa est"
+        "latim": "Humilis enim non videbatur, et propterea lucerna accensa est",
+        "pt": "Com efeito, não parecia humilde, e por isso foi acesa a lâmpada",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Vel medius erat Pharisaeorum dominus; sed ignorabant eum, quia ipsi Scripturas se scire putabant: et inquantum in illis praenuntiabatur dominus, medius eorum erat, scilicet in cordibus eorum; sed nesciebant eum, eo quod Scripturas non intelligebant. Vel aliter. Medius quidem erat, inquantum mediator Dei existens et hominum Christus Iesus medius Pharisaeorum extitit, volens illos Deo iungere; sed ipsi nesciebant eum"
+        "latim": "Vel medius erat Pharisaeorum dominus; sed ignorabant eum, quia ipsi Scripturas se scire putabant: et inquantum in illis praenuntiabatur dominus, medius eorum erat, scilicet in cordibus eorum; sed nesciebant eum, eo quod Scripturas non intelligebant. Vel aliter. Medius quidem erat, inquantum mediator Dei existens et hominum Christus Iesus medius Pharisaeorum extitit, volens illos Deo iungere; sed ipsi nesciebant eum",
+        "pt": "Ou o Senhor estava no meio dos fariseus; mas eles não o conheciam, porque pensavam conhecer as Escrituras; e, na medida em que o Senhor era anunciado nelas, estava no meio deles, isto é, em seus corações; mas não o conheciam, porque não entendiam as Escrituras. Ou ainda de outro modo: estava, sim, no meio, na medida em que Cristo Jesus, sendo mediador entre Deus e os homens, esteve no meio dos fariseus, querendo uni-los a Deus; mas eles não o conheciam.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Vel aliter. Hoc edito ego baptizo in aqua, ad illud quid ergo baptizas? Ad secundum si tu non es Christus? Praeconium de praecedenti Christi substantia proponit, quod tanta sit ei virtus quod invisibilis sit sua deitate, cum sit praesens cuilibet et totum per orbem diffusus: quod notatur ex illo medius vestrum stetit. Hic enim per totam orbis machinam effluxit, sic ut quae creantur, per ipsum creentur; omnia enim per ipsum facta sunt: unde palam est quod inquirentibus a Ioanne quid ergo baptizas? Ipse medius erat. Vel quod dicitur in medio vestrum stetit, intelligendum est de nobis hominibus. Cum enim simus rationales, in medio nostrum existit; ex eo quod principale, scilicet cor, in medio totius corporis insitum est. Qui ergo verbum in medio gerunt, non autem cognoscunt de illius natura, nec de quo fonte manavit, nec quomodo consistit in eis; hi verbum in medio sui obtinentes ignorant, quod tamen Ioannes agnovit: unde exprobrando dicit ad Pharisaeos quem vos nescitis. Quia expectantes Pharisaei Christi adventum, nihil tam arduum de eo contemplabantur, solum hominem sanctum existimantes eum esse. Dicit autem stetit: nam stat pater invariabilis existens et impermutabilis: stat quoque verbum eius ad salvandum continuo, quamvis carnem suscipiat, quamvis medium hominum stet invisibile. Ne vero putet aliquis alium esse invisibilem ad omnes homines venientem, vel ad universum orbem, ab eo qui humanatus est et in terra comparuit, subdit qui post me venit, hoc est qui post me appariturus est. Non autem idem denotatur hic per hoc quod dicit post, et cum Iesus nos post se invitat; illic enim sequi post ipsum praecipitur nobis, ut eius indagando vestigia, perveniamus ad patrem: hic autem ut pateat quid sequatur ex Ioannis dogmatibus: venit enim ut cuncti credant per eum, praeparati ad perfectum verbum per minora. Dicit ergo ipse est qui post me venit"
+        "latim": "Vel aliter. Hoc edito ego baptizo in aqua, ad illud quid ergo baptizas? Ad secundum si tu non es Christus? Praeconium de praecedenti Christi substantia proponit, quod tanta sit ei virtus quod invisibilis sit sua deitate, cum sit praesens cuilibet et totum per orbem diffusus: quod notatur ex illo medius vestrum stetit. Hic enim per totam orbis machinam effluxit, sic ut quae creantur, per ipsum creentur; omnia enim per ipsum facta sunt: unde palam est quod inquirentibus a Ioanne quid ergo baptizas? Ipse medius erat. Vel quod dicitur in medio vestrum stetit, intelligendum est de nobis hominibus. Cum enim simus rationales, in medio nostrum existit; ex eo quod principale, scilicet cor, in medio totius corporis insitum est. Qui ergo verbum in medio gerunt, non autem cognoscunt de illius natura, nec de quo fonte manavit, nec quomodo consistit in eis; hi verbum in medio sui obtinentes ignorant, quod tamen Ioannes agnovit: unde exprobrando dicit ad Pharisaeos quem vos nescitis. Quia expectantes Pharisaei Christi adventum, nihil tam arduum de eo contemplabantur, solum hominem sanctum existimantes eum esse. Dicit autem stetit: nam stat pater invariabilis existens et impermutabilis: stat quoque verbum eius ad salvandum continuo, quamvis carnem suscipiat, quamvis medium hominum stet invisibile. Ne vero putet aliquis alium esse invisibilem ad omnes homines venientem, vel ad universum orbem, ab eo qui humanatus est et in terra comparuit, subdit qui post me venit, hoc est qui post me appariturus est. Non autem idem denotatur hic per hoc quod dicit post, et cum Iesus nos post se invitat; illic enim sequi post ipsum praecipitur nobis, ut eius indagando vestigia, perveniamus ad patrem: hic autem ut pateat quid sequatur ex Ioannis dogmatibus: venit enim ut cuncti credant per eum, praeparati ad perfectum verbum per minora. Dicit ergo ipse est qui post me venit",
+        "pt": "Ou de outro modo. Dito isto, \"eu batizo na água\", a isto: \"Por que então batizas?\" e ainda: \"se tu não és o Cristo?\". Propõe o anúncio da substância de Cristo, que o precede: tamanha é a sua virtude que é invisível por sua divindade, estando presente a qualquer um e difundido por todo o orbe; o que se indica nestas palavras: \"No meio de vós está\". Pois ele se estendeu por toda a máquina do mundo, de modo que as coisas criadas sejam criadas por ele; \"tudo foi feito por ele\"; donde é claro que, aos que perguntavam a João: \"Por que então batizas?\", ele mesmo estava no meio. Ou, quando se diz \"no meio de vós esteve\", deve-se entender de nós, homens. Pois, sendo racionais, ele existe no meio de nós, visto que o principal, isto é, o coração, está situado no meio de todo o corpo. Portanto, os que trazem o verbo no meio de si, mas não conhecem a sua natureza, nem de que fonte brotou, nem como subsiste neles, esses, tendo o verbo no meio de si, o ignoram, o que João, contudo, reconheceu; por isso, repreendendo, diz aos fariseus: \"a quem vós não conheceis\". Porque os fariseus, esperando a vinda de Cristo, nada contemplavam nele de tão elevado, julgando que era apenas um homem santo. Diz, porém, \"esteve\": pois o Pai está, permanecendo invariável e imutável; também o seu Verbo está continuamente para salvar, ainda que assuma a carne, ainda que esteja invisível no meio dos homens. Para que ninguém pense que aquele que vem invisível a todos os homens, ou a todo o orbe, é outro que não aquele que se fez homem e apareceu na terra, acrescenta: \"aquele que vem depois de mim\", isto é, que há de aparecer depois de mim. Mas não se indica aqui o mesmo com \"depois\" e quando Jesus nos convida a segui-lo; pois ali nos é ordenado seguir depois dele, para que, buscando-lhe as pegadas, cheguemos ao Pai; aqui, porém, para que se manifeste o que se segue dos ensinamentos de João: pois ele veio para que todos creiam por ele, preparados para o Verbo perfeito pelas coisas menores. Diz, pois: \"Ele é aquele que vem depois de mim\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Ac si diceret: ne aestimetis totum in meo consistere Baptismate; si enim meum Baptisma perfectum esset, alius non veniret post me, aliud Baptisma daturus. Sed haec praeparatio est illius, et transibit in proximo, ut umbra et imago; sed oportet eum qui veritatem imponet, venire post me: si enim hoc esset perfectum, nequaquam secundi locus quaereretur; et ideo subdit qui ante me factus est, hic est honorabilior et clarior"
+        "latim": "Ac si diceret: ne aestimetis totum in meo consistere Baptismate; si enim meum Baptisma perfectum esset, alius non veniret post me, aliud Baptisma daturus. Sed haec praeparatio est illius, et transibit in proximo, ut umbra et imago; sed oportet eum qui veritatem imponet, venire post me: si enim hoc esset perfectum, nequaquam secundi locus quaereretur; et ideo subdit qui ante me factus est, hic est honorabilior et clarior",
+        "pt": "Como se dissesse: não julgueis que tudo consiste no meu batismo; pois, se o meu batismo fosse perfeito, não viria depois de mim outro para dar um outro batismo. Mas isto é uma preparação para ele, e passará em breve, como sombra e imagem; é preciso, porém, que venha depois de mim aquele que trará a verdade: pois, se isto fosse perfeito, de modo algum se buscaria um segundo lugar; e por isso acrescenta: \"que foi feito antes de mim\", este é mais honrado e mais ilustre.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Sic namque dicitur ante me factus est, ac si dicatur: antepositus est mihi. Post me ergo venit, quia postmodum natus; ante me autem factus est, quia mihi praelatus"
+        "latim": "Sic namque dicitur ante me factus est, ac si dicatur: antepositus est mihi. Post me ergo venit, quia postmodum natus; ante me autem factus est, quia mihi praelatus",
+        "pt": "Assim, com efeito, se diz \"foi feito antes de mim\", como se dissesse: foi posto à minha frente. Portanto, vem depois de mim, porque nasceu depois; mas foi feito antes de mim, porque me foi preferido.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Ne autem existimes comparabilem esse excellentiam hanc, incomparabilitatem ostendere volens, subiungit cuius ego non sum dignus ut solvam corrigiam calceamenti; quasi dicat: intantum est ante me ut ego neque in ultimis ministrorum vocari dignus sim: calceamentum enim solvere ultimi ministerii res est"
+        "latim": "Ne autem existimes comparabilem esse excellentiam hanc, incomparabilitatem ostendere volens, subiungit cuius ego non sum dignus ut solvam corrigiam calceamenti; quasi dicat: intantum est ante me ut ego neque in ultimis ministrorum vocari dignus sim: calceamentum enim solvere ultimi ministerii res est",
+        "pt": "Para que não penses que esta excelência é comparável, querendo mostrar a sua incomparabilidade, acrescenta: \"de quem eu não sou digno de desatar a correia da sandália\"; como se dissesse: está de tal modo diante de mim que nem entre os últimos dos servos eu seria digno de ser chamado: pois desatar a sandália é ofício do mais ínfimo serviço.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Unde et si dignum se diceret tantummodo corrigiam calceamenti solvere, multum se habuisset"
+        "latim": "Unde et si dignum se diceret tantummodo corrigiam calceamenti solvere, multum se habuisset",
+        "pt": "Por isso, se se dissesse digno apenas de desatar a correia da sandália, teria tido muito.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Vel aliter. Mos apud veteres fuit ut si quis eam quae sibi competeret, accipere uxorem nollet, ille ei calceamentum solveret qui ad hanc sponsus iure propinquitatis veniret. Quid igitur inter homines Christus, nisi sanctae Ecclesiae sponsus apparuit? Recte ergo Ioannes se indignum esse ad solvendam corrigiam eius calceamenti denuntiat; ac si aperte dicat: redemptoris vestigia non denudare valeo; quia sponsi nomen mihi immeritus non usurpo. Quod tamen intelligi et aliter potest. Quis enim nesciat quod calceamenta ex mortuis animalibus fiant? Incarnatus vero dominus veniens, quasi calceatus apparuit, qui in divinitate sua morticina nostrae corruptionis assumpsit. Corrigia ergo calceamenti est ligatura mysterii. Ioannes ergo solvere corrigiam calceamenti eius non valet: quia incarnationis mysterium nec ipse investigare sufficit; ac si patenter dicat: quid mirum si mihi ille praelatus est quem post me quidem natum considero, sed nativitatis eius mysterium non comprehendo?"
+        "latim": "Vel aliter. Mos apud veteres fuit ut si quis eam quae sibi competeret, accipere uxorem nollet, ille ei calceamentum solveret qui ad hanc sponsus iure propinquitatis veniret. Quid igitur inter homines Christus, nisi sanctae Ecclesiae sponsus apparuit? Recte ergo Ioannes se indignum esse ad solvendam corrigiam eius calceamenti denuntiat; ac si aperte dicat: redemptoris vestigia non denudare valeo; quia sponsi nomen mihi immeritus non usurpo. Quod tamen intelligi et aliter potest. Quis enim nesciat quod calceamenta ex mortuis animalibus fiant? Incarnatus vero dominus veniens, quasi calceatus apparuit, qui in divinitate sua morticina nostrae corruptionis assumpsit. Corrigia ergo calceamenti est ligatura mysterii. Ioannes ergo solvere corrigiam calceamenti eius non valet: quia incarnationis mysterium nec ipse investigare sufficit; ac si patenter dicat: quid mirum si mihi ille praelatus est quem post me quidem natum considero, sed nativitatis eius mysterium non comprehendo?",
+        "pt": "Ou de outro modo. Era costume entre os antigos que, se alguém não quisesse receber por esposa a que lhe cabia, aquele que viesse a ela como esposo por direito de parentesco lhe desatasse a sandália. Que apareceu, pois, Cristo entre os homens, senão como esposo da santa Igreja? Com razão, portanto, João declara-se indigno de desatar a correia de sua sandália; como se dissesse abertamente: não posso desnudar os passos do Redentor, porque não usurpo, sem merecê-lo, o nome de esposo. Isto, porém, pode também ser entendido de outro modo. Quem não sabe que as sandálias são feitas de animais mortos? Ora, o Senhor, ao vir encarnado, apareceu como que calçado, ele que, em sua divindade, assumiu as peles mortas da nossa corrupção. A correia da sandália é, pois, o laço do mistério. João, portanto, não pode desatar a correia de sua sandália: porque nem ele mesmo é capaz de investigar o mistério da encarnação; como se dissesse claramente: que há de admirar que me tenha sido preferido aquele que considero nascido depois de mim, mas cujo mistério de nascimento não compreendo?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "in Ioannem",
-        "latim": "Quidam vero non inepte dixit, hoc sic intelligendum. Non sum ego tanti ut causa mei descendat a magnalibus, ac carnem quasi calceamentum suscipiat"
+        "latim": "Quidam vero non inepte dixit, hoc sic intelligendum. Non sum ego tanti ut causa mei descendat a magnalibus, ac carnem quasi calceamentum suscipiat",
+        "pt": "Certo autor, porém, disse não sem acerto que isto deve ser entendido assim: não sou tão grande que, por minha causa, ele desça das alturas e assuma a carne como uma sandália.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "in Ioannem",
-        "latim": "Et quia Ioannes cum decenti libertate ea quae de Christo sunt, omnibus praedicabat, propterea Evangelista et locum designat, dicens haec in Bethania facta sunt trans Iordanem, ubi erat Ioannes baptizans. Non enim in domo, neque in angulo Christum praedicabat, sed Iordanem transiens in media multitudine, praesentibus omnibus qui ab eo baptizabantur. Quaedam vero exemplariorum certius habent in Bethabora: Bethania enim non ultra Iordanem, neque in deserto erat, sed prope Hierosolymam"
+        "latim": "Et quia Ioannes cum decenti libertate ea quae de Christo sunt, omnibus praedicabat, propterea Evangelista et locum designat, dicens haec in Bethania facta sunt trans Iordanem, ubi erat Ioannes baptizans. Non enim in domo, neque in angulo Christum praedicabat, sed Iordanem transiens in media multitudine, praesentibus omnibus qui ab eo baptizabantur. Quaedam vero exemplariorum certius habent in Bethabora: Bethania enim non ultra Iordanem, neque in deserto erat, sed prope Hierosolymam",
+        "pt": "E porque João pregava a todos, com conveniente liberdade, as coisas de Cristo, o Evangelista indica também o lugar, dizendo: \"Isto aconteceu em Betânia, do outro lado do Jordão, onde João estava batizando\". Pois não pregava Cristo em casa, nem num canto, mas, atravessando o Jordão, no meio da multidão, na presença de todos os que por ele eram batizados. Alguns exemplares, porém, trazem com mais certeza \"em Betabara\": pois Betânia não ficava além do Jordão, nem no deserto, mas perto de Jerusalém.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Glossa",
         "obra": "",
-        "latim": "Vel duae sunt Bethaniae: una trans Iordanem, altera citra non longe a Ierusalem, ubi Lazarus fuit suscitatus"
+        "latim": "Vel duae sunt Bethaniae: una trans Iordanem, altera citra non longe a Ierusalem, ubi Lazarus fuit suscitatus",
+        "pt": "Ou são duas as Betânias: uma do outro lado do Jordão, outra deste lado, não longe de Jerusalém, onde Lázaro foi ressuscitado.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Hoc autem et propter aliam causam designat: quia enim res non antiquas narrabat, sed ante parvum tempus contingentes, praesentes et videntes testes facit eorum quae dicuntur, demonstrationem a locis tribuens"
+        "latim": "Hoc autem et propter aliam causam designat: quia enim res non antiquas narrabat, sed ante parvum tempus contingentes, praesentes et videntes testes facit eorum quae dicuntur, demonstrationem a locis tribuens",
+        "pt": "Mas indica isto também por outra razão: porque narrava não coisas antigas, mas acontecidas pouco tempo antes, torna testemunhas do que se diz os presentes e os que viram, dando a demonstração pelos lugares.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Alcuinus",
         "obra": "",
-        "latim": "Bethania vero domus obedientiae interpretatur; per quam innuitur quia per obedientiam fidei omnes ad Baptisma debent pervenire"
+        "latim": "Bethania vero domus obedientiae interpretatur; per quam innuitur quia per obedientiam fidei omnes ad Baptisma debent pervenire",
+        "pt": "Betânia, porém, interpreta-se casa da obediência; por ela se dá a entender que todos devem chegar ao Batismo pela obediência da fé.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Bethabora vero interpretatur domus praeparationis, et convenit cum Baptismo praeparantis domino plebem perfectam. Iordanis autem interpretatur descensus eorum. Quis autem erit hic fluvius nisi salvator noster, per quem ingredientem in hunc mundum mundari convenit, non suum descendentem descensum, sed humani generis? Hic segregat donatas a Moyse, ab his quae per Iesum donantur, sortes; huius rivuli laetificant civitatem Dei. Sicut autem draco latitat in Aegyptiaco fluvio, ita Deus in isto. Pater enim est in filio; et qui proficiscuntur illuc ubi se lavent, opprobrium Aegypti deponunt, ac apti ad perceptionem hereditatis parantur, necnon a lepra mundantur, et duplicis capaces sunt gratiae, ac prompti fiunt ad susceptionem spiritus almi, in aliud flumen nequaquam descendente spiritali columba. Trans Iordanem vero Ioannes baptizat, ut praecursor venientis non innocentes sed peccatores vocaret"
+        "latim": "Bethabora vero interpretatur domus praeparationis, et convenit cum Baptismo praeparantis domino plebem perfectam. Iordanis autem interpretatur descensus eorum. Quis autem erit hic fluvius nisi salvator noster, per quem ingredientem in hunc mundum mundari convenit, non suum descendentem descensum, sed humani generis? Hic segregat donatas a Moyse, ab his quae per Iesum donantur, sortes; huius rivuli laetificant civitatem Dei. Sicut autem draco latitat in Aegyptiaco fluvio, ita Deus in isto. Pater enim est in filio; et qui proficiscuntur illuc ubi se lavent, opprobrium Aegypti deponunt, ac apti ad perceptionem hereditatis parantur, necnon a lepra mundantur, et duplicis capaces sunt gratiae, ac prompti fiunt ad susceptionem spiritus almi, in aliud flumen nequaquam descendente spiritali columba. Trans Iordanem vero Ioannes baptizat, ut praecursor venientis non innocentes sed peccatores vocaret",
+        "pt": "Betabara, por sua vez, interpreta-se casa da preparação, e convém ao Batismo do Senhor que prepara o povo perfeito. O Jordão, por sua vez, interpreta-se descida deles. Quem será este rio, senão nosso Salvador, por quem convém que seja purificado quem entra neste mundo, descendo não a sua própria descida, mas a do gênero humano? Ele separa as sortes dadas por Moisés das que são dadas por Jesus; seus riachos alegram a cidade de Deus. Assim como o dragão se esconde no rio do Egito, assim Deus neste. Pois o Pai está no Filho; e os que vão até lá para se lavar depõem o opróbrio do Egito, e são preparados para receber a herança, são purificados da lepra, tornam-se capazes de dupla graça e dispostos a receber o Espírito vivificante, que desce sobre outro rio como pomba espiritual. Do outro lado do Jordão, porém, João batiza para que, como precursor daquele que vem, chamasse não os inocentes, mas os pecadores.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },
   {
     "lectio": 21,
-    "versos": null,
+    "versos": [
+      29,
+      31
+    ],
     "itens": [
       {
         "autor": "Origenes",
@@ -1282,7 +1730,10 @@
   },
   {
     "lectio": 22,
-    "versos": null,
+    "versos": [
+      32,
+      34
+    ],
     "itens": [
       {
         "autor": "Chrysostomus",
@@ -1343,7 +1794,10 @@
   },
   {
     "lectio": 23,
-    "versos": null,
+    "versos": [
+      35,
+      36
+    ],
     "itens": [
       {
         "autor": "Chrysostomus",
@@ -1399,7 +1853,10 @@
   },
   {
     "lectio": 24,
-    "versos": null,
+    "versos": [
+      37,
+      40
+    ],
     "itens": [
       {
         "autor": "Alcuinus",
@@ -1485,7 +1942,10 @@
   },
   {
     "lectio": 25,
-    "versos": null,
+    "versos": [
+      41,
+      42
+    ],
     "itens": [
       {
         "autor": "Chrysostomus",

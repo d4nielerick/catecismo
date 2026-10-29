@@ -1,0 +1,33 @@
+{
+  "data": "2026-12-04",
+  "evangelho": "Mt 9,27-31",
+  "leituras": "Is 29,17-24 | Sl 26(27),1.4.13-14 (R. 1a) | Mt 9,27-31",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 9,
+      "lectio": 6,
+      "versos": [
+        27,
+        31
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 439,
+      "comum": [
+        27
+      ],
+      "direto": false,
+      "ref": "Mt 9,27",
+      "frase": "Numerosos judeus, e mesmo alguns pagãos que partilhavam da sua esperança, reconheceram em Jesus os traços fundamentais do messiânico «filho de David», prometido por Deus a Israel.",
+      "texto": "Numerosos judeus, e mesmo alguns pagãos que partilhavam da sua esperança, reconheceram em Jesus os traços fundamentais do messiânico «filho de David», prometido por Deus a Israel. Jesus aceitou o título de Messias a que tinha direito, mas não sem reservas, uma vez que esse título era compreendido, por numerosos dos seus contemporâneos, segundo um conceito demasiado humano, essencialmente político.",
+      "local": "Creio em jesus cristo, filho único de deus › «e em jesus cristo, seu único filho, nosso senhor»"
+    }
+  ],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

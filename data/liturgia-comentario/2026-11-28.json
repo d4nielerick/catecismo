@@ -1,0 +1,71 @@
+{
+  "data": "2026-11-28",
+  "evangelho": "Lc 21,34-36",
+  "leituras": "Ap 22,1-7 | Sl 94(95),1-2.3-5.6-7 (R. 1Cor 16,22b e Ap 22,20c) | Lc 21,34-36",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 21,
+      "lectio": 8,
+      "versos": [
+        34,
+        36
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 2612,
+      "comum": [
+        34,
+        35,
+        36
+      ],
+      "direto": false,
+      "ref": "Lc 21,34-36",
+      "frase": "Na oração (Mc 1, 15), o discípulo vela, atento Aquele que é e que vem, na memória da sua primeira vinda na humildade da carne e na esperança da sua segunda vinda na glória.",
+      "texto": "Em Jesus, «o Reino de Deus está perto». Ele apela à conversão e à fé, mas também à vigilância. Na oração (Mc 1, 15), o discípulo vela, atento Aquele que é e que vem, na memória da sua primeira vinda na humildade da carne e na esperança da sua segunda vinda na glória. Em comunhão com o Mestre, a oração dos discípulos é um combate; é vigiando na oração que não se cai na tentação.",
+      "local": "A oração na vida cristã › A revelação da oração"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Ap 22,1-7",
+      "catecismo": [
+        {
+          "numero": 1023,
+          "comum": [
+            4
+          ],
+          "direto": false,
+          "ref": "Ap 22,4",
+          "frase": "Serão para sempre semelhantes a Deus, porque O verão «tal como Ele é» (1 Jo 3, 2), «face a face» (1 Cor 13, 12): «Com a nossa autoridade apostólica, definimos que, por geral disposição divina, as almas de todos os santos mortos antes da paixão de Cristo [...] e as de todos os outros fiéis que morreram depois de terem recebido o santo Batismo de Cristo e nas quais nada havia a purificar no momento da morte, ou ainda daqueles que, se no momento da morte houve ou ainda há qualquer coisa a purificar, acabaram por o fazer [...] mesmo antes de ressuscitarem em seus corpos e do Juízo universal – e isto depois da Ascensão ao céu do nosso Senhor e Salvador Jesus Cristo –, estiveram, estão e estarão no céu, associadas ao Reino dos céus e no paraíso celeste, com Cristo, na companhia dos santos anjos.",
+          "texto": "Os que morrerem na graça e na amizade de Deus e estiverem perfeitamente purificados, viverão para sempre com Cristo. Serão para sempre semelhantes a Deus, porque O verão «tal como Ele é» (1 Jo 3, 2), «face a face» (1 Cor 13, 12): «Com a nossa autoridade apostólica, definimos que, por geral disposição divina, as almas de todos os santos mortos antes da paixão de Cristo [...] e as de todos os outros fiéis que morreram depois de terem recebido o santo Batismo de Cristo e nas quais nada havia a purificar no momento da morte, ou ainda daqueles que, se no momento da morte houve ou ainda há qualquer coisa a purificar, acabaram por o fazer [...] mesmo antes de ressuscitarem em seus corpos e do Juízo universal – e isto depois da Ascensão ao céu do nosso Senhor e Salvador Jesus Cristo –, estiveram, estão e estarão no céu, associadas ao Reino dos céus e no paraíso celeste, com Cristo, na companhia dos santos anjos. E depois da paixão e morte de nosso Senhor Jesus Cristo, essas almas viram e vêem a essência divina com uma visão intuitiva e face a face, sem a mediação de qualquer criatura».",
+          "local": "Creio no espírito santo › «creio na vida eterna»"
+        }
+      ]
+    },
+    {
+      "rotulo": "Salmo",
+      "referencia": "Sl 94(95),1-2.3-5.6-7 (R. 1Cor 16,22b e Ap 22,20c)",
+      "catecismo": [
+        {
+          "numero": 2628,
+          "comum": [
+            1,
+            2
+          ],
+          "direto": false,
+          "ref": "Sl 95,1-2",
+          "frase": "Exalta a grandeza do Senhor que nos criou e a onipotência do Salvador que nos liberta do mal.",
+          "texto": "A adoração é a primeira atitude do homem que se reconhece criatura diante do seu Criador. Exalta a grandeza do Senhor que nos criou e a onipotência do Salvador que nos liberta do mal. É a prostração do espírito perante o «Rei da glória» e o silêncio respeitoso face ao Deus «sempre maior». A adoração do Deus três vezes santo e soberanamente amável enche-nos de humildade e dá segurança às nossas súplicas.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

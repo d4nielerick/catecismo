@@ -1,0 +1,58 @@
+{
+  "data": "2026-12-02",
+  "evangelho": "Mt 15,29-37",
+  "leituras": "Is 25,6-10a | Sl 22(23),1-3a.3b-4.5.6 (R. 6cd) | Mt 15,29-37",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 15,
+      "lectio": 6,
+      "versos": [
+        29,
+        31
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 15,
+      "lectio": 7,
+      "versos": [
+        32,
+        39
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 1335,
+      "comum": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "direto": false,
+      "ref": "Mt 15,32-37",
+      "frase": "Os milagres da multiplicação dos pães, quando o Senhor disse a bênção, partiu e distribuiu os pães pelos seus discípulos para alimentar a multidão, prefiguram a superabundância deste pão único da sua Eucaristia.",
+      "texto": "Os milagres da multiplicação dos pães, quando o Senhor disse a bênção, partiu e distribuiu os pães pelos seus discípulos para alimentar a multidão, prefiguram a superabundância deste pão único da sua Eucaristia. O sinal da água transformada em vinho em Caná já anuncia a «Hora» da glorificação de Jesus. E manifesta o cumprimento do banquete das núpcias no Reino do Pai, onde os fiéis beberão do vinho novo tornado sangue de Cristo.",
+      "local": "Os sacramentos da iniciação cristã › Artigo 3: o sacramento da eucaristia"
+    },
+    {
+      "numero": 1329,
+      "comum": [
+        36
+      ],
+      "direto": false,
+      "ref": "Mt 15,36",
+      "frase": "Fração do Pão, porque este rito, próprio da refeição dos judeus, foi utilizado por Jesus quando abençoava e distribuía o pão como chefe de família, sobretudo aquando da última ceia.",
+      "texto": "Ceia do Senhor, porque se trata da ceia que o Senhor comeu com os discípulos na véspera da sua paixão e da antecipação do banquete nupcial do Cordeiro na Jerusalém celeste. Fração do Pão, porque este rito, próprio da refeição dos judeus, foi utilizado por Jesus quando abençoava e distribuía o pão como chefe de família, sobretudo aquando da última ceia. É por este gesto que os discípulos O reconhecerão depois da sua ressurreição e é com esta expressão que os primeiros cristãos designarão as suas assembleias eucarísticas. Querem com isso significar que todos os que comem do único pão partido, Cristo, entram em comunhão com Ele e formam um só corpo n'Ele. Assembleia eucarística («sýnaxis»), porque a Eucaristia é celebrada em assembleia de fiéis, expressão visível da Igreja.",
+      "local": "Os sacramentos da iniciação cristã › Artigo 3: o sacramento da eucaristia"
+    }
+  ],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

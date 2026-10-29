@@ -348,77 +348,182 @@
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Quia cuncta quae praedicta sunt, non de iniustitia ferientis sunt, sed de merito mundi patientis, facta pravorum hominum praenuntiantur, cum dicitur sed ante haec omnia inicient vobis manus suas, et persequentur, tradentes in synagogas et custodias, trahentes ad reges et praesides propter nomen meum; ac si dicat: prius corda hominum, post elementa turbabuntur, ut, cum rerum ordo confunditur, ex qua tribulatione veniat demonstretur. Nam quamvis finis mundi ex ipso suo ordine pendeat, perversiores tamen quosque inveniens, quia digne ruinis illius opprimantur, innotescit"
+        "latim": "Quia cuncta quae praedicta sunt, non de iniustitia ferientis sunt, sed de merito mundi patientis, facta pravorum hominum praenuntiantur, cum dicitur sed ante haec omnia inicient vobis manus suas, et persequentur, tradentes in synagogas et custodias, trahentes ad reges et praesides propter nomen meum; ac si dicat: prius corda hominum, post elementa turbabuntur, ut, cum rerum ordo confunditur, ex qua tribulatione veniat demonstretur. Nam quamvis finis mundi ex ipso suo ordine pendeat, perversiores tamen quosque inveniens, quia digne ruinis illius opprimantur, innotescit",
+        "pt": "Porque tudo o que foi predito não procede da injustiça de quem fere, mas do mérito do mundo que sofre, anunciam-se as obras dos homens perversos quando se diz: \"Mas antes de tudo isso, lançarão mão de vós e vos perseguirão, entregando-vos às sinagogas e às prisões, levando-vos diante de reis e governadores por causa do meu nome\"; como se dissesse: primeiro serão perturbados os corações dos homens, depois os elementos, para que, quando a ordem das coisas se confunde, se mostre de que tribulação ela provém. Pois, embora o fim do mundo dependa de sua própria ordem, ele se dá a conhecer ao encontrar os mais perversos, para que sejam dignamente oprimidos por sua ruína.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Vel hoc dicit, quia priusquam a Romanis Ierusalem caperetur, passi persecutiones a Iudaeis discipuli incarcerati sunt, et praesentati principatibus. Missus est Paulus Romam ad Caesarem, astititque Festo et Agrippae. Sequitur continget autem vobis in testimonium"
+        "latim": "Vel hoc dicit, quia priusquam a Romanis Ierusalem caperetur, passi persecutiones a Iudaeis discipuli incarcerati sunt, et praesentati principatibus. Missus est Paulus Romam ad Caesarem, astititque Festo et Agrippae. Sequitur continget autem vobis in testimonium",
+        "pt": "Ou diz isto porque, antes que Jerusalém fosse tomada pelos romanos, os discípulos, tendo sofrido perseguições da parte dos judeus, foram encarcerados e apresentados às autoridades. Paulo foi enviado a Roma, ao César, e compareceu diante de Festo e de Agripa. Segue-se: \"Isso vos servirá de testemunho\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Graecus",
         "obra": "",
-        "latim": "In martyrium, idest, in martyrii gloriam"
+        "latim": "In martyrium, idest, in martyrii gloriam",
+        "pt": "Para o martírio, isto é, para a glória do martírio.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Vel in testimonium, videlicet eorum: quia vos persequendo, mortes inferunt, aut videndo non imitantur: ut inde perversi sine excusatione pereant unde electi exemplum capiunt ut vivant. Sed auditis tot terroribus, turbari poterant auditorum corda; unde ad eorum consolationem subdit ponite ergo in cordibus vestris non praemeditari quemadmodum respondeatis"
+        "latim": "Vel in testimonium, videlicet eorum: quia vos persequendo, mortes inferunt, aut videndo non imitantur: ut inde perversi sine excusatione pereant unde electi exemplum capiunt ut vivant. Sed auditis tot terroribus, turbari poterant auditorum corda; unde ad eorum consolationem subdit ponite ergo in cordibus vestris non praemeditari quemadmodum respondeatis",
+        "pt": "Ou para testemunho deles, a saber: porque, perseguindo-vos, infligem a morte, ou, vendo-vos, não vos imitam; de modo que os perversos pereçam sem desculpa por onde os eleitos tomam exemplo para viver. Mas, ouvidos tantos terrores, os corações dos ouvintes podiam perturbar-se; por isso, para consolá-los, acrescenta: \"Ponde, pois, em vossos corações não premeditar como haveis de responder\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quia enim idiotae erant et imperiti, hoc eis dominus dicit, ne conturbarentur reddituri sapientibus rationem; et causam subdit ego enim dabo vobis os et sapientiam, cui non poterunt resistere et contradicere omnes adversarii vestri; quasi dicat: statim a me sortiemini facundiam et sapientiam, ut nec omnes adversarii vestri si in unum conveniant, resistere valeant vobis, nec in sapientia, idest speculationum vi, nec in eloquentia et sermonis lepore. Saepe enim multi sapientiam quidem habent in mente; sed cum sint provocabiles ad turbationem, totum confundunt, cum tempus fuerit proponendi. Non autem tales fuerunt apostoli; sed utrinque gratiosi fuerunt"
+        "latim": "Quia enim idiotae erant et imperiti, hoc eis dominus dicit, ne conturbarentur reddituri sapientibus rationem; et causam subdit ego enim dabo vobis os et sapientiam, cui non poterunt resistere et contradicere omnes adversarii vestri; quasi dicat: statim a me sortiemini facundiam et sapientiam, ut nec omnes adversarii vestri si in unum conveniant, resistere valeant vobis, nec in sapientia, idest speculationum vi, nec in eloquentia et sermonis lepore. Saepe enim multi sapientiam quidem habent in mente; sed cum sint provocabiles ad turbationem, totum confundunt, cum tempus fuerit proponendi. Non autem tales fuerunt apostoli; sed utrinque gratiosi fuerunt",
+        "pt": "Porque eram simples e ignorantes, o Senhor lhes diz isto, para que não se perturbassem ao terem de prestar contas aos sábios; e acrescenta a causa: \"Pois eu vos darei uma boca e uma sabedoria à qual todos os vossos adversários não poderão resistir nem contradizer\"; como se dissesse: de mim recebereis logo a eloquência e a sabedoria, de modo que nem todos os vossos adversários, ainda que se reúnam, possam resistir-vos, nem na sabedoria, isto é, na força das especulações, nem na eloquência e na graça do discurso. Com efeito, muitos têm sabedoria na mente, mas, sendo facilmente levados à perturbação, confundem tudo quando chega o momento de expor. Não foram assim os apóstolos, mas foram agraciados em ambos os aspectos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Ac si dominus suis dicat: nolite terreri: vos ad certamen acceditis, ego praelior: vos verba editis, sed ego sum qui loquor"
+        "latim": "Ac si dominus suis dicat: nolite terreri: vos ad certamen acceditis, ego praelior: vos verba editis, sed ego sum qui loquor",
+        "pt": "Como se o Senhor dissesse aos seus: não vos assusteis; vós ides ao combate, eu é que luto; vós proferis as palavras, mas sou eu quem fala.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Alibi autem Christus in discipulis, alibi pater, alibi spiritus loquitur patris. Non discordant ista, sed congruunt: quod unus loquitur, tres loquuntur, quia vox est una Trinitatis"
+        "latim": "Alibi autem Christus in discipulis, alibi pater, alibi spiritus loquitur patris. Non discordant ista, sed congruunt: quod unus loquitur, tres loquuntur, quia vox est una Trinitatis",
+        "pt": "Em outro lugar, porém, Cristo fala nos discípulos, em outro o Pai, em outro o Espírito do Pai. Isto não se contradiz, mas concorda: o que um fala, os três falam, porque a voz da Trindade é uma só.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "His autem dictis, et propulso imperitiae timore, subdit et aliud quiddam necessarium, quod eorum animos poterat commovere, ne subito irruens eos turbaret; sequitur enim trademini autem a parentibus et fratribus et cognatis, et morte afficient ex vobis"
+        "latim": "His autem dictis, et propulso imperitiae timore, subdit et aliud quiddam necessarium, quod eorum animos poterat commovere, ne subito irruens eos turbaret; sequitur enim trademini autem a parentibus et fratribus et cognatis, et morte afficient ex vobis",
+        "pt": "Dito isto, e afastado o temor da inexperiência, acrescenta ainda outra coisa necessária, que podia abalar-lhes o ânimo, para que, caindo de repente, não os perturbasse; segue-se, com efeito: \"Sereis entregues pelos pais, irmãos e parentes, e farão morrer alguns de vós\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Plus in nobis ea tormenta saeviunt quae ab illis patimur de quorum moribus praesumebamus: quia cum damno corporis mala nos cruciant amissae caritatis"
+        "latim": "Plus in nobis ea tormenta saeviunt quae ab illis patimur de quorum moribus praesumebamus: quia cum damno corporis mala nos cruciant amissae caritatis",
+        "pt": "Mais cruelmente nos atormentam os sofrimentos que padecemos daqueles de cujos costumes tínhamos boa opinião, porque, com o dano do corpo, nos torturam os males da caridade perdida.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius Nyssenus",
         "obra": "",
-        "latim": "Consideremus autem statum qui tunc temporis erat. Omnibus suspectis, ad invicem dividebantur cognationes, invicem disgregatae per cultus; et filius gentilis proditor fiebat parentum fidelium; et in filium qui crediderat, pater in infidelitate obstinatus accusator fiebat. Omnis aetas erat exposita persequentibus fidem, nec mulieribus succurrebat naturalis sexus fragilitas"
+        "latim": "Consideremus autem statum qui tunc temporis erat. Omnibus suspectis, ad invicem dividebantur cognationes, invicem disgregatae per cultus; et filius gentilis proditor fiebat parentum fidelium; et in filium qui crediderat, pater in infidelitate obstinatus accusator fiebat. Omnis aetas erat exposita persequentibus fidem, nec mulieribus succurrebat naturalis sexus fragilitas",
+        "pt": "Consideremos, porém, a situação que havia então. Estando todos sob suspeita, as parentelas dividiam-se umas contra as outras, separadas pelos cultos; o filho pagão tornava-se delator dos pais fiéis; e contra o filho que havia crido, o pai obstinado na infidelidade tornava-se acusador. Toda idade estava exposta aos que perseguiam a fé, e nem às mulheres socorria a fragilidade natural do sexo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "His autem dictis, et de odio subiungit quod ab omnibus patientur; sequitur enim et eritis odio omnibus hominibus propter nomen meum"
+        "latim": "His autem dictis, et de odio subiungit quod ab omnibus patientur; sequitur enim et eritis odio omnibus hominibus propter nomen meum",
+        "pt": "Dito isto, acrescenta também o ódio que sofrerão da parte de todos; segue-se, com efeito: \"E sereis odiados por todos os homens por causa do meu nome\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Sed quia dura sunt quae praedicuntur de afflictione mortis, protinus consolatio subditur de gaudio resurrectionis, cum dicitur et capillus de capite vestro non peribit; quasi dicat martyribus suis: cur timetis ne pereat quod incisum dolet, quando et illud in vobis perire non potest quod incisum non dolet?"
+        "latim": "Sed quia dura sunt quae praedicuntur de afflictione mortis, protinus consolatio subditur de gaudio resurrectionis, cum dicitur et capillus de capite vestro non peribit; quasi dicat martyribus suis: cur timetis ne pereat quod incisum dolet, quando et illud in vobis perire non potest quod incisum non dolet?",
+        "pt": "Mas, como são duras as coisas preditas sobre a aflição da morte, logo se acrescenta a consolação da alegria da ressurreição, quando se diz: \"E um cabelo da vossa cabeça não perecerá\"; como se dissesse a seus mártires: por que temeis que pereça o que, cortado, dói, quando em vós não pode perecer nem aquilo que, cortado, não dói?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Vel aliter. Capillus de capite discipulorum domini non peribit: quia non solum fortia facta vel dicta sanctorum, sed et tenuissima cogitatio digna mercede donabitur"
+        "latim": "Vel aliter. Capillus de capite discipulorum domini non peribit: quia non solum fortia facta vel dicta sanctorum, sed et tenuissima cogitatio digna mercede donabitur",
+        "pt": "Ou de outro modo: o cabelo da cabeça dos discípulos do Senhor não perecerá, porque não só os feitos e ditos fortes dos santos, mas também o mais tênue pensamento será recompensado com digna mercê.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius Moralium",
         "obra": "",
-        "latim": "Qui autem patientiam in adversis tenet, inde contra adversa omnia fortis efficitur: unde sibi et seipsum vincendo dominatur; unde sequitur in patientia vestra possidebitis animas vestras. Quid enim est animas possidere nisi perfecte in omnibus vivere, cunctisque mentis motibus quasi ex arce virtutis dominari?"
+        "latim": "Qui autem patientiam in adversis tenet, inde contra adversa omnia fortis efficitur: unde sibi et seipsum vincendo dominatur; unde sequitur in patientia vestra possidebitis animas vestras. Quid enim est animas possidere nisi perfecte in omnibus vivere, cunctisque mentis motibus quasi ex arce virtutis dominari?",
+        "pt": "Quem mantém a paciência nas adversidades torna-se por isso forte contra todas as adversidades; e assim domina a si mesmo, vencendo-se a si próprio; por isso segue-se: \"Na vossa paciência possuireis as vossas almas\". Pois que é possuir as almas senão viver perfeitamente em tudo e dominar todos os movimentos da mente como do alto da cidadela da virtude?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Per patientiam igitur animas nostras possidemus; quia dum nobismetipsis dominari discimus, hoc ipsum incipimus possidere quod sumus. Idcirco autem possessio animae in virtute patientiae ponitur, quia radix omnium custosque virtutum patientia est. Patientia vero est aliena mala aequanimiter perpeti; contra eum quoque qui mala irrogat nullo dolore morderi"
+        "latim": "Per patientiam igitur animas nostras possidemus; quia dum nobismetipsis dominari discimus, hoc ipsum incipimus possidere quod sumus. Idcirco autem possessio animae in virtute patientiae ponitur, quia radix omnium custosque virtutum patientia est. Patientia vero est aliena mala aequanimiter perpeti; contra eum quoque qui mala irrogat nullo dolore morderi",
+        "pt": "Pela paciência, portanto, possuímos as nossas almas; pois, ao aprendermos a dominar a nós mesmos, começamos a possuir isso mesmo que somos. Por isso a posse da alma é colocada na virtude da paciência, porque a paciência é raiz e guarda de todas as virtudes. A paciência, com efeito, é suportar com equanimidade os males alheios e não se deixar morder por nenhuma dor contra aquele mesmo que inflige os males.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },
@@ -432,87 +537,206 @@
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Hactenus ea quae per quadraginta annos, necdum fine adveniente, futura erant, dicta sunt; hic ipse finis desolationis quae a Romano exercitu facta est, domini verbis exponitur, cum dicitur cum autem videritis circumdari ab exercitu Ierusalem, tunc scitote quia appropinquavit desolatio eius"
+        "latim": "Hactenus ea quae per quadraginta annos, necdum fine adveniente, futura erant, dicta sunt; hic ipse finis desolationis quae a Romano exercitu facta est, domini verbis exponitur, cum dicitur cum autem videritis circumdari ab exercitu Ierusalem, tunc scitote quia appropinquavit desolatio eius",
+        "pt": "Até aqui foi dito o que haveria de acontecer durante quarenta anos, sem que chegasse ainda o fim; aqui o próprio fim da desolação que foi causada pelo exército romano é exposto nas palavras do Senhor, quando se diz: \"Quando virdes Jerusalém cercada por um exército, sabei então que a sua desolação está próxima\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Desolationem Ierusalem vocat non amplius eam a suis, nec secundum ritum legalem constitui, ita quod nullus expectet post futuram obsidionem aliam innovationem fieri, sicut accidit tempore regis Persarum, et illustris Antiochi, et iterum tempore Pompeii"
+        "latim": "Desolationem Ierusalem vocat non amplius eam a suis, nec secundum ritum legalem constitui, ita quod nullus expectet post futuram obsidionem aliam innovationem fieri, sicut accidit tempore regis Persarum, et illustris Antiochi, et iterum tempore Pompeii",
+        "pt": "Chama desolação de Jerusalém o fato de ela não ser mais estabelecida pelos seus, nem segundo o rito da Lei, de modo que ninguém espere que, depois do futuro cerco, se faça outra restauração, como aconteceu no tempo do rei dos persas, e do ilustre Antíoco, e de novo no tempo de Pompeu.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "ad Hesychium",
-        "latim": "Haec autem domini verba ideo Lucas hoc loco commemoravit, ut ostendat tunc factam fuisse abominationem desolationis quae a Daniele praedicta est, de qua Matthaeus et Marcus locuti sunt, quando expugnata est Ierusalem"
+        "latim": "Haec autem domini verba ideo Lucas hoc loco commemoravit, ut ostendat tunc factam fuisse abominationem desolationis quae a Daniele praedicta est, de qua Matthaeus et Marcus locuti sunt, quando expugnata est Ierusalem",
+        "pt": "Lucas recordou estas palavras do Senhor neste lugar para mostrar que a abominação da desolação, predita por Daniel e de que falaram Mateus e Marcos, se realizou então, quando Jerusalém foi tomada de assalto.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Iudaei enim putaverunt abominationem desolationis tunc factam, eo quod caput porci in templo iecerunt illudentes Romani Iudaicae ritum observantiae"
+        "latim": "Iudaei enim putaverunt abominationem desolationis tunc factam, eo quod caput porci in templo iecerunt illudentes Romani Iudaicae ritum observantiae",
+        "pt": "Os judeus, com efeito, pensaram que a abominação da desolação se realizou então, porque os romanos, zombando do rito da observância judaica, lançaram no templo a cabeça de um porco.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Dominus autem futuram in civitate praevidens famem, monebat discipulos ne in futura obsidione in civitatem confugerent tamquam ad locum tutum et a Deo protectum; sed magis inde discederent, et ad montes confugerent; unde sequitur tunc qui in Iudaea sunt, fugiant in montes"
+        "latim": "Dominus autem futuram in civitate praevidens famem, monebat discipulos ne in futura obsidione in civitatem confugerent tamquam ad locum tutum et a Deo protectum; sed magis inde discederent, et ad montes confugerent; unde sequitur tunc qui in Iudaea sunt, fugiant in montes",
+        "pt": "O Senhor, prevendo a fome que haveria na cidade, advertia os discípulos de que, no futuro cerco, não se refugiassem na cidade como em lugar seguro e protegido por Deus, mas antes se afastassem dali e fugissem para os montes; por isso segue-se: \"Então, os que estiverem na Judeia fujam para os montes\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Ecclesiastica narrat historia, cunctos qui in Iudaea erant Christianos, imminente Hierosolymorum excidio, commonitos a domino, loco discessisse, et trans Iordanem habitasse in civitate quadam Pella nomine, donec desolatio Iudaeae compleretur"
+        "latim": "Ecclesiastica narrat historia, cunctos qui in Iudaea erant Christianos, imminente Hierosolymorum excidio, commonitos a domino, loco discessisse, et trans Iordanem habitasse in civitate quadam Pella nomine, donec desolatio Iudaeae compleretur",
+        "pt": "A história eclesiástica narra que todos os cristãos que estavam na Judeia, iminente a ruína de Jerusalém, advertidos pelo Senhor, deixaram o lugar e habitaram além do Jordão, numa cidade chamada Pela, até que se consumasse a desolação da Judeia.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "ad Hesychium",
-        "latim": "Pro hoc autem Matthaeus et Marcus dixerunt: et qui supra tectum est, non descendat in domum; addit autem: nec introeat ut tollat aliquid de domo; pro quo Lucas subdit et qui in medio eius sunt discedant"
+        "latim": "Pro hoc autem Matthaeus et Marcus dixerunt: et qui supra tectum est, non descendat in domum; addit autem: nec introeat ut tollat aliquid de domo; pro quo Lucas subdit et qui in medio eius sunt discedant",
+        "pt": "Em lugar disto, Mateus e Marcos disseram: \"E quem estiver sobre o terraço não desça à casa\"; acrescenta ainda: \"nem entre para tirar algo de casa\"; em lugar disso, Lucas acrescenta: \"E os que estiverem no meio dela retirem-se\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Sed quomodo ab exercitu civitate iam circumdata, qui in medio eius sunt discedent? Nisi forte quod promisit tunc, non ad ipsum tempus obsidionis referatur, sed ad proximum ante obsidionem tempus, cum se primum miles Romanus per Galilaeae vel Samariae fines coepit diffundere"
+        "latim": "Sed quomodo ab exercitu civitate iam circumdata, qui in medio eius sunt discedent? Nisi forte quod promisit tunc, non ad ipsum tempus obsidionis referatur, sed ad proximum ante obsidionem tempus, cum se primum miles Romanus per Galilaeae vel Samariae fines coepit diffundere",
+        "pt": "Mas como se retirarão os que estão no meio da cidade, estando ela já cercada pelo exército? A não ser que o \"então\" que ele prometeu não se refira ao próprio tempo do cerco, mas ao tempo imediatamente anterior ao cerco, quando o soldado romano começou a espalhar-se pelas fronteiras da Galileia e da Samaria.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "ad Hesychium",
-        "latim": "Pro eo autem quod Matthaeus et Marcus posuerunt: et qui in agro erit, non revertatur retro tollere vestimentum suum, apertius iste subdit et qui in regionibus, non intrent in eam; quia dies ultionis hi sunt, ut impleantur omnia quae scripta sunt"
+        "latim": "Pro eo autem quod Matthaeus et Marcus posuerunt: et qui in agro erit, non revertatur retro tollere vestimentum suum, apertius iste subdit et qui in regionibus, non intrent in eam; quia dies ultionis hi sunt, ut impleantur omnia quae scripta sunt",
+        "pt": "Em lugar do que Mateus e Marcos puseram: \"E quem estiver no campo não volte atrás para pegar a sua veste\", este acrescenta mais claramente: \"E os que estiverem nas regiões não entrem nela; porque estes são os dias da vingança, para que se cumpra tudo o que está escrito\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Dies autem ultionis hi sunt, dies videlicet dominici sanguinis ultionem petentes"
+        "latim": "Dies autem ultionis hi sunt, dies videlicet dominici sanguinis ultionem petentes",
+        "pt": "Os dias da vingança são estes, isto é, dias que reclamam a vingança do sangue do Senhor.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Deinde similiter Lucas prosequitur, sicut et alii duo vae autem praegnantibus et nutrientibus in illis diebus. Et sic ergo Lucas patefecit quod poterat esse incertum, scilicet id quod dictum est de abominatione desolationis, non ad saeculi finem, sed ad expugnationem Ierusalem pertinere"
+        "latim": "Deinde similiter Lucas prosequitur, sicut et alii duo vae autem praegnantibus et nutrientibus in illis diebus. Et sic ergo Lucas patefecit quod poterat esse incertum, scilicet id quod dictum est de abominatione desolationis, non ad saeculi finem, sed ad expugnationem Ierusalem pertinere",
+        "pt": "Em seguida, Lucas prossegue de modo semelhante aos outros dois: \"Ai das grávidas e das que amamentam naqueles dias\". E assim Lucas deixou claro o que podia ser incerto, a saber, que o que foi dito sobre a abominação da desolação não diz respeito ao fim do mundo, mas à tomada de Jerusalém.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Dicit ergo vae praegnantibus, praesente captivitate, et nutrientibus sive mammantibus, ut quidam interpretantur, quarum vel uteri, vel manus filiorum sarcina praegravatae fugae necessitatem non minimum impediunt"
+        "latim": "Dicit ergo vae praegnantibus, praesente captivitate, et nutrientibus sive mammantibus, ut quidam interpretantur, quarum vel uteri, vel manus filiorum sarcina praegravatae fugae necessitatem non minimum impediunt",
+        "pt": "Diz, pois, \"ai das grávidas\", estando presente o cativeiro, \"e das que amamentam\" ou das que dão o seio, como alguns interpretam, cujo ventre ou cujas mãos, sobrecarregados com o peso dos filhos, dificultam grandemente a necessidade da fuga.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quidam vero dicunt, dominum per hoc significare filiorum esum, quem et Iosephus narrat"
+        "latim": "Quidam vero dicunt, dominum per hoc significare filiorum esum, quem et Iosephus narrat",
+        "pt": "Alguns, porém, dizem que o Senhor significa com isto o ato de comer os filhos, que também Josefo narra.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Deinde praedictorum assignat causam, dicens erit enim pressura magna super terram, et ira populo huic. Talia enim mala eos occupaverunt ut nulla deinceps aerumna possit eorum calamitatibus adaequari, ut Iosephus narravit"
+        "latim": "Deinde praedictorum assignat causam, dicens erit enim pressura magna super terram, et ira populo huic. Talia enim mala eos occupaverunt ut nulla deinceps aerumna possit eorum calamitatibus adaequari, ut Iosephus narravit",
+        "pt": "Em seguida, indica a causa do que foi predito, dizendo: \"Haverá, com efeito, grande aperto sobre a terra e ira contra este povo\". Tais males, com efeito, os acometeram, que nenhuma aflição posterior pode igualar-se às suas calamidades, como Josefo narrou.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Qualiter scilicet advenientibus Romanis, et urbem capientibus, multae catervae Iudaici populi in ore gladii periere; unde sequitur et cadent in ore gladii. Sed et plures necati sunt fame. Haec vero accidebant primo quidem sub Tito et Vespasiano, post hos autem tempore Hadriani principis Romanorum, quando natale solum Iudaeis inaccessibile est factum; unde sequitur et captivi ducentur in omnes gentes. Totum enim orbem Iudaei repleverunt, et usque ad fines terrae pervenerunt; et cum eorum terra ab alienigenis inhabitetur, solis ipsis est inaccessibilis facta; unde sequitur et Ierusalem calcabitur a gentibus, donec impleantur tempora nationum"
+        "latim": "Qualiter scilicet advenientibus Romanis, et urbem capientibus, multae catervae Iudaici populi in ore gladii periere; unde sequitur et cadent in ore gladii. Sed et plures necati sunt fame. Haec vero accidebant primo quidem sub Tito et Vespasiano, post hos autem tempore Hadriani principis Romanorum, quando natale solum Iudaeis inaccessibile est factum; unde sequitur et captivi ducentur in omnes gentes. Totum enim orbem Iudaei repleverunt, et usque ad fines terrae pervenerunt; et cum eorum terra ab alienigenis inhabitetur, solis ipsis est inaccessibilis facta; unde sequitur et Ierusalem calcabitur a gentibus, donec impleantur tempora nationum",
+        "pt": "Isto é, como, chegando os romanos e tomando a cidade, muitas multidões do povo judeu pereceram ao fio da espada; por isso segue-se: \"E cairão ao fio da espada\". Mas muitos mais foram mortos pela fome. Estas coisas aconteceram primeiro sob Tito e Vespasiano, e depois deles, no tempo de Adriano, príncipe dos romanos, quando o solo natal se tornou inacessível aos judeus; por isso segue-se: \"E serão levados cativos para todas as nações\". Os judeus, com efeito, encheram o mundo inteiro e chegaram até os confins da terra; e, embora a sua terra seja habitada por estrangeiros, só a eles foi tornada inacessível; por isso segue-se: \"E Jerusalém será pisada pelas nações, até que se cumpram os tempos das nações\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Quae scilicet apostolus commemorat dicens: caecitas ex parte facta est in Israel (...) et sic omnis Israel salvus fiet; qui cum promissa salute fuerit potitus, ad patrium solum rediturus non temere speratur"
+        "latim": "Quae scilicet apostolus commemorat dicens: caecitas ex parte facta est in Israel (...) et sic omnis Israel salvus fiet; qui cum promissa salute fuerit potitus, ad patrium solum rediturus non temere speratur",
+        "pt": "É o que o Apóstolo recorda, dizendo: \"A cegueira atingiu em parte Israel (...) e assim todo Israel será salvo\"; e, tendo alcançado a salvação prometida, não é sem fundamento que se espera que voltará ao solo da pátria.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Mystice autem abominatio desolationis, adventus Antichristi est: eo quod sacrilegiis infaustis mentium interiora contaminet, sedens iuxta historiam in templo, ut sibi vindicet divinae solium potestatis. Iuxta interpretationem autem spiritualem pulchre inducitur, eo quod in affectibus singulorum vestigium perfidiae suae confirmare desideret, ex Scripturis disputans se esse Christum. Tunc appropinquabit desolatio, quoniam a vera religione plerique lapsi desistent; tunc erit domini dies, quoniam sicut primus adventus domini fuit propter redimenda peccata, ita et secundus erit propter reprimenda delicta, ne plures perfidiae errore labantur. Est et alius Antichristus, idest Diabolus, qui Ierusalem, idest animam pacificam, obsidere nitatur suae legis exercitu. Ergo quando in medio templi est Diabolus, desolatio abominationis est. Cum autem unicuique laboranti, Christi praesentia spiritualis illuxerit, tollitur iniquus ex medio, et incipit regnare iustitia. Est etiam tertius Antichristus, ut Arius et Sabellius et omnes qui nos prava intentione seducunt. Hae autem sunt praegnantes quibus vae dicitur, quae arvinam suae carnis extendant, et quibus intimorum gressus pigrescat animorum, et effetae virtutum, fetaeque vitiorum. Sed nec illae praegnantes condemnationis expertes sunt, quae in bonorum actuum molimine constitutae, necdum aliquos suscepti operis dedere processus. Sunt quae Dei timore concipiunt, sed non omnes pariunt: sunt enim quae abortivum excludunt verbum antequam pariant. Sunt etiam quae in utero Christum habeant, sed nondum formaverunt. Ergo quae parit iustitiam, Christum parit. Nos etiam parvulos nostros ablactare properemus, ne nos quasi imperfectorum parentes, aut iudicii dies aut mortis inveniat. Quod ita fiet, si omnia dicta iustitiae in corde custodias, nec senectutis tempus expectes; sed in prima aetate sapientiam sine corruptela corporis tui cito concipias, cito nutrias. In fine autem Iudaea omnis a nationibus credituris subicietur in ore gladii spiritalis, qui est sermo bis acutus"
+        "latim": "Mystice autem abominatio desolationis, adventus Antichristi est: eo quod sacrilegiis infaustis mentium interiora contaminet, sedens iuxta historiam in templo, ut sibi vindicet divinae solium potestatis. Iuxta interpretationem autem spiritualem pulchre inducitur, eo quod in affectibus singulorum vestigium perfidiae suae confirmare desideret, ex Scripturis disputans se esse Christum. Tunc appropinquabit desolatio, quoniam a vera religione plerique lapsi desistent; tunc erit domini dies, quoniam sicut primus adventus domini fuit propter redimenda peccata, ita et secundus erit propter reprimenda delicta, ne plures perfidiae errore labantur. Est et alius Antichristus, idest Diabolus, qui Ierusalem, idest animam pacificam, obsidere nitatur suae legis exercitu. Ergo quando in medio templi est Diabolus, desolatio abominationis est. Cum autem unicuique laboranti, Christi praesentia spiritualis illuxerit, tollitur iniquus ex medio, et incipit regnare iustitia. Est etiam tertius Antichristus, ut Arius et Sabellius et omnes qui nos prava intentione seducunt. Hae autem sunt praegnantes quibus vae dicitur, quae arvinam suae carnis extendant, et quibus intimorum gressus pigrescat animorum, et effetae virtutum, fetaeque vitiorum. Sed nec illae praegnantes condemnationis expertes sunt, quae in bonorum actuum molimine constitutae, necdum aliquos suscepti operis dedere processus. Sunt quae Dei timore concipiunt, sed non omnes pariunt: sunt enim quae abortivum excludunt verbum antequam pariant. Sunt etiam quae in utero Christum habeant, sed nondum formaverunt. Ergo quae parit iustitiam, Christum parit. Nos etiam parvulos nostros ablactare properemus, ne nos quasi imperfectorum parentes, aut iudicii dies aut mortis inveniat. Quod ita fiet, si omnia dicta iustitiae in corde custodias, nec senectutis tempus expectes; sed in prima aetate sapientiam sine corruptela corporis tui cito concipias, cito nutrias. In fine autem Iudaea omnis a nationibus credituris subicietur in ore gladii spiritalis, qui est sermo bis acutus",
+        "pt": "Misticamente, porém, a abominação da desolação é a vinda do Anticristo, porque ele contamina o interior das mentes com sacrilégios funestos, sentando-se, segundo a história, no templo, para reivindicar para si o trono do poder divino. Segundo a interpretação espiritual, a imagem é aplicada com acerto, porque ele deseja fixar o rastro de sua perfídia nos afetos de cada um, disputando a partir das Escrituras que ele é o Cristo. Então se aproximará a desolação, porque muitos, tendo decaído, abandonarão a verdadeira religião; então será o dia do Senhor, porque, assim como a primeira vinda do Senhor foi para redimir os pecados, assim também a segunda será para reprimir os delitos, a fim de que não sejam mais os que caem no erro da perfídia. Há também outro Anticristo, isto é, o Diabo, que se esforça por sitiar Jerusalém, isto é, a alma pacífica, com o exército de sua lei. Portanto, quando o Diabo está no meio do templo, é a desolação da abominação. Quando, porém, a presença espiritual de Cristo resplandece para cada um que luta, o iníquo é tirado do meio, e a justiça começa a reinar. Há ainda um terceiro Anticristo, como Ário e Sabélio e todos os que nos seduzem com intenção perversa. São estas as grávidas a quem se diz \"ai\": as que estendem a gordura de sua carne, e nas quais o passo dos ânimos interiores se torna lento, e que são estéreis de virtudes e fecundas de vícios. Mas nem aquelas grávidas estão isentas de condenação que, empenhadas na realização de boas obras, ainda não deram nenhum fruto à obra empreendida. Há as que concebem pelo temor de Deus, mas nem todas dão à luz: pois há as que expelem a palavra como aborto antes de darem à luz. Há também as que têm Cristo no ventre, mas ainda não o formaram. Portanto, quem dá à luz a justiça, dá à luz Cristo. Apressemo-nos também a desmamar os nossos pequeninos, para que não nos encontre, como pais de filhos imperfeitos, nem o dia do juízo nem o da morte. Isso se dará se guardares no coração todas as palavras da justiça e não esperares o tempo da velhice, mas, na primeira idade, concebes depressa a sabedoria, sem corrupção do teu corpo, e depressa a nutres. No fim, porém, toda a Judeia será submetida pelas nações que hão de crer, ao fio da espada espiritual, que é a palavra de dois gumes.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },
@@ -526,117 +750,278 @@
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Quid impletis nationum temporibus sequatur, ex ordine manifestat, dicens erunt signa in sole et luna et stellis"
+        "latim": "Quid impletis nationum temporibus sequatur, ex ordine manifestat, dicens erunt signa in sole et luna et stellis",
+        "pt": "O que se seguirá, cumpridos os tempos das nações, ele o manifesta em ordem, dizendo: \"Haverá sinais no sol, na lua e nas estrelas\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Quae quidem signa secundum Matthaeum evidentius exprimuntur: tunc, inquit, sol obscurabitur, et luna non dabit lumen suum, et stellae cadent de caelo"
+        "latim": "Quae quidem signa secundum Matthaeum evidentius exprimuntur: tunc, inquit, sol obscurabitur, et luna non dabit lumen suum, et stellae cadent de caelo",
+        "pt": "Esses sinais são expressos com mais clareza segundo Mateus: \"Então\", diz ele, \"o sol escurecerá, a lua não dará a sua luz, e as estrelas cairão do céu\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Tunc enim cum vitae corruptibilis consummatio agetur, et secundum apostolum species huius mundi transibit, et novum succedet saeculum, in quo vice sensibilium luminarium ipse Christus fulgebit quasi iubar et rex novi saeculi: cuius erit tanta luminis virtus et gloria, ut sol, qui nunc radiat, atque luna et cetera sidera, adventu maioris luminis occultentur"
+        "latim": "Tunc enim cum vitae corruptibilis consummatio agetur, et secundum apostolum species huius mundi transibit, et novum succedet saeculum, in quo vice sensibilium luminarium ipse Christus fulgebit quasi iubar et rex novi saeculi: cuius erit tanta luminis virtus et gloria, ut sol, qui nunc radiat, atque luna et cetera sidera, adventu maioris luminis occultentur",
+        "pt": "Pois então, quando se realizar a consumação da vida corruptível, e, segundo o Apóstolo, passar a figura deste mundo, e suceder um novo século, no qual, em lugar dos luzeiros sensíveis, o próprio Cristo resplandecerá como o fulgor e o rei do novo século, será tão grande a força e a glória de sua luz que o sol, que agora brilha, e a lua e os demais astros se ocultarão com a vinda da luz maior.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Sicut enim in hoc saeculo luna et sidera mox obfuscantur orto sole; sic in gloriosa Christi apparitione sol obtenebrescet, et luna non dabit proprium iubar, et stellae cadent de caelo, priore spoliatae amictu, ut potioris lucis amictu potiantur"
+        "latim": "Sicut enim in hoc saeculo luna et sidera mox obfuscantur orto sole; sic in gloriosa Christi apparitione sol obtenebrescet, et luna non dabit proprium iubar, et stellae cadent de caelo, priore spoliatae amictu, ut potioris lucis amictu potiantur",
+        "pt": "Pois, assim como neste século a lua e os astros logo se ofuscam quando nasce o sol, assim, na gloriosa aparição de Cristo, o sol escurecerá, a lua não dará o seu próprio brilho, e as estrelas cairão do céu, despojadas da veste anterior, para receberem a veste de uma luz melhor.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Quae autem evenient orbi post luminarium obtenebrationem, ex quibus fiet angustia gentium, consequenter exprimit, dicens et in terris pressura gentium prae confusione sonitus maris et fluctuum: ubi videtur docere principium transmutationis universi futurum ex defectu substantiae humidae. Hac enim prima devorata, vel congelata, ut non amplius audiatur sonitus maris, nec contingant arenam fluctus eius, causa exuberantis siccitatis, ceterae mundi partes non amplius obtinentes vaporem solitum, emissum ex substantia humida, transmutationem patientur; et sic cum apparitio salvatoris confutare debeat repugnantia Deo prodigia, exordium sument furoris prooemia ex siccitatibus, ut nec tempestas, nec fremitus maris ulterius audiatur. Quo facto subsequetur angustia superstitum hominum; unde sequitur arescentibus, idest tabescentibus, hominibus prae timore et expectatione, eorum scilicet quae supervenient universo orbi. Quae autem tunc ingruant mundo, consequenter ostendit, subdens nam virtutes caelorum movebuntur"
+        "latim": "Quae autem evenient orbi post luminarium obtenebrationem, ex quibus fiet angustia gentium, consequenter exprimit, dicens et in terris pressura gentium prae confusione sonitus maris et fluctuum: ubi videtur docere principium transmutationis universi futurum ex defectu substantiae humidae. Hac enim prima devorata, vel congelata, ut non amplius audiatur sonitus maris, nec contingant arenam fluctus eius, causa exuberantis siccitatis, ceterae mundi partes non amplius obtinentes vaporem solitum, emissum ex substantia humida, transmutationem patientur; et sic cum apparitio salvatoris confutare debeat repugnantia Deo prodigia, exordium sument furoris prooemia ex siccitatibus, ut nec tempestas, nec fremitus maris ulterius audiatur. Quo facto subsequetur angustia superstitum hominum; unde sequitur arescentibus, idest tabescentibus, hominibus prae timore et expectatione, eorum scilicet quae supervenient universo orbi. Quae autem tunc ingruant mundo, consequenter ostendit, subdens nam virtutes caelorum movebuntur",
+        "pt": "O que acontecerá ao mundo depois do escurecimento dos luzeiros, do qual resultará a angústia das nações, ele o exprime em seguida, dizendo: \"E sobre a terra, angústia das nações, em meio ao estrondo do mar e das ondas\"; onde parece ensinar que o princípio da transformação do universo virá da falta da substância úmida. Pois, consumida ou congelada esta primeira, de modo que já não se ouça o rumor do mar nem as suas ondas toquem a areia, por causa do excesso de secura, as demais partes do mundo, não obtendo mais o vapor costumeiro emitido da substância úmida, sofrerão transformação; e assim, como a aparição do Salvador deve refutar os prodígios contrários a Deus, os prelúdios do furor tomarão princípio das secas, de modo que nem a tempestade nem o bramido do mar se ouçam mais. Feito isto, seguir-se-á a angústia dos homens sobreviventes; por isso se segue: \"Os homens definhando\", isto é, consumindo-se, \"de medo e na expectativa\" daquilo que sobrevirá a todo o mundo. O que então cairá sobre o mundo, ele mostra em seguida, acrescentando: \"Pois as potências dos céus serão abaladas\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Vel aliter. Cum alterabitur superior orbis, et elementa inferiora merito patientur iacturam; unde sequitur et in terris pressura gentium prae confusione sonitus maris et fluctuum; quasi dicat: mare terribiliter fremet, et littus maris agitabitur tempestate, ita ut sit populo terrae pressura, idest communis miseria, et tabescant timore et expectatione malorum irruentium mundo; unde sequitur arescentibus hominibus prae timore et expectatione, quae supervenient universo orbi"
+        "latim": "Vel aliter. Cum alterabitur superior orbis, et elementa inferiora merito patientur iacturam; unde sequitur et in terris pressura gentium prae confusione sonitus maris et fluctuum; quasi dicat: mare terribiliter fremet, et littus maris agitabitur tempestate, ita ut sit populo terrae pressura, idest communis miseria, et tabescant timore et expectatione malorum irruentium mundo; unde sequitur arescentibus hominibus prae timore et expectatione, quae supervenient universo orbi",
+        "pt": "Ou de outro modo. Quando o orbe superior for alterado, também os elementos inferiores com razão sofrerão dano; por isso se segue: \"E sobre a terra, angústia das nações, em meio ao estrondo do mar e das ondas\"; como se dissesse: o mar bramirá terrivelmente, e a praia do mar será agitada pela tempestade, de modo que haja para o povo da terra angústia, isto é, miséria comum, e definhem de medo e na expectativa dos males que irrompem sobre o mundo; por isso se segue: \"Os homens definhando de medo e na expectativa do que sobrevirá a todo o mundo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "ad Hesychium",
-        "latim": "Sed dices: confiteri vos poena vestra compellit adesse iam fines, dum impletur quod praenuntiatum est. Nullam enim patriam, nullum locum, nostris temporibus non affligi aut tribulari certum est. Sed si ista mala quae nunc patitur genus humanum, certa sunt indicia iam dominum esse venturum, quid est quod dicit apostolus: cum dixerint: pax et securitas? Videamus ergo ne forte melius intelligatur non eo modo impleri quae praedicta sunt his verbis; sed tunc potius esse ventura, quando sic erit tribulatio universo orbi ut ad Ecclesiam pertineat, quae universo orbe tribulabitur, non ad eos qui tribulabunt eam: ipsi enim sunt dicturi: pax et securitas. Nunc autem ista mala quae tamquam summa extremaque creduntur, utrique regno, Christi scilicet et Diaboli, videmus esse communia: pariter quippe his boni affliguntur et mali; interque tanta mala adhuc usquequaque frequentantur luxuriosa convivia. Hoccine est arescere prae timore, an potius inardescere prae libidine?"
+        "latim": "Sed dices: confiteri vos poena vestra compellit adesse iam fines, dum impletur quod praenuntiatum est. Nullam enim patriam, nullum locum, nostris temporibus non affligi aut tribulari certum est. Sed si ista mala quae nunc patitur genus humanum, certa sunt indicia iam dominum esse venturum, quid est quod dicit apostolus: cum dixerint: pax et securitas? Videamus ergo ne forte melius intelligatur non eo modo impleri quae praedicta sunt his verbis; sed tunc potius esse ventura, quando sic erit tribulatio universo orbi ut ad Ecclesiam pertineat, quae universo orbe tribulabitur, non ad eos qui tribulabunt eam: ipsi enim sunt dicturi: pax et securitas. Nunc autem ista mala quae tamquam summa extremaque creduntur, utrique regno, Christi scilicet et Diaboli, videmus esse communia: pariter quippe his boni affliguntur et mali; interque tanta mala adhuc usquequaque frequentantur luxuriosa convivia. Hoccine est arescere prae timore, an potius inardescere prae libidine?",
+        "pt": "Mas dirás: a vossa pena vos obriga a confessar que o fim já está próximo, uma vez que se cumpre o que foi predito. Com efeito, é certo que, em nossos tempos, não há pátria nem lugar que não seja afligido ou atribulado. Mas se esses males que agora o gênero humano sofre são indícios certos de que o Senhor já está para vir, que significa o que diz o Apóstolo: \"Quando disserem: Paz e segurança\"? Vejamos, pois, se não se entende melhor que as coisas preditas nestas palavras não se cumprem desse modo, mas que virão antes quando a tribulação de todo o mundo for tal que diga respeito à Igreja, que será atribulada em todo o mundo, e não àqueles que a atribularão: eles mesmos, com efeito, dirão: \"Paz e segurança\". Agora, porém, esses males, que se creem os supremos e últimos, vemos serem comuns aos dois reinos, o de Cristo e o do Diabo: igualmente por eles são afligidos os bons e os maus; e em meio a tantos males ainda se multiplicam por toda parte os banquetes luxuriosos. É isto definhar de medo, ou antes arder de desejo?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Non solum autem mortales fluctuabunt cum alterabitur mundus, sed etiam Angeli stupebunt in tam terribilibus mutationibus universi; unde sequitur nam virtutes caelorum movebuntur"
+        "latim": "Non solum autem mortales fluctuabunt cum alterabitur mundus, sed etiam Angeli stupebunt in tam terribilibus mutationibus universi; unde sequitur nam virtutes caelorum movebuntur",
+        "pt": "Não somente os mortais vacilarão quando o mundo for alterado, mas também os Anjos ficarão atônitos diante de mudanças tão terríveis do universo; por isso se segue: \"Pois as potências dos céus serão abaladas\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Quid enim virtutes caelorum, nisi Angelos, dominationes, et principatus, et potestates appellat? Quae in adventu districti iudicis, nostris tunc oculis visibiliter apparebunt, ut districte tunc a nobis exigant hoc quod nos modo invisibilis conditor aequanimiter portat"
+        "latim": "Quid enim virtutes caelorum, nisi Angelos, dominationes, et principatus, et potestates appellat? Quae in adventu districti iudicis, nostris tunc oculis visibiliter apparebunt, ut districte tunc a nobis exigant hoc quod nos modo invisibilis conditor aequanimiter portat",
+        "pt": "Que chama ele de potências dos céus, senão os Anjos, as dominações, os principados e as potestades? Estes, na vinda do juiz rigoroso, aparecerão então visivelmente aos nossos olhos, para exigirem de nós com rigor aquilo que agora o Criador invisível suporta com serenidade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Cum etiam Dei filius sit venturus in gloria, et confutaturus elatam tyrannidem filii peccati, ministrantibus Angelis, caeli fores a saeculo clausae patebunt, ut spectentur excelsa"
+        "latim": "Cum etiam Dei filius sit venturus in gloria, et confutaturus elatam tyrannidem filii peccati, ministrantibus Angelis, caeli fores a saeculo clausae patebunt, ut spectentur excelsa",
+        "pt": "Quando também o Filho de Deus vier em glória e refutar a tirania soberba do filho do pecado, servindo-o os Anjos, as portas do céu, fechadas desde o princípio do século, se abrirão, para que se contemplem as coisas excelsas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Vel virtutes caelicae movebuntur, quamvis sibi consciae non sint: videntes enim infinitas multitudines condemnari, non intrepide stabunt illic"
+        "latim": "Vel virtutes caelicae movebuntur, quamvis sibi consciae non sint: videntes enim infinitas multitudines condemnari, non intrepide stabunt illic",
+        "pt": "Ou as potências celestes serão abaladas, embora não tenham consciência de culpa: pois, vendo multidões infinitas serem condenadas, não permanecerão ali sem temor.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Unde et in Iob dicitur: columnae caeli contremiscunt, et pavent ad nutum eius. Quid ergo faciunt tabulae, quando tremunt columnae? Quid virgula deserti patitur, cum cedrus Paradisi concutitur?"
+        "latim": "Unde et in Iob dicitur: columnae caeli contremiscunt, et pavent ad nutum eius. Quid ergo faciunt tabulae, quando tremunt columnae? Quid virgula deserti patitur, cum cedrus Paradisi concutitur?",
+        "pt": "Por isso também se diz em Jó: \"As colunas do céu tremem e se espantam a um aceno seu\". Que fazem, pois, as tábuas, quando tremem as colunas? Que sofre a varinha do deserto, quando o cedro do Paraíso é sacudido?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Vel virtutes caelorum sunt quae praesunt sensibilibus partibus universi: quae quidem tunc movebuntur, ut potiorem statum attingant. Absolventur enim in saeculo novo a ministerio, quo Deo serviunt circa sensibilia corpora secundum corruptionis statum"
+        "latim": "Vel virtutes caelorum sunt quae praesunt sensibilibus partibus universi: quae quidem tunc movebuntur, ut potiorem statum attingant. Absolventur enim in saeculo novo a ministerio, quo Deo serviunt circa sensibilia corpora secundum corruptionis statum",
+        "pt": "Ou as potências dos céus são as que presidem às partes sensíveis do universo: estas então serão abaladas, para alcançarem um estado melhor. Com efeito, no novo século serão libertadas do ministério com que servem a Deus em torno dos corpos sensíveis, segundo o estado de corrupção.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Sed ne dominus, propinquante secundo adventu suo, ea pro magno praedixisse videatur quae huic mundo etiam ante primum eius adventum fieri consueverant, et rideamur ab eis qui plura in historia gentium et maiora legerunt, haec quae dicta sunt, melius in Ecclesia existimo intelligi. Ecclesia enim est sol, et luna, et stellae, cui dictum est: pulchra ut luna, electa ut sol; quae tunc non apparebit, persecutoribus ultra modum saevientibus"
+        "latim": "Sed ne dominus, propinquante secundo adventu suo, ea pro magno praedixisse videatur quae huic mundo etiam ante primum eius adventum fieri consueverant, et rideamur ab eis qui plura in historia gentium et maiora legerunt, haec quae dicta sunt, melius in Ecclesia existimo intelligi. Ecclesia enim est sol, et luna, et stellae, cui dictum est: pulchra ut luna, electa ut sol; quae tunc non apparebit, persecutoribus ultra modum saevientibus",
+        "pt": "Mas, para que o Senhor, ao aproximar-se a sua segunda vinda, não pareça ter predito como grandes coisas que costumavam acontecer a este mundo mesmo antes da sua primeira vinda, e para que não riam de nós os que leram na história dos povos coisas mais numerosas e maiores, julgo que estas palavras se entendem melhor da Igreja. Com efeito, a Igreja é o sol, a lua e as estrelas, a ela foi dito: \"Formosa como a lua, escolhida como o sol\"; ela então não aparecerá, enfurecendo-se os perseguidores além da medida.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Plurimis etiam a religione deficientibus, clara fides obscurabitur nube perfidiae; quia sol caelestis in ea, fide minuitur vel augetur; et sicut menstruis, idest mensium, defectibus, luna vel terrae oppositu, cum fuerit ex regione solis, vanescit; sic et sancta Ecclesia, cum lumini caelesti vitia carnis obsistunt, fulgorem divini luminis de Christi radiis non potest mutuari: nam in persecutionibus lucem divini solis plerumque amor vitae huius excludit. Cadunt etiam stellae, idest gloria micantes viri, si persecutionis acerbitas convalescat, quae oportet fieri donec Ecclesiae multitudo cumuletur: sic enim probantur boni, sic produntur infirmi"
+        "latim": "Plurimis etiam a religione deficientibus, clara fides obscurabitur nube perfidiae; quia sol caelestis in ea, fide minuitur vel augetur; et sicut menstruis, idest mensium, defectibus, luna vel terrae oppositu, cum fuerit ex regione solis, vanescit; sic et sancta Ecclesia, cum lumini caelesti vitia carnis obsistunt, fulgorem divini luminis de Christi radiis non potest mutuari: nam in persecutionibus lucem divini solis plerumque amor vitae huius excludit. Cadunt etiam stellae, idest gloria micantes viri, si persecutionis acerbitas convalescat, quae oportet fieri donec Ecclesiae multitudo cumuletur: sic enim probantur boni, sic produntur infirmi",
+        "pt": "Desertando muitíssimos da religião, a fé luminosa será obscurecida pela nuvem da perfídia, porque o sol celeste nela diminui ou cresce conforme a fé; e, assim como a lua, nos eclipses mensais, isto é, dos meses, se desvanece pela interposição da terra, quando está na região oposta ao sol, assim também a santa Igreja, quando os vícios da carne se opõem à luz celeste, não pode tomar emprestado o fulgor da luz divina dos raios de Cristo: pois, nas perseguições, o amor desta vida frequentemente exclui a luz do sol divino. Caem também as estrelas, isto é, os homens que resplandecem em glória, se a aspereza da perseguição se fortalece, a qual convém que aconteça até que se complete a multidão da Igreja: assim, com efeito, são provados os bons, assim são revelados os fracos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Quod autem dictum est et in terris pressura gentium, gentes voluit intelligi, non quae in semine Abrahae benedicentur, sed quae ad sinistram stabunt"
+        "latim": "Quod autem dictum est et in terris pressura gentium, gentes voluit intelligi, non quae in semine Abrahae benedicentur, sed quae ad sinistram stabunt",
+        "pt": "Quanto ao que foi dito: \"E sobre a terra, angústia das nações\", quis que se entendessem as nações, não as que serão abençoadas na descendência de Abraão, mas as que estarão à esquerda.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Ergo varii animorum aestus ita graves erunt ut delictorum multitudine male consciis futuri iudicii metu, sacri nobis ros fontis arescant. Quemadmodum autem domini expectatur adventus, ut eius praesentia in toto fiat vel hominis orbe vel mundi, quae fit in singulis, cum omnibus affectibus receperint Christum; sic virtutes caelorum in adventu domini augmentum gratiae consequentur, et plenitudine divinitatis propius se infundente movebuntur. Sunt etiam virtutes caelorum, quae enarrant gloriam Dei, quae pleniore Christi infusione movebuntur, ut videant Christum"
+        "latim": "Ergo varii animorum aestus ita graves erunt ut delictorum multitudine male consciis futuri iudicii metu, sacri nobis ros fontis arescant. Quemadmodum autem domini expectatur adventus, ut eius praesentia in toto fiat vel hominis orbe vel mundi, quae fit in singulis, cum omnibus affectibus receperint Christum; sic virtutes caelorum in adventu domini augmentum gratiae consequentur, et plenitudine divinitatis propius se infundente movebuntur. Sunt etiam virtutes caelorum, quae enarrant gloriam Dei, quae pleniore Christi infusione movebuntur, ut videant Christum",
+        "pt": "Portanto, as diversas agitações dos ânimos serão tão graves que, pela multidão dos delitos, e com o temor do juízo futuro nos que têm má consciência, secará para nós o orvalho da fonte sagrada. Assim como se espera a vinda do Senhor, para que a sua presença se faça no todo, seja no orbe do homem, seja no do mundo, presença que se faz em cada um quando, com todos os afetos, acolheram Cristo, assim as potências dos céus, na vinda do Senhor, obterão aumento de graça e serão abaladas, infundindo-se mais de perto a plenitude da divindade. Há também potências dos céus que \"proclamam a glória de Deus\", as quais serão abaladas por uma infusão mais plena de Cristo, a fim de que vejam a Cristo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "",
-        "latim": "Vel virtutes caelorum movebuntur, quia impiis persequentibus, quidam fideles fortissimi turbabuntur. Sequitur et tunc videbunt filium hominis"
+        "latim": "Vel virtutes caelorum movebuntur, quia impiis persequentibus, quidam fideles fortissimi turbabuntur. Sequitur et tunc videbunt filium hominis",
+        "pt": "Ou as potências dos céus serão abaladas, porque, perseguindo os ímpios, alguns fiéis fortíssimos ficarão perturbados. Segue-se: \"E então verão o Filho do Homem\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Tam fideles quam infideles: radiabit enim amplius sole tam ipse quam crux eius: unde ab omnibus cognoscetur"
+        "latim": "Tam fideles quam infideles: radiabit enim amplius sole tam ipse quam crux eius: unde ab omnibus cognoscetur",
+        "pt": "Tanto os fiéis como os infiéis: pois resplandecerá mais que o sol, tanto ele mesmo como a sua cruz; por isso será reconhecido por todos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "ad Hesychium",
-        "latim": "Quod autem dicit venientem in nube, duobus modis accipi potest: sive in Ecclesia sua tamquam in nube venientem, sicut nunc venire non cessat; sed ideo tunc cum potestate magna et maiestate, quia maior maiestas et potestas illius apparebit sanctis, quibus magnam virtutem dabit, ne tanta persecutione vincantur; sive in corpore suo, in quo sedet ad dexteram patris, merito credendus est non solum in eodem corpore, verum etiam in nube venturus: quoniam sic veniet sicut abiit; nubes autem suscepit eum ab oculis eorum"
+        "latim": "Quod autem dicit venientem in nube, duobus modis accipi potest: sive in Ecclesia sua tamquam in nube venientem, sicut nunc venire non cessat; sed ideo tunc cum potestate magna et maiestate, quia maior maiestas et potestas illius apparebit sanctis, quibus magnam virtutem dabit, ne tanta persecutione vincantur; sive in corpore suo, in quo sedet ad dexteram patris, merito credendus est non solum in eodem corpore, verum etiam in nube venturus: quoniam sic veniet sicut abiit; nubes autem suscepit eum ab oculis eorum",
+        "pt": "Quanto ao que diz, \"vindo numa nuvem\", pode ser entendido de dois modos: ou vindo em sua Igreja como numa nuvem, assim como agora não cessa de vir; mas então \"com grande poder e majestade\", porque maior majestade e poder seu aparecerá aos santos, aos quais dará grande força para que não sejam vencidos por tão grande perseguição; ou em seu corpo, no qual está sentado à direita do Pai, com razão se deve crer que virá não somente no mesmo corpo, mas também numa nuvem: porque \"virá assim como partiu; uma nuvem, com efeito, o recebeu, tirando-o de seus olhos\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Semper enim Deus in nube apparet, secundum illud: nubes et caligo in circuitu eius: unde et filius hominis in nubibus veniet, ut Deus et dominus, non latenter, sed in gloria digna Deo; et ideo subdit cum potestate magna et maiestate"
+        "latim": "Semper enim Deus in nube apparet, secundum illud: nubes et caligo in circuitu eius: unde et filius hominis in nubibus veniet, ut Deus et dominus, non latenter, sed in gloria digna Deo; et ideo subdit cum potestate magna et maiestate",
+        "pt": "Com efeito, Deus sempre aparece na nuvem, conforme aquilo: \"Nuvem e escuridão estão ao seu redor\"; por isso também o Filho do Homem virá nas nuvens, como Deus e Senhor, não às ocultas, mas em glória digna de Deus; e por isso acrescenta: \"com grande poder e majestade\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Intelligendum est similiter magna. Primam enim apparitionem prosecutus est cum infirmitate et humilitate nostra; sed secundam celebrabit cum propria potestate et magna maiestate"
+        "latim": "Intelligendum est similiter magna. Primam enim apparitionem prosecutus est cum infirmitate et humilitate nostra; sed secundam celebrabit cum propria potestate et magna maiestate",
+        "pt": "Deve-se entender igualmente \"grande\". Com efeito, a primeira aparição ele a realizou com a nossa fraqueza e humildade; mas a segunda a celebrará com poder próprio e grande majestade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "In potestate enim et maiestate visuri sunt quem in humilitate positum audire noluerunt; ut virtutem eius tanto tunc districtius sentiant, quanto cervicem cordis ad eius patientiam non inclinant"
+        "latim": "In potestate enim et maiestate visuri sunt quem in humilitate positum audire noluerunt; ut virtutem eius tanto tunc districtius sentiant, quanto cervicem cordis ad eius patientiam non inclinant",
+        "pt": "Com efeito, verão em poder e majestade aquele que, posto na humildade, não quiseram ouvir; de modo que sintam então a sua força tanto mais rigorosamente quanto menos inclinam a cerviz do coração à sua paciência.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },
@@ -650,77 +1035,182 @@
       {
         "autor": "Gregorius",
         "obra": "in Evang",
-        "latim": "Quia praemissa contra reprobos dicta sunt, mox ad electorum consolationem verba vertuntur; nam subditur his autem fieri incipientibus, respicite et levate capita vestra, quoniam appropinquat redemptio vestra; ac si dicat: cum plagae mundi crebrescunt, levate capita, idest exhilarate corda: quia dum finitur mundus, cuius amici non estis, prope fit redemptio quam quaesistis. In Scriptura enim sacra saepe caput pro mente ponitur: quia sicut capite reguntur membra, ita cogitationes mente disponuntur. Capita itaque levare, est mentes nostras ad gaudia patriae caelestis erigere"
+        "latim": "Quia praemissa contra reprobos dicta sunt, mox ad electorum consolationem verba vertuntur; nam subditur his autem fieri incipientibus, respicite et levate capita vestra, quoniam appropinquat redemptio vestra; ac si dicat: cum plagae mundi crebrescunt, levate capita, idest exhilarate corda: quia dum finitur mundus, cuius amici non estis, prope fit redemptio quam quaesistis. In Scriptura enim sacra saepe caput pro mente ponitur: quia sicut capite reguntur membra, ita cogitationes mente disponuntur. Capita itaque levare, est mentes nostras ad gaudia patriae caelestis erigere",
+        "pt": "Como as palavras anteriores foram ditas contra os réprobos, logo as palavras se voltam para a consolação dos eleitos; pois se acrescenta: \"Quando estas coisas começarem a acontecer, olhai e levantai as vossas cabeças, porque se aproxima a vossa redenção\"; como se dissesse: quando as pragas do mundo se multiplicam, levantai as cabeças, isto é, alegrai os corações: porque, ao acabar o mundo, de quem não sois amigos, está perto a redenção que buscastes. Na Sagrada Escritura, com efeito, a cabeça é muitas vezes posta no lugar da mente: porque, assim como os membros são regidos pela cabeça, assim os pensamentos são ordenados pela mente. Levantar as cabeças, portanto, é elevar as nossas mentes às alegrias da pátria celeste.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Vel aliter. Transactis corporalibus aderunt intelligibilia et caelestia, scilicet regnum saeculi non amplius transituri; et tunc dignis salubria promissa tribuentur; unde dicitur his autem fieri incipientibus, respicite et levate capita vestra, quoniam appropinquat redemptio vestra. Acceptis enim Dei promissis quae speramus, erigemur qui ante curvi fueramus, et elevabimus capita nostra, humiliati quondam, eo quod redemptio nostra quam sperabamus, aderit, illa scilicet quam tota creatura expectat"
+        "latim": "Vel aliter. Transactis corporalibus aderunt intelligibilia et caelestia, scilicet regnum saeculi non amplius transituri; et tunc dignis salubria promissa tribuentur; unde dicitur his autem fieri incipientibus, respicite et levate capita vestra, quoniam appropinquat redemptio vestra. Acceptis enim Dei promissis quae speramus, erigemur qui ante curvi fueramus, et elevabimus capita nostra, humiliati quondam, eo quod redemptio nostra quam sperabamus, aderit, illa scilicet quam tota creatura expectat",
+        "pt": "Ou de outro modo. Passadas as coisas corporais, estarão presentes as inteligíveis e celestes, a saber, o reino do século que não passará mais; e então serão concedidas aos dignos as promessas de salvação; por isso se diz: \"Quando estas coisas começarem a acontecer, olhai e levantai as vossas cabeças, porque se aproxima a vossa redenção\". Com efeito, recebidas as promessas de Deus que esperamos, nos erguermos nós que antes estávamos curvados, e levantaremos as nossas cabeças, outrora humilhadas, porque estará presente a nossa redenção, que esperávamos, aquela, a saber, que toda a criatura aguarda.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Idest, perfecta libertas corporis et animae. Sicut enim primus adventus domini fuit ad reformationem animarum nostrarum, sic secundus ad reformationem corporum celebrabitur"
+        "latim": "Idest, perfecta libertas corporis et animae. Sicut enim primus adventus domini fuit ad reformationem animarum nostrarum, sic secundus ad reformationem corporum celebrabitur",
+        "pt": "Isto é, a liberdade perfeita do corpo e da alma. Pois, assim como a primeira vinda do Senhor foi para a reforma de nossas almas, assim a segunda será celebrada para a reforma dos corpos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Dicit autem haec ad discipulos suos, non tamquam ad eos qui durare deberent in vita ista usque ad terminum mundi; sed quasi uno corpore existente ipsis, et nobis, et posteris usque ad consummationem mundi credituris in Christum"
+        "latim": "Dicit autem haec ad discipulos suos, non tamquam ad eos qui durare deberent in vita ista usque ad terminum mundi; sed quasi uno corpore existente ipsis, et nobis, et posteris usque ad consummationem mundi credituris in Christum",
+        "pt": "Diz isto, porém, a seus discípulos, não como a pessoas que devessem permanecer nesta vida até o fim do mundo, mas como se fossem um só corpo com eles, conosco e com os pósteros que, até a consumação do mundo, hão de crer em Cristo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Quod autem calcari mundus atque despici debeat, provida comparatione manifestat cum subdit videte ficulneam, et omnes arbores: cum producunt ex se fructum, scitis quoniam prope est aestas: ita et vos, cum videritis haec fieri, scitote quoniam prope est regnum Dei: quasi dicat: sicut ex fructu arboris vicina aestas agnoscitur, ita ex ruina mundi prope cognoscitur esse regnum Dei. Et ex hoc ostenditur quia fructus mundi ruina est. Ad hoc enim germinat, ut quaecumque germine aluit, cladibus consumat. Bene autem regnum Dei aestati comparatur, quia tunc moeroris nostri nebulae transeunt, et vitae dies aeterni solis claritate fulgescunt"
+        "latim": "Quod autem calcari mundus atque despici debeat, provida comparatione manifestat cum subdit videte ficulneam, et omnes arbores: cum producunt ex se fructum, scitis quoniam prope est aestas: ita et vos, cum videritis haec fieri, scitote quoniam prope est regnum Dei: quasi dicat: sicut ex fructu arboris vicina aestas agnoscitur, ita ex ruina mundi prope cognoscitur esse regnum Dei. Et ex hoc ostenditur quia fructus mundi ruina est. Ad hoc enim germinat, ut quaecumque germine aluit, cladibus consumat. Bene autem regnum Dei aestati comparatur, quia tunc moeroris nostri nebulae transeunt, et vitae dies aeterni solis claritate fulgescunt",
+        "pt": "Que o mundo deve ser pisado e desprezado, ele o manifesta por uma comparação providente, quando acrescenta: \"Vede a figueira e todas as árvores: quando produzem fruto, sabeis que o verão está próximo: assim também vós, quando virdes acontecer estas coisas, sabei que o Reino de Deus está próximo\"; como se dissesse: assim como pelo fruto da árvore se reconhece que o verão está próximo, assim pela ruína do mundo se reconhece que está próximo o Reino de Deus. E daí se mostra que o fruto do mundo é a ruína. Com efeito, ele germina para consumir em desastres tudo o que alimentou com o seu germe. Bem se compara, porém, o Reino de Deus ao verão, porque então passam as nuvens da nossa tristeza, e os dias da vida resplandecem com a claridade do sol eterno.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Matthaeus autem de sola dixit ficulnea, hic de arboribus omnibus. Duplicem autem habet figuram ficulnea; vel cum dura mitescunt, vel cum peccata luxuriant. Sive ergo cum fructus in omnibus virescit arboribus et ficulnea fecunda iam floret; idest cum omnis lingua confitetur Deo, confitente etiam populo Iudaeorum, sperare domini debemus adventum, quo tamquam temporibus aestivis resurrectionis fructus metentur: sive cum levem fragilemque iactantiam, tamquam folia synagogae, homo iniquitatis induerit, conicere debemus appropinquare iudicium: nam remunerare fidem dominus et delinquendi finem afferre festinat"
+        "latim": "Matthaeus autem de sola dixit ficulnea, hic de arboribus omnibus. Duplicem autem habet figuram ficulnea; vel cum dura mitescunt, vel cum peccata luxuriant. Sive ergo cum fructus in omnibus virescit arboribus et ficulnea fecunda iam floret; idest cum omnis lingua confitetur Deo, confitente etiam populo Iudaeorum, sperare domini debemus adventum, quo tamquam temporibus aestivis resurrectionis fructus metentur: sive cum levem fragilemque iactantiam, tamquam folia synagogae, homo iniquitatis induerit, conicere debemus appropinquare iudicium: nam remunerare fidem dominus et delinquendi finem afferre festinat",
+        "pt": "Mateus, porém, falou apenas da figueira; aqui se fala de todas as árvores. A figueira tem um duplo simbolismo: quando as coisas duras se abrandam, ou quando os pecados abundam. Assim, quando o fruto verdeja em todas as árvores e a figueira fecunda já floresce, isto é, quando toda língua confessa a Deus, confessando também o povo dos judeus, devemos esperar a vinda do Senhor, na qual, como nos tempos de verão, se colhem os frutos da ressurreição; ou, quando o homem da iniquidade se revestir de uma jactância leve e frágil, como as folhas da sinagoga, devemos concluir que o juízo se aproxima: pois o Senhor se apressa em recompensar a fé e em pôr fim ao pecado.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "ad Hesychium",
-        "latim": "Cum autem dicit cum videritis haec fieri, quae intelligere poterimus nisi ea quae supra memorata sunt? In his autem est quod ait et tunc videbunt filium hominis venientem. Proinde cum hoc visum fuerit, non iam erit regnum Dei, sed prope erit. An dicendum est, non omnia quae supra commemorata sunt, esse intelligenda, ubi ait cum videritis haec fieri, sed aliqua eorum, hoc scilicet excepto quod dictum est, et tunc videbunt filium hominis? Sed Matthaeus aperuit, nullis exceptis esse accipiendum, dicens: ita et vos cum videritis haec omnia: inter quae est quod videbitur filius hominis veniens, ut intelligatur de adventu quo nunc venit in membris suis tamquam in nubibus, vel in Ecclesia tamquam in nube magna"
+        "latim": "Cum autem dicit cum videritis haec fieri, quae intelligere poterimus nisi ea quae supra memorata sunt? In his autem est quod ait et tunc videbunt filium hominis venientem. Proinde cum hoc visum fuerit, non iam erit regnum Dei, sed prope erit. An dicendum est, non omnia quae supra commemorata sunt, esse intelligenda, ubi ait cum videritis haec fieri, sed aliqua eorum, hoc scilicet excepto quod dictum est, et tunc videbunt filium hominis? Sed Matthaeus aperuit, nullis exceptis esse accipiendum, dicens: ita et vos cum videritis haec omnia: inter quae est quod videbitur filius hominis veniens, ut intelligatur de adventu quo nunc venit in membris suis tamquam in nubibus, vel in Ecclesia tamquam in nube magna",
+        "pt": "Quando diz: \"quando virdes acontecer estas coisas\", que poderemos entender senão as que foram mencionadas acima? Entre elas está o que diz: \"e então verão o Filho do Homem vindo\". Logo, quando isso for visto, o Reino de Deus já não estará por vir, mas estará próximo. Ou se deve dizer que nem todas as coisas mencionadas acima devem ser entendidas onde diz \"quando virdes acontecer estas coisas\", mas algumas delas, com exceção do que foi dito: \"e então verão o Filho do Homem\"? Mas Mateus mostrou que se deve entender sem exceção alguma, dizendo: \"assim também vós, quando virdes todas estas coisas\"; entre elas está que o Filho do Homem será visto vindo, de modo que se entenda da vinda pela qual ele agora vem em seus membros, como nas nuvens, ou na Igreja, como numa grande nuvem.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Titus",
         "obra": "",
-        "latim": "Vel aliter. Dicit prope est regnum Dei, quia dum haec fient, nondum ultimus finis rerum eveniet, sed iam in finem tendent: nam et ipse adventus domini eliminans omnium principatum et potestatem praeparat regno Dei"
+        "latim": "Vel aliter. Dicit prope est regnum Dei, quia dum haec fient, nondum ultimus finis rerum eveniet, sed iam in finem tendent: nam et ipse adventus domini eliminans omnium principatum et potestatem praeparat regno Dei",
+        "pt": "Ou de outro modo. Diz: \"está próximo o Reino de Deus\", porque, enquanto isso acontece, o fim último das coisas ainda não chegará, mas já tenderão para o fim: pois a própria vinda do Senhor, eliminando todo principado e toda potestade, prepara o Reino de Deus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Sicut enim in hac vita sol hieme recedente, ac succedente vere, radium calidum mittens fovet ac vivificat humi condita semina, exuentia priscam figuram, pullulant autem nova varium virorem habentia; sic et gloriosus unigeniti Dei adventus vivificativis radiis illustrans novum saeculum, dudum condita per totum mundum semina, scilicet dormientes in pulvere terrae, potioribus corporibus quam prius producet in lucem, ac confutata morte regnabit deinceps vita saeculi novi"
+        "latim": "Sicut enim in hac vita sol hieme recedente, ac succedente vere, radium calidum mittens fovet ac vivificat humi condita semina, exuentia priscam figuram, pullulant autem nova varium virorem habentia; sic et gloriosus unigeniti Dei adventus vivificativis radiis illustrans novum saeculum, dudum condita per totum mundum semina, scilicet dormientes in pulvere terrae, potioribus corporibus quam prius producet in lucem, ac confutata morte regnabit deinceps vita saeculi novi",
+        "pt": "Assim como nesta vida o sol, quando o inverno se retira e vem a primavera, lançando um raio cálido, aquece e vivifica as sementes ocultas na terra, que, despojando-se de sua antiga figura, brotam novas, com variado verdor; assim também a gloriosa vinda do Filho unigênito de Deus, iluminando o novo século com raios vivificantes, trará à luz, em corpos melhores do que antes, as sementes há muito depositadas por todo o mundo, isto é, os que dormem no pó da terra; e, vencida a morte, reinará daí em diante a vida do século novo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Omnia autem praedicta sub magna certitudine confirmantur, cum subditur amen dico vobis, quia non praeteribit generatio haec donec omnia fiant"
+        "latim": "Omnia autem praedicta sub magna certitudine confirmantur, cum subditur amen dico vobis, quia non praeteribit generatio haec donec omnia fiant",
+        "pt": "Todas as coisas preditas são confirmadas com grande certeza, quando se acrescenta: \"em verdade vos digo que não passará esta geração até que tudo aconteça\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Multum commendat quod ita praenuntiat. Et, si dicere fas est, iuratio eius est quod dicit amen dico vobis: amen quippe interpretatur verum. Igitur veritas dicit: verum dico vobis: quod si non diceret, mentiri omnino non posset. Generationem autem, aut omne genus humanum dicit, aut specialiter Iudaeorum"
+        "latim": "Multum commendat quod ita praenuntiat. Et, si dicere fas est, iuratio eius est quod dicit amen dico vobis: amen quippe interpretatur verum. Igitur veritas dicit: verum dico vobis: quod si non diceret, mentiri omnino non posset. Generationem autem, aut omne genus humanum dicit, aut specialiter Iudaeorum",
+        "pt": "Recomenda muito o que prediz assim. E, se é lícito dizer, é um juramento seu o que diz: \"em verdade vos digo\": pois \"amém\" se interpreta como \"verdadeiro\". Portanto a Verdade diz: digo-vos o verdadeiro; e, se não o dissesse, não poderia de modo algum mentir. Por \"geração\" entende ou todo o gênero humano, ou especialmente os judeus.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Vel generationem dicit novam generationem Ecclesiae sanctae suae, ostendens duraturum populum fidelium usque ad id tempus quo visurus sit omnia et eventus verborum salvatoris oculis apprehendet"
+        "latim": "Vel generationem dicit novam generationem Ecclesiae sanctae suae, ostendens duraturum populum fidelium usque ad id tempus quo visurus sit omnia et eventus verborum salvatoris oculis apprehendet",
+        "pt": "Ou por \"geração\" entende a nova geração de sua santa Igreja, mostrando que o povo dos fiéis durará até o tempo em que verá todas as coisas e apreenderá com os olhos o cumprimento das palavras do Salvador.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quia enim turbationes et bella et alterationes tam elementorum quam ceterarum rerum futurum esse praedixerat; ne quis suspicaretur quod et ipsa Christianitas peritura foret, subiungit caelum et terra transibunt, verba autem mea non transibunt; quasi dicat: etsi cuncta commoveantur, fides tamen mea non deficiet: ex quo innuit Ecclesiam praeferri toti creaturae: siquidem creatura patietur alterationem; fidelium vero Ecclesia et sermones Evangelii permanebunt"
+        "latim": "Quia enim turbationes et bella et alterationes tam elementorum quam ceterarum rerum futurum esse praedixerat; ne quis suspicaretur quod et ipsa Christianitas peritura foret, subiungit caelum et terra transibunt, verba autem mea non transibunt; quasi dicat: etsi cuncta commoveantur, fides tamen mea non deficiet: ex quo innuit Ecclesiam praeferri toti creaturae: siquidem creatura patietur alterationem; fidelium vero Ecclesia et sermones Evangelii permanebunt",
+        "pt": "Como tinha predito que haveria perturbações, guerras e alterações tanto dos elementos quanto das demais coisas, para que ninguém suspeitasse que a própria cristandade ia perecer, acrescenta: \"o céu e a terra passarão, mas as minhas palavras não passarão\"; como se dissesse: ainda que todas as coisas sejam abaladas, a minha fé não faltará; com isso dá a entender que a Igreja é preferida a toda a criação: pois a criação sofrerá alteração, mas a Igreja dos fiéis e as palavras do Evangelho permanecerão.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "Vel aliter caelum et terra transibunt etc., quasi dicat: omne quod apud nos durabile est, sine mutatione durabile ad aeternitatem non est; et omne quod apud me transire cernitur, fixum et sine transitu tenetur: quia sine mutabilitate manentes sententias exprimit sermo meus, qui transit"
+        "latim": "Vel aliter caelum et terra transibunt etc., quasi dicat: omne quod apud nos durabile est, sine mutatione durabile ad aeternitatem non est; et omne quod apud me transire cernitur, fixum et sine transitu tenetur: quia sine mutabilitate manentes sententias exprimit sermo meus, qui transit",
+        "pt": "Ou de outro modo: \"o céu e a terra passarão\" etc., como se dissesse: tudo o que entre nós é duradouro, sem mudança não é duradouro para a eternidade; e tudo o que em mim se vê passar, é mantido fixo e sem passagem: porque a minha palavra, que passa, exprime sentenças que permanecem sem mutabilidade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Caelum autem quod transibit, non aethereum, sive sidereum, sive aereum, a quo aves caeli nominantur, intelligere debemus. Si autem terra transibit, quomodo Ecclesiastes dicit: terra in aeternum stat? Sed aperta ratione caelum et terra per eam quam nunc habent, imaginem transeunt, attamen per essentiam sine fine subsistunt"
+        "latim": "Caelum autem quod transibit, non aethereum, sive sidereum, sive aereum, a quo aves caeli nominantur, intelligere debemus. Si autem terra transibit, quomodo Ecclesiastes dicit: terra in aeternum stat? Sed aperta ratione caelum et terra per eam quam nunc habent, imaginem transeunt, attamen per essentiam sine fine subsistunt",
+        "pt": "O céu que passará não devemos entendê-lo como o éter, nem o céu sideral, nem o aéreo, de onde as aves recebem o nome de aves do céu. Mas, se a terra passará, como diz o Eclesiastes: \"a terra permanece para sempre\"? Por clara razão, o céu e a terra passam quanto à figura que agora têm, mas subsistem sem fim quanto à essência.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },
@@ -734,52 +1224,122 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Posuit supra dominus terribilia et sensibilia malorum indicia quae occupabunt peccatores, sed contra haec mala remedium est cautela et oratio; unde dicitur attendite autem vobis, ne forte graventur corda vestra in crapula et ebrietate"
+        "latim": "Posuit supra dominus terribilia et sensibilia malorum indicia quae occupabunt peccatores, sed contra haec mala remedium est cautela et oratio; unde dicitur attendite autem vobis, ne forte graventur corda vestra in crapula et ebrietate",
+        "pt": "O Senhor expôs acima os terríveis e sensíveis sinais dos males que ocuparão os pecadores; mas contra esses males o remédio é a cautela e a oração; por isso se diz: \"atentai, pois, para vós mesmos, para que não se tornem pesados os vossos corações pela devassidão e pela embriaguez\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Basilius",
         "obra": "",
-        "latim": "Singulum animalium a conditore omnium Deo habet intrinsecus causas facientes ad tutelam consistentiae propriae: propter quod et Christus nobis dedit hanc monitionem, ut quae illis a natura, haec nobis auxilio rationis et cautela contingant: fugientibus quidem peccatum, ut irrationabilia fugiunt mortifera pabula, inquirentibus vero iustitiam, sicut illa herbas nutritivas requirunt; et ideo dicit attendite vobis, ut scilicet discernere possitis a salubri nocivum. Sed quoniam dupliciter contingit attendere, hinc quidem corporis oculis, illinc vero per intellectivam virtutem, oculus corporis virtutem non attingit: restat igitur dictum esse de opere intellectus, attendite; hoc est, undique circumspicite vos, pervigil habentes ad vestram custodiam animae lumen. Neque autem dixit attendite vestris, aut eis quae circa vos sunt, sed vobis: vos enim estis intellectus et anima; vestrum autem corpus est sensus; circa vos autem opes, artes et reliqua vitae supellex; quibus non monet attendendum, sed animae, cuius praecipua cura habenda. Eadem vero admonitio aegrotantes sanat, et sanos perficit; servatores praesentium, et provisores futurorum; non alienorum censores, sed suorum scrutatores; non dimittentes intellectum servum fieri passionum, sed irrationale animae subicientes rationali. Cur autem sit attendendum, subiungit dicens ne forte graventur corda vestra in crapula et ebrietate et curis huius vitae"
+        "latim": "Singulum animalium a conditore omnium Deo habet intrinsecus causas facientes ad tutelam consistentiae propriae: propter quod et Christus nobis dedit hanc monitionem, ut quae illis a natura, haec nobis auxilio rationis et cautela contingant: fugientibus quidem peccatum, ut irrationabilia fugiunt mortifera pabula, inquirentibus vero iustitiam, sicut illa herbas nutritivas requirunt; et ideo dicit attendite vobis, ut scilicet discernere possitis a salubri nocivum. Sed quoniam dupliciter contingit attendere, hinc quidem corporis oculis, illinc vero per intellectivam virtutem, oculus corporis virtutem non attingit: restat igitur dictum esse de opere intellectus, attendite; hoc est, undique circumspicite vos, pervigil habentes ad vestram custodiam animae lumen. Neque autem dixit attendite vestris, aut eis quae circa vos sunt, sed vobis: vos enim estis intellectus et anima; vestrum autem corpus est sensus; circa vos autem opes, artes et reliqua vitae supellex; quibus non monet attendendum, sed animae, cuius praecipua cura habenda. Eadem vero admonitio aegrotantes sanat, et sanos perficit; servatores praesentium, et provisores futurorum; non alienorum censores, sed suorum scrutatores; non dimittentes intellectum servum fieri passionum, sed irrationale animae subicientes rationali. Cur autem sit attendendum, subiungit dicens ne forte graventur corda vestra in crapula et ebrietate et curis huius vitae",
+        "pt": "Cada um dos animais tem de Deus, criador de todas as coisas, causas interiores que servem à tutela de sua própria existência; por isso Cristo também nos deu esta advertência, para que o que a eles vem da natureza nos venha pelo auxílio da razão e da cautela: fugindo do pecado, como os irracionais fogem dos alimentos mortíferos, e buscando a justiça, como aqueles procuram as ervas nutritivas; e por isso diz: \"atentai para vós\", isto é, para que possais discernir o nocivo do salutar. Mas, como se pode atentar de dois modos, ora com os olhos do corpo, ora pela virtude intelectiva, e o olho do corpo não alcança a virtude, resta que se trate da obra do intelecto: \"atentai\"; isto é, olhai em volta de vós por todos os lados, tendo vigilante, para vossa guarda, a luz da alma. E não disse: atentai para as vossas coisas, ou para o que está ao vosso redor, mas \"para vós\": pois vós sois o intelecto e a alma; o vosso corpo é sensação; ao vosso redor estão as riquezas, as artes e o restante mobiliário da vida; a estas não adverte que se atenda, mas à alma, de que se deve ter o principal cuidado. Esta mesma advertência cura os enfermos e aperfeiçoa os sãos; torna-os guardiões do presente e previdentes do futuro; não censores das coisas alheias, mas examinadores das suas; não deixando que o intelecto se faça servo das paixões, mas submetendo o irracional da alma ao racional. Por que se deve atentar, acrescenta dizendo: \"para que não se tornem pesados os vossos corações pela devassidão e pela embriaguez e pelos cuidados desta vida\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Titus",
         "obra": "",
-        "latim": "Quasi dicat: cavete ne lumina mentis vestrae graventur: cura namque praesentis vitae, et crapula, et ebrietas fugant prudentiam, quassant fidem, operantur naufragia"
+        "latim": "Quasi dicat: cavete ne lumina mentis vestrae graventur: cura namque praesentis vitae, et crapula, et ebrietas fugant prudentiam, quassant fidem, operantur naufragia",
+        "pt": "Como se dissesse: guardai-vos de que se tornem pesadas as luzes da vossa mente: pois o cuidado da vida presente, a devassidão e a embriaguez afugentam a prudência, abalam a fé, causam naufrágios.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Basilius",
         "obra": "",
-        "latim": "Est autem ebrietas nimius usus vini; crapula vero anxietas et nausea quae est in ebrietate, a motione capitis Graeco vocabulo dicta. Sicut igitur cibis ne esuriamus, sic et potibus ne sitim patiamur, utendum est, vitando diligentius lapsum. Fallax enim est vini ingestio. Anima autem vino libera prudentissima erit et optima; sed humectata vini vaporibus quasi quadam nube velatur. Curiositas autem huius vitae quamvis nihil inhibitorum continere videatur, si tamen ad cultum divinum non coadiuvet, vitanda est; et quare hoc dixerit, ostendit subdens et superveniat in vos repentina dies illa"
+        "latim": "Est autem ebrietas nimius usus vini; crapula vero anxietas et nausea quae est in ebrietate, a motione capitis Graeco vocabulo dicta. Sicut igitur cibis ne esuriamus, sic et potibus ne sitim patiamur, utendum est, vitando diligentius lapsum. Fallax enim est vini ingestio. Anima autem vino libera prudentissima erit et optima; sed humectata vini vaporibus quasi quadam nube velatur. Curiositas autem huius vitae quamvis nihil inhibitorum continere videatur, si tamen ad cultum divinum non coadiuvet, vitanda est; et quare hoc dixerit, ostendit subdens et superveniat in vos repentina dies illa",
+        "pt": "A embriaguez é o uso excessivo do vinho; a devassidão, porém, é a angústia e a náusea que há na embriaguez, assim chamada, em vocábulo grego, pelo movimento da cabeça. Assim como devemos usar os alimentos para não sentirmos fome, usemos também as bebidas para não sofrermos sede, evitando com mais diligência a queda. Pois enganosa é a ingestão do vinho. A alma livre do vinho será prudentíssima e ótima; mas umedecida pelos vapores do vinho, fica como que velada por uma nuvem. A preocupação com esta vida, embora pareça nada conter de proibido, deve ser evitada se não ajuda ao culto divino; e por que o disse, mostra acrescentando: \"e venha sobre vós de repente aquele dia\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Non enim cum deliberatione veniet dies illa, sed ex improviso et furtim capiens tamquam laqueus non caventes; unde sequitur tamquam laqueus enim superveniet in omnes qui sedent super faciem omnis terrae. Quod diligentius discuti potest. Capiet enim dies illa sedentes in superficie terrae quasi impraemeditatos et inertes. Quotquot vero sunt solertes et agiles ad bonum, non sedentes, et otiantes in terrenis; sed surgentes ab eis, sibi dicentes: surge, vade, quoniam non est hic tibi requies; talibus non est illa dies, ut laqueus, in discrimen, sed ut dies festivus"
+        "latim": "Non enim cum deliberatione veniet dies illa, sed ex improviso et furtim capiens tamquam laqueus non caventes; unde sequitur tamquam laqueus enim superveniet in omnes qui sedent super faciem omnis terrae. Quod diligentius discuti potest. Capiet enim dies illa sedentes in superficie terrae quasi impraemeditatos et inertes. Quotquot vero sunt solertes et agiles ad bonum, non sedentes, et otiantes in terrenis; sed surgentes ab eis, sibi dicentes: surge, vade, quoniam non est hic tibi requies; talibus non est illa dies, ut laqueus, in discrimen, sed ut dies festivus",
+        "pt": "Pois aquele dia não virá com deliberação, mas de improviso e furtivamente, apanhando como um laço os desprevenidos; por isso segue: \"como um laço virá sobre todos os que habitam a face de toda a terra\". Isso pode ser examinado com mais cuidado. Aquele dia apanhará os que estão sentados na superfície da terra, como despreparados e inertes. Todos os que, porém, são diligentes e ágeis para o bem, não sentados nem ociosos nas coisas terrenas, mas levantando-se delas e dizendo a si mesmos: \"levanta-te, vai, porque aqui não há repouso para ti\", para estes aquele dia não é como um laço, para o perigo, mas como um dia de festa.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Eusebius",
         "obra": "",
-        "latim": "Praedicta igitur docuit esse attendenda ad cavendam gravedinem inde provenientem; unde sequitur vigilate itaque, omni tempore orantes, ut digni habeamini fugere ista omnia quae futura sunt"
+        "latim": "Praedicta igitur docuit esse attendenda ad cavendam gravedinem inde provenientem; unde sequitur vigilate itaque, omni tempore orantes, ut digni habeamini fugere ista omnia quae futura sunt",
+        "pt": "Ensinou, pois, que as coisas preditas devem ser tidas em conta para evitar o peso que delas provém; por isso segue: \"vigiai, pois, orando em todo tempo, para que sejais dignos de fugir de tudo isso que há de acontecer\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Scilicet famem, pestem, et cetera huiusmodi, quae temporaliter electis et aliis imminent, et ea quae postmodum accidunt reis perenniter: illa enim aliter cavere non possumus, nisi per vigilias et orationes"
+        "latim": "Scilicet famem, pestem, et cetera huiusmodi, quae temporaliter electis et aliis imminent, et ea quae postmodum accidunt reis perenniter: illa enim aliter cavere non possumus, nisi per vigilias et orationes",
+        "pt": "A saber, a fome, a peste e outras coisas semelhantes, que ameaçam temporalmente os eleitos e os outros, e as que depois acontecem perpetuamente aos réus: pois essas não podemos evitá-las de outro modo senão pelas vigílias e orações.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Augustinus",
         "obra": "de Cons. Evang",
-        "latim": "Haec intelligitur illa fuga quam Matthaeus commemorat, quae non debet fieri in hieme vel sabbato. Ad hiemem pertinent curae huius vitae, quae tristes sunt velut hiems: ad sabbatum vero crapula et ebrietas, quae carnali laetitia luxuriaque cor submergit atque obruit; quod malum sabbati nomine significatur, quia illo die Iudaei deliciis affluunt, dum spirituale sabbatum ignorant"
+        "latim": "Haec intelligitur illa fuga quam Matthaeus commemorat, quae non debet fieri in hieme vel sabbato. Ad hiemem pertinent curae huius vitae, quae tristes sunt velut hiems: ad sabbatum vero crapula et ebrietas, quae carnali laetitia luxuriaque cor submergit atque obruit; quod malum sabbati nomine significatur, quia illo die Iudaei deliciis affluunt, dum spirituale sabbatum ignorant",
+        "pt": "Entende-se aqui aquela fuga que Mateus menciona, que não deve acontecer no inverno nem no sábado. Ao inverno pertencem os cuidados desta vida, que são tristes como o inverno; ao sábado, a devassidão e a embriaguez, que mergulham e submergem o coração na alegria carnal e na luxúria; e esse mal é significado pelo nome de sábado, porque nesse dia os judeus abundam em delícias, ignorando o sábado espiritual.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Et quia Christianum decet non solum fugere mala, sed etiam niti ad gloriam assequendam, subdit et stare ante filium hominis: haec est enim angelica gloria stare ante filium hominis Deum nostrum, et faciem eius iugiter cernere"
+        "latim": "Et quia Christianum decet non solum fugere mala, sed etiam niti ad gloriam assequendam, subdit et stare ante filium hominis: haec est enim angelica gloria stare ante filium hominis Deum nostrum, et faciem eius iugiter cernere",
+        "pt": "E porque convém ao cristão não só fugir dos males, mas também esforçar-se por alcançar a glória, acrescenta: \"e estar de pé diante do Filho do Homem\": pois esta é a glória angélica: estar de pé diante do Filho do Homem, nosso Deus, e contemplar continuamente a sua face.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Et certe si quis sapiens medicus praeciperet attendere a succo alicuius herbae, ne repentinus interitus superveniat, magno studio medici mandata servaremus: nunc autem salvatore admonente ebrietatem, et crapulam, et curas saeculi esse cavendas, his sauciari et consumi non timent: quia fidem quam medici dictis praebent, domini verbis praebere contemnunt"
+        "latim": "Et certe si quis sapiens medicus praeciperet attendere a succo alicuius herbae, ne repentinus interitus superveniat, magno studio medici mandata servaremus: nunc autem salvatore admonente ebrietatem, et crapulam, et curas saeculi esse cavendas, his sauciari et consumi non timent: quia fidem quam medici dictis praebent, domini verbis praebere contemnunt",
+        "pt": "E certamente, se um médico sábio mandasse guardar-se do suco de alguma erva, para que não sobrevenha morte repentina, observaríamos com grande zelo as ordens do médico; agora, porém, advertindo o Salvador que se devem evitar a embriaguez, a devassidão e os cuidados do século, não temem ser feridos e consumidos por eles: porque a fé que dão às palavras do médico, desprezam dá-la às palavras do Senhor.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },

@@ -1,0 +1,39 @@
+{
+  "data": "2026-12-23",
+  "evangelho": "Lc 1,57-66",
+  "leituras": "Ml 3,1-4.23-24 | Sl 24(25),4-5ab.8-9.10 e 14 (R. Lc 21,28) | Lc 1,57-66",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 24,
+      "versos": [
+        57,
+        58
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 25,
+      "versos": [
+        59,
+        64
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 26,
+      "versos": [
+        65,
+        66
+      ]
+    }
+  ],
+  "catecismo": [],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

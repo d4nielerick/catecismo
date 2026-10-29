@@ -1,0 +1,54 @@
+{
+  "data": "2026-12-10",
+  "evangelho": "Mt 11,11-15",
+  "leituras": "Is 41,13-20 | Sl 144 (145),1 e 9.10-11.12-13ab (R. 8) | Mt 11,11-15",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 11,
+      "lectio": 4,
+      "versos": [
+        11,
+        11
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 11,
+      "lectio": 5,
+      "versos": [
+        12,
+        15
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 719,
+      "comum": [
+        13,
+        14
+      ],
+      "direto": false,
+      "ref": "Mt 11,13-14",
+      "frase": "João termina o ciclo dos profetas inaugurado por Elias.",
+      "texto": "João é «mais do que um profeta». Nele, o Espírito Santo consuma o «falar pelos profetas». João termina o ciclo dos profetas inaugurado por Elias. Anuncia como iminente a consolação de Israel; é ele a «voz» do Consolador que vai chegar. Tal como fará o Espírito da verdade, «ele vem como testemunha, para dar testemunho da Luz» (Jo 1, 7). A respeito de João, o Espírito cumpre assim as «indagações dos profetas» e o «desejo» dos anjos: «Aquele sobre Quem vires o Espírito Santo descer e permanecer, é Ele que batiza no Espírito Santo. Ora, eu vi e dou testemunho de que Ele é o Filho de Deus [...] Eis o Cordeiro de Deus!» (Jo 1, 33-36).",
+      "local": "Creio no espírito santo › «creio no espírito santo»"
+    },
+    {
+      "numero": 523,
+      "comum": [
+        13
+      ],
+      "direto": false,
+      "ref": "Mt 11,13",
+      "frase": "«Profeta do Altíssimo» (Lc 1, 76), supera todos os profetas, é o último deles inaugura o Evangelho; saúda a vinda de Cristo desde o seio da sua Mãe e põe a sua alegria em ser «o amigo do esposo» (Jo 3, 29) que ele designa como «Cordeiro de Deus que tira o pecado do mundo» (Jo 1, 29).",
+      "texto": "São João Batista é o precursor imediato do Senhor, enviado para Lhe preparar o caminho. «Profeta do Altíssimo» (Lc 1, 76), supera todos os profetas, é o último deles inaugura o Evangelho; saúda a vinda de Cristo desde o seio da sua Mãe e põe a sua alegria em ser «o amigo do esposo» (Jo 3, 29) que ele designa como «Cordeiro de Deus que tira o pecado do mundo» (Jo 1, 29). Precedendo Jesus «com o espírito e o poder de Elias» (Lc 1, 17), dá testemunho d'Ele pela sua pregação, pelo seu batismo de conversão e, finalmente, pelo seu martírio.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo foi concebido pelo poder do espírito santo e nasceu da virgem maria»"
+    }
+  ],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

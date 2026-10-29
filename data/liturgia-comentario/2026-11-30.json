@@ -1,0 +1,78 @@
+{
+  "data": "2026-11-30",
+  "evangelho": "Mt 4,18-22",
+  "leituras": "Rm 10,9-18 | Sl 18(19A),2-3.4-5 (R. 5a) | Mt 4,18-22",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 4,
+      "lectio": 7,
+      "versos": [
+        18,
+        22
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 878,
+      "comum": [
+        19
+      ],
+      "direto": false,
+      "ref": "Mt 4,19",
+      "frase": "Cada qual é chamado pessoalmente –: «Tu, segue-Me» (Jo 21, 22) – para ser, na missão comum, uma testemunha pessoal, pessoalmente responsável perante Aquele que lhe confere a missão, agindo «na pessoa d'Ele» e em favor das pessoas: «Eu te batizo em nome do Pai...»; «Eu te absolvo...».",
+      "texto": "Finalmente, pertence à natureza sacramental do ministério eclesial que ele tenha um caráter pessoal. Se os ministros de Cristo atuam em comunhão, fazem-no sempre também de modo pessoal. Cada qual é chamado pessoalmente –: «Tu, segue-Me» (Jo 21, 22) – para ser, na missão comum, uma testemunha pessoal, pessoalmente responsável perante Aquele que lhe confere a missão, agindo «na pessoa d'Ele» e em favor das pessoas: «Eu te batizo em nome do Pai...»; «Eu te absolvo...».",
+      "local": "Creio no espírito santo › «creio na santa igreja católica»"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Rm 10,9-18",
+      "catecismo": [
+        {
+          "numero": 432,
+          "comum": [
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "direto": false,
+          "ref": "Rm 10,9-13",
+          "frase": "Ele é o único nome divino que traz a salvação e pode desde agora ser invocado por todos, pois a todos os homens Se uniu pela Encarnação, de tal modo que «não existe debaixo do céu outro nome, dado aos homens, pelo qual possamos ser salvos» (At 4, l2).",
+          "texto": "O nome de Jesus significa que o próprio nome de Deus está presente na pessoa do seu Filho feito homem para a redenção universal e definitiva dos pecados. Ele é o único nome divino que traz a salvação e pode desde agora ser invocado por todos, pois a todos os homens Se uniu pela Encarnação, de tal modo que «não existe debaixo do céu outro nome, dado aos homens, pelo qual possamos ser salvos» (At 4, l2).",
+          "local": "Creio em jesus cristo, filho único de deus › «e em jesus cristo, seu único filho, nosso senhor»"
+        },
+        {
+          "numero": 2739,
+          "comum": [
+            12,
+            13
+          ],
+          "direto": false,
+          "ref": "Rm 10,12-13",
+          "frase": "Em São Paulo, esta confiança é audaciosa, apoiando-se na oração do Espírito em nós e no amor fiel do Pai que nos deu o seu Filho Único.",
+          "texto": "Em São Paulo, esta confiança é audaciosa, apoiando-se na oração do Espírito em nós e no amor fiel do Pai que nos deu o seu Filho Único. A transformação do coração que ora é a primeira resposta ao nosso pedido.",
+          "local": "A oração na vida cristã › A vida de oração"
+        },
+        {
+          "numero": 14,
+          "comum": [
+            9
+          ],
+          "direto": false,
+          "ref": "Rm 10,9",
+          "frase": "Aqueles que, pela fé e pelo Batismo, pertencem a Cristo, devem confessar a sua fé batismal diante dos homens.",
+          "texto": "Aqueles que, pela fé e pelo Batismo, pertencem a Cristo, devem confessar a sua fé batismal diante dos homens. Por isso, o Catecismo começa por expor em que consiste a Revelação, pela qual Deus Se dirige e Se dá ao homem, e a fé pela qual o homem responde a Deus (Primeira Seção). O Símbolo da fé resume os dons que Deus faz ao homem, como Autor de todo o bem, Redentor e Santificador, e articula-os em volta dos «três capítulos» do nosso Batismo – a fé num só Deus: o Pai Todo-poderoso, Criador; e o seu Filho Jesus Cristo, nosso Senhor e Salvador: e o Espírito Santo, na Santa Igreja (Segunda Seção).",
+          "local": "Prólogo"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

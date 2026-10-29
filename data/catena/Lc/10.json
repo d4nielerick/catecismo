@@ -472,72 +472,170 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Sicut benignus pater videns filios suos dirigi, gaudet; sic et Christus exultat, quod apostoli tantis bonis facti sunt digni; unde dicitur in ipsa autem hora exultavit in spiritu sancto"
+        "latim": "Sicut benignus pater videns filios suos dirigi, gaudet; sic et Christus exultat, quod apostoli tantis bonis facti sunt digni; unde dicitur in ipsa autem hora exultavit in spiritu sancto",
+        "pt": "Assim como um pai bondoso se alegra ao ver seus filhos bem encaminhados, assim também Cristo exulta porque os apóstolos se tornaram dignos de tantos bens; por isso se diz: \"naquela mesma hora exultou no Espírito Santo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Inspexit quidem per spiritus operationem, quam apostolis tradidit, plurium acquisitionem; unde in spiritu sancto laetatus dicitur, idest in effectibus, qui per spiritum sanctum proveniunt: quasi enim amator hominum, gaudii reputabat materiam conversionem errantium; de quo gratias agit; unde sequitur confiteor tibi, pater, domine caeli et terrae"
+        "latim": "Inspexit quidem per spiritus operationem, quam apostolis tradidit, plurium acquisitionem; unde in spiritu sancto laetatus dicitur, idest in effectibus, qui per spiritum sanctum proveniunt: quasi enim amator hominum, gaudii reputabat materiam conversionem errantium; de quo gratias agit; unde sequitur confiteor tibi, pater, domine caeli et terrae",
+        "pt": "Viu, pela operação do Espírito, que entregou aos apóstolos, a aquisição de muitos; por isso se diz que se alegrou no Espírito Santo, isto é, nos efeitos que procedem do Espírito Santo: pois, como amante dos homens, considerava matéria de alegria a conversão dos que erravam; por ela dá graças; por isso segue: \"eu te louvo, Pai, Senhor do céu e da terra\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Confessio non semper poenitentiam, sed et gratiarum actionem significat, ut in Psalmis saepissime legimus"
+        "latim": "Confessio non semper poenitentiam, sed et gratiarum actionem significat, ut in Psalmis saepissime legimus",
+        "pt": "\"Confessar\" nem sempre significa penitência, mas também ação de graças, como lemos muitíssimas vezes nos Salmos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
         "obra": "",
-        "latim": "Ecce autem, inquiunt illi quorum corda perversa sunt, gratias refert filius patri tamquam minor. Sed quid impedit consubstantialem filium laudare proprium genitorem, mundum salvantem per eum? Quod si censes confessionis causa hunc esse minorem, aspice quod vocat eum patrem suum, et dominum caeli et terrae"
+        "latim": "Ecce autem, inquiunt illi quorum corda perversa sunt, gratias refert filius patri tamquam minor. Sed quid impedit consubstantialem filium laudare proprium genitorem, mundum salvantem per eum? Quod si censes confessionis causa hunc esse minorem, aspice quod vocat eum patrem suum, et dominum caeli et terrae",
+        "pt": "Eis, dizem aqueles cujos corações são perversos, que o Filho dá graças ao Pai como um menor. Mas que impede o Filho consubstancial de louvar o seu próprio Genitor, que salva o mundo por meio dele? E se pensas que por causa da confissão ele é menor, observa que o chama seu Pai, e Senhor do céu e da terra.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Titus",
         "obra": "",
-        "latim": "Alia enim per Christum ex non entibus producta sunt; sed solus ipse incomprehensibiliter a patre est genitus: solius enim unigeniti tamquam veri filii naturaliter pater est; unde solus patri dicit confiteor tibi, pater; hoc est, glorifico te. Nec mireris si patrem filius glorificat: tota enim hypostasis unigeniti, genitoris est gloria: nam quae facta sunt, et caelum et Angeli, gloria sunt creatoris: verum quia haec nimis infime sita sunt respectu dignitatis ipsius, solus filius, cum Deus perfecte sit similis genitori, perfecte glorificat patrem"
+        "latim": "Alia enim per Christum ex non entibus producta sunt; sed solus ipse incomprehensibiliter a patre est genitus: solius enim unigeniti tamquam veri filii naturaliter pater est; unde solus patri dicit confiteor tibi, pater; hoc est, glorifico te. Nec mireris si patrem filius glorificat: tota enim hypostasis unigeniti, genitoris est gloria: nam quae facta sunt, et caelum et Angeli, gloria sunt creatoris: verum quia haec nimis infime sita sunt respectu dignitatis ipsius, solus filius, cum Deus perfecte sit similis genitori, perfecte glorificat patrem",
+        "pt": "Pois as outras coisas foram produzidas por Cristo a partir do nada; mas só ele foi gerado do Pai de modo incompreensível: pois só do Unigênito, como verdadeiro Filho, o Pai o é por natureza; por isso só ele diz ao Pai: \"eu te louvo, Pai\"; isto é, glorifico-te. Nem te admires de que o Filho glorifique o Pai: pois toda a hipóstase do Unigênito é glória do Genitor: porque as coisas que foram feitas, tanto o céu quanto os Anjos, são glória do Criador; mas, como estas estão situadas muito abaixo da dignidade dele, só o Filho, sendo Deus perfeitamente semelhante ao Genitor, glorifica perfeitamente o Pai.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Athanasius",
         "obra": "",
-        "latim": "Novimus etiam saepius salvatorem humana proferre; habet enim adiunctam humanitatem divinitas; nec tamen propter corporis tegimen Deum ignores. Sed quid respondent in hoc qui volunt subsistentiam esse mali, formant vero sibi Deum alium a vero patre Christi, et hunc dicunt esse unigenitum mali creatorem et nequitiae principem, nec non mundialis machinae conditorem? Ait autem dominus, approbans verba Moysi, confiteor tibi, pater, domine caeli et terrae"
+        "latim": "Novimus etiam saepius salvatorem humana proferre; habet enim adiunctam humanitatem divinitas; nec tamen propter corporis tegimen Deum ignores. Sed quid respondent in hoc qui volunt subsistentiam esse mali, formant vero sibi Deum alium a vero patre Christi, et hunc dicunt esse unigenitum mali creatorem et nequitiae principem, nec non mundialis machinae conditorem? Ait autem dominus, approbans verba Moysi, confiteor tibi, pater, domine caeli et terrae",
+        "pt": "Sabemos também que o Salvador muitas vezes disse coisas humanas; pois a divindade tem unida a humanidade; mas nem por isso, por causa do invólucro do corpo, ignores que ele é Deus. Mas que respondem a isso os que querem que haja uma subsistência do mal e formam para si um Deus diferente do verdadeiro Pai de Cristo, e dizem que este é o unigênito criador do mal, príncipe da maldade e construtor da máquina do mundo? Ora, o Senhor, aprovando as palavras de Moisés, diz: \"eu te louvo, Pai, Senhor do céu e da terra\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Epiphanius",
         "obra": "",
-        "latim": "Editum vero a Marcione Evangelium habet, Eucharisto, idest, gratias ago tibi, domine caeli: tacens quod dicitur pater, et quod dicitur et terrae, ne videatur Christus opificem caeli et terrae habere patrem suum. Redarguitur autem, quia idem paulo infra habet: ita, pater"
+        "latim": "Editum vero a Marcione Evangelium habet, Eucharisto, idest, gratias ago tibi, domine caeli: tacens quod dicitur pater, et quod dicitur et terrae, ne videatur Christus opificem caeli et terrae habere patrem suum. Redarguitur autem, quia idem paulo infra habet: ita, pater",
+        "pt": "O Evangelho publicado por Marcião traz: \"Eucharisto\", isto é, \"dou-te graças, Senhor do céu\", omitindo o que se diz \"Pai\" e o que se diz \"e da terra\", para que Cristo não pareça ter por pai o artífice do céu e da terra. Mas é refutado, porque pouco abaixo ele mesmo traz: \"sim, Pai\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Postremo aperit caeleste mysterium, quo placuit Deo ut parvulis, magis quam prudentibus mundi suam gratiam revelaret; unde sequitur quod abscondisti haec a sapientibus et prudentibus, et revelasti ea parvulis"
+        "latim": "Postremo aperit caeleste mysterium, quo placuit Deo ut parvulis, magis quam prudentibus mundi suam gratiam revelaret; unde sequitur quod abscondisti haec a sapientibus et prudentibus, et revelasti ea parvulis",
+        "pt": "Por fim, abre o mistério celeste, pelo qual aprouve a Deus revelar a sua graça aos pequeninos mais do que aos prudentes do mundo; por isso segue: \"porque escondeste estas coisas aos sábios e prudentes e as revelaste aos pequeninos\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Potest sic distingui ut dicatur a sapientibus, idest a Pharisaeis et Scribis legem interpretantibus, et prudentibus, idest ab his qui a Scribis fuerant docti; sapiens enim est qui docet, prudens vero qui docetur. Parvulos vero vocat dominus suos discipulos, quos non legis doctores, sed de turba et piscatores elegit, qui sunt vocati parvuli, quasi non malevoli"
+        "latim": "Potest sic distingui ut dicatur a sapientibus, idest a Pharisaeis et Scribis legem interpretantibus, et prudentibus, idest ab his qui a Scribis fuerant docti; sapiens enim est qui docet, prudens vero qui docetur. Parvulos vero vocat dominus suos discipulos, quos non legis doctores, sed de turba et piscatores elegit, qui sunt vocati parvuli, quasi non malevoli",
+        "pt": "Pode-se distinguir assim: \"aos sábios\", isto é, aos fariseus e escribas, que interpretam a lei, e \"aos prudentes\", isto é, aos que foram instruídos pelos escribas; pois sábio é o que ensina, e prudente o que é ensinado. O Senhor chama \"pequeninos\" os seus discípulos, que escolheu não entre os doutores da lei, mas entre a multidão e os pescadores, os quais são chamados pequeninos, como quem diz: sem malícia.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Vel parvulum hic accipiamus qui se exaltare non noverit, et phaleratis sermonibus artem suae iactare prudentiae: quod Pharisaei plerique faciunt"
+        "latim": "Vel parvulum hic accipiamus qui se exaltare non noverit, et phaleratis sermonibus artem suae iactare prudentiae: quod Pharisaei plerique faciunt",
+        "pt": "Ou entendamos aqui por pequenino aquele que não soube se exaltar nem jactar a arte de sua prudência com discursos ornamentados: o que muitos fariseus fazem.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Gratias igitur agit, quod apostolis quasi parvulis adventus sui aperuit sacramenta, quae ignoraverunt Scribae et Pharisaei, qui sibi sapientes videntur, et in conspectu suo prudentes"
+        "latim": "Gratias igitur agit, quod apostolis quasi parvulis adventus sui aperuit sacramenta, quae ignoraverunt Scribae et Pharisaei, qui sibi sapientes videntur, et in conspectu suo prudentes",
+        "pt": "Dá, portanto, graças porque revelou aos apóstolos, como a pequeninos, os mistérios de sua vinda, que ignoraram os escribas e fariseus, que parecem sábios a si mesmos e prudentes aos seus próprios olhos.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Abscondita igitur sunt mysteria ab his qui putant se esse sapientes, et non sunt: nam si essent, eis revelata fuissent"
+        "latim": "Abscondita igitur sunt mysteria ab his qui putant se esse sapientes, et non sunt: nam si essent, eis revelata fuissent",
+        "pt": "Os mistérios, portanto, foram escondidos àqueles que julgam ser sábios e não o são; pois, se o fossem, lhes teriam sido revelados.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Unde sapientibus et prudentibus, non insipientes et hebetes, sed parvulos, idest humiles opposuit, ut probaret se tumorem damnasse, non acumen"
+        "latim": "Unde sapientibus et prudentibus, non insipientes et hebetes, sed parvulos, idest humiles opposuit, ut probaret se tumorem damnasse, non acumen",
+        "pt": "Por isso, aos sábios e prudentes não opôs os insensatos e obtusos, mas os pequeninos, isto é, os humildes, para provar que condenara o orgulho, não a agudeza de espírito.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Sensus enim defectus praeparatio fit supervenientis perfectionis: qui enim non sentit quod careat vero bono, propter bonum praesens, quod sibi inesse videtur, vero bono privatur"
+        "latim": "Sensus enim defectus praeparatio fit supervenientis perfectionis: qui enim non sentit quod careat vero bono, propter bonum praesens, quod sibi inesse videtur, vero bono privatur",
+        "pt": "Com efeito, a consciência da própria deficiência torna-se preparação para a perfeição que sobrevém; pois quem não sente que lhe falta o verdadeiro bem, por causa do bem presente que lhe parece possuir, é privado do verdadeiro bem.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
@@ -554,47 +652,110 @@
       {
         "autor": "Gregorius",
         "obra": "",
-        "latim": "His verbis exempla humilitatis accipimus, ne temere discutere superna consilia de aliorum vocatione aliorumve repulsione praesumamus: iniustum enim esse non potest quod placuit iusto. In cunctis ergo quae exterius disponuntur, apertae causa rationis est occultae iustitia voluntatis"
+        "latim": "His verbis exempla humilitatis accipimus, ne temere discutere superna consilia de aliorum vocatione aliorumve repulsione praesumamus: iniustum enim esse non potest quod placuit iusto. In cunctis ergo quae exterius disponuntur, apertae causa rationis est occultae iustitia voluntatis",
+        "pt": "Por estas palavras recebemos exemplos de humildade, para não termos a temeridade de examinar os desígnios do alto sobre o chamado de uns ou a rejeição de outros; pois não pode ser injusto o que agradou ao Justo. Em tudo, portanto, o que se dispõe exteriormente, a causa da razão manifesta é a justiça da vontade oculta.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Cum vero dixisset confiteor tibi, quia revelasti ea parvulis, ne putares quod ipse Christus hac virtute privatus non posset hoc facere, subiungit omnia tradita sunt mihi a patre meo"
+        "latim": "Cum vero dixisset confiteor tibi, quia revelasti ea parvulis, ne putares quod ipse Christus hac virtute privatus non posset hoc facere, subiungit omnia tradita sunt mihi a patre meo",
+        "pt": "Tendo dito \"eu te louvo, porque revelaste estas coisas aos pequeninos\", para que não julgasses que o próprio Cristo, privado desse poder, não pudesse fazê-lo, acrescenta: \"Tudo me foi entregue por meu Pai\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Athanasius",
         "obra": "",
-        "latim": "Hoc non recte intelligentes Arii sequaces delirant in dominum, dicentes: si data sunt ei omnia, idest dominium creaturae, fuit tempus quo ea non habuit; et sic non est de substantia patris: nam si esset, non esset ei opus recipere. Sed ex hoc magis dementia eorum carpitur. Si enim priusquam recepisset vacabat creatura a verbo, qualiter salvabitur illud: omnia in eo consistunt? Ceterum si simul postquam facta est creatura, tota fuit tradita ei, non erat opus tradere; per ipsum namque facta sunt omnia. Non ergo, ut ipsi putant, significatur hic creaturae dominium; immo significativum est hoc verbum factae dispensationis in carne: postquam enim homo peccavit, perturbata sunt omnia; unde verbum caro factum est, ut omnia restauraret. Data sunt ergo ei omnia, non quia potestate careret, sed ut salvator emendet universa; ut sicut per verbum omnia in principio introducta sunt in esse, ita cum verbum caro factum est, in ipso omnia restaurentur"
+        "latim": "Hoc non recte intelligentes Arii sequaces delirant in dominum, dicentes: si data sunt ei omnia, idest dominium creaturae, fuit tempus quo ea non habuit; et sic non est de substantia patris: nam si esset, non esset ei opus recipere. Sed ex hoc magis dementia eorum carpitur. Si enim priusquam recepisset vacabat creatura a verbo, qualiter salvabitur illud: omnia in eo consistunt? Ceterum si simul postquam facta est creatura, tota fuit tradita ei, non erat opus tradere; per ipsum namque facta sunt omnia. Non ergo, ut ipsi putant, significatur hic creaturae dominium; immo significativum est hoc verbum factae dispensationis in carne: postquam enim homo peccavit, perturbata sunt omnia; unde verbum caro factum est, ut omnia restauraret. Data sunt ergo ei omnia, non quia potestate careret, sed ut salvator emendet universa; ut sicut per verbum omnia in principio introducta sunt in esse, ita cum verbum caro factum est, in ipso omnia restaurentur",
+        "pt": "Não entendendo isto retamente, os seguidores de Ario deliram contra o Senhor, dizendo: se todas as coisas lhe foram dadas, isto é, o domínio da criatura, houve um tempo em que ele não as possuía; e assim não é da substância do Pai, pois, se fosse, não teria necessidade de receber. Mas é por isso mesmo que sua demência é mais censurada. Com efeito, se antes de receber a criatura estava sem o Verbo, como se salvará aquilo: \"tudo nele subsiste\"? Por outro lado, se logo depois que a criatura foi feita ela lhe foi inteiramente entregue, não havia necessidade de entregar; pois por ele foram feitas todas as coisas. Não se significa aqui, portanto, como eles pensam, o domínio da criatura; antes, esta palavra é indicativa da dispensação realizada na carne: com efeito, depois que o homem pecou, todas as coisas foram perturbadas; por isso o Verbo se fez carne, para restaurar todas as coisas. Todas as coisas lhe foram dadas, portanto, não porque lhe faltasse poder, mas para que o Salvador corrija o universo; de modo que, assim como pelo Verbo todas as coisas foram trazidas ao ser no princípio, assim, quando o Verbo se fez carne, nele todas as coisas sejam restauradas.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Vel dicit omnia sibi tradita, non mundi elementa, sed hi quibus parvulis spiritu sacramenta filii pater revelavit, et de quorum salute, cum haec loqueretur, exultavit"
+        "latim": "Vel dicit omnia sibi tradita, non mundi elementa, sed hi quibus parvulis spiritu sacramenta filii pater revelavit, et de quorum salute, cum haec loqueretur, exultavit",
+        "pt": "Ou então diz que lhe foram entregues todas as coisas, não os elementos do mundo, mas aqueles pequeninos em espírito aos quais o Pai revelou os mistérios do Filho e por cuja salvação, ao dizer isto, exultou.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Vel cum omnia legis, omnipotentem agnoscis, non degenerem patris; cum tradita legis, filium confiteris; cui per naturam omnia unius substantiae iura sunt propria, non dono collata per gratiam. Cum autem dixisset omnia sibi fore a patre tradita, ascendit ad propriam gloriam et excellentiam, ostendens in nullo se superari a patre; unde subdit et nemo novit quis sit filius, nisi pater, et quis sit pater, nisi filius. Non valet enim creaturae intentio comprehendere modum divinae substantiae, quae omnem superat intellectum, et decor eius quamlibet considerationem transcendit; sed a seipsa quid sit natura divina cognoscitur. Itaque pater per id quod est, novit filium; et filius per id quod est, novit patrem, non interveniente aliqua differentia quantum ad divinitatis naturam: quod enim sit Deus, credimus; quid autem naturaliter sit incomprehensibile est. Si vero creatus est filius, quomodo solus sciret patrem, aut quomodo a solo patre sciretur? Scire namque naturam divinam impossibile est cuilibet creaturae; scire autem quodcumque eorum quae creata sunt quid sit, non transcendit quemlibet intellectum, quamvis superet nostrum sensum"
+        "latim": "Vel cum omnia legis, omnipotentem agnoscis, non degenerem patris; cum tradita legis, filium confiteris; cui per naturam omnia unius substantiae iura sunt propria, non dono collata per gratiam. Cum autem dixisset omnia sibi fore a patre tradita, ascendit ad propriam gloriam et excellentiam, ostendens in nullo se superari a patre; unde subdit et nemo novit quis sit filius, nisi pater, et quis sit pater, nisi filius. Non valet enim creaturae intentio comprehendere modum divinae substantiae, quae omnem superat intellectum, et decor eius quamlibet considerationem transcendit; sed a seipsa quid sit natura divina cognoscitur. Itaque pater per id quod est, novit filium; et filius per id quod est, novit patrem, non interveniente aliqua differentia quantum ad divinitatis naturam: quod enim sit Deus, credimus; quid autem naturaliter sit incomprehensibile est. Si vero creatus est filius, quomodo solus sciret patrem, aut quomodo a solo patre sciretur? Scire namque naturam divinam impossibile est cuilibet creaturae; scire autem quodcumque eorum quae creata sunt quid sit, non transcendit quemlibet intellectum, quamvis superet nostrum sensum",
+        "pt": "Ou ainda, quando lês \"todas as coisas\", reconheces o Onipotente, não degenerado em relação ao Pai; quando lês \"entregues\", confessas o Filho, ao qual, por natureza, todos os direitos da única substância são próprios, não conferidos por dom da graça. Ora, tendo dito que todas as coisas lhe seriam entregues pelo Pai, elevou-se à glória e excelência que lhe são próprias, mostrando que em nada é superado pelo Pai; por isso acrescenta: \"e ninguém conhece quem é o Filho, senão o Pai, e quem é o Pai, senão o Filho\". Com efeito, o entendimento da criatura não consegue compreender o modo da substância divina, que supera todo intelecto, e cuja beleza transcende qualquer consideração; mas o que seja a natureza divina é conhecido por ela mesma. Assim, o Pai conhece o Filho por aquilo que é, e o Filho conhece o Pai por aquilo que é, sem que intervenha diferença alguma quanto à natureza da divindade: com efeito, que Deus exista, cremos; mas o que ele seja por natureza é incompreensível. Se, porém, o Filho fosse criado, como é que somente ele conheceria o Pai, ou como seria conhecido somente pelo Pai? Pois conhecer a natureza divina é impossível a qualquer criatura; já conhecer o que seja qualquer das coisas criadas não transcende qualquer intelecto, embora supere o nosso sentido.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Athanasius",
         "obra": "",
-        "latim": "Hoc autem domino dicente, constat Arianos ei obsistere, dum dicunt non videri patrem a filio. Sed eorum ostenditur insania, si seipsum non novit verbum, quod omnibus patris et sui praestat notitiam; sequitur enim et cui voluerit filius revelare"
+        "latim": "Hoc autem domino dicente, constat Arianos ei obsistere, dum dicunt non videri patrem a filio. Sed eorum ostenditur insania, si seipsum non novit verbum, quod omnibus patris et sui praestat notitiam; sequitur enim et cui voluerit filius revelare",
+        "pt": "Ora, dizendo isto o Senhor, é claro que os arianos lhe resistem, ao dizerem que o Pai não é visto pelo Filho. Mas a sua insânia se mostra, se o Verbo não conhece a si mesmo, ele que dá a todos o conhecimento do Pai e de si; pois segue: \"e àquele a quem o Filho o quiser revelar\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Titus",
         "obra": "",
-        "latim": "Est autem revelatio traditio notionis iuxta proportionem naturae et virtutum uniuscuiusque; et ubi quidem est natura consimilis, ibi est cognitio sine doctrina; hic autem est per revelationem disciplina"
+        "latim": "Est autem revelatio traditio notionis iuxta proportionem naturae et virtutum uniuscuiusque; et ubi quidem est natura consimilis, ibi est cognitio sine doctrina; hic autem est per revelationem disciplina",
+        "pt": "A revelação é a transmissão do conhecimento segundo a proporção da natureza e das capacidades de cada um; e onde a natureza é semelhante, ali há conhecimento sem ensino; aqui, porém, o ensino se dá por revelação.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Vult autem revelare ut verbum, non irrationabiliter, et tamquam iustitia, qui novit digne et tempora revelandi et mensuras revelationis. Revelat autem removens oppositum cordi velamen, necnon tenebras quas posuit in sui latibulum. Sed quoniam ex hoc putant qui alterius sunt opinionis, construere nefarium suum dogma, quod scilicet ignotus erat pater Iesu sanctis antiquis; dicendum est eis, quoniam quod dicitur cuicumque vult filius revelare, non solum retorquetur ad tempus futurum, ex quo salvator hoc protulit, sed etiam ad tempus praeteritum. Quod si velint hoc verbum revelare pro praeterito sumere, dicendum est eis, quod non est idem cognoscere et credere. Alii datur per spiritum sermo scientiae, alii fides in eodem spiritu. Erant ergo primo quidem credentes, non autem cognoscentes"
+        "latim": "Vult autem revelare ut verbum, non irrationabiliter, et tamquam iustitia, qui novit digne et tempora revelandi et mensuras revelationis. Revelat autem removens oppositum cordi velamen, necnon tenebras quas posuit in sui latibulum. Sed quoniam ex hoc putant qui alterius sunt opinionis, construere nefarium suum dogma, quod scilicet ignotus erat pater Iesu sanctis antiquis; dicendum est eis, quoniam quod dicitur cuicumque vult filius revelare, non solum retorquetur ad tempus futurum, ex quo salvator hoc protulit, sed etiam ad tempus praeteritum. Quod si velint hoc verbum revelare pro praeterito sumere, dicendum est eis, quod non est idem cognoscere et credere. Alii datur per spiritum sermo scientiae, alii fides in eodem spiritu. Erant ergo primo quidem credentes, non autem cognoscentes",
+        "pt": "Quer revelar como Verbo, não sem razão, e como justiça, ele que sabe dignamente os tempos de revelar e as medidas da revelação. Revela removendo o véu posto diante do coração, assim como as trevas que ele pôs como esconderijo de si. Mas, como os que são de outra opinião julgam daí construir o seu nefando dogma, a saber, que o Pai de Jesus era desconhecido dos santos antigos, deve-se dizer-lhes que o que se diz, \"a quem o Filho quiser revelar\", não se refere apenas ao tempo futuro, a partir do qual o Salvador o proferiu, mas também ao tempo passado. E se quiserem tomar esta palavra \"revelar\" no sentido de passado, deve-se dizer-lhes que não é o mesmo conhecer e crer. A um é dada pelo Espírito a palavra da ciência, a outro a fé no mesmo Espírito. Eram, pois, primeiramente crentes, mas não conhecedores.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Ambrosius",
         "obra": "",
-        "latim": "Ut scias autem quia sicut filius patrem quibus vult revelat, etiam pater revelat quibus vult filium; audi dominum dicentem: beatus es, Simon Bariona, quia caro et sanguis non revelavit tibi, sed pater meus qui in caelis est"
+        "latim": "Ut scias autem quia sicut filius patrem quibus vult revelat, etiam pater revelat quibus vult filium; audi dominum dicentem: beatus es, Simon Bariona, quia caro et sanguis non revelavit tibi, sed pater meus qui in caelis est",
+        "pt": "Para que saibas que, assim como o Filho revela o Pai àqueles que quer, também o Pai revela o Filho àqueles que quer, ouve o Senhor dizendo: \"Bem-aventurado és tu, Simão Bar-Jonas, porque não foi a carne nem o sangue que te revelou isto, mas meu Pai que está nos céus\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },
@@ -608,7 +769,14 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Quia superius dixerat: nemo novit quis sit pater, nisi filius, et cui voluerit filius revelare, beatificat discipulos quibus pater per eum revelabatur; unde dicitur et conversus ad discipulos suos dixit: beati oculi qui vident quae vos videtis"
+        "latim": "Quia superius dixerat: nemo novit quis sit pater, nisi filius, et cui voluerit filius revelare, beatificat discipulos quibus pater per eum revelabatur; unde dicitur et conversus ad discipulos suos dixit: beati oculi qui vident quae vos videtis",
+        "pt": "Porque dissera acima: \"Ninguém conhece quem é o Pai, senão o Filho, e aquele a quem o Filho o quiser revelar\", declara bem-aventurados os discípulos aos quais o Pai era revelado por ele; por isso se diz: \"E, voltando-se para os seus discípulos, disse: Bem-aventurados os olhos que veem o que vós vedes\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Cyrillus",
@@ -625,27 +793,62 @@
       {
         "autor": "Theophylactus",
         "obra": "",
-        "latim": "Beatificat autem eos, et omnes simpliciter qui eum fide respiciunt, ex hoc quod antiqui prophetae et reges Deum in carne videre et audire optaverunt; unde sequitur dico enim vobis quod multi prophetae et reges voluerunt videre quae vos videtis, et non viderunt; et audire quae auditis, et non audierunt"
+        "latim": "Beatificat autem eos, et omnes simpliciter qui eum fide respiciunt, ex hoc quod antiqui prophetae et reges Deum in carne videre et audire optaverunt; unde sequitur dico enim vobis quod multi prophetae et reges voluerunt videre quae vos videtis, et non viderunt; et audire quae auditis, et non audierunt",
+        "pt": "Declara bem-aventurados a eles, e a todos os que simplesmente o olham com fé, pelo fato de os antigos profetas e reis terem desejado ver e ouvir a Deus na carne; por isso segue: \"Pois eu vos digo que muitos profetas e reis quiseram ver o que vós vedes, e não viram; e ouvir o que ouvis, e não ouviram\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Matthaeus apertius prophetas et iustos appellat; ipsi enim sunt reges magni, quia tentationum suarum motibus non consentiendo succumbere, sed regendo praeesse noverunt"
+        "latim": "Matthaeus apertius prophetas et iustos appellat; ipsi enim sunt reges magni, quia tentationum suarum motibus non consentiendo succumbere, sed regendo praeesse noverunt",
+        "pt": "Mateus chama mais claramente de profetas e justos; pois eles são os grandes reis, porque souberam não sucumbir aos movimentos de suas tentações consentindo neles, mas presidir a eles governando-os.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Chrysostomus",
         "obra": "",
-        "latim": "Ex hoc autem dicto plures existimant prophetas caruisse Christi notitia. Sed si optaverunt videre quae viderunt apostoli, noverunt illum venturum ad homines et dispensaturum quae dispensavit: nullus enim habet horum appetitum quae mente non concepit: noverant ergo filium Dei: unde non simpliciter dicit voluerunt videre me, sed quae vos videtis; nec audire me, sed quae vos auditis. Viderant enim ipsum, non tamen iam incarnatum, nec sic cum hominibus conversantem, nec tanta maiestate eis loquentem"
+        "latim": "Ex hoc autem dicto plures existimant prophetas caruisse Christi notitia. Sed si optaverunt videre quae viderunt apostoli, noverunt illum venturum ad homines et dispensaturum quae dispensavit: nullus enim habet horum appetitum quae mente non concepit: noverant ergo filium Dei: unde non simpliciter dicit voluerunt videre me, sed quae vos videtis; nec audire me, sed quae vos auditis. Viderant enim ipsum, non tamen iam incarnatum, nec sic cum hominibus conversantem, nec tanta maiestate eis loquentem",
+        "pt": "Por este dito, muitos julgam que os profetas não tiveram conhecimento de Cristo. Mas, se desejaram ver o que os apóstolos viram, souberam que ele viria aos homens e realizaria a dispensação que realizou; pois ninguém tem desejo daquilo que não concebeu com a mente: conheciam, portanto, o Filho de Deus; por isso não diz simplesmente \"quiseram ver-me\", mas \"o que vós vedes\"; nem \"ouvir-me\", mas \"o que ouvis\". Com efeito, tinham-no visto, mas não já encarnado, nem assim conversando com os homens, nem falando-lhes com tanta majestade.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Beda",
         "obra": "",
-        "latim": "Illi enim a longe inspicientes per speculum et in aenigmate viderunt; apostoli autem in praesentiarum habentes dominum, quaecumque voluissent interrogando discentes, nequaquam per Angelos aut alias visionum species opus habebant doceri"
+        "latim": "Illi enim a longe inspicientes per speculum et in aenigmate viderunt; apostoli autem in praesentiarum habentes dominum, quaecumque voluissent interrogando discentes, nequaquam per Angelos aut alias visionum species opus habebant doceri",
+        "pt": "Aqueles, com efeito, olhando de longe, viram por espelho e em enigma; os apóstolos, porém, tendo o Senhor presente, aprendendo interrogando tudo o que quisessem, de modo algum precisavam ser instruídos por Anjos ou por outras espécies de visões.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       },
       {
         "autor": "Origenes",
         "obra": "",
-        "latim": "Sed quare dicit plerosque prophetas optasse, non autem omnes? Quia de Abraham dicitur quod vidit diem Christi et laetatus est; quam visionem non plures, immo pauci contigerunt. Fuerunt autem alii prophetae et iusti non tanti ut visionem Abrahae et peritiam apostolorum attingerent; et hos dicit non vidisse, sed optasse"
+        "latim": "Sed quare dicit plerosque prophetas optasse, non autem omnes? Quia de Abraham dicitur quod vidit diem Christi et laetatus est; quam visionem non plures, immo pauci contigerunt. Fuerunt autem alii prophetae et iusti non tanti ut visionem Abrahae et peritiam apostolorum attingerent; et hos dicit non vidisse, sed optasse",
+        "pt": "Mas por que diz que muitos profetas desejaram, e não todos? Porque de Abraão se diz que viu o dia de Cristo e se alegrou; esta visão não a alcançaram muitos, mas poucos. Houve, porém, outros profetas e justos não tão grandes que alcançassem a visão de Abraão e o conhecimento dos apóstolos; e destes diz que não viram, mas desejaram.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
       }
     ]
   },

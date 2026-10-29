@@ -1,0 +1,68 @@
+{
+  "data": "2026-12-03",
+  "evangelho": "Mt 7,21.24-27",
+  "leituras": "Is 26,1-6 | Sl 117(118),1.8-9.19-21.25-27a (R. 26a) | Mt 7,21.24-27",
+  "catena": [
+    {
+      "ev": "Mt",
+      "cap": 7,
+      "lectio": 9,
+      "versos": [
+        21,
+        23
+      ]
+    },
+    {
+      "ev": "Mt",
+      "cap": 7,
+      "lectio": 10,
+      "versos": [
+        24,
+        27
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 1970,
+      "comum": [
+        21,
+        24,
+        25,
+        26,
+        27
+      ],
+      "direto": false,
+      "ref": "Mt 7,21.24-27",
+      "frase": "A Lei evangélica implica a escolha decisiva entre «os dois caminhos» e a passagem à prática das palavras do Senhor; resume-se na regra de ouro: «Tudo quanto quiserdes que os homens vos façam, fazei-lho, de igual modo, vós também, pois nisso consiste a Lei e os Profetas»(Mt 7, 12).",
+      "texto": "A Lei evangélica implica a escolha decisiva entre «os dois caminhos» e a passagem à prática das palavras do Senhor; resume-se na regra de ouro: «Tudo quanto quiserdes que os homens vos façam, fazei-lho, de igual modo, vós também, pois nisso consiste a Lei e os Profetas»(Mt 7, 12). Toda a Lei evangélica se apoia no «mandamento novo» de Jesus, de nos amarmos uns aos outros como Ele nos amou.",
+      "local": "A salvação de deus: a lei e a graça › Artigo 1: a lei moral"
+    },
+    {
+      "numero": 1821,
+      "comum": [
+        21
+      ],
+      "direto": false,
+      "ref": "Mt 7,21",
+      "frase": "Podemos, portanto, esperar a glória do céu prometida por Deus àqueles que O amam e fazem a sua vontade.",
+      "texto": "Podemos, portanto, esperar a glória do céu prometida por Deus àqueles que O amam e fazem a sua vontade. Em todas as circunstâncias, cada qual deve esperar, com a graça de Deus, «permanecer firme até ao fim» e alcançar a alegria do céu, como eterna recompensa de Deus pelas boas obras realizadas com a graça de Cristo. É na esperança que a Igreja pede que «todos os homens se salvem» (1 Tm 2, 4) e ela própria aspira a ficar, na glória do céu, unida a Cristo, seu Esposo: «Espera, espera, que não sabes quando virá o dia nem a hora. Vela com cuidado, que tudo passa com brevidade, embora o teu desejo faça o certo duvidoso e longo o tempo breve. Olha que quanto mais pelejares, mais mostrarás o amor que tens a teu Deus, e mais te regozijarás com teu Amado em gozo e deleite que não pode ter fim».",
+      "local": "A dignidade da pessoa humana › Artigo 7: as virtudes"
+    },
+    {
+      "numero": 2611,
+      "comum": [
+        21
+      ],
+      "direto": false,
+      "ref": "Mt 7,21",
+      "frase": "A oração de fé não consiste somente em dizer «Senhor, Senhor!», mas em preparar o coração para fazer a vontade do Pai.",
+      "texto": "A oração de fé não consiste somente em dizer «Senhor, Senhor!», mas em preparar o coração para fazer a vontade do Pai. Jesus exorta os seus discípulos a levar para a oração esta solicitude em cooperar com o desígnio de Deus.",
+      "local": "A oração na vida cristã › A revelação da oração"
+    }
+  ],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

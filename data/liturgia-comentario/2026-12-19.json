@@ -1,0 +1,111 @@
+{
+  "data": "2026-12-19",
+  "evangelho": "Lc 1,5-25",
+  "leituras": "Jz 13,2-7.24-25a | Sl 70(71),3-4a.5-6ab.16-17 (R. cf. 8a) | Lc 1,5-25",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 2,
+      "versos": [
+        5,
+        7
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 3,
+      "versos": [
+        8,
+        10
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 4,
+      "versos": [
+        11,
+        14
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 5,
+      "versos": [
+        15,
+        17
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 6,
+      "versos": [
+        18,
+        22
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 1,
+      "lectio": 7,
+      "versos": [
+        23,
+        25
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 332,
+      "comum": [
+        11
+      ],
+      "direto": false,
+      "ref": "Lc 1,11",
+      "frase": "Finalmente, é o anjo Gabriel que anuncia o nascimento do Precursor e o do próprio Jesus.",
+      "texto": "Ei-los, desde a criação e ao longo de toda a história da salvação, anunciando de longe ou de perto esta mesma salvação, e postos ao serviço do plano divino da sua realização: eles fecham o paraíso terrestre; protegem Lot, salvam Agar e seu filho, detêm a mão de Abraão pelo seu ministério é comunicada a Lei, são eles que conduzem o povo de Deus, anunciam nascimentos e vocações assistem os profetas – para não citar senão alguns exemplos. Finalmente, é o anjo Gabriel que anuncia o nascimento do Precursor e o do próprio Jesus.",
+      "local": "Creio em deus pai › «creio em deus pai todo-poderosocriador do céu e da terra»"
+    },
+    {
+      "numero": 1098,
+      "comum": [
+        17
+      ],
+      "direto": false,
+      "ref": "Lc 1,17",
+      "frase": "A assembleia deve preparar-se para o encontro com o seu Senhor, ser «um povo bem disposto».",
+      "texto": "A assembleia deve preparar-se para o encontro com o seu Senhor, ser «um povo bem disposto». Esta preparação dos corações é obra comum do Espírito Santo e da assembleia, particularmente dos seus ministros. A graça do Espírito Santo procura despertar a fé, a conversão do coração e a adesão à vontade do Pai. Estas disposições pressupõem-se para receber outras graças oferecidas na própria celebração, e para os frutos de vida nova que ela é destinada a produzir em seguida.",
+      "local": "O mistério pascal no tempo da igreja › Artigo 1: a liturgia – obra da santíssima trindade"
+    },
+    {
+      "numero": 2617,
+      "comum": [
+        14
+      ],
+      "direto": false,
+      "ref": "Lc 1,14",
+      "frase": "Antes da encarnação do Filho de Deus e da efusão do Espírito Santo, a sua oração coopera de um modo único com o desígnio benevolente do Pai, aquando da Anunciação para a concepção de Cristo e aquando do Pentecostes para a formação da Igreja, corpo de Cristo.",
+      "texto": "A oração de Maria é-nos revelada na aurora da plenitude dos tempos. Antes da encarnação do Filho de Deus e da efusão do Espírito Santo, a sua oração coopera de um modo único com o desígnio benevolente do Pai, aquando da Anunciação para a concepção de Cristo e aquando do Pentecostes para a formação da Igreja, corpo de Cristo. Na fé da sua humilde serva, o Dom de Deus encontra o acolhimento que Ele esperava desde o princípio dos tempos. Aquela que o Todo-Poderoso fez «cheia de graça» responde pelo oferecimento de todo o seu ser: «Eis a serva do Senhor, faça-se em mim segundo a tua palavra». «Faça-se» é a oração cristã: ser todo para Ele, já que Ele é todo para nós.",
+      "local": "A oração na vida cristã › A revelação da oração"
+    },
+    {
+      "numero": 2684,
+      "comum": [
+        17
+      ],
+      "direto": false,
+      "ref": "Lc 1,17",
+      "frase": "O carisma pessoal duma testemunha do amor de Deus pelos homens pode ter sido transmitido, como o espírito de Elias o foi a Eliseu e a João Batista, para que haja discípulos que partilhem desse espírito.",
+      "texto": "Na comunhão dos santos desenvolveram-se, ao longo da história das Igrejas diversas espiritualidades. O carisma pessoal duma testemunha do amor de Deus pelos homens pode ter sido transmitido, como o espírito de Elias o foi a Eliseu e a João Batista, para que haja discípulos que partilhem desse espírito. Uma espiritualidade está também na confluência doutras correntes, litúrgicas e teológicas, e testemunha a inculturação da fé num determinado meio humano e na respectiva história. As espiritualidades cristãs participam na tradição viva da oração e são guias indispensáveis para os fiéis. Refletem, na sua rica diversidade, a pura e única luz do Espírito Santo. «O Espírito é verdadeiramente o lugar dos santos. E o santo é, para o Espírito, um lugar próprio, pois se oferece para habitar com Deus e é chamado seu templo».",
+      "local": "A oração na vida cristã › A tradição da oração"
+    }
+  ],
+  "outrasLeituras": [],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

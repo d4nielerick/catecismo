@@ -1,0 +1,177 @@
+{
+  "data": "2026-12-13",
+  "evangelho": "Jo 1,6-8.19-28",
+  "leituras": "Is 61,1-2a.10-11 | Lc 1,46-48.49-50.53-54 (R. Is 61,10b) | 1Ts 5,16-24 | Jo 1,6-8.19-28",
+  "catena": [
+    {
+      "ev": "Jo",
+      "cap": 1,
+      "lectio": 10,
+      "versos": [
+        6,
+        8
+      ]
+    },
+    {
+      "ev": "Jo",
+      "cap": 1,
+      "lectio": 19,
+      "versos": [
+        19,
+        23
+      ]
+    },
+    {
+      "ev": "Jo",
+      "cap": 1,
+      "lectio": 20,
+      "versos": [
+        24,
+        28
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 575,
+      "comum": [
+        19
+      ],
+      "direto": true,
+      "ref": "Jo 1,19",
+      "frase": "Muitas atitudes e palavras de Jesus foram, portanto, «sinal de contradição» para as autoridades religiosas de Jerusalém, a quem o Evangelho de São João muitas vezes chama simplesmente «os Judeus», mais ainda do que para o comum do Povo de Deus.",
+      "texto": "Muitas atitudes e palavras de Jesus foram, portanto, «sinal de contradição» para as autoridades religiosas de Jerusalém, a quem o Evangelho de São João muitas vezes chama simplesmente «os Judeus», mais ainda do que para o comum do Povo de Deus. Sem dúvida que as suas relações com os fariseus não foram unicamente polêmicas: são fariseus que O previnem do perigo que corre. Jesus louva alguns de entre eles, como o escriba de Mc 12, 34, e em várias ocasiões come em casa de fariseus. Jesus confirma doutrinas partilhadas por esta elite religiosa do povo de Deus: a ressurreição dos mortos formas de piedade (esmola, jejum e oração) e o hábito de se dirigir a Deus como Pai, o caráter central do mandamento do amor de Deus e do próximo.",
+      "local": "Creio em jesus cristo, filho único de deus › «jesus cristo padeceu sob pôncio pilatos foi crucificado, morto e sepultado»"
+    },
+    {
+      "numero": 719,
+      "comum": [
+        23
+      ],
+      "direto": false,
+      "ref": "Jo 1,23",
+      "frase": "Anuncia como iminente a consolação de Israel; é ele a «voz» do Consolador que vai chegar.",
+      "texto": "João é «mais do que um profeta». Nele, o Espírito Santo consuma o «falar pelos profetas». João termina o ciclo dos profetas inaugurado por Elias. Anuncia como iminente a consolação de Israel; é ele a «voz» do Consolador que vai chegar. Tal como fará o Espírito da verdade, «ele vem como testemunha, para dar testemunho da Luz» (Jo 1, 7). A respeito de João, o Espírito cumpre assim as «indagações dos profetas» e o «desejo» dos anjos: «Aquele sobre Quem vires o Espírito Santo descer e permanecer, é Ele que batiza no Espírito Santo. Ora, eu vi e dou testemunho de que Ele é o Filho de Deus [...] Eis o Cordeiro de Deus!» (Jo 1, 33-36).",
+      "local": "Creio no espírito santo › «creio no espírito santo»"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Is 61,1-2a.10-11",
+      "catecismo": [
+        {
+          "numero": 714,
+          "comum": [
+            1,
+            2
+          ],
+          "direto": false,
+          "ref": "Is 61,1-2",
+          "frase": "É por isso que Cristo inaugura o anúncio da Boa-Nova, apropriando-Se desse passo de Isaías (Lc 4, 18-19): «O Espírito do Senhor Deus está sobre Mim, porque o Senhor Me ungiu.",
+          "texto": "É por isso que Cristo inaugura o anúncio da Boa-Nova, apropriando-Se desse passo de Isaías (Lc 4, 18-19): «O Espírito do Senhor Deus está sobre Mim, porque o Senhor Me ungiu. Enviou-Me a anunciar a Boa-Nova aos que sofrem, para curar os desesperados, para anunciar a libertação aos exilados e a liberdade aos prisioneiros, para proclamar o ano da graça do Senhor».",
+          "local": "Creio no espírito santo › «creio no espírito santo»"
+        },
+        {
+          "numero": 436,
+          "comum": [
+            1
+          ],
+          "direto": false,
+          "ref": "Is 61,1",
+          "frase": "O Messias devia ser ungido pelo Espírito do Senhor, ao mesmo tempo como rei e sacerdote mas também como profeta.",
+          "texto": "Cristo vem da tradução grega do termo hebraico «Messias», que quer dizer «ungido». Só se torna nome próprio de Jesus porque Ele cumpre perfeitamente a missão divina que tal nome significa. Com efeito, em Israel eram ungidos, em nome de Deus, aqueles que Lhe eram consagrados para uma missão d'Ele dimanada. Era o caso dos reis, dos sacerdotes e, em raros casos, dos profetas. Este devia ser, por excelência, o caso do Messias, que Deus enviaria para estabelecer definitivamente o seu Reino. O Messias devia ser ungido pelo Espírito do Senhor, ao mesmo tempo como rei e sacerdote mas também como profeta. Jesus realizou a expectativa messiânica de Israel na sua tríplice função de sacerdote, profeta e rei.",
+          "local": "Creio em jesus cristo, filho único de deus › «e em jesus cristo, seu único filho, nosso senhor»"
+        },
+        {
+          "numero": 695,
+          "comum": [
+            1
+          ],
+          "direto": false,
+          "ref": "Is 61,1",
+          "frase": "Jesus é constituído «Cristo» pelo Espírito Santo.",
+          "texto": "A unção. O simbolismo da unção com óleo é também significativo do Espírito Santo, a ponto de se tomar o seu sinônimo. Na iniciação cristã, ela é o sinal sacramental da Confirmação, que justamente nas Igrejas Orientais se chama «Crismação». Mas, para lhe apreender toda a força, temos de voltar à primeira unção realizada pelo Espírito Santo: a de Jesus. Cristo («Messias» em hebraico) significa «ungido» pelo Espírito de Deus. Houve «ungidos» do Senhor na antiga Aliança, sobretudo o rei David. Mas Jesus é o ungido de Deus de maneira única: a humanidade que o Filho assume é totalmente «ungida pelo Espírito Santo». Jesus é constituído «Cristo» pelo Espírito Santo. A Virgem Maria concebe Cristo do Espírito Santo, que pelo anjo O anuncia como Cristo aquando do seu nascimento e leva Simeão a ir ao templo ver o Cristo do Senhor. É Ele que enche Cristo e cujo poder emana de Cristo nos seus atos de cura e salvamento. Finalmente, é Ele que ressuscita Jesus de entre os mortos. Então, plenamente constituído «Cristo» na sua humanidade vencedora da morte, Jesus difunde em profusão o Espírito Santo, até que «os santos» constituam, na sua união à humanidade do Filho de Deus, o «homem adulto à medida completa da plenitude de Cristo» (Ef 4, 13), «o Cristo total», para empregar a expressão de Santo Agostinho.",
+          "local": "Creio no espírito santo › «creio no espírito santo»"
+        }
+      ]
+    },
+    {
+      "rotulo": "Salmo",
+      "referencia": "Lc 1,46-48.49-50.53-54 (R. Is 61,10b)",
+      "catecismo": [
+        {
+          "numero": 722,
+          "comum": [
+            46,
+            47,
+            48
+          ],
+          "direto": false,
+          "ref": "Lc 1,46-48",
+          "frase": "É a ação de graças de todo o povo de Deus, e portanto da Igreja, que ela faz subir até ao Pai, no Espírito Santo, com o seu cântico, quando já portadora, em si, do Filho eterno.",
+          "texto": "O Espírito Santo preparou Maria pela sua graça. Convinha que fosse «cheia de graça» a Mãe d'Aquele em Quem «habita corporalmente a plenitude da divindade» (Cl 2, 9). Ela foi, por pura graça, concebida sem pecado, como a mais humilde das criaturas, a mais capaz de acolher o dom inefável do Onipotente. É a justo título que o anjo Gabriel a saúda como «Filha de Sião»: «Ave» (= «Alegra-te»). É a ação de graças de todo o povo de Deus, e portanto da Igreja, que ela faz subir até ao Pai, no Espírito Santo, com o seu cântico, quando já portadora, em si, do Filho eterno.",
+          "local": "Creio no espírito santo › «creio no espírito santo»"
+        },
+        {
+          "numero": 2097,
+          "comum": [
+            46,
+            47,
+            48
+          ],
+          "direto": false,
+          "ref": "Lc 1,46-48",
+          "frase": "Adorar a Deus é, como Maria no Magnificat, louvá-Lo, exaltá-Lo e humilhar-se, confessando com gratidão que Ele fez grandes coisas e que o seu Nome é santo.",
+          "texto": "Adorar a Deus é reconhecer, com respeito e submissão absoluta, o «nada da criatura», que só por Deus existe. Adorar a Deus é, como Maria no Magnificat, louvá-Lo, exaltá-Lo e humilhar-se, confessando com gratidão que Ele fez grandes coisas e que o seu Nome é santo. A adoração do Deus único liberta o homem de se fechar sobre si próprio, da escravidão do pecado e da idolatria do mundo.",
+          "local": "«amarás o senhor teu deus com todo o teu coração, com toda a tua alma e com todas as tuas forças» › Artigo 1: o primeiro mandamento"
+        },
+        {
+          "numero": 2619,
+          "comum": [
+            46,
+            47,
+            48
+          ],
+          "direto": false,
+          "ref": "Lc 1,46-48",
+          "frase": "É por isso que o cântico de Maria o Magnificat latino, o Megalynárion bizantino – é, ao mesmo tempo, o cântico da Mãe de Deus e o da Igreja, cântico da Filha de Sião e do novo povo de Deus, cântico de ação de graças pela plenitude de graças derramadas na economia da salvação, cântico dos «pobres», cuja esperança se vê satisfeita pelo cumprimento das promessas feitas aos nossos pais, «em favor de Abraão e da sua descendência, para sempre».",
+          "texto": "É por isso que o cântico de Maria o Magnificat latino, o Megalynárion bizantino – é, ao mesmo tempo, o cântico da Mãe de Deus e o da Igreja, cântico da Filha de Sião e do novo povo de Deus, cântico de ação de graças pela plenitude de graças derramadas na economia da salvação, cântico dos «pobres», cuja esperança se vê satisfeita pelo cumprimento das promessas feitas aos nossos pais, «em favor de Abraão e da sua descendência, para sempre».",
+          "local": "A oração na vida cristã › A revelação da oração"
+        }
+      ]
+    },
+    {
+      "rotulo": "2ª Leitura",
+      "referencia": "1Ts 5,16-24",
+      "catecismo": [
+        {
+          "numero": 2633,
+          "comum": [
+            17,
+            18
+          ],
+          "direto": false,
+          "ref": "1Ts 5,17-18",
+          "frase": "É com esta certeza que Tiago e Paulo nos exortam a orar em todas as ocasiões.",
+          "texto": "Quando se participa assim no amor salvífico de Deus, compreende-se que qualquer necessidade pode tornar-se objeto de pedido. Cristo, que tudo assumiu a fim de tudo resgatar, é glorificado pelos pedidos que dirigimos ao Pai em seu nome. É com esta certeza que Tiago e Paulo nos exortam a orar em todas as ocasiões.",
+          "local": "A oração na vida cristã › A revelação da oração"
+        },
+        {
+          "numero": 1174,
+          "comum": [
+            17
+          ],
+          "direto": false,
+          "ref": "1Ts 5,17",
+          "frase": "Esta celebração, na fidelidade às recomendações apostólicas de «orar sem cessar» «constituiu-se de modo a consagrar, pelo louvor a Deus, todo o curso diurno e noturno do tempo».",
+          "texto": "O mistério de Cristo, a sua Encarnação e a sua Páscoa, que celebramos na Eucaristia, especialmente na assembleia dominical, penetra e transfigura o tempo de cada dia pela celebração da Liturgia das Horas, «o Ofício divino». Esta celebração, na fidelidade às recomendações apostólicas de «orar sem cessar» «constituiu-se de modo a consagrar, pelo louvor a Deus, todo o curso diurno e noturno do tempo». É «a oração pública da Igreja», na qual os fiéis (clérigos, religiosos e leigos) exercem o sacerdócio real dos batizados. Celebrada «segundo a forma aprovada» pela Igreja, a Liturgia das Horas «é verdadeiramente a voz da própria Esposa que fala com o Esposo; mais ainda, é a oração que Cristo, unido ao seu corpo, eleva ao Pai».",
+          "local": "A celebração sacramental do mistério pascal › Artigo 1: celebrar a liturgia da igreja"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}

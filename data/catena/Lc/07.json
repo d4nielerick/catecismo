@@ -1,0 +1,817 @@
+[
+  {
+    "lectio": 1,
+    "versos": [
+      1,
+      10
+    ],
+    "itens": [
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Cum perfectioribus documentis suos refecisset discipulos, vadit Capharnaum, ibi prodigiosa operaturus; unde dicitur cum autem implesset omnia verba sua in aures plebis, intravit in Capharnaum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Hic intelligendum est quia non ante quam haec verba terminasset intravit, sed non esse expressum post quantum temporis intervallum, cum istos sermones terminasset, intraverit Capharnaum: ipso quippe intervallo leprosus ille mundatus est, quem suo loco Matthaeus interponit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Pulchre autem ubi praecepta complevit, formam docet suorum praeceptorum exequi: nam statim gentilis centurionis servus domino curandus offertur; unde sequitur centurionis autem cuiusdam servus male habens, erat moriturus, qui illi erat pretiosus. Quod moriturum dixerit, Evangelista non fefellit; moriturus enim erat, nisi fuisset sanatus a Christo"
+      },
+      {
+        "autor": "Eusebius",
+        "obra": "",
+        "latim": "Strenuus siquidem in bellis erat iste centurio, et militibus Romanis praefectus. Quia vero specialis serviens eius domi languens iacebat, considerans quales salvator erga ceteros virtutes agebat sanando languidos, et iudicans quod non secundum vires humanas haec agebantur miracula, mittit ad eum ut ad Deum, non habito respectu ad apparens organum, quo cum hominibus conversabatur; unde sequitur et cum audisset de Iesu, misit ad eum seniores Iudaeorum, rogans eum ut veniret, et salvaret servum suum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Quomodo ergo verum erit quod Matthaeus narrat: accessit ad eum quidam centurio, cum ipse non accesserit? Ubi diligenter advertentes intelligamus, Matthaeum non deseruisse usitatum modum loquendi: si enim ipsa perventio usitate dicitur per alios fieri, quanto magis accessus per alios fieri potest? Non ergo absurde Matthaeus per alios facto accessu centurionis ad dominum, compendio dicere voluit, ipsum potius accessisse ad Christum, quam illos per quos verba sua misit: quia quo magis credidit, eo magis accessit"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Qualiter etiam Matthaeus dicit quod ipse dixit: non sum dignus ut intres sub tectum meum; Lucas autem hic dicit, quoniam rogat ut veniat? Sed mihi videtur quod Lucas significat nobis Iudaicas blanditias. Credibile enim est ut cum vellet abire centurio, retraheretur a Iudaeis blandientibus, et dicentibus, quia nos euntes ducemus eum: unde et eorum preces adulationibus plenae sunt; sequitur enim at illi cum venissent ad Iesum, rogabant eum sollicite, dicentes: quia dignus est ut hoc illi praestes: diligit enim gentem nostram, et synagogam ipse aedificavit nobis. Decebat quidem ipsos dicere, quoniam ipse volebat venire et supplicare; nos autem detinuimus, calamitatem videntes, et cadaver quod in domo iacebat, aut promere fidei eius immensitatem; sed nolebant propter invidiam fidem viri detegere; ne magnus aliquis esse videretur cui preces porriguntur. Quod autem Matthaeus significat ipsum Israelitam non esse, Lucas vero dicit quoniam aedificavit synagogam, non est contrarium; potuit enim et Iudaeus non esse, et synagogam construxisse"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "In hoc autem ostendunt, quia sicut nos Ecclesiam, sic etiam illi synagogam non conventum solummodo fidelium, sed etiam locum quo conveniebant sint soliti appellare"
+      },
+      {
+        "autor": "Eusebius",
+        "obra": "",
+        "latim": "Et seniores quidem Iudaeorum pro modicis sumptibus ad opus synagogae datis gratiam poscunt; sed dominus non propter hoc, sed pro maiori causa, volens scilicet generare credulitatem in cunctis mortalibus per suam virtutem, seipsum exhibuit; unde sequitur Iesus autem ibat cum illis"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Quod utique non ideo faciebat quia absens curare non poterat; sed ut formam tibi daret humilitatis imitandae, ad reguli filium noluit pergere, ne videretur magis divitiis detulisse; hic ipse perrexit, ne videretur in centurionis famulo conditionem despexisse servilem. Centurio vero militari tumore deposito, reverentiam sumit, et ad fidem facilis, et ad honorificentiam promptus; unde sequitur et cum non longe esset a domo, misit ad eum centurio amicos, dicens: domine, noli vexari. Non enim hominis, sed Dei potestate coniecit dari a Christo hominibus sanitatem. Iudaei quidem dignitatem eius praetenderant; iste vero indignum se asseruit non solum beneficii, sed etiam susceptionis domini: non enim dignus sum ut sub tectum meum intres"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Postquam enim liberatus est a Iudaeorum taedio, tunc mittit dicens: ne putes prae taedio me non venisse; sed indignum reputavi te domi recipere"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Bene autem Lucas in occursum amicos dicit esse a centurione transmissos, ne praesentia sua, et generare domini verecundiam videretur, et officio provocasse; unde sequitur propter quod et meipsum non sum dignum arbitratus ut venirem ad te; sed dic tantum verbo, et sanabitur puer meus"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Ubi attende centurionem debitam opinionem habentem de domino: non enim dixit: ora; sed tantummodo: iube, dubitans ne se humiliando renueret. Subdit nam et ego homo sum sub potestate constitutus, habens sub me milites; et dico huic: vade, et vadit; et alii: veni, et venit; et servo meo: fac hoc, et facit"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Hominem se potestati vel tribuni vel praesidis subditum dicit; imperare tamen minoribus: ut subaudiatur, eum multo magis qui Deus sit, non per adventum tantum corporis, sed per Angelorum ministeria posse implere quod vellet: repellendae enim erant vel infirmitates corporum, vel fortitudines contrariae, et verbo domini, et ministeriis Angelorum"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Est autem hic notandum, quod hoc verbum fac imperium designat dictum servo. Ob hoc Deus cum hominem vellet creare non ait unigenito: fac hominem; sed faciamus hominem, ut per formam consensus verborum declaret aequiparantiam. Quia ergo in Christo considerabat excellentiam dominii, ob hoc ait dic verbo: nam et ego dico servo meo, et cetera. Christus autem non eum reprehendit, sed eius intentionem roboravit; unde sequitur quo audito Iesus miratus est"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Sed quis in illo fecerat ipsam fidem nisi ille qui admirabatur? Sed et si alius eam fecisset, quid miraretur qui praescius erat? Quod ergo miratur dominus, nobis mirandum esse significat: omnes enim tales motus cum de Deo dicuntur, non perturbati animi signa sunt, sed docentis magistri"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Ut autem liqueat tibi quod dominus hoc ideo dixit ut alios instruat, prudenter Evangelista hoc aperiens subdit amen dico vobis, nec in Israel tantam fidem inveni"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Et quidem si sic legas: in nullo tantam fidem inveni in Israel, simplex intellectus et facilis est; si vero iuxta Graecos: nec in Israel tantam fidem inveni, fides huiusmodi etiam electioribus, et Deum videntibus antefertur"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non autem de omnibus retro patriarchis et prophetis, sed de praesentis aevi loquitur hominibus; quibus ideo centurionis fides antefertur, quia illi legis prophetarumque monitis edocti, hic autem nemine docente sponte credidit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Probatur autem fides domini, et servi sanitas roboratur; unde sequitur et reversi qui missi fuerant domum, invenerunt servum qui languerat sanum. Potest ergo meritum domini et famulis suffragari, non solum fidei merito, sed et studio disciplinae"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Plenius autem haec explicat Matthaeus, quod dicente domino centurioni: vade, sicut credidisti fiat tibi, sanatus sit puer ex illa hora. Sed beato Lucae moris est, quod plene viderit ab aliis Evangelistis exposita abbreviare, vel etiam de industria praeterire; quae vero ab eis omissa vel breviter cognoverit tacta, dilucidare solertius"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Mystice autem servo centurionis populus nationum, qui mundanae servitutis vinculis tenebatur, aeger lethalibus passionibus, beneficio domini sanandus exprimitur"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Centurio autem, cuius fides Israeli praefertur, electos a gentibus ostendit; qui quasi centenario milite stipati virtutum spiritualium sunt perfectione sublimes: numerus enim centenarius, qui de laeva transfertur ad dexteram, in caelestis vitae significationem poni consuevit. Tales ergo pro his necesse est ut domino supplicent qui adhuc spiritu servitutis premuntur; nos autem, qui de gentibus credimus, non ipsi ad dominum venire possumus, quem in carne videre non valemus; sed ad eum accedere debemus per fidem. Seniores autem Iudaeorum mittere, hoc est summos Ecclesiae viros, qui nos ad dominum praecesserunt, suppliciter obsecrando patronos acquirere, qui nobis testimonium reddentes, quod Ecclesiam aedificare curemus, pro nostris peccatis intercedant. Pulchre autem dicitur quia Iesus non longe erat a domo, quia prope timentes eum salutare ipsius; et qui naturali lege recte utitur, quo bona quae novit operatur, eo illi qui bonus est appropiat"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Non vult autem Iesum vexari centurio; quia quem Iudaeorum populus crucifixit, inviolatum ab iniuria manere desiderat populus nationum; et, quod ad mysterium spectat, vidit in pectora adhuc gentilium non esse penetrabilem Christum"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Milites autem et servi, qui centurioni obediunt, virtutes sunt naturales, quarum copiam multi ad dominum venientes deferunt secum"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Vel aliter. Centurio est intellectus, qui multorum in militia princeps existit, dum multas in hac vita res habet. Habet autem servum infirmum, irrationabilem animae partem, irascibilem et concupiscibilem dico. Et mittit ad Iesum mediatores Iudaeos, idest confessionis cogitationes et verba; et confestim suscipit servum sanum"
+      }
+    ]
+  },
+  {
+    "lectio": 2,
+    "versos": [
+      11,
+      17
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Mira dominus miris annectit; et supra quidem accersitus occurrit, hic vero non vocatus accedit; unde dicitur et factum est, deinceps ibat in civitatem quae vocatur Naim"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Naim est civitas Galilaeae in secundo milliario montis Thabor. Divino autem nutu multa turba dominum comitatur, ut multi essent tanti miraculi testes; unde sequitur et ibant cum illo discipuli eius et turba copiosa"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Resurrectionis autem experimentum non ita verbis sicut operibus a salvatore didicimus, qui ab inferioribus inchoans opus miraculi, fidem nostram assuefacit ad maiora. Primo quidem in aegritudine desperata servi centurionis, resurrectionis incepit potestatem; post haec altiori potestate ducit homines ad fidem resurrectionis, dum suscitavit filium viduae, qui ferebatur ad monumentum; unde sequitur cum autem appropinquaret portae civitatis, ecce defunctus efferebatur filius unicus matris suae. Diceret enim aliquis de puero centurionis, quod moriturus non erat: ut igitur temerariam linguam compesceret, iam defuncto iuveni Christum obviare fatetur unico filio viduae; nam sequitur et haec vidua erat, et turba civitatis multa cum illa. Aerumnae molem brevibus verbis explicuit. Mater vidua erat, et non sperabat ulterius filios procreare; non habebat in quem aspectum dirigeret vice defuncti; hunc solum lactaverat, solus aderat alacritatis causa in domo; quicquid matri dulce ac pretiosum, hic solus extiterat"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Miseranda passio, et ad fletum et lacrymas potens provocare. Unde sequitur quam cum vidisset dominus, misericordia motus super eam, dixit illi: noli flere"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quasi dicat: desiste quasi mortuum flere, quem mox vivum resurgere videbis"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Iubens autem cessare a lacrymis qui consolatur moestos, monet nos praesentibus defunctis consolationem recipere, resurrectionem sperantes. Tenet autem feretrum vita obvians morti; unde sequitur et accessit, et tetigit loculum; hi autem qui portabant steterunt"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "in Ioannem",
+        "latim": "Ideo autem non solo verbo peragit miraculum, sed et feretrum tangit, ut cognoscas efficax esse sacrum Christi corpus ad humanam salutem: est enim corpus vitae, et caro verbi omnipotentis, cuius habet virtutem: sicut enim ferrum adiunctum igni perficit opus ignis, sic postquam caro unita est verbo quod vivificat omnia, ipsa quoque facta est vivificativa, et mortis expulsiva"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Non autem salvator similis est Eliae deflenti filium Sareptanae, nec qualis Eliseus, qui proprium corpus applicuit corpori defuncti, nec qualis est Petrus, qui pro Thabita oravit; sed ipse est qui non entia velut entia vocat, qui mortuos ut vivos alloqui potest; unde sequitur et ait: adolescens, tibi dico: surge"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Qui dixit adolescentem, florentis significavit temporis horam, primam producentem lanuginem: qui paulo ante muliebris erat maternorum oculorum aspectui, iam aspirans ad tempus sponsalium, virga generis, successionis ramus, baculus senectutis"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Incunctanter autem erectus est cui sunt mandata directa: divina enim potestas est irrefragabilis: nulla mora, nulla orationum instantia; unde sequitur et resedit qui erat mortuus, et coepit loqui; et dedit illum matri suae. Indicia sunt haec verae resurrectionis: corpus enim exanime loqui non potest; nec reportasset mulier ad domum defunctum filium inanimatum"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Pulchre autem Evangelista dominum prius misericordia motum esse super matre, ac sic filium resuscitare testatur, ut in uno nobis exemplum imitandae pietatis ostenderet, in altero fidem mirandae potestatis astrueret; unde sequitur accepit autem omnes timor, et magnificabant Deum, dicentes: quia propheta magnus surrexit in nobis, et quia Deus visitavit plebem suam"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Hoc magnum fuit in populo insensibili et ingrato: post modicum enim nec prophetam, nec ad utilitatem populi procedere ipsum existimavit. Neminem autem habitantium Iudaeam hoc miraculum latuit; unde sequitur et exiit hic sermo in universam Iudaeam, et in omnem circa regionem"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Idoneum autem est dicere, quod septem resurrectiones ante dominicam narrantur; quarum prima est filii Sareptanae, secunda filii Sunamitis, tertia quae facta est in reliquiis Elisei, quarta quae facta est in Naim, quinta filiae archisynagogi, sexta Lazari, septima in Christi passione, multa namque corpora sanctorum surrexerunt; octava est Christi, qui expers mortis remansit ulterius, in signum quod communis resurrectio, quae futura est in octava aetate, non tolletur morte, sed indissolubilis permanebit"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Defunctus autem qui extra portam civitatis multis est intuentibus elatus, significat hominem lethali funere criminum soporatum, et animae mortem non cordis adhuc cubili tegentem, sed ad multorum notitiam per locutionis operisve indicium, quasi per civitatis ostia, propalantem. Portam enim civitatis puto aliquem de sensibus esse corporalibus: qui bene filius unicus matris suae fuisse perhibetur, quia una est ex multis personis collecta mater Ecclesia: viduam autem esse Ecclesiam, omnis anima quae se domini morte redemptam meminit, agnoscit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Hanc enim viduam populorum turba circumseptam plus video esse quam feminam, quae resurrectionem unici adolescentis filii a pompa funeris revocat ad vitam, quarum contemplatione lacrymarum, quae flere prohibetur eum cui resurrectio debebatur"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vel Novati dogma confunditur, qui dum poenitentium mundationem evacuare conatur, matrem Ecclesiam de natorum suorum spirituali extinctione plorantem spe vitae reddendae negat consolari debere"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Hic autem mortuus in loculo materialibus quatuor ad sepulchrum ferebatur elementis; sed spem resurgendi habebat, quia ferebatur in ligno; quod etsi nobis ante non proderat, tamen posteaquam Christus id tetigit, proficere coepit ad vitam; ut esset iudicio salutem populo per crucis patibulum refundendam. In secreto enim iacemus exanimes, cum vel ignis immodicae cupiditatis exaestuat, vel frigidus humor exundat, et pigra quadam corporis habitudine vigor hebetatur animorum"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Vel loculus in quo mortuus effertur, male secura desperati peccatoris conscientia est: qui vero sepeliendum portant, vel immunda desideria, vel blandimenta sunt sociorum; qui, domino loculum tangente, steterunt: quia superni formidine iudicii tacta conscientia, carnales saepe voluptates et iniuste laudantes coercens ad se revertitur, vocantique ad vitam respondet salvatori"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Si ergo grave peccatum est, quod poenitentiae tuae lacrymis ipse lavare non possis, fleat pro te mater Ecclesia, assistat et turba; iam resurges a funere, et incipies vitalia loqui, timebunt omnes; unius enim exemplo omnes corriguntur: laudabunt etiam Deum, qui tanta nobis remedia vitandae mortis indulsit"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Visitavit autem Deus plebem suam, non solum semel verbum suum incorporando, sed semper in corda mittendo"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Viduam etiam potes intelligere animam virum amittentem, idest divinum sermonem: filius enim est intellectus, qui extra civitatem effertur viventium; loculus eius est corpus eius, quod quidam dixerunt esse sepulchrum: tangens autem eum dominus levat ipsum, iuvenescere faciens eum qui surgens a peccato incipit loqui et alios edocere: non enim prius ei crederetur"
+      }
+    ]
+  },
+  {
+    "lectio": 3,
+    "versos": [
+      18,
+      23
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Miraculum quod omnes inhabitantes Iudaeam et Galilaeam sciverant, referunt sancto Baptistae quidam ex eius discipulis, unde sequitur et nuntiaverunt Ioanni discipuli eius de omnibus his",
+        "pt": "O milagre que todos os habitantes da Judeia e da Galileia tinham conhecido, alguns de seus discípulos o referem ao santo Batista; donde se segue: \"E os discípulos de João lhe anunciaram tudo isso\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non simplici corde, ut opinor, sed invidia stimulante: nam et alibi conqueruntur dicentes: Rabbi, qui erat tecum trans Iordanem, ecce hic baptizat; et omnes veniunt ad eum",
+        "pt": "Não com coração simples, como julgo, mas por estímulo da inveja: pois também em outro lugar se queixam, dizendo: \"Rabi, aquele que estava contigo do outro lado do Jordão, eis que batiza, e todos vão a ele\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Tunc autem magis ad eum erigimur cum incumbit necessitas: et ideo Ioannes detrusus in carcerem, quando magis discipuli eius indigebant Iesu, tunc mittit eos ad Christum; sequitur enim et convocavit duos de discipulis suis Ioannes, et misit eos ad Iesum, dicens: tu es qui venturus es, an alium expectamus?",
+        "pt": "Mas então nos erguemos mais para ele quando a necessidade nos aperta; e por isso João, lançado ao cárcere, quando seus discípulos mais precisavam de Jesus, então os envia a Cristo; pois se segue: \"E João chamou dois de seus discípulos e os enviou a Jesus, dizendo: Tu és aquele que há de vir, ou esperamos outro?\"",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Non ait: tu es qui venisti; sed: tu es qui venturus es? Et est sensus: manda mihi, quia interficiendus ab Herode et ad Inferna descensurus sum, utrum te et Inferis debeam nuntiare, qui superis nuntiavi; an hoc non conveniat filio Dei, et alium ad haec sacramenta missurus es?",
+        "pt": "Não diz: tu és aquele que veio; mas: \"tu és aquele que há de vir?\" E o sentido é: manda-me dizer, porque vou ser morto por Herodes e descer aos Infernos, se devo anunciar-te também aos que estão nos Infernos, eu que te anunciei aos que estão em cima; ou se isto não convém ao Filho de Deus, e enviarás outro a estes mistérios?",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Sed omnino reprobanda est talis opinio: nunquam enim reperimus sacram Scripturam disserere, quod infernalibus praenuntiaverit Baptista Ioannes salvatoris adventum. Illud etiam verum est dicere, quod non ignoravit Baptista virtutem mysterii incarnationis unigeniti; unde et hoc cum aliis noverat quod illuminaturus erat in Inferno manentes, cum pro omnibus gustaverit mortem, tam vivis quam mortuis. Sed quoniam sermo sacrae Scripturae hunc quidem praedixit venturum tamquam Deum et dominum; alii vero missi sunt sicut famuli ante Christum: ideo omnium salvator et dominus a prophetis nominabatur, qui venit vel qui venturus est, secundum illud: benedictus qui venit in nomine domini; et in Habacuc: post modicum qui venturus est veniet et non tardabit. Igitur divinus Baptista quasi nomen accipiens a sacra Scriptura, misit quosdam discipulorum suorum quaesituros an ipse sit qui venit vel qui venturus est",
+        "pt": "Mas tal opinião deve ser inteiramente rejeitada: pois nunca encontramos a Sagrada Escritura dizer que João Batista tenha anunciado aos habitantes do inferno a vinda do Salvador. Também é verdade dizer que o Batista não ignorou o poder do mistério da encarnação do Unigênito; por isso sabia, com os outros, que ele iluminaria os que permaneciam no Inferno, quando provasse a morte por todos, tanto vivos quanto mortos. Mas, uma vez que a palavra da Sagrada Escritura predisse que este viria como Deus e Senhor, ao passo que os outros foram enviados como servos antes de Cristo, por isso o Salvador e Senhor de todos era chamado pelos profetas aquele que vem ou que há de vir, segundo aquilo: \"Bendito o que vem em nome do Senhor\"; e em Habacuc: \"Dentro de pouco, aquele que há de vir virá e não tardará\". Portanto, o divino Batista, tomando como que um nome da Sagrada Escritura, enviou alguns de seus discípulos para perguntar se ele é aquele que veio ou que há de vir.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Sed quomodo fieri posset ut de quo dixerat: ecce qui tollit peccatum mundi, adhuc eum Dei filium esse non crederet? Aut enim insolentiae est ei tribuere divina quae nescit, aut de Dei filio dubitasse perfidiae est. Nonnulli autem de ipso Ioanne intelligunt magnum quidem ita prophetam ut Christum agnosceret; sed tamen non tamquam dubium, sed tamquam pium vatem quem venturum crediderat, non credidisse moriturum. Non igitur fide, sed pietate dubitavit, sicut et Petrus dicens: propitius tibi esto, domine, non fiet hoc",
+        "pt": "Mas como poderia ser que aquele de quem dissera: \"Eis o que tira o pecado do mundo\" ainda não cresse que era o Filho de Deus? Pois atribuir-lhe o que ignora das coisas divinas é insolência, e duvidar do Filho de Deus é perfídia. Alguns, porém, entendem que o próprio João, grande profeta a ponto de reconhecer Cristo, não duvidou como quem hesita, mas como piedoso vidente que, tendo crido que ele viria, não cria que haveria de morrer. Portanto, duvidou não por falta de fé, mas por piedade, como também Pedro, dizendo: \"Tem piedade de ti, Senhor, isso não acontecerá\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Vel ex dispensatione interrogat; noverat enim ut praecursor passionis Christi mysterium; sed ut discipulis suis constet quanta sit excellentia salvatoris, ex propriis discipulis prudentiores misit, quos praecepit sciscitari, et viva salvatoris voce conicere, si ipse est qui expectabatur; unde subditur cum autem ad eum venissent viri, dixerunt: Ioannes Baptista misit nos ad te, dicens: tu es qui venturus es, an alium expectamus? Sciens autem ut Deus quo animo misisset eos Ioannes, et causam adventus eorum, tunc temporis egit uberiora miracula; unde sequitur in ipsa autem hora curavit multos a languoribus et plagis et spiritibus malis, et caecis multis donavit visum. Non dicit eis expresse: ego sum; sed ducit eos magis ad rei certitudinem, ut congrua ratione sumentes fidem ipsius revertantur ad eum qui misit eos; unde non ad verba, sed ad propositum mittentis responsum exhibuit; nam sequitur et respondens dixit illis: euntes renuntiate Ioanni quae vidistis et audistis; quasi dicat: narrate Ioanni quae quidem audistis per prophetas, consummari vero vidistis a me: ea enim tunc agebat quae praedixerant prophetae eum facturum; de quibus subditur quia caeci vident, claudi ambulant, leprosi mundantur, surdi audiunt, mortui resurgunt",
+        "pt": "Ou pergunta por dispensação; pois, como precursor, conhecia o mistério da paixão de Cristo; mas, para que seus discípulos soubessem quão grande é a excelência do Salvador, enviou, dentre seus discípulos, os mais prudentes, aos quais mandou que perguntassem e conjecturassem, pela viva voz do Salvador, se ele é aquele que era esperado; donde se acrescenta: \"Tendo chegado a ele esses homens, disseram: João Batista nos enviou a ti, dizendo: Tu és aquele que há de vir, ou esperamos outro?\" Sabendo, porém, como Deus, com que ânimo João os enviara e a causa da vinda deles, fez então milagres mais abundantes; donde se segue: \"Naquela mesma hora curou muitos de enfermidades, de chagas e de espíritos malignos, e deu vista a muitos cegos\". Não lhes diz expressamente: eu sou; mas os conduz antes à certeza do fato, para que, recebendo a fé de modo conveniente, voltassem àquele que os enviara; por isso deu resposta não às palavras, mas ao propósito de quem os enviava; pois se segue: \"E, respondendo, disse-lhes: Ide e anunciai a João o que vistes e ouvistes\"; como se dissesse: contai a João o que ouvistes pelos profetas e vistes cumprir-se em mim: pois então fazia o que os profetas haviam predito que ele faria; das quais coisas se acrescenta: \"Os cegos veem, os coxos andam, os leprosos são purificados, os surdos ouvem, os mortos ressuscitam\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Plenum sane testimonium, quo dominum propheta cognosceret: de ipso enim fuerat prophetatum quia dominus dat escam esurientibus, erigit elisos, solvit compeditos, illuminat caecos; et quod qui ista facit, regnabit in aeternum. Ergo non humanae ista, sed divinae virtutis insignia sunt. Huius autem Evangelii exempla vel rara vel nulla inveniuntur: unus Tobias oculos recepit; et haec fuit Angeli, non hominis medicina; Elias mortuum suscitavit; ipse tamen rogavit et flevit, hic iussit; Eliseus leprosum mundari fecit; non tamen ibi valuit praecepti auctoritas, sed mysterii figura",
+        "pt": "Testemunho plenamente cabal, pelo qual o profeta reconheceria o Senhor: pois dele fora profetizado que o Senhor dá alimento aos famintos, levanta os abatidos, solta os acorrentados, ilumina os cegos; e que quem faz estas coisas reinará eternamente. Estes, portanto, são sinais não de poder humano, mas divino. Ora, deste Evangelho exemplos ou raros ou nenhum se encontram: só Tobias recobrou os olhos; e foi remédio de um Anjo, não de um homem; Elias ressuscitou um morto; ele, porém, rogou e chorou, este ordenou; Eliseu fez purificar um leproso; ali, porém, não valeu a autoridade da ordem, mas a figura do mistério.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Sunt enim haec verba Isaiae dicentis: Deus ipse veniet, et salvabit nos. Tunc aperientur oculi caecorum, et aures surdorum patebunt; tunc saliet sicut cervus, claudus",
+        "pt": "Estas, com efeito, são palavras de Isaías, que diz: \"O próprio Deus virá e nos salvará. Então se abrirão os olhos dos cegos, e os ouvidos dos surdos se desimpedirão; então o coxo saltará como o cervo\".",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Et, quod his non minus est, subditur pauperes evangelizantur, pauperes scilicet spiritu vel opibus, intus illuminantur, ut inter divites et egenos in praedicatione nulla distantia sit. Hoc magistri comprobavit veritatem; quando omnis qui apud eum salvari potest, aequalis est",
+        "pt": "E, o que não é menos que isto, acrescenta-se: \"Os pobres são evangelizados\", isto é, os pobres de espírito ou de bens são iluminados interiormente, de modo que, entre ricos e necessitados, não haja distinção alguma na pregação. Isto comprovou a verdade do mestre; pois todo aquele que pode ser salvo junto a ele é igual.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Sed tamen parva adhuc ista dominicae testificationis exempla: plenitudo fidei crux domini, obitus, sepultura est; unde addidit et beatus est qui non fuerit scandalizatus in me. Crux enim etiam electis scandalum posset afferre; sed nullum hoc maius divinae personae est testimonium; nihil enim est quod magis esse ultra humana videatur, quam totum se obtulisse pro mundo",
+        "pt": "Mas, contudo, estes são ainda pequenos exemplos do testemunho do Senhor: a plenitude da fé é a cruz do Senhor, a morte, a sepultura; por isso acrescentou: \"E bem-aventurado aquele que não se escandalizar de mim\". Pois a cruz podia trazer escândalo até aos eleitos; mas não há testemunho maior da pessoa divina; nada há, com efeito, que pareça mais superar o humano do que ter-se oferecido inteiro pelo mundo.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Vel per hoc volebat ostendere quod quaecumque versabantur in cordibus eorum, ab oculis ipsius effugere nequiverunt; ipsi enim erant qui scandalizabantur de ipso",
+        "pt": "Ou por isso queria mostrar que tudo o que se passava em seus corações não pôde escapar-lhe aos olhos; pois eram eles mesmos que se escandalizavam dele.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Mystice autem in Ioanne supra diximus typum esse legis, quae praenuntia fuit Christi. Mittit ergo Ioannes discipulos suos ad Christum ut supplementum scientiae consequantur, quia plenitudo legis est Christus: et fortasse isti discipuli sunt duo populi, quorum unus ex Iudaeis credidit, alter ex gentibus, qui ideo credidit, quia audivit. Voluerunt ergo et isti videre: quia beati oculi qui vident. Cum autem venerint ad Evangelium, et cognoverint illuminari caecos, ambulare claudos, tunc dicent: oculis nostris perspeximus: videmur enim nobis vidisse quae legimus: aut fortasse in parte quadam corporis nostri, omnes videmur investigasse dominicae seriem passionis: fides enim per paucos ad plures pervenit. Lex ergo Christum venturum annuntiat, Evangelii Scriptura venisse confirmat",
+        "pt": "Misticamente, porém, dissemos acima que João é figura da lei, que foi a anunciadora de Cristo. João envia, pois, seus discípulos a Cristo para que alcancem o complemento da ciência, porque a plenitude da lei é Cristo; e talvez esses discípulos sejam os dois povos, dos quais um creu vindo dos judeus, outro dos gentios, que por isso creu, porque ouviu. Quiseram, pois, também estes ver: porque bem-aventurados os olhos que veem. Quando, porém, chegarem ao Evangelho e reconhecerem que os cegos são iluminados e os coxos andam, então dirão: vimos com nossos olhos; parece-nos, com efeito, ter visto o que lemos; ou talvez, em alguma parte de nosso corpo, todos parecemos ter investigado a série da paixão do Senhor: pois a fé passa por poucos a muitos. A lei anuncia, pois, que Cristo virá; a Escritura do Evangelho confirma que veio.",
+        "traducao": {
+          "de": "latim",
+          "por": "claude-sonnet (subagente)",
+          "em": "2026-10-29",
+          "revisado": false
+        }
+      }
+    ]
+  },
+  {
+    "lectio": 4,
+    "versos": [
+      24,
+      28
+    ],
+    "itens": [
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Coniecit dominus, tamquam hominum secreta cognoscens, aliquos dicturos: si usque hodie ignorat Ioannes Iesum, qualiter eum ostendebat nobis, dicens: ecce agnus Dei, ecce qui tollit peccata mundi? Ut igitur sanaret hanc passionem quae eis acciderat, damnum quod ex scandalo procedebat, exclusit; unde dicitur et cum discessissent nuntii Ioannis, coepit dicere de Ioanne ad turbas: quid existis in desertum videre? Arundinem vento agitatam? Quasi dicat: mirati estis de Ioanne Baptista, et pluries perrexistis ad eum, percurrentes tam longa deserti itinera: frustra siquidem, si sic levem ipsum existimatis, ut similis sit arundini declinanti quocumque agitat ventus. Talis enim esse videtur, si quae cognovit, ex levitate se ignorare fatetur"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Non autem existis in desertum, ubi nulla iucunditas, civitatibus omissis, nisi de hoc viro curam gerentes"
+      },
+      {
+        "autor": "Graecus",
+        "obra": "",
+        "latim": "Hoc autem post recessum discipulorum Ioannis dominus dixit: non enim praesentibus eis proferre volebat Baptistae praeconia, ne blandientis verba esse putarentur"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Non otiose autem Ioannis hic persona laudatur, qui vitae amore posthabito, iustitiae formam nec mortis terrore mutavit. Deserto enim mundus hic comparari videtur adhuc sterilis, adhuc incultus; in quem negat nobis dominus ita prodeundum ut mente carnis inflatos, vacuosque virtutis internae viros, et fragili se gloriae saecularis sublimitate iactantes, exemplari quodam et imagine nobis putemus imitandos, quos procellis huius mundi obnoxios vita mobilis inquietat, iure arundini comparandos"
+      },
+      {
+        "autor": "Graecus",
+        "obra": "",
+        "latim": "Est etiam infallibile testimonium vitae Ioannis vestitus cum carcere, in quem detrusus non fuisset, si scivisset favere principibus; unde sequitur sed quid existis videre? Hominem mollibus vestimentis indutum? Ecce qui in veste pretiosa sunt et in deliciis, in domibus regum sunt. Mollibus vestimentis indutus viventes in deliciis significat"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Mollis autem vestis dissolvit rigidam animam; et si rigidum corpus assumat et asperum, facile per huiusmodi mollitiem delicatum reddit et fragile. Facto vero corpore molliori, necesse est et animam participare laesionem; nam ut plurimum operationes ipsius consonant dispositionibus corporis"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Qualiter ergo tanta sedulitas religionis ut carnales passiones subiceret, ad tantam ignorantiam deveniret, nisi ex mentis levitate, quam non asperitates, sed illecebrae mundanae delectant? Igitur si velut non colentem deliciosa Ioannem imitamini, date ei robur continentiae competens si vero nihil amplius debetur honestae conversationi, quid, omissa reverentia delicatorum, incolam deserti, vileque tegumen et camelorum vellus miramini?"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Per utrumque autem dictorum designat, quod Ioannes nec naturaliter, nec facile mobilis erat, nec ulla voluptate flecteretur"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Et quamvis plerosque mollioris cura vestis effeminet, tamen alia videtur hic indumenta significare; humana scilicet corpora, quibus anima nostra vestitur. Sunt autem mollia indumenta deliciosi actus et mores; hi vero quibus fluida deliciis membra solvuntur, regni caelestis extorres sunt; quos rectores mundi huius atque tenebrarum ceperunt: hi sunt enim reges qui dominantur suorum operum aemulos"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Sed forte inconveniens est circa hoc excusare Ioannem; fatemini enim eum imitabilem esse; unde subdit sed quid existis videre? Prophetam? Utique dico vobis: et plusquam prophetam. Prophetae namque praedicabant venturum: hic autem non solum venturum praedicavit, sed et praesentem indicavit, dicens: ecce agnus Dei"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Maior sane propheta, in quo finis est prophetarum: quia multi cupierunt videre quem iste conspexit, quem iste baptizavit"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Cum igitur et a loco et a vestibus et ex concursu hominum morem eius descripserit, introducit prophetae testimonium, dicens hic est, de quo scriptum est, scilicet in Malachia: ecce mitto Angelum meum"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Angelum appellat hominem, non quia natura esset Angelus, homo enim naturaliter erat; sed quia opus Angeli exercebat, nuntiando Christi adventum"
+      },
+      {
+        "autor": "Graecus",
+        "obra": "",
+        "latim": "Quod autem subdit ante faciem tuam, propinquitatem designat: apparuit enim hominibus prope Christi adventum; quapropter et plusquam prophetam ipsum esse existimandum est; nam et hi qui in militiis collaterales sunt regibus, digniores et familiariores sunt"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Viam autem domino non solum nascendi secundum carnem ordine fideique nuntio, sed etiam praecursu quodam paravit passiones; unde sequitur qui praeparabit viam tuam ante te. Si autem et Christus propheta, quomodo maior hic omnibus? Sed inter mulieris, non virginis natos: maior enim iis fuit quibus aequalis poterat esse sorte nascendi; unde sequitur dico enim vobis: maior inter natos mulierum propheta Ioanne Baptista non est"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Sufficit quidem domini vox praebens testimonium praeeminentiae Ioannis inter homines; reperiet autem qui vult et rei veritatem consonam, si mensam eius consideraverit, si vitam, si mentis excellentiam: velut enim qui caelitus descendisset, degebat in terra, fere nullam gerens curam de corpore, intellectualiter erectus in caelum, et soli Deo coniunctus, de nullo mundanorum sollicitus; sermo severus et lenis: nam cum populo Iudaeorum viriliter et ferventer, cum rege audacter, cum propriis discipulis leniter conferebat: nil frustra vel leviter, omnia convenienter agebat"
+      },
+      {
+        "autor": "Isidorus",
+        "obra": "abbas",
+        "latim": "Maior etiam inter natos mulierum Ioannes eo quod ab ipso matris utero prophetavit, et positus in tenebris lumen quod iam venerat non ignoravit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Denique eo usque cum Dei filio non poterit Ioannis esse ulla collatio ut et infra Angelos aestimetur; unde sequitur qui autem minor est in regno Dei, maior est illo"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Haec sententia duobus modis potest intelligi: aut enim regnum Dei appellavit quod nondum accepimus, in quo sunt Angeli, et quilibet in eis minor, maior est quolibet iusto portante corpus, quod aggravat animam; aut si regnum Dei intelligi voluit huius temporis Ecclesiam, seipsum dominus significavit, qui nascendi tempore minor erat Ioanne, maior autem divinitatis auctoritate et potestate dominica: proinde secundum primam expositionem ita distinguitur: qui autem minor est in regno Dei, ac deinde subinfertur maior est illo; secundum posteriorem vero ita: qui autem minor est, ac deinde subinfertur in regno Dei maior est illo"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Ut enim copia laudum Ioannis occasionem Iudaeis non daret praeferendi Ioannem Christo, hoc subdidit. Ne autem putes quod comparative se dixerit maiorem Ioanne"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Alia enim est ista natura, nec humanis generationibus comparanda: non potest enim homini cum Deo ulla esse collatio"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Mystice autem, cum Ioannis praerogativam ostendit inter natos mulierum, ponit ex opposito aliquid maius eo, scilicet qui per spiritum sanctum natus est filius Dei: regnum enim donum Dei spiritus est. Quamvis ergo secundum operationem et sanctitatem, minores sumus his qui legis mysterium sunt assecuti, quos Ioannes significat: tamen maiora per Christum attingimus, participes facti divinae naturae"
+      }
+    ]
+  },
+  {
+    "lectio": 5,
+    "versos": [
+      29,
+      35
+    ],
+    "itens": [
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Praemissa commendatione Ioannis, magnum Pharisaeorum et legisperitorum prodidit crimen, qui nec post publicanos Baptisma Ioannis acceperunt; unde dicitur et omnis populus audiens et publicani iustificaverunt Deum, baptizati Baptismo Ioannis"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "in Lucam",
+        "latim": "Iustificatur Deus per Baptismum, dum se homines peccata propria confitendo iustificant: qui enim peccat, et confitetur Deo peccatum, iustificat Deum: cedens ei vincenti, ab eoque gratiam sperans. In Baptismate igitur iustificatur Deus, in quo est et confessio, et venia peccatorum"
+      },
+      {
+        "autor": "Eusebius",
+        "obra": "in Lucam",
+        "latim": "Quia etiam crediderunt, iustificaverunt Deum: apparuit enim eis iustus in omnibus quae fecit. Pharisaei autem repellendo Ioannem, tamquam inobedientes, non consonabant prophetae dicenti: ut iustificeris in sermonibus tuis; unde sequitur Pharisaei autem et legisperiti consilium Dei spreverunt in semetipsis, non baptizati ab eo"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Haec verba sive ex persona Evangelistae, sive ex persona salvatoris, ut quibusdam placet, dicta sunt. Quod autem dicit in semetipsis, vel contra semetipsos, significat quia qui gratiam Dei respuit, contra semetipsum facit. Vel ad semetipsos missum Dei consilium stulti et ingrati vituperantur noluisse recipere. Consilium ergo est Dei, quod per passionem et mortem Christi salvare decrevit: quod Pharisaei et legisperiti spreverunt"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Non condemnamus ergo, sicut Pharisaei, consilium Dei quod est in Ioannis Baptismate: hoc est consilium quod magni consilii Angelus reperit. Ioannis consilium nemo contemnit, Dei consilium quis refutet?"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Erat autem quidam modus ludendi talis consuetus apud filios Iudaeorum: bipartiebatur puerorum caterva, qui rerum praesentis vitae deridentes repentinam transmutationem, hi quidem canebant, hi vero moerebant; sed nec gaudentibus congaudebant moerentes, nec qui gaudebant confirmabant se flentibus; deinde arguebant se invicem improperantes incompassionis malitiam. Tale quid passam fuisse Iudaeorum plebem una cum principibus Christus innuebat; unde ex persona Christi subditur cui ergo similis dicam homines generationis huius, et cui similes sunt? Similes sunt pueris sedentibus in foro, et loquentibus ad invicem, et dicentibus: cantavimus vobis tibiis, et non saltastis; lamentavimus, et non plorastis"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Generatio Iudaeorum comparatur pueris, quia doctores olim prophetas habebant, de quibus dicitur ex ore infantium et lactentium perfecisti laudem"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Cantaverunt autem prophetae spiritualibus modulis publicae salutis oracula resultantes, fleverunt threnis flebilibus Iudaeorum dura corda mulcentes. Hoc canticum non in foro, non in plateis canebatur, sed in Ierusalem: ipsa est enim dominicum forum, in quo praeceptorum caelestium iura conduntur"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Canticum autem et lamentatio nil aliud est quam excessus, hoc quidem gaudii, illud vero moeroris. Resonat autem quaedam consona melodia ex organo musico, secundum quam dum homo pede et motu consono corporis commovetur, intrinsecam dispositionem manifestat; et ideo dicit lamentavimus, et non plorastis"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Haec autem pertinent ad Ioannem et Christum. Quod enim dicit lamentavimus, et non plorastis, ad Ioannem pertinet, cuius abstinentia a cibis et potu luctum poenitentiae significabat; unde exponendo subdit venit enim Ioannes Baptista neque manducans panem, neque bibens vinum; et dicitis: Daemonium habet"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Praesumunt criminari virum qualibet admiratione dignum: Daemonium habere dicunt mortificantem legem peccati, quae latet in membris"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Quod autem dixerat cantavimus tibiis, et non saltastis, ad ipsum dominum pertinet, qui utendo cum ceteris cibo et potu, laetitiam regni significabat; unde sequitur venit filius hominis manducans et bibens; et dicitis: ecce homo devorator et bibens vinum"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Noluit enim Christus abstinere ab huiusmodi cibis, ne occasionem daret haereticis, qui dicunt creaturas esse malas, et vituperant carnes et vinum"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Ubi autem potuerunt ostendere dominum voratorem? Invenitur enim Christus ubique reprimere immoderantiam, et ad modestiam ducere. Conversabatur autem cum publicanis et peccatoribus; unde contra eum dicebant amicus publicanorum et peccatorum; cum tamen nullatenus ipse posset in peccatum incidere, sed e contra fiebat eis causa salutis: non enim coinquinatur sol radians super totam terram, et frequenter superveniens immundis corporibus; nec sol iustitiae laedetur conversando cum pravis. Nemo autem conetur comparare propriam mensuram dignitatibus Christi: sed quilibet propriam fragilitatem considerans vitet consortia talium: prava namque colloquia mores corrumpunt bonos. Sequitur et iustificata est sapientia ab omnibus filiis suis"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Sapientia Dei filius est per naturam, non per profectum: quae iustificatur per Baptisma, in eo quod non per contumaciam refutatur, sed per iustitiam Dei munus agnoscitur. In eo ergo iustificatio Dei est, si non ad indignos et obnoxios, sed ad innocentes, per ablutionem sanctos et iustos, videatur sua munera transtulisse"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "",
+        "latim": "Filios autem sapientiae dicit sapientes: consuevit enim Scriptura malos magis ex peccato quam ex nomine indicare, bonos autem filios appellare informantis eos virtutis"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Bene autem dicit ab omnibus: quia circa omnes iustitia reservatur, ut susceptio fiat fidelium et eiectio perfidorum"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de quaest. Evang",
+        "latim": "Vel quod dicit iustificata est sapientia ab omnibus filiis suis, ostendit filios sapientiae intelligere, nec in abstinendo, nec in manducando esse iustitiam, sed in aequanimitate tolerandi inopiam: non enim usus, sed concupiscentia reprehendenda est, dummodo congruas in generibus alimentorum his cum quibus tibi vivendum est"
+      }
+    ]
+  },
+  {
+    "lectio": 6,
+    "versos": [
+      36,
+      50
+    ],
+    "itens": [
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Quia superius dictum fuerat: et omnis populus audiens et publicani iustificaverunt Deum, baptizati Baptismate Ioannis, idem Evangelista, quae verbis proposuerat, etiam factis astruit: iustificatam scilicet sapientiam a iustis et poenitentibus, dicens rogabat autem illum quidam Pharisaeus ut manducaret cum illo"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Haec conscriptio quemdam utilem intellectum sapit. Sunt enim plerique eorum qui se iustificant inflati suspicione vani sensus, priusquam veniat verum iudicium, separantes seipsos velut agnos ab hoedis, nec tecto, nec escis cum plerisque communicare volentes, abominantes omnes quicumque non extremum sed medium tenent callem in vita. Lucas ergo plus medicus animarum quam corporum, ostendit ipsum Deum et salvatorem nostrum piissime alios visitantem; unde sequitur et ingressus domum Pharisaei discubuit: non ut aliquid de vitiis eius sortiatur, sed ut impartiatur de iustitia propria"
+      },
+      {
+        "autor": "Cyrillus",
+        "obra": "",
+        "latim": "Mulier autem inhonestae vitae, promens autem fidelem affectum, venit ad Christum, quasi potentem veniam commissorum largiri; sequitur enim et ecce mulier quae erat in civitate peccatrix, ut cognovit quod Iesus accubuit in domo Pharisaei, attulit alabastrum unguenti"
+      },
+      {
+        "autor": "Beda",
+        "obra": "",
+        "latim": "Alabastrum est genus marmoris candidi variis coloribus intertincti, quod ad vasa unguentaria cavari solet, eo quod optime servare ea incorrupta dicatur"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Quia enim haec mulier turpitudinis suae maculas aspexit, lavanda ad fontem misericordiae cucurrit: convivantes non erubuit; nam quia semetipsam graviter erubescebat intus, nihil esse credidit quod verecundaretur foris. Discite quo dolore ardet quae flere inter epulas non erubescit"
+      },
+      {
+        "autor": "Gregorius Nyssenus",
+        "obra": "",
+        "latim": "Indignitatem autem suam ostendens stabat post tergum, deiectis luminibus et effusa coma, pedes amplectens, lacrymisque eos perfundens; rebus tristem animum ostendebat, veniam implorans; sequitur enim et stans retro secus pedes eius, lacrymis coepit rigare pedes eius"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Oculis enim terrena cupierat; sed hos iam per poenitentiam conterens flebat: capillos ad compositionem vultus exhibuerat; sed iam capillis lacrymas tergebat; unde sequitur et capillis capitis sui tergebat. Ore superba dixerat; sed pedes domini osculans, hoc in redemptoris sui vestigia figebat; unde sequitur et osculabatur pedes eius. Unguentum sibi pro odore suae carnis exhibuit; quod ergo sibi turpiter exhibuerat, hoc iam Deo laudabiliter offerebat; unde sequitur et unguento ungebat. Quot ergo in se habuit oblectamenta, tot de se invenit holocausta. Convertit ad virtutum numerum, numerum criminum; ut totum Deo serviret in poenitentia quicquid ex se Deum contempserat in culpa. Sic igitur meretrix effecta est honestior virginibus: postquam enim accensa est poenitentia, exarsit in Christi amorem. Et haec quidem quae dicta sunt agebantur exterius; quae vero revolvebat eius intentio, multo ferventiora his erant, quae solus Deus inspiciebat"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Haec autem Pharisaeus intuens despicit, et non solum venientem peccatricem mulierem, sed etiam suscipientem dominum reprehendit. Videns autem Pharisaeus qui vocaverat eum, ait intra se dicens: si hic esset propheta, sciret utique quae et qualis mulier est quae tangit eum. Ecce Pharisaeus veraciter apud se superbus, et fallaciter iustus, aegrum reprehendit de aegritudine, et medicum de subventione: quae profecto mulier, si ad Pharisaei pedes venisset, calcibus repulsa discederet. Inquinari enim se alieno peccato crederet, quia hunc vera sua iustitia non replebat. Sic et quidam sacerdotali officio praediti, si quid fortasse iuste exterius vel tenuiter egerint, protinus subiectos despiciunt, et peccatores quosque in plebe positos dedignantur. Necesse est autem ut cum peccatores quosque conspicimus, nosmetipsos prius in eorum calamitate defleamus, quia fortasse in similibus aut lapsi sumus aut labi possumus. Oportet autem ut sollicite discernamus quia districtionem debemus vitiis, compassionem naturae. Si enim feriendus est peccator, nutriendus est proximus; cum vero iam per poenitentiam percutit ipse quod fecit, iam noster proximus peccator non est, quia hic in se punit quod iustitia divina reprehendit. Inter duos ergo aegros medicus aderat: sed unus in febre sensum tenebat, alter sensum perdiderat mentis: illa quippe flebat quod fecerat, Pharisaeus autem de falsa iustitia elatus, vim suae valetudinis exaggerabat"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Dominus autem non verba eius audiens, sed cogitationes inspiciens, dominum se prophetarum ostendit; unde sequitur et respondens Iesus, dixit ad illum: Simon, habeo tibi aliquid dicere"
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Quod quidem dixit eius cogitationi respondens. Pharisaeus autem ex verbis domini attentior est factus; unde dicitur at ille ait: magister, dic"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "De duobus autem ei debitoribus paradigma opponitur, quorum unus minus, alius amplius debet; unde sequitur duo debitores erant cuidam feneratori: unus debebat denarios quingentos, et alius quinquaginta"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Quasi dicat: neque tu absque debito es: quid igitur si in paucioribus teneris? Non superbias, quia tu quoque venia eges; unde de venia subdit, dicens non habentibus autem illis unde redderent, donavit utrisque"
+      },
+      {
+        "autor": "Glossa",
+        "obra": "",
+        "latim": "Nullus enim potest per seipsum a debito peccati liberari, nisi divina gratia veniam consequatur"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Utrorumque autem debito dimisso, quis amplius largitorem debiti diligat, Pharisaeus interrogatur: sequitur enim quis ergo plus eum diligit? Quibus verbis protinus ille respondit aestimo quia is cui plus donavit. Qua in re notandum est, quod dum sua sententia Pharisaeus convincitur, quasi phreneticus funem portat ex quo ligetur; unde sequitur at ille dixit ei: recte iudicasti. Enumerantur autem ei bona peccatricis, enumerantur et mala falsi iusti; unde sequitur et conversus ad mulierem, dixit Simoni: vides hanc mulierem? Intravi in domum tuam; aquam pedibus meis non dedisti: haec autem lacrymis rigavit pedes meos"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Quasi dicat: facilis est usus aquarum, non est facilis lacrymarum effusio: tu promptis non es usus, haec effudit non prompta: lavans lacrymis pedes meos, lavit maculas proprias: tersit comis, ut per eas sibi assumat sacros sudores, et quibus venata est ad peccatum iuventutem, venata est sanctitatem"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Sicut autem ubi vehemens imber prorumpit, fit serenitas, sic lacrymis effusis apparet tranquillitas, et perit caligo reatuum; et sicut per aquam et spiritum, sic per lacrymas et confessionem denuo mundamur; unde sequitur propter quod dico tibi: remittuntur ei peccata multa, quoniam dilexit multum. Nam qui vehementer se ingesserunt malis, rursus et bonis vehementer insistent, conscii ad quot debita se obligaverunt"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Tanto ergo amplius peccati rubigo consumitur, quanto peccatoris cor magno caritatis igne concrematur"
+      },
+      {
+        "autor": "Titus",
+        "obra": "",
+        "latim": "Contingit autem saepius eum qui multum peccavit, per confessionem purgari; pauca vero peccantem, ex arrogantia non venire ad confessionis remedium; unde sequitur cui autem minus dimittitur, minus diligit"
+      },
+      {
+        "autor": "Chrysostomus",
+        "obra": "in Matthaeum",
+        "latim": "Opus est ergo nobis ferventi anima, quia nihil impedit hominem fieri magnum. Nullus ergo constitutorum in peccatis desperet, nemo virtuosus dormitet: nec hic confidat, saepe enim meretrix praecedet eum; nec ille diffidat, possibile namque est eum etiam primos superare; unde et hic subditur dixit autem ad illam: remittuntur tibi peccata tua"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "in Evang",
+        "latim": "Ecce quae ad medicum venerat aegra, sanata est; sed de salute eius adhuc alii aegrotant; sequitur enim et coeperunt qui simul accumbebant dicere intra se: quis est hic qui etiam peccata dimittit? Sed caelestis medicus aegros non respicit, quos etiam de medicamento fieri deteriores vidit; eam autem quam sanaverat, per pietatis suae sententiam confirmat; unde sequitur dixit autem ad mulierem: fides tua te salvam fecit: quia scilicet hoc quod petiit, posse se accipere non dubitavit"
+      },
+      {
+        "autor": "Theophylactus",
+        "obra": "",
+        "latim": "Postquam autem ei peccata dimisit, non sistit in remissione peccati, sed adicit operationem boni; unde subditur vade in pace, idest in iustitia: quia iustitia est pax hominis ad Deum, sicut peccatum est inimicitia inter Deum et hominem; quasi dicat: operare omnia quae ad pacem Dei te ducunt"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Hoc autem loco plerique pati videntur scrupulum quaestionis, utrum videantur Evangelistae discordasse de fide"
+      },
+      {
+        "autor": "Graecus",
+        "obra": "",
+        "latim": "Quia enim quatuor Evangelistae dicunt Christum unctum fuisse unguento a muliere, tres puto fuisse mulieres ex personarum qualitate, ex modo agendi, ex differentia temporum. Ioannes quidem narrat de Maria sorore Lazari, quoniam sex diebus ante Pascha unxit pedes Iesu in propria domo. At Matthaeus, postquam dominus dixerat: scitis quia post biduum fiet Pascha, subdit, quod in Bethania in domo Simonis leprosi mulier fudit unguentum super domini caput; non autem unxit pedes, ut Maria; Marcus etiam Matthaeo similiter. Lucas autem non circa tempus Paschae, sed in medio Evangelii hoc refert. Chrysostomus autem binas asserit has mulieres fuisse: unam quidem quae continetur in Ioanne, alteram vero cuius mentio fit a tribus"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Hanc ergo mulierem inducit Matthaeus supra caput Christi effundentem unguentum; et ideo noluit dicere peccatricem: nam peccatrix, secundum Lucam, supra Christi pedes effudit unguentum. Potest ergo non eadem esse, ne sibi contrarium Evangelistae dixisse videantur. Potest etiam quaestio meriti et temporis diversitate dissolvi, ut adhuc illa peccatrix sit, iam ista perfectior"
+      },
+      {
+        "autor": "Augustinus",
+        "obra": "de Cons. Evang",
+        "latim": "Eamdem enim Mariam bis hoc fecisse, arbitror intelligendum; semel scilicet quod Lucas narravit, cum primo accedens cum humilitate et lacrymis meruit remissionem peccatorum. Unde Ioannes, cum de Lazaro resuscitando coepisset loqui, antequam veniret in Bethaniam, dicit: Maria autem erat quae unxit dominum unguento, et tersit pedes eius capillis suis, cuius frater Lazarus infirmabatur. Iam itaque hoc Maria fecerat. Quod autem in Bethania rursum fecit, aliud est, quod ad Lucae narrationem non pertinet, sed pariter narratur ab aliis tribus"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Mystico autem intellectu, Pharisaeus de falsa iustitia praesumens, Iudaicum populum, peccatrix mulier, sed ad vestigia domini veniens et plorans, conversam gentilitatem designat"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "in Lucam",
+        "latim": "Vel princeps huius saeculi quidam leprosus est, domus autem Simonis leprosi terra est; ergo dominus ex illis superioribus locis descendit in terram; neque enim sanari potuisset haec mulier, quae speciem habet animae vel Ecclesiae, nisi Christus venisset in terram. Merito autem speciem accipit peccatricis, quia Christus quoque formam peccatoris accepit. Itaque si constituas animam fideliter appropinquantem Deo, non peccatis turpibus et obscoenis, sed pie servientem Dei verbo, habentem immaculatae fiduciam castitatis; ad ipsum Christi caput ascendit: caput autem Christi Deus est. Sed qui caput non tenet Christi, ille pedes teneat. Peccator ad pedes, iustus ad caput. Habet tamen etiam ea quae peccavit unguentum"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Quid aliud unguento nisi bonus odor opinionis exprimitur? Si igitur recta opera agimus, quibus opinione boni odoris Ecclesiam respergamus, quid in corpore domini nisi unguentum fundimus? Sed secus pedes mulier stetit: contra pedes enim domini stetimus, cum in peccatis positi, eius itineribus renitebamur; sed si ad veram poenitentiam post peccata convertimur, iam retro secus pedes stamus, quia eius vestigia sequimur quem impugnabamus"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Defer et tu post peccata poenitentiam; ubicumque audieris Christi nomen, accurre; in cuiuscumque interiorem domum Iesus intrasse cognoveris, et ipse festina: cum repereris sapientiam, cum repereris iustitiam in aliquibus penetralibus recumbentem, accurre ad pedes; hoc est, vel extremam partem quaere sapientiae, lacrymis confitere peccata. Et fortasse ideo non lavit pedes suos Christus, ut eos lacrymis nos lavemus. Bonae lacrymae, quae non solum nostrum possunt lavare delictum, sed etiam verbi caelestis rigare vestigium, ut gressus eius nobis exuberent. Bonae lacrymae, in quibus non solum redemptio peccatorum, sed etiam iustorum refectio est"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Lacrymis enim domini pedes rigamus, si quibuslibet ultimis membris domini compassionis affectu inclinemur. Capillis pedes domini tergimus, quando sanctis eius, quibus ex caritate compatimur, ex his quae nobis superfluunt, miseremur"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Expande etiam capillos, sterne ante eum omnes corporis tui dignitates; non mediocres capilli sunt qui possunt pedes tergere Christi"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Osculatur mulier pedes quos tersit: quod nos quoque plane agimus si studiose diligimus quos ex largitate continemus. Potest quoque per pedes ipsum mysterium incarnationis eius intelligi. Osculamur igitur redemptoris pedes, cum mysterium incarnationis eius ex toto corde diligimus. Unguento pedes ungimus, cum ipsam humilitatis eius potentiam sacri eloquii bona opinione praedicamus. Sed hoc etiam Pharisaeus vidit, et invidit; quia cum Iudaicus populus gentilitatem Deum praedicare conspicit, sua apud se malitia tabescit. Sic autem Pharisaeus retunditur ut per eum perfidus ille populus ostendatur: quia videlicet infidelis ille populus nec ea quae extra se erant, unquam pro domino tribuit; conversa autem gentilitas pro eo non solum rerum substantiam, sed etiam sanguinem fudit; unde Pharisaeo dicit aquam pedibus meis non dedisti; haec autem lacrymis rigavit pedes meos. Aqua quippe extra nos est, lacrymarum humor intra nos est. Infidelis etiam ille populus Deo osculum non dedit, quia ex caritate eum amare noluit cui ex timore servivit; osculum quippe dilectionis est signum: vocata autem gentilitas redemptoris sui vestigia osculari non cessat, quia in eius continuo amore suspirat"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Non mediocris autem haec meriti est, de qua dicitur ex quo intravi, non cessavit osculari pedes meos; ut aliud nisi sapientiam loqui nesciat, nisi iustitiam diligere, nisi castitatem habere, nisi pudicitiam osculari"
+      },
+      {
+        "autor": "Gregorius",
+        "obra": "",
+        "latim": "Pharisaeo autem dicitur oleo caput meum non unxisti: quia ipsam quoque divinitatis potentiam, in quam se Iudaicus populus credere spopondit, digna laude praedicare neglexit; haec autem unguento unxit pedes meos: quia dum incarnationis eius mysterium gentilitas credidit, summa laude eius etiam ima praedicavit"
+      },
+      {
+        "autor": "Ambrosius",
+        "obra": "",
+        "latim": "Beatus qui potest et oleo ungere pedes Christi; sed beatior qui ungit unguento: multorum enim florum in unum collecta spargit; et fortasse istud unguentum non posset alius nisi Ecclesia sola deferre, quae diversi spiraminis innumerabiles habet flores: et ideo nemo potest tantum diligere quantum illa quae in pluribus diligit. In domo autem Pharisaei, idest in domo legis et prophetae, non Pharisaeus, sed Ecclesia iustificatur: Pharisaeus enim non credidit, ista credebat; lex mysterium non habet, quo occulta mundantur; et ideo quod in lege minus est, consummatur in Evangelio. Duo autem debitores, duo populi sunt feneratori illi thesauri caelestis obnoxii. Non materialem autem feneratori huic debemus pecuniam, sed meritorum examinata, aera virtutum; quarum merita gravitatis pondere, iustitiae specie, sono confessionis expenduntur. Non mediocris autem est iste denarius, in quo regis imago formatur. Vae mihi, si non habuero quod accepi: aut quia difficile quisquam est qui feneratori huic debitum integrum possit exsolvere, vae mihi, si non petiero concedi mihi debitum. Sed quis est populus iste qui amplius debet, nisi nos, quibus amplius creditum est? Illis credita sunt eloquia Dei; nobis creditur virginis partus Emmanuel, idest nobiscum Deus, domini crux, mors, resurrectio. Itaque non est dubium quod plus debet qui plus accipit. Secundum homines plus fortasse offendit qui plus debuerit; sed per misericordiam domini causa mutatur, ut amplius diligat qui amplius debuit, si tamen gratiam consequatur. Et ideo, quoniam nihil est quod digne Deo referre possimus, vae mihi et si non dilexero. Reddamus ergo amorem pro debito; amplius enim diligit cui donatur amplius"
+      }
+    ]
+  }
+]

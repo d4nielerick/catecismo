@@ -1,0 +1,103 @@
+{
+  "data": "2026-12-01",
+  "evangelho": "Lc 10,21-24",
+  "leituras": "Is 11,1-10 | Sl 71(72),1-2.7-8.12-13.17 (R. cf 7) | Lc 10,21-24",
+  "catena": [
+    {
+      "ev": "Lc",
+      "cap": 10,
+      "lectio": 6,
+      "versos": [
+        21,
+        22
+      ]
+    },
+    {
+      "ev": "Lc",
+      "cap": 10,
+      "lectio": 7,
+      "versos": [
+        23,
+        24
+      ]
+    }
+  ],
+  "catecismo": [
+    {
+      "numero": 2603,
+      "comum": [
+        21,
+        22
+      ],
+      "direto": false,
+      "ref": "Lc 10,21-22",
+      "frase": "Na primeira, Jesus louva o Pai, reconhece-O e bendi-Lo por ter escondido os mistérios do Reino aos que se julgavam sábios e os ter revelado aos «pequeninos» (os pobres das bem-aventuranças).",
+      "texto": "Os evangelistas retiveram duas orações mais explícitas de Cristo durante o seu ministério. E ambas começam por uma ação de graças. Na primeira, Jesus louva o Pai, reconhece-O e bendi-Lo por ter escondido os mistérios do Reino aos que se julgavam sábios e os ter revelado aos «pequeninos» (os pobres das bem-aventuranças). O seu estremecimento – «Sim Pai!» – revela o íntimo do seu coração, a sua adesão ao «beneplácito» do Pai, como um eco do «Fiat» da sua Mãe aquando da sua concepção e como prelúdio do que Ele próprio dirá ao Pai na sua agonia. Toda a oração de Jesus está nesta adesão amorosa do seu coração de homem ao «mistério da vontade» do Pai.",
+      "local": "A oração na vida cristã › A revelação da oração"
+    },
+    {
+      "numero": 1083,
+      "comum": [
+        21
+      ],
+      "direto": false,
+      "ref": "Lc 10,21",
+      "frase": "Por um lado, a Igreja, unida ao seu Senhor e «sob a ação do Espírito Santo», bendiz o Pai «pelo seu Dom inefável» (2 Cor 9, 15), mediante a adoração, o louvor e a ação de graças.",
+      "texto": "Compreende-se então a dupla dimensão da liturgia cristã, como resposta de fé e de amor às «bênçãos espirituais» com que o Pai nos gratifica. Por um lado, a Igreja, unida ao seu Senhor e «sob a ação do Espírito Santo», bendiz o Pai «pelo seu Dom inefável» (2 Cor 9, 15), mediante a adoração, o louvor e a ação de graças. Por outro lado, e até à consumação do desígnio de Deus, a Igreja não cessa de oferecer ao Pai «a oblação dos seus próprios dons» e de Lhe implorar que envie o Espírito Santo sobre esta oblação, sobre si própria, sobre os fiéis e sobre o mundo inteiro, a fim de que, pela comunhão na morte e ressurreição de Cristo-Sacerdote e pelo poder do Espírito, estas bênçãos divinas produzam frutos de vida, «para que seja enaltecida a glória da sua graça» (Ef 1, 6).",
+      "local": "O mistério pascal no tempo da igreja › Artigo 1: a liturgia – obra da santíssima trindade"
+    }
+  ],
+  "outrasLeituras": [
+    {
+      "rotulo": "1ª Leitura",
+      "referencia": "Is 11,1-10",
+      "catecismo": [
+        {
+          "numero": 672,
+          "comum": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "direto": false,
+          "ref": "Is 11,1-9",
+          "frase": "Cristo afirmou, antes da sua ascensão, que ainda não era a hora do estabelecimento glorioso do Reino messiânico esperado por Israel, o qual devia trazer a todos os homens, segundo os profetas, a ordem definitiva da justiça, do amor e da paz.",
+          "texto": "Cristo afirmou, antes da sua ascensão, que ainda não era a hora do estabelecimento glorioso do Reino messiânico esperado por Israel, o qual devia trazer a todos os homens, segundo os profetas, a ordem definitiva da justiça, do amor e da paz. O tempo presente é, segundo o Senhor, o tempo do Espírito e do testemunho mas é também um tempo ainda marcado pela «desolação» e pela provação do mal, que não poupa a Igreja e inaugura os combates dos últimos dias. É um tempo de espera e de vigília.",
+          "local": "Creio em jesus cristo, filho único de deus › «de onde há-de vir a julgar os vivos e os mortos»"
+        },
+        {
+          "numero": 1831,
+          "comum": [
+            1,
+            2
+          ],
+          "direto": false,
+          "ref": "Is 11,1-2",
+          "frase": "Pertencem em plenitude a Cristo, filho de David.",
+          "texto": "Os sete dons do Espírito Santo são: sabedoria, entendimento, conselho, fortaleza, ciência, piedade e temor de Deus. Pertencem em plenitude a Cristo, filho de David. Completam e levam à perfeição as virtudes de quem os recebe. Tornam os fiéis dóceis, na obediência pronta, às inspirações divinas. «Que o vosso espírito de bondade me conduza pelo caminho reto» (Sl 143, 10). «Todos aqueles que são conduzidos pelo Espírito de Deus são filhos de Deus [...]; se somos filhos, também somos herdeiros: herdeiros de Deus, co-herdeiros de Cristo» (Rm 8, 14.17).",
+          "local": "A dignidade da pessoa humana › Artigo 7: as virtudes"
+        },
+        {
+          "numero": 436,
+          "comum": [
+            2
+          ],
+          "direto": false,
+          "ref": "Is 11,2",
+          "frase": "O Messias devia ser ungido pelo Espírito do Senhor, ao mesmo tempo como rei e sacerdote mas também como profeta.",
+          "texto": "Cristo vem da tradução grega do termo hebraico «Messias», que quer dizer «ungido». Só se torna nome próprio de Jesus porque Ele cumpre perfeitamente a missão divina que tal nome significa. Com efeito, em Israel eram ungidos, em nome de Deus, aqueles que Lhe eram consagrados para uma missão d'Ele dimanada. Era o caso dos reis, dos sacerdotes e, em raros casos, dos profetas. Este devia ser, por excelência, o caso do Messias, que Deus enviaria para estabelecer definitivamente o seu Reino. O Messias devia ser ungido pelo Espírito do Senhor, ao mesmo tempo como rei e sacerdote mas também como profeta. Jesus realizou a expectativa messiânica de Israel na sua tríplice função de sacerdote, profeta e rei.",
+          "local": "Creio em jesus cristo, filho único de deus › «e em jesus cristo, seu único filho, nosso senhor»"
+        }
+      ]
+    }
+  ],
+  "padres": [],
+  "tema": "",
+  "destaques": []
+}
