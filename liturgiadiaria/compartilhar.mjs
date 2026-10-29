@@ -624,9 +624,9 @@ const CARDS = '/assets/img/cards';
 const diaDoAno = dt => Math.round(Date.parse(`${dt}T00:00:00Z`) / 86400000);
 
 /** Pinturas oferecidas para o dia: a escolhida para a leitura (se houver), até 6 das que batem o
- *  tempo litúrgico (+2) e a cor (+1) e, sempre, até 4 neutras (as que valem em qualquer dia).
+ *  tempo litúrgico (+2) e a cor (+1) e, sempre, até 10 neutras (as que valem em qualquer dia).
  *  Cada grupo gira com a data, para o card não abrir sempre com a mesma pintura. */
-export function escolherFotos(catalogo, { tempo, cor, dt, preferida }, maxDoDia = 6, maxNeutras = 4) {
+export function escolherFotos(catalogo, { tempo, cor, dt, preferida }, maxDoDia = 6, maxNeutras = 10) {
   const lista = catalogo?.imagens || [];
   const girar = arr => { const k = arr.length ? diaDoAno(dt) % arr.length : 0; return [...arr.slice(k), ...arr.slice(0, k)]; };
   const nota = im => (im.tempos.includes(tempo) ? 2 : 0) + (im.cores.includes(cor) ? 1 : 0);

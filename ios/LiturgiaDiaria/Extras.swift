@@ -38,7 +38,7 @@ struct CatalogoCards: Decodable {
 
     /// escolherFotos (compartilhar.mjs): a preferida, até 6 que batem o tempo (+2) e a cor (+1) e até
     /// 4 neutras; cada grupo gira com a data, para o card não abrir sempre com a mesma pintura.
-    func escolher(tempo: String, cor: String, dt: String, preferida: String?, maxDoDia: Int = 6, maxNeutras: Int = 4) -> [Pintura] {
+    func escolher(tempo: String, cor: String, dt: String, preferida: String?, maxDoDia: Int = 6, maxNeutras: Int = 10) -> [Pintura] {
         let diaDoAno = Int(((Datas.data(dt)?.timeIntervalSince1970 ?? 0) / 86400).rounded())
         func girar(_ a: [Pintura]) -> [Pintura] {
             guard !a.isEmpty else { return a }

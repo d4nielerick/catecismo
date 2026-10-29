@@ -212,8 +212,26 @@
       "cores": []
     },
     {
+      "id": "neutra-figos-a",
+      "titulo": "Mesa com figos, uvas e pão junto à janela",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "neutra-arco-a",
       "titulo": "Arco de pedra com glicínia",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-girassois-a",
+      "titulo": "Girassóis e caminho sob o céu de nuvens",
       "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
@@ -229,8 +247,26 @@
       "cores": []
     },
     {
+      "id": "neutra-campanario-a",
+      "titulo": "Campanário entre oliveiras ao amanhecer",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "neutra-estrada-a",
       "titulo": "Estrada entre oliveiras",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-lavanda-a",
+      "titulo": "Campo de lavanda e árvore solitária",
       "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
@@ -246,8 +282,26 @@
       "cores": []
     },
     {
+      "id": "neutra-bosque-a",
+      "titulo": "Bosque de outono com folhas douradas",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "neutra-jarra-a",
       "titulo": "Jarra e taça à janela",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-farol-a",
+      "titulo": "Farol nas rochas ao entardecer",
       "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
@@ -263,8 +317,26 @@
       "cores": []
     },
     {
+      "id": "neutra-poco-a",
+      "titulo": "Poço no pátio com buganvílias",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "neutra-lago-a",
       "titulo": "Lago entre montanhas",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-amendoeiras-a",
+      "titulo": "Amendoeiras em flor",
       "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
@@ -432,6 +504,15 @@
       "cores": []
     },
     {
+      "id": "neutra-prado-a",
+      "titulo": "Prado florido e montanhas nevadas",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "neutra-papoulas-a",
       "titulo": "Trigal com papoulas",
       "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
@@ -441,8 +522,26 @@
       "cores": []
     },
     {
+      "id": "neutra-vinhedo-a",
+      "titulo": "Vinhedo e casa de pedra ao entardecer",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "claustro",
       "titulo": "Claustro",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-figos-b",
+      "titulo": "Mesa com figos, uvas e pão junto à janela",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
       ],
@@ -549,8 +648,26 @@
       "cores": []
     },
     {
+      "id": "neutra-girassois-b",
+      "titulo": "Girassóis e caminho sob o céu de nuvens",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "mar-aurora",
       "titulo": "Mar na aurora",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-campanario-b",
+      "titulo": "Campanário entre oliveiras ao amanhecer",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
       ],
@@ -566,8 +683,26 @@
       "cores": []
     },
     {
+      "id": "neutra-lavanda-b",
+      "titulo": "Campo de lavanda e árvore solitária",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "biblia-rosario",
       "titulo": "Bíblia e terço",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-bosque-b",
+      "titulo": "Bosque de outono com folhas douradas",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
       ],
@@ -583,8 +718,26 @@
       "cores": []
     },
     {
+      "id": "neutra-farol-b",
+      "titulo": "Farol nas rochas ao entardecer",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "janela-trigo",
       "titulo": "Janela aberta sobre o trigal",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-poco-b",
+      "titulo": "Poço no pátio com buganvílias",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
       ],
@@ -600,6 +753,15 @@
       "cores": []
     },
     {
+      "id": "neutra-amendoeiras-b",
+      "titulo": "Amendoeiras em flor",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "caminho-ciprestes",
       "titulo": "Caminho entre ciprestes",
       "tempos": [
@@ -608,8 +770,26 @@
       "cores": []
     },
     {
+      "id": "neutra-prado-b",
+      "titulo": "Prado florido e montanhas nevadas",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
       "id": "neutra-lago-b",
       "titulo": "Lago ao amanhecer",
+      "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
+      "tempos": [
+        "todos"
+      ],
+      "cores": []
+    },
+    {
+      "id": "neutra-vinhedo-b",
+      "titulo": "Vinhedo e casa de pedra ao entardecer",
       "recriacao": "pintura gerada por IA no estilo óleo com impasto (paisagem neutra, sem figuras)",
       "tempos": [
         "todos"
