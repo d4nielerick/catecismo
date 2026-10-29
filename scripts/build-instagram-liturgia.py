@@ -100,4 +100,5 @@ def main():
         feitos += 1
     print(f'instagram: {feitos} cards em liturgiadiaria/instagram/' + (f' · sem trecho/dados: {", ".join(faltam)}' if faltam else ''))
 
-main()
+if __name__ == '__main__':
+    main()
