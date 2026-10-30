@@ -1,0 +1,92 @@
+{
+  "referencia": "Mt 9,27-31",
+  "voz": "leo (Grok TTS)",
+  "duracao": 40.72,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.56,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
+    },
+    {
+      "t0": 3.8,
+      "t1": 4.9,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 5.26,
+      "t1": 8.96,
+      "texto": "partindo Jesus, dois cegos o seguiram, gritando:"
+    },
+    {
+      "t0": 9.18,
+      "t1": 11.46,
+      "texto": "\"Tem piedade de nós, filho de Davi!\""
+    },
+    {
+      "t0": 11.72,
+      "t1": 13.48,
+      "texto": "Quando Jesus entrou em casa,"
+    },
+    {
+      "t0": 13.76,
+      "t1": 15.3,
+      "texto": "os cegos se aproximaram dele."
+    },
+    {
+      "t0": 15.58,
+      "t1": 17.74,
+      "texto": "Então Jesus perguntou-lhes:"
+    },
+    {
+      "t0": 17.74,
+      "t1": 19.96,
+      "texto": "\"Vós acreditais que eu posso fazer isso?\""
+    },
+    {
+      "t0": 20.28,
+      "t1": 22.38,
+      "texto": "Eles responderam: \"Sim, Senhor\"."
+    },
+    {
+      "t0": 22.7,
+      "t1": 25.32,
+      "texto": "Então Jesus tocou nos olhos deles, dizendo:"
+    },
+    {
+      "t0": 25.32,
+      "t1": 27.48,
+      "texto": "\"Faça-se conforme a vossa fé\"."
+    },
+    {
+      "t0": 27.48,
+      "t1": 29.52,
+      "texto": "E os olhos deles se abriram."
+    },
+    {
+      "t0": 29.8,
+      "t1": 31.92,
+      "texto": "Jesus os advertiu severamente:"
+    },
+    {
+      "t0": 32.16,
+      "t1": 34.88,
+      "texto": "\"Tomai cuidado para que ninguém fique sabendo\"."
+    },
+    {
+      "t0": 35.12,
+      "t1": 36.26,
+      "texto": "Mas eles saíram,"
+    },
+    {
+      "t0": 36.26,
+      "t1": 39.04,
+      "texto": "e espalharam sua fama por toda aquela região."
+    },
+    {
+      "t0": 39.42,
+      "t1": 40.72,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

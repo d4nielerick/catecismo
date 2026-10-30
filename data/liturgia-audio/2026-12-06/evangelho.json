@@ -1,0 +1,127 @@
+{
+  "referencia": "Mc 1,1-8",
+  "voz": "leo (Grok TTS)",
+  "duracao": 55.12,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.42,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Marcos."
+    },
+    {
+      "t0": 3.42,
+      "t1": 6.8,
+      "texto": "Início do Evangelho de Jesus Cristo, Filho de Deus."
+    },
+    {
+      "t0": 7.04,
+      "t1": 9.54,
+      "texto": "Está escrito no livro do profeta Isaías:"
+    },
+    {
+      "t0": 9.76,
+      "t1": 12.34,
+      "texto": "\"Eis que envio meu mensageiro à tua frente,"
+    },
+    {
+      "t0": 12.56,
+      "t1": 14.02,
+      "texto": "para preparar o teu caminho."
+    },
+    {
+      "t0": 14.3,
+      "t1": 16.88,
+      "texto": "Esta é a voz daquele que grita no deserto:"
+    },
+    {
+      "t0": 17.04,
+      "t1": 18.68,
+      "texto": "'Preparai o caminho do Senhor,"
+    },
+    {
+      "t0": 19.1,
+      "t1": 20.36,
+      "texto": "endireitai suas estradas!'\""
+    },
+    {
+      "t0": 20.68,
+      "t1": 23.48,
+      "texto": "Foi assim que João Batista apareceu no deserto,"
+    },
+    {
+      "t0": 23.7,
+      "t1": 25.44,
+      "texto": "pregando um batismo de conversão"
+    },
+    {
+      "t0": 25.44,
+      "t1": 26.8,
+      "texto": "para o perdão dos pecados."
+    },
+    {
+      "t0": 26.8,
+      "t1": 30.62,
+      "texto": "Toda a região da Judeia e todos os moradores de Jerusalém"
+    },
+    {
+      "t0": 30.62,
+      "t1": 32.04,
+      "texto": "iam ao seu encontro."
+    },
+    {
+      "t0": 32.54,
+      "t1": 33.92,
+      "texto": "Confessavam os seus pecados"
+    },
+    {
+      "t0": 33.92,
+      "t1": 35.98,
+      "texto": "e João os batizava no rio Jordão."
+    },
+    {
+      "t0": 36.32,
+      "t1": 38.72,
+      "texto": "João se vestia com uma pele de camelo"
+    },
+    {
+      "t0": 38.72,
+      "t1": 40.8,
+      "texto": "e comia gafanhotos e mel do campo."
+    },
+    {
+      "t0": 41.02,
+      "t1": 42.3,
+      "texto": "E pregava, dizendo:"
+    },
+    {
+      "t0": 42.56,
+      "t1": 45.28,
+      "texto": "\"Depois de mim virá alguém mais forte do que eu."
+    },
+    {
+      "t0": 45.44,
+      "t1": 47.4,
+      "texto": "Eu nem sou digno de me abaixar"
+    },
+    {
+      "t0": 47.4,
+      "t1": 49.04,
+      "texto": "para desamarrar suas sandálias."
+    },
+    {
+      "t0": 49.28,
+      "t1": 50.82,
+      "texto": "Eu vos batizei com água,"
+    },
+    {
+      "t0": 51.04,
+      "t1": 53.56,
+      "texto": "mas ele vos batizará com o Espírito Santo\"."
+    },
+    {
+      "t0": 53.94,
+      "t1": 55.12,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

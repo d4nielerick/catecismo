@@ -1,0 +1,217 @@
+{
+  "referencia": "2Sm 7,1-5.8b-12.14a.16",
+  "voz": "leo (Grok TTS)",
+  "duracao": 95.6,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 2.06,
+      "texto": "Leitura do Segundo Livro de Samuel."
+    },
+    {
+      "t0": 2.06,
+      "t1": 5.58,
+      "texto": "Tendo-se o rei Davi instalado já em sua casa"
+    },
+    {
+      "t0": 5.74,
+      "t1": 7.7,
+      "texto": "e tendo-lhe o Senhor dado a paz,"
+    },
+    {
+      "t0": 7.7,
+      "t1": 10.06,
+      "texto": "livrando-o de todos os seus inimigos,"
+    },
+    {
+      "t0": 10.3,
+      "t1": 12.14,
+      "texto": "ele disse ao profeta Natã:"
+    },
+    {
+      "t0": 12.14,
+      "t1": 15.02,
+      "texto": "\"Vê: eu resido num palácio de cedro,"
+    },
+    {
+      "t0": 15.16,
+      "t1": 17.88,
+      "texto": "e a arca de Deus está alojada numa tenda!\""
+    },
+    {
+      "t0": 17.88,
+      "t1": 19.7,
+      "texto": "Natã respondeu ao rei:"
+    },
+    {
+      "t0": 20.12,
+      "t1": 22.22,
+      "texto": "\"Vai e faze tudo o que diz o teu coração,"
+    },
+    {
+      "t0": 22.62,
+      "t1": 24.18,
+      "texto": "pois o Senhor está contigo\"."
+    },
+    {
+      "t0": 24.44,
+      "t1": 26.14,
+      "texto": "Mas, naquela mesma noite,"
+    },
+    {
+      "t0": 26.36,
+      "t1": 29.68,
+      "texto": "a palavra do Senhor foi dirigida a Natã nestes termos:"
+    },
+    {
+      "t0": 30.13,
+      "t1": 31.78,
+      "texto": "\"Vai dizer ao meu servo Davi:"
+    },
+    {
+      "t0": 32.18,
+      "t1": 33.18,
+      "texto": "Assim fala o Senhor:"
+    },
+    {
+      "t0": 33.68,
+      "t1": 36.08,
+      "texto": "'Porventura és tu que me construirás uma casa"
+    },
+    {
+      "t0": 36.08,
+      "t1": 36.9,
+      "texto": "para eu habitar?"
+    },
+    {
+      "t0": 37.28,
+      "t1": 40.64,
+      "texto": "Fui eu que te tirei do pastoreio, do meio das ovelhas,"
+    },
+    {
+      "t0": 40.86,
+      "t1": 43.36,
+      "texto": "para que fosses o chefe do meu povo, Israel."
+    },
+    {
+      "t0": 43.8,
+      "t1": 46.6,
+      "texto": "Estive contigo em toda a parte por onde andaste,"
+    },
+    {
+      "t0": 46.76,
+      "t1": 49.74,
+      "texto": "e exterminei diante de ti todos os teus inimigos,"
+    },
+    {
+      "t0": 50.02,
+      "t1": 51.8,
+      "texto": "fazendo o teu nome tão célebre"
+    },
+    {
+      "t0": 51.8,
+      "t1": 53.9,
+      "texto": "como o dos homens mais famosos da terra."
+    },
+    {
+      "t0": 54.24,
+      "t1": 56.92,
+      "texto": "Vou preparar um lugar para o meu povo, Israel:"
+    },
+    {
+      "t0": 56.92,
+      "t1": 60.12,
+      "texto": "eu o implantarei, de modo que possa morar lá"
+    },
+    {
+      "t0": 60.12,
+      "t1": 61.66,
+      "texto": "sem jamais ser inquietado."
+    },
+    {
+      "t0": 61.82,
+      "t1": 64.54,
+      "texto": "Os homens violentos não tornarão a oprimi-lo"
+    },
+    {
+      "t0": 64.54,
+      "t1": 65.34,
+      "texto": "como outrora,"
+    },
+    {
+      "t0": 65.5,
+      "t1": 67.56,
+      "texto": "no tempo em que eu estabelecia juízes"
+    },
+    {
+      "t0": 67.56,
+      "t1": 68.98,
+      "texto": "sobre o meu povo, Israel."
+    },
+    {
+      "t0": 68.98,
+      "t1": 71.2,
+      "texto": "Concedo-te uma vida tranquila,"
+    },
+    {
+      "t0": 71.2,
+      "t1": 73.56,
+      "texto": "livrando-te de todos os teus inimigos."
+    },
+    {
+      "t0": 73.76,
+      "t1": 76.26,
+      "texto": "E o Senhor te anuncia que te fará uma casa."
+    },
+    {
+      "t0": 76.54,
+      "t1": 78.26,
+      "texto": "Quando chegar o fim dos teus dias"
+    },
+    {
+      "t0": 78.26,
+      "t1": 79.8,
+      "texto": "e repousares com teus pais,"
+    },
+    {
+      "t0": 80.06,
+      "t1": 83.04,
+      "texto": "então, suscitarei, depois de ti, um filho teu,"
+    },
+    {
+      "t0": 83.16,
+      "t1": 84.96,
+      "texto": "e confirmarei a sua realeza."
+    },
+    {
+      "t0": 85.22,
+      "t1": 86.68,
+      "texto": "Eu serei para ele um pai"
+    },
+    {
+      "t0": 86.72,
+      "t1": 88.22,
+      "texto": "e ele será para mim um filho."
+    },
+    {
+      "t0": 88.56,
+      "t1": 89.9,
+      "texto": "Tua casa e teu reino"
+    },
+    {
+      "t0": 89.9,
+      "t1": 92.08,
+      "texto": "serão estáveis para sempre diante de mim,"
+    },
+    {
+      "t0": 92.08,
+      "t1": 94.62,
+      "texto": "e teu trono será firme para sempre' \"."
+    },
+    {
+      "t0": 94.62,
+      "t1": 95.6,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

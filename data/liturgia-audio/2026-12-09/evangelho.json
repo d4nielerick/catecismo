@@ -1,0 +1,57 @@
+{
+  "referencia": "Mt 11,28-30",
+  "voz": "leo (Grok TTS)",
+  "duracao": 26.26,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.52,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
+    },
+    {
+      "t0": 3.74,
+      "t1": 6.6,
+      "texto": "Naquele tempo, tomou Jesus a palavra e disse:"
+    },
+    {
+      "t0": 6.92,
+      "t1": 9.68,
+      "texto": "\"Vinde a mim todos vós que estais cansados"
+    },
+    {
+      "t0": 9.68,
+      "t1": 12.22,
+      "texto": "e fatigados sob o peso dos vossos fardos,"
+    },
+    {
+      "t0": 12.34,
+      "t1": 13.96,
+      "texto": "e eu vos darei descanso."
+    },
+    {
+      "t0": 14.34,
+      "t1": 17.1,
+      "texto": "Tomai sobre vós o meu jugo e aprendei de mim,"
+    },
+    {
+      "t0": 17.34,
+      "t1": 19.44,
+      "texto": "porque sou manso e humilde de coração,"
+    },
+    {
+      "t0": 19.7,
+      "t1": 21.56,
+      "texto": "e vós encontrareis descanso."
+    },
+    {
+      "t0": 21.76,
+      "t1": 24.64,
+      "texto": "Pois o meu jugo é suave e o meu fardo é leve\"."
+    },
+    {
+      "t0": 24.96,
+      "t1": 26.26,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

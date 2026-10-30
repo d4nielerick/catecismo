@@ -1,0 +1,112 @@
+{
+  "referencia": "Mt 4,18-22",
+  "voz": "leo (Grok TTS)",
+  "duracao": 42.6,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.46,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
+    },
+    {
+      "t0": 3.46,
+      "t1": 4.76,
+      "texto": "Naquele tempo,"
+    },
+    {
+      "t0": 4.94,
+      "t1": 7.56,
+      "texto": "quando Jesus andava à beira do mar da Galileia,"
+    },
+    {
+      "t0": 7.92,
+      "t1": 8.96,
+      "texto": "viu dois irmãos:"
+    },
+    {
+      "t0": 9.24,
+      "t1": 11.98,
+      "texto": "Simão, chamado Pedro, e seu irmão André."
+    },
+    {
+      "t0": 12.26,
+      "t1": 14.18,
+      "texto": "Estavam lançando a rede ao mar,"
+    },
+    {
+      "t0": 14.42,
+      "t1": 15.56,
+      "texto": "pois eram pescadores."
+    },
+    {
+      "t0": 15.88,
+      "t1": 17.26,
+      "texto": "Jesus disse a eles:"
+    },
+    {
+      "t0": 17.26,
+      "t1": 18.34,
+      "texto": "\"Segui-me,"
+    },
+    {
+      "t0": 18.34,
+      "t1": 20.7,
+      "texto": "e eu farei de vós pescadores de homens\"."
+    },
+    {
+      "t0": 20.94,
+      "t1": 23.4,
+      "texto": "Eles, imediatamente deixaram as redes"
+    },
+    {
+      "t0": 23.4,
+      "t1": 24.16,
+      "texto": "e o seguiram."
+    },
+    {
+      "t0": 24.6,
+      "t1": 25.98,
+      "texto": "Caminhando um pouco mais,"
+    },
+    {
+      "t0": 26.24,
+      "t1": 28.2,
+      "texto": "Jesus viu outros dois irmãos:"
+    },
+    {
+      "t0": 28.2,
+      "t1": 31.3,
+      "texto": "Tiago, filho de Zebedeu, e seu irmão João."
+    },
+    {
+      "t0": 31.66,
+      "t1": 33.94,
+      "texto": "Estavam na barca com seu pai Zebedeu"
+    },
+    {
+      "t0": 34.06,
+      "t1": 35.04,
+      "texto": "consertando as redes."
+    },
+    {
+      "t0": 35.42,
+      "t1": 36.58,
+      "texto": "Jesus os chamou."
+    },
+    {
+      "t0": 36.86,
+      "t1": 39.78,
+      "texto": "Eles, imediatamente deixaram a barca e o pai,"
+    },
+    {
+      "t0": 40.14,
+      "t1": 40.9,
+      "texto": "e o seguiram."
+    },
+    {
+      "t0": 41.34,
+      "t1": 42.6,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}

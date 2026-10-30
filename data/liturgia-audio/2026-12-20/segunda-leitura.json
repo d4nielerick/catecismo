@@ -1,0 +1,92 @@
+{
+  "referencia": "Rm 16,25-27",
+  "voz": "leo (Grok TTS)",
+  "duracao": 36.8,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 2.6,
+      "texto": "Leitura da Carta de São Paulo aos Romanos."
+    },
+    {
+      "t0": 2.6,
+      "t1": 3.6,
+      "texto": "Irmãos:"
+    },
+    {
+      "t0": 3.9,
+      "t1": 5,
+      "texto": "Glória seja dada"
+    },
+    {
+      "t0": 5,
+      "t1": 7.12,
+      "texto": "àquele que tem o poder de vos confirmar"
+    },
+    {
+      "t0": 7.12,
+      "t1": 8.86,
+      "texto": "na fidelidade ao meu evangelho"
+    },
+    {
+      "t0": 8.86,
+      "t1": 10.84,
+      "texto": "e à pregação de Jesus Cristo,"
+    },
+    {
+      "t0": 11.1,
+      "t1": 13.2,
+      "texto": "de acordo com a revelação do mistério"
+    },
+    {
+      "t0": 13.2,
+      "t1": 15.12,
+      "texto": "mantido em sigilo desde sempre."
+    },
+    {
+      "t0": 15.54,
+      "t1": 17.82,
+      "texto": "Agora este mistério foi manifestado"
+    },
+    {
+      "t0": 17.82,
+      "t1": 20.24,
+      "texto": "e, mediante as Escrituras proféticas,"
+    },
+    {
+      "t0": 20.5,
+      "t1": 22.72,
+      "texto": "conforme determinação do Deus eterno,"
+    },
+    {
+      "t0": 22.88,
+      "t1": 25.58,
+      "texto": "foi levado ao conhecimento de todas as nações,"
+    },
+    {
+      "t0": 25.82,
+      "t1": 27.9,
+      "texto": "para trazê-las à obediência da fé."
+    },
+    {
+      "t0": 28.18,
+      "t1": 30.84,
+      "texto": "A ele, o único Deus, o sábio,"
+    },
+    {
+      "t0": 31,
+      "t1": 32.48,
+      "texto": "por meio de Jesus Cristo,"
+    },
+    {
+      "t0": 32.78,
+      "t1": 35.54,
+      "texto": "a glória, pelos séculos dos séculos. Amém!"
+    },
+    {
+      "t0": 35.88,
+      "t1": 36.8,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

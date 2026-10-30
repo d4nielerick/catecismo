@@ -1,0 +1,77 @@
+{
+  "referencia": "Gl 4,4-7",
+  "voz": "leo (Grok TTS)",
+  "duracao": 33.72,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 2.62,
+      "texto": "Leitura da Carta de São Paulo aos Gálatas."
+    },
+    {
+      "t0": 2.62,
+      "t1": 3.66,
+      "texto": "Irmãos,"
+    },
+    {
+      "t0": 3.9,
+      "t1": 6.06,
+      "texto": "quando se completou o tempo previsto,"
+    },
+    {
+      "t0": 6.5,
+      "t1": 9.32,
+      "texto": "Deus enviou o seu Filho, nascido de uma mulher,"
+    },
+    {
+      "t0": 9.68,
+      "t1": 11.04,
+      "texto": "nascido sujeito à Lei,"
+    },
+    {
+      "t0": 11.4,
+      "t1": 13.86,
+      "texto": "a fim de resgatar os que eram sujeitos à Lei"
+    },
+    {
+      "t0": 13.86,
+      "t1": 17.08,
+      "texto": "e para que todos recebêssemos a filiação adotiva."
+    },
+    {
+      "t0": 17.28,
+      "t1": 18.78,
+      "texto": "E porque sois filhos,"
+    },
+    {
+      "t0": 19.18,
+      "t1": 21.98,
+      "texto": "Deus enviou aos nossos corações o Espírito do seu"
+    },
+    {
+      "t0": 21.98,
+      "t1": 24.9,
+      "texto": "Filho, que clama: Abá - ó Pai!"
+    },
+    {
+      "t0": 25.12,
+      "t1": 27.9,
+      "texto": "Assim já não és mais escravo, mas filho;"
+    },
+    {
+      "t0": 28.12,
+      "t1": 30.44,
+      "texto": "e se és filho, és também herdeiro:"
+    },
+    {
+      "t0": 30.7,
+      "t1": 32.44,
+      "texto": "tudo isso, por graça de Deus."
+    },
+    {
+      "t0": 32.78,
+      "t1": 33.72,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

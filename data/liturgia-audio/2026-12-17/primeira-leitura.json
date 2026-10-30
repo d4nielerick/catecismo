@@ -1,0 +1,87 @@
+{
+  "referencia": "Gn 49,2.8-10",
+  "voz": "leo (Grok TTS)",
+  "duracao": 39.74,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 2.04,
+      "texto": "Leitura do Livro do Gênesis."
+    },
+    {
+      "t0": 2.04,
+      "t1": 5.52,
+      "texto": "Naqueles dias, Jacó chamou seus filhos e disse:"
+    },
+    {
+      "t0": 5.52,
+      "t1": 8.42,
+      "texto": "\"Juntai-vos e ouvi, filhos de Jacó,"
+    },
+    {
+      "t0": 8.88,
+      "t1": 10.4,
+      "texto": "ouvi Israel, vosso pai!"
+    },
+    {
+      "t0": 10.92,
+      "t1": 13.16,
+      "texto": "Judá, teus irmãos te louvarão;"
+    },
+    {
+      "t0": 13.54,
+      "t1": 16.24,
+      "texto": "pesará tua mão sobre a nuca de teus inimigos,"
+    },
+    {
+      "t0": 16.48,
+      "t1": 19.36,
+      "texto": "se prostrarão diante de ti os filhos de teu pai."
+    },
+    {
+      "t0": 19.82,
+      "t1": 21.5,
+      "texto": "Judá, filhote de leão:"
+    },
+    {
+      "t0": 21.84,
+      "t1": 23.72,
+      "texto": "subiste, meu filho, da pilhagem;"
+    },
+    {
+      "t0": 23.96,
+      "t1": 26.26,
+      "texto": "ele se agacha e se deita como um leão,"
+    },
+    {
+      "t0": 26.44,
+      "t1": 28.94,
+      "texto": "e como uma leoa; quem o despertará?"
+    },
+    {
+      "t0": 28.94,
+      "t1": 31.46,
+      "texto": "O cetro não será tirado de Judá,"
+    },
+    {
+      "t0": 31.6,
+      "t1": 34.1,
+      "texto": "nem o bastão de comando dentre seus pés,"
+    },
+    {
+      "t0": 34.28,
+      "t1": 36.5,
+      "texto": "até que venha Aquele a quem pertencem,"
+    },
+    {
+      "t0": 36.6,
+      "t1": 38.48,
+      "texto": "e a quem obedecerão os povos\"."
+    },
+    {
+      "t0": 38.8,
+      "t1": 39.74,
+      "texto": "Palavra do Senhor."
+    }
+  ]
+}

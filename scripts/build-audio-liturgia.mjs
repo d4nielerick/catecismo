@@ -157,10 +157,19 @@ function gerarGemini(unidades, falado) {
   if (!dados) throw new Error(`Gemini: ${JSON.stringify(j.error || j).slice(0, 200)}`);
   fs.writeFileSync(wav, Buffer.from(dados, 'base64'));
   }
-  execFileSync('whisper', [wav, '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
-    '--output_format', 'json', '--output_dir', tmp, '--fp16', 'False'], { stdio: 'ignore' });
-  const ouvidas = JSON.parse(fs.readFileSync(path.join(tmp, 'voz.json'), 'utf8')).segments.flatMap(sg => sg.words || []);
-  const tu = tempoPorCaractere(faladoU, ouvidas);
+  const ouvir = (...extra) => {
+    execFileSync('whisper', [wav, '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
+      '--output_format', 'json', '--output_dir', tmp, '--fp16', 'False', ...extra], { stdio: 'ignore' });
+    return tempoPorCaractere(faladoU, JSON.parse(fs.readFileSync(path.join(tmp, 'voz.json'), 'utf8')).segments.flatMap(sg => sg.words || []));
+  };
+  // às vezes o Whisper encerra a primeira janela de 30 s na 1ª frase e pula o resto dela, e gerar de novo
+  // não resolve; com o texto como dica ele ouve tudo (só nessa segunda tentativa: a dica pode esconder erro de leitura)
+  let tu;
+  try { tu = ouvir(); }
+  catch (e) {
+    console.log(`  ${e.message}; tentando com o texto como dica`);
+    tu = ouvir('--initial_prompt', faladoU);
+  }
   const duracaoWav = +execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav]).toString();
 
   // trecho de áudio de cada linha única: de pouco antes da 1ª palavra até pouco antes da linha seguinte

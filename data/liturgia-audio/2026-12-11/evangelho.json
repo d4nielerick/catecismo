@@ -1,0 +1,77 @@
+{
+  "referencia": "Mt 11,16-19",
+  "voz": "leo (Grok TTS)",
+  "duracao": 37.8,
+  "linhas": [
+    {
+      "t0": 0,
+      "t1": 3.48,
+      "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
+    },
+    {
+      "t0": 3.86,
+      "t1": 6.4,
+      "texto": "Naquele tempo, disse Jesus às multidões:"
+    },
+    {
+      "t0": 6.68,
+      "t1": 8.78,
+      "texto": "\"Com quem vou comparar esta geração?"
+    },
+    {
+      "t0": 9.08,
+      "t1": 11.6,
+      "texto": "São como crianças sentadas nas praças,"
+    },
+    {
+      "t0": 11.6,
+      "t1": 13.48,
+      "texto": "que gritam para os colegas, dizendo:"
+    },
+    {
+      "t0": 13.74,
+      "t1": 16.1,
+      "texto": "'Tocamos flauta e vós não dançastes."
+    },
+    {
+      "t0": 16.54,
+      "t1": 19.7,
+      "texto": "Entoamos lamentações e vós não batestes no peito!'"
+    },
+    {
+      "t0": 20.14,
+      "t1": 22.36,
+      "texto": "Veio João, que não come nem bebe,"
+    },
+    {
+      "t0": 22.5,
+      "t1": 24.58,
+      "texto": "e dizem: 'Ele está com um demônio'."
+    },
+    {
+      "t0": 24.78,
+      "t1": 27.3,
+      "texto": "Veio o Filho do Homem, que come e bebe,"
+    },
+    {
+      "t0": 27.38,
+      "t1": 29.56,
+      "texto": "e dizem: 'É um comilão e beberrão,"
+    },
+    {
+      "t0": 29.56,
+      "t1": 32.5,
+      "texto": "amigo de cobradores de impostos e de pecadores'."
+    },
+    {
+      "t0": 32.8,
+      "t1": 36.14,
+      "texto": "Mas a sabedoria foi reconhecida com base em suas obras\"."
+    },
+    {
+      "t0": 36.52,
+      "t1": 37.8,
+      "texto": "Palavra da Salvação."
+    }
+  ]
+}
