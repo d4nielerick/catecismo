@@ -262,6 +262,20 @@ precisa estar listado no `robots.txt`. A página do dia mostra "Ler Lucas 15 int
 Padres →" **só se** o capítulo está em `data/catena-publicados.json` (o `liturgiadiaria.js` busca o arquivo e
 passa a lista a `comentarioHtml` como opção `publicados`; sem o arquivo, sem link). `verifica-liturgia.mjs`
 roda o gerador em memória e confere canonical, dados estruturados e ausência de latim/`undefined`.
+### Catecismo por parágrafo e por tema: páginas (gerar antes do deploy)
+
+O buscador em `/` abre os parágrafos por `#paragrafo-N`, que o Google não indexa. Para isso existem páginas prontas:
+
+```
+node scripts/build-paginas-cic.mjs   # cic/index.html, cic/<n>/ (2865 §§), cic/tema/ e cic/tema/<slug>/ ("O que o Catecismo diz sobre…"), sitemap-cic.xml
+```
+
+Entram `data/catecismo.json`, `notas.json`, `indice_analitico.json`, `relacoes.json`, `saopiox.json` e `data/liturgia-comentario/`
+(os dias que citam cada §). Só `cic/cic.css` e o script são versionados; o resto fica fora do git. `sitemap-cic.xml` vai no `robots.txt`.
+O índice analítico traz remissões coladas nos nomes ("Advento vide também: espera consumação", "Bom conforme bem"): o script
+separa o nome da remissão e liga o que casar com um tema existente. `verifica-integridade.mjs` monta todas as páginas em memória e confere
+canonical, marcador de nota cru, "vide" no texto e o sitemap. Os links "Abrir o §" da Liturgia apontam para `/cic/<n>/`.
+
 ### Liturgia Diária: avisos push ("Evangelho de hoje" às 6h)
 
 Quem liga os avisos no menu do app (seção "Evangelho de hoje") recebe, às 6h de Brasília, uma

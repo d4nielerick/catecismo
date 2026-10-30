@@ -131,6 +131,7 @@ node scripts/verifica-liturgia.mjs
 node scripts/build-paginas-liturgia.mjs
 python3 scripts/build-og-liturgia.py
 node scripts/build-paginas-catena.mjs
+node scripts/build-paginas-cic.mjs            # a página de cada § lista os dias que o citam
 node scripts/build-paginas-santos.mjs
 python3 scripts/build-instagram-liturgia.py      # cards do @liturgia_hoje (hoje +30); a VPS publica às 6h
 ```

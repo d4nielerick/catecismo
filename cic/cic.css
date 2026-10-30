@@ -1,0 +1,54 @@
+/* cic.css — páginas do Catecismo por parágrafo e por tema (scripts/build-paginas-cic.mjs).
+   Vem depois de catena.css: a família visual é a mesma (Inria Serif, rubrica vermelha); aqui só o
+   que é próprio do Catecismo (o texto do §, as chamadas e a lista das notas, os blocos de ligação). */
+
+.cic .ca-titulo { font-size: 2.6rem; }
+
+/* ── O texto do § ───────────────────────────────────────────────────────── */
+.cic-par { font-size: 1.12rem; line-height: 1.7; color: var(--ca-tinta); margin-top: 1.8rem; }
+.cic-par p { margin: 0 0 1rem; }
+.cic-par blockquote {
+  margin: 0 0 1rem 1.2rem; padding-left: 1rem; border-left: 2px solid rgba(203, 46, 46, 0.35);
+  font-style: italic; color: var(--ca-texto);
+}
+.cic-chamada { font-size: 0.68em; line-height: 0; margin-left: 0.08em; }
+.cic-chamada a { text-decoration: none; color: var(--ca-vermelho); }
+.cic-chamada a:hover { text-decoration: underline; }
+
+/* ── Notas e blocos ─────────────────────────────────────────────────────── */
+.cic-sub {
+  font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ca-vermelho); margin: 2.4rem 0 0.8rem;
+}
+.cic-notas-lista { padding-left: 2.2rem; font-size: 0.92rem; color: var(--ca-suave); line-height: 1.55; }
+.cic-notas-lista li { margin-bottom: 0.4rem; }
+.cic-notas-lista li:target { color: var(--ca-tinta); }
+.cic-volta { text-decoration: none; opacity: 0.6; }
+.cic-lista { list-style: none; padding: 0; margin: 0; }
+.cic-lista li { padding: 0.3rem 0; border-bottom: 1px solid var(--ca-linha); }
+.cic-suave { color: var(--ca-suave); }
+.cic-piox { font-size: 0.98rem; }
+.cic-piox b { font-weight: 700; color: var(--ca-tinta); }
+
+/* ── Tema ───────────────────────────────────────────────────────────────── */
+.cic-trecho { display: flex; gap: 0.6rem; margin: 0 0 0.9rem; }
+.cic-num {
+  flex: 0 0 3.6rem; padding-top: 0.15rem; text-decoration: none; color: var(--ca-vermelho);
+  font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em;
+}
+.cic-num:hover { text-decoration: underline; }
+
+/* ── Índices ────────────────────────────────────────────────────────────── */
+.cic-estrutura, .cic-estrutura ul { list-style: none; padding: 0; margin: 0; }
+.cic-estrutura > li { margin: 1.6rem 0; }
+.cic-estrutura .cic-n1 > a { font-family: var(--font-titulo); font-size: 1.5rem; font-style: italic; color: var(--ca-tinta); text-decoration: none; }
+.cic-estrutura .cic-n2 { margin: 0.9rem 0 0.3rem 0; }
+.cic-estrutura .cic-n2 > a { font-weight: 700; color: var(--ca-tinta); text-decoration: none; }
+.cic-estrutura .cic-n3 { margin-left: 1.2rem; }
+.cic-estrutura .cic-n4 { margin-left: 2.4rem; font-size: 0.95rem; }
+.cic-estrutura li > a:hover { text-decoration: underline; }
+.cic-letras { font-family: var(--font-sans); font-size: 0.9rem; letter-spacing: 0.2em; margin-top: 1.2rem; }
+.cic-letras a { text-decoration: none; }
+.cic-colunas { columns: 2; column-gap: 2rem; }
+.cic-colunas li { break-inside: avoid; border: 0; padding: 0.2rem 0; }
+@media (max-width: 480px) { .cic-colunas { columns: 1; } .cic .ca-titulo { font-size: 2.1rem; } }

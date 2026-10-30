@@ -35,3 +35,8 @@ catecismo/
 
 # @liturgia_hoje: cards do Instagram (scripts/build-instagram-liturgia.py)
 /liturgiadiaria/instagram/
+
+# Catecismo por parágrafo e por tema: páginas geradas antes do deploy (scripts/build-paginas-cic.mjs); só cic.css é versionado
+/cic/*/
+/cic/index.html
+/sitemap-cic.xml

@@ -160,6 +160,7 @@ function documento({ titulo, descricao, url, dados, corpo, classe = '' }) {
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/catena/catena.css">
   ${jsonLd(dados)}
+  <script defer src="https://umami.danielerick.com/script.js" data-website-id="28c35f85-bd1b-4ea9-8f52-fc98d33b4974"></script>
 </head>
 <body class="ca ${classe}">
 ${corpo}

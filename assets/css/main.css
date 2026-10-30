@@ -578,7 +578,9 @@ body {
   max-width: 540px;
 }
 
-#temas-rapidos button {
+#temas-rapidos button,
+#temas-rapidos a {
+  text-decoration: none;
   font-family: var(--font-sans);
   font-size: 0.78rem;
   font-weight: 500;
@@ -591,7 +593,8 @@ body {
   transition: background var(--transition), border-color var(--transition), color var(--transition), transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-#temas-rapidos button:hover {
+#temas-rapidos button:hover,
+#temas-rapidos a:hover {
   background: #FFFFFF;
   border-color: var(--color-accent);
   color: var(--color-accent-dk);
@@ -599,12 +602,14 @@ body {
   transform: translateY(-1px);
 }
 
-#temas-rapidos button:active {
+#temas-rapidos button:active,
+#temas-rapidos a:active {
   transform: scale(0.97);
 }
 
 /* Sobre a foto do hero do CIC, os chips ganham vidro escuro. */
-#hero.hero-foto #temas-rapidos button {
+#hero.hero-foto #temas-rapidos button,
+#hero.hero-foto #temas-rapidos a {
   color: rgba(255,255,255,0.82);
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(10px);
@@ -612,7 +617,8 @@ body {
   border-color: rgba(255,255,255,0.28);
 }
 
-#hero.hero-foto #temas-rapidos button:hover {
+#hero.hero-foto #temas-rapidos button:hover,
+#hero.hero-foto #temas-rapidos a:hover {
   background: rgba(255,255,255,0.14);
   border-color: var(--color-hero-ouro);
   color: #fff;

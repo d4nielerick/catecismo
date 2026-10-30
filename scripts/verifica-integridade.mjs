@@ -10,6 +10,7 @@
  */
 import fs from 'node:fs';
 import { aplicaPares, aplicaAjustes } from './lib-grafia.mjs';
+import { carregar, paginaDoParagrafo, paginaDoTema, sitemapCic } from './build-paginas-cic.mjs';
 
 const fonte   = JSON.parse(fs.readFileSync('data/fonte-vaticano.json', 'utf8'));
 const pares   = JSON.parse(fs.readFileSync('data/grafia-ptbr-pares.json', 'utf8'));
@@ -31,4 +32,23 @@ if (difs.length) {
   console.error(`✗ ${difs.length} §§ divergem da reconstrução fonte+pares+ajustes: ${difs.slice(0, 15).join(', ')}`);
   process.exit(1);
 }
+// As páginas por § e por tema saem deste mesmo texto: todo § precisa render com canonical, sem marcador cru
+const d = carregar();
+const erros = [];
+d.paragrafos.forEach((p, i) => {
+  const html = paginaDoParagrafo(p, d, { anterior: d.paragrafos[i - 1] || null, seguinte: d.paragrafos[i + 1] || null });
+  if (!html.includes(`<link rel="canonical" href="https://santadoutrina.com/cic/${p.numero}/">`)) erros.push(`§${p.numero}: canonical`);
+  if (/undefined|\(\d+\)<\/p>/.test(html.replace(/<script[\s\S]*?<\/script>/g, ''))) erros.push(`§${p.numero}: undefined ou marcador de nota cru`);
+});
+for (const t of d.temas) {
+  const html = paginaDoTema(t, d);
+  if (/undefined|\bvide\b/i.test(html.replace(/<script[\s\S]*?<\/script>/g, ''))) erros.push(`tema ${t.slug}: undefined ou "vide" no texto`);
+}
+if (new Set(d.temas.map(t => t.slug)).size !== d.temas.length) erros.push('slug de tema repetido');
+if ((sitemapCic(d.paragrafos, d.temas).match(/<loc>/g) || []).length !== 2 + d.paragrafos.length + d.temas.length) erros.push('sitemap-cic.xml incompleto');
+if (erros.length) {
+  console.error(`✗ páginas do Catecismo: ${erros.length} problema(s): ${erros.slice(0, 15).join('; ')}`);
+  process.exit(1);
+}
+
 console.log('✅ integridade OK: 2865 §§ completos e idênticos à reconstrução determinística da fonte oficial.');

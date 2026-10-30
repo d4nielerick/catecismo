@@ -318,10 +318,10 @@ export function comentarioHtml(comentario, capitulo, autores, { referenciasDia, 
         <div class="lp-cic-par">
           ${p.local ? `<p class="lp-cic-local">${esc(p.local)}</p>` : ''}
           <p>${esc(p.texto)}</p>
-          <a href="/#paragrafo-${p.numero}">Abrir o § ${p.numero} no Catecismo →</a>
+          <a href="/cic/${p.numero}/">Abrir o § ${p.numero} no Catecismo →</a>
         </div>
       </details>` : `
-      <p class="lp-cic-item"><a href="/#paragrafo-${p.numero}"><span class="lp-cic-num">§ ${p.numero}</span> ${esc(p.frase)}</a></p>`;
+      <p class="lp-cic-item"><a href="/cic/${p.numero}/"><span class="lp-cic-num">§ ${p.numero}</span> ${esc(p.frase)}</a></p>`;
   const grupos = [
     { rotulo: comentario.outrasLeituras?.length ? 'Evangelho' : '', itens: (comentario.catecismo || []).slice(0, 4) },
     ...(comentario.outrasLeituras || []).map(g => ({ rotulo: g.rotulo, itens: g.catecismo.slice(0, 2) })),
@@ -332,7 +332,7 @@ export function comentarioHtml(comentario, capitulo, autores, { referenciasDia, 
       <p class="lp-coment-rotulo">No Catecismo</p>
       ${grupos.map(g => `${g.rotulo ? `<p class="lp-cic-grupo">${esc(g.rotulo)}</p>` : ''}${g.itens.map(cicItem).join('')}`).join('')}
       ${padresCic.length ? `<p class="lp-cic-grupo">Os Padres de hoje no Catecismo</p>${padresCic.map(p => `
-      <p class="lp-cic-item"><a href="/#paragrafo-${p.numero}"><span class="lp-cic-ref">${esc(autores?.[p.autor]?.nome || p.autor)} · § ${p.numero}</span> ${esc(curta(p.frase))}</a></p>`).join('')}` : ''}
+      <p class="lp-cic-item"><a href="/cic/${p.numero}/"><span class="lp-cic-ref">${esc(autores?.[p.autor]?.nome || p.autor)} · § ${p.numero}</span> ${esc(curta(p.frase))}</a></p>`).join('')}` : ''}
     </section>` : '';
   if (!padres && !cic) return '';
   return `<div class="lp-comentario">${padres}${cic}</div>`;
