@@ -821,6 +821,294 @@
         "todos"
       ],
       "cores": []
+    },
+    {
+      "id": "todos-os-santos",
+      "titulo": "Todos os Santos",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sao-carlos-borromeu",
+      "titulo": "São Carlos Borromeu",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "basilica-latrao",
+      "titulo": "Basílica de São João de Latrão",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sao-leao-magno",
+      "titulo": "São Leão Magno",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sao-martinho",
+      "titulo": "São Martinho de Tours",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sao-josafa",
+      "titulo": "São Josafá",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "santa-isabel-hungria",
+      "titulo": "Santa Isabel da Hungria",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sao-roque-gonzalez",
+      "titulo": "São Roque González",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "apresentacao-maria",
+      "titulo": "Apresentação de Nossa Senhora",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "cristo-rei",
+      "titulo": "Cristo Rei",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "dung-lac",
+      "titulo": "Santo André Dung-Lac e companheiros",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sao-francisco-xavier",
+      "titulo": "São Francisco Xavier",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "santo-ambrosio",
+      "titulo": "Santo Ambrósio",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "imaculada",
+      "titulo": "Imaculada Conceição",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "guadalupe",
+      "titulo": "Nossa Senhora de Guadalupe",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sonho-sao-jose",
+      "titulo": "O sonho de São José",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "anunciacao",
+      "titulo": "A Anunciação",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "visitacao",
+      "titulo": "A Visitação",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "santo-estevao",
+      "titulo": "Santo Estêvão",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sagrada-familia",
+      "titulo": "A Sagrada Família em Nazaré",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "fuga-egito",
+      "titulo": "A fuga para o Egito",
+      "recriacao": "pintura gerada por IA no estilo do século XIX; não é retrato",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "sermao-montanha",
+      "titulo": "O Sermão da Montanha",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "dez-leprosos",
+      "titulo": "Jesus e o leproso agradecido",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "zaqueu",
+      "titulo": "Zaqueu na figueira",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "chora-jerusalem",
+      "titulo": "Jesus chora sobre Jerusalém",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "mae-irmaos",
+      "titulo": "Eis minha mãe e meus irmãos",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "templo-jerusalem",
+      "titulo": "Diante do Templo de Jerusalém",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "casa-rocha",
+      "titulo": "A casa sobre a rocha",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "paralitico",
+      "titulo": "A cura do paralítico",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "autoridade-templo",
+      "titulo": "Com que autoridade?",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "cego-jerico",
+      "titulo": "O cego de Jericó",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "oferta-viuva",
+      "titulo": "A oferta da viúva",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
     }
   ]
 }

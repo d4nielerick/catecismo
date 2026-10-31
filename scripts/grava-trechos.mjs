@@ -5,8 +5,9 @@
  *   node scripts/grava-trechos.mjs lote.json              # confere e grava
  *   node scripts/grava-trechos.mjs lote.json --conferir   # só confere (não grava nada)
  *
- * lote.json: { "AAAA-MM-DD": { "trechos": { "<referência>": "<trecho>" }, "imagens": { … } }, … }
- * (a referência é a da leitura no dia, como em data/liturgia/AAAA-MM-DD.json; "imagens" é opcional).
+ * lote.json: { "AAAA-MM-DD": { "trechos": { "<referência>": "<trecho>" }, "imagens": { … }, "fortes": { … } }, … }
+ * (a referência é a da leitura no dia, como em data/liturgia/AAAA-MM-DD.json; "imagens" e "fortes", a
+ * parte do trecho que vai em itálico no card do Instagram, são opcionais).
  *
  * Cada arquivo guarda também as referências das leituras do dia: se elas mudarem, os trechos deixam
  * de aparecer e verifica-liturgia.mjs aponta. Os trechos são escolhidos fora do site (Claude nesta
@@ -27,12 +28,12 @@ const ids = new Set(JSON.parse(fs.readFileSync(path.join(RAIZ, 'data', 'cards-im
 
 const prontos = [];
 const erros = [];
-for (const [data, { trechos, imagens }] of Object.entries(lote).sort()) {
+for (const [data, { trechos, imagens, fortes }] of Object.entries(lote).sort()) {
   const arq = path.join(RAIZ, 'data', 'liturgia', `${data}.json`);
   if (!fs.existsSync(arq)) { erros.push(`${data}: dia sem leituras`); continue; }
   const dia = JSON.parse(fs.readFileSync(arq, 'utf8'));
   const limpos = Object.fromEntries(Object.entries(trechos || {}).map(([r, t]) => [r, t.replace(/\s+/g, ' ').trim()]));
-  const t = { data, leituras: referenciasDoDia(dia), trechos: limpos, ...(imagens ? { imagens } : {}) };
+  const t = { data, leituras: referenciasDoDia(dia), trechos: limpos, ...(imagens ? { imagens } : {}), ...(fortes ? { fortes } : {}) };
   for (const e of conferirTrechos(t, dia, ids)) erros.push(`${data} ${e}`);
   prontos.push(t);
 }

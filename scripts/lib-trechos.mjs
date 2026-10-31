@@ -28,6 +28,9 @@ export function conferirTrechos(t, dia, idsDoAcervo = null) {
       erros.push(`${ref}: o trecho não está, palavra por palavra, na leitura`);
     }
   }
+  for (const [ref, forte] of Object.entries(t.fortes || {})) {
+    if (!(t.trechos?.[ref] || '').toLowerCase().includes(forte.toLowerCase())) erros.push(`${ref}: "${forte}" não está no trecho`);
+  }
   if (idsDoAcervo) {
     for (const [ref, id] of Object.entries(t.imagens || {})) {
       if (!idsDoAcervo.has(id)) erros.push(`${ref}: pintura "${id}" não existe no acervo`);

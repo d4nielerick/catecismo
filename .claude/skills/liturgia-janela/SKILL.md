@@ -108,6 +108,13 @@ node scripts/grava-curadoria.mjs "$SCRATCH/curadoria.json"
 O script recusa ponteiro para item inexistente, fora da perícope do dia, ou sem tradução, e § cujas
 notas não citam aquele Padre (a frase vem do próprio Catecismo).
 
+**Pintura e frase forte de cada dia.** Depois da curadoria, escolha para o Evangelho de cada dia a pintura (card do Instagram, Reel e
+primeira do compartilhar) e a parte do trecho que vai em itálico, e grave com `node scripts/grava-trechos.mjs`:
+`{ "<dia>": { "trechos": {...}, "imagens": { "<ref.>": "<id>" }, "fortes": { "<ref.>": "<parte do trecho>" } } }`.
+A pintura mostra a leitura, nunca o santo do dia, mesmo em festa: quem lê associa a imagem ao texto (decisão do Daniel, 31/10/2026). Falta cena? Gere no Flow e
+ponha no acervo (`data/cards-imagens.json`, `assets/img/cards/`, 1280×960 e mini 200×150, `tempos: ["festa"]`). Sem escolha, o dia cai num rodízio sem relação com
+o texto, e `build-instagram-liturgia.py` avisa. Mostre a folha de cards ao Daniel antes de subir.
+
 ## 6. Áudio (Gemini, grátis e devagar)
 
 ```bash
