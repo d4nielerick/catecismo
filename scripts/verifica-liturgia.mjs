@@ -165,10 +165,10 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
     for (const f of [`${im.id}.webp`, `mini/${im.id}.webp`]) {
       if (!fs.existsSync(path.join(IMG, f))) erros.push(`acervo: falta assets/img/cards/${f}`);
     }
-    if (!im.titulo || !im.tempos?.length) erros.push(`acervo ${im.id}: sem título ou sem tempos`);
+    if (!im.titulo || (!im.tempos?.length && !im.aposentada)) erros.push(`acervo ${im.id}: sem título ou sem tempos`);
   }
   const TRECHOS = path.join(SAIDA, '..', 'liturgia-trechos');
-  const ids = new Set(ACERVO.map(im => im.id));
+  const ids = new Set(ACERVO.filter(im => !im.aposentada).map(im => im.id));
   for (const arq of fs.existsSync(TRECHOS) ? fs.readdirSync(TRECHOS).filter(f => f.endsWith('.json')) : []) {
     const t = JSON.parse(fs.readFileSync(path.join(TRECHOS, arq), 'utf8'));
     const destino = path.join(SAIDA, `${t.data}.json`);
@@ -184,7 +184,7 @@ const ACERVO = JSON.parse(fs.readFileSync(path.join(SAIDA, '..', 'cards-imagens.
   const arq = path.join(SAIDA, '..', 'santos-frases.json');
   if (fs.existsSync(arq)) {
     const { frases, porData = {} } = JSON.parse(fs.readFileSync(arq, 'utf8'));
-    const ids = new Set(ACERVO.map(im => im.id));
+    const ids = new Set(ACERVO.filter(im => !im.aposentada).map(im => im.id));
     const celebracoes = new Set(datas.map(d => JSON.parse(fs.readFileSync(path.join(SAIDA, `${d}.json`), 'utf8')).celebracao));
     for (const [cel, f] of Object.entries(frases)) {
       if (!f.frase?.trim() || !f.fonte?.trim()) erros.push(`santos-frases "${cel}": sem frase ou sem fonte`);

@@ -4,23 +4,16 @@
     {
       "id": "trigo-colina",
       "titulo": "Colina de trigo",
-      "tempos": [
-        "Tempo Comum"
-      ],
-      "cores": [
-        "verde",
-        "branco"
-      ]
+      "tempos": [],
+      "cores": [],
+      "aposentada": "o Daniel pediu para não usar mais (31/10/2026)"
     },
     {
       "id": "trigo-cruz",
       "titulo": "Cruz no trigal",
-      "tempos": [
-        "Tempo Comum"
-      ],
-      "cores": [
-        "verde"
-      ]
+      "tempos": [],
+      "cores": [],
+      "aposentada": "o Daniel pediu para não usar mais (31/10/2026)"
     },
     {
       "id": "montanhas",
@@ -1104,6 +1097,60 @@
     {
       "id": "oferta-viuva",
       "titulo": "A oferta da viúva",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "nascimento-cristo",
+      "titulo": "O Nascimento de Cristo",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "menino-jesus",
+      "titulo": "O Menino Jesus em Nazaré",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "colheita",
+      "titulo": "A colheita e os poucos trabalhadores",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "patrao-servos",
+      "titulo": "O patrão e os servos",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "cruz-trigal",
+      "titulo": "Cruz no trigal",
+      "recriacao": "pintura gerada por IA no estilo do século XIX",
+      "tempos": [
+        "festa"
+      ],
+      "cores": []
+    },
+    {
+      "id": "jesus-discipulos",
+      "titulo": "Jesus com os discípulos",
       "recriacao": "pintura gerada por IA no estilo do século XIX",
       "tempos": [
         "festa"
