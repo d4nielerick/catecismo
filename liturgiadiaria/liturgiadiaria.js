@@ -772,8 +772,11 @@ function aplicarDia(dt, dia, resumo, trechos, { primeira = false } = {}) {
   }
   // Nas páginas de cada dia o HTML já veio pronto e é idêntico: redesenhar não mexe no layout.
   const { html, blocos } = conteudoDoDia(dia, resumo, { hoje: dt === estado.hoje });
+  // o comentário do Evangelho que veio no HTML gerado volta para o lugar depois de redesenhar
+  const comentarioPronto = primeira ? document.querySelector('#conteudo .card-evangelho .lp-comentario') : null;
   document.querySelector('.lp-main > .lp-resumo')?.remove();
   conteudo.innerHTML = html;
+  if (comentarioPronto) conteudo.querySelector('.card-evangelho')?.append(comentarioPronto);
   posicionarResumo();
   construirNav(blocos);
   botoesDeCompartilhar(dt, dia, blocos, trechos);
@@ -793,7 +796,7 @@ async function comentarioDoEvangelho(dt, dia) {
   const comentario = await buscarJson(`/data/liturgia-comentario/${dt}.json`);
   if (!comentario || estado.dt !== dt) return;
   const card = document.querySelector('.card-evangelho');
-  if (!card || card.querySelector('.lp-comentario')) return;
+  if (!card) return;
   const ref = comentario.catena?.[0];
   const chave = ref ? `${ref.ev}/${String(ref.cap).padStart(2, '0')}` : null;
   const [capitulo, autores, publicados] = await Promise.all([
@@ -802,10 +805,13 @@ async function comentarioDoEvangelho(dt, dia) {
     catenaPublicada ??= buscarJson('/data/catena-publicados.json'),
   ]);
   if (estado.dt !== dt) return;
-  const html = comentarioHtml(comentario, capitulo, autores, { referenciasDia: assinaturaDoDia(dia), publicados });
-  if (!html) return;
-  card.insertAdjacentHTML('beforeend', html);
-  card.querySelector('.lp-coment-inteiro')?.addEventListener('click', () => {
+  // na página gerada o bloco já veio no HTML; aqui só falta ligar o botão do comentário inteiro
+  if (!card.querySelector('.lp-comentario')) {
+    const html = comentarioHtml(comentario, capitulo, autores, { referenciasDia: assinaturaDoDia(dia), publicados });
+    if (!html) return;
+    card.insertAdjacentHTML('beforeend', html);
+  }
+  card.querySelector('button.lp-coment-inteiro')?.addEventListener('click', () => {
     const dlg = document.getElementById('lp-santo');
     if (!dlg?.showModal) return;
     dlg.classList.add('lp-modal-catena');
@@ -931,7 +937,10 @@ function botoesDeCompartilhar(dt, dia, blocos, trechos) {
 }
 
 let pedidoDeDia = 0;
-async function irParaDia(dt) {
+/** O endereço de cada dia é a página gerada dele (hoje é /liturgiadiaria/): o link copiado do navegador
+ *  é o do dia que está na tela, e o Voltar volta ao dia anterior. `voltando`: veio do Voltar/Avançar. */
+const enderecoDoDia = dt => (dt === estado.hoje ? '/liturgiadiaria/' : urlDoDia(dt));
+async function irParaDia(dt, { voltando = false } = {}) {
   if (dt === estado.dt) { rolarPara(0); return; }
   const vez = ++pedidoDeDia;
   const [dia, resumo, trechos] = await Promise.all([
@@ -940,8 +949,7 @@ async function irParaDia(dt) {
     buscarJson(`/data/liturgia-trechos/${dt}.json`),
   ]);
   if (vez !== pedidoDeDia) return;
-  // O endereço volta a ser o da página de hoje: recarregar sempre abre o dia atual.
-  if (location.pathname !== '/liturgiadiaria/' || location.search) history.replaceState(null, '', '/liturgiadiaria/');
+  if (!voltando && location.pathname + location.search !== enderecoDoDia(dt)) history.pushState({ dt }, '', enderecoDoDia(dt));
   if (scrollY > 40) rolarPara(0);
   await trocarData(() => aplicarDia(dt, dia, resumo, trechos));
 }
@@ -973,6 +981,10 @@ function toqueNaBarraDuranteRolagem() {
 
 function configurarNavegacao() {
   toqueNaBarraDuranteRolagem();
+  addEventListener('popstate', e => {
+    const dt = e.state?.dt || location.pathname.match(LINK_DE_DIA)?.[1] || new URLSearchParams(location.search).get('data') || estado.hoje;
+    if (estado.indice) irParaDia(dt, { voltando: true });
+  });
   document.addEventListener('touchstart', () => {}, { passive: true });   // faz o :active funcionar no iPhone
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;

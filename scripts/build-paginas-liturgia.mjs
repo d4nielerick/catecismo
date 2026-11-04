@@ -15,7 +15,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   esc, VERSO, NOME_COR, cabecalhoDoDia, conteudoDoDia, abasHtml, diasHtml, urlDoDia, tituloDoDia,
+  comentarioHtml, referenciasDoDia,
 } from '../liturgiadiaria/render.mjs';
+import { lerAutores, capitulosPublicados } from './build-paginas-catena.mjs';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://santadoutrina.com';
@@ -36,6 +38,21 @@ export const lerResumo = dt => {
   const arq = path.join(RESUMOS, `${dt}.json`);
   return fs.existsSync(arq) ? JSON.parse(fs.readFileSync(arq, 'utf8')) : null;
 };
+
+const COMENTARIOS = path.join(RAIZ, 'data', 'liturgia-comentario');
+const lerJsonSeHouver = arq => (fs.existsSync(arq) ? JSON.parse(fs.readFileSync(arq, 'utf8')) : null);
+let autoresCatena, catenaPublicada;
+/** O Evangelho comentado (Padres + Catecismo) já no HTML: o mesmo bloco que o JS punha depois, e que
+ *  agora ele só reaproveita. Sem comentário do dia (ou com leituras trocadas), vazio. */
+export function comentarioDoDia(dt, dia) {
+  const comentario = lerJsonSeHouver(path.join(COMENTARIOS, `${dt}.json`));
+  if (!comentario) return '';
+  const ref = comentario.catena?.[0];
+  const capitulo = ref ? lerJsonSeHouver(path.join(RAIZ, 'data', 'catena', ref.ev, `${String(ref.cap).padStart(2, '0')}.json`)) : null;
+  autoresCatena ??= lerAutores();
+  catenaPublicada ??= capitulosPublicados().map(c => c.chave);
+  return comentarioHtml(comentario, capitulo, autoresCatena, { referenciasDia: referenciasDoDia(dia), publicados: catenaPublicada });
+}
 
 const formatar = (dt, opcoes) => new Date(`${dt}T12:00:00Z`).toLocaleDateString('pt-BR', { timeZone: 'UTC', ...opcoes });
 
@@ -109,7 +126,8 @@ export function paginaDoDia(modelo, dt, dia, indice, resumo = lerResumo(dt), { h
   // se busca ("liturgia diária 4 de outubro") e é o que o WhatsApp mostra em negrito
   const santo = santoDoDia(dt, dia);
   const titulo = tituloDoDia(dt, dia, hoje);
-  const temComentario = fs.existsSync(path.join(RAIZ, 'data', 'liturgia-comentario', `${dt}.json`));
+  const comentario = comentarioDoDia(dt, dia);
+  const temComentario = Boolean(comentario);
   const descricao = descricaoDeBusca(dt, dia, { santo, comentario: temComentario, hoje });   // <meta description> e dados estruturados
   const descricaoSocial = descricaoDoDia(dt, dia, resumo);                              // WhatsApp / redes: o resumo convida a abrir
 
@@ -173,7 +191,9 @@ export function paginaDoDia(modelo, dt, dia, indice, resumo = lerResumo(dt), { h
   }
   h = trocar(h, '<nav class="lp-tabs" id="lp-tabs" aria-label="Leituras"></nav>',
     `<nav class="lp-tabs" id="lp-tabs" aria-label="Leituras">${abasHtml(blocos)}</nav>`);
-  h = trocar(h, '<p class="loading">Buscando leituras do dia…</p>', leituras.trim());
+  // o comentário entra no fim do card do Evangelho, onde o JS o punha ('beforeend')
+  const comLeituras = comentario ? leituras.replace(/(<article class="leitura-card card-evangelho"[\s\S]*?)(<\/article>)/, `$1${comentario}$2`) : leituras;
+  h = trocar(h, '<p class="loading">Buscando leituras do dia…</p>', comLeituras.trim());
   h = trocar(h, '<nav class="lp-dias" id="lp-dias" aria-label="Outros dias"></nav>',
     `<nav class="lp-dias" id="lp-dias" aria-label="Outros dias">${diasHtml(dt, indice)}</nav>`);
   return h;
