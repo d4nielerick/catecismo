@@ -3,8 +3,8 @@
  * (resumo-semanal.mjs). Rodam na VPS, fora dos containers, para avisar mesmo quando o
  * catecismo-api cai.
  *
- * Telegram: TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID do ambiente ou, na falta, os mesmos do
- * container catecismo-api (docker inspect funciona com ele parado). O token nunca é impresso.
+ * Telegram: manda pelo Haddock (@Bot_haddock_bot, o Claude da VPS), lendo o token do canal dele no
+ * volume do claude-terminal; fora da VPS, TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID. O token nunca é impresso.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -25,18 +25,17 @@ export const somaDias = (dt, n) => {
 
 export const docker = (...args) => execFileSync('docker', args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
 
+// O Haddock (@Bot_haddock_bot, o Claude da VPS no Telegram): token no volume do claude-terminal,
+// destinatário = o primeiro da allowlist do canal (o Daniel).
+const HADDOCK = process.env.VIGIA_TELEGRAM_DIR || '/var/lib/docker/volumes/claude-terminal_claude_config/_data/channels/telegram';
+
 function credenciais() {
-  let token = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
-  if (token && chat) return { token, chat };
   try {
-    for (const linha of docker('inspect', 'catecismo-api', '--format', '{{range .Config.Env}}{{println .}}{{end}}').split('\n')) {
-      const i = linha.indexOf('=');
-      const [k, v] = [linha.slice(0, i), linha.slice(i + 1)];
-      if (k === 'TELEGRAM_BOT_TOKEN') token ||= v;
-      if (k === 'TELEGRAM_CHAT_ID') chat ||= v;
-    }
-  } catch { /* sem docker ou sem container */ }
-  return { token, chat };
+    const token = fs.readFileSync(path.join(HADDOCK, '.env'), 'utf8').match(/^TELEGRAM_BOT_TOKEN=["']?([^"'\n]+)/m)?.[1];
+    const chat = JSON.parse(fs.readFileSync(path.join(HADDOCK, 'access.json'), 'utf8')).allowFrom?.[0];
+    if (token && chat) return { token, chat };
+  } catch { /* fora da VPS */ }
+  return { token: process.env.TELEGRAM_BOT_TOKEN, chat: process.env.TELEGRAM_CHAT_ID };
 }
 
 /** Manda texto puro (sem parse_mode) ao Telegram. Com ensaio, só imprime. */

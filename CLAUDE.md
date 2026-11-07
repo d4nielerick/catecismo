@@ -377,6 +377,7 @@ com o node do sistema, a partir de `/opt/mediaserver/catecismo`:
 - `scripts/resumo-semanal.mjs` (cron `0 12 * * 1`, segunda de manhã em Brasília): visitas do Umami (com e sem Lorena),
   compartilhamentos, inscritos no push, números do Instagram e até quando cada conteúdo está pronto, com o que fazer.
 
-Os dois usam `--ensaio` para imprimir sem mandar; `saude-liturgia.mjs --teste` manda uma mensagem de teste. O bot é o
-mesmo das correções (@santadoutrina_bot, `TELEGRAM_*` do container, lidos por `docker inspect`); se o Daniel bloquear o
-bot no Telegram, nada chega (nem as correções). Peças comuns em `scripts/lib-vigia.mjs`.
+Os dois usam `--ensaio` para imprimir sem mandar; `saude-liturgia.mjs --teste` manda uma mensagem de teste. Os avisos saem
+pelo Haddock (@Bot_haddock_bot, o Claude da VPS no Telegram): o script lê o token e o destinatário do canal dele no volume
+`claude-terminal_claude_config` (`channels/telegram/.env` e `access.json`). Mandar pela API não atrapalha a sessão do Claude,
+que só lê as mensagens recebidas. As correções do site usam outro bot (@santadoutrina_bot), hoje bloqueado pelo Daniel. Peças comuns em `scripts/lib-vigia.mjs`.
