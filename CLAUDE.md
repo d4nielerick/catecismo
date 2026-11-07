@@ -153,7 +153,7 @@ Variáveis de ambiente (container `catecismo-api`; as mesmas existem no painel d
 para o espelho):
 - `GROK_API_KEY` — usada por `api/resumo.js` (**hoje vazia em produção** → o botão
   "Resumir com IA" está quebrado no ar; ver `HANDOFF.md` §5)
-- `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` — usadas por `api/correcao.js` (encaminha correções)
+- `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` — usadas por `api/correcao.js` (encaminha correções; bot = Haddock)
 
 Contexto completo de arquitetura, pipelines e pendências: **`HANDOFF.md`**.
 
@@ -380,4 +380,5 @@ com o node do sistema, a partir de `/opt/mediaserver/catecismo`:
 Os dois usam `--ensaio` para imprimir sem mandar; `saude-liturgia.mjs --teste` manda uma mensagem de teste. Os avisos saem
 pelo Haddock (@Bot_haddock_bot, o Claude da VPS no Telegram): o script lê o token e o destinatário do canal dele no volume
 `claude-terminal_claude_config` (`channels/telegram/.env` e `access.json`). Mandar pela API não atrapalha a sessão do Claude,
-que só lê as mensagens recebidas. As correções do site usam outro bot (@santadoutrina_bot), hoje bloqueado pelo Daniel. Peças comuns em `scripts/lib-vigia.mjs`.
+que só lê as mensagens recebidas. As correções do site (`api/correcao.js`) também saem pelo Haddock: o `TELEGRAM_BOT_TOKEN` do
+`catecismo-api` no docker-compose da VPS é o dele desde 06/11/2026 (o antigo @santadoutrina_bot foi bloqueado). Peças comuns em `scripts/lib-vigia.mjs`.
