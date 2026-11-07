@@ -8,7 +8,8 @@
  *   node scripts/publicar-instagram.mjs --agora    # ignora a hora e o registro (teste)
  *   node scripts/publicar-instagram.mjs --ensaio   # só mostra o que publicaria
  *
- * Se existir liturgiadiaria/instagram/reels/<dia>.mp4, publica também o Reel do dia (estado separado).
+ * Se existir liturgiadiaria/instagram/reels/<dia>.mp4, publica também o Reel do dia (estado separado),
+ * com a capa reels/capas/<dia>.jpg quando houver (scripts/reels/capa-reel.py).
  * O card e a legenda vêm de liturgiadiaria/instagram/<dia>.jpg|.json (build-instagram-liturgia.py);
  * a API busca a imagem pelo endereço público do site. Token: IG_LITURGIA_TOKEN (nunca impresso).
  */
@@ -40,7 +41,9 @@ if (!fazCard && !fazReel) {
 const { legenda } = JSON.parse(fs.readFileSync(arqLegenda, 'utf8'));
 const imagem = `${SITE}/${dia}.jpg`;
 const video = `${SITE}/reels/${dia}.mp4`;
-if (ensaio) { console.log(fazCard ? imagem : '(card já saiu)', fazReel ? video : '(sem reel)', '\n', legenda); process.exit(0); }
+const arqCapa = path.join(RAIZ, 'liturgiadiaria', 'instagram', 'reels', 'capas', `${dia}.jpg`);
+const capa = fs.existsSync(arqCapa) ? `${SITE}/reels/capas/${dia}.jpg` : null;   // scripts/reels/capa-reel.py
+if (ensaio) { console.log(fazCard ? imagem : '(card já saiu)', fazReel ? video : '(sem reel)', fazReel ? capa || '(sem capa)' : '', '\n', legenda); process.exit(0); }
 
 const token = process.env.IG_LITURGIA_TOKEN;
 if (!token) { console.error('IG_LITURGIA_TOKEN ausente'); process.exit(1); }
@@ -80,7 +83,7 @@ try {
 if (fazReel) {
   novoEstado.reel = dia; gravar();
   try {
-    const { id: container } = await chamar('/me/media', { media_type: 'REELS', video_url: video, caption: legenda, share_to_feed: 'true' });
+    const { id: container } = await chamar('/me/media', { media_type: 'REELS', video_url: video, caption: legenda, share_to_feed: 'true', ...(capa && { cover_url: capa }) });
     for (let i = 0; i < 60; i++) {
       const { status_code } = await chamar(`/${container}`, { fields: 'status_code' }, 'GET');
       if (status_code === 'FINISHED') break;
