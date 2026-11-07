@@ -364,3 +364,19 @@ python3 scripts/scrape_indice.py
 - **`relacoes.json`**: cross-links entre os dois catecismos gerados por TF-IDF + revisão manual
 - **Grok para resumos**: escolha de API, não arquitetural — pode ser trocada em `api/resumo.js`
 - **Dados em PT-BR**: o `normalizar_portugues.py` existe porque fontes originais usam PT-PT
+
+### Vigia e resumo semanal (Telegram, sem IA)
+
+Dois scripts rodam no **host** da VPS (não no container, para avisar mesmo com o `catecismo-api` fora do ar),
+com o node do sistema, a partir de `/opt/mediaserver/catecismo`:
+
+- `scripts/saude-liturgia.mjs` (cron `20 * * * *`, log `/var/log/saude-liturgia.log`): containers, `/liturgiadiaria/`
+  com o Evangelho de hoje e o comentário, página e JSON do dia, card e áudio, home/Pio X/`/cic/`, `hoje.html` renovado,
+  depois das 7h o post/Reel do Instagram e o push nos logs, erros novos nos logs dos crons, certificado e pelo menos 7
+  dias de conteúdo. Só avisa quando muda (falha nova, lembrete a cada 20 h, resolvido). Estado em `/var/lib/saude-liturgia.json`.
+- `scripts/resumo-semanal.mjs` (cron `0 12 * * 1`, segunda de manhã em Brasília): visitas do Umami (com e sem Lorena),
+  compartilhamentos, inscritos no push, números do Instagram e até quando cada conteúdo está pronto, com o que fazer.
+
+Os dois usam `--ensaio` para imprimir sem mandar; `saude-liturgia.mjs --teste` manda uma mensagem de teste. O bot é o
+mesmo das correções (@santadoutrina_bot, `TELEGRAM_*` do container, lidos por `docker inspect`); se o Daniel bloquear o
+bot no Telegram, nada chega (nem as correções). Peças comuns em `scripts/lib-vigia.mjs`.
