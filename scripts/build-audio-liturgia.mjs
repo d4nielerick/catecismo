@@ -157,6 +157,27 @@ function gerarGemini(unidades, falado) {
   if (!dados) throw new Error(`Gemini: ${JSON.stringify(j.error || j).slice(0, 200)}`);
   fs.writeFileSync(wav, Buffer.from(dados, 'base64'));
   }
+  // o Gemini às vezes lê a instrução de estilo em voz alta antes do texto (12/11/2026: "…sotaque brasileiro
+  // neutro… sem dramatizar. Pausa breve ao fim de cada linha.") e o Whisper casa a 1ª linha com o começo dela;
+  // ouve os primeiros 45 s e, se a instrução estiver lá, corta o áudio logo depois da última palavra dela
+  if (!GROK) {
+    const ini = path.join(tmp, 'ini.wav');
+    execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', wav, '-t', '45', ini]);
+    execFileSync('whisper', [ini, '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
+      '--output_format', 'json', '--output_dir', tmp, '--fp16', 'False'], { stdio: 'ignore' });
+    const ps = JSON.parse(fs.readFileSync(path.join(tmp, 'ini.json'), 'utf8')).segments.flatMap(sg => sg.words || []);
+    const j = Math.max(ps.findLastIndex(w => /dramatizar/i.test(w.word)), ps.findLastIndex(w => /sotaque/i.test(w.word)));
+    if (j >= 0) {
+      // a instrução termina em "…sem dramatizar. Pausa breve ao fim de cada linha.": até 8 palavras depois
+      const fimLinha = ps.findIndex((w, i) => i > j && i <= j + 8 && /linha/i.test(w.word));
+      const k = fimLinha >= 0 ? fimLinha : j;
+      const corte = ps[k].end + 0.15;
+      console.log(`  instrução lida em voz alta: corto os primeiros ${corte.toFixed(1)} s`);
+      const limpo = path.join(tmp, 'limpo.wav');
+      execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-ss', String(corte), '-i', wav, limpo]);
+      fs.renameSync(limpo, wav);
+    }
+  }
   const ouvir = (...extra) => {
     execFileSync('whisper', [wav, '--model', 'large-v3-turbo', '--language', 'pt', '--word_timestamps', 'True',
       '--output_format', 'json', '--output_dir', tmp, '--fp16', 'False', ...extra], { stdio: 'ignore' });

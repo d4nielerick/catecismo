@@ -1,91 +1,91 @@
 {
   "referencia": "Mt 12,46-50",
   "voz": "Algenib (gemini-3.8-flash-tts)",
-  "duracao": 59.42,
+  "duracao": 42.4,
   "linhas": [
     {
       "t0": 0,
-      "t1": 3.5,
+      "t1": 3.34,
       "texto": "Evangelho de Nosso Senhor Jesus Cristo segundo Mateus."
     },
     {
-      "t0": 22.5,
-      "t1": 23.5,
+      "t0": 5.13,
+      "t1": 6.1,
       "texto": "Naquele tempo,"
     },
     {
-      "t0": 23.78,
-      "t1": 26.28,
+      "t0": 6.33,
+      "t1": 8.88,
       "texto": "enquanto Jesus estava falando às multidões,"
     },
     {
-      "t0": 26.28,
-      "t1": 29.36,
+      "t0": 9.55,
+      "t1": 11.96,
       "texto": "sua mãe e seus irmãos ficaram do lado de fora,"
     },
     {
-      "t0": 29.56,
-      "t1": 30.82,
+      "t0": 12.11,
+      "t1": 13.42,
       "texto": "procurando falar com ele."
     },
     {
-      "t0": 31.8,
-      "t1": 33.02,
+      "t0": 14.35,
+      "t1": 15.62,
       "texto": "Alguém disse a Jesus:"
     },
     {
-      "t0": 33.32,
-      "t1": 36.46,
+      "t0": 15.91,
+      "t1": 19.06,
       "texto": "\"Olha! Tua mãe e teus irmãos estão aí fora,"
     },
     {
-      "t0": 36.46,
-      "t1": 37.78,
+      "t0": 19.01,
+      "t1": 20.38,
       "texto": "e querem falar contigo\"."
     },
     {
-      "t0": 38.32,
-      "t1": 40.6,
+      "t0": 20.87,
+      "t1": 23.18,
       "texto": "Jesus perguntou àquele que tinha falado:"
     },
     {
-      "t0": 40.92,
-      "t1": 43.58,
+      "t0": 23.47,
+      "t1": 26.18,
       "texto": "\"Quem é minha mãe, e quem são meus irmãos?\""
     },
     {
-      "t0": 44.16,
-      "t1": 46.34,
+      "t0": 26.67,
+      "t1": 28.94,
       "texto": "E, estendendo a mão para os discípulos,"
     },
     {
-      "t0": 46.72,
-      "t1": 47.36,
+      "t0": 29.05,
+      "t1": 29.94,
       "texto": "Jesus disse:"
     },
     {
-      "t0": 47.98,
-      "t1": 49.78,
+      "t0": 29.95,
+      "t1": 32.38,
       "texto": "\"Eis minha mãe e meus irmãos."
     },
     {
-      "t0": 50.36,
-      "t1": 52.7,
+      "t0": 32.55,
+      "t1": 35.3,
       "texto": "Pois todo aquele que faz a vontade do meu Pai,"
     },
     {
-      "t0": 52.84,
-      "t1": 53.88,
+      "t0": 35.37,
+      "t1": 36.5,
       "texto": "que está nos céus,"
     },
     {
-      "t0": 53.88,
-      "t1": 57.26,
+      "t0": 37.01,
+      "t1": 39.86,
       "texto": "esse é meu irmão, minha irmã e minha mãe\"."
     },
     {
-      "t0": 57.92,
-      "t1": 59.42,
+      "t0": 40.61,
+      "t1": 42.02,
       "texto": "Palavra da Salvação."
     }
   ]

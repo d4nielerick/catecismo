@@ -1,76 +1,76 @@
 {
   "referencia": "Zc 2,14-17",
   "voz": "Algenib (gemini-3.8-flash-tts)",
-  "duracao": 60.34,
+  "duracao": 41.7,
   "linhas": [
     {
       "t0": 0,
-      "t1": 21.54,
+      "t1": 2.44,
       "texto": "Leitura da Profecia de Zacarias."
     },
     {
-      "t0": 22.8,
-      "t1": 25.74,
+      "t0": 3.77,
+      "t1": 6.64,
       "texto": "\"Rejubila, alegra-te, cidade de Sião,"
     },
     {
-      "t0": 25.74,
-      "t1": 28.88,
+      "t0": 7.45,
+      "t1": 9.78,
       "texto": "eis que venho para habitar no meio de ti,"
     },
     {
-      "t0": 29.18,
-      "t1": 30.04,
+      "t0": 10.07,
+      "t1": 10.96,
       "texto": "diz o Senhor."
     },
     {
-      "t0": 31.04,
-      "t1": 34.62,
+      "t0": 11.97,
+      "t1": 15.52,
       "texto": "Muitas nações se aproximarão do Senhor, naquele dia,"
     },
     {
-      "t0": 34.62,
-      "t1": 36.42,
+      "t0": 15.59,
+      "t1": 17.32,
       "texto": "e serão o seu povo."
     },
     {
-      "t0": 37.2,
-      "t1": 38.64,
+      "t0": 18.13,
+      "t1": 19.52,
       "texto": "Habitarei no meio de ti,"
     },
     {
-      "t0": 38.64,
-      "t1": 42.46,
+      "t0": 19.67,
+      "t1": 23.34,
       "texto": "e saberás que o Senhor dos exércitos me enviou a ti."
     },
     {
-      "t0": 42.98,
-      "t1": 45.68,
+      "t0": 23.29,
+      "t1": 26.62,
       "texto": "O Senhor entrará em posse de Judá,"
     },
     {
-      "t0": 45.82,
-      "t1": 48.24,
+      "t0": 26.71,
+      "t1": 29.14,
       "texto": "como sua porção na terra santa,"
     },
     {
-      "t0": 48.52,
-      "t1": 50.92,
+      "t0": 29.33,
+      "t1": 31.82,
       "texto": "e escolherá de novo Jerusalém."
     },
     {
-      "t0": 51.9,
-      "t1": 54.42,
+      "t0": 32.75,
+      "t1": 35.02,
       "texto": "Emudeça todo mortal diante do Senhor,"
     },
     {
-      "t0": 54.42,
-      "t1": 58.28,
+      "t0": 35.61,
+      "t1": 39.16,
       "texto": "ele acaba de levantar-se de sua santa habitação\"."
     },
     {
-      "t0": 59.14,
-      "t1": 60.34,
+      "t0": 40.07,
+      "t1": 41.2,
       "texto": "Palavra do Senhor."
     }
   ]
