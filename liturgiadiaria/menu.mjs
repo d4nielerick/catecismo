@@ -40,6 +40,8 @@ function aplicar(n) {
   const trilha = dialogo?.querySelector('.lp-menu-pontos');
   if (trilha) {
     trilha.style.setProperty('--p', String(nivel / (ESCALAS.length - 1)));   // a linha enche e o polegar desliza até aqui
+    trilha.setAttribute('aria-valuenow', String(nivel));
+    trilha.setAttribute('aria-valuetext', `${Math.round(16 * ESCALAS[nivel])} pixels`);
     const polegar = trilha.querySelector('.lp-menu-polegar');
     polegar.classList.remove('pulo'); void polegar.offsetWidth; polegar.classList.add('pulo');
   }
@@ -453,7 +455,7 @@ export function iniciarMenu() {
         <h3 id="lp-menu-h-fonte">Tamanho do texto</h3>
         <div class="lp-menu-fonte">
           <button type="button" data-fonte="-1" aria-label="Diminuir o texto"><span class="a-menor">A</span></button>
-          <span class="lp-menu-pontos" aria-hidden="true">${ESCALAS.map(() => '<i class="lp-menu-ponto"></i>').join('')}<b class="lp-menu-enche"></b><b class="lp-menu-polegar"></b></span>
+          <span class="lp-menu-pontos" role="slider" tabindex="0" aria-label="Tamanho do texto" aria-valuemin="0" aria-valuemax="${ESCALAS.length - 1}">${ESCALAS.map(() => '<i class="lp-menu-ponto" aria-hidden="true"></i>').join('')}<b class="lp-menu-enche" aria-hidden="true"></b><b class="lp-menu-polegar" aria-hidden="true"></b></span>
           <button type="button" data-fonte="1" aria-label="Aumentar o texto"><span class="a-maior">A</span></button>
         </div>
       </section>
@@ -524,6 +526,32 @@ export function iniciarMenu() {
     if (pix) { pix = null; mostrarEtapa('botao'); }   // fechou no meio de um Pix: volta ao início
   });
   dialogo.addEventListener('cancel', e => { e.preventDefault(); fechar(); });
+  // a trilha do tamanho: tocar num ponto ou arrastar a bolinha escolhe o nível mais próximo
+  const trilha = dialogo.querySelector('.lp-menu-pontos');
+  let arrastandoFonte = false;
+  const nivelNoDedo = e => {
+    const r = trilha.getBoundingClientRect();
+    return Math.round(Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * (ESCALAS.length - 1));
+  };
+  const seguir = e => { const n = nivelNoDedo(e); if (n !== nivel) aplicar(n); };
+  trilha.addEventListener('pointerdown', e => {
+    if (e.button > 0) return;
+    arrastandoFonte = true;
+    try { trilha.setPointerCapture(e.pointerId); } catch { /* sem captura: o arrasto vale enquanto o dedo estiver na trilha */ }
+    trilha.classList.add('arrastando');
+    seguir(e);
+  });
+  trilha.addEventListener('pointermove', e => { if (arrastandoFonte) seguir(e); });
+  const soltar = () => { if (!arrastandoFonte) return; arrastandoFonte = false; trilha.classList.remove('arrastando'); gravar(nivel); };
+  trilha.addEventListener('pointerup', soltar);
+  trilha.addEventListener('pointercancel', soltar);
+  trilha.addEventListener('keydown', e => {
+    const passo = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 }[e.key];
+    const alvo = passo !== undefined ? nivel + passo : e.key === 'Home' ? 0 : e.key === 'End' ? ESCALAS.length - 1 : null;
+    if (alvo === null) return;
+    e.preventDefault();
+    if (alvo !== nivel && alvo >= 0 && alvo < ESCALAS.length) { aplicar(alvo); gravar(nivel); }
+  });
   const grab = dialogo.querySelector('.lp-menu-grab');
   grab.addEventListener('pointerdown', comecarArrasto);
   grab.addEventListener('pointermove', moverArrasto);

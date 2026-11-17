@@ -1724,7 +1724,11 @@ a.lp-menu-seta:active { background: rgba(203, 46, 46, 0.14); transform: scale(0.
 .lp-menu-fonte button:disabled { opacity: 0.3; cursor: default; }
 .lp-menu-fonte .a-menor { font-size: 15px; }
 .lp-menu-fonte .a-maior { font-size: 26px; }
-.lp-menu-pontos { --p: 0; flex: 1; height: 46px; position: relative; display: flex; align-items: center; justify-content: space-between; margin: 0 0.9rem; }
+.lp-menu-pontos { --p: 0; flex: 1; height: 46px; position: relative; display: flex; align-items: center; justify-content: space-between; margin: 0 0.9rem;  cursor: pointer; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.lp-menu-pontos:focus-visible { outline: 2px solid var(--lp-vermelho); outline-offset: 4px; border-radius: 4px; }
+/* enquanto o dedo arrasta, a bolinha acompanha sem a mola (a mola atrasaria o dedo) */
+.lp-menu-pontos.arrastando .lp-menu-polegar, .lp-menu-pontos.arrastando .lp-menu-enche { transition-duration: 0.12s; }
+.lp-menu-pontos.arrastando .lp-menu-polegar { transform: scale(1.15); }
 .lp-menu-pontos::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; border-radius: 1px; background: rgba(40, 30, 15, 0.1); }
 /* a linha vermelha enche até o nível e o polegar desliza junto, com a mesma mola da luz das abas */
 .lp-menu-enche { position: absolute; left: 0; top: 50%; height: 2px; margin-top: -1px; border-radius: 1px; background: var(--lp-vermelho);

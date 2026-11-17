@@ -17,7 +17,8 @@
  * Para trocar tudo (mudou a lista da casca, por exemplo), suba a VERSAO.
  */
 
-const VERSAO = 'v3';   // v3: dados revalidam (cache: 'no-cache'); o servidor guarda /data/ por 30 dias e um dia corrigido não chegava ao aparelho
+const VERSAO = 'v4';   // v4: sem rede, procura a cópia em qualquer cache (o indice.json da instalação ficava na casca e o calendário sumia offline); apoio.json pela rede primeiro
+// v3: dados revalidam (cache: 'no-cache'); o servidor guarda /data/ por 30 dias e um dia corrigido não chegava ao aparelho
 const CASCA = `lit-${VERSAO}-casca`;
 const DADOS = `lit-${VERSAO}-dados`;
 const MIDIA = `lit-${VERSAO}-midia`;
@@ -51,6 +52,7 @@ const CASCA_ARQUIVOS = [
   '/data/santos/indice.json',
   '/data/santos-frases.json',
   '/data/cards-imagens.json',
+  '/data/apoio.json',
 ];
 
 self.addEventListener('install', e => {
@@ -83,7 +85,8 @@ async function redePrimeiro(req, nome, { tempo = 0, reserva } = {}) {
     if (!tempo) return await rede;
     return await Promise.race([rede, new Promise((_, no) => setTimeout(no, tempo, new Error('lento')))]);
   } catch (erro) {
-    const guardado = await cache.match(req, { ignoreSearch: req.mode === 'navigate' });
+    // em qualquer cache: o que a instalação guardou na casca também serve aos dados (indice.json)
+    const guardado = await cache.match(req, { ignoreSearch: req.mode === 'navigate' }) || await caches.match(req, { ignoreSearch: req.mode === 'navigate' });
     if (guardado) return guardado;
     if (reserva) { const r = await (await caches.open(nome)).match(reserva); if (r) return r; }
     if (tempo) return rede;   // sem cópia nenhuma: espera a rede, mesmo lenta
@@ -93,7 +96,7 @@ async function redePrimeiro(req, nome, { tempo = 0, reserva } = {}) {
 
 async function guardarEAtualizar(e, req) {
   const cache = await caches.open(DADOS);
-  const guardado = await cache.match(req);
+  const guardado = await cache.match(req) || await caches.match(req);
   const rede = fetch(req, { cache: 'no-cache' }).then(r => { if (r.ok) { cache.put(req, r.clone()).then(() => aparar(cache, MAX_DADOS)); } return r; }).catch(() => null);
   if (guardado) { e.waitUntil(rede); return guardado; }
   return (await rede) || new Response('null', { status: 504, headers: { 'Content-Type': 'application/json' } });
@@ -122,7 +125,7 @@ self.addEventListener('fetch', e => {
     e.respondWith(redePrimeiro(req, CASCA, { tempo: 3500, reserva: '/liturgiadiaria/' }));
     return;
   }
-  if (p === '/data/liturgia/indice.json' || p === '/data/push.json') { e.respondWith(redePrimeiro(req, DADOS, { tempo: 2500 })); return; }
+  if (p === '/data/liturgia/indice.json' || p === '/data/push.json' || p === '/data/apoio.json') { e.respondWith(redePrimeiro(req, DADOS, { tempo: 2500 })); return; }
   if (p.startsWith('/data/')) { e.respondWith(guardarEAtualizar(e, req)); return; }
   if (/\.(?:woff2|png|webp|jpg|jpeg|svg)$/.test(p)) { e.respondWith(copiaPrimeiro(req, MIDIA, MAX_MIDIA)); return; }
   if (/\.(?:js|mjs|css|webmanifest)$/.test(p)) { e.respondWith(redePrimeiro(req, CASCA)); return; }
