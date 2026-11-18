@@ -131,7 +131,7 @@ Deploy a partir de um clone local com a `main` atualizada:
 
 ```bash
 rsync -az --delete \
-  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/ios/} \
+  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/liturgiadiaria/instagram/reels/,/ios/} \
   ./ vps:/opt/mediaserver/catecismo/
 ```
 
@@ -143,6 +143,10 @@ tiram o que é só local — `.env.local` (chaves), `.claude/`, `.vercel/`, a pa
 `catecismo/`, backups `.bak` — e sem elas esses arquivos vão para o ar. Rode antes um ensaio
 com `-n --itemize-changes` e confira o que ele apagaria (`*deleting`) e se sobe algo fora do
 git além de `liturgiadiaria/AAAA-MM-DD/`, `liturgiadiaria/og/` e `sitemap-liturgia.xml`.
+
+Os vídeos dos Reels (`liturgiadiaria/instagram/reels/`, inclusive os extras `<dia>-2.mp4`) só existem na VPS:
+por isso a exclusão no rsync. O publicador (`scripts/publicar-instagram.mjs`) solta o Reel do dia às 6h e,
+se houver `reels/<dia>-2.mp4` + `<dia>-2.json` ({ legenda, hora }) + `capas/<dia>-2.jpg`, um Reel extra na hora indicada.
 
 Se algo em `api/` mudou, depois do rsync: `docker restart catecismo-api` na VPS.
 

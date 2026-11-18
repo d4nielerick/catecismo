@@ -34,7 +34,8 @@ const GEMINI = process.argv.includes('--gemini');
 const GROK = process.argv.includes('--grok');
 const VOZ = GROK ? { id: 'leo', nome: 'leo (Grok TTS)' }
   : GEMINI ? { modelo: process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts', id: 'Algenib', nome: `Algenib (${process.env.GEMINI_MODELO || 'gemini-3.8-flash-tts'})` }
-  : { id: 'onwK4e9ZLuTAKqWW03F9', nome: 'Daniel (ElevenLabs, v4)' };
+  : process.env.ELEVENLABS_VOZ ? { id: process.env.ELEVENLABS_VOZ.split(':')[1], nome: `${process.env.ELEVENLABS_VOZ.split(':')[0]} (ElevenLabs, v4)` }
+  : { id: 'onwK4e9ZLuTAKqWW03F9', nome: 'Daniel (ElevenLabs, v4)' };   // ELEVENLABS_VOZ=Nome:id troca a voz
 const ENSAIO = process.argv.includes('--ensaio');   // só mostra o texto que seria lido, sem gerar
 const [dt, pedido = 'evangelho', audioArq, temposArq] = process.argv.slice(2).filter(a => !a.startsWith('--'));
 

@@ -12,6 +12,10 @@
  * com a capa reels/capas/<dia>.jpg quando houver (scripts/reels/capa-reel.py).
  * O card e a legenda vêm de liturgiadiaria/instagram/<dia>.jpg|.json (build-instagram-liturgia.py);
  * a API busca a imagem pelo endereço público do site. Token: IG_LITURGIA_TOKEN (nunca impresso).
+ *
+ * Reel extra do dia (ex.: o Evangelho ilustrado de domingo): reels/<dia>-2.mp4 com a legenda e a hora em
+ * reels/<dia>-2.json ({ legenda, hora }) e a capa em reels/capas/<dia>-2.jpg; sai a partir da `hora`
+ * de Brasília (padrão 12), uma vez (estado `reel2`).
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -33,8 +37,11 @@ const arqLegenda = path.join(RAIZ, 'liturgiadiaria', 'instagram', `${dia}.json`)
 const arqReel = path.join(RAIZ, 'liturgiadiaria', 'instagram', 'reels', `${dia}.mp4`);
 const fazCard = fs.existsSync(arqLegenda) && (agora || estado.ultimo !== dia);
 const fazReel = fs.existsSync(arqReel) && fs.existsSync(arqLegenda) && (agora || estado.reel !== dia);
+const arqExtra = path.join(RAIZ, 'liturgiadiaria', 'instagram', 'reels', `${dia}-2.json`);
+const extra = fs.existsSync(arqExtra) && fs.existsSync(arqExtra.replace(/\.json$/, '.mp4')) ? JSON.parse(fs.readFileSync(arqExtra, 'utf8')) : null;
+const fazExtra = !!extra && (agora || (estado.reel2 !== dia && +brasilia.hour >= (extra.hora ?? 12)));
 if (!agora && +brasilia.hour < HORA) process.exit(0);
-if (!fazCard && !fazReel) {
+if (!fazCard && !fazReel && !fazExtra) {
   if (!fs.existsSync(arqLegenda)) console.log(`${dia}: sem card gerado (rode build-instagram-liturgia.py e faça o deploy)`);
   process.exit(0);
 }
@@ -43,7 +50,12 @@ const imagem = `${SITE}/${dia}.jpg`;
 const video = `${SITE}/reels/${dia}.mp4`;
 const arqCapa = path.join(RAIZ, 'liturgiadiaria', 'instagram', 'reels', 'capas', `${dia}.jpg`);
 const capa = fs.existsSync(arqCapa) ? `${SITE}/reels/capas/${dia}.jpg` : null;   // scripts/reels/capa-reel.py
-if (ensaio) { console.log(fazCard ? imagem : '(card já saiu)', fazReel ? video : '(sem reel)', fazReel ? capa || '(sem capa)' : '', '\n', legenda); process.exit(0); }
+const capaExtra = fs.existsSync(path.join(RAIZ, 'liturgiadiaria', 'instagram', 'reels', 'capas', `${dia}-2.jpg`)) ? `${SITE}/reels/capas/${dia}-2.jpg` : null;
+if (ensaio) {
+  console.log(fazCard ? imagem : '(card já saiu)', fazReel ? video : '(sem reel)', fazReel ? capa || '(sem capa)' : '', '\n', legenda);
+  if (extra) console.log(`\nreel extra (${extra.hora ?? 12}h, ${fazExtra ? 'sai agora' : 'ainda não'}):`, `${SITE}/reels/${dia}-2.mp4`, capaExtra || '(sem capa)', '\n', extra.legenda);
+  process.exit(0);
+}
 
 const token = process.env.IG_LITURGIA_TOKEN;
 if (!token) { console.error('IG_LITURGIA_TOKEN ausente'); process.exit(1); }
@@ -80,10 +92,10 @@ try {
 
 
 // Reel: o Instagram baixa o vídeo do endereço público e processa (pode levar alguns minutos)
-if (fazReel) {
-  novoEstado.reel = dia; gravar();
+async function publicarReel(chave, url, texto, capaUrl, rotulo) {
+  novoEstado[chave] = dia; gravar();
   try {
-    const { id: container } = await chamar('/me/media', { media_type: 'REELS', video_url: video, caption: legenda, share_to_feed: 'true', ...(capa && { cover_url: capa }) });
+    const { id: container } = await chamar('/me/media', { media_type: 'REELS', video_url: url, caption: texto, share_to_feed: 'true', ...(capaUrl && { cover_url: capaUrl }) });
     for (let i = 0; i < 60; i++) {
       const { status_code } = await chamar(`/${container}`, { fields: 'status_code' }, 'GET');
       if (status_code === 'FINISHED') break;
@@ -91,10 +103,12 @@ if (fazReel) {
       await new Promise(r => setTimeout(r, 5000));
     }
     const { id } = await chamar('/me/media_publish', { creation_id: container });
-    console.log(`${dia} ${brasilia.hour}h · reel publicado (mídia ${id})`);
+    console.log(`${dia} ${brasilia.hour}h · ${rotulo} publicado (mídia ${id})`);
   } catch (e) {
-    novoEstado.reel = estado.reel; gravar(); falhou = true;
-    console.error(`${dia} ${brasilia.hour}h · reel falhou: ${e.message}`);
+    novoEstado[chave] = estado[chave]; gravar(); falhou = true;
+    console.error(`${dia} ${brasilia.hour}h · ${rotulo} falhou: ${e.message}`);
   }
 }
+if (fazReel) await publicarReel('reel', video, legenda, capa, 'reel');
+if (fazExtra) await publicarReel('reel2', `${SITE}/reels/${dia}-2.mp4`, extra.legenda, capaExtra, 'reel extra');
 if (falhou) process.exit(1);
