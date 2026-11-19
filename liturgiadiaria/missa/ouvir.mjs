@@ -60,32 +60,46 @@ export const ANCORAS_OE = {
  * Liga o reconhecimento. `aoOuvir(textoNormalizado, final)` recebe cada pedaço reconhecido;
  * `aoMudar(estado, detalhe)` recebe 'ouvindo' | 'parado' | 'erro'. Devolve { parar }.
  */
-export function ouvir({ aoOuvir, aoMudar }) {
+export function ouvir({ aoOuvir, aoMudar, aoDiagnostico = () => {} }) {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  const rec = new SR();
-  rec.lang = 'pt-BR';
-  rec.continuous = true;
-  rec.interimResults = true;
-  rec.maxAlternatives = 1;
   let ligado = true;
+  let rec = null;
+  let sessoes = 0;
 
-  rec.onstart = () => aoMudar('ouvindo');
-  rec.onaudiostart = () => aoMudar('ouvindo');
-  // Junta todos os pedaços desta sessão: o Safari do iPhone entrega a fala em fragmentos curtos
-  // (às vezes uma palavra por resultado, sem nunca marcar "final"); o Chrome entrega frases.
-  rec.onresult = e => {
-    let texto = '';
-    for (let i = 0; i < e.results.length; i++) texto += ' ' + e.results[i][0].transcript;
-    const palavras = normalizar(texto).split(' ');
-    aoOuvir(palavras.slice(-40).join(' '), false);
-  };
-  rec.onerror = e => {
-    if (e.error === 'no-speech' || e.error === 'aborted') return;   // silêncio: segue ouvindo
-    if (e.error === 'not-allowed' || e.error === 'service-not-allowed') { ligado = false; aoMudar('erro', 'O navegador não deu acesso ao microfone.'); return; }
-    aoMudar('erro', e.error === 'network' ? 'Sem conexão com o serviço de voz do navegador.' : `Erro no reconhecimento (${e.error}).`);
-  };
-  // O Chrome encerra a escuta contínua depois de um tempo; enquanto estiver ligado, recomeça
-  rec.onend = () => { if (ligado) { try { rec.start(); } catch { /* já começou */ } } else aoMudar('parado'); };
-  try { rec.start(); } catch (err) { aoMudar('erro', String(err.message || err)); }
-  return { parar() { ligado = false; try { rec.stop(); } catch { /* já parou */ } } };
+  // Cada sessão é um reconhecedor novo: o Safari do iPhone encerra a escuta contínua sozinho e não
+  // aceita recomeçar o mesmo objeto logo em seguida (o start() falha calado e a escuta morre).
+  function comecar() {
+    if (!ligado) return;
+    rec = new SR();
+    rec.lang = 'pt-BR';
+    rec.continuous = true;
+    rec.interimResults = true;
+    rec.maxAlternatives = 1;
+    sessoes++;
+    aoDiagnostico({ sessoes, evento: 'início' });
+    rec.onstart = () => aoMudar('ouvindo');
+    // Junta todos os pedaços desta sessão: o Safari do iPhone entrega a fala em fragmentos curtos
+    // (às vezes uma palavra por resultado, sem nunca marcar "final"); o Chrome entrega frases.
+    rec.onresult = e => {
+      let texto = '';
+      for (let i = 0; i < e.results.length; i++) texto += ' ' + e.results[i][0].transcript;
+      aoOuvir(normalizar(texto).split(' ').slice(-40).join(' '), false);
+    };
+    rec.onerror = e => {
+      aoDiagnostico({ sessoes, evento: `erro ${e.error}` });
+      if (e.error === 'no-speech' || e.error === 'aborted') return;   // silêncio: recomeça no onend
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        ligado = false; aoMudar('erro', 'O navegador não deu acesso ao microfone (no iPhone, confira se o Ditado está ligado).'); return;
+      }
+      if (e.error === 'network') aoDiagnostico({ sessoes, evento: 'sem rede para o reconhecimento' });
+    };
+    rec.onend = () => {
+      aoDiagnostico({ sessoes, evento: 'fim' });
+      if (ligado) setTimeout(comecar, 300); else aoMudar('parado');
+    };
+    try { rec.start(); }
+    catch (err) { aoDiagnostico({ sessoes, evento: `não começou: ${err.message || err}` }); if (ligado) setTimeout(comecar, 1000); }
+  }
+  comecar();
+  return { parar() { ligado = false; try { rec?.stop(); } catch { /* já parou */ } } };
 }

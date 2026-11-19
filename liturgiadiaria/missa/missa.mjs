@@ -363,7 +363,9 @@ let sincronizado = false; // já achou uma vez onde a missa está?
 let avisoTimer = null;
 let trechos = 0;          // diagnóstico: quantos pedaços o reconhecimento já entregou
 let ultimo = '';
-let mostrarOuvido = false; // tocar na linha de baixo mostra o que ele está entendendo
+let mostrarOuvido = false;
+let diag = { sessoes: 0, evento: '' };
+let ultimoTempo = 0; // tocar na linha de baixo mostra o que ele está entendendo
 const JANELA = 6;         // depois de achar, olha primeiro só as próximas 6 partes
 
 function ancorasDe(p) { return (p.ancoras || ANCORAS[p.titulo] || []).filter(a => a && a.length >= 4); }
@@ -400,6 +402,7 @@ function achar(texto) {
 function aoOuvir(texto, final) {
   trechos++;
   ultimo = texto;
+  ultimoTempo = Date.now();
   if (mostrarOuvido) aviso(`(${trechos}) ${texto.split(' ').slice(-12).join(' ')}`);
   else if (!$('mm-escuta').classList.contains('achou')) aviso(`${sincronizado ? 'Acompanhando a missa' : 'Ouvindo… procurando em que parte a missa está'} · ${trechos}`);
   // o texto já vem acumulado da sessão (ouvir.mjs); depois de um reconhecimento, só conta o que veio depois
@@ -440,7 +443,9 @@ function aviso(texto, destaque = false) {
 function alternarEscuta() {
   if (escuta) { escuta.parar(); escuta = null; definirEscuta('parado'); return; }
   if (!suportado()) { definirEscuta('erro', 'Este navegador não reconhece voz. Use o Chrome ou o Safari.'); return; }
-  escuta = ouvir({ aoOuvir, aoMudar: definirEscuta });
+  $('mm-escuta').hidden = false; aviso('Esperando o microfone…');
+  $('mm-mic').setAttribute('aria-pressed', 'true');
+  escuta = ouvir({ aoOuvir, aoMudar: definirEscuta, aoDiagnostico: d => { diag = d; if (mostrarOuvido) aviso(`(${trechos}) sessão ${d.sessoes} · ${d.evento}`); } });
 }
 
 function definirEscuta(estado, detalhe = '') {
@@ -456,7 +461,7 @@ function definirEscuta(estado, detalhe = '') {
 
 // ── Controles ───────────────────────────────────────────────────────────────
 $('mm-mic').addEventListener('click', alternarEscuta);
-$('mm-escuta').addEventListener('click', () => { mostrarOuvido = !mostrarOuvido; aviso(mostrarOuvido ? `(${trechos}) ${ultimo || 'nada ainda'}` : 'Ouvindo…'); });
+$('mm-escuta').addEventListener('click', () => { mostrarOuvido = !mostrarOuvido; aviso(mostrarOuvido ? `(${trechos}) sessão ${diag.sessoes} · ${diag.evento} · ${ultimo.split(' ').slice(-8).join(' ') || 'nada ainda'}` : 'Ouvindo…'); });
 // Teste sem microfone (só em localhost): __mmOuvir('coracoes ao alto')
 if (location.hostname === 'localhost') window.__mmOuvir = t => aoOuvir(normalizar(t), true);
 $('mm-ant').addEventListener('click', () => ir(-1));
