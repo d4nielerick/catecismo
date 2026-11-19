@@ -47,15 +47,16 @@ const temCredo = (d, dia) => ehDomingo(d) || ehSolenidade(dia);
 
 // ── Montagem das telas ──────────────────────────────────────────────────────
 function falas(itens) {
-  return itens.map(i => i.s ? `<p class="mm-s"><span class="mm-quem">Sacerdote</span>${esc(i.s)}</p>`
-    : i.p ? `<p class="mm-p"><span class="mm-quem">Todos</span>${esc(i.p)}</p>`
+  // Como nos missais: V. (o sacerdote) e R. (todos) em vermelho, rubrica em vermelho itálico
+  return itens.map(i => i.s ? `<p class="mm-s"><span class="mm-sig" aria-hidden="true">V.</span><span class="mm-sr">Sacerdote: </span>${esc(i.s)}</p>`
+    : i.p ? `<p class="mm-p"><span class="mm-sig" aria-hidden="true">R.</span><span class="mm-sr">Todos: </span>${esc(i.p)}</p>`
     : i.r ? `<p class="mm-r">${esc(i.r)}</p>`
     : `<p>${esc(i.t)}</p>`).join('');
 }
 
 // Oração própria do dia (se o arquivo local existir); senão, só a rubrica
 const propria = (rotulo, texto) => texto
-  ? `<div class="mm-propria"><span class="mm-quem">${esc(rotulo)}</span>${esc(texto)}<span class="mm-credito">Missal Romano · © Edições CNBB</span></div>` : '';
+  ? `<figure class="mm-propria"><figcaption>${esc(rotulo)}</figcaption><blockquote>${esc(texto)}</blockquote><small class="mm-credito">Missal Romano · © Edições CNBB</small></figure>` : '';
 
 function montarPassos(d, dia, missa, or = {}) {
   const passos = [];
@@ -113,12 +114,12 @@ function montarPassos(d, dia, missa, or = {}) {
     S('Demos graças ao Senhor, nosso Deus.'), P('É digno e justo.'), R('O sacerdote reza o prefácio, um louvor que muda conforme o tempo e a festa.'),
     P('Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!'),
     R('Todos se ajoelham (onde for o costume).')]));
-  add(LE, 'Oração Eucarística', `${falas([R('O centro da missa. O sacerdote reza em nome de todos; o povo acompanha em silêncio. Qual delas está sendo rezada?')])}
-    <ul class="mm-oe">${ORACOES_EUCARISTICAS.map(([n, nome, desc]) => `<li><button type="button" data-oe="${n}"><strong>${esc(nome)}</strong><span>${esc(desc)}</span></button></li>`).join('')}</ul>
+  add(LE, 'Oração Eucarística', `${falas([R('O centro da missa. O sacerdote reza em nome de todos; o povo acompanha em silêncio.')])}
+    <p class="mm-oe-pergunta" id="mm-oe-pergunta">Qual está sendo rezada?</p>
+    <div class="mm-oe" role="radiogroup" aria-labelledby="mm-oe-pergunta">${ORACOES_EUCARISTICAS.map(([n, nome, desc]) => `<button type="button" role="radio" aria-checked="false" data-oe="${n}"><span class="mm-oe-marca" aria-hidden="true"></span><strong>${esc(nome)}</strong><span>${esc(desc)}</span></button>`).join('')}</div>
     <p class="mm-nota">O texto completo de cada Oração Eucarística entra depois da autorização da CNBB.</p>`, { oe: true });
-  add(LE, 'Consagração', `<p class="mm-recolhe-titulo">Consagração</p>
-    <p class="mm-recolhe-texto">O pão e o vinho se tornam o Corpo e o Sangue de Cristo.<br>Olhe para o altar e adore.</p>
-    <p class="mm-recolhe-dica">Guarde o celular. Toque em › quando o sacerdote disser “Eis o mistério da fé”.</p>`, { recolhimento: true });
+  add(LE, 'Consagração', `<p class="mm-recolhe-texto">O pão e o vinho se tornam o Corpo e o Sangue de Cristo.<br>Olhe para o altar e adore.</p>
+    <p class="mm-recolhe-dica">Guarde o celular. Avance quando o sacerdote disser “Eis o mistério da fé”.</p>`, { recolhimento: true });
   add(LE, 'Mistério da fé', falas([S('Eis o mistério da fé.'), P('Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição, até que venhais.'),
     R('A oração eucarística continua: o sacerdote reza pela Igreja, pelos vivos e pelos falecidos.'),
     S('Por Cristo, com Cristo e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda a honra e toda a glória, por todos os séculos dos séculos.'),
@@ -132,11 +133,10 @@ function montarPassos(d, dia, missa, or = {}) {
     P('Cordeiro de Deus, que tirais o pecado do mundo, tende piedade de nós. Cordeiro de Deus, que tirais o pecado do mundo, tende piedade de nós. Cordeiro de Deus, que tirais o pecado do mundo, dai-nos a paz.')]));
   add(RC, 'Eis o Cordeiro de Deus', falas([S('Felizes os convidados para a ceia do Senhor. Eis o Cordeiro de Deus, que tira o pecado do mundo.'),
     P('Senhor, eu não sou digno de que entreis em minha morada, mas dizei uma só palavra e a minha alma será curada.')]));
-  add(RC, 'Comunhão', `<p class="mm-recolhe-titulo">Comunhão</p>
-    <p class="mm-recolhe-texto">Guarde o celular e vá em paz ao encontro do Senhor.</p>
+  add(RC, 'Comunhão', `<p class="mm-recolhe-texto">Guarde o celular e vá em paz ao encontro do Senhor.</p>
     ${or.antifonas?.comunhao ? `<p class="mm-recolhe-dica">${esc(or.antifonas.comunhao)}</p>` : ''}
     <details class="mm-alt mm-recolhe-alt"><summary>Se não for comungar: comunhão espiritual</summary>${falas([P(COMUNHAO_ESPIRITUAL)])}</details>
-    <p class="mm-recolhe-dica">Toque em › quando o sacerdote disser “Oremos”.</p>`, { recolhimento: true });
+    <p class="mm-recolhe-dica">Avance quando o sacerdote disser “Oremos”.</p>`, { recolhimento: true });
   add(RC, 'Oração depois da comunhão', falas([S('Oremos.'), R(or.comunhao ? 'O sacerdote reza:' : 'O sacerdote reza a oração própria do dia.')])
     + propria('Depois da comunhão', or.comunhao) + falas([P('Amém.'), R('Avisos da comunidade, se houver.')]));
 
@@ -168,43 +168,73 @@ async function manterAcesa(sim) {
 }
 
 function mostrar(i, { rolar = true } = {}) {
+  const antes = atual;
   atual = Math.max(0, Math.min(passos.length - 1, i));
   const p = passos[atual];
+  const daSecao = passos.filter(q => q.secao === p.secao);
   $('mm-secao').textContent = p.secao;
+  $('mm-onde-n').textContent = atual > 0 ? `${daSecao.indexOf(p) + 1} de ${daSecao.length}` : '';
   $('mm-passo').textContent = p.titulo;
   const palco = $('mm-palco');
-  palco.innerHTML = `<section class="mm-tela${p.leitura ? ' mm-leitura' : ''}${p.evangelho ? ' mm-evangelho' : ''}">${p.html}</section>`;
+  const sentido = atual > antes ? 'frente' : atual < antes ? 'tras' : '';
+  palco.innerHTML = `<section class="mm-tela${p.leitura ? ' mm-leitura' : ''}${sentido ? ` mm-vem-${sentido}` : ''}">${p.html}</section>`;
   if (rolar) palco.scrollTop = 0;
   document.body.classList.toggle('mm-recolhido', !!p.recolhimento);
   manterAcesa(!p.recolhimento);
   $('mm-ant').disabled = atual === 0;
-  $('mm-prox').disabled = atual === passos.length - 1;
-  for (const [k, el] of [...$('mm-barra').children].entries()) el.classList.toggle('feito', k <= atual);
-  for (const li of $('mm-lista').children) li.classList.toggle('atual', +li.dataset.i === atual);
+  const prox = passos[atual + 1];
+  $('mm-prox').disabled = !prox;
+  $('mm-prox-nome').textContent = prox ? prox.titulo : 'Fim da missa';
+  $('mm-prox').setAttribute('aria-label', prox ? `A seguir: ${prox.titulo}` : 'Fim da missa');
+  for (const seg of $('mm-barra').children) {
+    const ini = +seg.dataset.ini, fim = +seg.dataset.fim;
+    seg.style.setProperty('--enche', atual >= fim ? 1 : atual < ini ? 0 : (atual - ini + 1) / (fim - ini + 1));
+    seg.classList.toggle('agora', atual >= ini && atual <= fim);
+  }
+  $('mm-barra').setAttribute('aria-valuenow', String(Math.round(atual / (passos.length - 1) * 100)));
+  for (const li of $('mm-lista').children) {
+    const eh = +li.dataset.i === atual;
+    li.classList.toggle('atual', eh);
+    li.querySelector('button')?.toggleAttribute('aria-current', eh);
+  }
   if (p.oe) {
     const escolhida = ler(`mm-oe-${chaveDia}`);
     palco.querySelectorAll('[data-oe]').forEach(b => {
-      b.classList.toggle('escolhida', b.dataset.oe === escolhida);
-      b.addEventListener('click', () => { guardar(`mm-oe-${chaveDia}`, b.dataset.oe); mostrar(atual, { rolar: false }); });
+      b.setAttribute('aria-checked', String(b.dataset.oe === escolhida));
+      b.addEventListener('click', () => {
+        guardar(`mm-oe-${chaveDia}`, b.dataset.oe);
+        palco.querySelectorAll('[data-oe]').forEach(o => o.setAttribute('aria-checked', String(o === b)));
+      });
     });
   }
   guardar(`mm-pos-${chaveDia}`, String(atual));
 }
 
+const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+const SEMANA = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+function dataPorExtenso(d) {
+  const [a, m, dd] = d.split('-').map(Number);
+  return `${SEMANA[new Date(a, m - 1, dd).getDay()]}, ${dd} de ${MESES[m - 1]}`;
+}
+
 const ir = n => mostrar(atual + n);
 
-function tamanho(delta) {
-  const atualT = parseFloat(ler('mm-tamanho') || '1');
-  const novo = Math.max(0.85, Math.min(1.6, +(atualT + delta).toFixed(2)));
-  document.documentElement.style.setProperty('--mm-escala', novo);
-  guardar('mm-tamanho', String(novo));
+// Tamanho do texto: os mesmos quatro níveis e a mesma preferência da Liturgia (menu.mjs, 'lp-fonte')
+const ESCALAS = [1, 1.125, 1.25, 1.375];
+function tamanho(nivel) {
+  const n = Math.max(0, Math.min(ESCALAS.length - 1, nivel | 0));
+  document.documentElement.style.setProperty('--lp-k', String(ESCALAS[n]));
+  guardar('lp-fonte', String(n));
+  $('mm-letras').querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-checked', String(k === n)));
 }
+$('mm-letras').innerHTML = ESCALAS.map((e, k) => `<button type="button" role="radio" aria-checked="false" aria-label="Texto ${['normal', 'médio', 'grande', 'maior'][k]}" style="font-size:${15 * e}px">A</button>`).join('');
+$('mm-letras').querySelectorAll('button').forEach((b, k) => b.addEventListener('click', () => tamanho(k)));
 
 async function iniciar() {
   const q = new URLSearchParams(location.search).get('data');
   const d = /^\d{4}-\d{2}-\d{2}$/.test(q || '') ? q : hojeLocal();
   chaveDia = d;
-  document.documentElement.style.setProperty('--mm-escala', ler('mm-tamanho') || '1');
+  tamanho(Number(ler('lp-fonte')) || 0);
   let dia;
   try {
     const r = await fetch(`/data/liturgia/${d}.json`);
@@ -221,18 +251,25 @@ async function iniciar() {
   let or = {};
   try { const r = await fetch(`/data/liturgia-oracoes/${d}.json`); if (r.ok) or = await r.json(); } catch {}
   passos = montarPassos(d, dia, dia.missas[n], or);
-  passos.unshift({ secao: 'Modo Missa', titulo: 'Início', html: `
+  passos.unshift({ secao: 'Modo Missa', titulo: 'Antes da missa', html: `
+    <p class="mm-abertura-data">${esc(dataPorExtenso(d))}</p>
     <p class="mm-abertura-cel">${esc(dia.celebracao)}</p>
     <p class="mm-abertura-tempo">${esc(dia.tempo || '')}${dia.cor ? ` · cor ${esc(NOME_COR[dia.cor] || dia.cor)}` : ''}</p>
     ${dia.missas.length > 1 ? `<p class="mm-r">Hoje há mais de uma missa: ${dia.missas.map((m, i) => `<a href="?data=${d}&missa=${i}"${i === n ? ' aria-current="true"' : ''}>${esc(m.nome || `missa ${i + 1}`)}</a>`).join(' · ')}</p>` : ''}
     <span class="mm-divisor" aria-hidden="true"></span>
-    <p class="mm-abertura-dica">Uma parte da missa por tela. Toque em <strong>›</strong> ou deslize para o lado para avançar.
-    Na Consagração e na Comunhão a tela escurece: é hora de guardar o celular.</p>
-    <p class="mm-abertura-dica">Ponha o celular no silencioso antes de começar.</p>` });
+    <dl class="mm-legenda">
+      <div><dt class="mm-sig">V.</dt><dd>o sacerdote</dd></div>
+      <div><dt class="mm-sig">R.</dt><dd>todos respondem</dd></div>
+      <div><dt class="mm-r">vermelho</dt><dd>o que acontece</dd></div>
+    </dl>
+    <p class="mm-abertura-dica">Uma parte da missa por tela: avance pelo botão de baixo ou deslizando para o lado. Na Consagração e na Comunhão a tela escurece e pode ser guardada.</p>
+    <p class="mm-abertura-dica">Ponha o celular no silencioso.</p>` });
 
-  const barra = $('mm-barra');
-  barra.innerHTML = passos.map(() => '<i></i>').join('');
-  $('mm-lista').innerHTML = passos.map((p, i) => `${i === 0 || p.secao !== passos[i - 1].secao ? `<li class="mm-lista-secao" aria-hidden="true">${esc(i === 0 ? 'Início' : p.secao)}</li>` : ''}<li data-i="${i}"><button type="button">${esc(p.titulo)}</button></li>`).join('');
+  // Linha de progresso: um trecho por seção, largura proporcional ao número de partes
+  const secoes = [];
+  passos.forEach((p, i) => { if (i === 0) return; const s = secoes.at(-1); if (s?.nome === p.secao) s.fim = i; else secoes.push({ nome: p.secao, ini: i, fim: i }); });
+  $('mm-barra').innerHTML = secoes.map(s => `<span style="flex:${s.fim - s.ini + 1}" data-ini="${s.ini}" data-fim="${s.fim}"><i></i></span>`).join('');
+  $('mm-lista').innerHTML = passos.map((p, i) => `${i > 0 && p.secao !== passos[i - 1].secao ? `<li class="mm-lista-secao" aria-hidden="true">${esc(p.secao)}</li>` : ''}<li data-i="${i}"><button type="button">${esc(p.titulo)}</button></li>`).join('');
   [...$('mm-lista').querySelectorAll('li[data-i]')].forEach(li => li.querySelector('button').addEventListener('click', () => { $('mm-indice').close(); mostrar(+li.dataset.i); }));
 
   const salvo = parseInt(ler(`mm-pos-${d}`) || '0', 10);
@@ -242,9 +279,8 @@ async function iniciar() {
 // ── Controles ───────────────────────────────────────────────────────────────
 $('mm-ant').addEventListener('click', () => ir(-1));
 $('mm-prox').addEventListener('click', () => ir(1));
-$('mm-menor').addEventListener('click', () => tamanho(-0.1));
-$('mm-maior').addEventListener('click', () => tamanho(0.1));
-$('mm-indice-btn').addEventListener('click', () => { $('mm-indice').showModal(); $('mm-lista').querySelector('.atual')?.scrollIntoView({ block: 'center' }); });
+$('mm-onde').addEventListener('click', () => { $('mm-indice').showModal(); $('mm-lista').querySelector('.atual')?.scrollIntoView({ block: 'center' }); });
+$('mm-indice').addEventListener('click', e => { if (e.target === $('mm-indice')) $('mm-indice').close(); }); // toque fora fecha
 $('mm-indice-fechar').addEventListener('click', () => $('mm-indice').close());
 document.addEventListener('keydown', e => {
   if ($('mm-indice').open) return;

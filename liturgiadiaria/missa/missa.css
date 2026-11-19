@@ -1,172 +1,219 @@
 /* Modo Missa — no design system da Liturgia Diária (liturgiadiaria.css vem antes: tokens --lp-*,
    Inria Serif no texto, Times itálico nos títulos, capitular e versículos em vermelho).
-   Como nos missais, a rubrica (o que acontece) vem em vermelho. Exceção: Consagração e Comunhão
-   ficam escuras, para o celular se apagar no banco. */
+   Pensado para o celular, na mão, no banco da igreja: uma parte por tela, o botão de avançar
+   embaixo, ao alcance do polegar. Como nos missais, ℣ ℟ e a rubrica vêm em vermelho.
+   Consagração e Comunhão ficam escuras, para o celular se apagar. */
 
 :root {
-  --mm-escala: 1;
-  --lp-k: var(--mm-escala);          /* A− / A+ usam a mesma escala do texto da Liturgia */
-  --mm-cor: #b8972e;                 /* cor litúrgica do dia (missa.mjs) */
+  --mm-cor: #b8972e;               /* cor litúrgica do dia (missa.mjs) */
   --mm-fs: calc(17px * var(--lp-k));
+  --mm-margem: 20px;
+  --mm-tinta-fraca: rgba(0, 0, 0, 0.12);
+  --mm-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; }
 body {
   display: flex; flex-direction: column;
   -webkit-tap-highlight-color: transparent;
-  transition: background .8s ease, color .8s ease;
+  transition: background-color .6s var(--mm-ease), color .6s var(--mm-ease);
 }
-button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+::selection { background: rgba(203, 46, 46, 0.16); }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+:where(a, button, [tabindex]):focus-visible { outline: 2px solid var(--lp-vermelho); outline-offset: 3px; border-radius: 8px; }
+svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.mm-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* ── Topo ── */
-.mm-topo {
-  display: flex; align-items: flex-end; gap: 12px;
-  padding: max(14px, env(safe-area-inset-top)) 20px 10px;
+/* ── Topo: onde estou (seção, abre a lista) e o nome da parte ── */
+.mm-topo { padding: max(8px, env(safe-area-inset-top)) var(--mm-margem) 0; }
+.mm-topo-linha { display: flex; align-items: center; justify-content: space-between; margin: 0 -10px; }
+.mm-icone {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  color: var(--lp-tinta); text-decoration: none;
 }
-.mm-sair {
-  color: var(--lp-suave); text-decoration: none; font-family: var(--font-sans);
-  font-size: 1.15rem; padding: 4px 6px 6px 0; align-self: center;
+.mm-icone:active { background: var(--lp-linha); }
+.mm-onde {
+  display: flex; align-items: center; gap: 6px; height: 44px; padding: 0 8px 0 14px; border-radius: 999px;
+  font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-tinta);
+  max-width: calc(100% - 52px);
 }
-.mm-onde { flex: 1; min-width: 0; }
-.mm-secao {
-  display: flex; align-items: center; gap: .45rem;
-  font-family: var(--font-sans); font-size: .64rem; font-weight: 600; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--lp-suave);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.mm-secao::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--mm-cor); flex-shrink: 0; }
+.mm-onde span:first-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mm-onde-n { font-weight: 400; color: var(--lp-suave); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.mm-onde-n:empty { display: none; }
+.mm-onde svg { width: 18px; height: 18px; color: var(--lp-suave); }
+.mm-onde:active { background: var(--lp-linha); }
+
 .mm-passo {
   font-family: var(--font-titulo); font-style: italic; font-weight: 400;
-  font-size: 30px; line-height: 1.05; letter-spacing: -0.03em; color: var(--lp-tinta);
-  margin-top: .15rem;
+  font-size: 40px; line-height: 1.02; letter-spacing: -0.03em; color: var(--lp-tinta);
+  margin: 6px 0 16px; text-wrap: balance;
 }
-.mm-tamanho { display: flex; gap: 2px; align-self: center; }
-.mm-tamanho button {
-  font-family: var(--font-sans); font-size: .8rem; font-weight: 600; color: var(--lp-suave);
-  padding: .4rem .6rem; border-radius: 999px;
-}
-.mm-tamanho button:active { background: var(--lp-linha); }
 
-.mm-barra { display: flex; gap: 2px; padding: 0 20px 8px; }
-.mm-barra i { flex: 1; height: 2px; background: var(--lp-linha); border-radius: 1px; }
-.mm-barra i.feito { background: var(--mm-cor); }
+/* Linha de progresso: um trecho por seção da missa (a largura conta as partes); o trecho de
+   agora enche aos poucos. Sem rótulos: a seção já está escrita no botão de cima. */
+.mm-barra { display: flex; gap: 4px; height: 3px; }
+.mm-barra > span { position: relative; height: 100%; border-radius: 2px; background: var(--mm-tinta-fraca); overflow: hidden; }
+.mm-barra i {
+  position: absolute; inset: 0; border-radius: inherit; background: var(--lp-tinta);
+  transform-origin: left; transform: scaleX(var(--enche, 0)); transition: transform .35s var(--mm-ease);
+}
+.mm-barra > span.agora i { background: var(--lp-vermelho); }
 
 /* ── Palco ── */
-.mm-palco { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 18px 20px 40px; }
+.mm-palco { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding: 28px var(--mm-margem) 48px; }
 .mm-tela {
   max-width: calc(520px * var(--lp-k)); margin: 0 auto;
   font-size: var(--mm-fs); line-height: 1.6; color: var(--lp-texto);
-  animation: entra .35s ease;
 }
-@keyframes entra { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .mm-tela { animation: none; } body { transition: none; } }
+.mm-vem-frente { animation: vem-frente .24s var(--mm-ease); }
+.mm-vem-tras { animation: vem-tras .24s var(--mm-ease); }
+@keyframes vem-frente { from { opacity: 0; transform: translateX(14px); } }
+@keyframes vem-tras { from { opacity: 0; transform: translateX(-14px); } }
+@media (prefers-reduced-motion: reduce) { .mm-vem-frente, .mm-vem-tras { animation: none; } body { transition: none; } }
 
-.mm-tela p { margin: 0 0 1em; }
-.mm-quem {
-  display: block; font-family: var(--font-sans); font-size: .6rem; font-weight: 600;
-  letter-spacing: .08em; text-transform: uppercase; color: var(--lp-vermelho); margin-bottom: .15em;
-}
-.mm-s .mm-quem::before { content: '℣ '; }
-.mm-p .mm-quem::before { content: '℟ '; }
-.mm-s { color: var(--lp-tinta); }
-.mm-p { color: var(--lp-tinta); font-weight: 700; }
-/* Rubrica: em vermelho e itálico, como nos missais */
-.mm-r { font-style: italic; color: var(--lp-vermelho); font-size: .9em; }
-.mm-calmo { color: var(--lp-suave); font-style: italic; text-align: center; margin-top: 2.5em !important; }
-.mm-nota { font-family: var(--font-sans); font-size: .72rem; line-height: 1.5; color: var(--lp-suave); }
-.mm-ref { font-size: var(--mm-fs); color: var(--lp-tinta); margin-bottom: 11px; }
+.mm-tela p { margin: 0 0 14px; }
+/* ℣ ℟ pendurados na margem: o texto alinha pela esquerda, o sinal fica de fora */
+.mm-s, .mm-p { position: relative; padding-left: 1.6em; color: var(--lp-tinta); }
+.mm-p { font-weight: 700; }
+.mm-sig { position: absolute; left: 0; top: 0; font-weight: 400; color: var(--lp-vermelho); }
+.mm-s + .mm-p, .mm-p + .mm-s { margin-top: -6px; }   /* diálogo: pergunta e resposta juntas */
+.mm-r { font-style: italic; font-size: .9em; line-height: 1.5; color: var(--lp-vermelho); margin-top: 22px !important; }
+.mm-tela > .mm-r:first-child, .mm-tela > :first-child .mm-r:first-child { margin-top: 0 !important; }
+.mm-calmo { color: var(--lp-suave); font-style: italic; text-align: center; }
+.mm-nota { font-family: var(--font-sans); font-size: 12px; line-height: 1.5; color: var(--lp-suave); }
+.mm-ref { font-size: var(--mm-fs); color: var(--lp-tinta); margin-bottom: 12px; }
 
-/* Oração própria do dia */
-.mm-propria { margin: 0 0 1em; padding: .1em 0 .1em 1em; border-left: 2px solid var(--mm-cor); color: var(--lp-tinta); }
-.mm-propria .mm-quem { color: var(--lp-suave); }
-.mm-credito { display: block; margin-top: .5em; font-family: var(--font-sans); font-size: .62rem; letter-spacing: .04em; color: var(--lp-suave); }
+/* Oração própria do dia: rótulo pequeno, o texto recuado, crédito embaixo */
+.mm-propria { margin: 4px 0 22px; padding: 0 0 0 1.6em; }
+.mm-propria figcaption { font-family: var(--font-sans); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--lp-suave); margin-bottom: 6px; }
+.mm-propria blockquote { margin: 0; color: var(--lp-tinta); }
+.mm-credito { display: block; margin-top: 8px; font-family: var(--font-sans); font-size: 11px; color: var(--lp-suave); }
 
-/* Leituras (render.mjs): título da leitura grande, como na página do dia */
+/* Leituras (render.mjs) */
 .mm-leitura .leitura-texto { font-size: var(--mm-fs); }
-.mm-leitura .leitura-texto p { margin: 0 0 1em; }
+.mm-leitura .leitura-texto p { margin: 0 0 14px; }
 .mm-leitura .salmo-refrao, .mm-leitura .acl-verso { font-weight: 700; color: var(--lp-tinta); }
-.mm-leitura .salmo-r-label { color: var(--lp-vermelho); }
+.mm-leitura .salmo-r-label { color: var(--lp-vermelho); font-weight: 400; }
+.mm-leitura .leitura-texto { margin-bottom: 22px; }
 
-/* Oração Eucarística: escolha */
-.mm-oe { list-style: none; padding: 0; margin: 0 0 1.2em; display: grid; gap: 8px; }
+/* Oração Eucarística: lista de escolha, linhas separadas por fio, marca à esquerda */
+.mm-oe-pergunta { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-tinta); margin: 24px 0 4px !important; }
+.mm-oe { border-top: 1px solid var(--lp-linha); margin-bottom: 18px; }
 .mm-oe button {
-  width: 100%; text-align: left; padding: .75em 1em; border: 1px solid var(--lp-linha); border-radius: 14px;
-  display: grid; gap: .1em; background: #fff; transition: border-color .2s, background .2s;
+  display: grid; grid-template-columns: 28px 1fr; column-gap: 6px; align-items: baseline;
+  width: 100%; text-align: left; padding: 14px 0; border-bottom: 1px solid var(--lp-linha);
 }
-.mm-oe strong { font-family: var(--font-titulo); font-style: italic; font-weight: 400; font-size: 1.25em; color: var(--lp-tinta); letter-spacing: -0.01em; }
-.mm-oe button span { color: var(--lp-suave); font-size: .85em; line-height: 1.45; }
-.mm-oe button.escolhida { border-color: var(--mm-cor); background: color-mix(in srgb, var(--mm-cor) 10%, #fff); }
-
-.mm-alt { margin: .4em 0 1em; }
-.mm-alt summary { font-family: var(--font-sans); font-size: .78rem; font-weight: 600; color: var(--lp-vermelho); cursor: pointer; margin-bottom: .8em; }
-
-/* Abertura e despedida: o divisor da Liturgia */
-.mm-abertura-cel {
-  font-family: var(--font-titulo); font-style: italic; font-size: 46px; line-height: 1;
-  letter-spacing: -0.03em; color: var(--lp-tinta); margin-top: .6em !important;
+.mm-oe strong { grid-column: 2; font-family: var(--font-titulo); font-style: italic; font-weight: 400; font-size: 1.3em; line-height: 1.15; letter-spacing: -0.01em; color: var(--lp-tinta); }
+.mm-oe button > span:last-child { grid-column: 2; font-size: .86em; line-height: 1.45; color: var(--lp-suave); margin-top: 2px; }
+.mm-oe-marca {
+  grid-row: 1; grid-column: 1; align-self: center; width: 18px; height: 18px; border-radius: 50%;
+  border: 1.5px solid rgba(0, 0, 0, .3); transition: border-color .2s, box-shadow .2s;
 }
-.mm-abertura-tempo { display: flex; align-items: center; gap: .5rem; font-family: var(--font-sans); font-size: .64rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--lp-suave); }
+.mm-oe button[aria-checked="true"] .mm-oe-marca { border-color: var(--lp-vermelho); box-shadow: inset 0 0 0 4px var(--lp-fundo), inset 0 0 0 9px var(--lp-vermelho); }
+.mm-oe button[aria-checked="true"] strong { color: var(--lp-vermelho); }
+
+.mm-alt { margin: 8px 0 18px; }
+.mm-alt summary { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-vermelho); cursor: pointer; padding: 10px 0; }
+
+/* Antes da missa */
+.mm-abertura-data { font-size: 15px; color: var(--lp-suave); margin: 0 0 4px !important; }
+.mm-abertura-data::first-letter { text-transform: uppercase; }
+.mm-abertura-cel { font-family: var(--font-titulo); font-style: italic; font-size: 34px; line-height: 1.05; letter-spacing: -0.03em; color: var(--lp-tinta); text-wrap: balance; margin: 0 0 10px !important; }
+.mm-abertura-tempo { display: flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--lp-suave); }
 .mm-abertura-tempo::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--mm-cor); }
-.mm-divisor { display: block; width: min(300px, 80%); height: 60px; margin: 2.2rem auto; background: url('/assets/img/liturgia-divisor.svg') center / contain no-repeat; }
+.mm-divisor { display: block; width: min(260px, 70%); height: 52px; margin: 28px auto; background: url('/assets/img/liturgia-divisor.svg') center / contain no-repeat; }
+.mm-legenda { margin: 0 0 22px; display: grid; gap: 6px; }
+.mm-legenda div { display: flex; gap: 12px; align-items: baseline; }
+.mm-legenda dt { position: static; width: 5.4em; flex-shrink: 0; margin: 0 !important; }
+.mm-legenda dd { margin: 0; color: var(--lp-texto); }
 .mm-abertura-dica { color: var(--lp-texto); }
-.mm-tela a { color: var(--lp-vermelho); }
+.mm-tela a { color: var(--lp-vermelho); text-underline-offset: 3px; }
+
+/* ── Rodapé: voltar pequeno, avançar grande e dizendo o que vem ── */
+.mm-rodape {
+  display: flex; gap: 10px; align-items: stretch;
+  padding: 10px var(--mm-margem) max(14px, env(safe-area-inset-bottom));
+  background: var(--lp-fundo); box-shadow: 0 -1px 0 var(--lp-linha);
+  transition: background-color .6s var(--mm-ease);
+}
+.mm-ant {
+  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
+  border: 1px solid var(--mm-tinta-fraca); color: var(--lp-tinta);
+}
+.mm-prox {
+  flex: 1; min-width: 0; height: 56px; border-radius: 999px; padding: 0 16px 0 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  background: var(--lp-vermelho); color: #fff; text-align: left;
+  transition: transform .15s var(--mm-ease), background-color .2s;
+}
+.mm-prox-texto { display: grid; min-width: 0; }
+.mm-prox small { font-family: var(--font-sans); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.mm-prox-texto > span { font-family: var(--font-titulo); font-style: italic; font-size: 20px; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mm-ant:active, .mm-prox:active { transform: scale(.97); }
+.mm-ant:disabled { opacity: .3; cursor: default; transform: none; }
+.mm-prox:disabled { background: var(--mm-tinta-fraca); color: var(--lp-suave); cursor: default; transform: none; }
+.mm-prox:disabled small { visibility: hidden; }
+@media (hover: hover) {
+  .mm-prox:not(:disabled):hover { background: #b52626; }
+  .mm-ant:not(:disabled):hover, .mm-icone:hover, .mm-onde:hover { background: var(--lp-linha); }
+}
 
 /* ── Recolhimento: Consagração e Comunhão ── */
-body.mm-recolhido { background: #000; color: #6f675d; }
-body.mm-recolhido .mm-topo, body.mm-recolhido .mm-barra, body.mm-recolhido .mm-rodape { opacity: .3; }
-body.mm-recolhido .mm-passo { color: #8d8478; }
-body.mm-recolhido .mm-tela { color: #8d8478; }
-.mm-recolhe-titulo { text-align: center; font-family: var(--font-titulo); font-style: italic; font-size: 40px; letter-spacing: -0.03em; color: #8d8478; margin-top: 16vh !important; }
-.mm-recolhe-texto { text-align: center; font-size: 1.1em; color: #8d8478; }
-.mm-recolhe-dica { text-align: center; font-family: var(--font-sans); font-size: .74rem; color: #5a534b; margin-top: 2.5em !important; }
-.mm-recolhe-alt summary { color: #8d8478; text-align: center; }
-body.mm-recolhido .mm-p { color: #a49b8e; }
-body.mm-recolhido .mm-quem { color: #6f675d; }
+body.mm-recolhido { background-color: #000; color: #8d8478; }
+body.mm-recolhido .mm-topo, body.mm-recolhido .mm-rodape { opacity: .35; transition: opacity .6s; }
+body.mm-recolhido .mm-rodape { background: #000; box-shadow: none; }
+body.mm-recolhido :is(.mm-passo, .mm-onde, .mm-icone, .mm-ant) { color: #8d8478; }
+body.mm-recolhido .mm-ant { border-color: #2a2622; }
+body.mm-recolhido .mm-prox { background: #1c1a17; color: #8d8478; }
+body.mm-recolhido .mm-barra > span { background: #1c1a17; }
+body.mm-recolhido .mm-barra i { background: #4f4942; }
+.mm-recolhe-texto { text-align: center; font-family: var(--font-titulo); font-style: italic; font-size: 30px; line-height: 1.2; letter-spacing: -0.02em; color: #a49b8e; margin: 14vh 0 0 !important; text-wrap: balance; }
+.mm-recolhe-dica { text-align: center; font-family: var(--font-sans); font-size: 13px; line-height: 1.5; color: #6f675d; margin-top: 32px !important; }
+.mm-recolhe-alt summary { color: #a49b8e; text-align: center; }
+body.mm-recolhido .mm-p, body.mm-recolhido .mm-s { color: #a49b8e; }
+body.mm-recolhido .mm-sig { color: #6f675d; }
 
-/* ── Rodapé ── */
-.mm-rodape {
-  display: flex; align-items: center; gap: 10px;
-  padding: 10px 20px max(14px, env(safe-area-inset-bottom));
-  border-top: 1px solid var(--lp-linha); background: var(--lp-fundo);
-  transition: background .8s ease;
-}
-body.mm-recolhido .mm-rodape { background: #000; border-color: #1c1a17; }
-.mm-nav {
-  width: 52px; height: 48px; border-radius: 999px; font-family: var(--font-sans); font-size: 1.5rem; line-height: 1;
-  border: 1px solid var(--lp-linha); color: var(--lp-tinta);
-}
-.mm-prox { background: var(--lp-vermelho); border-color: var(--lp-vermelho); color: #fff; width: 64px; }
-.mm-nav:disabled { opacity: .25; cursor: default; }
-.mm-indice-btn {
-  flex: 1; height: 48px; border-radius: 999px; font-family: var(--font-sans); font-size: .82rem; font-weight: 600;
-  color: var(--lp-suave);
-}
-body.mm-recolhido .mm-nav { color: #8d8478; border-color: #2a2622; }
-body.mm-recolhido .mm-prox { background: #2a2622; border-color: #2a2622; }
-
-/* ── Índice ── */
+/* ── Lista das partes (folha que sobe de baixo) ── */
 .mm-indice {
-  border: 0; padding: 0; margin: auto 0 0; width: 100%; max-width: none; max-height: 80vh;
-  background: var(--lp-fundo); color: var(--lp-texto); border-radius: 22px 22px 0 0;
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, .12);
+  border: 0; padding: 0; margin: auto 0 0; width: 100%; max-width: none; max-height: 86dvh;
+  background: var(--lp-fundo); color: var(--lp-texto); border-radius: 20px 20px 0 0;
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, .14);
+  overscroll-behavior: contain;
 }
-.mm-indice::backdrop { background: rgba(0, 0, 0, .35); }
+.mm-indice[open] { animation: sobe .3s var(--mm-ease); }
+@keyframes sobe { from { transform: translateY(24px); opacity: 0; } }
+.mm-indice::backdrop { background: rgba(0, 0, 0, .32); }
 .mm-indice-topo {
-  display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 12px;
-  border-bottom: 1px solid var(--lp-linha); position: sticky; top: 0; background: var(--lp-fundo);
-  font-family: var(--font-titulo); font-style: italic; font-size: 28px; letter-spacing: -0.03em; color: var(--lp-tinta);
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 14px 10px 10px var(--mm-margem); position: sticky; top: 0; z-index: 1; background: var(--lp-fundo);
+  box-shadow: 0 1px 0 var(--lp-linha);
 }
-.mm-indice-topo button { color: var(--lp-suave); font-family: var(--font-sans); font-size: 1rem; padding: 4px 8px; }
-.mm-indice ol { list-style: none; margin: 0; padding: 6px 0; }
-.mm-indice li button { width: 100%; text-align: left; padding: 9px 20px; font-size: 1.02rem; color: var(--lp-tinta); }
+.mm-indice-topo h2 { margin: 0; font-family: var(--font-titulo); font-style: italic; font-weight: 400; font-size: 28px; letter-spacing: -0.03em; color: var(--lp-tinta); }
+.mm-indice ol { list-style: none; margin: 0; padding: 8px 0 12px; }
+.mm-indice li button {
+  display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; text-align: left;
+  padding: 8px var(--mm-margem); font-size: 17px; color: var(--lp-tinta);
+}
+.mm-indice li button::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; background: transparent; }
 .mm-indice li.atual button { color: var(--lp-vermelho); }
-.mm-indice li.atual button::before { content: '› '; }
+.mm-indice li.atual button::before { background: var(--lp-vermelho); }
 .mm-lista-secao {
-  padding: 16px 20px 4px; font-family: var(--font-sans); font-size: .62rem; font-weight: 600;
+  padding: 18px var(--mm-margem) 4px; font-family: var(--font-sans); font-size: 11px; font-weight: 600;
   letter-spacing: .08em; text-transform: uppercase; color: var(--lp-suave);
 }
-.mm-indice .mm-nota { padding: 4px 20px 22px; }
+.mm-ajustes { padding: 16px var(--mm-margem); box-shadow: 0 -1px 0 var(--lp-linha); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mm-ajustes h3 { margin: 0; font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-tinta); }
+.mm-letras { display: flex; gap: 4px; }
+.mm-letras button {
+  width: 44px; height: 44px; border-radius: 50%; font-family: var(--font-titulo); color: var(--lp-suave);
+  display: grid; place-items: center; line-height: 1;
+}
+.mm-letras button[aria-checked="true"] { background: var(--lp-tinta); color: var(--lp-fundo); }
+.mm-indice .mm-nota { padding: 0 var(--mm-margem) max(20px, env(safe-area-inset-bottom)); margin: 0; }
+
 @media (min-width: 700px) {
-  .mm-indice { margin: auto; border-radius: 22px; max-width: 520px; }
-  .mm-passo { font-size: 42px; }
+  :root { --mm-margem: 32px; }
+  .mm-topo, .mm-rodape { padding-left: max(var(--mm-margem), calc(50% - 300px)); padding-right: max(var(--mm-margem), calc(50% - 300px)); }
+  .mm-passo { font-size: 52px; }
+  .mm-indice { margin: auto; border-radius: 20px; max-width: 480px; max-height: 80vh; }
 }
