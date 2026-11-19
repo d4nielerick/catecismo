@@ -24,7 +24,7 @@ export function comeco(texto, n = 4) {
 
 // Frases-âncora de cada parte (como se ouvem nas missas no Brasil; servem só para reconhecer)
 export const ANCORAS = {
-  'Entrada': ['em nome do pai', 'a graca de nosso senhor', 'o senhor esteja convosco'],
+  'Entrada': ['em nome do pai', 'a graca de nosso senhor', 'o senhor esteja convosco', 'bendito seja deus que nos reuniu'],
   'Ato penitencial': ['confesso a deus', 'reconhecamos', 'por minha culpa', 'tenha compaixao de nos'],
   'Senhor, tende piedade': ['senhor tende piedade', 'senhor piedade', 'kyrie'],
   'Glória': ['gloria a deus nas alturas'],
@@ -36,12 +36,12 @@ export const ANCORAS = {
   'Profissão de fé': ['creio em deus pai', 'creio em um so deus'],
   'Oração dos fiéis': ['escutai a nossa prece', 'senhor escutai', 'ouvi nos senhor', 'oracao da comunidade'],
   'Apresentação das oferendas': ['bendito sejais senhor deus do universo', 'pelo pao que recebemos', 'orai irmaos'],
-  'Prefácio e Santo': ['o senhor esteja convosco', 'coracoes ao alto', 'nosso coracao esta em deus', 'demos gracas ao senhor nosso deus'],
+  'Prefácio e Santo': ['o senhor esteja convosco', 'coracoes ao alto', 'nosso coracao esta em deus', 'demos gracas ao senhor nosso deus', 'e nosso dever e nossa salvacao'],
   'Oração Eucarística': ['fonte de toda santidade', 'pai de misericordia a quem', 'proclamamos a vossa grandeza', 'na verdade vos sois santo', 'na verdade o pai vos sois santo'],
   'Consagração': ['tomai todos e comei', 'isto e o meu corpo'],
-  'Mistério da fé': ['eis o misterio da fe', 'misterio da fe', 'anunciamos senhor a vossa morte'],
+  'Mistério da fé': ['eis o misterio da fe', 'misterio da fe', 'anunciamos senhor a vossa morte', 'vinde senhor jesus'],
   'Pai-Nosso': ['pai nosso que estais', 'pai nosso que estas', 'santificado seja o vosso nome', 'obedientes a palavra do salvador', 'ousamos dizer'],
-  'Paz e Cordeiro de Deus': ['a paz do senhor esteja sempre', 'cordeiro de deus que tirais'],
+  'Paz e Cordeiro de Deus': ['a paz do senhor esteja sempre', 'cordeiro de deus que tirais', 'o amor de cristo nos uniu'],
   'Eis o Cordeiro de Deus': ['felizes os convidados', 'eu nao sou digno'],
   'Comunhão': ['o corpo de cristo'],
   'Oração depois da comunhão': ['oremos'],

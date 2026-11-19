@@ -2,7 +2,8 @@
  * Modo Missa (protótipo): a missa do dia em telas, uma parte por vez, para acompanhar no banco.
  *
  * As leituras vêm de data/liturgia/AAAA-MM-DD.json (as mesmas da Liturgia Diária). O Ordinário da
- * Missa está aqui em tradução de trabalho feita do latim (Ordo Missae); quando a CNBB autorizar,
+ * Missa está aqui com as respostas do povo como se rezam no Brasil (e as Orações Eucarísticas em
+ * tradução de trabalho feita do latim); quando a CNBB autorizar,
  * entra o texto oficial do Missal Romano. Orações próprias do dia (coleta, oferendas, depois da
  * comunhão) e as Orações Eucarísticas não estão nos dados: a tela só diz o que está acontecendo.
  *
@@ -19,7 +20,7 @@ const S = t => ({ s: t });
 const P = t => ({ p: t });
 const R = t => ({ r: t });
 
-const GLORIA = 'Glória a Deus nas alturas, e paz na terra aos homens por ele amados. Nós vos louvamos, nós vos bendizemos, nós vos adoramos, nós vos glorificamos, nós vos damos graças por vossa imensa glória. Senhor Deus, Rei dos céus, Deus Pai todo-poderoso. Senhor Jesus Cristo, Filho Unigênito, Senhor Deus, Cordeiro de Deus, Filho de Deus Pai. Vós que tirais o pecado do mundo, tende piedade de nós. Vós que tirais o pecado do mundo, acolhei a nossa súplica. Vós que estais à direita do Pai, tende piedade de nós. Só vós sois o Santo, só vós o Senhor, só vós o Altíssimo, Jesus Cristo, com o Espírito Santo, na glória de Deus Pai. Amém.';
+const GLORIA = 'Glória a Deus nas alturas, e paz na terra aos homens por ele amados. Senhor Deus, rei dos céus, Deus Pai todo-poderoso: nós vos louvamos, nós vos bendizemos, nós vos adoramos, nós vos glorificamos, nós vos damos graças por vossa imensa glória. Senhor Jesus Cristo, Filho Unigênito, Senhor Deus, Cordeiro de Deus, Filho de Deus Pai. Vós que tirais o pecado do mundo, tende piedade de nós. Vós que tirais o pecado do mundo, acolhei a nossa súplica. Vós que estais à direita do Pai, tende piedade de nós. Só vós sois o Santo, só vós, o Senhor, só vós, o Altíssimo, Jesus Cristo, com o Espírito Santo, na glória de Deus Pai. Amém.';
 
 const CREDO_NICENO = 'Creio em um só Deus, Pai todo-poderoso, criador do céu e da terra, de todas as coisas visíveis e invisíveis. Creio em um só Senhor, Jesus Cristo, Filho Unigênito de Deus, nascido do Pai antes de todos os séculos: Deus de Deus, luz da luz, Deus verdadeiro de Deus verdadeiro; gerado, não criado, consubstancial ao Pai. Por ele todas as coisas foram feitas. E por nós, homens, e para a nossa salvação, desceu dos céus [todos se inclinam] e se encarnou pelo Espírito Santo, no seio da Virgem Maria, e se fez homem. Também por nós foi crucificado sob Pôncio Pilatos; padeceu e foi sepultado. Ressuscitou ao terceiro dia, conforme as Escrituras, e subiu aos céus, onde está sentado à direita do Pai. E de novo há de vir, em sua glória, para julgar os vivos e os mortos; e o seu reino não terá fim. Creio no Espírito Santo, Senhor que dá a vida, que procede do Pai e do Filho; e com o Pai e o Filho é adorado e glorificado: ele que falou pelos profetas. Creio na Igreja una, santa, católica e apostólica. Professo um só batismo para a remissão dos pecados. E espero a ressurreição dos mortos e a vida do mundo que há de vir. Amém.';
 
@@ -137,9 +138,9 @@ function montarPassos(d, dia, missa, or = {}) {
   // Ritos iniciais
   const RI = 'Ritos iniciais';
   add(RI, 'Entrada', propria('Antífona de entrada', or.antifonas?.entrada) + falas([R('Canto de entrada. Todos de pé.'), S('Em nome do Pai e do Filho e do Espírito Santo.'), P('Amém.'),
-    S('A graça de nosso Senhor Jesus Cristo, o amor do Pai e a comunhão do Espírito Santo estejam convosco.'), P('E com o teu espírito.')]));
+    S('A graça de nosso Senhor Jesus Cristo, o amor do Pai e a comunhão do Espírito Santo estejam convosco.'), P('Bendito seja Deus, que nos reuniu no amor de Cristo.')]));
   add(RI, 'Ato penitencial', falas([R('O sacerdote convida a reconhecer os pecados. Silêncio.'),
-    P('Confesso a Deus todo-poderoso e a vós, irmãos e irmãs, que pequei muitas vezes por pensamentos e palavras, atos e omissões: por minha culpa, minha culpa, minha máxima culpa. E peço à Virgem Maria, a todos os Anjos e Santos e a vós, irmãos e irmãs, que rogueis por mim a Deus, nosso Senhor.'),
+    P('Confesso a Deus todo-poderoso e a vós, irmãos e irmãs, que pequei muitas vezes por pensamentos e palavras, atos e omissões, por minha culpa, minha tão grande culpa. E peço à Virgem Maria, aos anjos e santos, e a vós, irmãos e irmãs, que rogueis por mim a Deus, nosso Senhor.'),
     S('Deus todo-poderoso tenha compaixão de nós, perdoe os nossos pecados e nos conduza à vida eterna.'), P('Amém.'),
     R('Pode ser usada outra fórmula; nela também se responde às invocações.')]));
   add(RI, 'Senhor, tende piedade', falas([S('Senhor, tende piedade de nós.'), P('Senhor, tende piedade de nós.'),
@@ -163,7 +164,7 @@ function montarPassos(d, dia, missa, or = {}) {
       add(LP, 'Aclamação ao Evangelho', falas([R('Todos de pé.')]) + corpoLeitura(s), { leitura: true, ancoras: ['aleluia', comeco(s.texto.replace(/^[RV]\.\s*/gm, ''), 3)] });
     } else if (s.tipo === 'evangelho') {
       const ev = EVANGELISTA[(s.referencia || '').split(' ')[0]] || '';
-      add(LP, 'Evangelho', cab + falas([S('O Senhor esteja convosco.'), P('E com o teu espírito.'),
+      add(LP, 'Evangelho', cab + falas([S('O Senhor esteja convosco.'), P('Ele está no meio de nós.'),
         S(`Proclamação do Evangelho de Jesus Cristo${ev ? ` segundo ${ev}` : ''}.`), P('Glória a vós, Senhor.')])
         + corpoLeitura(s) + falas([S('Palavra da Salvação.'), P('Glória a vós, Senhor.')]), { leitura: true, evangelho: true, trechos: pedacos(s.texto) });
     }
@@ -178,13 +179,13 @@ function montarPassos(d, dia, missa, or = {}) {
   // Liturgia Eucarística
   const LE = 'Liturgia Eucarística';
   add(LE, 'Apresentação das oferendas', falas([R('Todos sentados. Canto e coleta. O sacerdote prepara o altar com o pão e o vinho.'),
-    R('Se as orações sobre o pão e o vinho forem ditas em voz alta, responde-se:'), P('Bendito seja Deus para sempre.'),
+    R('Se as orações sobre o pão e o vinho forem ditas em voz alta, responde-se:'), P('Bendito seja Deus para sempre!'),
     S('Orai, irmãos e irmãs, para que o meu e o vosso sacrifício seja aceito por Deus Pai todo-poderoso.'),
-    P('Receba o Senhor por tuas mãos este sacrifício, para louvor e glória do seu nome, para nosso bem e de toda a sua santa Igreja.'),
+    P('Receba o Senhor por tuas mãos este sacrifício, para glória do seu nome, para nosso bem e de toda a santa Igreja.'),
     R('Todos de pé. O sacerdote reza a oração sobre as oferendas.')]) + propria('Sobre as oferendas', or.oferendas) + falas([P('Amém.')]));
-  add(LE, 'Prefácio e Santo', falas([S('O Senhor esteja convosco.'), P('E com o teu espírito.'), S('Corações ao alto.'), P('O nosso coração está em Deus.'),
-    S('Demos graças ao Senhor, nosso Deus.'), P('É digno e justo.'), R('O sacerdote reza o prefácio, um louvor que muda conforme o tempo e a festa.'),
-    P('Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!'),
+  add(LE, 'Prefácio e Santo', falas([S('O Senhor esteja convosco.'), P('Ele está no meio de nós.'), S('Corações ao alto.'), P('O nosso coração está em Deus.'),
+    S('Demos graças ao Senhor, nosso Deus.'), P('É nosso dever e nossa salvação.'), R('O sacerdote reza o prefácio, um louvor que muda conforme o tempo e a festa.'),
+    P('Santo, Santo, Santo, Senhor, Deus do universo! O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!'),
     R('Todos se ajoelham (onde for o costume).')]));
   add(LE, 'Oração Eucarística', oe => `${falas([R('O centro da missa. O sacerdote reza em nome de todos; o povo acompanha em silêncio.')])}
     <details class="mm-oe-escolha">
@@ -196,7 +197,7 @@ function montarPassos(d, dia, missa, or = {}) {
   add(LE, 'Consagração', oe => `<p class="mm-recolhe-texto">O pão e o vinho se tornam o Corpo e o Sangue de Cristo.<br>Olhe para o altar e adore.</p>
     <p class="mm-recolhe-dica">Guarde o celular. Avance quando o sacerdote disser “Eis o mistério da fé”.</p>
     ${TEXTO_OE[oe] ? `<details class="mm-alt mm-recolhe-alt"><summary>As palavras da consagração</summary>${trechoOE(oe, 'consagracao')}</details>` : ''}`, { recolhimento: true });
-  add(LE, 'Mistério da fé', oe => falas([S('Eis o mistério da fé.'), P('Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição, até que venhais.'),
+  add(LE, 'Mistério da fé', oe => falas([S('Eis o mistério da fé.'), P('Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!'),
     R('A oração eucarística continua: o sacerdote reza pela Igreja, pelos vivos e pelos falecidos.')]) + trechoOE(oe, 'depois') + falas([
     S('Por Cristo, com Cristo e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda a honra e toda a glória, por todos os séculos dos séculos.'),
     P('Amém.')]));
@@ -204,11 +205,11 @@ function montarPassos(d, dia, missa, or = {}) {
   // Rito da Comunhão
   const RC = 'Rito da Comunhão';
   add(RC, 'Pai-Nosso', falas([R('Todos de pé.'), P(PAI_NOSSO), R('O sacerdote continua sozinho e pede a paz.'),
-    P('Vosso é o reino, o poder e a glória para sempre.')]));
-  add(RC, 'Paz e Cordeiro de Deus', falas([S('A paz do Senhor esteja sempre convosco.'), P('E com o teu espírito.'), R('Saudação da paz.'),
+    P('Vosso é o reino, o poder e a glória para sempre!')]));
+  add(RC, 'Paz e Cordeiro de Deus', falas([S('A paz do Senhor esteja sempre convosco.'), P('O amor de Cristo nos uniu.'), R('Saudação da paz.'),
     P('Cordeiro de Deus, que tirais o pecado do mundo, tende piedade de nós. Cordeiro de Deus, que tirais o pecado do mundo, tende piedade de nós. Cordeiro de Deus, que tirais o pecado do mundo, dai-nos a paz.')]));
   add(RC, 'Eis o Cordeiro de Deus', falas([S('Felizes os convidados para a ceia do Senhor. Eis o Cordeiro de Deus, que tira o pecado do mundo.'),
-    P('Senhor, eu não sou digno de que entreis em minha morada, mas dizei uma só palavra e a minha alma será curada.')]));
+    P('Senhor, eu não sou digno(a) de que entreis em minha morada, mas dizei uma palavra e serei salvo(a).')]));
   add(RC, 'Comunhão', `<p class="mm-recolhe-texto">Guarde o celular e vá em paz ao encontro do Senhor.</p>
     ${or.antifonas?.comunhao ? `<p class="mm-recolhe-dica">${esc(or.antifonas.comunhao)}</p>` : ''}
     <details class="mm-alt mm-recolhe-alt"><summary>Se não for comungar: comunhão espiritual</summary>${falas([P(COMUNHAO_ESPIRITUAL)])}</details>
@@ -218,7 +219,7 @@ function montarPassos(d, dia, missa, or = {}) {
 
   // Ritos finais
   const RF = 'Ritos finais';
-  add(RF, 'Bênção e despedida', falas([S('O Senhor esteja convosco.'), P('E com o teu espírito.'),
+  add(RF, 'Bênção e despedida', falas([S('O Senhor esteja convosco.'), P('Ele está no meio de nós.'),
     S('Abençoe-vos Deus todo-poderoso, Pai e Filho e Espírito Santo.'), P('Amém.'), S('Ide em paz, e o Senhor vos acompanhe.'), P('Graças a Deus.')])
     + `<span class="mm-divisor" aria-hidden="true"></span><p class="mm-calmo">A missa terminou. Ide em paz.</p>`);
   return passos;
