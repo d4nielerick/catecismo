@@ -8,6 +8,7 @@
  *   node scripts/youtube.mjs envia video/2026-10-03-evangelho.mp4 \
  *        --titulo "…" --descricao-arquivo desc.txt [--publicar-em 2026-10-03T05:00:00-03:00] [--capa capa.jpg]
  *   node scripts/youtube.mjs capa <videoId> capa.jpg
+ *   node scripts/youtube.mjs vps                # copia cliente + autorização para /dados/youtube.json na VPS (Shorts automáticos)
  *
  * Segredos fora do repositório: o cliente OAuth fica em ~/.config/liturgia/youtube-client.json
  * (baixado do Google Cloud, projeto liturgia-diaria) e o refresh token no Keychain
@@ -25,7 +26,8 @@ import { execFileSync } from 'node:child_process';
 
 const CLIENTE = path.join(os.homedir(), '.config', 'liturgia', 'youtube-client.json');
 const ITEM_KEYCHAIN = 'youtube-refresh-token';
-const ESCOPOS = ['https://www.googleapis.com/auth/youtube.upload', 'https://www.googleapis.com/auth/youtube.readonly'];
+// youtube (gerenciar) cobre envio, visibilidade e leitura; youtube.upload fica para apps antigos autorizados só com ele
+const ESCOPOS = ['https://www.googleapis.com/auth/youtube', 'https://www.googleapis.com/auth/youtube.upload'];
 
 const cliente = () => {
   if (!fs.existsSync(CLIENTE)) { console.error(`falta ${CLIENTE} (cliente OAuth "App para computador" do projeto liturgia-diaria)`); process.exit(1); }
@@ -119,6 +121,15 @@ async function capa(id, arquivo, tok) {
   console.log(r.ok ? `capa aplicada em ${id}` : `capa recusada (${r.status}): ${(await r.text()).slice(0, 300)}`);
 }
 
+/** Copia o cliente OAuth e o refresh token para a VPS (/opt/mediaserver/apoio-dados/youtube.json, que o
+ *  container vê como /dados/youtube.json), pelo ssh, sem imprimir nada. Usado por publicar-youtube.mjs. */
+function vps() {
+  const c = cliente();
+  const json = JSON.stringify({ client_id: c.client_id, client_secret: c.client_secret, token_uri: c.token_uri, refresh_token: lerRefresh() });
+  execFileSync('ssh', ['vps', 'umask 077; cat > /opt/mediaserver/apoio-dados/youtube.json && chmod 600 /opt/mediaserver/apoio-dados/youtube.json'], { input: json });
+  console.log('Autorização do YouTube copiada para a VPS (/dados/youtube.json).');
+}
+
 /** Muda a visibilidade de um vídeo (public | unlisted | private). */
 async function visibilidade(id, valor) {
   const tok = await tokenDeAcesso();
@@ -145,6 +156,7 @@ for (let i = 0; i < resto.length; i++) {
 }
 if (cmd === 'autoriza') await autoriza();
 else if (cmd === 'canal') await canal();
+else if (cmd === 'vps') vps();
 else if (cmd === 'capa' && posicionais[1]) await capa(posicionais[0], posicionais[1]);
 else if (cmd === 'visibilidade' && posicionais[1]) await visibilidade(posicionais[0], posicionais[1]);
 else if (cmd === 'envia' && posicionais[0] && opcoes.titulo) await envia(posicionais[0], opcoes);
