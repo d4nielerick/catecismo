@@ -47,7 +47,10 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
   font-family: var(--font-titulo); font-style: italic; font-weight: 400;
   font-size: 40px; line-height: 1.02; letter-spacing: -0.03em; color: var(--lp-tinta);
   margin: 6px 0 16px; text-wrap: balance;
+  transition: font-size .25s var(--mm-ease), margin .25s var(--mm-ease);
 }
+/* rolando um texto longo: o título encolhe */
+body.mm-rolou .mm-passo { font-size: 26px; margin: 0 0 10px; }
 
 /* Linha de progresso: um trecho por seção da missa (a largura conta as partes); o trecho de
    agora enche aos poucos. Sem rótulos: a seção já está escrita no botão de cima. */
@@ -60,7 +63,11 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .mm-barra > span.agora i { background: var(--lp-vermelho); }
 
 /* ── Palco ── */
-.mm-palco { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding: 28px var(--mm-margem) 48px; }
+.mm-palco {
+  flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding: 28px var(--mm-margem) 48px;
+  /* o texto some suavemente sob a linha de progresso, em vez de ser cortado nela */
+  -webkit-mask-image: linear-gradient(transparent, #000 20px); mask-image: linear-gradient(transparent, #000 20px);
+}
 .mm-tela {
   max-width: calc(520px * var(--lp-k)); margin: 0 auto;
   font-size: var(--mm-fs); line-height: 1.6; color: var(--lp-texto);
@@ -89,6 +96,14 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .mm-propria blockquote { margin: 0; color: var(--lp-tinta); }
 .mm-credito { display: block; margin-top: 8px; font-family: var(--font-sans); font-size: 11px; color: var(--lp-suave); }
 
+/* Oração do sacerdote (Oração Eucarística): texto corrido, sem V./R.; as palavras de Cristo em destaque */
+.mm-oe-texto { margin-top: 28px; }
+.mm-oracao { margin: 0 0 22px; }
+.mm-oracao p { color: var(--lp-tinta); margin: 0 0 14px; }
+.mm-cristo { font-weight: 700; }
+body.mm-recolhido .mm-oracao p { color: #a49b8e; text-align: left; }
+body.mm-recolhido .mm-cristo { color: #d8cfc2; }
+
 /* Leituras (render.mjs) */
 .mm-leitura .leitura-texto { font-size: var(--mm-fs); }
 .mm-leitura .leitura-texto p { margin: 0 0 14px; }
@@ -97,7 +112,18 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .mm-leitura .leitura-texto { margin-bottom: 22px; }
 
 /* Oração Eucarística: lista de escolha, linhas separadas por fio, marca à esquerda */
-.mm-oe-pergunta { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-tinta); margin: 24px 0 4px !important; }
+/* A escolhida aparece numa linha; "trocar" abre a lista */
+.mm-oe-escolha { margin: 20px 0 0; border-block: 1px solid var(--lp-linha); }
+.mm-oe-escolha summary {
+  list-style: none; display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  min-height: 48px; padding: 12px 0; cursor: pointer;
+}
+.mm-oe-escolha summary::-webkit-details-marker { display: none; }
+.mm-oe-qual { font-family: var(--font-titulo); font-style: italic; font-size: 1.3em; line-height: 1.15; color: var(--lp-vermelho); }
+.mm-oe-trocar { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-suave); }
+.mm-oe-escolha[open] .mm-oe-trocar { visibility: hidden; }
+.mm-oe-escolha .mm-oe { border-bottom: 0; margin-bottom: 0; }
+.mm-oe-pergunta { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-tinta); margin: 4px 0 4px !important; }
 .mm-oe { border-top: 1px solid var(--lp-linha); margin-bottom: 18px; }
 .mm-oe button {
   display: grid; grid-template-columns: 28px 1fr; column-gap: 6px; align-items: baseline;
@@ -113,7 +139,12 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .mm-oe button[aria-checked="true"] strong { color: var(--lp-vermelho); }
 
 .mm-alt { margin: 8px 0 18px; }
-.mm-alt summary { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-vermelho); cursor: pointer; padding: 10px 0; }
+.mm-alt summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--lp-vermelho); cursor: pointer; padding: 12px 0; }
+.mm-alt summary::-webkit-details-marker { display: none; }
+.mm-alt summary::after { content: ''; width: 7px; height: 7px; border: solid currentColor; border-width: 0 1.6px 1.6px 0; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+.mm-alt[open] summary::after { transform: translateY(1px) rotate(-135deg); }
+.mm-recolhe-alt { text-align: center; }
+.mm-recolhe-alt .mm-oracao { text-align: left; margin-top: 8px; }
 
 /* Antes da missa */
 .mm-abertura-data { font-size: 15px; color: var(--lp-suave); margin: 0 0 4px !important; }

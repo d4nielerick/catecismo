@@ -38,6 +38,63 @@ const ORACOES_EUCARISTICAS = [
 
 const EVANGELISTA = { Mt: 'Mateus', Mc: 'Marcos', Lc: 'Lucas', Jo: 'João' };
 
+// Texto das Orações Eucarísticas, em tradução de trabalho feita do latim (Missale Romanum, editio typica
+// tertia). Cada uma em três partes: até a epiclese (tela "Oração Eucarística"), o relato da instituição
+// (tela escura da Consagração) e da anamnese até a doxologia (tela "Mistério da fé").
+// As palavras de Cristo vão entre « », para o CSS destacar.
+const TEXTO_OE = {
+  II: {
+    antes: [
+      'Na verdade, ó Senhor, vós sois santo, fonte de toda a santidade.',
+      'Santificai, pois, estes dons, nós vos pedimos, derramando sobre eles o vosso Espírito como o orvalho, para que se tornem para nós o Corpo e o Sangue de nosso Senhor Jesus Cristo.',
+    ],
+    consagracao: [
+      'Ele, ao ser entregue à paixão que livremente abraçou, tomou o pão, deu graças, partiu-o e o deu a seus discípulos, dizendo:',
+      '«Tomai, todos, e comei: isto é o meu Corpo, que será entregue por vós.»',
+      'Do mesmo modo, depois da ceia, tomou também o cálice, de novo deu graças e o deu a seus discípulos, dizendo:',
+      '«Tomai, todos, e bebei dele: este é o cálice do meu Sangue, o Sangue da nova e eterna aliança, que será derramado por vós e por muitos para a remissão dos pecados. Fazei isto em memória de mim.»',
+    ],
+    depois: [
+      'Celebrando, pois, a memória da sua morte e ressurreição, nós vos oferecemos, ó Senhor, o pão da vida e o cálice da salvação, e vos damos graças porque nos tornastes dignos de estar em vossa presença e de vos servir.',
+      'E humildemente vos suplicamos que, participando do Corpo e do Sangue de Cristo, sejamos reunidos pelo Espírito Santo num só corpo.',
+      'Lembrai-vos, ó Senhor, da vossa Igreja, espalhada por toda a terra: tornai-a perfeita na caridade, em comunhão com o nosso Papa Leão, o nosso Bispo e todo o clero.',
+      'Lembrai-vos também dos nossos irmãos e irmãs que adormeceram na esperança da ressurreição, e de todos os que partiram desta vida na vossa misericórdia: acolhei-os na luz da vossa face.',
+      'Tende piedade de todos nós, nós vos pedimos, para que, com a bem-aventurada Virgem Maria, Mãe de Deus, com São José, seu esposo, com os bem-aventurados Apóstolos e todos os Santos que desde sempre vos agradaram, mereçamos ter parte na vida eterna e vos louvar e glorificar, por Jesus Cristo, vosso Filho.',
+    ],
+  },
+  III: {
+    antes: [
+      'Na verdade, ó Senhor, vós sois santo, e com razão vos louva toda criatura que fizestes, pois, por vosso Filho, nosso Senhor Jesus Cristo, com o poder do Espírito Santo, dais vida e santificais todas as coisas, e não cessais de reunir para vós um povo que, do nascer ao pôr do sol, ofereça ao vosso nome um sacrifício puro.',
+      'Por isso, nós vos suplicamos, ó Senhor: dignai-vos santificar pelo mesmo Espírito estes dons que vos trouxemos para serem consagrados, a fim de que se tornem o Corpo e o Sangue do vosso Filho, nosso Senhor Jesus Cristo, por cuja ordem celebramos estes mistérios.',
+    ],
+    consagracao: [
+      'Pois ele mesmo, na noite em que ia ser entregue, tomou o pão, deu-vos graças, abençoou-o, partiu-o e o deu a seus discípulos, dizendo:',
+      '«Tomai, todos, e comei: isto é o meu Corpo, que será entregue por vós.»',
+      'Do mesmo modo, depois da ceia, tomou o cálice, deu-vos graças, abençoou-o e o deu a seus discípulos, dizendo:',
+      '«Tomai, todos, e bebei dele: este é o cálice do meu Sangue, o Sangue da nova e eterna aliança, que será derramado por vós e por muitos para a remissão dos pecados. Fazei isto em memória de mim.»',
+    ],
+    depois: [
+      'Celebrando agora, ó Senhor, a memória da paixão salvadora do vosso Filho, da sua admirável ressurreição e ascensão ao céu, e esperando a sua segunda vinda, nós vos oferecemos, em ação de graças, este sacrifício vivo e santo.',
+      'Olhai, nós vos pedimos, para a oferenda da vossa Igreja e, reconhecendo a Vítima por cuja imolação quisestes reconciliar-nos convosco, concedei que, alimentados pelo Corpo e Sangue do vosso Filho e repletos do seu Espírito Santo, nos tornemos em Cristo um só corpo e um só espírito.',
+      'Que ele faça de nós uma oferenda perfeita para vós, a fim de alcançarmos a herança com os vossos eleitos: em primeiro lugar com a bem-aventurada Virgem Maria, Mãe de Deus, com São José, seu esposo, com os vossos bem-aventurados Apóstolos e gloriosos Mártires e com todos os Santos, por cuja intercessão contamos sempre com o vosso auxílio.',
+      'Nós vos pedimos, ó Senhor: que esta Vítima da nossa reconciliação traga a paz e a salvação ao mundo inteiro. Confirmai na fé e na caridade a vossa Igreja, peregrina na terra, com o vosso servo, o nosso Papa Leão, o nosso Bispo, a ordem dos bispos, todo o clero e o povo que conquistastes.',
+      'Atendei com bondade às preces desta família que quisestes reunir em vossa presença. Reuni a vós, Pai de misericórdia, todos os vossos filhos dispersos pelo mundo.',
+      'Acolhei com bondade no vosso reino os nossos irmãos e irmãs falecidos e todos os que partiram deste mundo na vossa amizade. Lá esperamos também nós saciar-nos para sempre da vossa glória, por Cristo, nosso Senhor, por quem dais ao mundo todos os bens.',
+    ],
+  },
+};
+// Domingo: a III é a mais comum; nos dias de semana, a II
+const oePadrao = d => (ehDomingo(d) ? 'III' : 'II');
+const oracaoDoSacerdote = paragrafos => `<div class="mm-oracao">${paragrafos.map(t =>
+  `<p>${esc(t).replace(/«([^»]+)»/g, '<span class="mm-cristo">$1</span>')}</p>`).join('')}</div>`;
+function trechoOE(oe, parte) {
+  const t = TEXTO_OE[oe]?.[parte];
+  if (t) return oracaoDoSacerdote(t);
+  const nome = ORACOES_EUCARISTICAS.find(o => o[0] === oe)?.[1] || 'esta Oração Eucarística';
+  return `<p class="mm-calmo">O texto d${/^Oração/.test(nome) ? 'a' : 'o'} ${esc(nome)} ainda não está aqui.</p>`;
+}
+
+
 // ── Regras do dia ───────────────────────────────────────────────────────────
 const ehDomingo = d => { const [a, m, dd] = d.split('-').map(Number); return new Date(a, m - 1, dd).getDay() === 0; };
 const ehSolenidade = dia => /Solenidade|Natal|Páscoa|Ascensão|Pentecostes|Santíssima Trindade|Corpo e Sangue|Imaculada|Assunção|Todos os Santos|Rei do Universo|Sagrado Coração|Aparecida|São José|Pedro e (São )?Paulo/i.test(dia.celebracao || '');
@@ -96,8 +153,8 @@ function montarPassos(d, dia, missa, or = {}) {
         + corpoLeitura(s) + falas([S('Palavra da Salvação.'), P('Glória a vós, Senhor.')]), { leitura: true, evangelho: true });
     }
   }
-  add(LP, 'Homilia', falas([R('Todos sentados. Ouça a homilia: o sacerdote explica a Palavra que acabou de ser proclamada.')])
-    + `<p class="mm-calmo">Nada para ler aqui.</p>`);
+  add(LP, 'Homilia', `<p class="mm-recolhe-texto">Ouça a homilia.</p>
+    <p class="mm-recolhe-dica">O sacerdote explica a Palavra que acabou de ser proclamada. Todos sentados.<br>Avance quando ele terminar.</p>`, { recolhimento: true });
   if (temCredo(d, dia)) add(LP, 'Profissão de fé', falas([R('Todos de pé.'), P(CREDO_NICENO)])
     + `<details class="mm-alt"><summary>Às vezes se reza o Símbolo dos Apóstolos</summary>${falas([P(CREDO_APOSTOLOS)])}</details>`);
   add(LP, 'Oração dos fiéis', falas([R('Preces pela Igreja, pelo mundo, pelos que sofrem e pela comunidade. A resposta é anunciada no começo; a mais comum:'),
@@ -114,14 +171,18 @@ function montarPassos(d, dia, missa, or = {}) {
     S('Demos graças ao Senhor, nosso Deus.'), P('É digno e justo.'), R('O sacerdote reza o prefácio, um louvor que muda conforme o tempo e a festa.'),
     P('Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!'),
     R('Todos se ajoelham (onde for o costume).')]));
-  add(LE, 'Oração Eucarística', `${falas([R('O centro da missa. O sacerdote reza em nome de todos; o povo acompanha em silêncio.')])}
-    <p class="mm-oe-pergunta" id="mm-oe-pergunta">Qual está sendo rezada?</p>
-    <div class="mm-oe" role="radiogroup" aria-labelledby="mm-oe-pergunta">${ORACOES_EUCARISTICAS.map(([n, nome, desc]) => `<button type="button" role="radio" aria-checked="false" data-oe="${n}"><span class="mm-oe-marca" aria-hidden="true"></span><strong>${esc(nome)}</strong><span>${esc(desc)}</span></button>`).join('')}</div>
-    <p class="mm-nota">O texto completo de cada Oração Eucarística entra depois da autorização da CNBB.</p>`, { oe: true });
-  add(LE, 'Consagração', `<p class="mm-recolhe-texto">O pão e o vinho se tornam o Corpo e o Sangue de Cristo.<br>Olhe para o altar e adore.</p>
-    <p class="mm-recolhe-dica">Guarde o celular. Avance quando o sacerdote disser “Eis o mistério da fé”.</p>`, { recolhimento: true });
-  add(LE, 'Mistério da fé', falas([S('Eis o mistério da fé.'), P('Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição, até que venhais.'),
-    R('A oração eucarística continua: o sacerdote reza pela Igreja, pelos vivos e pelos falecidos.'),
+  add(LE, 'Oração Eucarística', oe => `${falas([R('O centro da missa. O sacerdote reza em nome de todos; o povo acompanha em silêncio.')])}
+    <details class="mm-oe-escolha">
+      <summary><span class="mm-oe-qual">${esc(ORACOES_EUCARISTICAS.find(o => o[0] === oe)?.[1] || '')}</span><span class="mm-oe-trocar">trocar</span></summary>
+      <p class="mm-oe-pergunta" id="mm-oe-pergunta">Qual está sendo rezada?</p>
+      <div class="mm-oe" role="radiogroup" aria-labelledby="mm-oe-pergunta">${ORACOES_EUCARISTICAS.map(([n, nome, desc]) => `<button type="button" role="radio" aria-checked="false" data-oe="${n}"><span class="mm-oe-marca" aria-hidden="true"></span><strong>${esc(nome)}</strong><span>${esc(desc)}</span></button>`).join('')}</div>
+    </details>
+    <div class="mm-oe-texto">${trechoOE(oe, 'antes')}</div>`, { oe: true });
+  add(LE, 'Consagração', oe => `<p class="mm-recolhe-texto">O pão e o vinho se tornam o Corpo e o Sangue de Cristo.<br>Olhe para o altar e adore.</p>
+    <p class="mm-recolhe-dica">Guarde o celular. Avance quando o sacerdote disser “Eis o mistério da fé”.</p>
+    ${TEXTO_OE[oe] ? `<details class="mm-alt mm-recolhe-alt"><summary>As palavras da consagração</summary>${trechoOE(oe, 'consagracao')}</details>` : ''}`, { recolhimento: true });
+  add(LE, 'Mistério da fé', oe => falas([S('Eis o mistério da fé.'), P('Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição, até que venhais.'),
+    R('A oração eucarística continua: o sacerdote reza pela Igreja, pelos vivos e pelos falecidos.')]) + trechoOE(oe, 'depois') + falas([
     S('Por Cristo, com Cristo e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda a honra e toda a glória, por todos os séculos dos séculos.'),
     P('Amém.')]));
 
@@ -177,8 +238,10 @@ function mostrar(i, { rolar = true } = {}) {
   $('mm-passo').textContent = p.titulo;
   const palco = $('mm-palco');
   const sentido = atual > antes ? 'frente' : atual < antes ? 'tras' : '';
-  palco.innerHTML = `<section class="mm-tela${p.leitura ? ' mm-leitura' : ''}${sentido ? ` mm-vem-${sentido}` : ''}">${p.html}</section>`;
-  if (rolar) palco.scrollTop = 0;
+  const oe = ler(`mm-oe-${chaveDia}`) || oePadrao(chaveDia);
+  const html = typeof p.html === 'function' ? p.html(oe) : p.html;
+  palco.innerHTML = `<section class="mm-tela${p.leitura ? ' mm-leitura' : ''}${sentido ? ` mm-vem-${sentido}` : ''}">${html}</section>`;
+  if (rolar) { palco.scrollTop = 0; document.body.classList.remove('mm-rolou'); }
   document.body.classList.toggle('mm-recolhido', !!p.recolhimento);
   manterAcesa(!p.recolhimento);
   $('mm-ant').disabled = atual === 0;
@@ -198,12 +261,14 @@ function mostrar(i, { rolar = true } = {}) {
     li.querySelector('button')?.toggleAttribute('aria-current', eh);
   }
   if (p.oe) {
-    const escolhida = ler(`mm-oe-${chaveDia}`);
     palco.querySelectorAll('[data-oe]').forEach(b => {
-      b.setAttribute('aria-checked', String(b.dataset.oe === escolhida));
+      b.setAttribute('aria-checked', String(b.dataset.oe === oe));
       b.addEventListener('click', () => {
         guardar(`mm-oe-${chaveDia}`, b.dataset.oe);
         palco.querySelectorAll('[data-oe]').forEach(o => o.setAttribute('aria-checked', String(o === b)));
+        palco.querySelector('.mm-oe-texto').innerHTML = trechoOE(b.dataset.oe, 'antes');
+        palco.querySelector('.mm-oe-qual').textContent = ORACOES_EUCARISTICAS.find(o => o[0] === b.dataset.oe)?.[1] || '';
+        palco.querySelector('.mm-oe-escolha').open = false;
       });
     });
   }
@@ -297,6 +362,8 @@ $('mm-palco').addEventListener('touchend', e => {
   toque = null;
   if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) ir(dx < 0 ? 1 : -1);
 }, { passive: true });
+// Texto longo: ao rolar, o título encolhe e devolve espaço à leitura
+$('mm-palco').addEventListener('scroll', () => document.body.classList.toggle('mm-rolou', $('mm-palco').scrollTop > 24), { passive: true });
 document.addEventListener('visibilitychange', () => { if (passos.length && !passos[atual].recolhimento) manterAcesa(true); });
 
 iniciar();
