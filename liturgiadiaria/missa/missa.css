@@ -258,8 +258,9 @@ body.mm-recolhido .mm-sig { color: #6f675d; }
   background: var(--lp-fundo); box-shadow: 0 -1px 0 var(--lp-linha);
 }
 .mm-escuta[hidden] { display: none; }
-#mm-ouvido { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; direction: rtl; text-align: left; }
+#mm-ouvido { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .mm-escuta-ponto { width: 6px; height: 6px; border-radius: 50%; background: var(--lp-vermelho); flex-shrink: 0; }
 .mm-escuta.erro { color: var(--lp-vermelho); }
-.mm-escuta.erro #mm-ouvido { direction: ltr; white-space: normal; }
+.mm-escuta.erro #mm-ouvido { white-space: normal; }
+.mm-escuta.achou { color: var(--lp-tinta); font-weight: 600; }
 body.mm-recolhido .mm-escuta { background: #000; box-shadow: none; opacity: .5; }
