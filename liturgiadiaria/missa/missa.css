@@ -268,12 +268,14 @@ body.mm-recolhido .mm-escuta { background: #000; box-shadow: none; opacity: .5; 
 /* ── A frase que está sendo dita (seguir.mjs) ──
    Um marca-texto discreto no vermelho das rubricas, e a tinta cheia: lê-se de longe sem gritar.
    O destaque só existe com o acompanhamento ligado; sem ele os <span> não mudam nada. */
-:root { --mm-realce: #f6e2df; }   /* o vermelho a 12% sobre o fundo */
+:root { --mm-realce: #f3d3ce; }   /* o vermelho a ~20% sobre o fundo: visível também no sol */
 .mm-fr { border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; transition: background-color .25s, box-shadow .25s, color .25s; }
 body.mm-seguindo .mm-fr.mm-agora {
   background-color: var(--mm-realce); box-shadow: -3px 0 0 var(--mm-realce), 3px 0 0 var(--mm-realce);
   color: var(--lp-tinta);
 }
+/* Enquanto há uma frase destacada, o resto do texto da tela recua um pouco: o olho acha a frase de agora */
+body.mm-seguindo .mm-tela:has(.mm-agora) :is(.leitura-texto, .mm-oracao, .mm-s, .mm-p, .mm-propria blockquote) .mm-fr:not(.mm-agora) { color: rgba(0, 0, 0, 0.55); }
 body.mm-recolhido { --mm-realce: #2e2a25; }
 body.mm-recolhido.mm-seguindo .mm-fr.mm-agora { color: #f3ece0; }
 /* Salmo: com o acompanhamento ligado, o refrão aparece escrito em cada volta (no alto ele já está) */

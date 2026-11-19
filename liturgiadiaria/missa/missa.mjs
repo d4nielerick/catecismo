@@ -408,11 +408,14 @@ function achar(texto) {
       if (forte(a)) return { k, adiar: true };
     }
   }
-  // 2) em qualquer ponto (também para trás), só com frase longa: assim dá para entrar no meio da missa
-  //    ou corrigir um salto errado
+  // Saltos para longe (2 e 3) esperam um pouco depois de cada troca: o que acabou de ser ouvido não
+  // pode mandar a tela de um lado para o outro
+  if (Date.now() - ultimoSalto < 4000) return null;
+  // 2) em qualquer ponto (também para trás), só com frase longa e que seja de uma parte só
+  //    ("O Senhor esteja convosco" se diz no Evangelho, no Prefácio e na Bênção: não serve para saltar)
   for (let k = 1; k < passos.length; k++) {
     if (k === atual) continue;
-    if (ancorasDe(passos[k]).some(a => forte(a) && texto.includes(a) && !daqui(a)) || temTrecho(passos[k], texto)) return { k };
+    if (ancorasDe(passos[k]).some(a => forte(a) && (usoDaAncora.get(a) || 0) <= 1 && texto.includes(a) && !daqui(a)) || temTrecho(passos[k], texto)) return { k };
   }
   // 3) pelo texto de cada tela: trios de palavras seguidas do que foi ouvido que aparecem no texto da
   //    tela (Pai-Nosso, Glória, Credo, as leituras…). Tolera uma palavra errada ("estás" por "estais"),
@@ -434,8 +437,12 @@ function achar(texto) {
 
 // Índice: trio de palavras → telas em cujo texto ele aparece (feito uma vez, depois de montar as telas)
 let indiceTrios = new Map();
+let usoDaAncora = new Map();   // frase-âncora → em quantas partes ela aparece
+let ultimoSalto = 0;
 function indexarTelas() {
   indiceTrios = new Map();
+  usoDaAncora = new Map();
+  passos.forEach(p => { for (const a of new Set(ancorasDe(p))) usoDaAncora.set(a, (usoDaAncora.get(a) || 0) + 1); });
   const oe = ler(`mm-oe-${chaveDia}`) || oePadrao(chaveDia);
   passos.forEach((p, k) => {
     if (k === 0) return;
@@ -502,6 +509,7 @@ function procurarParte(texto) {
 
 function reconhecido(k, rotulo) {
   sincronizado = true;
+  ultimoSalto = Date.now();
   mostrar(k, { rolar: k !== atual });
   aviso(`Reconhecido: ${rotulo || passos[k].titulo}`, true);
   clearTimeout(avisoTimer);
