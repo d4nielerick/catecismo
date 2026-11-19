@@ -348,6 +348,7 @@ async function iniciar() {
     <p class="mm-abertura-dica">Uma parte da missa por tela: avance pelo botão de baixo ou deslizando para o lado. Na Consagração e na Comunhão a tela escurece e pode ser guardada.</p>
     <p class="mm-abertura-dica">Ponha o celular no silencioso.</p>` });
 
+  indexarTelas();
   // Linha de progresso: um trecho por seção, largura proporcional ao número de partes
   const secoes = [];
   passos.forEach((p, i) => { if (i === 0) return; const s = secoes.at(-1); if (s?.nome === p.secao) s.fim = i; else secoes.push({ nome: p.secao, ini: i, fim: i }); });
@@ -413,7 +414,40 @@ function achar(texto) {
     if (k === atual) continue;
     if (ancorasDe(passos[k]).some(a => forte(a) && texto.includes(a) && !daqui(a)) || temTrecho(passos[k], texto)) return { k };
   }
+  // 3) pelo texto de cada tela: trios de palavras seguidas do que foi ouvido que aparecem no texto da
+  //    tela (Pai-Nosso, Glória, Credo, as leituras…). Tolera uma palavra errada ("estás" por "estais"),
+  //    porque basta acertar dois trios. Trios que aparecem em várias telas não contam.
+  const w = texto.split(' ').filter(Boolean).slice(-14);
+  const contagem = new Map();
+  for (let i = 0; i + 3 <= w.length; i++) {
+    const t = w.slice(i, i + 3).join(' ');
+    const onde = indiceTrios.get(t);
+    if (!onde || onde.size > 2) continue;
+    for (const k of onde) contagem.set(k, (contagem.get(k) || 0) + 1);
+  }
+  let melhor = null, pontos = 0;
+  for (const [k, n] of contagem) if (n > pontos) { melhor = k; pontos = n; }
+  const aqui = contagem.get(atual) || 0;
+  if (melhor !== null && melhor !== atual && pontos >= 2 && pontos > aqui) return { k: melhor };
   return null;
+}
+
+// Índice: trio de palavras → telas em cujo texto ele aparece (feito uma vez, depois de montar as telas)
+let indiceTrios = new Map();
+function indexarTelas() {
+  indiceTrios = new Map();
+  const oe = ler(`mm-oe-${chaveDia}`) || oePadrao(chaveDia);
+  passos.forEach((p, k) => {
+    if (k === 0) return;
+    const html = typeof p.html === 'function' ? p.html(oe) : p.html;
+    const texto = normalizar(html.replace(/<sup[^>]*>.*?<\/sup>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/g, ' '));
+    const w = texto.split(' ').filter(Boolean);
+    for (let i = 0; i + 3 <= w.length; i++) {
+      const t = w.slice(i, i + 3).join(' ');
+      if (!indiceTrios.has(t)) indiceTrios.set(t, new Set());
+      indiceTrios.get(t).add(k);
+    }
+  });
 }
 
 function aoOuvir(texto, final) {

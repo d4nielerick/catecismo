@@ -40,7 +40,7 @@ export const ANCORAS = {
   'Oração Eucarística': ['fonte de toda santidade', 'pai de misericordia a quem', 'proclamamos a vossa grandeza', 'na verdade vos sois santo', 'na verdade o pai vos sois santo'],
   'Consagração': ['tomai todos e comei', 'isto e o meu corpo'],
   'Mistério da fé': ['eis o misterio da fe', 'misterio da fe', 'anunciamos senhor a vossa morte'],
-  'Pai-Nosso': ['pai nosso que estais', 'obedientes a palavra do salvador', 'ousamos dizer'],
+  'Pai-Nosso': ['pai nosso que estais', 'pai nosso que estas', 'santificado seja o vosso nome', 'obedientes a palavra do salvador', 'ousamos dizer'],
   'Paz e Cordeiro de Deus': ['a paz do senhor esteja sempre', 'cordeiro de deus que tirais'],
   'Eis o Cordeiro de Deus': ['felizes os convidados', 'eu nao sou digno'],
   'Comunhão': ['o corpo de cristo'],
