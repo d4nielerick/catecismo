@@ -11,6 +11,7 @@
  */
 import { hojeLocal, esc, corpoLeitura, COR_PONTO, NOME_COR } from '../render.mjs';
 import { suportado, ouvir, normalizar, comeco, ANCORAS, ANCORAS_OE } from './ouvir.mjs';
+import { criarSeguidor } from './seguir.mjs';
 
 // ── Textos ──────────────────────────────────────────────────────────────────
 // s = sacerdote, p = povo (resposta), r = rubrica (o que acontece), t = texto livre
@@ -256,6 +257,8 @@ function mostrar(i, { rolar = true } = {}) {
   const html = typeof p.html === 'function' ? p.html(oe) : p.html;
   palco.innerHTML = `<section class="mm-tela${p.leitura ? ' mm-leitura' : ''}${sentido ? ` mm-vem-${sentido}` : ''}">${html}</section>`;
   if (rolar) { palco.scrollTop = 0; document.body.classList.remove('mm-rolou'); }
+  clearTimeout(saltoTimer);
+  seguidor.novaTela(palco.firstElementChild);   // marca as frases já agora (seguir.mjs), junto com o texto
   document.body.classList.toggle('mm-recolhido', !!p.recolhimento);
   manterAcesa(!p.recolhimento);
   $('mm-ant').disabled = atual === 0;
@@ -283,6 +286,7 @@ function mostrar(i, { rolar = true } = {}) {
         palco.querySelector('.mm-oe-texto').innerHTML = trechoOE(b.dataset.oe, 'antes');
         palco.querySelector('.mm-oe-qual').textContent = ORACOES_EUCARISTICAS.find(o => o[0] === b.dataset.oe)?.[1] || '';
         palco.querySelector('.mm-oe-escolha').open = false;
+        seguidor.novaTela(palco.firstElementChild);   // o texto da oração mudou
       });
     });
   }
@@ -367,6 +371,10 @@ let mostrarOuvido = false;
 let diag = { sessoes: 0, evento: '' };
 let ultimoTempo = 0; // tocar na linha de baixo mostra o que ele está entendendo
 const JANELA = 6;         // depois de achar, olha primeiro só as próximas 6 partes
+let saltoTimer = null;    // mudança de parte adiada (ver achar)
+const ADIAR_MS = 3500;
+// A frase que está sendo dita fica destacada e à vista (seguir.mjs)
+const seguidor = criarSeguidor({ palco: $('mm-palco'), botao: $('mm-retomar') });
 
 function ancorasDe(p) { return (p.ancoras || ANCORAS[p.titulo] || []).filter(a => a && a.length >= 4); }
 // Leituras: qualquer sequência de 5 palavras do texto do dia reconhece a leitura, mesmo entrando no meio
@@ -386,29 +394,56 @@ function temTrecho(p, texto, n = 5) {
 const forte = a => a.length >= 12;
 
 function achar(texto) {
+  // Uma frase que faz parte do que se diz na própria tela ("O Senhor esteja convosco" na Entrada, o
+  // "Aleluia" do refrão de um salmo) não serve para sair dela. A exceção são as próximas partes com
+  // frase longa ("Palavra da Salvação" fecha o Evangelho e abre a Homilia): aí a mudança espera um
+  // pouco, para a resposta do povo aparecer destacada antes de a tela trocar.
+  const daqui = a => seguidor.contem(a) || ancorasDe(passos[atual]).includes(a);
   // 1) as próximas partes, em ordem
   for (let k = atual + 1; k <= Math.min(passos.length - 1, atual + JANELA); k++) {
-    if (ancorasDe(passos[k]).some(a => texto.includes(a))) return k;
+    for (const a of ancorasDe(passos[k])) {
+      if (!texto.includes(a)) continue;
+      if (!daqui(a)) return { k };
+      if (forte(a)) return { k, adiar: true };
+    }
   }
   // 2) em qualquer ponto (também para trás), só com frase longa: assim dá para entrar no meio da missa
   //    ou corrigir um salto errado
   for (let k = 1; k < passos.length; k++) {
     if (k === atual) continue;
-    if (ancorasDe(passos[k]).some(a => forte(a) && texto.includes(a)) || temTrecho(passos[k], texto)) return k;
+    if (ancorasDe(passos[k]).some(a => forte(a) && texto.includes(a) && !daqui(a)) || temTrecho(passos[k], texto)) return { k };
   }
-  return -1;
+  return null;
 }
 
 function aoOuvir(texto, final) {
+  procurarParte(texto);
+  // na parte em que a missa está (talvez recém-trocada), qual frase é a de agora
+  if (seguidor.ouvido(ultimo) && !sincronizado) { sincronizado = true; aviso('Acompanhando a missa'); }
+}
+
+// O texto chega acumulado, mas só as últimas 40 palavras: o começo vai sumindo, e o Chrome ainda reescreve
+// o fim. Por isso o que já serviu para um reconhecimento é procurado pelas suas últimas palavras (8, 5 ou 3),
+// e não pelo texto inteiro; sem isso a mesma frase voltava a valer e a tela ficava indo e voltando.
+function depoisDoReconhecido(texto) {
+  if (!historico) return texto;
+  const h = historico.split(' ');
+  for (const n of [8, 5, 3]) {
+    const marca = h.slice(-n).join(' ');
+    const i = ` ${texto} `.lastIndexOf(` ${marca} `);
+    if (i >= 0) return texto.slice(i + marca.length).trim();
+  }
+  return texto;
+}
+
+function procurarParte(texto) {
   trechos++;
   ultimo = texto;
   ultimoTempo = Date.now();
   if (mostrarOuvido) aviso(`(${trechos}) ${texto.split(' ').slice(-12).join(' ')}`);
   else if (!$('mm-escuta').classList.contains('achou')) aviso(`${sincronizado ? 'Acompanhando a missa' : 'Ouvindo… procurando em que parte a missa está'} · ${trechos}`);
   // o texto já vem acumulado da sessão (ouvir.mjs); depois de um reconhecimento, só conta o que veio depois
-  if (historico && texto.startsWith(historico)) texto = texto.slice(historico.length).trim();
-  else if (historico && texto.includes(historico)) texto = texto.slice(texto.lastIndexOf(historico) + historico.length).trim();
-  const agora = texto;
+  const agora = depoisDoReconhecido(texto);
   // Qual Oração Eucarística: entre o Prefácio e a Consagração
   const iPref = passos.findIndex(p => p.titulo === 'Prefácio e Santo');
   const iCons = passos.findIndex(p => p.titulo === 'Consagração');
@@ -423,8 +458,12 @@ function aoOuvir(texto, final) {
       }
     }
   }
-  const k = achar(agora);
-  if (k >= 0) { historico = ultimo; reconhecido(k); }
+  const achado = achar(agora);
+  if (!achado) return;
+  historico = ultimo;
+  clearTimeout(saltoTimer);
+  if (achado.adiar) { const de = atual; saltoTimer = setTimeout(() => { if (atual === de && escutando()) reconhecido(achado.k); }, ADIAR_MS); }
+  else reconhecido(achado.k);
 }
 
 function reconhecido(k, rotulo) {
@@ -440,16 +479,22 @@ function aviso(texto, destaque = false) {
   $('mm-escuta').classList.toggle('achou', destaque);
 }
 
+const escutando = () => !!escuta || teste;
+let teste = false;        // __mmOuvir (localhost): acompanha sem microfone
+
 function alternarEscuta() {
   if (escuta) { escuta.parar(); escuta = null; definirEscuta('parado'); return; }
   if (!suportado()) { definirEscuta('erro', 'Este navegador não reconhece voz. Use o Chrome ou o Safari.'); return; }
   $('mm-escuta').hidden = false; aviso('Esperando o microfone…');
   $('mm-mic').setAttribute('aria-pressed', 'true');
+  seguidor.ligar();
   escuta = ouvir({ aoOuvir, aoMudar: definirEscuta, aoDiagnostico: d => { diag = d; if (mostrarOuvido) aviso(`(${trechos}) sessão ${d.sessoes} · ${d.evento}`); } });
 }
 
 function definirEscuta(estado, detalhe = '') {
   if (estado === 'erro') { escuta?.parar(); escuta = null; }
+  if (estado !== 'ouvindo') { seguidor.desligar(); clearTimeout(saltoTimer); }
+  else seguidor.ligar();
   document.body.classList.toggle('mm-ouvindo', estado === 'ouvindo');
   $('mm-mic').setAttribute('aria-pressed', String(estado === 'ouvindo'));
   $('mm-mic').setAttribute('aria-label', estado === 'ouvindo' ? 'Parar de acompanhar pelo áudio' : 'Acompanhar pelo áudio');
@@ -463,7 +508,10 @@ function definirEscuta(estado, detalhe = '') {
 $('mm-mic').addEventListener('click', alternarEscuta);
 $('mm-escuta').addEventListener('click', () => { mostrarOuvido = !mostrarOuvido; aviso(mostrarOuvido ? `(${trechos}) sessão ${diag.sessoes} · ${diag.evento} · ${ultimo.split(' ').slice(-8).join(' ') || 'nada ainda'}` : 'Ouvindo…'); });
 // Teste sem microfone (só em localhost): __mmOuvir('coracoes ao alto')
-if (location.hostname === 'localhost') window.__mmOuvir = t => aoOuvir(normalizar(t), true);
+if (location.hostname === 'localhost') {
+  window.__mmOuvir = t => { teste = true; seguidor.ligar(); $('mm-escuta').hidden = false; aoOuvir(normalizar(t).split(' ').slice(-40).join(' '), true); };
+  window.__mmSeguir = () => ({ parte: passos[atual]?.titulo, ...seguidor.estado() });
+}
 $('mm-ant').addEventListener('click', () => ir(-1));
 $('mm-prox').addEventListener('click', () => ir(1));
 $('mm-onde').addEventListener('click', () => { $('mm-indice').showModal(); $('mm-lista').querySelector('.atual')?.scrollIntoView({ block: 'center' }); });

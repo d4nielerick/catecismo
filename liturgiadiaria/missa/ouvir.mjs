@@ -31,12 +31,12 @@ export const ANCORAS = {
   'Oração do dia': ['oremos'],
   'Salmo responsorial': ['salmo'],
   'Aclamação ao Evangelho': ['aleluia'],
-  'Evangelho': ['proclamacao do evangelho', 'evangelho de jesus cristo segundo'],
+  'Evangelho': ['o senhor esteja convosco', 'proclamacao do evangelho', 'evangelho de jesus cristo segundo'],
   'Homilia': ['palavra da salvacao'],
   'Profissão de fé': ['creio em deus pai', 'creio em um so deus'],
   'Oração dos fiéis': ['escutai a nossa prece', 'senhor escutai', 'ouvi nos senhor', 'oracao da comunidade'],
   'Apresentação das oferendas': ['bendito sejais senhor deus do universo', 'pelo pao que recebemos', 'orai irmaos'],
-  'Prefácio e Santo': ['coracoes ao alto', 'nosso coracao esta em deus', 'demos gracas ao senhor nosso deus'],
+  'Prefácio e Santo': ['o senhor esteja convosco', 'coracoes ao alto', 'nosso coracao esta em deus', 'demos gracas ao senhor nosso deus'],
   'Oração Eucarística': ['fonte de toda santidade', 'pai de misericordia a quem', 'proclamamos a vossa grandeza', 'na verdade vos sois santo', 'na verdade o pai vos sois santo'],
   'Consagração': ['tomai todos e comei', 'isto e o meu corpo'],
   'Mistério da fé': ['eis o misterio da fe', 'misterio da fe', 'anunciamos senhor a vossa morte'],
@@ -45,7 +45,7 @@ export const ANCORAS = {
   'Eis o Cordeiro de Deus': ['felizes os convidados', 'eu nao sou digno'],
   'Comunhão': ['o corpo de cristo'],
   'Oração depois da comunhão': ['oremos'],
-  'Bênção e despedida': ['abencoe vos deus todo poderoso', 'ide em paz', 'o senhor vos acompanhe'],
+  'Bênção e despedida': ['o senhor esteja convosco', 'abencoe vos deus todo poderoso', 'ide em paz', 'o senhor vos acompanhe'],
 };
 
 // Qual Oração Eucarística começou (as primeiras palavras de cada uma, no texto usado no Brasil)

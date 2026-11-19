@@ -264,3 +264,32 @@ body.mm-recolhido .mm-sig { color: #6f675d; }
 .mm-escuta.erro #mm-ouvido { white-space: normal; }
 .mm-escuta.achou { color: var(--lp-tinta); font-weight: 600; }
 body.mm-recolhido .mm-escuta { background: #000; box-shadow: none; opacity: .5; }
+
+/* ── A frase que está sendo dita (seguir.mjs) ──
+   Um marca-texto discreto no vermelho das rubricas, e a tinta cheia: lê-se de longe sem gritar.
+   O destaque só existe com o acompanhamento ligado; sem ele os <span> não mudam nada. */
+:root { --mm-realce: #f6e2df; }   /* o vermelho a 12% sobre o fundo */
+.mm-fr { border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; transition: background-color .25s, box-shadow .25s, color .25s; }
+body.mm-seguindo .mm-fr.mm-agora {
+  background-color: var(--mm-realce); box-shadow: -3px 0 0 var(--mm-realce), 3px 0 0 var(--mm-realce);
+  color: var(--lp-tinta);
+}
+body.mm-recolhido { --mm-realce: #2e2a25; }
+body.mm-recolhido.mm-seguindo .mm-fr.mm-agora { color: #f3ece0; }
+/* Salmo: com o acompanhamento ligado, o refrão aparece escrito em cada volta (no alto ele já está) */
+body.mm-seguindo .mm-leitura .salmo-r-sep { display: block; margin-bottom: 24px; font-weight: 700; font-style: normal; color: var(--lp-tinta); }
+/* Quem rolou para longe do trecho: um botão para voltar a seguir (a seta aponta para onde ele está) */
+.mm-escuta { position: relative; }
+.mm-retomar {
+  position: absolute; left: 50%; bottom: calc(100% + 12px); transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px 0 14px; border-radius: 999px;
+  font-family: var(--font-sans); font-size: 13px; font-weight: 600; white-space: nowrap;
+  background: var(--lp-tinta); color: var(--lp-fundo); box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+  animation: sobe .25s var(--mm-ease);
+}
+.mm-retomar[hidden] { display: none; }
+.mm-retomar svg { width: 18px; height: 18px; }
+.mm-retomar.acima svg { transform: rotate(180deg); }
+.mm-retomar:active { transform: translateX(-50%) scale(.97); }
+body.mm-recolhido .mm-retomar { background: #2a2622; color: #d8cfc2; box-shadow: none; }
+@media (prefers-reduced-motion: reduce) { .mm-fr { transition: none; } .mm-retomar { animation: none; } }

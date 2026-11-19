@@ -37,7 +37,12 @@
 
   <main class="mm-palco" id="mm-palco" aria-live="polite"></main>
 
-  <p class="mm-escuta" id="mm-escuta" hidden><span class="mm-escuta-ponto" aria-hidden="true"></span><span id="mm-ouvido" aria-live="off"></span></p>
+  <p class="mm-escuta" id="mm-escuta" hidden><span class="mm-escuta-ponto" aria-hidden="true"></span><span id="mm-ouvido" aria-live="off"></span>
+    <button type="button" class="mm-retomar" id="mm-retomar" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.5v13M6.5 13l5.5 5.5 5.5-5.5"/></svg>
+      Seguir o áudio
+    </button>
+  </p>
   <nav class="mm-rodape" aria-label="Partes da missa">
     <button type="button" class="mm-ant" id="mm-ant" aria-label="Parte anterior">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
@@ -60,7 +65,7 @@
       <h3 id="mm-h-letra">Tamanho do texto</h3>
       <div class="mm-letras" role="radiogroup" aria-labelledby="mm-h-letra" id="mm-letras"></div>
     </div>
-    <p class="mm-nota">O microfone, no alto, faz o app acompanhar a missa pelo áudio e avançar sozinho (experimental). O reconhecimento é o do navegador: no Chrome o áudio vai para o Google; nada é gravado aqui.</p>
+    <p class="mm-nota">O microfone, no alto, faz o app acompanhar a missa pelo áudio: avança sozinho de parte em parte e destaca a frase que está sendo dita (experimental). O reconhecimento é o do navegador: no Chrome o áudio vai para o Google; nada é gravado aqui.</p>
     <p class="mm-nota">Protótipo. Orações próprias do dia: Missal Romano, tradução oficial da CNBB, © Edições CNBB. Leituras: Lecionário da CNBB. As partes fixas do povo estão em tradução de trabalho feita do latim.</p>
   </dialog>
 </body>
