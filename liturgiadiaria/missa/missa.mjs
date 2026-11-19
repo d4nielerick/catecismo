@@ -10,6 +10,7 @@
  * acesa": o próprio app pede para guardar o celular.
  */
 import { hojeLocal, esc, corpoLeitura, COR_PONTO, NOME_COR } from '../render.mjs';
+import { suportado, ouvir, normalizar, comeco, ANCORAS, ANCORAS_OE } from './ouvir.mjs';
 
 // ── Textos ──────────────────────────────────────────────────────────────────
 // s = sacerdote, p = povo (resposta), r = rubrica (o que acontece), t = texto livre
@@ -47,6 +48,7 @@ const TEXTO_OE = {
     antes: [
       'Na verdade, ó Senhor, vós sois santo, fonte de toda a santidade.',
       'Santificai, pois, estes dons, nós vos pedimos, derramando sobre eles o vosso Espírito como o orvalho, para que se tornem para nós o Corpo e o Sangue de nosso Senhor Jesus Cristo.',
+      { p: 'Santificai nossa oferenda, ó Senhor!' },
     ],
     consagracao: [
       'Ele, ao ser entregue à paixão que livremente abraçou, tomou o pão, deu graças, partiu-o e o deu a seus discípulos, dizendo:',
@@ -56,9 +58,13 @@ const TEXTO_OE = {
     ],
     depois: [
       'Celebrando, pois, a memória da sua morte e ressurreição, nós vos oferecemos, ó Senhor, o pão da vida e o cálice da salvação, e vos damos graças porque nos tornastes dignos de estar em vossa presença e de vos servir.',
+      { p: 'Recebei, ó Senhor, a nossa oferta!' },
       'E humildemente vos suplicamos que, participando do Corpo e do Sangue de Cristo, sejamos reunidos pelo Espírito Santo num só corpo.',
+      { p: 'Fazei de nós um só corpo e um só espírito!' },
       'Lembrai-vos, ó Senhor, da vossa Igreja, espalhada por toda a terra: tornai-a perfeita na caridade, em comunhão com o nosso Papa Leão, o nosso Bispo e todo o clero.',
+      { p: 'Lembrai-vos, ó Pai, da vossa Igreja!' },
       'Lembrai-vos também dos nossos irmãos e irmãs que adormeceram na esperança da ressurreição, e de todos os que partiram desta vida na vossa misericórdia: acolhei-os na luz da vossa face.',
+      { p: 'Concedei-lhes, ó Senhor, a luz eterna!' },
       'Tende piedade de todos nós, nós vos pedimos, para que, com a bem-aventurada Virgem Maria, Mãe de Deus, com São José, seu esposo, com os bem-aventurados Apóstolos e todos os Santos que desde sempre vos agradaram, mereçamos ter parte na vida eterna e vos louvar e glorificar, por Jesus Cristo, vosso Filho.',
     ],
   },
@@ -66,6 +72,7 @@ const TEXTO_OE = {
     antes: [
       'Na verdade, ó Senhor, vós sois santo, e com razão vos louva toda criatura que fizestes, pois, por vosso Filho, nosso Senhor Jesus Cristo, com o poder do Espírito Santo, dais vida e santificais todas as coisas, e não cessais de reunir para vós um povo que, do nascer ao pôr do sol, ofereça ao vosso nome um sacrifício puro.',
       'Por isso, nós vos suplicamos, ó Senhor: dignai-vos santificar pelo mesmo Espírito estes dons que vos trouxemos para serem consagrados, a fim de que se tornem o Corpo e o Sangue do vosso Filho, nosso Senhor Jesus Cristo, por cuja ordem celebramos estes mistérios.',
+      { p: 'Santificai nossa oferenda, ó Senhor!' },
     ],
     consagracao: [
       'Pois ele mesmo, na noite em que ia ser entregue, tomou o pão, deu-vos graças, abençoou-o, partiu-o e o deu a seus discípulos, dizendo:',
@@ -75,18 +82,25 @@ const TEXTO_OE = {
     ],
     depois: [
       'Celebrando agora, ó Senhor, a memória da paixão salvadora do vosso Filho, da sua admirável ressurreição e ascensão ao céu, e esperando a sua segunda vinda, nós vos oferecemos, em ação de graças, este sacrifício vivo e santo.',
+      { p: 'Recebei, ó Senhor, a nossa oferta!' },
       'Olhai, nós vos pedimos, para a oferenda da vossa Igreja e, reconhecendo a Vítima por cuja imolação quisestes reconciliar-nos convosco, concedei que, alimentados pelo Corpo e Sangue do vosso Filho e repletos do seu Espírito Santo, nos tornemos em Cristo um só corpo e um só espírito.',
+      { p: 'Fazei de nós um só corpo e um só espírito!' },
       'Que ele faça de nós uma oferenda perfeita para vós, a fim de alcançarmos a herança com os vossos eleitos: em primeiro lugar com a bem-aventurada Virgem Maria, Mãe de Deus, com São José, seu esposo, com os vossos bem-aventurados Apóstolos e gloriosos Mártires e com todos os Santos, por cuja intercessão contamos sempre com o vosso auxílio.',
+      { p: 'Fazei de nós uma perfeita oferenda!' },
       'Nós vos pedimos, ó Senhor: que esta Vítima da nossa reconciliação traga a paz e a salvação ao mundo inteiro. Confirmai na fé e na caridade a vossa Igreja, peregrina na terra, com o vosso servo, o nosso Papa Leão, o nosso Bispo, a ordem dos bispos, todo o clero e o povo que conquistastes.',
+      { p: 'Lembrai-vos, ó Pai, da vossa Igreja!' },
       'Atendei com bondade às preces desta família que quisestes reunir em vossa presença. Reuni a vós, Pai de misericórdia, todos os vossos filhos dispersos pelo mundo.',
       'Acolhei com bondade no vosso reino os nossos irmãos e irmãs falecidos e todos os que partiram deste mundo na vossa amizade. Lá esperamos também nós saciar-nos para sempre da vossa glória, por Cristo, nosso Senhor, por quem dais ao mundo todos os bens.',
+      { p: 'A todos saciai com vossa glória!' },
     ],
   },
 };
 // Domingo: a III é a mais comum; nos dias de semana, a II
 const oePadrao = d => (ehDomingo(d) ? 'III' : 'II');
-const oracaoDoSacerdote = paragrafos => `<div class="mm-oracao">${paragrafos.map(t =>
-  `<p>${esc(t).replace(/«([^»]+)»/g, '<span class="mm-cristo">$1</span>')}</p>`).join('')}</div>`;
+// Texto: a oração do sacerdote; { p } = aclamação do povo (as do Missal no Brasil, que não existem no latim)
+const oracaoDoSacerdote = paragrafos => `<div class="mm-oracao">${paragrafos.map(t => typeof t === 'string'
+  ? `<p>${esc(t).replace(/«([^»]+)»/g, '<span class="mm-cristo">$1</span>')}</p>`
+  : falas([t])).join('')}</div>`;
 function trechoOE(oe, parte) {
   const t = TEXTO_OE[oe]?.[parte];
   if (t) return oracaoDoSacerdote(t);
@@ -139,13 +153,13 @@ function montarPassos(d, dia, missa, or = {}) {
     if (s.alternativa) continue; // "ou…": a principal basta para acompanhar
     const cab = `<div class="mm-ref">${esc(s.referencia || '')}</div>`;
     if (s.tipo === 'leitura') {
-      add(LP, s.rotulo, cab + corpoLeitura(s) + falas([S('Palavra do Senhor.'), P('Graças a Deus.')]), { leitura: true });
+      add(LP, s.rotulo, cab + corpoLeitura(s) + falas([S('Palavra do Senhor.'), P('Graças a Deus.')]), { leitura: true, ancoras: ['leitura do', 'leitura da', 'leitura dos', comeco(s.texto)] });
     } else if (s.tipo === 'salmo') {
-      add(LP, 'Salmo responsorial', cab + falas([R('Todos repetem o refrão (R.) depois de cada estrofe.')]) + corpoLeitura(s), { leitura: true });
+      add(LP, 'Salmo responsorial', cab + falas([R('Todos repetem o refrão (R.) depois de cada estrofe.')]) + corpoLeitura(s), { leitura: true, ancoras: ['salmo', comeco(s.texto, 5)] });
     } else if (s.tipo === 'sequencia') {
       add(LP, s.rotulo || 'Sequência', cab + corpoLeitura(s), { leitura: true });
     } else if (s.tipo === 'aclamacao') {
-      add(LP, 'Aclamação ao Evangelho', falas([R('Todos de pé.')]) + corpoLeitura(s), { leitura: true });
+      add(LP, 'Aclamação ao Evangelho', falas([R('Todos de pé.')]) + corpoLeitura(s), { leitura: true, ancoras: ['aleluia', comeco(s.texto.replace(/^[RV]\.\s*/gm, ''), 3)] });
     } else if (s.tipo === 'evangelho') {
       const ev = EVANGELISTA[(s.referencia || '').split(' ')[0]] || '';
       add(LP, 'Evangelho', cab + falas([S('O Senhor esteja convosco.'), P('E com o teu espírito.'),
@@ -341,7 +355,55 @@ async function iniciar() {
   mostrar(Number.isFinite(salvo) ? salvo : 0);
 }
 
+
+// ── Acompanhar pelo áudio (ouvir.mjs) ───────────────────────────────────────
+let escuta = null;
+let ouvido = '';          // últimas palavras reconhecidas (só para a linha de legenda)
+const JANELA = 6;         // olha só as próximas 6 partes: nunca pula muito, nunca volta
+
+function ancorasDe(p) { return (p.ancoras || ANCORAS[p.titulo] || []).filter(a => a && a.length >= 4); }
+
+function aoOuvir(texto, final) {
+  ouvido = texto;
+  $('mm-ouvido').textContent = texto.split(' ').slice(-10).join(' ');
+  // Qual Oração Eucarística: só entre o Prefácio e a Consagração
+  const iPref = passos.findIndex(p => p.titulo === 'Prefácio e Santo');
+  const iCons = passos.findIndex(p => p.titulo === 'Consagração');
+  if (atual >= iPref && atual < iCons) {
+    for (const [oe, frases] of Object.entries(ANCORAS_OE)) {
+      if (frases.some(f => texto.includes(f)) && ler(`mm-oe-${chaveDia}`) !== oe) {
+        guardar(`mm-oe-${chaveDia}`, oe);
+        const iOE = passos.findIndex(p => p.oe);
+        mostrar(atual < iOE ? iOE : atual, { rolar: atual < iOE });
+        return;
+      }
+    }
+  }
+  for (let k = atual + 1; k <= Math.min(passos.length - 1, atual + JANELA); k++) {
+    if (ancorasDe(passos[k]).some(a => texto.includes(a))) { mostrar(k); return; }
+  }
+}
+
+function alternarEscuta() {
+  if (escuta) { escuta.parar(); escuta = null; definirEscuta('parado'); return; }
+  if (!suportado()) { definirEscuta('erro', 'Este navegador não reconhece voz. Use o Chrome ou o Safari.'); return; }
+  escuta = ouvir({ aoOuvir, aoMudar: definirEscuta });
+}
+
+function definirEscuta(estado, detalhe = '') {
+  if (estado === 'erro') { escuta?.parar(); escuta = null; }
+  document.body.classList.toggle('mm-ouvindo', estado === 'ouvindo');
+  $('mm-mic').setAttribute('aria-pressed', String(estado === 'ouvindo'));
+  $('mm-mic').setAttribute('aria-label', estado === 'ouvindo' ? 'Parar de acompanhar pelo áudio' : 'Acompanhar pelo áudio');
+  $('mm-ouvido').textContent = estado === 'erro' ? detalhe : estado === 'ouvindo' ? (ouvido ? ouvido.split(' ').slice(-10).join(' ') : 'Ouvindo…') : '';
+  $('mm-escuta').hidden = estado === 'parado';
+  $('mm-escuta').classList.toggle('erro', estado === 'erro');
+}
+
 // ── Controles ───────────────────────────────────────────────────────────────
+$('mm-mic').addEventListener('click', alternarEscuta);
+// Teste sem microfone (só em localhost): __mmOuvir('coracoes ao alto')
+if (location.hostname === 'localhost') window.__mmOuvir = t => aoOuvir(normalizar(t), true);
 $('mm-ant').addEventListener('click', () => ir(-1));
 $('mm-prox').addEventListener('click', () => ir(1));
 $('mm-onde').addEventListener('click', () => { $('mm-indice').showModal(); $('mm-lista').querySelector('.atual')?.scrollIntoView({ block: 'center' }); });
