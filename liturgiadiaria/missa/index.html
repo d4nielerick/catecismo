@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Modo Missa · Liturgia Diária</title>
+  <!-- Protótipo: fora do Google e do sitemap enquanto é testado na missa -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0f0d0b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/liturgia-icone-32.png?v=3">
+  <link rel="preload" href="/assets/fonts/inria-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/liturgiadiaria/missa/missa.css">
+  <script type="module" src="/liturgiadiaria/missa/missa.mjs"></script>
+</head>
+<body>
+  <header class="mm-topo">
+    <a class="mm-sair" href="/liturgiadiaria/" aria-label="Voltar para a Liturgia Diária">←</a>
+    <div class="mm-onde">
+      <div class="mm-secao" id="mm-secao">Modo Missa</div>
+      <div class="mm-passo" id="mm-passo">Carregando…</div>
+    </div>
+    <div class="mm-tamanho" role="group" aria-label="Tamanho do texto">
+      <button type="button" id="mm-menor" aria-label="Diminuir texto">A−</button>
+      <button type="button" id="mm-maior" aria-label="Aumentar texto">A+</button>
+    </div>
+  </header>
+  <div class="mm-barra" id="mm-barra" aria-hidden="true"></div>
+
+  <main class="mm-palco" id="mm-palco" aria-live="polite"></main>
+
+  <nav class="mm-rodape">
+    <button type="button" class="mm-nav" id="mm-ant" aria-label="Parte anterior">‹</button>
+    <button type="button" class="mm-indice-btn" id="mm-indice-btn" aria-haspopup="dialog">Partes da missa</button>
+    <button type="button" class="mm-nav mm-prox" id="mm-prox" aria-label="Próxima parte">›</button>
+  </nav>
+
+  <dialog class="mm-indice" id="mm-indice" aria-label="Partes da missa">
+    <div class="mm-indice-topo">
+      <span>Partes da missa</span>
+      <button type="button" id="mm-indice-fechar" aria-label="Fechar">✕</button>
+    </div>
+    <ol id="mm-lista"></ol>
+    <p class="mm-nota">Protótipo. Orações próprias do dia: Missal Romano, tradução oficial da CNBB, © Edições CNBB. Leituras: Lecionário da CNBB. As partes fixas do povo estão em tradução de trabalho feita do latim.</p>
+  </dialog>
+</body>
+</html>

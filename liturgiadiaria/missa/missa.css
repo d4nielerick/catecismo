@@ -1,0 +1,148 @@
+/* Modo Missa — escuro, letra grande, nada que brilhe no banco da igreja */
+@font-face {
+  font-family: 'Inria Serif'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/assets/fonts/inria-serif-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inria Serif'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('/assets/fonts/inria-serif-400-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inria Serif'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('/assets/fonts/inria-serif-700.woff2') format('woff2');
+}
+
+:root {
+  --mm-fundo: #0f0d0b;
+  --mm-texto: #e9e2d6;
+  --mm-suave: #a39a8c;
+  --mm-linha: #2a2520;
+  --mm-cor: #b8972e;
+  --mm-escala: 1;
+  --mm-letra: calc(1.18rem * var(--mm-escala));
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--mm-fundo); color: var(--mm-texto);
+  font-family: 'Inria Serif', Georgia, serif;
+  display: flex; flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .8s ease, color .8s ease;
+}
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+/* ── Topo ── */
+.mm-topo {
+  display: flex; align-items: center; gap: 12px;
+  padding: max(10px, env(safe-area-inset-top)) 16px 8px;
+}
+.mm-sair { color: var(--mm-suave); text-decoration: none; font-size: 1.3rem; padding: 6px 4px; }
+.mm-onde { flex: 1; min-width: 0; }
+.mm-secao {
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--mm-cor);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mm-passo { font-size: 1.15rem; line-height: 1.2; }
+.mm-tamanho { display: flex; gap: 2px; }
+.mm-tamanho button { color: var(--mm-suave); padding: 6px 8px; border-radius: 8px; font-size: .9rem; }
+.mm-tamanho button:active { background: var(--mm-linha); }
+
+.mm-barra { display: flex; gap: 2px; padding: 0 16px 6px; }
+.mm-barra i { flex: 1; height: 2px; background: var(--mm-linha); border-radius: 1px; }
+.mm-barra i.feito { background: var(--mm-cor); opacity: .8; }
+
+/* ── Palco ── */
+.mm-palco {
+  flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  padding: 12px 20px 32px;
+}
+.mm-tela { max-width: 640px; margin: 0 auto; font-size: var(--mm-letra); line-height: 1.55; animation: entra .35s ease; }
+@keyframes entra { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .mm-tela { animation: none; } body { transition: none; } }
+
+.mm-tela p { margin: 0 0 .9em; }
+.mm-quem {
+  display: block; font-size: .62em; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--mm-suave); margin-bottom: .1em;
+}
+.mm-s { color: var(--mm-texto); }
+.mm-p { font-weight: 700; color: #f6efe2; border-left: 3px solid var(--mm-cor); padding-left: .7em; }
+.mm-p .mm-quem { color: var(--mm-cor); font-weight: 400; }
+.mm-r { font-style: italic; color: var(--mm-suave); font-size: .88em; }
+.mm-calmo { color: var(--mm-suave); text-align: center; margin-top: 2em !important; }
+.mm-nota { font-size: .78em; color: var(--mm-suave); }
+.mm-ref { font-size: .8em; color: var(--mm-cor); letter-spacing: .04em; margin-bottom: .6em; }
+.mm-propria { border: 1px solid var(--mm-linha); border-radius: 12px; padding: .8em 1em; margin: 0 0 .9em; }
+.mm-propria .mm-quem { color: var(--mm-cor); }
+.mm-credito { display: block; margin-top: .6em; font-size: .6em; letter-spacing: .06em; color: var(--mm-suave); }
+
+/* Leituras: vêm do render.mjs da Liturgia */
+.mm-leitura .leitura-titulo { font-style: italic; color: var(--mm-suave); }
+.mm-leitura .leitura-texto p { margin: 0 0 .9em; }
+.mm-leitura .vers-num { font-size: .55em; color: var(--mm-suave); margin: 0 .2em; }
+.mm-leitura .capitular { font-size: 1em; }
+.mm-leitura .salmo-refrao, .mm-leitura .acl-verso { font-weight: 700; border-left: 3px solid var(--mm-cor); padding-left: .7em; margin: .2em 0 1em; }
+.mm-leitura .salmo-r-label { color: var(--mm-cor); margin-right: .4em; font-weight: 400; }
+.mm-leitura .salmo-estrofe { margin: 0 0 .7em; }
+.mm-leitura .salmo-r-sep { color: var(--mm-cor); font-weight: 700; margin: 0 0 .7em; }
+.mm-leitura .salmo-ou { font-style: italic; color: var(--mm-suave); }
+
+/* Oração Eucarística: escolha */
+.mm-oe { list-style: none; padding: 0; margin: 0 0 1em; display: grid; gap: 8px; }
+.mm-oe button {
+  width: 100%; text-align: left; padding: .7em .9em; border: 1px solid var(--mm-linha); border-radius: 12px;
+  display: grid; gap: .15em; font-size: .9em;
+}
+.mm-oe button span { color: var(--mm-suave); font-size: .85em; }
+.mm-oe button.escolhida { border-color: var(--mm-cor); background: color-mix(in srgb, var(--mm-cor) 12%, transparent); }
+
+.mm-alt { margin: .4em 0 1em; }
+.mm-alt summary { color: var(--mm-cor); cursor: pointer; font-size: .9em; margin-bottom: .6em; }
+
+/* Abertura */
+.mm-abertura-cel { font-size: 1.6em; line-height: 1.2; margin-top: 1em !important; }
+.mm-abertura-tempo { color: var(--mm-cor); font-size: .85em; }
+.mm-abertura-dica { color: var(--mm-suave); font-size: .92em; }
+.mm-tela a { color: var(--mm-cor); }
+
+/* ── Recolhimento: Consagração e Comunhão ── */
+body.mm-recolhido { background: #000; color: #6f675d; }
+body.mm-recolhido .mm-topo, body.mm-recolhido .mm-barra, body.mm-recolhido .mm-rodape { opacity: .35; }
+.mm-recolhe-titulo { text-align: center; font-size: .8em; letter-spacing: .2em; text-transform: uppercase; color: #6f675d; margin-top: 18vh !important; }
+.mm-recolhe-texto { text-align: center; font-size: 1.15em; color: #8d8478; }
+.mm-recolhe-dica { text-align: center; font-size: .78em; color: #4f4942; margin-top: 2.5em !important; }
+.mm-recolhe-alt summary { color: #8d8478; text-align: center; }
+body.mm-recolhido .mm-p { color: #a49b8e; border-color: #4f4942; }
+
+/* ── Rodapé ── */
+.mm-rodape {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 16px max(12px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--mm-linha);
+}
+.mm-nav {
+  width: 56px; height: 48px; border-radius: 14px; font-size: 1.8rem; line-height: 1;
+  border: 1px solid var(--mm-linha);
+}
+.mm-prox { border-color: color-mix(in srgb, var(--mm-cor) 55%, var(--mm-linha)); }
+.mm-nav:disabled { opacity: .25; cursor: default; }
+.mm-indice-btn { flex: 1; height: 48px; border-radius: 14px; color: var(--mm-suave); font-size: .95rem; }
+
+/* ── Índice ── */
+.mm-indice {
+  border: 0; padding: 0; margin: auto 0 0; width: 100%; max-width: none; max-height: 80vh;
+  background: #171411; color: var(--mm-texto); border-radius: 18px 18px 0 0;
+}
+.mm-indice::backdrop { background: rgba(0, 0, 0, .6); }
+.mm-indice-topo { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--mm-linha); position: sticky; top: 0; background: #171411; }
+.mm-indice-topo button { color: var(--mm-suave); font-size: 1.1rem; padding: 4px 8px; }
+.mm-indice ol { list-style: none; margin: 0; padding: 6px 0; }
+.mm-indice li button { width: 100%; text-align: left; padding: 10px 18px; font-size: 1.02rem; }
+.mm-indice li.atual button { color: var(--mm-cor); }
+.mm-lista-secao { padding: 14px 18px 4px; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--mm-suave); }
+.mm-indice .mm-nota { padding: 0 18px 18px; font-size: .8rem; }
+@media (min-width: 700px) {
+  .mm-indice { margin: auto; border-radius: 18px; max-width: 520px; }
+}

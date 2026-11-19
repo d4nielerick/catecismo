@@ -386,3 +386,13 @@ pelo Haddock (@Bot_haddock_bot, o Claude da VPS no Telegram): o script lê o tok
 `claude-terminal_claude_config` (`channels/telegram/.env` e `access.json`). Mandar pela API não atrapalha a sessão do Claude,
 que só lê as mensagens recebidas. As correções do site (`api/correcao.js`) também saem pelo Haddock: o `TELEGRAM_BOT_TOKEN` do
 `catecismo-api` no docker-compose da VPS é o dele desde 06/11/2026 (o antigo @santadoutrina_bot foi bloqueado). Peças comuns em `scripts/lib-vigia.mjs`.
+
+### Modo Missa (protótipo, `/liturgiadiaria/missa/`)
+
+A missa do dia em telas, uma parte por vez, para acompanhar no banco: `missa.mjs` monta o Ordinário (partes do povo em
+tradução de trabalho do latim), as leituras de `data/liturgia/` (via `render.mjs`) e, se existir,
+`data/liturgia-oracoes/AAAA-MM-DD.json` (coleta, oferendas, depois da comunhão, antífonas; Missal Romano da CNBB, com
+crédito "© Edições CNBB" na tela), gerado por `node scripts/baixa-oracoes-missa.mjs AAAA-MM-DD +60`. Glória e Credo
+seguem o dia (domingo fora do Advento/Quaresma, solenidade, festa). Consagração e Comunhão escurecem a tela e soltam o
+wake lock. Página com `noindex`, sem link no site até ser testada na missa. Pedido de autorização à CNBB:
+`docs/email-cnbb-modo-missa.md`.
