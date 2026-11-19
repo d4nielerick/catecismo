@@ -1,10 +1,6 @@
-# Robôs que coletam texto para treinar modelos de IA: não autorizados.
-User-agent: GPTBot
-User-agent: ClaudeBot
-User-agent: anthropic-ai
+# Coletores que copiam o site sem nunca citar a fonte: não autorizados.
+# (Os robôs de treino da OpenAI, Anthropic, Google e Apple ficam liberados, por causa das respostas de IA.)
 User-agent: CCBot
-User-agent: Google-Extended
-User-agent: Applebot-Extended
 User-agent: Bytespider
 User-agent: meta-externalagent
 User-agent: cohere-ai
