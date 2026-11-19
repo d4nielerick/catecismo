@@ -144,7 +144,7 @@ function montarPassos(d, dia, missa, or = {}) {
   const RF = 'Ritos finais';
   add(RF, 'Bênção e despedida', falas([S('O Senhor esteja convosco.'), P('E com o teu espírito.'),
     S('Abençoe-vos Deus todo-poderoso, Pai e Filho e Espírito Santo.'), P('Amém.'), S('Ide em paz, e o Senhor vos acompanhe.'), P('Graças a Deus.')])
-    + `<p class="mm-calmo">A missa terminou. Boa semana.</p>`);
+    + `<span class="mm-divisor" aria-hidden="true"></span><p class="mm-calmo">A missa terminou. Ide em paz.</p>`);
   return passos;
 }
 
@@ -221,10 +221,11 @@ async function iniciar() {
   let or = {};
   try { const r = await fetch(`/data/liturgia-oracoes/${d}.json`); if (r.ok) or = await r.json(); } catch {}
   passos = montarPassos(d, dia, dia.missas[n], or);
-  passos.unshift({ secao: dia.celebracao, titulo: 'Antes de começar', html: `
+  passos.unshift({ secao: 'Modo Missa', titulo: 'Início', html: `
     <p class="mm-abertura-cel">${esc(dia.celebracao)}</p>
     <p class="mm-abertura-tempo">${esc(dia.tempo || '')}${dia.cor ? ` · cor ${esc(NOME_COR[dia.cor] || dia.cor)}` : ''}</p>
     ${dia.missas.length > 1 ? `<p class="mm-r">Hoje há mais de uma missa: ${dia.missas.map((m, i) => `<a href="?data=${d}&missa=${i}"${i === n ? ' aria-current="true"' : ''}>${esc(m.nome || `missa ${i + 1}`)}</a>`).join(' · ')}</p>` : ''}
+    <span class="mm-divisor" aria-hidden="true"></span>
     <p class="mm-abertura-dica">Uma parte da missa por tela. Toque em <strong>›</strong> ou deslize para o lado para avançar.
     Na Consagração e na Comunhão a tela escurece: é hora de guardar o celular.</p>
     <p class="mm-abertura-dica">Ponha o celular no silencioso antes de começar.</p>` });
