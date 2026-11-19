@@ -41,3 +41,6 @@ catecismo/
 /cic/index.html
 /sitemap-cic.xml
 
+
+# Modo Missa: por enquanto só local (orações do Missal da CNBB fora do repositório público)
+data/liturgia-oracoes/

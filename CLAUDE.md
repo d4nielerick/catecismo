@@ -131,7 +131,7 @@ Deploy a partir de um clone local com a `main` atualizada:
 
 ```bash
 rsync -az --delete \
-  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/liturgiadiaria/instagram/reels/,/ios/} \
+  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/liturgiadiaria/instagram/reels/,/ios/,/liturgiadiaria/missa/,/data/liturgia-oracoes/} \
   ./ vps:/opt/mediaserver/catecismo/
 ```
 
@@ -394,5 +394,5 @@ tradução de trabalho do latim), as leituras de `data/liturgia/` (via `render.m
 `data/liturgia-oracoes/AAAA-MM-DD.json` (coleta, oferendas, depois da comunhão, antífonas; Missal Romano da CNBB, com
 crédito "© Edições CNBB" na tela), gerado por `node scripts/baixa-oracoes-missa.mjs AAAA-MM-DD +60`. Glória e Credo
 seguem o dia (domingo fora do Advento/Quaresma, solenidade, festa). Consagração e Comunhão escurecem a tela e soltam o
-wake lock. Página com `noindex`, sem link no site até ser testada na missa. Pedido de autorização à CNBB:
+wake lock. Por enquanto só local: fora do deploy (exclusão no rsync) e da Vercel (.vercelignore); `data/liturgia-oracoes/` fora do git. Pedido de autorização à CNBB:
 `docs/email-cnbb-modo-missa.md`.

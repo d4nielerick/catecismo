@@ -42,7 +42,7 @@ e recebe os mesmos pushes (é um espelho útil para preview), mas o domínio ape
 
 ```bash
 rsync -az --delete \
-  --exclude={.git,.gitignore,api-server.mjs,'.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/liturgiadiaria/instagram/reels/,/ios/} \
+  --exclude={.git,.gitignore,api-server.mjs,'.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/liturgiadiaria/instagram/reels/,/ios/,/liturgiadiaria/missa/,/data/liturgia-oracoes/} \
   ./ vps:/opt/mediaserver/catecismo/
 ```
 
