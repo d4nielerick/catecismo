@@ -32,6 +32,16 @@ ficam fora do git; aqui estão os scripts e o caminho de cada peça.
   expira de tempos em tempos (rodar `autoriza` de novo). `visibilidade` precisa reautorizar com o escopo
   `youtube` (hoje só há `youtube.upload`).
 
+### Shorts automáticos (desde 19/11/2026)
+
+- `scripts/publicar-youtube.mjs` roda na VPS (cron `8 * * * *`, log `/var/log/youtube-liturgia.log`) e sobe como Short
+  cada Reel que o `publicar-instagram.mjs` já publicou no dia (estado do Instagram em `/dados/instagram.json`): o do dia
+  e o extra (`reels/<dia>-2.mp4`). Título = 1ª linha da legenda + #Shorts; descrição = legenda + link do dia.
+  Estado em `/dados/youtube-estado.json`. `--ensaio` mostra o que subiria (`YT_DIA=` para outro dia).
+- Credenciais em `/dados/youtube.json` (VPS, 600), copiadas do Mac com `node scripts/youtube.mjs vps` depois de
+  `autoriza`. O app do Google Cloud foi publicado ("em produção") em 19/11: a autorização não vence mais em 7 dias.
+- Política de privacidade (exigida pelo Google): `/privacidade/`.
+
 ## Terço em vídeo (YouTube)
 
 - Scripts em `scripts/terco/` (rodar numa pasta de trabalho, ex. `video/terco/`, que é ignorada pelo git):
