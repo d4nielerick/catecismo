@@ -70,11 +70,14 @@ export function ouvir({ aoOuvir, aoMudar }) {
   let ligado = true;
 
   rec.onstart = () => aoMudar('ouvindo');
+  rec.onaudiostart = () => aoMudar('ouvindo');
+  // Junta todos os pedaços desta sessão: o Safari do iPhone entrega a fala em fragmentos curtos
+  // (às vezes uma palavra por resultado, sem nunca marcar "final"); o Chrome entrega frases.
   rec.onresult = e => {
-    for (let i = e.resultIndex; i < e.results.length; i++) {
-      const r = e.results[i];
-      aoOuvir(normalizar(r[0].transcript), r.isFinal);
-    }
+    let texto = '';
+    for (let i = 0; i < e.results.length; i++) texto += ' ' + e.results[i][0].transcript;
+    const palavras = normalizar(texto).split(' ');
+    aoOuvir(palavras.slice(-40).join(' '), false);
   };
   rec.onerror = e => {
     if (e.error === 'no-speech' || e.error === 'aborted') return;   // silêncio: segue ouvindo

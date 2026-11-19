@@ -153,9 +153,9 @@ function montarPassos(d, dia, missa, or = {}) {
     if (s.alternativa) continue; // "ou…": a principal basta para acompanhar
     const cab = `<div class="mm-ref">${esc(s.referencia || '')}</div>`;
     if (s.tipo === 'leitura') {
-      add(LP, s.rotulo, cab + corpoLeitura(s) + falas([S('Palavra do Senhor.'), P('Graças a Deus.')]), { leitura: true, ancoras: ['leitura do', 'leitura da', 'leitura dos', comeco(s.texto)] });
+      add(LP, s.rotulo, cab + corpoLeitura(s) + falas([S('Palavra do Senhor.'), P('Graças a Deus.')]), { leitura: true, ancoras: ['leitura do', 'leitura da', 'leitura dos', 'leitura do livro', 'leitura da carta', 'leitura da profecia', 'leitura dos atos', comeco(s.texto)], trechos: pedacos(s.texto) });
     } else if (s.tipo === 'salmo') {
-      add(LP, 'Salmo responsorial', cab + falas([R('Todos repetem o refrão (R.) depois de cada estrofe.')]) + corpoLeitura(s), { leitura: true, ancoras: ['salmo', comeco(s.texto, 5)] });
+      add(LP, 'Salmo responsorial', cab + falas([R('Todos repetem o refrão (R.) depois de cada estrofe.')]) + corpoLeitura(s), { leitura: true, ancoras: ['salmo', comeco(s.texto, 5)], trechos: pedacos(s.texto) });
     } else if (s.tipo === 'sequencia') {
       add(LP, s.rotulo || 'Sequência', cab + corpoLeitura(s), { leitura: true });
     } else if (s.tipo === 'aclamacao') {
@@ -164,7 +164,7 @@ function montarPassos(d, dia, missa, or = {}) {
       const ev = EVANGELISTA[(s.referencia || '').split(' ')[0]] || '';
       add(LP, 'Evangelho', cab + falas([S('O Senhor esteja convosco.'), P('E com o teu espírito.'),
         S(`Proclamação do Evangelho de Jesus Cristo${ev ? ` segundo ${ev}` : ''}.`), P('Glória a vós, Senhor.')])
-        + corpoLeitura(s) + falas([S('Palavra da Salvação.'), P('Glória a vós, Senhor.')]), { leitura: true, evangelho: true });
+        + corpoLeitura(s) + falas([S('Palavra da Salvação.'), P('Glória a vós, Senhor.')]), { leitura: true, evangelho: true, trechos: pedacos(s.texto) });
     }
   }
   add(LP, 'Homilia', `<p class="mm-recolhe-texto">Ouça a homilia.</p>
@@ -361,9 +361,25 @@ let escuta = null;
 let historico = '';       // o que foi ouvido desde o último reconhecimento (só na memória, só o fim)
 let sincronizado = false; // já achou uma vez onde a missa está?
 let avisoTimer = null;
+let trechos = 0;          // diagnóstico: quantos pedaços o reconhecimento já entregou
+let ultimo = '';
+let mostrarOuvido = false; // tocar na linha de baixo mostra o que ele está entendendo
 const JANELA = 6;         // depois de achar, olha primeiro só as próximas 6 partes
 
 function ancorasDe(p) { return (p.ancoras || ANCORAS[p.titulo] || []).filter(a => a && a.length >= 4); }
+// Leituras: qualquer sequência de 5 palavras do texto do dia reconhece a leitura, mesmo entrando no meio
+function pedacos(texto, n = 5) {
+  const p = normalizar(String(texto || '').replace(/^R\.?\s*$/gm, ' ').replace(/\b\d+[a-z]?\b/g, ' ')).split(' ').filter(Boolean);
+  const set = new Set();
+  for (let i = 0; i + n <= p.length; i++) set.add(p.slice(i, i + n).join(' '));
+  return set;
+}
+function temTrecho(p, texto, n = 5) {
+  if (!p.trechos) return false;
+  const w = texto.split(' ');
+  for (let i = 0; i + n <= w.length; i++) if (p.trechos.has(w.slice(i, i + n).join(' '))) return true;
+  return false;
+}
 // Frases longas o bastante para valer em qualquer ponto da missa (não "oremos", não "aleluia")
 const forte = a => a.length >= 12;
 
@@ -376,14 +392,20 @@ function achar(texto) {
   //    ou corrigir um salto errado
   for (let k = 1; k < passos.length; k++) {
     if (k === atual) continue;
-    if (ancorasDe(passos[k]).some(a => forte(a) && texto.includes(a))) return k;
+    if (ancorasDe(passos[k]).some(a => forte(a) && texto.includes(a)) || temTrecho(passos[k], texto)) return k;
   }
   return -1;
 }
 
 function aoOuvir(texto, final) {
-  const agora = (historico + ' ' + texto).trim();
-  if (final) historico = agora.split(' ').slice(-40).join(' ');
+  trechos++;
+  ultimo = texto;
+  if (mostrarOuvido) aviso(`(${trechos}) ${texto.split(' ').slice(-12).join(' ')}`);
+  else if (!$('mm-escuta').classList.contains('achou')) aviso(`${sincronizado ? 'Acompanhando a missa' : 'Ouvindo… procurando em que parte a missa está'} · ${trechos}`);
+  // o texto já vem acumulado da sessão (ouvir.mjs); depois de um reconhecimento, só conta o que veio depois
+  if (historico && texto.startsWith(historico)) texto = texto.slice(historico.length).trim();
+  else if (historico && texto.includes(historico)) texto = texto.slice(texto.lastIndexOf(historico) + historico.length).trim();
+  const agora = texto;
   // Qual Oração Eucarística: entre o Prefácio e a Consagração
   const iPref = passos.findIndex(p => p.titulo === 'Prefácio e Santo');
   const iCons = passos.findIndex(p => p.titulo === 'Consagração');
@@ -392,14 +414,14 @@ function aoOuvir(texto, final) {
       if (frases.some(f => agora.includes(f)) && ler(`mm-oe-${chaveDia}`) !== oe) {
         guardar(`mm-oe-${chaveDia}`, oe);
         const iOE = passos.findIndex(p => p.oe);
-        historico = '';
+        historico = ultimo;
         reconhecido(atual < iOE ? iOE : atual, `Oração Eucarística ${oe}`);
         return;
       }
     }
   }
   const k = achar(agora);
-  if (k >= 0) { historico = ''; reconhecido(k); }
+  if (k >= 0) { historico = ultimo; reconhecido(k); }
 }
 
 function reconhecido(k, rotulo) {
@@ -434,6 +456,7 @@ function definirEscuta(estado, detalhe = '') {
 
 // ── Controles ───────────────────────────────────────────────────────────────
 $('mm-mic').addEventListener('click', alternarEscuta);
+$('mm-escuta').addEventListener('click', () => { mostrarOuvido = !mostrarOuvido; aviso(mostrarOuvido ? `(${trechos}) ${ultimo || 'nada ainda'}` : 'Ouvindo…'); });
 // Teste sem microfone (só em localhost): __mmOuvir('coracoes ao alto')
 if (location.hostname === 'localhost') window.__mmOuvir = t => aoOuvir(normalizar(t), true);
 $('mm-ant').addEventListener('click', () => ir(-1));
