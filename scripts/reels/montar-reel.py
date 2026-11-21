@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 import sys
 RAIZ=Path('/Users/daniel/catecismo'); DIA=sys.argv[4] if len(sys.argv)>4 else '2026-10-15'
 BASE=sys.argv[5] if len(sys.argv)>5 else 'base.png'
-TRILHA=sys.argv[1]; SAIDA=sys.argv[2]; VOL_TRILHA=float(sys.argv[3]) if len(sys.argv)>3 else 0.22
+TRILHA=sys.argv[1]; SAIDA=sys.argv[2]; VOL_TRILHA=float(sys.argv[3]) if len(sys.argv)>3 else 0.07   # 0,07: o dono achou alto acima disso (o 0,22 antigo deixou o Reel de 21/11 com a trilha a 6 dB da voz)
 aud=json.load(open(RAIZ/f'data/liturgia-audio/{DIA}/evangelho.json'))
 mp3=RAIZ/f'data/liturgia-audio/{DIA}/evangelho.mp3'
 FONT='/Users/daniel/Library/Fonts/Michelangelus-Regular.ttf'
