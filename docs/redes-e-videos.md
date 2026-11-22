@@ -1,5 +1,7 @@
 # Instagram, Reels, YouTube e terço — como funciona
 
+> Atualizado em 22/11/2026 (horários, tokens, Reels de cenas, Evangelho ilustrado).
+
 Registro do que foi montado entre 10 e 13/10/2026. Os arquivos gerados (imagens, áudios, vídeos)
 ficam fora do git; aqui estão os scripts e o caminho de cada peça.
 
@@ -22,6 +24,40 @@ ficam fora do git; aqui estão os scripts e o caminho de cada peça.
   no `/opt/mediaserver/.env` (renovação mensal: `/opt/mediaserver/renovar-token-ig.sh`).
 - **Link para o site:** só nos Stories, com a figurinha de link nativa (a API não faz; é manual).
   Nada de endereço por extenso no card.
+
+### Horários de publicação (Brasília)
+
+| O quê | Quando | Quem solta |
+|---|---|---|
+| Card do dia + Reel do dia (`reels/<dia>.mp4`) | ~6h05 (cron no minuto 2, só depois das 6h; o Instagram leva alguns minutos para processar o vídeo) | `publicar-instagram.mjs` |
+| Reel extra (`reels/<dia>-2.mp4`, ex.: o Evangelho ilustrado de domingo) | a `hora` de `reels/<dia>-2.json` (padrão 12h), minuto 2 | `publicar-instagram.mjs` |
+| Short no YouTube de cada Reel | minuto 8 da hora em que o Reel já saiu no Instagram (6h08, 12h08; se o Instagram atrasar, na hora seguinte) | `publicar-youtube.mjs` |
+| Aviso push "Evangelho de hoje" | 6h | `enviar-push.mjs` |
+
+Conferir o que saiu: `ssh vps tail /var/log/instagram-liturgia.log /var/log/youtube-liturgia.log`.
+
+### Tokens e renovações (nada disso passa pela conversa nem pelo git)
+
+| Token | Onde fica | Renovação |
+|---|---|---|
+| Instagram @liturgia_hoje (`IG_LITURGIA_TOKEN`) | `/opt/mediaserver/.env` na VPS | sozinha, dia 1º às 4h30 (horário do servidor): `/opt/mediaserver/renovar-token-ig.sh`, log em `/var/log/instagram-liturgia.log` |
+| YouTube (refresh token) | `/dados/youtube.json` na VPS (cópia do Keychain do Mac) | não vence desde que o app do Google foi publicado (19/11/2026); se cair: `node scripts/youtube.mjs autoriza && node scripts/youtube.mjs vps` |
+| Instagram @danierick do n8n (DMs e fila de posts do estúdio) | credencial `Header Auth account` do n8n | sozinha, dia 1º às 4h40: `/opt/n8n/renovar-token-meta.sh`, avisa no Telegram se falhar. Documentado no repositório privado do estúdio (`pompeu-estrategia`, `ferramentas/n8n-instagram.md`), não aqui |
+
+Os tokens do @liturgia_hoje e do @danierick saem do mesmo app da Meta ("Daniel DM Bot", Casos de uso → API do Instagram → etapa 2, "Gerar token"). Se uma renovação automática falhar por 60 dias, gerar ali de novo; para pôr o token novo sem colar em lugar nenhum, copiar e pedir ao Claude, que lê da área de transferência (`pbpaste`) direto para o servidor.
+
+### Reels de cenas (desde 25/11/2026)
+
+O Reel diário passou a ter 4–5 pinturas por Evangelho (uma por momento da leitura), com zoom lento, dissolvência, as frases no ritmo da voz e o convite final (seguir @liturgia_hoje, liturgia.santadoutrina.com).
+
+1. **Cenas:** uma linha `AAAA-MM-DD-N|cena em inglês` por momento do Evangelho; gerar no Google Flow (Nano Banana, 3:4, x2, 0 crédito) com o prefixo e o sufixo de estilo de `instagram-posts/reels-cenas/prompts-completos.txt`. As imagens vão para `instagram-posts/reels-cenas/flow/cena-<dia>-<n><a|b>.jpg` (fora do git).
+2. **Escolha:** `instagram-posts/reels-cenas/escolhas.json` (`{ "2026-12-24": ["1a","2b","3b","4a"] }`). Para conferir: `python3 scripts/reels/folha-trechos.py folha.jpg <dias>` monta a folha com cada pintura e o trecho lido enquanto ela aparece (mesmo corte do montador).
+3. **Render:** `scripts/reels/reels-cenas-lote.sh` (usa `montar-reel-cenas.py` e `capa-reel.py`; saída em `instagram-posts/reels-cenas/lote/`). Trilha `trilha-violino.mp3` a 0,07.
+4. **Subir:** `scripts/reels/reels-cenas-subir.sh <dias>` (confere md5 e legenda). Prontos até 24/12/2026; o 19/12 é o mais longo (2min38).
+
+### Evangelho ilustrado (Reel extra de domingo)
+
+`scripts/reels/evangelho-ilustrado.py roteiro.json saida.mp4`, com a pasta do dia em `instagram-posts/evangelho-ilustrado/<dia>/` (cenas, narração, trilha, `roteiro.json`). **Volume da trilha:** sai sozinho da voz, 15 dB abaixo (`folga_trilha` no roteiro muda a folga; `vol_trilha` força um valor). O de Cristo Rei (22/11/2026) foi com `vol_trilha` 0,28, só 3 dB abaixo da voz, e o dono achou alto. Depois de pronto: `reels/<dia>-2.mp4`, `reels/<dia>-2.json` (`{ legenda, hora }`) e `reels/capas/<dia>-2.jpg` na VPS.
 
 ## YouTube — canal "Liturgia Diária" (@liturgia-santa-doutrina)
 

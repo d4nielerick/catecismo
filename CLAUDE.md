@@ -131,7 +131,7 @@ Deploy a partir de um clone local com a `main` atualizada:
 
 ```bash
 rsync -az --delete \
-  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/liturgiadiaria/instagram/reels/,/ios/,/liturgiadiaria/missa/,/data/liturgia-oracoes/} \
+  --exclude={.git,.gitignore,api-server.mjs,'api-server.mjs.bak*','.env*',/.claude/,/.vercel/,/catecismo/,/instagram-posts/,'*.bak','*.bak.*',.DS_Store,/liturgiadiaria/hoje.html,/liturgiadiaria/instagram/reels/,/ios/,/liturgiadiaria/missa/,/data/liturgia-oracoes/} \
   ./ vps:/opt/mediaserver/catecismo/
 ```
 
@@ -139,7 +139,7 @@ rsync -az --delete \
 desatualizada ou com o working tree sujo** — rode `git pull` e os verificadores antes.
 
 ⚠️ O rsync envia **tudo** o que está na pasta, inclusive o que o git ignora. As exclusões acima
-tiram o que é só local — `.env.local` (chaves), `.claude/`, `.vercel/`, a pasta antiga
+tiram o que é só local — `.env.local` (chaves), `instagram-posts/` (pastas de trabalho dos Reels, com a voz clonada e vídeos de GB), `.claude/`, `.vercel/`, a pasta antiga
 `catecismo/`, backups `.bak` — e sem elas esses arquivos vão para o ar. Rode antes um ensaio
 com `-n --itemize-changes` e confira o que ele apagaria (`*deleting`) e se sobe algo fora do
 git além de `liturgiadiaria/AAAA-MM-DD/`, `liturgiadiaria/og/` e `sitemap-liturgia.xml`.

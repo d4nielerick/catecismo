@@ -325,8 +325,17 @@ def desenhar_texto(quadro, t):
     if marca:
         colar(quadro, marca, SEG_X1 - marca.width + 10, 238, 0.5 * facil((t - 0.6) / 0.8))
 
-audio = ['-i', str(mp3), '-stream_loop', '-1', '-i', str((Path(sys.argv[1]).parent / roteiro['trilha']) if roteiro.get('trilha') else RAIZ / 'scripts' / 'reels' / 'trilha-violino.mp3')]   # `trilha`/`vol_trilha`: outra música
-fc = (f'[2:a]atrim=0:{total},asetpts=PTS-STARTPTS,volume={roteiro.get('vol_trilha', 0.22)},afade=t=in:st=0:d=3,afade=t=out:st={total - 3:.2f}:d=3[m];'
+arq_trilha = (Path(sys.argv[1]).parent / roteiro['trilha']) if roteiro.get('trilha') else RAIZ / 'scripts' / 'reels' / 'trilha-violino.mp3'
+def lufs(arq):   # sonoridade integrada (EBU R128) de um arquivo
+    r = subprocess.run(['ffmpeg', '-hide_banner', '-nostats', '-i', str(arq), '-af', 'ebur128', '-f', 'null', '-'], capture_output=True, text=True)
+    return float(re.findall(r'I:\s+(-?[\d.]+) LUFS', r.stderr)[-1])
+# A trilha fica FOLGA dB abaixo da voz, qualquer que seja a música (o edit de Cristo Rei, com vol_trilha 0,28,
+# ficou só 3 dB abaixo e o dono achou alto; os Reels diários ficam ~15 dB abaixo). `vol_trilha` no roteiro força um valor.
+FOLGA = float(roteiro.get('folga_trilha', 15))
+vol_trilha = roteiro.get('vol_trilha') or round(10 ** ((lufs(mp3) - FOLGA - lufs(arq_trilha)) / 20), 4)
+print(f'trilha {arq_trilha.name}: volume {vol_trilha}', file=sys.stderr)
+audio = ['-i', str(mp3), '-stream_loop', '-1', '-i', str(arq_trilha)]   # `trilha`: outra música; `folga_trilha` ou `vol_trilha`: nível
+fc = (f'[2:a]atrim=0:{total},asetpts=PTS-STARTPTS,volume={vol_trilha},afade=t=in:st=0:d=3,afade=t=out:st={total - 3:.2f}:d=3[m];'
       f'[1:a]adelay={int(ATRASO * 1000)}|{int(ATRASO * 1000)},apad[v0];[v0][m]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-15:TP=-1.5:LRA=11,alimiter=limit=0.95,atrim=0:{total}[a]')
 ff = subprocess.Popen(['ffmpeg', '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-']
                       + audio + ['-filter_complex', fc, '-map', '0:v', '-map', '[a]', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18',
