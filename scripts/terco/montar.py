@@ -6,7 +6,7 @@ os.makedirs('tmp',exist_ok=True)
 # pausa depois de cada segmento
 def pausa(i,x):
     nxt=s[i+1] if i+1<len(s) else None
-    if x['rotulo']=='Ave-Maria' and nxt and nxt['rotulo']=='Ave-Maria': return 0.55
+    if x['rotulo'] in('Ave-Maria','Pela sua dolorosa Paixão','Ó Sangue e Água','Deus Santo','Jesus, eu confio em vós') and nxt and nxt['rotulo']==x['rotulo']: return 0.55
     if x['tipo']=='meditacao': return 1.1
     if x['tipo'] in('anuncio','evangelho'): return 1.3
     if x['tipo']=='fruto': return 1.6

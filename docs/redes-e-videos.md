@@ -59,6 +59,20 @@ O Reel diário passou a ter 4–5 pinturas por Evangelho (uma por momento da lei
 
 `scripts/reels/evangelho-ilustrado.py roteiro.json saida.mp4`, com a pasta do dia em `instagram-posts/evangelho-ilustrado/<dia>/` (cenas, narração, trilha, `roteiro.json`). **Volume da trilha:** sai sozinho da voz, 15 dB abaixo (`folga_trilha` no roteiro muda a folga; `vol_trilha` força um valor). O de Cristo Rei (22/11/2026) foi com `vol_trilha` 0,28, só 3 dB abaixo da voz, e o dono achou alto. Depois de pronto: `reels/<dia>-2.mp4`, `reels/<dia>-2.json` (`{ legenda, hora }`) e `reels/capas/<dia>-2.jpg` na VPS.
 
+- **Voz com efeito e trilha trocada sem renderizar de novo** (desde 29/11/2026, 1º Domingo do Advento): copiar
+  `scripts/reels/mixa-evangelho-ilustrado.py` para a pasta do dia como `mixa.py` e rodar lá
+  `python3 mixa.py <trilha> [--folga 12] [--inicio 39]`. Põe reverb leve na voz (`0.035`) e delay de 2 repetições
+  (`[0.16, 0.06]`, abafadas) só nos gritos (`GRITOS`, tempos do Whisper em `narracao/brian.json`), mistura a trilha
+  N dB abaixo e troca o áudio do `completo.mp4` → `final.mp4`. `--inicio` = segundo da trilha em que o vídeo começa
+  (para o clímax da música cair no clímax do texto). O dono pediu: reverb "pouco", delay "suave, poucos rebotes".
+- **Trilha "cinematográfica"** feita pelo dono no Suno (29/11: `Advent Vigil`, 2min38, entrando aos 39 s, 12 dB abaixo).
+- **Peso:** o `final.mp4` herda o vídeo do `completo.mp4` (~390 MB em 52 s) e passa do limite de ~300 MB da API do
+  Instagram. Sempre recomprimir antes de subir: `ffmpeg -i final.mp4 -c:v libx264 -preset slow -crf 18 -maxrate 20M
+  -bufsize 40M -c:a copy final-instagram.mp4` (~130 MB). Capa = um quadro do clímax (`ffmpeg -ss <t> -frames:v 1`).
+- **Afiliados:** o dono entrou no programa de afiliados do Mercado Livre (25/11/2026) e marca produtos nos Reels à mão
+  pelo app ("Adicionar produtos"); a API do Instagram não faz essa marcação e o Mercado Livre não tem API pública de
+  links de afiliado. Ideias não decididas: catálogo `produtos.json`, lembrete no Telegram, DM por palavra-chave, página /indicados.
+
 ## YouTube — canal "Liturgia Diária" (@liturgia-santa-doutrina)
 
 - `scripts/youtube.mjs`: `autoriza` (OAuth loopback; cliente em `~/.config/liturgia/youtube-client.json`,
@@ -155,6 +169,40 @@ Pinturas do mês (12–31/10; título — autor): 12 Bodas de Caná — Murillo 
 4. `node scripts/build-liturgia.mjs && node scripts/build-santos.mjs && node scripts/verifica-liturgia.mjs && node scripts/build-paginas-liturgia.mjs && python3 scripts/build-og-liturgia.py && node scripts/build-paginas-santos.mjs`; apagar antes os `liturgiadiaria/og/AAAA-MM-DD.jpg` dos dias que mudaram. Commit, push, depois deploy (ver regras acima).
 5. Card do Instagram do santo: layout igual aos de frase, rótulo "SANTO DO DIA · …"; exemplo em `instagram-posts/acervo/card-2026-10-13-carlo-acutis.jpg`.
 
+## Terço da Misericórdia animado e lives diárias (25/11/2026)
+
+Formato novo, mais animado que os terços dos mistérios. Scripts em `scripts/terco/` (rodar em `video/terco/`):
+
+- `misericordia.py` — textos das orações (Diário de Santa Faustina: Expirastes 1319, Ó Sangue e Água 84/187, terço 476,
+  Ó Deus eterno 950), as 5 dezenas com um trecho da Paixão (Bíblia Ave-Maria) e as pinturas dos Dolorosos (`img-dol/`).
+  Abertura e encerramento: Jesus Misericordioso de **Kazimirowski (1934)**, domínio público, baixado da Wikimedia
+  Commons para `img-dol/0-misericordia.jpg`.
+- `animado.py completo` → `terco-misericordia.mp4` (10min26, 1920×1080, 30 fps, ~30 min de render). Desenha quadro a
+  quadro: zoom lento e dissolvência nas pinturas; cada dezena abre em tela cheia com o título e o painel de texto desliza;
+  palavras acendem junto com a voz (tempo proporcional ao tamanho da palavra); o terço inteiro desenhado com a conta
+  atual brilhando; raios da Misericórdia pulsando (cone a partir do coração); textos longos (Creio) escondem o terço e
+  usam o painel inteiro; no fim, convite "Curta e inscreva-se · todo dia às 15h e às 3h, ao vivo" com botão e voz.
+  `animado.py teste` faz só 47 s. `SO_AUDIO=1` troca só o áudio do vídeo já renderizado. Capítulos em
+  `terco-misericordia-capitulos.json`.
+- **Vozes:** guia = Grok `leo`; respostas ("tende misericórdia…", "em expiação…", "tende piedade…", "Jesus, eu confio
+  em vós") = `coro.py`, **dueto Ara + Castor** (Grok), a 2ª voz 70 ms depois, cada uma num lado do estéreo, reverb
+  leve, sem esticar a fala. Testados e recusados: 10 vozes esticadas para a mesma duração (soou metálico/"estranho").
+  Volume da resposta: pico 0,62 contra 0,68 da guia (`VOL_CORO`); o dono pediu "um pouco mais baixa".
+- Capa: `python3 scripts/reels/capa-youtube.py <dia> "Terço da|*Misericórdia*" "Jesus, eu confio em vós" --paleta vinho
+  --selo TERÇO --rotulo "TODO DIA ÀS 15H" --pintura img-dol/0-misericordia.jpg --topo 0.12 --saida capa-misericordia.jpg`.
+  Descrição com capítulos e créditos: `video/terco/descricao-misericordia.txt`.
+- **Lives às 15h e às 3h (Brasília):** `scripts/live-terco.mjs`, no host da VPS. Aos 50 min de cada hora, se a próxima
+  hora cheia é 15h ou 3h: cria a transmissão agendada (pública, título por horário, descrição, capa), liga ao stream
+  fixo do canal (id em `/opt/mediaserver/lives/estado.json`) e, na hora, transmite `terco-misericordia-live.mp4` com
+  `ffmpeg -re -c copy` (início e fim automáticos). Falha → aviso no Telegram. Arquivos em `/opt/mediaserver/lives/`
+  (fora do rsync do site). O arquivo da live é recodificado para 5 Mbps com quadro-chave a cada 2 s (`-g 60`).
+  ffmpeg instalado no host (apt) em 25/11/2026. Teste: `--agora --nao-listado`; `--ensaio` só mostra.
+  O canal foi liberado para lives em 25/11/2026 (Studio → Transmitir ao vivo); a 1ª live de teste, não listada,
+  funcionou do começo ao fim: https://youtu.be/dfJ6L7Njl9Q. Cron a pôr depois do OK do dono:
+  `50 * * * * cd /opt/mediaserver/catecismo && /usr/bin/node scripts/live-terco.mjs >> /var/log/live-terco.log 2>&1`.
+  Título honesto (oração transmitida, não "ao vivo com alguém rezando"); o YouTube pode tratar o mesmo vídeo diário
+  como repetitivo: variar com o tempo (vozes, pinturas).
+
 ## Receita 4 — terço em vídeo (YouTube)
 
 1. Pasta de trabalho `video/terco/` (copiar de `scripts/terco/`): `conjuntos.py` define gozosos, dolorosos e gloriosos (nomes, frutos, dias, pinturas, enquadramento); **falta luminosos** (não estão no livro de São Josemaria: usar anúncio + Evangelho + fruto). O texto das meditações vem de escriva.org/pt-br/santo-rosario/<n>/ (gloriosos = 11 a 15), lido pelo Chrome (curl dá 403).
@@ -164,6 +212,10 @@ Pinturas do mês (12–31/10; título — autor): 12 Bodas de Caná — Murillo 
 
 ## Armadilhas já pisadas
 
+- **Fim das falas cortado nos terços (até 25/11/2026):** os `tts*.py` tiravam o silêncio com `silenceremove` a -45 dB
+  sem folga e comiam o "s"/"m" final ("vós", "Amém"); as falas terminavam a ~-35 dB do pico. Corrigido em
+  `tts_grok.py` (fim a -55 dB com 120 ms de folga; mp3 original guardado em `vozg/orig/`). Os terços publicados antes
+  (gozosos, dolorosos, gloriosos, luminosos) têm o defeito; `tts.py` e `tts_eleven.py` ainda usam o corte antigo.
 - Gemini TTS: lê a instrução em voz alta se for no mesmo texto, pula o começo de orações conhecidas e sai em espanhol sem `languageCode: pt-BR`; a cota gratuita acaba (429).
 - ElevenLabs "português" puxa para Portugal em textos de construção lusitana: usar `eleven_multilingual_v2` nesses trechos.
 - `curl` local para `santadoutrina.com` falha: conferir pelo `ssh vps curl …`.

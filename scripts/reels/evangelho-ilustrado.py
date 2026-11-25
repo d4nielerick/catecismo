@@ -124,6 +124,73 @@ def pincel(campo, p):
     faixa = np.exp(-((campo - lim) / 0.09) ** 2)
     return m, faixa
 
+def campo_faixas(seed, angulo, n=4):
+    """Faixas de tinta (transição `faixas`): coordenada ao longo (0..1), faixa de cada pixel (0..n-1, com bordas
+    irregulares) e as fibras do pincel, para o tom da tinta variar em riscos."""
+    ca, sa = np.cos(np.radians(angulo)), np.sin(np.radians(angulo))
+    x, y = XX / H, YY / H
+    ao_longo, atraves = x * ca + y * sa, -x * sa + y * ca
+    norm = lambda a: (a - a.min()) / (a.max() - a.min())
+    fibras = sum(vruido(ao_longo * k1, atraves * k2, seed + j) * w for j, (k1, k2, w) in enumerate([(2, 70, 0.5), (4, 160, 0.3), (8, 340, 0.2)]))
+    borda = vruido(ao_longo * 9, atraves * 2, seed + 21)
+    al = norm(ao_longo); at = norm(atraves) * n + 0.35 * (borda - 0.5)          # bordas laterais irregulares
+    ponta = 0.06 * (fibras - 0.5) + 0.04 * (vruido(ao_longo * 2, atraves * 40, seed + 5) - 0.5)   # ponta do pincel em fiapos
+    faixa = np.clip(np.floor(at), 0, n - 1).astype(np.int16)
+    fr = at - np.floor(at)                                                      # posição dentro da faixa (0..1)
+    sombra = np.clip(1 - np.minimum(fr, 1 - fr) / 0.06, 0, 1) ** 2              # emenda entre faixas mais escura
+    return al, faixa, fibras, ponta, sombra
+
+def faixas(campo, p, n=4):
+    """Alfa da tinta em p (0..1): as faixas entram uma após a outra até cobrir tudo em p=0,5 e saem na mesma direção."""
+    al, faixa, fibras, ponta, _ = campo; c = al + ponta
+    alfa = np.zeros_like(al)
+    for j in range(n):
+        d = 0.07 * j; dur = 0.44 - 0.07 * (n - 1)
+        cabeca = -0.12 + 1.3 * min(1.0, max(0.0, (p - d) / dur))
+        cauda = -0.12 + 1.3 * min(1.0, max(0.0, (p - 0.5 - d) / dur))
+        m = np.clip((cabeca - c) / 0.02 + 0.5, 0, 1) * np.clip((c - cauda) / 0.02 + 0.5, 0, 1)
+        alfa = np.where(faixa == j, m, alfa)
+    return alfa
+
+def campo_luz(seed):
+    """Manchas de luz para o film burn: um campo largo (1,7× a largura) que desliza durante a transição."""
+    r = np.random.default_rng(seed); larg = int(W * 1.7)
+    def camada(gx, gy):
+        g = (r.random((gy, gx)) * 255).astype(np.uint8)
+        return np.asarray(Image.fromarray(g).resize((larg, H), Image.BICUBIC), np.float32) / 255
+    campo = 0.55 * camada(5, 9) + 0.3 * camada(11, 19) + 0.15 * camada(24, 42)
+    lado = np.linspace(0, 1, larg, dtype=np.float32)[None, :] ** 1.3            # mais forte de um lado (vaza da borda)
+    return np.clip(campo * 0.7 + lado * 0.5, 0, 1)
+
+# rampa de cor da película queimando: escuro → vermelho → laranja → amarelo claro → quase branco
+RAMPA = np.array([[0, 0, 0], [150, 24, 6], [240, 96, 24], [255, 186, 96], [255, 240, 214]], np.float32)
+def colorir(v):
+    x = np.clip(v, 0, 1) * (len(RAMPA) - 1); i = np.minimum(x.astype(np.int32), len(RAMPA) - 2); f = (x - i)[..., None]
+    return RAMPA[i] * (1 - f) + RAMPA[i + 1] * f
+
+# light leak: manchas grandes e macias de luz colorida que entram por um lado e atravessam a tela
+VAZAMENTOS = [  # cor, tamanho (frações da tela), atraso, força
+    ((255, 120, 40), (0.95, 0.55), 0.00, 1.00),
+    ((235, 60, 90), (0.70, 0.45), 0.10, 0.75),
+    ((255, 196, 110), (0.55, 0.30), 0.05, 0.85),
+]
+def luz_vazando(p, seed):
+    r = np.random.default_rng(seed); ang = np.radians(r.uniform(18, 38)) * (1 if seed % 2 else -1)
+    ca, sa = np.cos(ang), np.sin(ang)
+    x, y = (XX - W / 2) / W, (YY - H / 2) / H
+    u, v = x * ca + y * sa, -x * sa + y * ca                                     # eixo da diagonal
+    luz = np.zeros((H, W, 3), np.float32)
+    for k, (cor, (lu, lv), atraso, forca) in enumerate(VAZAMENTOS):
+        q = min(1.0, max(0.0, (p - atraso) / (1 - atraso)))
+        cu = -1.1 + 2.2 * q + r.uniform(-0.1, 0.1)                               # entra por um lado, sai pelo outro
+        cv = r.uniform(-0.35, 0.35)
+        g = np.exp(-(((u - cu) / lu) ** 2 + ((v - cv) / lv) ** 2) * 2.2) * forca * np.sin(np.pi * q) ** 0.8
+        luz += np.array(cor, np.float32) * g[..., None]
+    cu = -1.2 + 2.4 * p                                                          # feixe estreito e longo, mais brilhante
+    feixe = np.exp(-(((u - cu) / 0.07) ** 2)) * np.exp(-(v / 0.9) ** 2) * np.sin(np.pi * p) ** 1.2
+    luz += np.array([255, 214, 160], np.float32) * feixe[..., None] * 0.9
+    return np.clip(luz, 0, 255)
+
 def arrastar(img, desloc, direcao):
     ca, sa = direcao
     xs = np.clip((XX - desloc * ca).astype(np.int32), 0, W - 1)
@@ -159,17 +226,30 @@ def sprite(txt, estilo, tam, cor, tema, track=0):
         base = Image.merge('RGBA', (Image.new('L', im.size, 0),) * 3 + (a,)); base.alpha_composite(im); im = base
     return im, folga + asc   # sprite e a linha de base dentro dele
 
-import re
+import re, unicodedata
+def _plano(s):
+    """Mesmo comprimento de `s`: minúsculas sem acento; pontuação, aspas, @ e _ viram espaço."""
+    return ''.join((unicodedata.normalize('NFD', c)[0].lower() if c.isalnum() else ' ') for c in s)
+
 def achar(texto, w, desde=0):
-    """Posição de `w` como palavra inteira em `texto` (o "e" não casa dentro de "eu"); -1 se não há."""
-    m = re.compile(r'(?<!\w)' + re.escape(w.lower().rstrip(',.;:?!')) + r'(?!\w)').search(texto.lower(), max(desde, 0))
+    """Posição de `w` como palavra inteira em `texto`, sem ligar para caixa, acento, aspas e pontuação
+    (“Vigiai!” casa com "Vigiai!", @liturgia_hoje com Liturgia Hoje); o "e" não casa dentro de "eu". -1 se não há."""
+    alvo = _plano(w).strip()
+    if not alvo: return -1
+    m = re.compile(r'(?<!\w)' + r'\s+'.join(map(re.escape, alvo.split())) + r'(?!\w)').search(_plano(texto), max(desde, 0))
     return m.start() if m else -1
 
+NAO_ACHADOS = []
 def tempo_da_palavra(k, txt, desde=0):
-    """Quando a voz diz `txt` na linha k (proporcional aos caracteres), em segundos do vídeo."""
+    """Quando a voz diz `txt` na linha k, em segundos do vídeo. Com `palavras` na linha (tempo real de cada
+    palavra, de scripts/reels/alinhar-palavras.py) usa o início da palavra; sem isso, estima pela posição."""
     l = linhas[k]; s = l['texto']
-    i = max(achar(s, txt, desde), 0)
-    return ATRASO + l['t0'] + (l['t1'] - l['t0']) * i / max(1, len(s)) - 0.2   # um pouco antes da voz: o olho chega junto
+    i = achar(s, txt, desde)
+    if i < 0: NAO_ACHADOS.append((k, txt)); i = 0
+    if l.get('palavras'):
+        p = min((p for p in l['palavras'] if p['i'] <= i), key=lambda p: i - p['i'], default=l['palavras'][0])
+        return ATRASO + p['t0'] - 0.12   # o olho chega um tiquinho antes da voz
+    return ATRASO + l['t0'] + (l['t1'] - l['t0']) * i / max(1, len(s)) - 0.2
 
 def tema_da(arr):
     return 'claro' if float((arr @ np.array([0.3, 0.59, 0.11], np.float32)).mean()) > 135 else 'escuro'
@@ -181,7 +261,40 @@ imgs = [carregar(c) for c in cenas]
 PIL_DE = {id(a): Image.fromarray(a.astype(np.uint8)) for a in imgs}   # a conversão é cara: uma vez só
 temas = [tema_da(enquadrar(a, 1.0)) for a in imgs]
 ANGULOS = [-14, 196, 8, 168, -24, 188]
-campos = [campo_pincel(100 + 7 * i, ANGULOS[i % len(ANGULOS)]) for i in range(len(cenas))]
+TRANSICAO = roteiro.get('transicao', 'pincel')   # 'pincel' (padrão), 'faixas' (tinta gerada no código) ou um vídeo de tinta em fundo verde
+TINTA = None
+if TRANSICAO.endswith('.mp4'):
+    # clipe de tinta cobrindo um fundo verde (gerado no Flow): entra cobrindo a cena, a pintura troca por baixo
+    # e o mesmo clipe, de trás para frente, descobre a cena seguinte. O verde vira transparência.
+    arq_t = RAIZ / TRANSICAO if (RAIZ / TRANSICAO).exists() else Path(sys.argv[1]).parent / TRANSICAO
+    pw, ph = 720, 1280
+    bruto = subprocess.run(['ffmpeg', '-loglevel', 'error', '-i', str(arq_t), '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{pw}x{ph}', '-'], capture_output=True, check=True).stdout
+    TINTA = np.frombuffer(bruto, np.uint8).reshape(-1, ph, pw, 3)
+    _f = TINTA.astype(np.int16)
+    _verde = np.clip((_f[..., 1] - np.maximum(_f[..., 0], _f[..., 2]) - 10) / 50, 0, 1)
+    TINTA_A = (np.clip(((1 - _verde) - 0.2) / 0.8, 0, 1) * 255).astype(np.uint8)   # corta a franja da borda
+    _g = np.minimum(_f[..., 1], (_f[..., 0] + _f[..., 2]) // 2)                      # tira o verde que vazou na tinta
+    TINTA = np.stack([_f[..., 0], _g, _f[..., 2]], axis=-1)
+    TINTA = np.clip(TINTA.astype(np.float32) * np.array(roteiro.get('tom_tinta', [0.78, 0.7, 0.86]), np.float32), 0, 255).astype(np.uint8)
+    COBRE = [float(a.mean()) / 255 for a in TINTA_A]
+    TINTA_PICO = int(np.argmax(COBRE))
+    TRANS = roteiro.get('duracao_transicao', 1.6)
+    _cache = {}
+    def quadro_tinta(k):
+        """Quadro k do clipe em 1080×1920, ampliado 10% (as bordas do clipe às vezes ficam sem tinta)."""
+        if k not in _cache:
+            rgba = np.dstack([TINTA[k], TINTA_A[k]])
+            im = Image.fromarray(rgba, 'RGBA').resize((round(W * 1.1), round(H * 1.1)), Image.BILINEAR)
+            x0, y0 = (im.width - W) // 2, (im.height - H) // 2
+            a = np.asarray(im.crop((x0, y0, x0 + W, y0 + H)), np.float32)
+            if len(_cache) > 40: _cache.clear()
+            _cache[k] = (a[..., :3], a[..., 3:] / 255)
+        return _cache[k]
+COR_FAIXAS = np.array(roteiro.get('cor_faixas', [92, 42, 112]), np.float32)
+if TRANSICAO == 'faixas': TRANS = roteiro.get('duracao_transicao', 1.4)
+if TRANSICAO in ('luz', 'leak'): TRANS = roteiro.get('duracao_transicao', 1.2 if TRANSICAO == 'luz' else 1.5)
+campos = ([] if TINTA is not None else [campo_luz(100 + 7 * i) for i in range(len(cenas))] if TRANSICAO == 'luz'
+          else [(campo_faixas if TRANSICAO == 'faixas' else campo_pincel)(100 + 7 * i, ANGULOS[i % len(ANGULOS)]) for i in range(len(cenas))])
 inicios = [c['t0'] for c in cenas] + [total + 99]
 grao = (ruido((96, 192), seed=3) - 0.5) * 10   # textura fixa de tela
 _r = np.random.default_rng(11)
@@ -206,6 +319,28 @@ def overlay(quadro, t, q):
     ox, oy = rq.integers(0, 64), rq.integers(0, 64)
     return grao_filme[oy:oy + H, ox:ox + W]
 cena_em = lambda t: max(k for k in range(len(cenas)) if inicios[k] <= t + 1e-6)
+
+def tinta(it):
+    """Topo e base da tinta do texto (sem a caixa vazia da fonte), relativos ao topo da linha de ascendentes."""
+    f = fonte(it['estilo'], it['tam']); d0 = ImageDraw.Draw(Image.new('L', (1, 1)))
+    x0, y0, x1, y1 = d0.textbbox((0, 0), it['txt'], font=f)
+    if it['estilo'] == 'caixa': y0 = d0.textbbox((0, 0), 'H', font=f)[1]   # caixa alta: alinha pela altura das maiúsculas
+    return y0, y1
+
+def empilhar(itens, centro):
+    """Uma linha por item, na ordem do roteiro (itens com o mesmo y ficam na mesma linha não existem aqui):
+    respiro igual entre a tinta de uma linha e a da seguinte, proporcional ao menor dos dois tamanhos, e o
+    conjunto centrado em `centro`. Substitui o y escrito à mão."""
+    def respiro(a, b):
+        if 'caixa' in (a['estilo'], b['estilo']): return 30
+        return max(16, min(30, round(0.34 * min(a['tam'], b['tam']))))
+    caixas = [tinta(it) for it in itens]
+    alt = sum(y1 - y0 for y0, y1 in caixas) + sum(respiro(a, b) for a, b in zip(itens, itens[1:]))
+    y = centro - alt / 2
+    for k, (it, (y0, y1)) in enumerate(zip(itens, caixas)):
+        asc, desc = fonte(it['estilo'], it['tam']).getmetrics()
+        it['y'] = round(y - y0 + (asc + desc) / 2)   # o desenho centra o sprite (asc+desc) em it['y']
+        y += (y1 - y0) + (respiro(it, itens[k + 1]) if k + 1 < len(itens) else 0)
 
 blocos = []
 for b in roteiro.get('textos', []):
@@ -257,6 +392,7 @@ for j, b in enumerate(blocos):
             x += lw + esp
         if k is not None and ini >= 0: cursor[k] = max(ini, 0) + pos
     b['tema'] = tema
+    if roteiro.get('empilhar', True) and not b.get('y_fixo'): empilhar(b['itens'], b.get('centro', roteiro.get('centro', 1225)))
     b['topo'] = min(it['y'] for it in b['itens']) - 90
     for it in b['itens']:
         meia = it['tam'] * 0.55
@@ -266,10 +402,14 @@ for j, b in enumerate(blocos):
 # ordem de leitura: de cima para baixo, da esquerda para a direita; nenhuma palavra pode entrar antes da anterior
 for b in blocos:
     seq = sorted(((it['y'], x, tw, spr) for it in b['itens'] for spr, x, tw in it['pecas']), key=lambda e: (e[0], e[1]))
-    nomes = [(w['txt'] if w.get('chave') else None) for w in b['itens']]
     for (y0, x0, t0_, _), (y1, x1, t1_, _) in zip(seq, seq[1:]):
         if t1_ < t0_ - 0.01:
             print(f"aviso de ordem: bloco da linha {b.get('linha')}: palavra em y {y1} entra em {t1_:.2f}s, antes da anterior (y {y0}, {t0_:.2f}s)", file=sys.stderr)
+for k, txt in dict.fromkeys(NAO_ACHADOS):
+    print(f"ERRO: '{txt}' não está na fala da linha {k} ({linhas[k]['texto']!r}); entraria no começo da linha. Corrija o texto ou dê 't' ao item.", file=sys.stderr)
+if NAO_ACHADOS and not os.environ.get('ACEITAR'): sys.exit(1)
+if not any(l.get('palavras') for l in linhas):
+    print('aviso: a narração não tem o tempo de cada palavra; os textos entram por estimativa. Rode scripts/reels/alinhar-palavras.py', file=sys.stderr)
 if os.environ.get('SO_CHECAR'): sys.exit(0)
 
 marca = None   # marca d'água: o L da Liturgia no canto de cima, à direita, dentro da área segura
@@ -348,7 +488,50 @@ for q in range(int(total * FPS)):
         e = min(1.0, max(0.0, (t - inicios[k]) / TRANS))
         return 1.0 + ZOOM_POR_S * (t - inicios[k]) + (EMPURRAO * (1 - (1 - e) ** 3) if k else 0)
     alvo = cenas[i].get('alvo', (0.5, 0.5))
-    if i > 0 and t - inicios[i] < TRANS:
+    if i > 0 and t - inicios[i] < TRANS and TRANSICAO == 'leak':
+        p = (t - inicios[i]) / TRANS
+        e = np.sin(np.pi * p)
+        antiga = enquadrar(imgs[i - 1], esc(i - 1) * (1 + 0.04 * p), cenas[i - 1].get('alvo', (0.5, 0.5)))
+        nova = enquadrar(imgs[i], esc(i), alvo)
+        mist = min(1.0, max(0.0, (p - 0.3) / 0.4)); mist = mist * mist * (3 - 2 * mist)
+        base = (antiga * (1 - mist) + nova * mist) * (1 + 0.25 * e)
+        luz = luz_vazando(p, 100 + 7 * i) * (1 + 0.05 * np.sin(2 * np.pi * 9 * t))
+        quadro = 255 - (255 - np.clip(base, 0, 255)) * (255 - luz) / 255          # screen
+    elif i > 0 and t - inicios[i] < TRANS and TRANSICAO == 'luz':
+        p = (t - inicios[i]) / TRANS
+        e = np.sin(np.pi * p) ** 1.4                                             # sobe, estoura no meio, some
+        antiga = enquadrar(imgs[i - 1], esc(i - 1) * (1 + 0.04 * p), cenas[i - 1].get('alvo', (0.5, 0.5)))
+        nova = enquadrar(imgs[i], esc(i), alvo)
+        mist = min(1.0, max(0.0, (p - 0.38) / 0.24)); mist = mist * mist * (3 - 2 * mist)
+        base = antiga * (1 - mist) + nova * mist                                 # a troca acontece dentro do clarão
+        campo = campos[i]; x0 = int((campo.shape[1] - W) * (0.15 + 0.7 * p))     # a luz desliza pela tela
+        v = campo[:, x0:x0 + W]
+        tremor = 1 + 0.08 * np.sin(2 * np.pi * 11 * t) + 0.05 * np.sin(2 * np.pi * 23 * t)   # cintila como película
+        queima = np.clip(v * 1.5 * e * tremor + e * 0.35 - 0.15, 0, 1)
+        luz = colorir(queima) * (0.35 + 0.65 * queima[..., None])
+        base = base * (1 + 0.5 * e)                                              # exposição sobe junto
+        quadro = 255 - (255 - np.clip(base, 0, 255)) * (255 - luz) / 255          # screen
+    elif i > 0 and t - inicios[i] < TRANS and TINTA is not None:
+        p = (t - inicios[i]) / TRANS
+        if p < 0.5:   # a tinta entra sobre a cena anterior
+            base = enquadrar(imgs[i - 1], esc(i - 1) * (1 + 0.03 * p), cenas[i - 1].get('alvo', (0.5, 0.5)))
+            k = min(TINTA_PICO, int(p / 0.5 * TINTA_PICO))
+        else:         # e sai de trás para frente, descobrindo a nova
+            base = enquadrar(imgs[i], esc(i), alvo)
+            k = max(0, int((1 - p) / 0.5 * TINTA_PICO))
+        cor, a = quadro_tinta(k)
+        quadro = base * (1 - a) + cor * a
+    elif i > 0 and t - inicios[i] < TRANS and TRANSICAO == 'faixas':
+        p = (t - inicios[i]) / TRANS
+        base = enquadrar(imgs[i - 1], esc(i - 1) * (1 + 0.04 * p), cenas[i - 1].get('alvo', (0.5, 0.5))) if p < 0.5 else enquadrar(imgs[i], esc(i), alvo)
+        al, faixa, fibras, ponta, sombra = campos[i]
+        a = faixas(campos[i], p)[..., None]
+        tom = np.array([1.0, 0.8, 1.14, 0.9], np.float32)[faixa][..., None]          # cada faixa num tom
+        tinta = COR_FAIXAS * tom * (0.72 + 0.55 * fibras[..., None]) * (1 - 0.45 * sombra[..., None])   # riscos do pincel
+        brilho = np.clip((fibras - 0.62) * 4, 0, 1)[..., None] * 0.35              # brilho de tinta molhada nos riscos
+        tinta = tinta * (1 - brilho) + np.array([236, 214, 240], np.float32) * brilho
+        quadro = base * (1 - a) + tinta * a
+    elif i > 0 and t - inicios[i] < TRANS:
         p = (t - inicios[i]) / TRANS
         p = p * p * (3 - 2 * p)
         # a nova entra com rastro de movimento que some quando assenta; a anterior acelera para dentro
