@@ -8,7 +8,12 @@
  *   node scripts/youtube.mjs envia video/2026-10-03-evangelho.mp4 \
  *        --titulo "…" --descricao-arquivo desc.txt [--publicar-em 2026-10-03T05:00:00-03:00] [--capa capa.jpg]
  *   node scripts/youtube.mjs capa <videoId> capa.jpg
+ *   node scripts/youtube.mjs banner banner.jpg          # banner do canal (2560×1440)
  *   node scripts/youtube.mjs vps                # copia cliente + autorização para /dados/youtube.json na VPS (Shorts automáticos)
+ *   node scripts/youtube.mjs sobre descricao.txt "palavra, chave"   # descrição e palavras-chave do canal
+ *
+ * Outro canal: YT_CANAL=infantil node scripts/youtube.mjs … usa a autorização "youtube-refresh-token-infantil"
+ * (O Evangelho para crianças); no canal infantil os vídeos sobem marcados como "conteúdo para crianças".
  *
  * Segredos fora do repositório: o cliente OAuth fica em ~/.config/liturgia/youtube-client.json
  * (baixado do Google Cloud, projeto liturgia-diaria) e o refresh token no Keychain
@@ -25,7 +30,9 @@ import http from 'node:http';
 import { execFileSync } from 'node:child_process';
 
 const CLIENTE = path.join(os.homedir(), '.config', 'liturgia', 'youtube-client.json');
-const ITEM_KEYCHAIN = 'youtube-refresh-token';
+const CANAL = process.env.YT_CANAL || '';   // '' = Liturgia Diária; 'infantil' = O Evangelho para crianças
+const ITEM_KEYCHAIN = CANAL ? `youtube-refresh-token-${CANAL}` : 'youtube-refresh-token';
+const INFANTIL = CANAL === 'infantil';
 // youtube (gerenciar) cobre envio, visibilidade e leitura; youtube.upload fica para apps antigos autorizados só com ele
 const ESCOPOS = ['https://www.googleapis.com/auth/youtube', 'https://www.googleapis.com/auth/youtube.upload'];
 
@@ -35,7 +42,7 @@ const cliente = () => {
 };
 const lerRefresh = () => {
   try { return execFileSync('security', ['find-generic-password', '-a', os.userInfo().username, '-s', ITEM_KEYCHAIN, '-w']).toString().trim(); }
-  catch { console.error('sem autorização: rode node scripts/youtube.mjs autoriza'); process.exit(1); }
+  catch { console.error(`sem autorização: rode ${CANAL ? `YT_CANAL=${CANAL} ` : ''}node scripts/youtube.mjs autoriza`); process.exit(1); }
 };
 const gravarRefresh = t => execFileSync('security', ['add-generic-password', '-U', '-a', os.userInfo().username, '-s', ITEM_KEYCHAIN, '-w', t]);
 
@@ -54,7 +61,7 @@ async function autoriza() {
   await new Promise(ok => servidor.listen(0, '127.0.0.1', ok));
   const redirect = `http://127.0.0.1:${servidor.address().port}`;
   const url = `${c.auth_uri}?${new URLSearchParams({ client_id: c.client_id, redirect_uri: redirect, response_type: 'code', scope: ESCOPOS.join(' '), access_type: 'offline', prompt: 'consent' })}`;
-  console.log('Abrindo o Google no navegador. Escolha a conta/canal da Liturgia e clique em Permitir.');
+  console.log(`Abrindo o Google no navegador. Escolha o canal ${INFANTIL ? 'O Evangelho para crianças' : 'da Liturgia'} e clique em Permitir.`);
   execFileSync('open', [url]);
   const codigo = await new Promise(ok => servidor.on('request', (req, res) => {
     const q = new URL(req.url, redirect).searchParams;
@@ -85,14 +92,15 @@ async function envia(arquivo, opcoes) {
   if (!fs.existsSync(arquivo)) { console.error(`não existe: ${arquivo}`); process.exit(1); }
   const tok = await tokenDeAcesso();
   const descricao = opcoes['descricao-arquivo'] ? fs.readFileSync(opcoes['descricao-arquivo'], 'utf8') : (opcoes.descricao || '');
-  const status = { privacyStatus: 'private', selfDeclaredMadeForKids: false, embeddable: true };
+  const status = { privacyStatus: 'private', selfDeclaredMadeForKids: INFANTIL, embeddable: true };
   if (opcoes['publicar-em']) status.publishAt = new Date(opcoes['publicar-em']).toISOString();
   else if (opcoes.publico) status.privacyStatus = 'public';
   const meta = {
     snippet: {
       title: opcoes.titulo.slice(0, 100), description: descricao.slice(0, 5000),
-      tags: ['liturgia diária', 'evangelho do dia', 'leituras da missa', 'liturgia de hoje', 'católico'],
-      categoryId: '29',   // Nonprofits & Activism; alternativa: 22 People & Blogs
+      tags: INFANTIL ? ['evangelho para crianças', 'evangelho do domingo', 'catequese infantil', 'bíblia para crianças', 'católico']
+        : ['liturgia diária', 'evangelho do dia', 'leituras da missa', 'liturgia de hoje', 'católico'],
+      categoryId: INFANTIL ? '27' : '29',   // 27 Education; 29 Nonprofits & Activism
       defaultLanguage: 'pt-BR', defaultAudioLanguage: 'pt-BR',
     },
     status,
@@ -124,10 +132,46 @@ async function capa(id, arquivo, tok) {
 /** Copia o cliente OAuth e o refresh token para a VPS (/opt/mediaserver/apoio-dados/youtube.json, que o
  *  container vê como /dados/youtube.json), pelo ssh, sem imprimir nada. Usado por publicar-youtube.mjs. */
 function vps() {
+  if (CANAL) { console.error('vps só vale para o canal da Liturgia (o publicar-youtube.mjs usa /dados/youtube.json)'); process.exit(1); }
   const c = cliente();
   const json = JSON.stringify({ client_id: c.client_id, client_secret: c.client_secret, token_uri: c.token_uri, refresh_token: lerRefresh() });
   execFileSync('ssh', ['vps', 'umask 077; cat > /opt/mediaserver/apoio-dados/youtube.json && chmod 600 /opt/mediaserver/apoio-dados/youtube.json'], { input: json });
   console.log('Autorização do YouTube copiada para a VPS (/dados/youtube.json).');
+}
+
+/** Troca o banner do canal: sobe a imagem (16:9, mín. 2048×1152, até 6 MB; área segura 1546×423 no centro)
+ *  e grava a URL em brandingSettings (o PUT substitui a parte inteira, então reenvia o que já existe). */
+async function banner(arquivo) {
+  const tok = await tokenDeAcesso();
+  const tipo = arquivo.endsWith('.png') ? 'image/png' : 'image/jpeg';
+  const up = await fetch('https://www.googleapis.com/upload/youtube/v3/channelBanners/insert?uploadType=media', {
+    method: 'POST', headers: { Authorization: `Bearer ${tok}`, 'Content-Type': tipo }, body: fs.readFileSync(arquivo) });
+  const u = await up.json();
+  if (!u.url) { console.error(`banner recusado (${up.status}): ${JSON.stringify(u).slice(0, 300)}`); process.exit(1); }
+  const atual = await (await fetch('https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&mine=true', { headers: { Authorization: `Bearer ${tok}` } })).json();
+  const ch = atual.items?.[0];
+  if (!ch) { console.error('canal não encontrado'); process.exit(1); }
+  const bs = { ...ch.brandingSettings, image: { ...(ch.brandingSettings.image || {}), bannerExternalUrl: u.url } };
+  const r = await fetch('https://www.googleapis.com/youtube/v3/channels?part=brandingSettings', { method: 'PUT',
+    headers: { Authorization: `Bearer ${tok}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ id: ch.id, brandingSettings: bs }) });
+  const j = await r.json();
+  if (!r.ok) { console.error(`erro ${r.status}: ${j.error?.message}`); process.exit(1); }
+  console.log(`banner aplicado no canal ${ch.brandingSettings.channel?.title || ch.id}`);
+}
+
+/** Descrição e palavras-chave do canal (brandingSettings.channel), preservando o resto. */
+async function sobre(arquivo, palavras) {
+  const tok = await tokenDeAcesso();
+  const atual = await (await fetch('https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&mine=true', { headers: { Authorization: `Bearer ${tok}` } })).json();
+  const ch = atual.items?.[0];
+  if (!ch) { console.error('canal não encontrado'); process.exit(1); }
+  const channel = { ...ch.brandingSettings.channel, description: fs.readFileSync(arquivo, 'utf8').trim().slice(0, 1000), defaultLanguage: 'pt-BR', country: 'BR' };
+  if (palavras) channel.keywords = palavras.split(',').map(p => p.trim()).filter(Boolean).map(p => (p.includes(' ') ? `"${p}"` : p)).join(' ');
+  const r = await fetch('https://www.googleapis.com/youtube/v3/channels?part=brandingSettings', { method: 'PUT',
+    headers: { Authorization: `Bearer ${tok}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ id: ch.id, brandingSettings: { ...ch.brandingSettings, channel } }) });
+  const j = await r.json();
+  if (!r.ok) { console.error(`erro ${r.status}: ${j.error?.message}`); process.exit(1); }
+  console.log(`descrição aplicada no canal ${channel.title || ch.id}`);
 }
 
 /** Muda a visibilidade de um vídeo (public | unlisted | private). */
@@ -158,6 +202,8 @@ if (cmd === 'autoriza') await autoriza();
 else if (cmd === 'canal') await canal();
 else if (cmd === 'vps') vps();
 else if (cmd === 'capa' && posicionais[1]) await capa(posicionais[0], posicionais[1]);
+else if (cmd === 'banner' && posicionais[0]) await banner(posicionais[0]);
+else if (cmd === 'sobre' && posicionais[0]) await sobre(posicionais[0], posicionais[1]);
 else if (cmd === 'visibilidade' && posicionais[1]) await visibilidade(posicionais[0], posicionais[1]);
 else if (cmd === 'envia' && posicionais[0] && opcoes.titulo) await envia(posicionais[0], opcoes);
 else { console.error('uso: node scripts/youtube.mjs autoriza | canal | envia <mp4> --titulo "…" [--descricao-arquivo f] [--publicar-em ISO] [--publico] [--capa jpg] | capa <videoId> <jpg>'); process.exit(2); }
