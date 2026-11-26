@@ -197,7 +197,7 @@ Formato novo, mais animado que os terços dos mistérios. Scripts em `scripts/te
   (fora do rsync do site). O arquivo da live é recodificado para 5 Mbps com quadro-chave a cada 2 s (`-g 60`).
   ffmpeg instalado no host (apt) em 25/11/2026. Teste: `--agora --nao-listado`; `--ensaio` só mostra.
   O canal foi liberado para lives em 25/11/2026 (Studio → Transmitir ao vivo); a 1ª live de teste, não listada,
-  funcionou do começo ao fim: https://youtu.be/dfJ6L7Njl9Q. **Cron ativo desde 25/11/2026** (1ª live: 26/11, 3h):
+  funcionou do começo ao fim: https://youtu.be/dfJ6L7Njl9Q. Vídeo normal: https://youtu.be/tXEnzRI63jI (25/11/2026). **Cron ativo desde 25/11/2026** (1ª live: 26/11, 3h):
   `50 * * * * cd /opt/mediaserver/catecismo && /usr/bin/node scripts/live-terco.mjs >> /var/log/live-terco.log 2>&1`.
   Título honesto (oração transmitida, não "ao vivo com alguém rezando"); o YouTube pode tratar o mesmo vídeo diário
   como repetitivo: variar com o tempo (vozes, pinturas).

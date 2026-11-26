@@ -16,6 +16,11 @@
  * Reel extra do dia (ex.: o Evangelho ilustrado de domingo): reels/<dia>-2.mp4 com a legenda e a hora em
  * reels/<dia>-2.json ({ legenda, hora }) e a capa em reels/capas/<dia>-2.jpg; sai a partir da `hora`
  * de Brasília (padrão 12), uma vez (estado `reel2`).
+ *
+ * Colab: reels/colaboradores.json (só na VPS, como os Reels) diz quem convidar em cada post, por dia ou sempre:
+ *   { "sempre": { "card": [], "reel": [], "reel2": [] }, "2026-11-29": { "reel2": ["postscatolicos"] } }
+ * Até 3 contas públicas por post, sem @; a conta convidada aceita o convite no app dela. O Reel extra também
+ * aceita "colaboradores" no próprio reels/<dia>-2.json.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -39,6 +44,14 @@ const fazCard = fs.existsSync(arqLegenda) && (agora || estado.ultimo !== dia);
 const fazReel = fs.existsSync(arqReel) && fs.existsSync(arqLegenda) && (agora || estado.reel !== dia);
 const arqExtra = path.join(RAIZ, 'liturgiadiaria', 'instagram', 'reels', `${dia}-2.json`);
 const extra = fs.existsSync(arqExtra) && fs.existsSync(arqExtra.replace(/\.json$/, '.mp4')) ? JSON.parse(fs.readFileSync(arqExtra, 'utf8')) : null;
+const arqColab = path.join(RAIZ, 'liturgiadiaria', 'instagram', 'reels', 'colaboradores.json');
+const tabColab = fs.existsSync(arqColab) ? JSON.parse(fs.readFileSync(arqColab, 'utf8')) : {};
+const colab = tipo => {
+  const lista = [...(tabColab.sempre?.[tipo] || []), ...(tabColab[dia]?.[tipo] || []),
+                 ...(tipo === 'reel2' && extra?.colaboradores || [])].map(u => u.replace(/^@/, ''));
+  return [...new Set(lista)].slice(0, 3);
+};
+const comColab = (params, tipo) => (colab(tipo).length ? { ...params, collaborators: JSON.stringify(colab(tipo)) } : params);
 const fazExtra = !!extra && (agora || (estado.reel2 !== dia && +brasilia.hour >= (extra.hora ?? 12)));
 if (!agora && +brasilia.hour < HORA) process.exit(0);
 if (!fazCard && !fazReel && !fazExtra) {
@@ -53,6 +66,7 @@ const capa = fs.existsSync(arqCapa) ? `${SITE}/reels/capas/${dia}.jpg` : null;  
 const capaExtra = fs.existsSync(path.join(RAIZ, 'liturgiadiaria', 'instagram', 'reels', 'capas', `${dia}-2.jpg`)) ? `${SITE}/reels/capas/${dia}-2.jpg` : null;
 if (ensaio) {
   console.log(fazCard ? imagem : '(card já saiu)', fazReel ? video : '(sem reel)', fazReel ? capa || '(sem capa)' : '', '\n', legenda);
+  for (const t of ['card', 'reel', 'reel2']) if (colab(t).length) console.log(`colab ${t}:`, colab(t).join(', '));
   if (extra) console.log(`\nreel extra (${extra.hora ?? 12}h, ${fazExtra ? 'sai agora' : 'ainda não'}):`, `${SITE}/reels/${dia}-2.mp4`, capaExtra || '(sem capa)', '\n', extra.legenda);
   process.exit(0);
 }
@@ -75,7 +89,7 @@ let falhou = false;
 if (fazCard) {
 novoEstado.ultimo = dia; gravar();
 try {
-  const { id: container } = await chamar('/me/media', { image_url: imagem, caption: legenda });
+  const { id: container } = await chamar('/me/media', comColab({ image_url: imagem, caption: legenda }, 'card'));
   for (let i = 0; i < 20; i++) {   // a Meta baixa e processa a imagem antes de deixar publicar
     const { status_code } = await chamar(`/${container}`, { fields: 'status_code' }, 'GET');
     if (status_code === 'FINISHED') break;
@@ -95,7 +109,7 @@ try {
 async function publicarReel(chave, url, texto, capaUrl, rotulo) {
   novoEstado[chave] = dia; gravar();
   try {
-    const { id: container } = await chamar('/me/media', { media_type: 'REELS', video_url: url, caption: texto, share_to_feed: 'true', ...(capaUrl && { cover_url: capaUrl }) });
+    const { id: container } = await chamar('/me/media', comColab({ media_type: 'REELS', video_url: url, caption: texto, share_to_feed: 'true', ...(capaUrl && { cover_url: capaUrl }) }, chave));
     for (let i = 0; i < 60; i++) {
       const { status_code } = await chamar(`/${container}`, { fields: 'status_code' }, 'GET');
       if (status_code === 'FINISHED') break;
