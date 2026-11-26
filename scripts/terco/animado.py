@@ -239,7 +239,7 @@ def montar(evs, saida):
                            '-filter_complex', f'[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[v];[2:a]atrim=0:{total},volume=0.05,afade=t=in:d=3,'
                            f'afade=t=out:st={total - 3}:d=3[m];[v][m]amix=inputs=2:duration=first:normalize=0[a]',
                            '-map', '0:v', '-map', '[a]', '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p',
-                           '-c:a', 'aac', '-b:a', '160k', '-t', f'{total:.2f}', '-movflags', '+faststart', saida], stdin=subprocess.PIPE)
+                           '-c:a', 'aac', '-b:a', '160k', '-t', f'{total:.2f}', '-movflags', '+faststart', '-f', 'mp4', saida + '.parcial'], stdin=subprocess.PIPE)
     cabF = fonte('inria-serif-700.ttf', 50); subF = fonte('inria-serif-400-italic.ttf', 30)
     for fr in range(int(total * FPS)):
         t = fr / FPS
@@ -293,23 +293,34 @@ def montar(evs, saida):
             fade = ease((t - ev['t0']) / 0.35) if ev is e else 1
             corR = tuple(int(PAPEL[k] + (SUAVE[k] - PAPEL[k]) * fade) for k in range(3))
             espacado(dp, (X, 305), ev['rotulo'].upper(), sans(19), corR, 4)
-            if 'tam' not in ev:   # texto longo (Creio, Pai-Nosso): esconde o terço e usa o painel inteiro
+            # bolinhas: 10 nas dezenas, 3 nas orações repetidas três vezes (rótulo "· N de 3")
+            if 'contas' not in ev:
+                c = ev.get('conta', '')
+                if c.startswith('g'): ev['contas'] = (10, int(c.split('_')[1]))
+                elif ' de 3' in ev['rotulo']: ev['contas'] = (3, int(ev['rotulo'].split('·')[1].split()[0]))
+                else: ev['contas'] = None
+            if 'tam' not in ev:
                 alt = lambda z: desenha_texto(ImageDraw.Draw(Image.new('RGB', (10, 10))), ev['palavras'], -1, X, 350, L, z, ev.get('italico', False))
-                cabe = [z for z in (40, 36, 32, 30) if alt(z) <= 700]
-                if cabe: ev['tam'], ev['sem_terco'] = cabe[0], False
-                else: ev['tam'], ev['sem_terco'] = next(z for z in (34, 32, 30, 28, 26) if alt(z) <= 990 or z == 26), True
+                limite = 870 if ev['contas'] else 990
+                ev['tam'] = next(z for z in (40, 36, 34, 32, 30, 28, 26) if alt(z) + (34 if ev.get('ref') else 0) <= limite or z == 26)
             tam = ev['tam']
             camTx = Image.new('RGB', pa.size, PAPEL); dtx = ImageDraw.Draw(camTx)
             yfim = desenha_texto(dtx, ev['palavras'], t, X, 350, L, tam, ev.get('italico', False))
             if ev.get('ref'): dtx.text((X, yfim + 4), ev['ref'], font=sans(22, 2), fill=SUAVE)
-            mask = Image.new('L', pa.size, 0); ImageDraw.Draw(mask).rectangle((0, 340, pa.width, 1000 if ev['sem_terco'] else 750), fill=int(255 * fade))
+            mask = Image.new('L', pa.size, 0); ImageDraw.Draw(mask).rectangle((0, 340, pa.width, 1000), fill=int(255 * fade))
             pa = Image.composite(camTx, pa, mask)
-            if not ev['sem_terco']: pa = desenha_terco(pa, ev.get('conta'), t, acesa=ev.get('acesa', True))
+            if ev['contas']:
+                n, acesas = ev['contas']; cx, cy, r, g = X + 11, 930, 11, 34
+                brilha = ev.get('acesa', True) and acesas > 0
+                if brilha:   # a conta da oração atual brilha
+                    luz = Image.new('L', pa.size, 0); x = cx + (acesas - 1) * g; R = 22 + 3 * math.sin(t * 4)
+                    ImageDraw.Draw(luz).ellipse((x - R, cy - R, x + R, cy + R), fill=int(150 + 40 * math.sin(t * 4)))
+                    pa = Image.composite(Image.new('RGB', pa.size, (240, 90, 80)), pa, luz.filter(ImageFilter.GaussianBlur(7)).point(lambda v: v * 0.55))
+                dp = ImageDraw.Draw(pa)
+                for i in range(n):
+                    on = i < acesas; x = cx + i * g
+                    dp.ellipse((x - r, cy - r, x + r, cy + r), fill=VERM if on else None, outline=VERM if on else (200, 190, 180), width=2)
             dp = ImageDraw.Draw(pa)
-            if ev.get('conta', '').startswith('g') and ev.get('acesa', True) and not ev['sem_terco']:
-                k, nn = ev['conta'][1:].split('_')
-                dp.text((330, 800), f'{["Primeira", "Segunda", "Terceira", "Quarta", "Quinta"][int(k)]} dezena', font=subF, fill=SUAVE)
-                if int(nn): dp.text((330, 842), f'{nn} de 10', font=sans(22, 2), fill=VERM)
             wtxt = 'Liturgia Diária  ·  liturgia.santadoutrina.com'
             dp.text((pa.width - 90 - dp.textlength(wtxt, font=sans(18, 2)), 1030), wtxt, font=sans(18, 2), fill=(160, 150, 140))
             xp = round(W - (W - PW) * ease(p) if p < 1 else PW)
@@ -320,7 +331,9 @@ def montar(evs, saida):
         # fim: escurece
         if t > total - 1.2: quadro = Image.eval(quadro, lambda v, a=(total - t) / 1.2: int(v * a))
         ff.stdin.write(quadro.tobytes())
-    ff.stdin.close(); ff.wait()
+    ff.stdin.close()
+    if ff.wait() != 0: raise SystemExit('ffmpeg falhou')
+    os.replace(saida + '.parcial', saida)   # só troca o vídeo pronto quando terminou
     mm = lambda x: f'{int(x // 60)}:{int(x % 60):02d}'
     caps = [(mm(e['t0']), e['titulo'][1]) for e in evs if e['modo'] == 'cheio' and e.get('capitulo')]
     json.dump({'total': total, 'capitulos': caps}, open(saida.replace('.mp4', '-capitulos.json'), 'w'), ensure_ascii=False)

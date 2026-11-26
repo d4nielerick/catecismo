@@ -179,10 +179,9 @@ Formato novo, mais animado que os terços dos mistérios. Scripts em `scripts/te
   Commons para `img-dol/0-misericordia.jpg`.
 - `animado.py completo` → `terco-misericordia.mp4` (10min26, 1920×1080, 30 fps, ~30 min de render). Desenha quadro a
   quadro: zoom lento e dissolvência nas pinturas; cada dezena abre em tela cheia com o título e o painel de texto desliza;
-  palavras acendem junto com a voz (tempo proporcional ao tamanho da palavra); o terço inteiro desenhado com a conta
-  atual brilhando; raios da Misericórdia pulsando (cone a partir do coração); textos longos (Creio) escondem o terço e
-  usam o painel inteiro; no fim, convite "Curta e inscreva-se · todo dia às 15h e às 3h, ao vivo" com botão e voz.
-  `animado.py teste` faz só 47 s. `SO_AUDIO=1` troca só o áudio do vídeo já renderizado. Capítulos em
+  palavras acendem junto com a voz (tempo proporcional ao tamanho da palavra); 10 bolinhas por dezena (3 nas orações repetidas três
+  vezes) com a conta atual brilhando (o terço inteiro desenhado foi testado e o dono preferiu as bolinhas); raios da Misericórdia pulsando (cone a partir do coração); textos sem bolinhas (Creio) usam o painel inteiro; no fim, convite "Curta e inscreva-se · todo dia às 15h e às 3h, ao vivo" com botão e voz.
+  `animado.py teste` faz só 47 s. O render grava em `<saida>.parcial` e só troca o vídeo no fim (um arquivo saiu corrompido antes disso). `SO_AUDIO=1` troca só o áudio do vídeo já renderizado. Capítulos em
   `terco-misericordia-capitulos.json`.
 - **Vozes:** guia = Grok `leo`; respostas ("tende misericórdia…", "em expiação…", "tende piedade…", "Jesus, eu confio
   em vós") = `coro.py`, **dueto Ara + Castor** (Grok), a 2ª voz 70 ms depois, cada uma num lado do estéreo, reverb
@@ -198,7 +197,7 @@ Formato novo, mais animado que os terços dos mistérios. Scripts em `scripts/te
   (fora do rsync do site). O arquivo da live é recodificado para 5 Mbps com quadro-chave a cada 2 s (`-g 60`).
   ffmpeg instalado no host (apt) em 25/11/2026. Teste: `--agora --nao-listado`; `--ensaio` só mostra.
   O canal foi liberado para lives em 25/11/2026 (Studio → Transmitir ao vivo); a 1ª live de teste, não listada,
-  funcionou do começo ao fim: https://youtu.be/dfJ6L7Njl9Q. Cron a pôr depois do OK do dono:
+  funcionou do começo ao fim: https://youtu.be/dfJ6L7Njl9Q. **Cron ativo desde 25/11/2026** (1ª live: 26/11, 3h):
   `50 * * * * cd /opt/mediaserver/catecismo && /usr/bin/node scripts/live-terco.mjs >> /var/log/live-terco.log 2>&1`.
   Título honesto (oração transmitida, não "ao vivo com alguém rezando"); o YouTube pode tratar o mesmo vídeo diário
   como repetitivo: variar com o tempo (vozes, pinturas).
