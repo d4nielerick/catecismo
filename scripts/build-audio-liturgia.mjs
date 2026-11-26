@@ -23,10 +23,11 @@
  * ouvidas são casadas com as do texto oficial (as que não casam ficam entre as vizinhas). Pula
  * leituras que já têm áudio do Gemini; na cota gratuita esgotada (429), para sem erro.
  * Com --grok a voz é do Grok TTS (item "xai-api-key"), com o mesmo caminho do Whisper.
+ * --refazer gera de novo mesmo que a leitura já tenha áudio dessa voz.
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -93,7 +94,9 @@ function unidadesDe(l) {
     for (; i < cruas.length; i++) {
       const x = cruas[i].replace(/[*†]/g, '').trim();
       if (!x || VERSO.test(x)) continue;
-      saida.push(...(/^R\.?$/.test(x) ? refrao : [x]));
+      if (/^R\s*\.?\s*\.?$/.test(x)) { saida.push(...refrao); continue; }
+      if (!/[\p{L}\p{N}]/u.test(x)) continue;            // sobra só pontuação (ex.: "." solto depois do "R.")
+      saida.push(x);
     }
     return saida;
   }
@@ -106,7 +109,7 @@ async function gerarLeitura(qual) {
   if (!leitura) { console.log(`${dt}: sem ${qual}`); return; }
   const unidades = unidadesDe(leitura);
   const jaFeito = path.join(RAIZ, 'data', 'liturgia-audio', dt, `${qual}.json`);
-  if ((GEMINI || GROK) && !ENSAIO && fs.existsSync(jaFeito) && JSON.parse(fs.readFileSync(jaFeito, 'utf8')).voz === VOZ.nome) return;
+  if ((GEMINI || GROK) && !ENSAIO && !process.argv.includes('--refazer') && fs.existsSync(jaFeito) && JSON.parse(fs.readFileSync(jaFeito, 'utf8')).voz === VOZ.nome) return;
   const falado = unidades.join(' ').replace(/\s+/g, ' ').trim();
   if (ENSAIO) { console.log(`\n── ${qual} (${falado.length} caracteres)\n${unidades.join('\n')}`); return; }
   const { audio, tempos } = audioArq
@@ -201,14 +204,52 @@ function gerarGemini(unidades, falado) {
     const t = u.replace(/\s+/g, ' ').trim(), a = faladoU.indexOf(t, pos); pos = a + t.length;
     return { a, b: a + t.length, ini: tu.character_start_times_seconds[a] };
   });
+  // As emendas caem no meio da pausa real entre uma linha e a seguinte (silencedetect), não no tempo do
+  // Whisper: ele erra o começo das palavras em até ~0,3 s, e cortar por ele deixava, na volta do refrão
+  // repetido, um pedaço da próxima linha ou o fim da palavra comido (24/11/2026). Sem pausa achada, fica o
+  // tempo do Whisper.
+  const pausas = filtro => {
+    const log = spawnSync('ffmpeg', ['-hide_banner', '-nostats', '-i', wav, '-af', filtro, '-f', 'null', '-']).stderr.toString();
+    const r = []; let s0 = null;
+    for (const m of log.matchAll(/silence_(start|end): ([\d.]+)/g)) {
+      if (m[1] === 'start') s0 = +m[2]; else if (s0 != null) { r.push([s0, +m[2]]); s0 = null; }
+    }
+    return r;
+  };
+  // primeiro a pausa de verdade; se não houver, o ponto mais baixo (respiração entre palavras ditas juntas)
+  const niveis = [pausas('silencedetect=noise=-40dB:d=0.08'), pausas('silencedetect=noise=-32dB:d=0.05')];
+  const emenda = (fimFala, iniProx) => {
+    for (const silencios of niveis) {
+      const cands = silencios.filter(([s, e]) => e > fimFala - 0.15 && s < iniProx + 0.15);
+      if (!cands.length) continue;
+      const [s, e] = cands.reduce((a, b) => (b[1] - b[0] > a[1] - a[0] ? b : a));
+      return (s + e) / 2;
+    }
+    return null;
+  };
+  let semPausa = 0;
   trechos.forEach((x, k) => {
-    x.de = Math.max(0, x.ini - 0.2, k ? trechos[k - 1].fim ?? 0 : 0);
-    x.ate = k < trechos.length - 1 ? Math.max(x.de, trechos[k + 1].ini - 0.2) : duracaoWav;
-    x.fim = x.ate;
+    if (k === trechos.length - 1) return;
+    const prox = trechos[k + 1];
+    const c = emenda(tu.character_end_times_seconds[x.b - 1], prox.ini);
+    if (c == null) semPausa++;
+    x.corte = c ?? Math.max(prox.ini - 0.2, tu.character_end_times_seconds[x.b - 1]);
   });
-  // monta na ordem do lecionário (repetindo o refrão) e recalcula os tempos de cada caractere
+  trechos.forEach((x, k) => {
+    x.de = k ? trechos[k - 1].corte : Math.max(0, x.ini - 0.2);
+    x.ate = k < trechos.length - 1 ? Math.max(x.de, x.corte) : duracaoWav;
+  });
+  if (semPausa) console.log(`  ${semPausa} emenda(s) sem pausa detectada: cortadas pelo tempo do Whisper`);
+  // monta na ordem do lecionário (repetindo o refrão) e recalcula os tempos de cada caractere;
+  // 12 ms de fade em cada ponta evitam estalo na emenda
   const ordem = unidades.map(u => unicas.indexOf(u));
-  const filtro = ordem.map((k, i) => `[0:a]atrim=${trechos[k].de}:${trechos[k].ate},asetpts=PTS-STARTPTS[s${i}]`).join(';')
+  // (só nas emendas de verdade: onde o trecho seguinte não é o que vinha depois no áudio gerado)
+  const filtro = ordem.map((k, i) => {
+    const d = trechos[k].ate - trechos[k].de, f = Math.min(0.012, d / 4);
+    const fades = (i > 0 && ordem[i - 1] !== k - 1 ? `,afade=t=in:d=${f}` : '')
+      + (i < ordem.length - 1 && ordem[i + 1] !== k + 1 ? `,afade=t=out:st=${Math.max(0, d - f)}:d=${f}` : '');
+    return `[0:a]atrim=${trechos[k].de}:${trechos[k].ate},asetpts=PTS-STARTPTS${fades}[s${i}]`;
+  }).join(';')
     + `;${ordem.map((_, i) => `[s${i}]`).join('')}concat=n=${ordem.length}:v=0:a=1[out]`;
   execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', wav, '-filter_complex', filtro, '-map', '[out]', '-b:a', '96k', mp3]);
   const ini = [], fim = [];
